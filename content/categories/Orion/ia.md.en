@@ -1,0 +1,9 @@
+---
+categories: Orion, Architecture, ZFS
+dependencies: '*.md.en'
+keywords: information,topology,hypermedia,rest,architecture,hateoas
+status: draft
+title: Information Architecture
+
+---
+{% ssi `/joe/ia.md.en` %}

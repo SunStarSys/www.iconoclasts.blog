@@ -1,0 +1,8 @@
+---
+dependencies: '*.md.en'
+keywords: qpsmtpd,Apache::Qpsmtpd,earlytalker,anti-spam,sendmail,postfix,exim
+status: archived
+title: On the Spam Problem...
+
+---
+{% ssi `/joe/spam.md.en` %}
