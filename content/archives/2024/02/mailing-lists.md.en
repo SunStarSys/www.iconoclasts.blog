@@ -1,0 +1,8 @@
+---
+dependencies: '*.md.en'
+keywords: ezmlm-idx,BATV,DMARC,SRS
+status: archived
+title: Mailing Lists
+
+---
+{% ssi `/joe/mailing-lists.md.en` %}
