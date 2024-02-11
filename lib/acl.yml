@@ -5,11 +5,9 @@
     "@svnadmin": rw
     "*": r
 
-- path: content/orion
+- path: content/joe
   rules:
-    "@marketing": rw
-    "@staff": rw
-    "@svnadmin": rw
+    "joe": rw
     "*": r
 
 - path: lib
@@ -26,6 +24,16 @@
   rules:
     "@svnadmin": rw
     "@frontend": rw
+
+- path: content/archives
+  rules:
+    "@blogs": rw
+    "*": r
+
+- path: content/categories
+  rules:
+    "@blogs": rw
+    "*": r
 
 - path: cgi-bin/search.pl
   rules:
