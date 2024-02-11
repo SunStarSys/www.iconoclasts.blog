@@ -4,7 +4,7 @@
   <h1>{{ headers.title }}</h1></div>
 <div class="jumbotron">
 {% filter markdown %}
-## Jennifer's Lovely Blog
+## Priti's Lovely Blog
 
 {% endfilter %}
 
