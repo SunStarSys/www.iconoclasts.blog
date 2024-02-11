@@ -46,7 +46,7 @@ our @patterns = (
   }],
 
   [qr!^/[^/]+/([^/]+)\.md[^/]*$!, snippet => {
-    template        => "blogs.html",
+    template        => "blog.html",
     view            => [qw/single_narrative normalize_links/],
     compress        => 1,
     facts           => $facts,
