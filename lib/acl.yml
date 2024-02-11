@@ -10,6 +10,11 @@
     "joe": rw
     "*": r
 
+- path: content/jennifer
+  rules:
+    "jennifer": rw
+    "*": r
+
 - path: lib
   rules:
     "@svnadmin": rw
