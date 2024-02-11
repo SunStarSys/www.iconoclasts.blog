@@ -108,6 +108,7 @@ div.breadcrumbs {
 #search, #filter {
     display: inline-block;
     min-width: 350px;
+    line-height: 20px;
 }
 
 #watch, #unwatch { display: none }
