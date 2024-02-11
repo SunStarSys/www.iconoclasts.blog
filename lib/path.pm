@@ -31,15 +31,23 @@ our @patterns = (
 
 # the "memoize" view corrects most of the speed problems with quick_deps == 3:
 
-  [qr!/(index|sitemap)\.html!, memoize => {
+  [qr!/(index|sitemap)\.html!, sitemap => {
     compress   => 1,
-    view       => [qw/sitemap/],
     nest       => 1,
     facts      => $facts,
   }],
 
-  [qr!^/(essay|client)s/.*\.md(?:text)?!, memoize => {
-    view            => [qw/set_template_from_capture snippet single_narrative/],
+  [qr!/index.md[^/]*$!, single_narrative => {
+    template        => "main.html",
+    view            => [qw/normalize_links/],
+    compress        => 1,
+    facts           => $facts,
+    markdown_search => 1,
+  }],
+
+  [qr!^/[^/]+/([^/]+)\.md[^/]*$!, snippet => {
+    template        => "blogs.html",
+    view            => [qw/single_narrative normalize_links/],
     compress        => 1,
     facts           => $facts,
     archive_root    => "/archives",
@@ -48,17 +56,17 @@ our @patterns = (
     permalink       => 1,
   }],
 
-  [qr!^/(categories|archives)/.*\.md(?:text)?!, memoize => {
+  [qr!^/(categories|archives)/.*\.md[^/]*!, memoize => {
     view       => [qw/set_template_from_capture ssi normalize_links snippet single_narrative/],
     compress   => 1,
     facts      => $facts,
   }],
 
-  [qr#^(?!/editor\.md/).*\.md(?:text)?[^/]*$#, memoize => {
-    view       => [qw/snippet asymptote single_narrative/],
-    compress   => 1,
-    template   => "main.html",
-    facts      => $facts,
+  [qr!\.md[^/]*$!, snippet => {
+    template        => "main.html",
+    compress        => 1,
+    facts           => $facts,
+    markdown_search => 1,
   }],
 
 );
@@ -95,12 +103,9 @@ walk_content_tree {
 }
   and do {
 
-    my @essays_glob = glob("content/essays/files/*/*");
     my @categories_glob = glob("content/categories/*/*");
 
     for my $lang (qw/en es de fr/) {
-      push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-        @essays_glob;
       push @{$dependencies{"/categories/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
         @categories_glob if -f "content/categories/index.html.$lang";
     }
