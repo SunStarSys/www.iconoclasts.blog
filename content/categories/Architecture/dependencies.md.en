@@ -1,0 +1,11 @@
+---
+categories: Orion, Architecture
+closed: commentABAA, commentAAAA, commentAAAAAA
+dependencies: '*.md.en'
+important: commentAAAAAA
+keywords: architecture,incremental,website,generation,builds,dependencies,topology,wiki,graph,smart
+status: verified=15236
+title: What Is <em>Smart Content Dependency Management&trade;</em> All About?
+
+---
+{% ssi `/joe/dependencies.md.en` %}
