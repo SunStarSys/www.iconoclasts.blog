@@ -8,11 +8,11 @@
     <meta name="author" content="Joe Schaefer">
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
     <meta name="theme-color" content="black">
-        {% ifequal path|dirname "/orion" %}
+        {% if path|starts_with:"/blogs" %}
 	<meta property="og:image" content="/images/sunstar-orion-symbol-linear.png">
 	{% else %}
 	<meta property="og:image" content="/images/sunstarstaronly.png">
-	{% endifequal %}
+	{% endif %}
     <title>{% block title %}{{ facts.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 	{% if permalink %}
 	<link rel="bookmark" href="https://{{website}}{{path|dirname}}/{{path|basename:0}}.html{{lang}}">
