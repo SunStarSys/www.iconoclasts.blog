@@ -8,11 +8,19 @@
 - path: content/joe
   rules:
     "joe": rw
+    "@svnadmin": rw
     "*": r
 
 - path: content/jennifer
   rules:
     "jennifer": rw
+    "@svnadmin": rw
+    "*": r
+
+- path: content/priti
+  rules:
+    "priti": rw
+    "@svnadmin": rw
     "*": r
 
 - path: lib
