@@ -20,20 +20,17 @@
     endifequal %}{% ifequal lang ".es" %}Preferred Orion Plan{% endifequal
     %}{% ifequal lang ".de" %}Preferred Orion Plan{% endifequal %}{%
     ifequal lang ".fr" %}Preferred Orion Plan{% endifequal %}</label>
-  <input type="radio" id="planPP" name="plan" value="Professional" checked /> &nbsp; <label for="planPP">Professional Plan</label>
-  <input type="radio" id="planBP" name="plan" value="Business" /> &nbsp; <label for="planBP">Business Plan</label>
-  <input type="radio" id="planEP" name="plan" value="Enterprise" /> &nbsp; <label for="planEP">Enterprise Plan</label>
-  <input type="radio" id="planSI" name="plan" value="Server" /> &nbsp; <label for="planSI">Orion Server Install</label>
+  <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Free Blog</label>
 
   <label for="subject">{% ifequal lang ".en" %}Subject{% endifequal %}{% ifequal lang ".es" %}Sujeto{% endifequal %}{% ifequal lang ".de" %}Gegenstand{% endifequal %}{% ifequal lang ".fr" %}Matière{% endifequal %}</label>
-  <input name="subject" id="subject" class="form-control" value="Orion " pattern="Orion.*" required />
+  <input name="subject" id="subject" class="form-control" value="Orion Blog" pattern="Orion.*" required />
 
   <input type="hidden" name="lang" value="{{ lang }}" />
   <button name="submit" class="btn btn-outline-success" value=1 >{% ifequal lang ".en" %}Submit{% endifequal %}{% ifequal lang ".es" %}Enviar{% endifequal %}{% ifequal lang ".de" %}Einreichen{% endifequal %}{% ifequal lang ".fr" %}Soumettre{% endifequal %}</button>
 
   <br><br>
 
-  <label for="editor">{% ifequal lang ".en" %}Message for Sales{% endifequal %}{% ifequal lang ".es" %}Mensaje para el departamento de ventas{% endifequal %}{% ifequal lang ".de" %}Nachricht für die Verkaufsabteilung{% endifequal %}{% ifequal lang ".fr" %}Message pour le service commercial{% endifequal %}</label>
+  <label for="editor">{% ifequal lang ".en" %}Message for Onboarding{% endifequal %}{% ifequal lang ".es" %}Mensaje para el departamento de ventas{% endifequal %}{% ifequal lang ".de" %}Nachricht für die Verkaufsabteilung{% endifequal %}{% ifequal lang ".fr" %}Message pour le service commercial{% endifequal %}</label>
 
   <div id="editor-content">
     <textarea id="editor"></textarea>
