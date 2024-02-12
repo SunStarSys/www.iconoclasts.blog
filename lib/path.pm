@@ -65,6 +65,7 @@ our @patterns = (
   [qr!\.md[^/]*$!, single_narrative => {
     template        => "main.html",
     compress        => 1,
+    preprocess   => 1,
     facts           => $facts,
     markdown_search => 1,
   }],
