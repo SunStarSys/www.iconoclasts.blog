@@ -64,7 +64,8 @@ our @patterns = (
     facts      => $facts,
   }],
 
-  [qr!\.md[^/]*$!, single_narrative => {
+  [qr!\.md[^/]*$!, normalize_links => {
+    view      => [qw/single_narrative/],
     template        => "main.html",
     compress        => 1,
     preprocess   => 1,
