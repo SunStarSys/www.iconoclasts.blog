@@ -38,18 +38,5 @@
     "@svnadmin": rw
     "@frontend": rw
 
-- path: content/archives
-  rules:
-    "@blogs": rw
-    "*": r
-
-- path: content/categories
-  rules:
-    "@blogs": rw
-    "*": r
-
-- path: cgi-bin/search.pl
-  rules:
-    "*":
 
 #acl
