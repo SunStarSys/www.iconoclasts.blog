@@ -2,7 +2,10 @@
 categories: Home Decor
 dependencies: '*.md.en'
 status: draft
-title: Example Home Decor Blog Entry
+title: Sample Home Decor Blog Entry
 
 ---
+
 {% ssi `/priti/sample.md.en` %}
+
+<!-- $Date$ $Author$ $Revision$ -->
