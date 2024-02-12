@@ -2,9 +2,8 @@ Title: Bloggers
 Dependencies: */index.*.en
 Status: draft
 
-
-{% for d in deps %}{% if d.0|starts_with:"/categories" %}
-{% else %} {% if d.0|starts_with:"/archives" %}{% else %}
+{% for d in deps %}{% if d.0|starts_with:"categories" %}
+{% else %} {% if d.0|starts_with:"archives" %}{% else %}
 - [{{d.0|dirname|cut:"/"|title}}]({{d.0}})
 {% endif %}
 {% endif %}{% endfor %}
