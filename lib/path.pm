@@ -41,6 +41,7 @@ our @patterns = (
     template        => "main.html",
     view            => [qw/single_narrative/],
     compress        => 1,
+    preprocess    => 1,
     facts           => $facts,
     markdown_search => 1,
   }],
@@ -48,6 +49,7 @@ our @patterns = (
   [qr!^/[^/]+/([^/]+)\.md[^/]*$!, snippet => {
     template        => "blog.html",
     view            => [qw/normalize_links single_narrative/],
+    preprocess => 1,
     compress        => 1,
     facts           => $facts,
     archive_root    => "/archives",
