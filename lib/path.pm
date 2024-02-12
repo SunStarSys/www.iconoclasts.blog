@@ -37,9 +37,8 @@ our @patterns = (
     facts      => $facts,
   }],
 
-  [qr!/index.md[^/]*$!, normalize_links => {
+  [qr!/index.md[^/]*$!, single_narrative => {
     template        => "main.html",
-    view            => [qw/single_narrative/],
     compress        => 1,
     preprocess    => 1,
     facts           => $facts,
@@ -48,7 +47,7 @@ our @patterns = (
 
   [qr!^/[^/]+/([^/]+)\.md[^/]*$!, snippet => {
     template        => "blog.html",
-    view            => [qw/normalize_links single_narrative/],
+    view            => [qw/single_narrative/],
     preprocess => 1,
     compress        => 1,
     facts           => $facts,
@@ -59,13 +58,12 @@ our @patterns = (
   }],
 
   [qr!^/(categories|archives)/.*\.md[^/]*!, memoize => {
-    view       => [qw/set_template_from_capture ssi normalize_links snippet single_narrative/],
+    view       => [qw/set_template_from_capture ssi snippet single_narrative/],
     compress   => 1,
     facts      => $facts,
   }],
 
-  [qr!\.md[^/]*$!, normalize_links => {
-    view      => [qw/single_narrative/],
+  [qr!\.md[^/]*$!, single_narrative => {
     template        => "main.html",
     compress        => 1,
     preprocess   => 1,
