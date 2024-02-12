@@ -1,5 +1,5 @@
 Title: Bloggers
-Dependencies: /*/index.*.en
+Dependencies: */index.*.en
 Status: draft
 
 {% for d in deps %}{% if d.0|cut:"/"|starts_with:"categories" %}
