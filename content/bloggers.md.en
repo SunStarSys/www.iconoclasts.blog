@@ -2,7 +2,7 @@ Title: Bloggers
 Dependencies: */index.*.en
 Status: draft
 
-1. {% for d in deps %}{% if d.0|cut:"/"|starts_with:"categories" %}
+{% for d in deps %}{% if d.0|cut:"/"|starts_with:"categories" %}
 {% else %} {% if d.0|cut:"/"|starts_with:"archives" %}{% else %}
 - [{{d.0|dirname|cut:"/"|title}}]({{d.0|dirname}})
 {% endif %}
