@@ -21,7 +21,7 @@ div.jumbotron div.right {
 
 p.editormd-tex {
 	text-align: center;
-	color: #FEC93F;
+	color: cyan;
 }
 
 .katex {
@@ -142,8 +142,4 @@ pre {
 	border: 1px solid #ddd;
 	border-radius: 3px;
 	padding: 10px;
-}
-
-p.editormd-tex {
-    color: cyan;
 }
