@@ -62,7 +62,7 @@
                 href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">{% ifequal lang ".en" %}Orion Pricing Plans{% endifequal %}{% ifequal lang ".es" %}Planes Orion{% endifequal %}{% ifequal lang ".de" %}Orion-Pläne{% endifequal %}{% ifequal lang ".fr" %}Plans Orion{% endifequal %}</a></li>
             </ul>
           </li>
-          <li class="nav-item{% if path|starts_with"/open-source.md" %}
+          <li class="nav-item{% if path|starts_with:"/open-source.md" %}
             active
             {% endif %}"><a class="nav-link" href="/open-source">{% ifequal lang ".en" %}Open Source{% endifequal %}{% ifequal lang ".es" %}Fuente abierta{% endifequal %}{% ifequal lang ".de" %}Open Source{% endifequal %}{% ifequal lang ".fr" %}Open source{% endifequal %}</a></li>
           <li class="nav-item dropdown">
