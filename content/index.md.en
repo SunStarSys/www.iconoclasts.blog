@@ -18,28 +18,6 @@ Status: draft
 
 <br>
 
-<h2 class="card-title">
-<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> released to CPAN!
-</h2>
-
-<br>
-
-<h2 class="card-title">
-
-[Algorithm::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) released to CPAN!
-
-</h2>
-
-<br>
-
-<h2 class="card-title">SunStar Systems <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> released!</h2>
-
-<br>
-
-<h2 class="card-title">SunStar Systems pty {{facts.releases.pty.tag}} released!</h2>
-
-<p class="card-text">With the current release of Ubuntu 22.04, please upgrade your <span class="text-info">pty</span> installation to <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, which includes native support for <span class='text-info'>python 3.10.y</span>.</p>
-
 </div>
 </div>
 <br>
