@@ -37,12 +37,12 @@
           {% ifequal lang ".es" %}a las{% endifequal %}
           {% ifequal lang ".fr" %}à{% endifequal %}
           {{meta|vcs_time:lang}}
-          </em></small></div>
+          </em></small>
+	</div>
     <div class="card-body">
       <h3 class="card-title"><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=log={{
       revision }};lang={{lang}};markdown_search={{markdown_search}}">Log</a></h3>
       <pre>{{ log|safe }}</pre>
-    </div>
   </div>
 
 {% filter markdown %}
