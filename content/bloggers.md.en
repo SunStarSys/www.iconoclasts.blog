@@ -1,10 +1,10 @@
 Title: Bloggers
-Dependencies: */index.*.en
+Dependencies: /*/index.*.en
 Status: draft
 
 {% for d in deps %}{% if d.0|cut:"/"|starts_with:"categories" %}
 {% else %} {% if d.0|cut:"/"|starts_with:"archives" %}{% else %}
-- [{{d.0|dirname|cut:"/"|title}}]({{d.0|dirname|cut:"/"}})
+- [{{d.0|dirname|cut:"/"|title}}]({{d.0|dirname}})
 {% endif %}
 {% endif %}{% endfor %}
 <!-- $Date$ $Author$ $Revision$ -->
