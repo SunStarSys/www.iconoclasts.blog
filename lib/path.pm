@@ -37,24 +37,24 @@ our @patterns = (
     facts      => $facts,
   }],
 
-  [qr!/index.md[^/]*$!, single_narrative => {
-    template        => "main.html",
-    compress        => 1,
-    preprocess    => 1,
-    facts           => $facts,
-    markdown_search => 1,
-  }],
-
   [qr!^/[^/]+/([^/]+)\.md[^/]*$!, snippet => {
     template        => "blog.html",
     view            => [qw/single_narrative/],
-    preprocess => 1,
+    preprocess      => 1,
     compress        => 1,
     facts           => $facts,
     archive_root    => "/archives",
     category_root   => "/categories",
-    markdown_search => 1, # search markdown instead of built html
+    markdown_search => 1,
     permalink       => 1,
+  }],
+
+  [qr!/index.md[^/]*$!, single_narrative => {
+    template        => "main.html",
+    compress        => 1,
+    preprocess      => 1,
+    facts           => $facts,
+    markdown_search => 1,
   }],
 
   [qr!^/(categories|archives)/.*\.md[^/]*!, memoize => {
@@ -66,7 +66,7 @@ our @patterns = (
   [qr!\.md[^/]*$!, single_narrative => {
     template        => "main.html",
     compress        => 1,
-    preprocess   => 1,
+    preprocess      => 1,
     facts           => $facts,
     markdown_search => 1,
   }],
