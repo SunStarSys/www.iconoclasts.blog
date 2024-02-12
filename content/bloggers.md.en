@@ -1,0 +1,8 @@
+Title: Bloggers
+Dependencies: */index.*.en
+Status: draft
+
+{% for d in deps %}
+- [{{d.0|dirname|cut:"/"|title}}]({{d.0}})
+{% endfor %}
+<!-- $Date$ $Author$ $Revision$ -->
