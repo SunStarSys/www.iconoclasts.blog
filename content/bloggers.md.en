@@ -4,7 +4,7 @@ Status: draft
 
 {% for d in deps %}{% if d.0|cut:"/"|starts_with:"categories" %}
 {% else %} {% if d.0|cut:"/"|starts_with:"archives" %}{% else %}
-- [{{d.0|dirname|cut:"/"|title}}]({{d.0|dirname}})
+- [{{d.0|dirname|cut:"/"|title}}]({{d.0|dirname|cut:"/"}})
 {% endif %}
 {% endif %}{% endfor %}
 <!-- $Date$ $Author$ $Revision$ -->
