@@ -151,14 +151,14 @@
   <script blocking="render" async type="text/javascript">
     if (typeof(editormd) === "undefined") {
         mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
-        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
+        mermaid.initialize({theme: "light", startOnLoad: true, securityLevel: "loose"});
         $(".flowchart").flowChart();
         $(".sequence-diagram").sequenceDiagram();
         for (const e of $("body").find(".graphviz").toArray()) {
             d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
             e.innerHTML = ""
         }
-        $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
+        $("body").find("pre").parent().addClass("editormd-preview-theme-light");
         CodeMirror.colorize();
     }
     if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
