@@ -37,9 +37,9 @@ our @patterns = (
     facts      => $facts,
   }],
 
-  [qr!/index.md[^/]*$!, single_narrative => {
+  [qr!/index.md[^/]*$!, normalize_links => {
     template        => "main.html",
-    view            => [qw/normalize_links/],
+    view            => [qw/single_narrative/],
     compress        => 1,
     facts           => $facts,
     markdown_search => 1,
