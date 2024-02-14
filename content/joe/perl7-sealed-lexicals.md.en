@@ -94,7 +94,7 @@ Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should 
 
 There is only one snag: `:Sealed` subs aren't reentrant without patching line 2460 in `pad.c` in your `perl` build to read
 
-```c
+```clike
         else if ((uint64_t)(names[ix]) > 1024*1024 && PadnamePV(names[ix])) {
 ```
 
