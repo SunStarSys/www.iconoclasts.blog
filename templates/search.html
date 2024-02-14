@@ -45,11 +45,9 @@
       <pre>{{ log|safe }}</pre>
   </div>
 
-{% filter markdown %}
-```diff
+<pre class="text-primary"><code data-lang="diff">
 {{ diff }}
-```
-{% endfilter %}
+</code></pre>
 
 <pre class="text-primary">{{ blog }}</pre>
 </div>
@@ -204,10 +202,11 @@
 
 ## [Diff](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}})
 
-```diff
-{{ diff }}
-```
   {% endfilter %}
+<pre class="text-primary"><code data-lang="diff">
+{{ diff }}
+</code></pre>
+
   {% endif %}
   {% endifequal %}
   {% if specials %}
