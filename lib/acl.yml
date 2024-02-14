@@ -23,6 +23,12 @@
     "@svnadmin": rw
     "*": r
 
+- path: content/jhe
+  rules:
+    "jhe": rw
+    "@svnadmin": rw
+    "*": r
+
 - path: lib
   rules:
     "@svnadmin": rw
