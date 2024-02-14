@@ -2,10 +2,14 @@ Title: Bloggers
 Dependencies: /*/index.*.en
 Status: draft
 
-{% for d in deps %}{% if d.0|starts_with:"/categories" %}
-{% else %} {% if d.0|starts_with:"/archives" %}{% else %}
+{% for d in deps %}
+  {% if d.0|starts_with:"/categories" %}
+  {% else %}
+    {% if d.0|starts_with:"/archives" %}
+    {% else %}
 - [{{d.1.headers.title}}]({{d.0|dirname}}) &mdash; {{d.1.content|lede}} <small><em>on {{d.1.content|vcs_date}}</em></small>
-{% endif %}
-{% endif %}{% endfor %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
 <!-- $Date$ $Author$ $Revision$ -->
