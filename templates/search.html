@@ -47,7 +47,7 @@
 
 {% filter markdown %}
 ```diff
-{{ diff|safe }}
+{{ diff }}
 ```
 {% endfilter %}
 
@@ -205,7 +205,7 @@
 ## [Diff](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}})
 
 ```diff
-{{ diff|safe }}
+{{ diff }}
 ```
   {% endfilter %}
   {% endif %}
