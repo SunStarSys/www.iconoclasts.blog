@@ -1,10 +1,10 @@
-Status: verified=17456
+Status: verified=17459
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
 Keywords: apache,httpd,mod_apreq2,libapreq2
 
-For the past 25 years, I have been the lead developer of the libapreq2 subproject within the [Apache HTTPd Server](https://httpd.apache.org) Parent Project. The original idea of `libapreq` as a safe/performant HTML form and Cookie parsing library came out of a collaboration between Lincoln Stein and Doug MacEachern in the late 90s.
+For the past 25 years, I have been the lead developer of the libapreq2 subproject within the [Apache HTTPd Server](https://httpd.apache.org) Parent Project. The original idea of `libapreq`, as a safe/performant [HTML form](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) and [Cookie](https://datatracker.ietf.org/doc/html/rfc6265) parsing library, came out of a collaboration between Lincoln Stein and Doug MacEachern in the late 90s.
 
 It was my vision back then to transform the library into a generic, non-Perl related `C` library that would support language bindings from other programming languages, which is why I pushed for the project to be [homed](https://httpd.apache.org/apreq) under the HTTPd umbrella instead of the [Apache-Perl](https://perl.apache.org/) project.
 
@@ -12,11 +12,11 @@ While this vision was wildly successful, with language bindings available for se
 
 What happened? Philip Gollucci, a Perl/FreeBSD colleague of mine at the time, started agitating that we promote the project to be released from inside the HTTPd server itself. What {# lede #}Philip didn't know very well back then was how utterly [peevish, vapid, and territorial](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) that team had become{# lede #}, which would have meant having to collaborate with them directly on [user-facing decisions](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) about the code base.
 
-In 2012, Philip got what he wanted and I stopped resisting, so he forked the existing project and copied the C library components into HTTPd core.
+In 2012, Philip got what he wanted and I stopped resisting, so he forked the existing project and copied the `C` library components into HTTPd core.
 
 In 2016 I resigned from the Foundation en masse. You can guess the reasons.
 
-In 2020 or so, Google's Security Team took advantage of an alpha release of httpd 2.5 by fuzzing its 8 year old copy of apreq. It found a few hotspots that needed repair.
+In 2020 or so, Google's Security Team took advantage of an alpha release of httpd 2.5 by fuzzing its 8 year old copy of `apreq2`. It found a few hotspots that needed repair.
 
 Instead of having the courtesy of reaching out to me, or anyone else involved in development of apreq, a junior engineer on the HTTPd team went about the business of "bug fixing" the vulnerabilities Google found. You can see a record of his trial and error work in every release since then.
 
