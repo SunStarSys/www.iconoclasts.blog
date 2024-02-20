@@ -8,8 +8,7 @@ For the past 25 years, I have been the lead developer of the libapreq2 subprojec
 
 It was my vision back then to transform the library into a generic, non-Perl related `C` library that would support language bindings from other programming languages, which is why I pushed for the project to be homes under the HTTPd umbrella instead of the Apache-Perl project.
 
-While this vision was wildly successful, with language bindings available for several languages like `Perl`, `TCL`, `R`, etc., ever since about 2010 it has proven tragic for the [existing user community]
-(https://webtechsurvey.com/technology/mod_apreq2) consisting of all of them, not just `Perl`.
+While this vision was wildly successful, with language bindings available for several languages like `Perl`, `TCL`, `R`, etc., ever since about 2010 it has proven tragic for the [existing user community](https://webtechsurvey.com/technology/mod_apreq2) consisting of all of them, not just `Perl`.
 
 What happened? Philip Gollucci, a Perl/FreeBSD colleague of mine at the time, started agitating that we promote the project to be released from inside the HTTPd server itself. What {# lede #}Philip didn't know very well back then was how utterly vapid and territorial that team had become{# lede #}, which would have meant having to collaborate with them directly on user-facing decisions about the code base.
 
