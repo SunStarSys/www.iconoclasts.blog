@@ -1,4 +1,4 @@
-Status: verified=17453
+Status: verified=17456
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -26,7 +26,7 @@ If you are wondering how something with a broken regression test winds up on [CP
 
 Long story short, [they commented out the test](http://svn.apache.org/viewvc?view=revision&revision=1903489) and shipped it anyway, and called it a Security Release that [fixed a vulnerability every prior release was susceptible to](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
-Why do I care now? Because I'm the sucker users reach out to for answers as a known subject matter expert.
+Why do I care now? Because I'm the sucker [users reach out to for answers](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) as a known subject matter expert.
 
 This sucks, but I'm sorry to tell you that my days wearing the Superman cape at Apache ended 8 years ago.
 <!-- $Date$ $Author$ $Revision$ -->
