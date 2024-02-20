@@ -20,7 +20,7 @@ In 2020 or so, Google's Security Team took advantage of an alpha release of http
 
 Instead of having the courtesy of reaching out to me, or anyone else involved in development of apreq, a junior engineer on the HTTPd team went about the business of "bug fixing" the vulnerabilities Google found. You can see a record of his trial and error work in every release since then.
 
-But the coup de grace was the 2022 release of 2.17, wherein the rookie developer [purposely introduced a fatal bug into the codebase](http://svn.apache.org/viewvc?view=revision&revision=1895107), breaking a fifteen year old regression test.
+But the coup de grace was the 2022 release of 2.17, wherein the rookie developer [purposely introduced a fatal bug into the codebase](http://svn.apache.org/viewvc?view=revision&revision=1895107), breaking [a fifteen year old regression test](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
 If you are wondering how something with a broken regression test winds up on [CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2), you'll have to look into how RELENG is done in the server project.
 
