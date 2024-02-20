@@ -1,8 +1,14 @@
-Status: verified=17465
+Status: verified=17468
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
 Keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
+
+<div class="right">
+
+![tarred and feathered](https://www.apache.org/images/feather.png)
+
+</div>
 
 For the past 25 years, I have been the lead developer of the libapreq2 subproject within the [Apache HTTPd Server](https://httpd.apache.org) Parent Project. The original idea of `libapreq`, as a safe/performant [HTML form submission](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) and [Cookie](https://datatracker.ietf.org/doc/html/rfc6265) parsing library, came out of a collaboration between Lincoln Stein and Doug MacEachern in the late 90s.
 
