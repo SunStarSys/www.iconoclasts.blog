@@ -4,7 +4,7 @@ Dependencies: *.md.en
 Categories: Apache, Perl
 Keywords: apache,httpd,mod_apreq2,libapreq2
 
-For the past 25 years, I have been the lead developer of the libapreq2 subproject within the Apache HTTPd Server Parent Project. The original idea of `libapreq` as a safe/performant HTML form and Cookie parsing library came out of a collaboration between Lincoln Stein and Doug MacEachern in the late 90s.
+For the past 25 years, I have been the lead developer of the libapreq2 subproject within the [Apache HTTPd Server](https://httpd.apache.org) Parent Project. The original idea of `libapreq` as a safe/performant HTML form and Cookie parsing library came out of a collaboration between Lincoln Stein and Doug MacEachern in the late 90s.
 
 It was my vision back then to transform the library into a generic, non-Perl related `C` library that would support language bindings from other programming languages, which is why I pushed for the project to be [homed](https://httpd.apache.org/apreq) under the HTTPd umbrella instead of the [Apache-Perl](https://perl.apache.org/) project.
 
