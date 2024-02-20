@@ -10,7 +10,7 @@ It was my vision back then to transform the library into a generic, non-Perl rel
 
 While this vision was wildly successful, with language bindings available for several languages like Perl, TCL, R, etc, ever since about 2010 its proven tragic for the existing user community consisting of all of them, not just Perl.
 
-What happened? Philip Gollucci, a Perl/FreeBSD olleague of mine at the time, started agitating that we promote the project to be released from inside the HTTPd server itself. What Philip didnât know very well back then was how utterly vapid and territorial that team had become, which would have meant having to collaborate with them directly on user-facing decisions about the code base.
+What happened? Philip Gollucci, a Perl/FreeBSD olleague of mine at the time, started agitating that we promote the project to be released from inside the HTTPd server itself. What {# lede #}Philip didn't know very well back then was how utterly vapid and territorial that team had become{# lede #}, which would have meant having to collaborate with them directly on user-facing decisions about the code base.
 
 In 2012, Philip got what he wanted and I stopped resisting, so he forked the existing project and copied the C library components into HTTPd core.
 
