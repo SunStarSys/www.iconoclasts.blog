@@ -1,0 +1,32 @@
+Status: draft
+Title: HTTPd Devs Considered Harmful
+Dependencies: *.md.en
+Categories: Apache, Perl
+Keywords: apache,httpd,mod_apreq2,libapreq2
+
+For the past 25 years, I have been the lead developer of the libapreq2 subproject within the Apache HTTPd Server Parent Project. The original idea of libapreq as a safe/performant HTML form and Cookie parsing library came out of a collaboration between Lincoln Stein and Doug MacEachern in the late 90s.
+
+It was my vision back then to transform the library into a generic, non-Perl related C library that would support language bindings from other programming languages, which is why I pushed for the project to be homes under the HTTPd umbrella instead of the Apache-Perl project.
+
+While this vision was wildly successful, with language bindings available for several languages like Perl, TCL, R, etc, ever since about 2010 its proven tragic for the existing user community consisting of all of them, not just Perl.
+
+What happened? Philip Gollucci, a Perl/FreeBSD olleague of mine at the time, started agitating that we promote the project to be released from inside the HTTPd server itself. What Philip didnât know very well back then was how utterly vapid and territorial that team had become, which would have meant having to collaborate with them directly on user-facing decisions about the code base.
+
+In 2012, Philip got what he wanted and I stopped resisting, so he forked the existing project and copied the C library components into HTTPd core.
+
+In 2016 I resigned from the Foundation en masse. You can guess the reasons.
+
+In 2020 or so, Googleâs Security Team took advantage of an alpha release of httpd 2.5 by fuzzing its 8 year old copy of apreq. It found a few hotspots that needed repair.
+
+Instead of having the courtesy of reaching out to me, or anyone else involved in development of apreq, a junior engineer on the HTTPd team went about the business of âbug fixingâ the vulnerabilities Google found. You can see a record of his trial and error work in every release since then.
+
+But the coup de grace was the 2022 release of 2.17, wherein the rookie developer purposely introduced a fatal bug into the codebase, breaking a fifteen year old regression test.
+
+If you are wondering how something with a broken regression test winds up on CPAN, youâll have to look into how RELENG is done in the server project.
+
+Long story short, they commented out the test and shipped it anyway, and called it a Security Release that fixed a vulnerability every prior release was susceptible to.
+
+Why do I care now? Because Iâm the sucker users reach out to for answers as a known subject matter expert.
+
+This sucks, but Iâm sorry to tell you that my days wearing the Superman cape at Apache ended 8 years ago.
+<!-- $Date$ $Author$ $Revision$ -->
