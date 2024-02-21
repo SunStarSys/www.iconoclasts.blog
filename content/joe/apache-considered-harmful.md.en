@@ -1,4 +1,4 @@
-Status: verified=17558
+Status: verified=17561
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -31,6 +31,12 @@ But the coup de grace was the 2022 release of [2.17](https://www.google.com/sear
 If you are wondering how something with a broken regression test winds up on [CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2), you'll have to look into how [RELENG](https://httpd.apache.org/dev/release.html) is done in the server project.
 
 Long story short, [they commented out the test](http://svn.apache.org/viewvc?view=revision&revision=1903489) and shipped it anyway, and called it a Security Release that [fixed a vulnerability every prior release was susceptible to](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
+
+<div class="right">
+
+![Superman Logo](apache-considered-harmful.page/superman.jpg)
+
+</div>
 
 Why do I care now? Because I'm the sucker [users reach out to for answers](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) as a known subject matter expert.
 
