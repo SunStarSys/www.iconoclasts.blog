@@ -81,6 +81,12 @@
     "@svnadmin": rw
     "@security": rw
 
+- path: lib/trigger-site-build.txt
+  rules:
+    "@bloggers": rw
+    "@staff": rw
+    "@svnadmin": rw
+
 - path: templates
   rules:
     "@svnadmin": rw
