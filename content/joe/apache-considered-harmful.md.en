@@ -1,4 +1,4 @@
-Status: verified=17579
+Status: verified=17582
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -22,9 +22,9 @@ While this vision was wildly successful, with language bindings available for se
 
 What happened? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci), a Perl/FreeBSD colleague of mine at the time, started agitating that we promote the project to be released from inside the HTTPd server itself. What {# lede #}Philip didn't know very well back then was how utterly [peevish, vapid, and territorial](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) that team had become{# lede #}, which would have meant having to collaborate with them directly on [user-facing decisions](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) about the code base.
 
-## Fallout
-
 In 2012, Philip got what he wanted and I stopped resisting, so he forked the existing project and copied the `C` library components into HTTPd core.
+
+## Fallout
 
 In 2016 I resigned from the Foundation en masse. You can guess the reasons.
 
