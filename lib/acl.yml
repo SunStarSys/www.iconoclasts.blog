@@ -35,6 +35,30 @@
     "@svnadmin": rw
     "*": r
 
+- path: content/esha
+  rules:
+    "esha": rw
+    "@svnadmin": rw
+    "*": r
+
+- path: content/herkulz
+  rules:
+    "herkulz": rw
+    "@svnadmin": rw
+    "*": r
+
+- path: content/brook
+  rules:
+    "brook": rw
+    "@svnadmin": rw
+    "*": r
+
+- path: content/mousdrvr
+  rules:
+    "mousdrvr": rw
+    "@svnadmin": rw
+    "*": r
+
 - path: lib
   rules:
     "@svnadmin": rw
