@@ -1,4 +1,4 @@
-Status: verified=17570
+Status: verified=17573
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -10,13 +10,19 @@ Keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 
 </div>
 
+## Background
+
 For the past 25 years, I have been the lead developer of the libapreq2 subproject within the [Apache HTTPd Server](https://httpd.apache.org) Parent Project. The original idea of `libapreq`, as a safe/performant [HTML form submission](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) and [Cookie](https://datatracker.ietf.org/doc/html/rfc6265) parsing library, came out of a collaboration between Lincoln Stein and Doug MacEachern in the late 90s.
 
 It was my vision back then to transform the library into a generic, non-Perl related `C` library that would support language bindings from other programming languages, which is why I pushed for the project to be [homed](https://httpd.apache.org/apreq) under the HTTPd umbrella instead of the [Apache-Perl](https://perl.apache.org/) project.
 
+## Storm Clouds Gathering
+
 While this vision was wildly successful, with language bindings available for several languages like [`Perl`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache), etc., ever since about 2010 it has proven tragic for the [existing user community](https://webtechsurvey.com/technology/smod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">consisting of all of them</a>, not just the members of the `Perl` community.
 
 What happened? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci), a Perl/FreeBSD colleague of mine at the time, started agitating that we promote the project to be released from inside the HTTPd server itself. What {# lede #}Philip didn't know very well back then was how utterly [peevish, vapid, and territorial](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) that team had become{# lede #}, which would have meant having to collaborate with them directly on [user-facing decisions](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) about the code base.
+
+## Fallout
 
 In 2012, Philip got what he wanted and I stopped resisting, so he forked the existing project and copied the `C` library components into HTTPd core.
 
@@ -27,6 +33,8 @@ In 2020 or so, Google's Security Team took advantage of an alpha release of http
 Instead of having the courtesy of reaching out to  Philip, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann), myself (@joesuf4), or anyone else involved in the development of `apreq2`, a junior engineer on the HTTPd team went about the business of "bug fixing" the vulnerabilities Google found. You can see a record of his trial and error work in every release since then.
 
 But the coup de grace was the 2022 release of [2.17](https://www.google.com/search?q=libapreq2-2.17), wherein the rookie developer [purposely introduced a fatal bug into the codebase](http://svn.apache.org/viewvc?view=revision&revision=1895107), breaking [a nineteen year old regression test](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
+
+## Postmortem
 
 If you are wondering how something with a broken regression test winds up on [CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2), you'll have to look into how [RELENG](https://httpd.apache.org/dev/release.html) is done in the server project.
 
