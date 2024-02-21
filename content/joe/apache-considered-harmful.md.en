@@ -1,4 +1,4 @@
-Status: verified=17585
+Status: verified=17591
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -26,7 +26,7 @@ In 2012, Philip got what he wanted and I stopped resisting, so he forked the exi
 
 ## Fallout
 
-In 2016 I resigned from the Foundation en masse. You can guess the reasons.
+In 2018 I resigned from the Foundation en masse. You can guess the reasons.
 
 In 2020 or so, Google's Security Team took advantage of an alpha release of httpd 2.5 by fuzzing its 8 year old copy of `apreq2`. They found a few hotspots that needed repair.
 
