@@ -17,6 +17,12 @@
     "@svnadmin": rw
     "*": r
 
+- path: content/jimjag
+  rules:
+    "jimjag": rw
+    "@svnadmin": rw
+    "*": r
+
 - path: content/priti
   rules:
     "priti": rw
