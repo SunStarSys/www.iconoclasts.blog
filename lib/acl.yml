@@ -29,6 +29,18 @@
     "@svnadmin": rw
     "*": r
 
+- path: content/tommy2tone
+  rules:
+    "tommy2tone": rw
+    "@svnadmin": rw
+    "*": r
+
+- path: content/keerthy
+  rules:
+    "keerthy": rw
+    "@svnadmin": rw
+    "*": r
+
 - path: content/jhe
   rules:
     "jhe": rw
