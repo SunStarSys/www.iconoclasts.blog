@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=17704
+Status: verified=17707
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -220,7 +220,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 ```
 
-As this condition <span class="eqnum"></span> is linear on the weight lattice $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, only an $$L^2$$ orthonormal eigenfunction basis map **which is induced from a volume-preserving invertible linear map between two such indexed, rank $$n$$ weight lattices** will keep the "algebraic/topological" indexed data set $$\set{M^{i,j,k}}$$ invariant.
+As this condition <span class="eqno"></span> is linear on the weight lattice $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, only an $$L^2$$ orthonormal eigenfunction basis map **which is induced from a volume-preserving invertible linear map between two such indexed, rank $$n$$ weight lattices** will keep the "algebraic/topological" indexed data set $$\set{M^{i,j,k}}$$ invariant.
 
 However, in order to apply our [Theorem](#Theorem), it is essential that such a linear map $$B$$ be $$B\in O(n,\Reals)$$ on the weight lattice, because the induced $$L^2$$ eigenfunction basis map
 
@@ -292,7 +292,7 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
   /* automatic line numbering kludge */
   .katex-display { display: table; width: 100% }
   .katex-display>.katex { display: table-cell }
-  body { counter-reset: eqnum }
+  body { counter-reset: eqno }
   .katex-display::before, .katex-display::after {
     width: 5%;
     display: table-cell;
@@ -300,11 +300,11 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 	vertical-align: middle;
   }
   .katex-display::after {
-    counter-increment: eqnum;
-	content: "(" counter(eqnum) ")";
+    counter-increment: eqno;
+	content: "(" counter(eqno) ")";
   }
-  span.eqnum::after {
-    content: "(" counter(eqnum) ")";
+  .eqno::after {
+    content: "(" counter(eqno) ")";
   }
 </style>
 
