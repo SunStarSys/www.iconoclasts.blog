@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=17695
+Status: verified=17698
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -121,7 +121,7 @@ and by uniqueness, we have the following identity
 
 ```math
 \begin{aligned}
-\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\space\space \forall k\geq 0\\
+\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\space\space \forall k\geq 0 \\
 \iff f&=f^2 \space a.e.
 \end{aligned}
 ```
@@ -289,9 +289,9 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 1. <a id="GZ97">[GZ97] Zhou, Gengqiang</a>. "Compactness of isospectral compact manifolds with bounded curvatures." Pacific J. Math. 181:1, (1997): 187–200.
 
 <style type="text/css">
+  /* automatic line numbering kludge */
   .katex-display { display: table; width: 100% }
   .katex-display>.katex { display: table-cell }
-
   body { counter-reset: eqnum }
   .katex-display::before, .katex-display::after {
     width: 5%;
@@ -306,8 +306,6 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
   span.eqnum::after {
     content: "(" counter(eqnum) ")";
   }
-
 </style>
-
 
 <!-- $Date$ $Author$ $Revision$ -->
