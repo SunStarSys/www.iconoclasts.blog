@@ -21,16 +21,12 @@ Keywords: weiner measure,riemann surfaces,probability,geometry
 \begin{aligned}
 Z(t) &= \mu(\Omega_t) = \int_M k_t((x,y),(x,y))\sqrt{g}dxdy + \sum_{\set{\text{closed geodesics }\gamma}} \mu(\Omega_t[\gamma]) \\
 
-\mu(\Omega_t[\gamma]) &= \frac{e^{-||\gamma||^2/2}}{\sqrt{4\pi t}\det(//_{\gamma}(t))}\mu(e^{-t\bra{\gamma}\ket{x}}\Omega_t^0[\gamma]) \text{ by Girsanov}\\
+\mu(\Omega_t[\gamma]) &= e^{-||\gamma||^2/2} \mu(e^{-\ell(\gamma)x(t)}\Omega_t^0[\gamma])\space\text{ by Girsanov}\\
 
-d\mu(e^{-t\bra{\gamma}\ket{x}} \Omega^0_t[\gamma])/dx &= (1 + \frac{tK(\gamma(0))}{4\cdot}+O(t^2))dx \implies\\
+d\mu(e^{-\ell(\gamma)x(t)} \Omega^0_t[\gamma])/\sqrt{g}dxdy &= \frac{1}{\sqrt{4\pi t}\det(I-P_\gamma)}(1 + \frac{tK(x,0)}{6}+O(t^2)) \implies\\
 
-\mu(e^{-t\bra{\gamma}\ket{x}}\Omega^0_t[\gamma]) &= \ell(\gamma)e^{-t\bar{K}(\gamma)/4} + O(t^2)
-
+\mu(e^{\ell(\gamma)x(t)}\Omega^0_t[\gamma]) &= \frac{\ell(\gamma)e^{t\bar{K}(\gamma)/6}}{\sqrt{4\pi t}\det{(I-P_\gamma)}} + O(t^2)
 \end{aligned}
-
-
-
 ```
-<!-- $Date$ $Author$ $Revision$ -->
 
+<!-- $Date$ $Author$ $Revision$ -->
