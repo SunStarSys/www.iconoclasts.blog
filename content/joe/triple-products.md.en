@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=17701
+Status: verified=17704
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -186,7 +186,7 @@ p&\rightarrow\infty \implies\\
 \end{aligned}
 ```
 
-which is a characteristic function of positive measure on each disjoint subset $$\set{x\in M | a_j(x) = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $$a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\N$$, by Equation (3)).
+which is a characteristic function of positive measure on each disjoint subset $$\set{x\in M | a_j(x) = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $$a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\N$$, by Diagram (4)).
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, where $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ has positive measure, and the Lemma is proven in full.
 
