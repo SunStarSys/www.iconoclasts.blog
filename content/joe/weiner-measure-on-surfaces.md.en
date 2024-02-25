@@ -16,4 +16,21 @@ Keywords: weiner measure,riemann surfaces,probability,geometry
 
 ## Stochastic Trace Formula on Negatively Curved Surfaces
 
+
+```math
+\begin{aligned}
+Z(t) &= \mu(\Omega_t) = \int_M k_t((x,y),(x,y))\sqrt{g}dxdy + \sum_{\set{\text{closed geodesics }\gamma}} \mu(\Omega_t[\gamma]) \\
+
+\mu(\Omega_t[\gamma]) &= \frac{e^{-||\gamma||^2/2}}{\sqrt{4\pi t}\det(//_{\gamma}(t))}\mu(e^{-t\bra{\gamma}\ket{x}}\Omega_t^0[\gamma]) \text{ by Girsanov}\\
+
+d\mu(e^{-t\bra{\gamma}\ket{x}} \Omega^0_t[\gamma])/dx &= (1 + \frac{tK(\gamma(0))}{4\cdot}+O(t^2))dx \implies\\
+
+\mu(e^{-t\bra{\gamma}\ket{x}}\Omega^0_t[\gamma]) &= \ell(\gamma)e^{-t\bar{K}(\gamma)/4} + O(t^2)
+
+\end{aligned}
+
+
+
+```
 <!-- $Date$ $Author$ $Revision$ -->
+
