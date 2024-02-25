@@ -14,7 +14,7 @@ Keywords: weiner measure,riemann surfaces,probability,geometry
 
 ## Girsanov Transformation
 
-## Stochastic Trace Formula on Negatively Curved Surfaces
+## Stochastic Trace Formula on Negatively Curved Manifolds
 
 
 ```math
@@ -27,7 +27,7 @@ d\mu(e^{-\ell(\gamma)x(t)} \Omega^0_t[\gamma])/\sqrt{g}dxdy &= \frac{1}{\det(I-P
 
 \implies\\
 
-\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma)e^{t\bar{K}(\gamma)/6}}{\sqrt{2\pi t}\det{(I-P_\gamma)}}(1 + O(t^2))
+\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma)e^{t\bar{K}(\gamma)/6}}{\sqrt{2\pi t}\det{(I-P_\gamma(t))}}(1 + O(t^2))
 \end{aligned}
 ```
 
