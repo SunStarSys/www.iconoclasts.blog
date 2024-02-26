@@ -24,6 +24,9 @@ Keywords: weiner measure,riemann surfaces,probability,geometry
 \begin{aligned}
 Z_{\Delta/2}(t) &= \mu(\Omega_t) = \mu(\Omega^0_t) + \sum_{\set{\text{closed geodesics }\gamma}} \mu(\Omega_t[\gamma]) \\
 
+\mu(\Omega_t^0) &\approx (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2)) \\
+
+
 \mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\mu(e^{\ell(\gamma)x^1(t)}\Omega_t^0[\gamma])\space\text{ by Cameron-Martin}\\
 
 \frac{d\mu(e^{-\ell(\gamma)x^1(t)}
@@ -35,15 +38,10 @@ Z_{\Delta/2}(t) &= \mu(\Omega_t) = \mu(\Omega^0_t) + \sum_{\set{\text{closed geo
 
 \\
 
-&\approx\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t\det{(I-P^N_\gamma)}}}\int_0^{\ell(\gamma_0)}e^{\ell(\gamma)x}e^{-(1-e^{-\ell(\gamma)})x^2/2t}dx \\
+&\approx\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t\det{(I-P^\perp_\gamma)}}}\int_0^{\ell(\gamma_0)}e^{\ell(\gamma)x}e^{-(1-e^{-\ell(\gamma)})x^2/2t}dx \\
 
-&=\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t\det{(I-P^N_\gamma)}}}\int_0^{\ell(\gamma_0)}e^{-\frac{1-e^{-\ell(\gamma)}}{2t}\cdot(x-\ell(\gamma)t/e^{-(1-e^{-\ell(\gamma)})})^2 - 2t \ell(\gamma)^2/(1-e^{-\ell(\gamma)})}dx\\
+&\approx \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t\det{(I-P^\perp_\gamma)}}}\sum_{n=1}^\infty\frac{\ell(\gamma)^{n-1}\ell(\gamma_0)^{n}}{n!}\\
 
-&=\frac{e^{-\ell(\gamma)^2(1/2t-2t/(1-e^{-\ell(\gamma)})}}{\sqrt{2\pi t\det{(I-P^N_\gamma)}}}\int_{-\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}}}^{\ell(\gamma_0)-\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}}}e^{-\frac{1-e^{-\ell(\gamma)}}{2t}u^2}du\\
-
-&=\frac{e^{-\ell(\gamma)^2(1/2t-2t/(1-e^{-\ell(\gamma)})}}{\sqrt{\pi\det{(I-P_\gamma)}}}\int_{-\sqrt{\frac{2t}{1-e^{-\ell(\gamma)}}}\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}}}^{\sqrt{\frac{2t}{1-e^{-\ell(\gamma)}}}(\ell(\gamma_0)-\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}})}e^{-v^2}dv \\
-
-&=\frac{e^{-\ell(\gamma)^2(1/2t-2t/(1-e^{-\ell(\gamma)})}}{\sqrt{\det{(I-P_\gamma)}}} 2(erfc(-\sqrt{\frac{2t}{1-e^{-\ell(\gamma)}}}\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}}) - erfc(\sqrt{\frac{2t}{1-e^{-\ell(\gamma)}}}(\ell(\gamma_0)-\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}})))
 
 \end{aligned}
 ```
