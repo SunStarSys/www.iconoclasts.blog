@@ -24,18 +24,18 @@ Keywords: weiner measure,riemann surfaces,probability,geometry
 \begin{aligned}
 Z_{\Delta/2}(t) &= \mu(\Omega_t) = \mu(\Omega^0_t) + \sum_{\set{\text{closed geodesics }\gamma}} \mu(\Omega_t[\gamma]) \\
 
-\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\mu(e^{-\ell(\gamma)x(t)}\Omega_t^0)\space\text{ by Cameron-Martin}\\
+\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\mu(e^{-\ell(\gamma)x^1(t)}\Omega_t^0)\space\text{ by Cameron-Martin}\\
 
-\frac{d\mu(e^{-\ell(\gamma)x(t)}
- \Omega^0_t)}{dx^1\dots dx^n}\vert_{\vec{x}+\gamma} &= \frac{e^{-\bra{(1-P_{\vec{x}+\gamma})\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}\\
+\frac{d\mu(e^{-\ell(\gamma)x^1(t)}
+ \Omega^0_t)}{\sqrt{g}dx^2\dots dx^n}\vert_{\vec{x}+\gamma} &= \frac{e^{-\bra{(1-P_{\vec{x}+\gamma})\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{(n-1)/2}}\\
 
 \implies\\
 
-\mu(\Omega_t[\gamma]) &= \int_{\Reals^n/\ell(\gamma_0)\Z}\frac{e^{-\bra{(1-P_{\vec{x}+\gamma})\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^n
+\mu(\Omega_t[\gamma]) &= \int_{\Reals^n/\ell(\gamma_0)\Z}\frac{e^{-\ell(\gamma)x^1}e^{-\bra{(1-P_{\vec{x}+\gamma})\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{(n-1)/2}}dx^1 ... dx^n
 
 \\
 
-&\tilde=\frac{e^{-\ell(\gamma)x^1}e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t\det{(I-P_\gamma)}}}
+&\tilde=\frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t\det{(I-P_\gamma)}}}
 \end{aligned}
 ```
 
