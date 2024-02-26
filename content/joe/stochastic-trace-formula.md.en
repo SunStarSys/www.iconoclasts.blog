@@ -43,7 +43,7 @@ Z_{\Delta/2}(t) &= \mu(\Omega_t) = \mu(\Omega^0_t) + \sum_{\set{\text{closed geo
 
 &=\frac{e^{-\ell(\gamma)^2(1/2t-2t/(1-e^{-\ell(\gamma)})}}{\sqrt{\pi\det{(I-P_\gamma)}}}\int_{-\sqrt{\frac{2t}{1-e^{-\ell(\gamma)}}}\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}}}^{\sqrt{\frac{2t}{1-e^{-\ell(\gamma)}}}(\ell(\gamma_0)-\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}})}e^{-v^2}dv \\
 
-&=\frac{e^{-\ell(\gamma)^2(1/2t-2t/(1-e^{-\ell(\gamma)})}}{\sqrt{\det{(I-P_\gamma)}}} 2(erfc((-\sqrt{\frac{2t}{1-e^{-\ell(\gamma)}}}\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}}) - erfc(\sqrt{\frac{2t}{1-e^{-\ell(\gamma)}}}(\ell(\gamma_0)-\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}})))
+&=\frac{e^{-\ell(\gamma)^2(1/2t-2t/(1-e^{-\ell(\gamma)})}}{\sqrt{\det{(I-P_\gamma)}}} 2(erfc(-\sqrt{\frac{2t}{1-e^{-\ell(\gamma)}}}\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}}) - erfc(\sqrt{\frac{2t}{1-e^{-\ell(\gamma)}}}(\ell(\gamma_0)-\ell(\gamma)t/e^{1-e^{-\ell(\gamma)}})))
 
 \end{aligned}
 ```
