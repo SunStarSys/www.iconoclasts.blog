@@ -48,6 +48,28 @@ Z_{\Delta/2}(t) &= \mu(\Omega_t) = \mu(\Omega^0_t) + \sum_{\set{\text{closed geo
 \end{aligned}
 ```
 
-In the $$\dim=2$$ constant curvature case, $$P_{\\vec{x}+\gamma(t)}$$ is a constant coefficient matrix, so the  
+In the $$\dim=2$$ constant curvature case, $$P^\perp_{\\vec{x}+\gamma(t)}$$ is a constant coefficient matrix, so the approximation in Equation (1) is exact.
+
+
+<style type="text/css">
+  /* automatic line numbering kludge */
+  .katex-display { display: table; width: 100% }
+  .katex-display>.katex { display: table-cell }
+  body { counter-reset: eqno }
+  .katex-display::before, .katex-display::after {
+    width: 5%;
+    display: table-cell;
+    text-align: right;
+	vertical-align: middle;
+  }
+  .katex-display::after {
+    counter-increment: eqno;
+	content: "(" counter(eqno) ")";
+  }
+  .eqno::after {
+    content: "(" counter(eqno) ")";
+  }
+</style>
+
 
 <!-- $Date$ $Author$ $Revision$ -->
