@@ -41,9 +41,9 @@ Z_{-\Delta/2}(t) &:= \mu(DM^{-1}\Omega_t) = \mu(DM^{-1}\Omega^0_t) + \sum_{\set{
 \mu(DM^{-1}\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\mu(e^{\ell(\gamma)x^1(t)}DM^{-1}\Omega_t^0[\gamma])\space\text{ by Cameron-Martin}\\
 
 \frac{d\mu(e^{-\ell(\gamma)x^1(t)}
-DM^{-1}\Omega^0_t[\gamma])}{dx^1\dots dx^n}\vert_{\vec{x(\tau)}+\gamma(t)} &= \frac{e^{-\bra{(1-P_{\vec{x(\tau)}+\gamma(t)})\vec{x(\tau)}}\ket{\vec{x(\tau)}}/2t}}{(2 \pi t)^{(n+1)/2}}d\tau\\
+DM^{-1}\Omega^0_t[\gamma])}{dx^1\dots dx^n}\vert_{\vec{x}(\tau)+\gamma(t)} &= \frac{e^{-\bra{(1-P_{\vec{x}(\tau)+\gamma(t)})\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}d\tau\\
 
-\mu(DM^{-1}\Omega_t[\gamma]) &= \frac{e^{\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{DM^{-1}(\Omega^0_t[\gamma])}\frac{e^{-\bra{|1-P_{\vec{x(\tau)}+\gamma(t)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^nd\tau\\
+\mu(DM^{-1}\Omega_t[\gamma]) &= \frac{e^{\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{DM^{-1}(\Omega^0_t[\gamma])}\frac{e^{-\bra{|1-P_{\vec{x}(\tau)+\gamma(t)}|\vec{x}}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^nd\tau\\
 
 \mu(DM^{-1}\Omega_t[\gamma]) &\approx \frac{e^{\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{|1-P_{\gamma(t)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^nd\tau\\
 
@@ -73,6 +73,7 @@ e^{\ell(\gamma)} && 0 \\
 ```
 
 and the approximation $$\approx$$ line in Equation <span class="eqno"></span> is exact:
+
 ```math
 \begin{aligned}
 \mu(DM^{-1}\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)e^{-\ell(\gamma)/2}}{\sqrt{2 \pi t}(1-e^{-\ell(\gamma)})}\\
