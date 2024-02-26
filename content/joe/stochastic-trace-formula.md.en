@@ -22,12 +22,12 @@ Keywords: weiner measure,riemann surfaces,probability,geometry
 
 ```math
 \begin{aligned}
-Z_{\Delta/2}(t) &= \mu(\Omega_t) = \int_M k_t((x,y),(x,y))\sqrt{g}dxdy + \sum_{\set{\text{closed geodesics }\gamma}} \mu(\Omega_t[\gamma]) \\
+Z_{\Delta/2}(t) &= \mu(\Omega_t) = \mu(\Omega^0_t) + \sum_{\set{\text{closed geodesics }\gamma}} \mu(\Omega_t[\gamma]) \\
 
-\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\mu(e^{-\ell(\gamma)x(t)}\Omega_t^0[\gamma])\space\text{ by Cameron-Martin}\\
+\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\mu(e^{-\ell(\gamma)x(t)}\Omega_t^0)\space\text{ by Cameron-Martin}\\
 
 \frac{d\mu(e^{-\ell(\gamma)x(t)}
- \Omega^0_t[\gamma])}{\sqrt{g}dxdy}\vert_{\gamma(t)} &= \frac{1}{\sqrt{2\pi t\det(I-P_\gamma)}}(1 + \frac{tK(\gamma(t))}{6}+O(t^2)) \space\text{by McKean and Singer}\\
+ \Omega^0_t)}{\sqrt{g}dx^1\dots dx^n}\vert_{\vec{x}+\gamma} &= \int_{\Reals^n/\ell(\gamma_0)\Z}\frac{e^{-\bra{(1-P_{\vec{x}+\gamma})\vec{x}\ket{\vec{x}}}/2t}}{(2 \pi t)^{n/2}}dx^1\dots dx^n\\
 
 \implies\\
 
