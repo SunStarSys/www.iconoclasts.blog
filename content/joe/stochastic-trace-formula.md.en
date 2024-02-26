@@ -32,11 +32,9 @@ Z_{\Delta/2}(t) &= \mu(\Omega_t) = \mu(\Omega^0_t) + \sum_{\set{\text{closed geo
 \frac{d\mu(e^{-\ell(\gamma)x^1(t)}
  \Omega^0_t[\gamma])}{\sqrt{g}dx^1\dots dx^n}\vert_{\vec{x}+\gamma} &= \frac{e^{\ell(\gamma)x^1}e^{-\bra{(1-P_{\vec{x}+\gamma})\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}\\
 
-\implies\\
+\text{Fenchel-Nielsen}\implies\\
 
-\mu(\Omega_t[\gamma]) &\approx \frac{e^{\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n/\ell(\gamma_0)\Z}\frac{e^{\ell(\gamma)x^1}e^{-\bra{(1-P_{\vec{x}+\gamma})\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{(n-1)/2}}dx^1 ... dx^n
-
-\\
+\mu(\Omega_t[\gamma]) &= \frac{e^{\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n/\ell(\gamma_0)\Z}\frac{e^{\ell(\gamma)x^1}e^{-\bra{(1-P_{\vec{x}+\gamma})\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{(n-1)/2}}\sqrt{g}dx^1 ... dx^n\\
 
 &\approx\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t\det{(I-P^\perp_\gamma)}}}\int_0^{\ell(\gamma_0)}e^{\ell(\gamma)x}e^{-(1-e^{-\ell(\gamma)})x^2/2t}dx \\
 
