@@ -27,7 +27,7 @@ Z_{\Delta/2}(t) &= \mu(\Omega_t) = \mu(\Omega^0_t) + \sum_{\set{\text{closed geo
 \mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\mu(e^{\ell(\gamma)x^1(t)}\Omega_t^0[\gamma])\space\text{ by Cameron-Martin}\\
 
 \frac{d\mu(e^{-\ell(\gamma)x^1(t)}
- \Omega^0_t[\gamma])}{\sqrt{g}dx^1\dots dx^n}\vert_{\vec{x}+\gamma} &= \frac{e^{\ell(\gamma)x^1}e^{-\bra{(1-P_{\vec{x}+\gamma})\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{(n-1)/2}}\\
+ \Omega^0_t[\gamma])}{\sqrt{g}dx^1\dots dx^n}\vert_{\vec{x}+\gamma} &= \frac{e^{\ell(\gamma)x^1}e^{-\bra{(1-P_{\vec{x}+\gamma})\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}\\
 
 \implies\\
 
