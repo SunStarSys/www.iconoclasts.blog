@@ -26,23 +26,28 @@ Z_{\Delta/2}(t) &= \mu(\Omega_t) = \mu(\Omega^0_t) + \sum_{\set{\text{closed geo
 
 \mu(\Omega_t^0) &= (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2)) \\
 
-
 \mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\mu(e^{\ell(\gamma)x^1(t)}\Omega_t^0[\gamma])\space\text{ by Cameron-Martin}\\
 
 \frac{d\mu(e^{-\ell(\gamma)x^1(t)}
- \Omega^0_t[\gamma])}{\sqrt{g}dx^1\dots dx^n}\vert_{\vec{x}+\gamma} &= \frac{e^{\ell(\gamma)x^1}e^{-\bra{(1-P_{\vec{x}+\gamma})\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}\\
+ \Omega^0_t[\gamma])}{dx^1\dots dx^n}\vert_{\vec{x}+\gamma} &= \frac{e^{\ell(\gamma)x^1}e^{-\bra{(1-P^\perp_{\vec{x}+\gamma})\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}\\
 
-\text{Fenchel-Nielsen}\implies\\
+\mu(\Omega_t[\gamma]) &= \frac{e^{\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{DM^{-1}(\Omega^0_t[\gamma])}\frac{e^{\ell(\gamma)x^1}e^{-\bra{|1-P^\perp_{\vec{x}+\gamma(t)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{(n-1)/2}}dx^1 ... dx^n\\
 
-\mu(\Omega_t[\gamma]) &= \frac{e^{\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n/\ell(\gamma_0)\Z}\frac{e^{\ell(\gamma)x^1}e^{-\bra{|1-P_{\vec{x}+\gamma}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{(n-1)/2}}\sqrt{g}dx^1 ... dx^n\\
+\mu(\Omega_t[\gamma]) &\approx \frac{e^{\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n/\ell(\gamma_0)\Z}\frac{e^{\ell(\gamma)x^1}e^{-\bra{|1-P^\perp_{\gamma(t)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{(n-1)/2}}dx^1 ... dx^n\\
 
-&\approx\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t\det{|I-P^\perp_\gamma|}}}\int_0^{\ell(\gamma_0)}e^{\ell(\gamma)x}e^{-(1-e^{-\ell(\gamma)})x^2/2t}dx \\
+&=\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t\det{|I-P^\perp_\gamma|}}}\int_0^{\ell(\gamma_0)}e^{\ell(\gamma)x}dx \\
+\end{aligned}
+```
 
-&\approx \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t\det{|I-P^\perp_\gamma|}}}\sum_{n=1}^\infty\frac{\ell(\gamma)^{n-1}\ell(\gamma_0)^{n}}{n!}\\
+```math
+\begin{aligned}
+\mu(\Omega_t[\gamma])&\approx \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t\det{|I-P^\perp_\gamma|}}}\sum_{n=1}^\infty\frac{\ell(\gamma)^{n-1}\ell(\gamma_0)^{n}}{n!}\\
 
 &= \frac{e^{-\ell(\gamma)^2/2t}\sqrt{2\sinh{\ell(\gamma)}}}{\sqrt{2\pi t\det{|I-P_\gamma|}}}\frac{2\sinh{\ell(\gamma)\ell(\gamma_0)}}{\ell(\gamma)e^{-\ell(\gamma)/2\cdot(1/2+\ell(\gamma_0))}}
 
 \end{aligned}
 ```
+
+In the $$\dim=2$$ constant curvature case, $$P_{\\vec{x}+\gamma(t)}$$ is a constant coefficient matrix, so the  
 
 <!-- $Date$ $Author$ $Revision$ -->
