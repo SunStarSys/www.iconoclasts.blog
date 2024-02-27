@@ -106,7 +106,7 @@ e^{\ell(\gamma)} && 0 && 0\\
 \det I-P^\perp_{\gamma} &= |1-e^{-\ell(\gamma)/2+i\theta}|^2
 \end{aligned}
 ```
-and since $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$, the approximation in Equation (1) becomes exact:
+and since $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$, the approximation in Equation (1) again becomes exact:
 
 ```math
 \begin{aligned}
