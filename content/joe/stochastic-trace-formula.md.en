@@ -32,9 +32,11 @@ $$\Omega_t[\gamma]$$ is the space of continuous loops on $$M$$ homotopic to $$\g
 
 $$\Omega_t^0[\gamma]$$ is the space of continuous contractible loops on $$M$$ written as offset loops homotopic to $$\gamma$$.
 
+$$Z_{-\Delta/2}(t)$$ is the trace of the heat kernel.
+
 ```math
 \begin{aligned}
-Z_{-\Delta/2}(t) &:= DM_*\mu(\Omega_t) = DM_*\mu(\Omega^0_t) + \sum_{\set{\text{closed geodesics }\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
+Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t) = DM_*\mu(\Omega^0_t) + \sum_{\set{\text{closed geodesics }\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
 
 DM_*\mu(\Omega_t^0) &= (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\space \text{ by McKean-Singer}\\
 
