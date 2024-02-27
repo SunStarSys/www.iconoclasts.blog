@@ -76,7 +76,7 @@ and the approximation $$\approx$$ line in Equation (1) becomes *exact*:
 
 ```math
 \begin{aligned}
-\mu(DM^{-1}\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)e^{-\ell(\gamma)/2}}{\sqrt{2 \pi t}(1-e^{-\ell(\gamma)})}\\
+DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)e^{-\ell(\gamma)/2}}{\sqrt{2 \pi t}(1-e^{-\ell(\gamma)})}\\
 
 \gamma(t) = \gamma_0(kt)\implies \\
 
