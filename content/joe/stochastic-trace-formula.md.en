@@ -36,7 +36,7 @@ in the Normal Bundle over $$\gamma_0$$. Our curvature constraints imply Horocycl
 
 $$P_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ is the parallel-transport matrix along the smooth curve homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is aperiodic in general, yet it revisits its starting point at time $$t$$, making the computation of $$P$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. On $$\gamma$$, $$P$$ maps the Normal Bundle to itself, so can be restricted to it as $$P^\perp_{\gamma(\tau)}, 0 \leq \tau \leq \ell(\gamma_0)$$, which is a strict **contraction map** under the curvature constraints.
 
-$$Z_{-\Delta/2}(t)$$ is the trace of the heat kernel.
+$$Z_{-\Delta/2}(t):=\sum_{j=0}^\infty e^{-\lambda_i t/2}$$ is the trace of the heat kernel. Hence
 
 ```math
 \begin{aligned}
