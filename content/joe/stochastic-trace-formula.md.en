@@ -35,7 +35,7 @@ $$DM^{-1}\Omega_t^0[\gamma]$$ is the preimage of continuous contractible loops o
 in the Normal Bundle over $$\gamma_0$$.
 
 
-$$P_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ is the parallel-transport matrix along the smooth curve homotopic to $$\gamma: DM(\vec{x}(\tau) + s\ell(\gamma)\vec{e}^1), 0\leq s \leq 1$$. The curve is aperiodic in general, yet it revisits its starting point at time $$t$$.
+$$P_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ is the parallel-transport matrix along the smooth curve homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is aperiodic in general, yet it revisits its starting point at time $$t$$.
 
 $$Z_{-\Delta/2}(t)$$ is the trace of the heat kernel.
 
