@@ -69,7 +69,7 @@ e^{\ell(\gamma)} && 0 \\
 \implies \\
 
 \det|I-P_{\gamma(t)}| &= (e^{\ell(\gamma)} - 1)(1 - e^{-\ell(\gamma)})\\
-&= e^{\ell(\gamma)}(1-e^{\ell(\gamma)})^2
+&= (e^{\ell(\gamma)/2}-e^{-\ell(\gamma)/2})^2
 
 \end{aligned}
 ```
@@ -78,7 +78,7 @@ and the approximation $$\approx$$ line in Equation (1) becomes *exact*:
 
 ```math
 \begin{aligned}
-DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)e^{-\ell(\gamma)/2}}{\sqrt{2 \pi t}(1-e^{-\ell(\gamma)})}\\
+DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\ell(\gamma)/2} -e^{-\ell(\gamma)/2})}\\
 
 \gamma(t) = \gamma_0(kt)\implies \\
 
