@@ -74,31 +74,13 @@ P_{DM(\vec{x}+\ell(\gamma)\vec{e}^1)} &=
 e^{\ell(\gamma)} && 0\\
 0 && e^{-\ell(\gamma)} \\
 \end{pmatrix}\\
-\end{aligned}
-```
-
-In the $$\dim=3$$ hyperbolic manifold case, we use a complex coordinate on the normal bundle to write
-
-```math
-\begin{aligned}
-P_{DM(\vec{x}+\ell(\gamma)\vec{e}^1)} &=
-\begin{pmatrix}
-e^{\ell(\gamma)} && 0\\
-0 && e^{-\ell(\gamma)/2+i\theta} \\
-\end{pmatrix}\\
-
-\end{aligned}
-```
-In both hyperbolic cases, since
-```math
-\begin{aligned}
+\implies&\\
 (e^{\ell(\gamma)}-1)\det I-P^\perp_{\gamma} &= (e^{\ell(\gamma)} - 1)(1 - e^{-\ell(\gamma)})\\
 &= (e^{\ell(\gamma)/2}-e^{-\ell(\gamma)/2})^2\\
 \end{aligned}
 ```
 
-
-the approximation $$\approx_{t\rightarrow 0}$$ line in Equation (1) becomes *exact*:
+and the approximation $$\approx_{t\rightarrow 0}$$ line in Equation (1) becomes *exact*:
 
 ```math
 \begin{aligned}
@@ -113,6 +95,35 @@ DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2
 
 \end{aligned}
 ```
+In the $$\dim=3$$ hyperbolic manifold case, we use complex coordinates $$(z,\bar{z})$$ on the normal bundle to write
+
+```math
+\begin{aligned}
+P_{DM(\vec{x}+\ell(\gamma)\vec{e}^1)} &=
+\begin{pmatrix}
+e^{\ell(\gamma)} && 0 && 0\\
+0 && e^{-\ell(\gamma)/2+i\theta} && 0 \\
+0 && 0 && e^{-\ell(\gamma)/2-i\theta} \\
+\end{pmatrix}\\
+
+z(\gamma,\theta)=1-e^{-\ell(\gamma)/2+i\theta}
+
+\implies& \\
+(e^{\ell(\gamma)}-1)\det I-P^\perp_{\gamma} &= (e^{-\ell(\gamma)}-1)|z|^2
+\end{aligned}
+```
+and again the approximation in Equation (1) becomes exact:
+
+```math
+\begin{aligned}
+DM_*\mu(\Omega_t[\gamma]) &=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t (e^{k\ell(\gamma_0)}-1)}|1-e^{k(-\ell(\gamma_0)/2+i\theta(\gamma_0))}|}\\
+
+&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t (1-e^{-k\ell(\gamma_0)})}|e^{k\ell(\gamma_0)/2}-e^{ik\theta(\gamma_0))}|}\\
+
+\end{aligned}
+```
+
+
 
 <style type="text/css">
   /* automatic line numbering kludge */
