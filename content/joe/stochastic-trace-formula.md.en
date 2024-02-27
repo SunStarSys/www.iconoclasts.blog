@@ -97,12 +97,12 @@ In the $$\dim=3$$ hyperbolic manifold case, we use complex coordinates $$(z,\bar
 P_{DM(\vec{x}+\ell(\gamma)\vec{e}^1)} &=
 \begin{pmatrix}
 e^{\ell(\gamma)} && 0 && 0\\
-0 && e^{-\ell(\gamma)/2+i\theta} && 0 \\
-0 && 0 && e^{-\ell(\gamma)/2-i\theta} \\
+0 && e^{-\ell(\gamma)/2+i\theta(\gamma)} && 0 \\
+0 && 0 && e^{-\ell(\gamma)/2-i\theta(\gamma)} \\
 \end{pmatrix}\\
 
 \implies& \\
-\det I-P^\perp_{\gamma} &= |1-e^{-\ell(\gamma)/2+i\theta}|^2
+\det I-P^\perp_{\gamma} &= |1-e^{-\ell(\gamma)/2+i\theta(\gamma)}|^2
 \end{aligned}
 ```
 and since $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$, the approximation in Equation (1) again becomes exact:
