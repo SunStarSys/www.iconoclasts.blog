@@ -84,15 +84,11 @@ and the approximation $$\approx_{t\rightarrow 0}$$ line in Equation (1) becomes 
 
 ```math
 \begin{aligned}
-(e^{\ell(\gamma)}-1)\det I-P^\perp_{\gamma} &= (e^{\ell(\gamma)} - 1)(1 - e^{-\ell(\gamma)})\\
-&= (e^{\ell(\gamma)/2}-e^{-\ell(\gamma)/2})^2\\
-
 DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\ell(\gamma)/2} -e^{-\ell(\gamma)/2})}\\
 
 \gamma(t) = \gamma_0(kt)\implies \\
 
 &=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\ell(\gamma_0)/2}\\
-
 \end{aligned}
 ```
 In the $$\dim=3$$ hyperbolic manifold case, we use complex coordinates $$(z,\bar{z})$$ on the normal bundle to write
