@@ -31,7 +31,8 @@ $$\Omega_t^0$$ is the space of continuous contractible loops on $$M$$.
 
 $$\Omega_t[\gamma]$$ is the space of continuous loops on $$M$$ homotopic to the closed geodesic $$\gamma$$.
 
-$$DM^{-1}\Omega_t^0[\gamma]$$ is the preimage of continuous contractible loops on $$M$$ written as offsets homotopic to $$\gamma(s)= DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Think Fenchel-Nielsen coordinates, but vectorized in $$T_{\gamma(s)}M, 0 \leq s \leq t$$.
+$$DM^{-1}\Omega_t^0[\gamma]$$ is the preimage of continuous contractible loops on $$M$$ written as offsets homotopic to $$\gamma(s)= DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Think Horocyclic Coordinates generated
+from the Normal Bundle over $$\gamma$$.
 
 $$P_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ is the parallel-transport matrix along the smooth, closed curve homotopic to $$\gamma: DM(\vec{x}(\tau) + s\ell(\gamma)\vec{e}^1), 0\leq s \leq 1$$.
 
