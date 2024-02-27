@@ -65,7 +65,7 @@ DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{
 
 ## Approximation and the Selberg Trace Formula
 
-In the $$\dim=2$$ constant curvature case,
+In the $$\dim = 2$$ hyperbolic surface case,
 
 ```math
 \begin{aligned}
@@ -74,18 +74,37 @@ P_{DM(\vec{x}+\ell(\gamma)\vec{e}^1)} &=
 e^{\ell(\gamma)} && 0\\
 0 && e^{-\ell(\gamma)} \\
 \end{pmatrix}\\
-\implies \\
-
-(e^{\ell(\gamma)}-1)\det I-P^\perp_{\gamma(t)} &= (e^{\ell(\gamma)} - 1)(1 - e^{-\ell(\gamma)})\\
-&= (e^{\ell(\gamma)/2}-e^{-\ell(\gamma)/2})^2
-
 \end{aligned}
 ```
 
-and so the approximation $$\approx_{t\rightarrow 0}$$ line in Equation (1) becomes *exact*:
+In the $$\dim=3$$ hyperbolic manifold case, we use a complex coordinate on the normal bundle to write
 
 ```math
 \begin{aligned}
+P_{DM(\vec{x}+\ell(\gamma)\vec{e}^1)} &=
+\begin{pmatrix}
+e^{\ell(\gamma)} && 0\\
+0 && e^{-\ell(\gamma)/2+i\theta} \\
+\end{pmatrix}\\
+
+\end{aligned}
+```
+In both hyperbolic cases, since
+```math
+\begin{aligned}
+(e^{\ell(\gamma)}-1)\det I-P^\perp_{\gamma} &= (e^{\ell(\gamma)} - 1)(1 - e^{-\ell(\gamma)})\\
+&= (e^{\ell(\gamma)/2}-e^{-\ell(\gamma)/2})^2\\
+\end{aligned}
+```
+
+
+the approximation $$\approx_{t\rightarrow 0}$$ line in Equation (1) becomes *exact*:
+
+```math
+\begin{aligned}
+(e^{\ell(\gamma)}-1)\det I-P^\perp_{\gamma} &= (e^{\ell(\gamma)} - 1)(1 - e^{-\ell(\gamma)})\\
+&= (e^{\ell(\gamma)/2}-e^{-\ell(\gamma)/2})^2\\
+
 DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\ell(\gamma)/2} -e^{-\ell(\gamma)/2})}\\
 
 \gamma(t) = \gamma_0(kt)\implies \\
