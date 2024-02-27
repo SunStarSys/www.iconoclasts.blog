@@ -24,19 +24,21 @@ Keywords: weiner measure,riemann surfaces,probability,geometry
 
 $$M$$ is a negatively curved $$\dim=n$$ closed Riemannian manifold with metric $$g$$ and (positive-definite) Laplace-Beltrami Operator $$\Delta$$.
 
-$$\mu$$ is n-dimensional Wiener Measure restricted to the pull-back of continuous loop space $$\Omega_t(M)$$, via the inverse of the Weiner measure-preserving development map $$DM$$. Note: $$DM^{-1}\Omega_t(M)$$ is not a loop space, and it does not have Weiner measure 1.
+$$\mu$$ is n-dimensional Wiener Measure restricted to the pull-back of continuous loop space $$\Omega_t(M)$$, via the inverse of the Weiner measure-preserving development map $$DM$$. Note: $$DM^{-1}\Omega_t$$ is not a loop space, and it does not have Weiner measure 1.
 
 $$\Omega_t^0$$ is the space of continuous contractible loops on $$M$$.
 
-$$\Omega_t[\gamma]$$ is the space of continuous loops on $$M$$ homotopic to $$\gamma$$.
+$$\Omega_t[\gamma]$$ is the space of continuous loops on $$M$$ homotopic to the closed geodesic $$\gamma$$.
 
 $$\Omega_t^0[\gamma]$$ is the space of continuous contractible loops on $$M$$ written as offset loops homotopic to $$\gamma$$.
+
+$$P_{\vec{x}(\tau)+\ell(\gamma)\vec{x}^1(\tau)}$$ is the parallel-transport matrix along the curve $$\vec{x}(\tau) + s\ell(\gamma)\vec{x}^1(\tau), 0\leq s \leq 1$$.
 
 $$Z_{-\Delta/2}(t)$$ is the trace of the heat kernel.
 
 ```math
 \begin{aligned}
-Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t)  &= DM_*\mu(\Omega^0_t) + \sum_{\set{\text{closed geodesics }\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
+Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t)  &= DM_*\mu(\Omega^0_t) + \sum_{\set{\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
 
 DM_*\mu(\Omega_t^0) &= (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\space \text{ by McKean-Singer}\\
 
