@@ -41,7 +41,7 @@ $$Z_{-\Delta/2}(t)$$ is the trace of the heat kernel.
 \begin{aligned}
 Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t)  &= DM_*\mu(\Omega^0_t) + \sum_{\set{\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
 
-DM_*\mu(\Omega_t^0) &= (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\space \text{ by McKean-Singer}\\
+DM_*\mu(\Omega_t^0) &\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\space \text{ by McKean-Singer}\\
 
 DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\mu(e^{\ell(\gamma)x^1(t)}DM^{-1}\Omega_t^0[\gamma])\space\text{ by Cameron-Martin}\\
 
