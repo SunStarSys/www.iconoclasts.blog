@@ -94,7 +94,7 @@ In the $$\dim=3$$ hyperbolic manifold case, we use complex coordinates $$(z,\bar
 
 ```math
 \begin{aligned}
-P_{DM(\vec{x}+\ell(\gamma)\vec{e}^1)} &=
+P_{DM(\vec{x}+\frac{\tau\ell(\gamma)}{\ell(\gamma_0}\vec{e}^1)} &=
 \begin{pmatrix}
 e^{\ell(\gamma)} && 0 && 0\\
 0 && e^{-\ell(\gamma)/2+i\theta(\gamma)} && 0 \\
