@@ -46,7 +46,7 @@ DM_*\mu(\Omega_t^0) &= (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^
 DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\mu(e^{\ell(\gamma)x^1(t)}DM^{-1}\Omega_t^0[\gamma])\space\text{ by Cameron-Martin}\\
 
 \frac{d\mu(e^{-\ell(\gamma)x^1(t)}
-DM^{-1}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{x}(\tau)+\ell(\gamma)\vec{e}^1(\tau)}&= \frac{e^{-\bra{|1-P_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}|\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}\\
+DM^{-1}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{x}(\tau)+\ell(\gamma)\vec{e}^1}&= \frac{e^{-\bra{|1-P_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}|\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}\\
 
 DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{DM^{-1}(\Omega^0_t[\gamma])}\frac{e^{-\bra{|1-P_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}|\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{n/2}}dx^1(\tau)... dx^n(\tau)d\tau\\
 
