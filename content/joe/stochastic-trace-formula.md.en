@@ -50,7 +50,7 @@ DM^{-1}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{x}(\tau)
 
 DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{|I-P_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}|\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{n/2}}dx^1(\tau)... dx^n(\tau)d\tau\\
 
-DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{|I-P_{DM(\vec{x}+\ell(\gamma)\vec{e}^1)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^nd\tau\\
+DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{|I-P_{DM(\vec{x}+\frac{\tau\ell(\gamma)}{\ell(\gamma_0)}\vec{e}^1)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^nd\tau\\
 
 &\approx_{t\rightarrow 0}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t (e^{\ell(\gamma)}-1)}} \int_{\Reals^{n-1}\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{I-P^\perp_{\gamma(\tau)}\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{(n-1)/2}}dx^2 ... dx^nd\tau(1+O(t^\infty))\\
 
