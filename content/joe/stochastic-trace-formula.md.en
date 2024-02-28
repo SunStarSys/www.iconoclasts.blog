@@ -63,7 +63,7 @@ DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{
 
 &\approx_{t\rightarrow 0}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{|I-J_{\gamma(\tau)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^nd\tau(1+O(t^\infty))\\
 
-&=\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t(e^{\ell(\gamma)}-1)}}\int_0^{\ell(\gamma_0)}\frac{1}{\sqrt{\det{I-J\perp_{\gamma(\tau)}}}}d\tau \\
+&=\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t(e^{\ell(\gamma)}-1)}}\int_0^{\ell(\gamma_0)}\frac{1}{\sqrt{\det{I-J^\perp_{\gamma(\tau)}}}}d\tau \\
 
 \small \text{Since }J^\perp_{\gamma(\tau)} \text{ is congugate to }J^\perp_{\gamma(s)} \forall \tau, s,& \small \text{ we may abuse notation a bit and write}\\
 
