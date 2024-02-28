@@ -73,18 +73,17 @@ DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{
 
 ## Approximation and the Selberg Trace Formula
 
-In the $$\dim = 2$$ hyperbolic surface case,
+In the $$\dim = 2$$ constant curvature $$-\kappa^2$$ surface case,
 
 ```math
 \begin{aligned}
 J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1)} &=
 \begin{pmatrix}
 e^{\ell(\gamma)} && 0\\
-0 && e^{-\ell(\gamma)} \\
+0 && e^{-\kappa\ell(\gamma)} \\
 \end{pmatrix}\\
 \implies&\\
-(e^{\ell(\gamma)}-1)\det I-J^\perp_{\gamma} &= (e^{\ell(\gamma)} - 1)(1 - e^{-\ell(\gamma)})\\
-&= (e^{\ell(\gamma)/2}-e^{-\ell(\gamma)/2})^2\\
+(e^{\ell(\gamma)}-1)\det I-J^\perp_{\gamma} &= (e^{\ell(\gamma)} - 1)(1 - e^{-\kappa\ell(\gamma)})\\
 \end{aligned}
 ```
 
@@ -92,6 +91,7 @@ which is constant over $$(\vec{x},\tau)$$, so the approximation $$\approx_{t\rig
 
 ```math
 \begin{aligned}
+\kappa &= 1 \implies\\
 DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\ell(\gamma)/2} -e^{-\ell(\gamma)/2})}\\
 
 \gamma(t) = \gamma_0(kt)\implies \\
@@ -106,18 +106,19 @@ In the $$\dim=3$$ hyperbolic manifold case, we use complex coordinates $$(z,\bar
 J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1)} &=
 \begin{pmatrix}
 e^{\ell(\gamma)} && 0 && 0\\
-0 && e^{-\ell(\gamma)+i\theta(\gamma)} && 0 \\
-0 && 0 && e^{-\ell(\gamma)-i\theta(\gamma)} \\
+0 && e^{-\kappa\ell(\gamma)+i\theta(\gamma)} && 0 \\
+0 && 0 && e^{-\kappa\ell(\gamma)-i\theta(\gamma)} \\
 \end{pmatrix}\\
 
 \implies& \\
-\det I-J^\perp_{\gamma} &= |1-e^{-\ell(\gamma)+i\theta(\gamma)}|^2
+\det I-J^\perp_{\gamma} &= |1-e^{-\kappa\ell(\gamma)+i\theta(\gamma)}|^2
 \end{aligned}
 ```
 and since $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$, the approximation in Equation (2) again becomes exact:
 
 ```math
 \begin{aligned}
+\kappa &= 1 \implies \\
 DM_*\mu(\Omega_t[\gamma]) &=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (e^{k\ell(\gamma_0)}-1)}|1-e^{k(-\ell(\gamma_0)+i\theta(\gamma_0))}|}\\
 
 &=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (1-e^{-k\ell(\gamma_0)})}|e^{k\ell(\gamma_0)/2}-e^{-k(\ell(\gamma_0)/2-i\theta(\gamma_0))}|}\\
