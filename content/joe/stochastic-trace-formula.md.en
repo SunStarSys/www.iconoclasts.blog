@@ -65,7 +65,7 @@ DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{
 
 &=\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_0^{\ell(\gamma_0)}\frac{1}{\sqrt{\det{|I-J_{\gamma(\tau)}|}}}d\tau \\
 
-\small \text{Since }J^\perp_{\gamma(\tau)} \text{ is congugate to }J_{\gamma(s)} \forall \tau, s,& \small \text{ we may abuse notation a bit and write}\\
+\small \text{Since }J_{\gamma(\tau)} \text{ is congugate to }J_{\gamma(s)} \forall \tau, s,& \small \text{ we may abuse notation a bit and write}\\
 
 &=\frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t \det|I - J_{\gamma}|}}
 \end{aligned}
