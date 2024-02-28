@@ -30,7 +30,7 @@ $$\Omega_t[\gamma]$$ is the space of continuous loops on $$M$$ homotopic to the 
 
 $$DM^{-1}\Omega_t^0[\gamma]$$ is the preimage of continuous contractible loops on $$M$$ written as offsets homotopic to $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Think Horocyclic Coordinates &mdash; each fiber as the geometric limit of periodic geodesic spheres $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$,  vectorized in the Normal Bundle over $$\gamma_0$$. Our curvature constraints imply Horocyclic Coordinates for every $$\gamma_0$$ exist as a smooth, $$DM$$-compatible coordinate map for $$\Omega_t^0[\gamma]$$.
 
-Now $$DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)$$ is endpoint of the smooth curve homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is periodic with period $$\ell(\gamma_0)$$, so it revisits its starting point $$DM(\vec{x}(\tau))$$ at time $$t$$, making the computation of its derivative $$J$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. Note: $$J_{\gamma(\tau)}$$  may be constructed using **Jacobi Fields**.
+Now $$DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)$$ is endpoint of the smooth curve homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is periodic with period $$\ell(\gamma_0)$$, so it revisits its starting point $$DM(\vec{x}(\tau))$$ at time $$t$$, making the computation of its derivative $$J$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. Note: $$J_{\gamma(\tau)}$$ preserves the Normal bundle, where it is a strict contraction map, and may be constructed using **Jacobi Fields**.
 
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ is the trace of the heat kernel.
 
@@ -63,11 +63,11 @@ DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{
 
 &\approx_{t\rightarrow 0}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{|I-J_{\gamma(\tau)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^nd\tau(1+O(t^\infty))\\
 
-&=\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_0^{\ell(\gamma_0)}\frac{1}{\sqrt{\det{|I-J_{\gamma(\tau)}|}}}d\tau \\
+&=\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t(e^{\ell(\gamma)}-1)}}\int_0^{\ell(\gamma_0)}\frac{1}{\sqrt{\det{I-J\perp_{\gamma(\tau)}}}}d\tau \\
 
-\small \text{Since }J_{\gamma(\tau)} \text{ is congugate to }J_{\gamma(s)} \forall \tau, s,& \small \text{ we may abuse notation a bit and write}\\
+\small \text{Since }J^\perp_{\gamma(\tau)} \text{ is congugate to }J^\perp_{\gamma(s)} \forall \tau, s,& \small \text{ we may abuse notation a bit and write}\\
 
-&=\frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t \det|I - J_{\gamma}|}}
+&=\frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t(e^{\ell(\gamma)}-1)\det(I - J^\perp_{\gamma})}}
 \end{aligned}
 ```
 
@@ -79,11 +79,11 @@ In the $$\dim = 2$$ constant curvature $$-\kappa^2$$ surface case,
 \begin{aligned}
 J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1)} &=
 \begin{pmatrix}
-e^{\kappa\ell(\gamma)} && 0\\
+e^{\ell(\gamma)} && 0\\
 0 && e^{-\kappa\ell(\gamma)} \\
 \end{pmatrix}\\
 \implies&\\
-\det |I-J_{\gamma} |&= (e^{\kappa\ell(\gamma)} - 1)(1 - e^{-\kappa\ell(\gamma)})\\
+\det I-J^\perp_{\gamma} &= (1 - e^{-\kappa\ell(\gamma)})\\
 \end{aligned}
 ```
 
@@ -91,11 +91,12 @@ which is constant over $$(\vec{x},\tau)$$, so the approximation $$\approx_{t\rig
 
 ```math
 \begin{aligned}
-DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gamma)/2} -e^{-\kappa\ell(\gamma)/2})}\\
+\kappa &= 1 \implies\\
+DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\ell(\gamma)/2} -e^{-\ell(\gamma)/2})}\\
 
 \gamma(t) = \gamma_0(kt)\implies \\
 
-&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\ell(\gamma_0)/2}\\
 \end{aligned}
 ```
 In the $$\dim=3$$ hyperbolic manifold case, we use complex coordinates $$(z,\bar{z})$$ on the normal bundle to write
@@ -104,21 +105,23 @@ In the $$\dim=3$$ hyperbolic manifold case, we use complex coordinates $$(z,\bar
 \begin{aligned}
 J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1)} &=
 \begin{pmatrix}
-e^{\kappa\ell(\gamma)} && 0 && 0\\
+e^{\ell(\gamma)} && 0 && 0\\
 0 && e^{-\kappa\ell(\gamma)+i\theta(\gamma)} && 0 \\
 0 && 0 && e^{-\kappa\ell(\gamma)-i\theta(\gamma)} \\
 \end{pmatrix}\\
 
 \implies& \\
-\det |I-J_{\gamma}| &= (e^{\kappa\ell(\gamma)}-1)|1-e^{-\kappa\ell(\gamma)+i\theta(\gamma)}|^2
+\det I-J^\perp_{\gamma} &= |1-e^{-\kappa\ell(\gamma)+i\theta(\gamma)}|^2
 \end{aligned}
 ```
 and since $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$, the approximation in Equation (2) again becomes exact:
 
 ```math
 \begin{aligned}
+\kappa &= 1 \implies \\
+
 DM_*\mu(\Omega_t[\gamma])
-&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (1-e^{-k\kappa\ell(\gamma_0)})}|e^{k\kappa\ell(\gamma_0)/2}-e^{-k(\kappa\ell(\gamma_0)/2-i\theta(\gamma_0))}|}\\
+&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (1-e^{-k\ell(\gamma_0)})}|e^{k\ell(\gamma_0)/2}-e^{-k(\ell(\gamma_0)/2-i\theta(\gamma_0))}|}\\
 
 \end{aligned}
 ```
