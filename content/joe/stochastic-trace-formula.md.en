@@ -110,7 +110,7 @@ e^{\kappa\ell(\gamma)} && 0 && 0\\
 \end{pmatrix}\\
 
 \implies& \\
-\det |I-J{\gamma}| &= (e^{\kappa\ell(\gamma)}-1)|1-e^{-\kappa\ell(\gamma)+i\theta(\gamma)}|^2
+\det |I-J_{\gamma}| &= (e^{\kappa\ell(\gamma)}-1)|1-e^{-\kappa\ell(\gamma)+i\theta(\gamma)}|^2
 \end{aligned}
 ```
 and since $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$, the approximation in Equation (2) again becomes exact:
