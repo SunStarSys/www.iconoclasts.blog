@@ -38,9 +38,9 @@ Finally let us define the following from their Radon-Nicodym derivatives:
 
 ```math
 \begin{aligned}
-DM_*\mu(\Omega_t) &:= \int_M DM_*\mu(\Omega_t\vert_x dx)\\
-DM_*\mu(\Omega^0_t) &:= \int_M DM_*\mu(\Omega^0_t\vert_x dx)\\
-DM_*\mu(\Omega_t[\gamma]) &:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x dx) \\
+DM_*\mu(\Omega_t) &:= \int_M DM_*\mu(\Omega_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega^0_t) &:= \int_M DM_*\mu(\Omega^0_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega_t[\gamma]) &:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx) \\
 \end{aligned}
 ```
 
