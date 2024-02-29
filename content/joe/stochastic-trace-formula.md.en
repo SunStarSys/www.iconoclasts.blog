@@ -28,13 +28,9 @@ $$\Omega_t^0$$ is the space of continuous contractible loops on $$M$$.
 
 $$\Omega_t[\gamma]$$ is the space of continuous loops on $$M$$ homotopic to the closed geodesic $$\gamma$$. Let $$\gamma_0$$ be its primitive loop.
 
-$$DM^{-1}\Omega_t^0[\gamma]$$ is the preimage of continuous contractible loops on $$M$$ written as offsets homotopic to $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Think Horocyclic Coordinates &mdash; each fiber as the geometric limit of periodic geodesic spheres $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$,  vectorized in the Normal Bundle over $$\gamma_0$$. Our curvature constraints imply Horocyclic Coordinates for every $$\gamma_0$$ exist as a smooth, $$DM$$-compatible coordinate map for $$\Omega_t^0[\gamma]$$.
+$$DM^{-1}\Omega_t^0[\gamma]$$ is the preimage of continuous contractible loops on $$M$$ written as offsets homotopic to $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Think Horocyclic Coordinates &mdash; each fiber as the geometric limit of periodic geodesic spheres $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$, vectorized in the Normal Bundle over $$\gamma_0$$. Our curvature constraints imply Horocyclic Coordinates for every $$\gamma_0$$ exist as a smooth, $$DM$$-compatible coordinate map for $$\Omega_t^0[\gamma]$$.
 
-
-
-
-
-Now $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ is the *predeveloped* endpoint of the "offset" curve homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is smooth (in the forward direction), and it revisits its starting point $$DM(\vec{x}(\tau))$$ at time $$t$$, making the computation of its derivative $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. Note: $$J_{\gamma(\tau)}$$ preserves the Normal bundle, where it is a strict contraction map $$J^\perp$$ under the assumed negative sectional curvature conditions. Importantly, $$J^\perp_{\gamma(\tau)}$$ may be constructed using **Jacobi Fields**, since $$J$$ *agrees* with the Jacobian Derivative of the exponential map along $$\gamma(\tau)$$.
+Now $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ is the *predeveloped* endpoint of the "offset" *kinked geodesic* homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is periodic with period $$\ell(\gamma_0)$$, and it revisits its kinked starting point $$DM(\vec{x}(\tau))$$ at time $$t$$, making the computation of its forward derivative $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. Note: $$J_{\gamma(\tau)}$$ preserves the Normal bundle, where it is a strict contraction map $$J^\perp_{\gamma(\tau)}$$ under the assumed negative sectional curvature conditions. Importantly, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ may be constructed using **Jacobi Fields**, since $$J$$ *agrees* with the Jacobian Derivative of the exponential map along lines parallel to the $$\vec{e}^1$$ axis.
 
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ is the trace of the heat kernel.
 
@@ -59,19 +55,21 @@ DM_*\mu(\Omega_t^0) &\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M
 DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\ell(\gamma)x^1(t)}\Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
 
 \frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}
-DM^{-1}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{x}(\tau)+\ell(\gamma)\vec{e}^1}&= \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}|\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}\small \text{ semi-classical is exact on raw Wiener measure}\\
+\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{x}(\tau)+\ell(\gamma)\vec{e}^1}&= \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}|\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}\small \text{ semi-classical is exact on raw Wiener measure}\\
 
 DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}|\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{n/2}}dx^1(\tau)... dx^n(\tau)d\tau\\
 
-&= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{|I-J_{DM(\vec{x}+(\tau + \ell(\gamma))\vec{e}^1)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^nd\tau\\
+\gamma_0(kt) = \gamma(t) \implies \\
 
-&\approx_{t\rightarrow 0}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{|I-J_{\gamma(\tau)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^nd\tau(1+O(t^\infty))\\
+&= \frac{e^{-k^2\ell(\gamma_0)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{|I-J^k_{DM(\vec{x}+(\tau + \ell(\gamma_0))\vec{e}^1)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^nd\tau\\
 
-&=\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t(e^{\ell(\gamma)}-1)}}\int_0^{\ell(\gamma_0)}\frac{1}{\sqrt{\det{I-J^\perp_{\gamma(\tau)}}}}d\tau \\
+&\approx_{t\rightarrow 0}\frac{e^{-k^2\ell(\gamma_0)^2/2t}}{\sqrt{2\pi t}} \int_{\Reals^n\oplus\Z/\ell(\gamma_0)\Z}\frac{e^{-\bra{|I-J^k_{\gamma_0(\tau)}|\vec{x}}\ket{\vec{x}}/2t}}{(2 \pi t)^{n/2}}dx^1 ... dx^nd\tau(1+O(t^\infty))\\
 
-\small \text{Since }J^\perp_{\gamma(\tau)} \text{ is congugate to }J^\perp_{\gamma(s)} \forall \tau, s,& \small \text{ we may abuse notation a bit and write}\\
+&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}}{\sqrt{2\pi t(e^{k\ell(\gamma_0)}-1)}}\int_0^{\ell(\gamma_0)}\frac{1}{\sqrt{\det{I-{(J^\perp_{\gamma_0(\tau)})}^k}}}d\tau \\
 
-&=\frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t(e^{\ell(\gamma)}-1)\det(I - J^\perp_{\gamma})}}
+\small \text{Since }J^{\perp}_{\gamma_0(\tau)} \text{ is congugate to }J^\perp_{\gamma_0(s)} \forall \tau, s,& \small \text{ we may abuse notation a bit and write}\\
+
+&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t(e^{k\ell(\gamma_0)}-1)\det I - {J^\perp_{\gamma_0}}^k}}
 \end{aligned}
 ```
 
@@ -115,7 +113,7 @@ e^{\ell(\gamma)} && 0 && 0\\
 \end{pmatrix}\\
 
 \implies& \\
-\det I-J^\perp_{\gamma} &= |1-e^{-\kappa\ell(\gamma)+i\theta(\gamma)}|^2
+\det I-{J^\perp_{\gamma_0}}^k &= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
 \end{aligned}
 ```
 and since $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$, the approximation in Equation (2) again becomes exact:
@@ -129,8 +127,6 @@ DM_*\mu(\Omega_t[\gamma])
 
 \end{aligned}
 ```
-
-
 
 <style type="text/css">
   /* automatic line numbering kludge */
