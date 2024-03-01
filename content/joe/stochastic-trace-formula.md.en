@@ -37,7 +37,7 @@ Now $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ is the *predeveloped* endpoint of th
 &= {e^{J_B}_0}^i + \int_o^t \sigma_j^i(e^{J_B}_s)dB^j_s - 1/2\int_0^t \partial_j g^{ij}(e^{J_B}_s)ds\\
 \end{aligned}
 ```
-since $$\det g^{ij} = 1$$.
+since $$\det g^{ij} = 1$$ in horocyclic coordinates.
 
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ is the trace of the heat kernel.
 
