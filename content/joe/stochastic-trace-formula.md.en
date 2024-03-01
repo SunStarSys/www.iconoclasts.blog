@@ -30,7 +30,7 @@ $$\Omega_t[\gamma]$$ is the space of continuous loops on $$M$$ homotopic to the 
 
 $$DM^{-1}\Omega_t^0[\gamma]$$ is the preimage of continuous contractible loops on $$M$$ written as offsets homotopic to $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Think Horocyclic Coordinates &mdash; each fiber as the geometric limit of periodic geodesic spheres $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$, vectorized in the Normal Bundle over $$\gamma_0$$. Our curvature constraints imply Horocyclic Coordinates for every $$\gamma_0$$ exist as a smooth, $$DM$$-compatible coordinate map for $$\Omega_t^0[\gamma]$$.
 
-Now $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ is the *predeveloped* endpoint of the "offset" *kinked geodesic* homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is periodic with period $$\ell(\gamma_0)$$, and it revisits its kinked starting point $$DM(\vec{x}(\tau))$$ at time $$t$$, making the computation of its forward derivative $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. Note: $$J_{\gamma(\tau)}$$ preserves the Normal bundle, where it is a strict contraction map $$J^\perp_{\gamma(\tau)}$$ under the assumed negative sectional curvature conditions. Importantly, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ may be constructed using **Jacobi Fields**, since $$DM$$ **is** the (iterated) exponential map along any series of connected straight lines in $$\Reals^n$$. We will study $$ e^{\int_0^t \bra{J_B B}\ket{B} ds}$$.
+Now $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ is the *undeveloped* endpoint of the "offset" *kinked geodesic* homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is periodic with period $$\ell(\gamma_0)$$, and it revisits its kinked starting point $$DM(\vec{x}(\tau))$$ at time $$t$$, making the computation of its forward derivative $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. Note: $$J_{\gamma(\tau)}$$ preserves the Normal bundle, where it is a strict contraction map $$J^\perp_{\gamma(\tau)}$$ under the assumed negative sectional curvature conditions. Importantly, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ may be constructed using **Jacobi Fields**, since $$DM$$ **is** the (iterated) exponential map along any series of connected straight lines in $$\Reals^n$$. We will study $$ e^{\int_0^t \bra{J_B B}\ket{B} ds}$$.
 
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ is the trace of the heat kernel.
 
@@ -81,13 +81,13 @@ In the $$\dim = 2$$ constant curvature $$-\kappa^2$$ surface case,
 
 ```math
 \begin{aligned}
-J_{DM(\beta)}&=\prod_i
+\sqrt{J_{DM(\beta)}}&=_i
 \begin{pmatrix}
-e^{\kappa\ell(\delta_x\beta_i)} && 0\\
-0 && e^{-\kappa\ell(\delta_y\beta_i)}
+e^{\kappa\ell(\delta_x\beta_i)/2} && 0\\
+0 && e^{-\kappa\ell(\delta_y\beta_i)/2}
 \end{pmatrix}R_i
 \implies&\\
-\det I-J_{\gamma} &= (e^{\kappa\ell(\gamma)/2 - e^{-\kappa\ell(\gamma)/2})^2
+\det I-J_{\gamma} &= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
 \end{aligned}
 ```
 
