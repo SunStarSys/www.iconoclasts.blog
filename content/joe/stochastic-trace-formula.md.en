@@ -81,12 +81,13 @@ In the $$\dim = 2$$ constant curvature $$-\kappa^2$$ surface case,
 
 ```math
 \begin{aligned}
-\sqrt{J_{DM(\delta\beta_i)}}R_i\delta\beta_i&=
+\sqrt{J_{DM(\delta\beta_i)}}R_i&=
 \begin{pmatrix}
-e^{\kappa\ell(\delta_x\beta_i)/2} && 0\\
-0 && e^{-\kappa\ell(\delta_y\beta_i)/2}
+e^{\kappa\ell(\delta\beta_i)/2} && 0\\
+0 && e^{-\kappa\ell(\delta\beta_i)/2}
 \end{pmatrix}
 \implies&\\
+\bra{\sqrt{J}dB}\ket{\sqrt{J}dB} = tr J_B dt
 \det I-J_{\gamma} &= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
 \end{aligned}
 ```
