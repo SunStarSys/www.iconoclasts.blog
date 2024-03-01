@@ -54,7 +54,7 @@ DM_*\mu(\Omega_t^0) &\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M
 
 DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{J_B}_t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
 
- &= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_t | \Omega_^0[\gamma]\vert_x\dx^1(\tau)\dots dx^n(\tau) d\tau\\
+ &= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_x)\dx^1(\tau)\dots dx^n(\tau) d\tau\\
 
 \frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}
 \Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{x}(\tau)+\ell(\gamma)\vec{e}^1}&\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}|\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^\infty))\small \text{ semi-classical limit}\\
