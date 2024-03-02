@@ -67,7 +67,7 @@ DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t
 \text{Horocyclic coordinates}: z(\tau) - x(\tau) &= x + \ell(\gamma)\vec{e}^1\implies\\
 
 \int_{M/S^1\oplus S^1}k_t(x,z) dx &=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\bra{J_{X^j_t}\vec{x}}\ket{\vec{x}}})\\
- &=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_{(M/S^1\oplus S^1)^j}frac{1}{\sqrt{2\pi t}^j\det|I-J_{X^j}|}}e^{-\ell{X^j}^2/2t}X^{j}\\
+ &=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_{M^j/S^1\oplus S^1}frac{1}{\sqrt{2\pi t}^{jn}\det|I-J_{X^j}|}e^{-\ell(X^j)^2/2t}X^{j}\\
 \end{aligned}
 ```
 ## Approximation and the Selberg Trace Formula
