@@ -22,7 +22,7 @@ Keywords: weiner measure,riemann surfaces,probability,geometry
 
 $$M$$ is a negatively curved $$\dim=n$$ closed Riemannian manifold with metric $$g$$, metric connection $$\nabla$$, and (nonnegative) Laplace-Beltrami Operator $$\Delta_M$$.  Let $$k_{-t\Delta/2}(x,y)$$ represent the heat kernel on $$M$$.
 
-Hence $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ is the Radon-Nicodym derivative of n-dimensional Wiener Measure $$\mu$$, restricted to the pull-back of continuous loop space $$\Omega_t(M)\vert_x$$, via the inverse of the Weiner measure-preserving development map $$DM$$. Note: $$DM^{-1}\Omega_t\vert_x$$ is not a loop space.
+Hence $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ is the Radon-Nicodym derivative of n-dimensional Wiener Measure $$\mu$$, restricted to the pull-back of continuous loop space $$\Omega_t(M)\vert_x$$, via the inverse of the Weiner measure-preserving development map $$DM$$. *Note:* $$DM^{-1}\Omega_t\vert_x$$ is not a loop space.
 
 $$\Omega_t^0$$ is the space of continuous contractible loops on $$M$$.
 
