@@ -30,7 +30,7 @@ $$\Omega_t[\gamma]$$ is the space of continuous loops on $$M$$ homotopic to the 
 
 $$DM^{-1}\Omega_t^0[\gamma]$$ is the preimage of continuous contractible loops on $$M$$ written as offsets homotopic to $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Think Horocyclic Coordinates &mdash; each fiber as the geometric limit of periodic geodesic spheres $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$, vectorized in the Normal Bundle over $$\gamma_0$$. Our curvature constraints imply Horocyclic Coordinates for every $$\gamma_0$$ exist as a smooth, $$DM$$-compatible coordinate map for $$\Omega_t^0[\gamma]$$.
 
-Now $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ is the *undeveloped* endpoint of the "offset" *kinked geodesic* homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is periodic with period $$\ell(\gamma_0)$$, and it revisits its kinked starting point $$DM(\vec{x}(\tau))$$ at time $$t$$, making the computation of its forward derivative $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. Note: $$J_{\gamma(\tau)}$$ preserves the Normal bundle, where it is a strict contraction map $$J^\perp_{\gamma(\tau)}$$ under the assumed negative sectional curvature conditions. Importantly, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ may be constructed using **Jacobi Fields**, since $$DM$$ **is** the (iterated) exponential map along any series of connected straight lines in $$\Reals^n$$. We will study $$ 1/2 \int_0^t \bra{dJB}ket{dB}_s$$, with the solution
+Now $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ is the *undeveloped* endpoint of the "offset" *kinked geodesic* homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is periodic with period $$\ell(\gamma_0)$$, and it revisits its kinked starting point $$DM(\vec{x}(\tau))$$ at time $$t$$, making the computation of its forward derivative $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. Note: $$J_{\gamma(\tau)}$$ preserves the Normal bundle, where it is a strict contraction map $$J^\perp_{\gamma(\tau)}$$ under the assumed negative sectional curvature conditions. Importantly, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ may be constructed using **Jacobi Fields**, since $$DM$$ **is** the (iterated) exponential map along any series of connected straight lines in $$\Reals^n$$. We will study $$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$$, with the solution
 ```math
 \begin{aligned}
 X_t &= X_0 + \int_0^t \sqrt{J}_{X_t} dB_t  \\
@@ -62,15 +62,11 @@ DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t
 
 &= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
 
-\frac{k_t(x(\tau), y(\tau))}{e^{-d(x(\tau),y(\tau))^2/2t}} = \frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}
-\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}}&\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau),\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\small \text{ semi-classical limit}\\
+\frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}}&\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau),\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\small \text{ semi-classical limit}\\
 
-\text{Horocyclic coordinates}: z(\tau) - x(\tau) = x + \ell(\gamma)\vec{e}^1\implies\\
+\text{Horocyclic coordinates}: z(\tau) - x(\tau) &= x + \ell(\gamma)\vec{e}^1\implies\\
 
-\int_{M/S^1} k_t(x,z) dx &=
-\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\frac{1}{2}\int_0^t \bra{dJB}\ket{dB}_s})\\
-
-&=\frac{e^{-\ell(\gamma)^2/2(t)}}{\sqrt{2\pi t}}E(e^{\frac{1}{2}\int_0^t \bra{\sqrt{\nabla J}dB}\ket{\sqrt{\nabla J}dB}_s})\\
+\int_{M/S^1} k_t(x,z) dx &= \frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\frac{1}{2}\int_0^t \bra{J_XdB}\ket{dB}_s})\\
 
 \end{aligned}
 ```
@@ -86,9 +82,9 @@ e^{\kappa d(\vec{x},\vec{y})/2} && 0\\
 0 && e^{-\kappa d(\vec{x},\vec{y})/2}\\
 \end{pmatrix}
 \implies&\\
-\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} &= e^{\kappa |B|}dRB_1^2 - e^{-\kappa |B|}dRB_2^2\\
+\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} &= e^{\kappa \ell(B)}dRB_1^2 - e^{-\kappa \ell(B)}dRB_2^2\\
 
-\int_0^t \bra{\sqrt{\nabla J}dB}\ket{\sqrt{\nabla J}dB} &= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
+\int_0^t \bra{\sqrt{ J}dB}\ket{\sqrt{ J}dB} &= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
 
 \det I-J_{\gamma} &= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
 \end{aligned}
