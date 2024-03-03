@@ -145,13 +145,17 @@ DM_*\mu(\Omega_t[\gamma])
     text-align: right;
 	vertical-align: middle;
   }
+
   .katex-display::after {
     counter-increment: eqno;
 	content: "(" counter(eqno) ")";
   }
+
   .eqno::after {
     content: "(" counter(eqno) ")";
   }
+
 </style>
+
 
 <!-- $Date$ $Author$ $Revision$ -->
