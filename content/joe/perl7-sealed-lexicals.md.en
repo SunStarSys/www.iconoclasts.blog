@@ -2,7 +2,7 @@ Title: Perl 7 Feature Request: sealed subs for typed lexicals
 Keywords: perl,dylan,static,method,lookup,compile,sealed,apache,mod_perl,performance
 Dependencies: *.md.en
 Categories: Perl, Orion, Performance, Apache
-Status: verified=18490
+Status: verified=18508
 
 <div class="right">
   <img src="../images/sunstarstaronly.png">
@@ -27,30 +27,25 @@ What Doug was looking for was a way to tell Perl 5 to <a href="#commentAAAA" cla
 ## Benchmark results
 
 ```perl
-1..1
+1..2
 sealed: compiling main->foo lookup.
 {
+    use warnings;
     use strict;
     $y->;
 }
 sealed: compiling Benchmark->cmpthese lookup.
 sealed: compiling Foo->foo lookup.
-sealed: compiling main->foo lookup.
 {
+    use warnings;
     use strict;
     my Foo $b = $a;
     $inner->foo($b->($inner->bar, $inner, $bench->));
-    $a->;
-}
-sealed: compiling main->foo lookup.
-{
-    use strict;
-    my main $b = $a;
-    (local our(@Q)) = 1;
-    $b->;
+    $a = $inner;
 }
 sealed: compiling main->bar lookup.
 {
+    use warnings;
     use strict;
     my main $a = shift();
     if ($a) {
@@ -59,19 +54,20 @@ sealed: compiling main->bar lookup.
         return sub {
             my Foo $b = $a;
             $inner->foo($b->($inner->bar, $inner, $bench->));
-            $a->;
+            $a = $inner;
         }
         ;
     }
     $a->;
 }
-             Rate  class method   anon   func sealed
-class  16393443/s     --   -10%   -32%   -35%   -36%
-method 18181818/s    11%     --   -25%   -28%   -29%
-anon   24096386/s    47%    33%     --    -5%    -6%
-func   25316456/s    54%    39%     5%     --    -1%
-sealed 25641026/s    56%    41%     6%     1%     --
 ok 1
+             Rate  class method   anon   func sealed
+class  16000000/s     --    -2%   -24%   -30%   -32%
+method 16393443/s     2%     --   -22%   -29%   -30%
+anon   21052632/s    32%    28%     --    -8%   -11%
+func   22988506/s    44%    40%     9%     --    -2%
+sealed 23529412/s    47%    44%    12%     2%     --
+ok 2
 ```
 
 ## Proposed Perl 7 solution: `:sealed` subroutines for typed lexicals
