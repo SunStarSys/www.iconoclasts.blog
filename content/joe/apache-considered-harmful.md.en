@@ -1,4 +1,4 @@
-Status: verified=18753
+Status: verified=18754
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -20,7 +20,7 @@ With the advent of `httpd-2.X`, an entirely new `I/O Filter` architecture emerge
 
 Yet the key component of `apreq2` is the `mod_apreq2` Apache module, which was first conceived by `Bill Wrowe` in the early 2000s.  What he designed during a brainstorming session with me in person, was a single parser library internal to `httpd`, that **shared** the submitted request *body* with every key stakeholder module in the runtime.  That meant providing parsed data to modules hooked into the requesst processing engine *before*, *during*, and *after" the content handler runs. And it needed to work for subrequests as well, regardless of whether or not the content handler consumed the parsed data, or reparsed it itself internally.
 
-I explained the design goals several times over the years, even in 2012 on [dev@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04). But it's like talking to the wind with these guys; they just never cared.
+I explained the design goals several times over the years, even in 2012 on [dev@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04). But it was always like talking to the wind with these guys; they just never cared.
 
 ## Storm Clouds Gathering
 
