@@ -1,4 +1,4 @@
-Status: verified=18696
+Status: verified=18737
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -15,6 +15,12 @@ Keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 For the past 25 years, I have been the lead developer of the `apreq` subproject within the [Apache HTTPd Server](https://httpd.apache.org) Parent Project. The original idea of `libapreq`, as a safe/performant [HTML form submission](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) and [Cookie](https://datatracker.ietf.org/doc/html/rfc6265) parsing library, came out of a collaboration between Lincoln Stein and Doug MacEachern in the late 90s.
 
 It was my vision back then to transform the library into a generic, non-Perl related `C` library that would support language bindings from other programming languages, which is why I pushed for the project to be [homed](https://httpd.apache.org/apreq) under the HTTPd umbrella instead of the [Apache-Perl](https://perl.apache.org/) project.
+
+With the advent of `httpd-2.X`, an entirely new `I/O Filter` architecture emerged from `httpd` core, as well as the complete separation of `APR` from the core itself as a more general purpose POSIX-like portability runtime for `C` projects like `Subversion`. In fact, `libapreq2` is more closely aliged with the `Apache APR` project in that spirit, and its Perl API reflects that as part of its `APR::Request` buildout.
+
+Yet the key component of `apreq2` is the `mod_apreq` Apache module, which was first conceived by `Bill Wrowe` in the early 2000s.  What he designed during a brainstorming session with me in person, was a single parser library internal to `httpd`, that **shared** the submitted request *body* with every key stakeholder module in the runtime.  That meant providing parsed data to modules hooked into the requesst processing engine *before*, *during*, and *after" the content handler runs. And it needed to work for subrequests as well, regardless of whether or not the content handler consumed the parsed data, or reparsed it itself internally.
+
+I explained the design goals several times over the years, even in 2012 on [dev@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04). But it's like talking to the wind with these guys; they just never cared.
 
 ## Storm Clouds Gathering
 
