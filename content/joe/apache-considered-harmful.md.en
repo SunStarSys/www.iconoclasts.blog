@@ -1,4 +1,4 @@
-Status: verified=18827
+Status: verified=18830
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -18,7 +18,7 @@ It was my vision back then to transform the library into a generic, non-Perl rel
 
 With the advent of `httpd-2.X`, an entirely new `I/O Filter` architecture emerged from `httpd` core, as well as the complete separation of `APR` from the core itself as a more general purpose POSIX-like portability runtime for `C` projects like `Subversion`. In fact, `libapreq2` is more closely aliged with the `Apache APR` project in that spirit, and its Perl API reflects that as part of its `APR::Request` buildout.  It has a built-in *CGI* mode for standalone operation, outside of the `httpd` runtime, which makes unit testing a breeze.
 
-Yet the key component of `apreq2` has always been the `mod_apreq2` Apache module, which was first conceived by `Bill Wrowe` in the early 2000s.  What he designed, during a brainstorming session with me (in person), was a single parser library internal to `httpd`, that **shared** the submitted request *body* with every key stakeholder module in the runtime.  That meant providing parsed data to modules hooked into the request processing engine *before*, *during*, and *after* the content handler runs. And it needed to work for subrequests as well, regardless of whether or not the content handler consumed the parsed data, or reparsed the raw request body itself internally.
+Yet the key component of `apreq2` has always been the `mod_apreq2` Apache module, which was first conceived by `Bill Wrowe` in the early 2000s.  What he designed, during a brainstorming session with me (in person), was a single parser library internal to `httpd`, that **shared** the submitted request *body* with every key stakeholder module in the runtime.  That meant providing parsed data to modules hooked into the request processing engine *before*, *during*, and *after* the content handler runs. And it needed to work for subrequests as well, regardless of whether or not the content handler consumed the parsed data, or consumed and reparsed the raw request body itself.
 
 I explained the design goals several times over the years, even in 2012 on [dev@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04). But it was always like talking to the wind with these guys; they just never cared.
 
