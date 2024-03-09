@@ -9,7 +9,11 @@ div.right img {
 
 div.jumbotron li {
     font-family: Times New Roman;
-    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+div.jumbotron.li, div.jumbotron.li.p {
+	font-size: 1.036rem;
 }
 
 div.essay {
