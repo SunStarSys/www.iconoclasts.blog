@@ -2,7 +2,7 @@ Title: Perl 7 Feature Request: sealed subs for typed lexicals
 Keywords: perl,dylan,static,method,lookup,compile,sealed,apache,mod_perl,performance
 Dependencies: *.md.en
 Categories: Perl, Orion, Performance, Apache
-Status: verified=19287
+Status: verified=19290
 
 <div class="right">
   <img src="../images/sunstarstaronly.png">
@@ -28,23 +28,28 @@ What [Doug was looking for](https://www.perl.com/pub/2000/06/dougpatch.html/) wa
 
 ```perl
 1..2
+sealed: compiling Foo->bar lookup.                            B::Deparse: coderef2text() aborted: Can't locate object method "PV" via package "B::NULL" at /usr/share/perl/5.36/B/Deparse.pm line 4925.
 sealed: compiling main->foo lookup.
-{
+sub sealed :sealed {
     use warnings;
-    use strict;
-    $y->;
+	use strict;
+	$y->foo:compiled;
 }
 sealed: compiling Benchmark->cmpthese lookup.
 sealed: compiling Foo->foo lookup.
-{
+sealed: compiling main->foo lookup.
+sealed: compiling Foo->bar lookup.
+sub __ANON__ :sealed {
     use warnings;
-    use strict;
+	use strict;
     my Foo $b = $a;
-    $inner->foo($b->($inner->bar, $inner, $bench->));
+    $inner->foo($b->foo:compiled($inner->bar, $inner, $bench->cmpthese:compiled));
     $a = $inner;
+    $a->foo:compiled;
+    $b->bar:compiled;
 }
 sealed: compiling main->bar lookup.
-{
+sub also_sealed :sealed {
     use warnings;
     use strict;
     my main $a = shift();
@@ -53,20 +58,30 @@ sealed: compiling main->bar lookup.
         my $inner = $a;
         return sub {
             my Foo $b = $a;
-            $inner->foo($b->($inner->bar, $inner, $bench->));
+            $inner->foo($b->foo:compiled($inner->bar, $inner, $bench->cmpthese:compiled));
             $a = $inner;
+            $a->foo:compiled;
+            $b->bar:compiled;
         }
         ;
     }
-    $a->;
+    $a->bar:compiled;
+}
+sealed: compiling main->_foo lookup.
+sub reentrant :sealed {
+    use warnings;
+    use strict;
+    my main $b = shift();
+    (local our(@Q)) = 1;
+    my $c = $b->_foo:compiled;
 }
 ok 1
-             Rate  class method   anon   func sealed
-class  16000000/s     --    -2%   -24%   -30%   -32%
-method 16393443/s     2%     --   -22%   -29%   -30%
-anon   21052632/s    32%    28%     --    -8%   -11%
-func   22988506/s    44%    40%     9%     --    -2%
-sealed 23529412/s    47%    44%    12%     2%     --
+              Rate  class method   anon   func sealed
+class  15503876/s     --    -9%   -19%   -20%   -36%
+method 17094017/s    10%     --   -10%   -12%   -29%
+anon   19047619/s    23%    11%     --    -2%   -21%
+func   19417476/s    25%    14%     2%     --   -19%
+sealed 24096386/s    55%    41%    27%    24%     --
 ok 2
 ```
 
