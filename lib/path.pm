@@ -95,11 +95,11 @@ walk_content_tree {
     if (s!/index\.html\.$lang$!!) {
       $dependencies{"$_/index.html.$lang"} = [
         grep s/^content// && !archived,
-        glob("'content$_'/*.{md.$lang,pl,pm,pptx}"),
+        glob("'content$_'/*.md.$lang"),
         glob("'content$_'/*/index.html.$lang")
       ];
       push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang!,
-        glob("'content$_'/*.$lang") if m!/files\b!;
+        glob("'content$_'/*.$lang");
     }
   }
 }
@@ -110,7 +110,6 @@ walk_content_tree {
       push @{$dependencies{"/categories/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
         @categories_glob if -f "content/categories/index.html.$lang";
     }
-
 
     while  (my ($k, $v) = each %{$facts->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
