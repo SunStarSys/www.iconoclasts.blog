@@ -80,7 +80,7 @@ our (%dependencies, @acl);
 
 walk_content_tree {
 
-  $File::Find::prune = 1, return if m#^/(images|css|editor\.md|js|fontawesome)\b#;
+  $File::Find::prune = 1, return if m#^/(images|css|js)\b#;
 
   return if -d "content/$_";
 
@@ -99,18 +99,18 @@ walk_content_tree {
         glob("'content$_'/*/index.html.$lang")
       ];
       push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang!,
-        glob("'content$_'/*") if m!/files\b!;
+        glob("'content$_'/*.$lang") if m!/files\b!;
     }
   }
 }
   and do {
 
     my @categories_glob = glob("content/categories/*/*");
-
     for my $lang (qw/en es de fr/) {
       push @{$dependencies{"/categories/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
         @categories_glob if -f "content/categories/index.html.$lang";
     }
+
 
     while  (my ($k, $v) = each %{$facts->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
