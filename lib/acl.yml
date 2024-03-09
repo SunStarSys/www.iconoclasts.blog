@@ -11,6 +11,12 @@
     "@svnadmin": rw
     "*": r
 
+- path: content/inspectorcheeks
+  rules:
+    "inspectorcheeks": rw
+    "@svnadmin": rw
+    "*": r
+
 - path: content/jennifer
   rules:
     "jennifer": rw
