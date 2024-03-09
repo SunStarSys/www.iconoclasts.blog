@@ -2,7 +2,7 @@ Title: Perl 7 Feature Request: sealed subs for typed lexicals
 Keywords: perl,dylan,static,method,lookup,compile,sealed,apache,mod_perl,performance
 Dependencies: *.md.en
 Categories: Perl, Orion, Performance, Apache
-Status: verified=19290
+Status: verified=19296
 
 <div class="right">
   <img src="../images/sunstarstaronly.png">
@@ -99,7 +99,7 @@ sub handler :sealed {
 }
 ```
 
-## Production-Quality, Robust Perl v5.22+ Prototype: sealed.pm {{facts.releases.sealed.tag}} (on CPAN)
+## Production-Quality, Robust Perl v5.28+ Prototype: sealed.pm {{facts.releases.sealed.tag}} (on CPAN)
 
 Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should you want to run mod_perl2 w/ ithreads and httpd-2.4 w/ event mpm, and not segfault at **any** scale.  Tested on `Solaris 11.4` and `Ubuntu 22.04` on amd64.
 
@@ -143,7 +143,6 @@ time for request:     5.74ms      12.77s       6.39s       3.61s    58.14%
 time for connect:      304us    293.01ms     70.17ms     76.83ms    74.80%
 time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
 req/s           :       7.71      248.17       19.60       28.07    92.70%
-
 ```
 
 See <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Look for `t/bench.pl` in the parent directory.
