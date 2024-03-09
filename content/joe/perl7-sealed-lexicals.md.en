@@ -2,7 +2,7 @@ Title: Perl 7 Feature Request: sealed subs for typed lexicals
 Keywords: perl,dylan,static,method,lookup,compile,sealed,apache,mod_perl,performance
 Dependencies: *.md.en
 Categories: Perl, Orion, Performance, Apache
-Status: verified=19299
+Status: verified=19302
 
 <div class="right">
   <img src="../images/sunstarstaronly.png">
@@ -29,7 +29,7 @@ What [Doug was looking for](https://www.perl.com/pub/2000/06/dougpatch.html/) wa
 ```perl
 1..2
 sealed: compiling Foo->bar lookup.
-B::Deparse: coderef2text() aborted: Can't locate object method "PV" via package "B::NULL" at /usr/share/perl/5.36/B/Deparse.pm line 4925.
+B::Deparse: coderef2text() aborted: Cant locate object method "PV" via package "B::NULL" at /usr/share/perl/5.36/B/Deparse.pm line 4925.
 sealed: compiling main->foo lookup.
 sub sealed :sealed {
     use warnings;
