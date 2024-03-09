@@ -8,7 +8,7 @@
     <meta name="author" content="Joe Schaefer">
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
     <meta name="theme-color" content="black">
-	<meta property="og:image" content="/images/iconoclast.png">
+	<meta property="og:image" content="/images/iconoclast.jpg">
     <title>{% block title %}{{ facts.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 	{% if permalink %}
 	<link rel="bookmark" href="https://{{website}}{{path|dirname}}/{{path|basename:0}}.html{{lang}}">
@@ -39,7 +39,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-brand"><a href="https://www.iconoclasts.blog/">
-	  <img src="/images/iconoclast.png" alt="Iconoclasts">
+	  <img src="/images/iconoclast.jpg" alt="Iconoclasts">
 			<!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 --></a>
         </div>
       </div>
