@@ -18,36 +18,17 @@ accepted beliefs and traditions
 </small>
 &nbsp;
 
+
+{% for elt in iconoclasts.content|shuffle %}
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/5r98tT0j1a0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	 	<iframe title="{{elt.name}}" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 &nbsp;
+{% endfor %}
 
-<div class="embed-responsive embed-responsive-16by9">
-	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/4O9o4CKTGzQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-&nbsp;
-
-<div class="embed-responsive embed-responsive-16by9">
-	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/kZ-PhVcPMxo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-&nbsp;
-
-<div class="embed-responsive embed-responsive-16by9">
-	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/pVmwIDtnSqc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-&nbsp;
-
-<div class="embed-responsive embed-responsive-16by9">
-	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/80hWiPMy-Og" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
-</div>
-<br>
 </div>
 
 ![Iconoclasts](images/iconoclast.jpg)
