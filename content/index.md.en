@@ -3,7 +3,7 @@ Dependencies: /categories/*/index.html.en
 Keywords: wiki,knowledge
 Status: draft
 
-<div class="float-lg-right">
+<div id="news" class="float-lg-right">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
 		<div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclast</a></div>
 
@@ -113,6 +113,16 @@ div.jumbotron button.btn {
 @-webkit-keyframes FADEY {
   0%   { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes news {
+  0% {top: 1000px;}
+100% {top: 100px;}
+}
+
+#news {
+	animation: news;
+    animation-duration: 2s;
 }
 
 .theme-showcase {
