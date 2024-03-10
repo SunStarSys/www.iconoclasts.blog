@@ -129,6 +129,7 @@ div.jumbotron button.btn {
 #news {
 	animation: news;
     animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
 .theme-showcase {
