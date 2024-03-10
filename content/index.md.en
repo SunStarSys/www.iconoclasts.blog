@@ -116,8 +116,8 @@ div.jumbotron button.btn {
 }
 
 @keyframes news {
-  0% {top: 1000px;}
-100% {top: 100px;}
+  0% {top: 1000px;position:fixed}
+100% {top: 10px; position:relative}
 }
 
 #news {
