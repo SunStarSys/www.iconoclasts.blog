@@ -19,7 +19,7 @@ accepted beliefs and traditions
 
 &nbsp;
 
-{% for elt in iconoclasts.content|shuffle|slice:":5" %}
+{% for elt in iconoclasts.content|shuffle|slice:":4" %}
 <div class="embed-responsive embed-responsive-16by9">
 	 	<iframe title="{{elt.name}}" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -65,6 +65,9 @@ For a behind the scenes <span class="text-success">whitepaper</span> description
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
+
+</div>
+
 &nbsp;
 ## Featured Essays
 &nbsp;
@@ -80,8 +83,6 @@ For a behind the scenes <span class="text-success">whitepaper</span> description
 - [Sealed Lexicals for Perl 7](/joe/perl7-sealed-lexicals) &mdash; add <span class="text-info">:sealed</span> to a function definition and enjoy the extra speed of compile-time method lookups for all of its typed lexicals.
 
 - [The DevOps Movement](/joe/devops) &mdash; filled in the missing details on this article.
-
-</div>
 
 &nbsp;
 
