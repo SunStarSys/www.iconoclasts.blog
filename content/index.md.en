@@ -23,12 +23,14 @@ accepted beliefs and traditions
 <div class="embed-responsive embed-responsive-16by9">
 	 	<iframe title="{{elt.name}}" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 &nbsp;
 {% endfor %}
 
 </div>
 </div>
+
+&nbsp;
+
 </div>
 
 ![Iconoclasts](images/iconoclast.jpg)
