@@ -104,7 +104,7 @@ For a behind the scenes <span class="text-success">whitepaper</span> description
 ## Category Index
 &nbsp;
 
-<div style="text-align:justified">
+<div style="text-align:justify">
 {% for d in deps|dictsort:0 %}<button type="button" class="btn btn-success"><a href="{{d.0}}">{{d.0|dirname|basename}}</a></button> {% endfor %}
 </div>
 
