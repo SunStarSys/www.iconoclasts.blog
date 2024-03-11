@@ -65,7 +65,7 @@
           </h6>
         </header>
         <small>
-          <p class="card-text">{{c.content|markdown}}</p>
+          <p class="card-text">{{c.content|removetags:"script"|markdown}}</p>
           <hr>
           <p>&nbsp;</p>
         </small>
@@ -138,8 +138,16 @@
 
 ## Index
 
+<dl id="index">
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede}} ... <small><em>{{d.1.content|ssi|vcs_date}}</em></small>
+<dt>{{d1.content|ssi|img|removeattrs:"on\w+"}}</dt>
+<dd>
+
+- [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede|removetags:"script"|removeattrs:"on\w+"}} ... <small><em>{{d.1.content|ssi|vcs_date}}</em></small>
+
+</dd>
 {% endfor %}
+</dl>
+</div>
 {% endfilter %}
 {% endif %}

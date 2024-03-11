@@ -24,7 +24,7 @@
          <br>&nbsp;
          <br>
        </div>
-       {{ content|markdown }}
+       {{ content|removetags:"script"|markdown }}
      </div>
 {% endblock %}
 {% block footer %}
