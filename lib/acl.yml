@@ -7,13 +7,13 @@
 
 - path: content/joe
   rules:
-    "joe": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/inspectorcheeks
   rules:
-    "inspectorcheeks": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
@@ -25,73 +25,73 @@
 
 - path: content/jimjag
   rules:
-    "jimjag": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/priti
   rules:
-    "priti": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/tommy2tone
   rules:
-    "tommy2tone": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/keerthy
   rules:
-    "keerthy": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/jhe
   rules:
-    "jhe": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/jules
   rules:
-    "jules": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/esha
   rules:
-    "esha": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/herkulz
   rules:
-    "herkulz": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/brook
   rules:
-    "brook": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/mousdrvr
   rules:
-    "mousdrvr": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/dougm
   rules:
-    "dougm": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
 - path: content/gozer
   rules:
-    "gozer": rw
+    "@bloggers": rw
     "@svnadmin": rw
     "*": r
 
