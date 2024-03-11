@@ -140,7 +140,7 @@
 
 <dl id="index">
 {% for d in deps %}
-<dt>{{d.1.content|ssi|img|removeattrs:"on\w+"}}</dt>
+<dt>{{d.1.content|ssi|img|removeattrs:"on\w+ style"}}</dt>
 <dd>
 
 - [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede|removetags:"script"|removeattrs:"on\w+"}} ... <small><em>{{d.1.content|ssi|vcs_date}}</em></small>
