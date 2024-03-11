@@ -7,7 +7,7 @@ div.right img {
 	width: 200px;
 }
 
-dl#index dt img { height: 100px }
+dl#index dt img { height: 100px; max-width: 400px; }
 
 div.jumbotron li, footer li {
 font-family: Georgia, Cambria, "Times New Roman", Times, serif;
