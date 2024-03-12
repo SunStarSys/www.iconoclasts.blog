@@ -79,10 +79,11 @@
 </div>
 
 <hr>
+{% if category_root %}{% if archive_root %}
 <div class="card border-dark">
   <div class="card-header">
-    <h3 class="card-title">Attachments {% if category_root %}{% if archive_root %} &nbsp;
-    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Manage</a></button>{% endif %}{% endif %}
+    <h3 class="card-title">Attachments &nbsp;
+    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Manage</a></button>
 </h3>
   </div>
   <div class="card-body">
@@ -93,13 +94,14 @@
     </ul>
   </div>
   <div class="card-header">
-    <h3 class="card-title">Links {% if category_root %}{% if archive_root %} &nbsp;
-    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Manage</a></button>{% endif %}{% endif %}</h3>
+    <h3 class="card-title">Links &nbsp;
+    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Manage</a></button></h3>
   </div>
   <div class="card-body">
     {{ links.content|markdown }}
   </div>
 </div>
+{% endif %}{% endif %}
 
 <script type="text/javascript">
   function thread_comments() {
