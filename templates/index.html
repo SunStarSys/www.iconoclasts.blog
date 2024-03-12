@@ -2,10 +2,10 @@
 <span class="badge bg-info" style="color:#000">Permalink</span>&nbsp;
 {% endif %}
 
-{% if archive_path %}
+{% if archive_path %}{% ifequal headers.status "archived" %}
 <span class="badge bg-warning">
   <a style="color:#000" href="{{archive_path}}">Archived</a></span>&nbsp;
-{% endif %}
+{% endifequal %}{% endif %}
 
 {% for k in headers.keywords %}
 <span class="badge bg-danger text-white">
