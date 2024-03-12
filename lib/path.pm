@@ -34,6 +34,7 @@ our @patterns = (
   [qr!/(index|sitemap)\.html!, sitemap => {
     compress   => 1,
     nest       => 1,
+    markdown_search => 1,
     facts      => $facts,
   }],
 
