@@ -30,13 +30,13 @@
     <input type="hidden" id="action" name="action" value="comment">
     <input type="hidden" name="lang" value="{{lang|cut:"."}}">
     <div class="card-header">
-      <h3 class="card-title">Comments {% ifequal headers.status "final" %}{% else %}{% ifequal headers.status "archived" %}{% else %} &nbsp;
+      <h3 class="card-title">Comments {% if category_root %}{% if archive_root %} &nbsp;
         <button type="submit" name="uri"
                 value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
                 class="btn btn-sm btn-outline-warning">
           New
         </button>
-{% endifequal %}{% endifequal %}
+{% endif %}{% endif %}
 		</h3>
     </div>
 
@@ -56,13 +56,13 @@
             &nbsp;
             <span class="badge bg-danger text-white">Important!</span>
             {% endif %}
-            {% ifequal headers.status "final" %}{% else %}{% ifequal headers.status "archived" %}{% else %} 
+            {% if category_root %}{% if archive_root %}
 			  &nbsp;
             <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
                     value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
               Reply
             </button>
-			{% endifequal %}{% endifequal %}
+			{% endif %}{% endif %}
             {% endif %}
           </h6>
         </header>
@@ -81,8 +81,8 @@
 <hr>
 <div class="card border-dark">
   <div class="card-header">
-    <h3 class="card-title">Attachments {% ifequal headers.status "final" %}{% else %}{% ifequal headers.status "archived" %}{% else %} &nbsp;
-    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Manage</a></button>{% endifequal %}{% endifequal %}
+    <h3 class="card-title">Attachments {% if category_root %}{% if archive_root %} &nbsp;
+    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Manage</a></button>{% endif %}{% endif %}
 </h3>
   </div>
   <div class="card-body">
@@ -93,8 +93,8 @@
     </ul>
   </div>
   <div class="card-header">
-    <h3 class="card-title">Links {% ifequal headers.status "final" %}{% else %}{% ifequal headers.status "archived" %}{% else %} &nbsp;
-    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Manage</a></button>{% endifequal %}{% endifequal %}</h3>
+    <h3 class="card-title">Links {% if category_root %}{% if archive_root %} &nbsp;
+    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Manage</a></button>{% endif %}{% endif %}</h3>
   </div>
   <div class="card-body">
     {{ links.content|markdown }}
