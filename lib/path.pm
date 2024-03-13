@@ -64,6 +64,8 @@ our @patterns = (
     facts      => $facts,
   }],
 
+  [qr!\.tex[^/]*$!, latex => {}],
+
   [qr!\.md[^/]*$!, single_narrative => {
     template        => "main.html",
     compress        => 1,
