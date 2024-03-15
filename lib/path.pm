@@ -40,7 +40,7 @@ our @patterns = (
 
   [qr!^/[^/]+/([^/]+)\.md[^/]*$!, snippet => {
     template        => "blog.html",
-    view            => [qw/asy single_narrative/],
+    view            => [qw/asymptote single_narrative/],
     preprocess      => 1,
     compress        => 1,
     facts           => $facts,
