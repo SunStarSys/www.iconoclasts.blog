@@ -64,7 +64,7 @@ our @patterns = (
     facts      => $facts,
   }],
 
-  [qr!\.tex(?!=cache)[^/]*$!, latexmk => {
+  [qr!\.tex(?!cache)[^/]*$!, latexmk => {
           encoding  => "raw",
           format    => "pdf",
   }],
