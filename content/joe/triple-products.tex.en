@@ -2,6 +2,13 @@
 \usepackage[pages=all, color=black, position={current page.south}, placement=bottom, scale=1, opacity=1, vshift=5mm]{background}
 \usepackage[margin=1in]{geometry} % full-width
 
+\newenvironment{subproof}[1][\proofname]{%
+  \renewcommand{\qedsymbol}{$\blacksquare$}%
+  \begin{proof}[#1]%
+}{%
+  \end{proof}%
+}
+
 % AMS Packages
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -20,7 +27,7 @@
 \bibliographystyle{mplainnat}
 
 % Theorem, Lemma, etc
-\theoremstyle{plain}
+\theoremstyle{plain}s
 \newtheorem{theorem}{Theorem}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{lemma}[theorem]{Lemma}
@@ -38,13 +45,6 @@
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{problem}[theorem]{Problem}
 \newtheorem{principle}[theorem]{Principle}
-
-\newenvironment{subproof}[1][\proofname]{%
-  \renewcommand{\qedsymbol}{$\blacksquare$}%
-  \begin{subproof}[#1]%
-}{%
-  \end{subproof}%
-}
 
 \usepackage{graphicx, color}
 \graphicspath{{triple-products.page/}}
@@ -189,7 +189,8 @@ For sufficiency, we now consider the linear, bijective orthonormal eigenfunction
 \label{lma:1}
 $F: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
 \end{lemma}
-\begin{subproof}[Proof of Lemma]
+
+\begin{subproof}
 Let $\set{a_i}$ be a smooth partition of unity on $M$.
 
 \begin{equation}
