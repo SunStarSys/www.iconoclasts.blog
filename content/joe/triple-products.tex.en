@@ -41,9 +41,9 @@
 
 \newenvironment{subproof}[1][\proofname]{%
   \renewcommand{\qedsymbol}{$\blacksquare$}%
-  \begin{proof}[#1]%
+  \begin{subproof}[#1]%
 }{%
-  \end{proof}%
+  \end{subproof}%
 }
 
 \usepackage{graphicx, color}
