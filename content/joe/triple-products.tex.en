@@ -84,7 +84,7 @@ The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the st
 
 These results were first demonstrated during a similarly titled talk by the author at **MSRI** in 1997, but they appear here in published form for the first time.
 
-    \subsection{Preliminaries}
+    \section{Preliminaries}
 	\label{sec:pre}
 Now with $M,g,e^i,M^{i,j,k}$ as above, for $f \in C^\infty(M)$ and $i \geq 0$ note that the **Fourier coefficients**
 
@@ -154,13 +154,8 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 
 where $\delta_i$ is the Kronecker delta. Since $vol(M)$ is a spectral invariant [[HW11]](HW11), this information is already available from isospectrality considerations.
 
-
-
-	\subsection{Previous Results}
-	\label{sec:prev-results}
-
-	Null graphs are discussed in \cite{HararyR74}
-	The concept of ``internally stable set'' was used in \cite{Berge57, Berge58}.
+\section{Results}
+	\label{sec:results}
 
 	\begin{theorem}
 		\label{thrm:1}
@@ -186,12 +181,11 @@ we are done with the necessity argument.
 
 For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $F$ from $C^\infty(M)$ to $C^\infty(N)$ and note that from the calculations in the [Preliminaries](Preliminaries) above, $F$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
 
- Lemma
-
+\begin{lemma}
+\label{lma:1}
 $F: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
-
- Proof of Lemma
-
+\end{lemma}
+\begin{proof}
 Let $\set{a_i}$ be a smooth partition of unity on $M$.
 
 \begin{equation}
@@ -214,6 +208,8 @@ By the dominated convergence theorem,
 which is a characteristic function of positive measure on each disjoint subset $\set{x\in M | a_j(x) = 1}$. This means the Lemma is proven for each $a_j$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\mathbb{N}$, by Diagram (4)).
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$, where $ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$ has positive measure, and the Lemma is proven in full.
+
+\end{proof}
 
 This means that on a dense set of $C(M)$ (and $C(N)$), we have established $F$ as an isomorphism of Abelian $C^*$ algebras, and thus can be extended to an isomorphism of $C(M)$ and $C(N)$ in the same category.
 
