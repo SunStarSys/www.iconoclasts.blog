@@ -11,6 +11,12 @@
     "@svnadmin": rw
     "*": r
 
+- path: content/axio
+  rules:
+    "@bloggers": rw
+    "@svnadmin": rw
+    "*": r
+
 - path: content/inspectorcheeks
   rules:
     "@bloggers": rw
