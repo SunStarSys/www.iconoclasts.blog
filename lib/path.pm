@@ -64,7 +64,10 @@ our @patterns = (
     facts      => $facts,
   }],
 
-  [qr!\.tex[^/]*$!, pdflatex => {encoding => "raw"}],
+  [qr!\.tex[^/]*$!, latexmk => {
+      encoding => "raw",
+      format => "pdf",
+  }],
 
   [qr!\.md[^/]*$!, single_narrative => {
     template        => "main.html",
