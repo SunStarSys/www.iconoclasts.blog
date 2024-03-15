@@ -64,7 +64,7 @@ our @patterns = (
     facts      => $facts,
   }],
 
-  [qr!\.tex[^/]*$!, latex => {}],
+  [qr!\.tex[^/]*$!, pdflatex => {}],
 
   [qr!\.md[^/]*$!, single_narrative => {
     template        => "main.html",
