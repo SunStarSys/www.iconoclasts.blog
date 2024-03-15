@@ -216,10 +216,10 @@ Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functo
 As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $F$), it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators [[MT13]](MT13). The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
 This completes the proof of the Theorem.
-	\end{proof}
+\end{proof}
 
-	\section{Example}
-	\label{sec:example}
+\section{Example}
+\label{sec:example}
 Let $\set{\lambda_i} \subset \mathbb{R}^n$ be an indexed, rank $n$ lattice of Lie Algebra weights for the quotient space representation of $$\frak{g}=\mathbb{R}^n$$ as translation invariant (i.e., constant) vector fields on itself, when $\mathbb{R}^n$ is also viewed as $\frak{g}'s$ associated Lie Group over a torus defined by $\mathbb{R}^n/A\mathbb{Z}^n, A \in GL(n,\mathbb{R})$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $\langle x, \lambda_i\rangle,\space x\in\mathbb{R}^n$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $2\pi \sqrt{-1}$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $L^2(\mathbb{R}^n/A\mathbb{Z}^n,dx)$, with Lebesgue (Haar) measure $dx$.
 
 Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian **because** the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $4\pi^2$) to the Casimir-element-determined-length-squared of each character's weight in the lattice.
@@ -260,7 +260,7 @@ application of the Gelfand-Naimark Representation Theorem during the
 [Proof](Proof of Theorem) of our [Theorem](Theorem).
 
 
-	\paragraph{Acknowledgements}
+\paragraph{Acknowledgements}
 The original research was funded in part by a gracious James Simons Research Award in 1995-1996, and the generous support of an Alfred P. Sloan Dissertation Fellowship in 1996-1997 at the University at Stony Brook.
 
 The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid Hezari, Harish Seshadri, and especially Leon Takhtajan for their technical assistance and review in the preparation of this manuscript for publication.
