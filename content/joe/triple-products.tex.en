@@ -1,14 +1,6 @@
 \documentclass{article}
 \usepackage[pages=all, color=black, position={current page.south}, placement=bottom, scale=1, opacity=1, vshift=5mm]{background}
 \usepackage[margin=1in]{geometry} % full-width
-\usepackage{logicproof}
-
-\newenvironment{subproof}[1][\proofname]{%
-  \renewcommand{\qedsymbol}{$\blacksquare$}%
-  \begin{proof}[#1]%
-}{%
-  \end{proof}%
-}
 
 % AMS Packages
 \usepackage{amsmath}
