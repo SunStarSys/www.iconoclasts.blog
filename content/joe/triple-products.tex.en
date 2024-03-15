@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[pages=all, color=black, position={current page.south}, placement=bottom, scale=1, opacity=1, vshift=5mm]{background}
 \usepackage[margin=1in]{geometry} % full-width
+\usepackage{logicproof}
 
 \newenvironment{subproof}[1][\proofname]{%
   \renewcommand{\qedsymbol}{$\blacksquare$}%
@@ -46,12 +47,7 @@
 \newtheorem{problem}[theorem]{Problem}
 \newtheorem{principle}[theorem]{Principle}
 
-\usepackage{graphicx, color}
-\graphicspath{{triple-products.page/}}
-
-%\usepackage[linesnumbered,ruled,vlined,commentsnumbered]{algorithm2e} % use algorithm2e for typesetting algorithms
-\usepackage{algorithm, algpseudocode} % use algorithm and algorithmicx for typesetting algorithms
-\usepackage{mathrsfs} % for \mathscr command
+\graphicspath{{content/joe/triple-products.page/}}
 \usepackage{braket}
 
 \begin{document}
