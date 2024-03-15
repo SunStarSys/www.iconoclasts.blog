@@ -39,6 +39,13 @@
 \newtheorem{problem}[theorem]{Problem}
 \newtheorem{principle}[theorem]{Principle}
 
+\newenvironment{subproof}[1][\proofname]{%
+  \renewcommand{\qedsymbol}{$\blacksquare$}%
+  \begin{proof}[#1]%
+}{%
+  \end{proof}%
+}
+
 \usepackage{graphicx, color}
 \graphicspath{{triple-products.page/}}
 
@@ -182,7 +189,7 @@ For sufficiency, we now consider the linear, bijective orthonormal eigenfunction
 \label{lma:1}
 $F: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
 \end{lemma}
-\begin{proof}
+\begin{subproof}
 Let $\set{a_i}$ be a smooth partition of unity on $M$.
 
 \begin{equation}
@@ -206,7 +213,7 @@ which is a characteristic function of positive measure on each disjoint subset $
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$, where $ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$ has positive measure, and the Lemma is proven in full.
 
-\end{proof}
+\end{subproof}
 
 This means that on a dense set of $C(M)$ (and $C(N)$), we have established $F$ as an isomorphism of Abelian $C^*$ algebras, and thus can be extended to an isomorphism of $C(M)$ and $C(N)$ in the same category.
 
