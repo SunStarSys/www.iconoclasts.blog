@@ -139,7 +139,9 @@
 {% endfilter %}
 {% endif %}
 <div class="container">
-  {{ graphviz|safe }}
+  <div class="teaser">
+{{ graphviz|safe }}
+  </div>
   <br>
   {% for f in friends %}
   {% if f.members %}
