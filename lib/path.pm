@@ -64,11 +64,15 @@ our @patterns = (
     facts      => $facts,
   }],
 
+  # run latexmk on .tex... files
   [qr!\.tex\b[^/]*$!, latexmk => {
           encoding  => "raw",
           format    => "pdf",
 		  generator => "xelatex",
   }],
+
+  # skip .bib... files
+  [qr!\.bib\b[^/]*$!, skip => {}],
 
   [qr!\.md[^/]*$!, single_narrative => {
     template        => "main.html",
