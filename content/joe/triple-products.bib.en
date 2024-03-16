@@ -17,7 +17,7 @@
 }
 
 @article{CS92,
- author = {Conway, John H. and N. J. A. Sloane}
+ author = {Conway, John H}[Sloane, N. J. A.]
  title = {Four-dimensional lattices with the same theta series}
  journal = {Internat. Math. Res. Notices}
  volume = {4}
@@ -26,7 +26,7 @@
 }
 
 @article{DH11,
-  author = "Datchev, Kiril, and Hamid Hezari"
+  author = {Datchev, Kiril}[Hezari, Hamid]
   title = {Inverse problems in spectral geometry}
   journal = {Inverse problems and applications: Inside Out II}
   volume = {60}
@@ -35,7 +35,7 @@
 }
 
 @book{FBZ04,
- author = {Frenkel, Edward, and David Ben-Zvi}
+ author = {Frenkel, Edward}[Ben-Zvi, David]
  title = {Vertex algebras and algebraic curves}
  volume = {88}
  publisher = {American Mathematical Soc.}
@@ -60,15 +60,15 @@
 }
 
 @article{GK80,
-  author = {Guillemin, Victor, and David Kazhdan}
+  author = {Guillemin, Victor}[Kazhdan, David]
   title = {Some inverse spectral results for negatively curved n-manifolds}
   journal = {Proceedings of Symposia in Pure Math}
   volume = {36}
   year = {1980}
 }
 
-@article {LH68,
-  autho r= {Hörmander, Lars}
+@article{LH68,
+  author = {Hörmander, Lars}
   title = {The spectral function of an elliptic operator}
   journal = {Mathematics Past and Present Fourier Integral Operators}
   publisher = {Springer Berlin Heidelberg}
@@ -76,30 +76,119 @@
   pages = {217--242}
 }
 
-1. <a id="AK01">[AK01] Knapp, Anthony W.</a> Representation theory of semisimple groups: an overview based on examples. (2001).
+@book{AK01,
+  author = {Knapp, Anthony W}
+  title = {Representation theory of semisimple groups: an overview based on examples}
+  publisher = {Princeton University Press}
+  year = {2001}
+}
 
-1. <a id="LS18">[LS18] Lu, Jianfeng, and Stefan Steinerberger</a>. "On pointwise products of elliptic eigenfunctions." arXiv preprint arXiv:1810.01024 (2018).
+@online{LS18.
+  author = {Lu, Jianfeng}[Steinerberger, Stefan]
+  title = {On pointwise products of elliptic eigenfunctions}
+  publisher = {arXiv preprint arXiv:1810.01024}
+  year = {2018}
+}
 
-1. <a id="MS67">[MS67] McKean Jr, Henry P., and Isadore M. Singer</a>. "Curvature and the eigenvalues of the Laplacian." Journal of Differential Geometry 1.1-2 (1967): 43-69.
 
-1. <a id="JM64">[JM64] Milnor, John</a>. "Eigenvalues of the Laplace operator on certain manifolds." Proceedings of the National Academy of Sciences 51.4 (1964): 542-542.
+@proceedings{JM64,
+  author = {Milnor, John},
+  title = {Eigenvalues of the Laplace operator on certain manifolds}
+  journal = {Proceedings of the National Academy of Sciences}
+  volume = {51}
+  series = {4}
+  year = {1964}
+  pages = {542--542}
+}
 
-1. <a id="NRR22">[NRR22] Nilsson, Erik, Julie Rowlett, and Felix Rydell</a>. "The isospectral problem for flat tori from three perspectives." Bulletin of the American Mathematical Society 60.1 (2023): 39-83.
+@article{NRR22,
+  author = {Nilsson, Erik}[Rowlett, Julie][Rydell, Felix]
+  title = {The isospectral problem for flat tori from three perspectives}
+  journal = {Bulletin of the American Mathematical Society}
+  volume = {60}
+  series = {1}
+  year = {2023}
+  pages = {39--83}
+}
 
-1. <a id="RS75">[RS75] Reed, Michael, and Barry Simon</a>. II: Fourier analysis, self-adjointness. Vol. 2. Elsevier, 1975.
+@book{RS75,
+  author = {Reed, Michael}[Simon, Barry]
+  title = {Methods of Modern Mathematical Physics II: Fourier analysis, self-adjointness}
+  volume = {2}
+  publisher = {Elsevier}
+  year = {1975}
+}
 
-1. <a id="PS94">[PS94] Sarnak, Peter</a>. "Integrals of Products of Eigenfunctions", IMRN. No. 6, (1994): 251-260.
+@article{PS94,
+  author = {Sarnak, Peter}
+  title = {Integrals of Products of Eigenfunctions}
+  journal = {IMRN}
+  volume = {6}
+  year = {1994}
+  pages = {251--260}
+}
 
-1. <a id="AS94">[AS94] Schiemann, Alexander</a>. Ternäre positiv definite quadratische Formen mit gleichen Darstellungszahlen(German), Bonner Mathematische Schriften [Bonn Mathematical Publications], vol. 268, Universität Bonn, Mathematisches Institut, Bonn, 1994. Dissertation, Universität Bonn, Bonn, 1993. MR1294141
+@phdthesis{AS94,
+  author = {Schiemann, Alexander}
+  title = {Ternäre positiv definite quadratische Formen mit gleichen Darstellungszahlen}
+  language = {German}
+  publisher = {Bonner Mathematische Schriften [Bonn Mathematical Publications]}
+  volume = {268}
+  school = {Universität Bonn, Mathematisches Institut}
+  year = {1993}
+}
 
-1. <a id="TS85">[TS85] Sunada, Toshikazu</a>. "Riemannian coverings and isospectral manifolds." Annals of Mathematics 121.1 (1985): 169-186.
+@article{TS85,
+  author = {Sunada, Toshikazu}
+  title = {Riemannian coverings and isospectral manifolds}
+  journal = {Annals of Mathematics}
+  volume = {121}
+  series ={1}
+  year = {1985}
+  pages = {169--186}
+}
 
-1. <a id="ST80">[ST80] Tanno, Shukichi</a>. "A characterization of the canonical spheres by the spectrum." Math. Z. 175:3, (1980): 267–274.
+@article{ST80,
+  author = {Tanno, Shukichi}
+  title = {A characterization of the canonical spheres by the spectrum}
+  journal = {Math. Z.}
+  volume = {175}
+  series = {3}
+  year = {1980}
+  pages = {267-–274}
+}
 
-1. <a id="MT13">[MT13] Taylor, Michael</a>. Partial differential equations II: Qualitative studies of linear equations. Vol. 116. Springer Science & Business Media, 2013.
+@book{MT13,
+  author = {Taylor, Michael}
+  title = {Partial differential equations II: Qualitative studies of linear equations}
+  volume = {116}
+  publisher = {Springer Science & Business Media}
+  year = {2013}
+}
 
-1. <a id="HW11">[HW11] Weyl, Hermann</a> "Über die asymptotische Verteilung der Eigenwerte." Nachrichten der Königlichen Gesellschaft der Wissenschaften zu Göttingen: (1911): 110–117.
+@article{HW11,
+  author = {Weyl, Hermann}
+  title = {Über die asymptotische Verteilung der Eigenwerte}
+  journal = {Nachrichten der Königlichen Gesellschaft der Wissenschaften zu Göttingen}
+  year = {1911}
+  pages = {110–-117}
+}
 
-1. <a id="EW22">[EW22] Wyman, Emmett L.</a> "Triangles and triple products of Laplace eigenfunctions." Journal of Functional Analysis 282.8 (2022): 109404.
+@article{EW22,
+  author = {Wyman, Emmett L}
+  title = {Triangles and triple products of Laplace eigenfunctions}
+  journal = {Journal of Functional Analysis}
+  volume = {282}
+  series = {8}
+  year = {2022}
+}
 
-1. <a id="GZ97">[GZ97] Zhou, Gengqiang</a>. "Compactness of isospectral compact manifolds with bounded curvatures." Pacific J. Math. 181:1, (1997): 187–200.
+@article{GZ97,
+  author = {Zhou, Gengqiang}
+  title = {Compactness of isospectral compact manifolds with bounded curvatures}
+  journal = {Pacific J. Math}
+  volume = {181}
+  series = {1}
+  year = {1997}
+  pages = {187-–200}
+}
