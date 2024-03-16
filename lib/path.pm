@@ -67,6 +67,7 @@ our @patterns = (
   [qr!\.tex\b[^/]*$!, latexmk => {
           encoding  => "raw",
           format    => "pdf",
+		  generator => "xelatex",
   }],
 
   [qr!\.md[^/]*$!, single_narrative => {
