@@ -24,7 +24,7 @@
 \author{Joe Schaefer \\President, SunStar Systems}
 
 % modern, utf8 friendly
-\usepackage{biblatex}
+\usepackage[style=author-year]{biblatex}
 \addbibresource{content/joe/triple-products.bib.en}
 
 % Theorem, Lemma, et
