@@ -59,6 +59,7 @@ Using elementary techniques from Geometric Analysis, Partial Differential Equati
 
 \section{Introduction}
 \label{sec:intro}
+
 For a closed Riemannian manifold $(M,g)$, characterizing its class of
 non-isometric, isospectral manifolds is a type of Inverse Problem
 [[DH11]](DH11) in Spectral Geometry. Naïvely one might speculate that this
@@ -85,6 +86,7 @@ These results were first demonstrated during a similarly titled talk by the auth
 
 \section{Preliminaries}
 \label{sec:pre}
+
 Now with $M,g,e^i,M^{i,j,k}$ as above, for $f \in C^\infty(M)$ and $i \geq 0$ note that the **Fourier coefficients**
 
 \begin{equation}
@@ -157,6 +159,7 @@ where $\delta_i$ is the Kronecker delta. Since $vol(M)$ is a spectral invariant 
 
 \begin{theorem}
 \label{thrm:1}
+
 Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $\set{e^i}_{i=0}^{\infty}$ for the (non-negative) Laplacian $\Delta_M$ on $L^2(M,g)$ associated with a closed Riemannian manifold $(M,g)$, define
 
 \begin{equation}
@@ -165,6 +168,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 To be isometric to $(M,g)$, it is a necessary and sufficient condition for another isospectral closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $\set{M^{i,j,k}}$ under each basis.
 \end{theorem}
+
 \begin{proof}
 For necessity, let $F:(N,h)\rightarrow (M,g)$ be an isometry between closed Riemannian manifolds, and let the target orthonormal basis of eigenfunctions on $L^2(N,h)$ be the pull-back via $F$ of the orthonormal basis $\set{e^i}$ on $(M,g)$ above. Since
 
@@ -178,7 +182,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 we are done with the necessity argument.
 
 For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $F$ from $C^\infty(M)$ to $C^\infty(N)$ and note that from the calculations in the [Preliminaries](Preliminaries) above, $F$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
-\item
+
 \begin{lemma}
 \label{lma:1}
 $F: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
