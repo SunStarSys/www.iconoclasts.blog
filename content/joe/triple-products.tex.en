@@ -22,9 +22,7 @@
 \date{2024\\ March}
 \author{Joe Schaefer \\President, SunStar Systems}
 
-% Natbib
-\usepackage[sort&compress,numbers,square]{natbib}
-\bibliographystyle{mplainnat}
+\usepackage{biblatex}
 
 % Theorem, Lemma, et
 \theoremstyle{plain}
@@ -283,8 +281,6 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 \newpage
 
 \bibliography{refs}
-
-%	\appendix
 
 \end{document}
 
