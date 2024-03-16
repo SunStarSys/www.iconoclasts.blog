@@ -48,17 +48,6 @@
 \graphicspath{{content/joe/triple-products.page/}}
 \usepackage{braket}
 
-
-@article{mckean1967curvature,
-  title={Curvature and the eigenvalues of the Laplacian},
-  journal={Journal of Differential Geometry},
-  volume={1},
-  number={1-2},
-  pages={43--69},
-  year={1967},
-  publisher={Lehigh University}
-}
-
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -70,6 +59,16 @@ Using elementary techniques from Geometric Analysis, Partial Differential Equati
 
 \section{Introduction}
 \label{sec:intro}
+
+@article{mckean1967curvature,
+  title={Curvature and the eigenvalues of the Laplacian},
+  journal={Journal of Differential Geometry},
+  volume={1},
+  number={1-2},
+  pages={43--69},
+  year={1967},
+  publisher={Lehigh University}
+}
 
 For a closed Riemannian manifold $(M,g)$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem [[DH11]](DH11) in Spectral Geometry. Naïvely one might speculate that this class would always be empty. However, the academic literature is rich with decades-old constructions of specific pairings of counterexamples: beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori [[JM64]](JM64), and continuing [[CS92]](CS92) towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis [[AS94]](AS94) - replete with a computer aided search for the critical $\dim = 3$ case.  A modern survey of the full flat tori history appears in [[NRR22]](NRR22).
 
