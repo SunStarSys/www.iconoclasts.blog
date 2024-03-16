@@ -61,19 +61,19 @@ Using elementary techniques from Geometric Analysis, Partial Differential Equati
 \section{Introduction}
 \label{sec:intro}
 
-For a closed Riemannian manifold $(M,g)$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem [[DH11]](DH11) in Spectral Geometry. Naïvely one might speculate that this class would always be empty. However, the academic literature is rich with decades-old constructions of specific pairings of counterexamples: beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori [[JM64]](JM64), and continuing [[CS92]](CS92) towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis [[AS94]](AS94) - replete with a computer aided search for the critical $\dim = 3$ case.  A modern survey of the full flat tori history appears in [[NRR22]](NRR22).
+For a closed Riemannian manifold $(M,g)$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem \cite{DH11} in Spectral Geometry. Naïvely one might speculate that this class would always be empty. However, the academic literature is rich with decades-old constructions of specific pairings of counterexamples: beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori \cite{JM64}, and continuing \cite{CS92} towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis \cite{AS94} - replete with a computer aided search for the critical $\dim = 3$ case.  A modern survey of the full flat tori history appears in \cite{NRR22}.
 
-Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces; constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 \cite{mckean1967curvature}.) A prime example of this effort was Toshikazu Sunada's 1985 [[TS85]](TS85) invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
+Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces; constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 \cite{mckean1967curvature}.) A prime example of this effort was Toshikazu Sunada's 1985 \cite{TS85} invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
 
-For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are not even locally isometric [[CG93]](CG93).
+For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are not even locally isometric \cite{CG93}.
 
-Work continues in many related areas [[DH11]](DH11), such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty [[ST80]](ST80), finite [[AS93]](AS93), rigid [[GK80]](GK80), and compact [[GZ97]](GZ97)) as a subset of different moduli spaces of Riemannian metrics.
+Work continues in many related areas \cite{DH11}, such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty \cite{ST80}, finite \cite{AS93}, rigid \cite{GK80}, and compact \cite{GZ97}) as a subset of different moduli spaces of Riemannian metrics.
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" - the non-negative spectrum of the Laplace-Beltrami operator (herein referred to as the Laplacian) on $L^2(M,g)$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
-Symmetry plays an important role in computationally tractable cases [[TF17]](TF17) [[LS18]](LS18) [[PS94]](PS94), which is aptly illustrated in our flat tori [Example](Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this circumstance we offer an unproven conjecture: if the elements of the set $\set{M^{i,j,k}}$, for a pair of real-valued eigenfunction bases, agree up to changes of sign, then there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves the underlying closed Riemannian manifolds are isometric by application of the [Theorem](Theorem) above.
+Symmetry plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori [Example](Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this circumstance we offer an unproven conjecture: if the elements of the set $\set{M^{i,j,k}}$, for a pair of real-valued eigenfunction bases, agree up to changes of sign, then there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves the underlying closed Riemannian manifolds are isometric by application of the [Theorem](Theorem) above.
 
-The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the linear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra [[FBZ04]](FBZ04) associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
+The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the linear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
 These results were first demonstrated during a similarly titled talk by the author at MSRI in 1997, but they appear here in published form for the first time.
 
@@ -90,7 +90,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 \end{aligned}
 \end{equation}
 
-since $f$ is uniquely representable as its rapidly converging Fourier Series ($\Delta_M$-specific Sobolev Embeddings [[MT13]](MT13) [[RS75]](RS75), together with Weyl's Asymptotic Law [[HW11]](HW11), imply the terms in the sum are $o(i^{-n})$ uniformly in $x$ [[LH68]](LH68), $\forall n\in\mathbb{N}$.) Then we see that for $f_1, f_2 \in C^\infty(M)$, the Fourier coefficients of the pointwise product $f_1 f_2 \in C^\infty(M)$ are
+since $f$ is uniquely representable as its rapidly converging Fourier Series ($\Delta_M$-specific Sobolev Embeddings \cite{MT13} \cite{RS75}, together with Weyl's Asymptotic Law \cite{HW11}, imply the terms in the sum are $o(i^{-n})$ uniformly in $x$ \cite{LH68}, $\forall n\in\mathbb{N}$.) Then we see that for $f_1, f_2 \in C^\infty(M)$, the Fourier coefficients of the pointwise product $f_1 f_2 \in C^\infty(M)$ are
 
 \begin{equation}
 \begin{aligned}
@@ -133,7 +133,7 @@ This implies any such basis map as above carries characteristic functions (as me
 
 The point of these computations is to emphasize the fact that $\set{M^{i,j,k}}$ characterizes the Harmonic Analysis of the pointwise multiplication operator on $C^\infty(M)$, which is a dense subalgebra of the Abelian $C^*$ algebra $C(M)$, by the Stone-Weierstrass theorem.
 
-For the rapid convergence of these above sums involving $M^{i,j,k}$, note that products of eigenfunctions are smooth, so these Fourier coefficients decay as above (in each index). For more details, see Emmett Wyman's work in 2022 with these coefficients as it relates to the triangle inequality on the eigenvalues [[EW22]](EW22).
+For the rapid convergence of these above sums involving $M^{i,j,k}$, note that products of eigenfunctions are smooth, so these Fourier coefficients decay as above (in each index). For more details, see Emmett Wyman's work in 2022 with these coefficients as it relates to the triangle inequality on the eigenvalues \cite{EW22}.
 
 Note: we may always assume
 
@@ -145,7 +145,7 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 \end{aligned}
 \end{equation}
 
-where $\delta_i$ is the Kronecker delta. Since $vol(M)$ is a spectral invariant [[HW11]](HW11), this information is already available from isospectrality considerations.
+where $\delta_i$ is the Kronecker delta. Since $vol(M)$ is a spectral invariant \cite{HW11}, this information is already available from isospectrality considerations.
 
 \section{Results}
 \label{sec:results}
@@ -209,9 +209,9 @@ Without loss of generality, we may apply the special case result shown for  the 
 
 This means that on a dense set of $C(M)$ (and $C(N)$), we have established $F$ as an isomorphism of Abelian $C^*$ algebras, and thus can be extended to an isomorphism of $C(M)$ and $C(N)$ in the same category.
 
-Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras [[JC19]](JC19) to represent this isomorphism by a homeomorphism between $N$ and $M$. Since it is bijective on smooth functions, it too must be smooth.
+Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras \cite{JC19} to represent this isomorphism by a homeomorphism between $N$ and $M$. Since it is bijective on smooth functions, it too must be smooth.
 
-As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $F$), it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators [[MT13]](MT13). The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
+As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $F$), it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators \cite{MT13}. The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
 This completes the proof of the Theorem.
 
@@ -250,13 +250,8 @@ However, in order to apply our [Theorem](Theorem), it is essential that such a l
 
 must also preserve the "analytic" invariants - the Casimir-element induced figure $4\pi^2\|\lambda_i\|^2$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
 
-This representation-theoretical account [[AK01]](AK01) is exactly equivalent to
-the prior development of lattice congruence [[NRR22]](NRR22) traditonally
-used to delineate isometry classes of flat tori. In fact, the matrix transpose
-of such a linear map $B\in O(n,\mathbb{R})$, as described in the prior paragraph,
-is the contravariant Riemannian isometry between the tori, as provided by
-application of the Gelfand-Naimark Representation Theorem during the
-[Proof](Proof of Theorem) of our [Theorem](Theorem).
+This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of lattice congruence \cite{NR22} traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $B\in O(n,\mathbb{R})$, as described in the prior paragraph, is the contravariant Riemannian isometry between the tori, as provided by
+application of the Gelfand-Naimark Representation Theorem during the [Proof](Proof of Theorem) of our [Theorem](Theorem).
 
 \begin{conjecture}
 If every eigenvalue has multiplicity $1$, given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $\set{M^{i,j,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
