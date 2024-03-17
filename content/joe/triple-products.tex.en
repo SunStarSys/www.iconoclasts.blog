@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage[type={CC},modifier={by-nc-nd},version={4.0}]{doclicense}
 
 \usepackage[margin=1in]{geometry}
@@ -268,6 +268,8 @@ If every eigenvalue has multiplicity $1$, given a pair of eigenvalue preserving 
 The original research was funded in part by a gracious James Simons Research Award in 1995-1996, and the generous support of an Alfred P. Sloan Dissertation Fellowship in 1996-1997 at the University at Stony Brook.
 
 The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid Hezari, Harish Seshadri, and especially Leon Takhtajan for their technical assistance and review in the preparation of this manuscript for publication.
+
+\doclicenseThis
 
 \newpage
 
