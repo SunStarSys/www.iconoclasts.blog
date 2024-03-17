@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[margin=1in]{geometry} % full-width
+\usepackage[margin=1in]{geometry}
 
 \newenvironment{subproof}[1][\proofname]{%
   \renewcommand{\qedsymbol}{$\blacksquare$}%
@@ -26,7 +26,7 @@
 \usepackage[style=alphabetic]{biblatex}
 \addbibresource{content/joe/triple-products.bib.en}
 
-# useful math-physics macros
+% useful math-physics macros
 \usepackage{braket}
 
 % Theorem, Lemma, et
