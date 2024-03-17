@@ -250,7 +250,7 @@ As this Equation~\ref{eqn:a} is linear on the weight lattice $(A^{-1})^t\mathbb{
 However, in order to apply Theorem~\ref{thm}, it is essential that such a linear map $B$ be $B\in O(n,\mathbb{R})$ on the weight lattice, because the induced $L^2$ eigenfunction basis map
 
 \begin{equation}
-\{e^{2\pi\sqrt{-1}\bra{x}\ket{B\lambda_i}}/\sqrt{|\det A|}\}_{i=0}^\infty
+\{e^{2\pi\sqrt{-1}\bra{x}B\ket{\lambda_i}}/\sqrt{|\det A|}\}_{i=0}^\infty
 \end{equation}
 
 must also preserve the "analytic" invariants -- the Casimir-element induced figure $4\pi^2\|\lambda_i\|^2$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
