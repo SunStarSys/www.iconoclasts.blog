@@ -22,7 +22,7 @@
 
 \title{Triple Products of Eigenfunctions and Spectral Geometry}
 \date{2024\\March}
-\author{Joe Schaefer\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{$<joe@sunstarsys.com>$}}
+\author{Joe Schaefer\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
 
 % modern, utf8 friendly
 \usepackage[style=alphabetic]{biblatex}
@@ -89,7 +89,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 To be isometric to $(M,g)$, it is a necessary and sufficient condition for another isospectral closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $\set{M^{i,j,k}}$ under each basis.
 \end{theorem}
 
-Symmetry plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this circumstance we offer an unproven conjecture: if the elements of the set $\set{M^{i,j,k}}$, for a pair of real-valued eigenfunction bases, agree up to changes of sign, then there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves the underlying closed Riemannian manifolds are isometric by application of Theorem~\ref{thm}.
+\textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this circumstance we offer an unproven conjecture: if the elements of the set $\set{M^{i,j,k}}$, for a pair of real-valued eigenfunction bases, agree up to changes of sign, then there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves the underlying closed Riemannian manifolds are isometric by application of Theorem~\ref{thm}.
 
 The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the linear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
