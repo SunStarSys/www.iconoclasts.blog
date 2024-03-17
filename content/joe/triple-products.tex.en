@@ -63,7 +63,7 @@ Using elementary techniques from Geometric Analysis, Partial Differential Equati
 \section{Introduction}
 \label{sec:intro}
 
-For a closed Riemannian manifold $(M,g)$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem \cite{DH11} in Spectral Geometry. Naïvely one might speculate that this class would always be empty. However, the academic literature is rich with decades-old constructions of specific pairings of counterexamples: beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori \cite{JM64}, and continuing \cite{CS92} towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis \cite{AS94} - replete with a computer aided search for the critical $\dim = 3$ case.  A modern survey of the full flat tori history appears in \cite{NRR22}.
+For a closed Riemannian manifold $(M,g)$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem \cite{DH11} in Spectral Geometry. Naïvely one might speculate that this class would always be empty. However, the academic literature is rich with decades-old constructions of specific pairings of counterexamples: beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori \cite{JM64}, and continuing \cite{CS92} towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis \cite{AS94} -- replete with a computer aided search for the critical $\dim = 3$ case.  A modern survey of the full flat tori history appears in \cite{NRR22}.
 
 Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces; constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 \cite{mckean1967curvature}.) A prime example of this effort was Toshikazu Sunada's 1985 \cite{TS85} invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
 
@@ -71,7 +71,7 @@ For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are n
 
 Work continues in many related areas \cite{DH11}, such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty \cite{ST80}, finite \cite{AS94}, rigid \cite{GK80}, and compact \cite{GZ97}) as a subset of different moduli spaces of Riemannian metrics.
 
-What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" - the non-negative spectrum of the Laplace-Beltrami operator (herein referred to as the (non-negative) \textit{Laplacian}) on $L^2(M,g)$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
+What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" -- the non-negative spectrum of the Laplace-Beltrami operator (herein referred to as the (non-negative) \textit{Laplacian}) on $L^2(M,g)$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
 \begin{theorem}
 \label{thm}
@@ -253,7 +253,7 @@ However, in order to apply Theorem~\ref{thm}, it is essential that such a linear
 \set{e^{2\pi\sqrt{-1}\langle x, B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 \end{equation}
 
-must also preserve the "analytic" invariants - the Casimir-element induced figure $4\pi^2\|\lambda_i\|^2$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
+must also preserve the "analytic" invariants -- the Casimir-element induced figure $4\pi^2\|\lambda_i\|^2$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
 
 This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of \textit{lattice congruence} \cite{NRR22} traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $B\in O(n,\mathbb{R})$, as described in the prior paragraph, is the contravariant Riemannian isometry between the tori, as provided by
 application of the \textit{Gelfand-Naimark Representation Theorem} during the proof of Theorem~\ref{thm}.
