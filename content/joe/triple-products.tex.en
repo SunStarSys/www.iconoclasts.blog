@@ -230,7 +230,7 @@ Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian, bec
 We presently view the above basis
 
 \begin{equation}
-\set{e^{2\pi\sqrt{-1}\langle x, \lambda_i\rangle}\frac{1}{\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle x, \lambda_i\rangle}\frac{1}{\sqrt{|\det A|}}}_{i=0}^\infty
 \end{equation}
 
 to be our Theorem-applicable Fourier basis of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) Euclidean Casimir element) directly corresponding to $\set{\lambda_i}$. By our Theorem's hypotheses, we must have $i < j \implies \lVert \lambda_i\rVert \leq \lVert\lambda_j\rVert$ (with the Euclidean norm on the weights).
