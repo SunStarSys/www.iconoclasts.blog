@@ -74,7 +74,7 @@ Work continues in many related areas \cite{DH11}, such as determining topologica
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" - the non-negative spectrum of the Laplace-Beltrami operator (herein referred to as the Laplacian) on $L^2(M,g)$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
-Symmetry plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori [Example](Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this circumstance we offer an unproven conjecture: if the elements of the set $\set{M^{i,j,k}}$, for a pair of real-valued eigenfunction bases, agree up to changes of sign, then there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves the underlying closed Riemannian manifolds are isometric by application of the [Theorem](Theorem) above.
+Symmetry plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori [Example](Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this circumstance we offer an unproven conjecture: if the elements of the set $\set{M^{i,j,k}}$, for a pair of real-valued eigenfunction bases, agree up to changes of sign, then there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves the underlying closed Riemannian manifolds are isometric by application of \ref{thm}.
 
 The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the linear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
@@ -154,7 +154,7 @@ where $\delta_i$ is the Kronecker delta. Since $vol(M)$ is a spectral invariant 
 \label{sec:results}
 
 \begin{theorem}
-\label{thrm:1}
+\label{thm}
 
 Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $\set{e^i}_{i=0}^{\infty}$ for the (non-negative) Laplacian $\Delta_M$ on $L^2(M,g)$ associated with a closed Riemannian manifold $(M,g)$, define
 
@@ -177,10 +177,10 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 we are done with the necessity argument.
 
-For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $F$ from $C^\infty(M)$ to $C^\infty(N)$ and note that from the calculations in the [Preliminaries](Preliminaries) above, $F$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
+For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $F$ from $C^\infty(M)$ to $C^\infty(N)$ and note that from the calculations in the \ref{sec:pre} above, $F$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
 
 \begin{lemma}
-\label{lma:1}
+\label{lma}
 $F: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
 \end{lemma}
 
@@ -245,7 +245,7 @@ M^{i,j,k} = \begin{cases}
 
 As this condition <span class="eqno"></span> is linear on the weight lattice $(A^{-1})^t\mathbb{Z}^n = \set{\lambda_i}$, only an $L^2$ orthonormal eigenfunction basis map which is induced from a volume-preserving invertible linear map between two such indexed, rank $n$ weight lattices will keep the "algebraic/topological" indexed data set $\set{M^{i,j,k}}$ invariant.
 
-However, in order to apply our [Theorem](Theorem), it is essential that such a linear map $B$ be $B\in O(n,\mathbb{R})$ on the weight lattice, because the induced $L^2$ eigenfunction basis map
+However, in order to apply \ref{thm}, it is essential that such a linear map $B$ be $B\in O(n,\mathbb{R})$ on the weight lattice, because the induced $L^2$ eigenfunction basis map
 
 \begin{equation}
 \set{e^{2\pi\sqrt{-1}\langle x, B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
@@ -254,7 +254,7 @@ However, in order to apply our [Theorem](Theorem), it is essential that such a l
 must also preserve the "analytic" invariants - the Casimir-element induced figure $4\pi^2\|\lambda_i\|^2$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
 
 This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of lattice congruence \cite{NRR22} traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $B\in O(n,\mathbb{R})$, as described in the prior paragraph, is the contravariant Riemannian isometry between the tori, as provided by
-application of the Gelfand-Naimark Representation Theorem during the [Proof](Proof of Theorem) of our [Theorem](Theorem).
+application of the Gelfand-Naimark Representation Theorem during the proof of \ref{thm}.
 
 \begin{conjecture}
 If every eigenvalue has multiplicity $1$, given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $\set{M^{i,j,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
