@@ -245,7 +245,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 \end{equation}
 
-As this condition~\ref{eqn:a} is linear on the weight lattice $(A^{-1})^t\mathbb{Z}^n = \set{\lambda_i}$, only an $L^2$ orthonormal eigenfunction basis map which is induced from a volume-preserving invertible linear map between two such indexed, rank $n$ weight lattices will keep the "algebraic/topological" indexed data set $\set{M^{i,j,k}}$ invariant.
+As this Equation~\ref{eqn:a} is linear on the weight lattice $(A^{-1})^t\mathbb{Z}^n = \set{\lambda_i}$, only an $L^2$ orthonormal eigenfunction basis map which is induced from a volume-preserving invertible linear map between two such indexed, rank $n$ weight lattices will keep the "algebraic/topological" indexed data set $\set{M^{i,j,k}}$ invariant.
 
 However, in order to apply Theorem~\ref{thm}, it is essential that such a linear map $B$ be $B\in O(n,\mathbb{R})$ on the weight lattice, because the induced $L^2$ eigenfunction basis map
 
