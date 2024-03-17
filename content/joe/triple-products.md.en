@@ -181,7 +181,7 @@ By the dominated convergence theorem,
 
 ```math
 \lim_{p\rightarrow\infty}
-\sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}e^k(x)\sqrt{g}dx
+\sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
 which is a characteristic function of positive measure on each disjoint subset $$\set{x\in M | a_j(x) = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $$a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\N$$, by Diagram (4)).
