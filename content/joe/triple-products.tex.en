@@ -73,6 +73,18 @@ Work continues in many related areas \cite{DH11}, such as determining topologica
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" - the non-negative spectrum of the Laplace-Beltrami operator (herein referred to as the Laplacian) on $L^2(M,g)$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
+\begin{theorem}
+\label{thm}
+
+Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $\set{e^i}_{i=0}^{\infty}$ for the (non-negative) Laplacian $\Delta_M$ on $L^2(M,g)$ associated with a closed Riemannian manifold $(M,g)$, define
+
+\begin{equation}
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
+\end{equation}
+
+To be isometric to $(M,g)$, it is a necessary and sufficient condition for another isospectral closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $\set{M^{i,j,k}}$ under each basis.
+\end{theorem}
+
 Symmetry plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this circumstance we offer an unproven conjecture: if the elements of the set $\set{M^{i,j,k}}$, for a pair of real-valued eigenfunction bases, agree up to changes of sign, then there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves the underlying closed Riemannian manifolds are isometric by application of Theorem~\ref{thm}.
 
 The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the linear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
@@ -150,20 +162,8 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 
 where $\delta_i$ is the Kronecker delta. Since $vol(M)$ is a spectral invariant \cite{HW11}, this information is already available from isospectrality considerations.
 
-\section{Results}
-\label{sec:results}
-
-\begin{theorem}
-\label{thm}
-
-Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $\set{e^i}_{i=0}^{\infty}$ for the (non-negative) Laplacian $\Delta_M$ on $L^2(M,g)$ associated with a closed Riemannian manifold $(M,g)$, define
-
-\begin{equation}
-M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
-\end{equation}
-
-To be isometric to $(M,g)$, it is a necessary and sufficient condition for another isospectral closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $\set{M^{i,j,k}}$ under each basis.
-\end{theorem}
+\section{Proof of Theorem~\ref{thm}}
+\label{sec:proof}
 
 \begin{proof}
 For necessity, let $F:(N,h)\rightarrow (M,g)$ be an isometry between closed Riemannian manifolds, and let the target orthonormal basis of eigenfunctions on $L^2(N,h)$ be the pull-back via $F$ of the orthonormal basis $\set{e^i}$ on $(M,g)$ above. Since
