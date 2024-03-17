@@ -198,14 +198,14 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \R^n$$ be an indexed, rank $$n$$ lattice of Lie Algebra weights for the quotient space representation of $$\frak{g}=\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when $$\R^n$$ is also viewed as $$\frak{g}$$'s associated Lie Group over a torus defined by $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $$\langle x, \lambda_i\rangle,\space x\in\Reals^n$$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\Z^n,dx)$$, with Lebesgue (Haar) measure $$dx$$.
+Let $$\set{\lambda_i} \subset \R^n$$ be an indexed, rank $$n$$ lattice of Lie Algebra weights for the quotient space representation of $$\frak{g}=\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when $$\R^n$$ is also viewed as $$\frak{g}$$'s associated Lie Group over a torus defined by $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\Z^n,dx)$$, with Lebesgue (Haar) measure $$dx$$.
 
 Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian **because** the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Casimir-element-determined-length-squared of each character's weight in the lattice.
 
 We presently view the above basis
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle x, \lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 to be our Theorem-applicable Fourier basis of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) Euclidean Casimir element) directly corresponding to $$\set{\lambda_i}$$. By our Theorem's hypotheses, we must have $$i < j \implies \lVert \lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (with the Euclidean norm on the weights).
 
@@ -223,7 +223,7 @@ As this condition <span class="eqno"></span> is linear on the weight lattice $$(
 However, in order to apply our [Theorem](#Theorem), it is essential that such a linear map $$B$$ be $$B\in O(n,\Reals)$$ on the weight lattice, because the induced $$L^2$$ eigenfunction basis map
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle x, B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
 must also preserve the "analytic" invariants &mdash; the Casimir-element induced figure $$4\pi^2\|\lambda_i\|^2$$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
