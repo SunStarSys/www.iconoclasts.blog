@@ -100,7 +100,7 @@ Now with $M,g,e^i,M^{i,j,k}$ as above, for $f \in C^\infty(M)$ and $i \geq 0$ no
 \begin{aligned}
 \hat{f}(i) &:= \int_M f(x)\bar{e^i}(x)\sqrt{g(x)}dx \\
 \implies \\
-f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
+f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)\,,
 \end{aligned}
 \end{equation}
 
@@ -112,7 +112,7 @@ since $f$ is uniquely representable as its rapidly converging \textit{Fourier Se
 \implies \\
 f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
 f_1 = f^p_2,\space p \space \in \mathbb{N} \implies \\
-\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,...,i_p, k}\hat{f_2}(i_1)...\hat{f_2}(i_p)M^{i_1,i_2,i_3}M^{i_2,i_3,i_4}...M^{i_{p-1},i_p,k}e^k(x)
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,...,i_p, k}\hat{f_2}(i_1)...\hat{f_2}(i_p)M^{i_1,i_2,i_3}M^{i_2,i_3,i_4}...M^{i_{p-1},i_p,k}e^k(x)\,,
 \end{aligned}
 \end{equation}
 
@@ -132,7 +132,7 @@ Moreover if $A\subset M$ is Borel-measurable, then the results above hold pointw
 \begin{equation}
 \sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \begin{cases}
 1 & x \in \mathring{A} \\
-0 & x \in \mathring{A^\complement}\end{cases}
+0 & x \in \mathring{A^\complement}\end{cases}\,,
 \end{equation}
 
 and by uniqueness, we have the following identity
@@ -156,7 +156,7 @@ Note: we may always assume
 \begin{aligned}
 e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
 \implies \\
-M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
+M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}\,,
 \end{aligned}
 \end{equation}
 
@@ -171,7 +171,7 @@ For necessity, let $F:(N,h)\rightarrow (M,g)$ be an isometry between closed Riem
 \begin{equation}
 \begin{aligned}
 M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
-          &= \int_N e^i(F(x)) e^j(F(x))\bar{e^k}(F(x))\sqrt{h}dx
+          &= \int_N e^i(F(x)) e^j(F(x))\bar{e^k}(F(x))\sqrt{h}dx\,,
 \end{aligned}
 \end{equation}
 
@@ -201,7 +201,7 @@ By the dominated convergence theorem,
 
 \begin{equation}
 \lim_{p\rightarrow\infty}
-\sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}e^k(x)\sqrt{g}dx
+\sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}e^k(x)\sqrt{g}dx\,,
 \end{equation}
 
 which is a characteristic function of positive measure on each disjoint subset $\set{x\in M | a_j(x) = 1}$. This means the Lemma is proven for each $a_j$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\mathbb{N}$, by Diagram~\ref{fig}.
