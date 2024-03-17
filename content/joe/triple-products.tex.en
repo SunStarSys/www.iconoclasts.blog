@@ -125,7 +125,7 @@ and so, critically, any multivariate polynomial $\wp \in \mathbb{C}[z_1,...,z_l]
 \label{fig}
 \begin{CD}
   C^\infty(M,\space\mathbb{C}^l) @>\wp >> C^\infty(M)\\
-   @V\underbrace{F\oplus\dots\oplus F}_{l\space\text{times}}VV @VVFV\\
+   @V\underbrace{F\oplus\dots\oplus F}_{l\,\text{times}}VV @VVFV\\
   C^\infty(N,\space\mathbb{C}^l) @>>\wp > C^\infty(N)
 \end{CD}
 \end{equation}
