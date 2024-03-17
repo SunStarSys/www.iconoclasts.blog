@@ -26,6 +26,9 @@
 \usepackage[style=alphabetic]{biblatex}
 \addbibresource{content/joe/triple-products.bib.en}
 
+# useful math-physics macros
+\usepackage{braket}
+
 % Theorem, Lemma, et
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}
@@ -45,8 +48,6 @@
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{problem}[theorem]{Problem}
 \newtheorem{principle}[theorem]{Principle}
-
-\usepackage{braket}
 
 \begin{document}
 
