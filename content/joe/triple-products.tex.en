@@ -17,19 +17,20 @@
 \usepackage{amssymb}
 \usepackage{amscd}
 
-% Unicode
-\usepackage[utf8]{inputenc}
-
-\title{Triple Products of Eigenfunctions and Spectral Geometry}
-\date{2024\\March}
-\author{Joe Schaefer\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
-
 % modern, utf8 friendly
 \usepackage[style=alphabetic]{biblatex}
 \addbibresource{content/joe/triple-products.bib.en}
 
 % useful math-physics macros
 \usepackage{braket}
+
+% Unicode
+\usepackage[utf8]{inputenc}
+
+% Metadata
+\title{Triple Products of Eigenfunctions and Spectral Geometry}
+\date{2024\\March}
+\author{Joe Schaefer\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
 
 % Theorem, Lemma, etc
 \theoremstyle{plain}
