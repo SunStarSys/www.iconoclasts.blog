@@ -242,10 +242,10 @@ With $\set{M_0^{i,j,k}}, \set{M_1^{i,j,k}}$ representing the two triple-product 
 With $z_i \in \set{-1,1}$ as the $\mathbb{Z}_2^\infty$ action on such an $\mathbb{R}$-valued orthonormal basis, we need to choose $z_i$ so that $\set{z_i e^i}_{i=0}^\infty$ yields $\set{M_1^{i,j,k}} = \set{z_i z_j z_k M_0^{i,j,k}}$. But
 
 \begin{equation}
-z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\mathbb{N},\,\nisd\, M_0^{i,i,k} \ne 0 \,,
+z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\mathbb{N},\,\nisd\, M_0^{i,i,k} \ne 0 \,.
 \end{equation}
 
-but since for any given $k$, $M_0^{i,i,k}$ cannot be identically 0 for all $i$, this formula for $z_k$ yields Corollary~\ref{cor} for the basis map $e_0^i \mapsto z_i e_1^i$.
+Since for any given $k$, $M_0^{i,i,k}$ cannot be identically 0 for all $i$, this formula for $z_k$ yields Corollary~\ref{cor} for the basis map $e_0^i \mapsto z_i e_1^i$.
 
 \end{subproof}
 
