@@ -3,7 +3,7 @@
 {% endif %}
 
 {% if headers.published %}
-<span class="badge bg-success"><a href="{{headers.published}}">Published</a></span>&nbsp;
+<span class="badge bg-success"><a href="{{headers.published|safe}}">Published</a></span>&nbsp;
 {% endif %}
 
 {% if archive_path %}{% ifequal headers.status "archived" %}
