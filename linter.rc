@@ -209,4 +209,9 @@ EOT
     PCRE_PAT='/templates/|\.ya?ml$'
     LINTER+=' --parse-only'
     ;;
+
+  lacheck)
+    PCRE_PAT='\.tex\b[^/]*$'
+    XARGS_MAX_FILES=1
+        
 esac
