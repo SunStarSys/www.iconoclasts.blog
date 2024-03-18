@@ -92,7 +92,11 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 To be isometric to $(M,g)$, it is a necessary and sufficient condition for another isospectral closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $\set{M^{i,j,k}}$ under each basis.
 \end{theorem}
 
-\textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this circumstance we offer Corollary~\ref{cor}: if the elements of the set $\set{M^{i,j,k}}$, for a pair of real-valued eigenfunction bases, agree up to changes of sign, then there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves the underlying closed Riemannian manifolds are isometric by application of Theorem~\ref{thm}.
+\textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this circumstance we offer the Corollary:
+\begin{corollary}
+\label{cor}
+If every eigenvalue has multiplicity $1$, given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $\set{M^{i,j,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+\end{corollary}
 
 The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the linear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
@@ -191,7 +195,7 @@ For sufficiency, we now consider the linear, bijective orthonormal eigenfunction
 $F: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
 \end{lemma}
 
-\begin{subproof}[Proof of Lemma]
+\begin{subproof}[Proof of Lemma~\ref{lma}]
 Let $\set{a_i}$ be a smooth partition of unity on $M$.
 
 \begin{equation}
@@ -227,14 +231,7 @@ This completes the proof of the Theorem.
 
 \end{proof}
 
-\begin{corollary}
-\label{cor}
-
-If every eigenvalue has multiplicity $1$, given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $\set{M^{i,j,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
-
-\end{corollary}
-
-\begin{proof}
+\begin{subproof}[Proof of Corollary~\ref{cor}]
 
 With $z_i \in \set{-1,1}$ as the $\mathbb{Z}_2^\infty$ action on such an $\mathbb{R}$-valued orthonormal basis, we need to choose $z_i$ so that $\set{z_i e^i}_{i=0}^\infty$ yields $\set{M_1^{i,j,k}} = \set{z_i z_j z_k M_0^{i,j,k}}$. But
 
@@ -244,7 +241,7 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \, \forall i,k\in\mathbb{N},\,  s.t. M_0^{i,i,k}
 
 but since for any given $k$, $M_0^{i,i,k}$ cannot be identically 0 for all $i$, this formula for $z_k$ yields the conclusion.
 
-\end{proof}
+\end{subproof}
 
 \section{Example}
 \label{sec:ex}
