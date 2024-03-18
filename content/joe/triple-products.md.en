@@ -222,7 +222,7 @@ With $$\set{M_0^{i,j,k}}, \set{M_1^{i,j,k}}$$ representing the two triple-produc
 But
 
 ```math
-z_k = M_0^{i,i,k} / M_1^{i,i,k} \, \forall i,k\in\N,\, ⋺ M^{i,i,k} \ne 0 \,,\\
+z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M^{i,i,k} \ne 0 \,,\\
 ```
 
 and for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$, this formula yields the Corollary for the basis map $$e_0^i \mapsto z_ie_1^i$$ .
