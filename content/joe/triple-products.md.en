@@ -58,7 +58,24 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 <br>
 
-*Symmetry* plays an important role in computationally tractable cases [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity.) In this we obtrain the following [Corollary](#h2-corollary): if the elements of the set $$\set{M^{i,j,k}}$$, for a pair of real-valued eigenfunction bases, agree up to changes of sign, then there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves the underlying closed Riemannian manifolds are isometric by application of the [Theorem](#Theorem) above.
+*Symmetry* plays an important role in computationally tractable cases [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity.) In this we obtrain the following
+
+<div class="card border-dark">
+  <div class="card-header">
+
+### Corollary
+
+  </div>
+  <div class="card-body">
+
+If every eigenvalue has multiplicity $$1$$, given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $$\set{M^{i,j,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+
+  </div>
+</div>
+
+<br>
+
+if the elements of the set $$\set{M^{i,j,k}}$$, for a pair of real-valued eigenfunction bases, agree up to changes of sign, then there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves the underlying closed Riemannian manifolds are isometric by application of the [Theorem](#Theorem) above.
 
 The motivation for the study of $$\set{M^{i,j,k}}$$ is loosely derived from the study of the role of the **linear multiplication operator** $$Y:V\otimes V\rightarrow V((z))$$ in the definition of a Vertex Operator Algebra [[FBZ04]](#FBZ04) associated with a Chiral Conformal Field Theory. Here $$V$$ is the Vector Space of States and $$V((z))$$ is the space of formal Laurent series in $$z$$ with coefficients in $$V$$. Since $$V$$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $$Y$$ using the Fourier basis elements of $$V$$ is only slightly more involved than the $$M^{i,j,k}$$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
@@ -195,10 +212,6 @@ Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functo
 As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $$F$$), it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators [[MT13]](#MT13). The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
 This completes the proof of the Theorem.
-
-## Corollary
-
-If every eigenvalue has multiplicity $$1$$, given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $$\set{M^{i,j,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
 
 ### Proof of Corollary
 
