@@ -218,7 +218,7 @@ By the dominated convergence theorem,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx\,,
 \end{equation}
 
-which is a characteristic function of positive measure on each disjoint subset $\set{x\in M | a_j(x) = 1}$. This means the Lemma is proven for each $a_j$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\mathbb{N}$, by Diagram~\ref{fig}.
+which is a characteristic function of positive measure on each disjoint subset $\set{x\in M | a_j(x) = 1}$. This means the Lemma is proven for each $a_j$, since the limiting characteristic function of a set with positive measure is preserved, and hence has uniform norm 1, as do all $a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\mathbb{N}$, by Diagram~\ref{fig}.
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$, where $ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$ has positive measure, and the Lemma is proven in full.
 
