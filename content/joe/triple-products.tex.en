@@ -11,18 +11,18 @@
   \end{proof}%
 }
 
+% AMS Packages
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amscd}
+
 % modern, utf8 friendly
 
 \PassOptionsToPackage{partial=upright}{unicode-math}
 \usepackage{fontsetup}
 \usepackage[style=alphabetic]{biblatex}
 \addbibresource{content/joe/triple-products.bib.en}
-
-% AMS Packages
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{amscd}
 
 % useful math-physics macros
 \usepackage{braket}
