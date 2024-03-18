@@ -18,7 +18,9 @@
 \usepackage{amscd}
 
 % modern, utf8 friendly
-\usepackage{unimath}
+
+\PassOptionsToPackage{partial=upright}{unicode-math}
+\usepackage{fontsetup}
 \usepackage[style=alphabetic]{biblatex}
 \addbibresource{content/joe/triple-products.bib.en}
 
