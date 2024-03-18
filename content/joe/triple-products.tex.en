@@ -11,6 +11,10 @@
   \end{proof}%
 }
 
+% math unicode
+\PassOptionsToPackage{partial=upright}{unicode-math}
+\usepackage{fontsetup}
+
 % AMS Packages
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -19,8 +23,6 @@
 
 % modern, utf8 friendly
 
-\PassOptionsToPackage{partial=upright}{unicode-math}
-\usepackage{fontsetup}
 \usepackage[style=alphabetic]{biblatex}
 \addbibresource{content/joe/triple-products.bib.en}
 
