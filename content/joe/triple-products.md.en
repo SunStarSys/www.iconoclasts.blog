@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=20791
+Status: draft
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -60,14 +60,14 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 <br>
 
-*Symmetry* plays an important role in computationally tractable cases [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity.) In this instance, we obtain the following
+*Symmetry* plays an important role in computationally tractable cases [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity.) In this instance, we offer the following
 
 <br>
 
 <div class="card border-dark">
   <div class="card-header">
 
-#### Corollary
+#### Conjecture
 
   </div>
   <div class="card-body">
@@ -215,17 +215,18 @@ As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothes
 
 This completes the proof of the Theorem.
 
-### Proof of Corollary
+### Discussion of Conjecture
 
 With $$\set{M_0^{i,j,k}}$$ and $$set{M_1^{i,j,k}}$$ representing the two triple-product sets for the bases $$\set{e_0^i}$$ and $$\set{e_1^i}$$, let $$z_i \in \set{-1,1}$$ be the $$\Z_2^\infty$$ action on such an $$\R$$-valued orthonormal basis $$\set{e_1^i}$$. Thus, we need to choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
-We observe that
+Necessarily, we must have
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.\\
+
 ```
 
-Since for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$, this formula yields the Corollary for the [Theorem](#Theorem)-applicable basis map $$e_0^i \mapsto z_ie_1^i$$ .
+but both $$i$$-independence and sufficiency in the Formula is another matter entirely.
 
 ## Example
 
