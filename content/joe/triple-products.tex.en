@@ -95,11 +95,12 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 To be isometric to $(M,g)$, it is a necessary and sufficient condition for another isospectral closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $\set{M^{i,j,k}}$ under each basis.
 \end{theorem}
 
-\textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this instance. we obtain the following
-\begin{corollary}
-\label{cor}
+\textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this instance. we offer the following
+
+\begin{conjecture}
+\label{conj}
 If every eigenvalue has multiplicity $1$, given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $\set{M^{i,j,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
-\end{corollary}
+\end{conjecture}
 
 The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the linear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
@@ -233,23 +234,19 @@ This completes the proof of the Theorem.
 
 \end{proof}
 
-\subsection{Proof of Corollary~\ref{cor}}
-\label{subsec:cor}
-
-\begin{proof}
+\subsection{Discussion of Conjecture~\ref{conj}}
+\label{subsec:conj}
 
 With $\set{M_0^{i,j,k}}$ and $\set{M_1^{i,j,k}}$ representing the two triple-product sets for the bases $\set{e_0^i}$ and $\set{e_1^i}$, let $z_i \in \set{-1,1}$ be the $\mathbb{Z}_2^\infty$ action on such an $\mathbb{R}$-valued orthonormal basis $\set{e_1^i}$. Thus, we need to choose $z_i$ so that $\set{z_ie_1^i}$ yields $\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$.
 
-We observe that
+We observe necessarily that
 
 \begin{equation}
 \label{fml}
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\mathbb{N},\,\nisd\, M_0^{i,i,k} \ne 0 \,.
 \end{equation}
 
-Since for any given $k$, $M_0^{i,i,k}$ cannot be identically 0 for all $i$, this Formula~\ref{fml} for $z_k$ yields Corollary~\ref{cor} for the Theorem~\ref{thm} applicable basis map $e_0^i \mapsto z_i e_1^i$.
-
-\end{proof}
+Since for any given $k$, $M_0^{i,i,k}$ cannot be identically 0 for all $i$, this Formula~\ref{fml} for $z_k$ requires both $i$-independence,1 and sufficiency, to establish the basis map $e_0^i \mapsto z_i e_1^i$ preserves $\set{M_0^{i,j,k}}$.  These aspects remain unknown.
 
 \section{Example}
 \label{sec:ex}
