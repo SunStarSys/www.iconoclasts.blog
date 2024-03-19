@@ -219,7 +219,7 @@ This completes the proof of the Theorem.
 
 With $$\set{M_0^{i,j,k}}$$ and $$set{M_1^{i,j,k}}$$ representing the two triple-product sets for the bases $$\set{e_0^i}$$ and $$\set{e_1^i}$$, let $$z_i \in \set{-1,1}$$ be the $$\Z_2^\infty$$ action on such an $$\R$$-valued orthonormal basis $$\set{e_1^i}$$. Thus, we need to choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
-But
+We observe that
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.\\
