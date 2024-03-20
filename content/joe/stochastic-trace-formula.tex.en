@@ -16,6 +16,8 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{amscd}
+
+
 % modern, utf8 friendly options (wholly incompatible with amscd):
 %\PassOptionsToPackage{partial=upright}{unicode-math}
 %\usepackage{fontsetup}
@@ -24,6 +26,7 @@
 %\usepackage[style=alphabetic]{biblatex}
 %\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
 % useful math-physics macros
+\usepackage{physics}
 \usepackage{braket}
 % Unicode
 \usepackage[utf8]{inputenc}
