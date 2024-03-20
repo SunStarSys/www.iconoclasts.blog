@@ -16,18 +16,16 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{amscd}
-
-
 % modern, utf8 friendly options (wholly incompatible with amscd):
 %\PassOptionsToPackage{partial=upright}{unicode-math}
 %\usepackage{fontsetup}
 %\usepackage{tikz-cd}
 
-%\usepackage[style=alphabetic]{biblatex}
-%\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
+\usepackage[style=alphabetic]{biblatex}
+\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
 % useful math-physics macros
-\usepackage{physics}
 \usepackage{braket}
+\usepackage{physics}
 % Unicode
 \usepackage[utf8]{inputenc}
 
@@ -88,7 +86,7 @@ $\Omega_t[\gamma]$ is the space of continuous loops on $M$ homotopic to the clos
 
 $DM^{-1}\Omega_t^0[\gamma]$ is the preimage of continuous contractible loops on $M$ written as offsets homotopic to $\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$. Think Horocyclic Coordinates -- each fiber as the geometric limit of periodic geodesic spheres $S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$, vectorized in the Normal Bundle over $\gamma_0$. Our curvature constraints imply Horocyclic Coordinates for every $\gamma_0$ exist as a smooth, $DM$-compatible coordinate map for $\Omega_t^0[\gamma]$.
 
-Now $\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$ is the \textit{undeveloped} endpoint of the "offset" \textit{kinked geodesic} homotopic to $\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$. The curve is periodic with period $\ell(\gamma_0)$, and it revisits its kinked starting point $DM(\vec{x}(\tau))$ at time $t$, making the computation of its forward derivative $J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$ tractible as a linear automorphism of $T_{DM(\vec{x}(\tau))}M$. Importantly, $J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$ may be constructed using \textbf{Jacobi Fields}, since $DM$ \textbf{is} the (iterated) exponential map along any series of connected straight lines in $\Reals^n$. We will study $ 1/2 \int_0^t \bra{dX}\ket{dX}_s$, with the solution
+Now $\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$ is the \textit{undeveloped} endpoint of the "offset" \textit{kinked geodesic} homotopic to $\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$. The curve is periodic with period $\ell(\gamma_0)$, and it revisits its kinked starting point $DM(\vec{x}(\tau))$ at time $t$, making the computation of its forward derivative $J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$ tractible as a linear automorphism of $T_{DM(\vec{x}(\tau))}M$. Importantly, $J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$ may be constructed using \textbf{Jacobi Fields}, since $DM$ \textbf{is} the (iterated) exponential map along any series of connected straight lines in $\mathbb{}^n$. We will study $ 1/2 \int_0^t \bra{dX}\ket{dX}_s$, with the solution
 
 \begin{equation}
 \begin{aligned}
