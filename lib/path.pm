@@ -109,12 +109,13 @@ walk_content_tree {
         glob("'content$_'/*.md.$lang"),
         glob("'content$_'/*/index.html.$lang")
       ];
-      push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang!,
-        glob("'content$_'/*.$lang");
+      #push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang!,  glob("'content$_'/*.$lang");
     }
   }
 }
   and do {
+
+=pod
 
     my @categories_glob = glob("content/categories/*/*");
     for my $lang (qw/en es de fr/) {
@@ -122,11 +123,13 @@ walk_content_tree {
         @categories_glob if -f "content/categories/index.html.$lang";
     }
 
+=cut
+
     while  (my ($k, $v) = each %{$facts->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
 
-    open my $fh, "<:encoding(UTF-8)", "lib/acl.yml" or die "Can't open acl.yml: $!";
+    open my $fh, "<:raw", "lib/acl.yml" or die "Can't open acl.yml: $!";
     push @acl, @{Load join "", <$fh>};
   };
 #snippet
