@@ -1,3 +1,21 @@
+{% if bibliography %}
+{% filter markdown %}
+
+## References
+
+{% for b in bibliography|dictsort:"author" %}
+{% ifequal b.type "article" %}
+{% endifequal %}
+{% ifequal b.type "book" %}
+{% endifequal %}
+{% ifequal b.type "online" %}
+{% endifequal %}
+{% ifequal b.type "proceedings" %}
+{% endifequal %}
+{% endfor %}
+{% endfilter %}
+{% endif %}
+
 {% if permalink %}
 <span class="badge bg-info" style="color:#000">Permalink</span>&nbsp;
 {% endif %}
