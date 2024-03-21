@@ -16,6 +16,9 @@
 {% ifequal b.type "proceedings" %}
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"}}</a>. "{{b.title|utf8decode|cuts:"\\-"}}", {{b.journal|utf8decode|cuts:"\\-"}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: {{b.doi|utf8decode|cuts:"\\-"}}{% endif %}.
 {% endifequal %}
+{% ifequal b.type "phdthesis" %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"}}</a>. "{{b.title|utf8decode|cuts:"\\-"}}", {{b.school|utf8decode|cuts:"\\-"}} ({{b.year}}).
+{% endifequal %}
 {% endfor %}
 
 {% endfilter %}
