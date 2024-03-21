@@ -5,19 +5,19 @@
 
 {% for b in bibliography.content|dictsort:"author" %}
 {% ifequal b.type "article" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"}}</a>. "{{b.title|utf8decode|cuts:"\\-"}}", {{b.journal|utf8decode|cuts:"\\-"}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: {{b.doi|utf8decode|cuts:"\\-"}}{% endif %}.
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: {{b.doi|utf8decode|cuts:"\\-"}}{% endif %}.
 {% endifequal %}
 {% ifequal b.type "book" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"}}</a>. {{b.title|utf8decode|cuts:"\\="}}. {% if b.volume %}Vol. {{b.volume}}. {% endif %}{% if b.number %}No. {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"}}, {{b.year}}.  
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. {{b.title|utf8decode|cuts:"\\="|safe}}. {% if b.volume %}Vol. {{b.volume}}. {% endif %}{% if b.number %}No. {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"|safe}}, {{b.year}}.
 {% endifequal %}
 {% ifequal b.type "online" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"}}</a>. "{{b.title|utf8decode|cuts:"\\-"}}", {% if b.url %}`URL`: {{b.url|utf8decode|cuts:"\\-"}}.{% endif %}{% if b.doi %}`DOI`" {{b.doi|utf8decode|cuts:"\\-"}}.{% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`URL`: {{b.url|utf8decode|cuts:"\\-"}}.{% endif %}{% if b.doi %}`DOI`" {{b.doi|utf8decode|cuts:"\\-"}}.{% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
 {% endifequal %}
 {% ifequal b.type "proceedings" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"}}</a>. "{{b.title|utf8decode|cuts:"\\-"}}", {{b.journal|utf8decode|cuts:"\\-"}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: {{b.doi|utf8decode|cuts:"\\-"}}{% endif %}.
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: {{b.doi|utf8decode|cuts:"\\-"}}{% endif %}.
 {% endifequal %}
 {% ifequal b.type "phdthesis" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"}}</a>. "{{b.title|utf8decode|cuts:"\\-"}}", {{b.school|utf8decode|cuts:"\\-"}} ({{b.year}}).
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.school|utf8decode|cuts:"\\-"|safe}} ({{b.year}}).
 {% endifequal %}
 {% endfor %}
 
