@@ -95,12 +95,16 @@ walk_content_tree {
 
   return if -d "content/$_";
 
-  seed_file_deps, seed_file_acl if /\.md[^\/]*$/;
+  seed_file_deps, seed_file_acl if /\.(?:md|ya?ml)\b[^\/]*$/;
 
   for my $lang (qw/en es de fr/) {
 
     if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/!) {
       push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
+    }
+
+    if (/^content(.*)\.tex\.$lang$/ and -f "content$1.bib.lang") {
+      push @{$dependencies{"$1.tex.$lang"}}, "$1.bib.$lang";
     }
 
     if (s!/index\.html\.$lang$!!) {
