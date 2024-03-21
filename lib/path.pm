@@ -103,8 +103,8 @@ walk_content_tree {
       push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
     }
 
-    if (/^content(.*)\.tex\.$lang$/ and -f "content$1.bib.lang") {
-      push @{$dependencies{"$1.tex.$lang"}}, "$1.bib.$lang";
+    if (/^(.*)\.tex\.$lang$/ and -f "content$1.bib.lang") {
+      push @{$dependencies{$_}}, "$1.bib.$lang";
     }
 
     if (s!/index\.html\.$lang$!!) {
