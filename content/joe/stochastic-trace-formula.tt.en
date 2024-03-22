@@ -3,6 +3,8 @@
 \usepackage[type={% templatetag openbrace %}CC},modifier={% templatetag openbrace %}{{license}}},version={% templatetag openbrace %}4.0}]{% templatetag openbrace %}doclicense}
 \usepackage[margin=1in]{% templatetag openbrace %}geometry}
 
+% MY TEMPLATE!
+
 \newenvironment{% templatetag openbrace %}subproof}[1][\proofname]{% templatetag openbrace %}%
   \renewcommand{% templatetag openbrace %}\qedsymbol}{% templatetag openbrace %}$\blacksquare$}%
     \begin{% templatetag openbrace %}proof}[#1]%
