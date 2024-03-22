@@ -74,6 +74,9 @@ our @patterns = (
   # skip .bib... files
   [qr!\.bib\b[^/]*$!, skip => {}],
 
+  # transform yml to json
+  [qr!\.ya?ml\b[^/]*$!, yml2json => {}],
+
   [qr!\.md[^/]*$!, single_narrative => {
     template        => "main.html",
     compress        => 1,
