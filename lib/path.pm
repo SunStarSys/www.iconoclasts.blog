@@ -122,16 +122,6 @@ walk_content_tree {
 }
   and do {
 
-=pod
-
-    my @categories_glob = glob("content/categories/*/*");
-    for my $lang (qw/en es de fr/) {
-      push @{$dependencies{"/categories/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-        @categories_glob if -f "content/categories/index.html.$lang";
-    }
-
-=cut
-
     while  (my ($k, $v) = each %{$facts->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
