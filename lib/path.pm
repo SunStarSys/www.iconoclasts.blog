@@ -71,8 +71,8 @@ our @patterns = (
 		  generator => "xelatex",
   }],
 
-  # skip .bib... files
-  [qr!\.bib\b[^/]*$!, skip => {}],
+  # skip .bib|.tt  files
+  [qr!\.(?:bib|tt)\b[^/]*$!, skip => {}],
 
   # transform yml to json
   [qr!\.ya?ml\b[^/]*$!, yml2ext => { compress => 1 }],
