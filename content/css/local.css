@@ -49,11 +49,10 @@ iframe.asymptote {
 	height: 800px;
 }
 
-html { scroll-padding-top: 100px }
-body { padding-top: 100px; }
+html { scroll-padding-top: 90px }
+body { padding-top: 90px; }
 
 div.navbar img {height: 38px;}
-div.navbar {height: 80px;}
 div.jumbotron input.form-control, textarea.form-control {
    	width: 25em;
 	max-width: 100%;
@@ -115,7 +114,6 @@ div.breadcrumbs {
 }
 
 #search, #filter {
-	height: 40px;
     display: inline-block;
     min-width: 350px;
     line-height: 20px;
