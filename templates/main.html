@@ -14,7 +14,6 @@
 	<link rel="bookmark" href="https://{{website}}{{path|dirname}}/{{path|basename:0}}.html{{lang}}">
 	{% endif %}
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="/css/code.css" rel="stylesheet" media="screen">
     <link href="/css/katex.min.css" rel="stylesheet" media="screen">
     <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">
     <link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
@@ -77,7 +76,7 @@
             {% endif %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
           </li>
         </ul>
-        <form class="d-flex" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
+        <form class="d-flex" id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
             }}{% endifequal %}/" class="form-inline right" method="GET">
           <input type="hidden" name="lang" value="{{ lang }}" />
           <input class="form-control me-2" type="text" name="regex"
