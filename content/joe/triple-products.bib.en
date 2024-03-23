@@ -1,7 +1,7 @@
-@article{mckean1967curvature,
+@article{MS67,
   title={Curvature and the eigenvalues of the Laplacian},
   journal={Journal of Differential Geometry},
-  author={McKean, Henry P. and Singer, Isadore},
+  author={McKean, Henry P. and Singer, Isadore M.},
   volume={1},
   number={1-2},
   pages={43--69},
@@ -23,7 +23,7 @@
  journal={Internat. Math. Res. Notices},
  volume={4},
  year={1992},
- pages={93–-96}
+ pages={93--96}
 }
 
 @article{DH11,
@@ -45,7 +45,7 @@
 
 @online{TF17,
   author={Franke, Tobias},
-  title={Triple product integrals},
+  title={Triple prod\-uct inte\-grals},
   date={2023-09-01},
   url={https://www.tobias-franke.eu/log/2017/04/19/triple-products.html}
 }
@@ -65,6 +65,7 @@
   title={Some inverse spectral results for negatively curved n-manifolds},
   journal={Proceedings of Symposia in Pure Math},
   volume={36},
+  pages={301--312},
   year={1980}
 }
 
@@ -87,7 +88,8 @@
 @online{LS18,
   author={Lu, Jianfeng and Steinerberger, Stefan},
   title={On pointwise products of elliptic eigenfunctions},
-  publisher={arXiv preprint arXiv:1810.01024},
+  archivePrefix={arXiv},
+  eprint={1810.01024},
   year={2018}
 }
 
@@ -113,7 +115,7 @@
 
 @book{RS75,
   author={Reed, Michael and Simon, Barry},
-  title={Methods of Modern Mathematical Physics II: Fourier analysis, self-adjointness},
+  title={Methods of modern mathematical physics II: Fourier analysis, self-adjointness},
   volume={2},
   publisher={Elsevier},
   year={1975}
@@ -121,7 +123,7 @@
 
 @article{PS94,
   author={Sarnak, Peter},
-  title={Integrals of Products of Eigenfunctions},
+  title={Integrals of products of eigenfunctions},
   journal={IMRN},
   volume={6},
   year={1994},
@@ -130,8 +132,8 @@
 
 @phdthesis{AS94,
   author={Schiemann, Alexander},
-  title={Ternäre positiv definite quadratische Formen mit gleichen Darstellungszahlen},
-  publisher={Bonner Mathematische Schriften},
+  title={Ternäre positiv definite quad\-ratische Formen mit gleichen Darstellungs\-zahlen},
+  publisher={Bonner Mathe\matische Schriften},
   school={Universität Bonn},
   volume={268},
   year={1993}
@@ -154,12 +156,12 @@
   volume={175},
   number={3},
   year={1980},
-  pages={267-–274}
+  pages={267--274}
 }
 
 @book{MT13,
   author={Taylor, Michael},
-  title={Partial differential equations II: Qualitative studies of linear equations},
+  title={Partial differential equations II: qualitative studies of linear equations},
   volume={116},
   publisher={Springer Science \& Business Media},
   year={2013}
@@ -167,10 +169,10 @@
 
 @article{HW11,
   author={Weyl, Hermann},
-  title={Über die asymptotische Verteilung der Eigenwerte},
-  journal={Nachrichten der Königlichen Gesellschaft der Wissenschaften zu Göttingen},
+  title={Über die asymp\-totische Ver\-teilung der Eigen\-werte},
+  journal={Nach\-richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu Göttingen},
   year={1911},
-  pages={110–-117}
+  pages={110--117}
 }
 
 @article{EW22,
@@ -179,7 +181,8 @@
   journal={Journal of Functional Analysis},
   volum={282},
   number={8},
-  year={2022}
+  year={2022},
+  doi = {https://doi.org/10.1016/j.jfa.2022.109404}
 }
 
 @article{GZ97,
@@ -189,5 +192,5 @@
   volume={181},
   number={1},
   year={1997},
-  pages={187-–200}
+  pages={187--200}
 }

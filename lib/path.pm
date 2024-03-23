@@ -71,8 +71,11 @@ our @patterns = (
 		  generator => "xelatex",
   }],
 
-  # skip .bib... files
-  [qr!\.bib\b[^/]*$!, skip => {}],
+  # skip .bib|.tt  files
+  [qr!\.(?:bib|tt)\b[^/]*$!, skip => {}],
+
+  # transform yml to json
+  [qr!\.ya?ml\b[^/]*$!, yml2ext => { compress => 1 }],
 
   [qr!\.md[^/]*$!, single_narrative => {
     template        => "main.html",
@@ -95,12 +98,16 @@ walk_content_tree {
 
   return if -d "content/$_";
 
-  seed_file_deps, seed_file_acl if /\.md[^\/]*$/;
+  seed_file_deps, seed_file_acl if /\.(?:md|ya?ml)\b[^\/]*$/;
 
   for my $lang (qw/en es de fr/) {
 
     if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/!) {
       push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
+    }
+
+    if (/^(.*)\.tex\.$lang$/ and -f "content$1.bib.lang") {
+      push @{$dependencies{$_}}, "$1.bib.$lang";
     }
 
     if (s!/index\.html\.$lang$!!) {
@@ -109,24 +116,16 @@ walk_content_tree {
         glob("'content$_'/*.md.$lang"),
         glob("'content$_'/*/index.html.$lang")
       ];
-      push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang!,
-        glob("'content$_'/*.$lang");
+      #push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang!,  glob("'content$_'/*.$lang");
     }
   }
 }
   and do {
-
-    my @categories_glob = glob("content/categories/*/*");
-    for my $lang (qw/en es de fr/) {
-      push @{$dependencies{"/categories/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-        @categories_glob if -f "content/categories/index.html.$lang";
-    }
-
     while  (my ($k, $v) = each %{$facts->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
 
-    open my $fh, "<:encoding(UTF-8)", "lib/acl.yml" or die "Can't open acl.yml: $!";
+    open my $fh, "<:raw", "lib/acl.yml" or die "Can't open acl.yml: $!";
     push @acl, @{Load join "", <$fh>};
   };
 #snippet

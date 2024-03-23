@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage[type={CC},modifier={by-nc-nd},version={4.0}]{doclicense}
 
 \usepackage[margin=1in]{geometry}
 
@@ -13,21 +15,26 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
-\usepackage{amscd}
-
-% Unicode
-\usepackage[utf8]{inputenc}
-
-\title{Triple Products of Eigenfunctions and Spectral Geometry}
-\date{2024\\March}
-\author{Joe Schaefer\\President, SunStar Systems}
 
 % modern, utf8 friendly
+\PassOptionsToPackage{partial=upright}{unicode-math}
+\usepackage{fontsetup}
+\usepackage{tikz-cd}
+
 \usepackage[style=alphabetic]{biblatex}
 \addbibresource{content/joe/triple-products.bib.en}
 
 % useful math-physics macros
 \usepackage{braket}
+\usepackage{physics}
+
+% Unicode
+\usepackage[utf8]{inputenc}
+
+% Metadata
+\title{Triple products of eigenfunctions and spectral geometry}
+\date{2024\\March}
+\author{Joe Schaefer\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
 
 % Theorem, Lemma, etc
 \theoremstyle{plain}
@@ -54,8 +61,9 @@
 \maketitle
 
 \begin{abstract}
-Using elementary techniques from Geometric Analysis, Partial Differential Equations, and Abelian $C^*$ Algebras, we uncover a novel, yet familiar, global geometric invariant - namely the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator, to precisely characterize which isospectral closed Riemannian manifolds are isometric.
-\noindent\textbf{Keywords:} Spectral Geometry, Harmonic Analysis, Functional Analysis
+Using elementary techniques from Geometric Analysis, Partial Differential Equations, and Abelian $C^*$ Algebras, we uncover a novel, yet familiar, global geometric invariant -- namely the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator, to precisely characterize which isospectral closed Riemannian manifolds are isometric.
+
+\noindent\textbf{Keywords:} spectrum, Fourier, harmonic, triple products, Laplacian, eigenfunctions, functional, inverse problem, representation theory
 \end{abstract}
 
 \tableofcontents
@@ -63,36 +71,56 @@ Using elementary techniques from Geometric Analysis, Partial Differential Equati
 \section{Introduction}
 \label{sec:intro}
 
-For a closed Riemannian manifold $(M,g)$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem \cite{DH11} in Spectral Geometry. Naïvely one might speculate that this class would always be empty. However, the academic literature is rich with decades-old constructions of specific pairings of counterexamples: beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori \cite{JM64}, and continuing \cite{CS92} towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis \cite{AS94} - replete with a computer aided search for the critical $\dim = 3$ case.  A modern survey of the full flat tori history appears in \cite{NRR22}.
+For a closed Riemannian manifold $(M,g)$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem \cite{DH11} in Spectral Geometry. Naïvely one might speculate that this class would always be empty. However, the academic literature is rich with decades-old constructions of specific pairings of counterexamples: beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori \cite{JM64}, and continuing \cite{CS92} towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis \cite{AS94} -- replete with a computer aided search for the critical $\dim = 3$ case.  A modern survey of the full flat tori history appears in \cite{NRR22}.
 
-Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces; constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 \cite{mckean1967curvature}.) A prime example of this effort was Toshikazu Sunada's 1985 \cite{TS85} invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
+Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces; constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 \cite{MS67}.) A prime example of this effort was Toshikazu Sunada's 1985 \cite{TS85} invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
 
 For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are not even locally isometric \cite{CG93}.
 
 Work continues in many related areas \cite{DH11}, such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty \cite{ST80}, finite \cite{AS94}, rigid \cite{GK80}, and compact \cite{GZ97}) as a subset of different moduli spaces of Riemannian metrics.
 
-What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" - the non-negative spectrum of the Laplace-Beltrami operator (herein referred to as the Laplacian) on $L^2(M,g)$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
+What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" -- the non-negative spectrum of the Laplace-Beltrami operator (herein referred to as the (non-negative) \textit{Laplacian}) on $L^2(M,g)$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
-Symmetry plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this circumstance we offer an unproven conjecture: if the elements of the set $\set{M^{i,j,k}}$, for a pair of real-valued eigenfunction bases, agree up to changes of sign, then there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves the underlying closed Riemannian manifolds are isometric by application of Theorem~\ref{thm}.
+\subsection{Results}
+\label{subsec:res}
+
+\begin{theorem}
+\label{thm}
+
+Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $\set{e^i}_{i=0}^{\infty}$ for the (non-negative) Laplacian $\Delta_M$ on $L^2(M,g)$ associated with a closed Riemannian manifold $(M,g)$, define
+
+\begin{equation}
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
+\end{equation}
+
+To be isometric to $(M,g)$, it is a necessary and sufficient condition for another isospectral closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $\set{M^{i,j,k}}$ under each basis.
+\end{theorem}
+
+\textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this instance. we offer the following
+
+\begin{conjecture}
+\label{conj}
+If every eigenvalue has multiplicity $1$, given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $\set{M^{i,j,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+\end{conjecture}
 
 The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the linear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
-These results were first demonstrated during a similarly titled talk by the author at MSRI in 1997, but they appear here in published form for the first time.
+These results were first demonstrated during a similarly titled talk by the author at \textbf{MSRI} in 1997, but they appear here in published form for the first time.
 
 \section{Preliminaries}
 \label{sec:pre}
 
-Now with $M,g,e^i,M^{i,j,k}$ as above, for $f \in C^\infty(M)$ and $i \geq 0$ note that the **Fourier coefficients**
+Now with $M,g,e^i,M^{i,j,k}$ as in the hypotheses of Theorem~\ref{thm}, for $f \in C^\infty(M)$ and $i \geq 0$ note that the \textit{Fourier coefficients}
 
 \begin{equation}
 \begin{aligned}
 \hat{f}(i) &:= \int_M f(x)\bar{e^i}(x)\sqrt{g(x)}dx \\
 \implies \\
-f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
+f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)\,,
 \end{aligned}
 \end{equation}
 
-since $f$ is uniquely representable as its rapidly converging Fourier Series ($\Delta_M$-specific Sobolev Embeddings \cite{MT13} \cite{RS75}, together with Weyl's Asymptotic Law \cite{HW11}, imply the terms in the sum are $o(i^{-n})$ uniformly in $x$ \cite{LH68}, $\forall n\in\mathbb{N}$.) Then we see that for $f_1, f_2 \in C^\infty(M)$, the Fourier coefficients of the pointwise product $f_1 f_2 \in C^\infty(M)$ are
+since $f$ is uniquely representable as its rapidly converging \textit{Fourier Series} ($\Delta_M$-specific Sobolev Embeddings \cite{MT13} \cite{RS75}, together with Weyl's Asymptotic Law \cite{HW11}, imply the terms in the sum are $o(i^{-n})$ uniformly in $x$ \cite{LH68}, $\forall n\in\mathbb{N}$.) Then we see that for $f_1, f_2 \in C^\infty(M)$, the Fourier coefficients of the pointwise product $f_1 f_2 \in C^\infty(M)$ are
 
 \begin{equation}
 \begin{aligned}
@@ -100,7 +128,7 @@ since $f$ is uniquely representable as its rapidly converging Fourier Series ($\
 \implies \\
 f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
 f_1 = f^p_2,\space p \space \in \mathbb{N} \implies \\
-\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,...,i_p, k}\hat{f_2}(i_1)...\hat{f_2}(i_p)M^{i_1,i_2,i_3}M^{i_2,i_3,i_4}...M^{i_{p-1},i_p,k}e^k(x)
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,...,i_p, k}\hat{f_2}(i_1)...\hat{f_2}(i_p)M^{i_1,i_2,i_3}M^{i_2,i_3,i_4}...M^{i_{p-1},i_p,k}e^k(x)\,,
 \end{aligned}
 \end{equation}
 
@@ -108,11 +136,10 @@ and so, critically, any multivariate polynomial $\wp \in \mathbb{C}[z_1,...,z_l]
 
 \begin{equation}
 \label{fig}
-\begin{CD}
-  C^\infty(M,\space\mathbb{C}^l) @>\wp >> C^\infty(M)\\
-   @V\underbrace{F\oplus\dots\oplus F}_{l\space\text{times}}VV @VVFV\\
-  C^\infty(N,\space\mathbb{C}^l) @>>\wp > C^\infty(N)
-\end{CD}
+\begin{tikzcd}
+  C^\infty(M,\space\mathbb{C}^l)\arrow[swap]{d}{\underbrace{F\oplus\dots\oplus F}_{l\,\text{times}}} \arrow{r}{\wp} & C^\infty(M) \arrow{d}{F}\\%
+  C^\infty(N,\space\mathbb{C}^l) \arrow{r}{\wp} & C^\infty(N)
+\end{tikzcd}
 \end{equation}
 
 Moreover if $A\subset M$ is Borel-measurable, then the results above hold pointwise for the characteristic function of $A$ everywhere except along the boundary of $A$: if $f = f^2$ and $A:=\set{x\in M|f(x)=1}$,
@@ -120,15 +147,15 @@ Moreover if $A\subset M$ is Borel-measurable, then the results above hold pointw
 \begin{equation}
 \sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \begin{cases}
 1 & x \in \mathring{A} \\
-0 & x \in \mathring{A^\complement}\end{cases}
+0 & x \in \mathring{A^\complement}\end{cases}\,,
 \end{equation}
 
 and by uniqueness, we have the following identity
 
 \begin{equation}
 \begin{aligned}
-\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\space\space \forall k\geq 0 \\
-\iff f&=f^2 \space a.e.
+\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\,,\space \forall k\geq 0 \\
+\iff f&=f^2 \, \space a.e.
 \end{aligned}
 \end{equation}
 
@@ -144,26 +171,14 @@ Note: we may always assume
 \begin{aligned}
 e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
 \implies \\
-M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
+M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}\,,
 \end{aligned}
 \end{equation}
 
 where $\delta_i$ is the Kronecker delta. Since $vol(M)$ is a spectral invariant \cite{HW11}, this information is already available from isospectrality considerations.
 
-\section{Results}
-\label{sec:results}
-
-\begin{theorem}
-\label{thm}
-
-Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $\set{e^i}_{i=0}^{\infty}$ for the (non-negative) Laplacian $\Delta_M$ on $L^2(M,g)$ associated with a closed Riemannian manifold $(M,g)$, define
-
-\begin{equation}
-M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
-\end{equation}
-
-To be isometric to $(M,g)$, it is a necessary and sufficient condition for another isospectral closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $\set{M^{i,j,k}}$ under each basis.
-\end{theorem}
+\section{Proof of Theorem~\ref{thm}}
+\label{sec:proof}
 
 \begin{proof}
 For necessity, let $F:(N,h)\rightarrow (M,g)$ be an isometry between closed Riemannian manifolds, and let the target orthonormal basis of eigenfunctions on $L^2(N,h)$ be the pull-back via $F$ of the orthonormal basis $\set{e^i}$ on $(M,g)$ above. Since
@@ -171,7 +186,7 @@ For necessity, let $F:(N,h)\rightarrow (M,g)$ be an isometry between closed Riem
 \begin{equation}
 \begin{aligned}
 M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
-          &= \int_N e^i(F(x)) e^j(F(x))\bar{e^k}(F(x))\sqrt{h}dx
+          &= \int_N e^i(F(x)) e^j(F(x))\bar{e^k}(F(x))\sqrt{h}dx\,,
 \end{aligned}
 \end{equation}
 
@@ -184,7 +199,7 @@ For sufficiency, we now consider the linear, bijective orthonormal eigenfunction
 $F: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
 \end{lemma}
 
-\begin{subproof}[Proof of Lemma]
+\begin{subproof}[Proof of Lemma~\ref{lma}]
 Let $\set{a_i}$ be a smooth partition of unity on $M$.
 
 \begin{equation}
@@ -201,10 +216,10 @@ By the dominated convergence theorem,
 
 \begin{equation}
 \lim_{p\rightarrow\infty}
-\sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}e^k(x)\sqrt{g}dx
+\sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx\,,
 \end{equation}
 
-which is a characteristic function of positive measure on each disjoint subset $\set{x\in M | a_j(x) = 1}$. This means the Lemma is proven for each $a_j$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\mathbb{N}$, by Diagram~\ref{fig}.
+which is a characteristic function of positive measure on each disjoint subset $\set{x\in M | a_j(x) = 1}$. This means the Lemma is proven for each $a_j$, since the limiting characteristic function of a set with positive measure is preserved, and hence has uniform norm 1, as do all $a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\mathbb{N}$, by Diagram~\ref{fig}.
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$, where $ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$ has positive measure, and the Lemma is proven in full.
 
@@ -220,53 +235,66 @@ This completes the proof of the Theorem.
 
 \end{proof}
 
+\subsection{Discussion of Conjecture~\ref{conj}}
+\label{subsec:conj}
+
+With $\set{M_0^{i,j,k}}$ and $\set{M_1^{i,j,k}}$ representing the two triple-product sets for the bases $\set{e_0^i}$ and $\set{e_1^i}$, let $z_i \in \set{-1,1}$ be the $\mathbb{Z}_2^\infty$ action on such an $\mathbb{R}$-valued orthonormal basis $\set{e_1^i}$. Thus, we need to choose $z_i$ so that $\set{z_ie_1^i}$ yields $\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$.
+
+We observe necessarily that
+
+\begin{equation}
+\label{fml}
+z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\mathbb{N},\,\nisd\, M_0^{i,i,k} \ne 0 \,.
+\end{equation}
+
+Since for any given $k$, $M_0^{i,i,k}$ cannot be identically 0 for all $i$, this Formula~\ref{fml} for $z_k$ requires both $i$-independence, and sufficiency, to establish the basis map $e_0^i \mapsto z_i e_1^i$ preserves $\set{M_0^{i,j,k}}$.  These aspects remain unknown.
+
 \section{Example}
 \label{sec:ex}
 
-Let $\set{\lambda_i} \subset \mathbb{R}^n$ be an indexed, rank $n$ lattice of Lie Algebra weights for the quotient space representation of $\mathfrak{g}=\mathbb{R}^n$ as translation invariant (i.e., constant) vector fields on itself, when $\mathbb{R}^n$ is also viewed as $\mathfrak{g}'s$ associated Lie Group over a torus defined by $\mathbb{R}^n/A\mathbb{Z}^n, A \in GL(n,\mathbb{R})$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $\langle x, \lambda_i\rangle,\space x\in\mathbb{R}^n$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $2\pi \sqrt{-1}$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $L^2(\mathbb{R}^n/A\mathbb{Z}^n,dx)$, with Lebesgue (Haar) measure $dx$.
+Let $\set{\lambda_i} \subset \mathbb{R}^n$ be an indexed, rank $n$ lattice of Lie Algebra weights for the quotient space representation of $\mathfrak{g}=\mathbb{R}^n$ as translation invariant (i.e., constant) vector fields on itself, when $\mathbb{R}^n$ is also viewed as $\mathfrak{g}$'s associated Lie Group over a torus defined by $\mathbb{R}^n/A\mathbb{Z}^n, A \in GL(n,\mathbb{R})$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $\bra{x} \lambda_i\rangle,\space x\in\mathbb{R}^n$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $2\pi \sqrt{-1}$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $L^2(\mathbb{R}^n/A\mathbb{Z}^n,dx)$, with Lebesgue (Haar) measure $dx$.
 
 Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian, because the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $4\pi^2$) to the Casimir-element-determined-length-squared of each character's weight in the lattice.
 
 We presently view the above basis
 
 \begin{equation}
-\set{e^{2\pi\sqrt{-1}\langle x, \lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\{e^{2\pi\sqrt{-1}\bra{x}\lambda_i\rangle}/\sqrt{|\det A|}\}_{i=0}^\infty
 \end{equation}
 
-to be our Theorem-applicable Fourier basis of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) Euclidean Casimir element) directly corresponding to $\set{\lambda_i}$. By our Theorem's hypotheses, we must have $i < j \implies \lVert \lambda_i\rVert \leq \lVert\lambda_j\rVert$ (with the Euclidean norm on the weights).
+to be our Theorem-applicable Fourier basis of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) Euclidean Casimir element) directly corresponding to $\set{\lambda_i}$. By our Theorem's hypotheses, we must have $i < j \implies \lVert\lambda_i\rVert\leq \lVert\lambda_j\rVert$ (with the Euclidean norm on the weights).
 
 Now we can compute
 
 \begin{equation}
+\label{eqn:a}
 M^{i,j,k} = \begin{cases}
 1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0 \\
 0 & \text{otherwise}
 \end{cases}
 \end{equation}
 
-As this condition <span class="eqno"></span> is linear on the weight lattice $(A^{-1})^t\mathbb{Z}^n = \set{\lambda_i}$, only an $L^2$ orthonormal eigenfunction basis map which is induced from a volume-preserving invertible linear map between two such indexed, rank $n$ weight lattices will keep the "algebraic/topological" indexed data set $\set{M^{i,j,k}}$ invariant.
+As this Equation~\ref{eqn:a} is linear on the weight lattice $(A^{-1})^t\mathbb{Z}^n = \set{\lambda_i}$, only an $L^2$ orthonormal eigenfunction basis map which is induced from a volume-preserving invertible linear map between two such indexed, rank $n$ weight lattices will keep the "algebraic/topological" indexed data set $\set{M^{i,j,k}}$ invariant.
 
 However, in order to apply Theorem~\ref{thm}, it is essential that such a linear map $B$ be $B\in O(n,\mathbb{R})$ on the weight lattice, because the induced $L^2$ eigenfunction basis map
 
 \begin{equation}
-\set{e^{2\pi\sqrt{-1}\langle x, B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\{e^{2\pi\sqrt{-1}\bra{x}B\lambda_i\rangle}/\sqrt{|\det A|}\}_{i=0}^\infty
 \end{equation}
 
-must also preserve the "analytic" invariants - the Casimir-element induced figure $4\pi^2\|\lambda_i\|^2$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
+must also preserve the "analytic" invariants -- the Casimir-element induced figure $4\pi^2\lVert\lambda_i\rVert^2$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
 
-This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of lattice congruence \cite{NRR22} traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $B\in O(n,\mathbb{R})$, as described in the prior paragraph, is the contravariant Riemannian isometry between the tori, as provided by
-application of the Gelfand-Naimark Representation Theorem during the proof of Theorem~\ref{thm}.
-
-\begin{conjecture}
-If every eigenvalue has multiplicity $1$, given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $\set{M^{i,j,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
-\end{conjecture}
+This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of \textit{lattice congruence} \cite{NRR22} traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $B\in O(n,\mathbb{R})$, as described in the prior paragraph, \textbf{is} the contravariant Riemannian isometry between the tori, as provided by
+application of the \textit{Gelfand-Naimark Representation Theorem} during the proof of Theorem~\ref{thm}.
 
 \paragraph{Acknowledgements}
 The original research was funded in part by a gracious James Simons Research Award in 1995-1996, and the generous support of an Alfred P. Sloan Dissertation Fellowship in 1996-1997 at the University at Stony Brook.
 
 The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid Hezari, Harish Seshadri, and especially Leon Takhtajan for their technical assistance and review in the preparation of this manuscript for publication.
 
-\newpage
+\doclicenseThis
+
+\pagebreak
 
 \printbibliography
 
