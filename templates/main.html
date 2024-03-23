@@ -30,14 +30,13 @@
 </head>
 
 <body>
-<header>
-  <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+  <header class="navbar navbar-expand-lg bd-navbar sticky-top bg-light navbar-light">
     <div class="container-fluid">
-		<a class="navbar-brand" href="https://{{website}}/"><img src="/images/iconoclast" alt="Iconoclast"></a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	  <a class="navbar-brand" href="https://{{website}}/"><img src="/images/iconoclast" alt="Iconoclast"></a>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
             active
@@ -83,9 +82,8 @@
           <input class="form-control me-2" type="text" name="regex"
                placeholder="PCRE
  {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">{% ifequal lang ".en" %}Search{% endifequal -%}{% ifequal lang ".es" %}Buscar{% endifequal -%}{% ifequal lang ".de" %}Suche{% endifequal -%}{% ifequal lang ".fr" %}Rechercher{% endifequal -%}</button>
-	    	</form>
-		</div>
-	  </div>
+	    </form>
+	</div>
   </div>
 </header>
 
