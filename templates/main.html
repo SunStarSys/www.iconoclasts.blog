@@ -14,7 +14,6 @@
 	<link rel="bookmark" href="https://{{website}}{{path|dirname}}/{{path|basename:0}}.html{{lang}}">
 	{% endif %}
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="/css/code.css" rel="stylesheet" media="screen">
     <link href="/css/katex.min.css" rel="stylesheet" media="screen">
     <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">
     <link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
@@ -31,20 +30,14 @@
 </head>
 
 <body>
-<header>
-  <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+  <header style="border-bottom:solid #aaa 1px" class="container navbar navbar-expand-lg bd-navbar fixed-top bg-light navbar-light">
+    <div class="container-fluid">
+	  <a class="navbar-brand" href="https://{{website}}/"><img src="/images/iconoclast" alt="Iconoclast"></a>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-brand"><a href="https://www.iconoclasts.blog/">
-	  <img src="/images/iconoclast.jpg" alt="Iconoclasts">
-			<!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 --></a>
-        </div>
-      </div>
-      <div class="navbar-collapse collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
             active
             {% endif %}"><a class="nav-link text" href="/bloggers">{% ifequal lang ".en" %}Iconoclasts{% endifequal %}{% ifequal lang ".es" %}Iconoclastas{% endifequal %}{% ifequal lang ".de" %}Bilderstürmer{% endifequal %}{% ifequal lang ".fr" %}Iconoclastes{% endifequal %}</a></li>
@@ -52,16 +45,16 @@
              active
              {% endif %}"><a class="nav-link" href="/contact">{% ifequal lang ".en" %}Contact{% endifequal %}{% ifequal lang ".es" %}Contacto{% endifequal %}{% ifequal lang ".de" %}Kontakt{% endifequal %}{% ifequal lang ".fr" %}Contact{% endifequal %}</a></li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{% ifequal lang ".en" %}Products{% endifequal %}{% ifequal lang ".es" %}Productos{% endifequal %}{% ifequal lang ".de" %}Produkte{% endifequal %}{% ifequal lang ".fr" %}Des produits{% endifequal %}... <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
+            <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">{% ifequal lang ".en" %}Products{% endifequal %}{% ifequal lang ".es" %}Productos{% endifequal %}{% ifequal lang ".de" %}Produkte{% endifequal %}{% ifequal lang ".fr" %}Des produits{% endifequal %}... <span class="caret"></span></a>
+            <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
               <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orion&trade; Enterprise Wiki</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
                 href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">{% ifequal lang ".en" %}Orion Pricing Plans{% endifequal %}{% ifequal lang ".es" %}Planes Orion{% endifequal %}{% ifequal lang ".de" %}Orion-Pläne{% endifequal %}{% ifequal lang ".fr" %}Plans Orion{% endifequal %}</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{% ifequal lang ".en" %}More{% endifequal %}{% ifequal lang ".es" %}Más{% endifequal %}{% ifequal lang ".de" %}Mehr{% endifequal %}{% ifequal lang ".fr" %}Plus{% endifequal %}... <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
+            <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">{% ifequal lang ".en" %}More{% endifequal %}{% ifequal lang ".es" %}Más{% endifequal %}{% ifequal lang ".de" %}Mehr{% endifequal %}{% ifequal lang ".fr" %}Plus{% endifequal %}... <span class="caret"></span></a>
+            <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">
               <li class="dropdown-item">
                 <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">{% ifequal lang ".en" %}Site Source{% endifequal %}{% ifequal lang ".es" %}Fuente del sitio{% endifequal %}{% ifequal lang ".de" %}Site-Quelle{% endifequal %}{% ifequal lang ".fr" %}Source du site{% endifequal %}</a>
               </li>
@@ -82,24 +75,15 @@
             {% endif %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
           </li>
         </ul>
-      </div>
-      <div class="row right" id='search'>
-        <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="form-inline right" method="GET">
-          <input type="hidden" name="lang" value="{{ lang }}" />
-          <input class="form-control" type="text" name="regex"
+        <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
+            }}{% endifequal %}/" class="d-flex form-inline right" method="GET">
+          <input type="hidden" name="lang" value="{{ lang }}" >
+          <input type="hidden" name="markdown_search" value="1" >
+          <input class="form-control me-2" type="text" name="regex"
                placeholder="PCRE
- {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
-	    {% ifequal lang ".en" %}Search{% endifequal -%}
-	    {% ifequal lang ".es" %}Buscar{% endifequal -%}
-	    {% ifequal lang ".de" %}Suche{% endifequal -%}
-	    {% ifequal lang ".fr" %}Rechercher{% endifequal -%}
-          </button>&nbsp;
-          <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" {% if markdown_search %}checked{% endif %}/><label for="markdown-search"><small>Markdown</small></label>
-        </form>
-      </div>
-    </div>
+ {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">{% ifequal lang ".en" %}Search{% endifequal -%}{% ifequal lang ".es" %}Buscar{% endifequal -%}{% ifequal lang ".de" %}Suche{% endifequal -%}{% ifequal lang ".fr" %}Rechercher{% endifequal -%}</button>
+	    </form>
+	</div>
   </div>
 </header>
 
@@ -182,7 +166,6 @@
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
   </script>
-
   {% block javascript %}{% endblock %}
 </div>
 </body>

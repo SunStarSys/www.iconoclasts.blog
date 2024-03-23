@@ -52,8 +52,7 @@ iframe.asymptote {
 html { scroll-padding-top: 90px }
 body { padding-top: 90px; }
 
-div.navbar img {height: 38px;}
-
+.navbar img {height: 38px;}
 div.jumbotron input.form-control, textarea.form-control {
    	width: 25em;
 	max-width: 100%;
@@ -61,9 +60,9 @@ div.jumbotron input.form-control, textarea.form-control {
 
 div.editormd-preview-theme-dark {overflow-x: visible}
 
-div.navbar, div.navbar div { overflow: visible }
+.navbar, .navbar div { overflow: visible }
 
-div.container, div.jumbotron { overflow-x: auto; overflow-y: visible}
+div.container, div.container-fluid, div.jumbotron { overflow-x: auto; overflow-y: visible}
 
 div.jumbotron input:invalid {
 	border-color: #CC0000;
@@ -124,7 +123,10 @@ div.breadcrumbs {
 
 #search button, #filter button { height: 37px }
 
-/*#search input { font-size: .875rem }*/
+#search input { font-size: .875rem }
+
+a {text-decoration:none}
+a:hover {text-decoration: underline}
 
 #search input, #filter input { max-width: 13em; }
 @media only screen and (max-width: 1000px) {
