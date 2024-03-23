@@ -76,8 +76,8 @@
             {% endif %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
           </li>
         </ul>
-        <form class="d-flex" id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="form-inline right" method="GET">
+        <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
+            }}{% endifequal %}/" class="d-flex form-inline right" method="GET">
           <input type="hidden" name="lang" value="{{ lang }}" >
           <input type="hidden" name="markdown_search" value="1" >
           <input class="form-control me-2" type="text" name="regex"
