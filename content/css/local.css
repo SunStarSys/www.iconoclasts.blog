@@ -116,7 +116,7 @@ div.breadcrumbs {
 
 #search, #filter {
     display: inline-block;
-    min-width: 500px;
+    min-width: 350px;
     line-height: 20px;
 }
 
@@ -124,7 +124,7 @@ div.breadcrumbs {
 
 #search button, #filter button { height: 37px }
 
-/*#search input { font-size: .875rem }*/
+#search input { font-size: .875rem }
 
 #search input, #filter input { max-width: 13em; }
 @media only screen and (max-width: 1000px) {
