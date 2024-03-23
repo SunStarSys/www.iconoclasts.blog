@@ -31,7 +31,7 @@
 
 <body>
   <header style="border-bottom:solid #aaa 1px" class="fixed-top">
-	 <nav class="navbar container-xxl bg-light navbar-light navbar-expand-lg" aria-label="Main navigation">
+	 <nav class="navbar container-xxl bg-light navbar-light" aria-label="Main navigation">
 	  <div class="container-fluid">
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	       <span class="navbar-toggler-icon"></span>
@@ -78,7 +78,7 @@
           </ul>
 		</div>
         <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="d-flex form-inline right" method="GET">
+            }}{% endifequal %}/" class="d-flex form-inline right" method="GET" role="search">
           <input type="hidden" name="lang" value="{{ lang }}" >
           <input type="hidden" name="markdown_search" value="1" >
            <input class="form-control me-2" type="text" name="regex"
