@@ -77,7 +77,6 @@
             {% endif %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
           </li>
         </ul>
-      </div>
         <form class="d-flex" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
             }}{% endifequal %}/" class="form-inline right" method="GET">
           <input type="hidden" name="lang" value="{{ lang }}" />
@@ -86,7 +85,8 @@
  {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">{% ifequal lang ".en" %}Search{% endifequal -%}{% ifequal lang ".es" %}Buscar{% endifequal -%}{% ifequal lang ".de" %}Suche{% endifequal -%}{% ifequal lang ".fr" %}Rechercher{% endifequal -%}</button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
           id="markdown-search" value="1" {% if markdown_search %}checked{% endif %}/><label for="markdown-search"><small>Markdown</small></label>
-		</form>
+	    	</form>
+		</div>
 	  </div>
   </div>
 </header>
