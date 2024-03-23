@@ -125,6 +125,9 @@ div.breadcrumbs {
 
 #search input { font-size: .875rem }
 
+a {text-decoration:none}
+a:hover {text-decoration: underline}
+
 #search input, #filter input { max-width: 13em; }
 @media only screen and (max-width: 1000px) {
     #search, #filter { display: none; }
