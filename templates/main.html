@@ -32,10 +32,9 @@
 <body>
   <header style="border-bottom:solid #aaa 1px" class="container navbar navbar-expand-lg bd-navbar fixed-top bg-light navbar-light">
     <div class="container-fluid">
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+	  <span class="navbar-toggler-icon"></span>
 	  <a class="navbar-brand" href="https://{{website}}/"><img src="/images/iconoclast" alt="Iconoclast"></a>
-      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
@@ -75,17 +74,17 @@
             {% endif %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
           </li>
         </ul>
-        <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
+	  </div>
+      <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
             }}{% endifequal %}/" class="d-flex form-inline right" method="GET">
-          <input type="hidden" name="lang" value="{{ lang }}" >
-          <input type="hidden" name="markdown_search" value="1" >
-          <input class="form-control me-2" type="text" name="regex"
+        <input type="hidden" name="lang" value="{{ lang }}" >
+        <input type="hidden" name="markdown_search" value="1" >
+        <input class="form-control me-2" type="text" name="regex"
                placeholder="PCRE
  {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">{% ifequal lang ".en" %}Search{% endifequal -%}{% ifequal lang ".es" %}Buscar{% endifequal -%}{% ifequal lang ".de" %}Suche{% endifequal -%}{% ifequal lang ".fr" %}Rechercher{% endifequal -%}</button>
-	    </form>
+	  </form>
 	</div>
-  </div>
-</header>
+  </header>
 
 {% block alert %}
   {% if alert %}
