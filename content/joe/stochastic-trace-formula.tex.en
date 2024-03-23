@@ -15,10 +15,12 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
+\usepackage{amscd}
+
 % modern, utf8 friendly options (wholly incompatible with amscd):
-\PassOptionsToPackage{partial=upright}{unicode-math}
-\usepackage{fontsetup}
-\usepackage{tikz-cd}
+%\PassOptionsToPackage{partial=upright}{unicode-math}
+%\usepackage{fontsetup}
+%\usepackage{tikz-cd}
 
 \usepackage[style=alphabetic]{biblatex}
 \addbibresource{/content/joe/stochastic-trace-formula.bib.en}
