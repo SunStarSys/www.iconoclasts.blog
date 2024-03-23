@@ -34,7 +34,7 @@
 <header>
   <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
     <div class="container-fluid">
-		<a class="navbar-brand" href="https://{{website}}/"><img src="images/iconoclast" alt="Iconoclast"></a>
+		<a class="navbar-brand" href="https://{{website}}/"><img src="/images/iconoclast" alt="Iconoclast"></a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -73,7 +73,7 @@
             </ul>
           </li>
           <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
-            active1. 
+            active
             {% endif %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
           </li>
         </ul>
@@ -170,7 +170,6 @@
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
   </script>
-
   {% block javascript %}{% endblock %}
 </div>
 </body>
