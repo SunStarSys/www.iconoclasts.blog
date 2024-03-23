@@ -53,7 +53,7 @@ html { scroll-padding-top: 100px }
 body { padding-top: 100px; }
 
 div.navbar img {height: 38px;}
-
+div.navbar {height: 40px;}
 div.jumbotron input.form-control, textarea.form-control {
    	width: 25em;
 	max-width: 100%;
@@ -63,7 +63,7 @@ div.editormd-preview-theme-dark {overflow-x: visible}
 
 div.navbar, div.navbar div { overflow: visible }
 
-div.container, div.jumbotron { overflow-x: auto; overflow-y: visible}
+div.container, div.container-fluid, div.jumbotron { overflow-x: auto; overflow-y: visible}
 
 div.jumbotron input:invalid {
 	border-color: #CC0000;
@@ -115,6 +115,7 @@ div.breadcrumbs {
 }
 
 #search, #filter {
+	height: 40px;
     display: inline-block;
     min-width: 350px;
     line-height: 20px;
