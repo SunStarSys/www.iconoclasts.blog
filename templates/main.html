@@ -34,7 +34,7 @@
 <header>
   <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
     <div class="container-fluid">
-		<a href="https://{{website}}/"><img src="images/iconoclast" alt="Iconoclast"></a>
+		<a class="navbar-brand" href="https://{{website}}/"><img src="images/iconoclast" alt="Iconoclast"></a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -73,13 +73,12 @@
             </ul>
           </li>
           <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
-            active
+            active1. 
             {% endif %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
           </li>
         </ul>
       </div>
-      <div class="row right" id='search'>
-        <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
+        <form class="d-flex" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
             }}{% endifequal %}/" class="form-inline right" method="GET">
           <input type="hidden" name="lang" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
@@ -87,8 +86,7 @@
  {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">{% ifequal lang ".en" %}Search{% endifequal -%}{% ifequal lang ".es" %}Buscar{% endifequal -%}{% ifequal lang ".de" %}Suche{% endifequal -%}{% ifequal lang ".fr" %}Rechercher{% endifequal -%}</button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
           id="markdown-search" value="1" {% if markdown_search %}checked{% endif %}/><label for="markdown-search"><small>Markdown</small></label>
-        </form>
-		</div>
+		</form>
 	  </div>
   </div>
 </header>
