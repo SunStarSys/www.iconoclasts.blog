@@ -29,7 +29,7 @@
     {% endblock %}
 </head>
 
-<body data-bs-no-jquery="true">
+<body>
   <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
 	  <a class="navbar-brand" href="https://{{website}}/"><img src="/images/iconoclast" alt="Iconoclast"></a>
@@ -171,6 +171,8 @@ $.fn.scrollspy.noConflict();
 $.fn.carousel.noConflict();
 $.fn.tooltip.noConflict();
 $.fn.alert.noConflict();*/
+	  $('[data-bs-toggle=dropdown]').dropdown();
+	  $('[data-bs-toggle=collapse]').collapse();
   </script>
   {% block javascript %}{% endblock %}
 </div>
