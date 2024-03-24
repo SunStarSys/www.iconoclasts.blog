@@ -115,7 +115,7 @@ div.breadcrumbs {
 
 #search, #filter {
     display: inline-block;
-    min-width: 300px;
+    min-width: 200px;
     line-height: 20px;
 }
 
@@ -128,7 +128,7 @@ div.breadcrumbs {
 a {text-decoration:none}
 a:hover {text-decoration: underline}
 
-#search input, #filter input { max-width: 13em; }
+#search input, #filter input { max-width: 15em; }
 @media only screen and (max-width: 1000px) {
 /*    #search, #filter { display: none; } */
 }
