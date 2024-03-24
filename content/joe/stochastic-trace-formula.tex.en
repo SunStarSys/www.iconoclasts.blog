@@ -22,7 +22,7 @@
 \usepackage[inline]{asymptote}
 
 \usepackage[style=alphabetic]{biblatex}
-\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
+%\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
 % useful math-physics macros
 \usepackage{braket}
 \usepackage{physics}
@@ -205,6 +205,6 @@ DM_*\mu(\Omega_t[\gamma])
 
 \doclicenseThis
 \pagebreak
-\printbibliography
+%\printbibliography
 
 \end{document}
