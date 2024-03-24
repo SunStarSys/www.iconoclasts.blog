@@ -60,7 +60,7 @@ div.jumbotron input.form-control, textarea.form-control {
 
 div.editormd-preview-theme-dark {overflow-x: visible}
 
-.navbar, .navbar div { overflow: visible }
+.navbar, .navbar div { overflow: auto; }
 
 div.container, div.container-fluid, div.jumbotron { overflow-x: auto; overflow-y: visible}
 
