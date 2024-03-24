@@ -90,7 +90,7 @@
 {% block alert %}
   {% if alert %}
   <div class="alert alert-dismissible alert-info container">
-    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal"></button>
     {{ alert|markdown }}
   </div>
   {% endif %}
@@ -147,10 +147,10 @@
 <div class="card-body">
 <p class="card-text">
 <small class="text-dark">Please choose your Analytics preference:</small><br>
-  <button type="button" class="btn btn-outline-warning text-dark" data-bs-dismiss="modal"
+  <button type="button" class="btn btn-outline-warning text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
   onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
   $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
-  <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="modal"
+  <button type="button" class="btn btn-outline-danger text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
   onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
   $('#analytics').css('display', 'none');true">I
   Decline.</button><br><small class="text-dark">Should you elect to
