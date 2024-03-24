@@ -165,7 +165,8 @@
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
-  </script>
+   $('[data-bs-toggle="tooltip"]').tooltip()
+</script>
   {% block javascript %}{% endblock %}
 </div>
 </body>
