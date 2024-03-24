@@ -124,10 +124,10 @@
   <script src="/editor.md/lib/copy-tex.js"></script>
   <script blocking="render" type="text/javascript">
     if (typeof(editormd) === "undefined") {
-        mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
+        //mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
         mermaid.initialize({theme: "light", startOnLoad: true, securityLevel: "loose"});
-        $(".flowchart").flowChart();
-        $(".sequence-diagram").sequenceDiagram();
+        //$(".flowchart").flowChart();
+        //$(".sequence-diagram").sequenceDiagram();
         for (const e of $("body").find(".graphviz").toArray()) {
             d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
             e.innerHTML = ""
