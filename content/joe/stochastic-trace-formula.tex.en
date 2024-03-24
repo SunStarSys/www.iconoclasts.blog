@@ -61,11 +61,10 @@
 
 
 \tableofcontents
-\begin{figure}
+
 \begin{center}
-\begin{asy}[viewportwidth=\linewidth,height=10cm]
+\begin{asy}
 // tubular trefoil knot -*- asy -*-
-settings.prc=true;
 import tube;
 import graph3;
 import palette;
@@ -91,7 +90,7 @@ coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
 draw(tube(p,colorsec),render(merge=true));
 \end{asy}
 \end{center}
-\end{figure}
+
 My \textit{1997 Ph.D. thesis} as a blog entry.
 
 
