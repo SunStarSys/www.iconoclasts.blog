@@ -163,15 +163,7 @@
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
 	}
-	  var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
-$.fn.bootstrapBtn = bootstrapButton // give $().bootstrapBtn the Bootstrap functionality
-/*
-$.fn.button.noConflict();
-$.fn.tab.noConflict();
-$.fn.scrollspy.noConflict();
-$.fn.carousel.noConflict();
-$.fn.tooltip.noConflict();
-$.fn.alert.noConflict();*/
+
 	 $('[data-bs-toggle="dropdown"]').dropdown();
 	 $('[data-bs-toggle="collapse"]').collapse();
   </script>
