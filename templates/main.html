@@ -29,7 +29,7 @@
     {% endblock %}
 </head>
 
-<body>
+<body data-bs-no-jquery="true">
   <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
 	  <a class="navbar-brand" href="https://{{website}}/"><img src="/images/iconoclast" alt="Iconoclast"></a>
@@ -164,13 +164,13 @@
     }
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
-	}
+	}/*
 $.fn.button.noConflict();
 $.fn.tab.noConflict();
 $.fn.scrollspy.noConflict();
 $.fn.carousel.noConflict();
 $.fn.tooltip.noConflict();
-$.fn.alert.noConflict();
+$.fn.alert.noConflict();*/
   </script>
   {% block javascript %}{% endblock %}
 </div>
