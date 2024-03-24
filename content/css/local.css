@@ -60,9 +60,9 @@ div.jumbotron input.form-control, textarea.form-control {
 
 div.editormd-preview-theme-dark {overflow-x: visible}
 
-.navbar, .navbar div { overflow: auto; }
+.navbar, .navbar div { overflow: visible; }
 
-div.container, div.container-fluid, div.jumbotron { overflow-x: auto; overflow-y: visible}
+div.container, div.jumbotron { overflow-x: auto; overflow-y: visible}
 
 div.jumbotron input:invalid {
 	border-color: #CC0000;
