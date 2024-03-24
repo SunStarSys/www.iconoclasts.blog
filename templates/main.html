@@ -30,67 +30,67 @@
 </head>
 
 <body>
-<header style="border-bottom:solid #aaa 1px; background-color: #fff !important;" class="container-xxl navbar navbar-expand-lg bg-light fixed-top">
-  <div class="container-fluid" data-bs-theme="light">
+  <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
 	  <a class="navbar-brand" href="https://{{website}}/"><img src="/images/iconoclast" alt="Iconoclast"></a>
-    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
             active
-            {% endif %}"><a class="nav-link text-dark" href="/bloggers">{% ifequal lang ".en" %}Iconoclasts{% endifequal %}{% ifequal lang ".es" %}Iconoclastas{% endifequal %}{% ifequal lang ".de" %}Bilderstürmer{% endifequal %}{% ifequal lang ".fr" %}Iconoclastes{% endifequal %}</a></li>
-        <li class="nav-item{% if path|starts_with:"/contact.md" %}
+            {% endif %}"><a class="nav-link text" href="/bloggers">{% ifequal lang ".en" %}Iconoclasts{% endifequal %}{% ifequal lang ".es" %}Iconoclastas{% endifequal %}{% ifequal lang ".de" %}Bilderstürmer{% endifequal %}{% ifequal lang ".fr" %}Iconoclastes{% endifequal %}</a></li>
+          <li class="nav-item{% if path|starts_with:"/contact.md" %}
              active
-             {% endif %}"><a class="nav-link text-dark" href="/contact">{% ifequal lang ".en" %}Contact{% endifequal %}{% ifequal lang ".es" %}Contacto{% endifequal %}{% ifequal lang ".de" %}Kontakt{% endifequal %}{% ifequal lang ".fr" %}Contact{% endifequal %}</a></li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">{% ifequal lang ".en" %}Products{% endifequal %}{% ifequal lang ".es" %}Productos{% endifequal %}{% ifequal lang ".de" %}Produkte{% endifequal %}{% ifequal lang ".fr" %}Des produits{% endifequal %}... <span class="caret"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="products">
-            <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orion&trade; Enterprise Wiki</a></li>
-            <li class="dropdown-item"><a class="nav-link text-dark"
+             {% endif %}"><a class="nav-link" href="/contact">{% ifequal lang ".en" %}Contact{% endifequal %}{% ifequal lang ".es" %}Contacto{% endifequal %}{% ifequal lang ".de" %}Kontakt{% endifequal %}{% ifequal lang ".fr" %}Contact{% endifequal %}</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">{% ifequal lang ".en" %}Products{% endifequal %}{% ifequal lang ".es" %}Productos{% endifequal %}{% ifequal lang ".de" %}Produkte{% endifequal %}{% ifequal lang ".fr" %}Des produits{% endifequal %}... <span class="caret"></span></a>
+            <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
+              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orion&trade; Enterprise Wiki</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark"
                 href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">{% ifequal lang ".en" %}Orion Pricing Plans{% endifequal %}{% ifequal lang ".es" %}Planes Orion{% endifequal %}{% ifequal lang ".de" %}Orion-Pläne{% endifequal %}{% ifequal lang ".fr" %}Plans Orion{% endifequal %}</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">{% ifequal lang ".en" %}More{% endifequal %}{% ifequal lang ".es" %}Más{% endifequal %}{% ifequal lang ".de" %}Mehr{% endifequal %}{% ifequal lang ".fr" %}Plus{% endifequal %}... <span class="caret"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="more">
-            <li class="dropdown-item">
-              <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">{% ifequal lang ".en" %}Site Source{% endifequal %}{% ifequal lang ".es" %}Fuente del sitio{% endifequal %}{% ifequal lang ".de" %}Site-Quelle{% endifequal %}{% ifequal lang ".fr" %}Source du site{% endifequal %}</a>
-            </li>
-            <li class="dropdown-item divider"></li>
-            <li class="dropdown-header text-dark">{% ifequal lang ".en" %}Site Maps{% endifequal %}{% ifequal lang ".es" %}Mapas del sitio{% endifequal %}{% ifequal lang ".de" %}Site Maps{% endifequal %}{% ifequal lang ".fr" %}Cartes du site{% endifequal %}</li>
-            <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.en">{% ifequal lang ".en" %}English{% endifequal %}{% ifequal lang ".es" %}Inglés{% endifequal %}{% ifequal lang ".de" %}Englisch{% endifequal %}{% ifequal lang ".fr" %}Anglais{% endifequal %}</a></li>
-            <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.es">{% ifequal lang ".en" %}Spanish{% endifequal %}{% ifequal lang ".es" %}Español{% endifequal %}{% ifequal lang ".de" %}Spanisch{% endifequal %}{% ifequal lang ".fr" %}Espagnol{% endifequal %}</a></li>
-            <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.de">{% ifequal lang ".en" %}German{% endifequal %}{% ifequal lang ".es" %}Alemán{% endifequal %}{% ifequal lang ".de" %}Deutsche{% endifequal %}{% ifequal lang ".fr" %}Allemand{% endifequal %}</a></li>
-            <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.fr">{% ifequal lang ".en" %}French{% endifequal %}{% ifequal lang ".es" %}Francés{% endifequal %}{% ifequal lang ".de" %}Französisch{% endifequal %}{% ifequal lang ".fr" %}Français{% endifequal %}</a></li>
-            <li class="dropdown-item divider"></li>
-            <li class="dropdown-header text-dark">{% ifequal lang ".en" %}Taxonomies{% endifequal %}{% ifequal lang ".es" %}Taxonomías{% endifequal %}{% ifequal lang ".de" %}Taxonomien{% endifequal %}{% ifequal lang ".fr" %}Taxonomies{% endifequal %}</li>
-            <li class="dropdown-item"><a class="nav-link text-dark" href="/categories">{% ifequal lang ".en" %}Categories{% endifequal %}{% ifequal lang ".es" %}Categorías{% endifequal %}{% ifequal lang ".de" %}Kategorien{% endifequal %}{% ifequal lang ".fr" %}Catégories{% endifequal %}</a></li>
-            <li class="dropdown-item"><a class="nav-link text-dark" href="/archives">{% ifequal lang ".en" %}Archives{% endifequal %}{% ifequal lang ".es" %}Archivo{% endifequal %}{% ifequal lang ".de" %}Archiv{% endifequal %}{% ifequal lang ".fr" %}Les archives{% endifequal %}</a></li>
-          </ul>
-        </li>
-        <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">{% ifequal lang ".en" %}More{% endifequal %}{% ifequal lang ".es" %}Más{% endifequal %}{% ifequal lang ".de" %}Mehr{% endifequal %}{% ifequal lang ".fr" %}Plus{% endifequal %}... <span class="caret"></span></a>
+            <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">
+              <li class="dropdown-item">
+                <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">{% ifequal lang ".en" %}Site Source{% endifequal %}{% ifequal lang ".es" %}Fuente del sitio{% endifequal %}{% ifequal lang ".de" %}Site-Quelle{% endifequal %}{% ifequal lang ".fr" %}Source du site{% endifequal %}</a>
+              </li>
+              <li class="dropdown-item divider"></li>
+              <li class="dropdown-header text-dark">{% ifequal lang ".en" %}Site Maps{% endifequal %}{% ifequal lang ".es" %}Mapas del sitio{% endifequal %}{% ifequal lang ".de" %}Site Maps{% endifequal %}{% ifequal lang ".fr" %}Cartes du site{% endifequal %}</li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.en">{% ifequal lang ".en" %}English{% endifequal %}{% ifequal lang ".es" %}Inglés{% endifequal %}{% ifequal lang ".de" %}Englisch{% endifequal %}{% ifequal lang ".fr" %}Anglais{% endifequal %}</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.es">{% ifequal lang ".en" %}Spanish{% endifequal %}{% ifequal lang ".es" %}Español{% endifequal %}{% ifequal lang ".de" %}Spanisch{% endifequal %}{% ifequal lang ".fr" %}Espagnol{% endifequal %}</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.de">{% ifequal lang ".en" %}German{% endifequal %}{% ifequal lang ".es" %}Alemán{% endifequal %}{% ifequal lang ".de" %}Deutsche{% endifequal %}{% ifequal lang ".fr" %}Allemand{% endifequal %}</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.fr">{% ifequal lang ".en" %}French{% endifequal %}{% ifequal lang ".es" %}Francés{% endifequal %}{% ifequal lang ".de" %}Französisch{% endifequal %}{% ifequal lang ".fr" %}Français{% endifequal %}</a></li>
+              <li class="dropdown-item divider"></li>
+              <li class="dropdown-header text-dark">{% ifequal lang ".en" %}Taxonomies{% endifequal %}{% ifequal lang ".es" %}Taxonomías{% endifequal %}{% ifequal lang ".de" %}Taxonomien{% endifequal %}{% ifequal lang ".fr" %}Taxonomies{% endifequal %}</li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/categories">{% ifequal lang ".en" %}Categories{% endifequal %}{% ifequal lang ".es" %}Categorías{% endifequal %}{% ifequal lang ".de" %}Kategorien{% endifequal %}{% ifequal lang ".fr" %}Catégories{% endifequal %}</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/archives">{% ifequal lang ".en" %}Archives{% endifequal %}{% ifequal lang ".es" %}Archivo{% endifequal %}{% ifequal lang ".de" %}Archiv{% endifequal %}{% ifequal lang ".fr" %}Les archives{% endifequal %}</a></li>
+            </ul>
+          </li>
+          <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             active
-            {% endif %}"><a class="nav-link text-dark" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
-        </li>
-      </ul>
-	</div>
-    <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="d-flex form-inline" method="GET">
-      <input type="hidden" name="lang" value="{{ lang }}" >
-      <input type="hidden" name="markdown_search" value="1" >
-      <input class="form-control me-2" type="text" id="regex" name="regex"
+            {% endif %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
+          </li>
+        </ul>
+        <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
+            }}{% endifequal %}/" class="d-flex form-inline right" method="GET">
+          <input type="hidden" name="lang" value="{{ lang }}" >
+          <input type="hidden" name="markdown_search" value="1" >
+          <input class="form-control me-2" type="text" name="regex"
                placeholder="PCRE
- {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" /><label for="regex">&nbsp; <button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button></label>
-	</form>
+ {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
+	    </form>
+	</div>
   </div>
 </header>
 
 {% block alert %}
   {% if alert %}
-  <div class="alert alert-dismissible alert-info container" role="alert">
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <div class="alert alert-dismissible alert-info container">
+    <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal"></button>
     {{ alert|markdown }}
   </div>
   {% endif %}
@@ -109,7 +109,7 @@
 
   <footer>{% block footer %}{% endblock footer %}</footer>
 
-  <script defer src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
@@ -124,7 +124,7 @@
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script src="/editor.md/lib/copy-tex.js"></script>
-  <script blocking="render" defer type="text/javascript">
+  <script blocking="render" async type="text/javascript">
     if (typeof(editormd) === "undefined") {
         mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
         mermaid.initialize({theme: "light", startOnLoad: true, securityLevel: "loose"});
@@ -139,7 +139,7 @@
     }
     if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {
-        for (const h1 of document.getElementsByTagName("header")) {
+        for (const h1 of document.getElementsByTagName("h1")) {
             var html = `<div id="analytics"><br><div class="card border-warning">
 <div class="card-header">
   <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
@@ -147,10 +147,10 @@
 <div class="card-body">
 <p class="card-text">
 <small class="text-dark">Please choose your Analytics preference:</small><br>
-  <button type="button" class="btn btn-outline-warning text-dark"
+  <button type="button" class="btn btn-outline-warning text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
   onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
   $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
-  <button type="button" class="btn btn-outline-danger text-dark"
+  <button type="button" class="btn btn-outline-danger text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
   onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
   $('#analytics').css('display', 'none');true">I
   Decline.</button><br><small class="text-dark">Should you elect to
@@ -164,8 +164,13 @@
     }
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
-    }
-</script>
+
+$.fn.collapse.noConflict();
+$.fn.carousel.noConflict();
+$.fn.tooltip.noConflict();
+$.fn.alert.noConflict();
+	}
+  </script>
   {% block javascript %}{% endblock %}
 </div>
 </body>
