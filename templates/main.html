@@ -89,8 +89,8 @@
 
 {% block alert %}
   {% if alert %}
-  <div class="modal alert-dismissible alert-info container">
-    <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal"></button>
+  <div class="alert alert-dismissible alert-info container">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     {{ alert|markdown }}
   </div>
   {% endif %}
@@ -139,18 +139,18 @@
     }
     if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {
-        for (const h1 of document.getElementsByTagName("h1")) {
-            var html = `<div id="analytics" class="modal"><br><div class="card border-warning">
+        for (const h1 of document.getElementsByTagName("header")) {
+            var html = `<div id="analytics" class="alert"><br><div class="card border-warning">
 <div class="card-header">
   <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
 </div>
 <div class="card-body">
 <p class="card-text">
 <small class="text-dark">Please choose your Analytics preference:</small><br>
-  <button type="button" class="btn btn-outline-warning text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
+  <button type="button" class="btn btn-outline-warning text-dark"
   onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
   $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
-  <button type="button" class="btn btn-outline-danger text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
+  <button type="button" class="btn btn-outline-danger text-dark"
   onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
   $('#analytics').css('display', 'none');true">I
   Decline.</button><br><small class="text-dark">Should you elect to
