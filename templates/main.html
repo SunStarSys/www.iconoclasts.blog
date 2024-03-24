@@ -165,7 +165,10 @@
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
 
-$.fn.collapse.noConflict();
+		const bootstrapButton = $.fn.button.noConflict();
+$.fn.bootstrapBtn = bootstrapButton
+$.fn.tab.noConflict();
+$.fn.scrollspy.noConflict();
 $.fn.carousel.noConflict();
 $.fn.tooltip.noConflict();
 $.fn.alert.noConflict();
