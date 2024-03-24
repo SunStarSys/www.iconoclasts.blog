@@ -19,7 +19,7 @@
 \PassOptionsToPackage{partial=upright}{unicode-math}
 \usepackage{fontsetup}
 \usepackage{tikz-cd}
-\usepackage{asymptote}
+\usepackage[inline]{asymptote}
 
 %\usepackage[style=alphabetic]{biblatex}
 %\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
@@ -61,7 +61,7 @@
 
 \tableofcontents
 
-\begin{asy}
+\begin{asy}[width=\the\linewidth]
 // tubular trefoil knot -*- asy -*-
 settings.prc=true;
 import tube;
