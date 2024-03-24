@@ -19,6 +19,7 @@
 \PassOptionsToPackage{partial=upright}{unicode-math}
 \usepackage{fontsetup}
 \usepackage{tikz-cd}
+\usepackage{graphicx}
 \usepackage[inline]{asymptote}
 
 %\usepackage[style=alphabetic]{biblatex}
@@ -62,7 +63,7 @@
 \tableofcontents
 \begin{figure}
 \begin{center}
-\begin{asy}[width=10cm]
+\begin{asy}[viewportwidth=\linewidth,height=10cm]
 // tubular trefoil knot -*- asy -*-
 settings.prc=true;
 import tube;
