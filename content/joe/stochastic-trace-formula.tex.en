@@ -63,6 +63,7 @@
 
 \begin{asy}
 // tubular trefoil knot -*- asy -*-
+settings.prc=true;
 import tube;
 import graph3;
 import palette;
