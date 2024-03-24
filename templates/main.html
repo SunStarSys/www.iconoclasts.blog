@@ -40,10 +40,10 @@
       <ul class="navbar-nav">
         <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
             active
-            {% endif %}"><a class="nav-link text" href="/bloggers">{% ifequal lang ".en" %}Iconoclasts{% endifequal %}{% ifequal lang ".es" %}Iconoclastas{% endifequal %}{% ifequal lang ".de" %}Bilderstürmer{% endifequal %}{% ifequal lang ".fr" %}Iconoclastes{% endifequal %}</a></li>
+            {% endif %}"><a class="nav-link text-dark" href="/bloggers">{% ifequal lang ".en" %}Iconoclasts{% endifequal %}{% ifequal lang ".es" %}Iconoclastas{% endifequal %}{% ifequal lang ".de" %}Bilderstürmer{% endifequal %}{% ifequal lang ".fr" %}Iconoclastes{% endifequal %}</a></li>
         <li class="nav-item{% if path|starts_with:"/contact.md" %}
              active
-             {% endif %}"><a class="nav-link" href="/contact">{% ifequal lang ".en" %}Contact{% endifequal %}{% ifequal lang ".es" %}Contacto{% endifequal %}{% ifequal lang ".de" %}Kontakt{% endifequal %}{% ifequal lang ".fr" %}Contact{% endifequal %}</a></li>
+             {% endif %}"><a class="nav-link text-dark" href="/contact">{% ifequal lang ".en" %}Contact{% endifequal %}{% ifequal lang ".es" %}Contacto{% endifequal %}{% ifequal lang ".de" %}Kontakt{% endifequal %}{% ifequal lang ".fr" %}Contact{% endifequal %}</a></li>
         <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">{% ifequal lang ".en" %}Products{% endifequal %}{% ifequal lang ".es" %}Productos{% endifequal %}{% ifequal lang ".de" %}Produkte{% endifequal %}{% ifequal lang ".fr" %}Des produits{% endifequal %}... <span class="caret"></span></a>
           <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
@@ -72,12 +72,12 @@
         </li>
         <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             active
-            {% endif %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
+            {% endif %}"><a class="nav-link text-dark" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
         </li>
       </ul>
 	</div>
     <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="d-flex form-inline right" method="GET">
+            }}{% endifequal %}/" class="d-flex form-inline" method="GET">
       <input type="hidden" name="lang" value="{{ lang }}" >
       <input type="hidden" name="markdown_search" value="1" >
       <input class="form-control me-2" type="text" name="regex"
