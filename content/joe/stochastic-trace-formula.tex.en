@@ -62,7 +62,8 @@
 
 \tableofcontents
 
-\begin{asy}
+\begin[inline]{asy}
+settings.prc=true;
 // tubular trefoil knot -*- asy -*-
 import tube;
 import graph3;
