@@ -15,8 +15,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
-% modern, utf8 friendly options (wholly incompatible with amscd):
-\PassOptionsToPackage{partial=upright}{unicode-math}
+% modern, utf8 friendly options
 \usepackage{fontsetup}
 \usepackage{tikz-cd}
 \usepackage{graphicx}
