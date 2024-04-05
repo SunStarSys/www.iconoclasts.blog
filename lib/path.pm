@@ -128,7 +128,7 @@ walk_content_tree {
     open my $fh, "<:raw", "lib/acl.yml" or die "Can't open acl.yml: $!";
     push @acl, @{Load join "", <$fh>};
     for (glob("content/*/index.md.*")) {
-        s!/index\.md\.[^/]+$!!:
+        s!/index\.md\.[^/]+$!!;
 		push @acl, { path => $_, rules => {
              '@bloggers'  => 'rw',
              '@svnadmin' => 'rw',
