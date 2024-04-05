@@ -1,6 +1,6 @@
 Title: Triple products of eigenfunctions and spectral geometry
 Dependencies: *.md.en
-status: verified=21017
+status: draft
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -266,25 +266,5 @@ This representation-theoretical account [[AK01]](#AK01) is exactly equivalent to
 The original research was funded in part by a gracious James Simons Research Award in 1995-1996, and the generous support of an Alfred P. Sloan Dissertation Fellowship in 1996-1997 at the University at Stony Brook.
 
 The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid Hezari, Harish Seshadri, and especially Leon Takhtajan for their technical assistance and review in the preparation of this manuscript for publication.
-
-<style type="text/css">
-  /* automatic line numbering kludge */
-  .katex-display { display: table; width: 100% }
-  .katex-display>.katex { display: table-cell }
-  body { counter-reset: eqno }
-  .katex-display::before, .katex-display::after {
-    width: 5%;
-    display: table-cell;
-    text-align: right;
-	vertical-align: middle;
-  }
-  .katex-display::after {
-    counter-increment: eqno;
-	content: "(" counter(eqno) ")";
-  }
-  .eqno::after {
-    content: "(" counter(eqno) ")";
-  }
-</style>
 
 <!-- $Date$ $Author$ $Revision$ -->
