@@ -5,102 +5,6 @@
     "@svnadmin": rw
     "*": r
 
-- path: content/joe
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/axio
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/inspectorcheeks
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/jennifer
-  rules:
-    "jennifer": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/jimjag
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/priti
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/tommy2tone
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/keerthy
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/jhe
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/jules
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/esha
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/herkulz
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/brook
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/mousdrvr
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/dougm
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
-- path: content/gozer
-  rules:
-    "@bloggers": rw
-    "@svnadmin": rw
-    "*": r
-
 - path: lib
   rules:
     "@svnadmin": rw
@@ -121,6 +25,5 @@
   rules:
     "@svnadmin": rw
     "@frontend": rw
-
+    "@staff": rw
 #acl
-
