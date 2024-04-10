@@ -2,7 +2,7 @@ Title: Perl 7 Feature Request: sealed subs for typed lexicals
 Keywords: perl,dylan,static,method,lookup,compile,sealed,apache,mod_perl,performance
 Dependencies: *.md.en
 Categories: Perl, Orion, Performance, Apache
-Status: verified=19381
+status: draft
 
 <div class="right">
   <img src="../images/sunstarstaronly.png">
@@ -108,7 +108,7 @@ For fun, try this [monkey patch]({{snippetB.pretty_uri}}) to `ModPerl::RegistryC
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=83,88]
 
-It enables the effects of `sub handler :Sealed {<script goes here>}` on all of your `ModPerl::Registry` scripts, something like [this one](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+It enables the effects of `sub handler :Sealed {script goes here}` on all of your `ModPerl::Registry` scripts, something like [this one](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
