@@ -38,6 +38,9 @@ our @patterns = (
     facts      => $facts,
   }],
 
+  # don't build markdown files within attachment dirs
+  [qr!\.page/[^/]+.md[^/]*$!, skip => {}],
+
   [qr!^/[^/]+/([^/]+)\.md[^/]*$!, snippet => {
     template        => "blog.html",
     view            => [qw/asymptote single_narrative/],
