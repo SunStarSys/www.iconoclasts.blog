@@ -5,5 +5,15 @@ Dependencies: *.md.en
 
 [TOC]
 
+Measure twice, cut once, before embarking on a code optimization effort.
+
+Nothing makes measuring prod easier than DTrace.
+
+https://youtu.be/z8QveI4CHT8
+
+Targeted optimization:
+
+<https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Core.pm#L417>
+
 
 <!-- $Date$ $Author$ $Revision$ -->
