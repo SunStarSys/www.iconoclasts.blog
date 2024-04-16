@@ -21,7 +21,7 @@ Nothing makes measuring prod easier than DTrace.
 
 ## [Targeted optimization]({{snippetB.pretty_uri}}):
 
-Every $dtlv method call is done at compilrt time.
+Every `$dtlv` class-method-call below is done at compile time by `:Sealed`:
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
 
