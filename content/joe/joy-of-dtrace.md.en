@@ -19,7 +19,7 @@ Nothing makes measuring prod easier than DTrace.
 
 [snippet:repo=joesuf4/home:path=.zshrc:lines=L253-L255:lang=shell:branch=wsl]
 
-## [Targeted optimization]({{snippetB.pretty_uri}}):
+## [Targeted optimization]({{snippetB.pretty_uri}})
 
 Every `$dtlv` class-method-call below is done at compile time by `:Sealed`:
 
