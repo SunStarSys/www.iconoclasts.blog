@@ -1,7 +1,7 @@
 Title: Contacta con nosotros
 Keywords: South Florida, System Administration
 
-<div class="float-lg-right">
+<div class="float-lg-end">
 {% include "enquiry_get.html" %}
 </div>
 
@@ -22,3 +22,5 @@ Keywords: South Florida, System Administration
 - [+1 (305) 859-1630](tel://1.305.859.1630/)
 
 <div style="height: 650px">&nbsp;<br/></div>
+
+<!-- $Date$ $Author$ $Revision$ -->
