@@ -1,4 +1,5 @@
 Title: De, Por y Para iconoclastas
+Dependencies: /categories/*/index.html.es
 
 <div id="news" class=" float-lg-end">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
@@ -34,11 +35,11 @@ accepted beliefs and traditions
 
 <div style="max-width:900px">
 
-Bienvenido a nuestra comunidad de blogs 
+Bienvenido a nuestra comunidad de blogs
 
 <center>
 
-**STEM/Academia/Política/Cultura/Artes!**
+**STEM/Academia/Política/Cultura/Artes**
 
 </center>
 
