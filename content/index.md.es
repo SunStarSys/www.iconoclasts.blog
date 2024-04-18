@@ -1,4 +1,4 @@
-Title: De, Por y Para iconoclastas
+Title: De, Por y Para Iconoclastas
 Dependencies: /categories/*/index.html.es
 
 <div id="news" class=" float-lg-end">
