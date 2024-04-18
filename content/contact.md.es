@@ -11,12 +11,6 @@ Keywords: South Florida, System Administration
 
 - [Joe Schaefer, Ph.D.](mailto://joe@sunstarsys.com) &mdash; Presidente y dueño
 
-### Direccion postal:
-
-    SunStar Systems, Inc.
-    2519 Sugarloaf Lane
-    Ft. Lauderdale, FL  USA 33312
-
 ### Teléfono:
 
 - [+1 (305) 859-1630](tel://1.305.859.1630/)
