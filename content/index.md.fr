@@ -1,21 +1,130 @@
-Title: Accueil
+Title: De, Par et Pour Iconoclasts
+Dependencies: categories/*/index.md.fr
 
-<div class="float-lg-right">
+<div id="news" class=" float-lg-end">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
-		<div class="card-header">News</div>
-		<div class="card-body">
-			<h4 class="card-title">SunStar Systems CMS Product Availability!</h4>
-			<p class="card-text">Starting <span class='text-danger'>September 1, 2020</span>, our totally revamped and modernized version of the Apache CMS is available to JAM Stack developers as a <span class="text-success">$10 / month</span> soup-to-nuts, full zero-ops solution. Check out the <a href="/orion/">CMS</a>!</p>
-		</div>
-	</div>
-	<br />
+		<div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclast</a></div>
+
+<div class="card-body">
+<small>
+<pre class="card-title">
+noun [ C ]   formal
+US  /aɪˈkɑː.nə.klæst/
+a person who strongly opposes generally
+accepted beliefs and traditions
+</pre>
+</small>
+
+&nbsp;
+
+{% for elt in iconoclasts.content|shuffle|slice:":3" %}
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe title="{{elt.name}}" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+&nbsp;
+{% endfor %}
+
+</div>
 </div>
 
-![SunStar Systems](images/sunstarlogowhole.png)
+&nbsp;
 
-## Pages d’intérêt
+</div>
 
-- [htop](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash; ma version de htop pour Solaris 11.4, avec support pour ZFS/Zone/truss/pfiles+pmap.
-- [Sealed Lexicals for Perl 7](/essays/perl7-sealed-lexicals) &mdash; Ajouter :sealed a une declaration de fonction et profiter de vitesse additionnelle fournie par des recherches de fonctions durant al compilation pour tout ses lexicaux typés 
-- [The DevOps Movement](/essays/devops) &mdash; Enfin remplis les détails manquants de cet article.
-- [Exponential Growth and COVID-19](/essays/power) &mdash; Article opportun a propos de la pandémie de 2020.
+![Iconoclast](images/iconoclast.jpg)
+
+<div style="max-width:900px">
+
+Bienvenue dans notre communauté de blogging
+
+<center>
+
+**STEM/Académie/Politique/Culture/Arts**
+
+</center>
+
+Inscrivez-vous dès aujourd'hui sur la page [Contactez-nous](contact) lors de notre lancement promotionnel!
+
+ Aussi, s'il vous plaît vérifier [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>The Enterprise Jamstack Wiki.</em></span>&trade; &mdash;   est le seul produit d'entreprise basé sur SCM avec l'intégration native [mermaid-mindmap](https://www.sunstarsys.com/orion/features).
+
+&nbsp;
+
+<div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
+	 	<iframe title="video" class="embed-responsive-item" style="min-width:400px;min-height:275px" src="https://www.youtube.com/embed/f55XLGCs3H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+</div>
+
+&nbsp;
+
+## Blogs en vedette
+
+&nbsp;
+
+- <span class="badge bg-success">New</span> [Apache HTTPd Devs Considered Harmful](/joe/apache-considered-harmful)
+
+- [Triple Products of Eigenfunctions and Spectral Geometry](/joe/triple-products) published at SSRS.
+
+- [Application Performance](/joe/performance) &mdash; a working example: from an observable bottleneck to an effective resolution.
+
+- [Information Security](/joe/infosec) &mdash; abstraction of the basic concepts leads to wide real-world applicability and clarity.
+
+- [Sealed Lexicals for Perl 7](/joe/perl7-sealed-lexicals) &mdash; add <span class="text-info">:sealed</span> to a function definition and enjoy the extra speed of compile-time method lookups for all of its typed lexicals.
+
+- [The DevOps Movement](/joe/devops) &mdash; filled in the missing details on this article.
+
+&nbsp;
+
+## Index de catégorie
+
+&nbsp;
+
+<div style="text-align:justify">
+{% for d in deps|dictsort:0 %}<button type="button" class="btn btn-success"><a href="{{d.0}}">{{d.0|dirname|basename}}</a></button> {% endfor %}
+</div>
+
+<style type="text/css">
+h2 { font-size: 18px }
+
+button.btn a {
+    color:#fff;
+}
+div.jumbotron button.btn {
+    margin-bottom:5px;
+}
+
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes news {
+  0% {
+    left: 1000px;
+	top: 1000px;
+	position:relative;
+  }
+
+100% {top: 5px;position:relative}
+
+}
+
+#news {
+	animation: news;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date$ $Author$ $Revision$ -->
