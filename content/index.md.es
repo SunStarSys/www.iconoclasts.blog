@@ -76,7 +76,7 @@ Además, por favor echa un vistazo a  [Orion](https://www.sunstarsys.com/orion/)
 
 &nbsp;
 
-## Category Index
+## Categoría Índice
 
 &nbsp;
 
