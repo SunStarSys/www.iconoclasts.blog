@@ -45,7 +45,7 @@ Bienvenido a nuestra comunidad de blogs
 
 ¡Regístrese hoy mismo en la página [Contacto](/contact) durante nuestro lanzamiento promocional!
 
-Además, por favor echa un vistazo a  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>The Enterprise Jamstack Wiki.</em></span>&trade; &mdash;  es el único producto empresarial basado en SCM con integración nativa de [mermaid-mindmap](https://www.sunstarsys.com/orion/features)!
+Además, por favor echa un vistazo a  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>The Enterprise Jamstack Wiki.</em></span>&trade; &mdash;  es el único producto empresarial basado en SCM con integración nativa de [mermaid-mindmap](https://www.sunstarsys.com/orion/features).
 
 &nbsp;
 
