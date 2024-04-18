@@ -1,0 +1,27 @@
+---
+title: Iconoclast Youtube List
+status: draft
+---
+
+- name: "Martin Luther King, Jr"
+  key: 5r98tT0j1a0
+- name: Bruce Lee
+  key: 4O9o4CKTGzQ
+- name: George Carlin
+  key: kZ-PhVcPMxo
+- name: Tupac Shakur
+  key: pVmwIDtnSqc
+- name: Richard Ebright
+  key: 80hWiPMy-Og
+- name: Dick Fosbury
+  key: Wzk5-G2luZU
+- name: Igor Stravinsky
+  key: TRfiwyKDQoE
+- name: Rosa Parks
+  key: 1C7Cach5VRo
+- name: Mohammed Bouazizi
+  key: d2-Cli36Va4
+- name: Galileo
+  key: W1UbjX64B8Q
+- name: Richard Pryor
+  key: 0jII2piAUaY
