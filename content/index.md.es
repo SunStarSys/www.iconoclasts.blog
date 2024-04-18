@@ -1,4 +1,4 @@
-Title: Hogar
+Title: De, Por y Para iconoclastas
 
 <div id="news" class=" float-lg-end">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
