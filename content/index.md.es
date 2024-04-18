@@ -3,15 +3,15 @@ Dependencies: /categories/*/index.html.es
 
 <div id="news" class=" float-lg-end">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
-		<div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclast</a></div>
+		<div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclasta</a></div>
 
 <div class="card-body">
 <small>
 <pre class="card-title">
-noun [ C ]   formal
+sustantivo [ C ]   formal
 US  /aɪˈkɑː.nə.klæst/
-a person who strongly opposes generally
-accepted beliefs and traditions
+una persona que se opone a las creencias
+y tradiciones generalmente aceptadas
 </pre>
 </small>
 
