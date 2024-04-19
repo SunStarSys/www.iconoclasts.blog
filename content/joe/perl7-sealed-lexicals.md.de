@@ -1,0 +1,181 @@
+---
+categories: Perl, Orion, Performance, Apache
+dependencies: '*.md.de'
+keywords: Perl,Dylan,statisch,Methode,Lookup,kompilieren,versiegelt,apache,mod_perl,Leistung
+title: 'Perl 7 Feature-Anfrage: versiegelte Unterteile fchr hex 00fcr typisierte Lexika'
+---
+<div class="right">
+  <img src="../images/sunstarstaronly.png">
+</div>
+
+## Das Problem
+
+{# lede #}Der Lookup der OO-Laufzeitmethode von {# lede #}Perl 5 hat 50% mehr Performance-Overhead als ein direkter, benannter Unterroutinenaufruf{# lede #}.
+
+## Die erste Lchr hex 00f6sung: Methoden-Lookup-Optimierungen von Doug MacEachern
+
+Doug war der Schchr hex 00f6pfer des mod_perl-Projekts in der Mitte der 90er Jahre, also war das Schreiben von Hochleistungsperl sein Fort. Einer seiner vielen Beitrchr hex 00e4ge zu [p5p](https://lists.perl.org/list/perl5-porters.html) bestand darin, den Performance-Betrug des OO-Methoden-Lookup-Overheads zu halbieren. Verwenden Sie dazu einen Methoden-+<code> ISA</code>-Hierarchiecache, um den Runtime-Objektmethoden-Lookup fchr hex 00fcr mod_perl-Objekte wie `Apache2::RequestRec` so rational wie mchr hex 00f6glich zu gestalten.  Aber es bringt uns nur auf halbem Weg dorthin.
+
+Dies ist kein geringfchr hex 00fcgiges Problem bei Aufrufen von "C struct"-Get-Set-Accessormethoden - die allgemeine Situation bei vielen mod_perl-APIs. Perls Laufzeitmethode-Aufruf-Lookup-Strafe fchr hex 00fcr "struct request_rec *" von httpd, die mod_perl chr hex 00fcber das Modul "Apache2::RequestRec" anzeigt, befindet sich in der gleichen Grchr hex 00f6chr hex 00dfenordnung der vollstchr hex 00e4ndigen Ausfchr hex 00fchrung des Aufrufs.  Fchr hex 00fcr von mod_perl unterstchr hex 00fctzte Sites, die Millionen von XS-Methodenaufrufen pro Sekunde ausfchr hex 00fchren, ist dies eine schreckliche Verschwendung wertvoller CPU-Zyklen.
+
+Was [Doug suchte](https://www.perl.com/pub/2000/06/dougpatch.html/) war eine Mchr hex 00f6glichkeit, Perl 5 anzuweisen, den Methoden-Lookup zur Kompilierungszeit durchzufchr hex 00fchren, wie es mit benannten Unterroutinenaufrufen der Fall ist.  Jedes Mal, wenn Doug es versuchte, traf er Strachr hex 00dfensperren von sozialer oder technischer Natur.  Vielleicht ist es an der Zeit, bei dieser Idee mit dem Aufkommen von Perl 7 einen weiteren Pass zu machen.
+
+## [Benchmark script]({{snippetA.pretty_uri}})
+
+[snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
+
+## Benchmark-Ergebnisse
+
+``perl
+1..3
+sealed: Haupt-&gt;reentrant lookup wird kompiliert.
+verschlchr hex 00fcsselt: Haupt-&gt;Balken-Suche wird kompiliert.
+Unter_foo:versiegelt {
+    } Package Foo;
+    Warnungen verwenden;
+    Streng verwenden;
+    mein Haupt-$x = shift();
+    $n++ ? $x-&gt;bar:compiled : $x-&gt;reentrant:compiled;
+}
+sealed: Suche nach Haupt-&gt;foo wird kompiliert.
+Unterversiegelt: versiegelt {
+    } Warnungen verwenden;
+    Streng verwenden;
+    $y-&gt;foo:compiled;
+}
+sealed: Benchmark-&gt;cmpthis lookup wird kompiliert.
+verschlchr hex 00fcsselt: Foo-&gt;foo-Lookup wird kompiliert.
+verschlchr hex 00fcsselt: Haupt-&gt;foo-Lookup wird kompiliert.
+verschlchr hex 00fcsselt: Foo-&gt;bar-Lookup wird kompiliert.
+Verwendung von nicht initialisiertem Wert zuschr hex 00e4tzlich (+) in lib/sealed.pm Zeile 137.
+sealed: tweak() abgebrochen: verschlchr hex 00fcsselt: ungchr hex 00fcltiger Suchbegriff: Foo-&gt;bar - haben Sie vergessen, Foo zuerst zu verwenden? in lib/sealed.pm Zeile 75.
+sub __ANON__ :sealed {
+    Warnungen verwenden;
+    Streng verwenden;
+    meine Foo $b = $a;
+    $inner-&gt;foo($b-&gt;foo:compiled($inner-&gt;bar, $inner, $bench-&gt;cmpthese:compiled));
+    $a = $inner;
+    $a-&gt;foo:compiled;
+    $b-&gt;bar;
+}
+verschlchr hex 00fcsselt: Haupt-&gt;Balken-Lookup wird kompiliert.
+Unter also_sealed: versiegelt {
+    Warnungen verwenden;
+    Streng verwenden;
+    meine Haupt-$a = Schicht();
+    wenn ($a) {
+        meine Benchmark $bench = 'Benchmark';
+        mein $inner = $a;
+        Rchr hex 00fccksendung {
+            } meine Foo $b = $a;
+            $inner-&gt;foo($b-&gt;foo:compiled($inner-&gt;bar, $inner, $bench-&gt;cmpthese:compiled));
+            $a = $inner;
+            $a-&gt;foo:compiled;
+            $b-&gt;bar;
+        
+        ;
+    
+    $a-&gt;bar:compiled;
+}
+sealed: Haupt-&gt;_foo Lookup wird kompiliert.
+sub reentrant: versiegelt {
+    } Warnungen verwenden;
+    Streng verwenden;
+    meine Haupt-$b = Shift();
+    (lokal unsere(@Q)) = 1;
+    my $c = $b-&gt;_foo:compiled;
+}
+sealed: Suche nach Haupt-&gt;foo wird kompiliert.
+verschlchr hex 00fcsselt: Haupt-&gt;Balken-Lookup wird kompiliert.
+versiegelt: Haupt-&gt;Reentrant-Lookup wird kompiliert.
+Unter-sealed2:versiegelt {
+    Warnungen verwenden;
+    Streng verwenden;
+    Mein Haupt-$obj = 'main';
+    Vordergrund $_ (1 .. 3) {
+        $obj-&gt;foo:compiled;
+        $obj-&gt;bar:kompiliert;
+        $obj-&gt;reentrant:compiled;
+    }
+}
+OK 1
+            Satzklassenmethode   anon   func verschlchr hex 00fcsselt
+klasse  16129032/s     --    -4%   -26%   -33%   -36%
+Methode 16806723/s     4%     --   -23%   -30%   -34%
+Anon   21739130/s    35%    29%     --   -10%   -14%
+func   24096386/s    49%    43%    11%     --    -5%
+versiegelt 25316456/s    57%    51%    16%     5%     --
+ok 2
+        Rate-Methode verschlchr hex 00fcsselt
+Methode 546448/s     --   -17%
+versiegelt 662252/s    21%     --
+ok 3
+```
+
+## Vorgeschlagene Perl 7-Lchr hex 00f6sung: `:sealed` Subroutinen fchr hex 00fcr typisierte Lexika
+
+Beispielcode:
+
+``perl
+use v7.0;
+verwenden Sie Apache2::RequestRec;
+
+sub handler :sealed {
+  my Apache2::RequestRec $r = Shift;
+  $r-&gt;content_type("text/html"); #compile time method lookup
+}
+``
+
+## Produktionsqualitchr hex 00e4t, robuster Perl v5.28+ Prototyp: sealed.pm {{facts.releases.sealed.tag}} (auf CPAN)
+
+Kompilierungsanweisungen fchr hex 00fcr perl 5.30+ sind im Pod "sealed.pm" verfchr hex 00fcgbar, wenn Sie mod_perl2 w/ithreads und httpd-2.4 w/ event mpm ausfchr hex 00fchren mchr hex 00f6chten, und nicht segfault bei **beliebiger** Skalierung.  Auf "Solaris 11.4" und "Ubuntu 22.04" auf amd64 getestet.
+
+Verwenden Sie zum Spachr hex 00df dieses [monkey patch]({{snippetB.pretty_uri}}) in `ModPerl::RegistryCooker`:
+
+[Snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=83,88]
+
+Es aktiviert die Auswirkungen von `sub handler :Sealed {script goes here}` auf alle Ihre `ModPerl::Registry` Skripte, etwa [dieses](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+
+```shell
+~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
+Benchmark wird gestartet...
+Startthread Nr. 0: 100 Clients insgesamt. 10000 Anforderungen gesamt
+Startthread Nr. 1: 100 Clients insgesamt. 10000 Anforderungen gesamt
+Startthread Nr. 2: 100 Clients insgesamt. 1000 Anforderungen gesamt
+Startthread Nr. 3: 100 Clients insgesamt. 10000 Anforderungen gesamt
+Startthread Nr. 4: 100 Clients insgesamt. 10000 Anforderungen gesamt
+Startthread Nr. 5: 100 Clients insgesamt. 1000 Anforderungen gesamt
+Startthread Nr. 6: 100 Clients insgesamt. 10000 Anforderungen gesamt
+Startthread Nr. 7: 100 Clients insgesamt. 10000 Anforderungen gesamt
+Startthread Nr. 8: 100 Clients insgesamt. 1000 Anforderungen gesamt
+Startthread Nr. 9: 100 Clients insgesamt. 10000 Anforderungen gesamt
+Anwendungsprotokoll: h2c
+Fortschritt: 10% abgeschlossen
+Fortschritt: 20% abgeschlossen
+Fortschritt: 30% abgeschlossen
+Fortschritt: 40% erledigt
+Fortschritt: 50% abgeschlossen
+Fortschritt: 60% abgeschlossen
+Fortschritt: 70% erledigt
+Fortschritt: 80% abgeschlossen
+Fortschritt: 90% abgeschlossen
+Fortschritt: 100% abgeschlossen
+
+abgeschlossen in 13.07s, 7652.14 Anforderungen, 11.83MB/s
+Anforderungen: insgesamt 100000, gestartet 100000, fertig 10000, erfolgreich 100000, fehlerhaft 0, fehlerhaft 0, Timeout
+Statuscodes: 100000 2xx, 0 3xx, 0 4xx, 0 5xx
+Traffic: 154.61MB (162119955) gesamt, 566.39KB (579980) Header (Speicherplatzeinsparung 95,47%), 152.30MB (159700000) Daten
+                    min         max         mean         sd        +/- sd
+time fchr hex 00fcr Anforderung:     5.74ms      12.77s       6.39s       3.61s    58,14%
+time for connect:      304us    293.01ms     70.17ms     76.83ms    74,80%
+Zeit bis zum 1. Byte:     7.86ms       7.87s       3.33s       1.82s    50,40%
+Anforderung/en           :       7,71      248,17       19,60       28,07    92,70%
+``
+
+Siehe <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Suchen Sie im chr hex 00fcbergeordneten Verzeichnis nach `t/bench.pl'.
+
+Auf diese Weise kann Perl 5 die Methode "content_type" des Beispielcodes zur Kompilierungszeit chr hex 00fcberprchr hex 00fcfen, ohne dass es zu Backcompat-Problemen oder beschchr hex 00e4digten CPAN-Codierern kommt, da diese Funktion auf Anwendungsentwickler abzielt. Nicht vererbbare OO-Modul-Autoren.
+
+Diese vergchr hex 00e4ngliche Idee wurde kostenlos von [Dylan](https://jim.studt.net/dirm/interim-5.html) gestohlen.  [Lesen Sie dies](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) fchr hex 00fcr die CPython-Bemchr hex 00fchungen vor chr hex 00fcber einem Jahrzehnt.
+
+<!-- $Date$ $Author$ $Revision$ -->
