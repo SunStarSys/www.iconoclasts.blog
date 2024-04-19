@@ -2,7 +2,7 @@
 categories: Perl, Orion, Performance, Apache
 dependencies: '*.md.de'
 keywords: Perl,Dylan,statisch,Methode,Lookup,kompilieren,versiegelt,apache,mod_perl,Leistung
-title: 'Perl 7 Feature-Anfrage: versiegelte Unterteile fÃ¼r typisierte Lexika'
+title: 'Perl 7 Feature-Anfrage: versiegelte Unterteile für typisierte Lexika'
 ---
 
 <div class="right">
@@ -73,9 +73,9 @@ Unter also_sealed: versiegelt {
             $a = $inner;
             $a-&gt;foo:compiled;
             $b-&gt;bar;
-        
+
         ;
-    
+
     $a-&gt;bar:compiled;
 }
 sealed: Haupt-&gt;_foo Lookup wird kompiliert.
@@ -121,8 +121,8 @@ Beispielcode:
 use v7.0;
 verwenden Sie Apache2::RequestRec;
 
-sub handler :sealed {
-  my Apache2::RequestRec $r = Shift;
+Unter-Handler: {
+  my Apache2::RequestRec $r = shift;
   $r-&gt;content_type("text/html"); #compile time method lookup
 }
 ```
@@ -166,8 +166,8 @@ abgeschlossen in 13.07s, 7652.14 Anforderungen, 11.83MB/s
 Anforderungen: insgesamt 100000, gestartet 100000, fertig 10000, erfolgreich 100000, fehlerhaft 0, fehlerhaft 0, Timeout
 Statuscodes: 100000 2xx, 0 3xx, 0 4xx, 0 5xx
 Traffic: 154.61MB (162119955) gesamt, 566.39KB (579980) Header (Speicherplatzeinsparung 95,47%), 152.30MB (159700000) Daten
-                    min         max         mean         sd        +/- sd
-time für Anforderung:     5.74ms      12.77s       6.39s       3.61s    58,14%
+                    min         max         Mean         sd        +/- sd
+time for request:     5.74ms      12.77s       6.39s       3.61s    58,14%
 time for connect:      304us    293.01ms     70.17ms     76.83ms    74,80%
 Zeit bis zum 1. Byte:     7.86ms       7.87s       3.33s       1.82s    50,40%
 Anforderung/en           :       7,71      248,17       19,60       28,07    92,70%
