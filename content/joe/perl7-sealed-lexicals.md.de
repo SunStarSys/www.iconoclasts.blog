@@ -29,87 +29,87 @@ Was [Doug suchte](https://www.perl.com/pub/2000/06/dougpatch.html/) war eine Mö
 
 ```perl
 1..3
-sealed: Haupt-&gt;reentrant lookup wird kompiliert.
-verschlüsselt: Haupt-&gt;Balken-Suche wird kompiliert.
-Unter_foo:versiegelt {
-    } Package Foo;
-    Warnungen verwenden;
-    Streng verwenden;
-    mein Haupt-$x = shift();
-    $n++ ? $x-&gt;bar:compiled : $x-&gt;reentrant:compiled;
+sealed: compiling main->reentrant lookup.
+sealed: compiling main->bar lookup.
+sub _foo :sealed {
+    package Foo;
+    use warnings;
+    use strict;
+    my main $x = shift();
+    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
 }
-sealed: Suche nach Haupt-&gt;foo wird kompiliert.
-Unterversiegelt: versiegelt {
-    } Warnungen verwenden;
-    Streng verwenden;
-    $y-&gt;foo:compiled;
+sealed: compiling main->foo lookup.
+sub sealed :sealed {
+    use warnings;
+    use strict;
+    $y->foo:compiled;
 }
-sealed: Benchmark-&gt;cmpthis lookup wird kompiliert.
-verschlüsselt: Foo-&gt;foo-Lookup wird kompiliert.
-verschlüsselt: Haupt-&gt;foo-Lookup wird kompiliert.
-verschlüsselt: Foo-&gt;bar-Lookup wird kompiliert.
-Verwendung von nicht initialisiertem Wert zusätzlich (+) in lib/sealed.pm Zeile 137.
-sealed: tweak() abgebrochen: verschlüsselt: ungültiger Suchbegriff: Foo-&gt;bar - haben Sie vergessen, Foo zuerst zu verwenden? in lib/sealed.pm Zeile 75.
+sealed: compiling Benchmark->cmpthese lookup.
+sealed: compiling Foo->foo lookup.
+sealed: compiling main->foo lookup.
+sealed: compiling Foo->bar lookup.
+Use of uninitialized value in addition (+) at lib/sealed.pm line 137.
+sealed: tweak() aborted: sealed: invalid lookup: Foo->bar - did you forget to 'use Foo' first? at lib/sealed.pm line 75.
 sub __ANON__ :sealed {
-    Warnungen verwenden;
-    Streng verwenden;
-    meine Foo $b = $a;
-    $inner-&gt;foo($b-&gt;foo:compiled($inner-&gt;bar, $inner, $bench-&gt;cmpthese:compiled));
+    use warnings;
+    use strict;
+    my Foo $b = $a;
+    $inner->foo($b->foo:compiled($inner->bar, $inner, $bench->cmpthese:compiled));
     $a = $inner;
-    $a-&gt;foo:compiled;
-    $b-&gt;bar;
+    $a->foo:compiled;
+    $b->bar;
 }
-verschlüsselt: Haupt-&gt;Balken-Lookup wird kompiliert.
-Unter also_sealed: versiegelt {
-    Warnungen verwenden;
-    Streng verwenden;
-    meine Haupt-$a = Schicht();
-    wenn ($a) {
-        meine Benchmark $bench = 'Benchmark';
-        mein $inner = $a;
-        Rücksendung {
-            } meine Foo $b = $a;
-            $inner-&gt;foo($b-&gt;foo:compiled($inner-&gt;bar, $inner, $bench-&gt;cmpthese:compiled));
+sealed: compiling main->bar lookup.
+sub also_sealed :sealed {
+    use warnings;
+    use strict;
+    my main $a = shift();
+    if ($a) {
+        my Benchmark $bench = 'Benchmark';
+        my $inner = $a;
+        return sub {
+            my Foo $b = $a;
+            $inner->foo($b->foo:compiled($inner->bar, $inner, $bench->cmpthese:compiled));
             $a = $inner;
-            $a-&gt;foo:compiled;
-            $b-&gt;bar;
-        
+            $a->foo:compiled;
+            $b->bar;
+        }
         ;
-    
-    $a-&gt;bar:compiled;
+    }
+    $a->bar:compiled;
 }
-sealed: Haupt-&gt;_foo Lookup wird kompiliert.
-sub reentrant: versiegelt {
-    } Warnungen verwenden;
-    Streng verwenden;
-    meine Haupt-$b = Shift();
-    (lokal unsere(@Q)) = 1;
-    my $c = $b-&gt;_foo:compiled;
+sealed: compiling main->_foo lookup.
+sub reentrant :sealed {
+    use warnings;
+    use strict;
+    my main $b = shift();
+    (local our(@Q)) = 1;
+    my $c = $b->_foo:compiled;
 }
-sealed: Suche nach Haupt-&gt;foo wird kompiliert.
-verschlüsselt: Haupt-&gt;Balken-Lookup wird kompiliert.
-versiegelt: Haupt-&gt;Reentrant-Lookup wird kompiliert.
-Unter-sealed2:versiegelt {
-    Warnungen verwenden;
-    Streng verwenden;
-    Mein Haupt-$obj = 'main';
-    Vordergrund $_ (1 .. 3) {
-        $obj-&gt;foo:compiled;
-        $obj-&gt;bar:kompiliert;
-        $obj-&gt;reentrant:compiled;
+sealed: compiling main->foo lookup.
+sealed: compiling main->bar lookup.
+sealed: compiling main->reentrant lookup.
+sub sealed2 :sealed {
+    use warnings;
+    use strict;
+    my main $obj = 'main';
+    foreach $_ (1 .. 3) {
+        $obj->foo:compiled;
+        $obj->bar:compiled;
+        $obj->reentrant:compiled;
     }
 }
-OK 1
-            Satzklassenmethode   anon   func verschlüsselt
-klasse  16129032/s     --    -4%   -26%   -33%   -36%
-Methode 16806723/s     4%     --   -23%   -30%   -34%
-Anon   21739130/s    35%    29%     --   -10%   -14%
+ok 1
+             Rate  class method   anon   func sealed
+class  16129032/s     --    -4%   -26%   -33%   -36%
+method 16806723/s     4%     --   -23%   -30%   -34%
+anon   21739130/s    35%    29%     --   -10%   -14%
 func   24096386/s    49%    43%    11%     --    -5%
-versiegelt 25316456/s    57%    51%    16%     5%     --
+sealed 25316456/s    57%    51%    16%     5%     --
 ok 2
-        Rate-Methode verschlüsselt
-Methode 546448/s     --   -17%
-versiegelt 662252/s    21%     --
+           Rate method sealed
+method 546448/s     --   -17%
+sealed 662252/s    21%     --
 ok 3
 ```
 
@@ -119,11 +119,11 @@ Beispielcode:
 
 ```perl
 use v7.0;
-verwenden Sie Apache2::RequestRec;
+use Apache2::RequestRec;
 
 sub handler :sealed {
-  my Apache2::RequestRec $r = Shift;
-  $r-&gt;content_type("text/html"); #compile time method lookup
+  my Apache2::RequestRec $r = shift;
+  $r->content_type("text/html"); #compile time method lookup
 }
 ```
 
@@ -139,38 +139,38 @@ Es aktiviert die Auswirkungen von `sub handler :Sealed {script goes here}` auf a
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
-Benchmark wird gestartet...
-Startthread Nr. 0: 100 Clients insgesamt. 10000 Anforderungen gesamt
-Startthread Nr. 1: 100 Clients insgesamt. 10000 Anforderungen gesamt
-Startthread Nr. 2: 100 Clients insgesamt. 1000 Anforderungen gesamt
-Startthread Nr. 3: 100 Clients insgesamt. 10000 Anforderungen gesamt
-Startthread Nr. 4: 100 Clients insgesamt. 10000 Anforderungen gesamt
-Startthread Nr. 5: 100 Clients insgesamt. 1000 Anforderungen gesamt
-Startthread Nr. 6: 100 Clients insgesamt. 10000 Anforderungen gesamt
-Startthread Nr. 7: 100 Clients insgesamt. 10000 Anforderungen gesamt
-Startthread Nr. 8: 100 Clients insgesamt. 1000 Anforderungen gesamt
-Startthread Nr. 9: 100 Clients insgesamt. 10000 Anforderungen gesamt
-Anwendungsprotokoll: h2c
-Fortschritt: 10% abgeschlossen
-Fortschritt: 20% abgeschlossen
-Fortschritt: 30% abgeschlossen
-Fortschritt: 40% erledigt
-Fortschritt: 50% abgeschlossen
-Fortschritt: 60% abgeschlossen
-Fortschritt: 70% erledigt
-Fortschritt: 80% abgeschlossen
-Fortschritt: 90% abgeschlossen
-Fortschritt: 100% abgeschlossen
+starting benchmark...
+spawning thread #0: 100 total client(s). 10000 total requests
+spawning thread #1: 100 total client(s). 10000 total requests
+spawning thread #2: 100 total client(s). 10000 total requests
+spawning thread #3: 100 total client(s). 10000 total requests
+spawning thread #4: 100 total client(s). 10000 total requests
+spawning thread #5: 100 total client(s). 10000 total requests
+spawning thread #6: 100 total client(s). 10000 total requests
+spawning thread #7: 100 total client(s). 10000 total requests
+spawning thread #8: 100 total client(s). 10000 total requests
+spawning thread #9: 100 total client(s). 10000 total requests
+Application protocol: h2c
+progress: 10% done
+progress: 20% done
+progress: 30% done
+progress: 40% done
+progress: 50% done
+progress: 60% done
+progress: 70% done
+progress: 80% done
+progress: 90% done
+progress: 100% done
 
-abgeschlossen in 13.07s, 7652.14 Anforderungen, 11.83MB/s
-Anforderungen: insgesamt 100000, gestartet 100000, fertig 10000, erfolgreich 100000, fehlerhaft 0, fehlerhaft 0, Timeout
-Statuscodes: 100000 2xx, 0 3xx, 0 4xx, 0 5xx
-Traffic: 154.61MB (162119955) gesamt, 566.39KB (579980) Header (Speicherplatzeinsparung 95,47%), 152.30MB (159700000) Daten
-                    min         max         Mean         sd        +/- sd
-time for request:     5.74ms      12.77s       6.39s       3.61s    58,14%
-time for connect:      304us    293.01ms     70.17ms     76.83ms    74,80%
-Zeit bis zum 1. Byte:     7.86ms       7.87s       3.33s       1.82s    50,40%
-Anforderung/en           :       7,71      248,17       19,60       28,07    92,70%
+finished in 13.07s, 7652.14 req/s, 11.83MB/s
+requests: 100000 total, 100000 started, 100000 done, 100000 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 100000 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 154.61MB (162119955) total, 566.39KB (579980) headers (space savings 95.47%), 152.30MB (159700000) data
+                       min         max         mean         sd        +/- sd
+time for request:     5.74ms      12.77s       6.39s       3.61s    58.14%
+time for connect:      304us    293.01ms     70.17ms     76.83ms    74.80%
+time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
+req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
 Siehe <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Suchen Sie im übergeordneten Verzeichnis nach `t/bench.pl'.
