@@ -1,5 +1,4 @@
 ---
-acl: ~
 categories: Mathematisch
 dependencies: '*.md.de'
 keywords: Spektraltheorie, Riemannsche Geometrie, inverse Probleme, mathematische
@@ -57,7 +56,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 ```
 
-Um isometrisch zu $$(M,g)$$ zu sein, ist es eine *notwendige und ausreichende Bedingung* für einen anderen **iosospektral** geschlossenen Riemannschen Mannigfaltigkeit, um eine orthonormale Basis von Eigenfunktionen (für seinen Laplacian) zu haben, die beide die zugehörigen Eigenwerte beibehält und unter jeder Basis ein unveränderliches $$\set{M^{i,j,k}}$ besitzt.
+Um isometrisch zu $$(M,g)$$ zu sein, ist es eine *notwendige und ausreichende Bedingung* für einen anderen **iosospektral** geschlossenen Riemannschen Mannigfaltigkeit, um eine orthonormale Basis von Eigenfunktionen (für seinen Laplacian) zu haben, die beide die zugehörigen Eigenwerte beibehält und unter jeder Basis ein unveränderliches $$\set{M^{i,j,k}}$$ besitzt.
 
   </div>
 </div>
@@ -76,7 +75,7 @@ Um isometrisch zu $$(M,g)$$ zu sein, ist es eine *notwendige und ausreichende Be
   </div>
   <div class="card-body">
 
-Wenn jeder Eigenwert eine Multiplizität von $$1$$ hat, sind die Verteiler nur dann isometrisch, wenn das $$\set{M^{i,j,k}}$ für eine Basis übereinstimmt, bis zum absoluten Wert in den einzelnen Begriffen, mit der anderen Basis.
+Wenn jeder Eigenwert eine Multiplizität von $$1$$ hat, sind die Verteiler nur dann isometrisch, wenn das $$\set{M^{i,j,k}}$$ für eine Basis übereinstimmt, bis zum absoluten Wert in den einzelnen Begriffen, mit der anderen Basis.
 
   </div>
 </div>
@@ -151,7 +150,7 @@ und durch Einzigartigkeit haben wir die folgende Identität
 
 Dies bedeutet, dass eine solche Basiskarte wie oben charakteristische Funktionen (als Elemente von $$L^2(M,g)\subset L^1(M,g)$$) zu charakteristischen Funktionen auf messungserhaltende Weise trägt.
 
-Der Punkt dieser Berechnungen besteht darin, die Tatsache hervorzuheben, dass $$\set{M^{i,j,k}}$$ ** die harmonische Analyse des pointwise-Multiplikationsoperators auf $$C^\infty(M)$$ auszeichnet, einer dichten Unteralgebra der abelischen $$C^*$$-Algebra $$C(M)$$ durch das Stone-Weierstrass-Theorem.
+Der Punkt dieser Berechnungen besteht darin, die Tatsache hervorzuheben, dass $$\set{M^{i,j,k}}$$ die harmonische Analyse des pointwise-Multiplikationsoperators auf $$C^\infty(M)$$ auszeichnet, einer dichten Unteralgebra der abelischen $$C^*$$-Algebra $$C(M)$$ durch das Stone-Weierstrass-Theorem.
 
 Für die schnelle Konvergenz dieser oben genannten Summen mit $$M^{i,j,k}$$, beachten Sie, dass Produkte von Eigenfunktionen glatt sind, so dass diese Fourier-Koeffizienten wie oben (in jedem Index) abklingen. Weitere Einzelheiten finden Sie in der Arbeit von Emmett Wyman im Jahr 2022 mit diesen Koeffizienten, da sie sich auf die Dreiecksungleichheit auf den Eigenwerten bezieht [[EW22]](#EW22).
 
@@ -235,7 +234,7 @@ Da $$M_0^{i,i,k}$$ für $$k$$ nicht gleich $$0$$ für alle $$i$$ sein kann, erfo
 
 Lassen Sie $$\set{\lambda_i} \subset \R^n$$ ein indiziertes, Rang $$n$$-Gitter von Lie Algebra-Gewichten für die Quotientenbereichsdarstellung von $$\frak{g}=\Reals^n$$ als Translations-Invariante (d.h. Konstante) Vektorfelder an sich, wenn $$\R^n$$ auch als $$\frak{g}$$s zugeordnete Lie-Gruppe über einen Torus angezeigt wird, der durch $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$ definiert ist. Diese Gewichte definieren integrierbare Aufzüge von 1-Form über den Torus, die sich in lineare Funktionale $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ als Lie-Gruppe (die den Torus abdeckt) integrieren. Diese linearen Funktionale können dann gleichmäßig neu skaliert werden (um $$2\pi \sqrt{-1}$$) und exponentiert werden, um multiplikative Zeichen zu bilden, die zu einer orthonormalen Basis von $$L^2(\Reals^n/A\Z^n,dx)$$ absteigen, mit Lebesgue (Haar) Maß $$dx$$.
 
-Darüber hinaus diagonalisiert diese Basis gleichzeitig den Laplacian des flachen Torus, weil** der Laplacian das Bild eines symmetrischen, negativ-definitiven quadratischen Casimir-Elements unter dieser Quotientenraumdarstellung der universellen Hüllalgebra ist (konstanter linearer Differentialoperator). Daher sind seine Eigenwerte im konstanten Verhältnis (von $ 4\pi^ 2$ $) zum Casimir-Element-bestimmten Länge-quared von jedem Zeichen Gewicht im Gitter.
+Darüber hinaus diagonalisiert diese Basis gleichzeitig den Laplacian des flachen Torus, weil** der Laplacian das Bild eines symmetrischen, negativ-definitiven quadratischen Casimir-Elements unter dieser Quotientenraumdarstellung der universellen Hüllalgebra ist (konstanter linearer Differentialoperator). Daher sind seine Eigenwerte im konstanten Verhältnis (von $$4\pi^2$$) zum Casimir-Element-bestimmten Länge-quared von jedem Zeichen Gewicht im Gitter.
 
 Wir sehen derzeit die obige Grundlage
 
@@ -255,7 +254,7 @@ M^{i,j,k} = \begin{cases}
 
 Da diese Gleichung <span class="eqno"></span> auf dem Gewichtsgitter $$(A^{-1})^t\Z^n = \set{\lambda_i}$$ linear ist, wird nur eine $$L^2$$ orthonormale Eigenfunktionsbasiszuordnung **, die aus einer volumenerhaltenden invertierbaren linearen Zuordnung zwischen zwei solchen indexierten, Rang $$n$$-Gewichtsgittern** hervorgeht, das "algebraisch/topologische" indexierte Dataset $$\set{M^{i,j,k}}$$ unveränderlich belassen.
 
-Um unser [Theorem](#Theorem) anzuwenden, ist es jedoch wichtig, dass eine solche lineare Zuordnung $$$B$$ $$B\in O(n,\Reals)$$ auf dem Gewichtsgitter liegt, da die induzierte $$L^2$ Eigenfunktionsbasiszuordnung
+Um unser [Theorem](#Theorem) anzuwenden, ist es jedoch wichtig, dass eine solche lineare Zuordnung $$B\in O(n,\Reals)$$ auf dem Gewichtsgitter liegt, da die induzierte $$L^2$$ Eigenfunktionsbasiszuordnung.
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
