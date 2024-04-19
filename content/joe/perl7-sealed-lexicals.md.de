@@ -133,7 +133,7 @@ Kompilierungsanweisungen für perl 5.30+ sind im Pod `sealed.pm` verfügbar, wen
 
 Verwenden Sie zum Spaß dieses [monkey patch]({{snippetB.pretty_uri}}) in `ModPerl::RegistryCooker`:
 
-[Snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=83,88]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=83,88]
 
 Es aktiviert die Auswirkungen von `sub handler :Sealed {script goes here}` auf alle Ihre `ModPerl::Registry` Skripte, etwa [dieses](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
