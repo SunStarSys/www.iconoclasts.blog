@@ -17,7 +17,7 @@ title: 'Perl 7 Feature-Anfrage: versiegelte Unterteile für typisierte Lexika'
 
 Doug war der Schöpfer des mod_perl-Projekts in der Mitte der 90er Jahre, also war das Schreiben von Hochleistungsperl sein Fort. Einer seiner vielen Beiträge zu [p5p](https://lists.perl.org/list/perl5-porters.html) bestand darin, den Performance-Betrug des OO-Methoden-Lookup-Overheads zu halbieren. Verwenden Sie dazu einen Methoden-`ISA`-Hierarchiecache, um den Runtime-Objektmethoden-Lookup für mod_perl-Objekte wie `Apache2::RequestRec` so rational wie möglich zu gestalten.  Aber es bringt uns nur auf halbem Weg dorthin.
 
-Dies ist kein geringfügiges Problem bei Aufrufen von "C struct"-Get-Set-Accessormethoden - die allgemeine Situation bei vielen mod_perl-APIs. Perls Laufzeitmethode-Aufruf-Lookup-Strafe für `struct request_rec *` von httpd, die mod_perl über das Modul `Apache2::RequestRec` anzeigt, befindet sich in der gleichen Größenordnung der vollständigen Ausführung des Aufrufs.  Für von mod_perl unterstützte Sites, die Millionen von XS-Methodenaufrufen pro Sekunde ausführen, ist dies eine schreckliche Verschwendung wertvoller CPU-Zyklen.
+Dies ist kein geringfügiges Problem bei Aufrufen von `C struct` Get-Set-Accessormethoden - die allgemeine Situation bei vielen mod_perl-APIs. Perls Laufzeitmethode-Aufruf-Lookup-Strafe für `struct request_rec *` von httpd, die mod_perl über das Modul `Apache2::RequestRec` anzeigt, befindet sich in der gleichen Größenordnung der vollständigen Ausführung des Aufrufs.  Für von mod_perl unterstützte Sites, die Millionen von XS-Methodenaufrufen pro Sekunde ausführen, ist dies eine schreckliche Verschwendung wertvoller CPU-Zyklen.
 
 Was [Doug suchte](https://www.perl.com/pub/2000/06/dougpatch.html/) war eine Möglichkeit, Perl 5 anzuweisen, den Methoden-Lookup zur Kompilierungszeit durchzuführen, wie es mit benannten Unterroutinenaufrufen der Fall ist.  Jedes Mal, wenn Doug es versuchte, traf er Straßensperren von sozialer oder technischer Natur.  Vielleicht ist es an der Zeit, bei dieser Idee mit dem Aufkommen von Perl 7 einen weiteren Pass zu machen.
 
@@ -129,7 +129,7 @@ sub handler :sealed {
 
 ## Produktionsqualität, robuster Perl v5.28+ Prototyp: sealed.pm {{facts.releases.sealed.tag}} (auf CPAN)
 
-Kompilierungsanweisungen für perl 5.30+ sind im Pod "sealed.pm" verfügbar, wenn Sie mod_perl2 w/ithreads und httpd-2.4 w/ event mpm ausführen möchten, und nicht segfault bei **beliebiger** Skalierung.  Auf "Solaris 11.4" und "Ubuntu 22.04" auf amd64 getestet.
+Kompilierungsanweisungen für perl 5.30+ sind im Pod `sealed.pm` verfügbar, wenn Sie mod_perl2 w/ithreads und httpd-2.4 w/ event mpm ausführen möchten, und nicht segfault bei **beliebiger** Skalierung.  Auf `Solaris 11.4` und `Ubuntu 22.04` auf amd64 getestet.
 
 Verwenden Sie zum Spaß dieses [monkey patch]({{snippetB.pretty_uri}}) in `ModPerl::RegistryCooker`:
 
@@ -175,7 +175,7 @@ req/s           :       7.71      248.17       19.60       28.07    92.70%
 
 Siehe <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Suchen Sie im übergeordneten Verzeichnis nach `t/bench.pl'.
 
-Auf diese Weise kann Perl 5 die Methode "content_type" des Beispielcodes zur Kompilierungszeit überprüfen, ohne dass es zu Backcompat-Problemen oder beschädigten CPAN-Codierern kommt, da diese Funktion auf Anwendungsentwickler abzielt. Nicht vererbbare OO-Modul-Autoren.
+Auf diese Weise kann Perl 5 die Methode `content_type` des Beispielcodes zur Kompilierungszeit überprüfen, ohne dass es zu Backcompat-Problemen oder beschädigten CPAN-Codierern kommt, da diese Funktion auf Anwendungsentwickler abzielt. Nicht vererbbare OO-Modul-Autoren.
 
 Diese vergängliche Idee wurde kostenlos von [Dylan](https://jim.studt.net/dirm/interim-5.html) gestohlen.  [Lesen Sie dies](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) für die CPython-Bemühungen vor über einem Jahrzehnt.
 
