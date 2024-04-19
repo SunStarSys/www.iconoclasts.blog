@@ -173,7 +173,7 @@ time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
 req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
-Siehe <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Suchen Sie im übergeordneten Verzeichnis nach `t/bench.pl'.
+Siehe <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Suchen Sie im übergeordneten Verzeichnis nach `t/bench.pl`.
 
 Auf diese Weise kann Perl 5 die Methode `content_type` des Beispielcodes zur Kompilierungszeit überprüfen, ohne dass es zu Backcompat-Problemen oder beschädigten CPAN-Codierern kommt, da diese Funktion auf Anwendungsentwickler abzielt. Nicht vererbbare OO-Modul-Autoren.
 
