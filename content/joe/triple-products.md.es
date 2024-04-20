@@ -3,7 +3,7 @@ categories: Matemáticas
 dependencies: '*.md.es'
 keywords: teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación
-status: verificado=21999
+status: draft
 title: Triple productos de autofunciones y geometría espectral
 ---
 
