@@ -16,7 +16,7 @@ title: Triple productos de autofunciones y geometría espectral
 
 [TOC]
 
-No de autores
+## No de autores
 
 Joe Schaefer
 
@@ -103,7 +103,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-ya que $$f$$ es única y representable como su rápida convergencia **Serie Fourier** ($$\Delta_MIncrustaciones de Sobolev específicas de $$ [[MT13]](#MT13) [[RS75]](#RS75), junto con la Ley Asintótica de Weyl [[HW11]](#HW11), implican que los términos en la suma son $$o(i^{-n})$$ * uniformemente en $$x$$* [[LH68]](#LH68)
+ya que $$f$$ es única y representable como su rápida convergencia **Serie Fourier** ($$\Delta_M$$Incrustaciones de Sobolev específicas de [[MT13]](#MT13) [[RS75]](#RS75), junto con la Ley Asintótica de Weyl [[HW11]](#HW11), implican que los términos en la suma son $$o(i^{-n})$$ *uniformemente en $$x$$* [[LH68]](#LH68)).
 
 ```math
 \begin{aligned}
@@ -121,7 +121,7 @@ f_1 = f^p_2,\space p \space \in \N \implies \\
 \end{aligned}
 ```
 
-y así, *críticamente*, cualquier polinomio multivariante $$\weierp \in \Complex[z_1,...,z_l]$$ (en funciones lisas) **commutes** con cualquier mapa de base ortonormal de preservación de espectro $$\Delta$$-eigenfunction $$F$$ que conserva $$\set{M^{i,j,k}}$:
+y así, *críticamente*, cualquier polinomio multivariante $$\weierp \in \Complex[z_1,...,z_l]$$ (en funciones lisas) **commutes** con cualquier mapa de base ortonormal de preservación de espectro $$\Delta$$-eigenfunction $$F$$ que conserva $$\set{M^{i,j,k}}$$:
 
 ```math
 \begin{CD}
@@ -150,7 +150,7 @@ y por singularidad, tenemos la siguiente identidad
 
 Esto implica que cualquier mapa base como el anterior lleva funciones características (como miembros de $$L^2(M,g)\subset L^1(M,g)$$) a funciones características de una manera que preserva la medida.
 
-El punto de estos cálculos es enfatizar el hecho de que $$\set{M^{i,j,k}}$ **caracteriza** el análisis armónico del operador de multiplicación en sentido de puntos en $$C^\infty(M)$$, que es un subalgebra densa del álgebra abeliana $$C^*$$ $$C(M)$$, por el teorema de Stone-Weierstrass.
+El punto de estos cálculos es enfatizar el hecho de que $$\set{M^{i,j,k}}$$ **caracteriza** el análisis armónico del operador de multiplicación en sentido de puntos en $$C^\infty(M)$$, que es un subalgebra densa del álgebra abeliana $$C^*$$ $$C(M)$$, por el teorema de Stone-Weierstrass.
 
 Para la rápida convergencia de estas sumas anteriores que implican $$M^{i,j,k}$$, tenga en cuenta que los productos de las funciones propias son suaves, por lo que estos coeficientes de Fourier decaen como arriba (en cada índice). Para más detalles, vea el trabajo de Emmett Wyman en 2022 con estos coeficientes en relación con la desigualdad del triángulo en los valores propios [[EW22]](#EW22)
 
@@ -183,7 +183,7 @@ Para suficiencia, ahora consideramos el mapa de bases ortonormales lineales y bi
 
 ### Lemma
 
-$$F: C^\infty(M)\flecha derecha C^\infty(N)$$ conserva la norma uniforme.
+$$F: C^\infty(M)\rightarrow C^\infty(N)$$ conserva la norma uniforme.
 
 ### Prueba de Lemma
 
@@ -220,7 +220,7 @@ Esto completa la prueba del teorema.
 
 ### Discusión de la Conjetura
 
-Con $$\set{M_0^{i,j,k}}$$ y $$\set{M_1^{i,j,k}}$ que representan los dos juegos de triple producto para las bases $$\set{e_0^i}$$ y $$\set{e_1^i}$$, deje que $$z_i \in \set{-1,1}$$ sea la acción $$\Z_2^\infty$$ sobre una base ortonormal con valor $$\R$$ $$\set{e_1^i}$$. Thus, we need to choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+Con $$\set{M_0^{i,j,k}}$$ y $$\set{M_1^{i,j,k}}$$ que representan los dos juegos de triple producto para las bases $$\set{e_0^i}$$ y $$\set{e_1^i}$$, deje que $$z_i \in \set{-1,1}$$ sea la acción $$\Z_2^\infty$$ sobre una base ortonormal con valor $$\R$$ $$\set{e_1^i}$$. Thus, we need to choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
 Observamos necesariamente que
 
@@ -228,11 +228,11 @@ Observamos necesariamente que
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-Dado que para cualquier $$k$$ dado, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$, esta fórmula para $$z_k$$ requiere tanto $$i$-independencia, y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conserva $$\set{M_0^{i,j,k}}$$. Estos aspectos siguen siendo desconocidos.
+Dado que para cualquier $$k$$ dado, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$, esta fórmula para $$z_k$$ requiere tanto $$i$$-independencia, y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conserva $$\set{M_0^{i,j,k}}$$. Estos aspectos siguen siendo desconocidos.
 
 Ejemplo ##
 
-Deje que $$\set{\lambda_i} \subset \R^n$$ sea un enrejado indexado, clasifique $$n$$ de pesos de álgebra de Lie para la representación de espacio cociente de $$\frak{g}=\Reals^n$$ como invariante de traducción (es decir, constante) campos vectoriales en sí mismo, cuando $$\R^n$$ también se ve como Grupo de Lie asociado de $$\frak{g}$$ sobre un torus definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Estos pesos definen ascensores integrables de 1 forma sobre el toro que se integran a los funcionales lineales $$\bra{x} \lambda_i\rangle,\espacio x\in\Reales^n$$ como su Grupo de Lie (cubriendo el toro). Estas funciones lineales se pueden reajustar uniformemente (por $$2\pi \sqrt{-1}$$) y exponenciarse para formar caracteres multiplicativos que descienden para formar una base ortodóncica de $$L^2(\Reals^n/A\Z^n,dx)$$, con la medida Lebesgue (Haar) $$dx$$.
+Deje que $$\set{\lambda_i} \subset \R^n$$ sea un enrejado indexado, clasifique $$n$$ de pesos de álgebra de Lie para la representación de espacio cociente de $$\frak{g}=\Reals^n$$ como invariante de traducción (es decir, constante) campos vectoriales en sí mismo, cuando $$\R^n$$ también se ve como Grupo de Lie asociado de $$\frak{g}$$ sobre un torus definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Estos pesos definen ascensores integrables de 1 forma sobre el toro que se integran a los funcionales lineales $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ como su Grupo de Lie (cubriendo el toro). Estas funciones lineales se pueden reajustar uniformemente (por $$2\pi \sqrt{-1}$$) y exponenciarse para formar caracteres multiplicativos que descienden para formar una base ortodóncica de $$L^2(\Reals^n/A\Z^n,dx)$$, con la medida Lebesgue (Haar) $$dx$$.
 
 Además, esta base diagonaliza simultáneamente el laplaciano del toro plano **porque** el laplaciano es la imagen de un elemento cuadrático cuadrático simétrico, negativo-definido de Casimir bajo esta (operador diferencial lineal de coeficiente constante) representación del espacio cociente del álgebra envolvente universal. Por lo tanto, sus valores propios están en proporción constante (de $$4\pi^2$$) al Casimir-elemento-determinado-longitud-cuadrado del peso de cada personaje en la red.
 
@@ -241,7 +241,7 @@ Actualmente vemos la base anterior
 ```math
 \set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-ser nuestra base teórica Fourier de autofunciones ortonormales (carácter multiplicativo) (de esta representación de cociente del elemento Casimir euclidiano (negativo) directamente correspondiente a $$\set{\lambda_i}$$. Por las hipótesis de nuestro teorema, debemos tener $$i < j \implica \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (con la norma euclidiana sobre los pesos).
+ser nuestra base teórica Fourier de autofunciones ortonormales (carácter multiplicativo) (de esta representación de cociente del elemento Casimir euclidiano (negativo) directamente correspondiente a $$\set{\lambda_i}$$. Por las hipótesis de nuestro teorema, debemos tener $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (con la norma euclidiana sobre los pesos).
 
 Ahora podemos calcular
 
