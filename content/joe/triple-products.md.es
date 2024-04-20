@@ -230,7 +230,7 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 Dado que para cualquier $$k$$ dado, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$, esta fórmula para $$z_k$$ requiere tanto $$i$$-independencia, y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conserva $$\set{M_0^{i,j,k}}$$. Estos aspectos siguen siendo desconocidos.
 
-Ejemplo ##
+## Ejemplo
 
 Deje que $$\set{\lambda_i} \subset \R^n$$ sea un enrejado indexado, clasifique $$n$$ de pesos de álgebra de Lie para la representación de espacio cociente de $$\frak{g}=\Reals^n$$ como invariante de traducción (es decir, constante) campos vectoriales en sí mismo, cuando $$\R^n$$ también se ve como Grupo de Lie asociado de $$\frak{g}$$ sobre un torus definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Estos pesos definen ascensores integrables de 1 forma sobre el toro que se integran a los funcionales lineales $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ como su Grupo de Lie (cubriendo el toro). Estas funciones lineales se pueden reajustar uniformemente (por $$2\pi \sqrt{-1}$$) y exponenciarse para formar caracteres multiplicativos que descienden para formar una base ortodóncica de $$L^2(\Reals^n/A\Z^n,dx)$$, con la medida Lebesgue (Haar) $$dx$$.
 
@@ -264,7 +264,7 @@ debe conservar también las invariantes "analíticas": la figura inducida por el
 
 Esta cuenta teórica de representación [[AK01]](#AK01) es exactamente equivalente al desarrollo previo de *lattice congruence* [[NRR22]](#NRR22) se utiliza de forma comercial para delinear las clases de isometría de tori plano. De hecho, la matriz transpone tal mapa lineal $$B\in O(n,\Reals)$$, como se describe en el párrafo anterior, **es** la isometría contravariante de Riemannian entre el tori, según lo dispuesto por la aplicación del *Teorema de Representación de Gelfand-Naimark* durante la [Prueba](#Proof%20of%20Theorem) de nuestro [teórico](#Theorem)
 
-No de acuses de recibo
+## No de acuses de recibo
 
 La investigación original fue financiada en parte por un gracioso Premio de Investigación James Simons en 1995-1996, y el generoso apoyo de un Alfred P. Sloan Dissertation Fellowship en 1996-1997 en la Universidad de Stony Brook.
 
