@@ -10,7 +10,7 @@ title: Triple productos de autofunciones y geometría espectral
 <div class="right">
   <img src="../images/lawson6-pod.png" style="width:200px">
   <p style="width:200px;text-align:center;line-height:20px">
-  La superficie mínima de Lawson Î3⁄4<sub>6,1</sub> estereográficamente proyectada de S<sup>3</sup> a R<sup>3</sup>
+  La superficie mínima de Lawson ξ<sub>6,1</sub> estereográficamente proyectada de S<sup>3</sup> a R<sup>3</sup>
   </p>
 </div>
 
