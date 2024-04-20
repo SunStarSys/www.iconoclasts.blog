@@ -4,7 +4,7 @@ use SunStarSys::Util qw/walk_content_tree seed_file_deps seed_file_acl archived 
 use strict;
 use warnings;
 
-open my $fh, "<:encoding(UTF-8)", "lib/facts.yml" or die "Can't locate facts.yml data: $!";
+open my $fh, "<:raw", "lib/facts.yml" or die "Can't locate facts.yml data: $!";
 my $facts = Load join "", <$fh>;
 close $fh;
 
