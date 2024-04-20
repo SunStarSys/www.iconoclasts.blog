@@ -22,7 +22,7 @@ Joe Schaefer
 
 ## Resumen
 
-Uso de técnicas elementales de análisis geométrico, ecuaciones diferenciales parciales y álgebras abelianas $$C^*$$, {# lede #}descubrimos una invariante geométrica global novedosa pero familiar{# lede #}
+Uso de técnicas elementales de análisis geométrico, ecuaciones diferenciales parciales y álgebras abelianas $$C^*$$, {# lede #}descubrimos una invariante geométrica global novedosa pero familiar{# lede #}.
 
 ## Introducción
 
@@ -86,7 +86,7 @@ La motivación para el estudio de $$\set{M^{i,j,k}}$$ se deriva vagamente del es
 
 Estos resultados se demostraron por primera vez durante una charla similar titulada por el autor en **MSRI** en 1997, pero aparecen aquí en forma publicada por primera vez.
 
-No de preliminares
+## No de preliminares
 
 Now with $$M,g,e^i,M^{i,j,k}$$ as above, for $$f \in C^\infty(M)$$ and $$i \geq 0$$ note that the **Fourier coefficients**
 
