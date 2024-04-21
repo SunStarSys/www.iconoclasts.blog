@@ -1,0 +1,10 @@
+---
+categories: Drache,ai
+dependencies: '*.md.de'
+keywords: Entwurf
+status: ~
+title: Joe's Random Thoughts
+
+---
+
+{% ssi `/joe/index.md.de` %}

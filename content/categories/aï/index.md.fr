@@ -1,0 +1,10 @@
+---
+categories: dragon, aï
+dependencies: '*.md.fr'
+keywords: projet
+status: ~
+title: Les pensées aléatoires de Joe
+
+---
+
+{% ssi `/joe/index.md.fr` %}
