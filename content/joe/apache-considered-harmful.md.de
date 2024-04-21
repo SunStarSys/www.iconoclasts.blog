@@ -44,7 +44,7 @@ Aber der Coup de Grace war die Veröffentlichung von [2.17 2022](https://www.goo
 
 ## Postmortem
 
-Wenn Sie sich fragen, wie sich etwas mit einem gebrochenen Regressionstest auf [CPAN entwickelt](https://cpan-digger.perlmaven.com/dist/libapreq2)Sie werden sehen, wie [RELENG](https://httpd.apache.org/dev/release.html).
+Wenn Sie sich fragen, wie sich etwas mit einem gebrochenen Regressionstest auf [CPAN entwickelt](https://cpan-digger.perlmaven.com/dist/libapreq2). Sie werden sehen, wie [RELENG](https://httpd.apache.org/dev/release.html).
 
 Lange Geschichte kurz, [sie kommentierten den Test](http://svn.apache.org/viewvc?view=revision&revision=1903489) und versendeten es trotzdem und nannten es ein Sicherheitsrelease, für das [jedes vorherige Release eine Sicherheitslücke behoben hatte](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
