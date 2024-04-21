@@ -16,13 +16,13 @@ title: 'Perl 7 Solicitud de características: subs sellados para léxicos mecano
 
 ## La solución inicial: las optimizaciones de búsqueda de métodos de Doug MacEachern
 
-Doug fue el creador del proyecto mod_perl a mediados de los años 90, por lo que obviamente escribir Perl de alto rendimiento fue su fortaleza. Una de sus muchas contribuciones a [p5p](https://lists.perl.org/list/perl5-porters.html)
+Doug fue el creador del proyecto mod_perl a mediados de los años 90, por lo que obviamente escribir Perl de alto rendimiento fue su fortaleza. Una de sus muchas contribuciones a [p5p](https://lists.perl.org/list/perl5-porters.html).
 
 Este no es un problema insignificante con las llamadas a los métodos de acceso get-set `C struct` - la situación común con muchas API de mod_perl. La penalización de consulta de llamada de método de tiempo de ejecución de Perl en el `struct request_rec *` de httpd, que mod_perl expone mediante el módulo `Apache2::RequestRec`, está en el mismo orden de magnitud de la ejecución completa de la llamada.  Para los sitios respaldados por mod_perl que hacen millones de llamadas al método XS por segundo, esto es una terrible pérdida de preciosos ciclos de CPU.
 
-Lo que [Doug estaba buscando](https://www.perl.com/pub/2000/06/dougpatch.html/)
+Lo que [Doug estaba buscando](https://www.perl.com/pub/2000/06/dougpatch.html/).
 
-## [Script de referencia]({{snippetA.pretty_uri}})
+## [Script de referencia]({{snippetA.pretty_uri}}).
 
 [snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
 
@@ -132,11 +132,11 @@ sub handler :sealed {
 
 Las instrucciones de compilación para perl 5.30+ están disponibles en el pod `sealed.pm` si desea ejecutar mod_perl2 con ithreads y httpd-2.4 con mpm de eventos, y no segfault a **cualquier** escala.  Probado en `Solaris 11.4` y `Ubuntu 22.04` en amd64.
 
-Por diversión, pruebe esto [parche de mono]({{snippetB.pretty_uri}})
+Por diversión, pruebe esto [parche de mono]({{snippetB.pretty_uri}}).
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Permite los efectos de `sub handler :Sealed {script go here}` en todos los scripts `ModPerl::Registry`, algo así como [este](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl)
+Permite los efectos de `sub handler :Sealed {script go here}` en todos los scripts `ModPerl::Registry`, algo así como [este](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -178,6 +178,6 @@ Consulte <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Busqu
 
 Esto permitirá a Perl 5 hacer la búsqueda del método `content_type` del código de ejemplo en tiempo de compilación, sin causar problemas de back-compat o codificadores CPAN agravados, ya que esta función se dirigiría a los desarrolladores de aplicaciones. Autores de módulos OO no heredables.
 
-Esta idea perliza es gratuitamente robada de [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Leer esto](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf)
+Esta idea perliza es gratuitamente robada de [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Leer esto](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
 
 <!-- $Date$ $Author$ $Revision$ -->

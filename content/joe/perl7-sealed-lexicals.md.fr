@@ -18,13 +18,13 @@ title: 'Perl 7 Demande de fonctionnalité : sous-sections scellées pour les lex
 
 ## La solution initiale : les optimisations de recherche de méthode de Doug MacEachern
 
-Doug était le créateur du projet mod_perl au milieu des années 90, donc évidemment l'écriture de haute performance Perl était son fort. Une de ses nombreuses contributions à [p5p](https://lists.perl.org/list/perl5-porters.html)
+Doug était le créateur du projet mod_perl au milieu des années 90, donc évidemment l'écriture de haute performance Perl était son fort. Une de ses nombreuses contributions à [p5p](https://lists.perl.org/list/perl5-porters.html).
 
 Il ne s'agit pas d'un problème insignifiant avec les appels aux méthodes d'accès get-set `C struct` - la situation courante avec de nombreuses API mod_perl. La pénalité de recherche d'appel de méthode d'exécution de Perl sur la structure request_rec * de httpd, que mod_perl expose via le module Apache2 : :RequestRec, est du même ordre de grandeur que l'exécution complète de l'appel.  Pour les sites soutenus par mod_perl qui font des millions d'appels de méthode XS par seconde, il s'agit d'un horrible gaspillage de précieux cycles de CPU.
 
-Ce que [Doug cherchait](https://www.perl.com/pub/2000/06/dougpatch.html/)
+Ce que [Doug cherchait](https://www.perl.com/pub/2000/06/dougpatch.html/).
 
-## [Script de référence]({{snippetA.pretty_uri}})
+## [Script de référence]({{snippetA.pretty_uri}}).
 
 [snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
 
@@ -134,11 +134,11 @@ sub handler :sealed {
 
 Les instructions de compilation pour perl 5.30+ sont disponibles dans le pod `sealed.pm` si vous voulez exécuter mod_perl2 avec ithreads et httpd-2.4 avec mpm d'événement, et non segfault à n'importe quelle échelle **.  Testé sur 'Solaris 11.4' et 'Ubuntu 22.04' sur amd64.
 
-Pour le plaisir, essayez ce [patch de singe]({{snippetB.pretty_uri}})
+Pour le plaisir, essayez ce [patch de singe]({{snippetB.pretty_uri}}).
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Il active les effets de `sub handler :Sealed {script goes here}` sur tous vos scripts `ModPerl : :Registry`, quelque chose comme [celui-ci](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl)
+Il active les effets de `sub handler :Sealed {script goes here}` sur tous vos scripts `ModPerl : :Registry`, quelque chose comme [celui-ci](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -180,6 +180,6 @@ Voir <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Recherche
 
 Cela permettra à Perl 5 d'effectuer la recherche de méthode `content_type` de l'exemple de code au moment de la compilation, sans causer de problèmes de compatibilité arrière ou de codeurs CPAN lésés, car cette fonctionnalité ciblerait les développeurs d'applications. Les auteurs de module OO ne peuvent pas être hérités.
 
-Cette idée de Perlish est volée gratuitement à [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Lire ceci](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf)
+Cette idée de Perlish est volée gratuitement à [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Lire ceci](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
 
 <!-- $Date$ $Author$ $Revision$ -->
