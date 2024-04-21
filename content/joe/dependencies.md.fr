@@ -21,7 +21,7 @@ Cela n'a d'importance que lorsque vous devez peser les dépenses liées à la r�
 
 Par exemple, le site Web Apache <https://www.OpenOffice.Org> a pu créer ses fichiers 40K+ à l'aide de la version Apache d'origine de ce système de construction, avec une prise en charge entièrement intégrée des builds incrémentiels - sans aucune dépendance configurée - en utilisant intelligemment la technologie SSI traditionnelle seule.
 
-Par défaut, notre système de compilation ne construira que les fichiers que vous avez modifiés, sans se soucier des dépendances intra-fichiers (sauf si vous les spécifiez dans `%path : :dependencies` - plus sur cela ci-dessous). Si le fichier que vous avez modifié se trouve dans le répertoire `templates/` ou `lib/`, un build de site complet se déclenchera à la place.
+Par défaut, notre système de compilation ne construira que les fichiers que vous avez modifiés, sans se soucier des dépendances intra-fichiers (sauf si vous les spécifiez dans `%path::dependencies` - plus sur cela ci-dessous). Si le fichier que vous avez modifié se trouve dans le répertoire `templates/` ou `lib/`, un build de site complet se déclenchera à la place.
 
 ## Tisser le *graphique de dépendance* de votre site Web ensemble
 
@@ -85,7 +85,7 @@ Pouvez-vous repérer les arêtes rouges comme indiqué dans le *graphique de dé
 
 Syntaxe :
 
-{% `ssi` `/content_rooted/path/to/source_file` %}
+&123;% ssi `/content_rooted/path/to/source_file` %&124;
 
 - chemins enracinés dans le répertoire source `content`
 - ignore la partie en-tête du fichier source à inclure `ssi`
@@ -95,7 +95,7 @@ Syntaxe :
 
 Syntaxe :
 
-{{ content|ssi }}
+&123;&123; content|ssi &124;&124;
 
 - évalue de manière récursive les balises `ssi` dans la valeur à filtrer
 - utile pour éviter d'utiliser une grande valeur (3+) de `quick_deps` dans l'argument hashref d'une entrée `@path : :patterns`, ce qui peut avoir un impact sur les performances
@@ -129,7 +129,7 @@ Sur notre site, nous archivons agressivement des essais obsolètes pour mainteni
 
 ##### Lede
 
-Les commentaires HTML intégrés dans la prose Markdown forment les limites du contenu de la lede. Nous utilisons **{# lede #}** à cette fin.
+Les commentaires HTML intégrés dans la prose Markdown forment les limites du contenu de la lede. Nous utilisons **&123;# lede #&124;** à cette fin.
 
 Le traitement des ledes est effectué à l'aide du filtre Modèle `lede`. Il est utile de combiner cela avec le filtre `ssi` pour indexer un fichier de catégorie avec plus d'une page de catégorie à l'intérieur.
 
