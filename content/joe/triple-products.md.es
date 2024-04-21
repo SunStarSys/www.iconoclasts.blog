@@ -254,7 +254,7 @@ M^{i,j,k} = \begin{cases}
 
 Dado que esta ecuación <span class="eqno"></span> es lineal en la celosía de peso $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, solo un mapa de base de función propia ortonormal $$L^2$$ ** que se induce desde un mapa lineal invertible que preserva el volumen entre dos de dichas celosías de peso indexadas, de rango $$n$$** mantendrá el conjunto de datos indexado "algebraico/topológico" $$\set{M^{i,j,k}}$$ invariante.
 
-Sin embargo, con el fin de aplicar nuestro teorema(#Theorem)
+Sin embargo, con el fin de aplicar nuestro [teorema](#Theorem)
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
