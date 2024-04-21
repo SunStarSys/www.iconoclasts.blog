@@ -63,7 +63,7 @@ Para ser isométrico a $$(M,g)$$, es una condición *necesaria y suficiente* par
 
 <br>
 
-*La simetría* juega un papel importante en los casos de tracción computacional [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), que se ilustra acertadamente en nuestro tori plano [Ejemplo](#Ejemplo).
+*La simetría* juega un papel importante en los casos de tracción computacional [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), que se ilustra acertadamente en nuestro tori plano [Ejemplo](#ejemplo).
 
 <br>
 
@@ -179,7 +179,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 hemos terminado con el argumento de la necesidad.
 
-Para suficiencia, ahora consideramos el mapa de bases ortonormales lineales y bijetivas de función propia $$F$$ de $$C^\infty(M)$$ a $$C^\infty(N)$$ y observamos que de los cálculos en los [Preliminarios](#no%20do%20Preliminarios).
+Para suficiencia, ahora consideramos el mapa de bases ortonormales lineales y bijetivas de función propia $$F$$ de $$C^\infty(M)$$ a $$C^\infty(N)$$ y observamos que de los cálculos en los [Preliminarios](#no-do-preliminarios).
 
 ### Lemma
 
@@ -254,7 +254,7 @@ M^{i,j,k} = \begin{cases}
 
 Dado que esta ecuación <span class="eqno"></span> es lineal en la celosía de peso $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, solo un mapa de base de función propia ortonormal $$L^2$$ ** que se induce desde un mapa lineal invertible que preserva el volumen entre dos de dichas celosías de peso indexadas, de rango $$n$$** mantendrá el conjunto de datos indexado "algebraico/topológico" $$\set{M^{i,j,k}}$$ invariante.
 
-Sin embargo, con el fin de aplicar nuestro [teorema](#Teorema)
+Sin embargo, con el fin de aplicar nuestro [teorema](#teorema)
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
@@ -262,7 +262,7 @@ Sin embargo, con el fin de aplicar nuestro [teorema](#Teorema)
 
 debe conservar también las invariantes "analíticas": la figura inducida por el elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ por cada peso indexado, es decir, los valores propios individuales del laplaciano del tori plano.
 
-Esta cuenta teórica de representación [[AK01]](#AK01) es exactamente equivalente al desarrollo previo de *lattice congruence* [[NRR22]](#NRR22) se utiliza de forma comercial para delinear las clases de isometría de tori plano. De hecho, la matriz transpone tal mapa lineal $$B\in O(n,\Reals)$$, como se describe en el párrafo anterior, **es** la isometría contravariante de Riemannian entre el tori, según lo dispuesto por la aplicación del *Teorema de Representación de Gelfand-Naimark* durante la [Prueba](#Prueba%20del%20Teorema) de nuestro [teórico](#Teorema).
+Esta cuenta teórica de representación [[AK01]](#AK01) es exactamente equivalente al desarrollo previo de *lattice congruence* [[NRR22]](#NRR22) se utiliza de forma comercial para delinear las clases de isometría de tori plano. De hecho, la matriz transpone tal mapa lineal $$B\in O(n,\Reals)$$, como se describe en el párrafo anterior, **es** la isometría contravariante de Riemannian entre el tori, según lo dispuesto por la aplicación del *Teorema de Representación de Gelfand-Naimark* durante la [Prueba](#prueba-del-teorema) de nuestro [teórico](#teorema).
 
 ## No de acuses de recibo
 
