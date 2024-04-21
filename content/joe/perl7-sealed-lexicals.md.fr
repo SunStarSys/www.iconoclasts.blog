@@ -14,9 +14,9 @@ title: 'Perl 7 Demande de fonctionnalité : sous-sections scellées pour les lex
 
 ## Le problème
 
-{# lede #}La recherche de méthode d'exécution OO de Perl 5 a une surcharge de performances de 50 % supérieure à celle d'un appel de sous-routine nommé direct{# lede #}
+{# lede #}La recherche de méthode d'exécution OO de Perl 5 a une surcharge de performances de 50 % supérieure à celle d'un appel de sous-routine nommé direct{# lede #}.
 
-## La solution initiale : les optimisations de recherche de méthode de Doug MacEachern
+## La solution initiale : les optimisations de recherche de méthode de Doug MacEachern.
 
 Doug était le créateur du projet mod_perl au milieu des années 90, donc évidemment l'écriture de haute performance Perl était son fort. Une de ses nombreuses contributions à [p5p](https://lists.perl.org/list/perl5-porters.html).
 
