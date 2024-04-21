@@ -5,6 +5,7 @@ keywords: teoría espectral, geometría riemanniana, problemas inversos, física
   análisis armónico, teoría de la representación
 status: published
 title: Triple productos de autofunciones y geometría espectral
+published: https://dx.doi.org/10.2139/ssrn.4793533
 ---
 
 <div class="right">
