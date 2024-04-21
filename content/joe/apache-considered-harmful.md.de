@@ -16,7 +16,7 @@ title: Apache HTTPd Entwickler als schädlich angesehen
 
 In den letzten 25 Jahren bin ich der leitende Entwickler des Teilprojekts "apreq" im [Apache HTTPd Server](https://httpd.apache.org) Übergeordnetes Projekt. Die ursprüngliche Idee von `libapreq`, als Safe/Performant [HTML-Formulareinreichung](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) und [Cookie](https://datatracker.ietf.org/doc/html/rfc6265).
 
-Es war meine Vision damals, die Bibliothek in eine generische, nicht perlbezogene "C"-Bibliothek zu verwandeln, die Sprachbindungen aus anderen Programmiersprachen unterstützen würde, weshalb ich darauf drängte, dass das Projekt [homed] wird.(https://httpd.apache.org/apreq) unter dem Regenschirm HTTPd anstelle von [Apache-Perl](https://perl.apache.org/).
+Es war meine Vision damals, die Bibliothek in eine generische, nicht perlbezogene "C"-Bibliothek zu verwandeln, die Sprachbindungen aus anderen Programmiersprachen unterstützen würde, weshalb ich darauf drängte, dass das Projekt [homed](https://httpd.apache.org/apreq) wird unter dem Regenschirm HTTPd anstelle von [Apache-Perl](https://perl.apache.org/).
 
 Mit dem Aufkommen von `httpd-2. X`, eine völlig neue `I/O Filter` Architektur entstand aus `httpd` Kern, sowie die vollständige Trennung von `APR` vom Kern selbst als eine allgemeinere POSIX-ähnliche Portabilität Laufzeit für `C` Projekte wie `Subversion`. Tatsächlich ist `libapreq2` in diesem Sinne enger mit dem `Apache APR`-Projekt verbunden, und seine Perl-API spiegelt dies als Teil seines `APR::Request`-Buildouts wider.  Es verfügt über einen eingebauten *CGI*-Modus für den Standalone-Betrieb außerhalb der "httpd"-Laufzeit, was das Testen von Einheiten zu einem Kinderspiel macht.
 
