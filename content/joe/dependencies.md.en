@@ -2,7 +2,7 @@ Title: What Is <em>Smart Content Dependency Management&trade;</em> All About?
 Dependencies: *.md.en
 Categories: Orion, Architecture
 Keywords: architecture,incremental,website,generation,builds,dependencies,topology,wiki,graph,smart
-status: verified=22166
+status: verified=22163
 
 [TOC]
 
@@ -10,7 +10,7 @@ status: verified=22166
 
 *Smart Content Dependency Management&trade;* is about the circle of ideas related to providing support and facilitation for *incremental builds*, while staying true to the **Content Normalization Principle** &mdash; that [*permalinks*](https://en.wikipedia.org/wiki/Permalink) should be the single source of truth, no matter how their content is curated throughout the source tree and resulting build artifacts.
 
-This article presents the <https://sunstarsys.com/> website as a case study for a demonstration of best practices and analysis of the associated graph topologies.
+This article presents the <https://sunstarsys.com/> website as a case study for a <a href="#commentAB" class="border border-warning text-muted reference-link" id="commentAB-link" title="{{commentAB.headers.title}}">demonstration</a> of best practices and analysis of the associated graph topologies.
 
 ## Caveats
 
