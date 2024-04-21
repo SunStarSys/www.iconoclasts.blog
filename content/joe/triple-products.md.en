@@ -1,6 +1,6 @@
 Title: Triple products of eigenfunctions and spectral geometry
 Dependencies: *.md.en
-status: verified=22829
+status: draft
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
@@ -177,7 +177,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 we are done with the necessity argument.
 
-For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $$F$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the [Preliminaries](#Preliminaries) above, $$F$$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $$L^2(M,g)$$) by the premise that $$\set{M^{i,j,k}}$$ is invariant under this map.
+For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $$F$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the [Preliminaries](#preliminaries) above, $$F$$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $$L^2(M,g)$$) by the premise that $$\set{M^{i,j,k}}$$ is invariant under this map.
 
 ### Lemma
 
