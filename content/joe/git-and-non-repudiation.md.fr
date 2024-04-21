@@ -1,0 +1,27 @@
+---
+categories: Contrôle des versions, Apache
+dependencies: '*.md.fr'
+keywords: sécurité,non répudiation,DVCS,contrôle de version,icla
+status: archivé
+title: Git et non-répudiation
+---
+
+Cet essai concerne vraiment DVCS en général, pas seulement git en soi.  Mais nous allons concentrer notre attention sur le git, car il reste le DVCS le plus populaire aujourd'hui.
+
+[Non répudiation](http://en.wikipedia.org/wiki/Non-repudiation).
+
+Avec un outil de contrôle de version centralisé traditionnel, ces enregistrements sont facilement disponibles à partir de l'historique de validation.  Chaque validation dans le système passe par un mécanisme d'autorisation pour s'assurer que la personne qui a effectué la modification est autorisée à la télécharger.  Ces enregistrements sont essentiels pour l'entreprise afin de s'assurer que des enregistrements précis sont conservés, indiquant qui est responsable du téléchargement de chaque ligne de code dans le logiciel en question.
+
+Avec git, ou le contrôle de version distribué en général, {# lede #}Il y a une distinction claire entre l'histoire "commit" et l'histoire "upload".{# lede #}
+
+Avec [The Apache Software Foundation](https://www.apache.org/).
+
+Pourquoi est-ce important ?  Eh bien, pour commencer, laissez-moi aborder une idée fausse commune sur la nécessité d'accords de licence de contributeur (ICLA) pour les commissaires Apache.  Beaucoup de gens ne semblent pas comprendre qu'en ce qui concerne les œuvres individuelles d'un auteur, il n'y a pas de différence entre la langue applicable dans le [ICLA](http://www.apache.org/licenses/icla.txt) et le [Apache License 2.0](http://www.apache.org/licenses/license-2.0).
+
+Ce que les enregistrements push fournissent alors est un moyen de retrouver, à chaque ligne de code d'une version, le validateur individuel responsable de la propagation de ce code vers le référentiel git de l'ASF. Ceci est d'une importance cruciale pour déterminer la provenance d'une contribution tierce avec git, car il est malheureusement possible pour un tel contributeur de "s'éloigner" de sa contribution à un projet git en raison de la nature distribuée des journaux de validation DVCS.  La partie responsable devient alors, selon l'ICLA, l'auteur qui a poussé le code.
+
+Des stratégies d'atténuation rapides et appropriées tournent autour de la suppression de la contribution abandonnée, mais les dommages au projet ont peut-être déjà été causés.  Et sans les enregistrements push, nous n'aurions littéralement aucun processus faisant autorité pour déterminer comment ce code est réellement entré dans notre référentiel, à l'exception du chalutage à travers des enregistrements alternatifs dans les trackers de problèmes ou les communications sur liste.  S'appuyer uniquement sur les journaux de validation de fusion pour déterminer la provenance n'est pas très satisfaisant du point de vue de la sécurité, car cela nécessite une adhésion rigide à un type particulier de flux de travail, que nous ne voulons pas dicter.
+
+Sans de telles choses, nous aurions besoin de mandater au moins la signature PGP de l'engagement de chaque contributeur, ce qui est onéreux pour de nombreux projets.  Les enregistrements push fournissent un processus transparent qui n'a pas d'impact sur le workflow d'un projet, sauf pour s'assurer que le référentiel git d'ASF est le véritable référentiel maître.
+
+*$Date : 2023-01-19 17:58:40 -0500 (jeu, 19 janv. 2023) $*
