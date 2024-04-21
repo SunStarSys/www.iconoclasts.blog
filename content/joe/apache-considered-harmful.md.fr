@@ -1,0 +1,61 @@
+---
+categories: Apache (Perl)
+dependencies: '*.md.fr'
+keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
+status: vérifié=19662
+title: Apache HTTPd Devs considéré comme nuisible
+---
+
+<div class="right">
+
+ ![goudronné et plumé](apache-considered-harmful.page/feather.png).
+
+</div>
+
+## Arrière-plan
+
+Au cours des 25 dernières années, j'ai été le développeur principal du sous-projet `apreq` au sein du [serveur HTTPd](https://httpd.apache.org) Projet parent. L'idée originale de `libapreq`, comme un coffre-fort / performant [Soumission de formulaire HTML](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) et [Cookie](https://datatracker.ietf.org/doc/html/rfc6265).
+
+C'était ma vision à l'époque de transformer la bibliothèque en une bibliothèque "C" générique et non liée à Perl qui prendrait en charge les liaisons de langage d'autres langages de programmation, c'est pourquoi j'ai poussé pour que le projet soit [hébergé](https://httpd.apache.org/apreq) sous le parapluie HTTPd au lieu du [Apache-Perl](https://perl.apache.org/).
+
+Avec l'avènement de 'httpd-2. X`, une toute nouvelle architecture `I/O Filter` a émergé du noyau `httpd`, ainsi que la séparation complète de `APR` du noyau lui-même comme une exécution de portabilité de type POSIX à usage plus général pour les projets `C` comme `Subversion` . En fait, `libapreq2` est plus étroitement aligné avec le projet `Apache APR` dans cet esprit, et son API Perl reflète cela dans le cadre de sa construction `APR : :Request`.  Il dispose d'un mode *CGI* intégré pour un fonctionnement autonome, en dehors de l'exécution "httpd", ce qui rend les tests unitaires un jeu d'enfant.
+
+Pourtant, la composante clé de `apreq2` a toujours été le module `mod_apreq2` Apache, qui a été conçu pour la première fois par `Bill Wrowe` au début des années 2000.  Ce qu'il a conçu, lors d'une session de brainstorming avec moi (en personne), était une bibliothèque d'analyseurs unique interne à `httpd`, qui **partageait** la demande soumise *corps* avec chaque module d'intervenants clés dans l'exécution.  Cela signifiait fournir des données analysées aux modules connectés au moteur de traitement des demandes *avant*, *pendant* et *après* l'exécution du gestionnaire de contenu. Elle devait également fonctionner pour les sous-requêtes, que le gestionnaire de contenu ait consommé les données analysées ou non, ou qu'il ait consommé et analysé le corps de demande brut lui-même.
+
+J'ai expliqué les objectifs de conception à plusieurs reprises au fil des ans, même en 2012 sur [dev@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04).
+
+## Rassemblement de nuages orageux
+
+Bien que cette vision ait eu beaucoup de succès, avec des liaisons linguistiques disponibles pour plusieurs langues comme [`Perl`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache), etc., depuis environ 2010, il s'est avéré tragique pour [la communauté d'utilisateurs existante](https://webtechsurvey.com/technology/smod_apreq2).
+
+Que s'est-il passé ? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci), un de mes collègues Perl/FreeBSD à l'époque, a commencé à s'agiter pour que nous promouvions le projet à libérer de l'intérieur du serveur HTTPd lui-même. Quoi {{commentAA.headers.title}}Philippe ne savait pas très bien à l'époque à quel point [peut-être, vapide et territorial](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) Cette équipe était devenue{# lede #}, ce qui aurait signifié avoir à collaborer directement avec eux sur [les décisions relatives à l'utilisateur](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html).
+
+En 2012, Philip a obtenu ce qu'il voulait et j'ai cessé de résister, alors il [forked](https://svn.apache.org/viewvc?view=revision&revision=1201372).
+
+## Chute
+
+[En 2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1).
+
+En 2020 environ, l'équipe de sécurité de Google a profité d'une version alpha de httpd 2.5 en brouillant sa copie de 8 ans de `apreq2`. Ils ont trouvé quelques points chauds qui avaient besoin d'être réparés.
+
+Au lieu d'avoir la courtoisie de tendre la main à Philip, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann).
+
+Mais le coup de grâce était la sortie de [2.17] en 2022.(https://www.google.com/search?q=libapreq2-2.17), dans lequel le développeur débutant [a présenté un bug fatal dans la base de code](http://svn.apache.org/viewvc?view=revision&revision=1895107), brisant [un test de régression de dix-neuf ans](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
+
+## Postmortem
+
+Si vous demandez comment quelque chose avec un test de régression cassé se termine sur [CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2), vous devrez regarder comment [RELENG](https://httpd.apache.org/dev/release.html).
+
+Longue histoire courte, [ils ont commenté le test](http://svn.apache.org/viewvc?view=revision&revision=1903489) et l'a expédié de toute façon, et l'a appelé une version de sécurité qui [fixe une vulnérabilité à chaque version précédente était susceptible de](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
+
+<div class="right">
+
+ ![Logo Superman](apache-considered-harmful.page/superman.jpg).
+
+</div>
+
+Pourquoi je m'en soucie maintenant ? Parce que je suis le suceur [les utilisateurs cherchent des réponses](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html).
+
+Cela craint, mais je suis désolé de vous dire que mes jours de port de la cape Superman à Apache se sont terminés il y a environ une décennie.
+
+<!-- $Date$ $Author$ $Revision$ -->
