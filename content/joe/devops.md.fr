@@ -1,0 +1,71 @@
+---
+categories: Informatique
+dependencies: '*.md.fr'
+keywords: devops
+status: archivé
+title: Le mouvement DevOps
+---
+
+[TOC]
+
+## Plus qu'offrir aux développeurs un accès root !
+
+Ou même pas. {# lede #}La grande idée derrière le "mouvement" n'est pas simplement de donner aux développeurs plus de corde{# lede #}
+
+La gestion des contraintes est la clé du processus.  En identifiant d'abord tous les goulets d'étranglement dans le système, vous pouvez recentrer vos efforts sur l'optimisation de ces ressources pour obtenir un effet maximal.  Les optimisations au-delà de ces zones ne valent presque toujours pas la peine - le flux de travail sera toujours limité par ces ressources.
+
+## Développement basé sur le tronc
+
+Encourager des changements incrémentiels avec des processus automatisés de test, de promotion et de publication à une cadence programmée est un excellent moyen de faire rouler la balle, mais une grande partie du contrôle de la qualité dans les déploiements SaaS/PaaS implique l'adoption de *[développement basé sur le tronc](https://trunkbaseddevelopment.com).
+
+En substance, le multivers des branches de "git" à long terme crée la fiction psychologique que la fusion combinée de tous ces travaux de développement local (et de tests !) conduira à un tout qui est au moins aussi grand que la somme de ses parties.  L'expérience est le meilleur juge, ce qui indique que les ensembles complets de nouvelles fonctionnalités doivent être conçus *incrémentalement*, *in-situ*, sur le code source de la branche de production/libération existante.  Fondamentalement, vous concevez vos stratégies de développement dans les limites de la physique du monde biologique, qui dit :
+
+```text
+        Surgery on a patient must result
+		in good outcomes (at all times) for
+        that patient, not just for siblings
+		or future generations.
+```
+
+### pipelines CI/CD
+
+Le développement basé sur le tronc est la base de tous les pipelines de contrôle des changements automatisés qui ont grandi au cours des deux dernières décennies.
+
+## Le code est une loi (développement + infrastructure + configuration).
+
+Un peu de perspective historique d'abord ; la ligne de poinçon suit ces quatre paragraphes.  Le point commun ici est qu'Apache a presque toujours été en avance sur son temps.
+
+Retour dans la pré-[CFEngine](https://cfengine.com).
+
+Le flux de travail était moins qu'idéal : en plus de construire nos propres arborescences de ports FreeBSD patchés localement en paquets déployables (binaires) à partir de zéro, le personnel a dû faire preuve de *discipline* difficile à appliquer lorsque le déploiement des modifications en production, en validant d'abord le contrôle des versions, en vous connectant au serveur cible, en mettant à jour son extraction et en redémarrant potentiellement le service - tout ce travail répétitif effectué à la main. En réalité, la plupart du temps, les administrateurs système piratés directement sur le serveur cible et validés à partir de la caisse de ce serveur, risquant de nombreux conflits de fusion en cours de route au fur et à mesure que l'arborescence était à nouveau mise à jour (soit à ce moment-là, soit à un moment donné par des actions futures exécutées par un autre membre du personnel). Un flux de travail plutôt moins transparent, avec une sécurité de gestion des mots de passe douteuse, pour une équipe opérationnelle collaborative.
+
+De nos jours, ils conservent tout dans un arbre source de marionnettes soutenu par "git", et fournissent/déployent/configurent directement dans le cloud à l'aide de paquets Ubuntu en amont génériques, ce qui est une approche quelque peu moderne de leur travail informatique, car les tirages "git" programmés par le maître de marionnettes finiront par déployer des mises à jour lorsque les agents de marionnettes effectueront un retour.  Mais l'intégration continue et le déploiement continu sont en cours, même à ce jour.
+
+D'autre part, une initiative pionnière de type CI à l'ASF (pour les projets TLP réels du logiciel Apache) était [Apache Gump](https://gump.apache.org/).
+
+Voici le point en bref : toutes vos sources (développement, infrastructure et configuration) appartiennent au contrôle des versions (ne partageant pas nécessairement le même référentiel) qui est révisable par tout le personnel de devops et fait partie de votre ensemble complet de pipelines d'automatisation de test entre les révisions de correctifs et les déploiements de production.  Une étude de l'état de la technique, où les changements sont testés / provisionnés / déployés à la demande dans les paramètres IaC / CaC, se trouve sur le site Web de mon ami et visionnaire Paul Hammant [ici](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
+
+## Virtualisation vs. conteneurisation : un [animal de compagnie vs. bétail](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/).
+
+Les systèmes de conteneurs comme Docker sont des technologies de virtualisation personnalisables et redéployables qui sont généralement utilisées pour prendre en charge une structure de cluster d'applications MicroService Architecture (MSA) comme Kubernetes. Ils récupèrent là où les systèmes de virtualisation se sont arrêtés, échangeant un support illimité de systèmes d'exploitation (entièrement) isolés par machine virtuelle pour les machines virtuelles basées sur le noyau Linux qui ont une personnalisation et une intégration considérablement plus programmables avec l'hôte Linux parent sur lequel ils s'exécutent.  En outre, ils peuvent être reconstruits et *téléchargés* vers un service de distribution central (comme l'artifactory) pour une réutilisation à grande échelle entre plusieurs chaînes de dépendance et des déploiements de serveurs exécutables bruts.
+
+### Mise à l'échelle verticale ou horizontale
+
+Les conteneurs reconfigurables téléchargeables à partir d'un serveur central offrent des possibilités difficiles à réaliser avec la technologie de virtualisation de base. Vous n'êtes pas bloqué par les limites matérielles d'un seul serveur pour étendre vos services afin de répondre à la demande.  En d'autres termes, la mise à l'échelle horizontale en déployant le même conteneur dans des collections d'hôtes, **à la demande**, est une fonctionnalité de première classe immédiatement réalisable des structures MSA basées sur Docker.  De même que le déploiement de dizaines de conteneurs de plus que de coeurs de processeur sur le *même* hôte.
+
+## Mesurer, freiner et contrôler les efforts de lutte contre l'incendie, réels et pratiqués
+
+L'une des autres choses clés à reconnaître est de faire la distinction entre le travail *planifié* et *non planifié* dans l'un de vos indicateurs de suivi de la productivité, et la façon dont les ressources sont allouées à ces tâches.  Le travail non planifié équivaut à une ** lutte contre l'incendie** et, si trop de temps (plus de 20 %) est consacré à ces tâches, le travail planifié, qui est le véritable besoin commercial de l'entreprise, est en retard.
+
+Les goulets d'étranglement dans le système peuvent rarement faire face à un travail imprévu, il est donc important d'avoir suffisamment de ressources supplémentaires pour gérer la charge accrue et les retards qui en découlent.
+
+L'une des principales leçons de la COVID-19 au début de 2020, en tant que capacité hospitalière en termes d'informatique, est qu'il existe une chose telle que "trop maigre", du moins en ce qui concerne la dotation en personnel de devops (le matériel est une autre histoire).  La planification d'urgence pour une journée pluvieuse, avec du personnel "redondant" ou des initiatives de formation croisée, combinées à des exercices préparatoires réguliers, non seulement éloigne le médecin, mais est en fait **critique de la mission**.
+
+## Utiliser le programme
+
+Au niveau de la direction, une perspective globale de gestion du changement entre les changements de développement et d'opération est essentielle. Les deux équipes doivent être conscientes des changements de l'autre. Idéalement, avec des détails de planification mis à disposition en cours de route.  **De grandes choses peuvent se produire** lorsque les équipes sont un bon mélange de développeurs et de personnel d'exploitation, dans une culture de travail collaboratif basée sur les données et transparente.
+
+La philosophie de l'inclusion de multiples parties prenantes dans la création, et de l' **évolution**, d'un produit de travail tangible a des implications bien au-delà des seules équipes *dev* et *ops* partageant le contrôle et la responsabilité d'un effort d'ingénierie de serveur. Cette leçon ne cesse d'être répétée dans le monde moderne des entreprises, car de nouveaux domaines d'expression humaine créative prennent forme dans le secteur des affaires, ainsi que dans la réinvention des anciennes façons de faire des affaires ensemble.
+
+
+<!-- $Date$ $Author$ $Revision$ -->
