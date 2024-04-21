@@ -1,6 +1,7 @@
 Title: Triple products of eigenfunctions and spectral geometry
 Dependencies: *.md.en
-status: verified=21999
+status: draft
+published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -60,7 +61,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 <br>
 
-*Symmetry* plays an important role in computationally tractable cases [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity.) In this instance, we offer the following
+*Symmetry* plays an important role in computationally tractable cases [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity.) In this instance, we offer the following
 
 <br>
 
@@ -251,7 +252,7 @@ M^{i,j,k} = \begin{cases}
 
 As this Equation <span class="eqno"></span> is linear on the weight lattice $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, only an $$L^2$$ orthonormal eigenfunction basis map **which is induced from a volume-preserving invertible linear map between two such indexed, rank $$n$$ weight lattices** will keep the "algebraic/topological" indexed data set $$\set{M^{i,j,k}}$$ invariant.
 
-However, in order to apply our [Theorem](#Theorem), it is essential that such a linear map $$B$$ be $$B\in O(n,\Reals)$$ on the weight lattice, because the induced $$L^2$$ eigenfunction basis map
+However, in order to apply our [Theorem](#theorem), it is essential that such a linear map $$B$$ be $$B\in O(n,\Reals)$$ on the weight lattice, because the induced $$L^2$$ eigenfunction basis map
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
@@ -259,7 +260,7 @@ However, in order to apply our [Theorem](#Theorem), it is essential that such a 
 
 must also preserve the "analytic" invariants &mdash; the Casimir-element induced figure $$4\pi^2\lVert\lambda_i\rVert^2$$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
 
-This representation-theoretical account [[AK01]](#AK01) is exactly equivalent to the prior development of *lattice congruence* [[NRR22]](#NRR22) traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $$B\in O(n,\Reals)$$, as described in the prior paragraph, **is** the contravariant Riemannian isometry between the tori, as provided by application of the *Gelfand-Naimark Representation Theorem* during the [Proof](#Proof%20of%20Theorem) of our [Theorem](#Theorem).
+This representation-theoretical account [[AK01]](#AK01) is exactly equivalent to the prior development of *lattice congruence* [[NRR22]](#NRR22) traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $$B\in O(n,\Reals)$$, as described in the prior paragraph, **is** the contravariant Riemannian isometry between the tori, as provided by application of the *Gelfand-Naimark Representation Theorem* during the [Proof](#proof-of-theorem) of our [Theorem](#theorem).
 
 ## Acknowledgements
 
