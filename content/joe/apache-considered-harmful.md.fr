@@ -26,7 +26,7 @@ J'ai expliqué les objectifs de conception à plusieurs reprises au fil des ans,
 
 ## Rassemblement de nuages orageux
 
-Bien que cette vision ait eu beaucoup de succès, avec des liaisons linguistiques disponibles pour plusieurs langues comme [`Perl`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache), etc., depuis environ 2010, il s'est avéré tragique pour [la communauté d'utilisateurs existante](https://webtechsurvey.com/technology/smod_apreq2).
+Bien que cette vision ait eu beaucoup de succès, avec des liaisons linguistiques disponibles pour plusieurs langues comme [`Perl`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache), etc., depuis environ 2010, il s'est avéré tragique pour [la communauté d'utilisateurs existante](https://webtechsurvey.com/technology/mod_apreq2).
 
 Que s'est-il passé ? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci), un de mes collègues Perl/FreeBSD à l'époque, a commencé à s'agiter pour que nous promouvions le projet à libérer de l'intérieur du serveur HTTPd lui-même. Quoi {{commentAA.headers.title}}Philippe ne savait pas très bien à l'époque à quel point [peut-être, vapide et territorial](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) Cette équipe était devenue{# lede #}, ce qui aurait signifié avoir à collaborer directement avec eux sur [les décisions relatives à l'utilisateur](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html).
 
