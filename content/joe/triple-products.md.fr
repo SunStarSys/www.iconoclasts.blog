@@ -23,21 +23,21 @@ Joe Schaefer
 
 ## Résumé
 
-Utiliser des techniques élémentaires d'analyse géométrique, d'équations différentielles partielles et d'algèbres Abelian $$C^*$$, {# lede #}Nous découvrons un nouvel invariant géométrique mondial, pourtant familier{# lede #}
+Utiliser des techniques élémentaires d'analyse géométrique, d'équations différentielles partielles et d'algèbres Abelian $$C^*$$, {# lede #}Nous découvrons un nouvel invariant géométrique mondial, pourtant familier{# lede #}.
 
 ## Introduction
 
-Pour un collecteur riemannien fermé $$(M,g)$$, caractérisant sa **classe** de collecteurs isospectraux non isométriques, est un type de problème inverse [[DH11]](#DH11) en géométrie spectrale. On pourrait spéculer que cette classe serait toujours *vide*. Cependant, la littérature académique est riche de constructions datant de plusieurs décennies d'appariements spécifiques de contre-exemples : à partir de 1964 avec la paire de 16 dimensions de John Milnor de tori plat isospectral non isométrique, non isospectral [[JM64]](#JM64), et continuer [[CS92]](#CS92) vers la caractérisation dimensionnelle générique du tori plat dans la thèse de doctorat d'Alexander Schiemann en 1993 [[AS94]](#AS94) - complété par une recherche assistée par ordinateur pour le cas critique $$\dim = 3$$.  Une étude moderne de l'histoire complète des tori plats apparaît dans [[NRR22]](#NRR22)
+Pour un collecteur riemannien fermé $$(M,g)$$, caractérisant sa **classe** de collecteurs isospectraux non isométriques, est un type de problème inverse [[DH11]](#DH11) en géométrie spectrale. On pourrait spéculer que cette classe serait toujours *vide*. Cependant, la littérature académique est riche de constructions datant de plusieurs décennies d'appariements spécifiques de contre-exemples : à partir de 1964 avec la paire de 16 dimensions de John Milnor de tori plat isospectral non isométrique, non isospectral [[JM64]](#JM64), et continuer [[CS92]](#CS92) vers la caractérisation dimensionnelle générique du tori plat dans la thèse de doctorat d'Alexander Schiemann en 1993 [[AS94]](#AS94) - complété par une recherche assistée par ordinateur pour le cas critique $$\dim = 3$$.  Une étude moderne de l'histoire complète des tori plats apparaît dans [[NRR22]](#NRR22).
 
-En cours de route ont été des ramifications perspicaces dans des espaces de couverture symétriques non euclidiens plus sophistiqués ; la construction de tels "duets" isospectraux et non isométriques impliquant des tenseurs de courbure non triviaux (et leurs caractéristiques d'Euler déterminées par le spectre dans la dimension 2 [[MS67]](#MS67).) Un excellent exemple de cet effort fut celui de Toshikazu Sunada en 1985 [[TS85]](#TS85)
+En cours de route ont été des ramifications perspicaces dans des espaces de couverture symétriques non euclidiens plus sophistiqués ; la construction de tels "duets" isospectraux et non isométriques impliquant des tenseurs de courbure non triviaux (et leurs caractéristiques d'Euler déterminées par le spectre dans la dimension 2 [[MS67]](#MS67).) Un excellent exemple de cet effort fut celui de Toshikazu Sunada en 1985 [[TS85]](#TS85).
 
 Pour des métriques riemanniennes inhomogènes, Carolyn Gordon a découvert des duos qui ne sont même pas localement isométriques [[CG93]](#CG93)
 
-Les travaux se poursuivent dans de nombreux domaines connexes [[DH11]](#DH11), comme la détermination des caractéristiques topologiques de la classe des collecteurs isospectraux non isométriques en général (vide [[ST80]](#ST80), finie [[AS94]](#AS94), rigide [[GK80]](#GK80), et compact [[GZ97]](#GZ97)
+Les travaux se poursuivent dans de nombreux domaines connexes [[DH11]](#DH11), comme la détermination des caractéristiques topologiques de la classe des collecteurs isospectraux non isométriques en général (vide [[ST80]](#ST80), finie [[AS94]](#AS94), rigide [[GK80]](#GK80), et compact [[GZ97]](#GZ97).
 
 Ce que nous proposons dans cet article est une nouvelle perspective sur un outil familier : les coefficients de Fourier indexés de produits par paires de fonctions propres comme un "invariant algébrique/topologique" discret pour compléter le "invariant analytique" existant et discret - le spectre non négatif de l'opérateur *Laplace-Beltrami* (ci-après dénommé le **Laplacien**) sur $$L^2(M,g)$$$.  Combinés, nous observons que la paire fournit une "représentation géométrique globale discrète" des classes isométriques des collecteurs isospectraux et riemanniens fermés.
 
-### résultats
+### Résultats
 
 <br>
 
@@ -64,7 +64,7 @@ Pour être isométrique à $$(M,g)$$, il s'agit d'une condition *nécessaire et 
 
 <br>
 
-*La symétrie* joue un rôle important dans les cas traitables par ordinateur [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), qui est bien illustré dans notre plat tori [Exemple](#Example)
+*La symétrie* joue un rôle important dans les cas traitables par ordinateur [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), qui est bien illustré dans notre plat tori [Exemple](#Example).
 
 <br>
 
@@ -83,11 +83,11 @@ Si chaque valeur propre a une multiplicité $$1$$$, compte tenu d'une paire de v
 
 <br>
 
-La motivation pour l'étude de $$\set{M^{i,j,k}}$$ est vaguement dérivée de l'étude du rôle de l' **opérateur de multiplication linéaire** $$Y:V\otimes V\rightarrow V(((z))$$ dans la définition d'une algèbre d'opérateur de sommet [[FBZ04]](#FBZ04)
+La motivation pour l'étude de $$\set{M^{i,j,k}}$$ est vaguement dérivée de l'étude du rôle de l' **opérateur de multiplication linéaire** $$Y:V\otimes V\rightarrow V(((z))$$ dans la définition d'une algèbre d'opérateur de sommet [[FBZ04]](#FBZ04).
 
 Ces résultats ont été démontrés pour la première fois lors d'un discours similaire de l'auteur à **MSRI** en 1997, mais ils apparaissent ici sous forme publiée pour la première fois.
 
-## préliminaires
+## Préliminaires
 
 Now with $$M,g,e^i,M^{i,j,k}$$ as above, for $$f \in C^\infty(M)$$ and $$i \geq 0$$ note that the **Fourier coefficients**
 
@@ -104,7 +104,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-étant donné que $$f$$ est représentable de manière unique en tant que sa **série quatre fois plus rapide** ($$\Delta_M$$$-spécifique Sobolev Embeddings [[MT13]](#MT13) [[RS75]](#RS75), avec la loi asymptotique de Weyl [[HW11]](#HW11), implique que les termes de la somme sont $$o(i^{-n})$$ *uniformément dans $$x$$* [[LH68]](#LH68)
+étant donné que $$f$$ est représentable de manière unique en tant que sa **série quatre fois plus rapide** ($$\Delta_M$$$-spécifique Sobolev Embeddings [[MT13]](#MT13) [[RS75]](#RS75), avec la loi asymptotique de Weyl [[HW11]](#HW11), implique que les termes de la somme sont $$o(i^{-n})$$ *uniformément dans $$x$$* [[LH68]](#LH68).
 
 ```math
 \begin{aligned}
@@ -132,7 +132,7 @@ et ainsi, *critiquement*, tout polynôme multivarié $$\weierp \in \Complex[z_1,
 \end{CD}
 ```
 
-De plus, si $$A\sous-ensemble M$$ est mesurable en boréal, les résultats ci-dessus conservent la fonction *caractéristique de $$A$$* partout sauf le long de la limite de $$A$$ : si $$f = f^2$$ et $$A :=\set{x\in M|f(x)=1}$$,
+De plus, si $$A\subset M$$ est mesurable en boréal, les résultats ci-dessus conservent la fonction *caractéristique de $$A$$* partout sauf le long de la limite de $$A$$ : si $$f = f^2$$ et $$A :=\set{x\in M|f(x)=1}$$,
 
 ```math
 \sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \begin{cases}
@@ -149,11 +149,11 @@ et par l'unicité, nous avons l'identité suivante
 \end{aligned}
 ```
 
-Cela implique qu'une telle carte de base comme ci-dessus comporte des fonctions caractéristiques (en tant que membres de $$L^2(M,g)\sous-ensemble L^1(M,g)$$) à des fonctions caractéristiques de manière à préserver la mesure.
+Cela implique qu'une telle carte de base comme ci-dessus comporte des fonctions caractéristiques (en tant que membres de $$L^2(M,g)\subset L^1(M,g)$$) à des fonctions caractéristiques de manière à préserver la mesure.
 
 Le but de ces calculs est de souligner le fait que $$\set{M^{i,j,k}}$$ **caractérise** l'analyse harmonique de l'opérateur de multiplication par points sur $$C^\infty(M)$$, qui est une sous-algèbre dense de l'algèbre abélienne $$C^*$$ $$C(M)$$, par le théorème Stone-Weierstrass.
 
-Pour la convergence rapide de ces sommes ci-dessus impliquant $$M^{i,j,k}$$, notez que les produits de fonctions propres sont lisses, de sorte que ces coefficients de Fourier se dégradent comme ci-dessus (dans chaque indice). Pour plus de détails, voir le travail d'Emmett Wyman en 2022 avec ces coefficients en ce qui concerne l'inégalité des triangles sur les valeurs propres [[EW22]](#EW22)
+Pour la convergence rapide de ces sommes ci-dessus impliquant $$M^{i,j,k}$$, notez que les produits de fonctions propres sont lisses, de sorte que ces coefficients de Fourier se dégradent comme ci-dessus (dans chaque indice). Pour plus de détails, voir le travail d'Emmett Wyman en 2022 avec ces coefficients en ce qui concerne l'inégalité des triangles sur les valeurs propres [[EW22]](#EW22).
 
 Remarque : nous pouvons toujours supposer
 ```math
@@ -164,7 +164,7 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 \end{aligned}
 ```
 
-où $$\delta_i$$ est le delta de Kronecker. Puisque $$vol(M)$$ est un invariant spectral [[HW11]](#HW11)
+où $$\delta_i$$ est le delta de Kronecker. Puisque $$vol(M)$$ est un invariant spectral [[HW11]](#HW11).
 
 ## Preuve du théorème
 
@@ -180,7 +180,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 Nous en avons fini avec l'argument de nécessité.
 
-Pour suffisance, nous considérons maintenant la carte de base orthonormée bijective linéaire $$F$$ de $$C^\infty(M)$$ à $$C^\infty(N)$$ et notons que d'après les calculs dans les [Préliminaires](#Preliminaries)
+Pour suffisance, nous considérons maintenant la carte de base orthonormée bijective linéaire $$F$$ de $$C^\infty(M)$$ à $$C^\infty(N)$$ et notons que d'après les calculs dans les [Préliminaires](#Preliminaries).
 
 ### Lemme
 
@@ -213,9 +213,9 @@ Sans perte de généralité, nous pouvons appliquer le résultat de cas spécial
 
 Cela signifie que sur un ensemble dense de $$C(M)$$ (et $$C(N)$$), nous avons établi $$F$$ en tant qu'isomorphisme des algèbres Abéliennes $$C^*$$, et que nous pouvons donc l'étendre à un isomorphisme de $$C(M)$$ et $$C(N)$$ dans la même catégorie.
 
-Nous appliquons maintenant le théorème de représentation de Gelfand-Naimark (sous forme de functor contravariant) pour les algèbres Abelian $$C^*$$ [[JC19]](#JC19)
+Nous appliquons maintenant le théorème de représentation de Gelfand-Naimark (sous forme de functor contravariant) pour les algèbres Abelian $$C^*$$ [[JC19]](#JC19).
 
-Comme ce diffeomorphisme préserve désormais les valeurs propres et les fonctions propres (par hypothèse sur $$F$$), il doit préserver le Laplacien sur des fonctions lisses. Par conséquent, il doit également conserver les symboles principaux de ces mêmes opérateurs elliptiques [[MT13]](#MT13)
+Comme ce diffeomorphisme préserve désormais les valeurs propres et les fonctions propres (par hypothèse sur $$F$$), il doit préserver le Laplacien sur des fonctions lisses. Par conséquent, il doit également conserver les symboles principaux de ces mêmes opérateurs elliptiques [[MT13]](#MT13).
 
 Cela complète la preuve du théorème.
 
@@ -233,7 +233,7 @@ Etant donné que pour un $$k$$ donné, $$M_0^{i,i,k}$$ ne peut pas être identiq
 
 Exemple ##
 
-Que $$\set{\lambda_i} \sous-ensemble \R^n$$ soit un réseau indexé, classe $$n$$ de poids algébriques de Lie pour la représentation de l'espace quotient de $$\frak{g}=\Reals^n$$ en tant que champs vectoriels invariants de traduction (c'est-à-dire constants) sur lui-même, lorsque $$\R^n$$ est également considéré comme le groupe de Lie associé de $$\frak{g}$$ sur un tore défini par $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Ces poids définissent des levées intégrables de 1 forme sur le tore qui s'intègrent aux fonctions linéaires $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ en tant que groupe de mensonges (couvrant le tore). Ces fonctions linéaires peuvent ensuite être uniformément redimensionnées (par $$2\pi \sqrt{-1}$$) et exponentiées pour former des caractères multiplicatifs qui descendent pour former une base orthonormée de $$L^2(\Reals^n/A\Z^n,dx)$$, avec la mesure de Lebesgue (Haar) $$dx$$.
+Que $$\set{\lambda_i} \subset \R^n$$ soit un réseau indexé, classe $$n$$ de poids algébriques de Lie pour la représentation de l'espace quotient de $$\frak{g}=\Reals^n$$ en tant que champs vectoriels invariants de traduction (c'est-à-dire constants) sur lui-même, lorsque $$\R^n$$ est également considéré comme le groupe de Lie associé de $$\frak{g}$$ sur un tore défini par $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Ces poids définissent des levées intégrables de 1 forme sur le tore qui s'intègrent aux fonctions linéaires $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ en tant que groupe de mensonges (couvrant le tore). Ces fonctions linéaires peuvent ensuite être uniformément redimensionnées (par $$2\pi \sqrt{-1}$$) et exponentiées pour former des caractères multiplicatifs qui descendent pour former une base orthonormée de $$L^2(\Reals^n/A\Z^n,dx)$$, avec la mesure de Lebesgue (Haar) $$dx$$.
 
 De plus, cette base diagonalise simultanément le Laplacien du tore plat **parce que** le Laplacien est l'image d'un élément Casimir quadratique symétrique, défini négativement sous cette représentation d'espace quotient (opérateur différentiel linéaire à coefficient constant) de l'algèbre enveloppante universelle. Par conséquent, ses valeurs propres sont en proportion constante (de $$4\pi^2$$) par rapport à la longueur déterminée par l'élément de Casimir du poids de chaque personnage dans le réseau.
 
@@ -242,7 +242,7 @@ Nous examinons actuellement la base ci-dessus
 ```math
 \set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-être notre base de Fourier applicable au théorème des fonctions propres orthonormées (caractère multiplicatif) (de cette représentation quotient de l'élément (négatif) Euclidien Casimir) correspondant directement à $$\set{\lambda_i}$$. Selon les hypothèses de notre Théorème, nous devons avoir $$i < j \implique \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (avec la norme euclidienne sur les poids).
+être notre base de Fourier applicable au théorème des fonctions propres orthonormées (caractère multiplicatif) (de cette représentation quotient de l'élément (négatif) Euclidien Casimir) correspondant directement à $$\set{\lambda_i}$$. Selon les hypothèses de notre Théorème, nous devons avoir $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (avec la norme euclidienne sur les poids).
 
 Maintenant nous pouvons calculer
 
@@ -263,7 +263,7 @@ Cependant, afin d'appliquer notre [théorème](#Theorem)
 
 doit également préserver les invariants "analytiques" - le chiffre induit par l'élément de Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ pour chaque poids indexé, c'est-à-dire les valeurs propres individuelles du Laplacien du flat-tori.
 
-Ce compte de représentation théorique [[AK01]](#AK01) est exactement équivalent au développement antérieur de *construence de réseau* [[NRR22]](#NRR22) Traditonalement utilisé pour délimiter les classes d'isométrie de tori plat. En fait, la matrice transpose d'une telle carte linéaire $$B\in O(n,\Reals)$$, comme décrit dans le paragraphe précédent, **est** la contravariante isométrie riemannienne entre les tori, comme prévu par l'application du *Théorème de représentation de Gelfand-Naimark* pendant la [Proof](#Proof%20of%20Theorem) de notre [théorème](#Theorem)
+Ce compte de représentation théorique [[AK01]](#AK01) est exactement équivalent au développement antérieur de *construence de réseau* [[NRR22]](#NRR22) Traditonalement utilisé pour délimiter les classes d'isométrie de tori plat. En fait, la matrice transpose d'une telle carte linéaire $$B\in O(n,\Reals)$$, comme décrit dans le paragraphe précédent, **est** la contravariante isométrie riemannienne entre les tori, comme prévu par l'application du *Théorème de représentation de Gelfand-Naimark* pendant la [Proof](#Proof%20of%20Theorem) de notre [théorème](#Theorem).
 
 Nb d'accusés de réception
 
