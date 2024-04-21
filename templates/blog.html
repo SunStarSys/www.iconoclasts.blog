@@ -7,7 +7,7 @@
          <small>
            [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"^a-z"}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"^A-Z"}}</span></a>]
            <em>
-			   <a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">{% ifequal lang ".en" %}Last updated</a> by {% endifequal %}{% ifequal lang ".de" %}Zuletzt aktualisiert</a> von {% endifequal %}{% ifequal lang ".es" %}Actualizado por última vez</a> por{% endifequal %}{% ifequal lang ".fr" %}Dernière mise à jour</a> par {% endifequal %}<b>{{ content|ssi|vcs_author:lang }}</b>
+			   <a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">{% ifequal lang ".en" %}Last updated</a> by {% endifequal %}{% ifequal lang ".de" %}Zuletzt aktualisiert</a> von {% endifequal %}{% ifequal lang ".es" %}Actualizado por última vez</a> por {% endifequal %}{% ifequal lang ".fr" %}Dernière mise à jour</a> par {% endifequal %}<b>{{ content|ssi|vcs_author:lang }}</b>
              {% ifequal lang ".en" %}on{% endifequal %}{% ifequal lang ".de"%}am{% endifequal %}{% ifequal lang ".es" %}el{% endifequal %}{% ifequal lang ".fr" %}le{% endifequal %} <b>{{ content|ssi|vcs_date:lang }}</b>
 {% ifequal repos "public" %}
 			   &nbsp;
