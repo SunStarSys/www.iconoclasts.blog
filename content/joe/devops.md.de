@@ -1,0 +1,71 @@
+---
+categories: IT
+dependencies: '*.md.de'
+keywords: Devops
+status: archiviert
+title: Die Bewegung DevOps
+---
+
+[Inhaltsverzeichnis]
+
+## Mehr als nur den Entwicklern Root-Zugriff zu geben!
+
+Oder auch nicht. {# lede #}Die große Idee hinter der "Bewegung" ist nicht nur, den Entwicklern mehr Seil zu geben{# lede #}
+
+Constraint-Management ist der Schlüssel zum Prozess.  Indem Sie zunächst alle Engpässe im System identifizieren, können Sie Ihre Bemühungen auf die Optimierung dieser Ressourcen konzentrieren, um eine maximale Leistung zu erzielen.  Optimierungen über diese Bereiche hinaus sind fast immer nicht die Mühe wert - der Workflow wird immer noch durch diese Ressourcen eingeschränkt.
+
+## Trunk-basierte Entwicklung
+
+Die Förderung inkrementeller Änderungen mit automatisierten Test-, Promotion- und Freigabeprozessen in einem geplanten Intervall ist eine großartige Möglichkeit, den Ball ins Rollen zu bringen, aber ein großer Teil der Qualitätskontrolle in SaaS/PaaS-Bereitstellungen umfasst die Einführung von *[trunkbasierte Entwicklung](https://trunkbaseddevelopment.com).
+
+Im Wesentlichen schafft das Multiversum der langfristigen "Git"-Zweige die psychologische Fiktion, dass die kombinierte Verschmelzung all dieser lokalen Entwicklungsarbeit (und Tests!) zu einem Ganzen führen wird, das mindestens so groß ist wie die Summe seiner Teile.  Erfahrung ist das bessere Urteil, was darauf hindeutet, dass umfangreiche neue Funktionen auf dem vorhandenen Produktions-/Freigabe-Quellcode *inkrementell*, *in-situ* entwickelt werden sollten.  Grundsätzlich entwickeln Sie Ihre Entwicklungsstrategien innerhalb der Grenzen der Physik der biologischen Welt, die sagt:
+
+```text
+        Surgery on a patient must result
+		in good outcomes (at all times) for
+        that patient, not just for siblings
+		or future generations.
+```
+
+### CI/CD-Pipelines
+
+Trunk Based Development ist die Basis für alle konsequent automatisierten Change Control Pipelines, die in den letzten zwei Jahrzehnten gewachsen sind.
+
+## Code ist Gesetz (Entwicklung + Infrastruktur + Konfiguration).
+
+Ein bisschen historische Perspektive zuerst; die Pointe folgt diesen vier Absätzen.  Der gemeinsame Thread hier ist, dass Apache seiner Zeit fast immer voraus war.
+
+Zurück in der Pre-[CFEngine](https://cfengine.com).
+
+Der Workflow war weniger als ideal: Neben dem Aufbau unserer eigenen lokal gepatchten FreeBSD-Ports-Bäume in bereitstellbare (binäre) Pakete von Grund auf mussten die Mitarbeiter schwer durchzusetzen sein *disziplin* wenn Bereitstellen von Änderungen in der Produktion, indem Sie zunächst die Versionskontrolle festschreiben, sich beim Zielserver anmelden, den Checkout aktualisieren und den Service potenziell neu starten - all diese sich wiederholenden Aufgaben, die von Hand ausgeführt werden. In der Tat hackten die meisten Systemadministratoren direkt auf dem Zielserver und wurden von der Kasse dieses Servers festgeschrieben, wodurch viele Zusammenführungskonflikte während der Neuaktualisierung des Baums riskiert wurden (entweder dann oder irgendwann auf der Straße durch zukünftige Aktionen, die von einem anderen Mitarbeiter ausgeführt werden). Ein eher weniger transparenter Workflow mit zweifelhafter Sicherheit bei der Passwortverwaltung für ein kollaboratives ops-Team.
+
+Heutzutage behalten sie alles in einem `git`-unterstützten Marionetten-Quellbaum und stellen/bereitstellen/konfigurieren direkt in der Cloud mithilfe generischer Upstream-Ubuntu-Pakete, was ein etwas moderner Ansatz für ihre IT-OPs-Arbeit ist, da geplante `git`-Pulls vom Marionettenmaster schließlich Updates bereitstellen, wenn die Marionettenagenten einchecken.  Doch CI/CD ist bis heute in Arbeit.
+
+Auf der anderen Seite war eine frühe, bahnbrechende CI-ähnliche Initiative bei The ASF (für tatsächliche Apache-Software-TLP-Projekte) [Apache Gump](https://gump.apache.org/).
+
+Hier ist *der Punkt in Kürze*: Alle Ihre Quellen (Entwicklung, Infrastruktur und Konfiguration) gehören zur Versionskontrolle (nicht unbedingt das gleiche Repository), das von allen Devops-Mitarbeitern überprüft werden kann, und sind Teil Ihrer vollständigen Testautomatisierungspipelines zwischen Patchrevisionen und Produktionsbereitstellungen.  Eine Übersicht über den Stand der Technik, bei der Änderungen auf Anfrage in den IaC/CaC-Einstellungen getestet/bereitgestellt/bereitgestellt werden, ist auf der Website meines Freundes und Visionärs Paul Hammant [hier](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
+
+## Virtualisierung vs. Containerisierung: ein [Haustiere vs. Vieh](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/).
+
+Containersysteme wie Docker sind anpassbare, erneut bereitstellbare Virtualisierungstechnologien, die in der Regel zur Unterstützung eines Anwendungscluster-Frameworks der MicroService-Architektur (MSA) wie Kubernetes verwendet werden. Sie greifen dort auf, wo Virtualisierungssysteme aufgehört haben, und handeln mit unbegrenzter Unterstützung von (vollständig) isolierten pro-VM-Betriebssystemen für Linux-Kernel-basierte VMs, die wesentlich programmierbarere Anpassungen und Integration mit dem übergeordneten Linux-Host haben, auf dem sie ausgeführt werden.  Darüber hinaus können sie wieder aufgebaut und in einen zentralen Distributionsservice (wie Artifactory) hochgeladen werden, um sie in großem Maßstab über mehrere Abhängigkeitsketten und ausführbare Raw-Serverbereitstellungen hinweg wiederzuverwenden.
+
+### Vertikale vs. horizontale Skalierung
+
+Rekonfigurierbare Container, die von einem zentralen Server heruntergeladen werden können, ermöglichen mit der grundlegenden Virtualisierungstechnologie nur schwer realisierbare Möglichkeiten. Sie sind nicht an die Hardwarelimits eines einzelnen Servers gebunden, um Ihre Services nach Bedarf zu skalieren.  Mit anderen Worten: Die horizontale Skalierung durch die Bereitstellung desselben Containers über mehrere Hostsammlungen hinweg, **auf Anforderung**, ist ein sofort erreichbares erstklassiges Feature von MSA-Frameworks auf Basis von Docker.  Ebenso wie die Bereitstellung von Dutzenden mehr Containern als CPU-Cores auf dem * gleichen* Host.
+
+## Messung, Eindämmung und Kontrolle Brandbekämpfung Bemühungen, sowohl real und praktiziert
+
+Eines der anderen wichtigen Dinge, die Sie erkennen sollten, ist die Unterscheidung zwischen *geplanter* und * ungeplanter* Arbeit in einer Ihrer Produktivitätsverfolgungsmetriken und der Zuweisung von Ressourcen zu diesen Aufgaben.  Ungeplante Arbeit bedeutet **Feuerbekämpfung**, und wenn zu viel Zeit (mehr als ~20%) für diese Aufgaben aufgewendet wird, wird die geplante Arbeit, die der eigentliche Geschäftsbedarf für das Unternehmen ist, zurückgebucht.
+
+Die Engpässe im System können nur selten ungeplante Arbeiten bewältigen, daher ist es wichtig, über genügend zusätzliche Ressourcen zu verfügen, um die erhöhte Belastung und den daraus resultierenden Rückstand zu bewältigen.
+
+Eine der wichtigsten Rückwurflektionen von COVID-19 Anfang 2020, als Krankenhauskapazität in Bezug auf die IT, ist, dass es so etwas wie "zu schlank" gibt, zumindest wenn es um das Personal von Devops geht (Hardware ist eine andere Geschichte).  Die Notfallplanung für einen regnerischen Tag, entweder mit "redundantem" Personal oder Cross-Training-Initiativen, kombiniert mit regelmäßigen vorbereitenden Übungen, hält den Arzt nicht nur fern, sondern ist tatsächlich **missionskritisch**.
+
+## Anreise mit dem Programm
+
+Auf Managementebene ist eine globale Change Management-Perspektive zwischen Entwicklungs- und Operations-Änderungen von entscheidender Bedeutung. Beide Teams müssen sich der Veränderungen des jeweils anderen bewusst sein. Idealerweise mit Planungsdetails, die auf dem Weg zur Verfügung gestellt werden. **Große Dinge können passieren**, wenn die Teams eine gesunde Mischung aus Entwicklungs- und Betriebsmitarbeitern in einer datengesteuerten, transparenten Kultur der Zusammenarbeit sind.
+
+Die Philosophie der Einbeziehung vielfältiger Stakeholder in die Erstellung und **Evolution** eines konkreten Arbeitsprodukts hat Auswirkungen weit über die reine *dev*- und *ops*-Teams hinaus, die Kontrolle und Verantwortung für einen Server-Engineering-Aufwand teilen. Diese Lektion wiederholt sich in der modernen Unternehmenswelt, da neue Bereiche für kreativen menschlichen Ausdruck im Geschäftsbereich entstehen und alte Geschäftsweisen neu erfinden.
+
+
+<!-- $Date$ $Author$ $Revision$ -->
