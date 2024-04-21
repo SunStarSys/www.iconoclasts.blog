@@ -26,11 +26,11 @@ Ich habe die Designziele im Laufe der Jahre mehrmals erklärt, auch 2012 auf [de
 
 ## Sturmwolken sammeln
 
-Während diese Vision sehr erfolgreich war, mit Sprachbindungen für mehrere Sprachen wie [`Perl`] verfügbar(https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache), usw., seit etwa 2010 hat es sich für die [bestehende Benutzergemeinschaft] als tragisch erwiesen.(https://webtechsurvey.com/technology/smod_apreq2).
+Während diese Vision sehr erfolgreich war, mit Sprachbindungen für mehrere Sprachen wie [`Perl`] verfügbar(https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache), usw., seit etwa 2010 hat es sich für die [bestehende Benutzergemeinschaft](https://webtechsurvey.com/technology/mod_apreq2) als tragisch erwiesen.
 
-Was ist passiert? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci), ein damaliger Perl/FreeBSD-Kollege von mir, begann zu rühren, dass wir das Projekt fördern, das aus dem HTTPd-Server selbst heraus freigegeben werden soll. Was {{commentAA.headers.title}}Philip wusste damals nicht sehr gut, wie sehr [peevish, vapid und territorial](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) Das Team wurde{# lede #}, was bedeutet hätte, direkt mit ihnen an [benutzerorientierten Entscheidungen] zusammenarbeiten zu müssen.(https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html).
+Was ist passiert? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci), ein damaliger Perl/FreeBSD-Kollege von mir, begann zu rühren, dass wir das Projekt fördern, das aus dem HTTPd-Server selbst heraus freigegeben werden soll. Was {{commentAA.headers.title}}Philip wusste damals nicht sehr gut, wie sehr [peevish, vapid und territorial](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) Das Team wurde{# lede #}, was bedeutet hätte, direkt mit ihnen an [benutzerorientierten Entscheidungen](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) zusammenarbeiten zu müssen.
 
-Im Jahr 2012 bekam Philip, was er wollte, und ich hörte auf zu widerstehen, also gab er(https://svn.apache.org/viewvc?view=revision&revision=1201372).
+Im Jahr 2012 bekam Philip, was er wollte, und ich hörte auf zu widerstehen, also [gab er](https://svn.apache.org/viewvc?view=revision&revision=1201372).
 
 ## Fallout
 
@@ -40,11 +40,11 @@ Im Jahr 2020 oder so nutzte Google's Security Team eine Alpha-Version von httpd 
 
 Anstatt die Höflichkeit zu haben, Philip zu erreichen, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann).
 
-Aber der Coup de Grace war die Veröffentlichung von [2.17] 2022.(https://www.google.com/search?q=libapreq2-2.17), wobei der Rookie-Entwickler einen tödlichen Fehler in die Codebasis eingeführt hat(http://svn.apache.org/viewvc?view=revision&revision=1895107), brechen [ein neunzehnjähriger Regressionstest](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
+Aber der Coup de Grace war die Veröffentlichung von [2.17 2022](https://www.google.com/search?q=libapreq2-2.17), wobei der Rookie-Entwickler einen tödlichen Fehler in die [Codebasis eingeführt hat](http://svn.apache.org/viewvc?view=revision&revision=1895107), brechen [ein neunzehnjähriger Regressionstest](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
 ## Postmortem
 
-Wenn Sie sich fragen, wie sich etwas mit einem gebrochenen Regressionstest auf [CPAN] entwickelt(https://cpan-digger.perlmaven.com/dist/libapreq2)Sie werden sehen, wie [RELENG](https://httpd.apache.org/dev/release.html).
+Wenn Sie sich fragen, wie sich etwas mit einem gebrochenen Regressionstest auf [CPAN entwickelt](https://cpan-digger.perlmaven.com/dist/libapreq2)Sie werden sehen, wie [RELENG](https://httpd.apache.org/dev/release.html).
 
 Lange Geschichte kurz, [sie kommentierten den Test](http://svn.apache.org/viewvc?view=revision&revision=1903489) und versendeten es trotzdem und nannten es ein Sicherheitsrelease, für das [jedes vorherige Release eine Sicherheitslücke behoben hatte](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
