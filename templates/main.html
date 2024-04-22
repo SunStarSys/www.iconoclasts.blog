@@ -182,11 +182,11 @@
                            {credentials: 'same-origin'});
           // try {
               const json = await response.json();
-              for (var idx = 0; idx < json.log.length; ++idx) {
-                  const e = json.log[idx];
+              for (const e in json.log) {
+                  console.log(e);
                   var msg = e[2] + "\n";
-				  for (const [key, val] in Object.entries(e[1])) {
-					  msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
+				  for (const key in Object.keys(e[1])) {
+					  msg += e[1][key].action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
 				  var n = new Notification(msg,
      			    {
