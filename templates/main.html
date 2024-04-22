@@ -163,6 +163,40 @@
     }
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
+    }
+
+    if (document.location.href === "https://{{website}}/" && Notification.permission !== "denied")) {
+        var permission = Notification.permission;
+		if (permission !== "granted") {
+            Notification.requestPermission().then((result) => {
+              permission = result;
+            });
+        }
+        if (permission === "granted") {
+		   var revision;
+           var m = document.cookie.match(/\blast=(\d+)/);
+           if (m)
+			revision = m[1];
+           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
+                           {credentials: 'same-origin'});
+           try {
+              const json = await response.json();
+              for (const e in json.log) {
+	              var msg = "[" + e[3] +"] " + e[2] + "\n";
+				  for (const key in Object.keys(e[1])) {
+					  msg += e[1][key].action + " " + key.replace(m!^.*/!, "") + \n";
+				  }
+				  var n = new Notification(msg,
+     			    {
+					  tag: e[0],
+					  icon: "/images/favicon",
+					  image: "/images/iconoclast",
+				    }
+			  	  );
+			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") });
+			  }
+		   }
+		}
 	}
   </script>
   {% block javascript %}{% endblock %}
