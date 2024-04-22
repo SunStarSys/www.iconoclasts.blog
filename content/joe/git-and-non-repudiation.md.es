@@ -25,6 +25,4 @@ FrÃ1⁄4he y las estrategias de mitigación apropiadas tratan de eliminar la co
 
 Sin estas cosas, al menos debemos prescribir la firma PGP del compromiso de cada contribuyente, lo que es oneroso para muchos proyectos.1⁄4r  Las adiciones de datos push proporcionan un proceso transparente que no afecta al flujo de trabajo de un proyecto, excepto para garantizar que el repositorio de Git de ASF sea el repositorio maestro real.
 
-*$Fecha: 2023-01-19 17:58:40 -0500 (Jue, 19 de enero de 2023) $*
-
 <!-- $Date$ $Author$ $Revision$ -->
