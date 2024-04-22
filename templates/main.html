@@ -166,12 +166,13 @@
     }
 
     if (document.location.href === "https://{{website}}/" && Notification.permission !== "denied") {
-        var permission = Notification.permission;
+		var permission = Notification.permission;
 		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {
               permission = result;
             });
         }
+		alert(permission);
         if (permission === "granted") {
 		   var revision;
            var m = document.cookie.match(/\blast=(\d+)/);
