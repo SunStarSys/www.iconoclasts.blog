@@ -180,28 +180,26 @@
 			 revision = m[1];
            const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
                            {credentials: 'same-origin'});
-          // try {
+           try {
               const json = await response.json();
               for (const e of json.log) {
                   var msg = e[2] + "\n";
-                  const data = e[1];
-				  console.log(JSON.stringify(data));
-                  for (const [key, val] of Object.entries(data)) {
+                  for (const [key, val] of Object.entries(e[1])) {
                       msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
 				  var n = new Notification(msg,
      			    {
 					  tag: e[0],
-					  icon: "h/images/favicon",
+					  icon: "/images/favicon",
 					  image: "/images/iconoclast",
 				    }
 			  	  );
 			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
 			  }
-//		   }
-//           catch (e) {
-//              alert(e);
-//		   }
+		   }
+           catch (e) {
+              alert(e);
+		   }
         }
 	}
   </script>
