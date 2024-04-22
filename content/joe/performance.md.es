@@ -6,7 +6,7 @@ status: archivado
 title: Rendimiento de aplicaciones
 ---
 
-> {# lede #}Muchos desarrolladores caen en la trampa de pensar que la optimización del rendimiento consiste en hacer que cada línea de código sea lo más eficiente posible.{# lede #}
+{# lede #}Muchos desarrolladores caen en la trampa de pensar que la optimización del rendimiento consiste en hacer que cada línea de código sea lo más eficiente posible.{# lede #}
 
 En realidad es todo lo contrario. Comienza con las restricciones arquitectónicas de la aplicación y las utiliza para aumentar detalle hasta la parte "más lenta" observada del programa. La **implantación** de esa parte guía todas las demás opciones de rendimiento que necesita realizar. Cualquier cosa que no sea tan lenta como esa parte, no necesita ser optimizada aún más. En su lugar, concéntrese en la expresión humana y la simplicidad y claridad de la implementación, para los lectores no expertos sobre el "SSDLC" del software, para el resto del código de su programa.
 
@@ -110,4 +110,4 @@ El verdadero **rendimiento de aplicación** proviene del equilibrio, la flexibil
 
 ¡Que florezcan mil flores, por tontas que parezcan!
 
-*$Fecha: 2023-11-25 15:01:01 -0500 (Sat, 25 Nov 2023) $*
+<!-- $Date$ $Author$ $Revision$ -->
