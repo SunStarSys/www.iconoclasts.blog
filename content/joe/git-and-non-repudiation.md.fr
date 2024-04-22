@@ -16,7 +16,7 @@ Avec git, ou le contrôle de version distribué en général, {# lede #}Il y a u
 
 Avec [The Apache Software Foundation](https://www.apache.org/).
 
-Pourquoi est-ce important ?  Eh bien, pour commencer, laissez-moi aborder une idée fausse commune sur la nécessité d'accords de licence de contributeur (ICLA) pour les commissaires Apache.  Beaucoup de gens ne semblent pas comprendre qu'en ce qui concerne les œuvres individuelles d'un auteur, il n'y a pas de différence entre la langue applicable dans le [ICLA](http://www.apache.org/licenses/icla.txt) et le [Apache License 2.0](http://www.apache.org/licenses/license-2.0).
+Pourquoi est-ce important?  Eh bien, pour commencer, laissez-moi aborder une idée fausse commune sur la nécessité d'accords de licence de contributeur (ICLA) pour les commissaires Apache.  Beaucoup de gens ne semblent pas comprendre qu'en ce qui concerne les œuvres individuelles d'un auteur, il n'y a pas de différence entre la langue applicable dans le [ICLA](http://www.apache.org/licenses/icla.txt) et le [Apache License 2.0](http://www.apache.org/licenses/license-2.0).
 
 Ce que les enregistrements push fournissent alors est un moyen de retrouver, à chaque ligne de code d'une version, le validateur individuel responsable de la propagation de ce code vers le référentiel git de l'ASF. Ceci est d'une importance cruciale pour déterminer la provenance d'une contribution tierce avec git, car il est malheureusement possible pour un tel contributeur de "s'éloigner" de sa contribution à un projet git en raison de la nature distribuée des journaux de validation DVCS.  La partie responsable devient alors, selon l'ICLA, l'auteur qui a poussé le code.
 
