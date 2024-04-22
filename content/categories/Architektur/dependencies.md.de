@@ -1,0 +1,10 @@
+---
+categories: Orion, Architektur
+dependencies: '*.md.de'
+keywords: Architektur,inkrementell,Website,Generation,Gebäude,Abhängigkeiten,Topologie,Wiki,Grafik,Smart
+status: überprüft=22163
+title: Worum geht es in <em>Smart Content Dependency Management&trade;</em>?
+
+---
+
+{% ssi `/joe/dependencies.md.de` %}
