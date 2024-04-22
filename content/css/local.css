@@ -143,8 +143,8 @@ div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
 .right {
     float:        right;
     text-align:   right;
-    padding: 0 0 0 auto;
-    margin:  0 0 20 20;
+    padding: 0 0 20 20;
+    margin:  0 0 0 auto;
 }
 
 header div, div.brand-light, header div form input
