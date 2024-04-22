@@ -124,6 +124,7 @@
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script src="/editor.md/lib/copy-tex.js"></script>
   <script blocking="render" type="text/javascript">
+    alert(location.href + " : " + Notification.permission);
     if (typeof(editormd) === "undefined") {
         //mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
         mermaid.initialize({theme: "light", startOnLoad: true, securityLevel: "loose"});
@@ -164,8 +165,7 @@
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
-    alert(location.href);
-	alert(Notification.permission);
+
     if (location.href === "https://{{website}}/" && Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {
@@ -173,7 +173,6 @@
               permission = result;
             });
         }
-		alert(permission);
         if (permission === "granted") {
 		   var revision;
            var m = document.cookie.match(/\blast=(\d+)/);
