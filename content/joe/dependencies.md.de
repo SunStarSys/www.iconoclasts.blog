@@ -42,7 +42,7 @@ Woher stammen die Einträge in `%path::dependencies`? Wenn sie nicht aus einem A
 
 ### Zyklische Abhängigkeitsdiagramme sind die Norm
 
-Unsere Website besteht derzeit aus `240 Quelldateien` in `content/`.  Hier ist eine "85 Scheitelpunkte x 465 Kanten", scrollbare, zweidimensionale gerichtete Diagrammdarstellung eines aktuellen Snapshots der Seitenabhängigkeiten in englischer Sprache auf **unserer Website** ([mit dem `Punkt` von GraphViz])(https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl).
+Unsere Website besteht derzeit aus `240 Quelldateien` in `content/`.  Hier ist eine "85 Scheitelpunkte x 465 Kanten", scrollbare, zweidimensionale gerichtete Diagrammdarstellung eines aktuellen Snapshots der Seitenabhängigkeiten in englischer Sprache auf **unserer Website** [mit dem `Punkt` von GraphViz](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl).
 
 <div id="deps">
 
@@ -60,7 +60,7 @@ Natürlich unser [Orion Enterprise Wiki](/orion/).
 
 **Nein!** Tatsächlich ist die *Link-Topologie* Ihrer Website eine völlig andere Angelegenheit als das *Abhängigkeitsdiagramm des Quellbaums*.  Eine Suchmaschine wird natürlich die *Link-Topologie* entfernen, hat aber keinen Einblick in das *Abhängigkeitsdiagramm*.
 
-Hier ist ein `240+ Scheitelpunkte x 3859 Kanten`, aktuelles Bird-Eye-Diagramm des englischen *Link-Topologie*-Diagramms für **unsere Website** ([mit GraphViz`s `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl).
+Hier ist ein `240+ Scheitelpunkte x 3859 Kanten`, aktuelles Bird-Eye-Diagramm des englischen *Link-Topologie*-Diagramms für **unsere Website** [mit GraphViz `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl).
 
 <div id="links">
 
@@ -128,7 +128,7 @@ Auf unserer Website archivieren wir aggressiv veraltete Essays, um die Bauzeiten
 
 ##### Lede
 
-HTML-Kommentare, die in die Markdown-Prosa-Formulargrenzen des Lede-Inhalts eingebettet sind. Wir verwenden **&#123;Anzahl&#125;
+HTML-Kommentare, die in die Markdown-Prosa-Formulargrenzen des Lede-Inhalts eingebettet sind. Wir verwenden **&#123;Anzahl&#125;**.
 
 Die Verarbeitung von Ldes erfolgt mit dem 'lede'-Vorlagenfilter. Es ist nützlich, dies mit dem "ssi"-Filter zu kombinieren, um eine Kategoriedatei mit mehr als einer Kategorieseite zu indizieren.
 
