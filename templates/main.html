@@ -180,10 +180,10 @@
 			 revision = m[1];
            const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
                            {credentials: 'same-origin'});
-           try {
+          // try {
               const json = await response.json();
               for (const e in json.log) {
-	              var msg = "[" + e[3] +"] " + e[2] + "\n";
+	              var msg = e[2] + "\n";
 				  for (const key in Object.keys(e[1])) {
 					  msg += e[1][key].action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
@@ -196,10 +196,10 @@
 			  	  );
 			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") });
 			  }
-		   }
-           catch (e) {
-              alert(e);
-		   }
+//		   }
+//           catch (e) {
+//              alert(e);
+//		   }
         }
 	}
   </script>
