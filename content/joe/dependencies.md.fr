@@ -11,7 +11,7 @@ title: "Qu'est-ce que <em>Smart Content Dependency Management&trade;</em> ?"
 
 ## Résumé
 
-*Smart Content Dependency ManagementTM* concerne le cercle d'idées liées au soutien et à la facilitation des *créations incrémentielles*, tout en restant fidèle au **principe de normalisation du contenu** - que [*permalinks*](https://en.wikipedia.org/wiki/Permalink).
+*Smart Content Dependency Management&trade;* concerne le cercle d'idées liées au soutien et à la facilitation des *créations incrémentielles*, tout en restant fidèle au **principe de normalisation du contenu** - que [*permalinks*](https://en.wikipedia.org/wiki/Permalink).
 
 Cet article présente le site Web <https://sunstarsys.com/> en tant qu'étude de cas pour une démonstration des meilleures pratiques et une analyse des topologies de graphiques associées.
 
@@ -31,15 +31,15 @@ Ce dernier concept est ce que nous utiliserons lors de la discussion de la topol
 
 Avoir {# lede #}une compréhension claire du *graphique de dépendance* de votre site Web vous permettra de maximiser les performances de notre technologie de construction à grande échelle{# lede #}
 
-Il est important de noter que les relations de dépendance entre les fichiers source peuvent et doivent être entièrement capturées par le hachage `%path : :dependencies` pendant la charge de démarrage du système de construction de `lib/path.pm` à partir de votre arborescence source, ce qui est la façon dont les vues intégrées contenues dans notre package `SunStarSys : :View` Perl sont censées fonctionner. Les fonctions utilitaires `walk_content_tree`, `archived` et `seed_file_deps` importables à partir de `SunStarSys : :Util` sont des aides utiles à la construction du hachage `%path : :dependencies`, avec une prise en charge intégrée pour gérer un cache de dépendances afin d'accélérer les builds incrémentiels à grande échelle.
+Il est important de noter que les relations de dépendance entre les fichiers source peuvent et doivent être entièrement capturées par le hachage `%path:::dependencies` pendant la charge de démarrage du système de construction de `lib/path.pm` à partir de votre arborescence source, ce qui est la façon dont les vues intégrées contenues dans notre package `SunStarSys::View` Perl sont censées fonctionner. Les fonctions utilitaires `walk_content_tree`, `archived` et `seed_file_deps` importables à partir de `SunStarSys::Util` sont des aides utiles à la construction du hachage `%path::dependencies`, avec une prise en charge intégrée pour gérer un cache de dépendances afin d'accélérer les builds incrémentiels à grande échelle.
 
 Voici cette partie de notre live [`lib/path.pm`]({{snippetA.pretty_uri}}).
 
 [snippet:lang=perl:repo=SunStarSys/www:branch=trunk:path=lib/path.pm:token=#snippet]
 
-S'il vous plaît faire ce code pour des idées sur la façon dont vous voulez *votre site web * pour fonctionner. Oui, il y a une certaine complexité raisonnable (impliquant à la fois les expressions régulières de Perl et les interfaces UNIX C-shell `glob` de Perl, d'une manière très précise) autour de la façon dont `%path : :dependencies` est construit dans ce fichier, Mais au lieu de simplement voir cela comme un travail d'optimisation, regardez plutôt comme fournissant les ingrédients de base nécessaires pour interpréter les principaux aspects de la topologie *link* d'une manière automatisée et générée dynamiquement.
+S'il vous plaît faire ce code pour des idées sur la façon dont vous voulez *votre site web * pour fonctionner. Oui, il y a une certaine complexité raisonnable (impliquant à la fois les expressions régulières de Perl et les interfaces UNIX C-shell `glob` de Perl, d'une manière très précise) autour de la façon dont `%path::dependencies` est construit dans ce fichier, Mais au lieu de simplement voir cela comme un travail d'optimisation, regardez plutôt comme fournissant les ingrédients de base nécessaires pour interpréter les principaux aspects de la topologie *link* d'une manière automatisée et générée dynamiquement.
 
-D'où proviennent les entrées dans `%path : :dependencies` ? S'ils ne sont pas nés d'un appel de `walk_content_tree { seed_file_deps ... }`, (qui se divise essentiellement dans les en-têtes et le contenu de vos fichiers source de balisage), ils sont simplement codés en dur dans `lib/path.pm` au moment du chargement.
+D'où proviennent les entrées dans `%path::dependencies` ? S'ils ne sont pas nés d'un appel de `walk_content_tree { seed_file_deps ... }`, (qui se divise essentiellement dans les en-têtes et le contenu de vos fichiers source de balisage), ils sont simplement codés en dur dans `lib/path.pm` au moment du chargement.
 
 ### Les graphiques de dépendance cyclique sont la norme
 
@@ -53,7 +53,7 @@ Notre site se compose actuellement de `240 fichiers source` dans `content/`.  Vo
 
 Assez complexe, même pour un petit site comme celui-ci ! Nombreux croisements d'arêtes lors de la prise de `$$n=2$$` (évitable dans la dimension `$$n=3$$
 
-Notez également l'interdépendance interne, essentiellement isolée, des éléments figurant dans `/categories/*/*' et `/archives/2022/11/*'. Les seules dépendances externes impliquent un contenu non archivé dans `/essays/*`. C'est par conception - les essais archivés ne devraient changer *adiabatiquement*, peut-être que pour ajuster leurs en-têtes de catégorie. Aucune de ces modifications n'affecte matériellement le contenu préexistant, nous ne le suivons donc pas dans `%path : :dependencies`.
+Notez également l'interdépendance interne, essentiellement isolée, des éléments figurant dans `/categories/*/*' et `/archives/2022/11/*'. Les seules dépendances externes impliquent un contenu non archivé dans `/essays/*`. C'est par conception - les essais archivés ne devraient changer *adiabatiquement*, peut-être que pour ajuster leurs en-têtes de catégorie. Aucune de ces modifications n'affecte matériellement le contenu préexistant, nous ne le suivons donc pas dans `%path::dependencies`.
 
 Bien sûr, notre [Orion Enterprise Wiki](/orion/).
 
@@ -61,7 +61,7 @@ Bien sûr, notre [Orion Enterprise Wiki](/orion/).
 
 **Non !** En fait, la *topologie de lien* de votre site Web est une question entièrement distincte du *graphique de dépendance* de l'arborescence source.  Un moteur de recherche sortira naturellement de la topologie *link*, mais n'aura aucun aperçu du *graphique de dépendance*.
 
-Voici un `240+ sommets x 3859 arêtes`, graphique actuel des yeux d'oiseaux du graphique anglais *link topology* pour **notre site** ([en utilisant le `twopi`] de GraphViz)(https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl).
+Voici un `240+ sommets x 3859 arêtes`, graphique actuel des yeux d'oiseaux du graphique anglais *link topology* pour **notre site** [en utilisant le `twopi` de GraphViz](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl).
 
 <div id="links">
 
