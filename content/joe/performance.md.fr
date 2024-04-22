@@ -1,0 +1,113 @@
+---
+categories: Performances, outils
+dependencies: '*.md.fr'
+keywords: ~
+status: archivé
+title: Performances des applications
+---
+
+> {# lede #}De nombreux développeurs tombent dans le piège de penser que l'optimisation des performances consiste à rendre chaque ligne de code aussi efficace que possible.{# lede #}
+
+C'est en fait le contraire. Commencez par les contraintes architecturales de l'application et utilisez-les pour effectuer une analyse descendante jusqu'à la partie la plus lente observée du programme. La **implémentation** de cette partie guide tous les autres choix de performances que vous devez effectuer. Tout ce qui n'est pas aussi lent que cette partie n'a pas besoin d'être optimisé davantage. Au lieu de cela, concentrez-vous sur l'expression humaine et la simplicité et la clarté de la mise en œuvre, pour les lecteurs non experts sur le "SSDLC" du logiciel, pour le reste du code de votre programme.
+
+Vous pouvez itérer sur ce playbook, mais je n'ai jamais eu besoin d'aller au-delà de 3 itérations dans ma carrière professionnelle.
+
+Alors allez-y et utilisez un langage de programmation élégant comme `Python3` ou `Javascript` /`Typescript`, et laissez les experts en matière de sujet (**SME**) là-bas dans le monde open source vous donner de puissantes liaisons natives `C` /`C++` pour vos besoins spécifiques. Rien de ce que vous faites pour la logique métier n'a besoin de plus de vitesse que **n'importe quel** langage de programmation dynamique peut vous donner **prêt à l'emploi**.
+
+Même un script bash sans dépendance est une solution pratique pour de nombreuses tâches de base. Voici celui que j'ai écrit pour la société de réalité augmentée [Magic Leap](https://magicleap.com) Il y a des années, pour remplacer une maladresse [OpenGrok](https://oracle.github.io/opengrok/) service avec quelque chose qui tire parti de la parallélisation multiprocesseur avec `xargs -P` et prend en charge [PCRE](https://www.pcre.org/).
+
+https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
+
+Ce script est un ordre de grandeur plus rapide que les suspects habituels sur GitHub, qui ont tous été écrits dans des langages de programmation compilés statiques. Mais en identifiant le goulet d'étranglement exact dans 'bash' (boucle avec des appels 'fork+exec' à volume élevé au milieu), et en utilisant 'xargs' à la place, vous obtenez un script qui ressemble beaucoup à celui-ci, avec l'algorithme de base implémenté dans 10 lignes de 'shell'.
+
+Il utilise également la communauté open source des **PME** de manière intelligente, au lieu de la façon dont les autres implémentations "grappes récursives filtrées" sur GitHub l'ont fait. Au lieu d'adopter et de maintenir en interne ma propre implémentation (threadée) de "find", "xargs" et "grep", je réutilise simplement les exécutables préinstallés que d'autres **PME** ont perfectionnés au cours des décennies **telles quelles**. Je n'ai pas besoin de maîtriser leurs implémentations, il suffit de réutiliser leurs 'CLI'. Je ne veux même pas les maîtriser, c'est **leur** bailliage. Les deltas de performances n'ont d'importance que lorsqu'ils durent plusieurs secondes ou plus, compte tenu des cas d'utilisation attendus (humains) de l'application.
+
+Pour voir l'approche inverse, où tout est fait en interne, entièrement microoptimisé, et ne peut toujours pas battre ce script avec les options de recherche par défaut, et aucun système de mise en cache disponible, voici un bel exemple <https://github.com/BurntSushi/ripgrep>
+
+Juste pour extraire la première #performance #benchmark de cette page, et la mettre à l'échelle à partir d'un échantillon de taille d'arborescence de jouet (sources de noyau linux), vers une arborescence hétérogène qui est `23GB` : (meilleure exécution après 3 itérations ; `LANG=en_US.UTF-8`).
+
+```shell
+    % du -sh .
+    23G .
+    % time rg -uuniw '[A-Z]+_SUSPEND' | wc -l
+    6259
+    rg -uuniw '[A-Z]+_SUSPEND' 9.46s user 16.08s system 261% cpu 9.759 total
+    wc -l 0.00s user 0.07s system 0% cpu 9.759 total
+    % time pffxg.sh -- -wnE '[A-Z]+_SUSPEND' | wc -l
+    5855
+    pffxg.sh -- -wnE '[A-Z]+_SUSPEND' 16.66s user 2.68s system 429% cpu 4.501 total
+    wc -l 0.00s user 0.00s system 0% cpu 4.501 total
+```
+
+Il est assez stupide de microoptimiser quelque chose qui est profondément lié à l'état du cache du système de fichiers du noyau pour votre recherche. La variation des temps de performance est dominée par la vitesse d'accès au corpus de contenu des fichiers, et c'est un ordre de grandeur plus pertinent que tout autre facteur pour les résultats finaux. Être sur un `NVMe` aide, mais rien dans cet espace ne vaut `RAM` lui-même.
+
+C'est pourquoi le fait d'avoir un cache compressé en mémoire pour un grand nombre de fichiers stabilise les délais de performance. Il est surprenant que personne d'autre n'ait pensé que cela était assez important pour soutenir.
+
+Retirez le deuxième #performance #benchmark de cette page et mettez-le à l'échelle comme précédemment (même arborescence `23GB') :
+
+```shell
+	% time rg -tc -uuuiwn '[A-Z]+_SUSPEND' | wc -l
+    5629
+    rg -tc -uuuiwn '[A-Z]+_SUSPEND' 3.51s user 1.71s system 1141% cpu 0.457 total
+    wc -l 0.00s user 0.05s system 11% cpu 0.457 total
+    % time LANG=C pffxg.sh --cache /tmp/pffxg-$USER --workers 32 --cc -- -wE '[A-Z]+_SUSPEND' | wc -l
+    5628
+    LANG=C pffxg.sh --cache /tmp/pffxg-$USER --workers 32 --cc -- -wE  3.14s user 0.88s system 1055% cpu 0.381 total
+    wc -l 0.00s user 0.00s system 0% cpu 0.381 total
+```
+
+Un `pffxg.sh` réglé est encore plus rapide, malgré tout le travail mis dans la microoptimisation de ripgrep pour cette recherche de fichier `C`.
+
+La façon dont j'ai utilisé ce script avec [AOSP](https://source.android.com).
+
+.25M LOC entre `ripgrep` et [ugrep](https://github.com/Genivia/ugrep).
+
+Parce qu'il s'agit d'un programme shell si petit, `pffxg.sh` peut vous donner des crochets puissants dans ses internes avec presque zéro effort. Même la commande `grep` elle-même est personnalisable : toute commande que vous devez exécuter sur un corpus de fichiers sélectionnés, qui peut accepter une liste de noms de fichiers ajoutés à la fin de ses arguments, est un jeu équitable. Voici un exercice "total line count in `MiLOC`" sur le repo git du noyau linux :
+
+```shell
+	% time find * -type f | xargs wc -l | awk '{ $2 == "total" {a+=$1} END {print a/1024**2}'
+    28.451
+    find * -type f 0.00s user 0.06s system 2% cpu 2.733 total
+    xargs wc -l 0.53s user 1.02s system 54% cpu 2.853 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.23s user 0.59s system 28% cpu 2.853 total
+
+    % time pffxg.sh --workers 8 --cmd wc --all -- -l | awk '{$2 == "total" {a+=$1} END {print a/1024**2}'
+    28.4506
+    pffxg.sh --workers 8 --cmd wc --all -- -l 0.92s user 0.66s system 826% cpu 0.192 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 11% cpu 0.192 total
+```
+
+Version de `ripgrep` :
+
+```shell
+	% time rg -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
+    28.4284
+    rg -c \$ 2.12s user 2.19s system 276% cpu 1.564 total
+    awk -F : '{a+=$2} END {print a/1024**2}' 0.58s user 0.45s system 66% cpu 1.564 total
+```
+
+Ici, il est limité à `C`-files (même arbre linux) :
+
+```shell
+	% time pffxg.sh --workers 8 --cc --cmd wc -- -l | awk '$2 == "total" {a+=$1} END {print a/1024**2}'
+    25.3935
+    pffxg.sh --workers 8 --cc --cmd wc -- -l 0.76s user 0.54s system 734% cpu 0.177 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 9% cpu 0.177 total
+```
+
+et la version `ripgrep` :
+
+```shell
+	% time rg -tc -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
+    25.3844
+    rg -tc -c \$ 3.49s user 1.54s system 441% cpu 1.140 total
+    awk -F : '{a+=$2} END {print a/1024**2}' 0.38s user 0.38s system 66% cpu 1.140 total
+```
+
+Les **performances applicatives** réelles proviennent de l'équilibre, de la flexibilité et des techniques de programmation fonctionnelles ; elles ne proviennent pas de la fixation sur des tactiques de microoptimisation impératives dans des langages de programmation compilés statiques qui sont difficiles à utiliser du point de vue de l'équilibre et de la flexibilité. Ces langages impérieux et surchargés sont d'excellentes cibles pour des domaines problématiques très spécifiques, mais ils sont terribles pour les performances des applications à l'échelle du système.
+
+`pffxg.sh` n'est pas un produit et il ne s'agit pas d'un argumentaire de vente. C'est un **exemple** pour illustrer mon propos d'une manière très dramatique. Si vous connaissez la longue histoire des solutions filtrées-récursives-grep sur GitHub, elles reposent toutes sur l'idée que le problème avec l'implémentation originale de "Perl" d'Andy Lester [ack](https://beyondgrep.com/).
+
+Que mille fleurs fleurissent, peu importe ce qu'elles paraissent idiotes !
+
+*$Date : 2023-11-25 15:01:01 -0500 (Sam., 25 nov. 2023) $*
