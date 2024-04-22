@@ -1,0 +1,180 @@
+---
+categories: Orion, Architektur
+dependencies: '*.md.de'
+keywords: Architektur,inkrementell,Website,Generation,Gebäude,Abhängigkeiten,Topologie,Wiki,Grafik,Smart
+status: überprüft=22163
+title: Worum geht es in <em>Smart Content Dependency Management&trade;</em>?
+---
+
+[Inhaltsverzeichnis]
+
+## Auszug
+
+*Smart Content Dependency Management&trade;* geht es um den Kreis von Ideen, die sich auf die Unterstützung und Erleichterung von *inkrementellen Builds* beziehen, während sie dem **Inhaltsnormalisierungsprinzip** folgen. &mdash; das [*permalinks*](https://en.wikipedia.org/wiki/Permalink).
+
+In diesem Artikel wird die Website <https://sunstarsys.com/> als Fallstudie für eine <a href="#commentAB" class="border border-warning text-muted reference-link" id="commentAB-link" title="{{commentAB.headers.title}}">Demonstration</a> der Best Practices und die Analyse der zugehörigen Diagrammtopologien vorgestellt.
+
+## Höhlen
+
+Dies ist nur wichtig, wenn Sie die Kosten für die Durchführung von vollständigen Website-Builds jedes Mal abwägen müssen, wenn Sie den Inhalt auf einer Webseite optimieren müssen. Wenn Ihre Website weniger als 1K Quelldateien enthält, **entspannen** und lesen Sie Folgendes mit Blick auf Ihre zukünftigen Anforderungen. Sie haben sich für unsere Plattform entschieden, die so konzipiert ist, dass sie mit Ihnen skaliert wird, nicht gegen Sie. Für die meisten Seiten handelt es sich bei diesem Material unten um *dünne Abhängigkeitsdiagramme für Inhalte* für Websites mit mehr als 1K-Seiten.
+
+Beispiel: Die Apache <https://www.OpenOffice.Org>-Website konnte ihre 40K+-Dateien mit der ursprünglichen Apache-Version dieses Build-Systems erstellen, mit vollständig integrierter Unterstützung für inkrementelle Builds &mdash; ohne konfigurierte Abhängigkeiten &mdash;
+
+Standardmäßig erstellt unser Build-System nur die Dateien, die Sie geändert haben, ohne Bedenken hinsichtlich der Abhängigkeiten innerhalb der Datei (es sei denn, Sie geben sie in `%path::dependencies` an). &mdash;
+
+## Weben der *Abhängigkeitsgrafik* Ihrer Website zusammen
+
+Mathematisch eine *Topologie*$$\tau$$` ist eine vollständige Spezifikation der *offen* Teilmengen eines Raumes `$$X$$`, deren Zweck darin besteht, die Näherungsbeziehungen zwischen *Punkten* ` anzugeben$$x$$` des Raumes `$$X$$`.  Wenn `$$X$$` ist ein Diagramm, eine *Topologie* `$$\tau$$` für `$$X$$Gibt die Kanten an, die Scheitelpunkte des Diagramms miteinander verbinden (hier werden Scheitelpunkte als *Punkte* von ` angezeigt).$$X$$`, und die Verbindungsränder bestimmen die Nachbarschaft dieser Punkte als *Basis offene Sätze* für die Topologie).  Eine *gerichtete Diagrammtopologie* ist im Wesentlichen dasselbe, enthält jedoch einen Hinweis auf eine topologische Einbettung von$$(X,\tau)$$" in einen größeren topologischen Raum"$$(Y,\sigma)$$
+
+Das letztere Konzept wird verwendet, wenn wir die *Abhängigkeitsgrafik*-Topologie diskutieren.$$\tau$$` mit dem Leerzeichen verknüpft `$$X$$` von Quelldateien unter dem Unterverzeichnis `content/` Ihrer Website (hier `$$(Y,\sigma)$$` ist `$$\mathbb{R}^n$$mit seiner metrischen Topologie für `$$n \in \{2,3\}$$` und die Ränder von `$$X$$` sind nicht schneidende, gerichtete Jordan-Kurven, die eine Datei verbinden `$$x \in X$$zu seiner Gruppe von Dateien, auf denen$$x$$` hängt ab: `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$
+
+Haben {# lede #}Ein klares Verständnis des *Abhängigkeitsdiagramms* Ihrer Website wird sicherstellen, dass Sie die Leistung unserer Build-Technologie in großem Maßstab maximieren können{# lede #}
+
+Es ist wichtig zu beachten, dass die Abhängigkeitsbeziehungen zwischen Quelldateien während des Starts des Build-Systems von `lib/path.pm` aus Ihrem Quellbaum vollständig vom Hash `%path::dependencies` erfasst werden können und sollten. Auf diese Weise sind die integrierten Ansichten, die in unserem Package `SunStarSys::View` Perl enthalten sind, funktionsfähig. Die Utilityfunktionen `walk_content_tree`, `archived` und `seed_file_deps`, die aus `SunStarSys::Util` importiert werden können, sind nützliche Hilfen beim Erstellen des Hashs `%path::dependencies` mit integrierter Unterstützung für die Verwaltung eines Abhängigkeitscaches, um inkrementelle Builds in großem Umfang zu beschleunigen.
+
+Hier ist der Teil unseres Live [`lib/path.pm`]({{snippetA.pretty_uri}}).
+
+[snippet:lang=perl:repo=SunStarSys/www:branch=trunk:path=lib/path.pm:token=#snippet]
+
+Bitte mullen Sie diesen Code für Ideen, wie Sie *Ihre Website * arbeiten möchten. Ja, es gibt eine gewisse Komplexität (die sowohl die regulären Ausdrücke von Perl als auch die UNIX C-shell `glob`-Schnittstellen von Perl auf sehr präzise Weise umfasst) um die Art und Weise, wie `%path::dependencies` in dieser Datei erstellt wird, Anstatt dies nur als Optimierungsarbeit zu betrachten, betrachten Sie es stattdessen als die Bereitstellung der grundlegenden Zutaten, die erforderlich sind, um wichtige Aspekte der *Link-Topologie* automatisiert und dynamisch zu erstellen.
+
+Woher stammen die Einträge in `%path::dependencies`? Wenn sie nicht aus einem Aufruf von `walk_content_tree { seed_file_deps ... }` geboren werden (was im Wesentlichen in die Header und den Inhalt Ihrer Markdown-Quelldateien eintaucht), werden sie zur Lastzeit nur fest in `lib/path.pm` codiert.
+
+### Zyklische Abhängigkeitsdiagramme sind die Norm
+
+Unsere Website besteht derzeit aus `240 Quelldateien` in `content/`.  Hier ist eine "85 Scheitelpunkte x 465 Kanten", scrollbare, zweidimensionale gerichtete Diagrammdarstellung eines aktuellen Snapshots der Seitenabhängigkeiten in englischer Sprache auf **unserer Website** ([mit dem `Punkt` von GraphViz])(https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl).
+
+<div id="deps">
+
+  ![Englische Sprachabhängigkeiten](../images/deps).
+
+</div>
+
+Ganz komplex, auch für eine kleine Website wie diese! Viele Kantenschnittstellen beim Nehmen von `$$n=2$$` (vermeidbar in Dimension `$$n=3$$
+
+Beachten Sie auch die interne, im Wesentlichen isolierte Vernetzung der Elemente in `/categories/*/*` und `/archives/2022/11/*`. Die einzigen externen Abhängigkeiten umfassen nicht archivierten Inhalt in `/essays/*`. Dies ist von Design &mdash;
+
+Natürlich unser [Orion Enterprise Wiki](/orion/).
+
+### Geht es nicht nur um Hyperlinks?
+
+**Nein!** Tatsächlich ist die *Link-Topologie* Ihrer Website eine völlig andere Angelegenheit als das *Abhängigkeitsdiagramm des Quellbaums*.  Eine Suchmaschine wird natürlich die *Link-Topologie* entfernen, hat aber keinen Einblick in das *Abhängigkeitsdiagramm*.
+
+Hier ist ein `240+ Scheitelpunkte x 3859 Kanten`, aktuelles Bird-Eye-Diagramm des englischen *Link-Topologie*-Diagramms für **unsere Website** ([mit GraphViz`s `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl).
+
+<div id="links">
+
+  ![Englische Sprachlinks](../images/links).
+
+</div>
+
+Können Sie die "roten Kanten" erkennen, wie im *Abhängigkeitsdiagramm* angegeben? Das *Link-Topologie*-Diagramm ist qualitativ und quantitativ **sehr unterschiedlich** vom oben dargestellten (dramatisch kleineren und weniger miteinander verbundenen) *Abhängigkeitsdiagramm*.
+
+### Wie SSI-Technologie helfen kann
+
+#### Traditionell [Server-seitig inklusive](https://httpd.apache.org/docs/2.4/howto/ssi.html).
+
+- **großartig** für das Beschneiden des *Abhängigkeitsdiagramms* Ihrer Website auf überschaubare Größe, ohne die Latenz der Seitenbereitstellung zu beeinträchtigen
+- **großartig** zur Reduzierung der Abwanderung von Boilerplate in großen Commit-Nachrichten für eine bessere Peer Review und Überwachung Ihrer erstellten Änderungssets
+- **Lose** für die Retexualisierung ganzer Webseiten an einer anderen Stelle in der Hierarchie des Dokument-Root
+
+#### Vorlagen-APIs
+
+##### Ssi-Tag
+
+Syntax:
+
+&#123;% `ssi` &#96;/content_rooted/path/to/source_file&#96; %&#125;
+
+- Pfade, die im Quellverzeichnis `content` verwurzelt sind
+- überspringt den Header-Teil der Quelldatei, um "ssi" einzuschließen
+- schreibt relative URLs in absolute URLs im enthaltenen Inhalt des Zielpfads um
+
+##### ssi-Filter
+
+Syntax:
+
+&#123;&#123; Inhalt|ssi &#125;&#125;
+
+- wertet rekursiv `ssi`-Tags im zu filternden Wert aus
+- nützlich, um zu vermeiden, dass ein großer Wert (3+) von `quick_deps` in einem `@path::patterns` Eintragsargument hashref verwendet wird, was sich auf die Leistung auswirken kann
+
+#### Warum nicht SymLinks?
+
+- Barebones-Dateisystemabstraktion, die in einem "<virtualhost>"-Kontext nur schwer sicher unterstützt werden kann
+- die gleichen Nachteile wie traditionelle `ssi` auf vollständigen Webseiten
+- unser [Orion Enterprise Wiki](/orion/).
+
+#### Build-Tools für Permalinks
+
+##### Dokumentpflege
+
+Das Build-System von Orion bietet integrierte Unterstützung für das, was wir als *Document Curation* bezeichnen. Dabei handelt es sich um den Prozess der Retextualisierung und Neuorganisation Ihrer Inhalte, je nachdem, wie Sie die Kopfzeilen "Kategorien" und "Archiv" in Ihren Markdown-Quelldateien festlegen. Diese Features sind standardmäßig deaktiviert, können jedoch aktiviert werden, indem ein `category_root` (zur Kategorieunterstützung) oder ein `archive_root` (zur Archivierung) im zugehörigen Hashhref-Argument auf den gewünschten Eintrag `@path::patterns` gesetzt wird.
+
+##### Kategorien
+
+- Neuer Inhalt wird mit Template `ssi`-Tags erstellt, die auf den Permalink-Speicherort verweisen, während der `Archive`-Header von der konstruierten Quellseite entfernt wird
+- Kategorien sind streng additiv (d.h. das Entfernen einer Kategorie aus den Kopfzeilen einer Quellseite entfernt sie nicht aus dieser Kategorie auf der Live-Website),
+- bei Bedarf generiert
+- Das Löschen aller Kategorien in einem einzigen Commit ist eine großartige Möglichkeit, sie mit den genauen Spezifikationen in den Kopfzeilen aller Quellseiten zu synchronisieren, ohne den beibehaltenen Kategorieinhalt auf der Live-Website zu zerstören
+
+##### Archivierte Seiten
+
+Auf unserer Website archivieren wir aggressiv veraltete Essays, um die Bauzeiten für neue Essays niedrig zu halten, ohne Permalinks für archivierte Dokumente zu zerstören. Das *Abhängigkeitsdiagramm* relativ zum Verzeichnis `/archives/` (für unsere Website) ist einigermaßen eigenständig gemäß den folgenden Regeln:
+
+- Inhalt, der mit Template `ssi`-Tags erstellt wurde, die auf den Permalink-Speicherort zeigen, während die Header `Kategorien` und `Archiv` von der konstruierten Quellseite entfernt werden
+- Inhalt in `/(essays|clients)/` sind immer Permalinks, auch nach der Archivierung
+- Die Archivierung entfernt effektiv den Permalink-Standort aus dem *Abhängigkeitsdiagramm*, ohne den Permalink selbst von der Website zu entfernen
+
+##### Lede
+
+HTML-Kommentare, die in die Markdown-Prosa-Formulargrenzen des Lede-Inhalts eingebettet sind. Wir verwenden **&#123;Anzahl&#125;
+
+Die Verarbeitung von Ldes erfolgt mit dem 'lede'-Vorlagenfilter. Es ist nützlich, dies mit dem "ssi"-Filter zu kombinieren, um eine Kategoriedatei mit mehr als einer Kategorieseite zu indizieren.
+
+## Schlussfolgerungen
+
+Es gibt interessante Datenstrukturen und -beziehungen, die beim Umgang mit dem *Abhängigkeitsdiagramm* einer Website aus einer Build-Performance-Perspektive noch aufgedeckt werden müssen, was ein viel neueres Interessensgebiet ist als die Forschungsliteratur, die sich mit den Datenstrukturen und den zugehörigen Themen rund um die *Link-Topologie*<sup>1,2</sup> beschäftigt.
+
+Herkömmliche inkrementelle Builds für reine Softwareentwicklungsprojekte sind nach wie vor ein heißes Thema. Die Studie, die unter <sup>3,4</sup> behandelt wurde, wurde im Oktober 2022 veröffentlicht, etwa einen Monat, bevor dieser Aufsatz abgeschlossen sein wird. Das *pluto*<sup>5</sup>-Build-System verfügt über ähnliche Funktionen wie unsere (der Build selbst kann Abhängigkeiten dynamisch neu generieren und neu erstellen).
+
+Die gute Nachricht ist, dass wir Sie als unseren Kunden abgedeckt haben. Wir halten Sie auf dem Laufenden über die Best Practices und den Stand der Technik in diesem Bereich, so dass Sie von unseren Erfahrungen in den letzten zehn Jahren und in die Zukunft profitieren werden.
+
+## Fußnoten
+
+1. [Identifizierung von Clustern im Webdiagramm auf Basis der Linktopologie](https://ieeexplore.ieee.org/abstract/document/1214919).
+
+2. [Webcommunitys aus der Linktopologie ableiten](https://dl.acm.org/doi/pdf/10.1145/276627.276652) Verfahren der neunten ACM-Konferenz zu Hypertext und Hypermedia: Links, Objekte, Zeit und Raum &mdash; Struktur in Hypermediasystemen: Links, Objekte, Zeit und Raum &mdash;
+
+3. [Über die Vorteile und Grenzen inkrementeller Build-Softwarekonfigurationen: eine explorative Studie](https://dl.acm.org/doi/abs/10.1145/3510003.3510190).
+
+4. [Inkrementelle Erstellung von Softwarekonfigurationen](https://dl.acm.org/doi/10.1145/3510455.3512792).
+
+5. [Ein klares und optimales inkrementelles Build-System mit dynamischen Abhängigkeiten](https://dl.acm.org/doi/10.1145/2814270.2814316).
+
+<style type="text/css">
+
+#deps {
+  Breite:100%;
+  Überlauf:Auto;
+Rand unten:10px;
+  Abstand oben:0;
+  Höhe:1000px;
+}
+
+#links {
+  Breite:100%;
+  Überlauf:Auto;
+Rand unten:10px;
+  Abstand oben:0;
+  Höhe:1000px;
+}
+
+Nur Bildschirm @media und (max. Breite: 1000 px) {
+    #links { Höhe: 300px }
+}
+
+#links img { width:100% }
+</style>
+
+<!-- $Date$ $Author$ $Revision$  $Id$ -->
