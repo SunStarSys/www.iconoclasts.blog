@@ -6,7 +6,7 @@ status: archivé
 title: Performances des applications
 ---
 
-> {# lede #}De nombreux développeurs tombent dans le piège de penser que l'optimisation des performances consiste à rendre chaque ligne de code aussi efficace que possible.{# lede #}
+{# lede #}De nombreux développeurs tombent dans le piège de penser que l'optimisation des performances consiste à rendre chaque ligne de code aussi efficace que possible.{# lede #}
 
 C'est en fait le contraire. Commencez par les contraintes architecturales de l'application et utilisez-les pour effectuer une analyse descendante jusqu'à la partie la plus lente observée du programme. La **implémentation** de cette partie guide tous les autres choix de performances que vous devez effectuer. Tout ce qui n'est pas aussi lent que cette partie n'a pas besoin d'être optimisé davantage. Au lieu de cela, concentrez-vous sur l'expression humaine et la simplicité et la clarté de la mise en œuvre, pour les lecteurs non experts sur le "SSDLC" du logiciel, pour le reste du code de votre programme.
 
@@ -110,4 +110,4 @@ Les **performances applicatives** réelles proviennent de l'équilibre, de la fl
 
 Que mille fleurs fleurissent, peu importe ce qu'elles paraissent idiotes !
 
-*$Date : 2023-11-25 15:01:01 -0500 (Sam., 25 nov. 2023) $*
+<!-- $Date$ $Author$ $Revision$ -->
