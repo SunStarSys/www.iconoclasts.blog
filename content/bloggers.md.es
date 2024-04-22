@@ -12,7 +12,7 @@ title: Bloggers
   {% else %}
     {% if d.0|starts_with:"/archives" %}
     {% else %}
-- [{{d.1.headers.title}}]({{d.0|dirname}}) &mdash; {{d.1.content|lede}} <small><em>activado {{d.1.content|vcs_date}}</em></small>
+- [{{d.1.headers.title}}]({{d.0}}) &mdash; {{d.1.content|lede}} <small><em>activado {{d.1.content|vcs_date}}</em></small>
     {% endif %}
   {% endif %}
 {% endfor %}
