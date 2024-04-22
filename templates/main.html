@@ -183,7 +183,8 @@
           // try {
               const json = await response.json();
               for (const e in json.log) {
-	              var msg = e[2] + "\n";
+                  console.log(e);
+                  var msg = e[2] + "\n";
 				  for (const key in Object.keys(e[1])) {
 					  msg += e[1][key].action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
