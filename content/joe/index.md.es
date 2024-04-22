@@ -9,7 +9,7 @@ title: Los pensamientos aleatorios de Joe
 
 <div class="right">
 
-Año del Dragón(index.page/dragon.png).
+![Año del Dragón](index.page/dragon.png)
 
 </div>
 
