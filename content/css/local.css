@@ -7,6 +7,10 @@ div.right img {
 	width: 200px;
 }
 
+div.right p {
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
 dl#index dt img { height: 100px; max-width: 400px; }
 dl#index dd {margin-bottom: 20px;}
 
@@ -143,7 +147,7 @@ div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
 .right {
     float:        right;
     text-align:   right;
-    padding: 0 0 20 20;
+    padding: 0 0 0 auto;
     margin:  0 0 0 auto;
 }
 
