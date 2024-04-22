@@ -165,7 +165,7 @@
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
 
-    if (document.location.href === "https://{{website}}/" && Notification.permission !== "denied")) {
+    if (document.location.href === "https://{{website}}/" && Notification.permission !== "denied") {
         var permission = Notification.permission;
 		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {
@@ -176,7 +176,7 @@
 		   var revision;
            var m = document.cookie.match(/\blast=(\d+)/);
            if (m)
-			revision = m[1];
+			 revision = m[1];
            const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
                            {credentials: 'same-origin'});
            try {
