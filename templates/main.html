@@ -165,7 +165,7 @@
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
 
-    if (document.location.href == "https://{{website}}/" && Notification.permission != "denied") {
+    if (window.location.href === "https://{{website}}/" && Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {
