@@ -164,7 +164,8 @@
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
-
+    alert(location.href);
+	alert(Notification.permission);
     if (location.href === "https://{{website}}/" && Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {
