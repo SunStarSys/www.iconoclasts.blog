@@ -5,8 +5,6 @@ div.jumbotron img {
 
 div.right img {
 	width: 200px;
-	margin-right:20px;
-	margin-bottom: 20px;
 }
 
 dl#index dt img { height: 100px; max-width: 400px; }
@@ -146,7 +144,7 @@ div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
     float:        right;
     text-align:   right;
     padding: 0 0 0 auto;
-    margin:  0 0 0 auto;
+    margin:  0 0 20 20;
 }
 
 header div, div.brand-light, header div form input
