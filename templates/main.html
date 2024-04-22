@@ -183,12 +183,13 @@
            try {
               const json = await response.json();
               for (const e of json.log) {
-                  var msg = e[2] + "\n";
+                  var msg = e[3] + "\n";
                   for (const [key, val] of Object.entries(e[1])) {
                       msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
-				  var n = new Notification(msg,
+				  var n = new Notification(e[2],
      			    {
+					  body: msg,
 					  tag: e[0],
 					  icon: "/images/favicon",
 					  image: "/images/iconoclast",
