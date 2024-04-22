@@ -6,7 +6,7 @@ status: archiviert
 title: Anwendungsperformance
 ---
 
-> {# lede #}Viele Entwickler fallen in die Falle des Denkens, dass es bei der Leistungsoptimierung darum geht, jede Codezeile so effizient wie möglich zu machen.{# lede #}
+{# lede #}Viele Entwickler fallen in die Falle des Denkens, dass es bei der Leistungsoptimierung darum geht, jede Codezeile so effizient wie möglich zu machen.{# lede #}.
 
 Es ist eigentlich das Gegenteil. Sie beginnen mit den architektonischen Einschränkungen der Anwendung und verwenden sie, um einen Drilldown zum beobachteten "langsamsten" Teil des Programms durchzuführen. Die **Implementierung** dieses Teils führt alle anderen Performanceoptionen an, die Sie treffen müssen. Alles, was nicht so langsam ist wie dieser Teil, muss nicht weiter optimiert werden. Konzentrieren Sie sich stattdessen auf den menschlichen Ausdruck und die Einfachheit und Klarheit der Implementierung, für Nicht-Experten-Leser über den "SSDLC" der Software, für den Rest des Codes Ihres Programms.
 
@@ -14,7 +14,7 @@ Sie können auf diesem Spielbuch iterieren, aber ich habe nie über 3 Iteratione
 
 Verwenden Sie also eine elegante Programmiersprache wie `Python3` oder `Javascript`/`Typescript`, und lassen Sie sich von den Subject Matter Experts (**SME**) in der Open-Source-Welt leistungsstarke `C`/`C++` native Bindungen für Ihre speziellen Bedürfnisse geben. Nichts, was Sie für die Geschäftslogik tun, erfordert mehr Geschwindigkeit als **jede dynamische Programmiersprache**, die Ihnen ** out-of-the-box** bietet.
 
-Selbst ein abhängigkeitsfreies Bash-Skript ist eine praktikable Lösung für viele grundlegende Aufgaben. Hier ist eine, die ich für Augmented Reality-Firma geschrieben habe [Magic Leap](https://magicleap.com) Vor Jahren, um ein ungeschicktes zu ersetzen [OpenGrok](https://oracle.github.io/opengrok/) Service mit etwas, das die Multiprozessor-Parallelisierung mit `xargs -P` nutzt und [PCRE] unterstützt(https://www.pcre.org/).
+Selbst ein abhängigkeitsfreies Bash-Skript ist eine praktikable Lösung für viele grundlegende Aufgaben. Hier ist eine, die ich für Augmented Reality-Firma geschrieben habe [Magic Leap](https://magicleap.com) Vor Jahren, um ein ungeschicktes zu ersetzen [OpenGrok](https://oracle.github.io/opengrok/) Service mit etwas, das die Multiprozessor-Parallelisierung mit `xargs -P` nutzt und [PCRE unterstützt](https://www.pcre.org/).
 
 https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
 
@@ -110,4 +110,4 @@ Die tatsächliche **Anwendungsleistung** kommt von Balance, Flexibilität und fu
 
 Mögen tausend Blumen blühen, egal wie dumm sie scheinen!
 
-*$Datum: 2023-11-25 15:01:01 -0500 (Sa, 25. Nov 2023) $*
+<!-- $Date$ $Author$ $Revision$ -->
