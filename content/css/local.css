@@ -129,6 +129,8 @@ div.breadcrumbs {
 
 #search input, #filter input { font-size: .875rem; max-width: 15em; }
 
+#search label, #filter label {display:inline}
+
 #filter {height: 40px; width: 300px}
 
 a {text-decoration:none}
