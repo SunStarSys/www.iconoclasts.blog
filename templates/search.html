@@ -174,7 +174,7 @@
     <div class="card-header">
       {% ifequal w.name|parse_filename:2 ".md" %}
       {% ifequal w.name|dirname|parse_filename:2 ".page" %}
-	    <a href="/{{path|strip_prefix:"/"|dirname}}{{w.name|dirname|parse_filename:"0,1"}}.html{{w.name|parse_filename:"3.."}}">{{w.name}}</a>
+	    <a href="{{path|dirname|append:"/"}}{{w.name|dirname|parse_filename:"0,1"|strip_prefix:"/"}}.html{{w.name|parse_filename:"3.."}}">{{w.name}}</a>
 		{% else %}
 		 <a href="{{path|dirname|append:"/"|append:w.name|dirname}}/{{w.name|basename:0}}.html{{w.name|parse_filename:"3.."}}">{{w.name}}</a>
       {% endifequal %}
