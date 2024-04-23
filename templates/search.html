@@ -225,7 +225,7 @@
 			fa-filter fa-emoji" title="Filter"></i></button>
       </div>
       {% if matches.0 %}
-		<pre id="meta">Total Matches = {{ count }}, Total Documents = {{ file_count }}. Ordered by Match Count &amp; Document Revision.</pre>
+		<div id="meta"><pre id>Total Matches = {{ count }}, Total Documents = {{ file_count }}. Ordered by Match Count &amp; Document Revision.</pre></div>
       <div>
         <dl>
           {% for m in matches %}
