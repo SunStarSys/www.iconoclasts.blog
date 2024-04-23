@@ -217,7 +217,7 @@
   {% else %}
   <form method="POST" class="form-inline row d-flex">
     <div style="width:100%" class="container-fluid">
-      <div class="right" id="filter">
+      <div class="right row" id="filter">
         <input type="hidden" name="hash" value="{{hash}}"/>
         <input class="form-control me-2" type="text" name="filter"
              placeholder="PCRE {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ filter }}" />&nbsp;<button type="submit"
