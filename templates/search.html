@@ -174,12 +174,16 @@
     <div class="card-header">
       {% ifequal w.name|parse_filename:2 ".md" %}
       {% ifequal w.name|dirname|parse_filename:2 ".page" %}
-	    <a href="{{path|dirname|append:"/"}}{{w.name|dirname|parse_filename:"0,1"|strip_prefix:"/"}}.html{{w.name|parse_filename:"3.."}}">{{w.name}}</a>
-		{% else %}
-		 <a href="{{path|dirname|append:"/"|append:w.name|dirname}}/{{w.name|basename:0}}.html{{w.name|parse_filename:"3.."}}">{{w.name}}</a>
+	    <a href="{{path|dirname|append:"/"}}{{w.name|dirname|parse_filename:"0,1"|strip_prefix:"/"}}.html{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
+	  {% else %}
+        <a href="{{path|dirname|append:"/"|append:w.name|dirname}}/{{w.name|basename:0}}.html{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
       {% endifequal %}
       {% else %}
-      <a href="{{path|dirname|append:"/"|append:w.name}}">{{w.name}}</a>
+      {% ifequal w.name|parse_filename:2 ".yml" %}
+	    <a href="{{path|dirname|append:"/"|append:w.name|dirname}}/{{w.name|basename:0}}.json{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
+      {% else %}
+        <a href="{{path|dirname|append:"/"|append:w.name}}">.{{w.name|strip_prefix:"/"}}</a>
+	  {% endifequal %}
       {% endifequal %}
       <div class="right">
         <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname|append:"/"|append:w.name}};action=unwatch">
