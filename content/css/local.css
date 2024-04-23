@@ -120,7 +120,8 @@ div.breadcrumbs {
 #search, #filter {
     display: inline-block;
     min-width: 250px;
-    line-height: 20px;
+    max-width: 300px;
+	line-height: 20px;
 }
 
 #watch, #unwatch { display: none }
