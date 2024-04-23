@@ -222,11 +222,10 @@
         <input class="form-control" type="text" name="filter"
              placeholder="PCRE {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ filter }}" />&nbsp;<button type="submit"
     name="submit" value="1" class="btn btn-outline-danger"><i class="fa
-    fa-filter fa-emoji" title="Filter"></i>
-        </button>
+			fa-filter fa-emoji" title="Filter"></i></button>
       </div>
       {% if matches.0 %}
-		<pre>Total Matches = {{ count }}, Total Documents = {{ file_count }}. Ordered by Match Count &amp; Document Revision.</pre>
+		<pre id="meta">Total Matches = {{ count }}, Total Documents = {{ file_count }}. Ordered by Match Count &amp; Document Revision.</pre>
       <div>
         <dl>
           {% for m in matches %}
