@@ -133,9 +133,9 @@ a {text-decoration:none}
 a:hover {text-decoration: underline}
 
 #search input, #filter input { max-width: 15em; }
-#meta {max-width:600px;}
+#meta {max-width:800px;}
 @media only screen and (max-width: 1000px) {
-    #filter { display: none; }
+    #meta, #filter { display: none; }
 }
 
 div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
