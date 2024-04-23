@@ -129,6 +129,8 @@ div.breadcrumbs {
 
 #search input, #filter input { font-size: .875rem; max-width: 15em; }
 
+#filter {height: 40px}
+
 a {text-decoration:none}
 a:hover {text-decoration: underline}
 
@@ -149,9 +151,6 @@ div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
     text-align:   right;
     margin:  0 0 0 auto;
 }
-
-header div, div.brand-light, header div form input
-{ }
 
 pre {
 	border: 1px solid #ddd;
