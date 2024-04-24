@@ -182,7 +182,7 @@
       {% ifequal w.name|parse_filename:2 ".yml" %}
 	    <a href="{{path|dirname|append:"/"|append:w.name|dirname}}/{{w.name|basename:0}}.json{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
       {% else %}
-        <a href="{{path|dirname|append:"/"|append:w.name}}">{{w.name|strip_prefix:"/"}}</a>
+        <a href="{{path|dirname|append:"/"|append:w.name}}">{{w.name|strip_prefix:"/"|default:"./"}}</a>
 	  {% endifequal %}
       {% endifequal %}
       <div class="right">
