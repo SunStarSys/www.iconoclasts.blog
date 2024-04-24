@@ -77,9 +77,17 @@
       <dd>
         <code>{{v.action}}</code>&nbsp;
         {% ifequal k|parse_filename:2 ".md" %}
-        <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
+        {% ifequal k|dirname|parse_filename:2 ".page" %}
+	      <a href="{{k|dirname|parse_filename:"0,1"|strip_prefix}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
+	    {% else %}
+		  <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
+        {% endifequal %}
+	    {% else %}
+        {% ifequal k|parse_filename:3 ".yml" %}
+        <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.json{{k|parse_filename:"3.."}}">{{k}}</a>
         {% else %}
-        <a href="/{{k|strip_prefix}}">{{k}}</a>
+		  <a href="/{{k|strip_prefix}}">{{k}}</a>
+        {% endifequal %}
         <br>
       </dd>
         {% endifequal %}
@@ -119,8 +127,12 @@
         {% ifequal k|parse_filename:2 ".md" %}
         <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
         {% else %}
-        <a href="/{{k|strip_prefix}}">{{k}}</a>
-        <br>
+        {% ifequal k|parse_filename:3 ".yml" %}
+        <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.json{{k|parse_filename:"3.."}}">{{k}}</a>
+        {% else %}
+		  <a href="/{{k|strip_prefix}}">{{k}}</a>
+        {% endifequal %}
+		  <br>
       </dd>
         {% endifequal %}
         {% endfor %}
@@ -176,11 +188,11 @@
       {% ifequal w.name|dirname|parse_filename:2 ".page" %}
 	    <a href="{{path|dirname|append:"/"}}{{w.name|dirname|parse_filename:"0,1"|strip_prefix:"/"}}.html{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
 	  {% else %}
-        <a href="{{path|dirname|append:"/"|append:w.name|dirname}}/{{w.name|basename:0}}.html{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
+        <a href="{{path|dirname|append:"/"|append:w.name|dirname|append:"/"}}{{w.name|basename:0}}.html{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
       {% endifequal %}
       {% else %}
       {% ifequal w.name|parse_filename:2 ".yml" %}
-	    <a href="{{path|dirname|append:"/"|append:w.name|dirname}}/{{w.name|basename:0}}.json{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
+	    <a href="{{path|dirname|append:"/"|append:w.name|dirname|append:"/"}}{{w.name|basename:0}}.json{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
       {% else %}
         <a href="{{path|dirname|append:"/"|append:w.name}}">{{w.name|strip_prefix:"/"|default:"./"}}</a>
 	  {% endifequal %}
