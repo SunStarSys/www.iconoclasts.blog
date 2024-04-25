@@ -60,11 +60,17 @@
 {% block javascript %}
 <script async="" type="module">
   if (document.cookie.indexOf("can_search") >= 0) {
-    const response = await fetch("/dynamic/search){{path|dirname}}/?regex=reloj=;lang={{lang}};markdown_search=1;as_json=1",
+      const response = await fetch("/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1;as_json=1",
                                    {credentials: 'same-origin'});
       try {
           const json = await response.json();
-          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^(?:\/{{path|parse_filename:"1.."}}
+          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^(?:\/{{path|parse_filename:"1.."}}|\/)$/)).length;
+          if (is_watching)
+              $("#unwatch").css("display", "inline");
+          else
+              $("#watch").css("display", "inline");
+      }
+      catch (e) {
 
       }
   }
