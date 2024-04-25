@@ -1,10 +1,10 @@
 ---
 archived: ~
-categories: dtrace,solaris,bpftrace,modperl
+keywords: dtrace,solaris,bpftrace,modperl
 dependencies: '*.md.ru'
-keywords: черновик
+status: черновик
 published: ~
-status: ~
+categories: ~
 title: Радость DTrace
 ---
 
