@@ -3,8 +3,8 @@ archived: ~
 categories: Здравоохранение, математика, динамика
 dependencies: '*.md.ru'
 keywords: экспоненциальный, энергетический, covid-19, эпидемия, пандемия
-published: архивировано
-status: ~
+status: архивировано
+published: ~
 title: Экспоненциальный рост и COVID-19
 ---
 
