@@ -1,4 +1,4 @@
-{% extends "main.html" %}
+{% extends "main.html"|append:lang %}
 {% block title %}{{title|safe}} /{% if filter %}{{filter}}{% else
 %}{{regex}}{% endif %}/gi{% endblock %}
 {% block headers %}
