@@ -105,7 +105,7 @@ walk_content_tree {
 
   seed_file_deps, seed_file_acl if /\.(?:md|ya?ml)\b[^\/]*$/;
 
-  for my $lang (qw/en es de fr/) {
+  for my $lang (qw/en es de fr ru/) {
 
     if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/!) {
       push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
@@ -121,7 +121,6 @@ walk_content_tree {
         glob("'content$_'/*.md.$lang"),
         glob("'content$_'/*/index.html.$lang")
       ];
-      #push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang!,  glob("'content$_'/*.$lang");
     }
   }
 }
