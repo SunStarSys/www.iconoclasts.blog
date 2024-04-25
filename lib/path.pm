@@ -53,8 +53,8 @@ our @patterns = (
     permalink       => 1,
   }],
 
-  [qr!/index.md[^/]*$!, single_narrative => {
-    view            =>[qw/langify_template/],
+  [qr!/index.md[^/]*$!, langify_template => {
+    view            =>[qw/single_narrative/],
     template        => "main.html",
     compress        => 1,
     preprocess      => 1,
@@ -62,8 +62,8 @@ our @patterns = (
     markdown_search => 1,
   }],
 
-  [qr!^/(categories|archives)/.*\.md[^/]*!, memoize => {
-    view       => [qw/set_template_from_capture ssi snippet single_narrative/],
+  [qr!^/(categories|archives)/.*\.md[^/]*!, set_template_from_capture => {
+    view       => [qw/ssi snippet single_narrative/],
     compress   => 1,
     facts      => $facts,
   }],
@@ -81,8 +81,8 @@ our @patterns = (
   # transform yml to json
   [qr!\.ya?ml\b[^/]*$!, yml2ext => { compress => 1 }],
 
-  [qr!\.md[^/]*$!, single_narrative => {
-    view            => [qw/langify_template/],
+  [qr!\.md[^/]*$!, langify_template => {
+    view            => [qw/single_narrative/],
     template        => "main.html",
     compress        => 1,
     preprocess      => 1,
