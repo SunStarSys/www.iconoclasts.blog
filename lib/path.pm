@@ -54,6 +54,7 @@ our @patterns = (
   }],
 
   [qr!/index.md[^/]*$!, single_narrative => {
+    view            =>[qw/langify_template/],
     template        => "main.html",
     compress        => 1,
     preprocess      => 1,
@@ -81,6 +82,7 @@ our @patterns = (
   [qr!\.ya?ml\b[^/]*$!, yml2ext => { compress => 1 }],
 
   [qr!\.md[^/]*$!, single_narrative => {
+    view            => [qw/langify_template/],
     template        => "main.html",
     compress        => 1,
     preprocess      => 1,
