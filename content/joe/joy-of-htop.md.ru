@@ -1,10 +1,10 @@
 ---
 archived: ~
-categories: экран,htop,солярис,общество,наблюдение
+keywords: экран,htop,солярис,общество,наблюдение
 dependencies: '*.md.ru'
-keywords: черновик
+status: черновик
 published: ~
-status: ~
+categories: ~
 title: Радость вершины
 ---
 
