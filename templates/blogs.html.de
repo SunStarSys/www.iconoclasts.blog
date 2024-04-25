@@ -1,12 +1,3 @@
----
-archived: ~
-categories: ~
-keywords: ~
-published: ~
-status: ~
-title: ~
----
-
 {% extends "main.html" %}
 {% block content %}
    <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
@@ -28,7 +19,7 @@ title: ~
              <i class="fa fa-eye fa-emoji" title="Uhr"></i>
            </a>
            <a href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1#:~:text={{path|parse_filename:"1.."}}" id="unwatch">
-            <i class="fa fa-eye-slash fa-emoji" title="Unwissen"></i>
+            <i class="fa fa-eye-slash fa-emoji" title="Unkenntlich machen"></i>
            </a>
          </div>
          <br>&nbsp;

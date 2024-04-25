@@ -1,12 +1,3 @@
----
-archived: ~
-categories: ~
-keywords: ~
-published: ~
-status: ~
-title: ~
----
-
 {% extends "main.html" %}
 {% block content %}
    <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
@@ -15,20 +6,20 @@ title: ~
        <div style="color:#aaa">
          <small>
            [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"0-9="}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"0-9="}}</span></a>]
-        <em>
-			<a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">Última actualización</a> realizada por <b>{{ content|ssi|vcs_author:lang }}</b> en <b>{{ content|ssi|vcs_date:lang }}</b>
+           <em>
+			   <a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">Last updated</a> by <b>{{ content|ssi|vcs_author:lang }}</b> on <b>{{ content|ssi|vcs_date:lang }}</b>
 {% ifequal repos "public" %}
 			   &nbsp;
-			   <a href="https://github.com/SunStarSys/{{website}}/blob/trunk/content{{path}}"><i class="fa-brands fa-sm fa-github"></i>&nbsp;origen</a>
+			   <a href="https://github.com/SunStarSys/{{website}}/blob/trunk/content{{path}}"><i class="fa-brands fa-sm fa-github"></i>&nbsp;source</a>
 {% endifequal %}
 			 </em>
          </small>
          <div class="right">
-           <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch" id="watch">
-             <i class="fa fa-eye fa-emoji" title="reloj"></i>
+           <a id="watch" href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch">
+             <i class="fa fa-eye fa-emoji" title="watch"></i>
            </a>
-           <a href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1#:~:text={{path|parse_filename:"1.."}}" id="unwatch">
-            <i class="fa fa-eye-slash fa-emoji" title="anular asociación"></i>
+           <a id="unwatch" href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1#:~:text={{path|parse_filename:"1.."}}">
+            <i class="fa fa-eye-slash fa-emoji" title="unwatch"></i>
            </a>
          </div>
          <br>&nbsp;
@@ -42,25 +33,25 @@ title: ~
 {% include "index.html" %}
 </div>
 
-<style type="text/css[>
-  /* kludge de numeración automática de líneas */
+<style type="text/css">
+  /* automatic line numbering kludge */
   .katex-display { display: table; width: 100% }
-.katex-display>.katex { display: table-cell }
-  body { contra-reset: eqno }
+  .katex-display>.katex { display: table-cell }
+  body { counter-reset: eqno }
   .katex-display::before, .katex-display::after {
-    } ancho: 5%;
-    visualización: table-cell;
-    alineación de texto: derecha;
-	alineación vertical: medio;
+    width: 5%;
+    display: table-cell;
+    text-align: right;
+	vertical-align: middle;
   }
 
-  .katex-display::después de {
-    contraincremento: eqno;
-	contenido: ](" contador(eqno) ")[;
+  .katex-display::after {
+    counter-increment: eqno;
+	content: "(" counter(eqno) ")";
   }
 
   .eqno::after {
-    content: ](" counter(eqno) ")";
+    content: "(" counter(eqno) ")";
   }
 
 </style>
@@ -69,11 +60,17 @@ title: ~
 {% block javascript %}
 <script async="" type="module">
   if (document.cookie.indexOf("can_search") >= 0) {
-    const response = await fetch("/dynamic/search){{path|dirname}}/?regex=reloj=;lang={{lang}};markdown_search=1;as_json=1",
+      const response = await fetch("/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1;as_json=1",
                                    {credentials: 'same-origin'});
       try {
           const json = await response.json();
-          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^(?:\/{{path|parse_filename:"1.."}}
+          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^(?:\/{{path|parse_filename:"1.."}}|\/)$/)).length;
+          if (is_watching)
+              $("#unwatch").css("display", "inline");
+          else
+              $("#watch").css("display", "inline");
+      }
+      catch (e) {
 
       }
   }
