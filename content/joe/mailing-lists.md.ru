@@ -3,8 +3,8 @@ archived: ~
 categories: ИТ, Perl, почта, инструменты
 dependencies: '*.md.ru'
 keywords: ezmlm-idx, BATV, DMARC, SRS
-published: архивировано
-status: ~
+status: архивировано
+published: ~
 title: Списки рассылки
 ---
 
@@ -50,3 +50,5 @@ title: Списки рассылки
 Если вы не успели за временем, есть недавнее движение, чтобы ввести сильный [DMARC](http://en.wikipedia.org/wiki/DMARC) политики, отклоняющие сообщения с ошибками [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail).
 
 $Дата$
+
+<!-- $Date$ $Author$ $Revision$ -->
