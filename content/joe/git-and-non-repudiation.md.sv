@@ -27,3 +27,5 @@ Tidiga och korrekta begränsningsstrategier kretsar kring att ta bort det överg
 Utan sådana saker skulle vi behöva mandat åtminstone PGP-signering av varje bidragsgivares åtagande, vilket är betungande för många projekt.  Push-poster ger en transparent process som inte påverkar ett projekts arbetsflöde, annat än för att säkerställa att ASF:s git-datalager är det verkliga huvuddatalagret.
 
 *$Datum$*
+
+<!-- $Date$ $Author$ $Revision$ -->
