@@ -1,0 +1,81 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
+{% extends "main.html" %}
+{% block content %}
+   <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
+     <h1>{{ headers.title|safe }}</h1>
+     <div class="essay col-lg-12 container">
+       <div style="color:#aaa">
+         <small>
+           [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"0-9="}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"0-9="}}</span></a>]
+        <em>
+			<a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">Última actualización</a> realizada por <b>{{ content|ssi|vcs_author:lang }}</b> en <b>{{ content|ssi|vcs_date:lang }}</b>
+{% ifequal repos "public" %}
+			   &nbsp;
+			   <a href="https://github.com/SunStarSys/{{website}}/blob/trunk/content{{path}}"><i class="fa-brands fa-sm fa-github"></i>&nbsp;origen</a>
+{% endifequal %}
+			 </em>
+         </small>
+         <div class="right">
+           <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch" id="watch">
+             <i class="fa fa-eye fa-emoji" title="reloj"></i>
+           </a>
+           <a href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1#:~:text={{path|parse_filename:"1.."}}" id="unwatch">
+            <i class="fa fa-eye-slash fa-emoji" title="anular asociación"></i>
+           </a>
+         </div>
+         <br>&nbsp;
+         <br>
+       </div>
+       {{ content|removetags:"script"|markdown }}
+     </div>
+{% endblock %}
+{% block footer %}
+<div class="container">
+{% include "index.html" %}
+</div>
+
+<style type="text/css[>
+  /* kludge de numeración automática de líneas */
+  .katex-display { display: table; width: 100% }
+.katex-display>.katex { display: table-cell }
+  body { contra-reset: eqno }
+  .katex-display::before, .katex-display::after {
+    } ancho: 5%;
+    visualización: table-cell;
+    alineación de texto: derecha;
+	alineación vertical: medio;
+  }
+
+  .katex-display::después de {
+    contraincremento: eqno;
+	contenido: ](" contador(eqno) ")[;
+  }
+
+  .eqno::after {
+    content: ](" counter(eqno) ")";
+  }
+
+</style>
+{% endblock %}
+
+{% block javascript %}
+<script async="" type="module">
+  if (document.cookie.indexOf("can_search") >= 0) {
+    const response = await fetch("/dynamic/search){{path|dirname}}/?regex=reloj=;lang={{lang}};markdown_search=1;as_json=1",
+                                   {credentials: 'same-origin'});
+      try {
+          const json = await response.json();
+          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^(?:\/{{path|parse_filename:"1.."}}
+
+      }
+  }
+</script>
+{% endblock %}
