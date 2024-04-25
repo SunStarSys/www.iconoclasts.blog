@@ -49,8 +49,8 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="products" role="button">Продукты... <span class="caret"></span></a>
             <ul aria-labelledby="products" class="dropdown-menu me-auto mb-2 mb-lg-0">
-              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Орион&trade; Корпоративные Wiki</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Тарифные планы Orion</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Орион&trade; Корпоративная вики-страница</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Ценовые планы Orion</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -65,6 +65,7 @@
               <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.es">Испанский</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.de">Немецкий</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.fr">Французский</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.ru">Русский</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Таксономии</li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Категории</a></li>
@@ -142,7 +143,7 @@
 </div>
 <div class="card-body">
 <p class="card-text">
-<small class="text-dark">Выберите предпочтительный вариант аналитики:</small><br>
+<small class="text-dark">Выберите свой предпочтительный вариант аналитики:</small><br>
 <button type=button class=btn btn-outline-warning text-dark data-bs-toggle=modal data-bs-target=#date-filter-modal
   onClick=document.cookie='gdpr_analytics=1; path=/; max-age=8640000;
   $('#analytics').css('display', 'none');true>I Consent.</button> &nbsp;
