@@ -14,7 +14,7 @@ title: Радость вершины
 	</div>
 </div>
 
-[Оглавление]
+[TOC]
 
 ## {# lede #}htop на Solaris 11{# lede #}
 
