@@ -1,0 +1,63 @@
+---
+archived: ~
+categories: אפאצ'י (פרל)
+dependencies: '*.md.he'
+keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
+published: ~
+status: טיוטה
+title: Apache HTTPd Devs נחשב מזיק
+---
+
+<div class="right">
+
+(הופנה מהדף Tarred and Feched)(apache-considered-harmful.page/feather.png).
+
+</div>
+
+## רקע
+
+במשך 25 השנים האחרונות, הייתי המפתח הראשי של תת-פרויקט "הדרישה" בתוך [שרת אפאצ'י HTTPd](https://httpd.apache.org) פרויקט אב. הרעיון המקורי של "libapreq", כבטוח/מבצע [הגשת טופס HTML](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) [קוקי](https://datatracker.ietf.org/doc/html/rfc6265).
+
+זה היה החזון שלי אז להפוך את הספרייה לספריית "C" גנרית, שאינה קשורה לפרל, שתתמוך בכריכות שפה משפות תכנות אחרות, ולכן דחפתי את הפרויקט להיות.(https://httpd.apache.org/apreq) תחת המטרייה HTTPd במקום [Apache-Perl](https://perl.apache.org/).
+
+עם הופעתו של "httpd-2". X`, ארכיטקטורת "מסנן I/O" חדשה לחלוטין התפתחה מליבת "httpd", כמו גם ההפרדה המלאה של "APR" מהליבה עצמה כמטרה כללית יותר של זמן ריצה לניידות דמוי POSIX לפרויקטים של "C" כמו "Subversion". למעשה, "libapreq2" מתואמת יותר עם פרויקט "Apache APR" ברוח זו, ו- API פרל שלה משקף זאת כחלק מבניית "APR::Request" שלה.  יש לו מצב מובנה * CGI* לפעולה עצמאית, מחוץ לזמן הריצה "httpd", מה שהופך את בדיקת היחידה לרוח.
+
+עם זאת, המרכיב העיקרי של "apreq2" תמיד היה מודול "mod_apreq2" אפאצ'י, אשר נתפס לראשונה על ידי "ביל ורוב" בתחילת שנות ה -2000.  מה שהוא עיצב, במהלך סיעור מוחות איתי (באופן אישי), היה ספריית מנתח אחת פנימית ל"httpd", ש**משותפת** את הבקשה שהוגשה *גוף* עם כל מודול בעל עניין מרכזי בזמן הריצה.  משמעות הדבר היא מתן נתונים מפורקים למודולים המחוברים למנוע עיבוד הבקשות *לפני*, *במהלך*, ו- *אחרי* מפעיל את מטפל התוכן. וזה היה צריך לעבוד גם עבור בקשות משנה, בין אם מטפל התוכן צרך או לא צרך את הנתונים שנותחו, או נצרך וניתח מחדש את גוף הבקשה הגולמית עצמו.
+
+הסברתי את יעדי העיצוב מספר פעמים במהלך השנים, אפילו בשנת 2012 על [dev@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04).
+
+## סטורם עננים מתאספים
+
+בעוד חזון זה היה מוצלח להפליא, עם כריכות שפה זמין עבור מספר שפות כמו [פרל`](https://perl.apache.org/), [ע"פ](https://github.com/php/php-src/blob/master/main/rfc1867.c), [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache), וכו ', מאז 2010 היא הוכיחה טרגית עבור [קהילת המשתמשים הקיימת](https://webtechsurvey.com/technology/smod_apreq2).
+
+מה קרה? / פיליפ גולוצ'י(https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci), עמית פרל / FreeBSD שלי באותו זמן, התחיל נסער כי אנו מקדמים את הפרויקט להשתחרר מתוך שרת HTTPd עצמו. מה {{commentAA.headers.title}}פיליפ לא ידע כל כך טוב אז היה עד כמה מוחלט [רעה, אדי וטריטוריאלי](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) הקבוצה הזו הפכה{# lede #}מה שהיה אמור להיות שיתוף פעולה איתם ישירות על [החלטות מוכוונות משתמש](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html).
+
+בשנת 2012, פיליפ קיבל את מה שהוא רצה ואני הפסקתי להתנגד, אז הוא [שחקן](https://svn.apache.org/viewvc?view=revision&revision=1201372).
+
+מס' הנפילות
+
+[בשנת 2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1).
+
+בשנת 2020 או כך, צוות האבטחה של גוגל ניצל את גרסת האלפא של httpd 2.5 על ידי תיעוב העותק בן ה-8 של `apreq2`. הם מצאו כמה נקודות חמות שזקוקות לתיקון.
+
+במקום לקבל את האדיבות להגיע אל פיליפ, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [מקס קלרמן](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann).
+
+אבל ההפיכה דה גרייס היה שחרור 2022 של [2.17](https://www.google.com/search?q=libapreq2-2.17), שבו מפתח הרוקי [הציג בכוונה באג קטלני לתוך codebase](http://svn.apache.org/viewvc?view=revision&revision=1895107), שבירת [מבחן רגרסיה בן תשע עשרה](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
+
+# פוסט-מורטם
+
+אם אתה תוהה איך משהו עם מבחן רגרסיה שבור מתפתח על [CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2)אתה צריך לבדוק איך [להתאושש](https://httpd.apache.org/dev/release.html).
+
+סיפור ארוך קצר, [הם הגיבו למבחן](http://svn.apache.org/viewvc?view=revision&revision=1903489) והוא שלח אותו בכל מקרה, וקרא לזה "שחרור אבטחה" כי [קבע פגיעות כל שחרור קודם היה רגיש](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
+
+<div class="right">
+
+![לוגו סופרמן](apache-considered-harmful.page/superman.jpg).
+
+</div>
+
+למה אכפת לי עכשיו? כי אני המציצה (המשתמשים מגיעים לתשובות)(https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html).
+
+זה מבאס, אבל אני מצטער לספר לכם שהימים שלי שלבשו את הכף של סופרמן באפאצ'י הסתיימו לפני כעשור.
+
+<!-- $Date$ $Author$ $Revision$ -->

@@ -1,0 +1,52 @@
+---
+archived: ~
+categories: IT, פרל, דואר, כלים
+dependencies: '*.md.he'
+keywords: ezmlm-idx,BATV,DMARC,SRS
+published: ~
+status: הועבר לארכיב
+title: רשימות דיוור
+---
+
+## ezmlm-idx
+
+הניסיון שלי עם תוכנת רשימת דיוור סובב סביב [qmail](http://cr.yp.to/qmail.html) ו[ezmlm-idx](http://untroubled.org/ezmlm/). . עם כמה תסריטים קטנים, הצלחתי לתמוך במגוון רחב של תרחישי שימוש חדשים שאינם נתמכים מטבעם על ידי "ezmlm-idx" עצמו.  תכונות שימושיות באופן כללי מחוץ ל[קרן התוכנה אפאצ'י](http://www.apache.org) הם מסודרים למטה.  כדי להשתמש בקבצים אלה בצע [layout] זה(ezmlm/).
+
+מס' # BATV והגשת דוחות סטנדרטיים
+
+[בין/שולח-דמונגר](ezmlm/bin/sender-demunger.pl).
+
+[באטב](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) ו[SRS](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme).
+
+שני המפרטים סובבים סביב מתן כתובות זמניות לחלק המעטפה 'דואר אלקטרוני מ', אשר להטמיע את הכתובת המקורית בצורה קלה לפענוח.  אבל {# lede #}כתובות זמניות אלה הן אנטמה למערכות המנוי והמתינות של "ezmlm-idx".{# lede #}
+
+<div class="alert alert-info">
+   <div class="alert-header">הערה</div>
+   <div class="alert-body">
+על פי הערות השחרור, מאז גרסה 7.0.0, ezmlm-idx צריך להיות תמיכה עבור BATV ו SRS מובנה. בכל מקרה השולח-Demunger באמת לא יפגע רק במקרה :-).
+   </div>
+</div>
+
+## דמרק
+
+ראה [bin/ezmlm-dmarc-filter.pl](ezmlm/bin/ezmlm-dmarc-filter.pl) ו[bin/ezmlm-seekable-stdin.pl](ezmlm/bin/ezmlm-seekable-stdin.pl) וגם [lib/pull_header.pm](ezmlm/lib/pull_header.pm).
+
+```shell
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/ezmlm-seekable-stdin.pl /path/to/bin/sender-demunger.pl <#B#>/ezmlm-gate -rY '<#D#>' '<#D#>' '<#D#>/digest' '<#D#>/allow' '<#D#>/mod'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/sender-demunger.pl <#B#>/ezmlm-store '<#D#>'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | <#B#>/ezmlm-send -r '<#D#>'
+```
+
+פעולה זו מניחה שתיגע בקובץ בשם "dmarc" בכל ספריית רשימות שבה ברצונך לאפשר את המסנן.  באפשרותך להגדיר את `.ezmlmrc` לעשות זאת על-ידי הוספת הבלוק הבא לקובץ זה:
+
+```shell
+	</-dmarc#FXT/>
+	</dmarc#f/>
+	</dmarc#t/>
+	</dmarc#x/>
+```
+תצורות הרשימה היחידות שפועלות לפי `DMARC` הן אלו עם `-f`, `-t` או `-x` מוגדר. התצורה שלעיל תתאים לכך.
+
+אם לא שמרת על קשר עם הזמנים, יש תנועה אחרונה כדי להציג חזק [DMARC](http://en.wikipedia.org/wiki/DMARC) כללי מדיניות שדוחים הודעות שנכשלות [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail).
+
+$תאריך$

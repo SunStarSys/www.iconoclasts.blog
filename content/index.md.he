@@ -1,0 +1,136 @@
+---
+archived: ~
+categories: ~
+dependencies: /categories/*/index.html.he
+keywords: ויקי,ידע
+published: ~
+status: פורסם
+title: על, על ידי, ועל Iconoclasts
+---
+
+<div class=" float-lg-end" id="news">
+  <div class="card border-success" style="max-width:25rem;background-color:transparent">
+    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">איקונוקלסט</a></div>
+
+  <div class="card-body">
+  <small>
+<pre class="card-title">
+שם עצם [ C ]   רשמי
+US  /aÉaOkÉO.nÉ.klÃ...st/
+אדם שמתנגד בתוקף באופן כללי
+אמונות ומסורות מקובלות
+</pre>
+
+&nbsp;
+
+{% for elt in iconoclasts.content|shuffle|slice:":3" %}
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.name}}" style="max-width:560;max-height:315" title="{{elt.key}}"></iframe>
+</div>
+&nbsp;
+{% endfor %}
+
+  </div>
+</div>
+
+&nbsp;
+
+</div>
+
+![איקונוקלסט](images/iconoclast.jpg).
+
+<div style="max-width:900px">
+
+ברוכים הבאים אלינו
+
+<center>
+
+**STEM/אקדמיה/פוליטיקה/תרבות/אמנות**
+
+</center>
+
+קהילת בלוגים! הירשם עוד היום ב [צור קשר](/contact).
+
+כמו כן, נא לבדוק  [אוריון](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="לוגו Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki של Enterprise Jamstack.</em></span>&trade; &mdash; אוריון הוא המוצר הארגוני היחיד שמבוסס על SCM בעזרת [mermaid-mindmap] מקורי(https://www.sunstarsys.com/orion/features).
+
+&nbsp;
+
+<div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/f55XLGCs3H0" style="min-width:400px;min-height:275px" title="וידאו"></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+</div>
+
+&nbsp;
+
+## בלוגים מומלצים
+
+&nbsp;
+
+- <span class="badge bg-success">חדש</span> [מפתחי אפאצ'י HTTPd שנחשבו מזיקים](/joe/apache-considered-harmful).
+
+- [מוצרים משולשים של Eigenfunctions and Spectral Geometry](/joe/triple-products).
+
+- [ביצועי יישום](/joe/performance) &mdash;
+
+- [אבטחת מידע](/joe/infosec) &mdash;
+
+[לקסיקלים חתומים עבור פרל 7](/joe/perl7-sealed-lexicals) &mdash;
+
+- [תנועת DevOps](/joe/devops) &mdash;
+
+&nbsp;
+
+## אינדקס קטגוריות
+
+&nbsp;
+
+<div style="text-align:justify">
+{% for d in deps|dictsort:0 %}<button type="button" class="btn btn-success"><a href="{{d.0}}">{{d.0|dirname|basename}}</a></button> {% endfor %}
+</div>
+
+<style type="text/css">
+h2 { גודל גופן: 18px }
+
+button.btn a {
+    color:#fff;
+}
+div.jumbotron button.btn {
+    margin-bottom:5px;
+}
+
+/*-------------------------------------------
+	הנפשות
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes חדשות {
+  0% {
+    משמאל: 1000 פיקסלים;
+	ראש: 1000 פיקסלים;
+	מיקום: יחסי;
+  }
+
+100% {top: 5px;position:relative}
+
+}
+
+#news {
+	הנפשה: חדשות;
+    אנימציה-משך: 2s;
+    פונקציית תזמון הנפשה: easy-out;
+}
+
+מצגת נושא {
+	-webkit-animation-שם: FADEY;
+	-webkit-הנפשה-משך: 1s;
+	-webkit-animation-timing-function: קלות יציאה;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date: 2024-04-22 22:37:23 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23409 $ -->

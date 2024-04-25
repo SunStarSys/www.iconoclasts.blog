@@ -1,0 +1,57 @@
+---
+archived: ~
+categories: כלים
+dependencies: '*.md.he'
+keywords: ~
+published: ~
+status: הועבר לארכיב
+title: כיף עם htop
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/iEUZJ44mldI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+
+## {# lede #}תכונות htop מתקדמות בפלטפורמות יוניקס פופולריות{# lede #}
+
+
+- דלתא מתוך "למעלה"
+
+	- התנהגויות אינטראקטיביות מתוחכמות
+	- נושאיות, **סמנטית** ערכות צבעים
+	- פועל ברמת אשכול POSIX, לא רק תהליכים מלאים
+
+
+- תכונות
+
+	- התאמה אישית של התצוגה `C`
+	- חיפוש `/` או סינון `\` תהליכים קלים (LWP, aka pthreads) לפי שם
+	- סנן LWP לפי שם משתמש `u`
+	- החלפת מצב תצוגת עץ 't'
+	- פקודות per-LWP
+		- מעקב מערכת `s`
+		- "רשימת מתארי קבצים פתוחים"
+		- משתני סביבה 'e'
+		- "k" שלח אות עם להרוג
+
+### לינוקס
+
+OOTB: ערכת מאפיינים תפעולית מלאה.
+
+### יציאת OSX
+
+- אפשר את DTrace (דורש [אתחול למצב שחזור כדי לחסום את SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
+- העתק [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop).
+
+### [סולאריס 11](https://github.com/joesuf4/htop/tree/solaris-stable).
+
+- סטטיסטיקת ZFS ARC
+- עמודות שם אזור / מזהה
+כתובת: Solaris LWP Accounting Deltas
+	- PID דו-רמה + LWPID
+	- אינו מספק ארגומנטים של פקודה מלאה, רק שם פקודה
+
+<!-- $Date$ $Author$ -->
