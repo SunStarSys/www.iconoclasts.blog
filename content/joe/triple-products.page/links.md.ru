@@ -13,6 +13,6 @@ title: Ссылки
 
 - [$$\LaTeX$$](triple-products.tex.en).
 
-- [$$\LaTeX$$ Библиография(triple-products.bbl.en) как [JSON](triple-products.page/bibliography.json.en).
+- [$$\LaTeX$$ Библиография](triple-products.bbl.en) как [JSON](triple-products.page/bibliography.json.en).
 
 <!-- $Date$ $Author$ $Revision$ -->
