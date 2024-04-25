@@ -3,8 +3,8 @@ archived: ~
 categories: информационная технология
 dependencies: '*.md.ru'
 keywords: Девопс
-published: архивировано
-status: ~
+status: архивировано
+published: ~
 title: Движение DevOps
 ---
 
