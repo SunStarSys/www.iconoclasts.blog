@@ -2,9 +2,9 @@
 archived: ~
 categories: Инструменты
 dependencies: '*.md.ru'
-keywords: архивировано
+status: архивировано
 published: ~
-status: ~
+keywords: ~
 title: Развлечения с htop
 ---
 
@@ -55,3 +55,5 @@ title: Развлечения с htop
 	- не предоставляет полные аргументы команды, только имя команды
 
 <!-- $Date$ $Author$ -->
+
+<!-- $Date$ $Author$ $Revision$ -->
