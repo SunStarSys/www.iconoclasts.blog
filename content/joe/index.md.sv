@@ -11,7 +11,7 @@ title: Joe's slumpmässiga tankar
 
 <div class="right">
 
-[Dragonens år](index.page/dragon.png).
+![Dragonens år](index.page/dragon.png).
 
 </div>
 
