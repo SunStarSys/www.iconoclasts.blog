@@ -8,8 +8,7 @@
 <link href="/editor.md/lib/codemirror/theme/solarized.css" media="screen" rel="stylesheet">
 {% endblock %}
 {% block content %}
-<h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{%
-, иначе %}{{regex}}{% endif %}<span class="text-danger">/ги</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
+<h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{% else %}{{regex}}{% endif %}<span class="text-danger">/ги</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
 <div class="container">
   {% for k in specials_re|admit:"a-z=|"|split:"\\|"|dictsort %}
   <a href="./?regex={{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-success text-white">{{k}}</span></a>
