@@ -3,8 +3,8 @@ archived: ~
 categories: Безопасность, ИТ, Perl
 dependencies: '*.md.ru'
 keywords: infosec, нулевое доверие, танец, динамический, данные
-published: архивировано
-status: ~
+status: архивировано
+published: ~
 title: Основы информационной безопасности
 ---
 
@@ -33,3 +33,5 @@ title: Основы информационной безопасности
 Например, MIT Kerberos и Active Directory совместимы с нулевым доверием.
 
 *$Дата$*
+
+<!-- $Date$ $Author$ $Revision$ -->
