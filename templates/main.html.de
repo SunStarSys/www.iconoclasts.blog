@@ -143,64 +143,64 @@
 </div>
 <div class="card-body">
 <p class="card-text">
-<small class="text-dark">Wählen Sie Ihre Analytics-Voreinstellung aus:</small><br>
-<button type="button" class="btn btn-outline-warning text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
+<small class="text-dark">Please choose your Analytics preference:</small><br>
+  <button type="button" class="btn btn-outline-warning text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
   onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
-  $('#analytics').css('display', 'none');true">Ich bin damit einverstanden.</button> &nbsp;
-<button type="button" class="btn btn-outline-danger text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
+  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
+  <button type="button" class="btn btn-outline-danger text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
   onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
   $('#analytics').css('display', 'none');true">I
-Ablehnen. </button><br><small class="text-dark">Sollten Sie sich dafür entscheiden
-  Ablehnen, werden wir die nächsten 10 Tage nicht mehr fragen.</small>
+  Decline.</button><br><small class="text-dark">Should you elect to
+  Decline, we will not ask again for the next 10 days.</small>
 </p>
 </div>
 </div>
 </div>`;
             h1.insertAdjacentHTML('beforeend', html);
-        
-    
-    andernfalls, wenn (document.cookie.indexOf("gdpr_decline=1") == -1) {
-        document.cookie = 'gdpr_analytics=1; Pfad=/; Max-Alter=8640000';
-    
+        }
+    }
+    else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
+        document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
+    }
   </script>
   <script async type="module">
-    Wenn (document.cookie.indexOf("can_search") >= 0 &amp;&amp; Notification.permission !== "verweigert") {
-		var-Berechtigung = Notification.permission;
-		wenn (Berechtigung !== "erteilt") {
-            } Notification.requestPermission().then((Ergebnis) => {
-            Erlaubnis = Ergebnis;
+    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+		var permission = Notification.permission;
+		if (permission !== "granted") {
+            Notification.requestPermission().then((result) => {
+              permission = result;
             });
-        
-        wenn (Berechtigung === "erteilt") {
-		var revision;
-        var m = document.cookie.match(/last=([0-9]+)/);
-        wenn (m)
-			Revision = m[1];
-        Konstante Antwort = wait fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
-                        {credentials: 'same-origin'});
-        Versuch {
-            } const json = wait response.json();
-            für (Konst. e von json.log) {
-                } var msg = e[3] + "\n";
-                für (const [key, val] von Object.entries(e[1])) {
-                    += val.action + " " + key.replace(/^.*\//, "") + "\n";
-				
-				var n = neue Benachrichtigung(e[2],
-    			    {
-					Text: Nachricht,
-					Schlagwort: e[0],
-					Symbol: "/images/favicon",
-					Bild: "/images/iconoclast",
-				    
-				  );
-			    n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
-			
-		
-        Fang (e) {
-            } alert(e);
-		
-        
-	
+        }
+        if (permission === "granted") {
+		   var revision;
+           var m = document.cookie.match(/last=([0-9]+)/);
+           if (m)
+			 revision = m[1];
+           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
+                           {credentials: 'same-origin'});
+           try {
+              const json = await response.json();
+              for (const e of json.log) {
+                  var msg = e[3] + "\n";
+                  for (const [key, val] of Object.entries(e[1])) {
+                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
+				  }
+				  var n = new Notification(e[2],
+     			    {
+					  body: msg,
+					  tag: e[0],
+					  icon: "/images/favicon",
+					  image: "/images/iconoclast",
+				    }
+			  	  );
+			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
+			  }
+		   }
+           catch (e) {
+              alert(e);
+		   }
+        }
+	}
   </script>
   {% block javascript %}{% endblock %}
 </div>

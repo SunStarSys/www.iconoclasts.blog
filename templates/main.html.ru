@@ -143,66 +143,66 @@
 </div>
 <div class="card-body">
 <p class="card-text">
-<small class="text-dark">Выберите свой предпочтительный вариант аналитики:</small><br>
-<button type=button class=btn btn-outline-warning text-dark data-bs-toggle=modal data-bs-target=#date-filter-modal
-  onClick=document.cookie='gdpr_analytics=1; path=/; max-age=8640000;
-  $('#analytics').css('display', 'none');true>I Consent.</button> &nbsp;
-<button type=button class=btn btn-outline-danger text-dark data-bs-toggle=modal data-bs-target=#date-filter-modal
-  onClick=document.cookie='gdpr_decline=1; path=/; max-age=864000;
-  $('#analytics').css('display', 'none');true>I
-Отклонить. </button><br><small class="text-dark">Если вы выберете
-  Отклонить, мы больше не будем запрашивать следующие 10 дней.</small>
+<small class="text-dark">Please choose your Analytics preference:</small><br>
+  <button type="button" class="btn btn-outline-warning text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
+  onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
+  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
+  <button type="button" class="btn btn-outline-danger text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
+  onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
+  $('#analytics').css('display', 'none');true">I
+  Decline.</button><br><small class="text-dark">Should you elect to
+  Decline, we will not ask again for the next 10 days.</small>
 </p>
 </div>
 </div>
-</div>;
+</div>`;
             h1.insertAdjacentHTML('beforeend', html);
         }
     }
-    else if (document.cookie.indexOf(gdpr_decline=1) == -1) {
-        document.cookie = 'gdpr_analytics=1; путь=/; максимальный возраст=8640000';
+    else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
+        document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
   </script>
   <script async type="module">
-    if (document.cookie.indexOf(can_search) >= 0 &amp;&amp; Notification.permission !== «отказано») {
-		разрешение var = Notification.permission;
-		if (разрешение !== «предоставлено») {
+    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+		var permission = Notification.permission;
+		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {
-            ) разрешение = результат;
+              permission = result;
             });
         }
-        if (разрешение === «предоставлено») {
-		изменение версии;
-        var m = document.cookie.match(/last=([0-9]+)/);
-        если (м)
-			ревизия = m[1];
-        const response = Ожидание fetch(/dynamic/search/?regex=notify=+revision+;lang={{lang}};markdown_search=1;as_json=1,
-                        {credentials: 'same-origin'});
-        попробуйте {
-            const json = ожидание response.json();
-            for (конст e из json.log) {
-                var msg = e[3] + \n;
-                для (const [key, val] из Object.entries(e[1])) {
-                    msg += val.action +  + key.replace(/^.*\/, ) + \n«;
-				}
-				var n = новое уведомление (e[2],
-    			    {
-					тело: сообщение,
-					тег: e[0],
-					значок: »/images/favicon«,
-					изображение: »/images/iconoclast,
+        if (permission === "granted") {
+		   var revision;
+           var m = document.cookie.match(/last=([0-9]+)/);
+           if (m)
+			 revision = m[1];
+           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
+                           {credentials: 'same-origin'});
+           try {
+              const json = await response.json();
+              for (const e of json.log) {
+                  var msg = e[3] + "\n";
+                  for (const [key, val] of Object.entries(e[1])) {
+                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
+				  }
+				  var n = new Notification(e[2],
+     			    {
+					  body: msg,
+					  tag: e[0],
+					  icon: "/images/favicon",
+					  image: "/images/iconoclast",
 				    }
-				);
-			    n.addEventListener(click, () => {window.open(https://{{website}}/dynamic/search/?regex=diff=+e[0]+;lang=;markdown_search=1") }, { захват: true });
-			}
-		}
-        поймать (e) {
-            предупреждение(e);
-		}
+			  	  );
+			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
+			  }
+		   }
+           catch (e) {
+              alert(e);
+		   }
         }
 	}
   </script>
-  {{lang}}{% block javascript %}
+  {% block javascript %}{% endblock %}
 </div>
 </body>
 </html>
