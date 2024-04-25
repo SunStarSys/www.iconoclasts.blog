@@ -33,25 +33,25 @@
 {% include "index.html" %}
 </div>
 
-<style type="text/css[>
-  /* numérotation automatique des lignes kludge */
-  .katex-display { affichage : table ; largeur : 100% }
-.katex-display>.katex { display : table-cell }
-  corps { counter-reset : eqno }
-  .katex-display : :before, .katex-display : :after {
-    largeur : 5 % ;
-    affichage : table-cell ;
-    text-align : droite ;
-	vertical-align : middle ;
+<style type="text/css">
+  /* automatic line numbering kludge */
+  .katex-display { display: table; width: 100% }
+  .katex-display>.katex { display: table-cell }
+  body { counter-reset: eqno }
+  .katex-display::before, .katex-display::after {
+    width: 5%;
+    display: table-cell;
+    text-align: right;
+	vertical-align: middle;
   }
 
-  .katex-display : :après {
-    contre-incrément : eqno ;
-	content : ](" counter(eqno) ")[ ;
+  .katex-display::after {
+    counter-increment: eqno;
+	content: "(" counter(eqno) ")";
   }
 
   .eqno::after {
-    content: ](" counter(eqno) ")";
+    content: "(" counter(eqno) ")";
   }
 
 </style>

@@ -19,7 +19,7 @@
              <i class="fa fa-eye fa-emoji" title="Uhr"></i>
            </a>
            <a href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1#:~:text={{path|parse_filename:"1.."}}" id="unwatch">
-            <i class="fa fa-eye-slash fa-emoji" title="Unwissen"></i>
+            <i class="fa fa-eye-slash fa-emoji" title="Unkenntlich machen"></i>
            </a>
          </div>
          <br>&nbsp;
@@ -33,25 +33,25 @@
 {% include "index.html" %}
 </div>
 
-<style type="text/css[>
-  /* automatische Zeilennummerierung kludge */
+<style type="text/css">
+  /* automatic line numbering kludge */
   .katex-display { display: table; width: 100% }
-.katex-display>.katex { display: table-cell }
+  .katex-display>.katex { display: table-cell }
   body { counter-reset: eqno }
   .katex-display::before, .katex-display::after {
-    } Breite: 5%;
-    Anzeige: table-cell;
-    Textausrichtung: rechts;
-	Vertikal ausrichten: Mitte;
+    width: 5%;
+    display: table-cell;
+    text-align: right;
+	vertical-align: middle;
   }
 
-  .katex-display::nach {
-    } Gegenerhöhung: eqno;
-	Inhalt: ](" counter(eqno) ")[;
+  .katex-display::after {
+    counter-increment: eqno;
+	content: "(" counter(eqno) ")";
   }
 
   .eqno::after {
-    content: ](" counter(eqno) ")";
+    content: "(" counter(eqno) ")";
   }
 
 </style>
