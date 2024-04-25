@@ -66,6 +66,8 @@
               <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.de">tyska</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.fr">Franska</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.ru">ryska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.he">hebreiska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.sv">Svenska</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Taxonomier</li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Kategorier</a></li>

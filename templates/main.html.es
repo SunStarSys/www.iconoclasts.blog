@@ -66,6 +66,8 @@
               <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.de">Alemán</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.fr">Francés</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.ru">Ruso</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.he">Hebreo</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.sv">Sueco</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Taxonomías</li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Categorías</a></li>
