@@ -28,7 +28,7 @@ title: Apache HTTPd Devs Считается вредным
 
 ## Сбор облаков штормов
 
-Хотя это видение было очень успешным, с языковыми связями, доступными для нескольких языков, таких как ['Perl`](https://perl.apache.org/), [`ФП`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`Р`](https://github.com/jeffreyhorner/rapache)и т. д., с 2010 года он оказался трагическим для [существующего сообщества пользователей](https://webtechsurvey.com/technology/smod_apreq2).
+Хотя это видение было очень успешным, с языковыми связями, доступными для нескольких языков, таких как [`Perl`](https://perl.apache.org/), [`ФП`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`Р`](https://github.com/jeffreyhorner/rapache)и т. д., с 2010 года он оказался трагическим для [существующего сообщества пользователей](https://webtechsurvey.com/technology/smod_apreq2).
 
 Что случилось? [Филип Голлуччи](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci)Мой коллега Перл/FreeBSD в то время начал агитировать за то, что мы продвигаем проект, который будет выпущен из самого сервера HTTPd. Что {{commentAA.headers.title}}Филипп тогда не очень хорошо знал, насколько полностью [пивиш, вапид и территориальный](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) Эта команда стала{# lede #}, что означало бы необходимость сотрудничать с ними непосредственно на [пользовательские решения](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html).
 
