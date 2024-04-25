@@ -1,10 +1,10 @@
 ---
 archived: ~
-categories: дракон,ай
+keywords: дракон,ай
 dependencies: '*.md.ru'
-keywords: черновик
+status: черновик
 published: ~
-status: ~
+categories: ~
 title: Случайные мысли Джо
 ---
 
