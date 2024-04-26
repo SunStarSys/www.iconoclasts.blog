@@ -33,7 +33,7 @@
 {% include "index.html" %}
 </div>
 
-<style type="text/css[>
+<style type="text/css">
   /* automatic line numbering kludge */
   .katex-display { display: table; width: 100% }
   .katex-display>.katex { display: table-cell }
@@ -47,11 +47,11 @@
 
   .katex-display::after {
     counter-increment: eqno;
-	content: ](" counter(eqno) ")[;
+	content: "(" counter(eqno) ")";
   }
 
   .eqno::after {
-    content: ](" counter(eqno) ")";
+    content: "(" counter(eqno) ")";
   }
 
 </style>
