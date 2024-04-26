@@ -15,11 +15,12 @@ title: על, על ידי, ועל Iconoclasts
   <div class="card-body">
   <small>
 <pre class="card-title">
-שם עצם [ C ]   רשמי
-US  /aÉaOkÉO.nÉ.klÃ...st/
-אדם שמתנגד בתוקף באופן כללי
+שם עצם [ ג' ]   רשמי
+ארה"ב /aÉaOkÉ.nÉ.klÃ...
+אדם שמתנגד באופן כללי
 אמונות ומסורות מקובלות
 </pre>
+
 
 &nbsp;
 
@@ -37,7 +38,7 @@ US  /aÉaOkÉO.nÉ.klÃ...st/
 
 </div>
 
-![איקונוקלסט](images/iconoclast.jpg).
+![איקונוקלסט]
 
 <div style="max-width:900px">
 
@@ -49,9 +50,9 @@ US  /aÉaOkÉO.nÉ.klÃ...st/
 
 </center>
 
-קהילת בלוגים! הירשם עוד היום ב [צור קשר](/contact).
+קהילת בלוגים! הירשם עוד היום בכתובת [צור קשר]
 
-כמו כן, נא לבדוק  [אוריון](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="לוגו Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki של Enterprise Jamstack.</em></span>&trade; &mdash; אוריון הוא המוצר הארגוני היחיד שמבוסס על SCM בעזרת [mermaid-mindmap] מקורי(https://www.sunstarsys.com/orion/features).
+כמו כן, נא לבדוק  [אוריון](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="לוגו Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki של Enterprise Jamstack.</em></span>&trade; &mdash; אוריון הוא המוצר הארגוני היחיד המבוסס על SCM כמקורי [בתולת ים מפת חשיבה]
 
 &nbsp;
 
@@ -68,15 +69,15 @@ US  /aÉaOkÉO.nÉ.klÃ...st/
 
 &nbsp;
 
-- <span class="badge bg-success">חדש</span> [מפתחי אפאצ'י HTTPd שנחשבו מזיקים](/joe/apache-considered-harmful).
+- <span class="badge bg-success">חדש</span> [Apache HTTPd Devs נחשב מזיק]
 
-- [מוצרים משולשים של Eigenfunctions and Spectral Geometry](/joe/triple-products).
+- [מוצרים משולשים של Eigenfunctions וגיאומטריה ספקטרלית]
 
-- [ביצועי יישום](/joe/performance) &mdash;
+- [ביצועי יישומים](/joe/performance) &mdash;
 
 - [אבטחת מידע](/joe/infosec) &mdash;
 
-[לקסיקלים חתומים עבור פרל 7](/joe/perl7-sealed-lexicals) &mdash;
+- [לקסיקלים אטומים לפרל 7](/joe/perl7-sealed-lexicals) &mdash;
 
 - [תנועת DevOps](/joe/devops) &mdash;
 
@@ -91,7 +92,7 @@ US  /aÉaOkÉO.nÉ.klÃ...st/
 </div>
 
 <style type="text/css">
-h2 { גודל גופן: 18px }
+h2 { font-size: 18px }
 
 button.btn a {
     color:#fff;
@@ -101,18 +102,18 @@ div.jumbotron button.btn {
 }
 
 /*-------------------------------------------
-	הנפשות
+	Animations
 -------------------------------------------*/
 @-webkit-keyframes FADEY {
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
 
-@keyframes חדשות {
+@keyframes news {
   0% {
-    משמאל: 1000 פיקסלים;
-	ראש: 1000 פיקסלים;
-	מיקום: יחסי;
+    left: 1000px;
+	top: 1000px;
+	position:relative;
   }
 
 100% {top: 5px;position:relative}
@@ -120,15 +121,15 @@ div.jumbotron button.btn {
 }
 
 #news {
-	הנפשה: חדשות;
-    אנימציה-משך: 2s;
-    פונקציית תזמון הנפשה: easy-out;
+	animation: news;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
-מצגת נושא {
-	-webkit-animation-שם: FADEY;
-	-webkit-הנפשה-משך: 1s;
-	-webkit-animation-timing-function: קלות יציאה;
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }
 </style>

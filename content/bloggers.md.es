@@ -1,11 +1,12 @@
 ---
+archived: ~
 categories: ~
 dependencies: /*/index.*.es
 keywords: ~
+published: ~
 status: borrador
 title: Bloggers
 ---
-
 
 {% for d in deps %}
   {% if d.0|starts_with:"/categories" %}

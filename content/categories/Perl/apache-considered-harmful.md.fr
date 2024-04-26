@@ -1,10 +1,11 @@
 ---
-categories: Apache, Perl
+archived: ~
+categories: Apache (Perl)
 dependencies: '*.md.fr'
-keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
-status: vérifié=19662
+keywords: apache,httpd,mod_apreq2,libapreq2
+published: ~
+status: projet
 title: Apache HTTPd Devs considéré comme nuisible
-
 ---
 
-{% ssi `/joe/apache-considered-harmful.md.fr` %}
+{% ssi `/joe/apache-considered-harmful.md.en` %}

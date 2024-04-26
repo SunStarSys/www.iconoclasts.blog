@@ -1,10 +1,11 @@
 ---
+archived: ~
 categories: Control de versiones, Apache
 dependencies: '*.md.es'
-keywords: Seguridad, sin rechazo, DVCS, control de versiones, ICLA
-status: archivado
+keywords: seguridad,no repudio,DVCS,control de versiones,icla
+published: ~
+status: borrador
 title: Git y no repudio
-
 ---
 
-{% ssi `/joe/git-and-non-repudiation.md.es` %}
+{% ssi `/joe/git-and-non-repudiation.md.en` %}

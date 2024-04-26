@@ -12,4 +12,4 @@ title: Toms blogg
 
 Rejoinder... (varje rad är ett nytt stycke).
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date: 2024-04-11 19:36:37 +0000 (Thu, 11 Apr 2024) $ $Author: joe $ $Revision: 22080 $ -->

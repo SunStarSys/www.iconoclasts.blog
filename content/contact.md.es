@@ -1,20 +1,26 @@
-Title: Contacta con nosotros
-Keywords: South Florida, System Administration
+---
+archived: ~
+categories: ~
+keywords: Sur de Florida, Administración de sistemas, DevOps, DevSecOps, SRE, GitOps
+published: ~
+status: borrador
+title: Contáctenos
+---
 
 <div class="float-lg-end">
 {% include "enquiry_get.html" %}
 </div>
 
-![SunStar Systems](images/sunstarlogowhole.png)
+![SunStar Sistemas]
 
-### Email:
+### Correo electrónico:
 
-- [Joe Schaefer, Ph.D.](mailto://joe@sunstarsys.com) &mdash; Presidente y dueño
+<img src="/images/autumn-and-i.jpg" width="200px"> &nbsp; [Joe Schaefer, Ph.D. &lt;joe@sunstarsys.com&gt;](mailto://Joe%20Schaefer,%20Ph.D.%20&lt;joe@sunstarsys.com&gt;) &mdash;
 
 ### Teléfono:
 
-- [+1 (305) 859-1630](tel://1.305.859.1630/)
-
-<div style="height: 650px">&nbsp;<br/></div>
+- [+1 âª(305) 859-1630â¬]
 
 <!-- $Date$ $Author$ $Revision$ -->
+
+<div style="height:800px">&nbsp;</div>

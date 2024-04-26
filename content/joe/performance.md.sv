@@ -10,23 +10,23 @@ title: Applikationsprestanda
 
 {# lede #}Många utvecklare faller i fällan att tänka prestandaoptimering handlar om att göra varje rad av kod så effektiv som möjligt.{# lede #}
 
-Det är faktiskt tvärtom. Du börjar med applikationens arkitektoniska begränsningar och använder dem för att borra ned till den observerade "långsamma" delen av programmet. Den delens **implementering** guidar alla andra prestationsval du behöver göra. Allt som inte är så långsamt som den delen behöver inte optimeras ytterligare. Fokusera istället på det mänskliga uttrycket och implementeringens enkelhet och tydlighet, till icke-expertläsare över mjukvarans "SSDLC", för resten av programmets kod.
+Det är faktiskt tvärtom. Du börjar med applikationens arkitektoniska begränsningar och använder dem för att borra ned till den observerade "långsamma" delen av programmet. Den delens **implementering** guidar alla andra prestationsval du behöver göra. Allt som inte är så långsamt som den delen behöver inte optimeras ytterligare. Fokusera istället på det mänskliga uttrycket och implementeringens enkelhet och tydlighet, till icke-expertläsare över `SSDLC`
 
 Du kan iterera på den här spelboken, men jag har aldrig behövt gå utöver 3 iterationer i min professionella karriär.
 
-Så fortsätt och använd ett elegant programmeringsspråk som `Python3` eller `Javascript`/`Typescript`, och låt ämnesexperterna (**SME**) där ute i öppen källkodsvärlden ge dig kraftfulla `C`/`C++` infödda bindningar för dina speciella behov. Ingenting du gör för affärslogiken kräver högre hastighet än **vilket dynamiskt programmeringsspråk som helst kan ge dig **utanför boxen**.
+Så fortsätt och använd ett elegant programmeringsspråk som `Python3` eller `Javaskript`/`Typsnitt`och låt ämnesexperterna (**SME**) där ute i världen med öppen källkod ge dig kraftfulla `C`/`C++`
 
-Även ett beroendefritt bash-skript är en fungerande lösning för många grundläggande uppgifter. Här är en jag skrev för Augmented Reality firm [Magic Leap](https://magicleap.com) år sedan, för att ersätta en klumpig [OpenGrok](https://oracle.github.io/opengrok/) tjänst med något som utnyttjar parallellisering med flera processorer med `xargs -P` och stöder [PCRE](https://www.pcre.org/).
+Även ett beroendefritt bash-skript är en fungerande lösning för många grundläggande uppgifter. Här är en jag skrev för Augmented Reality firm [Magiskt språng](https://magicleap.com) för flera år sedan, för att ersätta en klumpig [OpenGrok](https://oracle.github.io/opengrok/) tjänst med något som drar nytta av parallellisering med flera processorer med `xargs -P`och stöder [PCRE](https://www.pcre.org/) sök med enkel `Emacs`/`Vim`
 
 https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
 
-Det skriptet är en storleksordning snabbare än de vanliga misstänkta på GitHub, som alla skrevs i statiska, kompilerade programmeringsspråk. Men genom att identifiera den exakta flaskhalsen i `bash` (looping med hög volym `fork+exec`-anrop i mitten), och använda `xargs` istället, får du ett skript som ser mycket ut som den här, med kärnalgoritmen implementerad i 10 rader av `shell`.
+Det skriptet är en storleksordning snabbare än de vanliga misstänkta på GitHub, som alla skrevs i statiska, kompilerade programmeringsspråk. Men genom att identifiera den exakta flaskhalsen i `basiska` (slinga med hög volym) `gaffel + körning` samtal i mitten), och använda `xarg` istället får du ett skript som ser mycket ut som detta, med kärnalgoritmen implementerad i 10 rader av `skal`
 
-Det använder också Open Source Community av **SME** på ett smart sätt, i stället för hur de andra "filtrerade rekursiva grep" implementeringarna på GitHub gjorde. I stället för att internt anta och upprätthålla min egen (trådade) implementering av "find", "xargs" och "grep" återanvänder jag bara de förinstallerade körbara filerna som andra ** SM** har fulländat under årtionden ** i befintligt skick**. Jag behöver inte behärska deras genomförande, bara återanvända deras "CLI". Jag vill inte ens behärska dem, det är deras ** bailiwick. Prestationsdeltas spelar bara roll när de är flera sekunder eller mer, med tanke på applikationens förväntade (mänskliga) användningsfall.
+Det använder också Open Source Community av **SME** på ett smart sätt, i stället för hur de andra "filtrerade rekursiva grep" implementeringarna på GitHub gjorde. Istället för att internt anta och upprätthålla min egen (trådade) implementering av `söka`, `xarg`och `fetknopp`Jag återanvänder bara de förinstallerade körbara filerna som andra **ME** har fulländat under årtionden ** i befintligt skick**. Jag behöver inte behärska deras implementationer, bara återanvända deras `kommandoradsgränssnitt`
 
 För att se motsatsen, där allt görs internt, helt mikrooptimerat och fortfarande inte kan slå det här skriptet med standardsökalternativen och inget cachningssystem tillgängligt, här är ett bra exempel <https://github.com/BurntSushi/ripgrep>
 
-Bara för att dra den första #performance #benchmark från den sidan och skala upp den från en leksak prov trädstorlek (linux kärna källor), till ett heterogent träd som är `23GB`: (bäst körs efter 3 iterationer; `LANG=en_US.UTF-8`).
+Bara för att dra den första #performance #benchmark från den sidan, och skala upp den från en leksak prov trädstorlek (linux kernel källor), till ett heterogent träd som är `23GB`: (bästa körningar efter 3 iterationer; `LANG=en_US.UTF-8`
 
 ```shell
     % du -sh .
@@ -41,11 +41,11 @@ Bara för att dra den första #performance #benchmark från den sidan och skala 
     wc -l 0.00s user 0.00s system 0% cpu 4.501 total
 ```
 
-Det är ganska dumt att mikrooptimera något som är djupt knutet till tillståndet i kärnans filsystemcache för din sökning. Variationen i prestandatider domineras av åtkomsthastigheten till arkivens innehåll, och det är en storleksordning som är mer relevant än någon annan faktor för slutresultatet. Att vara på en `NVMe` hjälper, men ingenting i detta utrymme slår `RAM` sig själv.
+Det är ganska dumt att mikrooptimera något som är djupt knutet till tillståndet i kärnans filsystemcache för din sökning. Variationen i prestandatider domineras av åtkomsthastigheten till arkivens innehåll, och det är en storleksordning som är mer relevant än någon annan faktor för slutresultatet. Att vara på en `NVMe` hjälp, men ingenting i detta utrymme slår `RAM`
 
 Det är därför att ha en komprimerad cache i minnet för en stor korpus av filer, kommer att stabilisera prestandatiderna. Det är förvånande att ingen annan tyckte att detta var tillräckligt viktigt för att stödja.
 
-Ta den andra #performance #benchmark från den sidan och skala upp den som tidigare (samma `23GB` träd):
+Ta den andra #performance #benchmark från den sidan och skala upp den som tidigare (samma `23GB`
 
 ```shell
 	% time rg -tc -uuuiwn '[A-Z]+_SUSPEND' | wc -l
@@ -58,13 +58,13 @@ Ta den andra #performance #benchmark från den sidan och skala upp den som tidig
     wc -l 0.00s user 0.00s system 0% cpu 0.381 total
 ```
 
-En inställd `pffxg.sh` är fortfarande snabbare, trots allt arbete som lagts i mikrooptimering ripgrep för denna `C`-fil uppslagning.
+En stämd `pffxg.sh` är fortfarande snabbare, trots allt arbete i mikrooptimering ripgrep för detta `C`
 
-Hur jag använde detta manus med [AOSP](https://source.android.com).
+Hur jag använde detta manus med [AOSP](https://source.android.com) var att schemalägga en `lager` synkronisering och efterföljande `pffxg.sh` **`länk`-komprimerad-cache frö-till-`tillf.`** Kör varje morgon före jobbet (via `crontab`), med `PFFXG_CACHE=...` sätta i min `~/.pffxg.conf` fil. Alltså någon `pffxg.sh` anrop som jag körde under arbetsdagen skulle använda den komprimerade cachen i `tillf.`
 
-.25M LOC mellan `ripgrep` och [ugrep](https://github.com/Genivia/ugrep).
+.25M LOC mellan `ripgrep` och [ugrep](https://github.com/Genivia/ugrep). 632 LOC för `pffxg.sh`
 
-Eftersom det är ett så litet skalprogram kan `pffxg.sh` ge dig kraftfulla krokar i sina inre med nästan noll ansträngning. Till och med kommandot "grep" i sig är anpassningsbart: vilket kommando som helst som du behöver köra på en vald korpus av filer, som kan acceptera en lista med filnamn som läggs till i slutet av dess argument, är rättvist spel. Här är en "total radräkning i `MiLOC` övning på linux kernel git repo:
+Eftersom det är ett så litet skalprogram, `pffxg.sh` kan ge dig kraftfulla krokar i sina inre med nästan noll ansträngning. Till och med `fetknopp` kommandot själv är anpassningsbar: alla kommando du behöver för att köra på en utvald korpus av filer, som kan acceptera en lista med filnamn som läggs till i slutet av dess argument, är rättvist spel. Här är en "total radräkning i `MiLOC`
 
 ```shell
 	% time find * -type f | xargs wc -l | awk '{ $2 == "total" {a+=$1} END {print a/1024**2}'
@@ -79,7 +79,7 @@ Eftersom det är ett så litet skalprogram kan `pffxg.sh` ge dig kraftfulla krok
     awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 11% cpu 0.192 total
 ```
 
-`ripgrep` version:
+`ripgrep`
 
 ```shell
 	% time rg -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
@@ -88,7 +88,7 @@ Eftersom det är ett så litet skalprogram kan `pffxg.sh` ge dig kraftfulla krok
     awk -F : '{a+=$2} END {print a/1024**2}' 0.58s user 0.45s system 66% cpu 1.564 total
 ```
 
-Här är den begränsad till `C`-filer (samma linux träd):
+Här är den begränsad till `C`
 
 ```shell
 	% time pffxg.sh --workers 8 --cc --cmd wc -- -l | awk '$2 == "total" {a+=$1} END {print a/1024**2}'
@@ -97,7 +97,7 @@ Här är den begränsad till `C`-filer (samma linux träd):
     awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 9% cpu 0.177 total
 ```
 
-och "ripgrep"-versionen:
+och `ripgrep`
 
 ```shell
 	% time rg -tc -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
@@ -108,7 +108,7 @@ och "ripgrep"-versionen:
 
 Real ** Applikationsprestanda** kommer från balans, flexibilitet och funktionell programmeringsteknik; det kommer inte från fixering på imperativ mikrooptimeringstaktik i statiska, kompilerade programmeringsspråk som är en björn att arbeta med från balans- och flexibilitetsperspektivet. Sådana överhypade, imperativa språk är stora mål för mycket specifika problemdomäner, men är hemska för systemomfattande applikationsprestanda.
 
-`pffxg.sh` är inte en produkt, och detta är inte en säljargument för den. Det är ett **exempel** för att illustrera min poäng på ett mycket dramatiskt sätt. Om du är bekant med den långa historien av filtrerade-rekursiva-grep lösningar på GitHub, är de alla baserade på tanken att problemet med Andy Lester ursprungliga "Perl" implementering [ack](https://beyondgrep.com/).
+`pffxg.sh` är inte en produkt, och detta är inte en säljargument för det. Det är ett **exempel** för att illustrera min poäng på ett mycket dramatiskt sätt. Om du är bekant med den långa historien av filtrerade-rekursiva-grep-lösningar på GitHub, är de alla baserade på tanken att problemet med Andy Lester ursprungliga `Perl` implementering [bekräfta](https://beyondgrep.com/), var det skrivet i `Perl`. Det enda verkliga problemet ur ett resultatperspektiv var att `Perl` skriven av Andy, som inte verkade ha någon förmåga för systemprestanda begrepp (som jordbruk ut `söka` parallelliseringsarbete till ett specialbyggt `C` binärt), men i stället syftade till lat portabilitet genom att försöka fånga hela koden som en enda trådad Pure `Perl`
 
 Må tusen blommor blomma, oavsett dumma de verkar!
 

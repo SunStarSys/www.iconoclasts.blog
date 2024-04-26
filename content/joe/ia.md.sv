@@ -10,7 +10,7 @@ title: Informationsarkitektur
 
 <div class="right">
 
-![Informationsarkitektur](ia.page/ia.jpg).
+![Informationsarkitektur]
 
 </div>
 
@@ -39,7 +39,7 @@ Informationsarkitektur **organiserar** och **anordningar** {# lede #}hela skalan
 
 Se avsnittet HATEOAS för en översikt.
 
-#### Inbyggd prestandaskalning till dokumentträd på 100 kbyte
+#### Inbyggd prestandaskala till 100K-dokumentträd
 
 #### Omfattbar resultatordning/prioritering
 
@@ -56,13 +56,13 @@ Se avsnittet HATEOAS för en översikt.
 Alternativ:
 
 - skicka "as_json=1" i frågesträngen
-- ställ in "Accept: application/json" i begärandehuvuden
 
-#### Styling kontrolleras semantiskt av kundinstallationen av filen `/content/css/boostrap.min.css`
 
-#### `search.html` Mallen kan åsidosättas av kundinstallationen av filen `/templates/search.html`
+#### Styling styrs semantiskt av kundens installation av `/content/css/boostrap.min.css`
 
-Den härledda mallen #### `main.html` kan åsidosättas av kundinstallationen av filen `/templates/main.html`
+##### `search.html` Mallen kan åsidosättas av kundens installation av `/templates/search.html`
+
+##### `main.html` Härledd mall kan åsidosättas av kundens installation av `/templates/main.html`
 
 ## REST, HATEOAS och innehållsförhandling
 
@@ -81,26 +81,26 @@ Den härledda mallen #### `main.html` kan åsidosättas av kundinstallationen av
 - Infogade databearbetningsmotorer
 
   - inbäddade, "säkra" json-litteraler i inbyggda filer
-  - skapande av nedsättningstabell för byggtid
+
 
 #### Långsamt utvecklande, centraliserad konfiguration av Wikifakta
 
 - URL:er för företagstjänst
-- platser och versionsnummer för programvaruartefakter
 
-### Rollen för `ssi` Taggar i din MultiMedia-strategi
+
+### Rollen för `ssi`
 
 ## Åtkomstkontroller för innehåll, från ett enda sanningskälleperspektiv
 
-- `walk_content_tree()` i `path.pm`
+- `walk_content_tree()` om `path.pm`
   - akl
   - beroenden
 - `acl.yml`
 
 ## SunStar Systems' Orion&trade;
 
-1. zfs-kloner
-2. zfs skicka/registrera
+1. zfs kloner
+
 
 ## StageMaster: Experiment med ren motor på klientsidan
 
@@ -108,6 +108,6 @@ Den härledda mallen #### `main.html` kan åsidosättas av kundinstallationen av
 
 1. Frontend
 2. Serverdel
-3. Dokumentation
+
 
 <!-- $Date$ $Author$ $Revision$ -->

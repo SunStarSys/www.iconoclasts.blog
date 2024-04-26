@@ -9,32 +9,32 @@ title: פרויקטי קוד פתוח
 
 ### השתתפות בקוד פתוח
 
-הליבה לאמונות שלנו היא הצעת הערך המולדת של תוכנת קוד פתוח.  שיתוף פעולה [משתמש קצה](http://en.wikipedia.org/wiki/Lead_user) הקהילות והרשתות הסובבות אותן היו חלק מעבודתנו מאז הקמת SunStar Systems, בעיקר בטכנולוגיות הנגזרות או מקורן ב[קרן התוכנה של אפאצ'י](http://www.apache.org/).
+הליבה לאמונות שלנו היא הצעת הערך המולדת של תוכנת קוד פתוח.  שיתופי [משתמש מוביל](http://en.wikipedia.org/wiki/Lead_user) קהילות והרשתות שמסביבן היו חלק מעבודתנו מאז הקמת SunStar Systems, בעיקר בטכנולוגיות הנגזרות או מקורן ב [קרן התוכנה של אפאצ'י]
 
-האם יש לך אסטרטגיית קוד פתוח עבור קו המוצרים שלך?  עד כמה התוכנה שלך מודולרית, והאם זה הגיוני לתת למשתמשים גישה לנקודות הרחבה אלו?  מעולם לא שמעתי על עקרון הוליווד.(http://en.wikipedia.org/wiki/Hollywood_principle).
+האם יש לך אסטרטגיית קוד פתוח עבור קו המוצרים שלך?  עד כמה התוכנה שלך מודולרית, והאם זה הגיוני לתת למשתמשים גישה לנקודות הרחבה אלו?  מעולם לא שמעתי על [עקרון הוליווד]
 
 ### רשימת הפרויקטים שהיינו מעורבים בהם, באופן מלא או חלקי:
 
 - [mod_perl](https://perl.apache.org/) &mdash;
 
-- [libapreq](https://httpd.apache.org/apreq/) &mdash;
+- [בקשת שפה](https://httpd.apache.org/apreq/) &mdash;
 
-- [SunStarSys ק"מ](https://github.com/SunStarSys/cms) &mdash;
+- [SunStarSys מערכת לניהול תחבורה](https://github.com/SunStarSys/cms) &mdash;
 
-- [אורתרוס](https://github.com/SunStarSys/orthrus) &mdash; [קידום מכירות](https://en.wikipedia.org/wiki/One-time_password).
+- [אורתרוס](https://github.com/SunStarSys/orthrus) &mdash; [חד-פעמי]
 
-- [ב](https://github.com/joesuf4/at) &mdash; [TAP](https://testanything.org).
+- [בשעה](https://github.com/joesuf4/at) &mdash; [טאפ]
 
-- [ריק](https://github.com/SunStarSys/pty) &mdash; כלים עבור תעודות מסוף אוטומטיות-מנחה תגובות.  ברוח של [TCL מצפה](https://en.wikipedia.org/wiki/Expect).
+- [פטי](https://github.com/SunStarSys/pty) &mdash; כלים עבור תעודות מסוף אוטומטיות-מנחה תגובות.  ברוח של [TCL צפוי]
 
-- [pffxg](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) &mdash;
+- [פקס](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) &mdash;
 
-- [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash;
+- [עברית](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash;
 
-- [עצירה](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash;
+- [ראש](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash;
 
-- [חסום](https://github.com/SunStarSys/sealed) &mdash;
+- [חתומה](https://github.com/SunStarSys/sealed) &mdash;
 
 - [אלגוריתם::LCS::XS](https://github.com/SunStarSys/Algorithm-LCS-XS) &mdash;
 
-- [schaefj/linter](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; אובייקט מכיל של עגינה עבור [linter.{rc,sh}](https://github.com/joesuf4/home/tree/wsl)
+- [schaefj/לינטר](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; מכל עגינה ל- [linter.{rc,sh}]

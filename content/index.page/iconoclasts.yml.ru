@@ -1,27 +1,32 @@
 ---
-title: Iconoclast Youtube List
-status: draft
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: черновик
+title: Список Iconoclast на YouTube
 ---
 
-- name: "Martin Luther King, Jr"
+
+- name: Мартин Лютер Кинг-младший
   key: 5r98tT0j1a0
-- name: Bruce Lee
+- name: Брюс Ли
   key: 4O9o4CKTGzQ
-- name: George Carlin
-  key: kZ-PhVcPMxo
-- name: Tupac Shakur
+- name: Джордж Карлин
+  key: кЗ-PhVcPMxo
+- name: Тупак Шакур
   key: pVmwIDtnSqc
-- name: Richard Ebright
-  key: 80hWiPMy-Og
-- name: Dick Fosbury
+- name: Ричард Эбрайт
+  key: 80hWiPMy-Ог
+- name: Фосбери, Дик
   key: Wzk5-G2luZU
-- name: Igor Stravinsky
+- name: Игорь Стравинский
   key: TRfiwyKDQoE
-- name: Rosa Parks
+- name: Роза Паркс
   key: 1C7Cach5VRo
-- name: Mohammed Bouazizi
+- name: Мухаммед Буазизи
   key: d2-Cli36Va4
-- name: Galileo
+- name: Галилео
   key: W1UbjX64B8Q
-- name: Richard Pryor
+- name: Ричард Прайор
   key: 0jII2piAUaY

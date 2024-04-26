@@ -10,8 +10,8 @@ title: Nu är det dags att gå till butiken
 
 En ny sida skapad för skojs skull
 
-![logo](blog1.page/image.png "logo").
+![logotyp](blog1.page/image.png "logotyp").
 
 {# lede #} Detta är teasern; lede {# lede #}
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date: 2024-04-24 02:26:45 +0000 (Wed, 24 Apr 2024) $ $Author: joe $ $Revision: 23823 $ -->

@@ -1,10 +1,11 @@
 ---
+archived: ~
 categories: Contrôle des versions, Apache
 dependencies: '*.md.fr'
 keywords: sécurité,non répudiation,DVCS,contrôle de version,icla
-status: archivé
+published: ~
+status: projet
 title: Git et non-répudiation
-
 ---
 
-{% ssi `/joe/git-and-non-repudiation.md.fr` %}
+{% ssi `/joe/git-and-non-repudiation.md.en` %}

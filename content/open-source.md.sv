@@ -9,9 +9,9 @@ title: Projekt med öppen källkod
 
 ### Deltagande i öppen källkod
 
-Kärnan i vår tro är det medfödda värdeerbjudandet av öppen källkodsprogramvara.  Samverkande [lead-user](http://en.wikipedia.org/wiki/Lead_user) samhällen och deras omgivande nätverk har varit en del av vårt arbete sedan starten av SunStar Systems, främst inom teknik som härrör från eller har sitt ursprung i [The Apache Software Foundation](http://www.apache.org/).
+Kärnan i vår tro är det medfödda värdeerbjudandet av öppen källkodsprogramvara.  Samarbete [huvudanvändare](http://en.wikipedia.org/wiki/Lead_user) samhällen och deras omgivande nätverk har varit en del av vårt arbete sedan starten av SunStar Systems, främst inom teknik som härrör från eller har sitt ursprung i [Apache Software Foundation]
 
-Har du en öppen källkodsstrategi för din produktlinje?  Hur modulär är din programvara, och är det vettigt att ge användarna tillgång till dessa tilläggspunkter?  Har aldrig hört talas om [Hollywood-principen](http://en.wikipedia.org/wiki/Hollywood_principle).
+Har du en öppen källkodsstrategi för din produktlinje?  Hur modulär är din programvara, och är det vettigt att ge användarna tillgång till dessa tilläggspunkter?  Aldrig hört talas om [Hollywoodprincipen]
 
 ### Lista över projekt som vi har varit involverade i, helt eller delvis:
 
@@ -21,20 +21,20 @@ Har du en öppen källkodsstrategi för din produktlinje?  Hur modulär är din 
 
 - [SunStarSys CMS](https://github.com/SunStarSys/cms) &mdash;
 
-- [ortrus](https://github.com/SunStarSys/orthrus) &mdash; [OTP](https://en.wikipedia.org/wiki/One-time_password).
+- [ortrus](https://github.com/SunStarSys/orthrus) &mdash; [Engångslösenkod]
 
-- [at](https://github.com/joesuf4/at) &mdash; [TAP](https://testanything.org).
+- [vid](https://github.com/joesuf4/at) &mdash; [Tidsrapport]
 
-- [tom](https://github.com/SunStarSys/pty) &mdash; Verktyg för automatiserade terminalinloggningsuppgifter-prompt-svar.  I andan av [TCL Expect](https://en.wikipedia.org/wiki/Expect).
+- [part](https://github.com/SunStarSys/pty) &mdash; Verktyg för automatiserade terminalinloggningsuppgifter-prompt-svar.  I en anda av [TCL förväntad]
 
 - [pffxg](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) &mdash;
 
 - [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash;
 
-- [högst upp](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash;
+- [htop](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash;
 
 - [förseglad](https://github.com/SunStarSys/sealed) &mdash;
 
-- [Algorithm::LCS::XS](https://github.com/SunStarSys/Algorithm-LCS-XS) &mdash;
+- [Algoritm::LCS::XS](https://github.com/SunStarSys/Algorithm-LCS-XS) &mdash;
 
-- [schaefj/linter](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; Dockningscontainer för [linter.{rc,sh}](https://github.com/joesuf4/home/tree/wsl)
+- [schaefj/linter](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; Dockningsbehållare för [senare.{rc,sh}]

@@ -1,10 +1,11 @@
 ---
+archived: ~
 categories: Versionskontrolle, Apache
 dependencies: '*.md.de'
 keywords: Sicherheit, keine Ablehnung, DVCS, Versionskontrolle, ICLA
-status: archiviert
+published: ~
+status: Entwurf
 title: Git und Non Repudation
-
 ---
 
-{% ssi `/joe/git-and-non-repudiation.md.de` %}
+{% ssi `/joe/git-and-non-repudiation.md.en` %}

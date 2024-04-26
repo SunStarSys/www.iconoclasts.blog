@@ -18,24 +18,24 @@ title: כיף עם htop
 ## {# lede #}תכונות htop מתקדמות בפלטפורמות יוניקס פופולריות{# lede #}
 
 
-- דלתא מתוך "למעלה"
+- דלתא מ `עליון`
 
 	- התנהגויות אינטראקטיביות מתוחכמות
 	- נושאיות, **סמנטית** ערכות צבעים
-	- פועל ברמת אשכול POSIX, לא רק תהליכים מלאים
+
 
 
 - תכונות
 
-	- התאמה אישית של התצוגה `C`
-	- חיפוש `/` או סינון `\` תהליכים קלים (LWP, aka pthreads) לפי שם
+	- התאמה אישית של תצוגה `ג'`
+	- חיפוש `/` או סנן `\` תהליכים קלים (LWP, aka pthreads) לפי שם
 	- סנן LWP לפי שם משתמש `u`
-	- החלפת מצב תצוגת עץ 't'
+	- מתג `שעה` תצוגת עץ
 	- פקודות per-LWP
-		- מעקב מערכת `s`
-		- "רשימת מתארי קבצים פתוחים"
-		- משתני סביבה 'e'
-		- "k" שלח אות עם להרוג
+		- `יום ו` מעקב מערכת
+		- `ליטר` רשימת מתארי קבצים פתוחים
+		- `e` משתני סביבה
+		- `בסדר`
 
 ### לינוקס
 
@@ -43,15 +43,16 @@ OOTB: ערכת מאפיינים תפעולית מלאה.
 
 ### יציאת OSX
 
-- אפשר את DTrace (דורש [אתחול למצב שחזור כדי לחסום את SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
-- העתק [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop).
+- אפשר את DTrace (דורש) [אתחול למצב שחזור לחסימת SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
+- העתק [דטרוס-הופ](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) עד `~/bin` וביצוע ליצירה `קו חוצה` קישור סימלי
+- השקה `ראש`
 
-### [סולאריס 11](https://github.com/joesuf4/htop/tree/solaris-stable).
+### [סולאריס 11]
 
-- סטטיסטיקת ZFS ARC
+- נתונים סטטיסטיים של ZFS ARC
 - עמודות שם אזור / מזהה
 כתובת: Solaris LWP Accounting Deltas
 	- PID דו-רמה + LWPID
-	- אינו מספק ארגומנטים של פקודה מלאה, רק שם פקודה
 
-<!-- $Date$ $Author$ -->
+
+<!-- $Date: 2023-01-19 22:58:40 +0000 (Thu, 19 Jan 2023) $ $Author: joe $ -->

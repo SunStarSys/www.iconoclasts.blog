@@ -3,14 +3,14 @@ archived: ~
 categories: Математика
 dependencies: '*.md.ru'
 keywords: измеритель утяжелителя, поверхности римана, вероятность, геометрия
-status: черновик
 published: ~
+status: черновик
 title: Стохастическая формула трассировки для закрытых, отрицательно изогнутых коллекторов
 ---
 
 <div class="right">
 
-![Гиперболический сот](stochastic-trace-formula.page/hyperbolic-honeycomb.png).
+![Гиперболический сот]
 
 </div>
 
@@ -97,7 +97,7 @@ DM_*\mu(\Omega_t[\gamma]) &:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx)
 \end{aligned}
 ```
 
-## Стохастическая формула трассировки
+## Формула стохастической трассировки
 
 ```math
 \begin{aligned}

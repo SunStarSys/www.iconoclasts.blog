@@ -16,7 +16,7 @@ title: Glädjen i DTrace
 
 [TOC]
 
-## {# lede #}Mät två gånger, skära en gång innan du påbörjar ett kodoptimeringsarbete{# lede #}
+## {# lede #}Mät två gånger, skära en gång innan du påbörjar ett arbete med kodoptimering{# lede #}
 
 Inget gör mätningen enklare än DTrace.
 
@@ -26,7 +26,7 @@ Inget gör mätningen enklare än DTrace.
 
 ## [Målinriktad optimering]({{snippetB.pretty_uri}}).
 
-Varje `$dtlv` klass-metod-anrop nedan görs vid kompileringstid av `:Sealed`:
+Varje `$dtlv` klassmetodanropet nedan görs vid kompileringstid `:Förseglad`
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
 

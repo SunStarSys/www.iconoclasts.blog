@@ -11,7 +11,7 @@ title: Kontakta oss
 {% include "enquiry_get.html" %}
 </div>
 
-![SunStar System](images/sunstarlogowhole.png).
+![SunStar System]
 
 ### E-post:
 
@@ -19,8 +19,8 @@ title: Kontakta oss
 
 ### Telefon:
 
-- [+1 âª(305) 859-1630â¬](tel://1.305.859.1630/).
+- [+1 âª(305) 859-1630â¬]
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date: 2024-04-18 20:48:55 +0000 (Thu, 18 Apr 2024) $ $Author: joe $ $Revision: 22449 $ -->
 
 <div style="height:800px">&nbsp;</div>

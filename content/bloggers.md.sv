@@ -18,4 +18,4 @@ title: Bloggare
   {% endif %}
 {% endfor %}
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date: 2024-04-22 07:19:59 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23202 $ -->

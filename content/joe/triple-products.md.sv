@@ -28,13 +28,13 @@ Använda elementära tekniker från geometrisk analys, partiella differentialekv
 
 ## Introduktion
 
-För en sluten Riemannian mångfald $$(M,g)$$, som karakteriserar dess **klass** av icke-isometriska, isospektrala grenrör är en typ av inverterat problem [[DH11]](#DH11) i spektral geometri. Man kan spekulera i att den här klassen alltid skulle vara tom. Den akademiska litteraturen är dock rik på årtionden gamla konstruktioner av specifika parningar av motexempel: från 1964 med John Milnors 16-dimensionella par icke-isometriska, isospektrala platta tori [[JM64]](#JM64), och fortsätter [[CS92]](#CS92) mot den generiska dimensionella karaktäriseringen av platt tori i Alexander Schiemanns doktorsavhandling 1993 [[AS94]](#AS94) &mdash; fyll i med en datorstödd sökning efter den kritiska $$\dim = 3$$ ärende.  En modern undersökning av hela tori historia visas i [[NRR22]](#NRR22).
+För en sluten riemannmångfald $$(M,g)$$, som karakteriserar dess **klass** av icke-isometriska, isospektrala grenrör är en typ av inverterat problem [[DH11]](#DH11) i spektralgeometri. Man kan spekulera i att den här klassen alltid skulle vara tom. Den akademiska litteraturen är dock rik på årtionden gamla konstruktioner av specifika parningar av motexempel: från 1964 med John Milnors 16-dimensionella par icke-isometriska, isospektrala platta tori [[JM64]](#JM64) och fortsätta [[CS92]](#CS92) mot den generiska dimensionella karaktäriseringen av platt tori i Alexander Schiemann doktorsavhandling från 1993 [[AS94]](#AS94) &mdash; fyll i med en datorstödd sökning efter den kritiska $$\dim = 3$$ ärende.  En modern undersökning av hela den platta tori-historien visas i [[NRR22]]
 
-Längs vägen var insiktsfulla skott i mer sofistikerade, icke-euklidiska symmetriska täckningsutrymmen; konstruera sådana isospektrala, icke-isometriska "duetter" som involverar icke-privata krökningssensorer (och deras spektrumbestämda Eulers egenskaper i dimension 2 [[MS67]]](#MS67).) Ett utmärkt exempel på denna insats var Toshikazu Sunadas 1985 [[TS85]](#TS85).
+Längs vägen var insiktsfulla avskjutningar i mer sofistikerade, icke-euklidiska symmetriska täckningsutrymmen; konstruera sådana isospektrala, icke-isometriska "duetter" som involverar icke-privata kurvaturtensorer (och deras spektrumbestämda Eulers egenskaper i dimension 2 [[MS67]](#MS67).) Ett utmärkt exempel på detta arbete var Toshikazu Sunadas 1985. [[TS85]]
 
-För inhomogena Riemannian-mätvärden upptäckte Carolyn Gordon duetter som inte ens är lokalt isometriska [[CG93]](#CG93).
+För inhomogena Riemannian-mätvärden upptäckte Carolyn Gordon duetter som inte ens är lokalt isometriska. [[CG93]]
 
-Arbetet fortsätter inom många relaterade områden [[DH11]](#DH11), t.ex. bestämning av topologiska egenskaper hos klassen av isospektrala, icke-isometriska grenrör i allmänhet (tomma [[ST80]](#ST80), ändlig [[AS94]](#AS94), styv [[GK80]](#GK80), och komprimera [[GZ97]](#GZ97).
+Arbetet fortsätter inom många relaterade områden [[DH11]](#DH11), t.ex. bestämning av topologiska egenskaper hos klassen isospektrala, icke-isometriska grenrör i allmänhet (tomma) [[ST80]](#ST80), ändlig [[AS94]](#AS94), styv [[GK80]](#GK80) och kompakt [[GZ97]]
 
 Vad vi erbjuder i den här artikeln är ett nytt perspektiv på ett välbekant verktyg: indexerade Fourier-koefficienter av parvisa produkter av egenfunktioner som en diskret "algebraisk / topologisk invariant" för att komplettera den befintliga, diskreta "analytiska invarianten" &mdash; det icke-negativa spektrumet för operatören *Laplace-Beltrami* (nedan kallad "Laplacian**") på $$L^2(M,g)$$
 
@@ -58,14 +58,14 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 ```
 
-Att vara isometrisk till $$(M,g)$$, det är ett *nödvändigt och tillräckligt villkor* för en annan **iospektral** stängd Riemannian mångfald för att ha en ortonormal grund av egenfunktioner (för dess laplacian) som både bevarar de tillhörande egenvärdena och har en oföränderlig $$\set{M^{i,j,k}}$$
+Att vara isometrisk till $$(M,g)$$, är det ett *nödvändigt och tillräckligt villkor* för en annan **iospektral** stängd Riemannian mångfald att ha en ortonormal grund av egenfunktioner (för dess laplacian) som både bevarar de tillhörande egenvärdena och har en oföränderlig $$\set{M^{i,j,k}}$$
 
   </div>
 </div>
 
 <br>
 
-*Symmetri* spelar en viktig roll i beräkningshanterbara fall [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), som är träffande illustrerad i vår platta tori [Exempel](#example).
+*Symmetri* spelar en viktig roll i beräkningshanterbara fall [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), som är träffande illustrerad i vår platta tori [Exempel]
 
 <br>
 
@@ -84,7 +84,7 @@ Om varje egenvärde har mångfald $$1$$Med tanke på ett par egenvärdesbevarand
 
 <br>
 
-Motivationen för studien av $$\set{M^{i,j,k}}$$ är löst härledd från studien av den **linjära multiplikationsoperatorns roll** $$Y:V\otimes V\rightarrow V((z))$$ i definitionen av en Vertex Operator-algebra [[FBZ04]](#FBZ04) i samband med en chiral konform fältteori. Här $$V$$ är statens vektorrum och $$V((z))$$ är utrymmet för formella Laurent-serien i $$z$$ med koefficienter i $$V$$. Sedan $$V$$ ofta kommer utrustad som ett Hilbert Space med en traditionell Fourier-serie ortonormal grund, indexering $$Y$$ använda Fourier-baselementen i $$V$$ är bara något mer involverad än $$M^{i,j,k}$$
+Motivationen för studien av $$\set{M^{i,j,k}}$$ är löst härledd från studien av den **linjära multiplikationsoperatorns roll** $$Y:V\otimes V\rightarrow V((z))$$ i definitionen av en Vertex Operator Algebra [[FBZ04]](#FBZ04) associerad med en korallkonform fältteori. Här $$V$$ är statens vektorrum och $$V((z))$$ är utrymmet för formella Laurent-serien i $$z$$ med koefficienter i $$V$$. Sedan $$V$$ ofta kommer utrustad som ett Hilbert Space med en traditionell Fourier-serie ortonormal grund, indexering $$Y$$ använda Fourier-baselementen i $$V$$ är bara något mer involverad än $$M^{i,j,k}$$
 
 Dessa resultat visades först under ett liknande tal av författaren på ** MRT** 1997, men de visas här i publicerad form för första gången.
 
@@ -105,7 +105,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
 
 ```
 
-sedan $$f$$ är unikt representabel eftersom dess snabbt konvergerande **Fourier-serien** ($$\Delta_M$$-specifika Sobolev Embeddings [[MT13]](#MT13) [[RS75]](#RS75)tillsammans med Weyls asymptotiska lag [[HW11]](#HW11)innebär att villkoren i summan är $$o(i^{-n})$$ * Likformigt i $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$Då ser vi att för $$f_1, f_2 \in C^\infty(M)$$, Fourierkoefficienter för den punktvisa produkten $$f_1 f_2 \in C^\infty(M)$$
+sedan $$f$$ är unikt representabel eftersom dess snabbt konvergerande **Fourier-serien** ($$\Delta_M$$-specifika Sobolev Embeddings [[MT13]](#MT13) [[RS75]](#RS75), tillsammans med Weyls asymptotiska lag [[HW11]](#HW11), innebär att villkoren i summan är $$o(i^{-n})$$ * Likformigt i $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$Då ser vi att för $$f_1, f_2 \in C^\infty(M)$$, Fourierkoefficienter för den punktvisa produkten $$f_1 f_2 \in C^\infty(M)$$
 
 ```math
 \begin{aligned}
@@ -154,7 +154,7 @@ Detta innebär att en sådan baskarta som ovan har karakteristiska funktioner (s
 
 Poängen med dessa beräkningar är att betona det faktum att $$\set{M^{i,j,k}}$$ **karakteriserar** den harmoniska analysen av den punktvisa multiplikationsoperatorn på $$C^\infty(M)$$som är en tät subalgebra av den abelska $$C^*$$ algebra $$C(M)$$
 
-För den snabba konvergensen av ovanstående belopp som omfattar $$M^{i,j,k}$$, notera att produkter av egenfunktioner är smidiga, så dessa Fourier koefficienter sönderfaller som ovan (i varje index). För mer information, se Emmett Wymans arbete 2022 med dessa koefficienter när det gäller triangel ojämlikhet på egenvärdena [[EW22]](#EW22).
+För den snabba konvergensen av ovanstående belopp som omfattar $$M^{i,j,k}$$, notera att produkter av egenfunktioner är smidiga, så dessa Fourier koefficienter sönderfaller som ovan (i varje index). För mer information, se Emmett Wymans arbete 2022 med dessa koefficienter när det gäller triangel ojämlikhet på egenvärdena. [[EW22]]
 
 Anmärkning: Vi kan alltid anta
 ```math
@@ -165,7 +165,7 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 \end{aligned}
 ```
 
-där $$\delta_i$$ är Kronecker delta. Sedan $$vol(M)$$ är en spektral invariant [[HW11]](#HW11).
+där $$\delta_i$$ är Kronecker delta. Sedan $$vol(M)$$ är en spektral invariant [[HW11]]
 
 ## Teorembevis
 
@@ -181,7 +181,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 Vi är klara med nödvändighetsargumentet.
 
-För tillräcklighet överväger vi nu den linjära, bijektiva ortonormala eigenfunktionsbaskartan $$F$$ från $$C^\infty(M)$$ till $$C^\infty(N)$$ och notera att från beräkningarna i [preliminärerna](#preliminaries) ovanför, $$F$$ bevarar punktvisa produkter för smidiga funktioner (och bevarar karakteristiska funktioner när de utökas till $$L^2(M,g)$$) enligt förutsättningen att $$\set{M^{i,j,k}}$$
+För tillräcklighet överväger vi nu den linjära, bijektiva ortonormala eigenfunktionsbaskartan $$F$$ från $$C^\infty(M)$$ till $$C^\infty(N)$$ Observera att beräkningarna i [Preliminära](#preliminaries) ovan, $$F$$ bevarar punktvisa produkter för smidiga funktioner (och bevarar karakteristiska funktioner när de utökas till $$L^2(M,g)$$) enligt förutsättningen att $$\set{M^{i,j,k}}$$
 
 ### Lemma
 
@@ -214,9 +214,9 @@ Utan förlust av allmängiltighet kan vi tillämpa det speciella fallresultat so
 
 Detta innebär att på en $$C(M)$$ (och $$C(N)$$), vi har upprättat $$F$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$
 
-Nu tillämpar vi Gelfand-Naimark representationssatsen (i kontravariant functor form) för Abelian $$C^*$$ algebror [[JC19]](#JC19) att representera denna isomorfism genom en homeomorfism mellan $$N$$ och $$M$$
+Nu tillämpar vi Gelfand-Naimark representationssatsen (i kontravariant functor form) för Abelian $$C^*$$ algebra [[JC19]](#JC19) för att representera denna isomorfism genom en homeomorfism mellan $$N$$ och $$M$$
 
-Eftersom detta nu diffeomorfism bevarar egenvärden och egenfunktioner (genom hypoteser om $$F$$), det måste bevara Laplacian på smidiga funktioner. Därför måste den också bevara de viktigaste symbolerna för samma elliptiska operatorer [[MT13]](#MT13).
+Eftersom detta nu diffeomorfism bevarar egenvärden och egenfunktioner (genom hypoteser om $$F$$), det måste bevara Laplacian på smidiga funktioner. Därför måste den också bevara de viktigaste symbolerna för dessa samma elliptiska operatörer. [[MT13]]
 
 Detta kompletterar teoremens bevis.
 
@@ -234,7 +234,7 @@ Sedan för varje given $$k$$, $$M_0^{i,i,k}$$ kan inte vara identiskt $$0$$ för
 
 ## Exempel
 
-Låt $$\set{\lambda_i} \subset \R^n$$ vara indexerad, rangordna $$n$$ lattice av Lie Algebra vikter för kvotutrymme representation av $$\frak{g}=\Reals^n$$ som översättningsinvariant (dvs. konstant) vektorfält på sig själv, när $$\R^n$$ ses också som $$\frak{g}$$'s associerade Lie Group över en torus definierad av $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Dessa vikter definierar icke-hållbara lyft av 1-former över torusen som integrerar med linjära funktioner $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ som dess lögngrupp (som täcker torus). Dessa linjära funktioner kan sedan likformigt skalas om (genom $$2\pi \sqrt{-1}$$) och exponentierad för att bilda multiplikativa tecken som sjunker till att bilda en ortonormal bas av $$L^2(\Reals^n/A\Z^n,dx)$$med måttet Lebesgue (Haar) $$dx$$
+Låt $$\set{\lambda_i} \subset \R^n$$ vara indexerad, rangordna $$n$$ lattice av Lie Algebra vikter för kvotutrymme representation av $$\frak{g}=\Reals^n$$ som översättningsinvariant (dvs. konstant) vektorfält på sig själv, när $$\R^n$$ ses också som $$\frak{g}$$'s associerade Lie Group över en torus definierad av $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Dessa vikter definierar icke-hållbara lyft av 1-former över torusen som integrerar med linjära funktioner $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ som dess lögngrupp (som täcker torusen). Dessa linjära funktioner kan sedan likformigt skalas om (genom $$2\pi \sqrt{-1}$$) och exponentierad för att bilda multiplikativa tecken som sjunker till att bilda en ortonormal bas av $$L^2(\Reals^n/A\Z^n,dx)$$med måttet Lebesgue (Haar) $$dx$$
 
 Dessutom diagonaliserar denna bas samtidigt den platta torus Laplacian ** eftersom** Laplacian är bilden av en symmetrisk, negativ-definit kvadratisk Casimir element under denna (konstant koefficient linjär differential operator) kvotutrymme representation av den universella omslutande algebra. Därför är dess egenvärden i konstant proportion (av $$4\pi^2$$
 
@@ -256,7 +256,7 @@ M^{i,j,k} = \begin{cases}
 
 Eftersom denna formel <span class="eqno"></span> är linjär på viktgitter $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, endast en $$L^2$$ ortonormal egenfunktionsbaskarta **som induceras från en volymbevarande inverterbar linjär karta mellan två sådana indexerade, rangordnade $$n$$ viktgitter** behåller den "algebraiska/topologiska" indexerade datamängden $$\set{M^{i,j,k}}$$
 
-Men för att tillämpa vår [Theorem](#theorem)Det är viktigt att en sådan linjär karta $$B$$ vara $$B\in O(n,\Reals)$$ på viktgitter, eftersom den inducerade $$L^2$$
+För att kunna tillämpa våra [Satsen](#theorem), det är viktigt att en sådan linjär karta $$B$$ vara $$B\in O(n,\Reals)$$ på viktgitter, eftersom den inducerade $$L^2$$
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
@@ -264,7 +264,7 @@ Men för att tillämpa vår [Theorem](#theorem)Det är viktigt att en sådan lin
 
 måste också bevara de "analytiska" varianterna &mdash; Casimir-element inducerad figur $$4\pi^2\lVert\lambda_i\rVert^2$$
 
-Detta representationsteoretiska konto [[AK01]](#AK01) motsvarar exakt den tidigare utvecklingen av *lattice kongruens* [[NRR22]](#NRR22) traditonally används för att avgränsa isometri klasser av platt tori. I själva verket transponerar matrisen en sådan linjär karta $$B\in O(n,\Reals)$$, som beskrivs i föregående stycke, **är ** den kontravariant Riemannian isometri mellan tori, som tillhandahålls genom tillämpning av *Gelfand-Naimark Representation Theorem * under [Bevis](#proof-of-theorem) av vår [teorem](#theorem).
+Detta representationsteoretiska konto [[AK01]](#AK01) är exakt likvärdig med tidigare utveckling av *lattice kongruens* [[NRR22]](#NRR22) traditonellt används för att avgränsa isometrisklasser av plattori. I själva verket transponerar matrisen en sådan linjär karta $$B\in O(n,\Reals)$$, som beskrivs i föregående stycke, **är ** den kontravariant Riemannian isometri mellan tori, som tillhandahålls genom tillämpning av *Gelfand-Naimark Representation Theorem * under [Bevis](#proof-of-theorem) av våra [Satsen]
 
 Antal bekräftelser
 

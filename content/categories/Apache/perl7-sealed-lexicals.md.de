@@ -1,9 +1,11 @@
 ---
+archived: ~
 categories: Perl, Orion, Performance, Apache
 dependencies: '*.md.de'
 keywords: Perl,Dylan,statisch,Methode,Lookup,kompilieren,versiegelt,apache,mod_perl,Leistung
+published: ~
+status: überprüft=12973
 title: 'Perl 7 Feature-Anfrage: versiegelte Unterteile für typisierte Lexika'
-
 ---
 
-{% ssi `/joe/perl7-sealed-lexicals.md.de` %}
+{% ssi `/joe/perl7-sealed-lexicals.md.en` %}

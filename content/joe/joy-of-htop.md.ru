@@ -1,10 +1,10 @@
 ---
 archived: ~
-keywords: экран,htop,солярис,общество,наблюдение
-dependencies: '*.md.ru'
-status: черновик
-published: ~
 categories: ~
+dependencies: '*.md.ru'
+keywords: экран,htop,olaris,oci,наблюдение
+published: ~
+status: черновик
 title: Радость вершины
 ---
 
@@ -21,5 +21,7 @@ title: Радость вершины
 ### [Источники видео]({{snippetA.pretty_uri}}).
 
 [snippet:repo=joesuf4/home:path=.ocirc:lines=417-425:lang=shell:branch=wsl]
+
+
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -7,6 +7,6 @@ status: skiss
 title: ~
 ---
 
-- [Flaggad Hacker News Artikel](https://news.ycombinator.com/item?id=39421579).
+- [Flaggad Hacker News Artikel]
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date: 2024-02-20 19:48:50 +0000 (Tue, 20 Feb 2024) $ $Author: joe $ $Revision: 17384 $ -->

@@ -18,24 +18,24 @@ title: Roligt med htop
 ## {# lede #}Avancerade funktioner på populära Unix-plattformar{# lede #}
 
 
-- Deltas från `top`
+- Deltavärden från `överst`
 
 	- sofistikerade interaktiva beteenden
 	- tematiska, ** semantiska** färgscheman
-	- fungerar på POSIX-trådnivå, inte bara fullständiga processer
+
 
 
 - Funktioner
 
-	- anpassa visning `C`
-	- sök `/` eller filtrera `\` lätta processer (LWP, aka pthreads) efter namn
-	- filtrera LWP efter användarnamn `u`
-	- växla trädvyn `t`
+	- anpassa display `C`
+	- sök `/` eller filtrera `\` lätta processer (LWP, även kallade pthreads) efter namn
+	- filtrera LWP efter användarnamn `du`
+	- växla `tt` trädvy
 	- per LWP-kommandon
-		- `s` systemspår
+		- `ss` systemspårning
 		- `l` lista över öppna fildeskriptorer
 		- `e` miljövariabler
-		- `k` skicka en signal med döda
+		- `kull`
 
 ### Linux
 
@@ -44,16 +44,15 @@ OOTB:s fullt fungerande funktionsuppsättning.
 ### OSX-port
 
 - Aktivera DTrace (kräver [starta i återställningsläge för att inaktivera SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
-- kopia [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop).
+- kopia [dtruss](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) till `~/bin` och kör för att skapa `stjärt` symbolisk länk
+- lansering `htop`
 
-### [Solaris 11](https://github.com/joesuf4/htop/tree/solaris-stable).
+### [Solis 11]
 
 - ZFS ARC-statistik
 - Kolumner för zonnamn/ID
 Solaris LWP Bokföring Deltas
 	- två nivåer PID + LWPID
-	- tillhandahåller inte fullständiga kommandoargument, bara kommandonamn
+
 
 <!-- $Date$ $Author$ -->
-
-<!-- $Date$ $Author$ $Revision$ -->

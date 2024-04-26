@@ -5,7 +5,7 @@ dependencies: '*.md.he'
 keywords: perl,dylan,סטטי,שיטה,חיפוש,הידור,חסום,מטמון,mod_perl,ביצועים
 published: ~
 status: טיוטה
-title: 'בקשת תכונה Perl 7: תת-אטום לקסיקלים מוקלדים'
+title: 'בקשת תכונה Perl 7: תת-חסום לקסיקלים מוקלדים'
 ---
 
 <div class="right">
@@ -18,11 +18,11 @@ title: 'בקשת תכונה Perl 7: תת-אטום לקסיקלים מוקלדי�
 
 ## הפתרון הראשוני: אופטימיזציות קוד השיטה של דאג מקאשרן
 
-דאג היה היוצר של פרויקט mod_perl באמצע שנות ה-90, אז ברור שכתיבת ביצועים גבוהים פרל היה המבצר שלו. אחת התרומות הרבות שלו ל[p5p](https://lists.perl.org/list/perl5-porters.html) היה לגזור את קנס הביצועים של תקורת lookup של שיטת OO בחצי, באמצעות שיטה + <code> &#64;
+דאג היה היוצר של פרויקט mod_perl באמצע שנות ה-90, אז ברור שכתיבת ביצועים גבוהים פרל היה המבצר שלו. אחת התרומות הרבות שלו ל [p5p](https://lists.perl.org/list/perl5-porters.html) נועד לקצץ בחצי את קנס הביצועים של תקורת lookup של שיטת OO באמצעות שיטה + <code> &#64;ISA</code> מטמון היררכיה כדי להפוך את ה-lookup של שיטת אובייקט זמן ריצה לאובייקטים של mod_perl כמו `Apache2::RequestRec`
 
-זו לא בעיה מטרידה עם קריאות לשיטות get-set accessor של 'מבנה C' &mdash;
+זו לא בעיה מטרידה עם שיחות ל `מבנה C` שיטות get-set accessor &mdash; המצב המשותף עם ממשקי API רבים mod_perl. שיטת זמן הריצה של פרל - קנס קוד קריאה על httpd's `מבנה request_rec *`, כי mod_perl חושף באמצעות `Apache2::RequestRec`
 
-מה [דאג חיפש](https://www.perl.com/pub/2000/06/dougpatch.html/).
+מה [דאג מחפש]
 
 ## [תסריט בוחן ביצועים]({{snippetA.pretty_uri}}).
 
@@ -116,7 +116,7 @@ sealed 662252/s    21%     --
 ok 3
 ```
 
-# פתרון Perl 7 מוצע: `:שגרות אטומות` עבור לקסיקלים מוקלדים
+# פתרון Perl 7 מוצע: `:חסום`
 
 קוד לדוגמה:
 
@@ -132,13 +132,13 @@ sub handler :sealed {
 
 # איכות הייצור, פרל חזק v5.28+ אב טיפוס: sealed.pm {{facts.releases.sealed.tag}}
 
-הוראות הידור עבור perl 5.30+ זמינות בתרמיל `sealed.pm` אם ברצונך להריץ mod_perl2 w/ ithreads ו- httpd-2.4 w/ event mpm, ולא segfault בסולם **any**.  נבדק על `Solaris 11.4` ו `Ubuntu 22.04` על amd64.
+הוראות הידור עבור perl 5.30+ זמינות ב `sealed.pm` pod אם ברצונך להריץ mod_perl2 w/ ithreads ו- httpd-2.4 w/ event mpm, ולא segfault בסולם **any**.  נבדק בתאריך `סולאריס 11.4` וגם `אובונטו 22.04`
 
-בשביל הכיף, נסה את זה [טלאי קוף]({{snippetB.pretty_uri}}).
+בשביל הכיף, נסה את זה [טלאי קוף]({{snippetB.pretty_uri}}) עד `ModPerl::RegistryCooker`
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-זה מאפשר את ההשפעות של 'sub handler:Sealed {script goes here}' על כל תסריטי `ModPerl::Registry` שלך, משהו כמו [זה](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+הוא מאפשר את ההשפעות של `מטפל משנה: {script אטום מופיע כאן}` על כל שלך `ModPerl::רישום` תסריט, משהו כמו [זה אחד]
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -176,10 +176,10 @@ time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
 req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
-ראה <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. חפש את `t/bench.pl` בספריית האב.
+ראה <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. חפש `נדבר/bench.pl`
 
-פעולה זו תאפשר ל-Perl 5 לבצע חיפוש שיטת `content_type` של קוד הדגימה בזמן הידור, מבלי לגרום לבעיות back-compat או מקודדים מתאבלים של CPAN, מאחר שתכונה זו תכוון למפתחי יישומים. מחברי מודול OO שאינם ניתנים לירושה.
+זה יאפשר Perl 5 לעשות את הקוד לדוגמה `content_type`
 
-הרעיון הזה נגנב בחינם מ[דילן](https://jim.studt.net/dirm/interim-5.html)[קרא את זה](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
+הרעיון הזה נגנב בחינם. [דילן](https://jim.studt.net/dirm/interim-5.html).  [קרא את זה]
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date: 2024-04-19 06:30:01 +0000 (Fri, 19 Apr 2024) $ $Author: joe $ $Revision: 22500 $ -->

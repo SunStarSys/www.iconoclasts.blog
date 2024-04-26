@@ -1,10 +1,10 @@
 ---
 archived: ~
-keywords: dtrace,solaris,bpftrace,modperl
-dependencies: '*.md.ru'
-status: черновик
-published: ~
 categories: ~
+dependencies: '*.md.ru'
+keywords: dtrace,solaris,bpftrace,modperl
+published: ~
+status: черновик
 title: Радость DTrace
 ---
 
@@ -26,7 +26,7 @@ title: Радость DTrace
 
 ## [Целевая оптимизация]({{snippetB.pretty_uri}}).
 
-Каждый приведенный ниже вызов class-method-call `$dtlv` выполняется во время компиляции с помощью `:Sealed`:
+Каждый `$dtlv` class-method-call ниже выполняется во время компиляции `:запечатано`
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
 

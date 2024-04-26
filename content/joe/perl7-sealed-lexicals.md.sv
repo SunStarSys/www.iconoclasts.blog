@@ -18,13 +18,13 @@ title: 'Perl 7 Funktionsbegäran: förseglade underdelar för typangivna lexikal
 
 ## Den första lösningen: Doug MacEachern's metodsökoptimeringar
 
-Doug var skaparen av mod_perl projektet tillbaka i mitten av 90-talet, så uppenbarligen skriva högpresterande Perl var hans forté. Ett av hans många bidrag till [p5p](https://lists.perl.org/list/perl5-porters.html) skulle skära ned prestandapåföljden för uppslagning av metod utan erbjudandeoptimering till hälften med hjälp av en metod + <code> &#64;
+Doug var skaparen av mod_perl projektet tillbaka i mitten av 90-talet, så uppenbarligen skriva högpresterande Perl var hans forté. Ett av hans många bidrag till [p5p](https://lists.perl.org/list/perl5-porters.html) innebar att prestandapåföljden för OO-metodsuppslagning halverades med hjälp av en metod + <code> &#64;ISA</code> hierarkicache för att göra uppslagning av exekveringsobjektmetod för mod_perl-objekt som `Apache2::RequestRec`
 
-Detta är inte ett trifling problem med anrop till `C strukture` get-set accessor metoder &mdash;
+Detta är inte ett trifling problem med samtal till `C-struktur` get-set accessor-metoder &mdash; den gemensamma situationen med många mod_perl API:er. Perl's runtime method-call lookup straff på httpd's `struktur request_rec *`som mod_perl exponerar via `Apache2::RequestRec`
 
-Vad (Doug letade efter)(https://www.perl.com/pub/2000/06/dougpatch.html/).
+Vad [Doug söker]
 
-## [Jämförelseskript]({{snippetA.pretty_uri}}).
+## [Riktmärke, skript]({{snippetA.pretty_uri}}).
 
 [snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
 
@@ -116,7 +116,7 @@ sealed 662252/s    21%     --
 ok 3
 ```
 
-## Föreslagen Perl 7-lösning: `:sealed`-subrutin för typangivna lexikaler
+## Föreslagen Perl 7-lösning: `:förseglad`
 
 Provkod:
 
@@ -132,13 +132,13 @@ sub handler :sealed {
 
 ## Produktionskvalitet, Robust Perl v5.28+ Prototyp: sealed.pm {{facts.releases.sealed.tag}}
 
-Kompileringsinstruktioner för perl 5.30+ är tillgängliga i podden `sealed.pm` om du vill köra mod_perl2 w/ ithreads och httpd-2.4 w/ event mpm, och inte segfault på **any**-skalan.  Testad på `Solaris 11.4` och `Ubuntu 22.04` på amd64.
+Kompilera instruktioner för perl 5.30+ finns i `sealed.pm` pod ska du köra mod_perl2 w/ ithreads och httpd-2.4 w/ event mpm, och inte segfault på **any**-skalan.  Testad den `Solaris 11.4` och `Ubuntu 22.04`
 
-För skojs skull, prova detta [monkey patch]({{snippetB.pretty_uri}}).
+För skojs skull, prova detta [apa]({{snippetB.pretty_uri}}) till `ModPerl::RegistryCooker`
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Den aktiverar effekterna av `sub handler :Sealed {script goes here}` på alla dina `ModPerl::Registry`-skript, något i stil med [den här](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+Det möjliggör effekterna av `underhanterare: Förseglad {script goes here}` på alla dina `ModPerl::Register` Skript, något som [denna]
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -176,10 +176,10 @@ time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
 req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
-Se <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Leta efter `t/bench.pl` i den överordnade katalogen.
+Se <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Sök efter `t/bench.pl`
 
-Detta gör det möjligt för Perl 5 att utföra exempelkodens metod "content_type" vid kompileringstid, utan att orsaka problem med bakåtkompatibla eller förvrängda CPAN-kodare, eftersom den här funktionen skulle rikta sig mot applikationsutvecklare. Inte ärftliga OO-modulförfattare.
+Detta gör det möjligt för Perl 5 att göra provkoderna `content_type`
 
-Denna Perlish idé är gratis stulen från [Dylan](https://jim.studt.net/dirm/interim-5.html). [Läs detta](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
+Denna engelska idé är gratis stulen från [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Läs det här]
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -10,15 +10,15 @@ title: רשימות דיוור
 
 ## ezmlm-idx
 
-הניסיון שלי עם תוכנת רשימת דיוור סובב סביב [qmail](http://cr.yp.to/qmail.html) ו[ezmlm-idx](http://untroubled.org/ezmlm/). . עם כמה תסריטים קטנים, הצלחתי לתמוך במגוון רחב של תרחישי שימוש חדשים שאינם נתמכים מטבעם על ידי "ezmlm-idx" עצמו.  תכונות שימושיות באופן כללי מחוץ ל[קרן התוכנה אפאצ'י](http://www.apache.org) הם מסודרים למטה.  כדי להשתמש בקבצים אלה בצע [layout] זה(ezmlm/).
+הניסיון שלי עם תוכנת רשימת דיוור סובב סביב [אימייל](http://cr.yp.to/qmail.html) וגם [ezmlm-idx](http://untroubled.org/ezmlm/). עם כמה תסריטים קטנים, הצלחתי לתמוך במגוון רחב של תרחישי שימוש חדשים שאינם נתמכים מטבעם על ידי `ezmlm-idx` עצמו.  תכונות שימושיות באופן כללי מחוץ ל- [קרן התוכנה של אפאצ'י](http://www.apache.org) מפורטים להלן.  כדי להשתמש בקבצים אלה, עקוב אחר זה [מתווה]
 
 מס' # BATV והגשת דוחות סטנדרטיים
 
-[בין/שולח-דמונגר](ezmlm/bin/sender-demunger.pl).
+[bin/שולח-demunger](ezmlm/bin/sender-demunger.pl) הוא תסריט מעט עטיפה המאפשר `באטב` וגם `הגשת דוחות סטנדרטיים` `השולח` הדגמה עבור `ezmlm-idx`. . כדי להשתמש בו אתה פשוט להוסיף אותו כקידומת לכל הקווים שלך `</editor />` וגם `</manager />` בלוקים בתוך `איפוס סיסמה` ורץ `ezmlm-make -+` על הרשימות שלך, או על קמצוץ בהנחה שלא תרוץ `ezmlm-עושה` שוב ברשימות שלך, ערוך `עורך` וגם `מנהל`
 
-[באטב](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) ו[SRS](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme).
+[באטב](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) וגם [הגשת דוחות סטנדרטיים](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme) מציבות בעיות ייחודיות עבור `ezmlm-idx` כי בניגוד לתוכנות אחרות של רשימת דיוור היא פועלת על `דואר מ-` חלק של `מדיה`
 
-שני המפרטים סובבים סביב מתן כתובות זמניות לחלק המעטפה 'דואר אלקטרוני מ', אשר להטמיע את הכתובת המקורית בצורה קלה לפענוח.  אבל {# lede #}כתובות זמניות אלה הן אנטמה למערכות המנוי והמתינות של "ezmlm-idx".{# lede #}
+שני המפרטים סובבים סביב מתן כתובות זמניות `דואר מ-` חלק המעטפה, אשר מטמיע את הכתובת המקורית בצורה הניתנת לפענוח בקלות.  אבל {# lede #}כתובות זמניות אלה הן anathema ל `ezmlm-idx`'s מנוי ומערכות מתינות{# lede #}, ואת `שולח-demunger.pl`
 
 <div class="alert alert-info">
    <div class="alert-header">הערה</div>
@@ -29,7 +29,7 @@ title: רשימות דיוור
 
 ## דמרק
 
-ראה [bin/ezmlm-dmarc-filter.pl](ezmlm/bin/ezmlm-dmarc-filter.pl) ו[bin/ezmlm-seekable-stdin.pl](ezmlm/bin/ezmlm-seekable-stdin.pl) וגם [lib/pull_header.pm](ezmlm/lib/pull_header.pm).
+ראו  [bin/ezmlm-dmarc-filter.pl](ezmlm/bin/ezmlm-dmarc-filter.pl) וגם [bin/ezmlm ניתן לחיפוש-stdin.pl](ezmlm/bin/ezmlm-seekable-stdin.pl) וגם [ספרייה/pull_header.pm](ezmlm/lib/pull_header.pm).  כדי להשתמש בתסריטים אלה, שנה את השורות ב- `</editor />` חלק של `איפוס סיסמה` שיחה זו `ezmlm-gate, בריטניה`, `ezmlm-store`, או `ezmlm-שלח`
 
 ```shell
     |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/ezmlm-seekable-stdin.pl /path/to/bin/sender-demunger.pl <#B#>/ezmlm-gate -rY '<#D#>' '<#D#>' '<#D#>/digest' '<#D#>/allow' '<#D#>/mod'
@@ -37,7 +37,7 @@ title: רשימות דיוור
     |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | <#B#>/ezmlm-send -r '<#D#>'
 ```
 
-פעולה זו מניחה שתיגע בקובץ בשם "dmarc" בכל ספריית רשימות שבה ברצונך לאפשר את המסנן.  באפשרותך להגדיר את `.ezmlmrc` לעשות זאת על-ידי הוספת הבלוק הבא לקובץ זה:
+פעולה זו מניחה שתיגע בקובץ בשם `דמארק` בכל ספריית רשימה שבה ברצונך לאפשר את המסנן.  תוכל להגדיר תצורה `איפוס סיסמה`
 
 ```shell
 	</-dmarc#FXT/>
@@ -45,8 +45,8 @@ title: רשימות דיוור
 	</dmarc#t/>
 	</dmarc#x/>
 ```
-תצורות הרשימה היחידות שפועלות לפי `DMARC` הן אלו עם `-f`, `-t` או `-x` מוגדר. התצורה שלעיל תתאים לכך.
+תצורות הרשימה היחידות שרצות אחרי `DMARC (חברה)` אלה עם `-f`, `-t` או `-x`
 
-אם לא שמרת על קשר עם הזמנים, יש תנועה אחרונה כדי להציג חזק [DMARC](http://en.wikipedia.org/wiki/DMARC) כללי מדיניות שדוחים הודעות שנכשלות [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail).
+אם לא שמרת על קשר עם הזמן, יש תנועה חדשה קדימה כדי להציג חזק [DMARC (חברה)](http://en.wikipedia.org/wiki/DMARC) כללי מדיניות שדוחים הודעות שנכשלות [דקים](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) בדיקות חתימה. פייסבוק, טוויטר, LinkedIn, יאהו! ועכשיו AOL מובילה את החיוב הזה לטריטוריה חדשה, ואילצה את מפעילי רשימת הדיוור להתמודד עם המצב. מה זה `ezmlm-dmarc-filter.pl` האם, וזה לא הפתרון היחיד האפשרי לבעיה, הוא להוריד את `DKIM - חתימה` כותרת לכל דומיין כזה, והוסף `. . לא תקף` סיומת לשולח `מתאריך` כתובת כותרת.  יש לו את היתרון של להיות אחד הפתרונות הפשוטים ביותר שעובד, אז אני מציע את זה כאן.  עד כה התחומים שפועלים באופן קפדני `DMARC (חברה)` כל הפוליסות מספקות התאמה `השב-אל` כותרות, כך שינויים אלה נעשו על ידי `ezmlm-dmarc-filter.pl`
 
-$תאריך$
+$תאריך: 2023-01-19 22:58:40 +0000 (Thu, 19 ינו 2023) $

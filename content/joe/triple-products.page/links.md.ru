@@ -7,12 +7,12 @@ status: черновик
 title: Ссылки
 ---
 
-### Опубликовано в [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4793533).
+### Опубликовано в [SSRN]
 
-- [PDF](triple-products.pdf.en).
+- [PDF]
 
-- [$$\LaTeX$$](triple-products.tex.en).
+- [$$\LaTeX$$]
 
-- [$$\LaTeX$$ Библиография](triple-products.bbl.en) как [JSON](triple-products.page/bibliography.json.en).
+- [$$\LaTeX$$ Библиография](triple-products.bbl.en) как [JSON]
 
 <!-- $Date$ $Author$ $Revision$ -->

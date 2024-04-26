@@ -11,13 +11,13 @@ title: Joe's slumpmässiga tankar
 
 <div class="right">
 
-![Dragonens år](index.page/dragon.png).
+![Drakens år]
 
 </div>
 
 ## {# lede #}Välkommen!{# lede #}
 
-Välkommen till 2024: Drakens år.  Vi praktiserar [Open Science](triple-products).
+Välkommen till 2024: Drakens år.  Vi övar [Öppen vetenskap]
 
 Mer snart...
 

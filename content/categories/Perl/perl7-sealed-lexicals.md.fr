@@ -1,12 +1,13 @@
 ---
+archived: ~
 categories: Perl, Orion, Performance, Apache
 dependencies: '*.md.fr'
 keywords: perl, dylan, statique, méthode, recherche, compiler, scellé, apache,mod_perl,
   performance
-status: projet
+published: ~
+status: vérifié=12973
 title: 'Perl 7 Demande de fonctionnalité : sous-sections scellées pour les lexicaux
   typés'
-
 ---
 
-{% ssi `/joe/perl7-sealed-lexicals.md.fr` %}
+{% ssi `/joe/perl7-sealed-lexicals.md.en` %}

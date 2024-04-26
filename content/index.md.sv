@@ -15,11 +15,12 @@ title: Av, Av och För Iconoclasts
   <div class="card-body">
   <small>
 <pre class="card-title">
-substantiv [ C ]   formellt
+substantiv [ C ]   formell
 US /aÉaËkÉË.nÉ.klæst/
-en person som starkt motsätter sig detta i allmänhet
+En person som starkt motsätter sig
 accepterade övertygelser och traditioner
 </pre>
+
 
 &nbsp;
 
@@ -37,7 +38,7 @@ accepterade övertygelser och traditioner
 
 </div>
 
-![Ikonoklast](images/iconoclast.jpg).
+![Ikonoklast]
 
 <div style="max-width:900px">
 
@@ -49,9 +50,9 @@ Välkommen till vår
 
 </center>
 
-Bloggvärlden! Registrera dig idag på [Kontakta oss](/contact).
+Bloggvärlden! Registrera dig redan idag på [Kontakta oss]
 
-Se även [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orions logotyp" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wikisystemet Enterprise Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [mermaid-mindmap](https://www.sunstarsys.com/orion/features).
+Vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orions logotyp" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wikisystemet Enterprise Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru mindmap]
 
 &nbsp;
 
@@ -68,15 +69,15 @@ Se även [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><i
 
 &nbsp;
 
-- <span class="badge bg-success">Ny</span> [Apache HTTPd Devs ansåg vara skadliga](/joe/apache-considered-harmful).
+- <span class="badge bg-success">Ny</span> [Apache HTTPd Devs ansåg vara skadliga]
 
-- [Triple Products of Eigenfunctions och Spectral Geometry](/joe/triple-products).
+- [Trippelprodukter av Eigenfunctions och Spectral Geometry]
 
 - [Applikationsprestanda](/joe/performance) &mdash;
 
 - [Informationssäkerhet](/joe/infosec) &mdash;
 
-- [Sealed Lexicals för Perl 7](/joe/perl7-sealed-lexicals) &mdash;
+- [Förseglade Lexicals för Perl 7](/joe/perl7-sealed-lexicals) &mdash;
 
 - [Rörelsen DevOps](/joe/devops) &mdash;
 
@@ -91,7 +92,7 @@ Se även [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><i
 </div>
 
 <style type="text/css">
-h2 { teckenstorlek: 18px }
+h2 { font-size: 18px }
 
 button.btn a {
     color:#fff;
@@ -101,35 +102,35 @@ div.jumbotron button.btn {
 }
 
 /*-------------------------------------------
-	Animeringar
+	Animations
 -------------------------------------------*/
 @-webkit-keyframes FADEY {
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
 
-@keyframes nyheter {
-  0 % {
-    vänster: 1000px;
-	topp: 1000px;
-	position:relativ;
+@keyframes news {
+  0% {
+    left: 1000px;
+	top: 1000px;
+	position:relative;
   }
 
-100 % {top: 5px;position:relative}
+100% {top: 5px;position:relative}
 
 }
 
 #news {
-	animering: nyheter;
-    animeringslängd: 2s;
-    animering-timing-funktion: lätthet;
+	animation: news;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
 .theme-showcase {
-	-webkit-animation-namn: FADEY;
-	-webkit-animation-varaktighet: 1s;
-	-webkit-animation-timing-funktion: easy-in-out;
-	-webkit-animation-iteration-antal: 1;
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
 }
 </style>
 

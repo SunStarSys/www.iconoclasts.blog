@@ -1,10 +1,11 @@
 ---
-categories: Apache, Perl
+archived: ~
+categories: Apache (Perl)
 dependencies: '*.md.de'
-keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
-status: überprüft=19777
+keywords: apache,httpd,mod_apreq2,libapreq2
+published: ~
+status: Entwurf
 title: Apache HTTPd Entwickler als schädlich angesehen
-
 ---
 
-{% ssi `/joe/apache-considered-harmful.md.de` %}
+{% ssi `/joe/apache-considered-harmful.md.en` %}

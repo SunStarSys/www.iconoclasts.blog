@@ -1,8 +1,10 @@
 ---
+archived: ~
 categories: Perl, Orion, Performance, Apache
 dependencies: '*.md.fr'
 keywords: perl, dylan, statique, méthode, recherche, compiler, scellé, apache,mod_perl,
   performance
+published: ~
 status: projet
 title: 'Perl 7 Demande de fonctionnalité : sous-sections scellées pour les lexicaux
   typés'
@@ -14,15 +16,15 @@ title: 'Perl 7 Demande de fonctionnalité : sous-sections scellées pour les lex
 
 ## Le problème
 
-{# lede #}La recherche de méthode d'exécution OO de Perl 5 a une surcharge de performances de 50 % supérieure à celle d'un appel de sous-routine nommé direct{# lede #}.
+{# lede #}La recherche de méthode d'exécution OO de Perl 5 a une surcharge de performances de 50 % supérieure à celle d'un appel de sous-routine nommé direct{# lede #}
 
-## La solution initiale : les optimisations de recherche de méthode de Doug MacEachern.
+## La solution initiale : les optimisations de recherche de méthode de Doug MacEachern
 
-Doug était le créateur du projet mod_perl au milieu des années 90, donc évidemment l'écriture de haute performance Perl était son fort. Une de ses nombreuses contributions à [p5p](https://lists.perl.org/list/perl5-porters.html).
+Doug était le créateur du projet mod_perl au milieu des années 90, donc évidemment l'écriture de haute performance Perl était son fort. Une de ses nombreuses contributions à [p5p](https://lists.perl.org/list/perl5-porters.html) devait réduire de moitié la pénalité de performance de la recherche de méthode OO, à l'aide d'une méthode + <code> &#64;Cache de hiérarchie ISA</code> permettant de rechercher la méthode d'objet d'exécution pour les objets mod_perl comme `Apache2::RequestRec`
 
-Il ne s'agit pas d'un problème insignifiant avec les appels aux méthodes d'accès get-set `C struct` - la situation courante avec de nombreuses API mod_perl. La pénalité de recherche d'appel de méthode d'exécution de Perl sur la structure request_rec * de httpd, que mod_perl expose via le module Apache2 : :RequestRec, est du même ordre de grandeur que l'exécution complète de l'appel.  Pour les sites soutenus par mod_perl qui font des millions d'appels de méthode XS par seconde, il s'agit d'un horrible gaspillage de précieux cycles de CPU.
+Ce n'est pas un problème insignifiant avec les appels à `C struct` Méthodes d'accès get-set &mdash; situation courante avec de nombreuses API mod_perl. Méthode d'exécution Perl : pénalité de recherche d'appel sur httpd `structure request_rec *`, que mod_perl expose via le `Apache2::RequestRec`
 
-Ce que [Doug cherchait](https://www.perl.com/pub/2000/06/dougpatch.html/).
+Quoi [Doug cherchait]
 
 ## [Script de référence]({{snippetA.pretty_uri}}).
 
@@ -116,7 +118,7 @@ sealed 662252/s    21%     --
 ok 3
 ```
 
-## Solution Perl 7 proposée : sous-routines ` :sealed` pour les lexicaux typés
+## Solution Perl 7 proposée : ` : scellé`
 
 Exemple de code :
 
@@ -132,13 +134,13 @@ sub handler :sealed {
 
 ## Production-Qualité, Robuste Perl v5.28+ Prototype : sealed.pm {{facts.releases.sealed.tag}}
 
-Les instructions de compilation pour perl 5.30+ sont disponibles dans le pod `sealed.pm` si vous voulez exécuter mod_perl2 avec ithreads et httpd-2.4 avec mpm d'événement, et non segfault à n'importe quelle échelle **.  Testé sur 'Solaris 11.4' et 'Ubuntu 22.04' sur amd64.
+Les instructions de compilation pour perl 5.30+ sont disponibles dans la `sealed.pm` pod doit vous permettre d'exécuter mod_perl2 avec ithreads et httpd-2.4 avec mpm d'événement, et non segfault à n'importe quelle échelle.  Testé le `Solaris 11.4` et `Ubuntu 22.04`
 
-Pour le plaisir, essayez ce [patch de singe]({{snippetB.pretty_uri}}).
+Pour le plaisir, essayez ceci [patch singe]({{snippetB.pretty_uri}}) à `ModPerl::RegistryCooker`
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Il active les effets de `sub handler :Sealed {script goes here}` sur tous vos scripts `ModPerl : :Registry`, quelque chose comme [celui-ci](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+Il permet les effets de `sous-gestionnaire : {script goes here} scellé` sur tous vos `ModPerl : :Registre` scripts, quelque chose comme [celui-ci]
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -176,10 +178,10 @@ time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
 req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
-Voir <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Recherchez `t/bench.pl` dans le répertoire parent.
+Voir <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Rechercher `t/bench.pl`
 
-Cela permettra à Perl 5 d'effectuer la recherche de méthode `content_type` de l'exemple de code au moment de la compilation, sans causer de problèmes de compatibilité arrière ou de codeurs CPAN lésés, car cette fonctionnalité ciblerait les développeurs d'applications. Les auteurs de module OO ne peuvent pas être hérités.
+Cela permettra à Perl 5 d'effectuer l'exemple de code `content_type`
 
-Cette idée de Perlish est volée gratuitement à [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Lire ceci](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
+Cette idée de Perlish est gratuitement volée à [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Lire cet article]
 
 <!-- $Date$ $Author$ $Revision$ -->

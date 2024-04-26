@@ -7,12 +7,12 @@ status: skiss
 title: Länkar
 ---
 
-### Publicerad till [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4793533).
+### Publicerad till [Personnr]
 
-- [PDF](triple-products.pdf.en).
+- [PDF]
 
-- [$$\LaTeX$$](triple-products.tex.en).
+- [$$\LaTeX$$]
 
-- [$$\LaTeX$$ Bibliografi(triple-products.bbl.en) som [JSON](triple-products.page/bibliography.json.en).
+- [$$\LaTeX$$ Bibliografi](trippel-products.bbl.en) som [JSON]
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date: 2024-04-18 20:36:35 +0000 (Thu, 18 Apr 2024) $ $Author: joe $ $Revision: 22425 $ -->

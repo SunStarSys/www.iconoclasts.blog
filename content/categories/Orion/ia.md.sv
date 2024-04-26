@@ -1,6 +1,6 @@
 ---
 archived: ~
-categories: Orion, arkitektur, ZFS
+categories: Orion, Arkitektur, ZFS
 dependencies: '*.md.sv'
 keywords: information,topologi,hypermedia,rest,arkitektur,hateoas
 published: ~

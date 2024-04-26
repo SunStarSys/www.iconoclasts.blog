@@ -2,7 +2,7 @@
 archived: ~
 categories: Versionskontroll, Apache
 dependencies: '*.md.sv'
-keywords: säkerhet,icke-förnekande,DVCS,versionskontroll,icla
+keywords: säkerhet,icke-förnekelse,DVCS,versionskontroll,icla
 published: ~
 status: skiss
 title: Git och non repudement

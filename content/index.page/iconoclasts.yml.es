@@ -1,9 +1,14 @@
 ---
-title: Iconoclast Youtube List
-status: draft
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: borrador
+title: Iconoclasta Lista de Youtube
 ---
 
-- name: "Martin Luther King, Jr"
+
+- name: "Martin Luther King, Jr."
   key: 5r98tT0j1a0
 - name: Bruce Lee
   key: 4O9o4CKTGzQ

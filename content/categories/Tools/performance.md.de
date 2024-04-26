@@ -1,10 +1,11 @@
 ---
+archived: ~
 categories: Leistung, Tools
 dependencies: '*.md.de'
 keywords: ~
-status: archiviert
+published: ~
+status: Entwurf
 title: Anwendungsperformance
-
 ---
 
-{% ssi `/joe/performance.md.de` %}
+{% ssi `/joe/performance.md.en` %}

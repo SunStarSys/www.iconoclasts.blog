@@ -1,10 +1,11 @@
 ---
+archived: ~
 categories: IT
 dependencies: '*.md.de'
 keywords: Devops
-status: archiviert
+published: ~
+status: Entwurf
 title: Die Bewegung DevOps
-
 ---
 
-{% ssi `/joe/devops.md.de` %}
+{% ssi `/joe/devops.md.en` %}

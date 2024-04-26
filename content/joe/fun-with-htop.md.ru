@@ -2,9 +2,9 @@
 archived: ~
 categories: Инструменты
 dependencies: '*.md.ru'
-status: архивировано
-published: ~
 keywords: ~
+published: ~
+status: архивировано
 title: Развлечения с htop
 ---
 
@@ -18,24 +18,24 @@ title: Развлечения с htop
 ## {# lede #}Расширенные возможности htop на популярных платформах Unix{# lede #}
 
 
-- Дельты от `top`
+- Дельта из `лучший`
 
 	- сложное интерактивное поведение
 	- тематические, **семантические** цветовые схемы
-	- работает на уровне потока POSIX, а не только полных процессов
+
 
 
 - Особенности
 
 	- настроить отображение `C`
-	- поиск `/` или фильтр `\` легких процессов (LWP, aka pthreads) по названию
-	- фильтр LWP по имени пользователя `u`
-	- переключение вида дерева `t`
+	- поиск `/` или фильтр `\` легкие процессы (LWP, aka pthreads) по названию
+	- фильтр LWP по имени пользователя `вы`
+	- переключатель `t` представление дерева
 	- команды per-LWP
-		- трассировка системы `s`
-		- `l` список открытых дескрипторов файлов
-		- переменные среды e
-		- k посылает сигнал с убийством
+		- `с` трассировка системы
+		- `л` список открытых дескрипторов файлов
+		- `д` переменные среды
+		- `кп`
 
 ### Линукс
 
@@ -43,17 +43,16 @@ title: Развлечения с htop
 
 ### Порт OSX
 
-- Включить DTrace (для отключения SIP требуется [загрузка в режим восстановления](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
-- копия [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop).
+- Включить DTrace (требуется [загрузите в режим восстановления, чтобы отключить SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
+- копия [дтрусс-хтоп](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) по `~/ячейка` и выполнить для создания `лице` ссылка
+- запуск `топ`
 
-### [Солярис 11](https://github.com/joesuf4/htop/tree/solaris-stable).
+### [Солярис 11]
 
 - Статистика ZFS ARC
 - Столбцы «Имя зоны/идентификатор»
-- Дельта учета LWP Solaris
+- Solaris LWP Бухгалтерские дельты
 	- двухуровневый PID + LWPID
-	- не предоставляет полные аргументы команды, только имя команды
+
 
 <!-- $Date$ $Author$ -->
-
-<!-- $Date$ $Author$ $Revision$ -->

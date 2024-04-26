@@ -1,11 +1,12 @@
 ---
+archived: ~
 categories: ~
 dependencies: /*/index.*.fr
 keywords: ~
+published: ~
 status: projet
 title: Blogueurs
 ---
-
 
 {% for d in deps %}
   {% if d.0|starts_with:"/categories" %}

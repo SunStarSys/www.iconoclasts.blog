@@ -1,9 +1,9 @@
 ---
 archived: ~
-categories: Южная Флорида, системное администрирование, DevOps, DevSecOps, SRE, GitOps
-keywords: черновик
+categories: ~
+keywords: Южная Флорида, системное администрирование, DevOps, DevSecOps, SRE, GitOps
 published: ~
-status: ~
+status: черновик
 title: Свяжитесь с нами
 ---
 
@@ -11,7 +11,7 @@ title: Свяжитесь с нами
 {% include "enquiry_get.html" %}
 </div>
 
-![SunStar Системы](images/sunstarlogowhole.png).
+![SunStar Системы]
 
 ### Эл. почта:
 
@@ -19,8 +19,8 @@ title: Свяжитесь с нами
 
 ### Телефон:
 
-- [+1 âª(305) 859-1630â¬](tel://1.305.859.1630/).
+- [+1 âª(305) 859-1630â¬]
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date: 2024-04-18 20:48:55 +0000 (Thu, 18 Apr 2024) $ $Author: joe $ $Revision: 22449 $ -->
 
 <div style="height:800px">&nbsp;</div>

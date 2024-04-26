@@ -8,7 +8,7 @@ status: skiss
 title: Informationssäkerhet, applikationsprestanda och tillförlitlighet
 ---
 
-{# lede #}"Icke-funktionell" programvaruteknik handlar om tre huvudfrågor: säkerhet, prestanda och tillförlitlighet (**SPR**){# lede #}"funktionell" programvaruteknik innebär den normala funktionsbaserade livscykeln för programvaruutveckling. En korrekt [NIST 800-160v1r1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1r1.pdf).
+{# lede #}"Icke-funktionell" programvaruteknik handlar om tre huvudfrågor: säkerhet, prestanda och tillförlitlighet (**SPR**){# lede #}"funktionell" programvaruteknik innebär den normala funktionsbaserade livscykeln för programvaruutveckling. En riktig [NIST 800-160v1r1]
 
 Vissa företag har fått otroligt värde genom att dela funktionell från icke-funktionell programvaruutveckling i två oberoende hierarkier i den tekniska delen av organisationsschemat. Du kan hitta ** SPR** arkitekter som mig själv att leda ett sådant ** SPR**-team, med en flexibel kombination av utvecklande, underordnade roller:
 
@@ -26,7 +26,7 @@ Genom att ha ett dedikerat **SPR**-team kan ledningen frigöra produktingenjöre
 
 Det finns också en betydande specialisering när det gäller observationsverktyg och kärnbaserade spårningstekniker, som bra systemingenjörer genomgår för att hålla sig på toppen av sitt område. Det är svårt att anställa för dessa hjälpfärdigheter när man söker kvalitetstalang för traditionella agile-baserade produkt / full stack ingenjörer och / eller datavetare.
 
-Robust, säker, skalbar, kostnadseffektiv och välfungerande programvara är inom räckhåll för alla små / medelstora ingenjörsteam med rätt investeringar i **SPR**. [Reach out](/contact).
+Robust, säker, skalbar, kostnadseffektiv och välfungerande programvara är inom räckhåll för alla små/medelstora ingenjörsteam med rätt investeringar i **SPR**. [Kontakta oss]
 
 
 <!-- $Date$ $Author$ $Revision$ -->

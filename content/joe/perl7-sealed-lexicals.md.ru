@@ -3,8 +3,8 @@ archived: ~
 categories: Перл, Орион, Перформанс, Апач
 dependencies: '*.md.ru'
 keywords: perl,dylan,static,method,lookup,compile,sealed,apache,mod_perl,performance
-status: черновик
 published: ~
+status: черновик
 title: 'Запрос функции Perl 7: запечатанные поддоны для типизированных лексиков'
 ---
 
@@ -18,13 +18,13 @@ title: 'Запрос функции Perl 7: запечатанные поддо�
 
 ## Первоначальное решение: оптимизация поиска метода Дага МакЭчерна
 
-Даг был создателем проекта mod_perl еще в середине 90-х годов, поэтому, очевидно, письмо с высокой производительностью Перла было его фортом. Один из его многочисленных вкладов в [p5p](https://lists.perl.org/list/perl5-porters.html) необходимо было вдвое сократить штраф за производительность при поиске метода OO, используя метод + <code> &#64;
+Даг был создателем проекта mod_perl еще в середине 90-х годов, поэтому, очевидно, письмо с высокой производительностью Перла было его фортом. Один из его многочисленных вкладов в [p5p](https://lists.perl.org/list/perl5-porters.html) было вдвое сократить штраф за производительность при поиске метода OO с помощью метода + <code> &#64;Кэш иерархии ISA</code> для поиска метода объекта времени выполнения для объектов mod_perl, таких как `Apache2::RequestRec`
 
-Это не мелочная проблема с вызовами методов доступа get-set `C Structure` &mdash;
+Это не мелочь с вызовами на `Структура C` методы доступа get-set &mdash; общая ситуация со многими API mod_perl. Штраф при поиске вызова метода выполнения Perl на httpd `структура request_rec *`, что mod_perl показывает через `Apache2::RequestRec`
 
-Что искал Дуг(https://www.perl.com/pub/2000/06/dougpatch.html/).
+Что [Даг искал]
 
-## [Сценарий тестирования]({{snippetA.pretty_uri}}).
+## [Сценарий эталонного теста]({{snippetA.pretty_uri}}).
 
 [snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
 
@@ -116,7 +116,7 @@ sealed 662252/s    21%     --
 ok 3
 ```
 
-## Предложенное решение Perl 7: подпрограммы `:sealed` для типизированных лексик
+## Предложенное решение Perl 7: `:запечатано`
 
 Пример кода:
 
@@ -132,13 +132,13 @@ sub handler :sealed {
 
 ## Производство-Качество, Надежный Perl v5.28+ Прототип: sealed.pm {{facts.releases.sealed.tag}}
 
-Инструкции по компиляции для perl 5.30+ доступны в отсеке `sealed.pm`, если вы хотите запустить mod_perl2 w/ ithreads и httpd-2.4 w/ event mpm, а не segfault в **любой** шкале.  Протестировано на «Солярис 11.4» и «Убунту 22.04» на amd64.
+Инструкции по компиляции для perl 5.30+ доступны в `sealed.pm` pod должен запускать mod_perl2 w/ ithreads и httpd-2.4 w/ event mpm, а не segfault в **любой** шкале.  Дата тестирования `Солярис 11.4` и `Убунту 22.04`
 
-Для удовольствия, попробуйте это [обезьяна патч]({{snippetB.pretty_uri}}).
+Для развлечения, попробуйте это [обезьяна патч]({{snippetB.pretty_uri}}) по `ModPerl::RegistryCooker`
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Он включает эффекты `sub handler :Sealed {script go here}` на все ваши скрипты `ModPerl::Registry`, что-то вроде [этого](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+Это позволяет воздействовать на `субобработчик:Заблокировано {script go here}` на всех ваших `ModPerl::Реестр` сценарии, что-то вроде [этот]
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -176,10 +176,10 @@ time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
 req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
-См. <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Найдите t/bench.pl в родительском каталоге.
+См. <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Поиск `т/bench.pl`
 
-Это позволит Perl 5 выполнять поиск метода content_type в процессе компиляции, не вызывая проблем с обратной совместимостью или проблем с кодерами CPAN, поскольку эта функция будет ориентирована на разработчиков приложений. Не наследуемые авторы OO-модулей.
+Это позволит Perl 5 сделать образец кода `content_type`
 
-Эта перлишская идея безвозмездно украдена у Дилана(https://jim.studt.net/dirm/interim-5.html).  [Читать](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
+Эта идея безвозмездно украдена из [Дилан](https://jim.studt.net/dirm/interim-5.html).  [Прочитать это]
 
 <!-- $Date$ $Author$ $Revision$ -->

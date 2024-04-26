@@ -1,41 +1,48 @@
-Title: De, Por y Para Iconoclastas
-Dependencies: /categories/*/index.html.es
+---
+archived: ~
+categories: ~
+dependencies: /categories/*/index.html.es
+keywords: wiki,conocimiento
+published: ~
+status: publicado
+title: De, por y para iconoclastas
+---
 
-<div id="news" class=" float-lg-end">
-	<div class="card border-success" style="max-width:25rem;background-color:transparent">
-		<div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclasta</a></div>
+<div class=" float-lg-end" id="news">
+  <div class="card border-success" style="max-width:25rem;background-color:transparent">
+    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclasta</a></div>
 
-<div class="card-body">
-<small>
+  <div class="card-body">
+  <small>
 <pre class="card-title">
 sustantivo [ C ]   formal
-US  /aɪˈkɑː.nə.klæst/
-una persona que se opone a las creencias
-y tradiciones generalmente aceptadas
+Estados Unidos  /aÉaËkÉË.nÉ.klÃ¦st/
+una persona que se opone en general
+creencias y tradiciones aceptadas
 </pre>
-</small>
+
 
 &nbsp;
 
 {% for elt in iconoclasts.content|shuffle|slice:":3" %}
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe title="{{elt.name}}" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.name}}" style="max-width:560;max-height:315" title="{{elt.key}}"></iframe>
 </div>
 &nbsp;
 {% endfor %}
 
-</div>
+  </div>
 </div>
 
 &nbsp;
 
 </div>
 
-![Iconoclast](images/iconoclast.jpg)
+![Iconoclasta]
 
 <div style="max-width:900px">
 
-Bienvenido a nuestra comunidad de blogs
+Bienvenido a nuestro
 
 <center>
 
@@ -43,14 +50,14 @@ Bienvenido a nuestra comunidad de blogs
 
 </center>
 
-¡Regístrese hoy mismo en la página [Contacto](/contact) durante nuestro lanzamiento promocional!
+comunidad de blogs! Regístrese hoy mismo en el [Contáctenos]
 
-Además, por favor echa un vistazo a  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>The Enterprise Jamstack Wiki.</em></span>&trade; &mdash;  es el único producto empresarial basado en SCM con integración nativa de [mermaid-mindmap](https://www.sunstarsys.com/orion/features).
+Además, por favor echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki de Enterprise Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mermaid-mindmap]
 
 &nbsp;
 
 <div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
-	 	<iframe title="video" class="embed-responsive-item" style="min-width:400px;min-height:275px" src="https://www.youtube.com/embed/f55XLGCs3H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/f55XLGCs3H0" style="min-width:400px;min-height:275px" title="video"></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -62,21 +69,21 @@ Además, por favor echa un vistazo a  [Orion](https://www.sunstarsys.com/orion/)
 
 &nbsp;
 
-- <span class="badge bg-success">New</span> [Apache HTTPd Devs Considered Harmful](/joe/apache-considered-harmful)
+- <span class="badge bg-success">Nuevo</span> [Desarrolladores de Apache HTTPd considerados dañinos]
 
-- [Triple Products of Eigenfunctions and Spectral Geometry](/joe/triple-products) published at SSRN.
+- [Triple Productos de Eigenfunciones y Geometría Espectral]
 
-- [Application Performance](/joe/performance) &mdash; a working example: from an observable bottleneck to an effective resolution.
+- [Rendimiento de aplicaciones](/joe/performance) &mdash;
 
-- [Information Security](/joe/infosec) &mdash; abstraction of the basic concepts leads to wide real-world applicability and clarity.
+- [Seguridad de la información](/joe/infosec) &mdash;
 
-- [Sealed Lexicals for Perl 7](/joe/perl7-sealed-lexicals) &mdash; add <span class="text-info">:sealed</span> to a function definition and enjoy the extra speed of compile-time method lookups for all of its typed lexicals.
+- [Léxicos sellados para Perl 7](/joe/perl7-sealed-lexicals) &mdash;
 
-- [The DevOps Movement](/joe/devops) &mdash; filled in the missing details on this article.
+- [Movimiento DevOps](/joe/devops) &mdash;
 
 &nbsp;
 
-## Categoría Índice
+No de índices de categoría
 
 &nbsp;
 
@@ -127,4 +134,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-04-18 20:37:15 +0000 (Thu, 18 Apr 2024) $ $Author: joe $ $Revision: 22428 $ -->
+<!-- $Date: 2024-04-22 22:37:23 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23409 $ -->

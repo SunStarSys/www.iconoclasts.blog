@@ -1,22 +1,24 @@
 ---
+archived: ~
 categories: Versionskontrolle, Apache
 dependencies: '*.md.de'
-keywords: Sicherheit, keine Ablehnung, DVCS, Versionskontrolle, ICLA
+keywords: Sicherheit, keine Ablehnung, DVCS, Versionskontrolle,icla
+published: ~
 status: archiviert
 title: Git und Non Repudation
 ---
 
 Dieser Aufsatz bezieht sich wirklich auf DVCS im Allgemeinen, nicht nur auf Git per se.  Aber wir werden die Aufmerksamkeit auf Git konzentrieren, weil es bis heute die beliebteste DVCS ist.
 
-[Nicht zurückweisen](http://en.wikipedia.org/wiki/Non-repudiation).
+[Nicht zurückweisend]
 
 Mit einem traditionellen, zentralisierten Tool zur Versionskontrolle sind solche Datensätze aus der Commit-Historie leicht verfügbar.  Jede Zusage an das System durchläuft einen Autorisierungsmechanismus, um sicherzustellen, dass die Person, die diese Änderung vorgenommen hat, zum Hochladen autorisiert ist.  Diese Datensätze sind für das Unternehmen von entscheidender Bedeutung, um sicherzustellen, dass genaue Datensätze gespeichert werden, die angeben, wer für das Hochladen jeder Codezeile in die betreffende Software verantwortlich ist.
 
-Mit git oder verteilter Versionskontrolle im Allgemeinen, {# lede #}Es gibt einen klaren Unterschied zwischen der "Commit"-Geschichte und der "Upload"-Geschichte{# lede #}
+Mit git oder verteilter Versionskontrolle im Allgemeinen, {# lede #}Es gibt einen klaren Unterschied zwischen der "Commit"-Geschichte und der "Upload"-Geschichte{# lede #} &mdash; die ich als "Push Records" bezeichnen werde. Commits in git werden nicht authentifiziert, da sie lokal erfolgen, wobei lokale, nicht verifizierte Metadaten zur Historie hinzugefügt werden.  Der Uploadschritt, aka `git push`
 
-[Die Apache Software Foundation](https://www.apache.org/).
+Mit [Die Apache Software Foundation]
 
-Warum ist das wichtig?  Nun, zunächst lassen Sie mich ein häufiges Missverständnis über die Notwendigkeit von Beitragenden Lizenzvereinbarungen (ICLAs) für Apache-Committers ansprechen.  Viele Menschen scheinen nicht zu verstehen, dass, soweit ein Committer einzelne Werke der Urheberschaft, gibt es keinen Unterschied zwischen der anwendbaren Sprache in der [ICLA](http://www.apache.org/licenses/icla.txt) und die [Apache License 2.0](http://www.apache.org/licenses/license-2.0).
+Warum ist das wichtig?  Lassen Sie mich zunächst ein allgemeines Missverständnis über die Notwendigkeit von Beitragenden-Lizenzvereinbarungen (ICLAs) für Apache-Committers ansprechen.  Viele Menschen scheinen nicht zu verstehen, dass, soweit ein Committer einzelne Werke der Autorenschaft, gibt es keinen Unterschied zwischen der anwendbaren Sprache in der [ICLA](http://www.apache.org/licenses/icla.txt) und die [Apache-Lizenz 2.0]
 
 Was Push-Datensätze dann bieten, ist eine Möglichkeit, auf jede Codezeile in einem Release zurückzuverfolgen, der einzelne Committer, der dafür verantwortlich ist, diesen Code an das Git-Repository der ASF zu übertragen. Dies ist von entscheidender Bedeutung für die Bestimmung der Herkunft eines Drittbeitrags mit Git, da es für einen solchen Mitwirkenden leider möglich ist, sich von seinem Beitrag zu einem Git-Projekt wegen der verteilten Natur von DVCS-Commit-Logs zu entfernen.  Die verantwortliche Partei wird nach Angaben der ICLA dann der Committer, der den Code gepusht hat.
 
@@ -24,4 +26,4 @@ Frühe und angemessene Minderungsstrategien drehen sich um die Beseitigung des a
 
 Ohne solche Dinge müssten wir zumindest die PGP-Unterzeichnung der Verpflichtung jedes Mitwirkenden vorschreiben, was für viele Projekte belastend ist.  Push-Datensätze bieten einen transparenten Prozess, der sich nicht auf den Workflow eines Projekts auswirkt, außer um sicherzustellen, dass das Git-Repository der ASF das echte Master-Repository ist.
 
-<!-- $Date$ $Author$ $Revision$ -->
+*$Datum: 2023-01-19 22:58:40 +0000 (Do, 19 Jan 2023) $*

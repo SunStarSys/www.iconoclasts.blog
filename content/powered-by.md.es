@@ -1,23 +1,25 @@
 ---
+archived: ~
 categories: ~
 keywords: subversion,svnpubsub,svnwcsub,Apache CMS,Twitter Bootstrap,logo
+published: ~
 status: borrador
 title: Desarrollado por...
 ---
 
 ## Tecnologías del sitio
 
-- [Subversión](https://subversion.apache.org/).
+- [Subversión]
 
-- [SvnPubSub](https://journal.paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/).
+- [SvnPubSub]
 
 - SvnWcSub (cliente SvnPubSub) para disparar compilaciones de sitios activos.
 
-- [SunStar Orión de los sistemas](https://www.sunstarsys.com/orion/).
+- [SunStar Orión de sistemas]
 
-- [Twitter Bootstrap](https://github.com/twbs/bootstrap).
+- [Inicio de Twitter]
 
-- [pffxg.sh](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh).
+- [pffxg.sh]
 
 - Diseño de logo por el artista gráfico (y todo-alrededor del hombre renacentista) Joel Suraci.
 

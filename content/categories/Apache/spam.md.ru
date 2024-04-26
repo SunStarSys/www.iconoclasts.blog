@@ -3,10 +3,9 @@ archived: ~
 categories: Perl, Apache, ИТ, почта, инструменты
 dependencies: '*.md.ru'
 keywords: qpsmtpd,Apache::Qpsmtpd,earlytalker,анти-спам,sendmail,postfix,exim
-published: архивировано
-status: ~
-title: О проблеме со спамом...
-
+published: ~
+status: черновик
+title: О проблеме спама...
 ---
 
-{% ssi `/joe/spam.md.ru` %}
+{% ssi `/joe/spam.md.en` %}

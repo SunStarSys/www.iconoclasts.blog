@@ -1,10 +1,10 @@
 ---
 archived: ~
-categories: wiki,знания
+categories: ~
 dependencies: /categories/*/index.html.ru
-keywords: опубликовано
+keywords: wiki,знания
 published: ~
-status: ~
+status: опубликовано
 title: О, По и для иконоборцев
 ---
 
@@ -15,11 +15,12 @@ title: О, По и для иконоборцев
   <div class="card-body">
   <small>
 <pre class="card-title">
-существительное [ C ]   формальное
-США  /aÉaËkÉË.nÉ.klä...st/
-человек, который решительно выступает против в целом
+имя существительное [ C ]   форма
+США /aÉaËkÉË.nÉ.klà...st/
+человек, который в целом выступает против
 общепринятые верования и традиции
 </pre>
+
 
 &nbsp;
 
@@ -37,7 +38,7 @@ title: О, По и для иконоборцев
 
 </div>
 
-![Иконокласт](images/iconoclast.jpg).
+![Иконок]
 
 <div style="max-width:900px">
 
@@ -49,9 +50,9 @@ title: О, По и для иконоборцев
 
 </center>
 
-сообщество блогов! Зарегистрируйтесь сегодня [Свяжитесь с нами](/contact).
+сообщество блогов! Зарегистрируйтесь сегодня в [Свяжитесь с нами]
 
-Также, пожалуйста, проверьте [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-страница Enterprise Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативной [mermaid-mindmap](https://www.sunstarsys.com/orion/features).
+Также, пожалуйста, проверьте  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-страница Enterprise Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на базе SCM с собственным ПО [русалка mindmap]
 
 &nbsp;
 
@@ -68,15 +69,15 @@ title: О, По и для иконоборцев
 
 &nbsp;
 
-- <span class="badge bg-success">Новинка</span> [Apache HTTPd Devs Считается вредным](/joe/apache-considered-harmful).
+- <span class="badge bg-success">Новинка</span> [Apache HTTPd Devs Считается вредным]
 
-- [Тройные продукты собственных функций и спектральной геометрии](/joe/triple-products).
+- [Тройные продукты собственных функций и спектральной геометрии]
 
-- [Эффективность приложения](/joe/performance) &mdash;
+- [Производительность приложений](/joe/performance) &mdash;
 
-[Информационная безопасность](/joe/infosec) &mdash;
+- [Информационная безопасность](/joe/infosec) &mdash;
 
-- [Запечатанные лексики для Perl 7](/joe/perl7-sealed-lexicals) &mdash;
+- [Герметичные лексики для Perl 7](/joe/perl7-sealed-lexicals) &mdash;
 
 - [Движение DevOps](/joe/devops) &mdash;
 
@@ -91,7 +92,7 @@ title: О, По и для иконоборцев
 </div>
 
 <style type="text/css">
-h2 { размер шрифта: 18px }
+h2 { font-size: 18px }
 
 button.btn a {
     color:#fff;
@@ -101,18 +102,18 @@ div.jumbotron button.btn {
 }
 
 /*-------------------------------------------
-	Анимации
+	Animations
 -------------------------------------------*/
 @-webkit-keyframes FADEY {
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
 
-@keyframes новости {
+@keyframes news {
   0% {
-    слева: 1000px;
-	вершина: 1000px;
-	позиция:относительная;
+    left: 1000px;
+	top: 1000px;
+	position:relative;
   }
 
 100% {top: 5px;position:relative}
@@ -120,15 +121,15 @@ div.jumbotron button.btn {
 }
 
 #news {
-	анимация: новости;
-    продолжительность анимации: 2s;
-    animation-timing-function: простота;
+	animation: news;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
-.theme-showcase
-	-webkit-animation имя: FADEY;
-	-вебкит-анимация-продолжительность: 1с;
-	-webkit-animation-timing-функция: легкость в выходе;
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }
 </style>
