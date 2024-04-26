@@ -49,7 +49,6 @@ path sec=scale(0.25)*texpath("$\pi$")[0];
 coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
 
 draw(tube(p,colorsec),render(merge=true));
-
 ```
 
 {# lede #}Min * 1997 Ph.D. avhandling* som ett blogginlägg.{# lede #}
