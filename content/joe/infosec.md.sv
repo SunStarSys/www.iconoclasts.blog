@@ -33,3 +33,5 @@ Om det inte är klart vid denna tidpunkt, bör DevOps/SRE-team triaging SaaS sec
 MIT Kerberos och Active Directory är till exempel kompatibla med Zero-Trust.
 
 *$Datum$*
+
+<!-- $Date$ $Author$ $Revision$ -->
