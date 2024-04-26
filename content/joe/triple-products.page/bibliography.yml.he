@@ -1,87 +1,86 @@
 ---
 title: Bibliography
 status: generated
-dependencies: ../triple-products.bib.en
+dependencies: ../triple-products.bib.he
 ---
-- author: McKean, Henry P. and Singer, Isadore M.
-  id: MS67
+- id: MS67
   journal: Journal of Differential Geometry
-  number: 1-2
-  pages: 43--69
-  publisher: Lehigh University
   title: Curvature and the eigenvalues of the Laplacian
   type: article
-  volume: '1'
-  year: '1967'
+  דפים: 43--69
+  כרך: '1'
+  מחבר: McKean, הנרי פ' וזינגר, איזדור מ'.
+  מספר: 1-2
+  מפרסם: Lehigh University
+  שנה: '1967'
 - author: Conway, John B.
   id: JC19
-  publisher: Springer
-  title: A course in functional analysis
+  title: A course in function analysis
   type: book
-  volume: '96'
-  year: '2019'
+  כרך: '96'
+  מפרסם: Springer
+  שנה: '2019'
 - author: Conway, John H and Sloane, N. J. A.
   id: CS92
-  journal: Internat. Math. Res. Notices
-  pages: 93--96
   title: Four-dimensional lattices with the same theta series
   type: article
-  volume: '4'
-  year: '1992'
+  דפים: 93--96
+  כרך: '4'
+  שנה: '1992'
 - author: Datchev, Kiril and Hezari, Hamid
   id: DH11
-  journal: 'Inverse problems and applications: Inside Out II'
-  pages: 455--486
-  title: Inverse problems in spectral geometry
+  title: בעיות הפוכות בגאומטריה ספקטרלית
   type: article
-  volume: '60'
-  year: '2011'
+  דפים: 455--486
+  יומן: 'היפוך בעיות ויישומים: Inside Out II'
+  כרך: '60'
+  שנה: '2011'
 - author: Frenkel, Edward and Ben-Zvi, David
   id: FBZ04
-  publisher: American Mathematical Soc.
   title: Vertex algebras and algebraic curves
   type: book
-  volume: '88'
-  year: '2004'
+  כרך: '88'
+  מפרסם: American Mathematical Soc.
+  שנה: '2004'
 - author: Franke, Tobias
-  date: 2023-09-01
   id: TF17
   title: Triple prod\-uct inte\-grals
   type: online
   url: https://www.tobias-franke.eu/log/2017/04/19/triple-products.html
+  תאריך: 2023-09-01
 - author: Gordon, Carolyn
   id: CG93
-  journal: Journal of Differential Geometry
-  number: '3'
-  pages: 639--649
-  title: Isospectral closed Riemannian manifolds which are not locally isometric
+  title: Isospectral סגרו את Riemannian manifolds שאינם איזומטריים מקומית
   type: article
-  volume: '37'
-  year: '1993'
+  דפים: 639--649
+  יומן: Journal of Differential Geometry
+  כרך: '37'
+  מספר: '3'
+  שנה: '1993'
 - author: Guillemin, Victor and Kazhdan, David
   id: GK80
-  journal: Proceedings of Symposia in Pure Math
-  pages: 301--312
-  title: Some inverse spectral results for negatively curved n-manifolds
+  title: כמה תוצאות ספקטרליות הופכיות ל-n-manifolds מעוקלים באופן שלילי
   type: article
-  volume: '36'
-  year: '1980'
-- author: Hörmander, Lars
+  דפים: 301--312
+  יומן: הליכים של סימפוזיה במתמטיקה טהורה
+  כרך: '36'
+  שנה: '1980'
+- Journal: Mathematics Past and Present Fourier Integral Operators
+  author: HÃ"rmander, Lars
   id: LH68
-  journal: Mathematics Past and Present Fourier Integral Operators
-  pages: 217--242
   publisher: Springer Berlin Heidelberg
-  title: The spectral function of an elliptic operator
+  title: הפונקציה הספקטרלית של אופרטור אליפטי
   type: article
   year: '1968'
+  דפים: 217--242
 - author: Knapp, Anthony W
   id: AK01
-  publisher: Princeton University Press
-  title: 'Representation theory of semisimple groups: an overview based on examples'
+  title: 'Representation theory of semisimple groups: מבט כללי המבוסס על דוגמאות'
   type: book
   year: '2001'
+  מפרסם: Princeton University Press
 - archivePrefix: arXiv
-  author: Lu, Jianfeng and Steinerberger, Stefan
+  author: Lu, Jianfeng ו-Steinerberger, Stefan
   eprint: '1810.01024'
   id: LS18
   title: On pointwise products of elliptic eigenfunctions
@@ -89,93 +88,93 @@ dependencies: ../triple-products.bib.en
   year: '2018'
 - author: Milnor, John
   id: JM64
-  journal: Proceedings of the National Academy of Sciences
-  number: '4'
-  pages: 542--542
-  title: Eigenvalues of the Laplace operator on certain manifolds
+  title: Eigenvalues of the Laplace Oper on some manifolds
   type: proceedings
-  volume: '51'
-  year: '1964'
-- author: Nilsson, Erik and Rowlett, Julie and Rydell, Felix
+  דפים: 542--542
+  יומן: הליכים של האקדמיה הלאומית למדעים
+  כרך: '51'
+  מספר: '4'
+  שנה: '1964'
+- author: Nilsson, Erik ו-Rowlett, Julie ו-Rydell, Felix
   id: NRR22
-  journal: Bulletin of the American Mathematical Society
-  number: '1'
-  pages: 39--83
   title: The isospectral problem for flat tori from three perspectives
   type: article
-  volume: '60'
-  year: '2023'
+  דפים: 39--83
+  יומן: Bulletin of the American Mathematical Society
+  כרך: '60'
+  מספר: '1'
+  שנה: '2023'
 - author: Reed, Michael and Simon, Barry
   id: RS75
-  publisher: Elsevier
-  title: 'Methods of modern mathematical physics II: Fourier analysis, self-adjointness'
+  title: 'Methods of modern במתמטיקה physics II: Fourier analysis, selfadjointness'
   type: book
-  volume: '2'
-  year: '1975'
+  כרך: '2'
+  מפרסם: Elsevier
+  שנה: '1975'
 - author: Sarnak, Peter
   id: PS94
-  journal: IMRN
-  pages: 251--260
   title: Integrals of products of eigenfunctions
   type: article
-  volume: '6'
-  year: '1994'
+  דפים: 251--260
+  יומן: IMRN
+  כרך: '6'
+  שנה: '1994'
 - author: Schiemann, Alexander
   id: AS94
-  publisher: Bonner Mathe\matische Schriften
-  school: Universität Bonn
-  title: Ternäre positiv definite quad\-ratische Formen mit gleichen Darstellungs\-zahlen
+  title: TernÃ@re positiv defite quad\-ratische Formen mit gleichen Darstellungs\-zahlen
   type: phdthesis
   volume: '268'
-  year: '1993'
+  מפרסם: Bonner Mathe\matische Schriften
+  ספר: UniversitÃ@t Bonn
+  שנה: '1993'
 - author: Sunada, Toshikazu
   id: TS85
-  journal: Annals of Mathematics
-  number: '1'
-  pages: 169--186
   title: Riemannian coverings and isospectral manifolds
   type: article
-  volume: '121'
-  year: '1985'
+  דפים: 169--186
+  יומן: כתבי עת של מתמטיקה
+  כרך: '121'
+  מספר: '1'
+  שנה: '1985'
 - author: Tanno, Shukichi
   id: ST80
-  journal: Math. Z.
-  number: '3'
-  pages: 267--274
-  title: A characterization of the canonical spheres by the spectrum
+  title: A characterization of the canonical spheres by the provider
   type: article
-  volume: '175'
-  year: '1980'
+  דפים: 267--274
+  יומן: מתמטיקה. Z.
+  כרך: '175'
+  מספר: '3'
+  שנה: '1980'
 - author: Taylor, Michael
   id: MT13
-  publisher: Springer Science \& Business Media
-  title: 'Partial differential equations II: qualitative studies of linear equations'
+  title: 'Partial differential equations II: qualitative studies of Linear equations'
   type: book
-  volume: '116'
-  year: '2013'
+  כרך: '116'
+  מפרסם: Springer Science \&amp; Business Media
+  שנה: '2013'
 - author: Weyl, Hermann
   id: HW11
-  journal: Nach\-richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu
-    Göttingen
   pages: 110--117
-  title: Über die asymp\-totische Ver\-teilung der Eigen\-werte
+  title: Ãber die asymp\-totische Ver\-teilung der Eigen\-werte
   type: article
   year: '1911'
+  יומן: Nach\-richten der KÃ...nig\-lichen Gesell\-schaft der Wissen\-schaften zu
+    GÃ...ttingen
 - author: Wyman, Emmett L
   doi: https://doi.org/10.1016/j.jfa.2022.109404
   id: EW22
-  journal: Journal of Functional Analysis
   number: '8'
   title: Triangles and triple products of Laplace eigenfunctions
   type: article
   volum: '282'
-  year: '2022'
+  יומן: Journal of Functional Analysis
+  שנה: '2022'
 - author: Zhou, Gengqiang
   id: GZ97
-  journal: Pacific J. Math
-  number: '1'
-  pages: 187--200
   title: Compactness of isospectral compact manifolds with bounded curvatures
   type: article
-  volume: '181'
-  year: '1997'
+  דפים: 187--200
+  יומן: Pacific J. מתמטיקה
+  כרך: '181'
+  מספר: '1'
+  שנה: '1997'

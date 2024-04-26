@@ -1,181 +1,183 @@
 ---
 title: Bibliography
 status: generated
-dependencies: ../triple-products.bib.en
+dependencies: ../triple-products.bib.es
 ---
-- author: McKean, Henry P. and Singer, Isadore M.
+- autor: McKean, Henry P. y Singer, Isadore M.
+  año: '1967'
+  editor: Lehigh University
   id: MS67
-  journal: Journal of Differential Geometry
-  number: 1-2
-  pages: 43--69
-  publisher: Lehigh University
+  journal: Asiento de geometría diferencial
+  número: 1-2
+  páginas: 43--69
   title: Curvature and the eigenvalues of the Laplacian
   type: article
-  volume: '1'
-  year: '1967'
-- author: Conway, John B.
+  volumen: '1'
+- autor: Conway, John B.
+  año: '2019'
+  editor: Springer
   id: JC19
-  publisher: Springer
-  title: A course in functional analysis
   type: book
-  volume: '96'
-  year: '2019'
-- author: Conway, John H and Sloane, N. J. A.
+  título: Un curso en análisis funcional
+  volumen: '96'
+- autor: Conway, John H y Sloane, N. J. A.
+  año: '1992'
   id: CS92
-  journal: Internat. Math. Res. Notices
-  pages: 93--96
-  title: Four-dimensional lattices with the same theta series
+  páginas: 93--96
   type: article
-  volume: '4'
-  year: '1992'
-- author: Datchev, Kiril and Hezari, Hamid
+  título: Rejillas de cuatro dimensiones con la misma serie theta
+  volumen: '4'
+- autor: Datchev, Kiril y Hezari, Hamid
+  año: '2011'
   id: DH11
-  journal: 'Inverse problems and applications: Inside Out II'
-  pages: 455--486
-  title: Inverse problems in spectral geometry
+  journal: 'Inverse problem and applications: Inside Out II'
+  páginas: 455--486
   type: article
-  volume: '60'
-  year: '2011'
-- author: Frenkel, Edward and Ben-Zvi, David
+  título: Problemas inversos en geometría espectral
+  volumen: '60'
+- autor: Frenkel, Edward y Ben-Zvi, David
+  año: '2004'
+  editor: American Mathematical Soc.
   id: FBZ04
-  publisher: American Mathematical Soc.
-  title: Vertex algebras and algebraic curves
   type: book
-  volume: '88'
-  year: '2004'
-- author: Franke, Tobias
+  título: Algebras de Vertex y curvas algebraicas
+  volumen: '88'
+- autor: Franke, Tobias
   date: 2023-09-01
   id: TF17
-  title: Triple prod\-uct inte\-grals
   type: online
+  título: Triple prod\-uct interes\-grals
   url: https://www.tobias-franke.eu/log/2017/04/19/triple-products.html
-- author: Gordon, Carolyn
+- autor: Gordon, Carolyn
+  año: '1993'
   id: CG93
-  journal: Journal of Differential Geometry
-  number: '3'
-  pages: 639--649
-  title: Isospectral closed Riemannian manifolds which are not locally isometric
+  journal: Asiento de geometría diferencial
+  número: '3'
+  páginas: 639--649
   type: article
-  volume: '37'
-  year: '1993'
-- author: Guillemin, Victor and Kazhdan, David
+  título: Multiplicadores de Riemannian cerrados isospectrales que no son isométricos
+    localmente
+  volumen: '37'
+- autor: Guillemin, Victor and Kazhdan, David
+  año: '1980'
   id: GK80
   journal: Proceedings of Symposia in Pure Math
-  pages: 301--312
-  title: Some inverse spectral results for negatively curved n-manifolds
+  páginas: 301--312
   type: article
-  volume: '36'
-  year: '1980'
-- author: Hörmander, Lars
+  título: Algunos resultados espectrales inversos para n-manifolds curvados negativamente
+  volumen: '36'
+- autor: HÃ¶rmander, Lars
+  año: '1968'
   id: LH68
   journal: Mathematics Past and Present Fourier Integral Operators
-  pages: 217--242
   publisher: Springer Berlin Heidelberg
-  title: The spectral function of an elliptic operator
+  páginas: 217--242
   type: article
-  year: '1968'
-- author: Knapp, Anthony W
+  título: La función espectral de un operador elíptico
+- autor: Knapp, Anthony W
+  año: '2001'
   id: AK01
   publisher: Princeton University Press
-  title: 'Representation theory of semisimple groups: an overview based on examples'
   type: book
-  year: '2001'
+  título: 'Teoría de la representación de grupos semisímiles: una visión general basada
+    en ejemplos'
 - archivePrefix: arXiv
-  author: Lu, Jianfeng and Steinerberger, Stefan
+  autor: Lu, Jianfeng y Steinerberger, Stefan
+  año: '2018'
   eprint: '1810.01024'
   id: LS18
-  title: On pointwise products of elliptic eigenfunctions
   type: online
-  year: '2018'
-- author: Milnor, John
+  título: Sobre productos puntuales de autofunciones elípticas
+- autor: Milnor, John
+  año: '1964'
   id: JM64
   journal: Proceedings of the National Academy of Sciences
-  number: '4'
-  pages: 542--542
-  title: Eigenvalues of the Laplace operator on certain manifolds
+  número: '4'
+  páginas: 542--542
   type: proceedings
-  volume: '51'
-  year: '1964'
-- author: Nilsson, Erik and Rowlett, Julie and Rydell, Felix
+  título: Valores propios del operador Laplace en determinados manifolds
+  volumen: '51'
+- autor: Nilsson, Erik y Rowlett, Julie y Rydell, Felix
+  año: '2023'
+  diario: Boletín de la American Mathematical Society
   id: NRR22
-  journal: Bulletin of the American Mathematical Society
-  number: '1'
-  pages: 39--83
-  title: The isospectral problem for flat tori from three perspectives
+  número: '1'
+  páginas: 39--83
   type: article
-  volume: '60'
-  year: '2023'
-- author: Reed, Michael and Simon, Barry
+  título: El problema isospectral para el tori plano desde tres perspectivas
+  volumen: '60'
+- autor: Reed, Michael y Simon, Barry
+  año: '1975'
+  editor: Elsevier
   id: RS75
-  publisher: Elsevier
-  title: 'Methods of modern mathematical physics II: Fourier analysis, self-adjointness'
   type: book
-  volume: '2'
-  year: '1975'
-- author: Sarnak, Peter
+  título: 'Métodos de la física matemática moderna II: Análisis de Fourier, autoconjunción'
+  volumen: '2'
+- autor: Sarnak, Peter
+  año: '1994'
+  diario: IMRN
   id: PS94
-  journal: IMRN
-  pages: 251--260
-  title: Integrals of products of eigenfunctions
+  páginas: 251--260
   type: article
-  volume: '6'
-  year: '1994'
-- author: Schiemann, Alexander
+  título: Integrales de productos de funciones propias
+  volumen: '6'
+- autor: Schiemann, Alexander
+  año: '1993'
   id: AS94
   publisher: Bonner Mathe\matische Schriften
   school: Universität Bonn
-  title: Ternäre positiv definite quad\-ratische Formen mit gleichen Darstellungs\-zahlen
   type: phdthesis
+  título: Ternäre positiv definida quad\-ratische Formen mit gleichen Darstellungs\-zahlen
   volume: '268'
-  year: '1993'
-- author: Sunada, Toshikazu
+- autor: Sunada, Toshikazu
+  año: '1985'
+  diario: Annals of Mathematics
   id: TS85
-  journal: Annals of Mathematics
-  number: '1'
-  pages: 169--186
-  title: Riemannian coverings and isospectral manifolds
+  número: '1'
+  páginas: 169--186
   type: article
-  volume: '121'
-  year: '1985'
-- author: Tanno, Shukichi
+  título: Recubrimientos de Rumanía y manifolds isospectrales
+  volumen: '121'
+- autor: Tanno, Shukichi
+  año: '1980'
+  diario: Math
   id: ST80
-  journal: Math. Z.
-  number: '3'
-  pages: 267--274
-  title: A characterization of the canonical spheres by the spectrum
+  número: '3'
+  páginas: 267--274
   type: article
-  volume: '175'
-  year: '1980'
-- author: Taylor, Michael
+  título: Caracterización de las esferas canónicas por el espectro
+  volumen: '175'
+- autor: Taylor, Michael
+  año: '2013'
+  editor: Springer Science \&amp; Business Media
   id: MT13
-  publisher: Springer Science \& Business Media
-  title: 'Partial differential equations II: qualitative studies of linear equations'
   type: book
-  volume: '116'
-  year: '2013'
-- author: Weyl, Hermann
+  título: 'Ecuaciones diferenciales parciales II: estudios cualitativos de ecuaciones
+    lineales'
+  volumen: '116'
+- autor: Weyl, Hermann
+  año: '1911'
   id: HW11
   journal: Nach\-richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu
     Göttingen
-  pages: 110--117
-  title: Über die asymp\-totische Ver\-teilung der Eigen\-werte
+  páginas: 110--117
   type: article
-  year: '1911'
-- author: Wyman, Emmett L
+  título: Ãber die asymp\-totische Ver\-teilung der Eigen\-werte
+- autor: Wyman, Emmett L
+  año: '2022'
+  diario: Journal of Functional Analysis
   doi: https://doi.org/10.1016/j.jfa.2022.109404
   id: EW22
-  journal: Journal of Functional Analysis
-  number: '8'
-  title: Triangles and triple products of Laplace eigenfunctions
+  número: '8'
   type: article
-  volum: '282'
-  year: '2022'
-- author: Zhou, Gengqiang
+  título: Triángulos y productos triples de las funciones propias de Laplace
+  volumen: '282'
+- autor: Zhou, Gengqiang
+  año: '1997'
+  diario: Pacific J. Math
   id: GZ97
-  journal: Pacific J. Math
-  number: '1'
-  pages: 187--200
-  title: Compactness of isospectral compact manifolds with bounded curvatures
+  número: '1'
+  páginas: 187--200
   type: article
-  volume: '181'
-  year: '1997'
+  título: Compacto de los colectores compactos isospectrales con curvaturas delimitadas
+  volumen: '181'
