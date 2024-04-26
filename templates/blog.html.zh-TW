@@ -1,7 +1,8 @@
 {% extends "main.html"|append:lang %}
 {% block content %}
    <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
-     <h1>{{ headers.title|safe }}</h1>
+
+   <h1>{{ headers.title|safe }}</h1>
      <div class="essay col-lg-12 container">
        <div style="color:#aaa">
          <small>
@@ -13,7 +14,8 @@
 			   <a href="https://github.com/SunStarSys/{{website}}/blob/trunk/content{{path}}"><i class="fa-brands fa-sm fa-github"></i>&nbsp;來源</a>
 {% endifequal %}
 			 </em>
-         </small>
+
+
          <div class="right">
            <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch" id="watch">
              <i class="fa fa-eye fa-emoji" title="手錶"></i>

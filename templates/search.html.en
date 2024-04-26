@@ -19,6 +19,7 @@
   <a href="./?regex=%23{{k}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-danger text-white">#{{k}}</span></a>
   &nbsp;
   {% endfor %}
+
   {% if duration %}
   <script src="/editor.md/js/chart.umd.js"></script>
   <canvas id="myChart" width="100%" height="800px"></canvas>
@@ -73,6 +74,7 @@
   </div>
 </div>
 {% endifequal %}
+
 {% ifequal specials "notify=" %}
 <div class="card text-dark border-success mb-3">
   <div class="card-header">Latest changes</div>
@@ -107,6 +109,7 @@
 </div>
 {% endifequal %}
 {% endifequal %}
+
 {% if yaml %}
 {% filter markdown %}
 ```yaml
@@ -144,6 +147,7 @@
   </div>
   {% endif %}
   {% endfor %}
+
   {% if watch.0 %}
   {% for w in watch %}
   <div class="card text-dark border-warning mb-3">
@@ -198,6 +202,7 @@
   <pre class="text-primary">{{ blog }}</pre>
   {% endif %}
   {% endifequal %}
+
   {% else %}
   <form method="POST" class="form-inline row">
       {% if matches.0 %}

@@ -31,34 +31,97 @@
     {% endblock %}
 </head>
 
+<body>
+  <header class="container-xxl navbar navbar-expand-lg fixed-top" style="border-bottom:solid #aaa 1px; background-color: #fff;">
+    <div class="container-fluid">
+	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img alt="Iconoclasta" src="/images/iconoclast"></a>
+      <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="La Torre" class="navbar-toggler" data-bs-target="#navbarResponsive" data-bs-toggle="collapse" type="button">
+          <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
+            active
+            {% endif %}"><a class="nav-link text" href="/bloggers.html{{lang}}">Iconoclastas</a></li>
+          <li class="nav-item{% if path|starts_with:"/contact.md" %}
+             active
+             {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">Contacto</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="products" role="button">Productos... <span class="caret"></span></a>
+            <ul aria-labelledby="products" class="dropdown-menu me-auto mb-2 mb-lg-0">
+              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orión&trade; Wiki de empresa</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark"
+                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Planes de precios de Orion</a></li>
+            </ul>
+          </li>
 
-{{website}}
-  {{lang}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="more" role="button">Más... <span class="caret"></span></a>
+            <ul aria-labelledby="more" class="dropdown-menu me-auto mb-2 mb-lg-0">
+              <li class="dropdown-item">
+                <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">Origen de sitio</a>
+              </li>
+              <li class="dropdown-item divider"></li>
+              <li class="dropdown-header text-dark">Mapas de sitio</li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.en">Español</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.es">Español</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.de">Alemán</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.fr">Francés</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.zh-TW">Chino</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.ru">Ruso</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.he">Hebreo</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.sv">Sueco</a></li>
+              <li class="dropdown-item divider"></li>
+              <li class="dropdown-header text-dark">Taxonomías</li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Categorías</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/archives/index.html{{lang}}">Archivos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
+            active
+            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">Desarrollado por...</a>
+          </li>
+        </ul>
+		</div>
+        <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
+            }}{% endifequal %}/" class="d-flex form-inline right" id="search" method="GET">
+          <input name="lang" type="hidden" value="{{ lang }}">
+          <input name="markdown_search" type="hidden" value="1">
+          <input class="form-control me-2" type="text" name="regex"
+               placeholder="Búsqueda recursiva de CPRE" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
+	    </form>
+  </div>
+</header>
+
+{% block alert %}
+  {% if alert %}
   <div class="alert alert-dismissible alert-info container">
     <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal"></button>
-    {% if path|starts_with:"/bloggers.md" %}
+    {{ alert|markdown }}
   </div>
   {% endif %}
-{{lang}}
+{% endblock %}
 
 <div class="container theme-showcase" id="content">
-  {% if path|starts_with:"/contact.md" %}
+  {% block content %}
   <div class="breadcrumbs">
-      {% endif %}&trade;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
+      {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
         <img alt="Editar icono" src="/images/edit.png" />
       </a>
   </div>
-  <h1>{{lang}}</h1>
-  <div class="jumbotron">{{ lang }}</div>
-  {{ lang }}
+  <h1>{{ headers.title|safe }}</h1>
+  <div class="jumbotron">{{ content|markdown }}</div>
+  {% endblock %}
 
-  <footer>{{website}}{{lang}}</footer><!--
+  <footer>{% block footer %}{% endblock footer %}</footer><!--
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
   <script src="/editor.md/js/jquery.flowchart.min.js"></script>
   <script src="/editor.md/js/sequence-diagram.min.js"></script> -->
+
   <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
   <script src="/editor.md/js/d3-graphviz.js"></script>
@@ -80,6 +143,7 @@
         $("body").find("pre").parent().addClass("editormd-preview-theme-light");
         CodeMirror.colorize();
     }
+
     if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {
         for (const h1 of document.getElementsByTagName("h1")) {
@@ -105,6 +169,7 @@
             h1.insertAdjacentHTML('beforeend', html);
         }
     }
+
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
@@ -117,6 +182,7 @@
               permission = result;
             });
         }
+
         if (permission === "granted") {
 		   var revision;
            var m = document.cookie.match(/last=([0-9]+)/);
@@ -148,7 +214,7 @@
         }
 	}
   </script>
-  {{lang}}{% if path|starts_with:"/powered-by.md" %}
+  {% block javascript %}{% endblock %}
 </div>
 </body>
 </html>
