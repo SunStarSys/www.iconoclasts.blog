@@ -16,7 +16,7 @@ Du kan iterera på den här spelboken, men jag har aldrig behövt gå utöver 3 
 
 Så fortsätt och använd ett elegant programmeringsspråk som `Python3` eller `Javaskript`/`Typsnitt`och låt ämnesexperterna (**SME**) där ute i världen med öppen källkod ge dig kraftfulla `C`/`C++`
 
-Även ett beroendefritt bash-skript är en fungerande lösning för många grundläggande uppgifter. Här är en jag skrev för Augmented Reality firm [Magiskt språng](https://magicleap.com) för flera år sedan, för att ersätta en klumpig [OpenGrok](https://oracle.github.io/opengrok/) tjänst med något som drar nytta av parallellisering med flera processorer med `xargs -P`och stöder [PCRE](https://www.pcre.org/) sök med enkel `Emacs`/`Vim`
+Även ett beroendefritt bash-skript är en fungerande lösning för många grundläggande uppgifter. Här är en jag skrev för Augmented Reality firm [Magiskt språng](https://magicleap.com) år sedan, för att ersätta en klumpig [OpenGrok](https://oracle.github.io/opengrok/) tjänst med något som utnyttjar parallellisering med flera processorer med `xargs -P`och stöder [PCRE](https://www.pcre.org/) sök med enkel `Emacs`/`Vim`
 
 https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
 
@@ -26,7 +26,7 @@ Det använder också Open Source Community av **SME** på ett smart sätt, i st�
 
 För att se motsatsen, där allt görs internt, helt mikrooptimerat och fortfarande inte kan slå det här skriptet med standardsökalternativen och inget cachningssystem tillgängligt, här är ett bra exempel <https://github.com/BurntSushi/ripgrep>
 
-Bara för att dra den första #performance #benchmark från den sidan, och skala upp den från en leksak prov trädstorlek (linux kernel källor), till ett heterogent träd som är `23GB`: (bästa körningar efter 3 iterationer; `LANG=en_US.UTF-8`
+Bara för att dra den första #performance #benchmark från den sidan, och skala upp den från en leksak prov trädstorlek (linux kärna källor), till ett heterogent träd som är `23GB`: (bästa körningar efter 3 iterationer; `LANG=en_US.UTF-8`
 
 ```shell
     % du -sh .
@@ -60,7 +60,7 @@ Ta den andra #performance #benchmark från den sidan och skala upp den som tidig
 
 En stämd `pffxg.sh` är fortfarande snabbare, trots allt arbete i mikrooptimering ripgrep för detta `C`
 
-Hur jag använde detta manus med [AOSP](https://source.android.com) var att schemalägga en `lager` synkronisering och efterföljande `pffxg.sh` **`länk`-komprimerad-cache frö-till-`tillf.`** Kör varje morgon före jobbet (via `crontab`), med `PFFXG_CACHE=...` sätta i min `~/.pffxg.conf` fil. Alltså någon `pffxg.sh` anrop som jag körde under arbetsdagen skulle använda den komprimerade cachen i `tillf.`
+Hur jag använde detta manus med [AOSP](https://source.android.com) var att schemalägga en `lager` synkronisering och efterföljande `pffxg.sh` **`länk`-komprimerad-cache frö-till-`tillf.`Kör varje morgon före jobbet (via `crontab`), med `PFFXG_CACHE=...` sätta i min `~/.pffxg.conf` fil. Alltså någon `pffxg.sh` anrop som jag körde under arbetsdagen skulle använda den komprimerade cachen i `tillf.`
 
 .25M LOC mellan `ripgrep` och [ugrep](https://github.com/Genivia/ugrep). 632 LOC för `pffxg.sh`
 
@@ -108,7 +108,7 @@ och `ripgrep`
 
 Real ** Applikationsprestanda** kommer från balans, flexibilitet och funktionell programmeringsteknik; det kommer inte från fixering på imperativ mikrooptimeringstaktik i statiska, kompilerade programmeringsspråk som är en björn att arbeta med från balans- och flexibilitetsperspektivet. Sådana överhypade, imperativa språk är stora mål för mycket specifika problemdomäner, men är hemska för systemomfattande applikationsprestanda.
 
-`pffxg.sh` är inte en produkt, och detta är inte en säljargument för det. Det är ett **exempel** för att illustrera min poäng på ett mycket dramatiskt sätt. Om du är bekant med den långa historien av filtrerade-rekursiva-grep-lösningar på GitHub, är de alla baserade på tanken att problemet med Andy Lester ursprungliga `Perl` implementering [bekräfta](https://beyondgrep.com/), var det skrivet i `Perl`. Det enda verkliga problemet ur ett resultatperspektiv var att `Perl` skriven av Andy, som inte verkade ha någon förmåga för systemprestanda begrepp (som jordbruk ut `söka` parallelliseringsarbete till ett specialbyggt `C` binärt), men i stället syftade till lat portabilitet genom att försöka fånga hela koden som en enda trådad Pure `Perl`
+`pffxg.sh` är inte en produkt, och detta är inte en säljargument för det. Det är ett **exempel** för att illustrera min poäng på ett mycket dramatiskt sätt. Om du är bekant med den långa historien av filtrerade-rekursiva-grep-lösningar på GitHub, är de alla baserade på tanken att problemet med Andy Lester ursprungliga `Perl` implementering [bekräfta](https://beyondgrep.com/)Om det är skrivet i `Perl`. Det enda verkliga problemet ur ett resultatperspektiv var att `Perl` skrevs av Andy, som inte verkade ha någon förmåga för systemprestanda begrepp (som jordbruk ut `söka` parallelliseringsarbete till ett specialbyggt `C` binärt), men i stället syftade till lat portabilitet genom att försöka fånga hela koden som en enda trådad Pure `Perl`
 
 Må tusen blommor blomma, oavsett dumma de verkar!
 

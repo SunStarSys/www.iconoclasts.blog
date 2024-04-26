@@ -18,11 +18,11 @@ title: 'Perl 7 Funktionsbegäran: förseglade underdelar för typangivna lexikal
 
 ## Den första lösningen: Doug MacEachern's metodsökoptimeringar
 
-Doug var skaparen av mod_perl projektet tillbaka i mitten av 90-talet, så uppenbarligen skriva högpresterande Perl var hans forté. Ett av hans många bidrag till [p5p](https://lists.perl.org/list/perl5-porters.html) innebar att prestandapåföljden för OO-metodsuppslagning halverades med hjälp av en metod + <code> &#64;ISA</code> hierarkicache för att göra uppslagning av exekveringsobjektmetod för mod_perl-objekt som `Apache2::RequestRec`
+Doug var skaparen av mod_perl projektet tillbaka i mitten av 90-talet, så uppenbarligen skriva högpresterande Perl var hans forté. Ett av hans många bidrag till [p5p](https://lists.perl.org/list/perl5-porters.html) skulle skära ned prestandapåföljden för uppslagning av metod utan erbjudandeoptimering till hälften med hjälp av en metod + <code> &#64;ISA</code> hierarkicache för att göra uppslagning av exekveringsobjektmetod för mod_perl-objekt som `Apache2::RequestRec`
 
 Detta är inte ett trifling problem med samtal till `C-struktur` get-set accessor-metoder &mdash; den gemensamma situationen med många mod_perl API:er. Perl's runtime method-call lookup straff på httpd's `struktur request_rec *`som mod_perl exponerar via `Apache2::RequestRec`
 
-Vad [Doug söker]
+Vad [Doug söker](https://www.perl.com/pub/2000/06/dougpatch.html/).
 
 ## [Riktmärke, skript]({{snippetA.pretty_uri}}).
 
@@ -138,7 +138,7 @@ För skojs skull, prova detta [apa]({{snippetB.pretty_uri}}) till `ModPerl::Regi
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Det möjliggör effekterna av `underhanterare: Förseglad {script goes here}` på alla dina `ModPerl::Register` Skript, något som [denna]
+Det möjliggör effekterna av `underhanterare: Förseglad {script goes here}` på alla dina `ModPerl::Register` Skript, något som [denna](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -180,6 +180,6 @@ Se <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Sök efter 
 
 Detta gör det möjligt för Perl 5 att göra provkoderna `content_type`
 
-Denna engelska idé är gratis stulen från [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Läs det här]
+Denna engelska idé är gratis stulen från [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Läs det här](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
 
 <!-- $Date$ $Author$ $Revision$ -->

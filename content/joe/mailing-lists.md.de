@@ -1,0 +1,52 @@
+---
+archived: ~
+categories: IT, Perl, Mail, Tools
+dependencies: '*.md.de'
+keywords: ezmlm-idx, BVT, DMARC, SRS
+published: ~
+status: archiviert
+title: Verteilerlisten
+---
+
+## ezmlm-idx
+
+Meine Erfahrung mit Mailinglisten-Software dreht sich um [qmail](http://cr.yp.to/qmail.html) und [ezmlm-idx](http://untroubled.org/ezmlm/). Mit einigen kleinen Skripten konnte ich eine Vielzahl neuer Anwendungsfälle unterstützen, die nicht von Natur aus von `ezmlm-idx` selbst.  Die Funktionen, die außerhalb von [Die Apache Software Foundation](http://www.apache.org) sind unten aufgeführt.  So verwenden Sie diese Dateien: [Layout](ezmlm/).
+
+### BATV und SRS
+
+[Bin/Absender-Demunger](ezmlm/bin/sender-demunger.pl) ist ein kleines Wrapper-Skript, das `BVT` und `Standardprozesse` `ABSENDER` Demung für `ezmlm-idx`. Um es zu verwenden, fügen Sie es einfach als Präfix zu allen Zeilen in Ihrem `</editor />` und `</manager />` Blöcke innerhalb `.ezmlmrc` und ausführen `ezmlm-make -+` auf Ihren Listen oder in einer Prise vorausgesetzt, Sie werden nicht laufen `ezmlm-Make` wieder in Ihren Listen, bearbeiten Sie die `Editor` und `Manager`
+
+[BVT](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) und [Standardprozesse](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme) einzigartige Probleme für `ezmlm-idx` weil sie im Gegensatz zu anderen Mailinglisten-Software auf der `POST VON` Teil der `SMTP`
+
+Beide Spezifikationen drehen sich um die Bereitstellung temporärer Adressen für die `POST VON` Umschlagteil, der die ursprüngliche Adresse auf leicht entzifferbare Weise einbettet.  Aber {# lede #}Diese temporären Adressen sind ein Anathema für `ezmlm-idx`'s Abo- und Moderationssysteme{# lede #}und die `Absender-demunger.pl`
+
+<div class="alert alert-info">
+   <div class="alert-header">HINWEIS</div>
+   <div class="alert-body">
+Laut den Versionshinweisen sollte ezmlm-idx seit Version 7.0.0 Unterstützung für BATV und SRS haben. In jedem Fall wird Absender-Demunger wirklich nicht schaden, nur für den Fall :-).
+   </div>
+</div>
+
+### DMARC
+
+Siehe [bin/ezmlm-dmarc-filter.pl](ezmlm/bin/ezmlm-dmarc-filter.pl) und [bin/ezmlm-seekable-stdin.pl](ezmlm/bin/ezmlm-seekable-stdin.pl) und [Bibliothek/pull_header.pm](ezmlm/lib/pull_header.pm). Um diese Skripte zu verwenden, ändern Sie die Zeilen in der `</editor />` Abschnitt von `.ezmlmrc` Dieser Anruf `ezmlm-gate`, `ezmlm-store`oder `ezmlm-senden`
+
+```shell
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/ezmlm-seekable-stdin.pl /path/to/bin/sender-demunger.pl <#B#>/ezmlm-gate -rY '<#D#>' '<#D#>' '<#D#>/digest' '<#D#>/allow' '<#D#>/mod'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/sender-demunger.pl <#B#>/ezmlm-store '<#D#>'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | <#B#>/ezmlm-send -r '<#D#>'
+```
+
+Dies setzt voraus, dass Sie eine Datei mit dem Namen `Marc` in Listenverzeichnissen, in denen Sie den Filter aktivieren möchten.  Sie können konfigurieren `.ezmlmrc`
+
+```shell
+	</-dmarc#FXT/>
+	</dmarc#f/>
+	</dmarc#t/>
+	</dmarc#x/>
+```
+Die einzigen Listenkonfigurationen, die vor `DMARC` sind die mit `-f`, `-t` oder `-x`
+
+Wenn Sie nicht mit der Zeit Schritt gehalten haben, gibt es eine kürzliche Bewegung zu Fuß, um starke [DMARC](http://en.wikipedia.org/wiki/DMARC) Policys, die nicht erfolgreiche Nachrichten ablehnen [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) Signaturtests. Facebook, Twitter, LinkedIn, Yahoo! und jetzt AOL haben diese Gebühr in Neuland geführt und die Mailinglistenbetreiber gezwungen, sich mit der Situation auseinanderzusetzen. Was `ezmlm-dmarc-filter.pl` tut, und dies ist nicht die einzige mögliche Lösung für das Problem, ist fallen die `DKIM-Signatur` Header für eine solche Domain und Hinzufügen eines `. UNGÜLTIG` Suffix für den Absender `Von` Kopfzeile.  Es hat den Vorteil, eine der einfachsten Lösungen zu sein, die funktioniert, also biete ich es hier an.  Bisher die Domains, die streng bereitstellen `DMARC` Richtlinien alle bieten angemessene `Antwort an` Kopfzeilen, so dass diese Änderungen von `ezmlm-dmarc-filter.pl`
+
+$Datum: 2023-01-19 22:58:40 +0000 (Do, 19 Jan 2023) $

@@ -1,0 +1,58 @@
+---
+archived: ~
+categories: Outils
+dependencies: '*.md.fr'
+keywords: ~
+published: ~
+status: archivé
+title: Fun avec htop
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/iEUZJ44mldI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+
+## {# lede #}Fonctionnalités htop avancées sur les plates-formes Unix populaires{# lede #}
+
+
+- Deltas de `haut`
+
+	- comportements interactifs sophistiqués
+	- schémas de couleurs **sémantiques** thématiques
+
+
+
+- Caractéristiques
+
+	- personnaliser l'affichage `C`
+	- recherche `/` ou filtre `\` processus légers (LWP, alias pthreads) par nom
+	- filtre LWP par nom d'utilisateur `u`
+	- bascule `t` vue d'arborescence
+	- commandes par LWP
+		- `s` trace système
+		- `l` liste des descripteurs de fichier ouverts
+		- `e` variables d'environnement
+		- `k`
+
+### Linux
+
+Ensemble de fonctionnalités entièrement opérationnel OOTB.
+
+### Port OSX
+
+- Activer DTrace (nécessite [initialiser en mode de récupération pour désactiver SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
+- copier [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) à `~/bin` et exécuter pour créer `stèle` lien symbolique
+- lancement `haut`
+
+### [Solaris 11](https://github.com/joesuf4/htop/tree/solaris-stable).
+
+- Statistiques ARC ZFS
+- Colonnes Nom/ID de zone
+- Deltas de comptabilité LWP
+	- PID bi-niveau + LWPID
+
+
+<!-- $Date: 2023-01-19 22:58:40 +0000 (Thu, 19 Jan 2023) $ $Author: joe $ -->

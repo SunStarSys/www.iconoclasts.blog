@@ -1,0 +1,32 @@
+---
+archived: ~
+categories: IT, Sicherheit, Leistung, Zuverlässigkeit
+dependencies: '*.md.de'
+keywords: infosec, appsec, Leistung, Skalierbarkeit, HA, Zuverlässigkeit
+published: ~
+status: Entwurf
+title: Informationssicherheit, Anwendungsleistung und Zuverlässigkeit
+---
+
+{# lede #}"Nicht funktionierendes" Software-Engineering dreht sich um drei wichtige Themen: Sicherheit, Performance und Zuverlässigkeit (**SPR**){# lede #}; in der Erwägung, dass "funktionales" Software-Engineering den normalen funktionsbasierten Softwareentwicklungslebenszyklus beinhaltet. Richtig [NIST 800-160v1r1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1r1.pdf).
+
+Einige Unternehmen haben einen unglaublichen Wert erzielt, indem sie funktionale aus der nichtfunktionalen Softwareentwicklung in zwei unabhängige Hierarchien im Engineering-Teil des Organigramms aufteilten. **SPR**-Architekten wie ich können ein solches **SPR**-Team mit einer flexiblen Kombination aus sich entwickelnden, untergeordneten Rollen leiten:
+
+1. **Kritisches System Engineering** (mit Schwerpunkt auf der Erstellung und Überwachung von Beobachtbarkeitsmetriken, dynamischen Tracing-Tools und kompatibler Laufzeitkonstruktion sowie vollständiger Spektralprofilanalyse zur Entwicklung von Hochleistungs-/Sicherheitslösungen),
+
+2. **Triage Engineering** (fokussiert auf die Verarbeitung von Stack Trace Dumps sowohl in der Entwicklung als auch in der Produktion und die Meldung der zugrunde liegenden technischen Probleme an das richtige Entwicklungsteam zur Lösung),
+
+3. **QA Engineering** (mit Schwerpunkt auf der Erstellung SPR-spezifischer Testsoftware und zugehöriger Berichte),
+
+4. **Data Quality Engineering** (mit Schwerpunkt auf der Bereitstellung einer automatisierten Berichts-/Verarbeitungs-/Visualisierungsinfrastruktur für die Triage- und Qualitätssicherungsaktivitäten).
+
+Der Aufbau eines dedizierten **SPR**-Teams beinhaltet einige organisatorische Herausforderungen. Auf Managementebene muss ein Buy-in erfolgen, dass die Performance-/Sicherheitsexperten von **SPR** einige angemessene Erwartungen haben, dass ihre Empfehlungen und erfolgreich getesteten Software-Patches rechtzeitig in die Produktionscodebasis integriert werden. Um die erforderlichen effektiven Arbeitsbeziehungen zwischen funktionalen und nicht funktionalen Engineering-Teams zu schaffen, sollten Performance-Ingenieure teilweise als Kollegen in funktionale Produktentwicklungsteams eingebettet werden, mit Peer-basierten Beurteilungs-/Commit-Privilegien für die Codebases.
+
+Durch ein dediziertes **SPR**-Team kann das Management Produktingenieure (Funktionsentwicklung) davon befreien, Mockups Ihrer Produktionsumgebungen zu erstellen, zu verwalten oder zu testen, die für Performance/Skalierung/Sicherheit/Dauerhaftigkeit/Zuverlässigkeit geeignet sind. Viele Teams haben einfach nicht die Zyklen, die sie dafür ausgeben müssen, obwohl sie ihre Cloud-Assets und abhängigen Softwarelaufzeiten richtig dimensionieren müssen, um ein schnelles Wachstum zu bewältigen.
+
+Es gibt auch eine beträchtliche Spezialisierung in Bezug auf Beobachtbarkeitstools und kernelbasierte Tracing-Techniken, die gute Systemingenieure durchlaufen, um auf ihrem Gebiet zu bleiben. Es ist schwierig, diese Hilfskompetenzen einzustellen, wenn qualitativ hochwertige Talente für traditionelle agile Produkt-/Vollstackingenieure und/oder Data Scientists gesucht werden.
+
+Robuste, sichere, skalierbare, kostengünstige und leistungsfähige Software ist für jedes kleine/mittlere Engineering-Team mit den richtigen Investitionen in **SPR** verfügbar. [Erreichen](/contact).
+
+
+<!-- $Date: 2024-04-08 17:03:24 +0000 (Mon, 08 Apr 2024) $ $Author: joe $ $Revision: 22019 $ -->

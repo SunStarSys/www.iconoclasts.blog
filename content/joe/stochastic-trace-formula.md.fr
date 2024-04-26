@@ -1,0 +1,183 @@
+---
+archived: ~
+categories: Mathématique
+dependencies: '*.md.fr'
+keywords: mesure de weiner, surfaces de triemann, probabilité, géométrie
+published: ~
+status: projet
+title: Formule de trace stochastique pour les collecteurs fermés et incurvés négativement
+---
+
+<div class="right">
+
+![Nid d'abeille hyperbolique](stochastic-trace-formula.page/hyperbolic-honeycomb.png).
+
+</div>
+
+[TOC]
+
+```asy
+// tubular trefoil knot -*- asy -*-
+
+import tube;
+import graph3;
+import palette;
+
+size(0, 8cm);
+currentlight=White;
+real redPortion = 143 / 256;
+real greenPortion = 153 / 256;
+real bluePortion = 251 / 156;
+pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+// currentlight.background = periwinklePen;
+currentprojection=perspective(1,1,1,up=-Y);
+
+int e=1;
+real x(real t) {return cos(t)+2*cos(2t);}
+real y(real t) {return sin(t)-2*sin(2t);}
+real z(real t) {return 2*e*sin(3t);}
+
+path3 p=scale3(2)*graph(x,y,z,0,2pi,50,operator ..)&cycle;
+
+pen[] pens=Gradient(6,red,blue,purple);
+pens.push(yellow);
+for (int i=pens.length-2; i >= 0 ; --i)
+  pens.push(pens[i]);
+
+path sec=scale(0.25)*texpath("$\pi$")[0];
+
+coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
+
+draw(tube(p,colorsec),render(merge=true));
+
+```
+
+{# lede #}Mon * 1997 Ph.D. thèse* comme une entrée de blog.{# lede #}
+
+## Il n'y a qu'une seule mesure de Wiener en n dimensions $$\mu$$
+
+## Approximations linéaires par morceaux au mouvement brownien
+
+## Carte de développement DM
+
+## La Formule Cameron-Martin
+
+## Les noyaux de chaleur comme dérivés de radon-nicodyme de Weiner Measure
+
+## Notation
+
+$$M$$ est une courbe négative $$\dim=n$$ collecteur Riemannien fermé avec métrique $$g$$, connexion de mesure $$\nabla$$, et (non négatif) Opérateur de Laplace-Beltrami $$\Delta_M$$. Laisser $$k_{-t\Delta/2}(x,y)$$ représente le noyau de chaleur sur $$M$$
+
+Par conséquent $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ est le dérivé radon-nicodyme de la mesure de Wiener à n dimensions $$\mu$$, limité au retrait de l'espace de boucle continue $$\Omega_t(M)\vert_x$$, via l'inverse de la carte de développement de conservation des mesures de Weiner $$DM$$. *Remarque :* $$DM^{-1}\Omega_t\vert_x$$
+
+$$\Omega_t^0$$ est l'espace des boucles contractibles continues sur $$M$$
+
+$$\Omega_t[\gamma]$$ est l'espace des boucles continues sur $$M$$ homotopique à la géodésique fermée $$\gamma$$. Laisser $$\gamma_0$$
+
+$$DM^{-1}\Omega_t^0[\gamma]$$ est la préimage des boucles contractibles continues sur $$M$$ écrit comme décalages homotopique à $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Pensez Coordonnées Horocycliques &mdash; chaque fibre comme limite géométrique de sphères géodésiques périodiques $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$, vectorisé dans le bundle normal sur $$\gamma_0$$. Nos contraintes de courbure impliquent des coordonnées horocycliques pour chaque $$\gamma_0$$ existent comme des lisses, $$DM$$-carte de coordonnées compatible pour $$\Omega_t^0[\gamma]$$
+
+Maintenant $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ est l'extrémité *non développée* de l'homotopique "offset" *kinked geodesic* à $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. La courbe est périodique avec une période $$\ell(\gamma_0)$$, et il revisite son point de départ pervers $$DM(\vec{x}(\tau))$$ à temps $$t$$, en faisant le calcul de sa dérivée avant $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ tractible comme automorphisme linéaire de $$T_{DM(\vec{x}(\tau))}M$$. Surtout, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ peut être construit à l'aide de **Jacobi Fields**, car $$DM$$ **est** la carte exponentielle (itérée) le long de toute série de lignes droites connectées dans $$\Reals^n$$. Nous étudierons $$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$$
+
+```math
+\begin{aligned}
+X_t &= X_0 + \int_0^t \sqrt{J}_{X_t} dB_t  \\
+
+\end{aligned}
+```
+
+$$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ est la trace du noyau de chaleur.
+
+Définissons enfin ce qui suit à partir de leurs dérivés Radon-Nicodyme :
+
+```math
+\begin{aligned}
+DM_*\mu(\Omega_t) &:= \int_M DM_*\mu(\Omega_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega^0_t) &:= \int_M DM_*\mu(\Omega^0_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega_t[\gamma]) &:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx) \\
+\end{aligned}
+```
+
+## Formule de trace stochastique
+
+```math
+\begin{aligned}
+Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t) &= DM_*\mu(\Omega^0_t) + \sum_{\set{\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
+
+DM_*\mu(\Omega_t^0) &\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\space \small\text{by McKean-Singer}\\
+
+DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
+
+&= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
+
+\frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}}&\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau),\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\small \text{ semi-classical limit}\\
+
+\text{Horocyclic coordinates}: z(\tau) - x(\tau) &= x + \ell(\gamma)\vec{e}^1\implies\\
+
+\int_{M/S^1\oplus S^1}k_t(x,z) dx &=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\bra{J_{X^j_t}\vec{x}}\ket{\vec{x}}})\\
+
+&=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_{M^j/S^1\oplus S^1}\frac{1}{\sqrt{2\pi t}^{jn}\det|I-J_{X^j}|}e^{-\ell(X^j)^2/2t}X^{j}\\
+
+\end{aligned}
+```
+
+## Approximation et la formule de trace Selberg
+
+Dans le $$\dim = 2$$ Courbure constante $$-\kappa^2$$
+
+```math
+\begin{aligned}
+\sqrt{J_{\vec{x}, \vec{y}}}dRB&=
+\begin{pmatrix}
+e^{\kappa d(\vec{x},\vec{y})/2} && 0\\
+0 && e^{-\kappa d(\vec{x},\vec{y})/2}\\
+\end{pmatrix}
+\implies&\\
+\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} &= e^{\kappa \ell(B)}dRB_1^2 - e^{-\kappa \ell(B)}dRB_2^2\\
+
+\int_0^t \bra{\sqrt{ J}dB}\ket{\sqrt{ J}dB} &= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
+
+\det I-J_{\gamma} &= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
+\end{aligned}
+```
+
+qui est constant sur $$(\vec{x},\tau)$$, l'approximation $$\approx_{t\rightarrow 0}$$
+
+```math
+\begin{aligned}
+
+DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gamma)/2} -e^{-\kappa\ell(\gamma)/2})}\\
+
+\gamma(t) = \gamma_0(kt)\implies \\
+
+&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+\end{aligned}
+```
+
+Dans le $$\dim=3$$ cas de manifold hyperbolique, nous utilisons des coordonnées complexes $$(z,\bar{z})$$
+
+```math
+\begin{aligned}
+J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1)} &=
+\begin{pmatrix}
+e^{\kappa\ell(\gamma)} && 0 && 0\\
+0 && e^{-\kappa\ell(\gamma)+i\theta(\gamma)} && 0 \\
+0 && 0 && e^{-\kappa\ell(\gamma)-i\theta(\gamma)} \\
+\end{pmatrix}\\
+
+\implies& \\
+\det I-{\perp_{\gamma_0}}^k &= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
+\end{aligned}
+```
+et depuis $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$
+
+```math
+\begin{aligned}
+\kappa &= 1 \implies \\
+
+DM_*\mu(\Omega_t[\gamma])
+&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (1-e^{-k\ell(\gamma_0)})}|e^{k\ell(\gamma_0)/2}-e^{-k(\ell(\gamma_0)/2-i\theta(\gamma_0))}|}\\
+
+\end{aligned}
+```
+
+<!-- $Date: 2024-04-12 16:58:35 +0000 (Fri, 12 Apr 2024) $ $Author: joe $ $Revision: 22121 $ -->

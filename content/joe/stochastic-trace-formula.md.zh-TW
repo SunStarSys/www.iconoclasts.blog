@@ -1,0 +1,183 @@
+---
+archived: ~
+categories: 數學
+dependencies: '*.md.zh-TW'
+keywords: 行程測量，里曼表面，機率，幾何
+published: ~
+status: 草稿
+title: 已結、負曲線的隨機追蹤公式
+---
+
+<div class="right">
+
+![雙曲蜂巢](stochastic-trace-formula.page/hyperbolic-honeycomb.png).
+
+</div>
+
+[TOC]
+
+```asy
+// tubular trefoil knot -*- asy -*-
+
+import tube;
+import graph3;
+import palette;
+
+size(0, 8cm);
+currentlight=White;
+real redPortion = 143 / 256;
+real greenPortion = 153 / 256;
+real bluePortion = 251 / 156;
+pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+// currentlight.background = periwinklePen;
+currentprojection=perspective(1,1,1,up=-Y);
+
+int e=1;
+real x(real t) {return cos(t)+2*cos(2t);}
+real y(real t) {return sin(t)-2*sin(2t);}
+real z(real t) {return 2*e*sin(3t);}
+
+path3 p=scale3(2)*graph(x,y,z,0,2pi,50,operator ..)&cycle;
+
+pen[] pens=Gradient(6,red,blue,purple);
+pens.push(yellow);
+for (int i=pens.length-2; i >= 0 ; --i)
+  pens.push(pens[i]);
+
+path sec=scale(0.25)*texpath("$\pi$")[0];
+
+coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
+
+draw(tube(p,colorsec),render(merge=true));
+
+```
+
+{# lede #}我的 *1997 Ph.D. 論文 * 作為部落格項目。{# lede #}
+
+## 僅有一個 n 維度 Wiener 測量$$\mu$$
+
+## 布朗運動的順時針線性近似值
+
+## 開發地圖 DM
+
+## Cameron-Martin 公式
+
+## 熱力核心為水線測量的放射性二極體衍生物
+
+## 表示法
+
+$$M$$ 是負面曲線$$\dim=n$$ 已關閉 Riemannian 手持裝置與度量$$g$$，度量連線$$\nabla$$，與 (非負數) 拉普拉斯 - 貝特拉米運算子$$\Delta_M$$繁體中文字母$$k_{-t\Delta/2}(x,y)$$ 代表熱核心開啟$$M$$
+
+因此$$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ 是 N 維能測量的 Radon-Nicodym 衍生物$$\mu$$，僅限於拉回連續迴圈空間$$\Omega_t(M)\vert_x$$，通過韋納測量的逆向 - 保存開發地圖$$DM$$。* 備註：* $$DM^{-1}\Omega_t\vert_x$$
+
+$$\Omega_t^0$$ 是連續可約迴圈所在的空間$$M$$
+
+$$\Omega_t[\gamma]$$ 是連續迴圈所開啟的空間$$M$$ 閉合大地同位素$$\gamma$$繁體中文字母$$\gamma_0$$
+
+$$DM^{-1}\Omega_t^0[\gamma]$$ 是連續可承包迴路的優先要點$$M$$ 寫成偏移同位素$$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$繁體中文思考 Horocyclic 座標&mdash; 每一個光纖做為週期性幾何球體的幾何限制$$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$，向量化為一般組合$$\gamma_0$$繁體中文我們的曲率約束會影響每個曲率循環座標$$\gamma_0$$ 存在為平滑，$$DM$$- 相容的座標映射$$\Omega_t^0[\gamma]$$
+
+現在$$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ 是「偏移」的 * 未開發 * 端點 * 閃爍的地理 * 同位素$$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$繁體中文曲線是週期性的期間$$\ell(\gamma_0)$$，然後重新審視其沉沒的起點$$DM(\vec{x}(\tau))$$ 時間$$t$$，計算其正向導數$$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ 牽引為線性自動型態$$T_{DM(\vec{x}(\tau))}M$$繁體中文重要的是，$$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ 可以使用 **Jacobi Fields** 建構，自$$DM$$ ** 是 ** 中任何連接直線系列的 (重複) 指數映射$$\Reals^n$$繁體中文我們將學習$$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$$
+
+```math
+\begin{aligned}
+X_t &= X_0 + \int_0^t \sqrt{J}_{X_t} dB_t  \\
+
+\end{aligned}
+```
+
+$$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ 是熱核心的追蹤。
+
+最後讓我們從 Radon-Nicodym 衍生工具中定義下列項目：
+
+```math
+\begin{aligned}
+DM_*\mu(\Omega_t) &:= \int_M DM_*\mu(\Omega_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega^0_t) &:= \int_M DM_*\mu(\Omega^0_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega_t[\gamma]) &:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx) \\
+\end{aligned}
+```
+
+## 隨機追蹤公式
+
+```math
+\begin{aligned}
+Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t) &= DM_*\mu(\Omega^0_t) + \sum_{\set{\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
+
+DM_*\mu(\Omega_t^0) &\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\space \small\text{by McKean-Singer}\\
+
+DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
+
+&= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
+
+\frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}}&\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau),\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\small \text{ semi-classical limit}\\
+
+\text{Horocyclic coordinates}: z(\tau) - x(\tau) &= x + \ell(\gamma)\vec{e}^1\implies\\
+
+\int_{M/S^1\oplus S^1}k_t(x,z) dx &=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\bra{J_{X^j_t}\vec{x}}\ket{\vec{x}}})\\
+
+&=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_{M^j/S^1\oplus S^1}\frac{1}{\sqrt{2\pi t}^{jn}\det|I-J_{X^j}|}e^{-\ell(X^j)^2/2t}X^{j}\\
+
+\end{aligned}
+```
+
+## 近似與塞爾伯格追蹤公式
+
+於$$\dim = 2$$ 恒曲率$$-\kappa^2$$
+
+```math
+\begin{aligned}
+\sqrt{J_{\vec{x}, \vec{y}}}dRB&=
+\begin{pmatrix}
+e^{\kappa d(\vec{x},\vec{y})/2} && 0\\
+0 && e^{-\kappa d(\vec{x},\vec{y})/2}\\
+\end{pmatrix}
+\implies&\\
+\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} &= e^{\kappa \ell(B)}dRB_1^2 - e^{-\kappa \ell(B)}dRB_2^2\\
+
+\int_0^t \bra{\sqrt{ J}dB}\ket{\sqrt{ J}dB} &= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
+
+\det I-J_{\gamma} &= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
+\end{aligned}
+```
+
+常數超過$$(\vec{x},\tau)$$，因此接近$$\approx_{t\rightarrow 0}$$
+
+```math
+\begin{aligned}
+
+DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gamma)/2} -e^{-\kappa\ell(\gamma)/2})}\\
+
+\gamma(t) = \gamma_0(kt)\implies \\
+
+&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+\end{aligned}
+```
+
+於$$\dim=3$$ 雙曲操作案例，我們使用複雜座標$$(z,\bar{z})$$
+
+```math
+\begin{aligned}
+J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1)} &=
+\begin{pmatrix}
+e^{\kappa\ell(\gamma)} && 0 && 0\\
+0 && e^{-\kappa\ell(\gamma)+i\theta(\gamma)} && 0 \\
+0 && 0 && e^{-\kappa\ell(\gamma)-i\theta(\gamma)} \\
+\end{pmatrix}\\
+
+\implies& \\
+\det I-{\perp_{\gamma_0}}^k &= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
+\end{aligned}
+```
+以及自$$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$
+
+```math
+\begin{aligned}
+\kappa &= 1 \implies \\
+
+DM_*\mu(\Omega_t[\gamma])
+&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (1-e^{-k\ell(\gamma_0)})}|e^{k\ell(\gamma_0)/2}-e^{-k(\ell(\gamma_0)/2-i\theta(\gamma_0))}|}\\
+
+\end{aligned}
+```
+
+<!-- $Date: 2024-04-12 16:58:35 +0000 (Fri, 12 Apr 2024) $ $Author: joe $ $Revision: 22121 $ -->

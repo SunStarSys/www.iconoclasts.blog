@@ -11,7 +11,7 @@ title: Contáctenos
 {% include "enquiry_get.html" %}
 </div>
 
-![SunStar Sistemas]
+![SunStar Sistemas](images/sunstarlogowhole.png).
 
 ### Correo electrónico:
 
@@ -19,7 +19,7 @@ title: Contáctenos
 
 ### Teléfono:
 
-- [+1 âª(305) 859-1630â¬]
+- [+1 âª(305) 859-1630â¬](tel://1.305.859.1630/).
 
 <!-- $Date$ $Author$ $Revision$ -->
 

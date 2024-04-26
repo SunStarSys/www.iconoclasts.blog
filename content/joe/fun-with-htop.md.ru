@@ -47,11 +47,11 @@ title: Развлечения с htop
 - копия [дтрусс-хтоп](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) по `~/ячейка` и выполнить для создания `лице` ссылка
 - запуск `топ`
 
-### [Солярис 11]
+### [Солярис 11](https://github.com/joesuf4/htop/tree/solaris-stable).
 
 - Статистика ZFS ARC
 - Столбцы «Имя зоны/идентификатор»
-- Solaris LWP Бухгалтерские дельты
+- Дельта учета LWP Solaris
 	- двухуровневый PID + LWPID
 
 

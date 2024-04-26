@@ -8,7 +8,7 @@ status: arkiverad
 title: Om skräppostproblemet...
 ---
 
-Som jag skrev om [någon annanstans](/clients/apache), ett av de bästa verktygen för öppen källkod som finns tillgängliga för en e-postadministratörs arsenal av antispamverktyg är [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), som bara är en server för inkommande e-post på klientsidan som behöver en fullt fungerande e-postserver som `qmail`, `skicka e-post`, `brädd`, eller `postfix` för utgående leverans.  Vad `qpsmtpd` är väldigt likt det som `httpd` gjorde för webbservrar: det introducerar anpassningsbara krokar i varje fas av `SMTP`
+Som jag skrev om [någon annanstans](/clients/apache), ett av de bästa verktygen för öppen källkod som finns tillgängliga för en e-postadministratörs arsenal av skräppostverktyg är [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), som bara är en server för inkommande e-post på klientsidan som behöver en fullt fungerande e-postserver som `qmail`, `skicka e-post`, `brädd`, eller `postfix` för utgående leverans.  Vad `qpsmtpd` är väldigt likt det som `httpd` gjorde för webbservrar: det introducerar anpassningsbara krokar i varje fas av `SMTP`
 
 {# lede #}Bästa plugin för `qpsmtpd`Även om det är svårt att förstå varför{# lede #}, är `fetknopp` plugin.  Vad `fetknopp` sätts `qpsmtpd` att sova under en konfigurerbar tid, lyssna på uttaget (via `välj(2)`) för icke-RFC-kompatibel "tidig" kommunikation som kommer från den andra änden av uttaget (`qpsmtpd` Gafflar vanligtvis en server för varje inkommande anslutning så det är bara den barnprocessen som sover i `välj(2)`
 

@@ -1,0 +1,52 @@
+---
+archived: ~
+categories: Informatique, Perl, Mail, Outils
+dependencies: '*.md.fr'
+keywords: ezmlm-idx, BATV, DMARC, SRS
+published: ~
+status: archivé
+title: Listes de diffusion
+---
+
+## ezmlm-idx
+
+Mon expérience avec le logiciel de liste de diffusion tourne autour [courriel](http://cr.yp.to/qmail.html) et [ezmlm-idx](http://untroubled.org/ezmlm/). Avec quelques petits scripts, j'ai pu prendre en charge une grande variété de nouveaux cas d'utilisation qui ne sont pas intrinsèquement pris en charge par `ezmlm-idx` elle-même.  Les fonctionnalités qui sont généralement utiles en dehors de [Fondation Apache Software](http://www.apache.org) sont présentées ci-dessous.  Pour utiliser ces fichiers, procédez comme suit : [présentation](ezmlm/).
+
+### BATV et SRS
+
+[bin/sender-demunger](ezmlm/bin/sender-demunger.pl) est un petit script de wrapper qui permet `MATV` et `SRS` `EXPÉDITEUR` démunging pour `ezmlm-idx`. Pour l'utiliser, il vous suffit de l'ajouter comme préfixe à toutes les lignes de votre `</editor />` et `</manager />` blocs dans `.ezmlmrc` et exécuter `ezmlm-faire -+` sur vos listes ou dans une pincée en supposant que vous ne courrez pas `ezmlm-faire` à nouveau sur vos listes, modifiez le `éditeur` et `responsable`
+
+[MATV](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) et [SRS](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme) posent des problèmes uniques pour `ezmlm-idx` car contrairement à d'autres logiciels de liste de diffusion, il fonctionne sur `COURRIER - DE` partie de la `SMTP`
+
+Les deux spécifications tournent autour de la fourniture d'adresses temporaires au `COURRIER - DE` partie enveloppe, qui incorpore l'adresse d'origine d'une manière facilement déchiffrable.  Mais {# lede #}ces adresses temporaires sont anathèmes à `ezmlm-idx`les systèmes d'abonnement et de modération{# lede #}, et le `expéditeur-demunger.pl`
+
+<div class="alert alert-info">
+   <div class="alert-header">Remarque</div>
+   <div class="alert-body">
+Selon les notes de version, depuis la version 7.0.0, ezmlm-idx devrait prendre en charge BATV et SRS intégrés. Dans tous les cas, l'expéditeur-démonteur ne fera vraiment pas de mal au cas où :-).
+   </div>
+</div>
+
+### DMARC
+
+Voir [bin/ezmlm-dmarc-filter.pl](ezmlm/bin/ezmlm-dmarc-filter.pl) et [bin/ezmlm-seekable-stdin.pl](ezmlm/bin/ezmlm-seekable-stdin.pl) et [lib/pull_header.pm](ezmlm/lib/pull_header.pm). Pour utiliser ces scripts, modifiez les lignes de votre `</editor />` section `.ezmlmrc` cet appel `ezmlm-gate`, `ezmlm-store`, ou `ezmlm-envoyer`
+
+```shell
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/ezmlm-seekable-stdin.pl /path/to/bin/sender-demunger.pl <#B#>/ezmlm-gate -rY '<#D#>' '<#D#>' '<#D#>/digest' '<#D#>/allow' '<#D#>/mod'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/sender-demunger.pl <#B#>/ezmlm-store '<#D#>'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | <#B#>/ezmlm-send -r '<#D#>'
+```
+
+Cela suppose que vous allez toucher un fichier nommé `dmarc` dans les répertoires de liste dans lesquels vous souhaitez activer le filtre.  Vous pouvez configurer `.ezmlmrc`
+
+```shell
+	</-dmarc#FXT/>
+	</dmarc#f/>
+	</dmarc#t/>
+	</dmarc#x/>
+```
+Les seules configurations de liste qui vont à l'encontre de `Palette DMARC` sont ceux avec `-f`, `-t` ou `-x`
+
+Dans le cas où vous n'avez pas suivi l'époque, il y a un mouvement récent en cours pour introduire [Palette DMARC](http://en.wikipedia.org/wiki/DMARC) stratégies qui rejettent les messages qui échouent [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) tests de signature. Facebook, Twitter, LinkedIn, Yahoo ! et maintenant AOL ont conduit cette charge dans un nouveau territoire, forçant les opérateurs de listes de diffusion à faire face à la situation. Ce que `ezmlm-dmarc-filter.pl` et ce n'est pas la seule solution possible au problème, c'est `Signature DKIM` un en-tête pour un tel domaine, et ajouter un `. NON VALIDE` suffixe de l'expéditeur `De` adresse d'en-tête.  Cela a l'avantage d'être l'une des solutions les plus simples qui fonctionnent, donc je l'offre ici.  Jusqu'à présent, les domaines qui déploient des `Palette DMARC` toutes les stratégies fournissent les informations appropriées `Répondre à` En-têtes, ces modifications sont donc effectuées par `ezmlm-dmarc-filter.pl`
+
+$Date : 2023-01-19 22:58:40 +0000 (jeu, 19 Jan 2023) $

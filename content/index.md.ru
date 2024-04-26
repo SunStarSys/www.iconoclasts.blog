@@ -38,7 +38,7 @@ title: О, По и для иконоборцев
 
 </div>
 
-![Иконок]
+![Иконок](images/iconoclast.jpg).
 
 <div style="max-width:900px">
 
@@ -50,9 +50,9 @@ title: О, По и для иконоборцев
 
 </center>
 
-сообщество блогов! Зарегистрируйтесь сегодня в [Свяжитесь с нами]
+сообщество блогов! Зарегистрируйтесь сегодня в [Свяжитесь с нами](/contact).
 
-Также, пожалуйста, проверьте  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-страница Enterprise Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на базе SCM с собственным ПО [русалка mindmap]
+Также, пожалуйста, проверьте  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-страница Enterprise Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на базе SCM с собственным ПО [русалка mindmap](https://www.sunstarsys.com/orion/features).
 
 &nbsp;
 
@@ -69,9 +69,9 @@ title: О, По и для иконоборцев
 
 &nbsp;
 
-- <span class="badge bg-success">Новинка</span> [Apache HTTPd Devs Считается вредным]
+- <span class="badge bg-success">Новинка</span> [Apache HTTPd Devs Считается вредным](/joe/apache-considered-harmful).
 
-- [Тройные продукты собственных функций и спектральной геометрии]
+- [Тройные продукты собственных функций и спектральной геометрии](/joe/triple-products).
 
 - [Производительность приложений](/joe/performance) &mdash;
 

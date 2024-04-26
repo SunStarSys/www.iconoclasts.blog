@@ -1,0 +1,35 @@
+---
+archived: ~
+categories: Sicherheit, IT, Perl
+dependencies: '*.md.de'
+keywords: Infosec,zerotrust,taint,dynamisch, Daten
+published: ~
+status: archiviert
+title: Informationssicherheits-Primer
+---
+
+[TOC]
+
+#### Was ist das primäre Ziel von InfoSec?
+
+*Um sicherzustellen, dass alle Änderungen an Kontextgrenzen gut geregelt sind.*
+
+Beispiel: Jeder **Systemaufruf** auf einer UNIX-Plattform erfüllt diese Bedingung im Hinblick auf das UNIX-Sicherheitsmodell für Benutzer/Gruppenprozess und Dateisystem. Die literale Definition eines **Kontext-Switches**, wie sie von **Systemaufrufen** typisiert wird, umfasst eine Überprüfung des Integritätsstatus der API-Nutzung auf der Kernel-Seite des Aufrufs.
+
+In Bezug auf SaaS Lieferung, {# lede #}alle Daten, die aus einem UNIX **Systemaufruf** zur Laufzeit stammen, müssen als **erhalten** behandelt werden{# lede #}
+
+Das UNIX-Sicherheitsmodell allein hat nie Vorkehrungen für die Entwicklung von vernetzten Client/Server-Anwendungen getroffen, da in der Vergangenheit die BSD-Socket-API, die vor dem Aufstieg von Network Computing in den 90er Jahren (Sun Microsystems) stand, über ein Jahrzehnt nach der Geburt von UNIX erfunden wurde (mit seinem OS-basierten Multiuser-Sicherheitsmodell, das bei der Geburt vollständig gebildet wurde). [MIT Kerberos](https://web.mit.edu/kerberos/).
+
+Die sichere Planung von CPUs zur Ausführung von Arbeiten auf Kernel-Ebene im Namen eines "autorisierten Benutzer-/Gruppen-/Rollenkontextes", der nicht mit dem UNIX-Benutzer-/Gruppenkontext des zugrunde liegenden Prozesses verknüpft ist, lag immer außerhalb des UNIX-Modells. Viele Infosec-Initiativen erkennen nicht, dass diese regulatorische Verantwortung allein den Anwendungen gehört; lassen Sie sich nicht eins sein!
+
+Falls an dieser Stelle nicht klar ist, sollten sich DevOps/SRE-Teams, die SaaS-Sicherheitsvorfälle (**CAI**) auf Linux testen, mit [Top](fun-with-htop)'s `straße` Schnittstelle über die `s` Schlüssel! Besser noch zu meistern `straße`
+
+#### Wie bezieht sich das auf Zero-Trust-Initiativen als praktische Angelegenheit?
+
+[Zero-Trust-Architekturen](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf).
+
+Zwar gibt es VPN/Firewall-Kontexte in der Realität, aber keines dieser Details ist für InfoSec innerhalb eines Zero-Trust-Frameworks relevant. Mit anderen Worten, solche Netzwerktopologie-Sicherheitsinitiativen können Zero-Trust-Initiativen erweitern, aber sie werden niemals innerhalb einer Zero-Trust-Initiative auf der Basis-Server-Host-Sicherheitsebene auf der Ebene der Anwendung verlassen.
+
+MIT Kerberos und Active Directory sind beispielsweise Zero-Trust-konform.
+
+*$Datum: 2023-01-19 22:58:40 +0000 (Do, 19 Jan 2023) $*

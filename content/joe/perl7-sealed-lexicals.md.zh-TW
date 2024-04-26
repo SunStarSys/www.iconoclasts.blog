@@ -1,0 +1,185 @@
+---
+archived: ~
+categories: Perl，Orion，Performance，效能，Apache
+dependencies: '*.md.zh-TW'
+keywords: perl，dylan，static，method，lookup，compile，sealed，apache，mod_perl，performance，敘述句，靜態，方法，查尋，編譯，密封，快取，效能
+published: ~
+status: 草稿
+title: Perl 7 功能要求：輸入詞彙的密封子
+---
+
+<div class="right">
+  <img src="../images/sunstarstaronly.png">
+</div>
+
+## 問題
+
+{# lede #}Perl 5 的 OO 程式實際執行方法查尋比直接具名子常式呼叫多出 50% 的效能負荷{# lede #}
+
+## 初始解決方案：Doug MacEachern 的方法查詢最佳化
+
+Doug 是 90 年代中期 mod_perl 專案的創作者，因此顯然是 Perl 的高效能公司。他的許多貢獻之一[p5p](https://lists.perl.org/list/perl5-porters.html) 是透過使用方法 + <code> 降低一半的 OO 方法查詢超載效能&#64;ISA</code> 階層快取，用來查尋 mod_perl 物件 (例如) 的程式實際執行物件方法`Apache2::RequestRec`
+
+這不是呼叫的解決方法問題`C 結構` get-set 存取子方法&mdash; 許多 mod_perl API 的常見情況。Perl 在 httpd 的程式實際執行方法呼叫查尋罰款`結構 request_rec *`，mod_perl 會透過`Apache2::RequestRec`
+
+什麼[Doug 正在尋找](https://www.perl.com/pub/2000/06/dougpatch.html/).
+
+## [指標指令碼]({{snippetA.pretty_uri}}).
+
+[snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
+
+## 指標結果
+
+```perl
+1..3
+sealed: compiling main->reentrant lookup.
+sealed: compiling main->bar lookup.
+sub _foo :sealed {
+    package Foo;
+    use warnings;
+    use strict;
+    my main $x = shift();
+    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
+}
+sealed: compiling main->foo lookup.
+sub sealed :sealed {
+    use warnings;
+    use strict;
+    $y->foo:compiled;
+}
+sealed: compiling Benchmark->cmpthese lookup.
+sealed: compiling Foo->foo lookup.
+sealed: compiling main->foo lookup.
+sealed: compiling Foo->bar lookup.
+Use of uninitialized value in addition (+) at lib/sealed.pm line 137.
+sealed: tweak() aborted: sealed: invalid lookup: Foo->bar - did you forget to 'use Foo' first? at lib/sealed.pm line 75.
+sub __ANON__ :sealed {
+    use warnings;
+    use strict;
+    my Foo $b = $a;
+    $inner->foo($b->foo:compiled($inner->bar, $inner, $bench->cmpthese:compiled));
+    $a = $inner;
+    $a->foo:compiled;
+    $b->bar;
+}
+sealed: compiling main->bar lookup.
+sub also_sealed :sealed {
+    use warnings;
+    use strict;
+    my main $a = shift();
+    if ($a) {
+        my Benchmark $bench = 'Benchmark';
+        my $inner = $a;
+        return sub {
+            my Foo $b = $a;
+            $inner->foo($b->foo:compiled($inner->bar, $inner, $bench->cmpthese:compiled));
+            $a = $inner;
+            $a->foo:compiled;
+            $b->bar;
+        }
+        ;
+    }
+    $a->bar:compiled;
+}
+sealed: compiling main->_foo lookup.
+sub reentrant :sealed {
+    use warnings;
+    use strict;
+    my main $b = shift();
+    (local our(@Q)) = 1;
+    my $c = $b->_foo:compiled;
+}
+sealed: compiling main->foo lookup.
+sealed: compiling main->bar lookup.
+sealed: compiling main->reentrant lookup.
+sub sealed2 :sealed {
+    use warnings;
+    use strict;
+    my main $obj = 'main';
+    foreach $_ (1 .. 3) {
+        $obj->foo:compiled;
+        $obj->bar:compiled;
+        $obj->reentrant:compiled;
+    }
+}
+ok 1
+             Rate  class method   anon   func sealed
+class  16129032/s     --    -4%   -26%   -33%   -36%
+method 16806723/s     4%     --   -23%   -30%   -34%
+anon   21739130/s    35%    29%     --   -10%   -14%
+func   24096386/s    49%    43%    11%     --    -5%
+sealed 25316456/s    57%    51%    16%     5%     --
+ok 2
+           Rate method sealed
+method 546448/s     --   -17%
+sealed 662252/s    21%     --
+ok 3
+```
+
+## 提議的 Perl 7 解決方案：`：密封`
+
+範例程式碼：
+
+```perl
+use v7.0;
+use Apache2::RequestRec;
+
+sub handler :sealed {
+  my Apache2::RequestRec $r = shift;
+  $r->content_type("text/html"); #compile time method lookup
+}
+```
+
+## 生產品質，堅固耐用 v5.28+ 原型：sealed.pm {{facts.releases.sealed.tag}}
+
+有關 perl 5.30+ 的編譯指示，請參閱`sealed.pm` Pod 應執行 mod_perl2 (含 ithreads 和 httpd-2.4 w/ event mpm)，且不得以 **any** 比例執行 segfault。測試日期`第 11.4 期` 以及`烏班圖 22.04`
+
+幹得好，試試看[單鍵修補]({{snippetB.pretty_uri}}) 終止`ModPerl::RegistryCooker`
+
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+
+它會啟用下列項目的效果：`子處理程式：密封的 {script 移至此處 }` 在您所有的`ModPerl：：登錄` 文稿，類似[這一個](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+
+```shell
+~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
+starting benchmark...
+spawning thread #0: 100 total client(s). 10000 total requests
+spawning thread #1: 100 total client(s). 10000 total requests
+spawning thread #2: 100 total client(s). 10000 total requests
+spawning thread #3: 100 total client(s). 10000 total requests
+spawning thread #4: 100 total client(s). 10000 total requests
+spawning thread #5: 100 total client(s). 10000 total requests
+spawning thread #6: 100 total client(s). 10000 total requests
+spawning thread #7: 100 total client(s). 10000 total requests
+spawning thread #8: 100 total client(s). 10000 total requests
+spawning thread #9: 100 total client(s). 10000 total requests
+Application protocol: h2c
+progress: 10% done
+progress: 20% done
+progress: 30% done
+progress: 40% done
+progress: 50% done
+progress: 60% done
+progress: 70% done
+progress: 80% done
+progress: 90% done
+progress: 100% done
+
+finished in 13.07s, 7652.14 req/s, 11.83MB/s
+requests: 100000 total, 100000 started, 100000 done, 100000 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 100000 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 154.61MB (162119955) total, 566.39KB (579980) headers (space savings 95.47%), 152.30MB (159700000) data
+                       min         max         mean         sd        +/- sd
+time for request:     5.74ms      12.77s       6.39s       3.61s    58.14%
+time for connect:      304us    293.01ms     70.17ms     76.83ms    74.80%
+time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
+req/s           :       7.71      248.17       19.60       28.07    92.70%
+```
+
+請參閱<https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>。尋找`t/bench.pl`
+
+這將允許 Perl 5 執行範例程式碼`content_type`
+
+這個「成就」的想法很感激。[狄倫](https://jim.studt.net/dirm/interim-5.html). [閱讀此文件](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
+
+<!-- $Date: 2024-04-19 06:30:01 +0000 (Fri, 19 Apr 2024) $ $Author: joe $ $Revision: 22500 $ -->

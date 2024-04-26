@@ -28,13 +28,13 @@ Uso de técnicas elementales de análisis geométrico, ecuaciones diferenciales 
 
 ## Introducción
 
-Para un colector Riemannian cerrado $$(M,g)$$, caracterizando su **clase** de colectores isospectrales no isométricos, es un tipo de problema inverso [[DH11]](#DH11) en Geometría espectral. Uno podría especular que esta clase siempre estaría vacía. Sin embargo, la literatura académica es rica en construcciones de décadas de pares específicos de contraejemplos: a partir de 1964 con el par de 16 dimensiones de tori plano isospectral no isométrico de John Milnor. [[JM64]](#JM64), y continuando [[CS92]](#CS92) hacia la caracterización dimensional genérica de tori plano en la tesis doctoral de Alexander Schiemann de 1993 [[AS94]](#AS94) &mdash; repleto de una búsqueda asistida por computadora para la crítica $$\dim = 3$$ caso.  Un estudio moderno de la historia completa del tori plano aparece en [[NRR22]]
+Para un colector Riemannian cerrado $$(M,g)$$, caracterizando su **clase** de colectores isospectrales no isométricos, es un tipo de problema inverso [[DH11]](#DH11) en geometría espectral. Uno podría especular que esta clase siempre estaría vacía. Sin embargo, la literatura académica es rica en construcciones de décadas de pares específicos de contraejemplos: a partir de 1964 con el par de 16 dimensiones de tori plano isospectral no isométrico de John Milnor. [[JM64]](#JM64)y continuando [[CS92]](#CS92) hacia la caracterización dimensional genérica de tori plano en la tesis doctoral de Alexander Schiemann de 1993 [[AS94]](#AS94) &mdash; repleto de una búsqueda asistida por computadora para la crítica $$\dim = 3$$ caso.  Un estudio moderno de la historia completa del tori plano aparece en [[NRR22]](#NRR22).
 
-A lo largo del camino fueron reveladoras ramificaciones en espacios de cobertura simétrica más sofisticados y no euclidianos; la construcción de tales "duetas" isospectrales y no isométricos que involucran tensores de curvatura no triviales (y sus características de Euler determinadas por el espectro en la dimensión 2) [[MS67]](#MS67).) Un ejemplo de este esfuerzo fue Toshikazu Sunada 1985 [[TS85]]
+A lo largo del camino fueron reveladoras ramificaciones en espacios de cobertura simétrica más sofisticados y no euclidianos; la construcción de tales "duetas" isospectrales y no isométricos que involucran tensores de curvatura no triviales (y sus características de Euler determinadas por el espectro en la dimensión 2) [[MS67]](#MS67)Un ejemplo de este esfuerzo fue Toshikazu Sunada en 1985. [[TS85]](#TS85).
 
-Para métricas riemannianas inhomogéneas, Carolyn Gordon descubrió dúos que ni siquiera son isométricos localmente. [[CG93]]
+Para métricas riemannianas inhomogéneas, Carolyn Gordon descubrió dúos que ni siquiera son isométricos localmente. [[CG93]](#CG93).
 
-Continúa el trabajo en muchas áreas relacionadas [[DH11]](#DH11), como la determinación de las características topológicas de la clase de colectores isospectrales no isométricos en general (vacío) [[ST80]](#ST80), finito [[AS94]](#AS94), rígido [[GK80]](#GK80), y compacto [[GZ97]]
+Continúa el trabajo en muchas áreas relacionadas [[DH11]](#DH11), como determinar las características topológicas de la clase de colectores isospectrales, no isométricos en general (vacío) [[ST80]](#ST80), finito [[AS94]](#AS94), rígido [[GK80]](#GK80)y compacto [[GZ97]](#GZ97).
 
 Lo que ofrecemos en este artículo es una nueva perspectiva sobre una herramienta familiar: los coeficientes de Fourier indexados de productos pareados de funciones propias como una discreta "invariante algebraica/topológica" para complementar la existente, discreta "invariante analítica" &mdash; el espectro no negativo del operador *Laplace-Beltrami* (en lo sucesivo denominado **Laplaciano**) en $$L^2(M,g)$$
 
@@ -65,7 +65,7 @@ Para ser isométrico $$(M,g)$$, es una condición *necesaria y suficiente* para 
 
 <br>
 
-* La simetría* juega un papel importante en los casos manejables computacionalmente [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), que se ilustra acertadamente en nuestro tori plano [Ejemplo]
+* La simetría* juega un papel importante en los casos manejables computacionalmente [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), que se ilustra acertadamente en nuestro tori plano [Ejemplo](#example).
 
 <br>
 
@@ -84,7 +84,7 @@ Si cada valor propio tiene multiplicidad $$1$$, dado un par de bases ortodormale
 
 <br>
 
-La motivación para el estudio de $$\set{M^{i,j,k}}$$ se deriva vagamente del estudio del rol del **operador de multiplicación lineal** $$Y:V\otimes V\rightarrow V((z))$$ en la definición de un álgebra de operador de vértice [[FBZ04]](#FBZ04) asociado a una Teoría de Campo Conformal Chiral. Aquí $$V$$ es el espacio vectorial de los Estados y $$V((z))$$ es el espacio de la serie formal Laurent en $$z$$ con coeficientes en $$V$$. Desde $$V$$ a menudo viene equipado como un espacio Hilbert con una base ortodóncica tradicional de la serie Fourier, indexando $$Y$$ utilizando los elementos básicos de Fourier de $$V$$ sólo está ligeramente más implicado que $$M^{i,j,k}$$
+La motivación para el estudio de $$\set{M^{i,j,k}}$$ se deriva vagamente del estudio del rol del **operador de multiplicación lineal** $$Y:V\otimes V\rightarrow V((z))$$ en la definición de un álgebra de operador de vértice [[FBZ04]](#FBZ04) asociado con una Teoría de Campo Conformal Chiral. Aquí $$V$$ es el espacio vectorial de los Estados y $$V((z))$$ es el espacio de la serie formal Laurent en $$z$$ con coeficientes en $$V$$. Desde $$V$$ a menudo viene equipado como un espacio de Hilbert con una base ortopédica tradicional de la serie Fourier, indexando $$Y$$ utilizando los elementos básicos de Fourier de $$V$$ sólo está ligeramente más implicado que $$M^{i,j,k}$$
 
 Estos resultados se demostraron por primera vez durante una charla similar titulada por el autor en **MSRI** en 1997, pero aparecen aquí en forma publicada por primera vez.
 
@@ -105,7 +105,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
 
 ```
 
-desde $$f$$ es singularmente representable como su rápida convergencia **Fourier Series** ($$\Delta_M$$-incrustaciones específicas de Sobolev [[MT13]](#MT13) [[RS75]](#RS75), junto con la Ley Asintótica de Weyl [[HW11]](#HW11), implican que los términos en la suma son $$o(i^{-n})$$ * uniformemente en $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$.) Entonces vemos que para $$f_1, f_2 \in C^\infty(M)$$, los coeficientes de Fourier del producto en sentido puntual $$f_1 f_2 \in C^\infty(M)$$
+desde $$f$$ es singularmente representable como su rápida convergencia **Fourier Series** ($$\Delta_M$$-incrustaciones específicas de Sobolev [[MT13]](#MT13) [[RS75]](#RS75)junto con la Ley Asintótica de Weyl [[HW11]](#HW11), implican que los términos de la suma son $$o(i^{-n})$$ * uniformemente en $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$.) Entonces vemos que para $$f_1, f_2 \in C^\infty(M)$$, los coeficientes de Fourier del producto en sentido puntual $$f_1 f_2 \in C^\infty(M)$$
 
 ```math
 \begin{aligned}
@@ -154,7 +154,7 @@ Esto implica que cualquier mapa de base como el anterior tiene funciones caracte
 
 El objetivo de estos cálculos es enfatizar el hecho de que $$\set{M^{i,j,k}}$$ **caracteriza** el análisis armónico del operador de multiplicación pointwise en $$C^\infty(M)$$, que es un denso subalgebra de los abelianos $$C^*$$ Álgebra $$C(M)$$
 
-Para la rápida convergencia de estas sumas que implican $$M^{i,j,k}$$, tenga en cuenta que los productos de las funciones propias son suaves, por lo que estos coeficientes de Fourier decaen como arriba (en cada índice). Para más detalles, vea el trabajo de Emmett Wyman en 2022 con estos coeficientes en relación con la desigualdad del triángulo en los valores propios. [[EW22]]
+Para la rápida convergencia de estas sumas que implican $$M^{i,j,k}$$, tenga en cuenta que los productos de las funciones propias son suaves, por lo que estos coeficientes de Fourier decaen como arriba (en cada índice). Para más detalles, vea el trabajo de Emmett Wyman en 2022 con estos coeficientes en relación con la desigualdad del triángulo en los valores propios. [[EW22]](#EW22).
 
 Nota: siempre podemos asumir
 ```math
@@ -165,7 +165,7 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 \end{aligned}
 ```
 
-donde $$\delta_i$$ es el delta de Kronecker. Desde $$vol(M)$$ es una invariable espectral [[HW11]]
+donde $$\delta_i$$ es el delta de Kronecker. Desde $$vol(M)$$ es una invariable espectral [[HW11]](#HW11).
 
 ## Prueba del teorema
 
@@ -181,7 +181,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 hemos terminado con el argumento de la necesidad.
 
-Para la suficiencia, ahora consideramos el mapa de bases ortopédicas lineales y bijetivas $$F$$ desde $$C^\infty(M)$$ para $$C^\infty(N)$$ y señalar que a partir de los cálculos de [Preliminar](#preliminaries) supra, $$F$$ conserva los productos en sentido puntual para funciones suaves (y conserva las funciones características cuando se amplía a $$L^2(M,g)$$) por la premisa de que $$\set{M^{i,j,k}}$$
+Para la suficiencia, ahora consideramos el mapa de bases ortopédicas lineales y bijetivas $$F$$ desde $$C^\infty(M)$$ a $$C^\infty(N)$$ y señalar que a partir de los cálculos de [Preliminar](#preliminaries) arriba, $$F$$ conserva los productos en sentido puntual para funciones suaves (y conserva las funciones características cuando se amplía a $$L^2(M,g)$$) por la premisa de que $$\set{M^{i,j,k}}$$
 
 ### Lemma
 
@@ -214,9 +214,9 @@ Sin pérdida de generalidad, podemos aplicar el resultado de caso especial mostr
 
 Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$F$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto puede extenderse a un isomorfismo de $$C(M)$$ y $$C(N)$$
 
-Ahora aplicamos el teorema de representación de Gelfand-Naimark (en forma de funtor contravariante) para Abelian $$C^*$$ álgebras [[JC19]](#JC19) para representar este isomorfismo por un homeomorfismo entre $$N$$ y $$M$$
+Ahora aplicamos el teorema de representación de Gelfand-Naimark (en forma de funtor contravariante) para Abelian $$C^*$$ álgebras [[JC19]](#JC19) representar este isomorfismo por un homeomorfismo entre $$N$$ y $$M$$
 
-Como este ahora diffeomorfismo preserva los valores propios y las funciones propias (por hipótesis sobre $$F$$), debe preservar el laplaciano en funciones suaves. Por lo tanto, también debe preservar los símbolos principales de estos mismos operadores elípticos. [[MT13]]
+Como este ahora diffeomorfismo preserva los valores propios y las funciones propias (por hipótesis sobre $$F$$), debe preservar el laplaciano en funciones suaves. Por lo tanto, también debe preservar los símbolos principales de estos mismos operadores elípticos. [[MT13]](#MT13).
 
 Esto completa la prueba del teorema.
 
@@ -264,7 +264,7 @@ Sin embargo, para aplicar nuestra [Teorema](#theorem), es esencial que este mapa
 
 también deben preservar las invariantes "analíticas" &mdash; figura inducida por el elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$
 
-Esta cuenta teórica de representación [[AK01]](#AK01) es exactamente equivalente al desarrollo previo de la congruencia de *lattice* [[NRR22]](#NRR22) se utiliza de forma comercial para delinear clases de isometría de tori plano. De hecho, la matriz transpone tal mapa lineal $$B\in O(n,\Reals)$$, tal como se describe en el párrafo anterior, **es** la isometría contravariante de Riemann entre el tori, según lo dispuesto por la aplicación del *Teorema de Representación de Gelfand-Naimark* durante el [Prueba](#proof del teorema) de nuestra [Teorema]
+Esta cuenta teórica de representación [[AK01]](#AK01) es exactamente equivalente al desarrollo previo de *congruencia de látex* [[NRR22]](#NRR22) se utiliza de forma comercial para delinear las clases de isometría de tori plano. De hecho, la matriz transpone tal mapa lineal $$B\in O(n,\Reals)$$, tal como se describe en el párrafo anterior, **es** la isometría contravariante de Riemann entre el tori, según lo dispuesto por la aplicación del *Teorema de Representación de Gelfand-Naimark* durante el [Prueba](#proof-of-theorem) de nuestros [Teorema](#theorem).
 
 No de acuses de recibo
 

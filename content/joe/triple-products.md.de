@@ -28,13 +28,13 @@ Verwendung elementarer Techniken aus der Geometrischen Analyse, partiellen Diffe
 
 ## Einführung
 
-Für eine geschlossene Riemannsche Verteiler $$(M,g)$$, charakterisiert seine **Klasse** nicht-isometrischer, isospektraler Verteiler ist eine Art inverses Problem [[DH11]](#DH11) in der Spektralgeometrie. Naiv könnte man spekulieren, dass diese Klasse immer *leer* sein würde. Die akademische Literatur ist jedoch reich an jahrzehntelangen Konstruktionen spezifischer Paarungen von Gegenbeispielen: ab 1964 mit John Milnors 16-dimensionalen Paaren nichtisometrischer, isospektraler flacher Tori [[JM64]](#JM64) und weiter [[CS92]](#CS92) zur generischen dimensionalen Charakterisierung flacher Tori in Alexander Schiemanns Doktorarbeit von 1993 [[AS94]](#AS94) &mdash; mit einer computergestützten Suche nach dem kritischen $$\dim = 3$$ Fall.  Eine moderne Übersicht über die ganze flache Tori-Geschichte erscheint in [[NRR22]]
+Für eine geschlossene Riemannsche Verteiler $$(M,g)$$, charakterisiert seine **Klasse** nicht-isometrischer, isospektraler Verteiler ist eine Art inverses Problem [[DH11]](#DH11) in der Spektralgeometrie. Naiv könnte man spekulieren, dass diese Klasse immer *leer* sein würde. Die akademische Literatur ist jedoch reich an jahrzehntelangen Konstruktionen spezifischer Paarungen von Gegenbeispielen: ab 1964 mit John Milnors 16-dimensionalen Paaren nichtisometrischer, isospektraler flacher Tori [[JM64]](#JM64)und weiter [[CS92]](#CS92) zur generischen dimensionalen Charakterisierung flacher Tori in Alexander Schiemanns Doktorarbeit von 1993 [[AS94]](#AS94) &mdash; mit einer computergestützten Suche nach dem kritischen $$\dim = 3$$ Fall.  Eine moderne Übersicht über die ganze flache Tori-Geschichte erscheint in [[NRR22]](#NRR22).
 
-Auf dem Weg waren aufschlussreiche Offshoots in anspruchsvollere, nicht-euklidische symmetrische Abdeckräume; Konstruieren solcher isospektraler, nicht-isometrischer "duets" mit nicht-trivialen Krümmungs-Tensoren (und ihre spektrumbestimmten Euler-Eigenschaften in Dimension 2) [[MS67]](#MS67).) Ein Paradebeispiel für diese Bemühungen war Toshikazu Sunadas 1985. [[TS85]]
+Auf dem Weg waren aufschlussreiche Offshoots in anspruchsvollere, nicht-euklidische symmetrische Abdeckräume; Konstruieren solcher isospektraler, nicht-isometrischer "duets" mit nicht-trivialen Krümmungs-Tensoren (und ihre spektrumbestimmten Euler-Eigenschaften in Dimension 2) [[MS67]](#MS67).) Ein Paradebeispiel für diese Bemühungen war Toshikazu Sunadas 1985. [[TS85]](#TS85).
 
-Für inhomogene Riemannsche Metriken entdeckte Carolyn Gordon Duette, die nicht einmal lokal isometrisch sind [[CG93]]
+Für inhomogene Riemannsche Metriken entdeckte Carolyn Gordon Duette, die nicht einmal lokal isometrisch sind [[CG93]](#CG93).
 
-Die Arbeit wird in vielen verwandten Bereichen fortgesetzt [[DH11]](#DH11), wie die Bestimmung der topologischen Merkmale der Klasse der isospektralen, nichtisometrischen Verteiler im Allgemeinen (leer) [[ST80]](#ST80), endlich [[AS94]](#AS94), starr [[GK80]](#GK80) und kompakt [[GZ97]]
+Die Arbeit wird in vielen verwandten Bereichen fortgesetzt [[DH11]](#DH11), wie die Bestimmung der topologischen Eigenschaften der Klasse der isospektralen, nichtisometrischen Verteiler im Allgemeinen (leer) [[ST80]](#ST80), endlich [[AS94]](#AS94), starr [[GK80]](#GK80)und kompakt [[GZ97]](#GZ97).
 
 Was wir in diesem Artikel anbieten, ist eine neue Perspektive auf ein bekanntes Werkzeug: indexierte Fourier-Koeffizienten von paarweisen Produkten von Eigenfunktionen als diskrete "algebraisch/topologische Invariante", um die bestehende, diskrete "analytische Invariante" zu ergänzen. &mdash; das nichtnegative Spektrum des *Laplace-Beltrami-Operators* (im Folgenden **Laplacian** genannt) auf $$L^2(M,g)$$
 
@@ -58,14 +58,14 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 ```
 
-Isometrisch zu $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingung* für eine andere **iosospektrale** geschlossene Riemannsche Mannigfaltigkeit, eine orthonormale Grundlage von Eigenfunktionen (für seine Laplacian) zu haben, die beide die zugehörigen Eigenwerte beibehält und eine Invariante besitzt. $$\set{M^{i,j,k}}$$
+Isometrisch zu $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingung* für eine andere **iosospektrale** geschlossene Riemannsche Mannigfaltigkeit, um eine orthonormale Grundlage von Eigenfunktionen (für seine Laplacian) zu haben, die beide die zugehörigen Eigenwerte bewahrt und eine Invariante besitzt. $$\set{M^{i,j,k}}$$
 
   </div>
 </div>
 
 <br>
 
-*Symmetrie* spielt eine wichtige Rolle bei rechnerisch ableitbaren Fällen [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), die in unserem flachen Tori passend dargestellt ist [Beispiel]
+*Symmetrie* spielt eine wichtige Rolle bei rechnerisch ableitbaren Fällen [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), was in unserem flachen Tori passend dargestellt ist [Beispiel](#example).
 
 <br>
 
@@ -84,7 +84,7 @@ Wenn jeder Eigenwert eine Vielfalt hat $$1$$, bei einem Paar von Eigenwerten, di
 
 <br>
 
-Die Motivation für das Studium von $$\set{M^{i,j,k}}$$ ist lose aus der Studie der Rolle des **linearen Multiplikationsoperators** abgeleitet $$Y:V\otimes V\rightarrow V((z))$$ in der Definition einer Vertex Operator Algebra [[FBZ04]](#FBZ04) im Zusammenhang mit einer chiralen konformen Feldtheorie. Hier $$V$$ ist der Vektorraum der Staaten und $$V((z))$$ ist der Raum der formellen Laurent-Serie in $$z$$ mit Koeffizienten in $$V$$. Seit $$V$$ oft als Hilbert Space mit einer traditionellen orthonormalen Basis der Fourier-Serie ausgestattet, $$Y$$ Verwendung der Fourier-Basiselemente von $$V$$ ist nur etwas stärker beteiligt als die $$M^{i,j,k}$$
+Die Motivation für das Studium von $$\set{M^{i,j,k}}$$ ist lose aus der Studie der Rolle des **linearen Multiplikationsoperators** abgeleitet $$Y:V\otimes V\rightarrow V((z))$$ in der Definition einer Vertex Operator Algebra [[FBZ04]](#FBZ04) mit einer chiralen konformen Feldtheorie verbunden. Hier $$V$$ ist der Vektorraum der Staaten und $$V((z))$$ ist der Raum der formellen Laurent-Serie in $$z$$ mit Koeffizienten in $$V$$. Seit $$V$$ oft als Hilbert Space mit einer traditionellen orthonormalen Basis der Fourier-Serie ausgestattet, $$Y$$ Verwendung der Fourier-Basiselemente von $$V$$ ist nur etwas stärker beteiligt als die $$M^{i,j,k}$$
 
 Diese Ergebnisse wurden erstmals in einem ähnlich betitelten Vortrag des Autors bei **MSRI** im Jahr 1997 gezeigt, erscheinen aber hier erstmals in veröffentlichter Form.
 
@@ -105,7 +105,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
 
 ```
 
-seit $$f$$ ist einzigartig darstellbar als seine schnell konvergierende **Fourier Series** ($$\Delta_M$$- spezifische Sobolev Embeddings [[MT13]](#MT13) [[RS75]](#RS75), zusammen mit Weyls asymptotischem Gesetz [[HW11]](#HW11), impliziert, dass die Begriffe in der Summe $$o(i^{-n})$$ *gleichmäßig in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$() Dann sehen wir das für $$f_1, f_2 \in C^\infty(M)$$, die Fourier-Koeffizienten des Pointwise-Produkts $$f_1 f_2 \in C^\infty(M)$$
+seit $$f$$ ist einzigartig darstellbar als seine schnell konvergierende **Fourier Series** ($$\Delta_M$$- spezifische Sobolev Embeddings [[MT13]](#MT13) [[RS75]](#RS75)Zusammen mit Weyls asymptotischem Gesetz [[HW11]](#HW11), implizieren die Begriffe in der Summe sind $$o(i^{-n})$$ *gleichmäßig in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$() Dann sehen wir das für $$f_1, f_2 \in C^\infty(M)$$, die Fourier-Koeffizienten des Pointwise-Produkts $$f_1 f_2 \in C^\infty(M)$$
 
 ```math
 \begin{aligned}
@@ -152,9 +152,9 @@ und durch Einzigartigkeit haben wir die folgende Identität
 
 Dies bedeutet, dass eine solche Basiskarte wie oben charakteristische Funktionen (als Elemente von $$L^2(M,g)\subset L^1(M,g)$$
 
-Der Sinn dieser Berechnungen besteht darin, die Tatsache hervorzuheben, dass $$\set{M^{i,j,k}}$$ **Zeichen** die harmonische Analyse des Pointwise-Multiplikationsoperators auf $$C^\infty(M)$$eine dichte Subalgebra der Abelianer $$C^*$$ Algebra $$C(M)$$
+Der Sinn dieser Berechnungen besteht darin, die Tatsache hervorzuheben, dass $$\set{M^{i,j,k}}$$ **Zeichen** die harmonische Analyse des Pointwise-Multiplikationsoperators auf $$C^\infty(M)$$, eine dichte Subalgebra der Abelianer $$C^*$$ Algebra $$C(M)$$
 
-Für die rasche Konvergenz dieser oben genannten Summen $$M^{i,j,k}$$, beachten Sie, dass Produkte mit Eigenfunktionen glatt sind, so dass diese Fourier-Koeffizienten wie oben (in jedem Index) abklingen. Weitere Informationen finden Sie unter Emmett Wymans Arbeit im Jahr 2022 mit diesen Koeffizienten, da sie sich auf die Dreiecksungleichheit auf die Eigenwerte bezieht. [[EW22]]
+Für die rasche Konvergenz dieser oben genannten Summen $$M^{i,j,k}$$, beachten Sie, dass Produkte mit Eigenfunktionen glatt sind, so dass diese Fourier-Koeffizienten wie oben (in jedem Index) abklingen. Weitere Informationen finden Sie unter Emmett Wymans Arbeit im Jahr 2022 mit diesen Koeffizienten, da sie sich auf die Dreiecksungleichheit auf die Eigenwerte bezieht. [[EW22]](#EW22).
 
 Hinweis: Wir können immer davon ausgehen
 ```math
@@ -165,7 +165,7 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 \end{aligned}
 ```
 
-wobei $$\delta_i$$ Das Kronecker-Delta. Seit $$vol(M)$$ ist eine spektrale Invariante [[HW11]]
+wobei $$\delta_i$$ Das Kronecker-Delta. Seit $$vol(M)$$ ist eine spektrale Invariante [[HW11]](#HW11).
 
 ## Theorienachweis
 
@@ -214,9 +214,9 @@ Ohne Verlust der Allgemeingültigkeit können wir das Sonderfallergebnis anwende
 
 Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), wir haben $$F$$ als Isomorphismus von Abelian $$C^*$$ Algebren und somit auf einen Isomorphismus der $$C(M)$$ und $$C(N)$$
 
-Nun wenden wir das Gelfand-Naimark-Darstellungstheorem (in kontravarianter Trichterform) für Abelian an $$C^*$$ Algebren [[JC19]](#JC19) diesen Isomorphismus durch einen Homeomorphismus zwischen $$N$$ und $$M$$
+Nun wenden wir das Gelfand-Naimark-Darstellungstheorem (in kontravarianter Trichterform) für Abelian an $$C^*$$ Algebren [[JC19]](#JC19) um diesen Isomorphismus durch einen Homeomorphismus zwischen $$N$$ und $$M$$
 
-Da dieser nun Diffeomorphismus Eigenwerte und Eigenfunktionen bewahrt (durch Hypothese auf $$F$$), es muss den Laplacian auf glatten Funktionen erhalten. Daher müssen auch die Hauptsymbole dieser elliptischen Operatoren erhalten bleiben. [[MT13]]
+Da dieser nun Diffeomorphismus Eigenwerte und Eigenfunktionen bewahrt (durch Hypothese auf $$F$$), es muss den Laplacian auf glatten Funktionen erhalten. Daher müssen auch die Hauptsymbole dieser elliptischen Operatoren erhalten bleiben. [[MT13]](#MT13).
 
 Dies schließt den Beweis des Theorems ab.
 
@@ -256,7 +256,7 @@ M^{i,j,k} = \begin{cases}
 
 Da diese Gleichung <span class="eqno"></span> linear auf dem Gewichtsgitter ist $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, nur ein $$L^2$$ orthonormale Eigenfunktionsbasiskarte **, die aus einer volumenerhaltenden invertierbaren linearen Karte zwischen zwei solchen indexierten, $$n$$ Gewichtsgitter** halten den "algebraisch/topologischen" indexierten Datensatz $$\set{M^{i,j,k}}$$
 
-Um unsere [Satz](#theorem), es ist wichtig, dass eine solche lineare Karte $$B$$ sein $$B\in O(n,\Reals)$$ auf dem Gewichtsgitter, weil die $$L^2$$
+Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ sein $$B\in O(n,\Reals)$$ auf dem Gewichtsgitter, weil die $$L^2$$
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
@@ -264,7 +264,7 @@ Um unsere [Satz](#theorem), es ist wichtig, dass eine solche lineare Karte $$B$$
 
 müssen auch die "analytischen" Invarianten erhalten &mdash; die Casimir-Element induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$
 
-Dieses repräsentationstheoretische Konto [[AK01]](#AK01) entspricht genau der vorherigen Entwicklung von *Gitterkongruenz* [[NRR22]](#NRR22) traditonell verwendet, um Isometrieklassen von flachen Tori zu beschreiben. Tatsächlich transponiert die Matrix einer solchen linearen Karte $$B\in O(n,\Reals)$$, wie im vorherigen Absatz beschrieben, **ist** die kontravariante Riemannsche Isometrie zwischen den Tori, wie sie durch Anwendung des *Gelfand-Naimark-Darstellungstheorems* während der [Nachweis](#proof-of-theorem) unserer [Satz]
+Dieses repräsentationstheoretische Konto [[AK01]](#AK01) entspricht genau der vorherigen Entwicklung von *Gitterkongruenz* [[NRR22]](#NRR22) verwendet, um Isometrieklassen von flachen Tori zu beschreiben. Tatsächlich transponiert die Matrix einer solchen linearen Karte $$B\in O(n,\Reals)$$, wie im vorherigen Absatz beschrieben, **ist** die kontravariante Riemannsche Isometrie zwischen den Tori, wie sie durch Anwendung des *Gelfand-Naimark-Darstellungstheorems* während der [Nachweis](#proof-of-theorem) unserer [Satz](#theorem).
 
 ## Bestätigungen
 

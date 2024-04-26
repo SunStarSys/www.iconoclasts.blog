@@ -1,0 +1,54 @@
+---
+archived: ~
+categories: 健康照護、數學、動力學
+dependencies: '*.md.zh-TW'
+keywords: exponential，power，covid-19，epidemic，pandemic，指數，功率，covid-19，流行病
+published: ~
+status: 已封存
+title: 指數成長和 COVID-19
+---
+
+讓我試著提供指數 (又稱功率) 函數 (圖表幾何圖形) 的定性分析，以及它如何套用至 covid-19 流行星球。這不是很長的複雜讀取，所以{# lede #}使用 **the math** 區段花時間&mdash; 成為與當前疫情相關的受教育統計消費者是很重要的{# lede #}繁體中文新鮮人背景[結石](https://en.wikipedia.org/wiki/Calculus).
+
+### 數學
+
+首先，指數函數 - 值微小且隨時間而幾乎不增加 (在`x 軸`
+
+![2020 年 3 月 COVID-19](../images/covid-march-2020-e.png).
+
+以類比來說明這一點：想像一下，如果你的汽車的速度總是以比例常數與里程的里程相連，你現在要多快。在這個假設下，對於每個經過的固定時間間隔，您的汽車的速度和總行駛距離 * 乘數 * 的固定數量都相同 (大於 1)。事實上，它[龜越下](https://en.wikipedia.org/wiki/Turtles_all_the_way_down)：您的汽車加速，jerk 等 (全部都一樣) [衍生物](https://en.wikipedia.org/wiki/Derivative).
+
+於[對數尺度](https://en.wikipedia.org/wiki/Logarithmic_scale) 針對`Y 軸`，這類電源功能的圖表會顯示為 ** 直線 **。下方的圖表配對具有平行成長線 (我以黑色加入這些線條) [世界公尺](https://www.worldometers.info/coronavirus/) 來源)，並反映與上述對相同的 *worldwide* 總計。如果我們代表這些 "line" 於`日誌 y = mx + b` 表格，`公尺 length unit`- 值 (`斜坡`) 同意；只有`bb`- 值 (`日誌 y 攔截`) 不同。此處的關鍵點主要著重於 ** 不變量 ** `斜率`，非變動`攔截`，針對每個年齡人口統計或每個地理區域的疫情統計，或其組合。乘法`明細行 10 = 2.302585...` 與`斜率` 此處會產生基本比例常數，其等同描述指數函數的值及其 * 即時 * 變更速率。換句話說，將焦點放在不同統計資料之間的相對百分比，例如[條件](https://en.wikipedia.org/wiki/Conditional_expectation) 死亡率是 * 遺漏點 *：這是關於此點的對話`bb`- 值，而非`公尺 length unit`
+
+要清楚，差異在`bb`- 值更是關於時間差異`x 軸` 差別在於`是`-values；就方程式而言：`log y = mx + b = m(x + b/m)` 是行的隱含翻譯`y = mx`, `bb` 單位沿著`Y 軸`，或等同於`公尺` 單位沿著`x 軸` (相反方向)。** 任何 ** 類型的相對統計 (如案例死亡率) 皆可依此時間翻譯擷取一次`公尺 length unit` 已知 (且非零)。同樣的，*critical* 統計是`公尺 length unit`
+
+![2020 年 3 月 COVID-19 對數比例](../images/covid-march-2020.png).
+
+### 美國 COVID-19 疫情
+
+最新消息`5 天期間加倍` 本週 NY 的受感染人口總數，以及`3 天週期加倍`
+
+
+![2020 年 3 月 COVID-19 美國對數規模](../images/covid-us-march-2020.png).
+
+![2020 年 3 月 COVID-19 美國死亡對數比例](../images/covid-us-march-2020-deaths.png).
+
+這裡是 * 好消息：* epidemics 只會在疫情爆發初始部分跟隨指數函數。最後，變更比率會扁平化並變成負數，表示目前患病的人口總數下降。
+
+* 壞消息 * 是：[世衛](https://www.who.int/emergencies/diseases/novel-coronavirus-2019).
+
+### 誤差
+
+它 - 不是 voodoo 導致流行病開始離開[指數成長](https://en.wikipedia.org/wiki/Exponential_growth).
+
+哪些 epidemiologists 試圖完成，就是盡快啟動該程序。每一天失落，都意味著加快生活損失、增加嚴重病例的動量，以及隨著圖表問題而使醫療體系整體負擔較大的風險。
+
+無可避免的平坦會發生。如果這不是因為人類的社會智慧所致，那麼這是因為病毒無法重新感染過去的受害者 <sup>2</sup> ，而且它只會感染大多數人口，然後才退役並引導感染新生兒，或只是完全消失。
+
+#### 註腳 (2020 年 9 月 24 日).
+
+1. 我刻意對實際的 * 時間間隔 * 的變化率感到不滿，但對於陳述的真值並不重要。不同的時間間隔會產生不同的比例常數，但這些常數只取決於時間間隔的大小，而不是測量的時間 (端點) 本身的即時。
+
+2. 陪審團還沒有出席。視乎哪些壓力在野外，加上病患合約的疾病嚴重程度而定，可能至少有一些時間可以重新感染。
+
+<!-- $Date: 2023-01-30 20:55:15 +0000 (Mon, 30 Jan 2023) $ $Author: joe $ $Revision: 12627 $ -->

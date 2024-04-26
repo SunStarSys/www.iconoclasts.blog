@@ -18,11 +18,11 @@ title: 'Запрос функции Perl 7: запечатанные поддо�
 
 ## Первоначальное решение: оптимизация поиска метода Дага МакЭчерна
 
-Даг был создателем проекта mod_perl еще в середине 90-х годов, поэтому, очевидно, письмо с высокой производительностью Перла было его фортом. Один из его многочисленных вкладов в [p5p](https://lists.perl.org/list/perl5-porters.html) было вдвое сократить штраф за производительность при поиске метода OO с помощью метода + <code> &#64;Кэш иерархии ISA</code> для поиска метода объекта времени выполнения для объектов mod_perl, таких как `Apache2::RequestRec`
+Даг был создателем проекта mod_perl еще в середине 90-х годов, поэтому, очевидно, писать высокую производительность Перл был его фортом. Одним из его многочисленных вкладов в [p5p](https://lists.perl.org/list/perl5-porters.html) необходимо было вдвое сократить штраф за производительность при поиске метода OO, используя метод + <code> &#64;Кэш иерархии ISA</code> для поиска метода объекта времени выполнения для объектов mod_perl, таких как `Apache2::RequestRec`
 
 Это не мелочь с вызовами на `Структура C` методы доступа get-set &mdash; общая ситуация со многими API mod_perl. Штраф при поиске вызова метода выполнения Perl на httpd `структура request_rec *`, что mod_perl показывает через `Apache2::RequestRec`
 
-Что [Даг искал]
+Что [Даг искал](https://www.perl.com/pub/2000/06/dougpatch.html/).
 
 ## [Сценарий эталонного теста]({{snippetA.pretty_uri}}).
 
@@ -138,7 +138,7 @@ sub handler :sealed {
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Это позволяет воздействовать на `субобработчик:Заблокировано {script go here}` на всех ваших `ModPerl::Реестр` сценарии, что-то вроде [этот]
+Это позволяет воздействовать на `субобработчик:Заблокировано {script go here}` на всех ваших `ModPerl::Реестр` сценарии, что-то вроде [этот](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -180,6 +180,6 @@ req/s           :       7.71      248.17       19.60       28.07    92.70%
 
 Это позволит Perl 5 сделать образец кода `content_type`
 
-Эта идея безвозмездно украдена из [Дилан](https://jim.studt.net/dirm/interim-5.html).  [Прочитать это]
+Эта идея безвозмездно украдена из [Дилан](https://jim.studt.net/dirm/interim-5.html).  [Прочитать это](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
 
 <!-- $Date$ $Author$ $Revision$ -->

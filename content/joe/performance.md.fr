@@ -16,7 +16,7 @@ Vous pouvez itérer sur ce playbook, mais je n'ai jamais eu besoin d'aller au-de
 
 Alors allez-y et utilisez un langage de programmation élégant comme `Python3` ou `Javascript`/`Descriptif`, et laissez les experts en la matière (**PME**) dans le monde open source vous donner de puissants `C`/`C++`
 
-Même un script bash sans dépendance est une solution pratique pour de nombreuses tâches de base. En voici un que j'ai écrit pour la société de réalité augmentée [Saut magique](https://magicleap.com) il y a quelques années, pour remplacer un [OpenGrok]Service (https://oracle.github.io/opengrok/) avec quelque chose qui tire parti de la parallélisation multiprocesseur avec `xargs - P`, et supports [PCRE](https://www.pcre.org/) recherche simple `Emacs`/`Vim`
+Même un script bash sans dépendance est une solution pratique pour de nombreuses tâches de base. En voici un que j'ai écrit pour la société de réalité augmentée [Saut magique](https://magicleap.com) Il y a quelques années, pour remplacer un [OpenGrok](https://oracle.github.io/opengrok/) service avec quelque chose qui exploite la parallélisation multiprocesseur avec `xargs - P`, et supports [PCRE](https://www.pcre.org/) recherche simple `Emacs`/`Vim`
 
 https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
 
@@ -60,7 +60,7 @@ Retirez le deuxième #performance #benchmark de cette page et redimensionnez-le 
 
 Un réglé `pffxg.sh` est encore plus rapide, malgré tout le travail mis en microoptimisation ripgrep pour cela `C`
 
-La façon dont j'ai utilisé ce script avec [AOSP](https://source.android.com) devait planifier un `référentiel` synchronisation et une `pffxg.sh` **`lzop`-graine de cache compressée à`tmpfs`** courir tous les matins avant le travail (via `crontab`), avec `PFFXG_CACHE=...` dans mon `~/.pffxg.conf` fichier. Ainsi n'importe lequel `pffxg.sh` les appels que j'ai exécutés tout au long de la journée de travail utilisent le cache compressé dans `tmpfs`
+La façon dont j'ai utilisé ce script avec [AOSP](https://source.android.com) était de planifier un `référentiel` synchronisation et une `pffxg.sh` **`lzop`-graine de cache compressée à`tmpfs`** courir tous les matins avant le travail (via `crontab`), avec `PFFXG_CACHE=...` dans mon `~/.pffxg.conf` fichier. Ainsi n'importe lequel `pffxg.sh` les appels que j'ai exécutés tout au long de la journée de travail utilisent le cache compressé dans `tmpfs`
 
 .25M LOC entre `ripgrep` et [ugrep](https://github.com/Genivia/ugrep). 632 LOC pour `pffxg.sh`
 
@@ -106,9 +106,9 @@ et `ripgrep`
     awk -F : '{a+=$2} END {print a/1024**2}' 0.38s user 0.38s system 66% cpu 1.140 total
 ```
 
-Les **performances applicatives** réelles proviennent de l'équilibre, de la flexibilité et des techniques de programmation fonctionnelles ; elles ne proviennent pas de la fixation sur des tactiques de microoptimisation impératives dans des langages de programmation compilés statiques qui sont difficiles à utiliser du point de vue de l'équilibre et de la flexibilité. Ces langages impérieux et surchargés sont d'excellentes cibles pour des domaines problématiques très spécifiques, mais ils sont terribles pour les performances des applications à l'échelle du système.
+Les **performances applicatives** réelles proviennent de l'équilibre, de la flexibilité et des techniques de programmation fonctionnelles ; elles ne proviennent pas de la fixation sur des tactiques de microoptimisation impératives dans des langages de programmation compilés statiques qui sont difficiles à utiliser du point de vue de l'équilibre et de la flexibilité. Ces langages impératifs surdimensionnés sont d'excellentes cibles pour des domaines problématiques très spécifiques, mais ils sont terribles pour les performances des applications à l'échelle du système.
 
-`pffxg.sh` n'est pas un produit, et ce n'est pas un argumentaire de vente pour lui. C'est un **exemple** pour illustrer mon propos d'une manière très dramatique. Si vous connaissez la longue histoire des solutions filtrées-récursives-grep sur GitHub, elles reposent toutes sur l'idée que le problème avec l'original d'Andy Lester `Perle` Implémentation [accusé de réception](https://beyondgrep.com/), était qu'il était écrit en `Perle`. Le seul vrai problème du point de vue de la performance était que le `Perle` Il a été écrit par Andy, qui ne semblait pas avoir le moindre talent pour les concepts de performance des systèmes (comme l'exploitation de `rechercher` le travail de parallélisation vers un projet spécifique `C` binaire), mais visait plutôt à la portabilité paresseuse en essayant de capturer l'ensemble du code en tant que Pure à un seul thread `Perle`
+`pffxg.sh` n'est pas un produit, et ce n'est pas un argumentaire de vente pour lui. C'est un **exemple** pour illustrer mon propos d'une manière très dramatique. Si vous connaissez la longue histoire des solutions filtrées-récursives-grep sur GitHub, elles reposent toutes sur l'idée que le problème avec l'original d'Andy Lester `Perle` Implémentation [accusé de réception](https://beyondgrep.com/)était-ce qu'il était écrit en `Perle`. Le seul vrai problème du point de vue de la performance était que le `Perle` Il a été écrit par Andy, qui ne semblait pas avoir le moindre talent pour les concepts de performance des systèmes (comme l'exploitation de `rechercher` un travail de parallélisation vers un projet spécifique `C` binaire), mais visait plutôt à la portabilité paresseuse en essayant de capturer l'ensemble du code en tant que Pure à un seul thread `Perle`
 
 Que mille fleurs fleurissent, peu importe ce qu'elles paraissent idiotes !
 

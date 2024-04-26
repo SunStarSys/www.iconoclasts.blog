@@ -9,9 +9,9 @@ title: Projekt med öppen källkod
 
 ### Deltagande i öppen källkod
 
-Kärnan i vår tro är det medfödda värdeerbjudandet av öppen källkodsprogramvara.  Samarbete [huvudanvändare](http://en.wikipedia.org/wiki/Lead_user) samhällen och deras omgivande nätverk har varit en del av vårt arbete sedan starten av SunStar Systems, främst inom teknik som härrör från eller har sitt ursprung i [Apache Software Foundation]
+Kärnan i vår tro är det medfödda värdeerbjudandet av öppen källkodsprogramvara.  Samarbete [huvudanvändare](http://en.wikipedia.org/wiki/Lead_user) samhällen och deras omgivande nätverk har varit en del av vårt arbete sedan starten av SunStar Systems, främst inom teknik som härrör från eller har sitt ursprung i [Apache Software Foundation](http://www.apache.org/).
 
-Har du en öppen källkodsstrategi för din produktlinje?  Hur modulär är din programvara, och är det vettigt att ge användarna tillgång till dessa tilläggspunkter?  Aldrig hört talas om [Hollywoodprincipen]
+Har du en öppen källkodsstrategi för din produktlinje?  Hur modulär är din programvara, och är det vettigt att ge användarna tillgång till dessa tilläggspunkter?  Aldrig hört talas om [Hollywoodprincipen](http://en.wikipedia.org/wiki/Hollywood_principle).
 
 ### Lista över projekt som vi har varit involverade i, helt eller delvis:
 
@@ -21,11 +21,11 @@ Har du en öppen källkodsstrategi för din produktlinje?  Hur modulär är din 
 
 - [SunStarSys CMS](https://github.com/SunStarSys/cms) &mdash;
 
-- [ortrus](https://github.com/SunStarSys/orthrus) &mdash; [Engångslösenkod]
+- [ortrus](https://github.com/SunStarSys/orthrus) &mdash; [Engångslösenkod](https://en.wikipedia.org/wiki/One-time_password).
 
-- [vid](https://github.com/joesuf4/at) &mdash; [Tidsrapport]
+- [vid](https://github.com/joesuf4/at) &mdash; [Tidsrapport](https://testanything.org).
 
-- [part](https://github.com/SunStarSys/pty) &mdash; Verktyg för automatiserade terminalinloggningsuppgifter-prompt-svar.  I en anda av [TCL förväntad]
+- [part](https://github.com/SunStarSys/pty) &mdash; Verktyg för automatiserade terminalinloggningsuppgifter-prompt-svar.  I en anda av [TCL förväntad](https://en.wikipedia.org/wiki/Expect).
 
 - [pffxg](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) &mdash;
 
@@ -37,4 +37,4 @@ Har du en öppen källkodsstrategi för din produktlinje?  Hur modulär är din 
 
 - [Algoritm::LCS::XS](https://github.com/SunStarSys/Algorithm-LCS-XS) &mdash;
 
-- [schaefj/linter](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; Dockningsbehållare för [senare.{rc,sh}]
+- [schaefj/linter](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; Dockningsbehållare för [senare.{rc,sh}](https://github.com/joesuf4/home/tree/wsl)

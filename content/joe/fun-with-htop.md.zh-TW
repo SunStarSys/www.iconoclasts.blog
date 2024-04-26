@@ -1,0 +1,58 @@
+---
+archived: ~
+categories: 工具
+dependencies: '*.md.zh-TW'
+keywords: ~
+published: ~
+status: 已封存
+title: 玩 htop
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/iEUZJ44mldI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+
+## {# lede #}熱門 Unix 平台的進階 htop 功能{# lede #}
+
+
+- 起始差異`頂端`
+
+	- 精密的互動行為
+	- 主題，** 語意 ** 色彩配置
+
+
+
+- 特色
+
+	- 自訂顯示`成本`
+	- 搜尋`/` 或過濾器`\` 依名稱區分的輕量型處理作業 (LWP、aka 執行緒)
+	- 依使用者名稱篩選 LWP `你好`
+	- 切換`ttw` 樹狀檢視
+	- 每個 LWP 命令
+		- `秒鐘` 系統追蹤
+		- `公升` 開啟的檔案描述元清單
+		- `電子` 環境變數
+		- `千卡`
+
+### Linux
+
+OOTB 完整作業功能集。
+
+### OSX 連接埠
+
+- 啟用 DTrace (必要) [啟動至復原模式以停用 SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
+- 複製[dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) 終止`~/bin` 並執行以建立`寬限` 符號連結
+- 啟動`頂點`
+
+### [第 11 期](https://github.com/joesuf4/htop/tree/solaris-stable).
+
+- ZFS ARC 統計
+- 區域名稱 /ID 資料欄
+- Solaris LWP 會計差異
+	- 雙層 PID + LWPID
+
+
+<!-- $Date: 2023-01-19 22:58:40 +0000 (Thu, 19 Jan 2023) $ $Author: joe $ -->

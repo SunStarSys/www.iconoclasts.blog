@@ -20,11 +20,11 @@ title: 'Perl 7 Demande de fonctionnalité : sous-sections scellées pour les lex
 
 ## La solution initiale : les optimisations de recherche de méthode de Doug MacEachern
 
-Doug était le créateur du projet mod_perl au milieu des années 90, donc évidemment l'écriture de haute performance Perl était son fort. Une de ses nombreuses contributions à [p5p](https://lists.perl.org/list/perl5-porters.html) devait réduire de moitié la pénalité de performance de la recherche de méthode OO, à l'aide d'une méthode + <code> &#64;Cache de hiérarchie ISA</code> permettant de rechercher la méthode d'objet d'exécution pour les objets mod_perl comme `Apache2::RequestRec`
+Doug était le créateur du projet mod_perl au milieu des années 90, donc évidemment l'écriture de haute performance Perl était son fort. Une de ses nombreuses contributions à [p5p](https://lists.perl.org/list/perl5-porters.html) a été de réduire de moitié la pénalité de performance de la recherche de méthode OO, en utilisant une méthode + <code> &#64;Cache de hiérarchie ISA</code> permettant de rechercher la méthode d'objet d'exécution pour les objets mod_perl comme `Apache2::RequestRec`
 
 Ce n'est pas un problème insignifiant avec les appels à `C struct` Méthodes d'accès get-set &mdash; situation courante avec de nombreuses API mod_perl. Méthode d'exécution Perl : pénalité de recherche d'appel sur httpd `structure request_rec *`, que mod_perl expose via le `Apache2::RequestRec`
 
-Quoi [Doug cherchait]
+Quoi [Doug cherchait](https://www.perl.com/pub/2000/06/dougpatch.html/).
 
 ## [Script de référence]({{snippetA.pretty_uri}}).
 
@@ -140,7 +140,7 @@ Pour le plaisir, essayez ceci [patch singe]({{snippetB.pretty_uri}}) à `ModPerl
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Il permet les effets de `sous-gestionnaire : {script goes here} scellé` sur tous vos `ModPerl : :Registre` scripts, quelque chose comme [celui-ci]
+Il permet les effets de `sous-gestionnaire : {script goes here} scellé` sur tous vos `ModPerl : :Registre` scripts, quelque chose comme [celui-ci](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -182,6 +182,6 @@ Voir <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Recherche
 
 Cela permettra à Perl 5 d'effectuer l'exemple de code `content_type`
 
-Cette idée de Perlish est gratuitement volée à [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Lire cet article]
+Cette idée Perlish est volée gratuitement à [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Lire cet article](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
 
 <!-- $Date$ $Author$ $Revision$ -->

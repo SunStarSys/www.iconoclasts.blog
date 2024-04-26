@@ -17,7 +17,7 @@ title: Av, Av och För Iconoclasts
 <pre class="card-title">
 substantiv [ C ]   formell
 US /aÉaËkÉË.nÉ.klæst/
-En person som starkt motsätter sig
+en person som starkt motsätter sig
 accepterade övertygelser och traditioner
 </pre>
 
@@ -38,7 +38,7 @@ accepterade övertygelser och traditioner
 
 </div>
 
-![Ikonoklast]
+![Ikonoklast](images/iconoclast.jpg).
 
 <div style="max-width:900px">
 
@@ -50,9 +50,9 @@ Välkommen till vår
 
 </center>
 
-Bloggvärlden! Registrera dig redan idag på [Kontakta oss]
+Bloggvärlden! Registrera dig redan idag på [Kontakta oss](/contact).
 
-Vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orions logotyp" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wikisystemet Enterprise Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru mindmap]
+Vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orions logotyp" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wikisystemet Enterprise Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru mindmap](https://www.sunstarsys.com/orion/features).
 
 &nbsp;
 
@@ -69,9 +69,9 @@ Vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-
 
 &nbsp;
 
-- <span class="badge bg-success">Ny</span> [Apache HTTPd Devs ansåg vara skadliga]
+- <span class="badge bg-success">Ny</span> [Apache HTTPd Devs ansåg vara skadliga](/joe/apache-considered-harmful).
 
-- [Trippelprodukter av Eigenfunctions och Spectral Geometry]
+- [Trippelprodukter av Eigenfunctions och Spectral Geometry](/joe/triple-products).
 
 - [Applikationsprestanda](/joe/performance) &mdash;
 

@@ -1,0 +1,54 @@
+---
+archived: ~
+categories: Soins de santé, Mathématiques, Dynamique
+dependencies: '*.md.fr'
+keywords: exponentielle, puissance, covid-19, épidémie, pandémie
+published: ~
+status: archivé
+title: Croissance exponentielle et COVID-19
+---
+
+Permettez-moi de vous donner une analyse qualitative de ce qu'est un graphique de fonction exponentielle (alias puissance) géométriquement, et comment il s'applique à l'épidémie de covid-19 balayant la planète.  Ce n'est pas une lecture longue et complexe, donc {# lede #}prenez votre temps avec la section **mathématiques** &mdash; Il est important d'être un consommateur averti de statistiques pertinentes pour la pandémie actuelle{# lede #}. Une formation en première année [calcul](https://en.wikipedia.org/wiki/Calculus).
+
+### La mathématique
+
+Au début, les valeurs de la fonction exponentielle sont microscopiquement petites, et à peine croissantes au fil du temps (sur la `Axe des X`
+
+![COVID-19 mars 2020](../images/covid-march-2020-e.png).
+
+Pour illustrer cela par analogie : imaginez à quelle vitesse vous iriez maintenant si la vitesse de votre voiture était toujours liée, par une constante de proportionnalité, au kilométrage de son compteur kilométrique. En vertu de cette hypothétique, pour chaque intervalle de temps fixe qui passe, la vitesse de votre voiture et la distance totale parcourue *multiplie * par la même quantité fixe (plus grande que un). En fait, c'est [tortues tout le long du chemin](https://en.wikipedia.org/wiki/Turtles_all_the_way_down) : accélération de votre voiture, secousse, etc. (c'est-à-dire tout [dérivés](https://en.wikipedia.org/wiki/Derivative).
+
+Sur un [échelle logarithmique](https://en.wikipedia.org/wiki/Logarithmic_scale) pour le `axe des ordonnées`, les graphiques de ces fonctions d'alimentation apparaissent sous la forme de **lignes droites**.  Les deux graphiques ci-dessous ont des lignes de croissance parallèles (que j'ai ajouté en noir à ces [mondomètres](https://www.worldometers.info/coronavirus/) et reflètent les mêmes totaux *mondiaux* que la paire ci-dessus. Si nous représentons ces "lignes" dans `log y = mx + b` forme, la `m`-valeurs (`pistes`) serait d'accord ; seul le `b`-valeurs (`log y-intercepts`) diffèrent.  Le point clé ici est de concentrer l'attention sur le **invariant** `pente`, pas les variations `Intercepts`, pour tout ensemble de statistiques de pandémie par âge-démographique ou par région géographique, ou des combinaisons de ces statistiques.  Multiplication `ln 10 = 2,302585...` avec le `pente` On obtient ici la constante de proportionnalité fondamentale qui associe les valeurs des fonctions exponentielles représentées à leurs taux de changement *instantanés*.  En d'autres termes, se concentrer sur les pourcentages relatifs entre différentes statistiques, comme [conditionnelle](https://en.wikipedia.org/wiki/Conditional_expectation) taux de mortalité, est *missing the point* : c'est une conversation sur le `b`Les valeurs, pas les `m`
+
+Pour être clair, la différence entre `b`-values est plus sur les différences de temps sur le `Axe des X` que des différences dans `y`-valeurs ; en termes d'équations : `log y = mx + b = m(x + b/m)` est une traduction implicite de la ligne `y = mx`, `b` unités le long du `axe des ordonnées`, ou équivalent `b/m` unités le long du `Axe des X` (dans la direction opposée).   **N'importe quel** type de statistique relative (comme le taux de mortalité par cas) peut être capturé en termes de traductions temporelles, une fois `m` est connu (et non nul).  La statistique *critique* est `m`
+
+![Échelle logarithmique du COVID-19 de mars 2020](../images/covid-march-2020.png).
+
+### La pandémie de COVID-19 aux États-Unis
+
+Le `Doublage sur 5 jours` du nombre total de personnes infectées à New York cette semaine, ainsi que `Doublage sur 3 jours`
+
+
+![Échelle logarithmique de la COVID-19 aux États-Unis en mars 2020](../images/covid-us-march-2020.png).
+
+![Mars 2020 COVID-19 Échelle logarithmique des décès aux États-Unis](../images/covid-us-march-2020-deaths.png).
+
+Voici la bonne nouvelle : les épidémies ne suivent que des fonctions exponentielles pour la première partie de l'épidémie. Finalement, le taux de changement s'aplatira et deviendra négatif, ce qui indique une baisse du niveau de la population totale qui est actuellement malade.
+
+La mauvaise nouvelle est que le [OMS](https://www.who.int/emergencies/diseases/novel-coronavirus-2019).
+
+### Fallout
+
+Il n'est pas vaudou de provoquer une épidémie pour commencer à s'éloigner de [croissance exponentielle](https://en.wikipedia.org/wiki/Exponential_growth).
+
+Ce que les épidémiologistes essaient d'accomplir, c'est de lancer ce processus le plus rapidement possible.  Chaque jour perdu signifie une perte de vie accélérée, une augmentation de l'élan des cas graves et un plus grand risque d'écraser totalement le système de soins de santé que les crêtes graphiques.
+
+Inévitablement, l'aplatissement se produira. Si ce n'est pas à cause de la sagesse sociale humaine, c'est parce que le virus ne peut pas réinfecter les victimes passées <sup>2</sup>, et il infecte simplement la majorité de la population avant de cracher et de s'attarder pour infecter les nouveau-nés, ou tout simplement disparaître entièrement.
+
+#### Notes de bas de page (24 septembre 2020).
+
+1. Je suis intentionnellement vague sur l'intervalle de temps réel pour le taux de changement, mais cela n'a pas vraiment d'importance pour la valeur de vérité de l'affirmation.  Des intervalles de temps différents donnent des constantes de proportionnalité différentes, mais ces constantes ne dépendent que de la taille de l'intervalle de temps, et non du ou des instants de temps mesurés (aux extrémités) eux-mêmes.
+
+2. Le jury est toujours là.  Selon les souches présentes dans la nature, combinée à la gravité de la maladie qu'un patient contracte, une réinfection peut être possible, au moins une partie du temps.
+
+<!-- $Date: 2023-01-30 20:55:15 +0000 (Mon, 30 Jan 2023) $ $Author: joe $ $Revision: 12627 $ -->

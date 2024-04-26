@@ -9,17 +9,17 @@ title: Desarrollado por...
 
 ## Tecnologías del sitio
 
-- [Subversión]
+- [Subversión](https://subversion.apache.org/).
 
-- [SvnPubSub]
+- [SvnPubSub](https://journal.paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/).
 
 - SvnWcSub (cliente SvnPubSub) para disparar compilaciones de sitios activos.
 
-- [SunStar Orión de sistemas]
+- [SunStar Orión de sistemas](https://www.sunstarsys.com/orion/).
 
-- [Inicio de Twitter]
+- [Inicio de Twitter](https://github.com/twbs/bootstrap).
 
-- [pffxg.sh]
+- [pffxg.sh](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh).
 
 - Diseño de logo por el artista gráfico (y todo-alrededor del hombre renacentista) Joel Suraci.
 

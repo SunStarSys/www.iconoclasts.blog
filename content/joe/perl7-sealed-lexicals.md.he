@@ -18,11 +18,11 @@ title: 'בקשת תכונה Perl 7: תת-חסום לקסיקלים מוקלדי�
 
 ## הפתרון הראשוני: אופטימיזציות קוד השיטה של דאג מקאשרן
 
-דאג היה היוצר של פרויקט mod_perl באמצע שנות ה-90, אז ברור שכתיבת ביצועים גבוהים פרל היה המבצר שלו. אחת התרומות הרבות שלו ל [p5p](https://lists.perl.org/list/perl5-porters.html) נועד לקצץ בחצי את קנס הביצועים של תקורת lookup של שיטת OO באמצעות שיטה + <code> &#64;ISA</code> מטמון היררכיה כדי להפוך את ה-lookup של שיטת אובייקט זמן ריצה לאובייקטים של mod_perl כמו `Apache2::RequestRec`
+דאג היה היוצר של פרויקט mod_perl באמצע שנות ה-90, אז ברור שכתיבת ביצועים גבוהים פרל היה המבצר שלו. אחת התרומות הרבות שלו ל [p5p](https://lists.perl.org/list/perl5-porters.html) היה לגזור את קנס הביצועים של תקורת lookup של שיטת OO בחצי, באמצעות שיטה + <code> &#64;ISA</code> מטמון היררכיה כדי להפוך את ה-lookup של שיטת אובייקט זמן ריצה לאובייקטים של mod_perl כמו `Apache2::RequestRec`
 
 זו לא בעיה מטרידה עם שיחות ל `מבנה C` שיטות get-set accessor &mdash; המצב המשותף עם ממשקי API רבים mod_perl. שיטת זמן הריצה של פרל - קנס קוד קריאה על httpd's `מבנה request_rec *`, כי mod_perl חושף באמצעות `Apache2::RequestRec`
 
-מה [דאג מחפש]
+מה [דאג מחפש](https://www.perl.com/pub/2000/06/dougpatch.html/).
 
 ## [תסריט בוחן ביצועים]({{snippetA.pretty_uri}}).
 
@@ -138,7 +138,7 @@ sub handler :sealed {
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-הוא מאפשר את ההשפעות של `מטפל משנה: {script אטום מופיע כאן}` על כל שלך `ModPerl::רישום` תסריט, משהו כמו [זה אחד]
+הוא מאפשר את ההשפעות של `מטפל משנה: {script אטום מופיע כאן}` על כל שלך `ModPerl::רישום` תסריט, משהו כמו [זה אחד](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -176,10 +176,10 @@ time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
 req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
-ראה <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. חפש `נדבר/bench.pl`
+ראה <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. חפש `נדב/bench.pl`
 
 זה יאפשר Perl 5 לעשות את הקוד לדוגמה `content_type`
 
-הרעיון הזה נגנב בחינם. [דילן](https://jim.studt.net/dirm/interim-5.html).  [קרא את זה]
+הרעיון הזה נגנב בחינם. [דילן](https://jim.studt.net/dirm/interim-5.html).  [קרא את זה](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
 
 <!-- $Date: 2024-04-19 06:30:01 +0000 (Fri, 19 Apr 2024) $ $Author: joe $ $Revision: 22500 $ -->

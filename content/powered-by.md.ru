@@ -9,17 +9,17 @@ title: На базе...
 
 ## Технологии сайта
 
-- [Подрывная деятельность]
+- [Подрывная деятельность](https://subversion.apache.org/).
 
-- [SvnPubSub]
+- [SvnPubSub](https://journal.paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/).
 
 - SvnWcSub (клиент SvnPubSub) для запуска интерактивных сборок сайта.
 
-- [SunStarСистемы Orion]
+- [SunStarСистемы Orion](https://www.sunstarsys.com/orion/).
 
-- [Твиттер Bootstrap]
+- [Твиттер Bootstrap](https://github.com/twbs/bootstrap).
 
-- [pffxg.sh]
+- [pffxg.sh](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh).
 
 - Дизайн логотипа художником-графиком (и всесторонним человеком эпохи Возрождения) Джоэлем Сурачи.
 

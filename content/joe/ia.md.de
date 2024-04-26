@@ -1,0 +1,113 @@
+---
+archived: ~
+categories: Orion, Architektur, ZFS
+dependencies: '*.md.de'
+keywords: Information,Topologie,Hypermedia,Rest,Architektur,Hateoas
+published: ~
+status: Entwurf
+title: Informationsarchitektur
+---
+
+<div class="right">
+
+![Informationsarchitektur](ia.page/ia.jpg).
+
+</div>
+
+[TOC]
+
+## Einführung
+
+Information Architecture **organisiert** und **arrangements** {# lede #}die gesamte Bandbreite an Technologien, die für das Design, die Präsentation, die Beziehungen und die architektonischen Einschränkungen relevant sind, die jede von Ihnen bereitgestellte URL abdecken{# lede #}
+
+## Benutzerfreundlichkeit, Discovery und Linktopologie: Das Gesamtbild
+
+## Heirarchien mit Tagged Suche
+
+### Radikal neu strukturieren Wiki-Suche
+
+#### Ziele für die menschliche Schnittstelle
+
+##### Leistungsstarke Syntax
+
+
+##### Hashtag-Seaches sind kennwortspezifisch anstelle generischer Wortsuchen
+
+##### Einfache Umfangserweiterung
+
+##### Filtermaschine für interaktive Ergebnisse
+
+Eine Übersicht finden Sie im Abschnitt HATEOAS.
+
+##### Integrierte Performance-Skalierung auf 100K-Dokumentbäume
+
+##### Anforderungen nach verständlichen Ergebnissen/Priorisierung
+
+##### Sicherheit pro Benutzer (ACL) - Kontextualisierte Ergebnisse
+
+##### Treffer, die direkt mit zielspezifischen Dokumentstandorten verknüpft sind
+
+##### Live, RealTime Ergebnisse (auch bekannt als No Stale Indexed Corpus).
+
+#### Kundenakzeptanzziele
+
+##### Leistung als "Anwendung/json" auf Anfrage
+
+Optionen:
+
+- Übergeben Sie "as_json=1" in der Abfragezeichenfolge
+
+
+##### Styling wird semantisch durch die Installation der `/content/css/boostrap.min.css`
+
+##### `search.html` Die Vorlage kann durch die Kundeninstallation der `/templates/search.html`
+
+##### `main.html` Die abgeleitete Vorlage kann durch die Kundeninstallation der `/templates/main.html`
+
+## REST, HATEOAS und Content Negotiation
+
+## Schöne URLs &mdash;
+
+## Strukturierte, zukunftssichere MultiMedia-Inhalte
+
+### GitHub Preisabschrift mit Aroma $$\KaTeX$$
+
+### YAML-Header für MetaData
+
+#### Eine vollständige Programmiersprache ist keine Daten - sie gehört nicht zu Ihren Inhaltsquellen
+
+### Der Wert der Aktivierung der Vorlagenvorverarbeitung für den Inhalt
+
+- Inline-Datenverarbeitungs-Engines
+
+  - eingebettete, "sichere" Json-Literale in gebauten Dateien
+
+
+#### Sich langsam entwickelnde, zentralisierte Konfiguration von Wiki-Fakten
+
+- Unternehmensservice-URLs
+
+
+### Die Rolle von `ssi`
+
+## Zugriffskontrollen auf Inhalte aus einer Single Source of Truth-Perspektive
+
+- `walk_content_tree()` in `path.pm`
+  - ACLs
+  - Abhängigkeiten
+- `acl.yml`
+
+## SunStar Systemorion&trade;
+
+1. zfs-Klone
+
+
+## StageMaster: Experimentieren mit Pure Client-Side State Engine
+
+## GitOps Workflows erstellen
+
+1. Frontend
+2. Backend
+
+
+<!-- $Date: 2024-03-11 03:02:57 +0000 (Mon, 11 Mar 2024) $ $Author: joe $ $Revision: 19680 $ -->

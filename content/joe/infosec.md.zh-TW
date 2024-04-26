@@ -1,0 +1,35 @@
+---
+archived: ~
+categories: Security，安全性，IT，Perl
+dependencies: '*.md.zh-TW'
+keywords: Infosec，zerotrust，taint，動態，資料
+published: ~
+status: 已封存
+title: 資訊安全入門
+---
+
+[TOC]
+
+#### InfoSec 的主要目標是什麼？
+
+* 為了確保環境定義界限的所有變更均受到完善的管制。*
+
+例如，就 UNIX 使用者 / 群組 process+filesystem 安全模型而言，UNIX 平台上的每個 ** 系統呼叫 ** 都會滿足此條件。** 相關資訊環境交換器 ** 的文字定義 (由 ** 系統呼叫 ** 輸入) 包括在呼叫核心端進行 API 使用狀況檢查。
+
+就 SaaS 遞送而言，{# lede #}所有源自程式實際執行 UNIX ** 系統呼叫 ** 的資料都應視為 ** 保留 **{# lede #}
+
+UNIX 安全性模型永遠不會為網路用戶端 / 伺服器應用程式開發佈建，因為在歷史上，BSD 插槽 API 預測在 90 年代 (Sun Microsystems) 中網路運算崛起已於 UNIX 出生後十年內發明 (其以作業系統為基礎的多使用者安全性模型於出生時完全形成)。[MIT Kerberos](https://web.mit.edu/kerberos/).
+
+在 UNIX 模型之外，安全地排定 CPU 代表部分「授權的使用者 / 群組 / 角色相關資訊環境」執行核心層次工作，而未連線至相關處理作業的 UNIX 使用者 / 群組相關資訊環境。許多資訊科技計畫無法單獨辨識此法規責任屬於應用程式，請勿讓自己成為一個！
+
+如果目前不清楚，DevOps/SRE 團隊在 Linux 上分類 SaaS 安全性 (**CAI**) 事件應熟悉自己[頂點](fun-with-htop)」s `寬限` 透過介面`秒鐘` 金鑰！更好的主人`寬限`
+
+#### 這與零信任的舉措有何關係？
+
+[零信任架構](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf).
+
+雖然實際上可能會有 VPN/ 防火牆環境定義，但在零信任架構內，這些細節都不會與 InfoSec 相關。換句話說，這類網路拓樸安全計畫可能會擴增「零信任」計畫，但這些計畫在基本伺服器主機安全層級的「零信任」計畫中從未仰賴到應用程式層級。
+
+例如，MIT Kerberos 和 Active Directory 符合零信任。
+
+* 日期：2023-01-19 22:58:40 +0000 (2023 年 1 月 19 日星期四) $*

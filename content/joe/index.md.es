@@ -11,13 +11,13 @@ title: Los pensamientos aleatorios de Joe
 
 <div class="right">
 
-![Año del Dragón]
+![Año del Dragón](index.page/dragon.png).
 
 </div>
 
 ## {# lede #}Bienvenido!{# lede #}
 
-2024: el año del dragón.  Practicamos [Ciencia abierta]
+2024: el año del dragón.  Practicamos [Ciencia abierta](triple-products).
 
 Más pronto...
 

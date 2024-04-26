@@ -1,0 +1,52 @@
+---
+archived: ~
+categories: IT，Perl，Mail，工具
+dependencies: '*.md.zh-TW'
+keywords: ezmlm-idx、BATV、DMARC、SRS
+published: ~
+status: 已封存
+title: 郵件群組
+---
+
+## ezmlm-idx 語法
+
+我使用郵寄清單軟體的經驗繞過[QQ 客服](http://cr.yp.to/qmail.html) 以及[ezmlm-idx 語言](http://untroubled.org/ezmlm/)繁體中文有了幾個小程序檔，我能夠支援各種新使用案例，而這些使用案例原本就不受支援`ezmlm-idx 語言` 本身。在下列項目之外一般有用的功能：[Apache 軟體基礎](http://www.apache.org) 配置如下。要使用這些檔案，請跟隨[版面配置](ezmlm/).
+
+### BATV 與 SRS
+
+[儲櫃 / 寄件者調解器](ezmlm/bin/sender-demunger.pl) 是一些啟用的包裝函式命令檔`BATV` 以及`SRS` `寄件者` 拆解`ezmlm-idx 語言`繁體中文若要使用它，只需將它作為前置碼新增至您所有的行`</editor />` 以及`</manager />` 內的區塊`繁體中文` 並執行`ezmlm-make -+` 在您的清單上，或假設您將不會執行`ezmlm 製造` 再次在您的清單上編輯`編輯器` 以及`經理`
+
+[BATV](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) 以及[SRS](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme) 提出獨特的問題`ezmlm-idx 語言` 因為它操作的其他郵寄清單軟體不同`郵件寄件者` 部分`SMTP`
+
+這兩種規格都會繞著提供暫時地址給`郵件寄件者` 信封部分，以易於解譯的方式嵌入原始位址。但是{# lede #}這些暫時地址是必要的`ezmlm-idx 語言`的訂閱和協調管制系統{# lede #}，以及`寄件者 -demunger.pl`
+
+<div class="alert alert-info">
+   <div class="alert-header">備註</div>
+   <div class="alert-body">
+根據版本說明，自版本 7.0.0 起，ezmlm-idx 應支援內建的 BATV 與 SRS。在任何情況下，寄件者 -demunger 真的不會傷害：-。
+   </div>
+</div>
+
+### 潛水艇
+
+請參閱[bin/ezmlm-dmarc-filter.pl](ezmlm/bin/ezmlm-dmarc-filter.pl) 以及[bin/ezmlm-seekable-stdin.pl](ezmlm/bin/ezmlm-seekable-stdin.pl) 以及[程式庫 /pull_header.pm](ezmlm/lib/pull_header.pm)繁體中文若要使用這些程序檔，請變更以下行：`</editor />` 區段`繁體中文` 該呼叫`ezmlm 閘`, `ezmlm 店`，或`ezmlm 傳送`
+
+```shell
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/ezmlm-seekable-stdin.pl /path/to/bin/sender-demunger.pl <#B#>/ezmlm-gate -rY '<#D#>' '<#D#>' '<#D#>/digest' '<#D#>/allow' '<#D#>/mod'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/sender-demunger.pl <#B#>/ezmlm-store '<#D#>'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | <#B#>/ezmlm-send -r '<#D#>'
+```
+
+這假設您將接觸到一個名為 的檔案`潛水艇` 在您要啟用篩選的任何清單目錄中。您可以設定`繁體中文`
+
+```shell
+	</-dmarc#FXT/>
+	</dmarc#f/>
+	</dmarc#t/>
+	</dmarc#x/>
+```
+唯一可執行以下項目的組態清單：`DMARC 系列` 那些`-f`, `-t` 或者`-x`
+
+假如你沒有跟上時間，最近有個運動開始引進強勁[DMARC 系列](http://en.wikipedia.org/wiki/DMARC) 拒絕失敗訊息的原則[DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) 簽章測試。Facebook、Twitter、LinkedIn、Yahoo！及現在 AOL 已帶領這筆費用進入新領域，迫使郵寄清單操作員處理情況。什麼`ezmlm-dmarc-filter.pl` 這不是問題的唯一可能解決方法，而是刪除`DKIM 簽章` 任何這類網域的標頭，並新增`繁體中文無效` 寄件者的尾碼`起始` 標頭位址。它有利於成為最簡單的解決方案之一，所以我在這裡提供。到目前為止部署嚴格的網域`DMARC 系列` 政策全部提供適當`回函地址` 標頭，因此這些變更由`ezmlm-dmarc-filter.pl`
+
+$ 日期：2023-01-19 22:58:40 +0000 (2023 年 1 月 19 日星期四) $

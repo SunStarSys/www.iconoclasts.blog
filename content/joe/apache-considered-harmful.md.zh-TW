@@ -1,0 +1,63 @@
+---
+archived: ~
+categories: Apache, Perl
+dependencies: '*.md.zh-TW'
+keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
+published: ~
+status: 草稿
+title: Apache HTTPd 視為有害的開發
+---
+
+<div class="right">
+
+![刺青和羽毛](apache-considered-harmful.page/feather.png).
+
+</div>
+
+## 背景
+
+過去 25 年，我一直是主要開發人員`要求` 子專案[Apache HTTPd 伺服器](https://httpd.apache.org) 上階專案。原來的想法`libapreq 程式語言`，作為安全 / 性能[HTML 表單送出](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) 以及[Cookie 通知](https://datatracker.ietf.org/doc/html/rfc6265).
+
+這是我的願景，然後將圖書館轉變為一般、非 Perl 相關`成本` 支援其他程式設計語言之語言連結的程式庫，這也是為什麼我要推送專案[歸位](https://httpd.apache.org/apreq) 在 HTTPd 傘底下，而非[Apache-Perl](https://perl.apache.org/).
+
+隨著以下時間的推移`httpd-2.X 軸`，全新`I/O 篩選` 建築從`HTTPD` 核心，以及完全分離的`年度經常性收入` 從核心本身成為更一般用途的 POSIX 可攜性程式實際執行，`成本` 類似專案`Subversion`繁體中文事實上，`libapreq2` 與此更密切配合`Apache APR` 該精神中的專案，而其 Perl API 反映出作為其一部分`APR：：請求` 建置。它具有用於獨立作業的內建 *CGI* 模式，不在`HTTPD`
+
+但是，主要元件為`apreq2` 一直是`mod_apreq2` Apache 模組，最初是由`Bill Wrowe` 2000 年代初。他在與我進行腦力激盪工作階段 (親自) 的設計，是內部的單一剖析器程式庫`HTTPD`
+
+我多年來解釋了設計目標數次，即使在 2012 年[裝置 @httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04).
+
+## Storm Clouds 收集
+
+雖然此願景大致成功，但有多種語言的語言連結可供使用，例如[`佩爾`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c), [`TCL`](https://tcl.apache.org/), [`零售`](https://github.com/jeffreyhorner/rapache)，等等，從 2010 年以來，它已經證明了悲劇[現有使用者社群](https://webtechsurvey.com/technology/smod_apreq2) <a class="border border-warning text-muted reference-link" href="#commentAA" id="commentAA-link" title="{{commentAA.headers.title}}">由所有成員組成</a>，而不只是成員`佩爾`
+
+發生了什麼事？[Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci)當時是礦山的 Perl/FreeBSD 同事，開始激勵我們推廣要從 HTTPd 伺服器本身發行的專案。什麼{# lede #}菲利普不知道太好了，那就是怎麼說[peevish，vapid and territorial - 歡樂，潮流和領土](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) 該團隊已經成為{# lede #}，這將需要直接與他們合作[使用者導向決策](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html).
+
+2012 年，菲利普得到了他想要的東西，我停止抗拒，所以他[叉](https://svn.apache.org/viewvc?view=revision&revision=1201372) 現有專案並複製`成本`
+
+## 誤差
+
+[2018 年度](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1).
+
+在 2020 年左右，Google 的安全團隊透過模糊其 8 年歷史的 httpd 2.5 版，充分利用 httpd 2.5 版`apreq2`
+
+不要有禮貌地去菲利普，[Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann)、本人 (@joesuf4) 或其他參與開發的人`libapreq2`
+
+不過，2022 年發行的優惠券 de grace 是[2.17 年](https://www.google.com/search?q=libapreq2-2.17)，在屋苑開發商[謹慎地將嚴重錯誤引入程式碼庫](http://svn.apache.org/viewvc?view=revision&revision=1895107)，中斷[十九歲迴歸測試](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
+
+## 後期
+
+如果您想知道有破損回歸測試的事情如何發生[CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2)，你必須了解如何[雷倫](https://httpd.apache.org/dev/release.html).
+
+長篇短篇，[他們對測驗發表了評論](http://svn.apache.org/viewvc?view=revision&revision=1903489) 並仍將其寄送，稱為「安全版本」[修正先前發行版本易遭遇的漏洞](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
+
+<div class="right">
+
+![超人標誌](apache-considered-harmful.page/superman.jpg).
+
+</div>
+
+我為什麼現在關心？因為我是吸吮者[使用者聯繫以尋求答案](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html).
+
+這起成功，但我很抱歉告訴你，我的日子在阿帕契穿著超人帽子，約 10 年前結束。
+
+<!-- $Date: 2024-04-25 18:56:40 +0000 (Thu, 25 Apr 2024) $ $Author: joe $ $Revision: 23968 $ -->

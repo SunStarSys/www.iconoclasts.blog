@@ -1,0 +1,21 @@
+---
+archived: ~
+categories: Perl, Apache, IT, Mail, Outils
+dependencies: '*.md.fr'
+keywords: 'qpsmtpd,Apache : :Qpsmtpd,earlytalker,anti-spam,envoi de courrier,postfix,exim'
+published: ~
+status: archivé
+title: Sur le problème du spam...
+---
+
+Comme j'ai écrit sur [ailleurs](/clients/apache), l'un des meilleurs outils open source disponibles pour l'arsenal d'outils anti-spam d'un administrateur de messagerie est [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), qui est simplement un serveur de courrier entrant frontal qui a besoin d'un serveur de courrier entièrement fonctionnel comme `courriel`, `envoyer un message`, `exim`, ou `préfixe` pour la livraison sortante.  Quoi `qpsmtpd` est très similaire à ce que `httpd` fait pour les webservers : il introduit des crochets personnalisables dans chaque phase de la `SMTP`
+
+{# lede #}Le meilleur plugin pour `qpsmtpd`, bien qu'il soit difficile de comprendre pourquoi{# lede #}, est le `débutant` plugin.  Quoi `débutant` est mis `qpsmtpd` pour dormir pendant une durée configurable, en écoutant sur le socket (via `sélectionner(2)`) pour les communications "précoces" non conformes à la norme RFC provenant de l'autre extrémité du socket (`qpsmtpd` fourche généralement un serveur pour chaque connexion entrante, de sorte que seul le processus enfant dort dans `sélectionner(2)`
+
+Pourquoi un outil aussi simple est-il si puissant dans l'arsenal de l'administrateur ?  Parce qu'il introduit des retards obligatoires pour chaque connexion de courrier, qui, comme il s'avère, frappe la plupart des spammeurs où ils peuvent le mesurer, en termes de lier leur agent de distribution de courrier de traiter le reste de leur file d'attente.  Il est important de se rendre compte que les spammeurs gèrent une entreprise, dont beaucoup n'ont aucun intérêt direct pour le contenu de ce qu'ils livrent. Ils sont payés pour la gestion d'un réseau sophistiqué, et généralement illégal, d'agents d'envoi, et fourniront des services de livraison à tout client avec l'argent pour couvrir son utilisation plus les profits.  Beaucoup d'entre eux font des revenus annuels bien au-dessus du mien ou du vôtre :-).
+
+Il y a des approches plus sophistiquées à être sûr, comme seulement retarder les messages des expéditeurs "non fiables", mais vous pouvez aller beaucoup plus loin que cela si votre serveur a ce type de connaissances à sa disposition.  Mais en termes de bang pour l'argent, courir `débutant`
+
+<!-- $Date: 2023-01-29 20:02:19 +0000 (Sun, 29 Jan 2023) $ $Author: joe $ $Revision: 12483 $ -->
+
+@joe=

@@ -10,7 +10,7 @@ title: Informationsarkitektur
 
 <div class="right">
 
-![Informationsarkitektur]
+![Informationsarkitektur](ia.page/ia.jpg).
 
 </div>
 
@@ -49,7 +49,7 @@ Se avsnittet HATEOAS för en översikt.
 
 #### Live, RealTime Results (aka No Stale Indexed Corpus).
 
-### Kundinförandemål
+#### Kundinförandemål
 
 ##### Leverabel som "application/json" på begäran
 

@@ -18,11 +18,11 @@ title: 'Perl 7 Feature-Anfrage: versiegelte Unterteile für typisierte Lexika'
 
 ## Die erste Lösung: Methoden-Lookup-Optimierungen von Doug MacEachern
 
-Doug war der Schöpfer des mod_perl-Projekts in der Mitte der 90er Jahre, also war das Schreiben von Hochleistungsperl sein Fort. Einer seiner vielen Beiträge zu [p5p](https://lists.perl.org/list/perl5-porters.html) sollte den Performancezuschlag für Lookup-Overhead der OO-Methode mit einer Methode + <code> halbieren &#64;ISA</code>-Hierarchiecache, um die Laufzeitobjektmethode für mod_perl-Objekte zu suchen, wie `Apache2::RequestRec`
+Doug war der Schöpfer des mod_perl-Projekts in der Mitte der 90er Jahre, also war das Schreiben von Hochleistungsperl sein Fort. Einer seiner vielen Beiträge zu [p5p](https://lists.perl.org/list/perl5-porters.html) wurde die Performanceeinbußen für den Lookup-Overhead der Abwesenheitsmethode mit einer Methode + <code> halbiert &#64;ISA</code>-Hierarchiecache, um die Laufzeitobjektmethode für mod_perl-Objekte zu suchen, wie `Apache2::RequestRec`
 
 Dies ist kein geringfügiges Problem bei Anrufen an `C-Struktur` get-set Accessor-Methoden &mdash; die allgemeine Situation mit vielen mod_perl-APIs. Perls Runtime-Methode-Call Lookup Penalty auf httpd's `Struktur request_rec *`, die mod_perl über die `Apache2::RequestRec`
 
-Was [Doug suchte]
+Was [Doug suchte](https://www.perl.com/pub/2000/06/dougpatch.html/).
 
 ## [Benchmark-Skript]({{snippetA.pretty_uri}}).
 
@@ -138,7 +138,7 @@ Zum Spaß, versuchen Sie es [Affe Patch]({{snippetB.pretty_uri}}) bis `ModPerl::
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Es ermöglicht die Auswirkungen von `Unter-Handler: Verschlüsselt {script goes here}` auf alle Ihre `ModPerl::Registrierung` Skripte, so etwas wie [diese]
+Es ermöglicht die Auswirkungen von `Unter-Handler: Verschlüsselt {script goes here}` auf alle Ihre `ModPerl::Registrierung` Skripte, so etwas wie [diese](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -180,6 +180,6 @@ Siehe <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Suchen n
 
 Dadurch kann Perl 5 den Beispielcode ausführen `content_type`
 
-Diese verderbliche Idee wird unentgeltlich gestohlen [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Lesen Sie das]
+Diese verderbliche Idee wird unentgeltlich gestohlen [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Lesen Sie das](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
 
 <!-- $Date$ $Author$ $Revision$ -->

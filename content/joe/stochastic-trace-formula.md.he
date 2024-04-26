@@ -10,7 +10,7 @@ title: נוסחת עקיבה סטוכסטית למניפולדים סגורים 
 
 <div class="right">
 
-![היפרבולית Honeycomb]
+![היפרבולית Honeycomb](stochastic-trace-formula.page/hyperbolic-honeycomb.png).
 
 </div>
 
@@ -74,9 +74,9 @@ $$\Omega_t^0$$ הוא המרחב של לולאות חוזיות רציפות ע�
 
 $$\Omega_t[\gamma]$$ הוא המרחב של לולאות רציפות על $$M$$ הומוטופיק לגאודזיה הסגורה $$\gamma$$. . תן $$\gamma_0$$
 
-$$DM^{-1}\Omega_t^0[\gamma]$$ הוא ההקדמה של לולאות חוזיות רציפות על $$M$$ נכתב כ- offsets homotopic ל $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. . קואורדינטות הורוציקליות &mdash; כל סיב כגבול הגיאומטרי של הספירות הגיאודזיות התקופתיות $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$ווקטורית בחבילה הרגילה מעל $$\gamma_0$$. . אילוצי העקמומיות שלנו מרמזים על קואורדינטות הורוציקליות לכל $$\gamma_0$$ קיים כמו חלק, $$DM$$-מפת קואורדינטות תואמת עבור $$\Omega_t^0[\gamma]$$
+$$DM^{-1}\Omega_t^0[\gamma]$$ הוא ההקדמה של לולאות חוזיות רציפות על $$M$$ נכתב כ- offsets homotopic ל $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. . חישבו על קואורדינטות הורוציקליות &mdash; כל סיב כגבול הגיאומטרי של הספירות הגיאודזיות התקופתיות $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$ווקטורית בחבילה הרגילה מעל $$\gamma_0$$. . אילוצי העקמומיות שלנו מרמזים על קואורדינטות הורוציקליות לכל $$\gamma_0$$ קיים כמו חלק, $$DM$$-מפת קואורדינטות תואמת עבור $$\Omega_t^0[\gamma]$$
 
-עכשיו $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ הוא נקודת הקצה *לא מפותחת* של "ההסטה" *גאודזית קינק* הומוטופית ל $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. . העקומה תקופתית עם נקודה $$\ell(\gamma_0)$$, והיא מחדשת את נקודת ההתחלה הקינק שלה $$DM(\vec{x}(\tau))$$ בזמן $$t$$, מה שהופך את החישוב של הנגזרת קדימה שלה $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ עקשן כאוטומורפיזם לינארי של $$T_{DM(\vec{x}(\tau))}M$$. . חשוב, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ ניתן לבנות באמצעות **Jacobi Fields**, מאז $$DM$$ **הוא** המפה האקספוננציאלית (המצוינת) לאורך כל סדרה של קווים ישרים מחוברים ב $$\Reals^n$$. . אנחנו נלמד $$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$$
+עכשיו $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ הוא נקודת הקצה*הלא מפותחת* של ההומוטופית* kinked geodesic* $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. . העקומה תקופתית עם נקודה $$\ell(\gamma_0)$$, והיא מחדשת את נקודת ההתחלה הקינק שלה $$DM(\vec{x}(\tau))$$ בזמן $$t$$, מה שהופך את החישוב של הנגזרת קדימה שלה $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ עקשן כאוטומורפיזם לינארי של $$T_{DM(\vec{x}(\tau))}M$$. . חשוב, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ ניתן לבנות באמצעות **Jacobi Fields**, מאז $$DM$$ **הוא** המפה האקספוננציאלית (המצוינת) לאורך כל סדרה של קווים ישרים מחוברים ב $$\Reals^n$$. . אנחנו נלמד $$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$$
 
 ```math
 \begin{aligned}

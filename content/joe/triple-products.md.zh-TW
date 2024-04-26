@@ -1,0 +1,274 @@
+---
+archived: ~
+categories: 數學
+dependencies: '*.md.zh-TW'
+keywords: 頻譜理論，里曼尼亞幾何，逆向問題，數學物理，諧波分析，表示理論
+published: https://dx.doi.org/10.2139/ssrn.4793533
+status: 已驗證 =22843
+title: 特徵函數和光譜幾何的三重產品
+---
+
+<div class="right">
+  <img src="../images/lawson6-pod.png" style="width:200px">
+  <p style="width:200px;text-align:center;line-height:20px">
+  Lawson 的最小表面 3⁄4<sub> 6,1</sub> 立體投影從 S<sup> 3</sup> 到 R<sup> 3</sup>
+  </p>
+</div>
+
+[TOC]
+
+## 作者
+
+Joe Schaefer
+
+## 摘要
+
+使用幾何分析、局部差分方程式和 Abelian 等基本技術$$C^*$$ 代數、{# lede #}我們發現一個小說，但熟悉的全球幾何不變{# lede #} &mdash;
+
+## 介紹
+
+封閉式里曼尼亞人$$(M,g)$$，描述其 ** 類別 ** 的非等分法，等分法為「逆向問題」類型[[DH11]](#DH11) 在光譜幾何圖形中 。奈爾 0vely 可能推測此類別永遠為 *empty*。然而，學術文獻富含數十年的特定對反範例組合結構：從 1964 年開始，由 John Milnor 的 16 維非幾何，等向均方均方[[JM64]](#JM64)，以及繼續[[CS92]](#CS92) 邁向亞歷山大·希曼 1993 年博士論文中平坦森的一般尺寸特性化[[AS94]](#AS94) &mdash; 使用電腦輔助搜尋來重新刪除嚴重$$\dim = 3$$ 個案。現代化的整平 Tori 歷史記錄調查顯示於[[NRR22]](#NRR22).
+
+在這種方式中，對稱空間較為複雜、非歐幾內亞對稱的洞察力；構建了涉及非傳統曲率張量的等光譜、非幾何「導管」(以及其在第 2 維度中頻譜決定的尤拉特徵) [[MS67]](#MS67)。) 此努力的主要例子是 Toshikazu Sunada 的 1985 年[[TS85]](#TS85).
+
+Carolyn Gordon 針對不同質的 Riemannian 指標發現即使在本機上也不是幾何圖形的飲食[[CG93]](#CG93).
+
+在許多相關區域繼續工作[[DH11]](#DH11)，如確定等同類、非等位法的拓樸特徵一般 (空的) [[ST80]](#ST80)，有限[[AS94]](#AS94)，剛性[[GK80]](#GK80)，緊湊[[GZ97]](#GZ97).
+
+我們在此文章中提供的是熟悉工具的新觀點：以個別「代數 / 主題不變量」形式編製特徵函數配對產品的傅立葉係數，以補充現有、離散的「分析不變量」&mdash; *Laplace-Beltrami 運算子 * (稱為 **Laplacian**) 的非負數頻譜$$L^2(M,g)$$
+
+### 筆結果
+
+<br>
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### 定理
+
+  </div>
+  <div class="card-body">
+
+指定特徵函數的正規基礎 (未遞減的特徵值) $$\set{e^i}_{i=0}^{\infty}$$ (非負數) Laplacian $$\Delta_M$$ 開啟$$L^2(M,g)$$ 與封閉式里曼尼亞機身相關$$(M,g)$$
+
+```math
+
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
+
+```
+
+要是等同於$$(M,g)$$，這是另一個 **iosospectral** 封閉的 Riemannian manifold 的 * 必要和足夠條件 *，可保留相關特徵且具有不變性的特徵 (Laplacian) 正規基礎$$\set{M^{i,j,k}}$$
+
+  </div>
+</div>
+
+<br>
+
+* 對稱 * 在計算可行的案例中扮演重要角色[[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94)，這是我們平坦的圖里中說明的[範例](#example).
+
+<br>
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### 形容詞
+
+  </div>
+  <div class="card-body">
+
+如果每個特徵值都有多重性$$1$$鑑於一對特徵值保存定理假說中所述的正規基底，則僅當和$$\set{M^{i,j,k}}$$
+
+  </div>
+</div>
+
+<br>
+
+研究的動機$$\set{M^{i,j,k}}$$ 是從研究 ** 線性乘法運算子 ** 的角色所衍生的$$Y:V\otimes V\rightarrow V((z))$$ 在 Vertex 運算子代數定義中[[FBZ04]](#FBZ04) 與「螺旋正規欄位理論」相關聯。這裡$$V$$ 是美國的向量空間，並且$$V((z))$$ 是 Laurent 系列正式的空間$$z$$ 內含係數$$V$$繁體中文起自$$V$$ 經常配備 Hilbert Space，配備傳統的 Fourier 系列正規基礎，索引$$Y$$ 使用下列項目的傅立葉基準元素：$$V$$ 僅比參與的程度稍微高$$M^{i,j,k}$$
+
+這些結果在作者於 1997 年首次在 **MSRI** 進行類似標題的談話時進行示範，但他們首次以公佈的形式出現在這裡。
+
+## 初步計畫
+
+現在使用$$M,g,e^i,M^{i,j,k}$$ 如上，$$f \in C^\infty(M)$$ 以及$$i \geq 0$$
+
+```math
+\begin{aligned}
+
+\hat{f}(i) &:= \int_M f(x)\bar{e^i}(x)\sqrt{g(x)}dx \\
+
+\implies \\
+
+f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
+
+\end{aligned}
+
+```
+
+起自$$f$$ 獨具代表性的快速融合 ** 快遞系列 ** ($$\Delta_M$$- 特定 Sobolev 嵌入[[MT13]](#MT13) [[RS75]](#RS75)，連同魏爾的漸近法[[HW11]](#HW11)，表示總和中的術語為$$o(i^{-n})$$ * 統一輸入$$x$$* [[LH68]](#LH68), $$\forall n\in\N$$。) 然後我們看到：$$f_1, f_2 \in C^\infty(M)$$，點狀產品的傅立葉係數$$f_1 f_2 \in C^\infty(M)$$
+
+```math
+\begin{aligned}
+
+\widehat{f_1 f_2}(k) &= \sum_{i,j}^\infty\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k} \\
+
+\implies \\
+
+f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
+
+f_1 = f^p_2,\space p \space \in \N \implies \\
+
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,...,i_p, k}\hat{f_2}(i_1)...\hat{f_2}(i_p)M^{i_1,i_2,i_3}M^{i_2,i_3,i_4}...M^{i_{p-1},i_p,k}e^k(x).
+
+\end{aligned}
+```
+
+等等，* 嚴重 *，任何多變量多項式$$\weierp \in \Complex[z_1,...,z_l]$$ (在平滑功能上) ** 使用任何光譜保留的指令 ** $$\Delta$$- 特徵函數正規基底圖$$F$$ 保留$$\set{M^{i,j,k}}$$
+
+```math
+\begin{CD}
+  C^\infty(M,\space\Complex^l) @>\weierp >> C^\infty(M)\\
+   @V\underbrace{F\oplus\dots\oplus F}_{l\space\text{times}}VV @VVFV\\
+  C^\infty(N,\space\Complex^l) @>>\weierp > C^\infty(N)
+\end{CD}
+```
+
+此外，如果$$A\subset M$$ 是 Borel-measurable，然後就 *characteristic function 的 *characteristic function 而言，上述結果為準點$$A$$* 除邊界外，任何地方$$A$$：如果$$f = f^2$$ 以及$$A:=\set{x\in M|f(x)=1}$$
+
+```math
+\sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \begin{cases}
+1 & x \in \mathring{A} \\
+0 & x \in \mathring{A^\complement}\end{cases}
+```
+
+我們擁有以下的身份，並通過獨特性
+
+```math
+\begin{aligned}
+\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\space\space \forall k\geq 0 \\
+\iff f&=f^2 \space a.e.
+\end{aligned}
+```
+
+這表示上述任何此類基準對應都具有特性函數 (作為下列成員)：$$L^2(M,g)\subset L^1(M,g)$$
+
+這些運算的重點是強調事實$$\set{M^{i,j,k}}$$ ** 字元 ** 點狀乘法運算子的調和分析$$C^\infty(M)$$，這是阿貝利安的密集小代數$$C^*$$ 代數$$C(M)$$
+
+以上金額的快速融合涉及$$M^{i,j,k}$$，請注意特徵函數的產品平滑，因此這些傅立葉係數會如上所示 (在每個索引中) 衰變。如需詳細資訊，請參閱 Emmett Wyman 在 2022 年的工作與這些係數相關，因為它與特徵值上的三角形不等式相關[[EW22]](#EW22).
+
+注意：我們可能總是假設
+```math
+\begin{aligned}
+e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
+\implies \\
+M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
+\end{aligned}
+```
+
+其中$$\delta_i$$ 是 Kronecker 的差異。起自$$vol(M)$$ 是光譜不變量[[HW11]](#HW11).
+
+## 定理證明
+
+必要，讓我們$$F:(N,h)\rightarrow (M,g)$$ 是封閉式里曼尼亞人體的幾何圖形，並讓目標的特徵正常基礎$$L^2(N,h)$$ 是回溯$$F$$ 正規基礎$$\set{e^i}$$ 開啟$$(M,g)$$
+
+```math
+\begin{aligned}
+M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
+          &= \int_N e^i(F(x)) e^j(F(x))\bar{e^k}(F(x))\sqrt{h}dx
+
+\end{aligned}
+```
+
+我們以必備的論點來完成。
+
+為了充分利用，我們現在考慮了線性、生物彈性的正規特徵基礎圖$$F$$ 來自$$C^\infty(M)$$ 終止$$C^\infty(N)$$ 並請注意，從計算中的[初步](#preliminaries) 以上，$$F$$ 保留順暢函數的定點產品 (延長至時保留特性函數) $$L^2(M,g)$$) 由處所$$\set{M^{i,j,k}}$$
+
+### 綱要
+
+$$F: C^\infty(M)\rightarrow C^\infty(N)$$ 會保留均勻規範。
+
+### 綱要證明
+
+字母$$\set{a_i}$$ 為平順的單位分割$$M$$
+
+```math
+\begin{aligned}
+1 &= \sum_i a_i(x) \\
+       &= \sum_{i,j} \hat{a_i}(j)e^j(x) \\
+	   &= \sum_j e^j(x)\sum_i \hat{a_i}(j)
+\end{aligned}
+```
+
+因此$$\sum_i\hat{a_i}(j) = \delta_j\sqrt{vol(M)}$$
+
+由主導的收斂定理，
+
+```math
+\lim_{p\rightarrow\infty}
+\sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
+```
+
+此為每個不相連子集之正計量特性函數$$\set{x\in M | a_j(x) = 1}$$繁體中文這表示每個 Lemma 都經過實證$$a_j$$，因為保留具有正計量之集合的限制特性函數，因此具有均勻標準 1，如同$$a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\N$$
+
+在不損失一般性的情況下，我們可能會套用針對單位平滑分割顯示的特殊案例結果$$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$，其中$$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$
+
+這表示在密集的集合上$$C(M)$$ (和$$C(N)$$)，我們已建立$$F$$ 阿貝利安同形性$$C^*$$ 代數，因此可以延伸至同形性$$C(M)$$ 以及$$C(N)$$
+
+現在我們把 Gelfand-Naimark 代表定理 (以相反的葬禮形式) 應用於阿貝利安$$C^*$$ 代數[[JC19]](#JC19) 利用之間的同態性來表示此同型$$N$$ 以及$$M$$
+
+如今，差異主義會保留特徵值和特徵函數 (透過假設對$$F$$)，它必須在平滑功能上保留拉普拉西亞文。因此，它也必須保留這些相同橢圓運算子的主要符號[[MT13]](#MT13).
+
+這樣就完成了理論的證明。
+
+### 形容詞的討論
+
+使用$$\set{M_0^{i,j,k}}$$ 以及$$\set{M_1^{i,j,k}}$$ 代表基準的兩個三重產品集$$\set{e_0^i}$$ 以及$$\set{e_1^i}$$，讓我們$$z_i \in \set{-1,1}$$ 是$$\Z_2^\infty$$ 此類動作$$\R$$- 估值正規基準$$\set{e_1^i}$$繁體中文因此，我們需要選擇$$z_i$$ 因此$$\set{z_ie_1^i}$$ 收益$$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$
+
+我們必須觀察
+
+```math
+z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
+```
+
+任何給定的開始日期$$k$$, $$M_0^{i,i,k}$$ 無法相同$$0$$ 全部$$i$$，此公式用於$$z_k$$ 需要兩者$$i$$- 獨立與充分性，以建立基準對應$$e_0^i \mapsto z_i e_1^i$$ 保留$$\set{M_0^{i,j,k}}$$
+
+## 範例
+
+字母$$\set{\lambda_i} \subset \R^n$$ 為索引，等級$$n$$ Lie Algebra 重量的晶格，用於商太空表示法$$\frak{g}=\Reals^n$$ 當翻譯不變量 (即常數) 向量欄位本身時$$\R^n$$ 也視為$$\frak{g}$$透過定義者之 torus 的相關 Lie Group $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$繁體中文這些權重定義了與線性函數整合的 torus 上 1 個格式的可整合升降機$$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ 作為其利氏集團 (承受托魯斯)。然後，這些線性函數可以統一重新縮放 (依據$$2\pi \sqrt{-1}$$) 並加以指數化，以形成多重性字元，其後代會形成正規基礎$$L^2(\Reals^n/A\Z^n,dx)$$，使用 Lebesgue (Haar) 測量$$dx$$
+
+此外，此基準同時將平面托魯斯的拉普拉西安 ** 因為 ** 拉普拉西安是通用信封代數的對稱、負二次二次卡西米爾的影像 (固定係數線性差動運算子) 象限空間表示法。因此，它的特徵值是固定比例 (of) $$4\pi^2$$
+
+我們目前檢視上述基準
+
+```math
+\set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+```
+成為我們的理論可應用的傅立葉原理 (多變性字元) 特徵 (此為 (負數) Euclidean Casimir 元素的商數表示法) 直接對應於$$\set{\lambda_i}$$繁體中文依據我們的理論假設，我們必須要有$$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$
+
+現在我們可以運算
+
+```math
+M^{i,j,k} = \begin{cases}
+1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0 \\
+0 & \text{otherwise}
+\end{cases}
+```
+
+由於此等式 <span class="eqno"></span> 對重量格而言為線性$$(A^{-1})^t\Z^n = \set{\lambda_i}$$，只有一個$$L^2$$ 正規特徵基底圖 ** 從容積保存的可逆線性圖中產生，這兩個索引，排名之間$$n$$ 重量晶格 ** 將保留「代數 / 拓樸」索引資料集$$\set{M^{i,j,k}}$$
+
+不過，為了申請我們[定理](#theorem)，對這類線性地圖至關重要$$B$$ 是$$B\in O(n,\Reals)$$ 在重量格子上，因為誘發$$L^2$$
+
+```math
+\set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+```
+
+也必須保留「分析」不變量&mdash; Casimir- 元素誘發的圖形$$4\pi^2\lVert\lambda_i\rVert^2$$
+
+此表示法 - 理論科目[[AK01]](#AK01) 正好等同於 * 晶格一致性 * 的先前開發[[NRR22]](#NRR22) 傳統上用來去劃分扁平鋪面幾何類。事實上，該線性圖的矩陣轉置$$B\in O(n,\Reals)$$，如上一段所述，** 是 ** 在被應用 *Gelfand-Naimark 表示定理 * 期間，Riemannian 同位素之間的異位。[證明](#proof-of-theorem) 我們的[定理](#theorem).
+
+## 確認
+
+最初的研究是由 1995-1996 年傑出的詹姆斯·西蒙斯研究獎以及阿爾弗雷德· P 的慷慨支持所資助的。Sloan Dissertation 1996-1997 在 Stony Brook 大學畢業。
+
+作者也要感謝 Tanya Christiansen、Carolyn Gordon、Hamid Hezari、Harish Seshadri，特別是 Leon Takhtajan 的技術協助，並檢閱本手稿的準備以供出版。
+
+<!-- $Date: 2024-04-22 15:39:47 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23262 $ -->

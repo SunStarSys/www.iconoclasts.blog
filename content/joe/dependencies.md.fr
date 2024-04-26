@@ -13,7 +13,7 @@ title: Qu'est-ce que <em>Smart Content Dependency ManagementTM</em> ?
 
 ## Résumé
 
-*Gestion intelligente des dépendances de contenu&trade;* concerne le cercle d'idées liées au soutien et à la facilitation des *créations incrémentielles*, tout en restant fidèle au **principe de normalisation du contenu** &mdash; que [*permalinks*]
+*Gestion intelligente des dépendances de contenu&trade;* concerne le cercle d'idées liées au soutien et à la facilitation des *créations incrémentielles*, tout en restant fidèle au **principe de normalisation du contenu** &mdash; que [*permalinks*](https://en.wikipedia.org/wiki/Permalink).
 
 Cet article présente le site Web <https://sunstarsys.com/> comme une étude de cas pour une <a href="#commentAB" class="border border-warning text-muted reference-link" id="commentAB-link" title="{{commentAB.headers.title}}">démonstration</a> des meilleures pratiques et une analyse des topologies de graphes associées.
 
@@ -29,7 +29,7 @@ Par défaut, notre système de compilation ne construira que les fichiers que vo
 
 Mathématiquement, une *Topologie* `$$\tau$$` est une spécification complète des sous-ensembles *open* d'un espace `$$X$$`, dont le but est d'indiquer les relations de proximité entre *points* `$$x$$` de l'espace `$$X$$`. Quand `$$X$$` est un graphique, une *topologie* `$$\tau$$` pour `$$X$$` revient à spécifier les arêtes reliant les sommets du graphe ensemble (ici les sommets sont considérés comme les *points* de `$$X$$`, et les bords de connexion déterminent les quartiers de ces points en tant que *jeux ouverts de base* pour la topologie).  Une topologie graphique *dirigée* est essentiellement la même chose, mais incorpore une référence à une intégration topologique de `$$(X,\tau)$$` dans un espace topologique plus vaste `$$(Y,\sigma)$$`
 
-Ce dernier concept est ce que nous utiliserons lors de la discussion de la topologie du *graphique de dépendance* `$$\tau$$` associé à l'espace `$$X$$` des fichiers source sous votre site `contenu/` sous-répertoire (ici) `$$(Y,\sigma)$$` est `$$\mathbb{R}^n$$` avec sa topologie métrique pour `$$n \in \{2,3\}$$`et les bords de `$$X$$` sont des courbes de Jordan dirigées sans intersection reliant un fichier `$$x \in X$$` à son ensemble de fichiers sur lesquels `$$x$$` dépend de : `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$`
+Ce dernier concept est ce que nous utiliserons lors de la discussion de la topologie du *graphique de dépendance* `$$\tau$$` associé à l'espace `$$X$$` des fichiers source sous votre site `contenu/` sous-répertoire (ici `$$(Y,\sigma)$$` est `$$\mathbb{R}^n$$` avec sa topologie métrique pour `$$n \in \{2,3\}$$`et les bords de `$$X$$` sont des courbes de Jordan dirigées sans intersection reliant un fichier `$$x \in X$$` à son ensemble de fichiers sur lesquels `$$x$$` dépend de : `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$`
 
 Avoir {# lede #}une compréhension claire du *graphique de dépendance* de votre site Web vous permettra de maximiser les performances de notre technologie de construction à grande échelle{# lede #}. Nous prenons les informations que vous fournissez à `%path : :dépendances` pendant le chargement de votre site Web `lib/path.pm` fichier, construire une mappe inverse de fichiers dépendants, et utiliser *celle mappe inverse* pour déterminer le corpus complet de fichiers à construire pour n'importe quel `validation svn`
 
@@ -45,11 +45,11 @@ Où les entrées dans `%path : :dépendances` D'origine ? S'ils ne sont pas nés
 
 ### Les graphiques de dépendance cyclique sont la norme
 
-Notre site est actuellement composé de `240 fichiers source` dans `contenu/`. Voici un `85 sommets x 465 arêtes`, représentation graphique dirigée bidimensionnelle et défilable d'un instantané récent des dépendances de page en langue anglaise sur **notre site** ([utilisation de GraphViz `point`]
+Notre site est actuellement composé de `240 fichiers source` dans `contenu/`. Voici un `85 sommets x 465 arêtes`, représentation graphique dirigée bidimensionnelle et défilable d'un instantané récent des dépendances de page en langue anglaise sur **notre site** ([utilisation de GraphViz `point`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl).
 
 <div id="deps">
 
-  ![Dépendances de la langue anglaise]
+  ![Dépendances de la langue anglaise](../images/deps).
 
 </div>
 
@@ -57,17 +57,17 @@ Assez complexe, même pour un petit site comme celui-ci ! Nombreux croisements d
 
 Notons également l'interconnexion interne essentiellement isolée des éléments dans `/catégories/*/*` et `/archives/2022/11/*`. Les seules dépendances externes impliquent un contenu non archivé dans `/essais/*`. C'est par conception &mdash; les essais archivés ne devraient changer que *adiabatiquement*, peut-être uniquement pour des ajustements à leur `Catégorie` en-têtes. Aucune de ces modifications n'affecte matériellement le contenu préexistant, nous ne le suivons donc pas. `%path : :dépendances`
 
-Bien sûr, notre [Wiki d'Orion]
+Bien sûr, notre [Wiki d'Orion](/orion/).
 
 ### Ne s'agit-il pas uniquement de liens hypertexte ?
 
 **Non !** En fait, la *topologie de lien* de votre site Web est une question entièrement distincte du *graphique de dépendance* de l'arborescence source.  Un moteur de recherche sortira naturellement de la topologie *link*, mais n'aura aucun aperçu du *graphique de dépendance*.
 
-Voici un `Plus de 240 sommets x 3859 arêtes`, graphique actuel des yeux d'oiseaux du graphique anglais *link topology* pour **notre site** ([utilisation de GraphViz `twopi`]
+Voici un `Plus de 240 sommets x 3859 arêtes`, graphique actuel des yeux d'oiseaux du graphique anglais *link topology* pour **notre site** ([utilisation de GraphViz `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl).
 
 <div id="links">
 
-  ![Liens vers la langue anglaise]
+  ![Liens vers la langue anglaise](../images/links).
 
 </div>
 
@@ -75,7 +75,7 @@ Pouvez-vous repérer le `bords rouges`
 
 ### Comment la technologie SSI peut vous aider
 
-#### Traditional [Inclut côté serveur]
+#### Traditional [Inclut côté serveur](https://httpd.apache.org/docs/2.4/howto/ssi.html).
 
 - **excellent** pour réduire la taille du *graphique de dépendance* de votre site Web à une taille gérable sans sacrifier la latence de livraison des pages
 - **excellent** pour réduire l'attrition standard dans les messages de validation volumineux afin d'améliorer la révision par les pairs et la surveillance de vos ensembles de modifications créés
@@ -106,7 +106,7 @@ Syntaxe :
 
 - abstraction du système de fichiers barebones difficile à prendre en charge en toute sécurité dans un `<virtualhost>` contexte
 - mêmes inconvénients avec le traditionnel `ssi` sur les pages web complètes
-- notre [Wiki d'Orion]
+- notre [Wiki d'Orion](/orion/).
 
 #### Outils de paramétrage pour les liens permanents
 
@@ -145,15 +145,15 @@ La bonne nouvelle, c'est que nous vous avons couvert en tant que client. Nous vo
 
 ## Notes de bas de page
 
-1. [Identification des clusters dans le graphique Web en fonction de la topologie des liens]
+1. [Identification des clusters dans le graphique Web en fonction de la topologie des liens](https://ieeexplore.ieee.org/abstract/document/1214919).
 
-2. [Inférer des communautés Web à partir de la topologie de lien](https://dl.acm.org/doi/pdf/10.1145/276627.276652) Actes de la neuvième conférence de l'ACM sur l'hypertexte et l'hypermédia : liens, objets, temps et espace &mdash; structure dans les systèmes hypermédias : liens, objets, temps et espace &mdash;
+2. [Inférer des communautés Web à partir de la topologie de lien](https://dl.acm.org/doi/pdf/10.1145/276627.276652) Compte rendu de la neuvième conférence de l'ACM sur l'hypertexte et l'hypermédia : liens, objets, temps et espace &mdash; structure dans les systèmes hypermédias : liens, objets, temps et espace &mdash;
 
-3. [Sur les avantages et les limites des configurations logicielles de construction incrémentielles : une étude exploratoire]
+3. [Sur les avantages et les limites des configurations logicielles de construction incrémentielles : une étude exploratoire](https://dl.acm.org/doi/abs/10.1145/3510003.3510190).
 
-4. [Vers la création incrémentielle de configurations logicielles]
+4. [Vers la création incrémentielle de configurations logicielles](https://dl.acm.org/doi/10.1145/3510455.3512792).
 
-5. [Un système de construction incrémentielle sain et optimal avec des dépendances dynamiques]
+5. [Un système de construction incrémentielle sain et optimal avec des dépendances dynamiques](https://dl.acm.org/doi/10.1145/2814270.2814316).
 
 <style type="text/css">
 

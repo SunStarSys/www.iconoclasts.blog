@@ -10,7 +10,7 @@ title: Стохастическая формула трассировки для
 
 <div class="right">
 
-![Гиперболический сот]
+![Гиперболический сот](stochastic-trace-formula.page/hyperbolic-honeycomb.png).
 
 </div>
 
@@ -97,7 +97,7 @@ DM_*\mu(\Omega_t[\gamma]) &:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx)
 \end{aligned}
 ```
 
-## Формула стохастической трассировки
+## Стохастическая формула трассировки
 
 ```math
 \begin{aligned}

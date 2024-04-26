@@ -9,9 +9,9 @@ title: פרויקטי קוד פתוח
 
 ### השתתפות בקוד פתוח
 
-הליבה לאמונות שלנו היא הצעת הערך המולדת של תוכנת קוד פתוח.  שיתופי [משתמש מוביל](http://en.wikipedia.org/wiki/Lead_user) קהילות והרשתות שמסביבן היו חלק מעבודתנו מאז הקמת SunStar Systems, בעיקר בטכנולוגיות הנגזרות או מקורן ב [קרן התוכנה של אפאצ'י]
+הליבה לאמונות שלנו היא הצעת הערך המולדת של תוכנת קוד פתוח.  שיתופי [משתמש מוביל](http://en.wikipedia.org/wiki/Lead_user) קהילות והרשתות שמסביבן היו חלק מעבודתנו מאז הקמת SunStar Systems, בעיקר בטכנולוגיות הנגזרות או מקורן ב [קרן התוכנה של אפאצ'י](http://www.apache.org/).
 
-האם יש לך אסטרטגיית קוד פתוח עבור קו המוצרים שלך?  עד כמה התוכנה שלך מודולרית, והאם זה הגיוני לתת למשתמשים גישה לנקודות הרחבה אלו?  מעולם לא שמעתי על [עקרון הוליווד]
+האם יש לך אסטרטגיית קוד פתוח עבור קו המוצרים שלך?  עד כמה התוכנה שלך מודולרית, והאם זה הגיוני לתת למשתמשים גישה לנקודות הרחבה אלו?  מעולם לא שמעתי על [עקרון הוליווד](http://en.wikipedia.org/wiki/Hollywood_principle).
 
 ### רשימת הפרויקטים שהיינו מעורבים בהם, באופן מלא או חלקי:
 
@@ -19,13 +19,13 @@ title: פרויקטי קוד פתוח
 
 - [בקשת שפה](https://httpd.apache.org/apreq/) &mdash;
 
-- [SunStarSys מערכת לניהול תחבורה](https://github.com/SunStarSys/cms) &mdash;
+- [SunStarSys מערכת ניהול סיכוני אשראי](https://github.com/SunStarSys/cms) &mdash;
 
-- [אורתרוס](https://github.com/SunStarSys/orthrus) &mdash; [חד-פעמי]
+- [אורתרוס](https://github.com/SunStarSys/orthrus) &mdash; [חד-פעמי](https://en.wikipedia.org/wiki/One-time_password).
 
-- [בשעה](https://github.com/joesuf4/at) &mdash; [טאפ]
+- [בשעה](https://github.com/joesuf4/at) &mdash; [טאפ](https://testanything.org).
 
-- [פטי](https://github.com/SunStarSys/pty) &mdash; כלים עבור תעודות מסוף אוטומטיות-מנחה תגובות.  ברוח של [TCL צפוי]
+- [פטי](https://github.com/SunStarSys/pty) &mdash; כלים עבור תעודות מסוף אוטומטיות-מנחה תגובות.  ברוח של [TCL צפוי](https://en.wikipedia.org/wiki/Expect).
 
 - [פקס](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) &mdash;
 
@@ -37,4 +37,4 @@ title: פרויקטי קוד פתוח
 
 - [אלגוריתם::LCS::XS](https://github.com/SunStarSys/Algorithm-LCS-XS) &mdash;
 
-- [schaefj/לינטר](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; מכל עגינה ל- [linter.{rc,sh}]
+- [schaefj/לינטר](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; מכל עגינה ל- [linter.{rc,sh}](https://github.com/joesuf4/home/tree/wsl)

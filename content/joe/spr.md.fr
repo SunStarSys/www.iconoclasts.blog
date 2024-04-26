@@ -1,0 +1,32 @@
+---
+archived: ~
+categories: IT, sécurité, performance, fiabilité
+dependencies: '*.md.fr'
+keywords: infosec, appsec, performances, évolutivité, haute disponibilité, fiabilité
+published: ~
+status: projet
+title: Sécurité de l'information, performances des applications et fiabilité
+---
+
+{# lede #}L'ingénierie logicielle "non fonctionnelle" s'articule autour de trois problèmes clés : la sécurité, les performances et la fiabilité (**SPR**){# lede #}tandis que l'ingénierie logicielle "fonctionnelle" implique le cycle de vie normal du développement logiciel basé sur les fonctionnalités. Un bon [NIST 800-160v1r1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1r1.pdf).
+
+Certaines entreprises ont tiré une valeur incroyable en divisant le développement fonctionnel de logiciels non fonctionnels en deux hiérarchies indépendantes dans la partie ingénierie de l'organigramme. Vous pouvez trouver des architectes **SPR** comme moi pour diriger une telle équipe **SPR**, avec une combinaison flexible de rôles subordonnés en évolution :
+
+1. **Ingénierie critique des systèmes** (axée sur la création et la surveillance de mesures d'observabilité, l'outillage de traçage dynamique et la construction d'exécution compatible, et l'analyse de profilage à spectre complet vers le développement de solutions de performance/sécurité à fort impact),
+
+2. **Ingénierie de tri** (axée sur le traitement des vidages de trace de pile en développement et en production, et sur l'obtention des problèmes techniques sous-jacents signalés à la bonne équipe de développement pour résolution),
+
+3. **Ingénierie de l'assurance de la qualité** (axée sur la création de logiciels de test spécifiques au SPR et de rapports associés),
+
+4. **Ingénierie de la qualité des données** (axée sur la fourniture d'une infrastructure automatisée de reporting/traitement/visualisation pour l'activité de triage et d'assurance qualité).
+
+La création d'une équipe **SPR** dédiée implique des défis organisationnels. Au niveau de la direction, les experts en performance/sécurité de **SPR** doivent s'attendre à ce que leurs recommandations et leurs correctifs logiciels soumis, testés avec succès, soient incorporés en temps opportun dans la base de code de production. Pour créer les relations de travail efficaces requises entre les équipes d'ingénierie fonctionnelles et non fonctionnelles, les ingénieurs de performance doivent être partiellement intégrés dans les équipes de développement de produits fonctionnels en tant que pairs, avec des privilèges de validation/commit basés sur les pairs sur les bases de code.
+
+En disposant d'une équipe **SPR** dédiée, la direction peut libérer les ingénieurs produit (effectuant le développement fonctionnel) de l'obligation de créer/gérer/tester des maquettes de vos environnements de production adaptées aux performances/évolutivité/sécurité/durabilité/fiabilité. De nombreuses équipes n'ont tout simplement pas les cycles nécessaires à cette fin, malgré l'importance de dimensionner correctement leurs ressources cloud et d'exécuter des logiciels dépendants pour s'adapter à une croissance rapide.
+
+Il existe également une spécialisation considérable en termes d'outillage d'observabilité et de techniques de traçage basées sur le noyau, que de bons ingénieurs système subissent pour rester au top de leur domaine. Il est difficile d'embaucher ces compétences auxiliaires lors de la recherche de talents de qualité pour les ingénieurs produits agiles traditionnels / full stack et / ou les data scientists.
+
+Des logiciels robustes, sécurisés, évolutifs, rentables et performants sont à la portée de toute équipe d'ingénierie de petite ou moyenne taille disposant des investissements appropriés dans **SPR**. [Contactez-nous](/contact).
+
+
+<!-- $Date: 2024-04-08 17:03:24 +0000 (Mon, 08 Apr 2024) $ $Author: joe $ $Revision: 22019 $ -->

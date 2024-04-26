@@ -18,7 +18,7 @@ Constraint-Management ist der Schlüssel zum Prozess.  Indem Sie zunächst alle 
 
 ## Trunk-basierte Entwicklung
 
-Die Förderung inkrementeller Änderungen mit automatisierten Test-, Promotion- und Freigabeprozessen in einem geplanten Intervall ist eine großartige Möglichkeit, den Ball ins Rollen zu bringen, aber ein großer Teil der Qualitätskontrolle in SaaS/PaaS-Bereitstellungen umfasst die Einführung von *[Trunk-basierte Entwicklung]
+Die Förderung inkrementeller Änderungen mit automatisierten Test-, Promotion- und Freigabeprozessen in einem geplanten Intervall ist eine großartige Möglichkeit, den Ball ins Rollen zu bringen, aber ein großer Teil der Qualitätskontrolle in SaaS/PaaS-Bereitstellungen umfasst die Einführung von *[Trunk-basierte Entwicklung](https://trunkbaseddevelopment.com).
 
 Im Wesentlichen das Multiversum der langfristigen `Git`
 
@@ -37,17 +37,17 @@ Trunk Based Development ist die Basis für alle konsequent automatisierten Chang
 
 Ein bisschen historische Perspektive zuerst; die Pointe folgt diesen vier Absätzen.  Der gemeinsame Thread hier ist, dass Apache seiner Zeit fast immer voraus war.
 
-Zurück in die Pre-[CFEngine]
+Zurück in die Pre-[CFEngine](https://cfengine.com).
 
 Der Workflow war weniger als ideal: Neben dem Aufbau unserer eigenen lokal gepatchten FreeBSD-Ports-Bäume in bereitstellbare (binäre) Pakete von Grund auf mussten die Mitarbeiter bei der Bereitstellung von Änderungen an der Produktion schwer durchsetzbare *disziplin* üben, indem sie sich zunächst zur Versionskontrolle verpflichten, sich beim Zielserver anmelden, den Checkout aktualisieren und den Service möglicherweise neu starten. &mdash;
 
 Heutzutage halten sie alles in einem `Git`-unterstützter Marionettenquellbaum und Bereitstellung/Bereitstellung/Konfiguration direkt in der Cloud mit generischen Upstream-Ubuntu-Paketen, was ein etwas moderner Ansatz für ihre IT-Betrieb ist, da geplant `Git`
 
-Auf der anderen Seite war eine frühe, bahnbrechende CI-ähnliche Initiative bei The ASF (für tatsächliche Apache-Software-TLP-Projekte) [Apache Gump]
+Auf der anderen Seite war eine frühe, bahnbrechende CI-ähnliche Initiative bei The ASF (für tatsächliche Apache-Software-TLP-Projekte) [Apache Gump](https://gump.apache.org/).
 
-Hier ist *der Punkt in Kürze*: Alle Ihre Quellen (Entwicklung, Infrastruktur und Konfiguration) gehören zur Versionskontrolle (nicht unbedingt das gleiche Repository), das von allen Devops-Mitarbeitern überprüft werden kann, und sind Teil Ihrer vollständigen Testautomatisierungspipelines zwischen Patchrevisionen und Produktionsbereitstellungen.  Eine Umfrage zum Stand der Technik, bei der Änderungen auf Anfrage in den Einstellungen von IaC/CaC getestet/bereitgestellt/bereitgestellt werden, ist auf der Website meines Freundes und Visionärs Paul Hammant [hier]
+Hier ist *der Punkt in Kürze*: Alle Ihre Quellen (Entwicklung, Infrastruktur und Konfiguration) gehören zur Versionskontrolle (nicht unbedingt das gleiche Repository), das von allen Devops-Mitarbeitern überprüft werden kann, und sind Teil Ihrer vollständigen Testautomatisierungspipelines zwischen Patchrevisionen und Produktionsbereitstellungen.  Eine Umfrage zum Stand der Technik, bei der Änderungen auf Anfrage in den Einstellungen von IaC/CaC getestet/bereitgestellt/bereitgestellt werden, ist auf der Website meines Freundes und Visionärs Paul Hammant [hier](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
 
-## Virtualisierung vs. Containerisierung: a [Haustiere vs. Rinder]
+## Virtualisierung vs. Containerisierung: a [Haustiere vs. Rinder](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/).
 
 Containersysteme wie Docker sind anpassbare, erneut bereitstellbare Virtualisierungstechnologien, die in der Regel zur Unterstützung eines Anwendungscluster-Frameworks der MicroService-Architektur (MSA) wie Kubernetes verwendet werden. Sie greifen dort auf, wo Virtualisierungssysteme aufgehört haben, und handeln mit unbegrenzter Unterstützung von (vollständig) isolierten pro-VM-Betriebssystemen für Linux-Kernel-basierte VMs, die wesentlich programmierbarere Anpassungen und Integration mit dem übergeordneten Linux-Host haben, auf dem sie ausgeführt werden.  Darüber hinaus können sie wieder aufgebaut und in einen zentralen Distributionsservice (wie Artifactory) hochgeladen werden, um sie in großem Maßstab über mehrere Abhängigkeitsketten und ausführbare Raw-Serverbereitstellungen hinweg wiederzuverwenden.
 
@@ -57,7 +57,7 @@ Rekonfigurierbare Container, die von einem zentralen Server heruntergeladen werd
 
 ## Messung, Eindämmung und Kontrolle Brandbekämpfung Bemühungen, sowohl real und praktiziert
 
-Eines der anderen wichtigen Dinge, die Sie erkennen sollten, ist die Unterscheidung zwischen *geplanter* und * ungeplanter* Arbeit in einer Ihrer Produktivitätsverfolgungsmetriken und der Zuweisung von Ressourcen zu diesen Aufgaben.  Ungeplante Arbeit bedeutet **Feuerbekämpfung**, und wenn zu viel Zeit (mehr als ~20%) für diese Aufgaben aufgewendet wird, wird die geplante Arbeit, die der eigentliche Geschäftsbedarf für das Unternehmen ist, zurückgebucht.
+Eines der anderen wichtigen Dinge, die Sie erkennen müssen, ist die Unterscheidung zwischen *geplanter* und * ungeplanter* Arbeit in einer Ihrer Produktivitätsverfolgungsmetriken und der Zuweisung von Ressourcen zu diesen Aufgaben.  Ungeplante Arbeit bedeutet **Feuerbekämpfung**, und wenn zu viel Zeit (mehr als ~20%) für diese Aufgaben aufgewendet wird, wird die geplante Arbeit, die der eigentliche Geschäftsbedarf für das Unternehmen ist, zurückgebucht.
 
 Die Engpässe im System können nur selten ungeplante Arbeiten bewältigen, daher ist es wichtig, über genügend zusätzliche Ressourcen zu verfügen, um die erhöhte Belastung und den daraus resultierenden Rückstand zu bewältigen.
 

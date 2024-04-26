@@ -14,9 +14,9 @@ En realidad es todo lo contrario. Comienza con las restricciones arquitectónica
 
 Puedes iterar en este libro de estrategias, pero nunca he tenido que ir más allá de 3 iteraciones en mi carrera profesional.
 
-Así que adelante y utiliza un lenguaje de programación elegante como `Python3` o `Archivo Javascript`/`Tipo de letra`y deje que los Expertos en Materia (**SME**) que hay en el mundo de código abierto le den un poderoso `C`/`C++`
+Así que adelante y utiliza un lenguaje de programación elegante como `Python3` o `Archivo Javascript`/`Tipo de letra`y deje que los expertos en la materia (**SME**) que hay en el mundo de código abierto le den una poderosa `C`/`C++`
 
-Incluso una secuencia de comandos bash libre de dependencias es una solución viable para muchas tareas básicas. He aquí uno que escribí para la firma de Realidad Aumentada [Salto mágico](https://magicleap.com) hace años, para sustituir a un torpe [OpenGrok](https://oracle.github.io/opengrok/) servicio con algo que aprovecha la paralelización multiprocesador con `xargs -P`, y apoya [PCRE](https://www.pcre.org/) búsqueda simple `Emacs`/`Vim`
+Incluso una secuencia de comandos bash libre de dependencias es una solución viable para muchas tareas básicas. He aquí uno que escribí para la firma de Realidad Aumentada [Salto mágico](https://magicleap.com) años, para sustituir a un torpe [OpenGrok](https://oracle.github.io/opengrok/) servicio con algo que aprovecha la paralelización multiprocesador con `xargs -P`, y apoya [PCRE](https://www.pcre.org/) buscar con simple `Emacs`/`Vim`
 
 https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
 
@@ -60,7 +60,7 @@ Desactive la segunda #performance #benchmark de esa página y amplíela vertical
 
 A sintonizado `pffxg.sh` todavía es más rápido, a pesar de todo el trabajo puesto en microoptimización ripgrep para este `C`
 
-La forma en que usé este guión con [AOSP](https://source.android.com) debía programar un `repositorio` sincronización y una posterior `pffxg.sh` **`lzop`-compressed-cache seed-to-`tmpfs`** correr todas las mañanas antes del trabajo (via `crontab`), con `PFFXG_CACHE=...` establecido en mi `~/.pffxg.conf` archivo. Así pues, cualquier `pffxg.sh` las llamadas que he ejecutado durante el día laborable utilizarían la caché comprimida en `tmpfs`
+La forma en que usé este guión con [AOSP](https://source.android.com) era programar un `repositorio` sincronización y una posterior `pffxg.sh` **`lzop`-compressed-cache seed-to-`tmpfs`** correr todas las mañanas antes del trabajo (via `crontab`), con `PFFXG_CACHE=...` establecido en mi `~/.pffxg.conf` archivo. Así pues, cualquier `pffxg.sh` las llamadas que he ejecutado durante el día laborable utilizarían la caché comprimida en `tmpfs`
 
 .25M de LOC entre `ripgrep` y [ugrep](https://github.com/Genivia/ugrep). 632 LOC para `pffxg.sh`
 
@@ -108,7 +108,7 @@ y el `ripgrep`
 
 El verdadero **rendimiento de aplicación** proviene del equilibrio, la flexibilidad y las técnicas de programación funcional; no proviene de la fijación de tácticas de microoptimización imperativas en lenguajes de programación estáticos y compilados que son un oso para trabajar desde las perspectivas de equilibrio y flexibilidad. Estos lenguajes imperativos sobrevalorados son grandes objetivos para dominios de problemas muy específicos, pero son terribles para el rendimiento de las aplicaciones de todo el sistema.
 
-`pffxg.sh` no es un producto, y esto no es un argumento de venta para él. Es un **ejemplo** para ilustrar mi punto de una manera muy dramática. Si está familiarizado con la larga historia de las soluciones "grep" recursivas filtradas en GitHub, todas ellas se basan en la idea de que el problema con el original de Andy Lester `Perl` implementación [confirmación](https://beyondgrep.com/), era que estaba escrito en `Perl`. El único problema real desde el punto de vista del rendimiento fue que `Perl` fue escrito por Andy, que no parecía tener ningún don para los conceptos de rendimiento de los sistemas (como cultivar el `buscar` trabajo de paralelización a un diseño específico `C` binario), sino que apuntaba a la portabilidad perezosa al tratar de capturar todo el código como un Pure de un solo hilo. `Perl`
+`pffxg.sh` no es un producto, y esto no es un argumento de venta para él. Es un **ejemplo** para ilustrar mi punto de una manera muy dramática. Si está familiarizado con la larga historia de las soluciones "grep" recursivas filtradas en GitHub, todas ellas se basan en la idea de que el problema con el original de Andy Lester `Perl` implementación [confirmación](https://beyondgrep.com/), fue que fue escrito en `Perl`. El único problema real desde el punto de vista del rendimiento fue que `Perl` fue escrito por Andy, que no parecía tener ningún don para los conceptos de rendimiento de los sistemas (como cultivar el `buscar` trabajo de paralelización a un diseño específico `C` binario), sino que apuntaba a la portabilidad perezosa al tratar de capturar todo el código como un Pure de un solo hilo. `Perl`
 
 ¡Que florezcan mil flores, por tontas que parezcan!
 

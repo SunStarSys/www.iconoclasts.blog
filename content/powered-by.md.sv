@@ -9,17 +9,17 @@ title: Tillhandahålls av...
 
 ## Webbplatsteknik
 
-- [Subversion]
+- [Subversion](https://subversion.apache.org/).
 
-- [SvnPubSub]
+- [SvnPubSub](https://journal.paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/).
 
-- SvnWcSub (klienten SvnPubSub) för att utlösa webbplatsbyggen i realtid.
+- SvnWcSub (klienten SvnPubSub) för att utlösa aktiva webbplatsbyggen.
 
-- [SunStar Systems Orion]
+- [SunStar Systems Orion](https://www.sunstarsys.com/orion/).
 
-- [Programladdning för Twitter]
+- [Programladdning för Twitter](https://github.com/twbs/bootstrap).
 
-- [pffxg.sh]
+- [pffxg.sh](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh).
 
 - Logo design av grafik artist (och all-around renässans man) Joel Suraci.
 

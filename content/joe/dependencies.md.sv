@@ -12,7 +12,7 @@ title: Vad handlar <em>Smart Content Dependency ManagementTM</em> om?
 
 ## Sammandrag
 
-* Hantering av beroenden för smart innehåll&trade;* handlar om cirkeln av idéer relaterade till att ge stöd och underlättande för *inkrementella byggen*, samtidigt som man håller sig till **Innehållsnormaliseringsprincipen** &mdash; det där [*permalänkar*]
+* Hantering av beroenden för smart innehåll&trade;* handlar om cirkeln av idéer relaterade till att ge stöd och underlättande för *inkrementella byggen*, samtidigt som man håller sig till **Innehållsnormaliseringsprincipen** &mdash; det där [*permalänkar*](https://en.wikipedia.org/wiki/Permalink).
 
 I den här artikeln presenteras webbplatsen för <https://sunstarsys.com/> som en fallstudie för en <a href="#commentAB" class="border border-warning text-muted reference-link" id="commentAB-link" title="{{commentAB.headers.title}}">demonstration</a> av praxis och analyser av associerade diagramtopologier.
 
@@ -28,7 +28,7 @@ Som standard bygger vårt byggsystem endast de filer som du har ändrat, utan pr
 
 Matematiskt en *Topologi* `$$\tau$$` är en fullständig specifikation av de *öppna* delmängderna i ett utrymme `$$X$$`, vars syfte är att ange närhetsrelationerna mellan *punkter* `$$x$$` från rymden `$$X$$`. När `$$X$$` är ett diagram, en *topologi* `$$\tau$$` för `$$X$$` uppgår till att ange kanterna som förbinder diagrammets brytpunkter tillsammans (här ses brytpunkter som *punkter* för `$$X$$`, och de anslutande kanterna bestämmer områdena för dessa punkter som *grundläggande öppna uppsättningar* för topologin).  En *riktad graftopologi* är i huvudsak samma sak, men innehåller en hänvisning till en topologisk inbäddning av `$$(X,\tau)$$` till ett större topologiskt rum `$$(Y,\sigma)$$`
 
-Det senare konceptet är vad vi kommer att använda när vi diskuterar *beroende diagrammets * topologi `$$\tau$$` associerad med arbetsytan `$$X$$` av källfiler under webbplatsens `innehåll/` underkatalog (här `$$(Y,\sigma)$$` är `$$\mathbb{R}^n$$` med sin metriska topologi för `$$n \in \{2,3\}$$`och kanterna av `$$X$$` är riktade jordanska kurvor som inte korsar varandra och som ansluter en fil `$$x \in X$$` till sin uppsättning filer som `$$x$$` beror på: `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$`
+Det senare konceptet är vad vi kommer att använda när vi diskuterar *beroende diagrammets * topologi `$$\tau$$` associerad med arbetsytan `$$X$$` av källfiler under platsens `innehåll/` underkatalog (här `$$(Y,\sigma)$$` är `$$\mathbb{R}^n$$` med sin metriska topologi för `$$n \in \{2,3\}$$`och kanterna av `$$X$$` är riktade jordanska kurvor som inte korsar varandra och som ansluter en fil `$$x \in X$$` till sin uppsättning filer som `$$x$$` beror på: `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$`
 
 Har {# lede #}en tydlig förståelse av din webbplats *beroende graf* kommer att se till att du kan maximera prestandan hos vår byggteknik i stor skala{# lede #}. Vi tar den information du tillhandahåller `%path::beroenden` under byggets laddning av webbplatsens `lib/path.pm` fil, konstruera en omvänd mappning av beroende filer och använd *som omvänd mappning* för att fastställa den fullständiga korpus av filer som ska skapas för varje given `svn bekräftelse`
 
@@ -44,29 +44,29 @@ Var finns posterna i `%path::beroenden` ursprung? Om de inte är födda av en `w
 
 ### Cykliska beroendediagram är normen
 
-Vår webbplats består för närvarande av `240 källfiler` om `innehåll/`. Här är en `85 hörn x 465 kanter`, rullningsbar, tvådimensionell riktad grafrepresentation av en aktuell ögonblicksbild av beroenden på den engelska språksidan på **vår webbplats** ([använda GraphViz `punkt`]
+Vår webbplats består för närvarande av `240 källfiler` om `innehåll/`. Här är en `85 hörn x 465 kanter`, rullningsbar, tvådimensionell riktad grafrepresentation av en aktuell ögonblicksbild av beroenden på den engelska språksidan på **vår webbplats** ([använda GraphViz `punkt`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl).
 
 <div id="deps">
 
-  ![Beroenden för engelska]
+  ![Beroenden för engelska](../images/deps).
 
 </div>
 
-Ganska komplex, även för en liten webbplats som den här! Många kantskärningar när du tar `$$n=2$$` (kan undvikas i dimension `$$n=3$$`). Av särskild vikt är kärnuppsättningen av täta, cykliska beroenden i de icke-arkiverade filerna på vår webbplats. `/lektioner/` katalog, mot nedre mitten till höger i diagrammet, vilket är hur en bra bloggwebbplatsens beroendediagram ska se ut. Dessa beroenden dras in i `röda kurvor`
+Ganska komplex, även för en liten webbplats som den här! Många kantskärningar när du tar `$$n=2$$` (undvikbar i dimension `$$n=3$$`). Av särskild vikt är kärnuppsättningen av täta, cykliska beroenden i de icke-arkiverade filerna på vår webbplats. `/lektioner/` katalog, mot nedre mitten till höger i diagrammet, vilket är hur en bra bloggwebbplatsens beroendediagram ska se ut. Dessa beroenden dras in i `röda kurvor`
 
 Observera också den interna, väsentligen isolerade sammankopplingen av elementen i `/kategorier/*/*` och `/archives/2022/11/*`. De enda externa beroendena omfattar icke-arkiverat innehåll i `/dagar/*`. Detta är genom design &mdash; De arkiverade uppsatserna bör endast ändras *adiabatiskt*, kanske enbart för justeringar av deras `Kategori` rubriker Ingen av dessa ändringar påverkar det befintliga innehållet väsentligt, så vi spårar det inte i `%path::beroenden`
 
-Självklart, vår [Wiki för Orion Enterprise]
+Självklart, vår [Wiki för Orion Enterprise](/orion/).
 
 ### Handlar det inte bara om hyperlänkar?
 
 **Nej!** I själva verket är *link-topologin* på din webbplats en helt separat fråga från källträdets *beroende diagram*.  En sökmotor kommer naturligtvis att iller ut *link topologi*, men har ingen inblick i *beroende graf*.
 
-Här är en `240+ hörn x 3859 kanter`, aktuella fågelögondiagram över den engelska *länka topologi* grafen för **vår plats** ([använda GraphViz `twopi`]
+Här är en `240+ hörn x 3859 kanter`, aktuella fågel-öga diagram över den engelska *länka topologi* graf för ** vår webbplats** ([använda GraphViz `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl).
 
 <div id="links">
 
-  ![Engelska språklänkar]
+  ![Engelska språklänkar](../images/links).
 
 </div>
 
@@ -74,7 +74,7 @@ Kan du upptäcka `röda kanter`
 
 ### Hur SSI-tekniken kan hjälpa till
 
-#### Traditional [Serversidan innehåller]
+#### Traditional [Serversidan innehåller](https://httpd.apache.org/docs/2.4/howto/ssi.html).
 
 - ** Stor** för beskärning av webbplatsens *beroende diagram* ner till hanterbar storlek utan att offra sidleveransfördröjning
 - ** Stor** för att minska bortfall av mallobjekt i stora bekräftelsemeddelanden för bättre peer review och övervakning av dina byggda ändringsuppsättningar
@@ -105,7 +105,7 @@ Syntax:
 
 - barebones filsystem abstraktion som är svårt att säkert stödja i en `<virtualhost>` sammanhang kontext
 - samma nackdelar med traditionella `ssi` på fullständiga webbsidor
-- vår [Wiki för Orion Enterprise]
+- vår [Wiki för Orion Enterprise](/orion/).
 
 #### Byggverktyg för permalänkar
 
@@ -136,7 +136,7 @@ Bearbetningslinjer görs med `ledare` Mallfilter. Det är nyttigt att kombinera 
 
 ## Slutsatser
 
-Det finns intressanta datastrukturer och relationer som ännu inte kan avslöjas när man hanterar en webbplats *beroende diagram* från ett byggprestandaperspektiv, vilket är ett mycket nyare intresseområde än forskningslitteraturen som gräver i datastrukturerna och tillhörande isärtaganden som omger *länka topologi*<sup>1,2</sup>.
+Det finns intressanta datastrukturer och relationer som ännu inte har upptäckts när man hanterar en webbplats *beroende diagram* från ett byggprestandaperspektiv, vilket är ett mycket nyare intresseområde än forskningslitteraturen som gräver i datastrukturerna och tillhörande isärtaganden som omger *länka topologi*<sup>1,2</sup>.
 
 Konventionella inkrementella byggen för rena mjukvaruutvecklingsprojekt är fortfarande ett hett ämne. Den forskning som omfattas av <sup>3 4</sup> publicerades i oktober 2022, ungefär en månad innan denna uppsats förväntas vara klar. Byggsystemet *pluto*<sup>5</sup> har funktioner som liknar våra (själva bygget kan dynamiskt återskapa och återskapa beroenden).
 
@@ -144,15 +144,15 @@ Den goda nyheten är att vi har dig täckt som vår kund. Vi kommer att hålla d
 
 ## Fotnoter
 
-1. [Identifiering av kluster i webbdiagrammet baserat på länktopologi]
+1. [Identifiering av kluster i webbdiagrammet baserat på länktopologi](https://ieeexplore.ieee.org/abstract/document/1214919).
 
-2. [Hämta webbforum från länktopologi](https://dl.ACM.org/doi/pdf/10.1145/276627.276652) Förfaranden vid den nionde ACM-konferensen om Hypertext och hypermedia: länkar, objekt, tid och rum &mdash; struktur i hypermedia system: länkar, objekt, tid och rum &mdash;
+2. [Hämta webbforum från länktopologi](https://dl.acm.org/doi/pdf/10.1145/276627.276652) Den nionde ACM-konferensen om hypertext och hypermedia: länkar, objekt, tid och rum &mdash; struktur i hypermedia system: länkar, objekt, tid och rum &mdash;
 
-3. [Om fördelarna och gränserna för inkrementella konfigurationer av programvara: en undersökande studie]
+3. [Om fördelarna och gränserna för inkrementella konfigurationer av programvara: en undersökande studie](https://dl.acm.org/doi/abs/10.1145/3510003.3510190).
 
-4. [Mot inkrementell utveckling av programvarukonfigurationer]
+4. [Mot inkrementell utveckling av programvarukonfigurationer](https://dl.acm.org/doi/10.1145/3510455.3512792).
 
-5. [Ett ljud och optimalt inkrementellt byggsystem med dynamiska beroenden]
+5. [Ett ljud och optimalt inkrementellt byggsystem med dynamiska beroenden](https://dl.acm.org/doi/10.1145/2814270.2814316).
 
 <style type="text/css">
 

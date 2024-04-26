@@ -1,0 +1,21 @@
+---
+archived: ~
+categories: Perl, Apache, IT, Mail, Tools
+dependencies: '*.md.de'
+keywords: qpsmtpd,Apache::Qpsmtpd,earlytalker,Anti-Spam,Sendmail,Postfix,exim
+published: ~
+status: archiviert
+title: Über das Spam-Problem...
+---
+
+Wie ich schrieb über [anderswo](/clients/apache), eines der besten Open-Source-Tools, das dem Arsenal von Anti-Spam-Tools eines Mail-Administrators zur Verfügung steht, ist [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), der lediglich ein Frontend-Eingangsmailserver ist, der einen voll funktionsfähigen Mailserver wie `qmail`, `senden`, `Exim`oder `Postleitzahl` für ausgehende Lieferung.  Was `qpsmtpd` ist sehr ähnlich zu dem was `HTTPD` tat für Webserver: Es führt anpassbare Haken in jede Phase der `SMTP`
+
+{# lede #}Das beste Plugin für `qpsmtpd`Obwohl es schwierig ist zu verstehen, warum{# lede #}, ist die `Earlytalker` Plugin.  Was `Earlytalker` setzt `qpsmtpd` um für eine konfigurierbare Zeit zu schlafen, hören Sie auf der Steckdose (über `auswählen(2)`) für nicht-RFC-konforme "frühen" Kommunikationen, die vom anderen Ende des Sockels kommen (`qpsmtpd` gibt normalerweise einen server für jede eingehende verbindung ab, so dass nur der kind-prozess schläft. `auswählen(2)`
+
+Warum ist ein so einfaches Tool so mächtig im Arsenal des Administrators?  Weil es obligatorische Verzögerungen für jede Mailverbindung einführt, die, wie es sich herausstellt, die meisten Spammer trifft, wo sie es messen können, in Bezug auf die Bindung ihres Mailzustellers vom Umgang mit dem Rest ihrer Warteschlange.  Es ist wichtig zu erkennen, dass Spammer ein Unternehmen führen, von denen viele kein direktes Interesse an den Inhalten dessen haben, was sie liefern. Sie werden für die Verwaltung eines ausgeklügelten und in der Regel illegalen (Zombie-)Netzwerks von Versandagenten bezahlt und bieten Zustelldienste für jeden Kunden mit dem Bargeld an, um seine Nutzung plus Gewinne zu decken.  Viele von ihnen machen Jahreseinkommen deutlich über meinem oder deinem :-).
+
+Es gibt anspruchsvollere Ansätze, um sicher zu sein, wie nur die Verzögerung von Nachrichten von "nicht vertrauenswürdigen" Absendern, aber Sie können viel weiter gehen als das, wenn Ihr Server über diese Art von Wissen verfügt.  Aber in Bezug auf Knall für den Dollar, laufen `Earlytalker`
+
+<!-- $Date: 2023-01-29 20:02:19 +0000 (Sun, 29 Jan 2023) $ $Author: joe $ $Revision: 12483 $ -->
+
+@joe=

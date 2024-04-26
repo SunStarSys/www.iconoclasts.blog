@@ -1,0 +1,34 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.fr'
+keywords: dtrace,solaris,bpftrace,modperl
+published: ~
+status: projet
+title: La joie de DTrace
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/SwnZf3j4f1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+[TOC]
+
+## {# lede #}Mesurez deux fois, coupez une fois, avant de vous lancer dans un effort d'optimisation de code{# lede #}
+
+Rien ne rend la mesure plus facile que DTrace.
+
+## [Sources vidéo]({{snippetA.pretty_uri}}).
+
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L253-L255:lang=shell:branch=wsl]
+
+## [Optimisation ciblée]({{snippetB.pretty_uri}}).
+
+Chaque `Niveau de détail` l'appel de méthode de classe ci-dessous est effectué au moment de la compilation par ` :Scellé`
+
+[snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
+
+
+<!-- $Date: 2024-04-17 15:47:19 +0000 (Wed, 17 Apr 2024) $ $Author: joe $ $Revision: 22360 $ -->

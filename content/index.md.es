@@ -38,7 +38,7 @@ creencias y tradiciones aceptadas
 
 </div>
 
-![Iconoclasta]
+![Iconoclasta](images/iconoclast.jpg).
 
 <div style="max-width:900px">
 
@@ -50,9 +50,9 @@ Bienvenido a nuestro
 
 </center>
 
-comunidad de blogs! Regístrese hoy mismo en el [Contáctenos]
+comunidad de blogs! Regístrese hoy mismo en el [Contáctenos](/contact).
 
-Además, por favor echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki de Enterprise Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mermaid-mindmap]
+Además, por favor echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki de Enterprise Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mermaid-mindmap](https://www.sunstarsys.com/orion/features).
 
 &nbsp;
 
@@ -69,9 +69,9 @@ Además, por favor echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<
 
 &nbsp;
 
-- <span class="badge bg-success">Nuevo</span> [Desarrolladores de Apache HTTPd considerados dañinos]
+- <span class="badge bg-success">Nuevo</span> [Desarrolladores de Apache HTTPd considerados dañinos](/joe/apache-considered-harmful).
 
-- [Triple Productos de Eigenfunciones y Geometría Espectral]
+- [Triple Productos de Eigenfunciones y Geometría Espectral](/joe/triple-products).
 
 - [Rendimiento de aplicaciones](/joe/performance) &mdash;
 

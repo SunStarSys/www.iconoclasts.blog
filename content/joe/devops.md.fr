@@ -18,7 +18,7 @@ La gestion des contraintes est la clé du processus.  En identifiant d'abord tou
 
 ## Développement basé sur le tronc
 
-Encourager des changements incrémentiels avec des processus automatisés de test, de promotion et de publication à une cadence programmée est un excellent moyen de faire rouler la balle, mais une grande partie du contrôle de la qualité dans les déploiements SaaS/PaaS implique l'adoption de *[développement basé sur le tronçon]
+Encourager des changements incrémentiels grâce à des processus automatisés de test, de promotion et de publication à une cadence programmée est un excellent moyen de faire rouler la balle, mais une grande partie du contrôle de la qualité dans les déploiements SaaS/PaaS implique l'adoption de *[développement basé sur le tronçon](https://trunkbaseddevelopment.com).
 
 En substance, le multivers de long terme `git`
 
@@ -37,23 +37,23 @@ Le développement basé sur le tronc est la base de tous les pipelines de contr�
 
 Un peu de perspective historique d'abord ; la ligne de poinçon suit ces quatre paragraphes.  Le point commun ici est qu'Apache a presque toujours été en avance sur son temps.
 
-De retour dans la pré-[CFEngine]
+De retour dans la pré-[CFEngine](https://cfengine.com).
 
 Le workflow était loin d'être idéal : en plus de créer nos propres arborescences de ports FreeBSD à patchs locaux dans des packages déployables (binaires) à partir de zéro, le personnel a dû faire preuve de *discipline* difficile à appliquer lors du déploiement des modifications en production, en s'engageant d'abord à contrôler la version, à se connecter au serveur cible, à mettre à jour son paiement et potentiellement à redémarrer le service &mdash;
 
 De nos jours, ils gardent tout dans un `git`- l'arbre source de marionnettes soutenu, et le provisionnement / déploiement / configuration directement dans le cloud en utilisant des paquets Ubuntu en amont génériques, qui est une approche quelque peu moderne de leur travail informatique, depuis la planification `git`
 
-D'autre part, une initiative pionnière de type CI à l'ASF (pour les projets TLP réels du logiciel Apache) a été [Apache Gump]
+D'autre part, une initiative pionnière de type CI à l'ASF (pour les projets TLP réels du logiciel Apache) a été [Apache Gump](https://gump.apache.org/).
 
-Voici le point en bref : toutes vos sources (développement, infrastructure et configuration) appartiennent au contrôle des versions (ne partageant pas nécessairement le même référentiel) qui est révisable par tout le personnel de devops et fait partie de votre ensemble complet de pipelines d'automatisation de test entre les révisions de correctifs et les déploiements de production.  Une étude de l'état de la technique, où les changements sont testés / provisionnés / déployés à la demande dans les paramètres IaC / CaC, est sur le site de mon ami et visionnaire Paul Hammant [ici]
+Voici le point en bref : toutes vos sources (développement, infrastructure et configuration) appartiennent au contrôle des versions (ne partageant pas nécessairement le même référentiel) qui est révisable par tout le personnel de devops et fait partie de votre ensemble complet de pipelines d'automatisation de test entre les révisions de correctifs et les déploiements de production.  Une étude de l'état de la technique, où les changements sont testés / provisionnés / déployés à la demande dans les paramètres IaC / CaC, est sur le site de mon ami et visionnaire Paul Hammant [ici](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
 
-## Virtualisation et conteneurisation : a [Animaux vs. Bovins]
+## Virtualisation et conteneurisation : a [Animaux vs. Bovins](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/).
 
-Les systèmes de conteneurs tels que Docker sont des technologies de virtualisation personnalisables et redéployables qui sont généralement utilisées pour prendre en charge une structure de cluster d'applications MicroService Architecture (MSA) telle que Kubernetes. Ils récupèrent là où les systèmes de virtualisation se sont arrêtés, échangeant un support illimité de systèmes d'exploitation (entièrement) isolés par machine virtuelle pour les machines virtuelles basées sur le noyau Linux qui ont une personnalisation et une intégration considérablement plus programmables avec l'hôte Linux parent sur lequel ils s'exécutent.  En outre, ils peuvent être reconstruits et *téléchargés* vers un service de distribution central (comme l'artifactory) pour une réutilisation à grande échelle entre plusieurs chaînes de dépendance et des déploiements de serveurs exécutables bruts.
+Les systèmes de conteneurs comme Docker sont des technologies de virtualisation personnalisables et redéployables qui sont généralement utilisées pour prendre en charge une structure de cluster d'applications MicroService Architecture (MSA) comme Kubernetes. Ils récupèrent là où les systèmes de virtualisation se sont arrêtés, échangeant un support illimité de systèmes d'exploitation (entièrement) isolés par machine virtuelle pour les machines virtuelles basées sur le noyau Linux qui ont une personnalisation et une intégration considérablement plus programmables avec l'hôte Linux parent sur lequel ils s'exécutent.  En outre, ils peuvent être reconstruits et *téléchargés* vers un service de distribution central (comme l'artifactory) pour une réutilisation à grande échelle entre plusieurs chaînes de dépendance et des déploiements de serveurs exécutables bruts.
 
 ### Mise à l'échelle verticale ou horizontale
 
-Les conteneurs reconfigurables téléchargeables à partir d'un serveur central offrent des possibilités difficiles à réaliser avec la technologie de virtualisation de base. Vous n'êtes pas bloqué par les limites matérielles d'un seul serveur pour étendre vos services afin de répondre à la demande.  En d'autres termes, la mise à l'échelle horizontale en déployant le même conteneur dans des collections d'hôtes, **à la demande**, est une fonctionnalité de première classe immédiatement réalisable des structures MSA basées sur Docker.  De même que le déploiement de dizaines de conteneurs de plus que de coeurs de processeur sur le *même* hôte.
+Les conteneurs reconfigurables téléchargeables à partir d'un serveur central offrent des possibilités difficiles à réaliser avec la technologie de virtualisation de base. Vous n'êtes pas bloqué par les limites matérielles d'un seul serveur pour étendre vos services afin de répondre à la demande.  En d'autres termes, la mise à l'échelle horizontale en déployant le même conteneur dans des collections d'hôtes, **à la demande**, est une fonctionnalité de première classe immédiatement réalisable des structures MSA basées sur Docker.  Tout comme le déploiement de dizaines de conteneurs de plus que de cœurs de processeur sur le *même* hôte.
 
 ## Mesurer, freiner et contrôler les efforts de lutte contre l'incendie, réels et pratiqués
 

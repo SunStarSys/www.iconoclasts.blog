@@ -10,7 +10,7 @@ title: Stokastisk spårningsformel för stängda, negativt böjda grenrör
 
 <div class="right">
 
-![Hyperbolisk honungskaka]
+![Hyperbolisk honungskaka](stochastic-trace-formula.page/hyperbolic-honeycomb.png).
 
 </div>
 
@@ -66,7 +66,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 ## Notation
 
-$$M$$ är en negativt böjd $$\dim=n$$ stängt Riemannmångfald med metrisk $$g$$, mätetalanslutning $$\nabla$$och (icke-negativ) Laplace-Beltrami-operatör $$\Delta_M$$. Låt $$k_{-t\Delta/2}(x,y)$$ representerar värmekärnan på $$M$$
+$$M$$ är negativt böjd $$\dim=n$$ stängt Riemannmångfald med metrisk $$g$$, mätetalanslutning $$\nabla$$och (icke-negativ) Laplace-Beltrami-operatör $$\Delta_M$$. Låt $$k_{-t\Delta/2}(x,y)$$ representerar värmekärnan på $$M$$
 
 Därför $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ Radon-Nicodym derivatet av n-dimensionella Wiener Mått $$\mu$$, begränsat till tillbakadragande av kontinuerligt looputrymme $$\Omega_t(M)\vert_x$$, via inversen av Weiners måttbevarande utvecklingskarta $$DM$$. *Obs!* $$DM^{-1}\Omega_t\vert_x$$
 

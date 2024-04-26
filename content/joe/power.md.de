@@ -1,0 +1,54 @@
+---
+archived: ~
+categories: Gesundheitswesen, Mathematik, Dynamik
+dependencies: '*.md.de'
+keywords: exponentiell, Macht, Covid-19, Epidemie, Pandemie
+published: ~
+status: archiviert
+title: Exponentielles Wachstum und COVID-19
+---
+
+Lassen Sie mich versuchen, Ihnen eine qualitative Analyse darüber zu geben, was eine exponentielle (auch Power-)Funktion geometrisch ist und wie sie für die Covid-19-Epidemie gilt, die den Planeten durchdringt.  Es ist kein langes, komplexes Lesen, also {# lede #}Nehmen Sie sich Zeit für den Abschnitt **Mathematik** &mdash; Es ist wichtig, ein gebildeter Verbraucher von Statistiken zu sein, die für die aktuelle Pandemie relevant sind{# lede #}. Ein Hintergrund für Freshman [Kalkül](https://en.wikipedia.org/wiki/Calculus).
+
+### Die Mathematik
+
+Zunächst sind die Werte der exponentiellen Funktion mikroskopisch klein und nehmen mit der Zeit kaum zu. `x-Achse`
+
+![COVID-19. März 2020](../images/covid-march-2020-e.png).
+
+Um dies durch Analogie zu veranschaulichen: Stellen Sie sich vor, wie schnell Sie jetzt fahren würden, wenn die Geschwindigkeit Ihres Autos immer durch eine Proportionalitätskonstante an die Kilometerleistung auf seinem Kilometerzähler gebunden wäre. Unter diesem hypothetischen, für jedes feste Intervall der Zeit, die vergeht, sowohl die Geschwindigkeit Ihres Autos als auch die Gesamtstrecke reiste *multiplies* um den gleichen festen Betrag (größer als eins). Tatsächlich ist es [Schildkröten ganz unten](https://en.wikipedia.org/wiki/Turtles_all_the_way_down): Beschleunigung Ihres Autos, Ruck usw. (also alle) [Derivate](https://en.wikipedia.org/wiki/Derivative).
+
+In einem [logarithmische Skala](https://en.wikipedia.org/wiki/Logarithmic_scale) für die `y-Achse`Diagramme solcher Leistungsfunktionen werden als **gerade Linien** angezeigt.  Die Diagramme unten haben parallele Wachstumslinien (die ich in schwarz zu diesen hinzugefügt habe) [Weltmesser](https://www.worldometers.info/coronavirus/) und die gleichen *weltweiten* Summen wie das Paar oben widerspiegeln. Wenn wir diese "Linien" in `Protokoll y = mx + b` Form, die `m`-Werte (`Gefälle`) zustimmen; nur die `B`-Werte (`Log-Y-Interzepte`) unterscheiden.  Im Mittelpunkt steht dabei die Aufmerksamkeit auf die **invariant** `Steigung`, nicht variierend `Abschnitte`, für alle Alters- oder Regionen-Pandemiestatistiken oder Kombinationen davon.  Multiplizieren `ln 10 = 2.302585...` mit dem `Steigung` Hier ergibt sich die fundamentale Proportionalitätskonstante, welche die dargestellten Werte der exponentiellen Funktionen mit ihren *instantanen* Veränderungsraten gleichsetzt.  Mit anderen Worten, die Konzentration auf die relativen Prozentsätze zwischen verschiedenen Statistiken, wie [bedingt](https://en.wikipedia.org/wiki/Conditional_expectation) Die Todesrate ist *fehlt der Punkt*: Das ist ein Gespräch über die `B`-Werte, nicht die `m`
+
+Um klar zu sein, der Unterschied in `B`-Wert ist mehr über Zeitunterschiede auf der `x-Achse` als es Unterschiede in `Jahr`-Werte; in Gleichungen: `log y = mx + b = m(x + b/m)` ist eine implizite Übersetzung der Zeile `y = mx`, `B` Einheiten entlang der `y-Achse`oder gleichwertig `b/m` Einheiten entlang der `x-Achse` (in der entgegengesetzten Richtung).   **Jeder** Typ einer relativen Statistik (z.B. Rate der Todesfälle) kann in Bezug auf solche Zeitübersetzungen erfasst werden, `m` ist bekannt (und ungleich Null).  Die *kritische* Statistik ist `m`
+
+![März 2020 COVID-19 logarithmische Skala](../images/covid-march-2020.png).
+
+### Die COVID-19-Pandemie in den USA
+
+Die `5-Tage-Doppelung` der gesamten infizierten Bevölkerung in NY in dieser Woche sowie der `3-Tage-Doppelung`
+
+
+![März 2020 COVID-19 US-Logarithmische Skala](../images/covid-us-march-2020.png).
+
+![März 2020 COVID-19 US Tod logarithmische Skala](../images/covid-us-march-2020-deaths.png).
+
+Hier ist die *gute Nachricht: * Epidemien folgen nur exponentiellen Funktionen für den ersten Teil des Ausbruchs. Schließlich wird sich die Änderungsrate abflachen und negativ ausfallen, was auf ein sinkendes Niveau der Gesamtbevölkerung hinweist, die derzeit krank ist.
+
+Die *schlechte Nachricht* ist, dass die [WHO](https://www.who.int/emergencies/diseases/novel-coronavirus-2019).
+
+### Fallout
+
+Es ist kein Voodoo, eine Epidemie zu veranlassen, sich von [exponentielles Wachstum](https://en.wikipedia.org/wiki/Exponential_growth).
+
+Was Epidemiologen erreichen wollen, ist, diesen Prozess so schnell wie möglich zu starten.  Jeder verlorene Tag bedeutet einen beschleunigten Verlust von Leben, eine erhöhte Dynamik von schweren Fällen und ein größeres Risiko, das Gesundheitssystem vollständig zu überwältigen, da die Grafik klettert.
+
+Die Abflachung wird unweigerlich geschehen. Wenn es nicht auf menschliche soziale Weisheit zurückzuführen ist, dann liegt es daran, dass das Virus vergangene Opfer nicht wieder infizieren kann <sup>2</sup>, und es infiziert einfach die Mehrheit der Bevölkerung, bevor es nachlässt und verweilt, um Neugeborene zu infizieren oder einfach nur vollständig zu verschwinden.
+
+#### Fußnoten (24. September 2020).
+
+1. Ich bin absichtlich vage über das tatsächliche *Zeitintervall* für die Änderungsrate, aber es spielt keine Rolle für den Wahrheitswert der Aussage.  Unterschiedliche Zeitintervalle ergeben unterschiedliche Proportionalitätskonstanten, aber diese Konstanten hängen nur von der Größe des Zeitintervalls ab, nicht von den gemessenen Zeitpunkten (an den Endpunkten) selbst.
+
+2. Die Jury ist noch dabei.  Je nachdem, welche Stämme in freier Wildbahn sind, in Kombination mit der Schwere der Erkrankung, die ein Patient antrifft, kann eine Reinfektion zumindest teilweise möglich sein.
+
+<!-- $Date: 2023-01-30 20:55:15 +0000 (Mon, 30 Jan 2023) $ $Author: joe $ $Revision: 12627 $ -->

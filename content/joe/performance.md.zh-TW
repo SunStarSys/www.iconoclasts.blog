@@ -1,0 +1,115 @@
+---
+archived: ~
+categories: 效能、工具
+dependencies: '*.md.zh-TW'
+keywords: ~
+published: ~
+status: 已封存
+title: 應用程式效能
+---
+
+{# lede #}許多開發人員陷入思考效能最佳化的困境，在於讓每一行程式碼儘可能有效率{# lede #}
+
+其實是相反的。您會從應用程式的架構限制開始，然後使用它們向下鑽研至觀察到的程式「最慢」部分。該部分的 ** 實行 ** 可引導您選擇所需的所有其他效能。不像那樣慢的任何東西都不需要進一步最佳化。相反地，請將重點放在非專家讀者的表達式，以及實作的簡潔與清晰度。`SSDLC 系列`
+
+您可以重複此手冊，但我從來不需要在我的職業生涯中超過 3 次重複。
+
+因此繼續使用優雅的程式設計語言，例如`Python3` 或者`雅瓦斯克`/`繁體中文`，並讓主題專家 (**SME**) 在開源世界中脫穎而出，為您提供強大的功能`成本`/`C++`
+
+即使是無相依性的 bash 命令檔，也是許多基本作業的可工作解決方案。這是我為擴增實境公司撰寫的一份子[魔術跳躍](https://magicleap.com) 多年前，取代一支 clumsy [OpenGrok](https://oracle.github.io/opengrok/) 利用多處理器平行化的服務`xargs -P`，和 support [PCRE](https://www.pcre.org/) 使用簡單搜尋`Emacs`/`維姆`
+
+https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
+
+此程序檔的幅度順序比 GitHub 上的一般嫌疑人快，這些都是以靜態、編譯的程式設計語言撰寫的。但可以識別出確切的瓶頸`巴什` (用大容量迴圈) `fork+ 執行` 中間通話，以及使用`xargs` 而是，您得到的指令碼看起來很像這樣，核心演算法則以 10 行實作`殼層`
+
+它也以智慧方式使用 **SME** 的開源社群，而不是使用 GitHub 上其他「篩選的遞迴 grep」實作的方式。而不是內部採用和維護我自己 (執行緒) 的實作`尋找`, `xargs`，和`灰色`，我剛重複使用其他 **SME** 的預先安裝可執行檔已超過數十年 ** 依現狀 ** 完美運作。我不需要掌握其實作，只要重複使用它們即可`CLI`
+
+若要查看相反的解決方法，其中所有作業都是在公司內部完成，完全微最佳化，而且仍然無法使用預設搜尋選項來處理此命令檔，而且沒有可用的快取系統，以下是精細的範例 <https://github.com/BurntSushi/ripgrep>
+
+只要將該頁面的第一個 #performance #benchmark 提取，然後將它從玩具樣本樹大小 (linux 核心來源) 擴展至異質樹狀結構`23GB`： (3 次重複後最佳執行；`語言 =en_US.UTF-8`
+
+```shell
+    % du -sh .
+    23G .
+    % time rg -uuniw '[A-Z]+_SUSPEND' | wc -l
+    6259
+    rg -uuniw '[A-Z]+_SUSPEND' 9.46s user 16.08s system 261% cpu 9.759 total
+    wc -l 0.00s user 0.07s system 0% cpu 9.759 total
+    % time pffxg.sh -- -wnE '[A-Z]+_SUSPEND' | wc -l
+    5855
+    pffxg.sh -- -wnE '[A-Z]+_SUSPEND' 16.66s user 2.68s system 429% cpu 4.501 total
+    wc -l 0.00s user 0.00s system 0% cpu 4.501 total
+```
+
+微最佳化與核心檔案系統快取狀態深度連結以進行搜尋的項目相當安靜。效能時機的變化主要是存取檔案內容核心的速度，而且其大小順序比最終結果的任何其他因素更為相關。保持在`NVMe` 有助於，但此空間沒有作用`記憶體`
+
+這就是為什麼記憶體內壓縮快取用於大型檔案核心，會穩定效能時機。令人驚訝的是，沒有人認為這足以支持。
+
+將該頁面的第二個 #performance #benchmark 設為關閉，然後再調整為之前 (相同) `23GB`
+
+```shell
+	% time rg -tc -uuuiwn '[A-Z]+_SUSPEND' | wc -l
+    5629
+    rg -tc -uuuiwn '[A-Z]+_SUSPEND' 3.51s user 1.71s system 1141% cpu 0.457 total
+    wc -l 0.00s user 0.05s system 11% cpu 0.457 total
+    % time LANG=C pffxg.sh --cache /tmp/pffxg-$USER --workers 32 --cc -- -wE '[A-Z]+_SUSPEND' | wc -l
+    5628
+    LANG=C pffxg.sh --cache /tmp/pffxg-$USER --workers 32 --cc -- -wE  3.14s user 0.88s system 1055% cpu 0.381 total
+    wc -l 0.00s user 0.00s system 0% cpu 0.381 total
+```
+
+已調整`pffxg.sh` 仍然更快，儘管所有工作都投入微最佳化 ripgrep 以實現此目標`成本`
+
+我使用此指令碼的方式[AOSP 系列](https://source.android.com) 排定`附錄` 同步與後續`pffxg.sh` **`雷佐普`-compressed-cache 內建至`tmpfs`** 每天早上工作 (透過`crontab 鍵`)，使用`PFFXG_CACHE=...` 設定於我的`~/.pffxg.conf` 檔案。因此`pffxg.sh` 我在整個工作天執行的呼叫會使用壓縮的快取`tmpfs`
+
+。25M LOC 介於`ripgrep 幣` 以及[ugrep](https://github.com/Genivia/ugrep)。632 LOC 適用`pffxg.sh`
+
+因為它是小型的 shell 程式，`pffxg.sh` 能使您擁有強大的鉤點進入內部，幾乎不費力。即使是`灰色` 指令本身可自訂：任何需要在所選檔案庫上執行的指令，這些檔案可以接受附加至其引數結尾的檔案名稱清單，都是公平的遊戲。以下是「行數總計`MiLOC`
+
+```shell
+	% time find * -type f | xargs wc -l | awk '{ $2 == "total" {a+=$1} END {print a/1024**2}'
+    28.451
+    find * -type f 0.00s user 0.06s system 2% cpu 2.733 total
+    xargs wc -l 0.53s user 1.02s system 54% cpu 2.853 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.23s user 0.59s system 28% cpu 2.853 total
+
+    % time pffxg.sh --workers 8 --cmd wc --all -- -l | awk '{$2 == "total" {a+=$1} END {print a/1024**2}'
+    28.4506
+    pffxg.sh --workers 8 --cmd wc --all -- -l 0.92s user 0.66s system 826% cpu 0.192 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 11% cpu 0.192 total
+```
+
+`ripgrep 幣`
+
+```shell
+	% time rg -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
+    28.4284
+    rg -c \$ 2.12s user 2.19s system 276% cpu 1.564 total
+    awk -F : '{a+=$2} END {print a/1024**2}' 0.58s user 0.45s system 66% cpu 1.564 total
+```
+
+此處僅限於`成本`
+
+```shell
+	% time pffxg.sh --workers 8 --cc --cmd wc -- -l | awk '$2 == "total" {a+=$1} END {print a/1024**2}'
+    25.3935
+    pffxg.sh --workers 8 --cc --cmd wc -- -l 0.76s user 0.54s system 734% cpu 0.177 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 9% cpu 0.177 total
+```
+
+以及`ripgrep 幣`
+
+```shell
+	% time rg -tc -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
+    25.3844
+    rg -tc -c \$ 3.49s user 1.54s system 441% cpu 1.140 total
+    awk -F : '{a+=$2} END {print a/1024**2}' 0.38s user 0.38s system 66% cpu 1.140 total
+```
+
+真正的 ** 應用程式效能 ** 來自平衡、靈活性和功能性程式設計技術；它並不來自在靜態、編譯的程式設計語言中，對於必須從平衡和彈性角度使用所採取的必要微最佳化策略。這種超類型、非必要語言是非常特定問題領域的絕佳目標，但對於全系統應用程式效能來說極為重要。
+
+`pffxg.sh` 不是產品，這不是銷售間距。這是一個 ** 範例 **，以非常戲劇的方式說明我的點。如果您熟悉 GitHub 上篩選遞迴 (recursive-grep) 解決方案的長久歷史，它們都會在 Andy Lester 原始問題上的概念上進行處理`佩爾` 導入[確認](https://beyondgrep.com/)，是它寫在`佩爾`繁體中文從效能觀點來看，唯一真正的問題是：`佩爾` 由安迪撰寫，他似乎沒有針對系統效能概念進行任何打擊 (例如農業) `尋找` 對特定用途的平行化工作`成本` 二進制)，但目標是嘗試將整個程式碼擷取為單一執行緒純粹，以遲緩可攜性。`佩爾`
+
+願一千個花朵，無論他們看似無聲！
+
+<!-- $Date: 2024-04-23 19:28:23 +0000 (Tue, 23 Apr 2024) $ $Author: joe $ $Revision: 23706 $ -->

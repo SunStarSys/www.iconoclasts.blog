@@ -18,7 +18,7 @@ Begränsningshantering är nyckeln till processen.  Genom att först identifiera
 
 ## Trunkbaserad utveckling
 
-Uppmuntra till inkrementella ändringar med automatiserade testnings-, marknadsförings- och frisläppningsprocesser i en schemalagd takt är ett bra sätt att få bollen i rullning, men en stor del av kvalitetskontrollen i SaaS/PaaS-distributioner innebär att du inför *[stambaserad utveckling]
+Uppmuntra till inkrementella ändringar med automatiserade testnings-, marknadsförings- och frisläppningsprocesser i en schemalagd takt är ett bra sätt att få bollen i rullning, men en stor del av kvalitetskontrollen i SaaS/PaaS-distributioner innebär att du inför *[stambaserad utveckling](https://trunkbaseddevelopment.com).
 
 I huvudsak multiversum av långsiktiga `stjärt`
 
@@ -37,17 +37,17 @@ Trunk Based Development är grunden för alla därmed automatiserade förändrin
 
 Lite historiskt perspektiv först; slaglinjen följer dessa fyra stycken.  Den gemensamma tråden här är att Apache nästan alltid har varit före sin tid.
 
-Tillbaka i pre-[CFEngine]
+Tillbaka i pre-[CFEngine](https://cfengine.com).
 
-Arbetsflödet var mindre än perfekt: förutom att bygga våra egna lokalt lappade FreeBSD-portar i driftsättningsbara (binära) paket från grunden var personalen tvungen att utöva svår att upprätthålla *disciplin* när de distribuerade ändringar i produktionen, genom att först bekräfta versionskontroll, logga in på målservern, uppdatera sin kassabetalning och eventuellt starta om tjänsten &mdash;
+Arbetsflödet var mindre än perfekt: förutom att bygga våra egna lokalt lappade FreeBSD-portar i driftsättningsbara (binära) paket från grunden var personalen tvungen att utöva svår att upprätthålla *disciplin* när de distribuerade ändringar i produktionen, genom att först bekräfta versionskontroll, logga in på målservern, uppdatera kassan och eventuellt starta om tjänsten &mdash;
 
 Numera håller de allt i en `stjärt`-backed marionett källträd, och provision / driftsätta / konfigurera direkt till molnet med hjälp av generiska uppströms Ubuntu-paket, vilket är en något modern inställning till deras IT-ops arbete, eftersom planerat `stjärt`
 
-Å andra sidan var ett tidigt, banbrytande CI-liknande initiativ vid ASF (för faktiska Apache-programvara TLP-projekt) [Apache Gump]
+Å andra sidan var ett tidigt, banbrytande CI-liknande initiativ vid ASF (för faktiska Apache-programvara TLP-projekt) [Apache Gump](https://gump.apache.org/).
 
-Här är *punkten i ett nötskal*: alla dina källor (utveckling, infrastruktur och konfiguration) tillhör versionskontroll (inte nödvändigtvis samma datalager) som kan granskas av all utvecklingspersonal och är en del av din fullständiga uppsättning testautomatiseringspipeliner mellan korrigeringsversioner och produktionsdistributioner.  En undersökning av den senaste tekniken, där förändringar testas/tilldelas/distribueras på begäran i IaC/CaC inställningar, finns på min vän och visionär Paul Hammants hemsida [här]
+Här är *punkten i ett nötskal*: alla dina källor (utveckling, infrastruktur och konfiguration) tillhör versionskontroll (inte nödvändigtvis samma datalager) som kan granskas av all utvecklingspersonal och är en del av din fullständiga uppsättning testautomatiseringspipeliner mellan korrigeringsversioner och produktionsdistributioner.  En undersökning av den senaste tekniken, där förändringar testas/tilldelas/distribueras på begäran i IaC/CaC inställningar, finns på min vän och visionär Paul Hammants hemsida [här](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
 
-## Virtualisering kontra containerisering: en [Husdjur vs. boskap]
+## Virtualisering kontra containerisering: en [Husdjur vs. boskap](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/).
 
 Containersystem som Docker är anpassningsbara, omdistribuerbara virtualiseringstekniker som vanligtvis används för att stödja ett MicroService Architecture (MSA) -ramverk för applikationskluster som Kubernetes. De plockar upp där virtualiseringssystem slutade, handel obegränsat stöd av (helt) isolerade per-VM operativsystem för Linux-kernel baserade virtuella maskiner som har betydligt mer programmerbar anpassning och integration med den överordnade Linux värd som de körs på.  Dessutom kan de byggas om och *uppladdas* till en central distributionstjänst (som artefakt) för storskalig återanvändning över flera beroendekedjor och råa körbara serverdistributioner.
 

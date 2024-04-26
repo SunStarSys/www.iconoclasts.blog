@@ -1,0 +1,34 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.zh-TW'
+keywords: dtrace，solaris，bpftrace，modperl，追蹤，追蹤
+published: ~
+status: 草稿
+title: The Joy of DTrace
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/SwnZf3j4f1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+[TOC]
+
+## {# lede #}測量兩次，切掉一次，再投入程式碼最佳化工作{# lede #}
+
+沒有任何東西使測量產品比 DTrace 更容易。
+
+## [影片來源]({{snippetA.pretty_uri}}).
+
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L253-L255:lang=shell:branch=wsl]
+
+## [目標最佳化]({{snippetB.pretty_uri}}).
+
+每個`$dtlv` 下面的類別方法呼叫會在編譯階段完成，由`：密封`
+
+[snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
+
+
+<!-- $Date: 2024-04-17 15:47:19 +0000 (Wed, 17 Apr 2024) $ $Author: joe $ $Revision: 22360 $ -->

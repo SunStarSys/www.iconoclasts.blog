@@ -1,0 +1,113 @@
+---
+archived: ~
+categories: Orion，Architecture，架構，ZFS
+dependencies: '*.md.zh-TW'
+keywords: information，topics，hypermedia，rest，architecture，hateoas，資訊，拓樸，超媒體，架構，架構
+published: ~
+status: 草稿
+title: 資訊架構
+---
+
+<div class="right">
+
+![資訊架構](ia.page/ia.jpg).
+
+</div>
+
+[TOC]
+
+## 介紹
+
+資訊架構 ** 組織 ** 和 ** 範圍 ** {# lede #}與設計、簡報、關係和架構限制相關的整個技術，涵蓋您服務的每個 URL{# lede #}
+
+## 可行性、探索與連結拓樸：概要
+
+## 對比階層與已標記的搜尋
+
+### 無線架構 Wiki 搜尋
+
+#### 人機介面目標
+
+##### 強大的語法
+
+
+##### 主題範圍是特定關鍵字，而非一般文字搜尋
+
+##### 簡易範圍擴充
+
+##### 互動式結果過濾引擎
+
+如需概述，請參閱 HATEOAS 的章節。
+
+##### 內建效能可擴展至 10 萬個文件樹狀結構
+
+##### 可理解的結果排序 / 優先順序
+
+##### 每一使用者安全性 (ACL) 情境化結果
+
+##### 直接連結至目標特定文件位置的點擊次數
+
+##### Live，RealTime 結果 (又稱 No Stale Indexed Corpus).
+
+#### 客戶採用目標
+
+##### 要求時作為 "application/json" 的交付項目
+
+選項：
+
+- 在查詢字串中傳送 "as_json=1"
+
+
+##### 樣式是由客戶安裝的半控制`/content/css/boostrap.min.css`
+
+##### `search.html` 範本可由客戶安裝修訂`/templates/search.html`
+
+##### `main.html` 衍生範本可由客戶安裝修訂`/templates/main.html`
+
+## REST、HATEOAS 與內容協商
+
+## 美好的網址&mdash;
+
+## 結構化、未來驗證的 MultiMedia 內容
+
+### GitHub 口味減價$$\KaTeX$$
+
+### MetaData 的 YAML 標頭
+
+#### 杜林完整程式設計語言不屬於您的內容來源
+
+### 啟用內容上範本前處理的值
+
+- 內嵌資料處理引擎
+
+  - 內嵌的 "safe" json 文字內建檔案
+
+
+#### 逐漸進化的 Wiki 事實集中組態
+
+- 企業服務網址
+
+
+### 角色`ssi`
+
+## 內容的存取控制，來自單一事實觀點來源
+
+- `walk_content_tree()` 英吋`path.pm`
+  - acls
+  - 相依性
+- `acl.yml`
+
+## SunStar 系統 Orion&trade;
+
+1. zfs 複製
+
+
+## StageMaster：使用純用戶端狀態引擎進行實驗
+
+## GitOps 組建工作流程
+
+1. 前端介面
+2. 後端介面
+
+
+<!-- $Date: 2024-03-11 03:02:57 +0000 (Mon, 11 Mar 2024) $ $Author: joe $ $Revision: 19680 $ -->

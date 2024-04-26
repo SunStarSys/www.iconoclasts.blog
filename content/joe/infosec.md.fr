@@ -1,0 +1,35 @@
+---
+archived: ~
+categories: Sécurité, informatique, Perl
+dependencies: '*.md.fr'
+keywords: infosec,zerotrust,taint,dynamique,données
+published: ~
+status: archivé
+title: Introduction à la sécurité des informations
+---
+
+[TOC]
+
+#### Quel est l'objectif principal de InfoSec ?
+
+*Pour s'assurer que tous les changements aux limites du contexte sont bien réglementés.*
+
+Par exemple, chaque **appel système** sur une plate-forme UNIX satisfait cette condition, en termes de modèle de sécurité utilisateur/groupe UNIX + système de fichiers. La définition littérale d'un **commutateur de contexte**, telle que définie par les **appels système**, implique la vérification de la validité de l'utilisation de l'API du côté du noyau de l'appel.
+
+En termes de livraison SaaS, {# lede #}toutes les données provenant d'un **appel système** UNIX d'exécution doivent être traitées comme **conservées**{# lede #}
+
+Le seul modèle de sécurité UNIX n'a jamais pris de dispositions pour le développement d'applications client/serveur en réseau, car historiquement, l'API de socket BSD qui a précédé la montée en puissance du Network Computing dans les années 90 (Sun Microsystems) a été inventée plus d'une décennie après la naissance d'UNIX (avec son modèle de sécurité multiutilisateur basé sur le système d'exploitation entièrement formé à la naissance). [MIT Kerberos](https://web.mit.edu/kerberos/).
+
+La planification sécurisée des CPU pour effectuer un travail au niveau du noyau pour le compte d'un "contexte utilisateur/groupe/rôle autorisé" non lié au contexte utilisateur/groupe UNIX du processus sous-jacent a toujours été en dehors du modèle UNIX. De nombreuses initiatives d'infosec ne reconnaissent pas que cette responsabilité réglementaire appartient uniquement aux applications ; ne laissez pas la vôtre en être une !
+
+Si ce n'est pas clair à ce stade, les équipes DevOps/SRE qui trient les incidents de sécurité SaaS (**CAI**) sur Linux devraient se familiariser avec [haut](fun-with-htop)'s `stèle` interface via le `s` clé ! Mieux vaut maîtriser `stèle`
+
+#### Comment cela se rapporte-t-il aux initiatives de confiance zéro, en pratique ?
+
+[Architectures sans confiance](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf).
+
+Bien qu'il puisse y avoir des contextes VPN / pare-feu en réalité, aucun de ces détails n'est pertinent pour InfoSec dans un cadre Zero-Trust. En d'autres termes, de telles initiatives de sécurité de topologie de réseau peuvent augmenter les initiatives Zero-Trust, mais elles ne sont jamais utilisées dans une initiative Zero-Trust au niveau de sécurité serveur-hôte de base jusqu'au niveau de l'application.
+
+MIT Kerberos et Active Directory sont par exemple conformes à Zero-Trust.
+
+*$Date : 2023-01-19 22:58:40 +0000 (jeu, 19 janvier 2023) $*

@@ -1,0 +1,137 @@
+---
+archived: ~
+categories: ~
+dependencies: /categories/*/index.html.zh-TW
+keywords: wiki，知識
+published: ~
+status: 已發布
+title: Of、By 和 For iconoclasts
+---
+
+<div class=" float-lg-end" id="news">
+  <div class="card border-success" style="max-width:25rem;background-color:transparent">
+    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">圖示區</a></div>
+
+  <div class="card-body">
+  <small>
+<pre class="card-title">
+名詞[ 成本]   正式
+美國 /aÉaÉaKÉ.nÉ.kl
+一般強烈反對的人
+接受的信念和傳統
+</pre>
+
+
+&nbsp;
+
+{% for elt in iconoclasts.content|shuffle|slice:":3" %}
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.name}}" style="max-width:560;max-height:315" title="{{elt.key}}"></iframe>
+</div>
+&nbsp;
+{% endfor %}
+
+  </div>
+</div>
+
+&nbsp;
+
+</div>
+
+![圖示區](images/iconoclast.jpg).
+
+<div style="max-width:900px">
+
+歡迎使用
+
+<center>
+
+**STEM/ 學院 / 政治 / 文化 / 藝術 **
+
+</center>
+
+部落格社群！立即註冊，就在[聯絡我們](/contact).
+
+此外，請查看[奧里昂](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion 標誌" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Enterprise Jamstack Wiki。</em></span>&trade; &mdash; Orion 是唯一具備原生功能的 SCM 企業產品[美人魚點陣圖](https://www.sunstarsys.com/orion/features).
+
+&nbsp;
+
+<div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/f55XLGCs3H0" style="min-width:400px;min-height:275px" title="影片"></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+</div>
+
+&nbsp;
+
+## 精選部落格
+
+&nbsp;
+
+- <span class="badge bg-success">新建</span> [Apache HTTPd 視為有害的開發](/joe/apache-considered-harmful).
+
+- [特徵和光譜幾何的三重產品](/joe/triple-products).
+
+- [應用程式效能](/joe/performance) &mdash;
+
+- [資訊安全性](/joe/infosec) &mdash;
+
+- [Perl 7 的密封語彙](/joe/perl7-sealed-lexicals) &mdash;
+
+- [DevOps 移動](/joe/devops) &mdash;
+
+&nbsp;
+
+## 分類索引
+
+&nbsp;
+
+<div style="text-align:justify">
+{% for d in deps|dictsort:0 %}<button type="button" class="btn btn-success"><a href="{{d.0}}">{{d.0|dirname|basename}}</a></button> {% endfor %}
+</div>
+
+<style type="text/css">
+h2 { font-size: 18px }
+
+button.btn a {
+    color:#fff;
+}
+div.jumbotron button.btn {
+    margin-bottom:5px;
+}
+
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes news {
+  0% {
+    left: 1000px;
+	top: 1000px;
+	position:relative;
+  }
+
+100% {top: 5px;position:relative}
+
+}
+
+#news {
+	animation: news;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date: 2024-04-22 22:37:23 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23409 $ -->

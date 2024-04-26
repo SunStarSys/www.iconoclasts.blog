@@ -47,7 +47,7 @@ OOTB:s fullt fungerande funktionsuppsättning.
 - kopia [dtruss](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) till `~/bin` och kör för att skapa `stjärt` symbolisk länk
 - lansering `htop`
 
-### [Solis 11]
+### [Solis 11](https://github.com/joesuf4/htop/tree/solaris-stable).
 
 - ZFS ARC-statistik
 - Kolumner för zonnamn/ID

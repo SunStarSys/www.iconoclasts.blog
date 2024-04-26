@@ -45,7 +45,7 @@
 
 @online{TF17,
   autor={Franke, Tobias},
-  title={Prod triple\-uct int\grals},
+  title={Producto triple\-ucte int\grals},
   fecha={2023-09-01},
   URL={https://www.tobias-franke.eu/log/2017/04/19/triple-products.html}
 

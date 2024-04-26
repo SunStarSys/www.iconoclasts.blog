@@ -1,0 +1,113 @@
+---
+archived: ~
+categories: Orion, Architecture, ZFS
+dependencies: '*.md.fr'
+keywords: informations,topologie,hypermédia,rest,architecture,hateoas
+published: ~
+status: projet
+title: Architecture des informations
+---
+
+<div class="right">
+
+![Architecture des informations](ia.page/ia.jpg).
+
+</div>
+
+[TOC]
+
+Introduction ##
+
+Architecture des informations **organisée** et **arrangements** {# lede #}toute la gamme de technologies pertinentes pour la conception, la présentation, les relations et les contraintes architecturales qui couvrent chaque URL que vous servez{# lede #}
+
+## Utilisation, découverte et topologie des liens : Vue d'ensemble
+
+## Hiérarchie contrastée avec une recherche marquée
+
+### Rearchitectures radicales Wiki Search
+
+#### Objectifs de l'interface humaine
+
+##### Syntaxe puissante
+
+
+##### Les cachets sont propres aux mots-clés plutôt qu'aux recherches génériques
+
+##### Extension facile du périmètre
+
+##### Moteur de filtrage des résultats interactifs
+
+Voir la section sur HATEOAS pour un aperçu.
+
+##### Mise à l'échelle des performances intégrées vers des arborescences de documents 100K
+
+##### Ordre/ordre de priorité des résultats compréhensibles
+
+##### Résultats contextualisés de sécurité par utilisateur (ACL).
+
+##### Succès liés directement aux emplacements de documents spécifiques à la cible
+
+##### Résultats en direct, RealTime (alias Aucun corpus indexé périmé).
+
+#### Objectifs d'adoption client
+
+##### Délivrable en tant que "application/json" sur demande
+
+Options :
+
+- transmet "as_json=1" dans la chaîne de requête
+
+
+##### Le style est contrôlé sémantiquement par l'installation du client `/content/css/boostrap.min.css`
+
+##### `search.html` Le modèle peut être remplacé par l'installation du client `/templates/search.html`
+
+##### `main.html` Le modèle dérivé peut être remplacé par l'installation client du `/templates/main.html`
+
+## REST, HATEOAS et négociation de contenu
+
+## Belles URL &mdash;
+
+## Contenu MultiMedia structuré et pérenne
+
+### GitHub Démarque aromatisée avec $$\KaTeX$$
+
+### En-têtes YAML pour MetaData
+
+#### Un langage de programmation complet de Turing n'appartient pas à vos sources de contenu
+
+### Valeur de l'activation du prétraitement de modèle sur le contenu
+
+- Moteurs de traitement de données en ligne
+
+  - des littéraux json intégrés et "sûrs" dans des fichiers construits
+
+
+#### Configuration centralisée, lente évolution des faits Wiki
+
+- URL de service d'entreprise
+
+
+### Le rôle de `ssi`
+
+## Contrôles d'accès au contenu, à partir d'une perspective source d'informations unique
+
+- `walk_content_tree()` dans `path.pm`
+  - ACL
+  - dépendances
+- `acl.yml`
+
+## SunStar Orion de Systems&trade;
+
+1. Clones zfs
+
+
+## StageMaster : Expérimentation avec Pure Client-Side State Engine
+
+## GitOps créer des workflows
+
+1. Frontale
+2. Back-end
+
+
+<!-- $Date: 2024-03-11 03:02:57 +0000 (Mon, 11 Mar 2024) $ $Author: joe $ $Revision: 19680 $ -->
