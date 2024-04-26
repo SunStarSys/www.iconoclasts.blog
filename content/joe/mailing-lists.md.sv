@@ -50,3 +50,5 @@ De enda listkonfigurationerna som körs i fel ordning för `DMARC` är de med `-
 Om du inte har hållit jämna steg med tiden, finns det en ny rörelse på gång för att introducera stark [DMARC](http://en.wikipedia.org/wiki/DMARC) policyer som avvisar meddelanden som underkänns [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail).
 
 $Datum$
+
+<!-- $Date$ $Author$ $Revision$ -->
