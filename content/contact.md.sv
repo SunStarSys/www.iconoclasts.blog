@@ -1,14 +1,14 @@
 ---
 archived: ~
 categories: ~
-keywords: South Florida, systemadministration, DevOps, DevSecOps, SRE, GitOps
+keywords: South Florida, System Administration, DevOps, DevSecOps, SRE, GitOps
 published: ~
 status: skiss
 title: Kontakta oss
 ---
 
 <div class="float-lg-end">
-{% include "enquiry_get.html" %}
+{% include "enquiry_get.html"|append:lang %}
 </div>
 
 ![SunStar System](images/sunstarlogowhole.png).
@@ -21,6 +21,6 @@ title: Kontakta oss
 
 - [+1 âª(305) 859-1630â¬](tel://1.305.859.1630/).
 
-<!-- $Date: 2024-04-18 20:48:55 +0000 (Thu, 18 Apr 2024) $ $Author: joe $ $Revision: 22449 $ -->
+<!-- $Date: 2024-04-26 17:40:11 -0400 (Fri, 26 Apr 2024) $ $Author: joe $ $Revision: 24320 $ -->
 
 <div style="height:800px">&nbsp;</div>

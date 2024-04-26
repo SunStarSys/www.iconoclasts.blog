@@ -8,7 +8,7 @@ title: Contáctenos
 ---
 
 <div class="float-lg-end">
-{% include "enquiry_get.html" %}
+{% include "enquiry_get.html"|append:lang %}
 </div>
 
 ![SunStar Sistemas](images/sunstarlogowhole.png).
