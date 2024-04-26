@@ -46,7 +46,7 @@
   {% if path|starts_with:"/contact.md" %}
   <div class="breadcrumbs">
       {% endif %}&trade;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-        <img alt="איקון עריכה" src="/images/edit.png" />
+        <img alt="編輯圖示" src="/images/edit.png" />
       </a>
   </div>
   <h1>{{lang}}</h1>

@@ -6,8 +6,8 @@
        <div style="color:#aaa">
          <small>
            [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"0-9="}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"0-9="}}</span></a>]
-        <em>
-			<a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">Zuletzt aktualisiert</a> von <b>{{ content|ssi|vcs_author:lang }}</b> auf <b>{{ content|ssi|vcs_date:lang }}</b>
+           <em>
+			   <a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">Zuletzt aktualisiert</a> von <b>{{ content|ssi|vcs_author:lang }}</b> auf <b>{{ content|ssi|vcs_date:lang }}</b>
 {% ifequal repos "public" %}
 			   &nbsp;
 			   <a href="https://github.com/SunStarSys/{{website}}/blob/trunk/content{{path}}"><i class="fa-brands fa-sm fa-github"></i>&nbsp;Quelle</a>
@@ -19,7 +19,7 @@
              <i class="fa fa-eye fa-emoji" title="Uhr"></i>
            </a>
            <a href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1#:~:text={{path|parse_filename:"1.."}}" id="unwatch">
-            <i class="fa fa-eye-slash fa-emoji" title="Unkenntlich machen"></i>
+            <i class="fa fa-eye-slash fa-emoji" title="Unwissen"></i>
            </a>
          </div>
          <br>&nbsp;

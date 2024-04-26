@@ -31,85 +31,29 @@
     {% endblock %}
 </head>
 
-<body>
-  <header class="container-xxl navbar navbar-expand-lg fixed-top" style="border-bottom:solid #aaa 1px; background-color: #fff;">
-    <div class="container-fluid">
-	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img alt="Иконок" src="/images/iconoclast"></a>
-      <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Навигация" class="navbar-toggler" data-bs-target="#navbarResponsive" data-bs-toggle="collapse" type="button">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-          <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
-            active
-            {% endif %}"><a class="nav-link text" href="/bloggers.html{{lang}}">Иконоборцы</a></li>
-          <li class="nav-item{% if path|starts_with:"/contact.md" %}
-             active
-             {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">Контакт</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="products" role="button">Продукты... <span class="caret"></span></a>
-            <ul aria-labelledby="products" class="dropdown-menu me-auto mb-2 mb-lg-0">
-              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Орион&trade; Корпоративная вики-страница</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Ценовые планы Orion</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="more" role="button">Дополнительно... <span class="caret"></span></a>
-            <ul aria-labelledby="more" class="dropdown-menu me-auto mb-2 mb-lg-0">
-              <li class="dropdown-item">
-                <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">Источник сайта</a>
-              </li>
-              <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-dark">Карты сайтов</li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.en">Английский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.es">Испанский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.de">Немецкий</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.fr">Французский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.ru">Русский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.he">Иврит</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.sv">шведский</a></li>
-              <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-dark">Таксономии</li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Категории</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/archives/index.html{{lang}}">Архивы</a></li>
-            </ul>
-          </li>
-          <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
-            active
-            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">На базе...</a>
-          </li>
-        </ul>
-		</div>
-        <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="d-flex form-inline right" id="search" method="GET">
-          <input name="lang" type="hidden" value="{{ lang }}">
-          <input name="markdown_search" type="hidden" value="1">
-          <input class="form-control me-2" name="regex" placeholder="Рекурсивный поиск PCRE" type="text" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
-	    </form>
-  </div>
-</header>
 
-{% block alert %}
-  {% if alert %}
+
+{{website}}
+  {{lang}}
   <div class="alert alert-dismissible alert-info container">
     <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal"></button>
-    {{ alert|markdown }}
+    {% if path|starts_with:"/bloggers.md" %}
   </div>
   {% endif %}
-{% endblock %}
+{{lang}}
 
 <div class="container theme-showcase" id="content">
-  {% block content %}
+  {% if path|starts_with:"/contact.md" %}
   <div class="breadcrumbs">
-      {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
+      {% endif %}&trade;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
         <img alt="Значок изменения" src="/images/edit.png" />
       </a>
   </div>
-  <h1>{{ headers.title|safe }}</h1>
-  <div class="jumbotron">{{ content|markdown }}</div>
-  {% endblock %}
+  <h1>{{lang}}</h1>
+  <div class="jumbotron">{{ lang }}</div>
+  {{ lang }}
 
-  <footer>{% block footer %}{% endblock footer %}</footer><!--
+  <footer>{{website}}{{lang}}</footer><!--
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
@@ -204,7 +148,7 @@
         }
 	}
   </script>
-  {% block javascript %}{% endblock %}
+  {{lang}}{% if path|starts_with:"/powered-by.md" %}
 </div>
 </body>
 </html>

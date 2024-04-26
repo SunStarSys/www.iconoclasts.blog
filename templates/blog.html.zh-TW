@@ -7,19 +7,19 @@
          <small>
            [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"0-9="}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"0-9="}}</span></a>]
            <em>
-			   <a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">Senast uppdaterad</a> av <b>{{ content|ssi|vcs_author:lang }}</b> den <b>{{ content|ssi|vcs_date:lang }}</b>
+			   <a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">上次更新時間</a>者：<b>{{ content|ssi|vcs_author:lang }}<b> 上的 </b>{{ content|ssi|vcs_date:lang }}</b>
 {% ifequal repos "public" %}
 			   &nbsp;
-			   <a href="https://github.com/SunStarSys/{{website}}/blob/trunk/content{{path}}"><i class="fa-brands fa-sm fa-github"></i>&nbsp;källa</a>
+			   <a href="https://github.com/SunStarSys/{{website}}/blob/trunk/content{{path}}"><i class="fa-brands fa-sm fa-github"></i>&nbsp;來源</a>
 {% endifequal %}
 			 </em>
          </small>
          <div class="right">
            <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch" id="watch">
-             <i class="fa fa-eye fa-emoji" title="klocka"></i>
+             <i class="fa fa-eye fa-emoji" title="手錶"></i>
            </a>
            <a href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1#:~:text={{path|parse_filename:"1.."}}" id="unwatch">
-            <i class="fa fa-eye-slash fa-emoji" title="mörda"></i>
+            <i class="fa fa-eye-slash fa-emoji" title="不觀測"></i>
            </a>
          </div>
          <br>&nbsp;

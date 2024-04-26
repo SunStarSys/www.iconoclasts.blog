@@ -36,240 +36,57 @@
 
 <pre><code data-lang="diff">{{ diff }}</code></pre>
 
-<pre class="text-primary">{{ blog }}</pre>
-</div>
-{% else %}
-{% ifequal specials "log=" %}
-<div class="card text-dark border-success mb-3">
-  <div class="card-header text-dark">Últimos cambios
-  </div>
-  <div class="card-body">
-    <dl>
-      {% for e in log %}
-      <dt><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
-        {{e.3|vcs_author:r.path_info}} <small><em> activado {{e.3|vcs_date:lang}} en {{e.3|vcs_time:lang}}</em></small></dt>
-        {% for k, v in e.1 %}
-      <dd>
-        <code>{{v.action}}</code>&nbsp;
-        {% ifequal k|parse_filename:2 ".md" %}
-        {% ifequal k|dirname|parse_filename:2 ".page" %}
-	      <a href="{{k|dirname|parse_filename:"0,1"|strip_prefix}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
-	    {% else %}
-		  <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
-        {% endifequal %}
-	    {% else %}
-        {% ifequal k|parse_filename:3 ".yml" %}
-        <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.json{{k|parse_filename:"3.."}}">{{k}}</a>
-        {% else %}
-		  <a href="/{{k|strip_prefix}}">{{k}}</a>
-        {% endifequal %}
-        <br>
-      </dd>
-        {% endifequal %}
-        {% endfor %}
-        <pre>{{e.2}}</pre>
-      {% endfor %}
-    </dl>
-  </div>
-</div>
-{% endifequal %}
-{% ifequal specials "notify=" %}
-<div class="card text-dark border-success mb-3">
-  <div class="card-header">Últimos cambios</div>
-  <div class="card-body">
-    <dl>
-      {% for e in log %}
-      <dt><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
-        {{e.3|vcs_author:r.path_info}} <small><em>
-            activado
-            {{e.3|vcs_date:lang}}
-            en
-            {{e.3|vcs_time:lang}}</em></small></dt>
-        {% for k, v in e.1 %}
-      <dd>
-        <code>{{v.action}}</code>&nbsp;
-        {% ifequal k|parse_filename:2 ".md" %}
-        <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
-        {% else %}
-        {% ifequal k|parse_filename:3 ".yml" %}
-        <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.json{{k|parse_filename:"3.."}}">{{k}}</a>
-        {% else %}
-		  <a href="/{{k|strip_prefix}}">{{k}}</a>
-        {% endifequal %}
-		  <br>
-      </dd>
-        {% endifequal %}
-        {% endfor %}
-        <pre>{{e.2}}</pre>
-      {% endfor %}
-    </dl>
-  </div>
-</div>
-{% endifequal %}
-{% endifequal %}
-{% if yaml %}
-{% filter markdown %}
-```yaml
-{{yaml|safe}}
-```
-{% endfilter %}
-{% endif %}
-<div class="container">
-  <div class="teaser">
-{{ graphviz|safe }}
-  </div>
-  <br>
-  {% for f in friends %}
-  {% if f.members %}
-  <div class="card text-dark border-success mb-3">
-    <div class="card-header"><a href="./?regex={{f.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText|safe }}</a></div>
-    <div class="card-body">
-      <ul>
-        {% for m in f.members|dictsort:"text" %}
-        <li class="card-text"><a href="./?regex={{m.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ m.displayText|safe }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-  {% else %}
-  <div class="card text-dark border-success mb-3">
-    <div class="card-header"><a href="./?regex={{f.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText|safe }}</a></div>
-    <div class="card-body">
-      <ul>
-        {% for g in f.groups|dictsort:"text" %}
-        <li class="card-text"><a href="./?regex={{g.text}};lang={{lang}};markdown_search={{markdown_search}}">{{g.displayText|safe}}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-  {% endif %}
-  {% endfor %}
-  {% if watch.0 %}
-  {% for w in watch %}
-  <div class="card text-dark border-warning mb-3">
-    <div class="card-header">
-      {% ifequal w.name|parse_filename:2 ".md" %}
-      {% ifequal w.name|dirname|parse_filename:2 ".page" %}
-	    <a href="{{path|dirname|append:"/"}}{{w.name|dirname|parse_filename:"0,1"|strip_prefix:"/"}}.html{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
-	  {% else %}
-        <a href="{{path|dirname|append:"/"|append:w.name|dirname|append:"/"}}{{w.name|basename:0}}.html{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
-      {% endifequal %}
-      {% else %}
-      {% ifequal w.name|parse_filename:2 ".yml" %}
-	    <a href="{{path|dirname|append:"/"|append:w.name|dirname|append:"/"}}{{w.name|basename:0}}.json{{w.name|parse_filename:"3.."}}">{{w.name|strip_prefix:"/"}}</a>
-      {% else %}
-        <a href="{{path|dirname|append:"/"|append:w.name}}">{{w.name|strip_prefix:"/"|default:"./"}}</a>
-	  {% endifequal %}
-      {% endifequal %}
-      <div class="right">
-        <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname|append:"/"|append:w.name}};action=unwatch">
-          <i class="fa fa-eye-slash fa-emoji" title="anular asociación"></i>
-        </a>
-      </div>
-    </div>
-    <div class="card-body">
-      <ul>
-        {% for u in w.watchers %}
-        <li class="card-text"><a href="./?regex={{u.text}};lang={{lang}};markdown_search={{markdown_search}}">{{u.displayText|safe}}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-  {% endfor %}
-  {% endif %}
-  {% ifequal specials "build=" %}
-  {% if blog %}
-  <pre class="text-primary">{{ blog }}</pre>
-  {% endif %}
-  {% if diff %}
-  {% filter markdown %}
 
-## [Diferencia](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}}).
 
-  {% endfilter %}
+## &nbsp;Diferencia](./?regex=diff={{ blog }};lang={% else %};markdown_search={% ifequal specials "log=" %}).
 
-<pre><code data-lang="diff">{{ diff }}</code></pre>
+  {% for e in log %}
 
-  {% endif %}
-  {% endifequal %}
-  {% if specials %}
-  {% ifequal specials "svnauthz=" %}
-  {% if blog %}
-  <pre class="text-primary">{{ blog }}</pre>
-  {% endif %}
-  {% endifequal %}
-  {% else %}
+<pre><code data-lang="diff">{{path|dirname|append:"/"}}</code></pre>
+
+  {{e.0}}
+  {{lang}}
+  {{e.0}}
+  {{e.3|vcs_author:r.path_info}}
+  {{e.3|vcs_date:lang}}
+  <pre class="text-primary">{{e.3|vcs_time:lang}}</pre>
+  {% for k, v in e.1 %}
+  {{v.action}}
+  {% ifequal k|parse_filename:2 ".md" %}
   <form class="form-inline row" method="POST">
-      {% if matches.0 %}
-	  <div id="meta"><pre>Coincidencias totales = {{ count }}, Total de documentos = {{ file_count }}. Ordenado por recuento de coincidencias &amp; Revisión del documento.</pre></div>
+      {% ifequal k|dirname|parse_filename:2 ".page" %}
+	  <div id="meta"><pre>Coincidencias totales = {{k|dirname|parse_filename:"0,1"|strip_prefix}}, Total de documentos = {{k|parse_filename:"3.."}}. Ordenado por recuento de coincidencias &nbsp; Revisión del documento.</pre></div>
 	  <div class="right" id="filter">
 	    <div class="d-flex float-end">
-    		<input name="hash" type="hidden" value="{{hash}}">
-	    	<input class="form-control me-2" name="filter" placeholder="Búsqueda recursiva de PCRE" type="text" value="{{ filter }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-filter fa-emoji" title="Filtro"></i></button>
+    		<input name="hash" type="hidden" value="{{k}}">
+	    	<input class="form-control me-2" type="text" name="filter"
+             placeholder="Búsqueda recursiva de CPRE" value="{% else %}" />[<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-filter fa-emoji" title="Filtro"></i></button>
         </div>
 	  </div>
       <div>
         <dl>
-          {% for m in matches %}
-          <dt>{{ m.0|safe }}</dt>
-          <input name="files" type="hidden" value="{{m.1}}" />
-          {% for hit in m.2 %}
-          <dd>{{ hit|safe }}</dd>
-          {% endfor %}
-          {% endfor %}
+          {{k|strip_prefix|parse_filename:"0,1"}}
+          <dt>{{k|parse_filename:"3.."}}</dt>
+          <input name="files" type="hidden" value="{{k}}" />
+          {% endifequal %}
+          <dd>{% else %}</dd>
+          {% ifequal k|parse_filename:3 ".yml" %}
+          {{k|strip_prefix|parse_filename:"0,1"}}
         </dl>
       </div>
-      {% endif %}
+      {{k|parse_filename:"3.."}}
   </form>
-  {% endif %}
+  {{k}}
 </div>
-{% endblock %}
+{% else %}
 
-{% block footer %}
+{{k|strip_prefix}}
+```yaml
+{{yaml|safe}}
+```
+{{k}}
 <script type="text/javascript">
   document.cookie = "can_search=1; path=/; max-age=" + (86400 * 30);
 </script>
-{% if duration %}
-<script async="" type="text/javascript">
-  var ctx = document.getElementById("myChart").getContext("2d");
-  const data = {{duration|json|safe}};
-  const values = data.map(x => x[1]);
-  var total = 0;
-  for (var i=0; i < values.length; ++i)
-      total += +values[i];
-
-  const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" +
-  x[4]);
-  var myChart = new Chart(
-      ctx,
-      {
-          type: "bar",
-          data: {
-              labels: labels.reverse(),
-              datasets: [{
-                  label: "Build Duration (s)",
-                  data: values.reverse(),
-                  backgroundColor: "#8f99fb",
-
-              }],
-          },
-          options: {
-              indexAxis: "y",
-              plugins: {
-                  title: {
-                      display: true,
-                      text: (total / 60).toFixed(0) + " build minutes this month (average build duration is " + (total / values.length).toFixed(0) + " s)",
-                  }
-              },
-              onClick: (e, elts, chart) => {
-                  if (elts) {
-                      const idx = elts[0].index;
-                      const revision = labels[idx].split(/:/)[0];
-                      document.location = "./?regex=build=" + revision + ";lang={{lang}};markdown_search={{markdown_search}}";
-                  }
-              },
-          },
-      });
-</script>
-{% endif %}
-{% endblock %}
+{% endifequal %}
+{% endifequal %}

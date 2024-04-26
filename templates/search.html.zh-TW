@@ -26,11 +26,11 @@
   {% ifequal specials "diff=" %}
   <div class="card text-dark border-success mb-3">
     <div class="card-header">{{meta|vcs_author:r.path_info}}
-      <small><em> aktiviert {{ meta|vcs_date:lang }} um {{meta|vcs_time:lang}}</em></small>
+      開啟 <small><em> {{ meta|vcs_date:lang }} 於{{meta|vcs_time:lang}}</em></small>
 	</div>
     <div class="card-body">
       <h3 class="card-title"><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=log={{
-      revision }};lang={{lang}};markdown_search={{markdown_search}}">Protokoll</a></h3>
+      revision }};lang={{lang}};markdown_search={{markdown_search}}">日誌</a></h3>
       <pre>{{ log|safe }}</pre>
   </div>
 
@@ -38,7 +38,7 @@
 
 
 
-## &nbsp;Differenz](./?regex=diff={{ blog }};lang={% else %};markdown_search={% ifequal specials "log=" %}).
+## &nbsp;差異](./?regex=diff={{ blog }};lang={% else %};markdown_search={% ifequal specials "log=" %}).
 
   {% for e in log %}
 
@@ -55,12 +55,12 @@
   {% ifequal k|parse_filename:2 ".md" %}
   <form class="form-inline row" method="POST">
       {% ifequal k|dirname|parse_filename:2 ".page" %}
-	  <div id="meta"><pre>Summe Übereinstimmungen = {{k|dirname|parse_filename:"0,1"|strip_prefix}}, Dokumente gesamt = {{k|parse_filename:"3.."}}. Nach Übereinstimmungsanzahl sortiert &nbsp; Dokumentversion</pre></div>
+	  <div id="meta"><pre>相符項目總計 = {{k|dirname|parse_filename:"0,1"|strip_prefix}}，文件總計 = {{k|parse_filename:"3.."}}繁體中文依比對計數排序&nbsp; 文件版次。</pre></div>
 	  <div class="right" id="filter">
 	    <div class="d-flex float-end">
     		<input name="hash" type="hidden" value="{{k}}">
 	    	<input class="form-control me-2" type="text" name="filter"
-             placeholder="PCRE Rekursive Suche" value="{% else %}" />[<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
+             placeholder=「PCRE 遞迴搜尋」value=」{% else %}" />[<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-filter fa-emoji" title="篩選"></i></button>
         </div>
 	  </div>
       <div>
