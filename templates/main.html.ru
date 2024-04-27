@@ -52,7 +52,7 @@
             <ul aria-labelledby="products" class="dropdown-menu me-auto mb-2 mb-lg-0">
               <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Орион&trade; Корпоративные Wiki</a></li>
               <li class="dropdown-item"><a class=«nav-link текст-темный»
-                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}»>Ценовые планы Orion</a></li>
+                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Ценовые планы Orion</a></li>
             </ul>
           </li>
 
@@ -90,7 +90,7 @@
           <input name="lang" type="hidden" value="{{ lang }}">
           <input name="markdown_search" type="hidden" value="1">
           <input class=form-control me-2 type=text name=regex
-               placeholder=«Рекурсивный поиск PCRE» value=»{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
+               placeholder="Рекурсивный поиск PCRE" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
 	    </form>
   </div>
 </header>
