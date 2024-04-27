@@ -50,3 +50,5 @@ Die einzigen Listenkonfigurationen, die vor `DMARC` sind die mit `-f`, `-t` oder
 Wenn Sie nicht mit der Zeit Schritt gehalten haben, gibt es eine kürzliche Bewegung zu Fuß, um starke [DMARC](http://en.wikipedia.org/wiki/DMARC) Policys, die nicht erfolgreiche Nachrichten ablehnen [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) Signaturtests. Facebook, Twitter, LinkedIn, Yahoo! und jetzt AOL haben diese Gebühr in Neuland geführt und die Mailinglistenbetreiber gezwungen, sich mit der Situation auseinanderzusetzen. Was `ezmlm-dmarc-filter.pl` tut, und dies ist nicht die einzige mögliche Lösung für das Problem, ist fallen die `DKIM-Signatur` Header für eine solche Domain und Hinzufügen eines `. UNGÜLTIG` Suffix für den Absender `Von` Kopfzeile.  Es hat den Vorteil, eine der einfachsten Lösungen zu sein, die funktioniert, also biete ich es hier an.  Bisher die Domains, die streng bereitstellen `DMARC` Richtlinien alle bieten angemessene `Antwort an` Kopfzeilen, so dass diese Änderungen von `ezmlm-dmarc-filter.pl`
 
 $Datum: 2023-01-19 22:58:40 +0000 (Do, 19 Jan 2023) $
+
+<!-- $Date$ $Author$ $Revision$ -->
