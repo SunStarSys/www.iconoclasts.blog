@@ -50,3 +50,5 @@ title: 郵件群組
 假如你沒有跟上時間，最近有個運動開始引進強勁[DMARC 系列](http://en.wikipedia.org/wiki/DMARC) 拒絕失敗訊息的原則[DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) 簽章測試。Facebook、Twitter、LinkedIn、Yahoo！及現在 AOL 已帶領這筆費用進入新領域，迫使郵寄清單操作員處理情況。什麼`ezmlm-dmarc-filter.pl` 這不是問題的唯一可能解決方法，而是刪除`DKIM 簽章` 任何這類網域的標頭，並新增`繁體中文無效` 寄件者的尾碼`起始` 標頭位址。它有利於成為最簡單的解決方案之一，所以我在這裡提供。到目前為止部署嚴格的網域`DMARC 系列` 政策全部提供適當`回函地址` 標頭，因此這些變更由`ezmlm-dmarc-filter.pl`
 
 $ 日期：2023-01-19 22:58:40 +0000 (2023 年 1 月 19 日星期四) $
+
+<!-- $Date$ $Author$ $Revision$ -->
