@@ -211,7 +211,7 @@
 	    <div class="d-flex float-end">
     		<input name="hash" type="hidden" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"
-             placeholder=「PCRE 遞迴搜尋」value=」{{ filter }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-filter fa-emoji" title="篩選"></i></button>
+             placeholder="PCRE 遞迴搜尋" value="{{ filter }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-filter fa-emoji" title="篩選"></i></button>
         </div>
 	  </div>
       <div>

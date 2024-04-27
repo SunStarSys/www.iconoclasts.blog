@@ -210,8 +210,8 @@
 	  <div class="right" id="filter">
 	    <div class="d-flex float-end">
     		<input name="hash" type="hidden" value="{{hash}}">
-	    	<input class=form-control me-2 type=text name=filter
-             placeholder=«Рекурсивный поиск PCRE» value=»{{ filter }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-filter fa-emoji" title="Фильтр"></i></button>
+	    	<input class="form-control me-2" type="text" name="filter"
+             placeholder="Рекурсивный поиск PCRE" value="{{ filter }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-filter fa-emoji" title="Фильтр"></i></button>
         </div>
 	  </div>
       <div>
