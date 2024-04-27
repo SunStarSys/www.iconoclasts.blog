@@ -1,0 +1,194 @@
+{% if bibliography %}
+{% filter markdown %}
+
+No de referencias
+
+{% for b in bibliography.content|dictsort:"author" %}
+{% ifequal b.type "article" %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: {{b.doi|utf8decode|cuts:"\\-"}}{% endif %}.
+{% endifequal %}
+{% ifequal b.type "book" %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. {{b.title|utf8decode|cuts:"\\="|safe}}. {% if b.volume %}Vol. {{b.volume}}. {% endif %}{% if b.number %}No {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"|safe}}, {{b.year}}.
+{% endifequal %}
+{% ifequal b.type "online" %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`URL`: {{b.url|utf8decode|cuts:"\\-"}}.{% endif %}{% if b.doi %}`DOI`" {{b.doi|utf8decode|cuts:"\\-"}}.{% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
+{% endifequal %}
+{% ifequal b.type "proceedings" %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: {{b.doi|utf8decode|cuts:"\\-"}}{% endif %}.
+{% endifequal %}
+{% ifequal b.type "phdthesis" %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.school|utf8decode|cuts:"\\-"|safe}} ({{b.year}}).
+{% endifequal %}
+{% endfor %}
+
+{% endfilter %}
+{% endif %}
+
+{% if permalink %}
+<span class="badge bg-info" style="color:#000">Enlace permanente</span>&nbsp;
+{% endif %}
+
+{% if headers.published %}
+<span class="badge bg-success text-white"><a href="{{headers.published|safe}}" style="color:#fff">Publicado</span></a>&nbsp;
+{% endif %}
+
+{% if archive_path %}{% ifequal headers.status "archived" %}
+<span class="badge bg-warning">
+  <a href="{{archive_path}}" style="color:#000">Archivado</a></span>&nbsp;
+{% endifequal %}{% endif %}
+
+{% for k in headers.keywords %}
+<span class="badge bg-danger text-white">
+  <a style="color:#fff"
+     href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}};markdown_search=1">#{{k}}</a>
+</span>&nbsp;
+{% endfor %}
+
+<p>
+  &nbsp;
+</p>
+
+{% for c in headers.categories %}
+<button type="button" class="btn btn-success">
+  <a style="color:#fff" href="{{category_root|default_if_none:".."}}/{{c}}">{{c}}</a></button>
+&nbsp;
+{% endfor %}
+
+<hr>
+<div class="card border-warning">
+	<form action="https://cms.sunstarsys.com/redirect" id="form" method="GET">
+    <input id="action" name="action" type="hidden" value="comment">
+    <input name="lang" type="hidden" value="{{lang|cut:"."}}">
+    <div class="card-header">
+      <h3 class="card-title">Comentarios {% if category_root %}{% if archive_root %} &nbsp;
+        <button type="submit" name="uri"
+                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.página/comment.md{{lang}}"
+                class="btn btn-sm btn-outline-warning">>>
+          Nuevo
+        </button>
+{% endif %}{% endif %}
+		</h3>
+    </div>
+
+<div class="card-body" id="comments">
+      {% for c in comments %}
+      {% if c.closed %}
+      {% else %}
+      <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
+        <header>
+          <h6 class="card-title" id="{{c.key}}">
+            <a class="reference-link" href="#{{c.key}}-link">{{c.headers.title}}</a>
+            por {{c.content|ssi|vcs_author:lang}}
+            en <em><time>{{c.content|ssi|vcs_date:lang}}</time></em>
+            {% if c.muted %}
+            {% else %}
+            {% if c.important %}
+            &nbsp;
+            <span class="badge bg-danger text-white">Importante.</span>
+            {% endif %}
+            {% if category_root %}{% if archive_root %}
+			  &nbsp;
+            <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
+                    value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
+              Responder
+            </button>
+			{% endif %}{% endif %}
+            {% endif %}
+          </h6>
+        </header>
+        <small>
+          <p class="card-text">{{c.content|removetags:"script"|markdown}}</p>
+          <hr>
+          <p>&nbsp;</p>
+        </small>
+      </article>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </form>
+</div>
+
+<hr>
+{% if category_root %}{% if archive_root %}
+<div class="card border-dark">
+  <div class="card-header">
+    <h3 class="card-title">Anexos &nbsp;
+    <button class="btn btn-sm btn-outline-dark" type="button"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Gestionar</a></button>
+</h3>
+  </div>
+  <div class="card-body">
+    <ul>
+      {% for a in attachments %}
+      <li><a href="{{a}}">{{a|basename:0}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="card-header">
+    <h3 class="card-title">Enlaces &nbsp;
+    <button class="btn btn-sm btn-outline-dark" type="button"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Gestionar</a></button></h3>
+  </div>
+  <div class="card-body">
+    {{ links.content|markdown }}
+  </div>
+</div>
+{% endif %}{% endif %}
+
+<script type="text/javascript">
+  function thread_comments() {
+      var html = "";
+      var current_level = 0;
+      var last_level = 0;
+      for (const e of $("article").toArray()) {
+          const id = e.getAttribute("id");
+          current_level = (id.length - 15) / 2;
+          if (current_level == last_level)
+              html += "</li><li>" + e.outerHTML;
+          else if (current_level == last_level + 1)
+              html += "<ul><li>" + e.outerHTML;
+          else if (current_level < last_level)
+              html += (new Array(last_level - current_level + 1)).join("</li></ul>") + "<li>" + e.outerHTML;
+          else
+              continue;
+          last_level = current_level;
+      }
+      html += (new Array(last_level + 1)).join("</li></ul>");
+      $("#comments").html(html);
+  }
+
+function clear_invalid_href() {
+      for (const e of $("article").find("a").toArray()) {
+          const hr = e.getAttribute("href");
+          if (hr && hr.length > 1 && hr.indexOf("#") == 0 && $(hr).length == 0)
+              $(e).removeAttr("href");
+      }
+  }
+
+thread_comments();
+  clear_invalid_href();
+</script>
+
+{% if deps.0 %}
+{% filter markdown %}
+--------
+
+## Índice
+
+<dl id="index">
+{% for d in deps %}
+<dt>
+
+{{d.1.content|ssi|img|removeattrs:"on\w+ style"}}
+
+</dt>
+<dd>
+
+- [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede|removetags:"script"|removeattrs:"on\w+"}} ... <small><em>{{d.1.content|ssi|vcs_date:lang}}
+
+--------
+
+</dd>
+{% endfor %}
+</dl>
+</div>
+{% endfilter %}
+{% endif %}

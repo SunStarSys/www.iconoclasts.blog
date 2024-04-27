@@ -32,7 +32,7 @@
 {% endblock %}
 {% block footer %}
 <div class="container">
-{% include "index.html" %}
+{% include "index.html"|append:lang %}
 </div>
 
 <style type="text/css">
