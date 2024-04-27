@@ -1,196 +1,196 @@
 @article{MS67,
-  Titel={Kurvatur och Lapplands egenvärden},
-  Tidskrift för differentialgeometri
-  författare={McKean, Henry P. och Singer, Isadore M.},
-  volym={1},
-  nummer={1-2},
-  sidor={43--69},
-  år={1967},
-  Utgivare={Lehigh University}
-
+  title=Korvatur och Lapplands egenvärden
+  journal=Differentialgeometri,
+  author={McKean, Henry P. och Singer, Isadore M.},
+  volume={1},
+  number={1-2},
+  pages={43--69},
+  year={1967},
+  publisher={Lehigh University}
+}
 
 @book{JC19,
-  författare:Conway, John B.},
+  author=Konway, John B.
   title={En kurs i funktionell analys},
-  volym={96},
-  år={2019},
-  utgivare={Springer}
-
+  volume={96},
+  year={2019},
+  publisher={Springer}
+}
 
 @article{CS92,
- författare:Conway, John H och Sloane, N. J. A.},
+ author=Conway, John H och Sloane, N. J. A.
  title={Fyra-dimensionella galler med samma teta-serie},
- tidskrift = International. Matematik. Res. Meddelanden
- volym={4},
- år={1992},
- sidor={93--96}
-
+ journal={Internat. Matematik. Res. Meddelanden
+ volume={4},
+ year={1992},
+ pages={93--96}
+}
 
 @article{DH11,
-  Katchev, Kiril och Hezari, Hamid
-  title={Omvända problem i spektralgeometri},
-  Journal={Inverse problems och applications: Inside Out II},
-  volym={60},
-  år={2011},
-  sidor={455--486}
-
+  author=Datchev, Kiril och Hezari, Hamid
+  title=Omvända problem i spektralgeometri
+  journal={Inverse problems and applications: Inside Out II},
+  volume={60},
+  year={2011},
+  pages={455--486}
+}
 
 @book{FBZ04,
- Fransk, Edvard och Ben-Zvi, David.
- Vertex algebror och algebraiska kurvor
- volym={88},
- Förlag: American Mathematical Soc.},
- år={2004}
-
+ author=Frenkel, Edward och Ben-Zvi, David
+ title={Vertex algebror och algebraiska kurvor},
+ volume={88},
+ publisher=Amerikansk matematisk soc.
+ year={2004}
+}
 
 @online{TF17,
-  Författare: Frank, Tobias
+  author={Franke, Tobias},
   title={Triple prod\-uct inte\-grals},
-  datum={2023-09-01},
+  date={2023-09-01},
   url={https://www.tobias-franke.eu/log/2017/04/19/triple-products.html}
-
+}
 
 @article{CG93,
-  Författare: Gordon, Carolyn
-  isospektral stängda riemanniska grenrör som inte är lokalt isometriska,
-  Tidskrift för differentialgeometri
-  volym={37},
-  nummer={3},
-  år={1993},
-  sidor={639--649}
-
+  author={Gordon, Carolyn},
+  title={Isospectral stängda Riemannian grenrör som inte är lokalt isometriska},
+  journal=Differentialgeometri,
+  volume={37},
+  number={3},
+  year={1993},
+  pages={639--649}
+}
 
 @article{GK80,
-  Guillemin, Victor och Kazhdan, David
+  author=Guillemin, Victor och Kazhdan, David
   title={Vissa inversa spektrala resultat för negativt böjda n-mångfalder},
-  Förhandlingar av symposier i ren matematik
-  volym={36},
-  sidor={301--312},
-  år={1980}
-
+  journal=Symposier i ren matematik
+  volume={36},
+  pages={301--312},
+  year={1980}
+}
 
 @article{LH68,
-  författare={Hörmander, Lars},
-  den spektrala funktionen hos en elliptisk operatör,
-  tidskrift={Mathematics Past and Present Fourier Integral Operators},
-  Utgivare={Springer Berlin Heidelberg},
-  år={1968},
-  sidor={217--242}
-
+  author=Lars,
+  title=Den spektrala funktionen hos en elliptisk operatör,
+  journal={Matematik tidigare och nuvarande Fourier Integral Operators},
+  publisher=Hotell nära Berlin Heidelberg
+  year={1968},
+  pages={217--242}
+}
 
 @book{AK01,
-  Författare={Knapp, Anthony W},
+  author={Knapp, Anthony W},
   title={Representationsteori för semisimpletta grupper: en översikt baserad på exempel},
-  Utgivare={Princeton University Press},
-  år={2001}
-
+  publisher=Hotell nära Princeton University Press
+  year={2001}
+}
 
 @online{LS18,
-  Författare: Lu, Jianfeng och Steinerberger, Stefan
-  title={Produkter från elliptiska eigenfunktioner},
+  author=Lu, Jianfeng och Steinerberger, Stefan
+  title={På punktvisa produkter av elliptiska egenfunktioner},
   archivePrefix={arXiv},
   eprint={1810.01024},
-  år={2018}
-
+  year={2018}
+}
 
 @proceedings{JM64,
-  Författare:Milnor, John
+  author=Milnor, John
   title={Egenvärden för Laplace-operatorn på vissa grenrör},
-  Förhandlingar av National Academy of Sciences,
-  volym={51},
-  nummer={4},
-  år={1964},
-  sidor={542--542}
-
+  journal=för National Academy of Sciences,
+  volume={51},
+  number={4},
+  year={1964},
+  pages={542--542}
+}
 
 @article{NRR22,
-  Nilsson, Erik och Rowlett, Julie och Rydell, Felix,
-  isospektral problem för platt tori från tre perspektiv,
-  Förlag: Bulletin of the American Mathematical Society
-  volym={60},
-  nummer={1},
-  år={2023},
-  sidor={39--83}
-
+  author={Nilsson, Erik och Rowlett, Julie och Rydell, Felix}
+  title=Det isospektrala problemet för platt tori ur tre perspektiv;
+  journal=från American Mathematical Society,
+  volume={60},
+  number={1},
+  year={2023},
+  pages={39--83}
+}
 
 @book{RS75,
-  Författare: Reed, Michael och Simon, Barry
-  title={Metoder för modern matematisk fysik II: Fourieranalys, självförverkligande},
-  volym={2},
+  author=Reed, Michael och Simon, Barry
+  title={Metoder för modern matematisk fysik II: Fourieranalys, självstyre},
+  volume={2},
   publisher={Elsevier},
-  år={1975}
-
+  year={1975}
+}
 
 @article{PS94,
-  Författare: Sarnak, Peter
-  title={Egenfunktionernas produktintegration},
+  author=Sarnak, Peter,
+  title={Integraler av produkter av egenfunktioner},
   journal={IMRN},
-  volym={6},
-  år={1994},
-  sidor={251--260}
-
+  volume={6},
+  year={1994},
+  pages={251--260}
+}
 
 @phdthesis{AS94,
-  författare:Schiemann, Alexander,
-  Titel={TernÃ¤re positiv definitiv quad\-ratische Formen mit gleichen Darstellungs\-zahlen},
-  utgivare={Bonner Mathe\matische Schriften},
-  skola = Universität Bonn,
-  volym={268},
-  år={1993}
-
+  author=Schiemann, Alexander
+  title={TernÃ¤re positiv definitiv quad\-ratische Formen mit gleichen Darstellungs\-zahlen},
+  publisher={Bonner Mathe\matische Schriften}
+  school=Universität Bonn
+  volume={268},
+  year={1993}
+}
 
 @article{TS85,
-  Författare: Sunada, Toshikazu
-  titel={Riemanniska beläggningar och isospektrala grenrör},
-  tidskrift={Annaler av matematik},
-  volym={121},
-  nummer={1},
-  år={1985},
-  sidor={169--186}
-
+  author=Solada, Toshikazu
+  title={Riemannbeläggningar och isospektralmångfalder},
+  journal=Annorlunda matematik,
+  volume={121},
+  number={1},
+  year={1985},
+  pages={169-186}
+}
 
 @article{ST80,
-  Författare: Tanno, Shukichi
-  title={En karakterisering av de kanoniska sfärerna genom spektrumet},
-  journal =Math. Z.},
-  volym={175},
-  nummer={3},
-  år={1980},
-  sidor={267--274}
-
+  author={Tanno, Shukichi}
+  title={En karakterisering av de kanoniska sfärerna av spektrumet},
+  journal={Math. Z.},
+  volume={175},
+  number={3},
+  year={1980},
+  pages={267--274}
+}
 
 @book{MT13,
-  Författare: Taylor, Michael
+  author={Taylor, Michael},
   title={Partiella differentialekvationer II: kvalitativa studier av linjära ekvationer},
-  volym={116},
+  volume={116},
   publisher={Springer Science \&amp; Business Media},
-  år={2013}
-
+  year={2013}
+}
 
 @article{HW11,
-  Författare: Weyl, Hermann
-  title={Äber die asymp\-totische Ver\-teilung der Eigen\-werte},
+  author={Weyl, Hermann}
+  title={Ãber die asymp\-totische Ver\-teilung der Eigen\-werte},
   journal={Nach\-richten der KÃ¶nig\-lichen Gesell\-schaft der Wissen\-schaften zu GÃ¶ttingen},
-  år={1911},
-  sidor={110--117}
-
+  year={1911},
+  pages={110--117}
+}
 
 @article{EW22,
-  Författare: Wyman, Emmett L
+  author={Wyman, Emmett L},
   title={Trianglar och trippelprodukter av Laplace egenfunktioner},
-  Journal={Journal of Functional Analysis},
-  volym={282},
-  nummer={8},
-  år={2022},
+  journal={Journal of Functional Analysis},
+  volum={282},
+  number={8},
+  year={2022},
   doi = {https://doi.org/10.1016/j.jfa.2022.109404}
-
+}
 
 @article{GZ97,
-  författare={Zhou, Gengqiang},
-  title={Kompakthet hos isospektrala kompakta grenrör med avgränsade krökar},
-  journal =Pacific J. Matematik},
-  volym={181},
-  nummer={1},
-  år={1997},
-  sidor={187--200}
+  author={Zhou, Gengqiang},
+  title={Kompakthet av isospektrala kompakta grenrör med avgränsade krökar},
+  journal={Pacific J. Matematik},
+  volume={181},
+  number={1},
+  year={1997},
+  pages={187--200}
 }

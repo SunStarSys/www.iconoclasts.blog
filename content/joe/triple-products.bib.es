@@ -1,196 +1,196 @@
 @article{MS67,
-  title={Curvature y los valores propios de Laplacian},
-  diario={Diario de geometría diferencial},
-  autor={McKean, Henry P. y Singer, Isadore M.},
-  volumen={1},
-  número={1-2},
-  páginas={43--69},
-  año={1967},
-  editor={Universidad de Lehigh}
-
+  title=La curvatura y los valores propios de la Laponia,
+  journal={Diario de geometría diferencial},
+  author={McKean, Henry P. y Singer, Isadore M.},
+  volume={1},
+  number={1-2},
+  pages={43--69},
+  year={1967},
+  publisher={Universidad Lehigh}
+}
 
 @book{JC19,
-  autor={Conway, John B.},
-  title={Un curso en análisis funcional},
-  volumen={96},
-  año={2019},
-  editor={Springer}
-
+  author={Conway, John B.},
+  title={Un curso de análisis funcional},
+  volume={96},
+  year={2019},
+  publisher={Springer}
+}
 
 @article{CS92,
- autor={Conway, John H y Sloane, N. J. A.},
- title={Rejillas de cuatro dimensiones con la misma serie theta},
- diario={Internat. Matemáticas Res. Avisos,
- volumen={4},
- año={1992},
- páginas={93--96}
-
+ author={Conway, John H y Sloane, N. J. A.},
+ title={Pantallas de cuatro dimensiones con la misma serie theta},
+ journal={Internat. Matemáticas Res. Avisos,
+ volume={4},
+ year={1992},
+ pages={93--96}
+}
 
 @article{DH11,
-  autor={Datchev, Kiril y Hezari, Hamid},
+  author=Datchev, Kiril y Hezari, Hamid,
   title={Problemas inversos en geometría espectral},
   journal={Problemas y aplicaciones inversos: Inside Out II},
-  volumen={60},
-  año={2011},
-  páginas={455--486}
-
+  volume={60},
+  year={2011},
+  pages={455--486}
+}
 
 @book{FBZ04,
- autor={Frenkel, Edward y Ben-Zvi, David},
- title={Algebras de vértice y curvas algebraicas},
- volumen={88},
- editor={American Mathematical Soc.},
- año={2004}
-
+ author=Frenkel, Edward y Ben-Zvi, David,
+ title={Vertex álgebras y curvas algebraicas},
+ volume={88},
+ publisher={American Mathematical Soc.},
+ year={2004}
+}
 
 @online{TF17,
-  autor={Franke, Tobias},
-  title={Producto triple\-ucte int\grals},
-  fecha={2023-09-01},
-  URL={https://www.tobias-franke.eu/log/2017/04/19/triple-products.html}
-
+  author={Franke, Tobias},
+  title={Triple prod\-uct int\grals},
+  date={2023-09-01},
+  url={https://www.tobias-franke.eu/log/2017/04/19/triple-products.html}
+}
 
 @article{CG93,
-  autor={Gordon, Carolyn},
-  title={Multiplicadores de Riemannian cerrados isospectrales que no son isométricos locales},
-  diario={Diario de geometría diferencial},
-  volumen={37},
-  número={3},
-  año={1993},
-  páginas={639--649}
-
+  author={Gordon, Carolyn},
+  title={Manifolds Riemannian cerrados isospectrales que no son isométricos localmente},
+  journal={Diario de geometría diferencial},
+  volume={37},
+  number={3},
+  year={1993},
+  pages={639--649}
+}
 
 @article{GK80,
-  autor={Guillemin, Víctor y Kazhdan, David},
-  title={Algunos resultados espectrales inversos para n-manifolds curvado negativamente},
-  diario={Procedimientos de Simposios en Matemáticas Puras},
-  volumen={36},
-  páginas={301--312},
-  año={1980}
-
+  author={Guillemin, Victor y Kazhdan, David},
+  title={Algunos resultados espectrales inversos para n-manifolds curvados negativamente},
+  journal={Procedimientos de Simposios en Matemáticas Puras},
+  volume={36},
+  pages={301--312},
+  year={1980}
+}
 
 @article{LH68,
-  autor={Hörmander, Lars},
+  author={Hörmander, Lars},
   title={La función espectral de un operador elíptico},
-  journal={Mathematics Past and Present Fourier Integral Operators} (Operadores integrales de Fourier pasados y presentes),
-  editor={Springer Berlin Heidelberg},
-  año={1968},
-  páginas={217--242}
-
+  journal={Operadores integrales de Fourier pasados y presentes en matemáticas},
+  publisher={Springer Berlin Heidelberg},
+  year={1968},
+  pages={217--242}
+}
 
 @book{AK01,
-  autor={Knapp, Anthony W},
+  author={Knapp, Anthony W},
   title={Teoría de la representación de grupos semisímiles: una visión general basada en ejemplos},
-  editorial={Princeton University Press},
-  año={2001}
-
+  publisher={Princeton University Press},
+  year={2001}
+}
 
 @online{LS18,
-  autor={Lu, Jianfeng y Steinerberger, Stefan},
-  title={Sobre productos puntuales de autofunciones elípticas},
+  author={Lu, Jianfeng y Steinerberger, Stefan},
+  title={En cuanto a los productos puntuales de las autofunciones elípticas},
   archivePrefix={arXiv},
-  eprint={1810.01024},
-  año={2018}
-
+  eprint={1810,01024},
+  year={2018}
+}
 
 @proceedings{JM64,
-  autor={Milnor, John},
-  title={Eigenvalues del operador Laplace en determinados manifolds},
-  revista={Actas de la Academia Nacional de Ciencias},
-  volumen={51},
-  número={4},
-  año={1964},
-  páginas={542--542}
-
+  author={Milnor, John},
+  title={Valores propios del operador de Laplace en determinados colectores},
+  journal={Actas de la Academia Nacional de Ciencias},
+  volume={51},
+  number={4},
+  year={1964},
+  pages={542--542}
+}
 
 @article{NRR22,
-  autor={Nilsson, Erik y Rowlett, Julie y Rydell, Felix},
+  author={Nilsson, Erik y Rowlett, Julie y Rydell, Felix},
   title={El problema isospectral para el tori plano desde tres perspectivas},
-  revista={Boletín de la Sociedad Matemática Americana},
-  volumen={60},
-  número={1},
-  año={2023},
-  páginas={39--83}
-
+  journal=Boletín de la Sociedad Matemática Americana,
+  volume={60},
+  number={1},
+  year={2023},
+  pages={39--83}
+}
 
 @book{RS75,
-  autor={Reed, Michael y Simon, Barry},
+  author=Reed, Michael y Simon, Barry,
   title={Métodos de la física matemática moderna II: Análisis de Fourier, autoconjunción},
-  volumen={2},
-  editor={Elsevier},
-  año={1975}
-
+  volume={2},
+  publisher={Elsevier},
+  year={1975}
+}
 
 @article{PS94,
-  autor={Sarnak, Peter},
-  title={Integrales de productos de eigenfunctions},
-  diario={IMRN},
-  volumen={6},
-  año={1994},
-  páginas={251--260}
-
+  author={Sarnak, Peter},
+  title={Integrales de productos de funciones propias},
+  journal={IMRN},
+  volume={6},
+  year={1994},
+  pages={251--260}
+}
 
 @phdthesis{AS94,
-  autor={Schiemann, Alexander},
+  author={Schiemann, Alexander},
   title={Ternäre positiv definida quad\-ratische Formen mit gleichen Darstellungs\-zahlen},
   publisher={Bonner Mathe\matische Schriften},
-  escuela={Universität Bonn},
-  volumen={268},
-  año={1993}
-
+  school={Universität Bonn},
+  volume={268},
+  year={1993}
+}
 
 @article{TS85,
-  autor={Sunada, Toshikazu},
-  title={Recubrimientos riemannianos y colectores isospectrales},
-  diario={Annals of Mathematics},
-  volumen={121},
-  número={1},
-  año={1985},
-  páginas={169--186}
-
+  author={Sunada, Toshikazu},
+  title={Riemannian cubre y manifolds isospectrales},
+  journal={Anales de Matemáticas},
+  volume={121},
+  number={1},
+  year={1985},
+  pages={169--186}
+}
 
 @article{ST80,
-  autor={Tanno, Shukichi},
+  author={Tanno, Shukichi},
   title={Caracterización de las esferas canónicas por el espectro},
-  diario={Math}. Z.},
-  volumen={175},
-  número={3},
-  año={1980},
-  páginas={267--274}
-
+  journal={Math. Z.},
+  volume={175},
+  number={3},
+  year={1980},
+  pages={267--274}
+}
 
 @book{MT13,
-  autor={Taylor, Michael},
-  title={Equipos diferenciales parciales II: estudios cualitativos de ecuaciones lineales},
-  volumen={116},
-  editor={Springer Science \&amp; Business Media},
-  año={2013}
-
+  author=Taylor, Michael,
+  title=Ecuaciones diferenciales parciales II: estudios cualitativos de ecuaciones lineales,
+  volume={116},
+  publisher={Springer Science \&amp; Business Media},
+  year={2013}
+}
 
 @article{HW11,
-  autor={Weyl, Hermann},
-  title={éber die asymp\-totische Ver\-teilung der Eigen\-werte},
+  author={Weyl, Hermann},
+  title={Ãber die asymp\-totische Ver\-teilung der Eigen\-werte},
   journal={Nach\-richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu Göttingen},
-  año={1911},
-  páginas={110--117}
-
+  year={1911},
+  pages={110--117}
+}
 
 @article{EW22,
-  autor={Wyman, Emmett L},
-  title={Triángulos y triples productos de Laplace eigenfunctions},
-  journal={Asiento de Análisis Funcional},
-  volumen={282},
-  número={8},
-  año={2022},
+  author={Wyman, Emmett L},
+  title={Triángulos y productos triples de las funciones propias de Laplace},
+  journal={Asiento de análisis funcional},
+  volum={282},
+  number={8},
+  year={2022},
   doi = {https://doi.org/10.1016/j.jfa.2022.109404}
-
+}
 
 @article{GZ97,
-  autor={Zhou, Gengqiang},
+  author={Zhou, Gengqiang},
   title={Compactitud de los colectores compactos isospectrales con curvaturas delimitadas},
-  diario={Pacific J. Matemáticas,
-  volumen={181},
-  número={1},
-  año={1997},
-  páginas={187--200}
+  journal=El Pacífico J. Matemáticas,
+  volume={181},
+  number={1},
+  year={1997},
+  pages={187--200}
 }
