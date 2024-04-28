@@ -7,70 +7,77 @@ dependencies: ../triple-products.bib.fr
   id: MS67
   journal: Journal de géométrie différentielle
   number: 1-2
-  pages: 43--69
-  publisher: Université supérieure
+  pages: 43-69
+  publisher: Université Lehigh
+  title: La courbure et les valeurs propres du Laplacien
   type: article
   volume: '1'
   year: '1967'
-- id: JC19
-  publisher: Springer
+- author: Conway, John B.
+  id: JC19
+  publisher: Printemps
   title: Un cours d'analyse fonctionnelle
   type: book
-  volume: '96'
+  volume: (96)
   year: '2019'
 - author: Conway, John H et Sloane, N. J. A.
   id: CS92
-  pages: 93--96
-  title: Trilles à quatre dimensions avec la même série thêta
+  journal: Interne. Math. Rés. Avis
+  pages: 93-96
+  title: Treillis à quatre dimensions avec la même série thêta
   type: article
   volume: '4'
   year: '1992'
 - author: Datchev, Kiril et Hezari, Hamid
   id: DH11
   journal: 'Problèmes et applications inverses : Inside Out II'
-  pages: 455--486
+  pages: 455-486
   title: Problèmes inverses de géométrie spectrale
   type: article
   volume: '60'
   year: '2011'
 - author: Frenkel, Edward et Ben-Zvi, David
   id: FBZ04
-  title: Algèbres Vertex et courbes algébriques
+  publisher: Soc mathématique américain.
+  title: Algèbres du sommet et courbes algébriques
   type: book
-  volume: '88'
+  volume: (88)
   year: '2004'
-- author: Franke, Tobias
+- author: Franke (Tobias)
   date: 2023-09-01
   id: TF17
   title: Triple prod\-uct inte\-grals
   type: online
   url: https://www.tobias-franke.eu/log/2017/04/19/triple-products.html
-- author: Gordon, Carolyn
+- author: Gordon (ville)
   id: CG93
   journal: Journal de géométrie différentielle
   number: '3'
-  pages: 639--649
+  pages: 639-649
+  title: Variétés riemanniennes fermées isospectrales qui ne sont pas localement isométriques
   type: article
-  volume: '37'
+  volume: (37)
   year: '1993'
 - author: Guillemin, Victor et Kazhdan, David
   id: GK80
-  pages: 301--312
-  title: Certains résultats spectraux inverses pour n-manifolds incurvés négativement
+  journal: Symposium en mathématiques pures
+  pages: 301-312
+  title: Quelques résultats spectraux inverses pour n-manifolds incurvés négativement
   type: article
   volume: '36'
   year: '1980'
 - author: HÃ¶rmander, Lars
   id: LH68
   journal: Opérateurs intégraux de Fourier passés et présents
-  pages: 217--242
+  pages: 217-242
   publisher: Springer Berlin Heidelberg
   title: La fonction spectrale d'un opérateur elliptique
   type: article
   year: '1968'
 - author: Knapp, Anthony W
   id: AK01
-  title: 'Théorie de la représentation des groupes semi-simples : un aperçu basé sur
+  publisher: Princeton University Press
+  title: 'Théorie de représentation des groupes semi-simples : un aperçu basé sur
     des exemples'
   type: book
   year: '2001'
@@ -83,83 +90,94 @@ dependencies: ../triple-products.bib.fr
   year: '2018'
 - author: Milnor, John
   id: JM64
+  journal: Actes de l'Académie nationale des sciences
   number: '4'
-  pages: 542--542
-  title: Valeurs propres de l'opérateur de Laplace sur certains collecteurs
+  pages: 542-542
+  title: Valeurs propres de l'opérateur Laplace sur certains collecteurs
   type: proceedings
-  volume: '51'
+  volume: (51)
   year: '1964'
 - author: Nilsson, Erik et Rowlett, Julie et Rydell, Felix
   id: NRR22
   journal: Bulletin de la Société mathématique américaine
   number: '1'
-  pages: 39--83
-  title: Le problème isospectral du tori plat sous trois perspectives
+  pages: 39-83
+  title: Le problème isospectral du tori plat sous trois angles
   type: article
   volume: '60'
   year: '2023'
 - author: Reed, Michael et Simon, Barry
   id: RS75
   publisher: Elsevier
+  title: 'Méthodes de la physique mathématique moderne II : analyse de Fourier, auto-adjonction'
   type: book
   volume: '2'
   year: '1975'
-- author: Sarnak, Pierre
+- author: Sarnak, Peter
   id: PS94
   journal: IMRN
   pages: 251-260
-  title: Intégrales des produits des fonctions propres
+  title: Intégrations de produits de eigenfunctions
   type: article
   volume: '6'
   year: '1994'
-- author: Schiemann, Alexandre
+- author: Schiemann, Alexander
   id: AS94
   publisher: Bonner Mathe\matische Schriften
-  title: TernÃ¤re positiv définitivement quad\-ratische Formen mit gleichen Darstellungs\-zahlen
+  school: Université de Bonn
+  title: TernÃ¤re positiv définitif quad\-ratische Formen mit gleichen Darstellungs\-zahlen
   type: phdthesis
-  volume: '268'
+  volume: (268)
   year: '1993'
 - author: Sunada, Toshikazu
   id: TS85
+  journal: Annales de mathématiques
   number: '1'
-  pages: 169--186
+  pages: 169-186
+  title: Revêtements riemanniens et collecteurs isospectraux
   type: article
-  volume: '121'
+  volume: (121)
   year: '1985'
-- author: Tanno, Shukichi
+- author: Tanno (Shukichi)
   id: ST80
+  journal: Math. Z.
   number: '3'
-  pages: 267--274
+  pages: 267-274
   title: Une caractérisation des sphères canoniques par le spectre
   type: article
-  volume: '175'
+  volume: (175)
   year: '1980'
 - author: Taylor, Michael
   id: MT13
-  publisher: Springer Science \&amp; Médias commerciaux
+  publisher: Springer Science \&amp; Médias d'affaires
+  title: 'Équations différentielles partielles II : études qualitatives d''équations
+    linéaires'
   type: book
-  volume: '116'
+  volume: (116)
   year: '2013'
-- author: Weyl, Hermann
+- author: Weyl (Hermann)
   id: HW11
   journal: Nach\-richten der KÃ¶nig\-lichen Gesell\-schaft der Wissen\-schaften zu
     GÃ¶ttingen
-  pages: 110--117
+  pages: 110-117
   title: Ãber die asymp\-totische Ver\-teilung der Eigen\-werte
   type: article
   year: '1911'
-- doi: https://doi.org/10.1016/j.jfa.2022.109404
+- author: Wyman, Emmett L
+  doi: https://doi.org/10.1016/j.jfa.2022.109404
   id: EW22
-  journal: Journal of Functional Analysis
+  journal: Journal d'analyse fonctionnelle
   number: '8'
+  title: Triangles et triple produits de Laplace eigenfunctions
   type: article
-  volum: '282'
+  volum: (282)
   year: '2022'
 - author: Zhou, Gengqiang
   id: GZ97
+  journal: Pacific J. Mathématique
   number: '1'
   pages: 187-200
-  title: Compactité des collecteurs compacts isospectraux à courbures délimitées
+  title: Compacité des collecteurs compacts isospectraux à courbures délimitées
   type: article
-  volume: '181'
+  volume: (181)
   year: '1997'
