@@ -63,7 +63,7 @@
                 <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">Источник сайта</a>
               </li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-dark">Карты сайтов</li>
+              <li class="dropdown-header text-dark">i18n</li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Английский</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Испанский</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">Немецкий</a></li>
