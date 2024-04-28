@@ -124,7 +124,7 @@ dependencies: ../triple-products.bib.sv
   id: AS94
   publisher: Bonner Mathe\matische Schriften
   school: Universität Bonn
-  title: TernÃ¤re positiv definitiv quad\-ratische Formen mit gleichen Darstellungs\-zahlen
+  title: Ternäre positiv definitiv quad\-ratische Formen mit gleichen Darstellungs\-zahlen
   type: phdthesis
   volume: '268'
   year: '1993'
@@ -155,10 +155,10 @@ dependencies: ../triple-products.bib.sv
   year: '2013'
 - author: Weyl, Hermann
   id: HW11
-  journal: Nach\-richten der KÃ¶nig\-lichen Gesell\-schaft der Wissen\-schaften zu
-    GÃ¶ttingen
+  journal: Nach\-richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu
+    Göttingen
   pages: 110-117
-  title: Ãber die asymp\-totische Ver\-teilung der Eigen\-werte
+  title: Über die asymp\-totische Ver\-teilung der Eigen\-werte
   type: article
   year: '1911'
 - author: Wyman, Emmett L

@@ -133,7 +133,7 @@ dependencies: ../triple-products.bib.ru
   id: TS85
   journal: Анналы математики
   number: '1'
-  pages: 169--186
+  pages: 169-186
   title: Римановые покрытия и изоспектральные манифольды
   type: article
   volume: '121'
@@ -157,9 +157,9 @@ dependencies: ../triple-products.bib.ru
   year: 2013 год
 - author: Вейль
   id: HW11
-  journal: Nach\richten der K¶nig\-lichen Gesell\-schaft der Wissen\-schaften zu G¶ttingen
+  journal: Nach\richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu Геттинген
   pages: 110--117
-  title: Aber умереть asymp\-totische Ver\-teilung der Eigen\-werte
+  title: Uber умереть asymp\-totische Ver\-teilung der Eigen\-werte
   type: article
   year: 1911 год
 - author: Уайман, Эмметт Л

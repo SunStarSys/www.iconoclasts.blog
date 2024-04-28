@@ -125,7 +125,7 @@ dependencies: ../triple-products.bib.es
 - author: Schiemann, Alexander
   id: AS94
   publisher: Bonner Mathe\matische Schriften
-  school: Universidad de Bonn
+  school: Universität Bonn
   title: Ternäre positiv definido quad\-ratische Formen mit gleichen Darstellungs\-zahlen
   type: phdthesis
   volume: '268'
@@ -161,7 +161,7 @@ dependencies: ../triple-products.bib.es
   journal: Nach\-richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu
     Göttingen
   pages: 110--117
-  title: Ãber die asymp\-totische Ver\-teilung der Eigen\-werte
+  title: Über die asymp\-totische Ver\-teilung der Eigen\-werte
   type: article
   year: '1911'
 - author: Wyman, Emmett L
