@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang|cut:"." }}">
+<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}>
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -39,7 +39,7 @@
           <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+<div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
           <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
             active
@@ -56,7 +56,7 @@
             </ul>
           </li>
 
-          <li class="nav-item dropdown">
+<li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="more" role="button">Más... <span class="caret"></span></a>
             <ul aria-labelledby="more" class="dropdown-menu me-auto mb-2 mb-lg-0">
               <li class="dropdown-item">
@@ -64,14 +64,14 @@
               </li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Mapas de sitio</li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.en">Español</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.es">Español</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.de">Alemán</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.fr">Francés</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.zh-TW">Chino</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.ru">Ruso</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.he">Hebreo</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/sitemap.html.sv">Sueco</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.en">Español</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.es">Español</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.de">Alemán</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.fr">Francés</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.ru">Ruso</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.zh-TW">Chino</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.he">Hebreo</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.sv">Sueco</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Taxonomías</li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Categorías</a></li>
@@ -79,7 +79,7 @@
             </ul>
           </li>
 
-          <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
+<li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             active
             {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">Desarrollado por...</a>
           </li>
@@ -115,14 +115,14 @@
   <div class="jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-  <footer>{% block footer %}{% endblock footer %}</footer><!--
+<footer>{% block footer %}{% endblock footer %}</footer><!--
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
   <script src="/editor.md/js/jquery.flowchart.min.js"></script>
   <script src="/editor.md/js/sequence-diagram.min.js"></script> -->
 
-  <script src="/editor.md/js/d3.min.js"></script>
+<script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
   <script src="/editor.md/js/d3-graphviz.js"></script>
   <script src="/editor.md/js/mermaid.min.js"></script>
@@ -144,7 +144,7 @@
         CodeMirror.colorize();
     }
 
-    if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
+if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {
         for (const h1 of document.getElementsByTagName("h1")) {
             var html = `<div id="analytics"><br><div class="card border-warning">
@@ -170,7 +170,7 @@
         }
     }
 
-    else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
+else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
   </script>
@@ -183,7 +183,7 @@
             });
         }
 
-        if (permission === "granted") {
+if (permission === "granted") {
 		   var revision;
            var m = document.cookie.match(/last=([0-9]+)/);
            if (m)
