@@ -182,9 +182,9 @@ thread_comments();
 </dt>
 <dd>
 
-  - [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede|removetags:"script"|removeattrs:"on\w+"}} ... <small><em>{{d.1.content|ssi|vcs_date:lang}}</em></small>
+<ul><li><a href="{{d.0|urlencode}}">{{d.1.headers.title|safe}}</a>&mdash; {{d.1.content|ssi|lede|removetags:"script"|removeattrs:"on\w+"}} ... <small><em>{{d.1.content|ssi|vcs_date:lang}}</em></small></li></ul>
 
---------
+<hr>
 
 </dd>
 {% endfor %}
