@@ -134,7 +134,7 @@
   author={Schiemann, Alexander},
   title={Ternäre positiv definido quad\-ratische Formen mit gleichen Darstellungs\-zahlen},
   publisher={Bonner Mathe\matische Schriften},
-  school={Universidad de Bonn},
+  school={Universität Bonn},
   volume={268},
   year={1993}
 }
@@ -169,7 +169,7 @@
 }
 @article{HW11,
   author={Weyl, Hermann},
-  title={Ãber die asymp\-totische Ver\-teilung der Eigen\-werte},
+  title={Über die asymp\-totische Ver\-teilung der Eigen\-werte},
   journal={Nach\-richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu Göttingen},
   year={1911},
   pages={110--117}

@@ -146,7 +146,7 @@
   volume={121},
   number={1},
   year={1985 год},
-  pages={169--186}
+  pages={169-186}
 }
 }
 @article{ST80,
@@ -169,8 +169,8 @@
 }
 @article{HW11,
   author={Вейль},
-  title={Aber умереть asymp\-totische Ver\-teilung der Eigen\-werte},
-  journal={Nach\richten der K¶nig\-lichen Gesell\-schaft der Wissen\-schaften zu G¶ttingen},
+  title={Uber умереть asymp\-totische Ver\-teilung der Eigen\-werte},
+  journal={Nach\richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu Геттинген},
   year={1911 год},
   pages={110--117}
 }

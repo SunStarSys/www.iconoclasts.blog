@@ -132,7 +132,7 @@
 }
 @phdthesis{AS94,
   author={Schiemann},
-  title={TernÃ¤re positiv definitiv quad\-ratische Formen mit gleichen Darstellungs\-zahlen},
+  title={Ternäre positiv definitiv quad\-ratische Formen mit gleichen Darstellungs\-zahlen},
   publisher={Bonner Mathe\matische Schriften},
   school={Universität Bonn},
   volume={268},
@@ -169,8 +169,8 @@
 }
 @article{HW11,
   author={Weyl, Hermann},
-  title={Ãber die asymp\-totische Ver\-teilung der Eigen\-werte},
-  journal={Nach\-richten der KÃ¶nig\-lichen Gesell\-schaft der Wissen\-schaften zu GÃ¶ttingen},
+  title={Über die asymp\-totische Ver\-teilung der Eigen\-werte},
+  journal={Nach\-richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu Göttingen},
   year={1911},
   pages={110-117}
 }
