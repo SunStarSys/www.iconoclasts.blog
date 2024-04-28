@@ -11,7 +11,7 @@
 	<meta content="/images/iconoclast.jpg" property="og:image">
     <title>{% block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
 	{% if permalink %}
-	<link href="https://{{website}}{{path|dirname}}/{{path|basename:0}}.html{{lang}}" rel="bookmark">
+	<link href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}" rel="bookmark">
 	{% endif %}
     <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet">
     <link href="/css/katex.min.css" media="screen" rel="stylesheet">
@@ -64,14 +64,14 @@
               </li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Mapas de sitio</li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname}}/{{path|basename:0}}.html.en">Español</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname}}/{{path|basename:0}}.html.es">Español</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname}}/{{path|basename:0}}.html.de">Alemán</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname}}/{{path|basename:0}}.html.fr">Francés</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname}}/{{path|basename:0}}.html.ru">Ruso</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname}}/{{path|basename:0}}.html.zh-TW">Chino</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname}}/{{path|basename:0}}.html.he">Hebreo</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname}}/{{path|basename:0}}.html.sv">Sueco</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Español</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Español</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">Alemán</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Francés</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Ruso</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Chino</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebreo</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Sueco</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Taxonomías</li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Categorías</a></li>
