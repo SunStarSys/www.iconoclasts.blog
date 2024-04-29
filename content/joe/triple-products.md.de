@@ -12,7 +12,7 @@ title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 <div class="right">
   <img src="../images/lawson6-pod.png" style="width:200px">
   <p style="width:200px;text-align:center;line-height:20px">
-  Lawsons minimale Oberfläche Î3⁄4<sub>6,1</sub> stereografisch von S<sup>3</sup> auf R<sup>3</sup> projiziert
+  Lawsons minimale Oberfläche <sub>6,1</sub> stereografisch von S<sup>3</sup> auf R<sup>3</sup> projiziert
   </p>
 </div>
 
@@ -28,7 +28,7 @@ Verwendung elementarer Techniken aus der Geometrischen Analyse, partiellen Diffe
 
 ## Einführung
 
-Für eine geschlossene Riemannsche Verteiler $$(M,g)$$, charakterisiert seine **Klasse** nicht-isometrischer, isospektraler Verteiler ist eine Art inverses Problem [[DH11]](#DH11) in der Spektralgeometrie. Naiv könnte man spekulieren, dass diese Klasse immer *leer* sein würde. Die akademische Literatur ist jedoch reich an jahrzehntelangen Konstruktionen spezifischer Paarungen von Gegenbeispielen: ab 1964 mit John Milnors 16-dimensionalen Paaren nichtisometrischer, isospektraler flacher Tori [[JM64]](#JM64)und weiter [[CS92]](#CS92) zur generischen dimensionalen Charakterisierung flacher Tori in Alexander Schiemanns Doktorarbeit von 1993 [[AS94]](#AS94) &mdash; mit einer computergestützten Suche nach dem kritischen $$\dim = 3$$ Fall.  Eine moderne Übersicht über die ganze flache Tori-Geschichte erscheint in [[NRR22]](#NRR22).
+Für eine geschlossene Riemannsche Verteiler $$(M,g)$$, die ihre **Klasse** von nicht-isometrischen, isospektralen Verteilern kennzeichnet, ist eine Art inverses Problem [[DH11]](#DH11) in der Spektralgeometrie. Naiv könnte man spekulieren, dass diese Klasse immer *leer* sein würde. Die akademische Literatur ist jedoch reich an jahrzehntelangen Konstruktionen spezifischer Paarungen von Gegenbeispielen: ab 1964 mit John Milnors 16-dimensionalen Paaren nichtisometrischer, isospektraler flacher Tori [[JM64]](#JM64)und weiter [[CS92]](#CS92) zur generischen dimensionalen Charakterisierung flacher Tori in Alexander Schiemanns Doktorarbeit von 1993 [[AS94]](#AS94) &mdash; mit einer computergestützten Suche nach dem Kritischen $$\dim = 3$$ Fall.  Eine moderne Übersicht über die ganze flache Tori-Geschichte erscheint in [[NRR22]](#NRR22).
 
 Auf dem Weg waren aufschlussreiche Offshoots in anspruchsvollere, nicht-euklidische symmetrische Abdeckräume; Konstruieren solcher isospektraler, nicht-isometrischer "duets" mit nicht-trivialen Krümmungs-Tensoren (und ihre spektrumbestimmten Euler-Eigenschaften in Dimension 2) [[MS67]](#MS67).) Ein Paradebeispiel für diese Bemühungen war Toshikazu Sunadas 1985. [[TS85]](#TS85).
 
@@ -47,7 +47,7 @@ Was wir in diesem Artikel anbieten, ist eine neue Perspektive auf ein bekanntes 
 
 Satz von ####
 
-  </div>
+</div>
   <div class="card-body">
 
 Bei einer (nicht abnehmenden Eigenwert) orthonormalen Basis von Eigenfunktionen $$\set{e^i}_{i=0}^{\infty}$$ für den (nicht-negativen) Laplacian $$\Delta_M$$ am $$L^2(M,g)$$ verbunden mit einem geschlossenen Riemannschen Verteiler $$(M,g)$$
@@ -60,7 +60,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 Isometrisch zu $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingung* für eine andere **iosospektrale** geschlossene Riemannsche Mannigfaltigkeit, um eine orthonormale Grundlage von Eigenfunktionen (für seine Laplacian) zu haben, die beide die zugehörigen Eigenwerte bewahrt und eine Invariante besitzt. $$\set{M^{i,j,k}}$$
 
-  </div>
+</div>
 </div>
 
 <br>
@@ -74,17 +74,17 @@ Isometrisch zu $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingung* f�
 
 #### Vermutung
 
-  </div>
+</div>
   <div class="card-body">
 
 Wenn jeder Eigenwert eine Vielfalt hat $$1$$, bei einem Paar von Eigenwerten, die orthormale Basen erhalten, wie in der Hypothese des Theorems beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn und nur wenn die $$\set{M^{i,j,k}}$$
 
-  </div>
+</div>
 </div>
 
 <br>
 
-Die Motivation für das Studium von $$\set{M^{i,j,k}}$$ ist lose aus der Studie der Rolle des **linearen Multiplikationsoperators** abgeleitet $$Y:V\otimes V\rightarrow V((z))$$ in der Definition einer Vertex Operator Algebra [[FBZ04]](#FBZ04) mit einer chiralen konformen Feldtheorie verbunden. Hier $$V$$ ist der Vektorraum der Staaten und $$V((z))$$ ist der Raum der formellen Laurent-Serie in $$z$$ mit Koeffizienten in $$V$$. Seit $$V$$ oft als Hilbert Space mit einer traditionellen orthonormalen Basis der Fourier-Serie ausgestattet, $$Y$$ Verwendung der Fourier-Basiselemente von $$V$$ ist nur etwas stärker beteiligt als die $$M^{i,j,k}$$
+Die Motivation für das Studium von $$\set{M^{i,j,k}}$$ ist lose aus der Studie der Rolle des **linearen Multiplikationsoperators** abgeleitet $$Y:V\otimes V\rightarrow V((z))$$ in der Definition einer Vertex Operator Algebra [[FBZ04]](#FBZ04) mit einer chiralen konformen Feldtheorie verbunden. Hier $$V$$ ist der Vektorraum der Staaten und $$V((z))$$ ist der Raum der formalen Laurent-Serie in $$z$$ mit Koeffizienten in $$V$$. Seit $$V$$ oft als Hilbert Space mit einer traditionellen orthonormalen Basis der Fourier-Serie ausgestattet, $$Y$$ Verwendung der Fourier-Basiselemente von $$V$$ ist nur etwas stärker beteiligt als die $$M^{i,j,k}$$
 
 Diese Ergebnisse wurden erstmals in einem ähnlich betitelten Vortrag des Autors bei **MSRI** im Jahr 1997 gezeigt, erscheinen aber hier erstmals in veröffentlichter Form.
 
@@ -105,7 +105,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
 
 ```
 
-seit $$f$$ ist einzigartig darstellbar als seine schnell konvergierende **Fourier Series** ($$\Delta_M$$- spezifische Sobolev Embeddings [[MT13]](#MT13) [[RS75]](#RS75)Zusammen mit Weyls asymptotischem Gesetz [[HW11]](#HW11), implizieren die Begriffe in der Summe sind $$o(i^{-n})$$ *gleichmäßig in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$() Dann sehen wir das für $$f_1, f_2 \in C^\infty(M)$$, die Fourier-Koeffizienten des Pointwise-Produkts $$f_1 f_2 \in C^\infty(M)$$
+seit $$f$$ ist einzigartig darstellbar als seine schnell konvergierende **Fourier Series** ($$\Delta_M$$- spezifische Sobolev Embeddings [[MT13]](#MT13) [[RS75]](#RS75)zusammen mit Weyls asymptotischem Gesetz [[HW11]](#HW11), implizieren die Begriffe in der Summe sind $$o(i^{-n})$$ *gleichmäßig in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$() Dann sehen wir das für $$f_1, f_2 \in C^\infty(M)$$, die Fourier-Koeffizienten des Pointwise-Produkts $$f_1 f_2 \in C^\infty(M)$$
 
 ```math
 \begin{aligned}

@@ -12,7 +12,7 @@ title: Tredubbla produkter av egenfunktioner och spektral geometri
 <div class="right">
   <img src="../images/lawson6-pod.png" style="width:200px">
   <p style="width:200px;text-align:center;line-height:20px">
-  Lawsons minimala yta Î3⁄4<sub>6,1</sub> projiceras stereografiskt från S<sup>3</sup> till R<sup>3</sup>
+  Lawsons minimala yta <sub>6,1</sub> projiceras stereografiskt från S<sup>3</sup> till R<sup>3</sup>
   </p>
 </div>
 
@@ -28,7 +28,7 @@ Använda elementära tekniker från geometrisk analys, partiella differentialekv
 
 ## Introduktion
 
-För en sluten riemannmångfald $$(M,g)$$, som karakteriserar dess **klass** av icke-isometriska, isospektrala grenrör är en typ av inverterat problem [[DH11]](#DH11) i spektral geometri. Man kan spekulera i att den här klassen alltid skulle vara tom. Den akademiska litteraturen är dock rik på årtionden gamla konstruktioner av specifika parningar av motexempel: från 1964 med John Milnors 16-dimensionella par icke-isometriska, isospektrala platta tori [[JM64]](#JM64)och fortsätter [[CS92]](#CS92) mot den generiska dimensionella karaktäriseringen av platt tori i Alexander Schiemann doktorsavhandling från 1993 [[AS94]](#AS94) &mdash; fyll i med en datorstödd sökning efter den kritiska $$\dim = 3$$ ärende.  En modern undersökning av hela den platta tori-historien visas i [[NRR22]](#NRR22).
+För en sluten riemannmångfald $$(M,g)$$, som karakteriserar dess **klass** av icke-isometriska, isospektrala grenrör är en typ av inverterat problem [[DH11]](#DH11) i spektral geometri. Naiv kan man spekulera i att denna klass alltid skulle vara *tom*. Den akademiska litteraturen är dock rik på årtionden gamla konstruktioner av specifika parningar av motexempel: från 1964 med John Milnors 16-dimensionella par icke-isometriska, isospektrala platta tori [[JM64]](#JM64)och fortsätter [[CS92]](#CS92) mot den generiska dimensionella karaktäriseringen av platt tori i Alexander Schiemann doktorsavhandling från 1993 [[AS94]](#AS94) &mdash; fyll i med en datorstödd sökning efter den kritiska $$\dim = 3$$ ärende.  En modern undersökning av hela den platta tori-historien visas i [[NRR22]](#NRR22).
 
 Längs vägen var insiktsfulla avskjutningar i mer sofistikerade, icke-euklidiska symmetriska täckningsutrymmen; konstruera sådana isospektrala, icke-isometriska "duetter" som involverar icke-privata kurvaturtensorer (och deras spektrumbestämda Eulers egenskaper i dimension 2 [[MS67]](#MS67).) Ett utmärkt exempel på denna insats var Toshikazu Sunadas 1985 [[TS85]](#TS85).
 
@@ -47,7 +47,7 @@ Vad vi erbjuder i den här artikeln är ett nytt perspektiv på ett välbekant v
 
 #### Satsen
 
-  </div>
+</div>
   <div class="card-body">
 
 Med tanke på en (icke-minskande på egenvärdena) ortonormal grund av egenfunktioner $$\set{e^i}_{i=0}^{\infty}$$ för (icke-negativa) Lappland $$\Delta_M$$ på $$L^2(M,g)$$ i samband med en stängd Riemannian mångfald $$(M,g)$$
@@ -58,9 +58,9 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 ```
 
-Att vara isometrisk till $$(M,g)$$, det är ett *nödvändigt och tillräckligt villkor* för en annan **iospektral** stängd Riemannian mångfald för att ha en ortonormal grund av egenfunktioner (för dess laplacian) som både bevarar de tillhörande egenvärdena och har en oföränderlig $$\set{M^{i,j,k}}$$
+Att vara isometrisk till $$(M,g)$$, är det ett *nödvändigt och tillräckligt villkor* för en annan **iospektral** stängd Riemannian mångfald att ha en ortonormal grund av egenfunktioner (för dess laplacian) som både bevarar de tillhörande egenvärdena och har en oföränderlig $$\set{M^{i,j,k}}$$
 
-  </div>
+</div>
 </div>
 
 <br>
@@ -74,12 +74,12 @@ Att vara isometrisk till $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 
 ### Förmodan
 
-  </div>
+</div>
   <div class="card-body">
 
 Om varje egenvärde har mångfald $$1$$Med tanke på ett par egenvärdesbevarande ortormala baser som beskrivs i teoremens hypotes är mångfaldarna isometriska om och endast om $$\set{M^{i,j,k}}$$
 
-  </div>
+</div>
 </div>
 
 <br>

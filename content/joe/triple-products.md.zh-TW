@@ -11,7 +11,7 @@ title: 特徵函數和光譜幾何的三重產品
 <div class="right">
   <img src="../images/lawson6-pod.png" style="width:200px">
   <p style="width:200px;text-align:center;line-height:20px">
-  Lawson 的最小表面 3⁄4<sub> 6,1</sub> 立體投影從 S<sup> 3</sup> 到 R<sup> 3</sup>
+  Lawson 的最小表面面積為 <sub>6,1</sub> ，從 S<sup> 3</sup> 到 R<sup> 3</sup>
   </p>
 </div>
 
@@ -27,7 +27,7 @@ Joe Schaefer
 
 ## 介紹
 
-封閉式里曼尼亞人$$(M,g)$$，描述其 ** 類別 ** 的非等分法，等分法為「逆向問題」類型[[DH11]](#DH11) 在光譜幾何圖形中 。奈爾 0vely 可能推測此類別永遠為 *empty*。然而，學術文獻富含數十年的特定對反範例組合結構：從 1964 年開始，由 John Milnor 的 16 維非幾何，等向均方均方[[JM64]](#JM64)，以及繼續[[CS92]](#CS92) 邁向亞歷山大·希曼 1993 年博士論文中平坦森的一般尺寸特性化[[AS94]](#AS94) &mdash; 使用電腦輔助搜尋來重新刪除嚴重$$\dim = 3$$ 個案。現代化的整平 Tori 歷史記錄調查顯示於[[NRR22]](#NRR22).
+封閉式里曼尼亞人$$(M,g)$$，描述其 ** 類別 ** 的非等分法，等分法為「逆向問題」類型[[DH11]](#DH11) 在光譜幾何圖形中 。Naïvely 可能會推測此類別永遠為 *empty*。然而，學術文獻富含數十年的特定對反範例組合結構：從 1964 年開始，由 John Milnor 的 16 維非幾何，等向均方均方[[JM64]](#JM64)，以及繼續[[CS92]](#CS92) 邁向亞歷山大·希曼 1993 年博士論文中平坦森的一般尺寸特性化[[AS94]](#AS94) &mdash; 使用電腦輔助搜尋來重新刪除嚴重$$\dim = 3$$ 個案。現代化的整平 Tori 歷史記錄調查顯示於[[NRR22]](#NRR22).
 
 在這種方式中，對稱空間較為複雜、非歐幾內亞對稱的洞察力；構建了涉及非傳統曲率張量的等光譜、非幾何「導管」(以及其在第 2 維度中頻譜決定的尤拉特徵) [[MS67]](#MS67)。) 此努力的主要例子是 Toshikazu Sunada 的 1985 年[[TS85]](#TS85).
 
@@ -46,7 +46,7 @@ Carolyn Gordon 針對不同質的 Riemannian 指標發現即使在本機上也�
 
 #### 定理
 
-  </div>
+</div>
   <div class="card-body">
 
 指定特徵函數的正規基礎 (未遞減的特徵值) $$\set{e^i}_{i=0}^{\infty}$$ (非負數) Laplacian $$\Delta_M$$ 開啟$$L^2(M,g)$$ 與封閉式里曼尼亞機身相關$$(M,g)$$
@@ -59,7 +59,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 要是等同於$$(M,g)$$，這是另一個 **iosospectral** 封閉的 Riemannian manifold 的 * 必要和足夠條件 *，可保留相關特徵且具有不變性的特徵 (Laplacian) 正規基礎$$\set{M^{i,j,k}}$$
 
-  </div>
+</div>
 </div>
 
 <br>
@@ -73,12 +73,12 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 #### 形容詞
 
-  </div>
+</div>
   <div class="card-body">
 
 如果每個特徵值都有多重性$$1$$鑑於一對特徵值保存定理假說中所述的正規基底，則僅當和$$\set{M^{i,j,k}}$$
 
-  </div>
+</div>
 </div>
 
 <br>
@@ -242,7 +242,7 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 ```math
 \set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-成為我們的理論可應用的傅立葉原理 (多變性字元) 特徵 (此為 (負數) Euclidean Casimir 元素的商數表示法) 直接對應於$$\set{\lambda_i}$$繁體中文依據我們的理論假設，我們必須要有$$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$
+成為我們的理論可應用的傅立葉原理 (多變性字元) 特徵 (此為 (負數) Euclidean Casimir 元素的商數表示法) 直接對應於$$\set{\lambda_i}$$繁體中文依據我們的理論假設，我們必須具備$$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$
 
 現在我們可以運算
 
@@ -255,7 +255,7 @@ M^{i,j,k} = \begin{cases}
 
 由於此等式 <span class="eqno"></span> 對重量格而言為線性$$(A^{-1})^t\Z^n = \set{\lambda_i}$$，只有一個$$L^2$$ 正規特徵基底圖 ** 從容積保存的可逆線性圖中產生，這兩個索引，排名之間$$n$$ 重量晶格 ** 將保留「代數 / 拓樸」索引資料集$$\set{M^{i,j,k}}$$
 
-不過，為了申請我們[定理](#theorem)，對這類線性地圖至關重要$$B$$ 是$$B\in O(n,\Reals)$$ 在重量格子上，因為誘發$$L^2$$
+不過，為了申請我們[定理](#theorem)，對於這類線性地圖至關重要$$B$$ 是$$B\in O(n,\Reals)$$ 在重量格子上，因為誘發$$L^2$$
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
@@ -267,8 +267,8 @@ M^{i,j,k} = \begin{cases}
 
 ## 確認
 
-最初的研究是由 1995-1996 年傑出的詹姆斯·西蒙斯研究獎以及阿爾弗雷德· P 的慷慨支持所資助的。Sloan Dissertation 1996-1997 在 Stony Brook 大學畢業。
+原本的研究是由 1995-1996 年的傑出詹姆斯·西蒙斯研究獎以及阿爾弗雷德· P 的慷慨支持所資助的。Sloan 1996- 1997 在 Stony Brook 大學辭職團契。
 
 作者也要感謝 Tanya Christiansen、Carolyn Gordon、Hamid Hezari、Harish Seshadri，特別是 Leon Takhtajan 的技術協助，並檢閱本手稿的準備以供出版。
 
-<!-- $Date: 2024-04-22 15:39:47 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23262 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

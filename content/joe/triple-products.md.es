@@ -12,7 +12,7 @@ title: Triple productos de autofunciones y geometría espectral
 <div class="right">
   <img src="../images/lawson6-pod.png" style="width:200px">
   <p style="width:200px;text-align:center;line-height:20px">
-  La superficie mínima de Lawson Î3⁄4<sub>6,1</sub> estereográficamente proyectada de S<sup>3</sup> a R<sup>3</sup>
+  La superficie mínima de Lawson ξ<sub>6,1</sub> estereográficamente proyectada de S<sup>3</sup> a R<sup>3</sup>
   </p>
 </div>
 
@@ -28,9 +28,9 @@ Uso de técnicas elementales de análisis geométrico, ecuaciones diferenciales 
 
 ## Introducción
 
-Para un colector Riemannian cerrado $$(M,g)$$, caracterizando su **clase** de colectores isospectrales no isométricos, es un tipo de problema inverso [[DH11]](#DH11) en geometría espectral. Uno podría especular que esta clase siempre estaría vacía. Sin embargo, la literatura académica es rica en construcciones de décadas de pares específicos de contraejemplos: a partir de 1964 con el par de 16 dimensiones de tori plano isospectral no isométrico de John Milnor. [[JM64]](#JM64)y continuando [[CS92]](#CS92) hacia la caracterización dimensional genérica de tori plano en la tesis doctoral de Alexander Schiemann de 1993 [[AS94]](#AS94) &mdash; repleto de una búsqueda asistida por computadora para la crítica $$\dim = 3$$ caso.  Un estudio moderno de la historia completa del tori plano aparece en [[NRR22]](#NRR22).
+Para un colector Riemannian cerrado $$(M,g)$$, caracterizando su **clase** de colectores isospectrales no isométricos, es un tipo de problema inverso [[DH11]](#DH11) en geometría espectral. Uno podría especular ingenuamente que esta clase siempre estaría vacía. Sin embargo, la literatura académica es rica en construcciones de décadas de pares específicos de contraejemplos: a partir de 1964 con el par de 16 dimensiones de tori plano isospectral no isométrico de John Milnor. [[JM64]](#JM64)y continuando [[CS92]](#CS92) hacia la caracterización dimensional genérica de tori plano en la tesis doctoral de Alexander Schiemann de 1993 [[AS94]](#AS94) &mdash; repleto de una búsqueda asistida por computadora para la crítica $$\dim = 3$$ caso.  Un estudio moderno de la historia completa del tori plano aparece en [[NRR22]](#NRR22).
 
-A lo largo del camino fueron reveladoras ramificaciones en espacios de cobertura simétrica más sofisticados y no euclidianos; la construcción de tales "duetas" isospectrales y no isométricos que involucran tensores de curvatura no triviales (y sus características de Euler determinadas por el espectro en la dimensión 2) [[MS67]](#MS67)Un ejemplo de este esfuerzo fue Toshikazu Sunada en 1985. [[TS85]](#TS85).
+A lo largo del camino fueron reveladoras ramificaciones en espacios de cobertura simétrica más sofisticados y no euclidianos; la construcción de tales "duetas" isospectrales y no isométricos que involucran tensores de curvatura no triviales (y sus características de Euler determinadas por el espectro en la dimensión 2) [[MS67]](#MS67)Un ejemplo de este esfuerzo fue el de Toshikazu Sunada en 1985. [[TS85]](#TS85).
 
 Para métricas riemannianas inhomogéneas, Carolyn Gordon descubrió dúos que ni siquiera son isométricos localmente. [[CG93]](#CG93).
 
@@ -47,10 +47,10 @@ Lo que ofrecemos en este artículo es una nueva perspectiva sobre una herramient
 
 #### Teorema
 
-  </div>
+</div>
   <div class="card-body">
 
-Dada una (no disminución de los valores propios) base ortonormal de las funciones propias $$\set{e^i}_{i=0}^{\infty}$$ para el laplaciano (no negativo) $$\Delta_M$$ activado $$L^2(M,g)$$ asociado a un múltiple Riemannian cerrado $$(M,g)$$
+Dada una (no disminución de los valores propios) base ortonormal de las funciones propias $$\set{e^i}_{i=0}^{\infty}$$ para el laplaciano (no negativo) $$\Delta_M$$ activado $$L^2(M,g)$$ asociado con un múltiple Riemannian cerrado $$(M,g)$$
 
 ```math
 
@@ -60,7 +60,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 Para ser isométrico $$(M,g)$$, es una condición *necesaria y suficiente* para que otro **iosospectral** cerrara el múltiple riemanniano para tener una base ortonormal de autofunciones (para su laplaciano) que tanto preserva los autovalores asociados como posee un invariante $$\set{M^{i,j,k}}$$
 
-  </div>
+</div>
 </div>
 
 <br>
@@ -74,12 +74,12 @@ Para ser isométrico $$(M,g)$$, es una condición *necesaria y suficiente* para 
 
 #### Conjetura
 
-  </div>
+</div>
   <div class="card-body">
 
 Si cada valor propio tiene multiplicidad $$1$$, dado un par de bases ortodormales preservadoras de autovalor como se describe en la hipótesis del teorema, los colectores son isométricos si y solo si el $$\set{M^{i,j,k}}$$
 
-  </div>
+</div>
 </div>
 
 <br>
@@ -181,7 +181,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 hemos terminado con el argumento de la necesidad.
 
-Para la suficiencia, ahora consideramos el mapa de bases ortopédicas lineales y bijetivas $$F$$ desde $$C^\infty(M)$$ a $$C^\infty(N)$$ y señalar que a partir de los cálculos de [Preliminar](#preliminaries) arriba, $$F$$ conserva los productos en sentido puntual para funciones suaves (y conserva las funciones características cuando se amplía a $$L^2(M,g)$$) por la premisa de que $$\set{M^{i,j,k}}$$
+Para la suficiencia, ahora consideramos el mapa de bases ortopédicas lineales y bijetivas $$F$$ desde $$C^\infty(M)$$ para $$C^\infty(N)$$ y señalar que a partir de los cálculos de [Preliminar](#preliminaries) arriba, $$F$$ conserva los productos en sentido puntual para funciones suaves (y conserva las funciones características cuando se amplía a $$L^2(M,g)$$) por la premisa de que $$\set{M^{i,j,k}}$$
 
 ### Lemma
 
@@ -234,7 +234,7 @@ Desde para cualquier $$k$$, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para to
 
 Ejemplo ##
 
-Vamos $$\set{\lambda_i} \subset \R^n$$ ser una clasificación indexada $$n$$ enrejado de los pesos de Lie Algebra para la representación espacial cociente de $$\frak{g}=\Reals^n$$ como campos vectoriales invariantes de traducción (es decir, constantes) en sí mismos, cuando $$\R^n$$ también se considera $$\frak{g}$$Grupo de Lie asociado sobre un toro definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Estos pesos definen ascensores integrables de 1 forma sobre el toro que se integran a los funcionales lineales. $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ como su grupo de mentiras (que cubre el toro). Estas funciones lineales pueden entonces ser reescaladas uniformemente (por $$2\pi \sqrt{-1}$$) y exponenciados para formar caracteres multiplicativos que descienden para formar una base ortonormal de $$L^2(\Reals^n/A\Z^n,dx)$$, con la medida Lebesgue (Haar) $$dx$$
+Vamos $$\set{\lambda_i} \subset \R^n$$ ser una clasificación indexada $$n$$ enrejado de los pesos de Lie Algebra para la representación espacial cociente de $$\frak{g}=\Reals^n$$ como campos vectoriales invariantes de traducción (es decir, constantes) en sí mismos, cuando $$\R^n$$ también se considera $$\frak{g}$$Grupo de Lie asociado sobre un toro definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Estos pesos definen ascensores integrables de 1 forma sobre el toro que se integran a funciones lineales. $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ como su grupo de mentiras (que cubre el toro). Estas funciones lineales pueden entonces ser reescaladas uniformemente (por $$2\pi \sqrt{-1}$$) y exponenciados para formar caracteres multiplicativos que descienden para formar una base ortonormal de $$L^2(\Reals^n/A\Z^n,dx)$$, con la medida Lebesgue (Haar) $$dx$$
 
 Además, esta base diagonaliza simultáneamente el laplaciano del toro plano **porque** el laplaciano es la imagen de un elemento cuadrático cuadrático simétrico, negativo-definido de Casimir bajo esta (operador diferencial lineal de coeficiente constante) representación del espacio cociente del álgebra envolvente universal. Por lo tanto, sus valores propios están en proporción constante (de $$4\pi^2$$
 

@@ -12,7 +12,7 @@ title: Triple produits de fonctions propres et de géométrie spectrale
 <div class="right">
   <img src="../images/lawson6-pod.png" style="width:200px">
   <p style="width:200px;text-align:center;line-height:20px">
-  Surface minimale Î3⁄4<sub>6,1</sub> de Lawson projetée de manière stéréographique de S<sup>3</sup> à R<sup>3</sup>
+  Surface minimale ξ<sub>6,1</sub> de Lawson projetée de manière stéréographique de S<sup>3</sup> à R<sup>3</sup>
   </p>
 </div>
 
@@ -28,7 +28,7 @@ Utiliser les techniques élémentaires de l'analyse géométrique, des équation
 
 Introduction ##
 
-Pour un collecteur Riemannien fermé $$(M,g)$$, caractérisant sa **classe** de collecteurs isospectraux non isométriques, est un type de problème inverse [[DH11]](#DH11) en géométrie spectrale. On pourrait spéculer que cette classe serait toujours *vide*. Cependant, la littérature académique est riche de constructions de plusieurs décennies d'appariements spécifiques de contre-exemples : à partir de 1964 avec la paire de 16 dimensions de John Milnor de tori plats isospectraux non isométriques. [[JM64]](#JM64), et continuer [[CS92]](#CS92) vers la caractérisation dimensionnelle générique du tori plat dans la thèse de doctorat d'Alexander Schiemann en 1993 [[AS94]](#AS94) &mdash; rempli d'une recherche assistée par ordinateur pour la critique $$\dim = 3$$ cas.  Une étude moderne de l'histoire complète des tori plats apparaît dans [[NRR22]](#NRR22).
+Pour un collecteur Riemannien fermé $$(M,g)$$, caractérisant sa **classe** de collecteurs isospectraux non isométriques, est un type de problème inverse [[DH11]](#DH11) en géométrie spectrale. Naïvement, on pourrait spéculer que cette classe serait toujours *vide*. Cependant, la littérature académique est riche de constructions de plusieurs décennies d'appariements spécifiques de contre-exemples : à partir de 1964 avec la paire de 16 dimensions de John Milnor de tori plats isospectraux non isométriques. [[JM64]](#JM64), et continuer [[CS92]](#CS92) vers la caractérisation dimensionnelle générique du tori plat dans la thèse de doctorat d'Alexander Schiemann en 1993 [[AS94]](#AS94) &mdash; rempli d'une recherche assistée par ordinateur pour la critique $$\dim = 3$$ cas.  Une étude moderne de l'histoire complète des tori plats apparaît dans [[NRR22]](#NRR22).
 
 En cours de route, il y a eu des ramifications perspicaces dans des espaces de couverture symétriques non euclidiens plus sophistiqués ; la construction de tels "duets" isospectraux et non isométriques impliquant des tenseurs de courbure non triviaux (et leurs caractéristiques Euler déterminées par le spectre dans la dimension 2 [[MS67]](#MS67).) Un excellent exemple de cet effort fut celui de Toshikazu Sunada en 1985. [[TS85]](#TS85).
 
@@ -47,7 +47,7 @@ Ce que nous proposons dans cet article est une nouvelle perspective sur un outil
 
 #### Théorie
 
-  </div>
+</div>
   <div class="card-body">
 
 Compte tenu d'une base orthonormée (non décroissante sur les valeurs propres) des fonctions propres $$\set{e^i}_{i=0}^{\infty}$$ pour le Laplacien (non négatif) $$\Delta_M$$ le $$L^2(M,g)$$ associé à un collecteur riemannien fermé $$(M,g)$$
@@ -60,7 +60,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffisante* pour qu'un autre collecteur riemannien **iosospectral** fermé ait une base orthonormée de fonctions propres (pour son laplacien) qui préserve les valeurs propres associées et possède un invariant $$\set{M^{i,j,k}}$$
 
-  </div>
+</div>
 </div>
 
 <br>
@@ -74,17 +74,17 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 
 #### Conjecture
 
-  </div>
+</div>
   <div class="card-body">
 
 Si chaque valeur propre a une multiplicité $$1$$, étant donné une paire de bases orthormales préservant la valeur propre telle que décrite dans l'hypothèse du théorème, les collecteurs sont isométriques si et seulement si le $$\set{M^{i,j,k}}$$
 
-  </div>
+</div>
 </div>
 
 <br>
 
-La motivation pour l'étude de $$\set{M^{i,j,k}}$$ est vaguement dérivé de l'étude du rôle de l' **opérateur de multiplication linéaire** $$Y:V\otimes V\rightarrow V((z))$$ dans la définition d'une algèbre d'opérateur de sommet [[FBZ04]](#FBZ04) associée à une théorie du champ conformationnel chiral. Ici $$V$$ est l'espace vecteur des États et $$V((z))$$ est l'espace de la série formelle Laurent dans $$z$$ avec coefficients en $$V$$. Depuis $$V$$ est souvent équipé en tant qu'espace Hilbert avec une base orthonormée traditionnelle de la série Fourier, indexant $$Y$$ en utilisant les éléments de base de Fourier de $$V$$ est un peu plus impliqué que le $$M^{i,j,k}$$
+La motivation pour l'étude de $$\set{M^{i,j,k}}$$ est vaguement dérivé de l'étude du rôle de l' **opérateur de multiplication linéaire** $$Y:V\otimes V\rightarrow V((z))$$ dans la définition d'une algèbre d'opérateur de sommet [[FBZ04]](#FBZ04) associée à une théorie du champ conformationnel chiral. Ici $$V$$ est l'espace vecteur des États et $$V((z))$$ est l'espace de la série formelle Laurent dans $$z$$ avec des coefficients en $$V$$. Depuis $$V$$ est souvent équipé en tant qu'espace Hilbert avec une base orthonormée traditionnelle de la série Fourier, indexant $$Y$$ en utilisant les éléments de base de Fourier de $$V$$ est un peu plus impliqué que le $$M^{i,j,k}$$
 
 Ces résultats ont été démontrés pour la première fois lors d'un discours similaire de l'auteur à **MSRI** en 1997, mais ils apparaissent ici sous forme publiée pour la première fois.
 
