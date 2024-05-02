@@ -5,7 +5,7 @@ dependencies: '*.md.es'
 keywords: ~
 published: ~
 status: borrador
-title: Blog de Axio
+title: Blog de Milan
 ---
 
 {# lede #}¡Nuevo blog!{# lede #}

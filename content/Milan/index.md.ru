@@ -5,7 +5,7 @@ dependencies: '*.md.ru'
 keywords: ~
 published: ~
 status: черновик
-title: Блог Axio
+title: Блог Milan
 ---
 
 {# lede #}Новый блог!{# lede #}
