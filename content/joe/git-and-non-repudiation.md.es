@@ -27,3 +27,5 @@ Las estrategias de mitigación tempranas y adecuadas giran en torno a la elimina
 Sin tales cosas tendríamos que exigir al menos la firma de PGP del compromiso de cada contribuyente, lo que es oneroso para muchos proyectos.  Los registros push proporcionan un proceso transparente que no afecta al flujo de trabajo de un proyecto, excepto para garantizar que el repositorio de Git de ASF sea el verdadero repositorio maestro.
 
 *$Fecha: 2023-01-19 22:58:40 +0000 (Jue, 19 de enero de 2023) $*
+
+<!-- $Date$ $Author$ $Revision$ -->
