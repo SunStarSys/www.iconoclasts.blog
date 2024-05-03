@@ -50,3 +50,5 @@ La única lista de configuraciones que se ejecutan en conflicto con `DMARC` son 
 En caso de que no se haya mantenido al día con los tiempos, hay un movimiento reciente en marcha para introducir fuertes [DMARC](http://en.wikipedia.org/wiki/DMARC) políticas que rechazan mensajes que fallan [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) pruebas de firma. Facebook, Twitter, LinkedIn, Yahoo! y ahora AOL han liderado esta carga en un nuevo territorio, obligando a los operadores de listas de correo a lidiar con la situación. ¿Qué `ezmlm-dmarc-filter.pl` si, y esta no es la única solución posible al problema, es `Firma de DKIM` encabezado para cualquier dominio de este tipo, y agregue un `. NO VÁLIDO` sufijo al remitente `Desde` dirección de cabecera.  Tiene la ventaja de ser una de las soluciones más sencillas que funciona, así que lo estoy ofreciendo aquí.  Hasta ahora, los dominios que implementan estrictos `DMARC` todas las políticas proporcionan `Responder a` encabezados, por lo que estos cambios realizados por `ezmlm-dmarc-filter.pl`
 
 $Fecha: 2023-01-19 22:58:40 +0000 (Jue, 19 Ene 2023) $
+
+<!-- $Date$ $Author$ $Revision$ -->
