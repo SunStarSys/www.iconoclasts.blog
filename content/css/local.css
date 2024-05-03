@@ -116,6 +116,7 @@ div.breadcrumbs {
 	z-index: 1000;
 	text-align: right;
     float:right;
+	direction: ltr;
 }
 
 #search, #filter {
