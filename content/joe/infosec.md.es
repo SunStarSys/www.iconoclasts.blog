@@ -33,3 +33,5 @@ Aunque puede haber contextos de VPN/Firewall en realidad, ninguno de esos detall
 MIT Kerberos y Active Directory cumplen con Zero-Trust, por ejemplo.
 
 *$Fecha: 2023-01-19 22:58:40 +0000 (Jue, 19 de enero de 2023) $*
+
+<!-- $Date$ $Author$ $Revision$ -->
