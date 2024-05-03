@@ -29,7 +29,7 @@
 {% endif %}
 
 {% if headers.published %}
-<span class="badge bg-success text-white"><a href="{{headers.published|safe}}" style="color:#fff">Publié</span></a>&nbsp;
+<span class="badge bg-success text-white"><a href="{{headers.published|safe}}" style="color:#fff">Publié</a></span>&nbsp;
 {% endif %}
 
 {% if archive_path %}{% ifequal headers.status "archived" %}
@@ -189,6 +189,5 @@ thread_comments();
 </dd>
 {% endfor %}
 </dl>
-</div>
 {% endfilter %}
 {% endif %}
