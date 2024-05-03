@@ -29,7 +29,7 @@ No de referencias
 {% endif %}
 
 {% if headers.published %}
-<span class="badge bg-success text-white"><a href="{{headers.published|safe}}" style="color:#fff">Publicado</span></a>&nbsp;
+<span class="badge bg-success text-white"><a href="{{headers.published|safe}}" style="color:#fff">Publicado</a></span>&nbsp;
 {% endif %}
 
 {% if archive_path %}{% ifequal headers.status "archived" %}
@@ -62,7 +62,7 @@ No de referencias
     <div class="card-header">
       <h3 class="card-title">Comentarios {% if category_root %}{% if archive_root %} &nbsp;
         <button type="submit" name="uri"
-                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.página/comment.md{{lang}}"
+                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
                 class="btn btn-sm btn-outline-warning">>>
           Nuevo
         </button>
@@ -189,6 +189,5 @@ thread_comments();
 </dd>
 {% endfor %}
 </dl>
-</div>
 {% endfilter %}
 {% endif %}
