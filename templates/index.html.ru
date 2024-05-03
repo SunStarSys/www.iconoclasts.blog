@@ -29,7 +29,7 @@
 {% endif %}
 
 {% if headers.published %}
-<span class="badge bg-success text-white"><a href="{{headers.published|safe}}" style="color:#fff">Опубликовано</span></a>&nbsp;
+<span class="badge bg-success text-white"><a href="{{headers.published|safe}}" style="color:#fff">Опубликовано</a></span>&nbsp;
 {% endif %}
 
 {% if archive_path %}{% ifequal headers.status "archived" %}
@@ -89,7 +89,7 @@
             {% if category_root %}{% if archive_root %}
 			  &nbsp;
             <button type=submit class=btn btn-sm btn-outline-warning name=uri
-                    value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.страница{{c.key}}.md{{lang}}">
+                    value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
               Ответить
             </button>
 			{% endif %}{% endif %}
@@ -189,6 +189,5 @@ thread_comments();
 </dd>
 {% endfor %}
 </dl>
-</div>
 {% endfilter %}
 {% endif %}
