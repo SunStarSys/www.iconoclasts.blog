@@ -47,8 +47,7 @@ sealed: compiling Benchmark->cmpthese lookup.
 sealed: compiling Foo->foo lookup.
 sealed: compiling main->foo lookup.
 sealed: compiling Foo->bar lookup.
-Use of uninitialized value in addition (+) at lib/sealed.pm line 137.
-sealed: tweak() aborted: sealed: invalid lookup: Foo->bar - did you forget to 'use Foo' first? at lib/sealed.pm line 75.
+sealed: tweak() aborted: sealed: invalid lookup: Foo->bar - did you forget to 'use Foo' first?
 sub __ANON__ :sealed {
     use warnings;
     use strict;
