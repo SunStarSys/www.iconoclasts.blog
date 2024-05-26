@@ -31,7 +31,6 @@
 
 <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
 
-<script src="/js/jquery.min.js"></script>
 <script type="text/javascript">
 var IN_GLOBAL_SCOPE=true;
 </script>
