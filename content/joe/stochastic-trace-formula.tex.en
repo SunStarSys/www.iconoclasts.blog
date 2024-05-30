@@ -15,15 +15,13 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
-% modern, utf8 friendly options
+% modern, utf8 friendly options (wholly incompatible with amscd):
+\PassOptionsToPackage{partial=upright}{unicode-math}
+\usepackage{fontsetup}
 \usepackage{tikz-cd}
-\usepackage{graphicx}
-\usepackage[inline]{asymptote}
 
-% biblatex
-%\usepackage[style=alphabetic]{biblatex}
-%\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
-
+\usepackage[style=alphabetic]{biblatex}
+\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
 % useful math-physics macros
 \usepackage{braket}
 \usepackage{physics}
@@ -32,7 +30,7 @@
 
 % Metadata
 \title{Stochastic trace formula for closed, negatively curved manifolds}
-\date{2024\\March}
+\date{2024\\May}
 \author{Joe Schaefer\\\href{mailto://Joe\%20Schaefer\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
 
 % Theorem, Lemma, etc
@@ -56,42 +54,15 @@
 \newtheorem{principle}[theorem]{Principle}
 
 \begin{document}
-
 \maketitle
+
+
 
 \tableofcontents
 
-\begin{center}
-\begin{asy}
-settings.prc=true;
-size(0,150);
-import geometry;
-
-real a=3;
-real b=4;
-real c=hypot(a,b);
-
-pair z1=(0,b);
-pair z2=(a,0);
-pair z3=(a+b,0);
-perpendicular(z1,NE,z1--z2,blue);
-perpendicular(z3,NW,blue);
-draw(square((0,0),z3));
-draw(square(z1,z2));
-
-real d=0.3;
-pair v=unit(z2-z1);
-draw(baseline("$a$"),-d*I--z2-d*I,red,Bars,Arrows,PenMargins);
-draw(baseline("$b$"),z2-d*I--z3-d*I,red,Arrows,Bars,PenMargins);
-draw("$c$",z3+z2*I-d*v--z2-d*v,red,Arrows,PenMargins);
-draw("$a$",z3+d--z3+z2*I+d,red,Arrows,Bars,PenMargins);
-draw("$b$",z3+z2*I+d--z3+z3*I+d,red,Arrows,Bars,PenMargins);
-\end{asy}
-\end{center}
-
 My \textit{1997 Ph.D. thesis} as a blog entry.
 
-\section{There Is Only One n-Dimensional Wiener Measure}
+\section{There Is Only One n-Dimensional Wiener Measure $\mu$}
 
 \section{Piecewise Linear Approximations to Brownian Motion}
 
@@ -200,8 +171,11 @@ DM_*\mu(\Omega_t[\gamma])
 \end{aligned}
 \end{equation}
 
+
+
+
 \doclicenseThis
 \pagebreak
-%\printbibliography
+\printbibliography
 
 \end{document}
