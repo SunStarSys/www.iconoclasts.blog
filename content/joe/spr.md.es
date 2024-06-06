@@ -4,9 +4,15 @@ categories: TI, seguridad, rendimiento, fiabilidad
 dependencies: '*.md.es'
 keywords: infosec, appsec, rendimiento, escalabilidad, alta disponibilidad, fiabilidad
 published: ~
-status: borrador
+status: verificado=24957
 title: Seguridad de la información, rendimiento de las aplicaciones y fiabilidad
 ---
+
+<div class="right">
+
+![NonFunctional Pruebas](spr.page/nft).
+
+</div>
 
 {# lede #}La ingeniería de software "no funcional" gira en torno a tres cuestiones clave: seguridad, rendimiento y fiabilidad (**SPR**){# lede #}; mientras que la ingeniería de software "funcional" implica el ciclo de vida normal de desarrollo de software basado en funciones. Una adecuada [NIST 800-160v1r1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1r1.pdf).
 
@@ -20,7 +26,7 @@ Algunas empresas han obtenido un valor increíble al dividir el desarrollo funci
 
 4. **Ingeniería de calidad de datos** (centrada en ofrecer una infraestructura automatizada de generación de informes, procesamiento y visualización para la actividad de triaje y control de calidad).
 
-Crear un equipo de **SPR** dedicado implica algunos desafíos organizativos. En el nivel de gestión, debe haber aceptación de que los expertos en rendimiento/seguridad de **SPR** tengan algunas expectativas razonables de que sus recomendaciones, y los parches de software enviados y probados con éxito, se incorporen de manera oportuna en la base de código de producción. Para generar las relaciones de trabajo efectivas necesarias entre los equipos de ingeniería funcionales y no funcionales, los ingenieros de rendimiento deben estar parcialmente integrados en los equipos de desarrollo de productos funcionales como pares, con privilegios de revisión/confirmación basados en pares en las bases de código.
+Crear un equipo de **SPR** dedicado implica algunos desafíos organizativos. En el nivel de gestión, debe haber una aceptación de que los expertos en rendimiento/seguridad de **SPR** tengan algunas expectativas razonables de que sus recomendaciones, y los parches de software enviados y probados con éxito, se incorporen de manera oportuna en la base de código de producción. Para generar las relaciones de trabajo efectivas necesarias entre los equipos de ingeniería funcionales y no funcionales, los ingenieros de rendimiento deben estar parcialmente integrados en los equipos de desarrollo de productos funcionales como pares, con privilegios de revisión/confirmación basados en pares en las bases de código.
 
 Al contar con un equipo dedicado de **SPR**, la dirección puede liberar a los ingenieros de productos (realizando el desarrollo funcional) de tener que crear/gestionar/probar simulaciones de sus entornos de producción que sean adecuadas para el trabajo de rendimiento/escala/seguridad/durabilidad/fiabilidad. Muchos equipos simplemente no tienen los ciclos para gastar en esto, a pesar de la importancia de ajustar el tamaño de sus activos en la nube y los tiempos de ejecución de software dependientes para adaptarse a un rápido crecimiento.
 
@@ -28,5 +34,4 @@ También hay una especialización considerable en términos de herramientas de o
 
 Un software sólido, seguro, escalable, rentable y de buen rendimiento está al alcance de cualquier equipo de ingeniería pequeño o mediano con las inversiones adecuadas en **SPR**. [Ponte en contacto](/contact).
 
-
-<!-- $Date: 2024-04-08 17:03:24 +0000 (Mon, 08 Apr 2024) $ $Author: joe $ $Revision: 22019 $ -->
+<!-- $Date: 2024-05-09 16:45:20 -0400 (Thu, 09 May 2024) $ $Author: joe $ $Revision: 24957 $ -->

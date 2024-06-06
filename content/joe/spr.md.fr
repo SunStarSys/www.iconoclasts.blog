@@ -4,9 +4,15 @@ categories: IT, sécurité, performance, fiabilité
 dependencies: '*.md.fr'
 keywords: infosec, appsec, performances, évolutivité, haute disponibilité, fiabilité
 published: ~
-status: projet
+status: vérifié=24957
 title: Sécurité de l'information, performances des applications et fiabilité
 ---
+
+<div class="right">
+
+![NonFunctional Tests](spr.page/nft).
+
+</div>
 
 {# lede #}L'ingénierie logicielle "non fonctionnelle" s'articule autour de trois problèmes clés : la sécurité, les performances et la fiabilité (**SPR**){# lede #}tandis que l'ingénierie logicielle "fonctionnelle" implique le cycle de vie normal du développement logiciel basé sur les fonctionnalités. Un bon [NIST 800-160v1r1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1r1.pdf).
 
@@ -28,5 +34,4 @@ Il existe également une spécialisation considérable en termes d'outillage d'o
 
 Des logiciels robustes, sécurisés, évolutifs, rentables et performants sont à la portée de toute équipe d'ingénierie de petite ou moyenne taille disposant des investissements appropriés dans **SPR**. [Contactez-nous](/contact).
 
-
-<!-- $Date: 2024-04-08 17:03:24 +0000 (Mon, 08 Apr 2024) $ $Author: joe $ $Revision: 22019 $ -->
+<!-- $Date: 2024-05-09 16:45:20 -0400 (Thu, 09 May 2024) $ $Author: joe $ $Revision: 24957 $ -->

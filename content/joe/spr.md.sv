@@ -4,9 +4,15 @@ categories: IT, Säkerhet, Prestanda, Tillförlitlighet
 dependencies: '*.md.sv'
 keywords: infosec, appsec, prestanda, skalbarhet, HA, tillförlitlighet
 published: ~
-status: skiss
+status: verifierad=24957
 title: Informationssäkerhet, applikationsprestanda och tillförlitlighet
 ---
+
+<div class="right">
+
+![NonFunctional Tester](spr.page/nft).
+
+</div>
 
 {# lede #}"Icke-funktionell" programvaruteknik handlar om tre huvudfrågor: säkerhet, prestanda och tillförlitlighet (**SPR**){# lede #}"funktionell" programvaruteknik innebär den normala funktionsbaserade livscykeln för programvaruutveckling. En riktig [NIST 800-160v1r1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1r1.pdf).
 
@@ -26,7 +32,6 @@ Genom att ha ett dedikerat **SPR**-team kan ledningen frigöra produktingenjöre
 
 Det finns också en betydande specialisering när det gäller observationsverktyg och kärnbaserade spårningstekniker, som bra systemingenjörer genomgår för att hålla sig på toppen av sitt område. Det är svårt att anställa för dessa hjälpfärdigheter när man söker kvalitetstalang för traditionella agile-baserade produkt / full stack ingenjörer och / eller datavetare.
 
-Robust, säker, skalbar, kostnadseffektiv och välfungerande programvara är inom räckhåll för alla små/medelstora ingenjörsteam med rätt investeringar i **SPR**. [Kontakta oss](/contact).
-
+Robust, säker, skalbar, kostnadseffektiv och välfungerande programvara är inom räckhåll för alla små och medelstora ingenjörsteam med rätt investeringar i ** SPR**. [Kontakta oss](/contact).
 
 <!-- $Date$ $Author$ $Revision$ -->
