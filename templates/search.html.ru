@@ -1,3 +1,4 @@
+# coding: utf-8
 {% extends "main.html"|append:lang %}
 {% block title %}{{title|safe}} /{% if filter %}{{filter}}{% else
 %}{{regex}}{% endif %}/ги{% endblock %}
@@ -54,9 +55,9 @@
         <code>{{v.action}}</code>&nbsp;
         {% ifequal k|parse_filename:2 ".md" %}
         {% ifequal k|dirname|parse_filename:2 ".page" %}
-	      <a href="{{k|dirname|parse_filename:"0,1"|strip_prefix}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
+	      <a href="/{{k|dirname|parse_filename:"0,1"|strip_prefix}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
 	    {% else %}
-		  <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
+		  <a href="/{{k|parse_filename:"0,1"|strip_prefix}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
         {% endifequal %}
 	    {% else %}
         {% ifequal k|parse_filename:3 ".yml" %}
