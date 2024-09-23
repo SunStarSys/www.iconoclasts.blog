@@ -4,8 +4,8 @@ categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆向問題，數學物理，諧波分析，表示理論
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: 已驗證 =22843
-title: 特徵函數和光譜幾何的三重產品
+status: 草稿
+title: 特徵和光譜幾何的三重產品
 ---
 
 <div class="right">
@@ -122,12 +122,12 @@ f_1 = f^p_2,\space p \space \in \N \implies \\
 \end{aligned}
 ```
 
-等等，* 嚴重 *，任何多變量多項式$$\weierp \in \Complex[z_1,...,z_l]$$ (在平滑功能上) ** 使用任何光譜保留的指令 ** $$\Delta$$- 特徵函數正規基底圖$$F$$ 保留$$\set{M^{i,j,k}}$$
+等等，* 嚴重 *，任何多變量多項式$$\weierp \in \Complex[z_1,...,z_l]$$ (在平滑功能上) ** 使用任何光譜保留的指令 ** $$\Delta$$- 特徵函數正規基底圖$$\vec{F}$$ 保留$$\set{M^{i,j,k}}$$
 
 ```math
 \begin{CD}
   C^\infty(M,\space\Complex^l) @>\weierp >> C^\infty(M)\\
-   @V\underbrace{F\oplus\dots\oplus F}_{l\space\text{times}}VV @VVFV\\
+   @V\underbrace{\vec{F}\oplus\dots\oplus \vec{F}}_{l\space\text{times}}VV @VV\vec{F}V\\
   C^\infty(N,\space\Complex^l) @>>\weierp > C^\infty(N)
 \end{CD}
 ```
@@ -178,13 +178,13 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 \end{aligned}
 ```
 
-我們以必備的論點來完成。
+我們以必要的論點來完成。
 
-為了充分利用，我們現在考慮了線性、生物彈性的正規特徵基礎圖$$F$$ 來自$$C^\infty(M)$$ 終止$$C^\infty(N)$$ 並請注意，從計算中的[初步](#preliminaries) 以上，$$F$$ 保留順暢函數的定點產品 (延長至時保留特性函數) $$L^2(M,g)$$) 由處所$$\set{M^{i,j,k}}$$
+為了充分利用，我們現在考慮了線性、生物彈性的正規特徵基礎圖$$\vec{F}$$ 來自$$C^\infty(M)$$ 終止$$C^\infty(N)$$ 並請注意，從計算中的[初步](#preliminaries) 以上，$$\vec{F}$$ 保留順暢函數的定點產品 (延長至時保留特性函數) $$L^2(M,g)$$) 由處所$$\set{M^{i,j,k}}$$
 
 ### 綱要
 
-$$F: C^\infty(M)\rightarrow C^\infty(N)$$ 會保留均勻規範。
+$$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 會保留均勻規範。
 
 ### 綱要證明
 
@@ -207,15 +207,15 @@ $$F: C^\infty(M)\rightarrow C^\infty(N)$$ 會保留均勻規範。
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-此為每個不相連子集之正計量特性函數$$\set{x\in M | a_j(x) = 1}$$繁體中文這表示每個 Lemma 都經過實證$$a_j$$，因為保留具有正計量之集合的限制特性函數，因此具有均勻標準 1，如同$$a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\N$$
+此為每個不相連子集之正計量特性函數$$\set{x\in M | a_j(x) = 1}$$繁體中文這表示每個 Lemma 都經過實證$$a_j$$，因為保留具有正計量之集合的限制特性函數，因此具有均勻標準 1，如同$$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$
 
 在不損失一般性的情況下，我們可能會套用針對單位平滑分割顯示的特殊案例結果$$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$，其中$$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$
 
-這表示在密集的集合上$$C(M)$$ (和$$C(N)$$)，我們已建立$$F$$ 阿貝利安同形性$$C^*$$ 代數，因此可以延伸至同形性$$C(M)$$ 以及$$C(N)$$
+這表示在密集的集合上$$C(M)$$ (和$$C(N)$$)，我們已建立$$\vec{F}$$ 阿貝利安同形性$$C^*$$ 代數，因此可以延伸至同形性$$C(M)$$ 以及$$C(N)$$
 
-現在我們把 Gelfand-Naimark 代表定理 (以相反的葬禮形式) 應用於阿貝利安$$C^*$$ 代數[[JC19]](#JC19) 利用之間的同態性來表示此同型$$N$$ 以及$$M$$
+現在我們把 Gelfand-Naimark 代表定理 (以相反的葬禮形式) 應用於阿貝利安$$C^*$$ 代數[[JC19]](#JC19) 以家庭型態表示此同型$$F$$ 介於$$N$$ 以及$$M$$
 
-如今，差異主義會保留特徵值和特徵函數 (透過假設對$$F$$)，它必須在平滑功能上保留拉普拉西亞文。因此，它也必須保留這些相同橢圓運算子的主要符號[[MT13]](#MT13).
+如今，這種多型$$F$$ 保存特徵值和特徵函數 (透過假說$$\vec{F}(f) = f\circ F$$)，它必須在平滑功能上保留拉普拉西亞文。因此，它也必須保留這些相同橢圓運算子的主要符號[[MT13]](#MT13).
 
 這樣就完成了理論的證明。
 
@@ -255,7 +255,7 @@ M^{i,j,k} = \begin{cases}
 
 由於此等式 <span class="eqno"></span> 對重量格而言為線性$$(A^{-1})^t\Z^n = \set{\lambda_i}$$，只有一個$$L^2$$ 正規特徵基底圖 ** 從容積保存的可逆線性圖中產生，這兩個索引，排名之間$$n$$ 重量晶格 ** 將保留「代數 / 拓樸」索引資料集$$\set{M^{i,j,k}}$$
 
-不過，為了申請我們[定理](#theorem)，對於這類線性地圖至關重要$$B$$ 是$$B\in O(n,\Reals)$$ 在重量格子上，因為誘發$$L^2$$
+不過，為了申請我們[定理](#theorem)，對這類線性地圖至關重要$$B$$ 是$$B\in O(n,\Reals)$$ 在重量格子上，因為誘發$$L^2$$
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty

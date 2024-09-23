@@ -5,8 +5,8 @@ dependencies: '*.md.es'
 keywords: teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verificado=22843
-title: Triple productos de autofunciones y geometría espectral
+status: borrador
+title: Triple Productos de Eigenfunciones y Geometría Espectral
 ---
 
 <div class="right">
@@ -30,7 +30,7 @@ Uso de técnicas elementales de análisis geométrico, ecuaciones diferenciales 
 
 Para un colector Riemannian cerrado $$(M,g)$$, caracterizando su **clase** de colectores isospectrales no isométricos, es un tipo de problema inverso [[DH11]](#DH11) en geometría espectral. Uno podría especular ingenuamente que esta clase siempre estaría vacía. Sin embargo, la literatura académica es rica en construcciones de décadas de pares específicos de contraejemplos: a partir de 1964 con el par de 16 dimensiones de tori plano isospectral no isométrico de John Milnor. [[JM64]](#JM64)y continuando [[CS92]](#CS92) hacia la caracterización dimensional genérica de tori plano en la tesis doctoral de Alexander Schiemann de 1993 [[AS94]](#AS94) &mdash; repleto de una búsqueda asistida por computadora para la crítica $$\dim = 3$$ caso.  Un estudio moderno de la historia completa del tori plano aparece en [[NRR22]](#NRR22).
 
-A lo largo del camino fueron reveladoras ramificaciones en espacios de cobertura simétrica más sofisticados y no euclidianos; la construcción de tales "duetas" isospectrales y no isométricos que involucran tensores de curvatura no triviales (y sus características de Euler determinadas por el espectro en la dimensión 2) [[MS67]](#MS67)Un ejemplo de este esfuerzo fue el de Toshikazu Sunada en 1985. [[TS85]](#TS85).
+A lo largo del camino fueron reveladoras ramificaciones en espacios de cobertura simétrica más sofisticados y no euclidianos; la construcción de tales "duetas" isospectrales y no isométricos que involucran tensores de curvatura no triviales (y sus características de Euler determinadas por el espectro en la dimensión 2) [[MS67]](#MS67)Un ejemplo de este esfuerzo fue Toshikazu Sunada en 1985. [[TS85]](#TS85).
 
 Para métricas riemannianas inhomogéneas, Carolyn Gordon descubrió dúos que ni siquiera son isométricos localmente. [[CG93]](#CG93).
 
@@ -123,12 +123,12 @@ f_1 = f^p_2,\space p \space \in \N \implies \\
 \end{aligned}
 ```
 
-y así, *críticamente*, cualquier polinomio multivariante $$\weierp \in \Complex[z_1,...,z_l]$$ (en funciones fluidas) **se conmuta** con cualquier preservación del espectro $$\Delta$$-eigenfunction mapa de base ortonormal $$F$$ que preserva $$\set{M^{i,j,k}}$$
+y así, *críticamente*, cualquier polinomio multivariante $$\weierp \in \Complex[z_1,...,z_l]$$ (en funciones fluidas) **se conmuta** con cualquier preservación del espectro $$\Delta$$-eigenfunction mapa de base ortonormal $$\vec{F}$$ que preserva $$\set{M^{i,j,k}}$$
 
 ```math
 \begin{CD}
   C^\infty(M,\space\Complex^l) @>\weierp >> C^\infty(M)\\
-   @V\underbrace{F\oplus\dots\oplus F}_{l\space\text{times}}VV @VVFV\\
+   @V\underbrace{\vec{F}\oplus\dots\oplus \vec{F}}_{l\space\text{times}}VV @VV\vec{F}V\\
   C^\infty(N,\space\Complex^l) @>>\weierp > C^\infty(N)
 \end{CD}
 ```
@@ -181,11 +181,11 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 hemos terminado con el argumento de la necesidad.
 
-Para la suficiencia, ahora consideramos el mapa de bases ortopédicas lineales y bijetivas $$F$$ desde $$C^\infty(M)$$ para $$C^\infty(N)$$ y señalar que a partir de los cálculos de [Preliminar](#preliminaries) arriba, $$F$$ conserva los productos en sentido puntual para funciones suaves (y conserva las funciones características cuando se amplía a $$L^2(M,g)$$) por la premisa de que $$\set{M^{i,j,k}}$$
+Para la suficiencia, ahora consideramos el mapa de bases ortopédicas lineales y bijetivas $$\vec{F}$$ desde $$C^\infty(M)$$ para $$C^\infty(N)$$ y señalar que a partir de los cálculos de [Preliminar](#preliminaries) arriba, $$\vec{F}$$ conserva los productos en sentido puntual para funciones suaves (y conserva las funciones características cuando se amplía a $$L^2(M,g)$$) por la premisa de que $$\set{M^{i,j,k}}$$
 
 ### Lemma
 
-$$F: C^\infty(M)\rightarrow C^\infty(N)$$ mantiene la norma uniforme.
+$$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ mantiene la norma uniforme.
 
 ### Prueba de Lemma
 
@@ -208,15 +208,15 @@ Por el teorema de convergencia dominado,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-que es una función característica de la medida positiva en cada subconjunto separado $$\set{x\in M | a_j(x) = 1}$$. Esto significa que el Lemma está probado para cada $$a_j$$, ya que se conserva la función característica limitante de un conjunto con medida positiva, y por lo tanto tiene norma uniforme 1, al igual que todas las $$a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\N$$
+que es una función característica de la medida positiva en cada subconjunto separado $$\set{x\in M | a_j(x) = 1}$$. Esto significa que el Lemma está probado para cada $$a_j$$, ya que se conserva la función característica limitante de un conjunto con medida positiva, y por lo tanto tiene norma uniforme 1, al igual que todas las $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$
 
 Sin pérdida de generalidad, podemos aplicar el resultado de caso especial mostrado para la división suave de la unidad $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, donde $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$
 
-Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$F$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto puede extenderse a un isomorfismo de $$C(M)$$ y $$C(N)$$
+Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto puede extenderse a un isomorfismo de $$C(M)$$ y $$C(N)$$
 
-Ahora aplicamos el teorema de representación de Gelfand-Naimark (en forma de funtor contravariante) para Abelian $$C^*$$ álgebras [[JC19]](#JC19) representar este isomorfismo por un homeomorfismo entre $$N$$ y $$M$$
+Ahora aplicamos el teorema de representación de Gelfand-Naimark (en forma de funtor contravariante) para Abelian $$C^*$$ álgebras [[JC19]](#JC19) representar este isomorfismo por un homeomorfismo $$F$$ entre $$N$$ y $$M$$
 
-Como este ahora diffeomorfismo preserva los valores propios y las funciones propias (por hipótesis sobre $$F$$), debe preservar el laplaciano en funciones suaves. Por lo tanto, también debe preservar los símbolos principales de estos mismos operadores elípticos. [[MT13]](#MT13).
+Como este ahora diffeomorfismo $$F$$ preserva los valores propios y las funciones propias (por hipótesis sobre $$\vec{F}(f) = f\circ F$$), debe preservar el laplaciano en funciones suaves. Por lo tanto, también debe preservar los símbolos principales de estos mismos operadores elípticos. [[MT13]](#MT13).
 
 Esto completa la prueba del teorema.
 
@@ -234,7 +234,7 @@ Desde para cualquier $$k$$, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para to
 
 Ejemplo ##
 
-Vamos $$\set{\lambda_i} \subset \R^n$$ ser una clasificación indexada $$n$$ enrejado de los pesos de Lie Algebra para la representación espacial cociente de $$\frak{g}=\Reals^n$$ como campos vectoriales invariantes de traducción (es decir, constantes) en sí mismos, cuando $$\R^n$$ también se considera $$\frak{g}$$Grupo de Lie asociado sobre un toro definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Estos pesos definen ascensores integrables de 1 forma sobre el toro que se integran a funciones lineales. $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ como su grupo de mentiras (que cubre el toro). Estas funciones lineales pueden entonces ser reescaladas uniformemente (por $$2\pi \sqrt{-1}$$) y exponenciados para formar caracteres multiplicativos que descienden para formar una base ortonormal de $$L^2(\Reals^n/A\Z^n,dx)$$, con la medida Lebesgue (Haar) $$dx$$
+Vamos $$\set{\lambda_i} \subset \R^n$$ ser una clasificación indexada $$n$$ enrejado de los pesos de Lie Algebra para la representación espacial cociente de $$\frak{g}=\Reals^n$$ como campos vectoriales invariantes de traducción (es decir, constantes) en sí mismos, cuando $$\R^n$$ también se considera $$\frak{g}$$Grupo de Lie asociado sobre un toro definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Estos pesos definen ascensores integrables de 1 forma sobre el toro que se integran a los funcionales lineales. $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ como su grupo de mentiras (que cubre el toro). Estas funciones lineales pueden entonces ser reescaladas uniformemente (por $$2\pi \sqrt{-1}$$) y exponenciados para formar caracteres multiplicativos que descienden para formar una base ortonormal de $$L^2(\Reals^n/A\Z^n,dx)$$, con la medida Lebesgue (Haar) $$dx$$
 
 Además, esta base diagonaliza simultáneamente el laplaciano del toro plano **porque** el laplaciano es la imagen de un elemento cuadrático cuadrático simétrico, negativo-definido de Casimir bajo esta (operador diferencial lineal de coeficiente constante) representación del espacio cociente del álgebra envolvente universal. Por lo tanto, sus valores propios están en proporción constante (de $$4\pi^2$$
 

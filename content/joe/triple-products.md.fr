@@ -5,8 +5,8 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: vérifié=22843
-title: Triple produits de fonctions propres et de géométrie spectrale
+status: projet
+title: Triple produits d'Eigenfunctions et de géométrie spectrale
 ---
 
 <div class="right">
@@ -28,7 +28,7 @@ Utiliser les techniques élémentaires de l'analyse géométrique, des équation
 
 Introduction ##
 
-Pour un collecteur Riemannien fermé $$(M,g)$$, caractérisant sa **classe** de collecteurs isospectraux non isométriques, est un type de problème inverse [[DH11]](#DH11) en géométrie spectrale. Naïvement, on pourrait spéculer que cette classe serait toujours *vide*. Cependant, la littérature académique est riche de constructions de plusieurs décennies d'appariements spécifiques de contre-exemples : à partir de 1964 avec la paire de 16 dimensions de John Milnor de tori plats isospectraux non isométriques. [[JM64]](#JM64), et continuer [[CS92]](#CS92) vers la caractérisation dimensionnelle générique du tori plat dans la thèse de doctorat d'Alexander Schiemann en 1993 [[AS94]](#AS94) &mdash; rempli d'une recherche assistée par ordinateur pour la critique $$\dim = 3$$ cas.  Une étude moderne de l'histoire complète des tori plats apparaît dans [[NRR22]](#NRR22).
+Pour un collecteur Riemannien fermé $$(M,g)$$, caractérisant sa **classe** de collecteurs isospectraux non isométriques, est un type de problème inverse [[DH11]](#DH11) en géométrie spectrale. Naïvement, on pourrait spéculer que cette classe serait toujours *vide*. Cependant, la littérature académique est riche de constructions de plusieurs décennies d'appariements spécifiques de contre-exemples : à partir de 1964 avec la paire de 16 dimensions de John Milnor de tori plats isospectraux non isométriques. [[JM64]](#JM64), et continuer [[CS92]](#CS92) Vers la caractérisation dimensionnelle générique du tori plat dans la thèse de doctorat d'Alexander Schiemann en 1993 [[AS94]](#AS94) &mdash; rempli d'une recherche assistée par ordinateur pour la critique $$\dim = 3$$ cas.  Une étude moderne de l'histoire complète des tori plats apparaît dans [[NRR22]](#NRR22).
 
 En cours de route, il y a eu des ramifications perspicaces dans des espaces de couverture symétriques non euclidiens plus sophistiqués ; la construction de tels "duets" isospectraux et non isométriques impliquant des tenseurs de courbure non triviaux (et leurs caractéristiques Euler déterminées par le spectre dans la dimension 2 [[MS67]](#MS67).) Un excellent exemple de cet effort fut celui de Toshikazu Sunada en 1985. [[TS85]](#TS85).
 
@@ -84,7 +84,7 @@ Si chaque valeur propre a une multiplicité $$1$$, étant donné une paire de ba
 
 <br>
 
-La motivation pour l'étude de $$\set{M^{i,j,k}}$$ est vaguement dérivé de l'étude du rôle de l' **opérateur de multiplication linéaire** $$Y:V\otimes V\rightarrow V((z))$$ dans la définition d'une algèbre d'opérateur de sommet [[FBZ04]](#FBZ04) associée à une théorie du champ conformationnel chiral. Ici $$V$$ est l'espace vecteur des États et $$V((z))$$ est l'espace de la série formelle Laurent dans $$z$$ avec des coefficients en $$V$$. Depuis $$V$$ est souvent équipé en tant qu'espace Hilbert avec une base orthonormée traditionnelle de la série Fourier, indexant $$Y$$ en utilisant les éléments de base de Fourier de $$V$$ est un peu plus impliqué que le $$M^{i,j,k}$$
+La motivation pour l'étude de $$\set{M^{i,j,k}}$$ est vaguement dérivé de l'étude du rôle de l' **opérateur de multiplication linéaire** $$Y:V\otimes V\rightarrow V((z))$$ dans la définition d'une algèbre d'opérateur de sommet [[FBZ04]](#FBZ04) associée à une théorie du champ conformationnel chiral. Ici $$V$$ est l'espace vecteur des États et $$V((z))$$ est l'espace de la série formelle Laurent dans $$z$$ avec des coefficients en $$V$$. Depuis $$V$$ est souvent équipé en tant qu'espace Hilbert avec une base orthonormée traditionnelle de la série Fourier, indexant $$Y$$ en utilisant les éléments de base de Fourier de $$V$$ est légèrement plus impliqué que le $$M^{i,j,k}$$
 
 Ces résultats ont été démontrés pour la première fois lors d'un discours similaire de l'auteur à **MSRI** en 1997, mais ils apparaissent ici sous forme publiée pour la première fois.
 
@@ -123,12 +123,12 @@ f_1 = f^p_2,\space p \space \in \N \implies \\
 \end{aligned}
 ```
 
-et donc, *critiquement*, tout polynôme multivarié $$\weierp \in \Complex[z_1,...,z_l]$$ (sur des fonctions lisses) **commute** avec préservation du spectre $$\Delta$$-carte de base orthonormée eigenfunction $$F$$ qui préserve $$\set{M^{i,j,k}}$$
+et donc, *critiquement*, tout polynôme multivarié $$\weierp \in \Complex[z_1,...,z_l]$$ (sur des fonctions lisses) **commute** avec préservation du spectre $$\Delta$$-carte de base orthonormée eigenfunction $$\vec{F}$$ qui préserve $$\set{M^{i,j,k}}$$
 
 ```math
 \begin{CD}
   C^\infty(M,\space\Complex^l) @>\weierp >> C^\infty(M)\\
-   @V\underbrace{F\oplus\dots\oplus F}_{l\space\text{times}}VV @VVFV\\
+   @V\underbrace{\vec{F}\oplus\dots\oplus \vec{F}}_{l\space\text{times}}VV @VV\vec{F}V\\
   C^\infty(N,\space\Complex^l) @>>\weierp > C^\infty(N)
 \end{CD}
 ```
@@ -181,11 +181,11 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 Nous en avons fini avec l'argument de nécessité.
 
-Pour la suffisance, nous considérons maintenant la carte de base orthonormée bijective linéaire $$F$$ de $$C^\infty(M)$$ à $$C^\infty(N)$$ Notez que les calculs dans le [Préliminaires](#preliminaries) ci-dessus, $$F$$ conserve les produits au niveau des points pour des fonctions lisses (et conserve les fonctions caractéristiques lorsqu'elles sont étendues à $$L^2(M,g)$$) par la prémisse que $$\set{M^{i,j,k}}$$
+Pour la suffisance, nous considérons maintenant la carte de base orthonormée bijective linéaire $$\vec{F}$$ de $$C^\infty(M)$$ à $$C^\infty(N)$$ Notez que les calculs dans le [Préliminaires](#preliminaries) ci-dessus, $$\vec{F}$$ conserve les produits au niveau des points pour des fonctions lisses (et conserve les fonctions caractéristiques lorsqu'elles sont étendues à $$L^2(M,g)$$) par la prémisse que $$\set{M^{i,j,k}}$$
 
 ### Lemme
 
-$$F: C^\infty(M)\rightarrow C^\infty(N)$$ préserve la norme uniforme.
+$$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ préserve la norme uniforme.
 
 ### Preuve de Lemme
 
@@ -208,15 +208,15 @@ Par le théorème de convergence dominé,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-qui est une fonction caractéristique de mesure positive sur chaque sous-ensemble disjoint $$\set{x\in M | a_j(x) = 1}$$. Cela signifie que le Lemme est prouvé pour chaque $$a_j$$, puisque la fonction caractéristique limitante d'un ensemble à mesure positive est préservée, et a donc la norme uniforme 1, comme le font tous les $$a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\N$$
+qui est une fonction caractéristique de mesure positive sur chaque sous-ensemble disjoint $$\set{x\in M | a_j(x) = 1}$$. Cela signifie que le Lemme est prouvé pour chaque $$a_j$$, puisque la fonction caractéristique limitante d'un ensemble à mesure positive est préservée, et a donc la norme uniforme 1, comme le font tous les $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$
 
 Sans perte de généralité, nous pouvons appliquer le résultat de cas spécial affiché pour la partition lisse de l'unité $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, où $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$
 
-Cela signifie que sur un ensemble dense de $$C(M)$$ (et $$C(N)$$), nous avons établi $$F$$ comme un isomorphisme d'Abelian $$C^*$$ les algèbres, et peuvent ainsi être étendues à un isomorphisme de $$C(M)$$ et $$C(N)$$
+Cela signifie que sur un ensemble dense de $$C(M)$$ (et $$C(N)$$), nous avons établi $$\vec{F}$$ comme un isomorphisme d'Abelian $$C^*$$ les algèbres, et peuvent ainsi être étendues à un isomorphisme de $$C(M)$$ et $$C(N)$$
 
-Maintenant, nous appliquons le théorème de représentation de Gelfand-Naimark (en forme de functor contravariant) pour Abelian $$C^*$$ algèbres [[JC19]](#JC19) pour représenter cet isomorphisme par un homéomorphisme entre $$N$$ et $$M$$
+Maintenant, nous appliquons le théorème de représentation de Gelfand-Naimark (en forme de functor contravariant) pour Abelian $$C^*$$ algèbres [[JC19]](#JC19) pour représenter cet isomorphisme par un homéomorphisme $$F$$ entre $$N$$ et $$M$$
 
-Comme ce diffeomorphisme préserve maintenant les valeurs propres et les fonctions propres (par hypothèse sur $$F$$), il doit préserver le Laplacien sur des fonctions lisses. Elle doit donc aussi conserver les principaux symboles de ces mêmes opérateurs elliptiques. [[MT13]](#MT13).
+Comme ce diffeomorphisme $$F$$ préserve les valeurs propres et les fonctions propres (par hypothèse sur $$\vec{F}(f) = f\circ F$$), il doit préserver le Laplacien sur des fonctions lisses. Elle doit donc aussi conserver les principaux symboles de ces mêmes opérateurs elliptiques. [[MT13]](#MT13).
 
 Cela complète la preuve du théorème.
 

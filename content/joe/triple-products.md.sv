@@ -5,8 +5,8 @@ dependencies: '*.md.sv'
 keywords: spektralteori, riemanngeometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verifierad=22843
-title: Tredubbla produkter av egenfunktioner och spektral geometri
+status: skiss
+title: Trippelprodukter av Eigenfunctions och Spectral Geometry
 ---
 
 <div class="right">
@@ -58,7 +58,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 ```
 
-Att vara isometrisk till $$(M,g)$$, är det ett *nödvändigt och tillräckligt villkor* för en annan **iospektral** stängd Riemannian mångfald att ha en ortonormal grund av egenfunktioner (för dess laplacian) som både bevarar de tillhörande egenvärdena och har en oföränderlig $$\set{M^{i,j,k}}$$
+Att vara isometrisk till $$(M,g)$$, det är ett *nödvändigt och tillräckligt villkor* för en annan **iospektral** stängd Riemannian mångfald för att ha en ortonormal grund av egenfunktioner (för dess laplacian) som både bevarar de tillhörande egenvärdena och har en oföränderlig $$\set{M^{i,j,k}}$$
 
 </div>
 </div>
@@ -123,12 +123,12 @@ f_1 = f^p_2,\space p \space \in \N \implies \\
 \end{aligned}
 ```
 
-och så, *kritiskt*, alla multivariat polynom $$\weierp \in \Complex[z_1,...,z_l]$$ (på smidiga funktioner) ** pendlar** med alla spektrumbevarande $$\Delta$$-Egenfunktion ortonormal bas karta $$F$$ som bevarar $$\set{M^{i,j,k}}$$
+och så, *kritiskt*, alla multivariat polynom $$\weierp \in \Complex[z_1,...,z_l]$$ (på smidiga funktioner) ** pendlar** med alla spektrumbevarande $$\Delta$$-Egenfunktion ortonormal bas karta $$\vec{F}$$ som bevarar $$\set{M^{i,j,k}}$$
 
 ```math
 \begin{CD}
   C^\infty(M,\space\Complex^l) @>\weierp >> C^\infty(M)\\
-   @V\underbrace{F\oplus\dots\oplus F}_{l\space\text{times}}VV @VVFV\\
+   @V\underbrace{\vec{F}\oplus\dots\oplus \vec{F}}_{l\space\text{times}}VV @VV\vec{F}V\\
   C^\infty(N,\space\Complex^l) @>>\weierp > C^\infty(N)
 \end{CD}
 ```
@@ -181,11 +181,11 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 Vi är klara med nödvändighetsargumentet.
 
-För tillräcklighet överväger vi nu den linjära, bijektiva ortonormala eigenfunktionsbaskartan $$F$$ från $$C^\infty(M)$$ till $$C^\infty(N)$$ Observera att beräkningarna i [Preliminära](#preliminaries) ovanför, $$F$$ bevarar punktvisa produkter för smidiga funktioner (och bevarar karakteristiska funktioner när de utökas till $$L^2(M,g)$$) enligt förutsättningen att $$\set{M^{i,j,k}}$$
+För tillräcklighet överväger vi nu den linjära, bijektiva ortonormala eigenfunktionsbaskartan $$\vec{F}$$ från $$C^\infty(M)$$ till $$C^\infty(N)$$ Observera att beräkningarna i [Preliminära](#preliminaries) ovanför, $$\vec{F}$$ bevarar punktvisa produkter för smidiga funktioner (och bevarar karakteristiska funktioner när de utökas till $$L^2(M,g)$$) enligt förutsättningen att $$\set{M^{i,j,k}}$$
 
 ### Lemma
 
-$$F: C^\infty(M)\rightarrow C^\infty(N)$$ bevarar den enhetliga normen.
+$$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ bevarar den enhetliga normen.
 
 ### Bevis på Lemma
 
@@ -208,15 +208,15 @@ genom den dominerade konvergensatsen,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-som är en karakteristisk funktion av positivt mått på varje delad delmängd $$\set{x\in M | a_j(x) = 1}$$. Detta innebär att Lemma bevisas för varje $$a_j$$, eftersom den begränsande karakteristiska funktionen hos ett set med positivt mått bevaras, och därmed har enhetlig norm 1, liksom alla $$a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\N$$
+som är en karakteristisk funktion av positivt mått på varje delad delmängd $$\set{x\in M | a_j(x) = 1}$$. Detta innebär att Lemma bevisas för varje $$a_j$$, eftersom den begränsande karakteristiska funktionen hos ett set med positivt mått bevaras, och därmed har enhetlig norm 1, liksom alla $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$
 
 Utan förlust av allmängiltighet kan vi tillämpa det speciella fallresultat som visas för den smidiga uppdelningen av enhet $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, där $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$
 
-Detta innebär att på en $$C(M)$$ (och $$C(N)$$), vi har upprättat $$F$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$
+Detta innebär att på en $$C(M)$$ (och $$C(N)$$), vi har upprättat $$\vec{F}$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$
 
-Nu tillämpar vi Gelfand-Naimark representationssatsen (i kontravariant functor form) för Abelian $$C^*$$ algebra [[JC19]](#JC19) att representera denna isomorfism genom en homeomorfism mellan $$N$$ och $$M$$
+Nu tillämpar vi Gelfand-Naimark representationssatsen (i kontravariant functor form) för Abelian $$C^*$$ algebra [[JC19]](#JC19) att representera denna isomorfism av en homeomorfism $$F$$ mellan $$N$$ och $$M$$
 
-Eftersom detta nu diffeomorfism bevarar egenvärden och egenfunktioner (genom hypoteser om $$F$$), det måste bevara Laplacian på smidiga funktioner. Därför måste den också bevara de viktigaste symbolerna för dessa samma elliptiska operatörer. [[MT13]](#MT13).
+som nu är diffeomorfism $$F$$ bevarar egenvärden och egenfunktioner (genom hypotes om $$\vec{F}(f) = f\circ F$$), det måste bevara Laplacian på smidiga funktioner. Därför måste den också bevara de viktigaste symbolerna för dessa samma elliptiska operatörer. [[MT13]](#MT13).
 
 Detta kompletterar teoremens bevis.
 
@@ -234,7 +234,7 @@ Sedan för varje given $$k$$, $$M_0^{i,i,k}$$ kan inte vara identiskt $$0$$ för
 
 ## Exempel
 
-Låt $$\set{\lambda_i} \subset \R^n$$ vara indexerad, rangordna $$n$$ lattice av Lie Algebra vikter för kvotutrymme representation av $$\frak{g}=\Reals^n$$ som översättningsinvariant (dvs. konstant) vektorfält på sig själv, när $$\R^n$$ ses också som $$\frak{g}$$'s associerade Lie Group över en torus definierad av $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Dessa vikter definierar icke-hållbara lyft av 1-former över torusen som integrerar med linjära funktioner $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ som dess lögngrupp (som täcker torus). Dessa linjära funktioner kan sedan likformigt skalas om (genom $$2\pi \sqrt{-1}$$) och exponentierad för att bilda multiplikativa tecken som sjunker till att bilda en ortonormal bas av $$L^2(\Reals^n/A\Z^n,dx)$$med måttet Lebesgue (Haar) $$dx$$
+Låt $$\set{\lambda_i} \subset \R^n$$ vara indexerad, rangordna $$n$$ lattice av Lie Algebra vikter för kvotutrymme representation av $$\frak{g}=\Reals^n$$ som översättningsinvariant (dvs. konstant) vektorfält på sig själv, när $$\R^n$$ ses också som $$\frak{g}$$'s associerade Lie Group över en torus definierad av $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Dessa vikter definierar icke-hållbara lyft av 1-former över torusen som integrerar med linjära funktioner $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ som dess lögngrupp (som täcker torusen). Dessa linjära funktioner kan sedan likformigt skalas om (genom $$2\pi \sqrt{-1}$$) och exponentierad för att bilda multiplikativa tecken som sjunker till att bilda en ortonormal bas av $$L^2(\Reals^n/A\Z^n,dx)$$med måttet Lebesgue (Haar) $$dx$$
 
 Dessutom diagonaliserar denna bas samtidigt den platta torus Laplacian ** eftersom** Laplacian är bilden av en symmetrisk, negativ-definit kvadratisk Casimir element under denna (konstant koefficient linjär differential operator) kvotutrymme representation av den universella omslutande algebra. Därför är dess egenvärden i konstant proportion (av $$4\pi^2$$
 

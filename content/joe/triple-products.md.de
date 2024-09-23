@@ -5,8 +5,8 @@ dependencies: '*.md.de'
 keywords: Spektraltheorie, Riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: überprüft=22843
-title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
+status: Entwurf
+title: Dreifache Produkte der Eigenfunktionen und der Spektralgeometrie
 ---
 
 <div class="right">
@@ -28,7 +28,7 @@ Verwendung elementarer Techniken aus der Geometrischen Analyse, partiellen Diffe
 
 ## Einführung
 
-Für eine geschlossene Riemannsche Verteiler $$(M,g)$$, die ihre **Klasse** von nicht-isometrischen, isospektralen Verteilern kennzeichnet, ist eine Art inverses Problem [[DH11]](#DH11) in der Spektralgeometrie. Naiv könnte man spekulieren, dass diese Klasse immer *leer* sein würde. Die akademische Literatur ist jedoch reich an jahrzehntelangen Konstruktionen spezifischer Paarungen von Gegenbeispielen: ab 1964 mit John Milnors 16-dimensionalen Paaren nichtisometrischer, isospektraler flacher Tori [[JM64]](#JM64)und weiter [[CS92]](#CS92) zur generischen dimensionalen Charakterisierung flacher Tori in Alexander Schiemanns Doktorarbeit von 1993 [[AS94]](#AS94) &mdash; mit einer computergestützten Suche nach dem Kritischen $$\dim = 3$$ Fall.  Eine moderne Übersicht über die ganze flache Tori-Geschichte erscheint in [[NRR22]](#NRR22).
+Für eine geschlossene Riemannsche Verteiler $$(M,g)$$, charakterisiert seine **Klasse** nicht-isometrischer, isospektraler Verteiler ist eine Art inverses Problem [[DH11]](#DH11) in der Spektralgeometrie. Naiv könnte man spekulieren, dass diese Klasse immer *leer* sein würde. Die akademische Literatur ist jedoch reich an jahrzehntelangen Konstruktionen spezifischer Paarungen von Gegenbeispielen: ab 1964 mit John Milnors 16-dimensionalen Paaren nichtisometrischer, isospektraler flacher Tori [[JM64]](#JM64)und weiter [[CS92]](#CS92) zur generischen dimensionalen Charakterisierung flacher Tori in Alexander Schiemanns Doktorarbeit von 1993 [[AS94]](#AS94) &mdash; mit einer computergestützten Suche nach dem kritischen $$\dim = 3$$ Fall.  Eine moderne Übersicht über die ganze flache Tori-Geschichte erscheint in [[NRR22]](#NRR22).
 
 Auf dem Weg waren aufschlussreiche Offshoots in anspruchsvollere, nicht-euklidische symmetrische Abdeckräume; Konstruieren solcher isospektraler, nicht-isometrischer "duets" mit nicht-trivialen Krümmungs-Tensoren (und ihre spektrumbestimmten Euler-Eigenschaften in Dimension 2) [[MS67]](#MS67).) Ein Paradebeispiel für diese Bemühungen war Toshikazu Sunadas 1985. [[TS85]](#TS85).
 
@@ -84,7 +84,7 @@ Wenn jeder Eigenwert eine Vielfalt hat $$1$$, bei einem Paar von Eigenwerten, di
 
 <br>
 
-Die Motivation für das Studium von $$\set{M^{i,j,k}}$$ ist lose aus der Studie der Rolle des **linearen Multiplikationsoperators** abgeleitet $$Y:V\otimes V\rightarrow V((z))$$ in der Definition einer Vertex Operator Algebra [[FBZ04]](#FBZ04) mit einer chiralen konformen Feldtheorie verbunden. Hier $$V$$ ist der Vektorraum der Staaten und $$V((z))$$ ist der Raum der formalen Laurent-Serie in $$z$$ mit Koeffizienten in $$V$$. Seit $$V$$ oft als Hilbert Space mit einer traditionellen orthonormalen Basis der Fourier-Serie ausgestattet, $$Y$$ Verwendung der Fourier-Basiselemente von $$V$$ ist nur etwas stärker beteiligt als die $$M^{i,j,k}$$
+Die Motivation für das Studium von $$\set{M^{i,j,k}}$$ ist lose aus der Studie der Rolle des **linearen Multiplikationsoperators** abgeleitet $$Y:V\otimes V\rightarrow V((z))$$ in der Definition einer Vertex Operator Algebra [[FBZ04]](#FBZ04) mit einer chiralen konformen Feldtheorie verbunden. Hier $$V$$ ist der Vektorraum der Staaten und $$V((z))$$ ist der Raum der formellen Laurent-Serie in $$z$$ mit Koeffizienten in $$V$$. Seit $$V$$ oft als Hilbert Space mit einer traditionellen orthonormalen Basis der Fourier-Serie ausgestattet, $$Y$$ Verwendung der Fourier-Basiselemente von $$V$$ ist nur etwas stärker beteiligt als die $$M^{i,j,k}$$
 
 Diese Ergebnisse wurden erstmals in einem ähnlich betitelten Vortrag des Autors bei **MSRI** im Jahr 1997 gezeigt, erscheinen aber hier erstmals in veröffentlichter Form.
 
@@ -123,12 +123,12 @@ f_1 = f^p_2,\space p \space \in \N \implies \\
 \end{aligned}
 ```
 
-und so, *kritisch*, jedes multivariate Polynom $$\weierp \in \Complex[z_1,...,z_l]$$ (bei reibungslosen Funktionen) **kommutiert** mit beliebigem Spektrum $$\Delta$$-Eigenfunktion orthonormale Basiskarte $$F$$ erhalten, $$\set{M^{i,j,k}}$$
+und so, *kritisch*, jedes multivariate Polynom $$\weierp \in \Complex[z_1,...,z_l]$$ (bei reibungslosen Funktionen) **kommutiert** mit beliebigem Spektrum $$\Delta$$-Eigenfunktion orthonormale Basiskarte $$\vec{F}$$ erhalten, $$\set{M^{i,j,k}}$$
 
 ```math
 \begin{CD}
   C^\infty(M,\space\Complex^l) @>\weierp >> C^\infty(M)\\
-   @V\underbrace{F\oplus\dots\oplus F}_{l\space\text{times}}VV @VVFV\\
+   @V\underbrace{\vec{F}\oplus\dots\oplus \vec{F}}_{l\space\text{times}}VV @VV\vec{F}V\\
   C^\infty(N,\space\Complex^l) @>>\weierp > C^\infty(N)
 \end{CD}
 ```
@@ -181,11 +181,11 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 Wir sind mit dem Argument der Notwendigkeit fertig.
 
-Zur Genügsamkeit betrachten wir nun die lineare, bijektive orthonormale Eigenfunktionsbasiskarte $$F$$ von $$C^\infty(M)$$ bis $$C^\infty(N)$$ und beachten Sie, dass aus den Berechnungen der [Vorläufig](#preliminaries) oben, $$F$$ Bewahrt punktgleiche Produkte für glatte Funktionen (und bewahrt charakteristische Funktionen, wenn erweitert um $$L^2(M,g)$$) durch die Prämisse, dass $$\set{M^{i,j,k}}$$
+Zur Genügsamkeit betrachten wir nun die lineare, bijektive orthonormale Eigenfunktionsbasiskarte $$\vec{F}$$ von $$C^\infty(M)$$ bis $$C^\infty(N)$$ und beachten Sie, dass aus den Berechnungen der [Vorläufig](#preliminaries) oben, $$\vec{F}$$ Bewahrt punktgleiche Produkte für glatte Funktionen (und bewahrt charakteristische Funktionen, wenn erweitert um $$L^2(M,g)$$) durch die Prämisse, dass $$\set{M^{i,j,k}}$$
 
 ### Lemma
 
-$$F: C^\infty(M)\rightarrow C^\infty(N)$$ behält die einheitliche Norm bei.
+$$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ behält die einheitliche Norm bei.
 
 ### Nachweis von Lemma
 
@@ -208,15 +208,15 @@ durch das dominierte Konvergenztheorem,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-die eine charakteristische Funktion der positiven Kennzahl bei jeder disjunktierten Teilmenge ist $$\set{x\in M | a_j(x) = 1}$$. Dies bedeutet, dass die Lemma für jeden $$a_j$$, da die limitierende charakteristische Funktion eines Satzes mit positiver Maßnahme erhalten bleibt und somit eine einheitliche Norm 1 hat, wie alle $$a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\N$$
+die eine charakteristische Funktion der positiven Kennzahl bei jeder disjunktierten Teilmenge ist $$\set{x\in M | a_j(x) = 1}$$. Dies bedeutet, dass die Lemma für jeden $$a_j$$, da die limitierende charakteristische Funktion eines Satzes mit positiver Maßnahme erhalten bleibt und somit eine einheitliche Norm 1 hat, wie alle $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$
 
 Ohne Verlust der Allgemeingültigkeit können wir das Sonderfallergebnis anwenden, das für die reibungslose Teilung der Einheit gezeigt wird. $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, wobei $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$
 
-Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), wir haben $$F$$ als Isomorphismus von Abelian $$C^*$$ Algebren und somit auf einen Isomorphismus der $$C(M)$$ und $$C(N)$$
+Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), wir haben $$\vec{F}$$ als Isomorphismus von Abelian $$C^*$$ Algebren und somit auf einen Isomorphismus der $$C(M)$$ und $$C(N)$$
 
-Nun wenden wir das Gelfand-Naimark-Darstellungstheorem (in kontravarianter Trichterform) für Abelian an $$C^*$$ Algebren [[JC19]](#JC19) um diesen Isomorphismus durch einen Homeomorphismus zwischen $$N$$ und $$M$$
+Jetzt wenden wir das Gelfand-Naimark-Darstellungstheorem (in kontravarianter Trichterform) für Abelian an $$C^*$$ Algebren [[JC19]](#JC19) diesen Isomorphismus durch einen Homöomorphismus darzustellen $$F$$ zwischen $$N$$ und $$M$$
 
-Da dieser nun Diffeomorphismus Eigenwerte und Eigenfunktionen bewahrt (durch Hypothese auf $$F$$), es muss den Laplacian auf glatten Funktionen erhalten. Daher müssen auch die Hauptsymbole dieser elliptischen Operatoren erhalten bleiben. [[MT13]](#MT13).
+Als dieser jetzt Diffeomorphismus $$F$$ behält Eigenwerte und Eigenfunktionen (durch Hypothese auf $$\vec{F}(f) = f\circ F$$), es muss den Laplacian auf glatten Funktionen erhalten. Daher müssen auch die Hauptsymbole dieser elliptischen Operatoren erhalten bleiben. [[MT13]](#MT13).
 
 Dies schließt den Beweis des Theorems ab.
 
