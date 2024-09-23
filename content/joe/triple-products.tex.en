@@ -135,7 +135,7 @@ and so, critically, any multivariate polynomial $\wp \in \mathbb{C}[z_1,...,z_l]
 \begin{equation}
 \label{fig}
 \begin{tikzcd}
-  C^\infty(M,\space\mathbb{C}^l)\arrow[swap]{d}{\underbrace{\vec{F}F\oplus\dots\oplus \vec{F}_{l\,\text{times}}} \arrow{r}{\wp} & C^\infty(M) \arrow{d}{\vec{F}}\\%
+  C^\infty(M,\space\mathbb{C}^l)\arrow[swap]{d}{\underbrace{\vec{F}\oplus\dots\oplus \vec{F}}_{l\,\text{times}}} \arrow{r}{\wp} & C^\infty(M) \arrow{d}{\vec{F}}\\%
   C^\infty(N,\space\mathbb{C}^l) \arrow{r}{\wp} & C^\infty(N)
 \end{tikzcd}
 \end{equation}
