@@ -33,7 +33,7 @@
 
 % Metadata
 \title{Triple products of eigenfunctions and spectral geometry}
-\date{2024\\March}
+\date{2024\\September}
 \author{Joe Schaefer\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
 
 % Theorem, Lemma, etc
@@ -132,12 +132,12 @@ f_1 = f^p_2,\space p \space \in \mathbb{N} \implies \\
 \end{aligned}
 \end{equation}
 
-and so, critically, any multivariate polynomial $\wp \in \mathbb{C}[z_1,...,z_l]$ (on smooth functions) commutes with any spectrum-preserving $\Delta$-eigenfunction orthonormal basis map $F$ that preserves $\set{M^{i,j,k}}$:
+and so, critically, any multivariate polynomial $\wp \in \mathbb{C}[z_1,...,z_l]$ (on smooth functions) commutes with any spectrum-preserving $\Delta$-eigenfunction orthonormal basis map $\vec{F}$ that preserves $\set{M^{i,j,k}}$:
 
 \begin{equation}
 \label{fig}
 \begin{tikzcd}
-  C^\infty(M,\space\mathbb{C}^l)\arrow[swap]{d}{\underbrace{F\oplus\dots\oplus F}_{l\,\text{times}}} \arrow{r}{\wp} & C^\infty(M) \arrow{d}{F}\\%
+  C^\infty(M,\space\mathbb{C}^l)\arrow[swap]{d}{\underbrace{\vec{F}F\oplus\dots\oplus \vec{F}_{l\,\text{times}}} \arrow{r}{\wp} & C^\infty(M) \arrow{d}{\vec{F}}\\%
   C^\infty(N,\space\mathbb{C}^l) \arrow{r}{\wp} & C^\infty(N)
 \end{tikzcd}
 \end{equation}
@@ -190,13 +190,13 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 \end{aligned}
 \end{equation}
 
-we are done with the necessity argument.
+we are done with the necessity argument, because $\Delta_M (f\circ F) = (\Delta_N f) \circ f, \ \ \forall f \in C^\infty(N)$.
 
-For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $F$ from $C^\infty(M)$ to $C^\infty(N)$ and note that from the calculations in Section~\ref{sec:pre} above, $F$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
+For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $\vec{F}$ from $C^\infty(M)$ to $C^\infty(N)$ and note that from the calculations in Section~\ref{sec:pre} above, $\vec{F}$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
 
 \begin{lemma}
 \label{lma}
-$F: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
+$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
 \end{lemma}
 
 \begin{subproof}[Proof of Lemma~\ref{lma}]
@@ -219,17 +219,17 @@ By the dominated convergence theorem,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx\,,
 \end{equation}
 
-which is a characteristic function of positive measure on each disjoint subset $\set{x\in M | a_j(x) = 1}$. This means the Lemma is proven for each $a_j$, since the limiting characteristic function of a set with positive measure is preserved, and hence has uniform norm 1, as do all $a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\mathbb{N}$, by Diagram~\ref{fig}.
+which is a characteristic function of positive measure on each disjoint subset $\set{x\in M | a_j(x) = 1}$. This means the Lemma is proven for each $a_j$, since the limiting characteristic function of a set with positive measure is preserved, and hence has uniform norm 1, as do all $a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\mathbb{N}$, by Diagram~\ref{fig}.
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$, where $ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$ has positive measure, and the Lemma is proven in full.
 
 \end{subproof}
 
-This means that on a dense set of $C(M)$ (and $C(N)$), we have established $F$ as an isomorphism of Abelian $C^*$ algebras, and thus can be extended to an isomorphism of $C(M)$ and $C(N)$ in the same category.
+This means that on a dense set of $C(M)$ (and $C(N)$), we have established $\vec{F}$ as an isomorphism of Abelian $C^*$ algebras, and thus can be extended to an isomorphism of $C(M)$ and $C(N)$ in the same category.
 
-Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras \cite{JC19} to represent this isomorphism by a homeomorphism between $N$ and $M$. Since it is bijective on smooth functions, it too must be smooth.
+Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$. Since $\vec{F}$ is bijective on smooth functions, $F$ too must be smooth.
 
-As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $F$), it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators \cite{MT13}. The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
+As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $\vec{F}(f) = f\circ F$), it must preserve the Laplacian on smooth functions. Hence $F$ also must preserve the principal symbols of these same elliptic operators \cite{MT13}. The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
 This completes the proof of the Theorem.
 
