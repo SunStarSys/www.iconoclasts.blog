@@ -211,7 +211,6 @@ Let $\set{a_i}$ be a smooth partition of unity on $M$.
 Thus $\sum_i\hat{a_i}(j) = \delta_j\sqrt{vol(M)}$ (Kronecker delta).
 
 By the dominated convergence theorem,
-
 \begin{equation}
 \lim_{p\rightarrow\infty}
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx\,,
