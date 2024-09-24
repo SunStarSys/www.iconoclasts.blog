@@ -179,7 +179,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 \end{aligned}
 ```
 
-Vi är klara med nödvändighetsargumentet.
+Det är nödvändigt att argumentera för att $$\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infty(M)$$
 
 För tillräcklighet överväger vi nu den linjära, bijektiva ortonormala eigenfunktionsbaskartan $$\vec{F}$$ från $$C^\infty(M)$$ till $$C^\infty(N)$$ Observera att beräkningarna i [Preliminära](#preliminaries) ovanför, $$\vec{F}$$ bevarar punktvisa produkter för smidiga funktioner (och bevarar karakteristiska funktioner när de utökas till $$L^2(M,g)$$) enligt förutsättningen att $$\set{M^{i,j,k}}$$
 

@@ -188,7 +188,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 \end{aligned}
 \end{equation}
 
-we are done with the necessity argument, because $\Delta_M (f\circ F) = (\Delta_N f) \circ f, \ \ \forall f \in C^\infty(N)$.
+we are done with the necessity argument because $\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infy(M)$.
 
 For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $\vec{F}$ from $C^\infty(M)$ to $C^\infty(N)$ and note that from the calculations in Section~\ref{sec:pre} above, $\vec{F}$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
 

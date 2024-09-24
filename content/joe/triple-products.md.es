@@ -179,7 +179,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 \end{aligned}
 ```
 
-hemos terminado con el argumento de la necesidad.
+hemos terminado con el argumento de la necesidad porque $$\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infty(M)$$
 
 Para la suficiencia, ahora consideramos el mapa de bases ortopédicas lineales y bijetivas $$\vec{F}$$ desde $$C^\infty(M)$$ para $$C^\infty(N)$$ y señalar que a partir de los cálculos de [Preliminar](#preliminaries) arriba, $$\vec{F}$$ conserva los productos en sentido puntual para funciones suaves (y conserva las funciones características cuando se amplía a $$L^2(M,g)$$) por la premisa de que $$\set{M^{i,j,k}}$$
 
