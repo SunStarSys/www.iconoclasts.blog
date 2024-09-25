@@ -226,20 +226,27 @@ We observe necessarily that
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. To see why, we can first compute
+We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. To see why, first assume without loss of generality that $$\set{e^i}$$ are all $$\R$$-valued. Then $$M^{i,j,k}$$ is symmetric in all indices, so we can compute
 
 ```math
 \begin{aligned}
 \sum_i a_i(e^i)^2 &= \sum_{i,j} a_iM^{i,i,j}e^j \implies \\
 \sum_i a_i e^i \sum_j b_j e^j &= \sum_{i,j}a_ib_je^ie^j = \sum_{i,j,k}a_ib_jM^{i,j,k}e^k=\sum_{i,j,k}a_ib_j M{i,i,k}\\
 \Delta fg &= f\Delta g + g\Delta f + 2 df \cdot dg \implies \\
-M_0^{i,j,k} &= \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_k - \lambda_i - \lambda_j},\text{ but by polarization} \\
+M_0^{i,j,k} &= \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_k - \lambda_i - \lambda_j} \\
+&= \frac{\bra{de^i\cdot de^k}\ket{e^j}}{\lambda_j - \lambda_i - \lambda_k} \text{, so}\\
+M_0^{i,i,k} &= 0 \iff \bra{de^i\cdot de^k}\ket{e^i} = 0. \\
+
+\text{Now by polarization}\\
 M_0^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{\bra{(e^i+e^j)^2}\ket{e^k} - M_0^{i,i,k} - M_0^{j,j,k}}{2}\text { and so the quadratic form} \\
 
-Q_k(f,g) := \bra{fg}\ket{e^k} &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\bra{(e^i+e^j)^2}\ket{e^k} - M_0^{i,i,k} - M_0^{j,j,k})\\
-Q_k(f,f) &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)\bra{(e^i+e^j)^2}\ket{e^k}. \\
-\text{Now letting }f = e^i + e^j \implies
-
+Q_k(f,g) := \bra{df\cdot dg}\ket{e^k} &= \sum_{i,j}\hat{f}(i)\hat{g}(j)(\bra{de^i\cdot de^j}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_k - \lambda_i - \lambda_j)M_0^{i,j,k}\ \therefore \\
+df \cdot dg &= \sum Q_k(f,g)e^k = \frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
+Q_0(f,f) &= -\frac{2}{\sqrt{\vol M}}sum_i \hat{f}(i)^2 \lambda_i\\
+Q_k(f,f) &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_k - \lambda_i - \lambda_j)(\bra{(e^i+e^j)^2}\ket{e^k} - M_0^{i,i,k} - M_0^{j,j,k}\\
+&= -\frac{1}{2}\sum_{i\ne j}\hat{f}(i)\hat{f}(j)(\lambda_k - \lambda_i - \lambda_j)\bra{(e^i-e^j)^2}\ket{e^k} -  M_0^{i,i,k} - M_0^{j,j,k}\\
+f = \frac{1}{\sqrt{\Delta}}g \implies \\
+&= \hat{g}(k) \\
 M_0^{i,i,k} &= 0\  \forall i\ \iff \\
 M_0^{i,j,k} = \frac{\bra{(e^i+e^j)^2}\ket{e^k}}{2} \forall i \ne j.
 \end{aligned}
