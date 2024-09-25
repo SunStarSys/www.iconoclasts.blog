@@ -245,8 +245,7 @@ df\cdot df = \sum_kQ_k(f,f)e^k &= \sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \
  = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M_0^{i,j,k}e^k \implies\\
  \sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M_0^{i,j,k} \\
 &= \widehat{g^2}(k) \\
-M_0^{i,i,k} &= 0\  \forall i\ \iff \\
-M_0^{i,j,k} = \frac{\bra{(e^i+e^j)^2}\ket{e^k}}{2} \forall i \ne j.
+Q_k(e^i + e^j, e^i + e^j) &= 2Q_k(e^i,e^j) = \frac{1}{2}(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k}\\
 \end{aligned}
 ```
 We proceed by induction on the lowest eigenvalue realizable by $$k$$, since the hope for the $$k=0, \ \lambda_0 = 0$$ case is obviously true.  Without loss of generality, we may assume the $$\set{e^i}$$ are $$\R$$-valued functions, so their squares are non-negative $$\R$$-valued functions. For contradiction, suppose $$\langle e^k \rangle \subset (ℋ^k := \overline{\langle (e^i)^2\rangle_{i\geq 0}})^\perp$$, but for $$l<k \implies \langle e^l \rangle \subset ℋ^k$$. Let $$f = f_ke^k + f_{ℋ^k},$$ so
