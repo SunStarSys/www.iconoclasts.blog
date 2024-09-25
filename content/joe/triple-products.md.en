@@ -231,15 +231,15 @@ We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$
 ```math
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
-M_0^{i,j,k} &= \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
+M_0^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
 M_0^{i,i,k} &= 0 \iff \bra{de^i\cdot de^k}\ket{e^i} = 0. \\
 
 \text{Now by polarization}\\
 M_0^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{\bra{(e^i+e^j)^2}\ket{e^k} - M_0^{i,i,k} - M_0^{j,j,k}}{2}\text { and so the quadratic form} \\
 
-Q_k(f,g) := \bra{df\cdot dg}\ket{e^k} &= \sum_{i,j}\hat{f}(i)\hat{g}(j)(\bra{de^i\cdot de^j}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k}\ \therefore \\
+Q_k(f,g) := \bra{df\cdot dg}\ket{e^k} &= \sum_{i,j}\hat{f}(i)\hat{g}(j)(\bra{de^i\cdot de^j}\ket{e^k} = \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k}\ \therefore \\
 df \cdot dg &= \sum Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) &= -\frac{2}{\sqrt{vol M}}sum_i \hat{f}(i)^2 \lambda_i\\
+Q_0(f,f) &= -\frac{1}{\sqrt{vol M}}sum_i \hat{f}(i)^2 \lambda_i\\
 df\cdot df = \sum_kQ_k(f,f)e^k &= \sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M_0^{i,j,k}e^k\\
 &= -\frac{1}{2}\sum_{i\ne j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(\bra{(e^i-e^j)^2}\ket{e^k} -  M_0^{i,i,k} - M_0^{j,j,k})e^k\\
  = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M_0^{i,j,k}e^k \implies\\
@@ -255,8 +255,6 @@ We proceed by induction on the lowest eigenvalue realizable by $$k$$, since the 
 \begin{aligned}
 \int_M df \cdot df \sqrt{g}dx &= \int_M (f_kde^k+df_{ℋ^k})\cdot (f_kde^k + df_{ℋ^k})\sqrt{g}dx = \bra{\Delta f}\ket{f}\\
 &= \int_M f_k^2 de^k \cdot de^k + 2f_k de^k \cdot df_{ℋ^k} + df_{ℋ^k} \cdot df_{ℋ^k}\ \  \sqrt{g}dx = \lambda_k f_k^2 + \underbrace{2f_k\bra{\nabla e^k}\ket{\nabla f_{ℋ^k}}}_0 + \bra{\Delta f_{ℋ^k} }\ket{f_{ℋ^k}}.
-
-\\ 
 \end{aligned}
 ```
 Furthermore, the Formula (11) for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$. These aspects remain unknown.
