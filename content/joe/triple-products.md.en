@@ -226,20 +226,17 @@ We observe necessarily that
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. To see why, first assume without loss of generality that $$\set{e^i}$$ are all $$\R$$-valued. Then $$M^{i,j,k}$$ is symmetric in all indices, so we can compute
+We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. At first blush, this doesn't seem impossible if $$M$$ has an "even/odd" symmetry group, and $$e^k$$ is odd. Nevertheless, let us compute
 
 ```math
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M_0^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
-M_0^{i,i,k} &= 0 \iff \bra{de^i\cdot de^k}\ket{e^i} = 0. \\
-
 \text{Now by polarization}\\
 M_0^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{\bra{(e^i+e^j)^2}\ket{e^k} - M_0^{i,i,k} - M_0^{j,j,k}}{2}\text { and so the quadratic form} \\
-
 Q_k(f,g) := \bra{df\cdot dg}\ket{e^k} &= \sum_{i,j}\hat{f}(i)\hat{g}(j)(\bra{de^i\cdot de^j}\ket{e^k} = \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k}\ \therefore \\
 df \cdot dg &= \sum Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) &= -\frac{1}{\sqrt{vol M}}sum_i \hat{f}(i)^2 \lambda_i\\
+Q_0(f,f) &= \frac{1}{\sqrt{vol M}}\sum_i \hat{f}(i)^2 \lambda_i\\
 df\cdot df = \sum_kQ_k(f,f)e^k &= \sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M_0^{i,j,k}e^k\\
 &= -\frac{1}{2}\sum_{i\ne j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(\bra{(e^i-e^j)^2}\ket{e^k} -  M_0^{i,i,k} - M_0^{j,j,k})e^k\\
  = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M_0^{i,j,k}e^k \implies\\
