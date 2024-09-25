@@ -238,8 +238,7 @@ Q_k(f,g) := \bra{df\cdot dg}\ket{e^k} &= \sum_{i,j}\hat{f}(i)\hat{g}(j)(\bra{de^
 \tilde{Q}_k(f,g) := \bra{\sqrt{\Delta}f \sqrt{\Delta}g}\ket{e^k} &= \frac{1}{2}\bra{fg}\ket{\sqrt{\Delta} e^k} - \bra{f\sqrt{\Delta}g + g\sqrt{\Delta}f}\ket{e^k}\\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\sqrt{\lambda_k} - \sqrt{\lambda_i} - \sqrt{\lambda_j})M_0^{i,j,k} e^k \\
 df \cdot dg &= \sum_n Q_n(f,g)e^n = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-
-Q_0(f,f) &= \frac{1}{\sqrt{vol M}}\sum_i \hat{f}(i)^2 \lambda_i\\
+Q_0(f,f) = \tilde{Q}_0(f,f) &= \frac{1}{\sqrt{vol M}}\sum_i |\hat{f}(i)|^2 \lambda_i = \\
 df\cdot df = \sum_nQ_n(f,f)e^n &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M_0^{i,j,k}e^k\\
 
 &= -\frac{1}{4}\sum_{i\ne j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(\bra{(e^i-e^j)^2}\ket{e^k} -  M_0^{i,i,k} - M_0^{j,j,k})e^k\\
