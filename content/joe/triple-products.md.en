@@ -233,7 +233,7 @@ We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M_0^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
 \text{Now by polarization}\\
-M_0^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{\bra{(e^i+e^j)^2}\ket{e^k} - M_0^{i,i,k} - M_0^{j,j,k}}{2}\text { and so the quadratic form} \\
+M_0^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{M_0^{i,i,k} + M_0^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k}}{2}\text { and so the quadratic form} \\
 Q_k(f,g) := \bra{df\cdot dg}\ket{e^k} &= \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} = \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k} ,\ \\
 \text{and with }J \text{ real-analytic}\\
 Q^J_k(f,g) := -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} &= -\frac{1}{2}\bra{fg}\ket{J(\Delta) e^k} - \bra{fJ(\Delta)g + gJ(\Delta)f}\ket{e^k}\\
