@@ -234,10 +234,14 @@ We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$
 M_0^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
 \text{Now by polarization}\\
 M_0^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{\bra{(e^i+e^j)^2}\ket{e^k} - M_0^{i,i,k} - M_0^{j,j,k}}{2}\text { and so the quadratic form} \\
-Q_k(f,g) := \bra{df\cdot dg}\ket{e^k} &= \sum_{i,j}\hat{f}(i)\hat{g}(j)(\bra{de^i\cdot de^j}\ket{e^k} = \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k}\ \therefore \\
+Q_k(f,g) := \bra{df\cdot dg}\ket{e^k} &= \sum_{i,j}\hat{f}(i)\hat{g}(j)(\bra{de^i\cdot de^j}\ket{e^k} = \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k} = 2\bra{(\sqrt{\Delta}f)(\sqrt{\Delta}g)}\ket{e^k} = \\
+\tilde{Q}_k(f,g) := \bra{\sqrt{\Delta}f \sqrt{\Delta}g}\ket{e^k} &= \frac{1}{2}\bra{fg}\ket{\Delta e^k} - \bra{f\sqrt{\Delta}g + g\sqrt{\Delta}f}\ket{\sqrt{\Delta}e^k}\\
+&= \frac{1}{2}\sum_{i,j}\sqrt{\lambda_k}(\sqrt{\lambda_k} - \sqrt{\lambda_i} - \sqrt{\lambda_j})\hat{f}(i)\hat{f}(j)M_0^{i,j,k} e^k \\
 df \cdot dg &= \sum_n Q_n(f,g)e^n = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
+
 Q_0(f,f) &= \frac{1}{\sqrt{vol M}}\sum_i \hat{f}(i)^2 \lambda_i\\
 df\cdot df = \sum_nQ_n(f,f)e^n &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M_0^{i,j,k}e^k\\
+
 &= -\frac{1}{4}\sum_{i\ne j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(\bra{(e^i-e^j)^2}\ket{e^k} -  M_0^{i,i,k} - M_0^{j,j,k})e^k\\
  = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M_0^{i,j,k}e^k \implies\\
  \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M_0^{i,j,k} \\
