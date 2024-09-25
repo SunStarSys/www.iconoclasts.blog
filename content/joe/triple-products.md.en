@@ -226,7 +226,7 @@ We observe necessarily that
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. At first blush, this doesn't seem impossible if $$M$$ has an "even/odd" symmetry group, and $$e^k$$ is odd. Nevertheless, let us compute
+We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. At first blush, this doesn't seem impossible if $$M$$ has an "even/odd" symmetry group, and $$e^k$$ is odd. Nevertheless, let us compute some new identities:
 
 ```math
 \begin{aligned}
@@ -234,10 +234,11 @@ We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$
 M_0^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
 \text{Now by polarization}\\
 M_0^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{\bra{(e^i+e^j)^2}\ket{e^k} - M_0^{i,i,k} - M_0^{j,j,k}}{2}\text { and so the quadratic form} \\
-Q_k(f,g) := \bra{df\cdot dg}\ket{e^k} &= \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} = \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k} \\
-\tilde{Q}_k(f,g) := \bra{\sqrt{\Delta}f \sqrt{\Delta}g}\ket{e^k} &= \frac{1}{2}\bra{fg}\ket{\sqrt{\Delta} e^k} - \bra{f\sqrt{\Delta}g + g\sqrt{\Delta}f}\ket{e^k}\\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\sqrt{\lambda_k} - \sqrt{\lambda_i} - \sqrt{\lambda_j})M_0^{i,j,k}\\
-&= \frac{1}{2} \sum_{i,j}\hat{f}(i)\hat{g}(j)\sqrt{\lambda_k}(\sqrt{\lambda_k} - \sqrt{\lambda_i} - \sqrt{\lambda_j})M_0^{i,j,k}\\
+Q_k(f,g) := \bra{df\cdot dg}\ket{e^k} &= \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} = \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k} ,\ \\
+\text{and with }J \text{ real-analytic}\\
+Q^J_k(f,g) := \bra{(J(\Delta)f)(J(\Delta)g)}\ket{e^k} &= \frac{1}{2}\bra{fg}\ket{J(\Delta) e^k} - \bra{fJ(\Delta)g + gJ(\Delta)f}\ket{e^k}\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\lambda_k) - J(\lambda_i) - J(\lambda_j)M_0^{i,j,k}\\
+\tilde{Q}_k(f,g) := \bra{(\Delta f)(\Delta g)}\ket{e^k} &= Q_k(f,g)\\
 df \cdot dg &= \sum_n Q_n(f,g)e^n = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
 Q_0(f,f) = \tilde{Q}_0(f,f) &= \frac{1}{\sqrt{vol M}}\sum_i |\hat{f}(i)|^2 \lambda_i = \\
 df\cdot df = \sum_nQ_n(f,f)e^n &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M_0^{i,j,k}e^k\\
