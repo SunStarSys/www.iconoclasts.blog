@@ -226,7 +226,7 @@ We observe necessarily that
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. At first blush, this doesn't seem impossible if $$M$$ has an "even/odd" symmetry group, and $$e^k$$ is odd. Nevertheless, let us compute some new identities:
+We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. At first blush, this doesn't seem impossible if $$M$$ has an "even/odd" symmetry group, and $$e^k$$ is odd. Nevertheless, let us compute some relevant identities to aid our investigation:
 
 ```math
 \begin{aligned}
@@ -236,20 +236,21 @@ M_0^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lam
 M_0^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{\bra{(e^i+e^j)^2}\ket{e^k} - M_0^{i,i,k} - M_0^{j,j,k}}{2}\text { and so the quadratic form} \\
 Q_k(f,g) := \bra{df\cdot dg}\ket{e^k} &= \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} = \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k} ,\ \\
 \text{and with }J \text{ real-analytic}\\
-Q^J_k(f,g) := \bra{(J(\Delta)f)(J(\Delta)g)}\ket{e^k} &= \frac{1}{2}\bra{fg}\ket{J(\Delta) e^k} - \bra{fJ(\Delta)g + gJ(\Delta)f}\ket{e^k}\\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\lambda_k) - J(\lambda_i) - J(\lambda_j)M_0^{i,j,k}\\
-\tilde{Q}_k(f,g) := \bra{(\Delta f)(\Delta g)}\ket{e^k} &= Q_k(f,g)\\
+Q^J_k(f,g) := -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} &= -\frac{1}{2}\bra{fg}\ket{J(\Delta) e^k} - \bra{fJ(\Delta)g + gJ(\Delta)f}\ket{e^k}\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M_0^{i,j,k}\\
+\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
 df \cdot dg &= \sum_n Q_n(f,g)e^n = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) = \tilde{Q}_0(f,f) &= \frac{1}{\sqrt{vol M}}\sum_i |\hat{f}(i)|^2 \lambda_i = \\
-df\cdot df = \sum_nQ_n(f,f)e^n &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M_0^{i,j,k}e^k\\
-
-&= -\frac{1}{4}\sum_{i\ne j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(\bra{(e^i-e^j)^2}\ket{e^k} -  M_0^{i,i,k} - M_0^{j,j,k})e^k\\
+Q_0(f,f) &= \frac{1}{\sqrt{vol M}}\sum_i |\hat{f}(i)|^2 \lambda_i = \\
+df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M_0^{i,j,k}e^k\\
+&= \frac{1}{4}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(M_0^{i,i,k} + M_0^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k})e^k\\
  = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M_0^{i,j,k}e^k \implies\\
  \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M_0^{i,j,k} \\
 &= \widehat{g^2}(k) \\
-Q_k(e^i + e^j, e^i + e^j) &= 2Q_k(e^i,e^j) = \frac{1}{2}(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k}\\
+Q_k(e^i + e^j, e^i + e^j) - Q_k(e^i,e^i) - Q_k(e^j,e^j) &= 2Q_k(e^i,e^j) = \frac{1}{2}(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k}.\\
 \end{aligned}
 ```
+Note: for the $$\dim = 1$$ case, $$\tilde{Q}_k(f,g) = 0$$ since $$\sqrt{\Delta} = d/dx$$ is a true derivation.
+
 We proceed by induction on the lowest eigenvalue realizable by $$k$$, since the hope for the $$k=0, \ \lambda_0 = 0$$ case is obviously true.  Without loss of generality, we may assume the $$\set{e^i}$$ are $$\R$$-valued functions, so their squares are non-negative $$\R$$-valued functions. For contradiction, suppose $$\langle e^k \rangle \subset (ℋ^k := \overline{\langle (e^i)^2\rangle_{i\geq 0}})^\perp$$, but for $$l<k \implies \langle e^l \rangle \subset ℋ^k$$. Let $$f = f_ke^k + f_{ℋ^k},$$ so
 
 ```math
