@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: draft
+status: verified=25249
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
@@ -226,7 +226,9 @@ We observe necessarily that
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. At first blush, this doesn't seem impossible if $$M$$ has an "even/odd" symmetry group, and $$e^k$$ is odd. Nevertheless, let us compute some relevant identities to aid our investigation:
+We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. At first blush, this doesn't seem impossible if $$M$$ has an "even/odd" symmetry group, and $$e^k$$ is odd. Furthermore, the Formula (11) for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$. All of these aspects remain unknown.
+
+Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into this conjecture:
 
 ```math
 \begin{aligned}
@@ -253,16 +255,6 @@ Q_k(e^i + e^j, e^i + e^j) - Q_k(e^i,e^i) - Q_k(e^j,e^j) &= 2Q_k(e^i,e^j) = (\lam
 \end{aligned}
 ```
 Note: for the $$\dim = 1$$ case, $$\tilde{Q}_k(f,g) = 0$$ since $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ is a true derivation.
-
-We proceed by induction on the lowest eigenvalue realizable by $$k$$, since the hope for the $$k=0, \ \lambda_0 = 0$$ case is obviously true.  Without loss of generality, we may assume the $$\set{e^i}$$ are $$\R$$-valued functions, so their squares are non-negative $$\R$$-valued functions. For contradiction, suppose $$\langle e^k \rangle \subset (ℋ^k := \overline{\langle (e^i)^2\rangle_{i\geq 0}})^\perp$$, but for $$l<k \implies \langle e^l \rangle \subset ℋ^k$$. Let $$f = f_ke^k + f_{ℋ^k},$$ so
-
-```math
-\begin{aligned}
-\int_M df \cdot df \sqrt{g}dx &= \int_M (f_kde^k+df_{ℋ^k})\cdot (f_kde^k + df_{ℋ^k})\sqrt{g}dx = \bra{\Delta f}\ket{f}\\
-&= \int_M f_k^2 de^k \cdot de^k + 2f_k de^k \cdot df_{ℋ^k} + df_{ℋ^k} \cdot df_{ℋ^k}\ \  \sqrt{g}dx = \lambda_k f_k^2 + \underbrace{2f_k\bra{\nabla e^k}\ket{\nabla f_{ℋ^k}}}_0 + \bra{\Delta f_{ℋ^k} }\ket{f_{ℋ^k}}.
-\end{aligned}
-```
-Furthermore, the Formula (11) for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$. These aspects remain unknown.
 
 ## Example
 
