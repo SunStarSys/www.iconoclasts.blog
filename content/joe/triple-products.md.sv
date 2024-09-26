@@ -5,7 +5,7 @@ dependencies: '*.md.sv'
 keywords: spektralteori, riemanngeometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: skiss
+status: verifierad=25295
 title: Trippelprodukter av Eigenfunctions och Spectral Geometry
 ---
 
@@ -54,7 +54,7 @@ Med tanke på en (icke-minskande på egenvärdena) ortonormal grund av egenfunkt
 
 ```math
 
-M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 ```
 
@@ -230,7 +230,35 @@ Vi ser med nödvändighet att
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-Sedan för varje given $$k$$, $$M_0^{i,i,k}$$ kan inte vara identiskt $$0$$ för alla $$i$$Denna formel för $$z_k$$ kräver båda $$i$$-oberoende, och tillräcklig, för att fastställa baskartan $$e_0^i \mapsto z_i e_1^i$$ konserver $$\set{M_0^{i,j,k}}$$
+Vi hoppas att för varje given $$k$$, $$M_0^{i,i,k}$$ kan inte vara identiskt $$0$$ för alla $$i$$. Vid första rodnad verkar det inte omöjligt om $$M$$ har en "jämn/odd" symmetrigrupp, och $$e^k$$ är udda, men hoppet gäller för flat-torifallet nedan (som inte uppfyller den enhetliga egenvärdesmultiplikiteten = 1 villkor). Formeln (11) för $$z_k$$ kräver båda $$i$$-oberoende, och tillräcklig, för att fastställa baskartan $$e_0^i \mapsto z_i e_1^i$$ konserver $$\set{M_0^{i,j,k}}$$
+
+Låt oss dock beräkna några relevanta identiteter så att några oförskämda framtida forskare kan gräva i denna gissning:
+
+```math
+\begin{aligned}
+\Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
+M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
+\text{Now by polarization}\\
+M^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k}}{2},\\
+\text {and so the quadratic form} \\
+Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\ \\
+\text{Now with }J \text{ real-analytic}\\
+Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
+&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
+\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
+Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
+df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M^{i,j,k}e^k\\
+&= \frac{1}{4}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k})e^k\\
+ = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M^{i,j,k}e^k \implies\\
+ \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
+&= \widehat{g^2}(k). \\
+\end{aligned}
+```
+Anmärkning: för det endimensionella flat-torifallet nedan, $$\tilde{Q}_k(e^i,e^j) = 0$$ sedan $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$
 
 ## Exempel
 

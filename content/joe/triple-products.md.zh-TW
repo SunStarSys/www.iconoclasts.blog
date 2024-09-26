@@ -4,7 +4,7 @@ categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆向問題，數學物理，諧波分析，表示理論
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: 草稿
+status: 已驗證 =25295
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -53,7 +53,7 @@ Carolyn Gordon 針對不同質的 Riemannian 指標發現即使在本機上也�
 
 ```math
 
-M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 ```
 
@@ -178,7 +178,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 \end{aligned}
 ```
 
-我們以必要的論點來完成。
+我們是用必需的論點來完成，因為$$\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infty(M)$$
 
 為了充分利用，我們現在考慮了線性、生物彈性的正規特徵基礎圖$$\vec{F}$$ 來自$$C^\infty(M)$$ 終止$$C^\infty(N)$$ 並請注意，從計算中的[初步](#preliminaries) 以上，$$\vec{F}$$ 保留順暢函數的定點產品 (延長至時保留特性函數) $$L^2(M,g)$$) 由處所$$\set{M^{i,j,k}}$$
 
@@ -229,7 +229,35 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 會保留均勻規範。
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-任何給定的開始日期$$k$$, $$M_0^{i,i,k}$$ 無法相同$$0$$ 全部$$i$$，此公式用於$$z_k$$ 需要兩者$$i$$- 獨立與充分性，以建立基準對應$$e_0^i \mapsto z_i e_1^i$$ 保留$$\set{M_0^{i,j,k}}$$
+我們可能希望對任何給定的$$k$$, $$M_0^{i,i,k}$$ 無法相同$$0$$ 全部$$i$$繁體中文第一個筆刷，如果$$M$$ 具有 "even/odd" 對稱群組，並且$$e^k$$ 為奇數，但希望對於以下的均一大小寫保持真 (不滿足均勻特徵值多重性 = 1 條件)。此外，公式 (11) $$z_k$$ 需要兩者$$i$$- 獨立與充分性，以建立基準對應$$e_0^i \mapsto z_i e_1^i$$ 保留$$\set{M_0^{i,j,k}}$$
+
+然而，讓我們計算一些相關的身份，以便一些未來的研究人員可以挖到這個形容詞：
+
+```math
+\begin{aligned}
+\Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
+M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
+\text{Now by polarization}\\
+M^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k}}{2},\\
+\text {and so the quadratic form} \\
+Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\ \\
+\text{Now with }J \text{ real-analytic}\\
+Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
+&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
+\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
+Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
+df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M^{i,j,k}e^k\\
+&= \frac{1}{4}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k})e^k\\
+ = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M^{i,j,k}e^k \implies\\
+ \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
+&= \widehat{g^2}(k). \\
+\end{aligned}
+```
+注：對於下面的一維扁平鋪面案例，$$\tilde{Q}_k(e^i,e^j) = 0$$ 起自$$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$
 
 ## 範例
 

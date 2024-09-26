@@ -5,7 +5,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: projet
+status: vérifié=25295
 title: Triple produits d'Eigenfunctions et de géométrie spectrale
 ---
 
@@ -54,7 +54,7 @@ Compte tenu d'une base orthonormée (non décroissante sur les valeurs propres) 
 
 ```math
 
-M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 ```
 
@@ -179,7 +179,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 \end{aligned}
 ```
 
-Nous en avons fini avec l'argument de nécessité parce que $$\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infy(M)$$
+Nous en avons fini avec l'argument de nécessité parce que $$\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infty(M)$$
 
 Pour la suffisance, nous considérons maintenant la carte de base orthonormée bijective linéaire $$\vec{F}$$ de $$C^\infty(M)$$ à $$C^\infty(N)$$ Notez que les calculs dans le [Préliminaires](#preliminaries) ci-dessus, $$\vec{F}$$ conserve les produits au niveau des points pour des fonctions lisses (et conserve les fonctions caractéristiques lorsqu'elles sont étendues à $$L^2(M,g)$$) par la prémisse que $$\set{M^{i,j,k}}$$
 
@@ -230,7 +230,35 @@ Nous observons nécessairement que
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-Depuis pour toute donnée $$k$$, $$M_0^{i,i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$, cette formule pour $$z_k$$ nécessite les deux $$i$$- l'indépendance et la suffisance pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conserves $$\set{M_0^{i,j,k}}$$
+Nous pouvons espérer que pour chaque $$k$$, $$M_0^{i,i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$. Au début, cela ne semble pas impossible si $$M$$ a un groupe de symétrie "pair/impair", et $$e^k$$ est étrange, mais l'espoir est vrai pour le cas plat-tori ci-dessous (qui ne satisfait pas la multiplicité uniforme de la valeur propre = 1 condition). La formule (11) pour $$z_k$$ nécessite les deux $$i$$- l'indépendance et la suffisance pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conserves $$\set{M_0^{i,j,k}}$$
+
+Néanmoins, calculons certaines identités pertinentes afin que certains futurs chercheurs intrépides puissent creuser dans cette conjecture :
+
+```math
+\begin{aligned}
+\Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
+M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
+\text{Now by polarization}\\
+M^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k}}{2},\\
+\text {and so the quadratic form} \\
+Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\ \\
+\text{Now with }J \text{ real-analytic}\\
+Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
+&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
+\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
+Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
+df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M^{i,j,k}e^k\\
+&= \frac{1}{4}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k})e^k\\
+ = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M^{i,j,k}e^k \implies\\
+ \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
+&= \widehat{g^2}(k). \\
+\end{aligned}
+```
+Note : pour le cas monodimensionnel plat-tori ci-dessous, $$\tilde{Q}_k(e^i,e^j) = 0$$ depuis $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$
 
 Exemple ##
 

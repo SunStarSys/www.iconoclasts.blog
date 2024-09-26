@@ -5,7 +5,7 @@ dependencies: '*.md.es'
 keywords: teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: borrador
+status: verificado=25295
 title: Triple Productos de Eigenfunciones y Geometría Espectral
 ---
 
@@ -54,7 +54,7 @@ Dada una (no disminución de los valores propios) base ortonormal de las funcion
 
 ```math
 
-M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 ```
 
@@ -230,7 +230,35 @@ Observamos necesariamente que
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-Desde para cualquier $$k$$, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$, esta fórmula para $$z_k$$ requiere tanto $$i$$-independencia y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conservas $$\set{M_0^{i,j,k}}$$
+Podemos esperar que para cualquier $$k$$, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$. Al principio, esto no parece imposible si $$M$$ tiene un grupo de simetría "par/odd", y $$e^k$$ es extraño, pero la esperanza es verdadera para el caso plano-tori a continuación (que no satisface la multiplicidad de valor propio uniforme = 1 condición). Además, la Fórmula (11) para $$z_k$$ requiere tanto $$i$$-independencia y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conservas $$\set{M_0^{i,j,k}}$$
+
+Sin embargo, calculemos algunas identidades relevantes para que algún investigador futuro intrépido pueda profundizar en esta conjetura:
+
+```math
+\begin{aligned}
+\Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
+M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
+\text{Now by polarization}\\
+M^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k}}{2},\\
+\text {and so the quadratic form} \\
+Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\ \\
+\text{Now with }J \text{ real-analytic}\\
+Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
+&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
+\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
+Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
+df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M^{i,j,k}e^k\\
+&= \frac{1}{4}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k})e^k\\
+ = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M^{i,j,k}e^k \implies\\
+ \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
+&= \widehat{g^2}(k). \\
+\end{aligned}
+```
+Nota: para el caso de tori plano unidimensional que figura a continuación, $$\tilde{Q}_k(e^i,e^j) = 0$$ desde $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$
 
 Ejemplo ##
 

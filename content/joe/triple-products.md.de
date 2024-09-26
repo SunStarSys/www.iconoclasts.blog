@@ -5,7 +5,7 @@ dependencies: '*.md.de'
 keywords: Spektraltheorie, Riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: überprüft=25255
+status: überprüft=25295
 title: Dreifache Produkte der Eigenfunktionen und der Spektralgeometrie
 ---
 
@@ -54,7 +54,7 @@ Bei einer (nicht abnehmenden Eigenwert) orthonormalen Basis von Eigenfunktionen 
 
 ```math
 
-M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 ```
 
@@ -230,36 +230,35 @@ Wir beobachten notwendigerweise, dass
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-Wir können hoffen, dass für jede gegebene $$k$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$. Auf den ersten Blick scheint dies nicht unmöglich, wenn $$M$$ eine "even/odd"-Symmetriegruppe hat und $$e^k$$ ist seltsam. Die Formel (11) für $$z_k$$ erfordert beides $$i$$Unabhängigkeit und Suffizienz, um die Basiskarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Konserven $$\set{M_0^{i,j,k}}$$
+Wir können hoffen, dass für jede gegebene $$k$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$. Auf den ersten Blick scheint dies nicht unmöglich, wenn $$M$$ eine "even/odd"-Symmetriegruppe hat und $$e^k$$ ist seltsam, aber die Hoffnung gilt für den unten stehenden Flat-Tori-Fall (der die einheitliche Eigenwertvielfalt nicht erfüllt = 1 Bedingung). Die Formel (11) für $$z_k$$ erfordert beides $$i$$Unabhängigkeit und Suffizienz, um die Basiskarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Konserven $$\set{M_0^{i,j,k}}$$
 
 Lassen Sie uns jedoch einige relevante Identitäten berechnen, damit einige unerschrockene zukünftige Forscher diese Vermutung untersuchen können:
 
 ```math
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
-M_0^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
+M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
 \text{Now by polarization}\\
-M_0^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{M_0^{i,i,k} + M_0^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k}}{2},\\
+M^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k}}{2},\\
 \text {and so the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k} .\ \\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\ \\
 \text{Now with }J \text{ real-analytic}\\
 Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
 &= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M_0^{i,j,k}\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
 \tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M_0^{i,j,k}\\
-df \cdot dg &= \sum_n Q_n(f,g)e^n = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) &= \frac{1}{\sqrt{vol M}}\sum_i \hat{f}(i)^2 \lambda_i = \\
-df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M_0^{i,j,k}e^k\\
-&= \frac{1}{4}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(M_0^{i,i,k} + M_0^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k})e^k\\
- = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M_0^{i,j,k}e^k \implies\\
- \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M_0^{i,j,k} \\
-&= \widehat{g^2}(k) \\
-Q_k(e^i + e^j, e^i + e^j) - Q_k(e^i,e^i) - Q_k(e^j,e^j) &= 2Q_k(e^i,e^j) = (\lambda_i + \lambda_j - \lambda_k)M_0^{i,j,k}.\\
+&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
+Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
+df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M^{i,j,k}e^k\\
+&= \frac{1}{4}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k})e^k\\
+ = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M^{i,j,k}e^k \implies\\
+ \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
+&= \widehat{g^2}(k). \\
 \end{aligned}
 ```
-Hinweis: für den flachen Fall unten, $$\tilde{Q}_k(f,g) = 0$$ seit $$\sqrt{\Delta}$$
+Hinweis: für den eindimensionalen Flat-Tori-Fall unten, $$\tilde{Q}_k(e^i,e^j) = 0$$ seit $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$
 
 ## Beispiel
 
