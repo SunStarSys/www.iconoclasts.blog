@@ -50,7 +50,7 @@ Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions 
 
 ```math
 
-M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 ```
 
