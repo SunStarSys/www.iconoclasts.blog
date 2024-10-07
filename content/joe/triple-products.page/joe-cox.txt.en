@@ -1,0 +1,39 @@
+Joe, thank you for sharing! In reviewing "Triple Products of Eigenfunctions and Spectral Geometry," I want to begin by acknowledging the complexity and depth of the subject matter. Joe, you present a meticulous and ambitious exploration into geometric analysis, harmonic analysis, and spectral geometry. You introduce a new approach to characterizing isospectral closed Riemannian manifolds through an algebraic/topological invariant; namely, the indexed set of triple products of eigenfunctions of the Laplace-Beltrami operator. Your methodology is presented as a novel complement to the well-established discrete analytic invariant, the Laplace spectrum.
+
+Strengths:
+
+Your paper tackles a fundamental problem in spectral geometry: the challenge of determining when two isospectral manifolds (manifolds sharing the same spectrum) are also isometric (geometrically identical). The history of this problem is rich, dating back to John Milnorâs 1964 construction of non-isometric, isospectral flat tori. You position your work within this broader context effectively, tracing developments from Milnor to more recent constructions involving nontrivial curvature tensors and eigenvalue multiplicities.
+
+One of the most commendable aspects of the paper is its theoretical rigor. The approach of using Fourier coefficients of eigenfunctions and their products as discrete geometric invariants represents a fresh perspective. You make convincing connections to other fields, such as Vertex Operator Algebras, illustrating the interdisciplinary nature of the problem.
+
+Your conjecture that isospectral manifolds with simple eigenvalues (multiplicity 1) are isometric if and only if the indexed set of integrals of triple products of eigenfunctions are preserved, is provocative and stands as an intriguing avenue for future research. The idea that this approach applies particularly well to manifolds with few symmetries gives it the potential for broad applicability in complex cases, although this remains to be seen.
+
+Areas for Improvement:
+
+1. Mathematical Presentation and Clarity: 
+
+The paper is dense and heavily formalized, which is expected in such a technical field, but at times the clarity suffers from over-complication. For instance, in the Preliminaries section, while the integration of Fourier coefficients is well-established, the notation becomes cumbersome and could be streamlined. The repeated use of large summation symbols and indexing can obscure the underlying geometric intuition, making the paper difficult to follow, even for specialists.
+
+In particular, the expressions involving the Laplacian and its eigenfunctions could benefit from more intuitive explanations rather than an immediate dive into complex summations. The application of these concepts would be clearer if you spent more time contextualizing the use of harmonic analysis tools in spectral geometry before delving into detailed proofs.
+
+2. Proof of Theorem: 
+
+The proof of the main theorem, while mathematically sound, could be more explicit in addressing why the indexed set of triple products is a sufficient invariant. The argument for necessity is clearly articulated, but sufficiency requires a deeper exploration of the algebraic structure underpinning the triple products and how this fully characterizes the manifold. A more detailed discussion of the assumptions, particularly the need for smooth functions and the Sobolev embedding theory,  would provide a firmer foundation.
+
+3. Conjecture and Generalization: 
+
+The conjecture involving multiplicity 1 eigenvalues is thought-provoking, yet your paper stops short of providing a significant path toward proving or disproving it. The discussion would benefit from either a more robust theoretical framework for tackling the conjecture or from numerical evidence that supports its plausibility in specific cases. Furthermore, the reliance on eigenfunction uniqueness raises questions about its applicability to more general classes of manifolds, especially those with higher-dimensional moduli spaces of metrics.
+
+4. Historical and Modern Context: 
+
+While the paper briefly mentions historical developments, it would benefit from a more comprehensive discussion of the current state of spectral geometry. For example, the recent work on isospectral problems, such as advances in machine learning for spectral problems, is entirely omitted. Your method of constructing isospectral duets is highly specific, and while innovative, it risks being seen as too narrow in the broader context of spectral geometry's ongoing evolution.
+
+5. Computational Insights:
+
+Although you mention computational cases (such as flat tori), the computational tractability of the method is not fully explored. The paper could be enhanced by either demonstrating an explicit computation for a known manifold or providing further insight into how the theory might be computationally implemented. Given that spectral geometry often relies heavily on computational tools, this aspect should not be overlooked.
+
+Conclusion:
+
+In the spirit of scientific inquiry, I believe your work opens up new and exciting possibilities for the study of isospectral manifolds. Your approach to leveraging triple products of eigenfunctions is both elegant and original, but I think it requires further development, particularly in terms of clarity and practical application. The paper's conclusions are promising, but more substantial groundwork is needed to validate the broader conjecture.
+
+As with many complex mathematical problems, the road ahead is long, but this paper provides a stepping stone toward a deeper understanding of spectral geometry. By refining the presentation and expanding upon the computational implications, I think you could make your contribution even more impactful in the field.
