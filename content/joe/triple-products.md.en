@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=25316
+status: verified=25318
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
@@ -54,7 +54,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 ```
 
-To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $$\set{M^{i,j,k}}$$ under each basis.
+To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for another **isospectral** closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $$\set{M^{i,j,k}}$$ under each basis.
 
   </div>
 </div>
