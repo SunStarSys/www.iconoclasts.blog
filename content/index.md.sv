@@ -13,20 +13,18 @@ title: Av, Av och För Iconoclasts
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Ikonoklast</a></div>
 
 <div class="card-body">
-<small>
-<pre class="card-title">
+<small><pre class="card-title">
 substantiv [ C ]   formell
 US /aɪˈkː.nə.klæst/
 en person som starkt motsätter sig
 accepterade övertygelser och traditioner
 </pre>
 
-
 &nbsp;
 
 {% for elt in iconoclasts.content|shuffle|slice:":3" %}
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.name}}" style="max-width:560;max-height:315" title="{{elt.key}}"></iframe>
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.key}}" style="max-width:560;max-height:315" title="{{elt.name}}"></iframe>
 </div>
 &nbsp;
 {% endfor %}
@@ -149,4 +147,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-12-19 07:24:31 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25474 $ -->
+<!-- $Date: 2024-12-19 13:28:44 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25497 $ -->

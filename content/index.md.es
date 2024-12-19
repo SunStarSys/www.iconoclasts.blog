@@ -1,5 +1,6 @@
 ---
 archived: ~
+categories: ~
 dependencies: /categories/*/index.html.es
 keywords: wiki,conocimiento
 published: ~
@@ -12,14 +13,12 @@ title: De, Por y Para Iconoclastas
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclasta</a></div>
 
 <div class="card-body">
-<small>
-<pre class="card-title">
+<small><pre class="card-title">
 sustantivo [ C ]   formal
 EE.UU. /aɪˈkː.nə.klæst/
 una persona que se opone firmemente en general
 creencias y tradiciones aceptadas
 </pre>
-</small>
 
 &nbsp;
 
