@@ -2,21 +2,21 @@
 archived: ~
 categories: ~
 dependencies: /categories/*/index.html.ru
-keywords: wiki,знания
+keywords: вики,знание
 published: ~
 status: опубликовано
-title: О, По и для иконоборцев
+title: О, По и Для Иконоборцев
 ---
 
 <div class=" float-lg-end" id="news">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Иконок</a></div>
+    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Иконокласт</a></div>
 
-  <div class="card-body">
+<div class="card-body">
   <small>
 <pre class="card-title">
-имя существительное [ C ]   форма
-США /aÉaËkÉË.nÉ.klà...st/
+имя существительное [ C ]   формальный
+США /aɪˈkː.nə.klæst/
 человек, который в целом выступает против
 общепринятые верования и традиции
 </pre>
@@ -31,14 +31,14 @@ title: О, По и для иконоборцев
 &nbsp;
 {% endfor %}
 
-  </div>
+</div>
 </div>
 
 &nbsp;
 
 </div>
 
-![Иконок](images/iconoclast.jpg).
+![Иконокласт](images/iconoclast.jpg).
 
 <div style="max-width:900px">
 
@@ -46,13 +46,13 @@ title: О, По и для иконоборцев
 
 <center>
 
-**STEM/Academy/Politics/Culture/Arts**
+**STEM/Academia/Politics/Culture/Arts**
 
 </center>
 
-сообщество блогов! Зарегистрируйтесь сегодня в [Свяжитесь с нами](/contact).
+Сообщество блогов! Зарегистрируйтесь прямо сейчас [Свяжитесь с нами](/contact).
 
-Также, пожалуйста, проверьте  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-страница Enterprise Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на базе SCM с собственным ПО [русалка mindmap](https://www.sunstarsys.com/orion/features).
+Также, пожалуйста, проверьте  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-страница Enterprise Jamstack.</em></span>&trade; &mdash; Orion является единственным корпоративным продуктом на основе управления цепочками поставок с собственным [русалка-карта](https://www.sunstarsys.com/orion/features).
 
 &nbsp;
 
@@ -65,11 +65,11 @@ title: О, По и для иконоборцев
 
 &nbsp;
 
-## Избранные блоги
+## Рекомендуемые блоги
 
 &nbsp;
 
-- <span class="badge bg-success">Новинка</span> [Apache HTTPd Devs Считается вредным](/joe/apache-considered-harmful).
+- <span class="badge bg-success">Создать</span> [Реквием для волонтера с открытым исходным кодом](/jimjag/requiem).
 
 - [Тройные продукты собственных функций и спектральной геометрии](/joe/triple-products).
 
@@ -77,9 +77,24 @@ title: О, По и для иконоборцев
 
 - [Информационная безопасность](/joe/infosec) &mdash;
 
-- [Герметичные лексики для Perl 7](/joe/perl7-sealed-lexicals) &mdash;
+- [Герметичные лексические для Perl 7](/joe/perl7-sealed-lexicals) &mdash;
 
 - [Движение DevOps](/joe/devops) &mdash;
+
+&nbsp;
+
+## Карты сайта
+
+&nbsp;
+
+- [Британские единицы](sitemap.html.en)
+- [Испанский](sitemap.html.es)
+- [Немецкий](sitemap.html.de)
+- [Французский](sitemap.html.fr)
+- [Русский](sitemap.html.ru)
+- [Китайский](sitemap.html.zh-TW)
+- [иврит](sitemap.html.he)
+- [Шведский](sitemap.html.sv).
 
 &nbsp;
 
@@ -134,4 +149,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-04-22 22:37:23 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23409 $ -->
+<!-- $Date: 2024-12-19 07:24:31 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25474 $ -->

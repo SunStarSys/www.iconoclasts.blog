@@ -2,23 +2,23 @@
 archived: ~
 categories: ~
 dependencies: /categories/*/index.html.de
-keywords: Wiki, Wissen
+keywords: Wiki,Wissen
 published: ~
 status: veröffentlicht
-title: Von, Von und Für Iconoclasts
+title: von, von und für Iconoclasts
 ---
 
 <div class=" float-lg-end" id="news">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Ikonoklast</a></div>
+    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclast</a></div>
 
-  <div class="card-body">
+<div class="card-body">
   <small>
 <pre class="card-title">
-Substantiv [ C ]   form
-US  /aÉaËkÉË.nÉklÃ¦st/
-eine Person, die sich generell
-akzeptierte Überzeugungen und Traditionen
+Substantiv [ C ]   formell
+US  /aɪˈkː.nə.klæst/
+eine Person, die sich generell stark widersetzt
+Akzeptierte Überzeugungen und Traditionen
 </pre>
 
 
@@ -31,18 +31,18 @@ akzeptierte Überzeugungen und Traditionen
 &nbsp;
 {% endfor %}
 
-  </div>
+</div>
 </div>
 
 &nbsp;
 
 </div>
 
-![Ikonoklast](images/iconoclast.jpg).
+![Iconoclast](images/iconoclast.jpg).
 
 <div style="max-width:900px">
 
-Willkommen bei uns
+Willkommen in unserem
 
 <center>
 
@@ -50,9 +50,9 @@ Willkommen bei uns
 
 </center>
 
-Blog-Community! Melden Sie sich noch heute bei der [Kontakt](/contact).
+Blog-Community! Melden Sie sich noch heute an auf der [Kontakt](/contact).
 
-Bitte überprüfen Sie auch  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion-Logo" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Das Enterprise Jamstack Wiki.</em></span>&trade; &mdash; Orion ist das einzige SCM-basierte Unternehmensprodukt mit nativer [Meerjungfrau-Mindmap](https://www.sunstarsys.com/orion/features).
+Auch bitte auschecken  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion-Logo" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Das Enterprise Jamstack Wiki.</em></span>&trade; &mdash; Orion ist das einzige SCM-basierte Unternehmensprodukt mit nativen [Meerjungfrau-Mindmap](https://www.sunstarsys.com/orion/features).
 
 &nbsp;
 
@@ -69,17 +69,32 @@ Bitte überprüfen Sie auch  [Orion](https://www.sunstarsys.com/orion/)<span cla
 
 &nbsp;
 
-- <span class="badge bg-success">Neu</span> [Apache HTTPd Entwickler als schädlich angesehen](/joe/apache-considered-harmful).
+- <span class="badge bg-success">Neu</span> [Requiem für den freiwilligen Open-Source-Mitwirkenden](/jimjag/requiem).
 
-- [Dreifache Produkte der Eigenfunktionen und der Spektralgeometrie](/joe/triple-products).
+- [Dreifache Produkte von Eigenfunktionen und spektraler Geometrie](/joe/triple-products).
 
 - [Anwendungsperformance](/joe/performance) &mdash;
 
 - [Informationssicherheit](/joe/infosec) &mdash;
 
-- [Versiegelte Lexika für Perl 7](/joe/perl7-sealed-lexicals) &mdash;
+- [Versiegelte Lexicals für Perl 7](/joe/perl7-sealed-lexicals) &mdash;
 
 - [Die Bewegung DevOps](/joe/devops) &mdash;
+
+&nbsp;
+
+## Sitemaps
+
+&nbsp;
+
+- [Englisch](sitemap.html.en)
+- [Spanisch](sitemap.html.es)
+- [Deutsch](sitemap.html.de)
+- [Französisch](sitemap.html.fr)
+- [Russisch](sitemap.html.ru)
+- [Chinesisch](sitemap.html.zh-TW)
+- [Hebräisch](sitemap.html.he)
+- [Schwedisch](sitemap.html.sv).
 
 &nbsp;
 
@@ -134,4 +149,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-04-22 22:37:23 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23409 $ -->
+<!-- $Date: 2024-12-19 07:24:31 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25474 $ -->

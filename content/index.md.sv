@@ -12,11 +12,11 @@ title: Av, Av och För Iconoclasts
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Ikonoklast</a></div>
 
-  <div class="card-body">
+<div class="card-body">
   <small>
 <pre class="card-title">
 substantiv [ C ]   formell
-US /aÉaËkÉË.nÉ.klæst/
+US /aɪˈkː.nə.klæst/
 en person som starkt motsätter sig
 accepterade övertygelser och traditioner
 </pre>
@@ -31,7 +31,7 @@ accepterade övertygelser och traditioner
 &nbsp;
 {% endfor %}
 
-  </div>
+</div>
 </div>
 
 &nbsp;
@@ -69,7 +69,7 @@ Vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-
 
 &nbsp;
 
-- <span class="badge bg-success">Ny</span> [Apache HTTPd Devs ansåg vara skadliga](/joe/apache-considered-harmful).
+- <span class="badge bg-success">Ny</span> [Requiem för volontärens bidragare med öppen källkod](/jimjag/requiem).
 
 - [Trippelprodukter av Eigenfunctions och Spectral Geometry](/joe/triple-products).
 
@@ -80,6 +80,21 @@ Vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-
 - [Förseglade Lexicals för Perl 7](/joe/perl7-sealed-lexicals) &mdash;
 
 - [Rörelsen DevOps](/joe/devops) &mdash;
+
+&nbsp;
+
+Antal webbkartor
+
+&nbsp;
+
+- [Engelska](sitemap.html.en)
+- [Spanska](sitemap.html.es)
+- [tyska](sitemap.html.de)
+- [Franska](sitemap.html.fr)
+- [ryska](sitemap.html.ru)
+- [kinesiska](sitemap.html.zh-TW)
+- [hebreiska](sitemap.html.he)
+- [Svenska](sitemap.html.sv).
 
 &nbsp;
 
@@ -134,4 +149,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-04-22 22:37:23 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23409 $ -->
+<!-- $Date: 2024-12-19 07:24:31 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25474 $ -->

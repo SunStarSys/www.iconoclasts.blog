@@ -5,19 +5,19 @@ dependencies: /categories/*/index.html.es
 keywords: wiki,conocimiento
 published: ~
 status: publicado
-title: De, por y para iconoclastas
+title: De, Por y Para Iconoclastas
 ---
 
 <div class=" float-lg-end" id="news">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclasta</a></div>
 
-  <div class="card-body">
+<div class="card-body">
   <small>
 <pre class="card-title">
 sustantivo [ C ]   formal
-Estados Unidos  /aÉaËkÉË.nÉ.klÃ¦st/
-una persona que se opone en general
+EE.UU. /aɪˈkː.nə.klæst/
+una persona que se opone firmemente en general
 creencias y tradiciones aceptadas
 </pre>
 
@@ -31,7 +31,7 @@ creencias y tradiciones aceptadas
 &nbsp;
 {% endfor %}
 
-  </div>
+</div>
 </div>
 
 &nbsp;
@@ -50,9 +50,9 @@ Bienvenido a nuestro
 
 </center>
 
-comunidad de blogs! Regístrese hoy mismo en el [Contáctenos](/contact).
+¡Comunidad de blogs! Regístrate hoy mismo en el [Contáctenos](/contact).
 
-Además, por favor echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki de Enterprise Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mermaid-mindmap](https://www.sunstarsys.com/orion/features).
+Además, por favor echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La Wiki de Enterprise Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](https://www.sunstarsys.com/orion/features).
 
 &nbsp;
 
@@ -69,9 +69,9 @@ Además, por favor echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<
 
 &nbsp;
 
-- <span class="badge bg-success">Nuevo</span> [Desarrolladores de Apache HTTPd considerados dañinos](/joe/apache-considered-harmful).
+- <span class="badge bg-success">Nuevo</span> [Requiem para el colaborador de código abierto de voluntario](/jimjag/requiem).
 
-- [Triple Productos de Eigenfunciones y Geometría Espectral](/joe/triple-products).
+- [Triple producto de funciones propias y geometría espectral](/joe/triple-products).
 
 - [Rendimiento de aplicaciones](/joe/performance) &mdash;
 
@@ -83,7 +83,22 @@ Además, por favor echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<
 
 &nbsp;
 
-No de índices de categoría
+## Sitemaps
+
+&nbsp;
+
+- [Inglés](sitemap.html.en)
+- [Español](sitemap.html.es)
+- [Alemán](sitemap.html.de)
+- [Francés](sitemap.html.fr)
+- [Ruso](sitemap.html.ru)
+- [Chino](sitemap.html.zh-TW)
+- [Hebreo](sitemap.html.he)
+- [Sueco](sitemap.html.sv).
+
+&nbsp;
+
+## Índice de categorías
 
 &nbsp;
 
@@ -134,4 +149,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-04-22 22:37:23 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23409 $ -->
+<!-- $Date: 2024-12-19 07:24:31 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25474 $ -->
