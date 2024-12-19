@@ -13,12 +13,14 @@ title: О, По и Для Иконоборцев
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Иконокласт</a></div>
 
 <div class="card-body">
-<small><pre class="card-title">
+<small>
+<pre class="card-title">
 имя существительное [ C ]   формальный
 США /aɪˈkː.nə.klæst/
 человек, который в целом выступает против
 общепринятые верования и традиции
 </pre>
+
 
 &nbsp;
 
@@ -147,4 +149,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-12-19 13:36:03 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25513 $ -->
+<!-- $Date: 2024-12-19 13:44:04 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25523 $ -->

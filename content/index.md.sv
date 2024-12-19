@@ -13,12 +13,14 @@ title: Av, Av och För Iconoclasts
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Ikonoklast</a></div>
 
 <div class="card-body">
-<small><pre class="card-title">
+<small>
+<pre class="card-title">
 substantiv [ C ]   formell
 US /aɪˈkː.nə.klæst/
 en person som starkt motsätter sig
 accepterade övertygelser och traditioner
 </pre>
+
 
 &nbsp;
 
@@ -147,4 +149,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-12-19 13:36:03 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25513 $ -->
+<!-- $Date: 2024-12-19 13:44:04 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25523 $ -->
