@@ -1,6 +1,5 @@
 ---
 archived: ~
-categories: ~
 dependencies: /categories/*/index.html.es
 keywords: wiki,conocimiento
 published: ~
@@ -20,7 +19,7 @@ EE.UU. /aɪˈkː.nə.klæst/
 una persona que se opone firmemente en general
 creencias y tradiciones aceptadas
 </pre>
-
+</small>
 
 &nbsp;
 
@@ -149,4 +148,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-12-19 07:24:31 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25474 $ -->
+<!-- $Date$ $Author$ $Revision$ -->
