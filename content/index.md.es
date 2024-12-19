@@ -1,6 +1,5 @@
 ---
 archived: ~
-categories: ~
 dependencies: /categories/*/index.html.es
 keywords: wiki,conocimiento
 published: ~
@@ -20,13 +19,13 @@ EE.UU. /aɪˈkː.nə.klæst/
 una persona que se opone firmemente en general
 creencias y tradiciones aceptadas
 </pre>
-
+</small>
 
 &nbsp;
 
 {% for elt in iconoclasts.content|shuffle|slice:":3" %}
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.name}}" style="max-width:560;max-height:315" title="{{elt.key}}"></iframe>
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.key}}" style="max-width:560;max-height:315" title="{{elt.name}}"></iframe>
 </div>
 &nbsp;
 {% endfor %}
