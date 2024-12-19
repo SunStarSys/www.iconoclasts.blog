@@ -13,7 +13,7 @@ title: Av, Av och För Iconoclasts
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Ikonoklast</a></div>
 
 <div class="card-body">
-  <small>
+<small>
 <pre class="card-title">
 substantiv [ C ]   formell
 US /aɪˈkː.nə.klæst/

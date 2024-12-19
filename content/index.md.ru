@@ -13,7 +13,7 @@ title: О, По и Для Иконоборцев
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Иконокласт</a></div>
 
 <div class="card-body">
-  <small>
+<small>
 <pre class="card-title">
 имя существительное [ C ]   формальный
 США /aɪˈkː.nə.klæst/
