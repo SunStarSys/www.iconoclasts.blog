@@ -1,4 +1,4 @@
-Title: Git and Non Repudiation
+Title: Git and Non Repudiation, Revisited
 Keywords: security,non repudiation,DVCS,version control,icla
 Dependencies: *.md.en
 Status: archived
@@ -22,4 +22,10 @@ Early and proper mitigation strategies all revolve around removing the abandoned
 
 Without such things we'd need to mandate at least PGP-signing of each contributor's commit, which is onerous for many projects.  Push records provide a transparent process that does not impact a project's workflow, other than to ensure The ASF's git repo is the true master repo.
 
-*$Date$*
+## 2025 Update
+
+Git has native support for `SSH-SK-ED25519@openssh.com` signing keys, which are a great fit for organizational adoption of a 2FA Commit/Tag signing infrastructure which incorporates USB-C YubiKeys for laptop/workstation use.
+
+The needless bloat and complexity of a full PGP Infrastructure is no longer relevant to solving the non-repudiation issues discussed above, across the organization or on a per-project level. And the nice GitHub integration facilitates this effort in full.
+
+<!-- $Date$ $Author$ $Revision$ -->
