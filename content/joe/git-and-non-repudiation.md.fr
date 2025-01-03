@@ -5,27 +5,31 @@ dependencies: '*.md.fr'
 keywords: sécurité,non répudiation,DVCS,contrôle de version,icla
 published: ~
 status: archivé
-title: Git et non-répudiation
+title: Git et non répudiation, revisité
 ---
 
-Cet essai concerne vraiment DVCS en général, pas seulement git en soi.  Mais nous allons concentrer notre attention sur le git, car il reste le DVCS le plus populaire aujourd'hui.
+Cet essai concerne vraiment DVCS en général, pas seulement git en soi.  Mais nous allons concentrer notre attention sur git, car il reste le DVCS le plus populaire d'aujourd'hui.
 
 [Non répudiation](http://en.wikipedia.org/wiki/Non-repudiation).
 
-Avec un outil de contrôle de version centralisé traditionnel, ces enregistrements sont facilement disponibles à partir de l'historique de validation.  Chaque validation dans le système passe par un mécanisme d'autorisation pour s'assurer que la personne qui a effectué la modification est autorisée à la télécharger.  Ces enregistrements sont essentiels pour l'entreprise afin de s'assurer que des enregistrements précis sont conservés, indiquant qui est responsable du téléchargement de chaque ligne de code dans le logiciel en question.
+Avec un outil de contrôle de version centralisé traditionnel, ces enregistrements sont facilement disponibles à partir de l'historique de validation.  Chaque validation dans le système passe par un mécanisme d'autorisation pour s'assurer que la personne qui a effectué la modification est autorisée à la télécharger.  Ces enregistrements sont essentiels pour l'entreprise afin de s'assurer que des enregistrements exacts indiquent qui est responsable du téléchargement de chaque ligne de code vers le logiciel en question.
 
-Avec git, ou le contrôle de version distribué en général, {# lede #}Il y a une distinction claire entre l'histoire "commit" et l'histoire "upload".{# lede #} &mdash; que j'appellerai ici "push records". Les validations dans git ne sont pas authentifiées, car elles se produisent localement, avec des métadonnées locales non vérifiées ajoutées à l'historique.  L'étape de téléchargement, alias `git push`
+Avec git, ou le contrôle de version distribué en général, {# lede #}Il y a une distinction claire entre l'histoire "commit" et l'histoire "upload"{# lede #} &mdash; que je qualifierai ici de "push records". Les validations dans git ne sont pas authentifiées, car elles se produisent localement, avec des métadonnées locales non vérifiées ajoutées à l'historique.  L'étape de téléchargement, alias `git push`
 
-Avec [Fondation Apache Software](https://www.apache.org/).
+Avec [La Fondation Apache Software](https://www.apache.org/).
 
-Pourquoi est-ce important ?  Eh bien, pour commencer, laissez-moi aborder une idée fausse commune sur la nécessité d'accords de licence de contributeur (ICLA) pour les commissaires Apache.  Beaucoup de gens ne semblent pas comprendre qu'en ce qui concerne les œuvres individuelles d'auteur d'un auteur, il n'y a pas de différence entre la langue applicable dans la [ICLA](http://www.apache.org/licenses/icla.txt) et [Licence Apache 2.0](http://www.apache.org/licenses/license-2.0).
+Pourquoi est-ce important ?  Eh bien, pour commencer, permettez-moi d'aborder une idée fausse commune concernant la nécessité de contrats de licence de contributeur (ICLA) pour les commettants Apache.  Beaucoup de gens ne semblent pas comprendre qu'en ce qui concerne les œuvres individuelles d'auteur d'un auteur, il n'y a pas de différence entre la langue applicable dans le [ICLA](http://www.apache.org/licenses/icla.txt) et [Licence Apache 2.0](http://www.apache.org/licenses/license-2.0).
 
-Ce que les enregistrements push fournissent alors est un moyen de retrouver, à chaque ligne de code d'une version, le validateur individuel responsable de la propagation de ce code vers le référentiel git de l'ASF. Ceci est d'une importance cruciale pour déterminer la provenance d'une contribution tierce avec git, car il est malheureusement possible pour un tel contributeur de "s'éloigner" de sa contribution à un projet git en raison de la nature distribuée des journaux de validation DVCS.  La partie responsable devient alors, selon l'ICLA, l'auteur qui a poussé le code.
+Ce que les enregistrements push fournissent alors est un moyen de retracer, à chaque ligne de code dans une version, le validateur individuel responsable de la transmission de ce code vers le référentiel git de l'ASF. Ceci est d'une importance cruciale pour déterminer la provenance d'une contribution tierce avec git, car il est malheureusement possible pour un tel contributeur de "s'éloigner" de sa contribution à un projet git en raison de la nature distribuée des journaux de validation DVCS.  La partie responsable, selon l'ICLA, devient alors le responsable qui a poussé le code.
 
-Des stratégies d'atténuation rapides et appropriées tournent autour de la suppression de la contribution abandonnée, mais les dommages au projet ont peut-être déjà été causés.  Et sans les enregistrements push, nous n'aurions littéralement aucun processus faisant autorité pour déterminer comment ce code est réellement entré dans notre référentiel, à l'exception du chalutage à travers des enregistrements alternatifs dans les trackers de problèmes ou les communications sur liste.  S'appuyer uniquement sur les journaux de validation de fusion pour déterminer la provenance n'est pas très satisfaisant du point de vue de la sécurité, car cela nécessite une adhésion rigide à un type particulier de flux de travail, que nous ne voulons pas dicter.
+Les stratégies d'atténuation précoces et appropriées visent toutes à éliminer la contribution abandonnée, mais les dommages au projet ont peut-être déjà été causés.  Et sans les enregistrements push, nous n'aurions littéralement aucun processus faisant autorité pour déterminer comment ce code est réellement entré dans notre référentiel, à part le chalutage à travers des enregistrements alternatifs dans les traqueurs de problèmes ou les communications sur la liste.  S'appuyer uniquement sur les journaux de validation de fusion pour déterminer la provenance n'est pas très satisfaisant du point de vue de la sécurité, car il nécessite une adhésion rigide à un type particulier de workflow, que nous ne voulons pas dicter.
 
-Sans de telles choses, nous aurions besoin de mandater au moins la signature PGP de l'engagement de chaque contributeur, ce qui est onéreux pour de nombreux projets.  Les enregistrements push fournissent un processus transparent qui n'a pas d'impact sur le workflow d'un projet, sauf pour s'assurer que le référentiel git d'ASF est le véritable référentiel maître.
+Sans de telles choses, nous aurions besoin de mandater au moins la signature PGP de l'engagement de chaque contributeur, ce qui est lourd pour de nombreux projets.  Les enregistrements push fournissent un processus transparent qui n'a pas d'impact sur le workflow d'un projet, sauf pour s'assurer que le référentiel git de l'ASF est le véritable référentiel maître.
 
-*$Date : 2023-01-19 22:58:40 +0000 (jeu, 19 janv. 2023) $*
+## Mise à jour 2025
+
+Git a un support natif pour `SSH-SK-ED25519@openssh.com`
+
+Le gonflement inutile et la complexité d'une infrastructure PGP complète ne sont plus pertinents pour résoudre les problèmes de non-répudiation discutés ci-dessus, dans l'ensemble de l'organisation ou à un niveau par projet. Et la belle intégration GitHub facilite pleinement cet effort.
 
 <!-- $Date$ $Author$ $Revision$ -->

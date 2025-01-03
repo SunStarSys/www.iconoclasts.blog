@@ -2,30 +2,34 @@
 archived: ~
 categories: Versionskontrolle, Apache
 dependencies: '*.md.de'
-keywords: Sicherheit, keine Ablehnung, DVCS, Versionskontrolle, ICLA
+keywords: Sicherheit, nicht Ablehnung, DVCS, Versionskontrolle, ICLA
 published: ~
 status: archiviert
-title: Git und Non Repudation
+title: Git und Non Repudiation, Revisited
 ---
 
-Dieser Aufsatz bezieht sich wirklich auf DVCS im Allgemeinen, nicht nur auf Git per se.  Aber wir werden die Aufmerksamkeit auf Git konzentrieren, weil es bis heute die beliebteste DVCS ist.
+Dieser Aufsatz bezieht sich wirklich auf DVCS im Allgemeinen, nicht nur git per se.  Aber wir werden die Aufmerksamkeit auf Git lenken, weil es das beliebteste DVCS bis heute bleibt.
 
-[Nicht zurückweisend](http://en.wikipedia.org/wiki/Non-repudiation).
+[Nichtzurückweisung](http://en.wikipedia.org/wiki/Non-repudiation).
 
-Mit einem traditionellen, zentralisierten Tool zur Versionskontrolle sind solche Datensätze aus der Commit-Historie leicht verfügbar.  Jede Zusage an das System durchläuft einen Autorisierungsmechanismus, um sicherzustellen, dass die Person, die diese Änderung vorgenommen hat, zum Hochladen autorisiert ist.  Diese Datensätze sind für das Unternehmen von entscheidender Bedeutung, um sicherzustellen, dass genaue Datensätze gespeichert werden, die angeben, wer für das Hochladen jeder Codezeile in die betreffende Software verantwortlich ist.
+Mit einem traditionellen, zentralisierten Versionskontrolltool sind solche Datensätze leicht aus der Commit-Historie verfügbar.  Jeder Commit an das System durchläuft einen Autorisierungsmechanismus, um sicherzustellen, dass die Person, die diese Änderung vorgenommen hat, berechtigt ist, sie hochzuladen.  Diese Aufzeichnungen sind für das Unternehmen von entscheidender Bedeutung, um sicherzustellen, dass genaue Aufzeichnungen geführt werden, die angeben, wer für das Hochladen jeder Codezeile in die betreffende Software verantwortlich ist.
 
-Mit git oder verteilter Versionskontrolle im Allgemeinen, {# lede #}Es gibt einen klaren Unterschied zwischen der "Commit"-Geschichte und der "Upload"-Geschichte{# lede #} &mdash; die ich als "Push Records" bezeichnen werde. Commits in git werden nicht authentifiziert, da sie lokal erfolgen, wobei lokale, nicht verifizierte Metadaten zur Historie hinzugefügt werden.  Der Uploadschritt, aka `git push`
+mit git oder verteilter Versionskontrolle im Allgemeinen, {# lede #}Es gibt einen klaren Unterschied zwischen der "Commit"-Geschichte und der "Upload"-Geschichte{# lede #} &mdash; Ich werde sie als "Push Records" bezeichnen. Commits in git werden nicht authentifiziert, da sie lokal erfolgen und lokale, nicht verifizierte Metadaten zur Historie hinzugefügt werden.  Der Upload-Schritt, aka `Git-Push`
 
 Mit [Die Apache Software Foundation](https://www.apache.org/).
 
-Warum ist das wichtig?  Nun, zunächst lassen Sie mich ein häufiges Missverständnis über die Notwendigkeit von Beitragenden Lizenzvereinbarungen (ICLAs) für Apache-Committers ansprechen.  Viele Menschen scheinen nicht zu verstehen, dass, soweit ein Committer einzelne Werke der Autorenschaft, gibt es keinen Unterschied zwischen der anwendbaren Sprache in der [ICLA](http://www.apache.org/licenses/icla.txt) und die [Apache-Lizenz 2.0](http://www.apache.org/licenses/license-2.0).
+Warum ist das wichtig?  Nun, für Anfänger, lassen Sie mich ein häufiges Missverständnis über die Notwendigkeit von Contributor License Agreements (ICLAs) für Apache-Committers ansprechen.  Viele Menschen scheinen nicht zu verstehen, dass es in Bezug auf die einzelnen Werke der Autorschaft eines Committer keinen Unterschied zwischen der anwendbaren Sprache in der [ICLA](http://www.apache.org/licenses/icla.txt) und die [Apache-Lizenz 2.0](http://www.apache.org/licenses/license-2.0).
 
-Was Push-Datensätze dann bieten, ist eine Möglichkeit, auf jede Codezeile in einem Release zurückzuverfolgen, der einzelne Committer, der dafür verantwortlich ist, diesen Code an das Git-Repository der ASF zu übertragen. Dies ist von entscheidender Bedeutung für die Bestimmung der Herkunft eines Drittbeitrags mit Git, da es für einen solchen Mitwirkenden leider möglich ist, sich von seinem Beitrag zu einem Git-Projekt wegen der verteilten Natur von DVCS-Commit-Logs zu entfernen.  Die verantwortliche Partei wird nach Angaben der ICLA dann der Committer, der den Code gepusht hat.
+Was Push-Datensätze dann bieten, ist eine Möglichkeit, zu jeder Codezeile in einem Release zurückzuverfolgen, der einzelne Committer, der dafür verantwortlich ist, diesen Code an das Git-Repository des ASF zu übertragen. Dies ist von entscheidender Bedeutung, um die Herkunft eines Drittbeitrags mit git zu bestimmen, da es für einen solchen Mitwirkenden leider möglich ist, wegen der verteilten Natur von DVCS-Commit-Logs von seinem Beitrag zu einem Git-Projekt "abzugehen".  Die verantwortliche Partei wird dann laut ICLA der Committer, der den Code gepusht hat.
 
-Frühe und angemessene Minderungsstrategien drehen sich um die Beseitigung des aufgegebenen Beitrags, aber der Schaden am Projekt ist möglicherweise bereits entstanden.  Und ohne die Push-Aufzeichnungen hätten wir buchstäblich keinen autoritativen Prozess, um zu bestimmen, wie dieser Code tatsächlich in unser Repo gelangt ist, außer durch alternative Aufzeichnungen in Problem-Trackern oder auf der Liste Kommunikation.  Sich allein auf Merge-Commit-Logs zu verlassen, um die Herkunft zu bestimmen, ist aus Sicherheitsgründen nicht sehr befriedigend, da es eine starre Einhaltung eines bestimmten Workflowtyps erfordert, den wir nicht diktieren möchten.
+Frühe und angemessene Minderungsstrategien drehen sich alle um das Entfernen des aufgegebenen Beitrags, aber der Schaden am Projekt ist möglicherweise bereits geschehen.  Und ohne die Push-Datensätze hätten wir buchstäblich keinen maßgeblichen Prozess, um zu bestimmen, wie dieser Code tatsächlich in unser Repository gelangt ist, außer durch alternative Datensätze in Problem-Trackern oder in der Kommunikation auf der Liste zu trawlingeln.  Sich allein auf Merge-Commit-Logs zu verlassen, um die Herkunft zu bestimmen, ist aus Sicherheitsgründen nicht sehr zufriedenstellend, da es eine starre Einhaltung einer bestimmten Art von Workflow erfordert, die wir nicht diktieren möchten.
 
-Ohne solche Dinge müssten wir zumindest die PGP-Unterzeichnung der Verpflichtung jedes Mitwirkenden vorschreiben, was für viele Projekte belastend ist.  Push-Datensätze bieten einen transparenten Prozess, der sich nicht auf den Workflow eines Projekts auswirkt, außer um sicherzustellen, dass das Git-Repository der ASF das echte Master-Repository ist.
+Ohne solche Dinge müssten wir zumindest die PGP-Unterzeichnung des Engagements jedes Mitwirkenden vorschreiben, was für viele Projekte schwierig ist.  Push-Datensätze bieten einen transparenten Prozess, der sich nicht auf den Workflow eines Projekts auswirkt, außer sicherzustellen, dass das Git-Repository des ASF das wahre Master-Repository ist.
 
-*$Datum: 2023-01-19 22:58:40 +0000 (Do, 19 Jan 2023) $*
+## 2025-Update
+
+Git unterstützt nativ `SSH-SK-ED25519@openssh.com`
+
+Die unnötige Aufblähung und Komplexität einer vollständigen PGP-Infrastruktur ist nicht mehr relevant, um die oben diskutierten Nichtrückweisungsprobleme im gesamten Unternehmen oder auf Projektebene zu lösen. Und die schöne GitHub-Integration erleichtert diesen Aufwand vollständig.
 
 <!-- $Date$ $Author$ $Revision$ -->

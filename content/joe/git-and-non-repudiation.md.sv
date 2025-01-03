@@ -2,10 +2,10 @@
 archived: ~
 categories: Versionskontroll, Apache
 dependencies: '*.md.sv'
-keywords: säkerhet,icke-förnekelse,DVCS,versionskontroll,icla
+keywords: säkerhet,icke-förnekande,DVCS,versionskontroll,icla
 published: ~
 status: arkiverad
-title: Git och non repudement
+title: Git och Non Repudiation, Revisited
 ---
 
 Denna uppsats gäller verkligen DVCS i allmänhet, inte bara git per se.  Men vi kommer att fokusera uppmärksamheten på git eftersom det fortfarande är den mest populära DVCS runt idag.
@@ -26,4 +26,10 @@ Tidiga och korrekta begränsningsstrategier kretsar kring att ta bort det överg
 
 Utan sådana saker skulle vi behöva mandat åtminstone PGP-signering av varje bidragsgivares åtagande, vilket är betungande för många projekt.  Push-poster ger en transparent process som inte påverkar ett projekts arbetsflöde, annat än för att säkerställa att ASF:s git-datalager är det verkliga huvuddatalagret.
 
-*$Datum: 2023-01-19 22:58:40 +0000 (Thu, 19 Jan 2023) $*
+## Uppdatering 2025
+
+Git har inbyggt stöd för `SSH-SK-ED25519@openssh.com`
+
+Den onödiga uppblåstheten och komplexiteten hos en fullständig PGP-infrastruktur är inte längre relevant för att lösa de oavvislighetsfrågor som diskuteras ovan, i hela organisationen eller på en projektnivå. Och den trevliga GitHub-integrationen underlättar denna insats i sin helhet.
+
+<!-- $Date$ $Author$ $Revision$ -->
