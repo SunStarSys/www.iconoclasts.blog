@@ -79,7 +79,7 @@ Además, por favor echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<
 
 - [Léxicos sellados para Perl 7](/joe/perl7-sealed-lexicals) &mdash;
 
-- [Movimiento DevOps](/joe/devops) &mdash;
+- [Git y no repudio, revisado](/joe/git-and-non-repudiation) &mdash;
 
 &nbsp;
 

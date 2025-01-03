@@ -79,7 +79,7 @@ title: О, По и Для Иконоборцев
 
 - [Герметичные лексические для Perl 7](/joe/perl7-sealed-lexicals) &mdash;
 
-- [Движение DevOps](/joe/devops) &mdash;
+- [Git и Non-Repudiation, повторное посещение](/joe/git-and-non-repudiation) &mdash;
 
 &nbsp;
 
@@ -149,4 +149,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-12-19 13:44:04 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25523 $ -->
+<!-- $Date: 2024-12-19 14:19:37 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25536 $ -->
