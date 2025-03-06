@@ -54,7 +54,7 @@ Oundvikligen kommer utplattningen att ske. Om det inte är på grund av mänskli
 
 Denna artikel skrevs i slutet av mars 2020, när lite var känt om COVID ursprung som inte var ren propaganda från NIH och CDC.
 
-Snabbt framåt till Trumps andra mandatperiod, och det är nu klart att det fanns en massiv, samordnad västvärldskonspiration för att lura planeten: om det sanna ursprunget till COVID och den amerikanska regeringens roll för att skapa det associerade viruset.
+Snabbt fram till Trumps andra mandatperiod, och det är nu klart att det fanns en massiv, samlad västerländsk konspiration för att lura planeten: om det sanna ursprunget till COVID och den amerikanska regeringens roll för att skapa det associerade viruset.
 
 Det är vid denna tidpunkt mycket tydligt att [SARS2 var en konstgjord bakterie](https://jimhaslam.substack.com/)Att huvuddelen av det akademiska medicinska samfundet fortfarande är delaktig i att förvränga detta faktum för allmänheten, och att allmänheten nu är redo att bränna hela vetenskapen.&trade;
 

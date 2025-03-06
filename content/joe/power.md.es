@@ -54,7 +54,7 @@ Inevitablemente, el aplanamiento sucederá. Si no es debido a la sabiduría soci
 
 Este artículo fue escrito a finales de marzo de 2020, cuando se sabía poco sobre los orígenes de la COVID que no eran pura propaganda de los NIH y los CDC.
 
-Avanzó rápidamente al segundo mandato de Trump, y ahora está claro que hubo una conspiración masiva y concertada en el mundo occidental para engañar al planeta: sobre el verdadero origen de la COVID y el papel del gobierno de Estados Unidos en la creación del virus asociado.
+Avanzar rápidamente hacia el segundo mandato de Trump, y ahora está claro que hubo una conspiración masiva y concertada en el mundo occidental para engañar al planeta: sobre el verdadero origen de la COVID y el papel del gobierno de Estados Unidos en la creación del virus asociado.
 
 Es muy claro en este punto que [SARS2 era un germen artificial](https://jimhaslam.substack.com/); que la mayor parte de la comunidad médica académica sigue siendo cómplice en tergiversar ese hecho al público; y que el público está ahora listo para quemar toda la ciencia.&trade;
 
@@ -68,4 +68,4 @@ QED.
 
 Esperemos que la rendición de cuentas interna llegue al FBI, CDC, NIH, DoD, DARPA, CIA y la NSF antes de que todo se vaporice en disgusto.
 
-<!-- $Date: 2025-03-06 11:07:32 -0500 (Thu, 06 Mar 2025) $ $Author: joe $ $Revision: 25590 $ -->
+<!-- $Date: 2025-03-06 15:19:50 -0700 (Thu, 06 Mar 2025) $ $Author: joe $ $Revision: 25605 $ -->
