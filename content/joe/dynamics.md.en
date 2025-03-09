@@ -44,4 +44,8 @@ The Feynman-Kac Formula follows from the path-integral formulation.
 
 ### Notes on the Dynamics of General Relativity
 
+- the external time axis is artificial, since `time` is embedded into the geometry of the 4-dimensional manifold itself.
+- this means evolution operators aren't relevaant; only the stationary Schrodinger Equation matters.
+- the path integral formulation blows up because of the `-1` signature of the Lorenzian metric in the intrinsic `time` direction. $$\det{g}$$ is negative, and the Fourier Transform  on each cotangent-bundle's fiber is infinite in that direction as well, unless we use analytic continuation (aka Wick Rotation on the intrinsic `time`).
+
 <!-- $Date$ $Author$ $Revision$ -->
