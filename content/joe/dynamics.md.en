@@ -9,9 +9,17 @@ Dependencies: *.md.en
 
 ### The Mechanics of Cotangent Bundles
 
+### $$\alpha = p\ dq - H(p,q,t)\ dt$$
+
+### $$\omega = d\alpha = dp\wedge dq - dH \wedge dt$$
+
+#### $$\omega|_\gamma = 0 \implies \gamma:[0,t]\mapsto T^*(M\oplus\R)  $$ is a stationary curve for $$A=\int_\gamma \alpha$$.
+
 ### Legendre Transform
 
 ### Symplectic Geometry
+
+### The natural volume form $$\omega^n$$
 
 ### Poisson Bracket and Lie Groups
 
