@@ -103,11 +103,16 @@ K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
  - \frac{\partial^2 g}{\partial x \partial y} + 3{\frac{\partial  g}{\partial y}}^2 + 3g \frac{\partial^2 g}{\partial y \partial y} ,\\
  \frac{\partial g}{\partial x} = 0 \implies \\
  
- K &= 6 \frac{\partial^2}{\partial y\partial y}\ g^2
+ K(y) &= 6 \frac{\partial^2}{\partial y\partial y}\ g^2
  
-
 \end{aligned}
 ```
+**IMPORTANT** Since K is independent of $$x$$, parallel transport along any curve that begins and ends at the same height $$y_0$$ is equivalent to parallel transport along the horizontal linear curve connecting the starting and ending $$x$$ values.
+
+Now *this* Jacobi equation leaves $$K=K(y_0)$$ constant along those horizontal geodesics, so its solutions is just $$exp(\pm\sqrt{-K(y_0)}\ell(\gamma(x,y_0))$$.
+
+
+
 Now $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ is the *undeveloped* endpoint of the "offset" *kinked geodesic* homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is periodic with period $$\ell(\gamma_0)$$, and it revisits its kinked starting point $$DM(\vec{x}(\tau))$$ at time $$t$$, making the computation of its forward derivative $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. Importantly, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ may be constructed using **Jacobi Fields**, since $$DM$$ **is** the (iterated) exponential map along any series of connected straight lines in $$\Reals^n$$. We will study $$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$$, with the solution
 
 ```math
