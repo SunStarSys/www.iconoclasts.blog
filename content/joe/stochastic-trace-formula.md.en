@@ -112,16 +112,6 @@ K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
 Now *this* Jacobi equation leaves $$K=K(y_0)$$ constant along those horizontal non-geodesic curves $$\gamma(x,y_0)$$, so its solutions is just $$exp(\pm\sqrt{-K(y_0)}\ell(\gamma(x,y_0)))$$.
 
 
-
-Now $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ is the *undeveloped* endpoint of the "offset" *kinked geodesic* homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is periodic with period $$\ell(\gamma_0)$$, and it revisits its kinked starting point $$DM(\vec{x}(\tau))$$ at time $$t$$, making the computation of its forward derivative $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. Importantly, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ may be constructed using **Jacobi Fields**, since $$DM$$ **is** the (iterated) exponential map along any series of connected straight lines in $$\Reals^n$$. We will study $$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$$, with the solution
-
-```math
-\begin{aligned}
-X_t &= X_0 + \int_0^t \sqrt{J}_{X_t} dB_t  \\
-
-\end{aligned}
-```
-
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ is the trace of the heat kernel.
 
 Finally let us define the following from their Radon-Nicodym derivatives:
@@ -159,30 +149,12 @@ DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t
 
 ## Approximation and the Selberg Trace Formula
 
-In the $$\dim = 2$$ constant curvature $$-\kappa^2$$ surface case,
-
-```math
-\begin{aligned}
-\sqrt{J_{\vec{x}, \vec{y}}}dRB&=
-\begin{pmatrix}
-e^{\kappa d(\vec{x},\vec{y})/2} && 0\\
-0 && e^{-\kappa d(\vec{x},\vec{y})/2}\\
-\end{pmatrix}
-\implies&\\
-\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} &= e^{\kappa \ell(B)}dRB_1^2 - e^{-\kappa \ell(B)}dRB_2^2\\
-
-\int_0^t \bra{\sqrt{ J}dB}\ket{\sqrt{ J}dB} &= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
-
-\det I-J_{\gamma} &= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
-\end{aligned}
-```
-
-which is constant over $$(\vec{x},\tau)$$, so the approximation $$\approx_{t\rightarrow 0}$$ line in Equation (2) becomes *exact*:
+In the $$\dim = 2$$ curvature $$-\kappa^2(y)$$ surface case,
 
 ```math
 \begin{aligned}
 
-DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gamma)/2} -e^{-\kappa\ell(\gamma)/2})}\\
+DM_*\mu(\Omega_t[\gamma]) &= \int_{M/S^1 \oplus S^1} \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gamma)/2} -e^{-\kappa\ell(\gamma)/2})}\\
 
 \gamma(t) = \gamma_0(kt)\implies \\
 
