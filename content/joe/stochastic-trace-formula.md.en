@@ -109,7 +109,7 @@ K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
 ```
 **IMPORTANT** Since K is independent of $$x$$, parallel transport along any curve that begins and ends at the same height $$y_0$$ is equivalent to parallel transport along the horizontal linear curve $$\gamma(x, y_0)$$ connecting the starting and ending $$x$$ values.
 
-Now *this* Jacobi equation leaves $$K=K(y_0)$$ constant along those horizontal non-geodesic curves $$\gamma(x,y_0)$$, so its solutions is just $$exp(\pm\sqrt{-K(y_0)}t$$.
+Now *this* Jacobi equation leaves $$K=K(y_0)$$ constant along those horizontal non-geodesic curves $$\gamma(x,y_0)$$, so its solutions is just $$exp(\pm\sqrt{-K(y_0)}\ell(\gamma(x,y_0)))$$.
 
 
 
