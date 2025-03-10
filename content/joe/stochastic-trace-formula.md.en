@@ -71,8 +71,43 @@ $$\Omega_t^0$$ is the space of continuous contractible loops on $$M$$.
 $$\Omega_t[\gamma]$$ is the space of continuous loops on $$M$$ homotopic to the closed geodesic $$\gamma$$. Let $$\gamma_0$$ be its primitive loop.
 
 $$DM^{-1}\Omega_t^0[\gamma]$$ is the preimage of continuous contractible loops on $$M$$ written as offsets homotopic to $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Think Horocyclic Coordinates &mdash; each fiber as the geometric limit of periodic geodesic spheres $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$, vectorized in the Normal Bundle over $$\gamma_0$$. Our curvature constraints imply Horocyclic Coordinates for every $$\gamma_0$$ exist as a smooth, $$DM$$-compatible coordinate map for $$\Omega_t^0[\gamma]$$.
-In horocyclic coordinates, $$\det{g(x)} = 1$$.
+In horocyclic coordinates, $$\det{g(\vec{x})} = 1$$:
 
+```math
+\begin{aligned}
+ds^2 &= dx\odot dx + g(x,y) dx\odot dy +  (1+g^2(x,y)) dy\odot dy \\
+g(x,0) &= 0,\ g(x,y) > 0\ \forall y!=0\ ,\\
+\sigma_1 &= dx + g(x,y)dy \\
+\sigma_2 &= g(x,y)dx + (1+g^2(x,y))dy \\
+\sigma_1 \wedge \sigma_2 &= dx \wedge dy\\
+d\sigma_1 &= \frac{\partial g}{\partial x}dx\wedge dy \\
+d\sigma_2 &= (-\frac{\partial g}{\partial y}+2g\frac{\partial g}{\partial x}) dx\wedge dy \\
+
+
+\end{aligned}
+```
+So the connection 1-form $$\alpha := Adx + Bdy$$ satisfies
+```math
+\begin{aligned}
+d\sigma_1 &= \alpha \wedge \sigma_1 \\
+d\sigma_2 &= \sigma_2 \wedge \alpha \\
+\implies \\
+\frac{\partial g}{\partial x} &= -B + Ag \\
+2g\frac{\partial g}{\partial x} - \frac{\partial g}{\partial y} &= Bg - A(1 + g^2) \\
+\implies\\
+A &= \frac{\partial g}{\partial x} - 3g\frac{\partial g}{\partial y} \\
+B &= g\frac{\partial g}{\partial y} - (1+g^2)\frac{\partial g}{\partial x} \\
+ \\
+K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
+ &= \frac{\partial g}{\partial x}\frac{\partial g}{\partial y} - g \frac{\partial^2 g}{\partial x \partial y} - 2g{\frac{\partial g}{\partial x}}^2 - (1+g^2)\frac{\partial^2 g}{\partial x \partial y}
+ - \frac{\partial^2 g}{\partial x \partial y} + 3{\frac{\partial  g}{\partial y}}^2 + 3g \frac{\partial^2 g}{\partial y \partial y} ,\\
+ \frac{\partial g}{\partial x} = 0 \implies \\
+ 
+ K &= 6 \frac{\partial^2}{\partial y\partial y}\ g^2
+ 
+
+\end{aligned}
+```
 Now $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ is the *undeveloped* endpoint of the "offset" *kinked geodesic* homotopic to $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. The curve is periodic with period $$\ell(\gamma_0)$$, and it revisits its kinked starting point $$DM(\vec{x}(\tau))$$ at time $$t$$, making the computation of its forward derivative $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ tractible as a linear automorphism of $$T_{DM(\vec{x}(\tau))}M$$. Importantly, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ may be constructed using **Jacobi Fields**, since $$DM$$ **is** the (iterated) exponential map along any series of connected straight lines in $$\Reals^n$$. We will study $$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$$, with the solution
 
 ```math
