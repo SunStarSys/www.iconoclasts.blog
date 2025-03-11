@@ -106,13 +106,13 @@ K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
  
 \end{aligned}
 ```
-**IMPORTANT** Therefore, when $$\partial_y g=0$$, the parallel transport equation reduces to $$\dot{\vec{c}}(t) = -\alpha(t)\vec{c}(t) = -\partial_y(g\ dx/dt + g^2/2\ dy/dt)\vec{c}(t)$$ has solution
+**IMPORTANT** Therefore, when $$\partial_y g=0$$, the parallel transport equation reduces to $$\dot{\vec{c}}(t) = -\alpha(t)\vec{c}(t) = -\partial_y(g\ dx/dt + g^2/2\ dy/dt)\vec{c}(t)$$. Of course, this has closed solution
 
 ```math
 \vec{c}(t) = exp(\pm(g\ dx/dt + g^2/2\ dy/dt)|_{y_0}^{y_t})\vec{c}(0)
 ```
 
-which is a function of the curve's endpoints **alone**.
+which is a function of the transport curve's endpoints **alone**.
 
 Now *this* Jacobi equation leaves $$K=K(y_0)$$ constant along those horizontal non-geodesic curves $$\gamma(x,y_0)$$, so its solutions is just $$exp(\pm\sqrt{-K(y_0)}\ell(\gamma(x,y_0)))$$.
 
