@@ -143,25 +143,12 @@ DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t
 ```math
 \begin{aligned}
 \text{Horocyclic coordinates}: g &= g(y) \implies \\
-<<<<<<< .mine
 &= \frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{0,0}\oplus \Reals^3} e^{-\ell(\gamma)^2/2t} e^{-\bra{|I-J|\vec x, y,\beta}\ket{\vec x,y,\beta}/2t}d\vec x \frac{e^{-(\beta^2+\ell(y)^2)/2}}{2\pi} d\beta d\ell(y)\\
-||||||| .r25676
-&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{\gamma(0)}\oplus \Reals} e^{-\ell(\gamma(y))^2/2t} e^{\bra{(I-J_{\gamma(y)})\vec x}\ket{\vec x}/2t}d\vec x dy \\
-=======
-&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{\gamma(0)}\oplus \Reals} e^{-\ell(\gamma)^2/2t} e^{-g(y)\ell(\gamma)x_1-\bra{(I-J_{\gamma(y)})\vec x}\ket{\vec x}/2t}d\vec x dy \\
->>>>>>> .r25688
 
 &=\frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t}}\int_{\Reals}\frac{e^{-\ell(y)^2/2}}{\sqrt {2 \pi}2\sinh \sqrt{-h^{\prime\prime}(y)}\ell(\gamma)/2} d\ell(y) \ .
 
 \end{aligned}
 ```
-<<<<<<< .mine
-||||||| .r25676
-where $$J_gamma(y)$$ is the Jacobi Matrix along $$\gamma(y(s)) = y\vec{e_2} + s/t\ \ell(\gamma)\vec{e_1}$$.
-=======
-where $$J_{\gamma(y)}$$ is the Jacobi Matrix along $$\gamma(y(s)) = y\vec{e_2} + s/t\ \ell(\gamma)\vec{e_1}$$.
->>>>>>> .r25688
-
 ## Approximation and the Selberg Trace Formula
 
 In the $$\dim = 2$$ constant curvature $$K = -\kappa^2$$ case,
