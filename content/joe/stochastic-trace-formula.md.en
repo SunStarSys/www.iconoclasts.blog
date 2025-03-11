@@ -64,7 +64,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 $$M$$ is a negatively curved $$\dim=n$$ closed Riemannian manifold with metric $$g$$, metric connection $$\nabla$$, and (nonnegative) Laplace-Beltrami Operator $$\Delta_M$$.  Let $$k_{-t\Delta/2}(x,y)$$ represent the heat kernel on $$M$$.
 
-Hence $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ is the Radon-Nicodym derivative of n-dimensional Wiener Measure $$\mu$$, restricted to the pull-back of continuous loop space $$\Omega_t(M)\vert_x$$, via the inverse of the Weiner measure-preserving development map $$DM$$. *Note:* $$DM^{-1}\Omega_t\vert_x$$ is not a loop space.
+Hence $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ is the Radon-Nicodym derivative of n-dimensional Wiener Measure $$\mu$$, restricted to the pull-back of continuous loop space $$\Omega_t(M)\vert_x$$, via the inverse of the Weiner measure-preserving development map $$DM$$. *Note:* $$DM^{-1}\Omega_t\vert_x$$ is not a loop space in general.
 
 $$\Omega_t^0$$ is the space of continuous contractible loops on $$M$$.
 
@@ -139,13 +139,13 @@ DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t
 &= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
 
 \text{Horocyclic coordinates}: g &= g(y) \implies \\
-&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{\gamma(0)}\oplus \Reals} e^{-\ell(\gamma(y))^2/2t} e^{\bra{(I-J_{\gamma(y)})\vec x}\ket{\vec x}/2t}d\vec x dy \\
+&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{\gamma(0)}} e^{-\ell(\gamma)^2/2t} e^{\bra{(I-J_{\gamma(y)})\vec x}\ket{\vec x}/2t}d\vec y \\
 
 &=\frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t \det |I-J_{\gamma}|}}
 
 \end{aligned}
 ```
-where $$J_gamma(y)$$ is the Jacobi Matrix along $$\gamma(y(s)) = y\vec{e_2} + s/t\ \ell(\gamma)\vec{e_1}$$.
+where $$J_{\gamma(y)}$$ is the Jacobi Matrix along $$\gamma(y(s)) = y\vec{e_2} + s/t\ \ell(\gamma)\vec{e_1}$$.
 
 ## Approximation and the Selberg Trace Formula
 
