@@ -76,7 +76,7 @@ In horocyclic coordinates, $$\det{g(\vec{x})} = 1$$:
 ```math
 \begin{aligned}
 ds^2 &= dx\odot dx + g(x,y) dx\odot dy +  (1+g^2(x,y)) dy\odot dy \\
-g(x,0) &= 0,\ g(x,y) > 0\ \forall y!=0\ ,\\
+g(x,0) &= 0,\\
 \sigma_1 &= dx + g(x,y)dy \\
 \sigma_2 &= g(x,y)dx + (1+g^2(x,y))dy \\
 \sigma_1 \wedge \sigma_2 &= dx \wedge dy\\
@@ -92,22 +92,27 @@ So the connection 1-form $$\alpha := Adx + Bdy$$ satisfies
 d\sigma_1 &= \alpha \wedge \sigma_1 \\
 d\sigma_2 &= \sigma_2 \wedge \alpha \\
 \implies \\
-\frac{\partial g}{\partial x} &= -B + Ag \\
-2g\frac{\partial g}{\partial x} - \frac{\partial g}{\partial y} &= Bg - A(1 + g^2) \\
-\implies\\
-A &= \frac{\partial g}{\partial x} - 3g\frac{\partial g}{\partial y} \\
-B &= g\frac{\partial g}{\partial y} - (1+g^2)\frac{\partial g}{\partial x} \\
+A &= \frac{\partial g}{\partial y} - 3g\frac{\partial g}{\partial x} \\
+B &= g\frac{\partial g}{\partial y} - (1+3g^2)\frac{\partial g}{\partial x} \\
  \\
 K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
- &= \frac{\partial g}{\partial x}\frac{\partial g}{\partial y} - g \frac{\partial^2 g}{\partial x \partial y} - 2g{\frac{\partial g}{\partial x}}^2 - (1+g^2)\frac{\partial^2 g}{\partial x \partial y}
- - \frac{\partial^2 g}{\partial x \partial y} + 3{\frac{\partial  g}{\partial y}}^2 + 3g \frac{\partial^2 g}{\partial y \partial y} ,\\
+ &= \frac{\partial g}{\partial x}\frac{\partial g}{\partial y} - 6g\frac{\partial g}{\partial x}^2 - (1+3g^2)\frac{\partial^2 g}{\partial x \partial x}
+ - \frac{\partial^2 g}{\partial y \partial y} + 2g \frac{\partial^2 g}{\partial x \partial y} ,\\
  \frac{\partial g}{\partial x} = 0 \implies \\
- 
- K(y) &= 6 \frac{\partial^2}{\partial y\partial y}\ g^2
+
+\alpha &= \frac{\partial }{\partial y} (gdx +\frac{g^2}{2} dy)\\
+
+ K(y) &= -\frac{\partial^2 g}{\partial y \partial y}
  
 \end{aligned}
 ```
-**IMPORTANT** Since K is independent of $$x$$, parallel transport along any curve that begins and ends at the same height $$y_0$$ is equivalent to parallel transport along the horizontal linear curve $$\gamma(x, y_0)$$ connecting the starting and ending $$x$$ values.
+**IMPORTANT** Therefore, when $$\partial_y g=0$$, the parallel transport equation reduces to $$\dot{\vec{c}}(t) = -\alpha(t)\vec{c}(t) = -\partial_y(g\ dx/dt + g^2/2\ dy/dt)\vec{c}(t)$$ has solution
+
+```math
+\vec{c}(t) = exp(\pm(g\ dx/dt + g^2/2\ dy/dt)|_{y_0}^{y_t})\vec{c}(0)
+```
+
+which is a function of the curve's endpoints **alone**.
 
 Now *this* Jacobi equation leaves $$K=K(y_0)$$ constant along those horizontal non-geodesic curves $$\gamma(x,y_0)$$, so its solutions is just $$exp(\pm\sqrt{-K(y_0)}\ell(\gamma(x,y_0)))$$.
 
