@@ -98,24 +98,21 @@ B &= g\frac{\partial g}{\partial y} - (1+3g^2)\frac{\partial g}{\partial x} \\
 K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
  &= \frac{\partial g}{\partial x}\frac{\partial g}{\partial y} - 6g\frac{\partial g}{\partial x}^2 - (1+3g^2)\frac{\partial^2 g}{\partial x \partial x}
  - \frac{\partial^2 g}{\partial y \partial y} + 2g \frac{\partial^2 g}{\partial x \partial y} ,\\
- \frac{\partial g}{\partial x} = 0 \implies \\
+g &= g(y) \implies \\
 
 \alpha &= \frac{\partial }{\partial y} (gdx +\frac{g^2}{2} dy)\\
 
- K(y) &= -\frac{\partial^2 g}{\partial y \partial y}
- 
+ K(y) &= -\frac{\partial^2 g}{\partial y \partial y}\ .
 \end{aligned}
 ```
-**IMPORTANT** Therefore, when $$\partial_y g=0$$, the parallel transport equation reduces to $$\dot{\vec{c}}(t) = -\alpha(t)\vec{c}(t) = -\partial_y(g\ dx/dt + g^2/2\ dy/dt)\vec{c}(t)$$. Of course, this has closed solution
+
+**IMPORTANT** Therefore, when $$g=g(y)$$, the parallel transport equation reduces to $$\dot{\vec{c}}(t) = -\alpha(\dot{\gamma}(t))\vec{c}(t) = -\partial_y(g\ dx/dt + g^2/2\ dy/dt)\vec{c}(t)$$. Of course, this has closed solution
 
 ```math
-\vec{c}(t) = exp(\pm(g\ dx/dt + g^2/2\ dy/dt)|_{y_0}^{y_t})\vec{c}(0)
+\vec{c}(t) = exp(-(g\ dx/dt + g^2/2\ dy/dt)|_{y_0}^{y_t})\vec{c}(0)
 ```
 
-which is a function of the transport curve's endpoints **alone**.
-
-Now *this* Jacobi equation leaves $$K=K(y_0)$$ constant along those horizontal non-geodesic curves $$\gamma(x,y_0)$$, so its solutions is just $$exp(\pm\sqrt{-K(y_0)}\ell(\gamma(x,y_0)))$$.
-
+which is a function of the transport curve $$\gamma$$'s endpoints **alone**.
 
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ is the trace of the heat kernel.
 
@@ -141,29 +138,27 @@ DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t
 
 &= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
 
-\frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}}&\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau),\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\small \text{ semi-classical limit}\\
+\text{Horocyclic coordinates}: g &= g(y) \implies \\
+&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{\gamma(0)}\oplus \Reals} e^{-\ell(\gamma(y))^2/2t} e^{\bra{(I-P_{\gamma(y)})\vec x}\ket{\vec x}/2t}d\vec x dy \\
 
-\text{Horocyclic coordinates}: z(\tau) - x(\tau) &= x + \ell(\gamma)\vec{e}^1\implies\\
-
-\int_{M/S^1\oplus S^1}k_t(x,z) dx &=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\bra{J_{X^j_t}\vec{x}}\ket{\vec{x}}})\\
-
-&=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_{M^j/S^1\oplus S^1}\frac{1}{\sqrt{2\pi t}^{jn}\det|I-J_{X^j}|}e^{-\ell(X^j)^2/2t}X^{j}\\
+&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}}\int_{-\infty}^{\infty}\frac{e^{-\ell(\gamma(y))^2/2t}dy}{\sqrt{\det |I-P_{\gamma(y)}|}} \\
 
 \end{aligned}
 ```
+where $$P_\gamma(y)$$ is the Parallel Transport Matrix along $$\gamma(y(s)) = y\vec{e_2} + s/t\ \ell(\gamma)\vec{e_1}$$.
 
 ## Approximation and the Selberg Trace Formula
 
-In the $$\dim = 2$$ curvature $$-\kappa^2(y)$$ surface case,
+In the $$\dim = 2$$ constant curvature $$-\kappa^2$$ case,
 
 ```math
 \begin{aligned}
 
-DM_*\mu(\Omega_t[\gamma]) &= \int_{M/S^1 \oplus S^1} \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gamma)/2} -e^{-\kappa\ell(\gamma)/2})}\\
+\det |I-J_\gamma| &= (e^{\kappa\ell(\gamma)} - 1)(1 - e^{-\kappa\ell(\gamma)}) = 2 \sinh \kappa\ell(\gamma)/2\\
 
 \gamma(t) = \gamma_0(kt)\implies \\
 
-&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+DM_*\mu(\Omega_t[\gamma])&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
 \end{aligned}
 ```
 
