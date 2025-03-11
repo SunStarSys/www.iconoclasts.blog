@@ -139,13 +139,13 @@ DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t
 &= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
 
 \text{Horocyclic coordinates}: g &= g(y) \implies \\
-&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{\gamma(0)}\oplus \Reals} e^{-\ell(\gamma(y))^2/2t} e^{\bra{(I-P_{\gamma(y)})\vec x}\ket{\vec x}/2t}d\vec x dy \\
+&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{\gamma(0)}\oplus \Reals} e^{-\ell(\gamma(y))^2/2t} e^{\bra{(I-J_{\gamma(y)})\vec x}\ket{\vec x}/2t}d\vec x dy \\
 
-&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}}\int_{-\infty}^{\infty}\frac{e^{-\ell(\gamma(y))^2/2t}dy}{\sqrt{\det |I-P_{\gamma(y)}|}} \\
+&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}}\int_{-\infty}^{\infty}\frac{e^{-\ell(\gamma(y))^2/2t}dy}{\sqrt{\det |I-J_{\gamma(y)}|}} \\
 
 \end{aligned}
 ```
-where $$P_\gamma(y)$$ is the Parallel Transport Matrix along $$\gamma(y(s)) = y\vec{e_2} + s/t\ \ell(\gamma)\vec{e_1}$$.
+where $$P_\gamma(y)$$ is the Jacobi Matrix along $$\gamma(y(s)) = y\vec{e_2} + s/t\ \ell(\gamma)\vec{e_1}$$.
 
 ## Approximation and the Selberg Trace Formula
 
