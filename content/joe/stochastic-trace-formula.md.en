@@ -109,7 +109,7 @@ g &= g(y) \implies \\
 **IMPORTANT** Therefore, when $$g=g(y)$$, the parallel transport equation reduces to $$\dot{\vec{c}}(t) = -\alpha(\dot{\gamma}(t))\vec{c}(t) = -\partial_y(g\ dx/dt + g^2/2\ dy/dt)\vec{c}(t)$$. Of course, this has closed solution
 
 ```math
-\vec{c}(t) = exp(-(g\ dx/dt + g^2/2\ dy/dt)|_{y_0}^{y_t})\vec{c}(0)
+\vec{c}(t) = exp(-(g\ dx/dt + g^2/2\ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
 ```
 
 which is a function of the transport curve $$\gamma$$'s endpoints **alone**.
