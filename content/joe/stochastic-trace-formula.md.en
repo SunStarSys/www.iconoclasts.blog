@@ -75,14 +75,13 @@ In horocyclic coordinates, $$\det{g(\vec{x})} = 1$$:
 
 ```math
 \begin{aligned}
-ds^2 &= dx\odot dx + g(x,y) dx\odot dy +  (1+g^2(x,y)) dy\odot dy \\
+ds^2 &= dx\odot dx + h(x,y) dx\odot dy +  (1+h^2(x,y)) dy\odot dy \\
 g(x,0) &= 0,\\
-\sigma_1 &= dx + g(x,y)dy \\
-\sigma_2 &= g(x,y)dx + (1+g^2(x,y))dy \\
+\sigma_1 &= dx + h(x,y)dy \\
+\sigma_2 &= h(x,y)dx + (1+h^2(x,y))dy \\
 \sigma_1 \wedge \sigma_2 &= dx \wedge dy\\
-d\sigma_1 &= \frac{\partial g}{\partial x}dx\wedge dy \\
-d\sigma_2 &= (-\frac{\partial g}{\partial y}+2g\frac{\partial g}{\partial x}) dx\wedge dy \\
-
+d\sigma_1 &= \frac{\partial h}{\partial x}dx\wedge dy \\
+d\sigma_2 &= (-\frac{\partial h}{\partial y}+2h\frac{\partial h}{\partial x}) dx\wedge dy \\
 
 \end{aligned}
 ```
@@ -92,24 +91,26 @@ So the connection 1-form $$\alpha := Adx + Bdy$$ satisfies
 d\sigma_1 &= \alpha \wedge \sigma_1 \\
 d\sigma_2 &= \sigma_2 \wedge \alpha \\
 \implies \\
-A &= \frac{\partial g}{\partial y} - 3g\frac{\partial g}{\partial x} \\
-B &= g\frac{\partial g}{\partial y} - (1+3g^2)\frac{\partial g}{\partial x} \\
+A &= \frac{\partial h}{\partial y} - 3h\frac{\partial h}{\partial x} \\
+B &= h\frac{\partial h}{\partial y} - (1+3h^2)\frac{\partial h}{\partial x} \\
  \\
 K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
- &= \frac{\partial g}{\partial x}\frac{\partial g}{\partial y} - 6g\frac{\partial g}{\partial x}^2 - (1+3g^2)\frac{\partial^2 g}{\partial x \partial x}
- - \frac{\partial^2 g}{\partial y \partial y} + 2g \frac{\partial^2 g}{\partial x \partial y} ,\\
-g &= g(y) \implies \\
+ &= \frac{\partial h}{\partial x}\frac{\partial h}{\partial y} - 6h\frac{\partial h}{\partial x}^2 - (1+3h^2)\frac{\partial^2 h}{\partial x \partial x}
+ - \frac{\partial^2 h}{\partial y \partial y} + 2h \frac{\partial^2 h}{\partial x \partial y} ,\\
+h &= h(y) \implies \\
 
-\alpha &= \frac{\partial }{\partial y} (gdx +\frac{g^2}{2} dy)\\
+\alpha &= \frac{\partial }{\partial y} (hdx +\frac{h^2}{2} dy)\\
 
- K(y) &= -\frac{\partial^2 g}{\partial y \partial y}\ .
+ K(y) &= -\frac{\partial^2 h}{\partial y \partial y}\ \\
+ \text{has Galilean Symmetry for the Horocyclic Flow:}\\
+ g \mapsto h(y,\beta) &= h(y) + \beta y \ .\\
 \end{aligned}
 ```
 
-**IMPORTANT** Therefore, when $$g=g(y)$$, the parallel transport equation reduces to $$\dot{\vec{c}}(t) = -\alpha(\dot{\gamma}(t))\vec{c}(t) = -\partial_y(g\ dx/dt + g^2/2\ dy/dt)\vec{c}(t)$$. Of course, this has closed solution
+**IMPORTANT** Therefore, when $$h=h(y)$$, the parallel transport equation reduces to $$\dot{\vec{c}}(t) = -\alpha(\dot{\gamma}(t))\vec{c}(t) = -\partial_y(h\ dx/dt + h^2/2\ dy/dt)\vec{c}(t)$$. Of course, this has closed solution
 
 ```math
-\vec{c}(t) = \exp(-(g\ dx/dt + g^2/2\ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
+\vec{c}(t) = exp(-((h+\beta y)\ dx/dt + (h^2/2 + (\beta y)^2/2 + \beta y h) \ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
 ```
 
 which is a function of the transport curve $$\gamma$$'s endpoints **alone**. This fact implies the Development Map preserves loops.
@@ -137,19 +138,33 @@ DM_*\mu(\Omega_t^0) &\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M
 DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
 
 &= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
-
+\end{aligned}
+```
+```math
+\begin{aligned}
 \text{Horocyclic coordinates}: g &= g(y) \implies \\
+<<<<<<< .mine
+&= \frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{0,0}\oplus \Reals^3} e^{-\ell(\gamma)^2/2t} e^{-\bra{|I-J|\vec x, y,\beta}\ket{\vec x,y,\beta}/2t}d\vec x \frac{e^{-(\beta^2+\ell(y)^2)/2}}{2\pi} d\beta d\ell(y)\\
+||||||| .r25676
+&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{\gamma(0)}\oplus \Reals} e^{-\ell(\gamma(y))^2/2t} e^{\bra{(I-J_{\gamma(y)})\vec x}\ket{\vec x}/2t}d\vec x dy \\
+=======
 &=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{\gamma(0)}\oplus \Reals} e^{-\ell(\gamma)^2/2t} e^{-g(y)\ell(\gamma)x_1-\bra{(I-J_{\gamma(y)})\vec x}\ket{\vec x}/2t}d\vec x dy \\
+>>>>>>> .r25688
 
-&=\frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t \det |I-J_{\gamma}|}}
+&=\frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t}}\int_{\Reals}\frac{e^{-\ell(y)^2/2}}{\sqrt {2 \pi}2\sinh \sqrt{-h^{\prime\prime}(y)}\ell(\gamma)/2} d\ell(y) \ .
 
 \end{aligned}
 ```
+<<<<<<< .mine
+||||||| .r25676
+where $$J_gamma(y)$$ is the Jacobi Matrix along $$\gamma(y(s)) = y\vec{e_2} + s/t\ \ell(\gamma)\vec{e_1}$$.
+=======
 where $$J_{\gamma(y)}$$ is the Jacobi Matrix along $$\gamma(y(s)) = y\vec{e_2} + s/t\ \ell(\gamma)\vec{e_1}$$.
+>>>>>>> .r25688
 
 ## Approximation and the Selberg Trace Formula
 
-In the $$\dim = 2$$ constant curvature $$-\kappa^2$$ case,
+In the $$\dim = 2$$ constant curvature $$K = -\kappa^2$$ case,
 
 ```math
 \begin{aligned}
