@@ -141,11 +141,11 @@ DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t
 \text{Horocyclic coordinates}: g &= g(y) \implies \\
 &=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{\gamma(0)}\oplus \Reals} e^{-\ell(\gamma(y))^2/2t} e^{\bra{(I-J_{\gamma(y)})\vec x}\ket{\vec x}/2t}d\vec x dy \\
 
-&=\frac{\ell(\gamma_0)}{\sqrt{2\pi t}}\int_{-\infty}^{\infty}\frac{e^{-\ell(\gamma(y))^2/2t}dy}{\sqrt{\det |I-J_{\gamma(y)}|}} \\
+&=\frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t \det |I-J_{\gamma}|}}
 
 \end{aligned}
 ```
-where $$P_\gamma(y)$$ is the Jacobi Matrix along $$\gamma(y(s)) = y\vec{e_2} + s/t\ \ell(\gamma)\vec{e_1}$$.
+where $$J_gamma(y)$$ is the Jacobi Matrix along $$\gamma(y(s)) = y\vec{e_2} + s/t\ \ell(\gamma)\vec{e_1}$$.
 
 ## Approximation and the Selberg Trace Formula
 
