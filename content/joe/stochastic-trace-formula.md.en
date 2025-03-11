@@ -102,8 +102,8 @@ h &= h(y) \implies \\
 \alpha &= \frac{\partial }{\partial y} (hdx +\frac{h^2}{2} dy)\\
 
  K(y) &= -\frac{\partial^2 h}{\partial y \partial y}\ \\
- \text{has Galilean Symmetry for the Horocyclic Flow:}\\
- g \mapsto h(y,\beta) &= h(y) + \beta y \ .\\
+ \text{has Galilean Symmetry:} \\
+ h \mapsto h(y,\beta) &= h(y) + \beta y \ .\\
 \end{aligned}
 ```
 
