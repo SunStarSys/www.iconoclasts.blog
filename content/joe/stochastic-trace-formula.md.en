@@ -112,7 +112,7 @@ g &= g(y) \implies \\
 \vec{c}(t) = exp(-(g\ dx/dt + g^2/2\ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
 ```
 
-which is a function of the transport curve $$\gamma$$'s endpoints **alone**.
+which is a function of the transport curve $$\gamma$$'s endpoints **alone**. This fact implies the Development Map preserves loops.
 
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ is the trace of the heat kernel.
 
