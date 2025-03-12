@@ -142,7 +142,9 @@ DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t
 ```
 ```math
 \begin{aligned}
-\text{Horocyclic coordinates}: g &= g(y) \implies \\
+\text{Horocyclic coordinates}: \\
+
+h&= h(y) \implies \\
 &= \frac{\ell(\gamma_0)}{\sqrt{2\pi t}^3}\int_{TM_{0,0}\oplus \Reals^3} e^{-\ell(\gamma)^2/2t} e^{-\bra{|I-J|\vec x, y,\beta}\ket{\vec x,y,\beta}/2t}d\vec x \frac{e^{-(\beta^2+\ell(y)^2)/2}}{2\pi} d\beta d\ell(y)\\
 
 &=\frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2\pi t}}\int_{\Reals}\frac{e^{-\ell(y)^2/2}}{\sqrt {2 \pi}2\sinh \sqrt{-h^{\prime\prime}(y)}\ell(\gamma)/2} d\ell(y) \ .
