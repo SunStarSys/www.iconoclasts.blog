@@ -4,7 +4,7 @@ categories: Perl, Orion, Prestanda, Apache
 dependencies: '*.md.sv'
 keywords: perl,dylan,static,method,lookup,compile,sealed,apache,mod_perl,prestanda
 published: ~
-status: skiss
+status: arkivera
 title: 'Perl 7 Funktionsbegäran: förseglade underdelar för typangivna lexikaler'
 ---
 
@@ -18,9 +18,9 @@ title: 'Perl 7 Funktionsbegäran: förseglade underdelar för typangivna lexikal
 
 ## Den första lösningen: Doug MacEachern's metodsökoptimeringar
 
-Doug var skaparen av mod_perl projektet tillbaka i mitten av 90-talet, så uppenbarligen skriva högpresterande Perl var hans forté. Ett av hans många bidrag till [p5p](https://lists.perl.org/list/perl5-porters.html) skulle skära ned prestandapåföljden för uppslagning av metod utan erbjudandeoptimering till hälften med hjälp av en metod + <code> &#64;ISA</code> hierarkicache för att göra uppslagning av exekveringsobjektmetod för mod_perl-objekt som `Apache2::RequestRec`
+Doug var skaparen av mod_perl projektet tillbaka i mitten av 90s, så uppenbarligen skriva hög prestanda Perl var hans forté. Ett av hans många bidrag till [p5p](https://lists.perl.org/list/perl5-porters.html) var att kapa prestanda straffavgift för OO metod uppslagning overhead i hälften, med hjälp av en metod + <code> &#64;ISA</code> hierarkicache för att göra uppslagning av exekveringsobjektmetod för mod_perl-objekt som `Apache2::RequestRec`
 
-Detta är inte ett trifling problem med samtal till `C-struktur` get-set accessor-metoder &mdash; den gemensamma situationen med många mod_perl API:er. Perl's runtime method-call lookup straff på httpd's `struktur request_rec *`som mod_perl exponerar via `Apache2::RequestRec`
+Detta är inte ett trifling problem med samtal till `C-struktur` get-set accessor-metoder &mdash; den gemensamma situationen med många mod_perl API:er. Perl's runtime method-call lookup straff på httpd's `struktur request_rec *`, som mod_perl exponerar via `Apache2::RequestRec`
 
 Vad [Doug söker](https://www.perl.com/pub/2000/06/dougpatch.html/).
 
@@ -51,8 +51,7 @@ sealed: compiling Benchmark->cmpthese lookup.
 sealed: compiling Foo->foo lookup.
 sealed: compiling main->foo lookup.
 sealed: compiling Foo->bar lookup.
-Use of uninitialized value in addition (+) at lib/sealed.pm line 137.
-sealed: tweak() aborted: sealed: invalid lookup: Foo->bar - did you forget to 'use Foo' first? at lib/sealed.pm line 75.
+sealed: tweak() aborted: sealed: invalid lookup: Foo->bar - did you forget to 'use Foo' first?
 sub __ANON__ :sealed {
     use warnings;
     use strict;

@@ -2,9 +2,9 @@
 archived: ~
 categories: Perl, Orion, Rendimiento, Apache
 dependencies: '*.md.es'
-keywords: perl,dilano,estático,método,lookup,compile,sealed,apache,mod_perl,rendimiento
+keywords: perl,dylan,estático,método,lookup,compilar,sellado,apache,mod_perl,rendimiento
 published: ~
-status: borrador
+status: archivo
 title: 'Perl 7 Solicitud de características: subs sellados para léxicos mecanografiados'
 ---
 
@@ -14,13 +14,13 @@ title: 'Perl 7 Solicitud de características: subs sellados para léxicos mecano
 
 ## El problema
 
-{# lede #}La consulta del método de tiempo de ejecución OO de Perl 5 tiene un 50% más de sobrecarga de rendimiento que una llamada de subrutina con nombre directa{# lede #}
+{# lede #}La consulta del método de tiempo de ejecución fuera de línea de Perl 5 tiene un 50 % más de sobrecarga de rendimiento que una llamada de subrutina directa con nombre{# lede #}
 
 ## La solución inicial: las optimizaciones de búsqueda de métodos de Doug MacEachern
 
-Doug fue el creador del proyecto mod_perl a mediados de los años 90, por lo que obviamente escribir Perl de alto rendimiento fue su fortaleza. Una de sus muchas contribuciones a [p5p](https://lists.perl.org/list/perl5-porters.html) era reducir la penalización de rendimiento de la sobrecarga de consulta del método OO a la mitad, mediante un método + <code> &#64;Caché de jerarquía</code> de ISA para hacer que el método de objeto de tiempo de ejecución busque objetos mod_perl como `Apache2::RequestRec`
+Doug fue el creador del proyecto mod_perl a mediados de 90s, por lo que obviamente escribir Perl de alto rendimiento fue su forté. Una de sus muchas contribuciones a [p5p](https://lists.perl.org/list/perl5-porters.html) consistía en reducir a la mitad la penalización de rendimiento de la sobrecarga de consulta del método OO mediante un método + <code> &#64;Caché de jerarquía de ISA</code> para realizar la consulta del método de objeto de tiempo de ejecución para objetos mod_perl como `Apache2::RequestRec`
 
-Este no es un problema insignificante con las llamadas a `Estructura C` métodos de acceso get-set &mdash; la situación común con muchas API de mod_perl. Penalización de consulta de llamada de método de tiempo de ejecución de Perl en httpd's `estructura request_rec *`, que mod_perl expone a través de `Apache2::RequestRec`
+Este no es un problema insignificante con las llamadas a `Estructura C` métodos de acceso get-set &mdash; la situación común con muchas API mod_perl. Penalización de consulta de llamada de método de tiempo de ejecución de Perl en httpd `estructura request_rec *`, que mod_perl expone a través del `Apache2::RequestRec`
 
 Qué [Doug estaba buscando](https://www.perl.com/pub/2000/06/dougpatch.html/).
 
@@ -51,8 +51,7 @@ sealed: compiling Benchmark->cmpthese lookup.
 sealed: compiling Foo->foo lookup.
 sealed: compiling main->foo lookup.
 sealed: compiling Foo->bar lookup.
-Use of uninitialized value in addition (+) at lib/sealed.pm line 137.
-sealed: tweak() aborted: sealed: invalid lookup: Foo->bar - did you forget to 'use Foo' first? at lib/sealed.pm line 75.
+sealed: tweak() aborted: sealed: invalid lookup: Foo->bar - did you forget to 'use Foo' first?
 sub __ANON__ :sealed {
     use warnings;
     use strict;
@@ -116,7 +115,7 @@ sealed 662252/s    21%     --
 ok 3
 ```
 
-## Solución propuesta de Perl 7: `:sellado`
+## Solución Perl 7 propuesta: `:sellado`
 
 Código de ejemplo:
 
@@ -130,15 +129,15 @@ sub handler :sealed {
 }
 ```
 
-## Calidad de producción, robusto Perl v5.28+ Prototipo: sealed.pm {{facts.releases.sealed.tag}}
+## Producción-Calidad, Robust Perl v5.28+ Prototipo: sealed.pm {{facts.releases.sealed.tag}}
 
-Las instrucciones de compilación para perl 5.30+ están disponibles en el `sealed.pm` pod si desea ejecutar mod_perl2 con ithreads y httpd-2.4 con mpm de evento, y no segfault a **cualquier** escala.  Probado en `Solaris 11.4` y `Ubuntu 22.04`
+Las instrucciones de compilación para perl 5.30+ están disponibles en el `sealed.pm` pod debe ejecutar mod_perl2 con httpd-2.4 con mpm de evento y no segfault a **cualquier** escala.  Probado en `Solaris 11.4` y `Ubuntu 22.04`
 
 Por diversión, prueba esto [parche de mono]({{snippetB.pretty_uri}}) a `ModPerl::RegistryCooker`
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Permite los efectos de `submanejador: {script va aquí} sellado` en todos sus `ModPerl::Registro` guiones, algo así como [este](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+Permite los efectos de `Submanejador: {script go here} sellado` en todos sus `ModPerl::Registro` guiones, algo así como [este](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -180,6 +179,6 @@ Consulte <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Busca
 
 Esto permitirá a Perl 5 hacer el código de muestra `content_type`
 
-Esta idea perlana es gratuitamente robada de [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Leer esto](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
+Esta idea inglesa es gratuitamente robada de [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Lee esto](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
 
 <!-- $Date$ $Author$ $Revision$ -->
