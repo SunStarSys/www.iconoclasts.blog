@@ -9,7 +9,9 @@ title: 'Perl 7 Solicitud de características: subs sellados para léxicos mecano
 ---
 
 <div class="right">
-  <img src="../images/sunstarstaronly.png">
+
+![Estrella del Sol](../images/sunstarstaronly.png).
+
 </div>
 
 ## El problema

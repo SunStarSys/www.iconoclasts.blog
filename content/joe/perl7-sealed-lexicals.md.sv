@@ -9,7 +9,9 @@ title: 'Perl 7 Funktionsbegäran: förseglade underdelar för typangivna lexikal
 ---
 
 <div class="right">
-  <img src="../images/sunstarstaronly.png">
+
+![endast solstjärna](../images/sunstarstaronly.png).
+
 </div>
 
 ## Problemet

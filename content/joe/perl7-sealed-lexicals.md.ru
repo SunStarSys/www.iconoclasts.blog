@@ -9,7 +9,9 @@ title: 'Perl 7 Функция Запрос: запечатанные подмн�
 ---
 
 <div class="right">
-  <img src="../images/sunstarstaronly.png">
+
+![солнцезвезда](../images/sunstarstaronly.png).
+
 </div>
 
 ## Проблема
