@@ -4,7 +4,7 @@ categories: Perl, Orion, Prestanda, Apache
 dependencies: '*.md.sv'
 keywords: perl,dylan,static,method,lookup,compile,sealed,apache,mod_perl,prestanda
 published: ~
-status: arkivera
+status: arkiverad
 title: 'Perl 7 Funktionsbegäran: förseglade underdelar för typangivna lexikaler'
 ---
 

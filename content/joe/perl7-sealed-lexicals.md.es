@@ -4,7 +4,7 @@ categories: Perl, Orion, Rendimiento, Apache
 dependencies: '*.md.es'
 keywords: perl,dylan,estático,método,lookup,compilar,sellado,apache,mod_perl,rendimiento
 published: ~
-status: archivo
+status: archivado
 title: 'Perl 7 Solicitud de características: subs sellados para léxicos mecanografiados'
 ---
 

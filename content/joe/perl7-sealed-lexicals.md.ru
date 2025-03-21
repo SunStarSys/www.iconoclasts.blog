@@ -4,7 +4,7 @@ categories: Перл, Орион, Перформанс, Апачи
 dependencies: '*.md.ru'
 keywords: perl,dylan,static,ethod,lookup,compile, Герметичный,apache,mod_perl,производительность
 published: ~
-status: архивировать
+status: архивировано
 title: 'Perl 7 Функция Запрос: запечатанные подмножества для типизированных лексик'
 ---
 
