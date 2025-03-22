@@ -40,7 +40,7 @@ In general, this claim is false. But the set stationary curves of $$A_H$$ are al
 
 #### Quadratic Form Translation Magic, part 1
 
-When $$H(p,q,t)$$'s $$p$$-denpendence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a metric $$[g_{ij}]: T^{\*}M\odot T^{\*}M\rightarrow\Reals$$
+When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a metric $$[g_{ij}]: T^{\*}M\odot T^{\*}M\rightarrow\Reals$$
 with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$. The Legendre Transform relates them:
 
 ```math
@@ -55,7 +55,7 @@ Furthermore, if $$H = H\_B$$ has an additional component $$B(q,t)\in T_qM$$, a l
 ```math
 \begin{aligned}
 H_B(p,q,t) &= \frac{1}{2}\ g_{ij}\ p^ip^j + B(q,t)_ip^i + V(q,t) \\
- &= \frac{1}{2}\ g_{ij}\ (p^i+g^{ik}B_k)(p^j+g^{jk}B_k) - \frac{1}{2}\ g_{ij} g^{ki}g^{im}g^{jn},B_nB_m + V(q,t)\\
+ &= \frac{1}{2}\ g_{ij}\ (p^i+g^{ik}B_k)(p^j+g^{jk}B_k) - \frac{1}{2}\ g_{ij} g^{ki}g^{im}g^{jn}B_nB_m + V(q,t)\\
 
 &= H_0(p+g^{-1}B, q, t) - \frac{1}{2} g^{ij}B_iB_j \implies\\
 \mathscr{L}_B(q,\dot q, t) &= \min_p (p+g^{-1}B)\dot q - H_0(p+g^{-1}B,q,t) - g^{ij}B_i \dot q_i + \frac{1}{2}\ g^{ij}(q,t)B_iB_j\\
