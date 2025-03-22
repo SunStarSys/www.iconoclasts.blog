@@ -41,7 +41,7 @@ In general, this claim is false. But the set stationary curves of $$A_H$$ are al
 #### Quadratic Form Translation Magic, part 1
 
 When $$H(p,q,t)$$'s $$p$$-denpendence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a metric $$[g_{ij}]: T^{\*}M\odot T^{\*}M\rightarrow\Reals$$
-with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$, it it's Legendre Transform:
+with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$. The Legendre Transform relates them:
 
 ```math
 \begin{aligned}
