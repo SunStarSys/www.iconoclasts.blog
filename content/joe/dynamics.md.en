@@ -13,6 +13,14 @@ Dependencies: *.md.en
 
 ### $$\omega = d\alpha = dp\wedge dq - dH \wedge dt$$
 
+```math
+\begin{aligned}
+\omega &= \dot{p}dt\wedge dq + dp\wedge dt\dot{q} - \frac{\partial H}{\partial p}dp\wedge dt - \frac{\partial H}{\partial q}dq\wedge dt \\
+        &= (-\dot{p} - \frac{\partial H}{\partial q}) dq \wedge dt+  (\dot{q} - \frac{\partial H}{\partial p}) dp\wedge dt
+\end{aligned}
+```
+
+
 #### $$\omega|_\gamma = 0 \iff \gamma:[0,t]\mapsto T^*(M\oplus\R)  $$ is a stationary curve for $$A=\int_\gamma \alpha$$.
 
 ### Legendre Transform
