@@ -20,10 +20,13 @@ Dependencies: *.md.en
 \end{aligned}
 ```
 
-
 #### $$\omega|_\gamma = 0 \iff \gamma:[0,t]\mapsto T^*(M\oplus\R)  $$ is a stationary curve for $$A=\int_\gamma \alpha$$.
 
 ### Legendre Transform
+
+```math
+\mathscr{L}(q,\dot q, t) = \min_p(p\dot{q} - H(p,q,t))
+```
 
 ### Symplectic Geometry
 
