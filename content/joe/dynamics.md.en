@@ -15,7 +15,7 @@ Dependencies: *.md.en
 
 ```math
 \begin{aligned}
-\omega &= \dot{p}dt\wedge dq + dp\wedge dt\dot{q} - \frac{\partial H}{\partial p}dp\wedge dt - \frac{\partial H}{\partial q}dq\wedge dt \\
+\omega|_\gamma &= \dot{p}dt\wedge dq + dp\wedge dt\dot{q} - \frac{\partial H}{\partial p}dp\wedge dt - \frac{\partial H}{\partial q}dq\wedge dt \\
         &= (-\dot{p}^i - \frac{\partial H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial H}{\partial p^i}) dp^i\wedge dt
 \end{aligned}
 ```
