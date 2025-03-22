@@ -31,6 +31,19 @@ A &= \int_{\pi(\gamma)} \mathscr{L}(q,\dot q, t)\ dt
 \end{aligned}
 ```
 is the Lagrangian representation of the Action $$A$$, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
+
+### Principle of Least Action != Method of Stationary Phase
+
+When $$H(p,q,t)$$'s $$p$$-dependency (aka the Kinetic Energy component of $$H$$) is a nondegenerate symmetric quadratic form in $$p$$, some magical relationships happen: $$H$$ may be thought of as defining a metric $$g_{ij}$$ on $$T^*(M\oplus\Reals)$$, and its inverse $$g^{ij}$$ is the metric's Legendre Transform:
+
+```math
+\begin{aligned}
+H(p,q,t) &= 1/2\ g_{ij}(q,t)\ p^ip^j + V(q,t) \implies\\
+\mathscr{L}(q,\dot q, t) &= 1/2\ g^{ij}(q,t)\ \dot{q}_i\dot{q}_j - V(q) \\
+\end{aligned}
+```
+
+
 ### Symplectic Geometry
 
 ### The natural volume form $$\omega^n/n!$$
