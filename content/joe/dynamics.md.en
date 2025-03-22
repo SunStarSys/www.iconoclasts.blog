@@ -20,14 +20,17 @@ Dependencies: *.md.en
 \end{aligned}
 ```
 
-#### $$\omega|_\gamma = 0 \iff \gamma:[0,t]\mapsto T^*(M\oplus\R)  $$ is a stationary curve for $$A=\int_\gamma \alpha$$.
+#### $$\omega|_\gamma = 0 \iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a stationary curve for $$A:=\int_\gamma \alpha$$.
 
 ### Legendre Transform
 
 ```math
-\mathscr{L}(q,\dot q, t) = \min_p(p\dot{q} - H(p,q,t))
+\begin{aligned}
+\mathscr{L}(q,\dot q, t) &:= \min_p p\dot{q} - H(p,q,t) \\
+A &= \int_{\pi(\gamma)} \mathscr{L}(q,\dot q, t)\ dt
+\end{aligned}
 ```
-
+is the Lagrangian representation of the Action $$A$$, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
 ### Symplectic Geometry
 
 ### The natural volume form $$\omega^n/n!$$
