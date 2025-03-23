@@ -97,14 +97,14 @@ with inverse $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$. The Legendre Tra
 The Levi-Civita Connection's Christoffel Symbols for $$g$$ are simply defined by the Koszul Formula
 
 ```math
-
-\Gamma^k_{ij} = \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})
-
+\Gamma^k_{ij} = \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})\\
 ```
 with $$\partial_i := \frac{\partial}{\partial q^i}$$. The associated Covariant Derivative in local coordinates is
 ```math
-\nabla_{a^i\partial_i} b^j\partial_j =a^i\partial_ib^j\partial_j + \Gamma_{ij}^k a^ib ^j
-\partial_k
+\begin{aligned}
+\nabla_{a^i\partial_i} b^j\partial_j &=a^i(\partial_ib^j)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or succinctly}\\
+\nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k
+\end{aligned}
 ```
 
 Correspondingly, the Riemann-Christoffel Curvature Tensor is
