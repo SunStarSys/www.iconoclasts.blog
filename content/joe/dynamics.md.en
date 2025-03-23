@@ -30,7 +30,7 @@ Dependencies: *.md.en
 A_\mathscr{L} &= \int_{\pi(\gamma)} \mathscr{L}(q,\dot q, t)\ dt
 \end{aligned}
 ```
-is the Lagrangian representation of the Action, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
+is the Lagrangian representation of the Action, where $$\dot{q} = \frac{\partial H}{\partial p}$$ and $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
 
 #### The (Meta)Principle of Least Action
 
