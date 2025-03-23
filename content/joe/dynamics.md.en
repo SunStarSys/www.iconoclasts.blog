@@ -9,9 +9,9 @@ Dependencies: *.md.en
 
 ### The Mechanics of Cotangent Bundles
 
-### $$\theta := p\ dq - \mathcal H(p,q,t)\ dt$$
+### Let $$\theta := p\ dq - \mathcal H(p,q,t)\ dt$$.
 
-Let $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ for smooth $$\gamma:[0,t]\rightarrow T^{\*}(M\oplus\Reals)$$.
+Define $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ for smooth $$\gamma:[0,t]\rightarrow T^{\*}(M\oplus\Reals)$$.
 
 If two such curves $$\gamma_1, \gamma_2$$ have the exact same boundary endpoints, lets define **subtraction** by inverse composition, so $$\gamma_1 - \gamma_2$$ is a closed loop defined by traversing $$\gamma_1$$ in the forward direction, and $$\gamma_2$$ in reverse. Let $$S$$ be any 2-dimensonal surface bounded by this closed loop: $$\gamma_1 - \gamma_2 = \partial S$$. So
 
@@ -25,7 +25,7 @@ If two such curves $$\gamma_1, \gamma_2$$ have the exact same boundary endpoints
 by Stokes' Theorem. Clearly, for the action $$\mathcal S$$ to only depend on the endpoints of $$\gamma$$, we necessarily must have $$d\theta$$ vanish on $$\gamma$$.
 
 
-### $$\omega := d\theta = dp\wedge dq - d\mathcal H \wedge dt$$
+### Let $$\omega := d\theta = dp\wedge dq - d\mathcal H \wedge dt$$.
 
 ```math
 \begin{aligned}
@@ -34,7 +34,7 @@ by Stokes' Theorem. Clearly, for the action $$\mathcal S$$ to only depend on the
 \end{aligned}
 ```
 
-#### $$\omega|_\gamma = 0 \iff \gamma$$ satisfies the Hamilton-Jacobi Equations
+#### $$\therefore \omega|_\gamma = 0 \iff \gamma(t)$$ satisfies the Hamilton-Jacobi Equations
 ```math
 \begin{aligned}
 \dot p &= -\frac{\partial \mathcal H}{\partial q} \\
@@ -42,7 +42,7 @@ by Stokes' Theorem. Clearly, for the action $$\mathcal S$$ to only depend on the
 \end{aligned}
 ```
 
-$$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a *stationary curve* for the Action $$\mathcal S_\mathcal H(\gamma):=\int_\gamma \theta$$.
+$$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a *stationary curve* for the Action $$\mathcal S_\mathcal H(\gamma)=\int_\gamma \theta$$.
 
 ### Legendre Transform
 When $$\mathcal H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  satisfying $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform $$\mathcal L$$ of $$\mathcal H$$:
