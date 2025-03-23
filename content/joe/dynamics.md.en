@@ -34,8 +34,8 @@ $$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a *stationary curve* for th
 When $$\mathcal H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  satisfying $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform $$\mathcal L$$ of $$\mathcal H$$:
 ```math
 \begin{aligned}
-\mathcal{L}(q,\dot q, t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) = p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
-S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(q,\dot q, t)\ dt
+\mathcal{L}(\dot q,q,t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) = p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
+S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
 \end{aligned}
 ```
 is the *Lagrangian representation of the Action*, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
@@ -54,16 +54,17 @@ which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial co
 
 The interesting aspect of $$S(\gamma)$$ is when can uniquely define $$\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$S = S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
 
-We can now define a unique "horizontal" lift $$A=\pi^{-1}:M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ of $$\pi$$ by assigning
+We can now define a unique "horizontal" lift $$A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ of $$\pi$$ by assigning
+
 ```math
-(q,t)\mapsto (p_{max}(\dot q), q, \mathcal H(p_{max}(\dot q), q, t), t)\ .
+(\dot q, q,t)\mapsto (p_{max}(\dot q), q, \mathcal H(p_{max}(\dot q), q, t), t)\ .
 ```
-Now we have at last, for any curve $$\gamma$$ as above:
+Now we have at last, for **any "projected" smooth curve** $$\tilde\gamma:[0,t]\rightarrow M\oplus\R$$:
 
 ```math
 \begin{aligned}
 
-S_\mathcal{L}(\pi(\gamma)) &= S_\mathcal H(A(\pi(\gamma))) \ .
+S_\mathcal{L}(\tilde\gamma) &= S_\mathcal H(A\circ \tilde\gamma) \ .
 \end{aligned}
 ```
 
@@ -81,7 +82,7 @@ with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$. The Legendre Transform r
 \end{aligned}
 ```
 
-##### Lagrange Multipliers as Infinitesimal Translations
+##### Lagrange Multipliers on $$\mathcal H$$ as Infinitesimal Translations on $$\mathcal L$$
 
 Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$B(q,t)\in T_qM$$, ie a linear funtional on $$p\in T^{\*}_qM$$, we can **complete the square** and recompute $$\mathcal{L}_B$$ in terms of $$\mathcal L$$:
 
