@@ -54,7 +54,7 @@ which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial co
 
 The interesting aspect of $$S(\gamma)$$ is when can uniquely define $$\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$S = S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
 
-We can now define a unique "horizontal" lift $$A=\pi^{-1}:M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ of $$\pi(\gamma)$$ by assigning
+We can now define a unique "horizontal" lift $$A=\pi^{-1}:M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ of $$\pi$$ by assigning
 ```math
 (q,t)\mapsto (p_{max}(\dot q), q, \mathcal H(p_{max}(\dot q), q, t), t)\ .
 ```
