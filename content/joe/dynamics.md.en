@@ -9,42 +9,42 @@ Dependencies: *.md.en
 
 ### The Mechanics of Cotangent Bundles
 
-### $$\alpha = p\ dq - H(p,q,t)\ dt$$
+### $$\alpha = p\ dq - \mathcal H(p,q,t)\ dt$$
 
-### $$\omega = d\alpha = dp\wedge dq - dH \wedge dt$$
+### $$\omega = d\alpha = dp\wedge dq - d\mathcal H \wedge dt$$
 
 ```math
 \begin{aligned}
-\omega|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial H}{\partial p}dp\wedge dt - \frac{\partial H}{\partial q}dq\wedge dt \\
-        &= (-\dot{p}^i - \frac{\partial H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial H}{\partial p^i}) dp^i\wedge dt
+\omega|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial \mathcal H}{\partial p}dp\wedge dt - \frac{\partial \mathcal H}{\partial q}dq\wedge dt \\
+        &= (-\dot{p}^i - \frac{\partial \mathcal H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial \mathcal H}{\partial p^i}) dp^i\wedge dt
 \end{aligned}
 ```
 
 #### $$\omega|_\gamma = 0 \iff \gamma$$ satisfies the Hamilton-Jacobi Equations
 ```math
 \begin{aligned}
-\dot p &= -\frac{\partial H}{\partial q} \\
-\dot q &= \ \ \ \frac{\partial H}{\partial p}
+\dot p &= -\frac{\partial \mathcal H}{\partial q} \\
+\dot q &= \ \ \ \frac{\partial \mathcal H}{\partial p}
 \end{aligned}
 ```
 
-$$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a stationary curve for the Action $$S_H(\gamma):=\int_\gamma \alpha$$.
+$$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a stationary curve for the Action $$S_\mathcal H(\gamma):=\int_\gamma \alpha$$.
 
 ### Legendre Transform
-When $$H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  satisfying $$\dot{q} = \frac{\partial H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform of $$H$$:
+When $$\mathcal H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  satisfying $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform of $$\mathcal H$$:
 ```math
 \begin{aligned}
-\mathcal{L}(q,\dot q, t) &:= \max_p p\dot{q} - H(p,q,t) = p_{max}(\dot q)\dot q - H(p_{max}(\dot q),q,t) \\
-S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathscr{L}(q,\dot q, t)\ dt
+\mathcal{L}(q,\dot q, t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) = p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
+S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(q,\dot q, t)\ dt
 \end{aligned}
 ```
 is the Lagrangian representation of the Action, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
 
 #### The (Meta)Principle of Least Action
 
-The Principle of Least Action simply claims that the Classical Dynamics of Nature Itself tends to select trajectories that minimize $$S_\mathscr{L}$$.
+The Principle of Least Action simply claims that the Classical Dynamics of Nature Itself tends to select trajectories that minimize $$S_\mathcal{L}$$.
 
-In general, this claim is false. But the set stationary curves of $$S_H$$ are always interesting to discover, and they are identical to the curves that leave $$A_\mathcal{L}$$ stationary.  Locally, **the differential equations for those stationary trajectories are identical**, and so $$S_H = S_\mathcal{L}$$ on those curves.  In the Lagrangian Formulation, these covariant equations are known as the **Euler-Lagrange Equations** $$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
+In general, this claim is false. But the set stationary curves of $$S_\mathcal H$$ are always interesting to discover, and they are identical to the curves that leave $$A_\mathcal{L}$$ stationary.  Locally, **the differential equations for those stationary trajectories are identical**, and so $$S_\mathcal H = S_\mathcal{L}$$ on those curves.  In the Lagrangian Formulation, these covariant equations are known as the **Euler-Lagrange Equations** $$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
 
 ```math
 \frac{\partial \mathcal L}{\partial q} = \frac{d}{dt}\frac{\partial \mathcal L}{\partial \dot q}
@@ -56,18 +56,18 @@ The interesting aspect of $$S(\gamma)$$ is when can uniquely define $$\gamma$$ i
 
 We can now define a unique "horizontal" lift $$A=\pi^{-1}:M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ of $$\pi(\gamma)$$ by assigning
 ```math
-(q,t)\mapsto (p_{max}(\dot q), q, H(p_{max}(\dot q), q, t), t)\ .
+(q,t)\mapsto (p_{max}(\dot q), q, \mathcal H(p_{max}(\dot q), q, t), t)\ .
 ```
 Now we have at last
 
 ```math
 \begin{aligned}
 
-S_\mathcal{L}(\pi(\gamma)) &= S_H(A(\pi(\gamma))) \ .
+S_\mathcal{L}(\pi(\gamma)) &= S_\mathcal H(A(\pi(\gamma))) \ .
 \end{aligned}
 ```
 
-This $$A$$ is called the **Connection 1-form $$A=A_H$$**.
+This $$A$$ is called the **Connection 1-form $$A=A_\mathcal H$$**.
 
 #### Quadratic Form Translation Magic, part 1
 
@@ -76,20 +76,20 @@ with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$. The Legendre Transform r
 
 ```math
 \begin{aligned}
-H(p,q,t) &= \frac{1}{2}\ g_{ij}(q,t)\ p^ip^j + V(q,t) \implies\\
+\mathcal H(p,q,t) &= \frac{1}{2}\ g_{ij}(q,t)\ p^ip^j + V(q,t) \implies\\
 \mathcal{L}(q,\dot q, t) &= \frac{1}{2}\ g^{ij}(q,t)\dot{q}_i\dot{q}_j - V(q,t)\ .
 \end{aligned}
 ```
 
-Furthermore, if $$H = H\_B$$ has an additional component $$B(q,t)\in T_qM$$, a linear funtional on $$p$$, we can **complete the square** and recompute $$\mathcal{L}_B$$:
+Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$B(q,t)\in T_qM$$, a linear funtional on $$p$$, we can **complete the square** and recompute $$\mathcal{L}_B$$:
 
 ```math
 \begin{aligned}
-H_B(p,q,t) &= \frac{1}{2}\ g_{ij}\ p^ip^j + B(q,t)_ip^i + V(q,t) \\
+\mathcal H_B(p,q,t) &= \frac{1}{2}\ g_{ij}\ p^ip^j + B(q,t)_ip^i + V(q,t) \\
  &= \frac{1}{2}\ g_{ij}\ (p^i+g^{ik}B_k)(p^j+g^{jk}B_k) - \frac{1}{2}\ g_{ij} g^{im}g^{jn}B_nB_m + V(q,t)\\
 
-&= H(p+g^{-1}B, q, t) - \frac{1}{2} g^{ij}B_iB_j \implies\\
-\mathcal{L}_B(q,\dot q, t) &= \max_p (p+g^{-1}B)\dot q - H(p+g^{-1}B,q,t) - g^{ij}B_i \dot q_j + \frac{1}{2}\ g^{ij}(q,t)B_iB_j\\
+&= \mathcal H(p+g^{-1}B, q, t) - \frac{1}{2} g^{ij}B_iB_j \implies\\
+\mathcal{L}_B(q,\dot q, t) &= \max_p (p+g^{-1}B)\dot q - \mathcal H(p+g^{-1}B,q,t) - g^{ij}B_i \dot q_j + \frac{1}{2}\ g^{ij}(q,t)B_iB_j\\
 &= \mathcal{L}(q,\dot q, t)- g^{ij}B_i\dot{q}_i + \frac{1}{2}\ g^{ij}B_iB_j(q,t) \ ,\\
 &= \mathcal{L}(q,\dot{q}-B(q,t), t)
 \end{aligned}
