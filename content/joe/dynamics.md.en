@@ -11,15 +11,15 @@ Dependencies: *.md.en
 
 ### $$\theta := p\ dq - \mathcal H(p,q,t)\ dt$$
 
-Let $$S_\mathcal H(\gamma) := \int_\gamma \theta$$ for smooth $$\gamma:[0,t]\rightarrow T^{\*}(M\oplus\Reals)$$.
+Let $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ for smooth $$\gamma:[0,t]\rightarrow T^{\*}(M\oplus\Reals)$$.
 
-If two such curves $$\gamma_1, \gamma_2$$ have the exact same boundary endpoints, lets define **subtraction** by inverse composition, so $$\gamma_1 - \gamma_2$$ is a closed loop defined by traversing $$\gamma_1$$ in the forward direction, and $$\gamma_2$$ in reverse. Let $$\mathcal S$$ be any 2-dimensonal surface bounded by this closed loop: $$\gamma_1 - \gamma_2 = \partial S$$. So
+If two such curves $$\gamma_1, \gamma_2$$ have the exact same boundary endpoints, lets define **subtraction** by inverse composition, so $$\gamma_1 - \gamma_2$$ is a closed loop defined by traversing $$\gamma_1$$ in the forward direction, and $$\gamma_2$$ in reverse. Let $$S$$ be any 2-dimensonal surface bounded by this closed loop: $$\gamma_1 - \gamma_2 = \partial S$$. So
 
 ```math
 \begin{aligned}
-S(\gamma_1) - S(\gamma_2) &= \int_{\gamma_1 - \gamma_2}\theta \\
-&= \int_{\partial \mathcal S}\theta\\
-&= \int_\mathcal S d\theta
+\mathcal S(\gamma_1) - \mathcal S(\gamma_2) &= \int_{\gamma_1 - \gamma_2}\theta \\
+&= \int_{\partial S}\theta\\
+&= \int_S d\theta
 \end{aligned}
 ```
 by Stokes' Theorem.
@@ -42,23 +42,23 @@ by Stokes' Theorem.
 \end{aligned}
 ```
 
-$$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a *stationary curve* for the Action $$S_\mathcal H(\gamma):=\int_\gamma \theta$$.
+$$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a *stationary curve* for the Action $$\mathcal S_\mathcal H(\gamma):=\int_\gamma \theta$$.
 
 ### Legendre Transform
 When $$\mathcal H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  satisfying $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform $$\mathcal L$$ of $$\mathcal H$$:
 ```math
 \begin{aligned}
 \mathcal{L}(\dot q,q,t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) = p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
-S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
+\mathcal S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
 \end{aligned}
 ```
 is the *Lagrangian representation of the Action*, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
 
 #### The (Meta)Principle of Least Action
 
-The Principle of Least Action simply claims that the Classical Dynamics of Nature Itself tends to select trajectories that minimize $$S_\mathcal{L}$$.
+The Principle of Least Action simply claims that the Classical Dynamics of Nature Itself tends to select trajectories that minimize $$\mathcal S_\mathcal{L}$$.
 
-In general, this claim is **false**. But the set stationary curves of $$S_\mathcal H$$ are always interesting to discover, and they are identical to the curves that leave $$S_\mathcal{L}$$ stationary.  Locally, **the differential equations for those stationary trajectories are identical**, and so $$S_\mathcal H = S_\mathcal{L}$$ on those curves.  In the Lagrangian Formulation, these covariant equations are known as the **Euler-Lagrange Equations** $$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
+In general, this claim is **false**. But the set stationary curves of $$\mathcal S_\mathcal H$$ are always interesting to discover, and they are identical to the curves that leave $$\mathcal S_\mathcal{L}$$ stationary.  Locally, **the differential equations for those stationary trajectories are identical**, and so $$\mathcal S_\mathcal H = \mathcal S_\mathcal{L}$$ on those curves.  In the Lagrangian Formulation, these covariant equations are known as the **Euler-Lagrange Equations** $$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
 
 ```math
 \frac{\partial \mathcal L}{\partial q} = \frac{d}{dt}\frac{\partial \mathcal L}{\partial \dot q}
@@ -66,9 +66,9 @@ In general, this claim is **false**. But the set stationary curves of $$S_\mathc
 
 which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial conditions $$(\dot q_0, q_0)$$, just as with the contravariant Hamilton-Jacobi Equations.
 
-The interesting aspect of $$S_\mathcal L(\pi\circ\gamma)$$ is when can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$S = S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
+The interesting aspect of $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ is when can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
 
-We can now define a unique "horizontal" lift $$A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ by assigning
+We can now define a unique "horizontal" lift $$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ by assigning
 
 ```math
 (\dot q, q,t)\mapsto (p_{max}(\dot q), q, \mathcal H(p_{max}(\dot q), q, t), t)\ .
@@ -78,7 +78,7 @@ Now we have at last, for **any "projected" smooth curve** $$\tilde\gamma:[0,t]\r
 ```math
 \begin{aligned}
 
-S_\mathcal{L}(\tilde\gamma) &= S_\mathcal H(A\circ \tilde\gamma) \ .
+\mathcal S_\mathcal{L}(\tilde\gamma) &= \mathcal S_\mathcal H(\mathcal A\circ \tilde\gamma) \ .
 \end{aligned}
 ```
 
@@ -132,14 +132,14 @@ Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$B(q
 
 Here we see the connection between the Lagrange Multiplier $$B$$ on $$\mathcal H$$ and its equivalent expression as an infinitesimal deformation on $$\mathcal L$$.  We will contextualize $$B$$ in a variety of useful ways in the remainder. **Both of the last two expressions for $$\mathcal{L}_B$$ in Equation <span class="eqno"></span> are critical**.
 
-##### The Connection 1-form $$A$$ is explicit
+##### The Connection 1-form $$\mathcal A$$ is explicit
 
 Since $$\frac{\partial \mathcal H}{\partial p^j}(p,q,t) = g_{ij}p^i \implies \frac{\partial^2\mathcal H}{\partial p^i \partial p^j} = g_{ij}$$, we can compute the horizontal lift explicitly
 
 ```math
 \begin{aligned}
 p_{max}^i &= g^{ij}\dot q_i \implies \\
-A(\dot q, q, t) &= (g^{-1}\dot q, q, \mathcal H(g^{-1}\dot q, q, t), t)\ .
+\mathcal A(\dot q, q, t) &= (g^{-1}\dot q, q, \mathcal H(g^{-1}\dot q, q, t), t)\ .
 \end{aligned}
 ```
 
