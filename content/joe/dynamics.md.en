@@ -22,7 +22,7 @@ If two such curves $$\gamma_1, \gamma_2$$ have the exact same boundary endpoints
 &= \int_S d\theta
 \end{aligned}
 ```
-by Stokes' Theorem.
+by Stokes' Theorem. Clearly, for the action $$\mathcal S$$ to only depend on the endpoints of $$\gamma$$, we necessarily must have $$d\theta$$ vanish on $$\gamma$$.
 
 
 ### $$\omega := d\theta = dp\wedge dq - d\mathcal H \wedge dt$$
