@@ -66,7 +66,7 @@ In general, this claim is **false**. But the set stationary curves of $$\mathcal
 
 which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial conditions $$(\dot q_0, q_0)$$, just as with the contravariant Hamilton-Jacobi Equations.
 
-The interesting aspect of $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ is when can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
+The interesting aspect of $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ is when we can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
 
 We can now define a unique "horizontal" lift $$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ by assigning
 
@@ -84,8 +84,8 @@ Now we have at last, for **any "projected" smooth curve** $$\tilde\gamma:[0,t]\r
 
 #### Quadratic Form Magic, part 1
 
-When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a pseudo-Riemannian metric $$[g_{ij}]: T^{\*}M\odot T^{\*}M\rightarrow\Reals$$
-with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$. The Legendre Transform relates them:
+When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a pseudo-Riemannian metric $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$
+with inverse $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$. The Legendre Transform relates them:
 
 ```math
 \begin{aligned}
@@ -94,7 +94,7 @@ with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$. The Legendre Transform r
 \end{aligned}
 ```
 
-The Levi-Civita Connection's Christoffel Symbols for $$g$$ are simply defined by the Kozsul Formula
+The Levi-Civita Connection's Christoffel Symbols for $$g$$ are simply defined by the Koszul Formula
 
 ```math
 
@@ -134,7 +134,7 @@ Here we see the connection between the Lagrange Multiplier $$B$$ on $$\mathcal H
 
 ##### The Horizontal Lift $$\mathcal A$$
 
-Since $$\frac{\partial \mathcal H}{\partial p^j}(p,q,t) = g_{ij}p^i \implies \frac{\partial^2\mathcal H}{\partial p^i \partial p^j} = g_{ij}$$, we can compute the horizontal lift explicitly
+Since $$\frac{\partial \mathcal H}{\partial p^i}(p,q,t) = g_{ij}p^j \implies \frac{\partial^2\mathcal H}{\partial p^i \partial p^j} = g_{ij}$$, we can compute the horizontal lift explicitly
 
 ```math
 \begin{aligned}
@@ -143,7 +143,7 @@ p_{max}^i &= g^{ij}\dot q_i \implies \\
 \end{aligned}
 ```
 
-When $$g_{ij}$$ is positive-definite, so is its inverse, which implies the Kinetic Energy Component of $$S_\mathcal L$$ is locally **minimized** on stationary curves involving true Riemannian metrics.
+When $$g_{ij}$$ is positive-definite, so is its inverse, which implies the Kinetic Energy Component of $$\mathcal S_\mathcal L(\tilde\gamma) = \mathcal S_\mathcal H(\mathcal A\circ\tilde\gamma)$$ is locally **minimized** on stationary curves involving true Riemannian metrics.
 
 ### Symplectic Geometry
 
