@@ -11,6 +11,20 @@ Dependencies: *.md.en
 
 ### $$\theta := p\ dq - \mathcal H(p,q,t)\ dt$$
 
+Let $$S_\mathcal H(\gamma) := \int_\gamma \theta$$ for smooth $$\gamma:[0,t]\rightarrow T^{\*}(M\oplus\Reals)$$.
+
+If two such curves $$\gamma_1, \gamma_2$$ have the exact same boundary endpoints, lets define **subtraction** by inverse composition, so $$\gamma_1 - \gamma_2$$ is a closed loop defined by traversing $$\gamma_1$$ in the forward direction, and $$\gamma_2$$ in reverse. Let $$\mathcal S$$ be any 2-dimensonal surface bounded by this closed loop: $$\gamma_1 - \gamma_2 = \partial S$$. So
+
+```math
+\begin{aligned}
+S(\gamma_1) - S(\gamma_2) &= \int_{\gamma_1 - \gamma_2}\theta \\
+&= \int_{\partial \mathcal S}\theta\\
+&= \int_\mathcal S d\theta
+\end{aligned}
+```
+by Stokes' Theorem.
+
+
 ### $$\omega := d\theta = dp\wedge dq - d\mathcal H \wedge dt$$
 
 ```math
