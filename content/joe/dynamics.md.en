@@ -52,7 +52,7 @@ In general, this claim is false. But the set stationary curves of $$S_H$$ are al
 
 which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial conditions $$(\dot q_0, q_0)$$, just as with the contravariant Hamilton-Jacobi Equations.
 
-The interesting aspect of $$S(\gamma)$$ is when can uniquely define \gamma in explicitly based on only the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other wores, we most choose (ie solve for) a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ that solves the Euler-Lagrange Equations. In this way we can think of $$S = S(q_0,t_0, q_f, t_f)$$, as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
+The interesting aspect of $$S(\gamma)$$ is when can uniquely define $$\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$S = S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
 
 #### Quadratic Form Translation Magic, part 1
 
@@ -81,6 +81,7 @@ H_B(p,q,t) &= \frac{1}{2}\ g_{ij}\ p^ip^j + B(q,t)_ip^i + V(q,t) \\
 ```
 
 We will contextualize $$B$$ (e.g. as a variation of an *arbitrary* curve $$\gamma$$, etc) in useful ways in the remainder. **Both of the last two expressions for $$\mathscr{L}_B$$ in Equation <span class="eqno"></span> are critical**.
+
 ### Symplectic Geometry
 
 ### The natural volume form $$\omega^n/n!$$
