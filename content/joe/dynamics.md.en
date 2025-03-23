@@ -125,7 +125,7 @@ Since $$\frac{\partial \mathcal H}{\partial p^j}(p,q,t) = g_{ij}p^i \implies \fr
 ```math
 \begin{aligned}
 p_{max}^i &= g^{ij}\dot q_i \implies \\
-A(q,t) &= (g^{-1}\dot q, q, \mathcal H(g^{-1}\dot q, q, t), t)\ .
+A(\dot q, q, t) &= (g^{-1}\dot q, q, \mathcal H(g^{-1}\dot q, q, t), t)\ .
 \end{aligned}
 ```
 
