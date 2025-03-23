@@ -54,7 +54,7 @@ which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial co
 
 The interesting aspect of $$S_\mathcal L(\pi\circ\gamma)$$ is when can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$S = S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
 
-We can now define a unique "horizontal" lift $$A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ of $$\pi$$ by assigning
+We can now define a unique "horizontal" lift $$A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ by assigning
 
 ```math
 (\dot q, q,t)\mapsto (p_{max}(\dot q), q, \mathcal H(p_{max}(\dot q), q, t), t)\ .
@@ -87,7 +87,13 @@ The Levi-Civita Connection's Christoffel Symbols for $$g$$ are simply defined by
 \Gamma^k_{ij} = \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})
 
 ```
-with $$\partial_i := \frac{\partial}{\partial q^i}$$. Correspondinly, the Riemann-Christoffel Curvature Tensor is 
+with $$\partial_i := \frac{\partial}{\partial q^i}$$. The associated Covariant Derivative in local coordinates is
+```math
+\nabla_{a^i\partial_i} b^j\partial_j =a^i\partial_ib^j\partial_j + \Gamma_{ij}^k a^ib ^j
+\partial_k
+```
+
+Correspondinly, the Riemann-Christoffel Curvature Tensor is
 
 ```math
 R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
@@ -114,7 +120,7 @@ Here we see the connection between the Lagrange Multiplier $$B$$ on $$\mathcal H
 
 ##### The Connection 1-form $$A$$ is explicit
 
-Since $$\frac{\partial \mathcal H}{\partial p^j}(p,q,t) = g_{ij}p^i$$, we can compute the horizontal lift explicitly
+Since $$\frac{\partial \mathcal H}{\partial p^j}(p,q,t) = g_{ij}p^i \implies \frac{\partial^2\mathcal H}{\partial p^i \partial p^j} = g_{ij}$$, we can compute the horizontal lift explicitly
 
 ```math
 \begin{aligned}
@@ -123,6 +129,7 @@ A(q,t) &= (g^{-1}\dot q, q, \mathcal H(g^{-1}\dot q, q, t), t)\ .
 \end{aligned}
 ```
 
+When $$g_{ij}$$ is positive-definite, so is its inverse, which implies $$S_\mathcal L$$ is actually **minimized** on stationary curves.
 ### Symplectic Geometry
 
 ### The natural volume form $$\omega^n/n!$$
