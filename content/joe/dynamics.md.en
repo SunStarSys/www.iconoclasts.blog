@@ -23,14 +23,14 @@ Dependencies: *.md.en
 #### $$\omega|_\gamma = 0 \iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a stationary curve for $$A_H:=\int_\gamma \alpha$$.
 
 ### Legendre Transform
-
+When $$H$$ is convex in $$p$$, we get a unique solution $$\dot{q} = \frac{\partial H}{\partial p}$$ to
 ```math
 \begin{aligned}
 \mathscr{L}(q,\dot q, t) &:= \max_p p\dot{q} - H(p,q,t) \\
 A_\mathscr{L} &= \int_{\pi(\gamma)} \mathscr{L}(q,\dot q, t)\ dt
 \end{aligned}
 ```
-is the Lagrangian representation of the Action, where $$\dot{q} = \frac{\partial H}{\partial p}$$ and $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
+is the Lagrangian representation of the Action, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
 
 #### The (Meta)Principle of Least Action
 
