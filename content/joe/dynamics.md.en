@@ -83,7 +83,7 @@ with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$. The Legendre Transform r
 
 ##### Lagrange Multipliers as Infinitesimal Translations
 
-Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$B(q,t)\in T_qM$$, ie a linear funtional on $$p$$, we can **complete the square** and recompute $$\mathcal{L}_B$$ in terms of $$\mathcal L$$:
+Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$B(q,t)\in T_qM$$, ie a linear funtional on $$p\in T^{\*}_qM$$, we can **complete the square** and recompute $$\mathcal{L}_B$$ in terms of $$\mathcal L$$:
 
 ```math
 \begin{aligned}
