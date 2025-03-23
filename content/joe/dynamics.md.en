@@ -9,9 +9,9 @@ Dependencies: *.md.en
 
 ### The Mechanics of Cotangent Bundles
 
-### $$\alpha = p\ dq - \mathcal H(p,q,t)\ dt$$
+### $$\theta := p\ dq - \mathcal H(p,q,t)\ dt$$
 
-### $$\omega = d\alpha = dp\wedge dq - d\mathcal H \wedge dt$$
+### $$\omega := d\theta = dp\wedge dq - d\mathcal H \wedge dt$$
 
 ```math
 \begin{aligned}
@@ -28,23 +28,23 @@ Dependencies: *.md.en
 \end{aligned}
 ```
 
-$$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a stationary curve for the Action $$S_\mathcal H(\gamma):=\int_\gamma \alpha$$.
+$$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a *stationary curve* for the Action $$S_\mathcal H(\gamma):=\int_\gamma \theta$$.
 
 ### Legendre Transform
-When $$\mathcal H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  satisfying $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform of $$\mathcal H$$:
+When $$\mathcal H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  satisfying $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform $$\mathcal L$$ of $$\mathcal H$$:
 ```math
 \begin{aligned}
 \mathcal{L}(q,\dot q, t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) = p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
 S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(q,\dot q, t)\ dt
 \end{aligned}
 ```
-is the Lagrangian representation of the Action, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
+is the *Lagrangian representation of the Action*, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
 
 #### The (Meta)Principle of Least Action
 
 The Principle of Least Action simply claims that the Classical Dynamics of Nature Itself tends to select trajectories that minimize $$S_\mathcal{L}$$.
 
-In general, this claim is false. But the set stationary curves of $$S_\mathcal H$$ are always interesting to discover, and they are identical to the curves that leave $$A_\mathcal{L}$$ stationary.  Locally, **the differential equations for those stationary trajectories are identical**, and so $$S_\mathcal H = S_\mathcal{L}$$ on those curves.  In the Lagrangian Formulation, these covariant equations are known as the **Euler-Lagrange Equations** $$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
+In general, this claim is **false**. But the set stationary curves of $$S_\mathcal H$$ are always interesting to discover, and they are identical to the curves that leave $$S_\mathcal{L}$$ stationary.  Locally, **the differential equations for those stationary trajectories are identical**, and so $$S_\mathcal H = S_\mathcal{L}$$ on those curves.  In the Lagrangian Formulation, these covariant equations are known as the **Euler-Lagrange Equations** $$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
 
 ```math
 \frac{\partial \mathcal L}{\partial q} = \frac{d}{dt}\frac{\partial \mathcal L}{\partial \dot q}
@@ -58,7 +58,7 @@ We can now define a unique "horizontal" lift $$A=\pi^{-1}:M\oplus \Reals \righta
 ```math
 (q,t)\mapsto (p_{max}(\dot q), q, \mathcal H(p_{max}(\dot q), q, t), t)\ .
 ```
-Now we have at last
+Now we have at last, for any curve $$\gamma$$ as above:
 
 ```math
 \begin{aligned}
@@ -69,7 +69,7 @@ S_\mathcal{L}(\pi(\gamma)) &= S_\mathcal H(A(\pi(\gamma))) \ .
 
 This $$A$$ is called the **Connection 1-form $$A=A_\mathcal H$$**.
 
-#### Quadratic Form Translation Magic, part 1
+#### Quadratic Form Magic, part 1
 
 When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a metric $$[g_{ij}]: T^{\*}M\odot T^{\*}M\rightarrow\Reals$$
 with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$. The Legendre Transform relates them:
@@ -81,7 +81,9 @@ with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$. The Legendre Transform r
 \end{aligned}
 ```
 
-Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$B(q,t)\in T_qM$$, a linear funtional on $$p$$, we can **complete the square** and recompute $$\mathcal{L}_B$$:
+##### Lagrange Multipliers as Infinitesimal Translations
+
+Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$B(q,t)\in T_qM$$, ie a linear funtional on $$p$$, we can **complete the square** and recompute $$\mathcal{L}_B$$ in terms of $$\mathcal L$$:
 
 ```math
 \begin{aligned}
@@ -95,7 +97,18 @@ Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$B(q
 \end{aligned}
 ```
 
-We will contextualize $$B$$ (e.g. as a variation of an *arbitrary* curve $$\gamma$$, etc) in useful ways in the remainder. **Both of the last two expressions for $$\mathcal{L}_B$$ in Equation <span class="eqno"></span> are critical**.
+We will contextualize the Lagrange Multiplier $$B$$ in a variety of useful ways in the remainder. **Both of the last two expressions for $$\mathcal{L}_B$$ in Equation <span class="eqno"></span> are critical**.
+
+##### The Connection 1-form $$A$$ is explicit
+
+Since $$\frac{\partial \mathcal H}{\partial p}(p,q,t) = g_{ij}p^i$$, we can compute the horizontal lift explicitly
+
+```math
+\begin{aligned}
+p_{max}^i &= g^{ij}\dot q_i \implies \\
+A(q,t) &= (g^{ij}\dot q_i, q, \mathcal H(g^{ij}\dot q_i, q, t), t)\ .
+\end{aligned}
+```
 
 ### Symplectic Geometry
 
