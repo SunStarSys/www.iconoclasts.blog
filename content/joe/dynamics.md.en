@@ -52,7 +52,7 @@ In general, this claim is **false**. But the set stationary curves of $$S_\mathc
 
 which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial conditions $$(\dot q_0, q_0)$$, just as with the contravariant Hamilton-Jacobi Equations.
 
-The interesting aspect of $$S(\gamma)$$ is when can uniquely define $$\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$S = S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
+The interesting aspect of $$S_\mathcal L(\pi\circ\gamma)$$ is when can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$S = S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
 
 We can now define a unique "horizontal" lift $$A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ of $$\pi$$ by assigning
 
@@ -68,8 +68,6 @@ S_\mathcal{L}(\tilde\gamma) &= S_\mathcal H(A\circ \tilde\gamma) \ .
 \end{aligned}
 ```
 
-This $$A$$ is called the **Connection 1-form $$A=A_\mathcal H$$**.
-
 #### Quadratic Form Magic, part 1
 
 When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a metric $$[g_{ij}]: T^{\*}M\odot T^{\*}M\rightarrow\Reals$$
@@ -81,6 +79,20 @@ with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$. The Legendre Transform r
 \mathcal{L}(q,\dot q, t) &= \frac{1}{2}\ g^{ij}(q,t)\dot{q}_i\dot{q}_j - V(q,t)\ .
 \end{aligned}
 ```
+
+The Levi-Civita Connection's Christoffel Symbols for $$g$$ are simply defined by the Kozsul Formula
+
+```math
+
+\Gamma^k_{ij} = \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})
+
+```
+with $$\partial_i := \frac{\partial}{\partial q^i}$$. Correspondinly, the Riemann-Christoffel Curvature Tensor is 
+
+```math
+R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
+```
+
 
 ##### Lagrange Multipliers on $$\mathcal H$$ as Infinitesimal Translations on $$\mathcal L$$
 
