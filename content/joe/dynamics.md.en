@@ -23,7 +23,7 @@ Dependencies: *.md.en
 #### $$\omega|_\gamma = 0 \iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a stationary curve for $$A_H:=\int_\gamma \alpha$$.
 
 ### Legendre Transform
-When $$H$$ is convex in $$p$$, $$\forall \dot{q} \in T_\gamma M\ \exists ! p=p_{max}$$  satisfying $$\dot{q} = \frac{\partial H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform of $$H$$:
+When $$H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists ! p=p_{max}$$  satisfying $$\dot{q} = \frac{\partial H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform of $$H$$:
 ```math
 \begin{aligned}
 \mathscr{L}(q,\dot q, t) &:= \max_p p\dot{q} - H(p,q,t) \\
