@@ -36,7 +36,11 @@ is the Lagrangian representation of the Action, where $$\pi: T^*(M\oplus\Reals) 
 
 The Principle of Least Action simply claims that the Classical Dynamics of Nature Itself tends to select trajectories that minimize $$A_\mathscr{L}$$.
 
-In general, this claim is false. But the set stationary curves of $$A_H$$ are always interesting to discover, and in most cases they contain the curves that minimize $$A_\mathscr{L}$$.  Locally, **the differential equations for those trajectories are typically identical**.
+In general, this claim is false. But the set stationary curves of $$A_H$$ are always interesting to discover, and in they contain the curves that minimize $$A_\mathscr{L}$$.  Locally, **the differential equations for those trajectories are identical**.  In the Lagrantian Formulation, these are the **Euler-Lagrange Equations**
+
+```math
+\frac{\partial L}{\partial q} = \frac{d}{dt}\frac{\partial L}{\partial \dot q}
+```
 
 #### Quadratic Form Translation Magic, part 1
 
