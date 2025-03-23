@@ -15,12 +15,12 @@ Dependencies: *.md.en
 
 ```math
 \begin{aligned}
-\omega|_\gamma &= \dot{p}dt\wedge dq + dp\wedge dt\dot{q} - \frac{\partial H}{\partial p}dp\wedge dt - \frac{\partial H}{\partial q}dq\wedge dt \\
+\omega|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial H}{\partial p}dp\wedge dt - \frac{\partial H}{\partial q}dq\wedge dt \\
         &= (-\dot{p}^i - \frac{\partial H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial H}{\partial p^i}) dp^i\wedge dt
 \end{aligned}
 ```
 
-#### $$\omega|_\gamma = 0 \iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a stationary curve for $$A_H:=\int_\gamma \alpha$$.
+#### $$\omega|_\gamma = 0 \iff \gamma$$ satisfies the Hamilton-Jacobi Equations $$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a stationary curve for $$A_H:=\int_\gamma \alpha$$.
 
 ### Legendre Transform
 When $$H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists ! p=p_{max}$$  satisfying $$\dot{q} = \frac{\partial H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform of $$H$$:
