@@ -101,12 +101,12 @@ We will contextualize the Lagrange Multiplier $$B$$ in a variety of useful ways 
 
 ##### The Connection 1-form $$A$$ is explicit
 
-Since $$\frac{\partial \mathcal H}{\partial p}(p,q,t) = g_{ij}p^i$$, we can compute the horizontal lift explicitly
+Since $$\frac{\partial \mathcal H}{\partial p^j}(p,q,t) = g_{ij}p^i$$, we can compute the horizontal lift explicitly
 
 ```math
 \begin{aligned}
 p_{max}^i &= g^{ij}\dot q_i \implies \\
-A(q,t) &= (g^{ij}\dot q_i, q, \mathcal H(g^{ij}\dot q_i, q, t), t)\ .
+A(q,t) &= (g^{-1}\dot q, q, \mathcal H(g^{-1}\dot q, q, t), t)\ .
 \end{aligned}
 ```
 
