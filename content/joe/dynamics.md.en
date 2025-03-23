@@ -52,7 +52,7 @@ When $$\mathcal H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ 
 \mathcal S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
 \end{aligned}
 ```
-is the *Lagrangian representation of the Action*, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the projection operator $$(p,q,E,t)\mapsto (q,t)$$.
+is the *Lagrangian representation of the Action*, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the (forgetful) projection operator $$(p,q,E,t)\mapsto (q,t)$$.
 
 #### The (Meta)Principle of Least Action
 
