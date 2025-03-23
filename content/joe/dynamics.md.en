@@ -58,7 +58,7 @@ H_B(p,q,t) &= \frac{1}{2}\ g_{ij}\ p^ip^j + B(q,t)_ip^i + V(q,t) \\
  &= \frac{1}{2}\ g_{ij}\ (p^i+g^{ik}B_k)(p^j+g^{jk}B_k) - \frac{1}{2}\ g_{ij} g^{im}g^{jn}B_nB_m + V(q,t)\\
 
 &= H_0(p+g^{-1}B, q, t) - \frac{1}{2} g^{ij}B_iB_j \implies\\
-\mathscr{L}_B(q,\dot q, t) &= \max_p (p+g^{-1}B)\dot q - H_0(p+g^{-1}B,q,t) - g^{ij}B_i \dot q_i + \frac{1}{2}\ g^{ij}(q,t)B_iB_j\\
+\mathscr{L}_B(q,\dot q, t) &= \max_p (p+g^{-1}B)\dot q - H_0(p+g^{-1}B,q,t) - g^{ij}B_i \dot q_j + \frac{1}{2}\ g^{ij}(q,t)B_iB_j\\
 &= \mathscr{L}_0(q,\dot q, t)- g^{ij}B_i\dot{q}_i + \frac{1}{2}\ g^{ij}B_iB_j(q,t) \ ,\\
 &= \mathscr{L_0}(q,\dot{q}-B(q,t), t)
 \end{aligned}
