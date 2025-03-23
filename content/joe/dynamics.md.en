@@ -70,7 +70,7 @@ S_\mathcal{L}(\tilde\gamma) &= S_\mathcal H(A\circ \tilde\gamma) \ .
 
 #### Quadratic Form Magic, part 1
 
-When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a metric $$[g_{ij}]: T^{\*}M\odot T^{\*}M\rightarrow\Reals$$
+When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a pseudo-Riemannian metric $$[g_{ij}]: T^{\*}M\odot T^{\*}M\rightarrow\Reals$$
 with inverse $$[g^{ij}]: TM\odot TM\rightarrow\Reals$$. The Legendre Transform relates them:
 
 ```math
