@@ -6,10 +6,11 @@ Dependencies: *.md.en
 ## Classical Dynamics
 
 ### Hamilton-Jacobi / Lagrange Formalism
-
 ### The Mechanics of Cotangent Bundles
 
-### Let $$\theta := p\ dq - \mathcal H(p,q,t)\ dt$$.
+Define the smooth **Hamilton** $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ as $$\mathcal H(p,q,t)$$.
+
+#### Let $$\theta := p\ dq - \mathcal H(p,q,t)\ dt$$.
 
 Define $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ for smooth $$\gamma:[0,t]\rightarrow T^{\*}(M\oplus\Reals)$$.
 
@@ -25,7 +26,7 @@ If two such curves $$\gamma_1, \gamma_2$$ have the exact same boundary endpoints
 by Stokes' Theorem. Clearly, for the action $$\mathcal S$$ to only depend on the endpoints of $$\gamma$$, we necessarily must have $$d\theta$$ vanish on $$\gamma$$.
 
 
-### Let $$\omega := d\theta = dp\wedge dq - d\mathcal H \wedge dt$$.
+#### Let $$\omega := d\theta = dp\wedge dq - d\mathcal H \wedge dt$$.
 
 ```math
 \begin{aligned}
@@ -44,7 +45,7 @@ by Stokes' Theorem. Clearly, for the action $$\mathcal S$$ to only depend on the
 
 $$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a *stationary curve* for the Action $$\mathcal S_\mathcal H(\gamma)=\int_\gamma \theta$$.
 
-### Legendre Transform
+#### Legendre Transform
 When $$\mathcal H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  satisfying $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform $$\mathcal L$$ of $$\mathcal H$$:
 ```math
 \begin{aligned}
@@ -106,13 +107,11 @@ with $$\partial_i := \frac{\partial}{\partial q^i}$$. The associated Covariant D
 \nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k
 \end{aligned}
 ```
-
 Correspondingly, the Riemann-Christoffel Curvature Tensor is
 
 ```math
 R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
 ```
-
 
 ##### Lagrange Multipliers on $$\mathcal H$$ as Infinitesimal Translations on $$\mathcal L$$
 
