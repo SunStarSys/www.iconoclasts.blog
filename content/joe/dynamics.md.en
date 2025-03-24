@@ -10,9 +10,9 @@ Dependencies: *.md.en
 
 Define the smooth **Hamilton** $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ as $$\mathcal H(p,q,t)$$.
 
-#### Let $$\theta := p\ dq - \mathcal H(p,q,t)\ dt$$.
+#### Let $$\theta := p\ dq - \mathcal H(p,q,t)\ dt\in T^\*T^\*M\oplus\Reals$$.
 
-Define $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ for smooth $$\gamma:[0,t]\rightarrow T^{\*}(M\oplus\Reals)$$.
+Define $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ for smooth $$\gamma:[0,t]\rightarrow T^{\*}M\oplus\Reals$$.
 
 If two such curves $$\gamma_1, \gamma_2$$ have the exact same boundary endpoints, lets define **subtraction** by inverse composition, so $$\gamma_1 - \gamma_2$$ is a closed loop defined by traversing $$\gamma_1$$ in the forward direction, and $$\gamma_2$$ in reverse. Let $$S$$ be any 2-dimensonal surface bounded by this closed loop: $$\gamma_1 - \gamma_2 = \partial S$$. So
 
@@ -43,7 +43,7 @@ by Stokes' Theorem. Clearly, for the action $$\mathcal S$$ to only depend on the
 \end{aligned}
 ```
 
-$$\iff \gamma:[0,t]\rightarrow T^*(M\oplus\R)  $$ is a *stationary curve* for the Action $$\mathcal S_\mathcal H(\gamma)=\int_\gamma \theta$$.
+$$\iff \gamma:[0,t]\rightarrow T^*M\oplus\R  $$ is a *stationary curve* for the Action $$\mathcal S_\mathcal H(\gamma)=\int_\gamma \theta$$.
 
 #### Legendre Transform
 When $$\mathcal H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  satisfying $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform $$\mathcal L$$ of $$\mathcal H$$:
@@ -69,10 +69,10 @@ which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial co
 
 The interesting aspect of $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ is when we can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
 
-We can now define a unique "horizontal" lift $$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q,t}^{\*}(M\oplus \Reals)$$ by assigning
+We can now define a unique "horizontal" lift $$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q}^{\*}M\oplus \Reals$$ by assigning
 
 ```math
-(\dot q, q,t)\mapsto (p_{max}(\dot q), q, \mathcal H(p_{max}(\dot q), q, t), t)\ .
+(\dot q, q,t)\mapsto (p_{max}(\dot q), q, t)\ .
 ```
 Now we have at last, for **any "projected" smooth curve** $$\tilde\gamma:[0,t]\rightarrow M\oplus\R$$:
 
@@ -138,7 +138,7 @@ Since $$\frac{\partial \mathcal H}{\partial p^i}(p,q,t) = g_{ij}p^j \implies \fr
 ```math
 \begin{aligned}
 p_{max}^i &= g^{ij}\dot q_i \implies \\
-\mathcal A(\dot q, q, t) &= (g^{-1}\dot q, q, \mathcal H(g^{-1}\dot q, q, t), t)\ .
+\mathcal A(\dot q, q, t) &= (g^{-1}\dot q, q, t)\ .
 \end{aligned}
 ```
 
