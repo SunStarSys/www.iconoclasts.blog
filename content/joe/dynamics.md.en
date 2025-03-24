@@ -137,7 +137,7 @@ Since $$\frac{\partial \mathcal H}{\partial p^i}(p,q,t) = g_{ij}p^j \implies \fr
 
 ```math
 \begin{aligned}
-p_{max}^i &= g^{ij}\dot q_i = \frac{\partial \mathcal L}{\partial \dot q_i}\implies \\
+p_{max}^i &= g^{ij}\dot q_j = frac{\partial \mathcal L}{\partial \dot q_i}\implies \\
 \mathcal A(\dot q, q, t) &= (g^{-1}\dot q, q, t)\ .
 \end{aligned}
 ```
