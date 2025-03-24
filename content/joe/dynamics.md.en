@@ -100,12 +100,12 @@ The Levi-Civita Connection's Christoffel Symbols for $$g$$ are simply defined by
 
 ```math
 \begin{aligned}
-\Gamma^k_{ij} &:= \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})\\
-&=-\frac{1}{2} g_{ka}(\partial_ig^{ja} + \partial_j g^{ia} - \partial_a g^{ij})
+\Gamma^k_{ij} &= \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})\\
+\Gamma_k^{ij} &= \frac{1}{2}g_{ka}(\partial^ig^{ja} + \partial^j g^{ia} - \partial^ag^{ij})
 
 \end{aligned}
 ```
-with $$\partial_i := \frac{\partial}{\partial q^i}$$. The associated Covariant Derivative in local coordinates is
+with $$\partial_i := \frac{\partial}{\partial q^i}$$ and $$\partial^i := g^{ij}\partial_j$$. The associated Covariant Derivative in local coordinates is
 ```math
 \begin{aligned}
 \nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or succinctly}\\
@@ -155,8 +155,8 @@ Hence, the Euler-Lagrange Equations become:
 \begin{aligned}
 
 \frac{1}{2}\partial_i g^{jk}\dot q_j\dot q_k -\partial_i \mathcal V &= \frac{d}{dt}g^{ij}(q,t)\dot q_j = \dot p_{max}^i\ ,\\
-\frac{1}{2}\ g_{ai}\partial_ig^{jk}\dot q_j\dot q_k - g_{ai} \partial_i \mathcal V &= g_{ai}\ \dot p_{max}^i\\
-&=\nabla_{\dot q} \dot q
+\frac{1}{2}\partial^ig^{jk}\dot q_j\dot q_k - \partial^i \mathcal V &= \partial^i g^{jk}\dot q_j \dot q _k + g^{ij}g^{ik}\ddot q_k + g^{ij}\frac{\partial g^{jk}}{\partial t}\dot q_k\\
+-\nabla\mathcal V&=\nabla_{\dot q} \dot q + g^{-1}\partial_tg^{-1}\dot q
 \end{aligned}
 ```
 
