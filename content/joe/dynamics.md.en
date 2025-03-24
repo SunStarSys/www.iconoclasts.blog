@@ -156,10 +156,10 @@ Hence, the Euler-Lagrange Equations become:
 
 \frac{1}{2}\partial_i g^{jk}\dot q_j\dot q_k -\partial_i \mathcal V &= \frac{d}{dt}g^{ij}(q,t)\dot q_j = \dot p_{max}^i\ ,\\
 \frac{1}{2}\partial^ig^{jk}\dot q_j\dot q_k - \partial^i \mathcal V &= \partial^i g^{jk}\dot q_j \dot q _k + g^{ij}g^{ik}\ddot q_k + g^{ij}\frac{\partial g^{jk}}{\partial t}\dot q_k\\
--\nabla\mathcal V&=\nabla_{\dot q} \dot q + g^{-1}\partial_tg^{-1}\dot q
+-\nabla\mathcal V&=\nabla_{\dot q} \dot q + g^{-1}\partial_tg^{-1}\dot q \,
 \end{aligned}
 ```
-
+which are exactly Newton's Laws of Motion $$F = ma$$ in a time-dependent setting.
 
 
 ### Symplectic Geometry
