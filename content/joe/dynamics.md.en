@@ -9,7 +9,7 @@ Dependencies: *.md.en
 ### Hamilton-Jacobi / Lagrange Formalism
 ### The Mechanics of Cotangent Bundles
 
-Define the smooth **Hamilton** $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ as $$\mathcal H(p,q,t)$$.
+Define the smooth **Hamiltonian** $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ as $$\mathcal H(p,q,t)$$.
 
 #### Let $$\theta := p\ dq - \mathcal H(p,q,t)\ dt\in T^\*(T^\*M\oplus\Reals)$$.
 
