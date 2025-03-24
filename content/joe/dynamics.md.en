@@ -10,7 +10,7 @@ Dependencies: *.md.en
 
 Define the smooth **Hamilton** $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ as $$\mathcal H(p,q,t)$$.
 
-#### Let $$\theta := p\ dq - \mathcal H(p,q,t)\ dt\in T^\*T^\*M\oplus\Reals$$.
+#### Let $$\theta := p\ dq - \mathcal H(p,q,t)\ dt\in T^\*(T^\*M\oplus\Reals)$$.
 
 Define $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ for smooth $$\gamma:[0,t]\rightarrow T^{\*}M\oplus\Reals$$.
 
@@ -25,8 +25,7 @@ If two such curves $$\gamma_1, \gamma_2$$ have the exact same boundary endpoints
 ```
 by Stokes' Theorem. Clearly, for the action $$\mathcal S$$ to only depend on the endpoints of $$\gamma$$, we necessarily must have $$d\theta$$ vanish on $$\gamma$$.
 
-
-#### Let $$\omega := d\theta = dp\wedge dq - d\mathcal H \wedge dt$$.
+#### Let $$\omega := d\theta = dp\wedge dq - d\mathcal H \wedge dt\in\bigwedge^2T^\*(T^\*M\oplus\Reals)$$.
 
 ```math
 \begin{aligned}
@@ -53,7 +52,7 @@ When $$\mathcal H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ 
 \mathcal S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
 \end{aligned}
 ```
-is the *Lagrangian representation of the Action*, where $$\pi: T^*(M\oplus\Reals) \rightarrow M\oplus\Reals$$ is the (forgetful) projection operator $$(p,q,E,t)\mapsto (q,t)$$.
+is the *Lagrangian representation of the Action*, where $$\pi: T^*M\oplus\Reals \rightarrow M\oplus\Reals$$ is the (forgetful) fiber projection operator $$(p,q,t)\mapsto (q,t)$$.
 
 #### The (Meta)Principle of Least Action
 
@@ -90,8 +89,8 @@ with inverse $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$. The Legendre Tra
 
 ```math
 \begin{aligned}
-\mathcal H(p,q,t) &= \frac{1}{2}\ g_{ij}(q,t)\ p^ip^j + V(q,t) \implies\\
-\mathcal{L}(q,\dot q, t) &= \frac{1}{2}\ g^{ij}(q,t)\dot{q}_i\dot{q}_j - V(q,t)\ .
+\mathcal H(p,q,t) &= \frac{1}{2}\ g_{ij}(q,t)\ p^ip^j + \mathcal V(q,t) \implies\\
+\mathcal{L}(q,\dot q, t) &= \frac{1}{2}\ g^{ij}(q,t)\dot{q}_i\dot{q}_j - \mathcal V(q,t)\ .
 \end{aligned}
 ```
 
@@ -107,6 +106,7 @@ with $$\partial_i := \frac{\partial}{\partial q^i}$$. The associated Covariant D
 \nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k
 \end{aligned}
 ```
+
 Correspondingly, the Riemann-Christoffel Curvature Tensor is
 
 ```math
@@ -115,21 +115,19 @@ R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\p
 
 ##### Lagrange Multipliers on $$\mathcal H$$ as Infinitesimal Translations on $$\mathcal L$$
 
-Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$B(q,t)\in T_qM$$, ie a linear funtional on $$p\in T^{\*}_qM$$, we can **complete the square** and recompute $$\mathcal{L}_B$$ in terms of $$\mathcal L$$:
+Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$\mathcal B(q,t)\in T_qM$$, ie a linear functional on $$p\in T^{\*}_qM$$, we can **complete the square** and recompute $$\mathcal{L}_B$$ in terms of $$\mathcal L$$:
 
 ```math
 \begin{aligned}
-\mathcal H_B(p,q,t) &= \frac{1}{2}\ g_{ij}\ p^ip^j + B(q,t)_ip^i + V(q,t) \\
- &= \frac{1}{2}\ g_{ij}\ (p^i+g^{ik}B_k)(p^j+g^{jk}B_k) - \frac{1}{2}\ g_{ij} g^{im}g^{jn}B_nB_m + V(q,t)\\
-
-&= \mathcal H(p+g^{-1}B, q, t) - \frac{1}{2} g^{ij}B_iB_j \implies\\
-\mathcal{L}_B(q,\dot q, t) &= \max_p (p+g^{-1}B)\dot q - \mathcal H(p+g^{-1}B,q,t) - g^{ij}B_i \dot q_j + \frac{1}{2}\ g^{ij}(q,t)B_iB_j\\
-&= \mathcal{L}(q,\dot q, t)- g^{ij}B_i\dot{q}_i + \frac{1}{2}\ g^{ij}B_iB_j(q,t) \ ,\\
-&= \mathcal{L}(q,\dot{q}-B(q,t), t)
+\mathcal H_\mathcal B(p,q,t) &= \mathcal H + \mathcal Bp \implies\\
+\mathcal L_\mathcal B(\dot q,q,t) &=\max_p p(\dot q - \mathcal B) - \mathcal H\\
+&= \mathcal{L}(q,\dot{q}-\mathcal B(q,t), t)\\
+\mathcal H_\mathcal B &= \frac{1}{2}\ g_{ij}p^ip^j + p\mathcal B + \mathcal V \implies\\
+\mathcal L_\mathcal B &= \mathcal L + g^{ij}\mathcal B_i\dot q_j + \frac{1}{2}\ g^{ij}\mathcal B_i\mathcal B_j
 \end{aligned}
 ```
 
-Here we see the connection between the Lagrange Multiplier $$B$$ on $$\mathcal H$$ and its equivalent expression as an infinitesimal deformation on $$\mathcal L$$.  We will contextualize $$B$$ in a variety of useful ways in the remainder. **Both of the last two expressions for $$\mathcal{L}_B$$ in Equation <span class="eqno"></span> are critical**.
+Here we see the connection between the Lagrange Multiplier $$B$$ on $$\mathcal H$$ and its equivalent expression as an infinitesimal deformation on $$\mathcal L$$.  We will contextualize $$B$$ in a variety of useful ways in the remainder. **Both of the expressions for $$\mathcal{L}_B$$ in Equation <span class="eqno"></span> are critical**.
 
 ##### The Horizontal Lift $$\mathcal A$$
 
@@ -137,12 +135,24 @@ Since $$\frac{\partial \mathcal H}{\partial p^i}(p,q,t) = g_{ij}p^j \implies \fr
 
 ```math
 \begin{aligned}
-p_{max}^i &= g^{ij}\dot q_i \implies \\
+p_{max}^i &= g^{ij}\dot q_i = \frac{\partial \mathcal L}{\partial \dot q^i}\implies \\
 \mathcal A(\dot q, q, t) &= (g^{-1}\dot q, q, t)\ .
 \end{aligned}
 ```
 
 When $$g_{ij}$$ is positive-definite, so is its inverse, which implies the Kinetic Energy Component of $$\mathcal S_\mathcal L(\tilde\gamma) = \mathcal S_\mathcal H(\mathcal A\circ\tilde\gamma)$$ is locally **minimized** on stationary curves involving true Riemannian metrics.
+
+Hence, the Euler-Lagrange Equations become:
+
+```math
+\begin{aligned}
+
+\frac{1}{2}\partial_i g^{jk}\dot q^j\dot q^k -\partial_i \mathcal V &= \frac{d}{dt}g^{ij}(q,t)\dot q_j = \dot p_{max}^i\\
+&= \
+\end{aligned}
+```
+
+
 
 ### Symplectic Geometry
 
