@@ -108,13 +108,14 @@ The Levi-Civita Connection's Christoffel Symbols for $$g$$ are simply defined by
 with $$\partial_i := \frac{\partial}{\partial q^i}$$ and $$\partial^i := g^{ij}\partial_j$$. The associated Covariant Derivative in local coordinates is
 ```math
 \begin{aligned}
-\nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or succinctly}\\
-\nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k \text{ , so}\\
+\nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or}\\
+\nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k \text{ , and contravariantly}\\
+\nabla_{dq^i}dq^j &= \Gamma^{ij}_kdq^k \text{, so} \\
 \nabla &= d + \Gamma
 \end{aligned}
 ```
 
-Correspondingly, the Riemann-Christoffel Curvature Tensor is
+for all tensor fields.  Correspondingly, the Riemann-Christoffel Curvature Tensor is
 
 ```math
 R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
@@ -156,10 +157,10 @@ Hence, the Euler-Lagrange Equations become:
 
 \frac{1}{2}\partial_i g^{jk}\dot q_j\dot q_k -\partial_i \mathcal V &= \frac{d}{dt}g^{ij}(q,t)\dot q_j = \dot p_{max}^i\ ,\\
 \frac{1}{2}\partial^ig^{jk}\dot q_j\dot q_k - \partial^i \mathcal V &= \partial^i g^{jk}\dot q_j \dot q _k + g^{ij}g^{ik}\ddot q_k + g^{ij}\frac{\partial g^{jk}}{\partial t}\dot q_k\\
--\nabla\mathcal V&=\nabla_{\dot q} \dot q + g^{-1}\partial_tg^{-1}\dot q \ ,
+-\nabla\mathcal V(q,t)&=\nabla_{\dot q} \dot q + g^{-1}\partial_tg^{-1}(q,t)\dot q \ ,
 \end{aligned}
 ```
-which are exactly Newton's Laws of Motion $$F = ma$$ in a time-dependent setting.
+which are exactly Newton's Laws of Motion $$F = ma$$ in a time-dependent setting (with $$\dot q := \dot q_i \partial^i $$ and \partial_t := \frac{\partial}{\partial t}$$).
 
 
 ### Symplectic Geometry
