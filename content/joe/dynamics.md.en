@@ -48,7 +48,7 @@ $$\iff \gamma:[0,t]\rightarrow T^*M\oplus\R  $$ is a *stationary curve* for the 
 When $$\mathcal H$$ is convex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  satisfying $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$.  This defines the (involutive) Legendre Transform $$\mathcal L$$ of $$\mathcal H$$:
 ```math
 \begin{aligned}
-\mathcal{L}(\dot q,q,t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) = p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
+\mathcal{L}(\dot q,q,t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) \\&= p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
 \mathcal S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
 \end{aligned}
 ```
@@ -102,8 +102,9 @@ The Levi-Civita Connection's Christoffel Symbols for $$g$$ are simply defined by
 with $$\partial_i := \frac{\partial}{\partial q^i}$$. The associated Covariant Derivative in local coordinates is
 ```math
 \begin{aligned}
-\nabla_{a^i\partial_i} b^j\partial_j &=a^i(\partial_ib^j)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or succinctly}\\
-\nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k
+\nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or succinctly}\\
+\nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k \text{ , so}\\
+\nabla &= d + \Gamma
 \end{aligned}
 ```
 
@@ -135,7 +136,7 @@ Since $$\frac{\partial \mathcal H}{\partial p^i}(p,q,t) = g_{ij}p^j \implies \fr
 
 ```math
 \begin{aligned}
-p_{max}^i &= g^{ij}\dot q_i = \frac{\partial \mathcal L}{\partial \dot q^i}\implies \\
+p_{max}^i &= g^{ij}\dot q_i = \frac{\partial \mathcal L}{\partial \dot q_i}\implies \\
 \mathcal A(\dot q, q, t) &= (g^{-1}\dot q, q, t)\ .
 \end{aligned}
 ```
@@ -147,8 +148,9 @@ Hence, the Euler-Lagrange Equations become:
 ```math
 \begin{aligned}
 
-\frac{1}{2}\partial_i g^{jk}\dot q^j\dot q^k -\partial_i \mathcal V &= \frac{d}{dt}g^{ij}(q,t)\dot q_j = \dot p_{max}^i\\
-&= \
+\frac{1}{2}\partial_i g^{jk}\dot q_j\dot q_k -\partial_i \mathcal V &= \frac{d}{dt}g^{ij}(q,t)\dot q_j = \dot p_{max}^i\ ,\\
+\frac{1}{2}\ g_{ai}\partial_ig^{jk}\dot q_j\dot q_k - g_{ai} \partial_i \mathcal V &= g_{ai}\ \dot p_{max}^i\\
+&=\nabla_{\dot q} \dot q
 \end{aligned}
 ```
 
