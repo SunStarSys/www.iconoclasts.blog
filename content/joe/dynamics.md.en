@@ -197,9 +197,15 @@ so the **Feynman Path Integral** expressions are morally equivalent in the quadr
 \begin{aligned}
 \int_{\set{\gamma}} e^{\mathcal S_{\mathcal H_\mathcal B} (\gamma)} D\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H_\mathcal B(p,q,t))\Delta t}\omega^n/n!\\
 &= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{-\mathcal L_\mathcal B(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
-&\approx \int_{\set{\tilde \gamma}} e^{\mathcal -S_{\mathcal L_\mathcal B}(\tilde \gamma)} D\tilde \gamma
- 
+&\approx \int_{\set{\tilde \gamma}} e^{\mathcal -S_{\mathcal L_\mathcal B}(\tilde \gamma)} D\tilde \gamma \ .
  \end{aligned}
+```
+
+Hence, with a Wick rotation and rescale by the Planck constant $$\bar h = h/2\pi$$, sending $$t\mapsto it\bar h$$:
+
+```math
+\int_{\set{\gamma}}e^{i\bar h S_{\mathcal H_\mathcal B}(\gamma)}D\gamma \approx \int_{\set{\tilde\gamma}} e^{-i\bar h \ \mathcal S_{\mathcal L_\mathcal B}(\tilde \gamma)}D\tilde\gamma
+
 ```
 
 ### Feynman-Kac Formula
