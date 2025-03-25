@@ -157,7 +157,7 @@ By Equation (12), the Euler-Lagrange Equations for $$\mathcal L_\mathcal B$$beco
 
 \frac{1}{2}\partial_i g_{jk}(\dot q^j-\mathcal B^j)(\dot q^k -\mathcal B^k)\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)(\dot q^j - \mathcal B^j) = {\dot p^\mathcal B_{max}}_i\ ,\\
 - \partial^i \mathcal V &= \frac{1}{2} \partial^i   g_{jk}(\dot q^j-\mathcal B^j) (\dot q^k-\mathcal B^k) + \frac{d}{dt} (\dot q^i - B^i) + g^{ij}\frac{\partial g_{jk}}{\partial t}(\dot q^k -\mathcal B^k)\\
--\nabla\mathcal V(q,t)&=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B + [g^{-1}][\partial_tg(q,t)](\dot q-\mathcal B) \ ,
+-\nabla\mathcal V(q,t)&=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B +(\partial_t [\log g])dot q-\mathcal B) \ ,
 \end{aligned}
 ```
 
