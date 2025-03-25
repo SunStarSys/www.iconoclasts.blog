@@ -66,16 +66,16 @@ In general, this claim is **false**. But the set stationary curves of $$\mathcal
 \frac{\partial \mathcal L}{\partial q} = \frac{d}{dt}\frac{\partial \mathcal L}{\partial \dot q}
 ```
 
-which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial conditions $$(\dot q_0, q_0)$$, just as with the contravariant Hamilton-Jacobi Equations. By the Picard-Lindelöf Theorem, these equations have locally unique solutions when framed as intial value problems (more on this later).
+which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial conditions $$(\dot q_0, q_0)$$, just as with the contravariant Hamilton-Jacobi Equations. By the Picard-Lindelöf Theorem, these equations have locally unique solutions when framed as an intial value problem.
 
-The interesting aspect of $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ is when we can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
+However, an interesting aspect of $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ reveals itself when we can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to *transform this boundary-value problem into an initial-value problem*. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a (unique?) stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.  Locally, this is an application of the Implicit Function Theorem, but globally, there may be topological obstructions to constructing any such $$\gamma$$.
 
-We can now define a unique "horizontal" lift $$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q}^{\*}M\oplus \Reals$$ by assigning
+Let's take a step back and define something simpler: a unique "horizontal" lift $$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q}^{\*}M\oplus \Reals$$ by assigning
 
 ```math
 (\dot q, q,t)\mapsto (p_{max}(\dot q), q, t)\ .
 ```
-Now we have at last, for **any "projected" smooth curve** $$\tilde\gamma:[0,t]\rightarrow M\oplus\R$$:
+Now we have, for **any** "projected" smooth curve (not just stationary ones) $$\tilde\gamma:[0,t]\rightarrow M\oplus\R$$:
 
 ```math
 \begin{aligned}
@@ -83,6 +83,7 @@ Now we have at last, for **any "projected" smooth curve** $$\tilde\gamma:[0,t]\r
 \mathcal S_\mathcal{L}(\tilde\gamma) &= \mathcal S_\mathcal H(\mathcal A\circ \tilde\gamma) \ .
 \end{aligned}
 ```
+The net of this is that since stationary curves $$\gamma$$ do have sustained movement contained within a fiber of $$\pi^{-1}$$, without loss of generality we simply consider non-stationary $$\tilde \gamma$$ and lift them with $$\mathcal A$$ as a suitable class of curves to "integrate over" later on.
 
 #### Quadratic Form Magic, part 1
 
