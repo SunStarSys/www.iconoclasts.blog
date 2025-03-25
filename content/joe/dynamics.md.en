@@ -155,7 +155,7 @@ Hence, the Euler-Lagrange Equations become:
 ```math
 \begin{aligned}
 
-\frac{1}{2}\partial_i g_{jk}\dot q^j\dot q^k -\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)\dot q^j = \dot p_{max}^i\ ,\\
+\frac{1}{2}\partial_i g_{jk}\dot q^j\dot q^k -\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)\dot q^j = {\dot p_{max}}_i\ ,\\
 \frac{1}{2}\partial^ig_{jk}\dot q_j\dot q_k - \partial^i \mathcal V &= \partial^i   g_{jk}\dot q^j \dot q^k + \ddot q^i + g^{ij}\frac{\partial g^{jk}}{\partial t}\dot q_k\\
 -\nabla\mathcal V(q,t)&=\nabla_{\dot q} \dot q + [g][\partial_tg(q,t)]\dot q \ ,
 \end{aligned}
