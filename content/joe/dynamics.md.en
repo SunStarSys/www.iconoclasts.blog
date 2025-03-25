@@ -160,7 +160,7 @@ Hence, the Euler-Lagrange Equations become:
 -\nabla\mathcal V(q,t)&=\nabla_{\dot q} \dot q + [g][\partial_tg(q,t)]\dot q \ ,
 \end{aligned}
 ```
-which are exactly **Newton's Laws of Motion** $$F = ma$$ (in a time-dependent setting) with $$\dot q := \dot q^i \partial_i $$ and $$\partial_t := \frac{\partial}{\partial t}$$.
+which are exactly **Newton's Laws of Motion** $$F/m = a$$ (in a time-dependent setting) with $$\dot q := \dot q^i \partial_i $$ and $$\partial_t := \frac{\partial}{\partial t}$$.
 
 
 ### Symplectic Geometry
