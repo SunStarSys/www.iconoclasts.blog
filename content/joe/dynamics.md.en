@@ -131,13 +131,15 @@ Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional velocity field 
 \begin{aligned}
 \mathcal H_\mathcal B(p,q,t) &= \mathcal H + \mathcal Bp \implies\\
 \mathcal L_\mathcal B(\dot q,q,t) &=\max_p p(\dot q - \mathcal B) - \mathcal H\\
-&= \mathcal{L}(q,\dot{q}-\mathcal B, t)\\
+&\ \begin{equation}
+\tag{A}= \mathcal{L}(q,\dot{q}-\mathcal B, t)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\end{equation}\\
 \mathcal H_\mathcal B &= \frac{1}{2}\ g^{ij}p_ip_j + p\mathcal B + \mathcal V \implies\\
-\mathcal L_\mathcal B &= \mathcal L - g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j
+\mathcal L_\mathcal B &\ \begin{equation}\tag{B}= \mathcal L - g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j\ \ \ \ \ \ \end{equation}
 \end{aligned}
 ```
 
-Here we see the connection between the Lagrange Multiplier $$\mathcal B$$ on $$\mathcal H$$ and its equivalent expression as an infinitesimal deformation on $$\mathcal L$$.  We will contextualize $$\mathcal B$$ in a variety of useful ways in the remainder. **Both of the expressions for $$\mathcal{L}_\mathcal B$$ in Equation <span class="eqno"></span> are critical**.
+Here we see the connection between the Lagrange Multiplier $$\mathcal B$$ on $$\mathcal H$$ and its equivalent expression as an infinitesimal deformation on $$\mathcal L$$.  We will contextualize $$\mathcal B$$ in a variety of useful ways in the remainder. **Both of the expressions $$(A)$$ and $$(B)$$ for $$\mathcal{L}_\mathcal B$$ in Equation <span class="eqno"></span> are critical**.
 
 ##### The Horizontal Lift $$\mathcal A$$
 
@@ -161,7 +163,7 @@ By Equation (12), the Euler-Lagrange Equations for $$\mathcal L_\mathcal B$$beco
 
 - \partial^i \mathcal V &= \frac{1}{2} (\partial^i   g_{jk})(\dot q^j-\mathcal B^j) (\dot q^k-\mathcal B^k) - g_{jk}(\partial^i\mathcal B^j)(\dot q^k - \mathcal B^k) + \frac{d}{dt} (\dot q^i - B^i) + g^{ij}\frac{\partial g_{jk}}{\partial t}(\dot q^k -\mathcal B^k)\\
 
--\nabla\mathcal V(q,t)&=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B +(\partial_t [\log g])(\dot q-\mathcal B) \ .
+-\nabla\mathcal V(q,t)&\begin{equation}\tag{C}=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B +(\partial_t [\log g])(\dot q-\mathcal B) \ .\ \ \ \ \ \ \ \ \ \end{equation}
 \end{aligned}
 ```
 
@@ -213,10 +215,12 @@ Hence, with a Wick rotation and rescale by the Planck constant $$\hbar = h/2\pi$
 \end{aligned}
 ```
 
-so when we want to approximate the right-hand-side of Equation <span class="eqno"></span> using the method of stationary phase (aka the semi-classical limit), we need to remember to solve the Euler-Lagrange Equations with $$\mathcal V \mapsto -\hbar^2 \mathcal V$$:
+so when we want to approximate the right-hand-side of Equation <span class="eqno"></span> using the method of stationary phase (aka the semi-classical limit), we need to remember to solve the Euler-Lagrange Equations $$(C)$$ with $$\mathcal V \mapsto -\hbar^2 \mathcal V$$:
 
 ```math
+\begin{equation}\tag{D}
 \hbar^2\nabla\mathcal V(q,t)=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B +(\partial_t [\log g])(\dot q-\mathcal B) \ .
+\end{equation}
 ```
 ### Feynman-Kac Formula
 
