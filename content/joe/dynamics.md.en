@@ -123,13 +123,13 @@ R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\p
 
 ##### Lagrange Multipliers on $$\mathcal H$$ as Infinitesimal Translations on $$\mathcal L$$
 
-Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$\mathcal B(q,t)\in T_qM$$, ie a linear functional on $$p\in T^{\*}_qM$$, we can **complete the square** and recompute $$\mathcal{L}_B$$ in terms of $$\mathcal L$$:
+Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$\mathcal B\in T_qM$$, ie a linear functional on $$p\in T^{\*}_qM$$, we can **complete the square** and recompute $$\mathcal{L}_B$$ in terms of $$\mathcal L$$:
 
 ```math
 \begin{aligned}
 \mathcal H_\mathcal B(p,q,t) &= \mathcal H + \mathcal Bp \implies\\
 \mathcal L_\mathcal B(\dot q,q,t) &=\max_p p(\dot q - \mathcal B) - \mathcal H\\
-&= \mathcal{L}(q,\dot{q}-\mathcal B(q,t), t)\\
+&= \mathcal{L}(q,\dot{q}-\mathcal B, t)\\
 \mathcal H_\mathcal B &= \frac{1}{2}\ g^{ij}p_ip_j + p\mathcal B + \mathcal V \implies\\
 \mathcal L_\mathcal B &= \mathcal L - g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j
 \end{aligned}
@@ -160,7 +160,7 @@ Hence, the Euler-Lagrange Equations for $$\mathcal L_\mathcal B$$become:
 -\nabla\mathcal V(q,t)&=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) +\frac{1}{2} [g^{-1}][\partial_tg(q,t)](\dot q-\mathcal B) \ ,
 \end{aligned}
 ```
-which are exactly **Newton's Laws of Motion** $$F/m = a$$ (in a time-dependent setting) with $$\partial_t := \frac{\partial}{\partial t}$$.
+which are exactly **Newton's Laws of Motion** $$F/m = a$$ (in a time-dependent setting) with $$\partial_t := \frac{\partial}{\partial t}$$ and a velocity drag force $$\mathcal B$$.
 
 
 ### Symplectic Geometry
