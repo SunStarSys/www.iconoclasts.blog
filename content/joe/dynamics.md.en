@@ -32,7 +32,7 @@ by Stokes' Theorem. Clearly, for the action $$\mathcal S$$ to only depend on the
 ```math
 \begin{aligned}
 \omega|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial \mathcal H}{\partial p}dp\wedge dt - \frac{\partial \mathcal H}{\partial q}dq\wedge dt \\
-        &= (-\dot{p}^i - \frac{\partial \mathcal H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial \mathcal H}{\partial p^i}) dp^i\wedge dt
+        &= (-\dot{p}_i - \frac{\partial \mathcal H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial \mathcal H}{\partial p_i}) dp_i\wedge dt
 \end{aligned}
 ```
 
@@ -87,12 +87,12 @@ Now we have at last, for **any "projected" smooth curve** $$\tilde\gamma:[0,t]\r
 #### Quadratic Form Magic, part 1
 
 When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a pseudo-Riemannian metric $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$
-with inverse $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$. The Legendre Transform relates them:
+with inverse $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$. The Legendre Transform in local coordinates relates them as so:
 
 ```math
 \begin{aligned}
-\mathcal H(p,q,t) &= \frac{1}{2}\ g_{ij}(q,t)\ p^ip^j + \mathcal V(q,t) \implies\\
-\mathcal{L}(q,\dot q, t) &= \frac{1}{2}\ g^{ij}(q,t)\dot{q}_i\dot{q}_j - \mathcal V(q,t)\ .
+\mathcal H(p,q,t) &= \frac{1}{2}\ g^{ij}(q,t)\ p_ip_j + \mathcal V(q,t) \implies\\
+\mathcal{L}(q,\dot q, t) &= \frac{1}{2}\ g_{ij}(q,t)\dot{q}^i\dot{q}^j - \mathcal V(q,t)\ .
 \end{aligned}
 ```
 
@@ -143,8 +143,8 @@ Since $$\frac{\partial \mathcal H}{\partial p^i}(p,q,t) = g_{ij}p^j \implies \fr
 
 ```math
 \begin{aligned}
-p_{max}^i &= g^{ij}\dot q_j = \frac{\partial \mathcal L}{\partial \dot q_i}\implies \\
-\mathcal A(\dot q, q, t) &= (g^{-1}\dot q, q, t)\ .
+{p_{max}}_i &= g_{ij}\dot q^j = \frac{\partial \mathcal L}{\partial \dot q_i}\implies \\
+\mathcal A(\dot q, q, t) &= ([g] \dot q, q, t)\ .
 \end{aligned}
 ```
 
@@ -155,12 +155,12 @@ Hence, the Euler-Lagrange Equations become:
 ```math
 \begin{aligned}
 
-\frac{1}{2}\partial_i g^{jk}\dot q_j\dot q_k -\partial_i \mathcal V &= \frac{d}{dt}g^{ij}(q,t)\dot q_j = \dot p_{max}^i\ ,\\
-\frac{1}{2}\partial^ig^{jk}\dot q_j\dot q_k - \partial^i \mathcal V &= \partial^i g^{jk}\dot q_j \dot q _k + g^{ij}g^{ik}\ddot q_k + g^{ij}\frac{\partial g^{jk}}{\partial t}\dot q_k\\
--\nabla\mathcal V(q,t)&=\nabla_{\dot q} \dot q + g^{-1}\partial_tg^{-1}(q,t)\dot q \ ,
+\frac{1}{2}\partial_i g_{jk}\dot q^j\dot q^k -\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)\dot q^j = \dot p_{max}^i\ ,\\
+\frac{1}{2}\partial^ig_{jk}\dot q_j\dot q_k - \partial^i \mathcal V &= \partial^i   g_{jk}\dot q^j \dot q^k + \ddot q^i + g^{ij}\frac{\partial g^{jk}}{\partial t}\dot q_k\\
+-\nabla\mathcal V(q,t)&=\nabla_{\dot q} \dot q + [g][\partial_tg(q,t)]\dot q \ ,
 \end{aligned}
 ```
-which are exactly Newton's Laws of Motion $$F = ma$$ in a time-dependent setting (with $$\dot q := \dot q_i \partial^i $$ and \partial_t := \frac{\partial}{\partial t}$$).
+which are exactly **Newton's Laws of Motion** $$F = ma$$ (in a time-dependent setting) with $$\dot q := \dot q^i \partial_i $$ and $$\partial_t := \frac{\partial}{\partial t}$$.
 
 
 ### Symplectic Geometry
