@@ -182,17 +182,7 @@ These are exactly **Newton's Laws of Motion** $$F/m = a$$ with $$\partial_t := \
 
 ### Natural (Covariant) Path Integral Quantization
 
-#### Hamiltonian Formulation
-
-#### The Value of the Action Matters
-
-#### Semiclassical Mechanics
-
-##### Semiclassical Asymptotics are an Exact Solution on Flat Manifolds
-
-#### Fourier Transform and the Cameron-Martin Formula
-
-By completing the square and the translation invariance of Legesgue Measure, recall that:
+By completing the square and the translation invariance of Lebesgue Measure (in a fiber of $$T^\*M$$), recall that:
 
 ```math
 \int_{\Reals^n} e^{p_i\dot q^i - \frac{1}{2}\ g^{ij}p_ip_j}dp_1...dp_n = \frac{e^{-\frac{1}{2}g_{ij}\dot q^i\dot q^j}}{\sqrt{(2\pi)^n \det g^{ij}}}
@@ -220,11 +210,20 @@ Hence, with a Wick rotation and rescale by the Planck constant $$\hbar = h/2\pi$
 so when we want to approximate the right-hand-side of Equation <span class="eqno"></span> using the method of stationary phase (aka the semi-classical limit), we need to remember to solve the Euler-Lagrange Equations $$(C)$$ with $$\mathcal V \mapsto -\hbar^2 \mathcal V\approx 0$$:
 
 ```math
-\begin{equation}\tag{D}
 \hbar^2\nabla\mathcal V(q,t)=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B +(\partial_t [\log g])(\dot q-\mathcal B) \ .
-\end{equation}
 ```
+
 ### Feynman-Kac Formula
+#### Hamiltonian Formulation
+
+#### The Value of the Action Matters
+
+#### Semiclassical Mechanics
+
+##### Semiclassical Asymptotics are an Exact Solution on Flat Manifolds
+
+#### Fourier Transform and the Cameron-Martin Formula
+
 
 With $$V \in C^\infty(M)$$, by the Baker-Campbell-Hausdorff Formula:
 ```math
