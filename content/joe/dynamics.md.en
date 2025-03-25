@@ -208,6 +208,7 @@ Hence, with a Wick rotation and rescale by the Planck constant $$\hbar = h/2\pi$
 
 ```
 
+so when we want to approximate the right-hand-side using the method of stationary phase (aka the semi-classical limit), we need to rember to solve the Euler-Lagrange Equations with $$\mathcal V \mapsto -\mathcal V$$!
 ### Feynman-Kac Formula
 
 With $$V \in C^\infty(M)$$, by the Baker-Campbell-Hausdorff Formula:
