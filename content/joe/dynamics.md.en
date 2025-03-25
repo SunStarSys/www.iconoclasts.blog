@@ -160,7 +160,8 @@ By Equation (12), the Euler-Lagrange Equations for $$\mathcal L_\mathcal B$$beco
 -\nabla\mathcal V(q,t)&=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B + [g^{-1}][\partial_tg(q,t)](\dot q-\mathcal B) \ ,
 \end{aligned}
 ```
-which are exactly **Newton's Laws of Motion** $$F/m = a$$ (in a time-dependent setting) with $$\partial_t := \frac{\partial}{\partial t}$$ subject to a wind velocity field $$\mathcal B$$.
+
+which are exactly **Newton's Laws of Motion** $$F/m = a$$ with $$\partial_t := \frac{\partial}{\partial t}$$ subject to a potential energy $$\mathcal V$$ and velocity field $$\mathcal B$$, in a time dependent setting.
 
 
 ### Symplectic Geometry
