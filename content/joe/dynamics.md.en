@@ -131,7 +131,7 @@ Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$\ma
 \mathcal L_\mathcal B(\dot q,q,t) &=\max_p p(\dot q - \mathcal B) - \mathcal H\\
 &= \mathcal{L}(q,\dot{q}-\mathcal B(q,t), t)\\
 \mathcal H_\mathcal B &= \frac{1}{2}\ g^{ij}p_ip_j + p\mathcal B + \mathcal V \implies\\
-\mathcal L_\mathcal B &= \mathcal L + g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j
+\mathcal L_\mathcal B &= \mathcal L - g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j
 \end{aligned}
 ```
 
@@ -150,17 +150,17 @@ Since $$\frac{\partial \mathcal H}{\partial p_i}(p,q,t) = g^{ij}p_j \implies \fr
 
 When $$g^{ij}$$ is positive-definite, so is its inverse, which implies the Kinetic Energy Component of $$\mathcal S_\mathcal L(\tilde\gamma) = \mathcal S_\mathcal H(\mathcal A\circ\tilde\gamma)$$ is locally **minimized** on stationary curves involving true Riemannian metrics.
 
-Hence, the Euler-Lagrange Equations become:
+Hence, the Euler-Lagrange Equations for $$\mathcal L_\mathcal B$$become:
 
 ```math
 \begin{aligned}
 
-\frac{1}{2}\partial_i g_{jk}\dot q^j\dot q^k -\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)\dot q^j = {\dot p_{max}}_i\ ,\\
-\frac{1}{2}\partial^ig_{jk}\dot q_j\dot q_k - \partial^i \mathcal V &= \partial^i   g_{jk}\dot q^j \dot q^k + \ddot q^i + g^{ij}\frac{\partial g_{jk}}{\partial t}\dot q^k\\
--\nabla\mathcal V(q,t)&=\nabla_{\dot q} \dot q + [g^{-1}][\partial_tg(q,t)]\dot q \ ,
+\frac{1}{2}\partial_i g_{jk}(\dot q^j-\mathcal B^j)(\dot q^k -\mathcal B^k)\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)(\dot q^j - \mathcal B^j) = {\dot p^\mathcal B_{max}}_i\ ,\\
+\frac{1}{2}\partial^ig_{jk}(\dot q^j - \mathcal B^j)(\dot q^k - \mathcal B^k) - \partial^i \mathcal V &= \partial^i   g_{jk}(\dot q^j-\mathcal B^j) (\dot q^k-\mathcal B^k) + \frac{d}{dt} (\dot q^i - B^i) + g^{ij}\frac{\partial g_{jk}}{\partial t}(\dot q^k -\mathcal B^k)\\
+-\nabla\mathcal V(q,t)&=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) +\frac{1}{2} [g^{-1}][\partial_tg(q,t)](\dot q-\mathcal B) \ ,
 \end{aligned}
 ```
-which are exactly **Newton's Laws of Motion** $$F/m = a$$ (in a time-dependent setting) with $$\dot q := \dot q^i \partial_i $$ and $$\partial_t := \frac{\partial}{\partial t}$$.
+which are exactly **Newton's Laws of Motion** $$F/m = a$$ (in a time-dependent setting) with $$\partial_t := \frac{\partial}{\partial t}$$.
 
 
 ### Symplectic Geometry
