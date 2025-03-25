@@ -201,10 +201,10 @@ so the **Feynman Path Integral** expressions are morally equivalent in the quadr
  \end{aligned}
 ```
 
-Hence, with a Wick rotation and rescale by the Planck constant $$\bar h = h/2\pi$$, sending $$t\mapsto it, \ p\mapsto \bar h p, \ \dot q\mapsto \dot q/\bar h$$:
+Hence, with a Wick rotation and rescale by the Planck constant $$\hbar = h/2\pi$$, sending $$t\mapsto it, \ p\mapsto \hbar p, \ \dot q\mapsto \dot q/\hbar$$:
 
 ```math
-\int_{\set{\gamma}}e^{iS_{\mathcal H_\mathcal B^{\mathcal V}(\bar h p, q, t)}(\gamma)}D\gamma \approx \int_{\set{\tilde\gamma}} e^{-i \ \mathcal S_{\mathcal L_\mathcal B^{-\mathcal V}(\dot q/\bar h,q, t)}(\tilde \gamma)}D\tilde\gamma
+\int_{\set{\gamma}}e^{iS_{\mathcal H_\mathcal B^{\mathcal V}(\hbar p, q, t)}(\gamma)}D\gamma \approx \int_{\set{\tilde\gamma}} e^{-i \ \mathcal S_{\mathcal L_\mathcal B^{-\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}D\tilde\gamma
 
 ```
 
@@ -225,15 +225,13 @@ The Feynman-Kac Formula follows from the path-integral formulation for Brownian 
 \begin{aligned}
 \mathcal H &\ = \mathcal T + \mathcal V \implies \\
 
-e^{-it/\bar h\hat{\mathcal H}}\ket{\psi} &:= e^{-it/\bar h(-\frac{\bar h^2}{2} \Delta_M + \mathcal V)} \ket{\psi} \implies \\
+e^{-it/\hbar \hat{\mathcal H}}\ket{\psi} &:= e^{-it/\hbar(-\frac{\hbar^2}{2} \Delta_M + \mathcal V)} \ket{\psi} \implies \\
 
-i\bar h \frac{d}{dt}\ket{\psi} &\ = -\frac{\bar h^2}{2}\Delta_M \ket{\psi} + \mathcal V\ket{\psi}
+i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mathcal V\ket{\psi}
 
 \end{aligned}
 ```
-as lineear differential operators. Hence the Schrodinger Equation becomes:
-
-
+as lineear differential operators.
 
 #### The Scalar Curvature Path Integral Delta
 
