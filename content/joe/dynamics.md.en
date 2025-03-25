@@ -195,16 +195,16 @@ so the **Feynman Path Integral** expressions are morally equivalent in the quadr
 
 ```math
 \begin{aligned}
-\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H_\mathcal B} (\gamma)} D\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H_\mathcal B(p,q,t))\Delta t}\omega^n/n!\\
-&= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{-\mathcal L_\mathcal B(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
-&\approx \int_{\set{\tilde \gamma}} e^{\mathcal -S_{\mathcal L_\mathcal B}(\tilde \gamma)} D\tilde \gamma \ .
+\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H^\mathcal V_\mathcal B} (\gamma)} D\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H^\mathcal V_\mathcal B(p,q,t))\Delta t}\omega^n/n!\\
+&= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{-\mathcal L^{-\mathcal V}_\mathcal B(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
+&\approx \int_{\set{\tilde \gamma}} e^{\mathcal -S_{\mathcal L^{-\mathcal V}_\mathcal B}(\tilde \gamma)} D\tilde \gamma \ .
  \end{aligned}
 ```
 
-Hence, with a Wick rotation and rescale by the Planck constant $$\bar h = h/2\pi$$, sending $$t\mapsto it\bar h$$:
+Hence, with a Wick rotation and rescale by the Planck constant $$\bar h = h/2\pi$$, sending $$t\mapsto it\bar h, \ p\mapsto i \bar h p, \ \dot q\mapsto \dot q/i \bar h$$:
 
 ```math
-\int_{\set{\gamma}}e^{i\bar h S_{\mathcal H_\mathcal B}(\gamma)}D\gamma \approx \int_{\set{\tilde\gamma}} e^{-i\bar h \ \mathcal S_{\mathcal L_\mathcal B}(\tilde \gamma)}D\tilde\gamma
+\int_{\set{\gamma}}e^{i\bar hS_{\mathcal H_\mathcal B^{\mathcal V}(i\bar h p, q, t)}(\gamma)}D\gamma \approx \int_{\set{\tilde\gamma}} e^{-i\bar h \ \mathcal S_{\mathcal L_\mathcal B^{-\mathcal V}(\dot q/i\bar h,q, t)}(\tilde \gamma)}D\tilde\gamma
 
 ```
 
@@ -220,6 +220,20 @@ The Feynman-Kac Formula follows from the path-integral formulation for Brownian 
 ### Observables, Evolution Equation, and Lie Algebras
 
 ### Schrodinger Quantization
+
+```math
+\begin{aligned}
+\mathcal H &\ = \mathcal T + \mathcal V \implies \\
+
+e^{-it/\bar h\hat{\mathcal H}}\ket{\psi} &:= e^{-it/\bar h(-\frac{\bar h^2}{2} \Delta_M + \mathcal V)} \ket{\psi} \implies \\
+
+i\bar h \frac{d}{dt}\ket{\psi} &\ = -\frac{\bar h^2}{2}\Delta_M \ket{\psi} + \mathcal V\ket{\psi}
+
+\end{aligned}
+```
+as lineear differential operators. Hence the Schrodinger Equation becomes:
+
+
 
 #### The Scalar Curvature Path Integral Delta
 
