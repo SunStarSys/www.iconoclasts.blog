@@ -86,8 +86,7 @@ Now we have at last, for **any "projected" smooth curve** $$\tilde\gamma:[0,t]\r
 
 #### Quadratic Form Magic, part 1
 
-When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a pseudo-Riemannian metric $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$
-with inverse $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$. The Legendre Transform in local coordinates relates them as so:
+When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a pseudo-Riemannian metric $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$ with inverse $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$. The Legendre Transform in local coordinates relates them as so:
 
 ```math
 \begin{aligned}
