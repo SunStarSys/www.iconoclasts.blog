@@ -189,15 +189,17 @@ These are exactly **Newton's Laws of Motion** $$F/m = a$$ with $$\partial_t := \
 By completing the square and the translation invariance of Legesgue Measure, recall that:
 
 ```math
-\int_{\Reals^n} e^{p_i\dot q^i - \frac{1}{2}\ g^{ij}p_ip_j}dp_1...dp_n = \frac{e^{-\frac{1}{2}g_{ij}\dot q^i\dot q^j}}{\sqrt{(2\pi)^n \det g^{-1}}}
+\int_{\Reals^n} e^{p_i\dot q^i - \frac{1}{2}\ g^{ij}p_ip_j}dp_1...dp_n = \frac{e^{-\frac{1}{2}g_{ij}\dot q^i\dot q^j}}{\sqrt{(2\pi)^n \det g^{ij}}}
 ```
-so the **Feynman Path Integral**
+so the **Feynman Path Integral** expressions are morally equivalent:
 
 ```math
 \begin{aligned}
-\int_{\set{\gamma}} e^{\mathcal S_\mathcal H (\gamma)} D\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H(p\Delta t,q,t))\Delta t}\omega^n/n!\\
-&= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{\mathcal L(\dot q/\Delta t, q, t)\Delta t}\sqrt{\det g}\  dq^1...dq^n
-\end{aligned}
+\int_{\set{\gamma}} e^{\mathcal S_\mathcal H (\gamma)} D\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H(p,q,t))\Delta t}\omega^n/n!\\
+&= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{\mathcal L(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
+&\approx \int_{\set{\tilde \gamma}} e^{\mathcal S_\mathcal L(\tilde \gamma)} D\tilde \gamma
+ 
+ \end{aligned}
 ```
 
 ### Feynman-Kac Formula
