@@ -130,8 +130,8 @@ Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$\ma
 \mathcal H_\mathcal B(p,q,t) &= \mathcal H + \mathcal Bp \implies\\
 \mathcal L_\mathcal B(\dot q,q,t) &=\max_p p(\dot q - \mathcal B) - \mathcal H\\
 &= \mathcal{L}(q,\dot{q}-\mathcal B(q,t), t)\\
-\mathcal H_\mathcal B &= \frac{1}{2}\ g_{ij}p^ip^j + p\mathcal B + \mathcal V \implies\\
-\mathcal L_\mathcal B &= \mathcal L + g^{ij}\mathcal B_i\dot q_j + \frac{1}{2}\ g^{ij}\mathcal B_i\mathcal B_j
+\mathcal H_\mathcal B &= \frac{1}{2}\ g^{ij}p_ip_j + p\mathcal B + \mathcal V \implies\\
+\mathcal L_\mathcal B &= \mathcal L + g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j
 \end{aligned}
 ```
 
@@ -139,7 +139,7 @@ Here we see the connection between the Lagrange Multiplier $$B$$ on $$\mathcal H
 
 ##### The Horizontal Lift $$\mathcal A$$
 
-Since $$\frac{\partial \mathcal H}{\partial p^i}(p,q,t) = g_{ij}p^j \implies \frac{\partial^2\mathcal H}{\partial p^i \partial p^j} = g_{ij}$$, we can compute the horizontal lift explicitly
+Since $$\frac{\partial \mathcal H}{\partial p_i}(p,q,t) = g^{ij}p_j \implies \frac{\partial^2\mathcal H}{\partial p_i \partial p_j} = g^{ij}$$, we can compute the horizontal lift explicitly
 
 ```math
 \begin{aligned}
