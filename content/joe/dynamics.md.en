@@ -123,7 +123,7 @@ R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\p
 
 ##### Lagrange Multipliers on $$\mathcal H$$ as Infinitesimal Translations on $$\mathcal L$$
 
-Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional component $$\mathcal B(q,t)\in T_qM$$, ie a linear functional on $$p\in T^{\*}_qM$$, we can **complete the square** and recompute $$\mathcal{L}_B$$ in terms of $$\mathcal L$$:
+Furthermore, if $$\mathcal H = \mathcal H\_B$$ has an additional velocity field component $$\mathcal B(q,t)\in T_qM$$, ie a linear functional on $$p\in T^{\*}_qM$$, we can **complete the square** and recompute $$\mathcal{L}_B$$ in terms of $$\mathcal L$$:
 
 ```math
 \begin{aligned}
