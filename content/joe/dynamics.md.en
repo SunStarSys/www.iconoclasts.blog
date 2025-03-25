@@ -66,7 +66,7 @@ In general, this claim is **false**. But the set stationary curves of $$\mathcal
 \frac{\partial \mathcal L}{\partial q} = \frac{d}{dt}\frac{\partial \mathcal L}{\partial \dot q}
 ```
 
-which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial conditions $$(\dot q_0, q_0)$$, just as with the contravariant Hamilton-Jacobi Equations. By the Picard-Lindelöf Theorem, these equations have locally unique solutions.
+which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M$$ initial conditions $$(\dot q_0, q_0)$$, just as with the contravariant Hamilton-Jacobi Equations. By the Picard-Lindelöf Theorem, these equations have locally unique solutions when framed as intial value problems (more on this later).
 
 The interesting aspect of $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ is when we can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to transform this boundary-value problem into an initial-value problem. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.
 
@@ -156,8 +156,8 @@ Hence, the Euler-Lagrange Equations become:
 \begin{aligned}
 
 \frac{1}{2}\partial_i g_{jk}\dot q^j\dot q^k -\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)\dot q^j = {\dot p_{max}}_i\ ,\\
-\frac{1}{2}\partial^ig_{jk}\dot q_j\dot q_k - \partial^i \mathcal V &= \partial^i   g_{jk}\dot q^j \dot q^k + \ddot q^i + g^{ij}\frac{\partial g^{jk}}{\partial t}\dot q_k\\
--\nabla\mathcal V(q,t)&=\nabla_{\dot q} \dot q + [g][\partial_tg(q,t)]\dot q \ ,
+\frac{1}{2}\partial^ig_{jk}\dot q_j\dot q_k - \partial^i \mathcal V &= \partial^i   g_{jk}\dot q^j \dot q^k + \ddot q^i + g^{ij}\frac{\partial g_{jk}}{\partial t}\dot q^k\\
+-\nabla\mathcal V(q,t)&=\nabla_{\dot q} \dot q + [g^{-1}][\partial_tg(q,t)]\dot q \ ,
 \end{aligned}
 ```
 which are exactly **Newton's Laws of Motion** $$F/m = a$$ (in a time-dependent setting) with $$\dot q := \dot q^i \partial_i $$ and $$\partial_t := \frac{\partial}{\partial t}$$.
