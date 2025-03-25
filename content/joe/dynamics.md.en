@@ -201,10 +201,10 @@ so the **Feynman Path Integral** expressions are morally equivalent in the quadr
  \end{aligned}
 ```
 
-Hence, with a Wick rotation and rescale by the Planck constant $$\bar h = h/2\pi$$, sending $$t\mapsto it\bar h, \ p\mapsto i \bar h p, \ \dot q\mapsto \dot q/i \bar h$$:
+Hence, with a Wick rotation and rescale by the Planck constant $$\bar h = h/2\pi$$, sending $$t\mapsto it, \ p\mapsto \bar h p, \ \dot q\mapsto \dot q/\bar h$$:
 
 ```math
-\int_{\set{\gamma}}e^{i\bar hS_{\mathcal H_\mathcal B^{\mathcal V}(i\bar h p, q, t)}(\gamma)}D\gamma \approx \int_{\set{\tilde\gamma}} e^{-i\bar h \ \mathcal S_{\mathcal L_\mathcal B^{-\mathcal V}(\dot q/i\bar h,q, t)}(\tilde \gamma)}D\tilde\gamma
+\int_{\set{\gamma}}e^{iS_{\mathcal H_\mathcal B^{\mathcal V}(\bar h p, q, t)}(\gamma)}D\gamma \approx \int_{\set{\tilde\gamma}} e^{-i \ \mathcal S_{\mathcal L_\mathcal B^{-\mathcal V}(\dot q/\bar h,q, t)}(\tilde \gamma)}D\tilde\gamma
 
 ```
 
