@@ -110,7 +110,7 @@ with $$\partial_i := \frac{\partial}{\partial q^i}$$ and $$\partial^i := g^{ij}\
 \begin{aligned}
 \nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or}\\
 \nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k \text{ , and contravariantly}\\
-\nabla_{dq^i}dq^j &= \Gamma^{ij}_kdq^k \text{, so} \\
+\nabla_{\partial^i}\partial^j &= \Gamma^{ij}_k\partial^k \text{, so} \\
 \nabla &= d + \Gamma
 \end{aligned}
 ```
