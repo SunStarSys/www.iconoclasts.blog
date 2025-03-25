@@ -16,16 +16,18 @@ Define the smooth **Hamiltonian** $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\
 
 Define $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ for smooth $$\gamma:[0,t]\rightarrow T^{\*}M\oplus\Reals$$.
 
-If two such curves $$\gamma_1, \gamma_2$$ have the exact same boundary endpoints, lets define **subtraction** by inverse composition, so $$\gamma_1 - \gamma_2$$ is a closed loop defined by traversing $$\gamma_1$$ in the forward direction, and $$\gamma_2$$ in reverse. Let $$S$$ be any 2-dimensonal surface bounded by this closed loop: $$\gamma_1 - \gamma_2 = \partial S$$. So
+If two such curves $$\gamma_1, \gamma_2$$ have the exact same boundary endpoints, define **subtraction** by inverse composition, so $$\gamma_1 - \gamma_2$$ is a closed loop defined by traversing $$\gamma_1$$ in the forward direction, and $$\gamma_2$$ in reverse. Let $$S$$ be any 2-dimensonal surface bounded by this closed loop: $$\gamma_1 - \gamma_2 = \partial S$$. So
 
 ```math
 \begin{aligned}
-\mathcal S(\gamma_1) - \mathcal S(\gamma_2) &= \int_{\gamma_1 - \gamma_2}\theta \\
+\mathcal S_\mathcal H(\gamma_1) - \mathcal S_\mathcal H(\gamma_2) &= \int_{\gamma_1 - \gamma_2}\theta \\
 &= \int_{\partial S}\theta\\
 &= \int_S d\theta
 \end{aligned}
 ```
-by Stokes' Theorem. Clearly, for the action $$\mathcal S$$ to only depend on the endpoints of $$\gamma$$, we necessarily must have $$d\theta$$ vanish on $$\gamma$$.
+by Stokes' Theorem.
+
+Regardless of whether or not such a surface $$S$$ actually exists, for the action $$\mathcal S_\mathcal H$$ to only depend on the endpoints of $$\gamma$$, we necessarily must have the first order condition that $$d\theta$$ vanish on $$\gamma$$.
 
 #### Let $$\omega := d\theta = dp\wedge dq - d\mathcal H \wedge dt\in\bigwedge^2T^\*(T^\*M\oplus\Reals)$$.
 
