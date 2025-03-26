@@ -186,7 +186,7 @@ These are exactly **Newton's Laws of Motion** $$F/m = a$$ with $$\partial_t := \
 
 A symplectic manifold $$N$$ is an abtraction of the contangent bundle $$T^\*(M\oplus \Reals)$$, with a closed 2-form $$\omega \in \bigwedge^2T^\*N$$. $$N$$-isomorphisms in this category preserve $$\omega$$.
 
-Requiring $$d\omega = 0$$ is a local integrability condition for a potential $$\theta = d\omega$$, but there may be topological constraints on its global integrability.
+Requiring $$d\omega = 0$$ is a local integrability condition for a potential $$\theta$$ satisfying $$d\theta = \omega$$, but there may be topological constraints on $$\omega$$'s global integrability.
 
 What we care about for dynamics is the Action $$\mathcal S(\gamma) = \int_\gamma \theta$$, so we focus on cotangent bundles in this article. Here, an appropriate $$\theta$$ is trivial to classify in terms of a function $$\mathcal H$$ on $$N$$.  Of course, a Wick-rotated $$\theta$$ on the universal cover of $$N$$ may sometimes be finessed with integrability conditions on its *phase* (e.g. think of $$\theta$$ as having values in a complex-line-bundle over $$N$$, and focus on its imaginary part), in order to provide consistent values of $$e^\mathcal S$$ that descend to $$N$$.
 
@@ -204,7 +204,7 @@ In reality, only the Gaussian "coupling"
 \int_{\set{\tilde \gamma}} e^{\mathcal -S_{\mathcal L_\mathcal B^{-\mathcal V}}(\gamma)}D_{dt}\gamma
 ```
 
-needs interpretation as *a (complex-valued) measure on some $$\set{\tilde \gamma}$$*, but this construction, as a series of increasingly sophisticated examples, will be our focus going forward.
+needs interpretation as *a (complex-valued) measure on some $$\set{\tilde \gamma}$$*, but this construction, as a series of increasingly sophisticated examples, will be our focus going forward.  Whatever that set turns out to be, it will be clear that the actual value of $$\mathcal S$$ on those curves will infinity, to *cancel the infinity* of the "Lebesgue Measure ormalizer" $$\Delta_{dt}$$. There are several choices involved in constructing the approximations that impact the convergence of the approximations, but we will sidestep all of them by focusing on the geometic nvariance of trivially computable cases.
 
 ### The Value of the Action Matters
 
