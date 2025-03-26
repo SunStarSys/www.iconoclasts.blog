@@ -188,7 +188,7 @@ These are exactly **Newton's Laws of Motion** $$F/m = a$$ with $$\partial_t := \
 By completing the square and the translation invariance of Lebesgue Measure (in a fiber of $$T^\*M$$), recall that:
 
 ```math
-\hbar^n\int_{\Reals^n} e^{ p_i\dot q^i\Delta t- \frac{1}{2}\hbar^2 g^{ij}p_ip_j\Delta t}dp_1...dp_n = \frac{e^{-\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t}{\sqrt{(2\pi\Delta t)^n \det g^{ij}}}
+\hbar^n\int_{\Reals^n} e^{ p_i\dot q^i\Delta t- \frac{1}{2}\hbar^2 g^{ij}p_ip_j\Delta t}dp_1...dp_n = \frac{e^{-\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t}}{\sqrt{(2\pi\Delta t)^n \det g^{ij}}}
 ```
 so the **Feynman Path Integral** expressions are morally equivalent in the quadratic Kinetic Energy case:
 
