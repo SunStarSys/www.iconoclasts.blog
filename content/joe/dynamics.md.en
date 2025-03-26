@@ -189,7 +189,7 @@ A symplectic manifold $$N$$ is an abtraction of the contangent bundle $$T^\*(M\o
 
 That  $$d\omega = 0$$ is a local integrability condition for a potential $$\theta = d\omega$$, but there may be topological constraints on its global integrability.
 
-What we care about for dynamics is the Action $$S(\gamma) = int_\gamma \theta$$, so we focus on cotangent bundles in this article. Here, an appropriate $$\theta$$ is trivial to classify in terms of a fuction $$\mathcal H$$ on $$N$$.
+What we care about for dynamics is the Action $$\mathcal S(\gamma) = int_\gamma \theta$$, so we focus on cotangent bundles in this article. Here, an appropriate $$\theta$$ is trivial to classify in terms of a fuction $$\mathcal H$$ on $$N$$.  Of couse, a Wick-Rotated $$\theta$$ on the universal cover of $$N$$ may be finessed with intgrability conditions on its *phase*, in order to provide consistent values of $$\mathcal S$$ that descend to $$N$$.
 
 #### The natural volume form $$\omega^n/n!$$
 
@@ -227,6 +227,7 @@ Hence, with a **Wick rotation and a vector rescale by the Planck constant** $$\h
 So when we want to approximate the right-hand-side of Equation <span class="eqno"></span> using the method of stationary phase (aka the semi-classical limit), we need to remember to solve the Euler-Lagrange Equations (14) $$(C)$$ with $$\mathcal V \mapsto - \hbar^2 \mathcal V\approx 0$$.
 
 ### Feynman-Kac Formula
+
 #### Hamiltonian Formulation
 
 #### The Value of the Action Matters
