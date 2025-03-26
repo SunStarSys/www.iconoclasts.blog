@@ -204,8 +204,8 @@ Hence, with a Wick rotation and rescale by the Planck constant $$\hbar = h/2\pi$
 
 ```math
 \begin{aligned}
-\int_{\set{\gamma}}e^{i\hbar S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}D_\hbar\gamma &\approx \int_{\set{\tilde\gamma}} e^{-i\hbar \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{-\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}D_{\hbar t}\tilde\gamma\\
-&= \int_{\set{\tilde \gamma}}e^{-\frac{i}{\hbar}\mathcal S_{\mathcal L^{-\hbar^2 \mathcal V}_{\mathcal B}}(\tilde \gamma)}D_{\hbar t}\tilde\gamma\ .
+\int_{\set{\gamma}}e^{i\hbar S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}D_\hbar\gamma &\approx \int_{\set{\tilde\gamma}} e^{-i\hbar \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{-\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}D_{i\hbar t}\tilde\gamma\\
+&= \int_{\set{\tilde \gamma}}e^{-\frac{i}{\hbar}\mathcal S_{\mathcal L^{-\hbar^2 \mathcal V}_{\mathcal B}}(\tilde \gamma)}D_{i\hbar t}\tilde\gamma\ .
 
 \end{aligned}
 ```
