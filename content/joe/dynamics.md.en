@@ -245,7 +245,7 @@ i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mat
 
 \end{aligned}
 ```
-as lineear differential operators. The point is that the solution is **analytic** in $$t$$ on the upper half-plane, and $$dt\mapsto i/\hbar\ dt$$ is its Wick-Unrotated boundary value:
+as lineear differential operators. The point is that the solution is **analytic** in $$t$$ on the upper half-plane, and $$dt\mapsto i/\hbar\ dt,\ p\mapsto p/\hbar $$ is its Wick-Unrotated boundary value:
 
 ```math
 \frac{d}{dt}e^{-t\bar H}\ket{\psi} = (\frac{1}{2}\Delta_M - \mathcal V) e^{-t\bar H}\ket{\psi} \ .
