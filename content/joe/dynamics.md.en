@@ -184,11 +184,11 @@ These are exactly **Newton's Laws of Motion** $$F/m = a$$ with $$\partial_t := \
 
 ### Symplectic Geometry
 
-A symplectic manifold $$N$$ is an abtraction of the contangent bundle $$T^\*(M\oplus \Reals)$$, with a closed 2-form $$\omega \in \bigwedge^2T^\*N$$. $$N$$-Isomorphisms in this category preserve $$\omega$$.
+A symplectic manifold $$N$$ is an abtraction of the contangent bundle $$T^\*(M\oplus \Reals)$$, with a closed 2-form $$\omega \in \bigwedge^2T^\*N$$. $$N$$-isomorphisms in this category preserve $$\omega$$.
 
-That  $$d\omega = 0$$ is a local integrability condition for a potential $$\theta = d\omega$$, but there may be topological constraints on its global integrability.
+Requiring $$d\omega = 0$$ is a local integrability condition for a potential $$\theta = d\omega$$, but there may be topological constraints on its global integrability.
 
-What we care about for dynamics is the Action $$\mathcal S(\gamma) = \int_\gamma \theta$$, so we focus on cotangent bundles in this article. Here, an appropriate $$\theta$$ is trivial to classify in terms of a function $$\mathcal H$$ on $$N$$.  Of couse, a Wick-Rotated $$\theta$$ on the universal cover of $$N$$ may sometimes be finessed with integrability conditions on its *phase*, in order to provide consistent values of $$e^\mathcal S$$ that descend to $$N$$.
+What we care about for dynamics is the Action $$\mathcal S(\gamma) = \int_\gamma \theta$$, so we focus on cotangent bundles in this article. Here, an appropriate $$\theta$$ is trivial to classify in terms of a function $$\mathcal H$$ on $$N$$.  Of couse, a Wick-rotated $$\theta$$ on the universal cover of $$N$$ may sometimes be finessed with integrability conditions on its *phase*, in order to provide consistent values of $$e^\mathcal S$$ that descend to $$N$$.
 
 #### The natural symplectic volume form $$\omega^n/n!$$
 
@@ -208,7 +208,7 @@ needs interpretation as *a measure on some $$\set{\tilde \gamma}$$*, but this co
 
 ### The Value of the Action Matters
 
-Not to put too fine a point on it, but Classical Mechanics defines the Action as a means to an end.  It never concerned itself with coming to any understanding of what its actual value **meant**.  We just use it to contruct requisite differential equations so we can think of $$\mathcal S$$ as transition function between its endpoints via *stationary cureves*.  The stationary requirement allowed us to think of $$\mathcal S$$ as a function of its endpoints, but we never cared about its actual value.
+Not to put too fine a point on it, but Classical Mechanics defines the Action as a means to an end.  It never concerned itself with coming to any understanding of what its actual value **meant**.  We just use it to contruct requisite differential equations so we can think of $$\mathcal S$$ as transition function between its endpoints via *stationary curves*.  The stationary requirement allowed us to think of $$\mathcal S$$ as a function of its endpoints, but we never cared about its actual value.
 
 Well We Do in Quantum Dynamics!
 
