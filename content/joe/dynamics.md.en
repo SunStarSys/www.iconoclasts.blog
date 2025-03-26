@@ -100,12 +100,12 @@ Note: the convexity constraint on $$\mathcal H$$ ensures there is a unique $$p_{
 
 #### Quadratic Form Magic, Part 1
 
-When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a pseudo-Riemannian metric $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$ with inverse $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$. The Legendre Transform in local coordinates relates them as so:
+When $$\mathcal H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a pseudo-Riemannian metric $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$ with inverse $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$. The Legendre Transform in local coordinates relates them as so:
 
 ```math
 \begin{aligned}
-\mathcal H(p,q,t) &= \frac{1}{2}\ g^{ij}(q,t)\ p_ip_j + \mathcal V(q,t) \implies\\
-\mathcal{L}(q,\dot q, t) &= \frac{1}{2}\ g_{ij}(q,t)\dot{q}^i\dot{q}^j - \mathcal V(q,t)\ .
+\mathcal H^\mathcal V(p,q,t) &= \frac{1}{2}\ g^{ij}(q,t)\ p_ip_j + \mathcal V(q,t) \implies\\
+\mathcal{L}^\mathcal V(q,\dot q, t) &= \frac{1}{2}\ g_{ij}(q,t)\dot{q}^i\dot{q}^j - \mathcal V(q,t)\ .
 \end{aligned}
 ```
 
