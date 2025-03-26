@@ -185,7 +185,11 @@ These are exactly **Newton's Laws of Motion** $$F/m = a$$ with $$\partial_t := \
 
 ### Symplectic Geometry
 
-A symplectic manifold $$N$$ is an abtraction of the contangent bundle $$T^\*(M\oplus \Reals)$$, with a closed 2-form $$\omega \in \bigwedge^2T^\*N,\ d\omega=0$$. $$N$$-Isomorphisms in this category preserve $$\omega$$.
+A symplectic manifold $$N$$ is an abtraction of the contangent bundle $$T^\*(M\oplus \Reals)$$, with a closed 2-form $$\omega \in \bigwedge^2T^\*N$$. $$N$$-Isomorphisms in this category preserve $$\omega$$.
+
+That  $$d\omega = 0$$ is a local integrability condition for a potential $$\theta = d\omega$$, but there may be topological constraints on its global integrability.
+
+What we care about for dynamics is the Action $$S(\gamma) = int_\gamma \theta$$, so we focus on cotangent bundles in this article. Here, an appropriate $$\theta$$ is trivial to classify in terms of a fuction $$\mathcal H$$ on $$N$$.
 
 #### The natural volume form $$\omega^n/n!$$
 
