@@ -210,7 +210,7 @@ Hence, with a Wick rotation and rescale by the Planck constant $$\hbar = h/2\pi$
 \end{aligned}
 ```
 
-so when we want to approximate the right-hand-side of Equation <span class="eqno"></span> using the method of stationary phase (aka the semi-classical limit), we need to remember to solve the Euler-Lagrange Equations $$(C)$$ with $$\mathcal V \mapsto \hbar^2 \mathcal V\approx 0$$,
+so when we want to approximate the right-hand-side of Equation <span class="eqno"></span> using the method of stationary phase (aka the semi-classical limit), we need to remember to solve the Euler-Lagrange Equations $$(C)$$ with $$\mathcal V \mapsto - \hbar^2 \mathcal V\approx 0$$,
 
 ### Feynman-Kac Formula
 #### Hamiltonian Formulation
