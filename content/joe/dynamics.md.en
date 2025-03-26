@@ -167,7 +167,7 @@ Since $$\frac{\partial \mathcal H}{\partial p_i}(p,q,t) = g^{ij}p_j \implies \fr
 
 When $$g^{ij}$$ is positive-definite, so is its inverse, which implies the Kinetic Energy Component of $$\mathcal S_\mathcal L(\tilde\gamma) = \mathcal S_\mathcal H(\mathcal A\circ\tilde\gamma)$$ is locally **minimized** on stationary curves involving true Riemannian metrics.
 
-By Equation (12), the Euler-Lagrange Equations for $$\mathcal L^\mathcal V_\mathcal B$$become:
+By Equation (12), the Euler-Lagrange Equations for $$\mathcal L^\mathcal V_\mathcal B$$ become:
 
 ```math
 \begin{aligned}
@@ -188,7 +188,7 @@ A symplectic manifold $$N$$ is an abtraction of the contangent bundle $$T^\*(M\o
 
 Requiring $$d\omega = 0$$ is a local integrability condition for a potential $$\theta = d\omega$$, but there may be topological constraints on its global integrability.
 
-What we care about for dynamics is the Action $$\mathcal S(\gamma) = \int_\gamma \theta$$, so we focus on cotangent bundles in this article. Here, an appropriate $$\theta$$ is trivial to classify in terms of a function $$\mathcal H$$ on $$N$$.  Of course, a Wick-rotated $$\theta$$ on the universal cover of $$N$$ may sometimes be finessed with integrability conditions on its *phase*, in order to provide consistent values of $$e^\mathcal S$$ that descend to $$N$$.
+What we care about for dynamics is the Action $$\mathcal S(\gamma) = \int_\gamma \theta$$, so we focus on cotangent bundles in this article. Here, an appropriate $$\theta$$ is trivial to classify in terms of a function $$\mathcal H$$ on $$N$$.  Of course, a Wick-rotated $$\theta$$ on the universal cover of $$N$$ may sometimes be finessed with integrability conditions on its *phase* (e.g. think of \theta as having values in a complex-line-bundle over $$N$$, and focus on its imaginary part), in order to provide consistent values of $$e^\mathcal S$$ that descend to $$N$$.
 
 #### The natural symplectic volume form $$\omega^n/n!$$
 
