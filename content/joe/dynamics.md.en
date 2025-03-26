@@ -98,7 +98,7 @@ Now we have, for **any** "projected" smooth curve (not just stationary ones) $$\
 
 Note: the convexity constraint on $$\mathcal H$$ ensures there is a unique $$p_{max}(0)$$ on any such stationary curve wiith $$\dot q = 0$$.  The net of this is that stationary curves $$\gamma$$ *do not have sustained movement contained within a fiber of* $$\pi^{-1}$$, so without loss of generality we simply consider non-stationary $$\tilde \gamma$$ and lift them with $$\mathcal A$$ as a suitable class of curves to "integrate over" later on.
 
-#### Quadratic Form Magic
+#### Quadratic Form Magic, Part 1
 
 When $$H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a pseudo-Riemannian metric $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$ with inverse $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$. The Legendre Transform in local coordinates relates them as so:
 
@@ -182,7 +182,6 @@ By Equation (12), the Euler-Lagrange Equations for $$\mathcal L_\mathcal B$$beco
 
 These are exactly **Newton's Laws of Motion** $$F/m = a$$ with $$\partial_t := \frac{\partial}{\partial t}$$ subject to a potential energy $$\mathcal V$$ and velocity field $$\mathcal B$$, in a time dependent setting.
 
-
 ### Symplectic Geometry
 
 A symplectic manifold $$N$$ is an abtraction of the contangent bundle $$T^\*(M\oplus \Reals)$$, with a closed 2-form $$\omega \in \bigwedge^2T^\*N$$. $$N$$-Isomorphisms in this category preserve $$\omega$$.
@@ -236,7 +235,7 @@ So when we want to approximate the right-hand-side of Equation <span class="eqno
 
 ##### Semiclassical Asymptotics are an Exact Solution on Flat Manifolds
 
-#### Fourier Transform and the Cameron-Martin Formula
+#### The Geometric Cameron-Martin Formula (aka Quadratic Form Magic, Part 2)
 
 
 With $$V \in C^\infty(M)$$, by the Baker-Campbell-Hausdorff Formula:
