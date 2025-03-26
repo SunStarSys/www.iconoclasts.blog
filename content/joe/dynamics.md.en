@@ -196,6 +196,22 @@ What we care about for dynamics is the Action $$\mathcal S(\gamma) = \int_\gamma
 
 ## Quantum Dynamics
 
+If Classical Dynamics is about finding curves that satisfy the Principle of Least Action, Quantum Dynamics is about the exponential of the Action as we integrate its value over an entire class of (typically) non-stationary curves, with a suitable limiting notion of an "infinite dimensional" Lebesgue Measure.
+
+In reality, only the Gaussian "coupling"
+
+```math
+\int_{\set{\tilde \gamma}} e^{\mathcal -S_\mathcal L(\gamma)}D_t\gamma
+```
+
+need be interpretation as a measure on $$\{set{\tilde \gamma}}$$, but this constrution, as a series of increasingly complex examples, will be our focus going forward.
+
+### The Value of the Action Matters
+
+Not to put too fine a point on it, but Classical Mechanics defines the Action as a means to an end.  It never concerned itself with coming to any understanding of what its actual value **meant**.  We just use it to contruct requisite differential equations so we can think of $$\mathcal S$$ as transition function between its endpoints via *stationary cureves*.  The stationary requirement allowed us to think of $$\mathcal S$$ as a function of its endpoints, but we never cared about its actual value.
+
+But We Do in Quantum Dynamics!
+
 ### Natural (Covariant) Path Integral Quantization
 
 By completing the square and the translation invariance of Lebesgue Measure (in a fiber of $$T^\*M$$), recall that:
@@ -228,8 +244,6 @@ So when we want to approximate the right-hand-side of Equation <span class="eqno
 ### Feynman-Kac Formula
 
 #### The Parallel Transport Operator $$\hat\Gamma$$
-
-#### The Value of the Action Matters
 
 #### Semiclassical Mechanics
 
