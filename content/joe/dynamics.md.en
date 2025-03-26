@@ -200,12 +200,12 @@ so the **Feynman Path Integral** expressions are morally equivalent in the quadr
  \end{aligned}
 ```
 
-Hence, with a Wick rotation and a vector rescale by the Planck constant $$\hbar = h/2\pi$$, sending $$dt\mapsto i \hbar dt, \ p\mapsto \hbar p, \ \dot q\mapsto \dot q/\hbar,\  \mathcal B\mapsto \mathcal B/\hbar$$:
+Hence, with a Wick rotation and a vector rescale by the Planck constant $$\hbar = h/2\pi$$, sending $$dt\mapsto \hbar/i\ dt, \ p\mapsto \hbar p, \ \dot q\mapsto \dot q/\hbar,\  \mathcal B\mapsto \mathcal B/\hbar$$:
 
 ```math
 \begin{aligned}
-\int_{\set{\gamma}}e^{i\hbar S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}D_\hbar\gamma &\approx \int_{\set{\tilde\gamma}} e^{-i\hbar \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{-\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}D_{i\hbar dt}\tilde\gamma\\
-&= \int_{\set{\tilde \gamma}}e^{-\frac{i}{\hbar}\mathcal S_{\mathcal L^{-\hbar^2 \mathcal V}_{\mathcal B}}(\tilde \gamma)}D_{i\hbar dt}\tilde\gamma\ .
+\int_{\set{\gamma}}e^{-i\hbar S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}D_\hbar\gamma &\approx \int_{\set{\tilde\gamma}} e^{i\hbar \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{-\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}D_{\hbar/i\ dt}\tilde\gamma\\
+&= \int_{\set{\tilde \gamma}}e^{\frac{i}{\hbar}\mathcal S_{\mathcal L^{-\hbar^2 \mathcal V}_{\mathcal B}}(\tilde \gamma)}D_{\hbar/i\ dt}\tilde\gamma\ .
 
 \end{aligned}
 ```
@@ -245,7 +245,14 @@ i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mat
 
 \end{aligned}
 ```
-as lineear differential operators.
+as lineear differential operators. The point is that the solution is **analytic** in $$t$$ on the upper half-plane, and $$dt\mapsto i/\hbar\ dt$$ is its Wick-Unrotated boundary value:
+
+```math
+\frac{d}{dt}e^{-t\bar H}\ket{\psi} = (\frac{1}{2}\Delta_M - \mathcal V) e^{-t\bar H}\ket{\psi} \ .
+
+```
+
+This is a bone-standard diffusion equation amenable to sample-path-based Stochastic Analysis.
 
 #### The Scalar Curvature Path Integral Delta
 
