@@ -245,7 +245,7 @@ So when we want to approximate the right-hand-side of Equation <span class="eqno
 
 ```math
 \begin{aligned}
-\mathcal H &\ = \mathcal T + \mathcal V \implies \\
+\mathcal H(p,q) &\ = \mathcal T(p,q) + \mathcal V(q) \implies \\
 
 e^{-it/\hbar \hat{\mathcal H}}\ket{\psi} &:= e^{-it/\hbar(-\frac{\hbar^2}{2} \Delta_M + \mathcal V)} \ket{\psi} \implies \\
 
