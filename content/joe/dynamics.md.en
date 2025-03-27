@@ -18,6 +18,7 @@ Prerequisites:
 ## Classical Dynamics
 
 ### Hamilton-Jacobi / Lagrange Formalism
+
 ### The Mechanics of Cotangent Bundles
 
 Define the smooth **Hamiltonian** $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ as $$\mathcal H(p,q,t)$$.
@@ -260,7 +261,7 @@ i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mat
 
 ```
 
-This is form amenable to sample-path-based Stochastic Analysis, and gives us a meaningful way of aligning Feynman Path-Integrals with the analytic continuation of solutions to elliptic PDE's to its entire right half-plane.  In essence, we have an analytic map from the right half plane into a set of bounded linear operators on $$L^2(M,g)$$, and the Schrödinger Equation's Unitary Evolution operator is its boundary value on the imaginary line $$it\hbar\ ,t\in\Reals$$.
+This is a form amenable to sample-path-based Stochastic Analysis, and gives us a meaningful way of aligning Feynman Path-Integrals with the analytic continuation of solutions to elliptic PDE's to its entire right half-plane.  In essence, we will have a well-defined "path-integral-based" analytic map from the right half plane into a set of bounded linear operators on $$\mathscr H = L^2(M,g)$$, and the Schrödinger Equation's Unitary Evolution operator is its boundary value on the imaginary line $$it\hbar\ ,t\in\Reals$$. While it helps to undertand von-Neumann's Spectral Theorem for the harmonic decomposition of closed, unbounded self-adjoint operators on $$\mathscr H$$, it's not required for the remainder of this article.
 
 In other words, it is enough to study the dynamics of Equation (16), once we have clarified the subtleties involved in an explicit definition of its suggestive path integral expression.
 
