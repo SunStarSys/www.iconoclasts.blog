@@ -241,29 +241,6 @@ Hence, with a **Wick rotation and a vector rescale by the Planck constant** $$\h
 
 So when we want to approximate the right-hand-side of Equation <span class="eqno"></span> using the method of stationary phase (aka the semi-classical limit), we need to remember to solve the Euler-Lagrange Equations (14) $$(C)$$ with $$\mathcal V \mapsto - \hbar^2 \mathcal V\approx 0$$.
 
-### Feynman-Kac Formula
-
-With $$V \in C^\infty(M)$$, by the Baker-Campbell-Hausdorff Formula:
-```math
-e^{-it/\hbar -\Delta_M/2} e^{-it/\hbar V} = e^{-it/\hbar(-\Delta_M /2 + V - it/4\hbar [\Delta_M,V] + O(t^2))}
-```
-
-The Feynman-Kac Formula follows from the path-integral formulation for Brownian Motion in Euclidean space. The upshot of this is that we can focus on the $$\mathcal V = 0$$ case, so we will going forward.
-
-#### The Parallel Transport Isometry $$\hat\Gamma$$
-
-#### Semiclassical Mechanics
-
-##### Semiclassical Asymptotics are an Exact Solution on Flat Manifolds
-
-#### The Geometric Cameron-Martin Formula (aka Quadratic Form Magic, Part 2)
-
-##### The Development Map
-
-##### $$\hat\Gamma^{-1}$$ as the Inverse of the Development Map
-
-### Observables, Evolution Equation, and Lie Algebras
-
 ### Schrödinger Quantization
 
 ```math
@@ -288,6 +265,29 @@ This is form amenable to sample-path-based Stochastic Analysis, and gives as an 
 In other words, it is enough to study the dynamics of Equation (16), once we have clarified the subtleties involved in an explicit definition of its suggestive path integral expression.
 
 Instead of reinventing the Itô/Stratonovich/Malliavin SDE semimartingale calculus out of whole-cloth, we are going to proceed with a series of simple (flat-metric) examples that will carry us into the general theory.
+
+### Feynman-Kac Formula
+
+With $$V \in C^\infty(M)$$, by the Baker-Campbell-Hausdorff Formula:
+```math
+e^{-it/\hbar -\Delta_M/2} e^{-it/\hbar V} = e^{-it/\hbar(-\Delta_M /2 + V - it/4\hbar [\Delta_M,V] + O(t^2))}
+```
+
+The Feynman-Kac Formula follows from the path-integral formulation for Brownian Motion in Euclidean space. The upshot of this is that we can focus on the $$\mathcal V = 0$$ case, so we will going forward.
+
+#### The Parallel Transport Isometry $$\hat\Gamma$$
+
+#### Semiclassical Mechanics
+
+##### Semiclassical Asymptotics are an Exact Solution on Flat Manifolds
+
+#### The Geometric Cameron-Martin Formula (aka Quadratic Form Magic, Part 2)
+
+##### The Development Map
+
+##### $$\hat\Gamma^{-1}$$ as the Inverse of the Development Map
+
+### Observables, Evolution Equation, and Lie Algebras
 
 #### The Scalar Curvature Path Integral Delta
 
