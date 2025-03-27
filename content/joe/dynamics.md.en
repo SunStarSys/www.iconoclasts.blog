@@ -100,7 +100,7 @@ Note: the convexity constraint on $$\mathcal H$$ ensures there is a unique $$p_{
 
 #### Quadratic Form Magic, Part 1
 
-When $$\mathcal H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a pseudo-Riemannian metric $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$ with inverse $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$. The Legendre Transform in local coordinates relates them as so:
+When $$\mathcal H(p,q,t)$$'s $$p$$-dependence (aka the Kinetic Energy component) is a non-degenerate, symmetric quadratic form, we may represent it as a pseudo-Riemannian metric $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$ with inverse $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$. The Legendre Transform in local coordinates relates them as so:
 
 ```math
 \begin{aligned}
