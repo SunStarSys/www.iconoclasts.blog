@@ -202,10 +202,10 @@ If Classical Dynamics is about finding curves that satisfy the Principle of Leas
 In reality, only the Gaussian "coupling"
 
 ```math
-\int_{\set{\tilde \gamma}} e^{\mathcal -S_{\mathcal L_\mathcal B^{-\mathcal V}}(\gamma)}D_{dt}\gamma
+\int_{\set{\tilde \gamma}} e^{\mathcal -S_{\mathcal L_\mathcal B^{-\mathcal V}}(\gamma)}\mathcal D_{dt}\gamma
 ```
 
-needs interpretation as *a (complex-valued) measure on some $$\set{\tilde \gamma}$$*, but this construction, as a series of increasingly sophisticated examples, will be our focus going forward.  Whatever that set turns out to be, it will be clear that the actual value of $$\mathcal S$$ on those curves will infinity, to *cancel the infinity* of the "Time Division Normalizer" inherent in the $$dt$$ elements of $$D_{dt}\gamma$$. There are several choices involved in constructing the approximations that impact the convergence of the approximations, but we will sidestep all of them by focusing on the geometic invariance of trivially computable cases.
+needs interpretation as *a (complex-valued) measure on some $$\set{\tilde \gamma}$$*, but this construction, as a series of increasingly sophisticated examples, will be our focus going forward.  Whatever that set turns out to be, it will be clear that the actual value of $$\mathcal S$$ on those curves will infinity, to *cancel the infinity* of the "Time Division Normalizer" inherent in the $$dt$$ elements of $$\mathcal D_{dt}\gamma$$. There are several choices involved in constructing the approximations that impact the convergence of the approximations, but we will sidestep all of them by focusing on the geometic invariance of trivially computable cases.
 
 ### The Value of the Action Matters
 
@@ -224,9 +224,9 @@ so the **Feynman Path Integral** expressions are morally equivalent in the quadr
 
 ```math
 \begin{aligned}
-\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H^\mathcal V_\mathcal B} (\gamma)} D\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H^\mathcal V_\mathcal B(p,q,t))\Delta t}\omega_0^n/n!\\
+\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H^\mathcal V_\mathcal B} (\gamma)} \mathcal D\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H^\mathcal V_\mathcal B(p,q,t))\Delta t}\omega_0^n/n!\\
 &= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{-\mathcal L^{-\mathcal V}_\mathcal B(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
-&\approx \int_{\set{\tilde \gamma}} e^{\mathcal -S_{\mathcal L^{-\mathcal V}_\mathcal B}(\tilde \gamma)} D_{dt}\tilde \gamma \ .
+&\approx \int_{\set{\tilde \gamma}} e^{\mathcal -S_{\mathcal L^{-\mathcal V}_\mathcal B}(\tilde \gamma)} \mathcal D_{dt}\tilde \gamma \ .
  \end{aligned}
 ```
 
@@ -234,8 +234,8 @@ Hence, with a **Wick rotation and a vector rescale by the Planck constant** $$\h
 
 ```math
 \begin{aligned}
-\int_{\set{\gamma}}e^{-i\hbar S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}D_\hbar\gamma &\approx \int_{\set{\tilde\gamma}} e^{i\hbar \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{-\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}D_{\hbar/i\ dt}\tilde\gamma\\
-&= \int_{\set{\tilde \gamma}}e^{\frac{i}{\hbar}\mathcal S_{\mathcal L^{-\hbar^2 \mathcal V}_{\mathcal B}}(\tilde \gamma)}D_{\hbar/i\ dt}\tilde\gamma\ .
+\int_{\set{\gamma}}e^{-i\hbar S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}\mathcal D_\hbar\gamma &\approx \int_{\set{\tilde\gamma}} e^{i\hbar \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{-\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\\
+&= \int_{\set{\tilde \gamma}}e^{\frac{i}{\hbar}\mathcal S_{\mathcal L^{-\hbar^2 \mathcal V}_{\mathcal B}}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\ .
 
 \end{aligned}
 ```
@@ -261,9 +261,9 @@ i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mat
 
 ```
 
-This is a form amenable to sample-path-based Stochastic Analysis, and gives us a meaningful way of aligning Feynman Path-Integrals with the analytic continuation of solutions to elliptic diffusion equations to its entire right half-plane.  In essence, we will have a well-defined "measure-theoretic" analytic map from the right half plane into a set of bounded linear operators on $$\mathscr H = L^2(M,g)$$, and the Schrödinger Equation's Unitary Evolution operator is its boundary value on the imaginary line $$it\hbar\ ,t\in\Reals$$. While it helps to undertand von-Neumann's Spectral Theorem for the harmonic decomposition of closed, unbounded self-adjoint operators on $$\mathscr H$$, it's not required for the remainder of this article.
+This is a form amenable to sample-path-based Stochastic Analysis, and gives us a meaningful way of aligning Feynman Path-Integrals with the analytic continuation of solutions to elliptic diffusion equations to its entire right half-plane.  In essence, we will have a well-defined "measure-theoretic" analytic map from the right half plane into a set of bounded linear operators on $$\mathscr H = L^2(M,g)$$, and the Schrödinger Equation's Unitary Evolution operator is its boundary value on the imaginary line $$it\hbar\ ,t\in\Reals$$. While it helps to understand von-Neumann's Spectral Theorem for the harmonic decomposition of closed, unbounded self-adjoint operators on $$\mathscr H$$, it's not required for the remainder of this article.
 
-In other words, it is enough to study the dynamics of Equation (16), once we have clarified the subtleties involved in an explicit definition of its suggestive path integral expression.
+In other words, it is enough to study the dynamics of Equation (17), once we have clarified the subtleties involved in an explicit definition of its suggestive path integral expression.
 
 Instead of reinventing the Itô/Stratonovich/Malliavin SDE semimartingale calculus out of whole-cloth, we are going to proceed with a series of simple (flat-metric) examples that will carry us into the general theory.
 
