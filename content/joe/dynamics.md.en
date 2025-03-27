@@ -40,16 +40,16 @@ by Stokes' Theorem.
 
 Regardless of whether or not such a surface $$S$$ actually exists, for the action $$\mathcal S_\mathcal H$$ to only depend on the endpoints of $$\gamma$$, we necessarily must have the first order condition that $$d\theta$$ vanish on $$\gamma$$.
 
-#### Let $$\omega := d\theta = dp\wedge dq - d\mathcal H \wedge dt\in\bigwedge^2T^\*(T^\*M\oplus\Reals)$$.
+#### Let $$\omega_\mathcal H := d\theta = dp\wedge dq - d\mathcal H \wedge dt\in\bigwedge^2T^\*(T^\*M\oplus\Reals)$$.
 
 ```math
 \begin{aligned}
-\omega|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial \mathcal H}{\partial p}dp\wedge dt - \frac{\partial \mathcal H}{\partial q}dq\wedge dt \\
+\omega_\mathcal H|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial \mathcal H}{\partial p}dp\wedge dt - \frac{\partial \mathcal H}{\partial q}dq\wedge dt \\
         &= (-\dot{p}_i - \frac{\partial \mathcal H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial \mathcal H}{\partial p_i}) dp_i\wedge dt
 \end{aligned}
 ```
 
-#### $$\therefore \omega|_\gamma = 0 \iff \gamma(t)$$ satisfies the Hamilton-Jacobi Equations
+#### $$\therefore \omega_\mathcal H|_\gamma = 0 \iff \gamma(t)$$ satisfies the Hamilton-Jacobi Equations
 ```math
 \begin{aligned}
 \dot p &= -\frac{\partial \mathcal H}{\partial q} \\
@@ -81,7 +81,7 @@ In general, this claim is **false**. But the set stationary curves of $$\mathcal
 
 which is a second-order ODE in $$t \mapsto q(t)$$, so has $$2\dim M+1$$ initial conditions $$(\dot q_0, q_0, t_0)$$, just as with the contravariant Hamilton-Jacobi Equations. By the Picard-Lindelöf Theorem, these equations have locally unique solutions when framed as an intial value problem.
 
-However, an interesting aspect of $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ reveals itself when we can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to *transform this boundary-value problem into an initial-value problem*. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a (unique?) stationary curve $$\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.  Locally, this is an application of the Implicit Function Theorem, but globally, there may be topological obstructions to constructing any such $$\gamma$$.
+However, an interesting aspect of $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ reveals itself when we can uniquely define $$\pi\circ\gamma$$ implicitly based on the endpoints $$(q_0, t_0)$$ and $$(q_f, t_f)$$, so we need to *transform this boundary-value problem into an initial-value problem*. In other words, we must solve for a $$\dot q_0$$ that will hit the target $$(q_f, t_f)$$ with a (unique?) stationary curve $$\pi\circ\gamma$$ which solves the Euler-Lagrange Equations. In this way we can think of $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ as a **transition function**, assuming it does not depend on the choice of stationary $$\pi\circ\gamma$$, and such a $$\gamma$$ actually exists in the Solution Space of smooth curves connecting the pair of transition points.  Locally, this is an application of the Implicit Function Theorem, but globally, there may be topological obstructions to constructing any such $$\gamma$$.
 
 Let's take a step back and define something simpler: a unique "horizontal" lift $$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q}^{\*}M\oplus \Reals$$ by assigning
 
@@ -224,7 +224,7 @@ so the **Feynman Path Integral** expressions are morally equivalent in the quadr
 
 ```math
 \begin{aligned}
-\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H^\mathcal V_\mathcal B} (\gamma)} D\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H^\mathcal V_\mathcal B(p,q,t))\Delta t}\omega^n/n!\\
+\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H^\mathcal V_\mathcal B} (\gamma)} D\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H^\mathcal V_\mathcal B(p,q,t))\Delta t}\omega_0^n/n!\\
 &= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{-\mathcal L^{-\mathcal V}_\mathcal B(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
 &\approx \int_{\set{\tilde \gamma}} e^{\mathcal -S_{\mathcal L^{-\mathcal V}_\mathcal B}(\tilde \gamma)} D_{dt}\tilde \gamma \ .
  \end{aligned}
@@ -261,7 +261,7 @@ i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mat
 
 ```
 
-This is a form amenable to sample-path-based Stochastic Analysis, and gives us a meaningful way of aligning Feynman Path-Integrals with the analytic continuation of solutions to elliptic diffusion equations to its entire right half-plane.  In essence, we will have a well-defined "path-integral-based" analytic map from the right half plane into a set of bounded linear operators on $$\mathscr H = L^2(M,g)$$, and the Schrödinger Equation's Unitary Evolution operator is its boundary value on the imaginary line $$it\hbar\ ,t\in\Reals$$. While it helps to undertand von-Neumann's Spectral Theorem for the harmonic decomposition of closed, unbounded self-adjoint operators on $$\mathscr H$$, it's not required for the remainder of this article.
+This is a form amenable to sample-path-based Stochastic Analysis, and gives us a meaningful way of aligning Feynman Path-Integrals with the analytic continuation of solutions to elliptic diffusion equations to its entire right half-plane.  In essence, we will have a well-defined "measure-theoretic" analytic map from the right half plane into a set of bounded linear operators on $$\mathscr H = L^2(M,g)$$, and the Schrödinger Equation's Unitary Evolution operator is its boundary value on the imaginary line $$it\hbar\ ,t\in\Reals$$. While it helps to undertand von-Neumann's Spectral Theorem for the harmonic decomposition of closed, unbounded self-adjoint operators on $$\mathscr H$$, it's not required for the remainder of this article.
 
 In other words, it is enough to study the dynamics of Equation (16), once we have clarified the subtleties involved in an explicit definition of its suggestive path integral expression.
 
