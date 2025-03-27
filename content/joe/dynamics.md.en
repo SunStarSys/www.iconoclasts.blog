@@ -130,7 +130,7 @@ with $$\partial_i := \frac{\partial}{\partial q^i}$$ and $$\partial^i := g^{ij}\
 
 for all tensor fields. In particular, $$\nabla [g_{ij}] = \nabla [g^{ij}] = 0$$.
 
-Correspondingly, the Riemann-Christoffel Curvature Tensor is
+Anecdotally, the Riemann-Christoffel Curvature Tensor is
 
 ```math
 R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
