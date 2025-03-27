@@ -245,7 +245,7 @@ So when we want to approximate the right-hand-side of Equation <span class="eqno
 
 With $$V \in C^\infty(M)$$, by the Baker-Campbell-Hausdorff Formula:
 ```math
-e^{it-\Delta_M/2} e^{itV} = e^{it(-\Delta_M /2 + V - it/4[\Delta_M,V] + O(t^2))}
+e^{-it/\hbar -\Delta_M/2} e^{-it/\hbar V} = e^{-it/\hbar(-\Delta_M /2 + V - it/4\hbar [\Delta_M,V] + O(t^2))}
 ```
 
 The Feynman-Kac Formula follows from the path-integral formulation for Brownian Motion in Euclidean space. The upshot of this is that we can focus on the $$\mathcal V = 0$$ case, so we will going forward.
