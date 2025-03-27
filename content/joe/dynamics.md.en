@@ -266,6 +266,8 @@ In other words, it is enough to study the dynamics of Equation (16), once we hav
 
 Instead of reinventing the Itô/Stratonovich/Malliavin SDE semimartingale calculus out of whole-cloth, we are going to proceed with a series of simple (flat-metric) examples that will carry us into the general theory.
 
+At the end of the day, we will want the Feynman Path-Integral Quantization to match the Schrödinger Quantization, or at least to understand the deviation.
+
 ### Feynman-Kac Formula
 
 With $$V \in C^\infty(M)$$, by the Baker-Campbell-Hausdorff Formula:
