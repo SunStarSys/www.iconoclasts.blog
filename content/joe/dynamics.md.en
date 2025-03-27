@@ -245,10 +245,10 @@ So when we want to approximate the right-hand-side of Equation <span class="eqno
 
 With $$V \in C^\infty(M)$$, by the Baker-Campbell-Hausdorff Formula:
 ```math
-e^{it\Delta_M} e^{itV} = e^{it(\Delta_M + V + t/2[\Delta_M,V] + O(t^2))}
+e^{it\Delta_M} e^{itV} = e^{it(\Delta_M + V + it/2[\Delta_M,V] + O(t^2))}
 ```
 
-The Feynman-Kac Formula follows from the path-integral formulation for Brownian Motion.
+The Feynman-Kac Formula follows from the path-integral formulation for Brownian Motion in Euclidean space. The upshot of this is that we can focus on the $$\mathcal V = 0$$ case, so we will going forward.
 
 #### The Parallel Transport Isometry $$\hat\Gamma$$
 
