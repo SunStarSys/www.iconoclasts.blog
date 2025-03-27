@@ -245,7 +245,7 @@ So when we want to approximate the right-hand-side of Equation <span class="eqno
 
 ```math
 \begin{aligned}
-\mathcal H(p,q) &\ = \mathcal T(p,q) + \mathcal V(q) \implies \\
+\mathcal H(p,q) &\ = \mathcal T(p,q) + \mathcal V(q)\ \text {, where } \mathcal T = \frac{1}{2}g^{ij}(q)p_ip_j \implies \\
 
 e^{-it/\hbar \hat{\mathcal H}}\ket{\psi} &:= e^{-it/\hbar(-\frac{\hbar^2}{2} \Delta_M + \mathcal V)} \ket{\psi} \implies \\
 
@@ -253,14 +253,14 @@ i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mat
 
 \end{aligned}
 ```
-as lineear differential operators. The point is that the solution is **analytic** in $$t$$ on the upper half-plane, and $$dt\mapsto i/\hbar\ dt,\ p\mapsto p/\hbar $$ is its Wick-unrotated diffusion equation:
+($$\Delta_M$$ is the Laplace-Beltrami Operator) as linear differential operators. The point is that the solution is **analytic** in $$t$$ on the upper half-plane, and $$dt\mapsto i/\hbar\ dt,\ p\mapsto p/\hbar $$ is its Wick-unrotated diffusion equation:
 
 ```math
 \frac{d}{dt}e^{-t\hat H}\ket{\psi} = (\frac{1}{2}\Delta_M - \mathcal V) e^{-t\hat H}\ket{\psi} \ .
 
 ```
 
-This is form amenable to sample-path-based Stochastic Analysis, and gives as an meaningful way of aligning Feynman Path-Integrals with the analytic continuation of solutions to elliptic PDE's to its entire right half-plane.
+This is form amenable to sample-path-based Stochastic Analysis, and gives us a meaningful way of aligning Feynman Path-Integrals with the analytic continuation of solutions to elliptic PDE's to its entire right half-plane.  In essence, we have an analytic map from the right half plane into a set of bounded linear operators on $$L^2(M,g)$$, and the Schrodinger Equation's Unitary Evolution operator is its boundary value on the imaginary line $$it\hbar\ ,t\in\Reals$$.
 
 In other words, it is enough to study the dynamics of Equation (16), once we have clarified the subtleties involved in an explicit definition of its suggestive path integral expression.
 
