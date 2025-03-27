@@ -205,7 +205,7 @@ In reality, only the Gaussian "coupling"
 \int_{\set{\tilde \gamma}} e^{\mathcal -S_{\mathcal L_\mathcal B^{-\mathcal V}}(\gamma)}\mathcal D_{dt}\tilde \gamma
 ```
 
-needs interpretation as *a (complex-valued) measure on some $$\set{\tilde \gamma}$$*, but this construction, as a series of increasingly sophisticated examples, will be our focus going forward.  Whatever that set turns out to be, it will be clear that the actual value of $$\mathcal S$$ on those curves will infinity, to *cancel the infinity* of the "Time Division Normalizer" inherent in the $$dt$$ elements of $$\mathcal D_{dt}\tilde \gamma$$. There are several choices involved in constructing the approximations that impact the convergence of the approximations, but we will sidestep all of them by focusing on the geometic invariance of trivially computable cases.
+needs interpretation as *a (complex-valued) measure on some $$\set{\tilde \gamma}$$*, but this construction, as a series of increasingly sophisticated examples, will be our focus going forward.  Whatever that set turns out to be, it will be clear that the actual value of $$\mathcal S$$ on those curves will be $$\infty$$, to *cancel the $$\infty$$* of the "Time Division Normalizer" inherent in the $$dt$$ elements of $$\mathcal D_{dt}\tilde \gamma$$. There are several choices involved in constructing the approximations that impact the convergence of the approximations, but we will sidestep all of them by focusing on the geometic invariance of trivially computable cases.
 
 ### The Value of the Action Matters
 
@@ -288,12 +288,11 @@ The right-hand side of Equation (16) is the precise formulation of the Heat Kern
 
 This **is** the Heat Kernel for standard $$n$$-dimensional Brownian Motion.
 
-#### The DeWitt Scalar Curvature Path Integral Delta
+#### The DeWitt Scalar Curvature Path Integral Defect
 
-What if we tried to use "successive convolutions" on the semi-classical expression to construct Brownian Motion on a manifold by fiat?
+What if we tried to use "successive convolutions" on the semi-classical expression to construct Brownian Motion on a curved manifold by fiat?
 
-We'd get something, but it'd be almost Brownian Motion on curved spaces. It turns out there will be an effective potential function defect $$\mathcal V \propto \mathcal K$$, where $$\mathcal K$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's.
-
+We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$\mathcal V = \frac{1}{12}\mathcal R$$, where $$\mathcal R$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time aymptotics of the trace of the Heat Kernel.
 
 #### The Geometric Cameron-Martin Formula (aka Quadratic Form Magic, Part 2)
 
