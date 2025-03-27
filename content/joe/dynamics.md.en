@@ -129,7 +129,7 @@ with $$\partial_i := \frac{\partial}{\partial q^i}$$ and $$\partial^i := g^{ij}\
 \end{aligned}
 ```
 
-for all tensor fields. In particular, $$\nabla [g_{ij}] = \nabla [g^{ij}] = 0$$.
+for all tensor fields. In particular $$\Gamma$$ is symmetric in $$(i, j)$$; and  $$\nabla [g_{ij}] = \nabla [g^{ij}] = 0$$.
 
 Anecdotally, the Riemann-Christoffel Curvature Tensor is
 
@@ -185,11 +185,11 @@ These are exactly **Newton's Laws of Motion** $$F/m = a$$ with $$\partial_t := \
 
 ### Symplectic Geometry
 
-A symplectic manifold $$N$$ is an abtraction of the contangent bundle $$T^\*(M\oplus \Reals)$$, with a closed 2-form $$\omega \in \bigwedge^2T^\*N$$. $$N$$-isomorphisms in this category preserve $$\omega$$.
+A symplectic manifold $$N$$ is an abtraction of the contangent bundle $$T^\*(M\oplus \Reals)$$, with a closed, non-degenerate 2-form $$\omega \in \bigwedge^2T^\*N$$. $$N$$-isomorphisms in this category preserve $$\omega$$.
 
 Requiring $$d\omega = 0$$ is a local integrability condition for a potential $$\theta$$ satisfying $$d\theta = \omega$$, but there may be topological constraints on $$\omega$$'s global integrability.
 
-What we care about for dynamics is the Action $$\mathcal S(\gamma) = \int_\gamma \theta$$, so we focus on cotangent bundles in this article. Here, an appropriate $$\theta$$ is trivial to classify in terms of a function $$\mathcal H$$ on $$N$$.  Of course, a Wick-rotated $$\theta$$ on the universal cover of $$N$$ may sometimes be finessed with integrability conditions on its *phase* (e.g. think of $$\theta$$ as having values in a complex-line-bundle over $$N$$, and focus on its imaginary part), in order to provide consistent values of $$e^\mathcal S$$ that descend to $$N$$.
+What we care about for dynamics is the Action $$\mathcal S(\gamma) = \int_\gamma \theta$$, so we focus on cotangent bundles in this article. Here, an appropriate $$\theta$$ is trivial to classify in terms of a function $$\mathcal H$$ on $$N$$.  Of course, a Wick-rotated $$\theta$$ on the universal cover of $$N$$ may sometimes be finessed with integrability conditions on its *phase* (i.e. think of $$\theta$$ as having values in a complex-line-bundle over $$N$$, and focus on its imaginary part), in order to provide consistent values of $$e^\mathcal S$$ that descend to $$N$$.
 
 #### The natural symplectic volume form $$\omega^n/n!$$
 
@@ -261,7 +261,7 @@ i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mat
 
 ```
 
-This is a form amenable to sample-path-based Stochastic Analysis, and gives us a meaningful way of aligning Feynman Path-Integrals with the analytic continuation of solutions to elliptic PDE's to its entire right half-plane.  In essence, we will have a well-defined "path-integral-based" analytic map from the right half plane into a set of bounded linear operators on $$\mathscr H = L^2(M,g)$$, and the Schrödinger Equation's Unitary Evolution operator is its boundary value on the imaginary line $$it\hbar\ ,t\in\Reals$$. While it helps to undertand von-Neumann's Spectral Theorem for the harmonic decomposition of closed, unbounded self-adjoint operators on $$\mathscr H$$, it's not required for the remainder of this article.
+This is a form amenable to sample-path-based Stochastic Analysis, and gives us a meaningful way of aligning Feynman Path-Integrals with the analytic continuation of solutions to elliptic diffusion equations to its entire right half-plane.  In essence, we will have a well-defined "path-integral-based" analytic map from the right half plane into a set of bounded linear operators on $$\mathscr H = L^2(M,g)$$, and the Schrödinger Equation's Unitary Evolution operator is its boundary value on the imaginary line $$it\hbar\ ,t\in\Reals$$. While it helps to undertand von-Neumann's Spectral Theorem for the harmonic decomposition of closed, unbounded self-adjoint operators on $$\mathscr H$$, it's not required for the remainder of this article.
 
 In other words, it is enough to study the dynamics of Equation (16), once we have clarified the subtleties involved in an explicit definition of its suggestive path integral expression.
 
@@ -273,7 +273,7 @@ At the end of the day, we will want the Feynman Path-Integral Quantization to ma
 
 With $$V \in C^\infty(M)$$, by the Baker-Campbell-Hausdorff Formula:
 ```math
-e^{-it/\hbar -\Delta_M/2} e^{-it/\hbar V} = e^{-it/\hbar(-\Delta_M /2 + V - it/4\hbar [\Delta_M,V] + O(t^2))}
+e^{-it/\hbar -\Delta^\hbar_M/2} e^{-it/\hbar V} = e^{-it/\hbar(-\Delta^\hbar_M /2 + V - it/4\hbar [\Delta^\hbar_M,V] + O(t^2))}
 ```
 
 The Feynman-Kac Formula follows from the path-integral formulation for Brownian Motion in Euclidean space. The upshot of this is that we can focus on the $$\mathcal V = 0$$ case, so we will going forward.
