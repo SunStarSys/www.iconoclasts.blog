@@ -197,7 +197,7 @@ What we care about for dynamics is the Action $$\mathcal S(\gamma) = \int_\gamma
 
 ## Quantum Dynamics
 
-If Classical Dynamics is about finding curves that satisfy the Principle of Least Action, Quantum Dynamics is about the exponential of the Action as we integrate its value over an entire class of (typically) non-stationary curves, with a suitable limiting notion of an "infinite dimensional" Lebesgue Measure.
+If Classical Dynamics is about finding curves that satisfy the Principle of Least Action, Quantum Dynamics is about the exponential of the Action as we integrate its value over an entire class of (typically) non-stationary curves, with a suitable limiting notion of an "infinite dimensional" Lebesgue Measure $$\mathcal D\gamma$$,
 
 In reality, only the Gaussian "coupling"
 
@@ -283,6 +283,10 @@ The Feynman-Kac Formula follows from the path-integral formulation for Brownian 
 #### Semiclassical Mechanics
 
 ##### Semiclassical Asymptotics are an Exact Solution on Flat Manifolds
+
+The right-hand side of Equation (16) is the precise formulation of the Heat Kernel for constant-coefficient (in $$q$$ metrics $$g_{ij}$$.  Every flat manifold's universal cover is isometric to Euclidean space, where $$g_{ij} = \delta_{i-j}$$.
+
+This **is** the Heat Kernel for standard $$n$$-dimensional Brownian Motion.
 
 #### The Geometric Cameron-Martin Formula (aka Quadratic Form Magic, Part 2)
 
