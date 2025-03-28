@@ -134,7 +134,7 @@ for all tensor fields. In particular $$\Gamma$$ is symmetric in $$(i, j)$$; and 
 Anecdotally, the Riemann-Christoffel Curvature Tensor is
 
 ```math
-R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
+\mathcal R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
 ```
 
 ##### Lagrange Multipliers on $$\mathcal H$$ as Infinitesimal Translations on $$\mathcal L$$
@@ -294,20 +294,20 @@ let $$||q||^2 = q\cdot q$$ be the square of the Euclidean norm of $$q$$:
 ```math
 \begin{aligned}
 RHS^{16}_t(q_0,q_f) &:= \frac{e^{-\mathcal S_\mathcal L(q_0, 0, q_f, t)}}{\sqrt{(2 \pi t)^n}} \sqrt{g(q_f)}\\
-R=0 \implies \\
+\mathcal R=0 \implies \\
 &\ = \frac{e^{\frac{-||q_f - q_i||^2}{2t}}}{\sqrt{(2\pi t)^n}} \\
-                   &\ = \int_{\Reals ^n}RHS^{16}_{t-s}(q_i, q)\ RHS^{16}_s(q, q_f)\ dq^1...dq^n\ \forall s\in (0, t)
+                   &\ = \int_{\Reals ^n}RHS^{16}_{s}(q_i, q)\ RHS^{16}_{t-s}(q, q_f)\ dq^1...dq^n\ \forall s\in (0, t)
 \end{aligned}
 ```
 
-Why does this last equation hold true?  Let's look at the picture from path space: we have a straight-line geodesic that connects $$q_0$$ to $$q_f$$ in time $$t$$, and a broken geodesic that connects them with the intermediate break point occuring at $$t-s$$.  Effectively we are integrating out the once-broken geodesics by using the Cameron-Martin Formula to represent the straight-line geodesic as a $$g$$-invariant vector field $$\mathcal B$$. Then we integrate out the breakpoint deltas from that geodesic ($$\dot q-\mathcal B$$) with a $$\mathscr N(0, s\wedge t-s)$$ Gaussian for $$\Reals^n$$, which has integral (i.e. total probability) 1.
+Why does this last equation hold true?  Let's look at the picture from path space: we have a straight-line geodesic that connects $$q_0$$ to $$q_f$$ in time $$t$$, and a broken geodesic that connects them with the intermediate break point occuring at $$s$$.  Effectively we are integrating out the once-broken geodesics by using the Cameron-Martin Formula to represent the straight-line geodesic as a $$g$$-invariant vector field $$\mathcal B$$. Then we integrate out the breakpoint deltas from that geodesic ($$\dot q-\mathcal B$$) with a centered Gaussian for $$\Reals^n$$.
 
 Explicitly, given constant vector field $$\mathcal B = (q_f - q_0) / t$$, once-broken Euclidean geodesics are
 
 ```math
-q(\tau) = \mathcal B\tau + \begin{cases}
-q\tau/s & 0\leq\tau\leq s\\
-q(t-\tau)/(t-s)& s\leq\tau\leq t
+q(\tau) = \mathcal B\tau + q_0 + q\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t - \tau)/(t-s)& s\leq\tau\leq t
 \end{cases}
 ````
 for fixed $$q\in\Reals^n$$ representing the "break point" at $$s$$.
@@ -316,7 +316,24 @@ By Equation (12) $$(A)$$ and $$(B)$$:
 
 ```math
 \begin{aligned}
--\mathcal L(\dot q, q, \tau) &= -\mathcal L(\dot q(\tau) - \mathcal B, q(\tau), \tau) - \mathcal B\cdot \dot q(\tau) + \frac{1}{2}\mathcal B \cdot B \\
+-\mathcal L(\dot q, q, \tau) &= -\mathcal L(\dot q(\tau) - \mathcal B, q(\tau), \tau) - \mathcal B\cdot \dot q(\tau) + \frac{1}{2}\mathcal B \cdot B \implies \\
+
+e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{\tau||\mathcal B||^2/2}e^{-(\mathcal B -q_0)\cdot (q(\tau)-q_0) -\mathcal S_{\mathcal L_\mathcal B(\dot q,q,\tau)}} \\
+
+&= e ^{-\tau||q_f-q_0||^2/2t^2  - \mathcal S_{\mathcal L(\dot q-\mathcal B, q, \tau)}}e^{-(q_f - q_0)/t\ \cdot q
+\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t-\tau)(t-s) & s\leq\tau\leq t	
+\end{cases}
+}\\
+\implies
+
+\frac{1}{\sqrt{((2\pi)^2 s(t-s))^n}}\int_{\Reals^n} e^{-\mathcal S_{\mathcal L}(q_0,q,s)}e^{\mathcal S_{\mathcal L}(q,q_f,t-s)}dq^1...dq^n &= \int_{\Reals^n}
+e^{-(s+t-s)||q_f - q_0||^2/2t^2}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
+&= \frac{e^{-\rho^2(q_f, q_0)/2t}}{\sqrt{(2\pi t)^n}}\\
+&= RHS^{16}_t(q_0,q_f)
+
+
 \end{aligned}
 ```
 
