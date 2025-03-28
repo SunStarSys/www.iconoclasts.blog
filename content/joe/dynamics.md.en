@@ -280,6 +280,17 @@ The Feynman-Kac Formula follows from the path-integral formulation for Brownian 
 
 #### The Parallel Transport Isometry $$\hat\Gamma$$
 
+Take any vector in $$v \in T_qM$$. Parallel Transport $$\hat\Gamma_t(\gamma)v \in T_{\gamma(t)}M$$ is the vector you get by solving the linear first-order ODE:
+
+```math
+\begin{aligned}
+v(0) &= v \\
+\dot v &= \nabla_{\dot \gamma(t)}\dot v = 0
+\end{aligned}
+```
+
+Notably, the curvature tensor $$\mathcal R(X,Y) = [\nabla_X,\nabla_Y] - \nabla_{[X,Y]}$$ measures the first order dependence of parallel transport on the choice of curve $$\gamma$$ connecting the endpoints. $$\mathcal R = 0 \iff \hat\Gamma_t$$ does not depend on $$\gamma$$.
+
 #### Semiclassical Mechanics
 
 ##### Semiclassical Asymptotics are an Exact Solution on Flat Manifolds
@@ -323,7 +334,7 @@ e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{\tau||\mathcal B||^2/2}e^{-(\math
 &= e ^{-\tau||q_f-q_0||^2/2t^2  - \mathcal S_{\mathcal L(\dot q-\mathcal B, q, \tau)}}e^{-(q_f - q_0)/t\ \cdot q
 \begin{cases}
 \tau/s & 0\leq\tau\leq s\\
-(t-\tau)(t-s) & s\leq\tau\leq t	
+(t-\tau)(t-s) & s\leq\tau\leq t
 \end{cases}
 }\\
 \implies
@@ -331,23 +342,29 @@ e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{\tau||\mathcal B||^2/2}e^{-(\math
 \frac{1}{\sqrt{((2\pi)^2 s(t-s))^n}}\int_{\Reals^n} e^{-\mathcal S_{\mathcal L}(q_0,q,s)}e^{\mathcal S_{\mathcal L}(q,q_f,t-s)}dq^1...dq^n &= \int_{\Reals^n}
 e^{-(s+t-s)||q_f - q_0||^2/2t^2}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
 &= \frac{e^{-\rho^2(q_f, q_0)/2t}}{\sqrt{(2\pi t)^n}}\\
-&= RHS^{16}_t(q_0,q_f)
-
-
+&= RHS^{16}_t(q_0,q_f) \ .
 \end{aligned}
 ```
+
+Significantly, we constructed $$\mathcal B$$ so that $$\dot q - \mathcal B$$ represented a once-broken geodesic at $$s$$ that started and ended at $$q_0$$, and we saw that those curves are essentially $$\mathcal N(0,s\wedge t-s)$$ distributed.
 
 #### The DeWitt Scalar Curvature Path Integral Defect
 
 What if we tried to use "successive convolutions" on the semi-classical expression in Equation (16) to construct Brownian Motion on a curved manifold by fiat?
 
-We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$\mathcal V = \frac{1}{12}\mathcal R$$, where $$\mathcal R$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time aymptotics of the trace of the Heat Kernel.
+We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$\mathcal V = \frac{1}{12}\mathcal R$$, where $$\mathcal R$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel.
 
-#### The Geometric Cameron-Martin Formula (aka Quadratic Form Magic, Part 2)
+#### The Geometric Cameron-Martin Formula for $$g$$-invariant vector fields $$\mathcal B$$ (aka Quadratic Form Magic, Part 2)
 
-##### The Development Map
+Assume $$\mathcal B$$ is a $$g$$-invariant vector field on $$M$$ for the remainder of this article.
 
-##### $$\hat\Gamma^{-1}$$ as the Inverse of the Development Map
+##### The Development Map $$\tilde \gamma = DM_q(c)$$ for $$c\in C^\infty([0,t],T_qM)$$.
+
+##### $$c=\hat\Gamma^{-1}(\tilde\gamma)$$ as the Differential Inverse of the Development Map
+
+##### If $$q_f=e^{t\mathcal B}q_0$$, $$\gamma$$ connects $$q_0$$ to $$q_f$$ iff $$DM(\int_0^t \hat\Gamma^{-1}(\dot q - B)(s)ds)$$ is a closed loop.
+
+##### The Cameron Martin Formula for $$\mathcal B$$
 
 ### Observables, Evolution Equation, and Lie Algebras
 
