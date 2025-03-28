@@ -374,14 +374,14 @@ Solve for $$\tilde \gamma$$:
 
 ##### The Cameron Martin Formula for the Heat Kernel $$k_t(q_0,q_f)$$ on $$M$$
 
-Let $$\Omega(q_i)$$ be the space of closed loops on $$M$$ originating at $$q_i$$, and $$\mu$$ be Wiener Measure on $$TM$$. Then
+Let $$\Omega(q_i)$$ be the space of closed loops on $$M$$ originating at $$q_i$$, and $$\mu$$ be Global Wiener Measure on $$TM$$. Then
 
 ```math
 \begin{aligned}
 k_t(q_i,q_f) &= \frac{e^{-\rho^2(q_i,q_f)/2t}}{\sqrt{(2 \pi t)^n}\det{|I-\mathcal J_\mathcal B|}}\frac{d\mu({DM^{-1}\Omega(q_i)})}{\sqrt {\det g(q_i)} dq_i^1...dq_i^n}
 \end{aligned}
 ```
-where $$\mathcal J_\mathcal B$$ is the matrix of Jacobi Fields along $$\mathcal B$$
+where $$\mathcal J_\mathcal B$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma = \exp(t\mathcal B)$$ connecting $$q_i$$ to $$ q_f$$.
 
 ### Observables, Evolution Equation, and Lie Algebras
 
