@@ -290,7 +290,7 @@ This **is** the Heat Kernel for standard $$n$$-dimensional Brownian Motion.
 
 #### The DeWitt Scalar Curvature Path Integral Defect
 
-What if we tried to use "successive convolutions" on the semi-classical expression to construct Brownian Motion on a curved manifold by fiat?
+What if we tried to use "successive convolutions" on the semi-classical expression in Equation (16) to construct Brownian Motion on a curved manifold by fiat?
 
 We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$\mathcal V = \frac{1}{12}\mathcal R$$, where $$\mathcal R$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time aymptotics of the trace of the Heat Kernel.
 
