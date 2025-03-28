@@ -360,11 +360,28 @@ Assume $$\mathcal B$$ is a $$g$$-invariant vector field on $$M$$ for the remaind
 
 ##### The Development Map $$\tilde \gamma = DM_q(c)$$ for $$c\in C^\infty([0,t],T_qM)$$.
 
+Solve for $$\tilde \gamma$$:
+```math
+\begin{aligned}
+\tilde \gamma(0) &= q \\
+\dot {\tilde \gamma} &= \hat\Gamma(\tilde \gamma)(\dot c)
+\end{aligned}
+```
+
 ##### $$c=\hat\Gamma^{-1}(\tilde\gamma)$$ as the Differential Inverse of the Development Map
 
 ##### If $$q_f=e^{t\mathcal B}q_0$$, $$\gamma$$ connects $$q_0$$ to $$q_f$$ iff $$DM(\int_0^t \hat\Gamma^{-1}(\dot q - B)(s)ds)$$ is a closed loop.
 
-##### The Cameron Martin Formula for $$\mathcal B$$
+##### The Cameron Martin Formula for the Heat Kernel $$k_t(q_0,q_f)$$ on $$M$$
+
+Let $$\Omega(q_i)$$ be the space of closed loops on $$M$$ originating at $$q_i$$, and $$\mu$$ be Wiener Measure on $$TM$$. Then
+
+```math
+\begin{aligned}
+k_t(q_i,q_f) &= \frac{e^{-\rho^2(q_i,q_f)/2t}}{\sqrt{(2 \pi t)^n}\det{|I-\mathcal J_\mathcal B|}}\frac{d\mu({DM^{-1}\Omega(q_i)})}{\sqrt {\det g(q_i)} dq_i^1...dq_i^n}
+\end{aligned}
+```
+where $$\mathcal J_\mathcal B$$ is the matrix of Jacobi Fields along $$\mathcal B$$
 
 ### Observables, Evolution Equation, and Lie Algebras
 
