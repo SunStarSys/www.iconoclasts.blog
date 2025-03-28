@@ -288,19 +288,37 @@ The right-hand side of Equation (16) is the precise formulation of the Heat Kern
 
 This **is** the Heat Kernel for standard $$n$$-dimensional Brownian Motion.
 
-Let's clarify this, be recalling the *transition function* in this case: $$\mathcal S_\mathcal L(q_0,t_0, q_f, t_f) = dist^2(q_0, q_f)/2(t_f - t_i)^2$$, where dist is the Riemannian distance between $$q_0$$ and $$q_f$$.
-let $$||q||$$ be the Euclidean norm of $$q$$ in the flat metric case:
+Let's clarify this, be recalling the *transition function* in this case: $$\mathcal S_\mathcal L(q_0,t_0, q_f, t_f) = \rho^2(q_0, q_f)/2(t_f - t_i)$$, where $$\rho$$ is the Riemannian distance between $$q_0$$ and $$q_f$$.
+let $$||q||^2 = q\cdot q$$ be the square of the Euclidean norm of $$q$$:
 
 ```math
 \begin{aligned}
-RHS^{16}_t(q_0,q_f) &:= \frac{e^{-\mathcal S_\mathcal L(q_0, 0, q_f, t)t}}{\sqrt{(2 \pi t)^n}} \sqrt{g(q_f)}\\
+RHS^{16}_t(q_0,q_f) &:= \frac{e^{-\mathcal S_\mathcal L(q_0, 0, q_f, t)}}{\sqrt{(2 \pi t)^n}} \sqrt{g(q_f)}\\
 R=0 \implies \\
 &\ = \frac{e^{\frac{-||q_f - q_i||^2}{2t}}}{\sqrt{(2\pi t)^n}} \\
                    &\ = \int_{\Reals ^n}RHS^{16}_{t-s}(q_i, q)\ RHS^{16}_s(q, q_f)\ dq^1...dq^n\ \forall s\in (0, t)
 \end{aligned}
 ```
 
-Why does this last equation hold true?  Let's look at the picture from path space: we have a straight-line geodesic that connects $$q_0$$ to $$q_f$$ in time $$t$$, and a broken geodesic that connects them with the intermediate break point occuring at $$t-s$$.  Effectively we are integrating out the once-broken geodesics by using the Cameron-Martin Formula to represent the straight-line geodesic as a $$g$$-invariant vector field $$\mathcal B$$. Then we integrate out the breakpoint deltas from that geodesic ($$\dot q-\mathcal B$$) with a centered $$\mathscr N(0,t-s)$$ Gaussian for $$\Reals^n$$, which has integral (i.e. probability) 1.
+Why does this last equation hold true?  Let's look at the picture from path space: we have a straight-line geodesic that connects $$q_0$$ to $$q_f$$ in time $$t$$, and a broken geodesic that connects them with the intermediate break point occuring at $$t-s$$.  Effectively we are integrating out the once-broken geodesics by using the Cameron-Martin Formula to represent the straight-line geodesic as a $$g$$-invariant vector field $$\mathcal B$$. Then we integrate out the breakpoint deltas from that geodesic ($$\dot q-\mathcal B$$) with a $$\mathscr N(0, s\wedge t-s)$$ Gaussian for $$\Reals^n$$, which has integral (i.e. total probability) 1.
+
+Explicitly, given constant vector field $$\mathcal B = (q_f - q_0) / t$$, once-broken Euclidean geodesics are
+
+```math
+q(\tau) = \mathcal B\tau + \begin{cases}
+q\tau/s & 0\leq\tau\leq s\\
+q(t-\tau)/(t-s)& s\leq\tau\leq t
+\end{cases}
+````
+for fixed $$q\in\Reals^n$$ representing the "break point" at $$s$$.
+
+By Equation (12) $$(A)$$ and $$(B)$$:
+
+```math
+\begin{aligned}
+-\mathcal L(\dot q, q, \tau) &= -\mathcal L(\dot q(\tau) - \mathcal B, q(\tau), \tau) - \mathcal B\cdot \dot q(\tau) + \frac{1}{2}\mathcal B \cdot B \\
+\end{aligned}
+```
 
 #### The DeWitt Scalar Curvature Path Integral Defect
 
