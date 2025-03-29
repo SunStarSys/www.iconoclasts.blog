@@ -285,7 +285,7 @@ Take any vector in $$v \in T_qM$$. Parallel Transport $$\hat\Gamma_t(\gamma)v \i
 ```math
 \begin{aligned}
 v(0) &= v \\
-\dot v &= \nabla_{\dot \gamma(t)}\dot v = 0
+\nabla_{\dot \gamma(t)}\dot v &= 0
 \end{aligned}
 ```
 
@@ -327,9 +327,10 @@ By Equation (12) $$(A)$$ and $$(B)$$:
 
 ```math
 \begin{aligned}
--\mathcal L(\dot q, q, \tau) &= -\mathcal L(\dot q(\tau) - \mathcal B, q(\tau), \tau) - \mathcal B\cdot \dot q(\tau) + \frac{1}{2}\mathcal B \cdot B \implies \\
+-\mathcal L(\dot q, q, \tau) &= \begin{equation}\tag{D}-\mathcal L(\dot q(\tau) - \mathcal B, q(\tau), \tau) - \mathcal B\cdot (\dot q(\tau)-\mathcal B) - \frac{1}{2}\mathcal B \cdot B \ \ \ \ \ \ \ \ \ \end{equation}\\
+\implies \\
 
-e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{\tau||\mathcal B||^2/2}e^{-(\mathcal B -q_0)\cdot (q(\tau)-q_0) -\mathcal S_{\mathcal L_\mathcal B(\dot q,q,\tau)}} \\
+e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B||^2/2}e^{-(\mathcal B -q_0)\cdot (q(\tau)-\mathcal B\tau - q_0) -\mathcal S_{\mathcal L_\mathcal B(\dot q,q,\tau)}} \\
 
 &= e ^{-\tau||q_f-q_0||^2/2t^2  - \mathcal S_{\mathcal L(\dot q-\mathcal B, q, \tau)}}e^{-(q_f - q_0)/t\ \cdot q
 \begin{cases}
@@ -337,7 +338,7 @@ e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{\tau||\mathcal B||^2/2}e^{-(\math
 (t-\tau)(t-s) & s\leq\tau\leq t
 \end{cases}
 }\\
-\implies
+\implies\\
 
 \frac{1}{\sqrt{((2\pi)^2 s(t-s))^n}}\int_{\Reals^n} e^{-\mathcal S_{\mathcal L}(q_0,q,s)}e^{\mathcal S_{\mathcal L}(q,q_f,t-s)}dq^1...dq^n &= \int_{\Reals^n}
 e^{-(s+t-s)||q_f - q_0||^2/2t^2}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
@@ -354,9 +355,9 @@ What if we tried to use "successive convolutions" on the semi-classical expressi
 
 We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$\mathcal V = \frac{1}{12}\mathcal R$$, where $$\mathcal R$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel.
 
-#### The Geometric Cameron-Martin Formula for $$g$$-invariant vector fields $$\mathcal B$$ (aka Quadratic Form Magic, Part 2)
+#### The Geometric Cameron-Martin Formula for $$g$$-invariant vector fields $$\mathcal B_t$$ (aka Quadratic Form Magic, Part 2)
 
-Assume $$\mathcal B$$ is a $$g$$-invariant vector field on $$M$$ for the remainder of this article.
+Assume $$\mathcal B_t$$ is a $$g$$-invariant vector field on $$M$$ for the remainder of this article.
 
 ##### The Development Map $$\tilde \gamma = DM_q(c)$$ for $$c\in C^\infty([0,t],T_qM)$$.
 
@@ -368,20 +369,20 @@ Solve for $$\tilde \gamma$$:
 \end{aligned}
 ```
 
-##### $$c=\hat\Gamma^{-1}(\tilde\gamma)$$ as the Differential Inverse of the Development Map
+##### $$c(t)=\int_0^t\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ as the Inverse of the Development Map
 
-##### If $$q_f=e^{t\mathcal B}q_0$$, $$\gamma$$ connects $$q_0$$ to $$q_f$$ iff $$DM(\int_0^t \hat\Gamma^{-1}(\dot q - B)(s)ds)$$ is a closed loop.
+##### If $$q_f=\exp{t\mathcal B_t}q_0$$, $$\gamma$$ connects $$q_0$$ to $$q_f$$ iff $$DM[\int_0^t \hat\Gamma_s^{-1}(\tilde \gamma)\dot{\tilde\gamma} - \mathcal B_t\  ds]$$ is a closed loop.
 
-##### The Cameron Martin Formula for the Heat Kernel $$k_t(q_0,q_f)$$ on $$M$$
+##### The Cameron Martin Formula for the Heat Kernel $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
 
-Let $$\Omega(q_i)$$ be the space of closed loops on $$M$$ originating at $$q_i$$, and $$\mu$$ be Global Wiener Measure on $$TM$$. Then
+Let $$\Omega(q_0)$$ be the space of closed loops on $$M$$ originating at $$q_i$$, and $$\mu_t$$ be Global Wiener Measure on $$TM$$. Then Equation (25) $$(D) \implies$$
 
 ```math
 \begin{aligned}
-k_t(q_i,q_f) &= \frac{e^{-\rho^2(q_i,q_f)/2t}}{\sqrt{(2 \pi t)^n}\det{|I-\mathcal J_\mathcal B|}}\frac{d\mu({DM^{-1}\Omega(q_i)})}{\sqrt {\det g(q_i)} dq_i^1...dq_i^n}
+k_t(q_0,q_f) &= \frac{e^{-\rho^2(q_0,q_f)/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_\mathcal B(\tilde\gamma)| }}} \mu_t(e^{-\mathcal B_t(q_0)\cdot c(t)}{DM^{-1}\Omega(q_0)}\sqrt {\det g(q_0)} dq_0^1...dq_0^n)
 \end{aligned}
 ```
-where $$\mathcal J_\mathcal B$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma = \exp(t\mathcal B)$$ connecting $$q_i$$ to $$ q_f$$.
+where $$\mathcal J_\mathcal B(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}$$ connecting $$q_0$$ to $$ q_f$$, and does not depend on $$t$$.
 
 ### Observables, Evolution Equation, and Lie Algebras
 
