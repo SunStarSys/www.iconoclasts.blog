@@ -359,7 +359,7 @@ We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash
 
 Assume $$\mathcal B_t$$ is a $$g$$-invariant vector field on $$M$$ for the remainder of this article.
 
-##### The Development Map $$\tilde \gamma = DM_q(c)$$ for $$c\in C^\infty([0,t],T_qM)$$.
+##### The Development Map $$\tilde \gamma = \mathscr D_q(c)$$ for $$c\in C^\infty([0,t],T_qM)$$.
 
 Solve for $$\tilde \gamma$$:
 ```math
@@ -371,18 +371,18 @@ Solve for $$\tilde \gamma$$:
 
 ##### $$c(t)=\int_0^t\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ as the Inverse of the Development Map
 
-##### If $$q_f=\exp{t\mathcal B_t}q_0$$, $$\gamma$$ connects $$q_0$$ to $$q_f$$ iff $$DM[\int_0^t \hat\Gamma_s^{-1}(\tilde \gamma)\dot{\tilde\gamma} - \mathcal B_t\  ds]$$ is a closed loop.
+##### If $$q_f=\exp{t\mathcal B_t}q_0$$, $$\gamma$$ connects $$q_0$$ to $$q_f$$ iff $$\mathscr D[\int_0^t \hat\Gamma_s^{-1}(\tilde \gamma)\dot{\tilde\gamma} - \mathcal B_t\  ds]$$ is a closed loop.
 
 ##### The Cameron Martin Formula for the Heat Kernel $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
 
-Let $$\Omega(q_0)$$ be the space of closed loops on $$M$$ originating at $$q_i$$, and $$\mu_t$$ be Global Wiener Measure on $$TM$$. Then Equation (25) $$(D) \implies$$
+Let $$\Omega(q_0)$$ be the space of closed loops on $$M$$ originating at $$q_i$$, and $$\mu_t$$ be Global Wiener Measure on $$TM$$, with $$E_t^q (f):=\int_{\set{c}} f(c) d\mu_t^q(c)$$. Then Equation (25) $$(D) \implies$$
 
 ```math
 \begin{aligned}
-k_t(q_0,q_f) &= \frac{e^{-\rho^2(q_0,q_f)/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_\mathcal B(\tilde\gamma)| }}} \mu_t(e^{-\mathcal B_t(q_0)\cdot c(t)}{DM^{-1}\Omega(q_0)}\sqrt {\det g(q_0)} dq_0^1...dq_0^n)
+k_t(q_0,q_f) &= \frac{e^{-\rho^2(q_0,q_f)/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_\mathcal B(\tilde\gamma)| }}} E_t^{q_0}(e^{-\mathcal B_t\cdot c(t)}{\chi_{\mathscr D^{-1}[\Omega(q_0)]}}\sqrt {\det g(q_0)} dq_0^1...dq_0^n)
 \end{aligned}
 ```
-where $$\mathcal J_\mathcal B(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}$$ connecting $$q_0$$ to $$ q_f$$, and does not depend on $$t$$.
+where $$\mathcal J_\mathcal B(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_\mathcal B$$ does not depend on $$t$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
 
 ### Observables, Evolution Equation, and Lie Algebras
 
