@@ -390,14 +390,14 @@ We still need to determine that $$\gamma(t) = q_f$$, and maybe see if the endpoi
 
 ##### The Cameron Martin Formula for the Heat Kernel $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
 
-Let $$\Omega(q_0)$$ be the space of closed loops on $$M$$ originating at $$q_i$$, and $$\mu_t$$ be Global Wiener Measure on $$TM$$, with $$E_t (f):=\int_{\set{c}} f(c) d\mu_t(c)$$. Then Equation (25) $$(D) \implies$$
+Let $$\Omega(q_0)$$ be the space of closed loops on $$M$$ originating at $$q_i$$, and $$\mu_t$$ be Global Wiener Measure on $$TM$$, with $$E_t (f|A):=\int_{\set{c}} f(c) d(\mu_t|A)(c)$$. Then Equation (25) $$(D) \implies$$
 
 ```math
 \begin{aligned}
 k_t(q_0,q_f) &= \frac{e^{-\rho^2(q_0,q_f)/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_\mathcal B(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega(q_0)]}}\sqrt {\det g(q_0)} dq_0^1...dq_0^n|\mathcal B^\perp)
 \end{aligned}
 ```
-where $$\mathcal J_\mathcal B(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_\mathcal B$$ does not depend on $$t$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
+where $$\mathcal J_\mathcal B(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_\mathcal B$$ does not depend on $$t$$, and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
 
 ### Observables, Evolution Equation, and Lie Algebras
 
