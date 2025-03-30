@@ -373,16 +373,17 @@ Solve for $$\tilde \gamma$$:
 
 ##### If $$q_f=\exp{t\mathcal B_t}\ q_0$$, $$\tilde \gamma$$ connects $$q_0$$ to $$q_f$$ iff $$\mathscr D[c(\tau) = \int_0^\tau \hat\Gamma_s^{-1}(\tilde \gamma)\dot{\tilde\gamma}|_{\mathcal B^\perp}  ds]$$ is a closed loop.
 
-Let $$\gamma = \mathscr D[c]$$. Then we need to prove $$\gamma(t) = q_0$$: 
+Let $$\gamma = \mathscr D[c]$$. Then we need to prove $$\gamma(t) = q_0$$. Since $$d({g^{-1}\mathcal B}) = 0$$, $$g^{-1}\mathcal B$$ is locally integrable to $$\hat{\mathcal B}$$, and its local level sets are orthogonal to $$\mathcal B = \nabla \hat{\mathcal B}$$. And because $$\hat \Gamma$$ preserves the metric, it preserves $$\mathcal B$$ and $$\mathcal B_\perp$$:
 
 ```math
 \begin{aligned}
-\dot c &= \dot{\tilde c} - \mathcal B_t \implies \\
-\dot \gamma &= \hat\Gamma(\gamma)(\dot{\tilde c}- \mathcal B_t)\ ,\\
-\nabla_{\mathcal B_t} \dot {\tilde \gamma} &= [\mathcal B_t, \dot {\tilde\gamma}] + \Gamma_{ij}^kb^i\dot{\tilde\gamma}^j\partial_k = 0 \implies \\
-\nabla_{\dot \gamma}\dot \gamma &= \hat\Gamma(\gamma)( \ddot{\tilde c} + \Gamma^k_{ij}b^i\dot{\tilde c}^j\partial_k)
+\\
+\dot{c}\cdot\mathcal B &= 0 \implies\\
+\dot{\gamma}\cdot \mathcal B &= 0 \implies\\
+\frac{d\hat{\mathcal B}}{dt} &= 0\ ,
 \end{aligned}
 ```
+so $$\gamma$$ is contained in a level set of $$\mathcal B$$.
 
 ##### Brownian Motion on $$M$$ is Euclidean Wiener Measure on $$\mathscr D^{-1}$$
 
