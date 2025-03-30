@@ -289,7 +289,7 @@ v(0) &= v \\
 \end{aligned}
 ```
 
-Notably, the curvature tensor $$\mathcal R(X,Y) = [\nabla_X,\nabla_Y] - \nabla_{[X,Y]}$$ measures the first order dependence of parallel transport on the choice of curve $$\gamma$$ connecting the endpoints. $$\mathcal R = 0 \iff \hat\Gamma_t$$ does not depend on $$\gamma$$.
+Notably $$\nabla_{\dot \gamma}\hat\Gamma_t(\gamma) = 0$$, and the curvature tensor $$\mathcal R(X,Y) = [\nabla_X,\nabla_Y] - \nabla_{[X,Y]}$$ measures the first order dependence of $$\hat \Gamma$$ on the choice of curve $$\gamma$$ connecting the endpoints. $$\mathcal R = 0 \iff \hat\Gamma_t$$ does not depend on $$\gamma$$.
 
 #### Semiclassical Mechanics
 
@@ -359,22 +359,32 @@ We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash
 
 Assume $$\mathcal B_t$$ is a $$g$$-invariant vector field on $$M$$ for the remainder of this article.
 
-##### The Development Map $$\tilde \gamma = \mathscr D_q[c]$$ for $$c\in C^\infty([0,t],T_qM)$$.
+##### The Development Map $$\tilde \gamma = \mathscr D_q[\tilde c]$$ for $$c\in C^\infty([0,t],T_qM)$$.
 
 Solve for $$\tilde \gamma$$:
 ```math
 \begin{aligned}
 \tilde \gamma(0) &= q \\
-\dot {\tilde \gamma} &= \hat\Gamma(\tilde \gamma)(\dot c)
+\dot {\tilde \gamma} &= \hat\Gamma(\tilde \gamma)\dot c
 \end{aligned}
 ```
 
-##### $$c(t)=\int_0^t\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ as the Inverse of the Development Map
+##### $$\tilde c(\tau)=\int_0^\tau\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ as the Inverse of the Development Map
 
-##### If $$q_f=\exp{t\mathcal B_t}\ q_0$$, $$\tilde \gamma$$ connects $$q_0$$ to $$q_f$$ iff $$\mathscr D[\int_0^t \hat\Gamma_s^{-1}(\tilde \gamma)\dot{\tilde\gamma} - \mathcal B_t\  ds]$$ is a closed loop.
+##### If $$q_f=\exp{t\mathcal B_t}\ q_0$$, $$\tilde \gamma$$ connects $$q_0$$ to $$q_f$$ iff $$\mathscr D[c(\tau) = \int_0^\tau \hat\Gamma_s^{-1}(\tilde \gamma)\dot{\tilde\gamma}|_{\mathcal B^\perp}  ds]$$ is a closed loop.
+
+Let $$\gamma = \mathscr D[c]$$. Then we need to prove $$\gamma(t) = q_0$$: 
+
+```math
+\begin{aligned}
+\dot c &= \dot{\tilde c} - \mathcal B_t \implies \\
+\dot \gamma &= \hat\Gamma(\gamma)(\dot{\tilde c}- \mathcal B_t)\ ,\\
+\nabla_{\mathcal B_t} \dot {\tilde \gamma} &= [\mathcal B_t, \dot {\tilde\gamma}] + \Gamma_{ij}^kb^i\dot{\tilde\gamma}^j\partial_k = 0 \implies \\
+\nabla_{\dot \gamma}\dot \gamma &= \hat\Gamma(\gamma)( \ddot{\tilde c} + \Gamma^k_{ij}b^i\dot{\tilde c}^j\partial_k)
+\end{aligned}
+```
 
 ##### Brownian Motion on $$M$$ is Euclidean Wiener Measure on $$\mathscr D^{-1}$$
-
 
 ##### The Cameron Martin Formula for the Heat Kernel $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
 
@@ -382,7 +392,7 @@ Let $$\Omega(q_0)$$ be the space of closed loops on $$M$$ originating at $$q_i$$
 
 ```math
 \begin{aligned}
-k_t(q_0,q_f) &= \frac{e^{-\rho^2(q_0,q_f)/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_\mathcal B(\tilde\gamma)| }}} E_t(e^{-\mathcal B_t\cdot c(t)}{\chi_{\mathscr D^{-1}[\Omega(q_0)]}(c)}\sqrt {\det g(q_0)} dq_0^1...dq_0^n)
+k_t(q_0,q_f) &= \frac{e^{-\rho^2(q_0,q_f)/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_\mathcal B(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega(q_0)]}}\sqrt {\det g(q_0)} dq_0^1...dq_0^n|\mathcal B^\perp)
 \end{aligned}
 ```
 where $$\mathcal J_\mathcal B(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_\mathcal B$$ does not depend on $$t$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
