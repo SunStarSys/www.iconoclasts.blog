@@ -359,7 +359,7 @@ We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash
 
 Assume $$\mathcal B_t$$ is a $$g$$-invariant vector field on $$M$$ for the remainder of this article.
 
-##### The Development Map $$\tilde \gamma = \mathscr D_q(c)$$ for $$c\in C^\infty([0,t],T_qM)$$.
+##### The Development Map $$\tilde \gamma = \mathscr D_q[c]$$ for $$c\in C^\infty([0,t],T_qM)$$.
 
 Solve for $$\tilde \gamma$$:
 ```math
@@ -372,6 +372,9 @@ Solve for $$\tilde \gamma$$:
 ##### $$c(t)=\int_0^t\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ as the Inverse of the Development Map
 
 ##### If $$q_f=\exp{t\mathcal B_t}\ q_0$$, $$\tilde \gamma$$ connects $$q_0$$ to $$q_f$$ iff $$\mathscr D[\int_0^t \hat\Gamma_s^{-1}(\tilde \gamma)\dot{\tilde\gamma} - \mathcal B_t\  ds]$$ is a closed loop.
+
+##### Brownian Motion on $$M$$ is Euclidean Wiener Measure on $$\mathscr D^{-1}$$
+
 
 ##### The Cameron Martin Formula for the Heat Kernel $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
 
