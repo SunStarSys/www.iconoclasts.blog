@@ -400,15 +400,6 @@ k_t(q_0,q_f) &= \frac{e^{-\rho^2(q_0,q_f)/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_\
 ```
 where $$\mathcal J_\mathcal B(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_\mathcal B$$ does not depend on $$t$$, and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
 
-Since $$(\mu_t|\mathcal B^\perp)$$ only depends on the endpoints, which are Gaussian-distributed, we have
-
-```math
-\begin{aligned}
-E_t(\chi_{\mathscr D^{-1}[\Omega_t(q_0)]}|\mathcal B^\perp) &= 1
-
-\end{aligned}
-```
-
 ### Observables, Evolution Equation, and Lie Algebras
 
 
