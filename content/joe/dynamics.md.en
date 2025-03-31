@@ -119,7 +119,7 @@ The Levi-Civita Connection's Christoffel Symbols for $$g$$ are simply defined by
 
 \end{aligned}
 ```
-with $$\partial_i := \frac{\partial}{\partial q^i}$$ and $$\partial^i := g^{ij}\partial_j$$. The associated Covariant Derivative in local coordinates is
+with $$\partial_i := \frac{\partial}{\partial q^i}$$ and $$\partial^i := g^{ij}\partial_j$$. The associated Covariant Derivative $$\nabla$$ in local coordinates is
 ```math
 \begin{aligned}
 \nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or}\\
@@ -335,7 +335,7 @@ e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B||^2/2}e^{-(\mat
 &= e ^{-\tau||q_f-q_0||^2/2t^2  - \mathcal S_{\mathcal L(\dot q-\mathcal B, q, \tau)}}e^{-(q_f - q_0)/t\ \cdot q
 \begin{cases}
 \tau/s & 0\leq\tau\leq s\\
-(t-\tau)(t-s) & s\leq\tau\leq t
+(t-\tau)/(t-s) & s\leq\tau\leq t
 \end{cases}
 }\\
 \implies\\
@@ -386,6 +386,13 @@ Let $$\gamma = \mathscr D[c]$$. Then we need to prove $$\gamma(t) = q_0$$. Since
 so $$\gamma$$ is contained in a level set of $$\mathcal B$$.
 We still need to determine that $$\gamma(t) = q_f$$.
 
+```math
+\begin{aligned}
+||\mathcal B_t|| &= \frac{\rho(q_0,q_f)}{t} \implies \\
+\tilde{c}(\tau) - c(\tau) &= \frac{t^2}{\rho^2(q_0,q_f)}\mathcal B_t\int_0^\tau \dot{\tilde c} \cdot \mathcal B_t\ ds
+\end{aligned}
+```
+
 ##### Brownian Motion on $$M$$ is Euclidean Wiener Measure on $$\mathscr D^{-1}$$
 
 ##### The Cameron Martin Formula for the Heat Kernel $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
@@ -394,7 +401,7 @@ Let $$\Omega_t(q_0)$$ be the space of closed loops on $$M$$ originating at $$q_i
 
 ```math
 \begin{aligned}
-k_t(q_0,q_f) &= \frac{e^{-\rho^2(q_0,q_f)/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_\mathcal B(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega_t(q_0)]}}\sqrt{g(q_0)} dq_0^1...dq_0^n|\mathcal B^\perp)
+k_t(q_0,q_f) &= \frac{e^{-\rho^2(q_0,q_f)/2t}\rho(q_0,q_f)}{\sqrt{2 \pi t\det{|I-\mathcal J_\mathcal B(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega_t(q_0)]}}\sqrt{g(q_0)} dq_0^1...dq_0^n|\mathcal B^\perp)
 \end{aligned}
 ```
 where $$\mathcal J_\mathcal B(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_\mathcal B$$ does not depend on $$t$$, and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
