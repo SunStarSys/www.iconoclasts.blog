@@ -362,7 +362,7 @@ Significantly, we constructed $$\mathcal B$$ so that $$\dot q - \mathcal B$$ rep
 
 What if we tried to use "successive convolutions" on the semi-classical expression in Equation (16) to construct Brownian Motion on a curved manifold by fiat?
 
-We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$\mathcal V = \frac{1}{12}\mathcal R$$, where $$\mathcal R$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel, where this term represents the contribution from the volume form $$\sqrt g$$.  When you add the corrective potential $$\frac{1}{12}\mathcal R$$ to the Hamiltonian, the volumne form's contribution is eliminated from the short-term asymptotics.
+We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$\mathcal V = \frac{1}{12}\mathcal R$$, where $$\mathcal R$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel, where this term represents the contribution from the volume form $$\sqrt g$$.  When you add the corrective potential $$-\frac{1}{12}\mathcal R$$ to the Hamiltonian, the volume form's contribution is eliminated from the short-term asymptotics.
 
 #### The Geometric Cameron-Martin Formula for $$g$$-invariant vector fields $$\mathcal B_t$$ (aka Quadratic Form Magic, Part 2)
 
@@ -407,16 +407,16 @@ Curvature constraints on the commutativity of parallel transport determine that 
 
 ##### Brownian Motion on $$M$$ is Euclidean Wiener Measure on $$\mathscr D^{-1}$$
 
-##### The Cameron Martin Formula for the Kernel of $$\Delta + \frac{1}{12}\mathcal R$$ $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
+##### The Cameron Martin Formula for the Kernel of $$\frac{1}{2}\Delta - \frac{1}{12}\mathcal R$$ $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
 
 Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$q$$ and remaining within the hypersurface $$\hat{\mathcal B}(q) = \hat{\mathcal B}(q_0)$$, and $$\mu_t$$ be Global Wiener Measure on $$TM$$, with $$E_t (f|A):=\int_{\set{c}} f(c) d(\mu_t|A)(c)$$. Then Equation (25) $$(D) \implies$$
 
 ```math
 \begin{aligned}
-\int_{\mathcal B(q) = \mathcal B((q_0)}k_t(q,\exp{\lambda\mathcal B_t}\ q) &= \frac{e^{-\rho^2(q_0,q_f)/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\lambda\mathcal B}(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q)]}}|\mathcal B^\perp)
+k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{e^{-(\lambda\rho)^2/2t}\lambda\rho}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}|\mathcal B^\perp)
 \end{aligned}
 ```
-where $$\mathcal J_{\lambda\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the  geodesic $$\tilde \gamma(s) = \exp{s\lambda\mathcal B_t}\ q$$ connecting $$q_0$$ to $$ q_f$$. Here we select $$q_0$$ and $$q_f$$ to be the location where $$||\mathcal B_t||$$ is shortest along the chosen fiber of $$\hat{\mathcal B}$$. $$\mathcal J_\mathcal B$$ does not depend on $$t$$, and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
+where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,  $$\mathcal J_{\rho\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the  geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_{\rho\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$ and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
 
 ### Observables, Evolution Equation, and Lie Algebras
 
