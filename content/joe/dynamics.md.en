@@ -349,20 +349,20 @@ e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B_t||^2/2}e^{-(\m
 }\\
 \implies\\
 
-\frac{1}{\sqrt{((2\pi)^2 s(t-s))^n}}\int_{\Reals^n} e^{-\mathcal S_{\mathcal L}(q_0,q,s)}e^{\mathcal S_{\mathcal L}(q,q_f,t-s)}dq^1...dq^n &= \int_{\Reals^n}
-e^{-(s+t-s)||q_f - q_0||^2/2t^2}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
+\frac{1}{\sqrt{((2\pi)^2 s(t-s))^n}}\int_{\Reals^n} e^{-\mathcal S_{\mathcal L}(q_0,q,s)}e^{\mathcal S_{\mathcal L}(q,q_f,t-s)}dq^1...dq^n &= \frac{e^{-(s+t-s)||q_f - q_0||^2/2t^2}}{\sqrt{((2\pi)^2 s(t-s))^n}}
+\int_{\Reals^n}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
 &= \frac{e^{-\rho^2(q_f, q_0)/2t}}{\sqrt{(2\pi t)^n}}\\
 &= RHS^{16}_t(q_0,q_f) \ .
 \end{aligned}
 ```
 
-Significantly, we constructed $$\mathcal B_t$$ so that $$\dot q - \mathcal B_t$$ represented a once-broken geodesic at $$s$$ that started and ended at $$q_0$$, and we saw that those curves are essentially $$\mathcal N(0,s\wedge t-s)$$ distributed.
+Significantly, we constructed $$\mathcal B_t$$ so that $$\dot q - \mathcal B_t$$ represented a once-broken geodesic at $$s$$ that started and ended at $$q_0$$, and we saw that those curves are essentially $$\mathcal N(0,s\wedge t-s)$$ distributed. In the remainder of this article, we will decompose $$\Reals^n=\mathcal <B_t>\oplus \mathcal B_t^\perp$$ and integrate out $$<\mathcal B_t>$$.
 
 #### The DeWitt Scalar Curvature Path Integral Defect
 
 What if we tried to use "successive convolutions" on the semi-classical expression in Equation (16) to construct Brownian Motion on a curved manifold by fiat?
 
-We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$\mathcal V = \frac{1}{12}\mathcal R$$, where $$\mathcal R$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel, where this term represents the contribution from the volume form $$\sqrt g$$.  When you add the corrective potential $$-\frac{1}{12}\mathcal R$$ to the Hamiltonian, the volume form's contribution is eliminated from the short-term asymptotics.
+We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$-\mathcal V = -\frac{1}{12}\mathcal R$$, where $$\mathcal R$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel, where this term represents the contribution from the volume form $$\sqrt g$$.  When you add the corrective potential $$\frac{1}{12}\mathcal R$$ to the Hamiltonian, the volume form's contribution is eliminated from the short-term asymptotics.
 
 #### The Geometric Cameron-Martin Formula for $$g$$-invariant vector fields $$\mathcal B_t$$ (aka Quadratic Form Magic, Part 2)
 
@@ -407,7 +407,7 @@ Curvature constraints on the commutativity of parallel transport determine that 
 
 ##### Brownian Motion on $$M$$ is Euclidean Wiener Measure on $$\mathscr D^{-1}$$
 
-##### The Cameron Martin Formula for the Kernel of $$\frac{1}{2}\Delta - \frac{1}{12}\mathcal R$$ $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
+##### The Cameron Martin Formula for the Kernel of $$\frac{1}{2}\Delta + \frac{1}{12}\mathcal R$$ $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
 
 Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$q$$ and remaining within the hypersurface $$\hat{\mathcal B}(q) = \hat{\mathcal B}(q_0)$$, and $$\mu_t$$ be Global Wiener Measure on $$TM$$, with $$E_t (f|A):=\int_{\set{c}} f(c) d(\mu_t|A)(c)$$. Then Equation (25) $$(D) \implies$$
 
