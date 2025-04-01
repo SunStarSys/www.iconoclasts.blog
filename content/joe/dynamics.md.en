@@ -295,7 +295,7 @@ In other words, if we tried to decompose parallel transport as infintesimal move
 ```math
 \begin{aligned}
 \hat\Gamma(\gamma) &= \hat\Gamma(\gamma|_\mathcal B)\hat\Gamma(\gamma|_{\mathcal B^\perp}) - \frac{1}{2}\mathcal R(\dot{\gamma}|_\mathcal B, \dot{\gamma}|_{\mathcal B^\perp})dt + O(dt^2) \ \\
-\nabla_{\dot \gamma}\hat\Gamma(\gamma) &= \hat\Gamma{\gamma|_{\mathcal B^\perp}} + \hat\Gamma{\gamma|_{\mathcal B}}  - \frac{1}{2}\mathcal R(\dot\gamma|_\mathcal B,\dot{\gamma}|_{\mathcal B^\perp}) = 0
+\nabla_{\dot \gamma}\hat\Gamma(\gamma) &= \nabla_{\dot \gamma|_\mathcal B}\hat\Gamma(\gamma|_{\mathcal B^\perp}) + \nabla_{\dot \gamma|{\mathcal B^\perp}}\hat\Gamma(\gamma|_{\mathcal B})  - \frac{1}{2}\mathcal R(\dot\gamma|_\mathcal B,\dot{\gamma}|_{\mathcal B^\perp}) = 0
 \end{aligned}
 ```
 
