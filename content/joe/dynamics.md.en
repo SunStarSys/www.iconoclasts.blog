@@ -322,10 +322,10 @@ RHS^{16}_t(q_0,q_f) &:= \frac{e^{-\mathcal S_\mathcal L(q_0, 0, q_f, t)}}{\sqrt{
 
 Why does this last equation hold true?  Let's look at the picture from path space: we have a straight-line geodesic that connects $$q_0$$ to $$q_f$$ in time $$t$$, and a broken geodesic that connects them with the intermediate break point occuring at $$s$$.  Effectively we are integrating out the once-broken geodesics by using the Cameron-Martin Formula to represent the straight-line geodesic as a $$g$$-invariant vector field $$\mathcal B$$. Then we integrate out the breakpoint deltas from that geodesic ($$\dot q-\mathcal B$$) with a centered Gaussian for $$\Reals^n$$.
 
-Explicitly, given constant vector field $$\mathcal B = (q_f - q_0) / t$$, once-broken Euclidean geodesics are
+Explicitly, given constant vector field $$\mathcal B_t = (q_f - q_0) / t$$, once-broken Euclidean geodesics are
 
 ```math
-q(\tau) = \mathcal B\tau + q_0 + q\begin{cases}
+q(\tau) = \mathcal B_t\tau + q_0 + q\begin{cases}
 \tau/s & 0\leq\tau\leq s\\
 (t - \tau)/(t-s)& s\leq\tau\leq t
 \end{cases}
@@ -336,10 +336,10 @@ By Equation (12) $$(A)$$ and $$(B)$$:
 
 ```math
 \begin{aligned}
--\mathcal L(\dot q, q, \tau) &= \begin{equation}\tag{D}-\mathcal L(\dot q(\tau) - \mathcal B, q(\tau), \tau) - \mathcal B\cdot (\dot q(\tau)-\mathcal B) - \frac{1}{2}\mathcal B \cdot B \ \ \ \ \ \ \ \ \ \end{equation}\\
+-\mathcal L(\dot q, q, \tau) &= \begin{equation}\tag{D}-\mathcal L(\dot q(\tau) - \mathcal B_t, q(\tau), \tau) - \mathcal B_t\cdot (\dot q(\tau)-\mathcal B_t) - \frac{1}{2}\mathcal B_t \cdot B_t \ \ \ \ \ \ \ \ \ \end{equation}\\
 \implies \\
 
-e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B||^2/2}e^{-(\mathcal B -q_0)\cdot (q(\tau)-\mathcal B\tau - q_0) -\mathcal S_{\mathcal L_\mathcal B(\dot q,q,\tau)}} \\
+e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B_t||^2/2}e^{-(\mathcal B_t -q_0)\cdot (q(\tau)-\mathcal B_t\tau - q_0) -\mathcal S_{\mathcal L_{\mathcal B_t}(\dot q,q,\tau)}} \\
 
 &= e ^{-\tau||q_f-q_0||^2/2t^2  - \mathcal S_{\mathcal L(\dot q-\mathcal B, q, \tau)}}e^{-(q_f - q_0)/t\ \cdot q
 \begin{cases}
@@ -356,7 +356,7 @@ e^{-(s+t-s)||q_f - q_0||^2/2t^2}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
 \end{aligned}
 ```
 
-Significantly, we constructed $$\mathcal B$$ so that $$\dot q - \mathcal B$$ represented a once-broken geodesic at $$s$$ that started and ended at $$q_0$$, and we saw that those curves are essentially $$\mathcal N(0,s\wedge t-s)$$ distributed.
+Significantly, we constructed $$\mathcal B_t$$ so that $$\dot q - \mathcal B_t$$ represented a once-broken geodesic at $$s$$ that started and ended at $$q_0$$, and we saw that those curves are essentially $$\mathcal N(0,s\wedge t-s)$$ distributed.
 
 #### The DeWitt Scalar Curvature Path Integral Defect
 
