@@ -405,13 +405,13 @@ Curvature constraints on the commutativity of parallel transport determine that 
 
 ##### Brownian Motion on $$M$$ is Euclidean Wiener Measure on $$\mathscr D^{-1}$$
 
-##### The Cameron Martin Formula for the Kernel of $$\frac{1}{2}\Delta + \frac{1}{12}\mathcal R$$ $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
+##### The Cameron Martin Formula for the Kernel of $$\frac{1}{2}\Delta - \frac{1}{12}\mathcal R$$ $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
 
 Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$q$$ and ending at $$\exp(t\mathcal B_t)\ q$$, and $$\mu_t$$ be Global Wiener Measure on $$TM$$, with $$E_t (f|A):=\int_{\set{c}} f(c) d(\mu_t|A)(c)$$. Then Equation (25) $$(D) \implies$$
 
 ```math
 \begin{aligned}
-k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{\lambda e^{-(\lambda\rho)^2/2t - \lambda \mathcal R(q_0)/6}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}
+k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{\lambda e^{-(\lambda\rho)^2/2t - t\mathcal R(q_0)/6\lambda}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}
 |\mathcal B^\perp)
 \end{aligned}
 ```
