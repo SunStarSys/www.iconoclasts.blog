@@ -411,11 +411,11 @@ Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$
 
 ```math
 \begin{aligned}
-k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{e^{-(\lambda\rho)^2/2t - \mathcal R(q_0)/6}\lambda\rho}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}
+k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{\lambda e^{-(\lambda\rho)^2/2t - \lambda \mathcal R(q_0)/6}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}
 |\mathcal B^\perp)
 \end{aligned}
 ```
-where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,  $$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the  geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$ and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
+where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the  geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$ and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
 
 Proof of this Equation <span class="eqno"></span> will be grist for a preprint article, not this survey.
 
