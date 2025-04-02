@@ -409,14 +409,17 @@ Curvature constraints on the commutativity of parallel transport determine that 
 
 ##### The Cameron Martin Formula for the Kernel of $$\frac{1}{2}\Delta + \frac{1}{12}\mathcal R$$ $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
 
-Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$q$$ and remaining within the hypersurface $$\hat{\mathcal B}(q) = \hat{\mathcal B}(q_0)$$, and $$\mu_t$$ be Global Wiener Measure on $$TM$$, with $$E_t (f|A):=\int_{\set{c}} f(c) d(\mu_t|A)(c)$$. Then Equation (25) $$(D) \implies$$
+Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$q$$ and ending at $$\exp(t\mathcal B_t)\ q$$, and $$\mu_t$$ be Global Wiener Measure on $$TM$$, with $$E_t (f|A):=\int_{\set{c}} f(c) d(\mu_t|A)(c)$$. Then Equation (25) $$(D) \implies$$
 
 ```math
 \begin{aligned}
-k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{e^{-(\lambda\rho)^2/2t}\lambda\rho}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}|\mathcal B^\perp)
+k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{e^{-(\lambda\rho)^2/2t}\lambda\rho}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}
+|\mathcal B^\perp)
 \end{aligned}
 ```
-where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,  $$\mathcal J_{\rho\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the  geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_{\rho\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$ and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
+where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,  $$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the  geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$ and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
+
+Proof of this expression will be grist for a preprint article, not this survey.
 
 ### Observables, Evolution Equation, and Lie Algebras
 
