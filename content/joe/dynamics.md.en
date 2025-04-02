@@ -356,7 +356,7 @@ e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B_t||^2/2}e^{-(\m
 \end{aligned}
 ```
 
-Significantly, we constructed $$\mathcal B_t$$ so that $$\dot q - \mathcal B_t$$ represented a once-broken geodesic at $$s$$ that started and ended at $$q_0$$, and we saw that those curves are essentially $$\mathcal N(0,s\wedge t-s)$$ distributed. In the remainder of this article, we will decompose $$\Reals^n=\mathcal <B_t>\oplus \mathcal B_t^\perp$$ and integrate out $$<\mathcal B_t>$$.
+Significantly, we constructed $$\mathcal B_t$$ so that $$\dot q - \mathcal B_t$$ represented a once-broken geodesic at $$s$$ that started and ended at $$q_0$$, and we saw that those curves are essentially $$\mathcal N(0,s\wedge t-s)$$ distributed. In the remainder of this article, we will decompose $$\Reals^n=<\mathcal B_t>\oplus \mathcal B_t^\perp$$ and integrate out $$<\mathcal B_t>$$.
 
 #### The DeWitt Scalar Curvature Path Integral Defect
 
@@ -380,9 +380,7 @@ Solve for $$\tilde \gamma$$:
 
 ##### $$\tilde c(\tau)=\int_0^\tau\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ as the Inverse of the Development Map
 
-##### If $$q_f=\exp{t\mathcal B_t}\ q_0$$, $$\tilde \gamma$$ connects $$q_0$$ to $$q_f$$ iff $$\mathscr D[c(\tau) = \int_0^\tau \hat\Gamma_s^{-1}(\tilde \gamma)\dot{\tilde\gamma}|_{\mathcal B^\perp}  ds]$$ is a closed loop.
-
-Let $$\gamma = \mathscr D[c]$$. Then we need to prove $$\gamma(t) = q_0$$. Since $$d({g^{-1}\mathcal B}) = 0$$, $$g^{-1}\mathcal B$$ is locally integrable to $$\hat{\mathcal B}$$, and its local level sets are orthogonal to $$\mathcal B = \nabla \hat{\mathcal B}$$. And because $$\hat \Gamma$$ preserves the metric, it preserves $$\mathcal B$$ and $$\mathcal B_\perp$$:
+Noether's Theorem ensures $$d({g^{-1}\mathcal B}) = 0$$, so $$g^{-1}\mathcal B$$ is locally integrable to $$\hat{\mathcal B}$$, and its local level sets are orthogonal to $$\mathcal B = \nabla \hat{\mathcal B}$$. And because $$\hat \Gamma$$ preserves the metric, it preserves $$\mathcal B$$ and $$\mathcal B_\perp$$:
 
 ```math
 \begin{aligned}
