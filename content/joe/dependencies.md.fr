@@ -2,96 +2,95 @@
 archived: ~
 categories: Orion, Architecture
 dependencies: '*.md.fr'
-keywords: architecture, incrémentiel, site Web, génération, constructions, dépendances,
-  topologie, wiki, graphique, intelligent
+keywords: architecture,incrémentiel,site Web,génération,constructions,dépendances,topologie,wiki,graphique,smart
 published: ~
-status: vérifié=22163
-title: Qu'est-ce que <em>Smart Content Dependency ManagementTM</em> ?
+status: vérifié=22964
+title: A quoi sert <em>Smart Content Dependency ManagementTM</em> ?
 ---
 
 [TOC]
 
 ## Résumé
 
-*Gestion intelligente des dépendances de contenu&trade;* concerne le cercle d'idées liées au soutien et à la facilitation des *créations incrémentielles*, tout en restant fidèle au **principe de normalisation du contenu** &mdash; que [*permalinks*](https://en.wikipedia.org/wiki/Permalink).
+*Gestion intelligente des dépendances de contenu&trade;* concerne le cercle des idées liées à la fourniture de soutien et de facilitation pour les constructions incrémentielles*, tout en restant fidèle au **principe de normalisation du contenu** &mdash; que [*permaliens*](https://en.wikipedia.org/wiki/Permalink) doit être la source unique de vérité, quelle que soit la façon dont leur contenu est organisé dans l'arborescence source et les artefacts de construction résultants.
 
-Cet article présente le site Web <https://sunstarsys.com/> comme une étude de cas pour une <a href="#commentAB" class="border border-warning text-muted reference-link" id="commentAB-link" title="{{commentAB.headers.title}}">démonstration</a> des meilleures pratiques et une analyse des topologies de graphes associées.
+Cet article présente le site Web <https://sunstarsys.com/> sous la forme d'une étude de cas pour une démonstration des meilleures pratiques et une analyse des topologies de graphes associées.
 
 ## Grottes
 
-Cela n'a d'importance que lorsque vous devez peser les dépenses liées à la réalisation de builds de site complets chaque fois que vous avez besoin de modifier le contenu d'une page Web. Si votre site Web contient moins de fichiers source 1K, ** détendez-vous** et lisez ce qui suit en tenant compte de vos besoins futurs. Vous avez choisi d'utiliser notre plateforme, conçue pour évoluer avec vous, pas contre vous. Pour la plupart des pages, ce matériel ci-dessous concerne les *graphiques de dépendance de contenu dispersé* pour les sites de plus de 1K pages.
+Cela n'a d'importance que lorsque vous avez besoin de peser les dépenses liées à la réalisation de sites complets chaque fois que vous avez besoin de modifier le contenu d'une page Web. Si votre site Web contient moins de fichiers source 1K, **relaxez** et lisez ce qui suit en gardant à l'esprit vos besoins futurs. Vous avez choisi d'utiliser notre plateforme, conçue pour évoluer avec vous, pas contre vous. Pour la plupart des pages, ce document ci-dessous concerne les *graphiques de dépendance de contenu dispersés* pour les sites comportant plus de pages 1K.
 
-Par exemple, le site Web Apache <https://www.OpenOffice.Org> a pu créer ses fichiers 40K+ à l'aide de la version Apache d'origine de ce système de build, avec une prise en charge entièrement intégrée des builds incrémentiels &mdash; sans aucune dépendance configurée &mdash;
+Par exemple, le site Web Apache <https://www.OpenOffice.Org> a pu créer ses fichiers 40K+ à l'aide de la version Apache d'origine de ce système de build, avec une prise en charge entièrement intégrée des builds incrémentiels &mdash; sans aucune dépendance configurée &mdash; en utilisant intelligemment la technologie traditionnelle SSI seule.
 
-Par défaut, notre système de compilation ne construira que les fichiers que vous avez modifiés, sans se soucier des dépendances intra-fichiers (sauf si vous les spécifiez dans `%path : :dépendances` &mdash; plus à ce sujet ci-dessous). Si le fichier que vous avez modifié se trouve dans `modèles/` ou `lib/`
+Par défaut, notre système de construction construira uniquement les fichiers que vous avez modifiés, sans se préoccuper des dépendances intra-fichiers (sauf si vous les spécifiez dans `%path : :dépendances` &mdash; plus à ce sujet ci-dessous). Si le fichier que vous avez modifié est dans la `modèles/` ou `lib/` répertoire, un build de site complet déclenchera à la place.
 
-## Tisser le *graphique de dépendance* de votre site Web ensemble
+## Tissage du *Graphique de dépendance* de votre site Web
 
-Mathématiquement, une *Topologie* `$$\tau$$` est une spécification complète des sous-ensembles *open* d'un espace `$$X$$`, dont le but est d'indiquer les relations de proximité entre *points* `$$x$$` de l'espace `$$X$$`. Quand `$$X$$` est un graphique, une *topologie* `$$\tau$$` pour `$$X$$` revient à spécifier les arêtes reliant les sommets du graphe ensemble (ici les sommets sont considérés comme les *points* de `$$X$$`, et les bords de connexion déterminent les quartiers de ces points en tant que *jeux ouverts de base* pour la topologie).  Une topologie graphique *dirigée* est essentiellement la même chose, mais incorpore une référence à une intégration topologique de `$$(X,\tau)$$` dans un espace topologique plus vaste `$$(Y,\sigma)$$`
+Mathématiquement, une *Topologie* `$$\tau$$` est une spécification complète des sous-ensembles *ouverts* d'un espace `$$X$$`, dont le but est d'indiquer les relations de proximité entre *points* `$$x$$` de l'espace `$$X$$`. Quand `$$X$$` est un graphe, une *topologie* `$$\tau$$` pour `$$X$$` indique les arêtes reliant les sommets du graphique (ici, les sommets sont considérés comme les *points* de `$$X$$`, et les bords de connexion déterminent les quartiers de ces points en tant que *ensembles ouverts de base* pour la topologie).  Une *topologie de graphe dirigée* est essentiellement la même chose, mais intègre une référence à une intégration topologique de `$$(X,\tau)$$` dans un plus grand espace topologique `$$(Y,\sigma)$$` , où les connexions de bord de l'intégration sont représentées par des courbes directionnelles (Jordanie).
 
-Ce dernier concept est ce que nous utiliserons lors de la discussion de la topologie du *graphique de dépendance* `$$\tau$$` associé à l'espace `$$X$$` des fichiers source sous votre site `contenu/` sous-répertoire (ici `$$(Y,\sigma)$$` est `$$\mathbb{R}^n$$` avec sa topologie métrique pour `$$n \in \{2,3\}$$`et les bords de `$$X$$` sont des courbes de Jordan dirigées sans intersection reliant un fichier `$$x \in X$$` à son ensemble de fichiers sur lesquels `$$x$$` dépend de : `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$`
+Ce dernier concept est ce que nous allons utiliser lors de la discussion de la topologie du graphe de dépendance. `$$\tau$$` associés à l'espace `$$X$$` des fichiers source sous votre site `contenu/` sous-répertoire (ici `$$(Y,\sigma)$$` est `$$\mathbb{R}^n$$` avec sa topologie métrique pour `$$n \in \{2,3\}$$`et les bords de `$$X$$` sont des courbes Jordan dirigées sans intersection reliant un fichier `$$x \in X$$` à son ensemble de fichiers sur lesquels `$$x$$` dépend : `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$`).
 
-Avoir {# lede #}une compréhension claire du *graphique de dépendance* de votre site Web vous permettra de maximiser les performances de notre technologie de construction à grande échelle{# lede #}. Nous prenons les informations que vous fournissez à `%path : :dépendances` pendant le chargement de votre site Web `lib/path.pm` fichier, construire une mappe inverse de fichiers dépendants, et utiliser *celle mappe inverse* pour déterminer le corpus complet de fichiers à construire pour n'importe quel `validation svn`
+Avoir {# lede #}une compréhension claire du *graphique de dépendance* de votre site Web vous permettra d'optimiser les performances de notre technologie de construction à grande échelle{# lede #}. Nous prenons les informations que vous nous fournissez `%path : :dépendances` pendant le chargement de votre site Web `lib/path.pm` fichier, construire une mappe inverse des fichiers dépendants, et utiliser *cette mappe inverse* pour déterminer le corpus complet de fichiers à construire pour un `validation svn` Vous faites à notre système.
 
-Il est important de noter que les relations de dépendance entre les fichiers source peuvent et doivent être entièrement capturées par le `%path : :dépendances` hachage pendant la charge de démarrage du système de build `lib/path.pm` de votre arbre source, qui est la façon dont les vues intégrées contenues dans notre `SunStarSys : :Afficher` Le paquet Perl est destiné à fonctionner. Le `walk_content_tree`, `archivé`, et `seed_file_deps` fonctions utilitaires importables depuis `SunStarSys : :Util` sont des aides utiles à la construction de `%path : :dépendances`
+Il est important de noter que les relations de dépendance entre les fichiers source peuvent et doivent être entièrement capturées par le `%path : :dépendances` hachage lors du chargement de démarrage du système de build `lib/path.pm` à partir de votre arbre source, qui est la façon dont les vues intégrées contenues dans notre `SunStarSys : :Affichage` Le paquet Perl est destiné à fonctionner. Le `walk_content_tree`, `archivé`et `seed_file_deps` fonctions utilitaires importables à partir de `SunStarSys : :Utilisation` sont des aides utiles à la construction de `%path : :dépendances` hash, avec prise en charge intégrée de la gestion d'un cache de dépendances pour accélérer les builds incrémentiels à grande échelle.
 
-Voici cette partie de notre vie [`lib/path.pm`]({{snippetA.pretty_uri}}).
+Voici cette partie de notre vie [`lib/path.pm`]({{snippetA.pretty_uri}}):
 
 [snippet:lang=perl:repo=SunStarSys/www:branch=trunk:path=lib/path.pm:token=#snippet]
 
-S'il vous plaît faire ce code pour des idées sur la façon dont vous voulez *votre site web * pour fonctionner. Oui, il y a une certaine complexité raisonnable (impliquant à la fois les expressions régulières de Perl et la coque UNIX C de Perl) `globulaire` d'une manière très précise) autour de la `%path : :dépendances`
+S'il vous plaît faire mull ce code pour des idées sur la façon dont vous voulez que *votre site Web * fonctionne. Oui, il y a une certaine complexité raisonnable (impliquant à la fois les expressions régulières de Perl et le shell UNIX C de Perl) `glob` interfaces, de manière très précise) autour de la façon dont `%path : :dépendances` est construit dans ce fichier, mais au lieu de simplement le voir comme un travail d'optimisation, regardez-le plutôt comme fournissant les ingrédients de base nécessaires pour interpréter les principaux aspects de la topologie *link* de manière automatisée et dynamique.
 
-Où les entrées dans `%path : :dépendances` D'origine ? S'ils ne sont pas nés d'une invocation de `walk_content_tree { seed_file_deps ... }`, (qui plonge essentiellement dans les en-têtes et le contenu de vos fichiers source de démarque), puis ils sont simplement codés en dur dans `lib/path.pm`
+Emplacement des entrées `%path : :dépendances` origine ? S'ils ne sont pas nés d'une invocation de `walk_content_tree { seed_file_deps ... }`, (qui plonge essentiellement dans les en-têtes et le contenu de vos fichiers source Markdown), puis ils sont simplement codés en dur dans `lib/path.pm` lors du chargement.
 
 ### Les graphiques de dépendance cyclique sont la norme
 
-Notre site est actuellement composé de `240 fichiers source` dans `contenu/`. Voici un `85 sommets x 465 arêtes`, représentation graphique dirigée bidimensionnelle et défilable d'un instantané récent des dépendances de page en langue anglaise sur **notre site** ([utilisation de GraphViz `point`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl).
+Notre site se compose actuellement de `240 fichiers source` dans `contenu/`. Voici un `85 sommets x 465 arêtes`, représentation graphique dirigée bidimensionnelle défilable d'un instantané récent des dépendances de page en anglais sur **notre site** ([utilisation de GraphViz `point`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl)):
 
 <div id="deps">
 
-  ![Dépendances de la langue anglaise](../images/deps).
+![Dépendances de la langue anglaise](../images/deps).
 
 </div>
 
-Assez complexe, même pour un petit site comme celui-ci ! Nombreux croisements d'arêtes lors de la prise `$$n=2$$` (évitable dans la dimension `$$n=3$$`). Notons en particulier l'ensemble de base des dépendances cycliques denses dans les fichiers non archivés de notre site. `/essais/` répertoire, vers le bas-centre-droite du graphique, qui est ce à quoi devrait ressembler un bon site de blogging graphique de dépendance. Ces dépendances sont tracées dans `courbes rouges`
+Assez complexe, même pour un petit site comme celui-ci ! Beaucoup d'intersections de bord lors de la prise `$$n=2$$` (évitable dans la dimension `$$n=3$$`). Notons en particulier l'ensemble central des dépendances cycliques denses dans les fichiers non archivés de notre site. `/résultats/` répertoire, vers le centre inférieur droit du graphique, à quoi devrait ressembler le graphique de dépendance d'un bon site de blogs. Ces dépendances sont définies dans `courbes rouges` dans l'image.
 
-Notons également l'interconnexion interne essentiellement isolée des éléments dans `/catégories/*/*` et `/archives/2022/11/*`. Les seules dépendances externes impliquent un contenu non archivé dans `/essais/*`. C'est par conception &mdash; les essais archivés ne devraient changer que *adiabatiquement*, peut-être uniquement pour des ajustements à leur `Catégorie` en-têtes. Aucune de ces modifications n'affecte matériellement le contenu préexistant, nous ne le suivons donc pas. `%path : :dépendances`
+Notez également l'interconnexion interne, essentiellement isolée, des éléments dans `/catégories/*/*` et `/archives/2022/11/*`. Les seules dépendances externes impliquent du contenu non archivé dans `/résultats/*`. C'est par conception &mdash; les essais archivés ne devraient changer que *adiabatiquement*, peut-être uniquement pour des ajustements à leurs `Catégorie` en-têtes. Aucune de ces modifications n'affecte matériellement le contenu préexistant, nous ne le suivons donc pas dans `%path : :dépendances`.
 
-Bien sûr, notre [Wiki d'Orion](/orion/).
+Bien sûr, notre [Wiki d'Orion Enterprise](/orion/) n'a jamais eu de problèmes avec les dépendances cycliques.
 
-### Ne s'agit-il pas uniquement de liens hypertexte ?
+### N'est-ce pas seulement des hyperliens ?
 
-**Non !** En fait, la *topologie de lien* de votre site Web est une question entièrement distincte du *graphique de dépendance* de l'arborescence source.  Un moteur de recherche sortira naturellement de la topologie *link*, mais n'aura aucun aperçu du *graphique de dépendance*.
+**Non !** En fait, la *topologie de lien* de votre site Web est une matière entièrement distincte du *graphique de dépendance* de l'arborescence source*.  Un moteur de recherche va naturellement extraire la *topologie du lien*, mais n'a aucun aperçu du *graphique de dépendance*.
 
-Voici un `Plus de 240 sommets x 3859 arêtes`, graphique actuel des yeux d'oiseaux du graphique anglais *link topology* pour **notre site** ([utilisation de GraphViz `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl).
+Voici une `Plus de 240 sommets x 3859 arêtes`, graphique des yeux des oiseaux en cours du graphique anglais *link topology* pour **notre site** ([utilisation de GraphViz `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl)):
 
 <div id="links">
 
-  ![Liens vers la langue anglaise](../images/links).
+![Liens de langue anglaise](../images/links).
 
 </div>
 
-Pouvez-vous repérer le `bords rouges`
+Pouvez-vous repérer `bords rouges` comme indiqué dans le *graphique de dépendance* ? Le graphique *topologie de lien* est qualitativement et quantitativement **très différent** du graphique *dépendance* (dramatiquement plus petit et moins interconnecté) représenté ci-dessus.
 
-### Comment la technologie SSI peut vous aider
+### Comment la technologie SSI peut aider
 
-#### Traditional [Inclut côté serveur](https://httpd.apache.org/docs/2.4/howto/ssi.html).
+#### Traditionnel [Inclus côté serveur](https://httpd.apache.org/docs/2.4/howto/ssi.html) (SSI).
 
-- **excellent** pour réduire la taille du *graphique de dépendance* de votre site Web à une taille gérable sans sacrifier la latence de livraison des pages
-- **excellent** pour réduire l'attrition standard dans les messages de validation volumineux afin d'améliorer la révision par les pairs et la surveillance de vos ensembles de modifications créés
+- **excellent** pour élaguer le *graphique de dépendance* de votre site Web vers une taille gérable sans sacrifier la latence de livraison des pages
+- **excellent** pour réduire l'attrition boilerplate dans les messages de validation volumineux afin d'améliorer la révision par les pairs et la surveillance de vos ensembles de modifications créés
+- **mauvaise** pour la recontextualisation de pages Web entières dans un emplacement différent dans la hiérarchie de la racine de document
 
-
-#### API de modèles
+#### API de modèle
 
 ##### balise ssi
 
 Syntaxe :
 
-&#123;% `ssi` &#96;/content_rooted/path/to/source_file&#96; %&#125;
+&#123;% `Ssi` &#96;/content_rooted/path/to/source_file&#96; %&#125;
 
 - chemins enracinés à `contenu` répertoire source
-- ignore la partie d'en-tête du fichier source à être `ssi` inclus
-
+- ignore la partie en-tête du fichier source à `Ssi` inclus
+- réécrit les URL relatives en URL absolues dans le contenu inclus du chemin cible
 
 ##### filtre ssi
 
@@ -99,61 +98,61 @@ Syntaxe :
 
 &#123;&#123; contenu|ssi &#125;&#125;
 
-- Evaluations récursives `ssi` balises dans la valeur à filtrer
-- utile pour éviter d'utiliser une grande valeur (3+) de `quick_deps` dans un `@path : :modèles`
+- Évaluations récursives `Ssi` balises dans la valeur à filtrer
+- utile pour éviter d'utiliser une grande valeur (3+) de `quick_deps` dans un `@path : :modèles` hashref d'argument d'entrée, qui peut avoir un impact sur les performances
 
 #### Pourquoi pas SymLinks ?
 
-- abstraction du système de fichiers barebones difficile à prendre en charge en toute sécurité dans un `<virtualhost>` contexte
-- mêmes inconvénients avec le traditionnel `ssi` sur les pages web complètes
-- notre [Wiki d'Orion](/orion/).
+- abstraction de système de fichiers barebones qui est difficile à prendre en charge en toute sécurité dans un `<virtualhost>` contexte
+- les mêmes inconvénients que les traditionnels `Ssi` sur des pages web complètes
+- notre [Wiki d'Orion Enterprise](/orion/) Le système ne les prend pas en charge
 
-#### Outils de paramétrage pour les liens permanents
+#### Outils de paramétrage pour les permaliens
 
-##### Curation de document
+##### Durée du document
 
-Le système de construction d'Orion a intégré la prise en charge de ce que nous appelons la "curation des documents", qui est le processus de recontextualisation et de réorganisation de votre contenu en fonction de la façon dont vous définissez le `Catégories` et `Archiver` en-têtes dans vos fichiers source Markdown. Ces fonctionnalités sont désactivées par défaut, mais peuvent être activées en définissant une `category_root` (pour le support de catégorie) ou un `archive_root` (pour la prise en charge de l'archivage) dans l'argument hashref associé au `@path : :modèles`
+Le système de construction d'Orion a intégré la prise en charge de ce que nous appelons *Curation de documents*, qui est le processus de recontextualisation et de réorganisation de votre contenu en fonction de la façon dont vous définissez le `Catégories` et `Archiver` en-têtes dans vos fichiers source Markdown. Ces fonctionnalités sont désactivées par défaut, mais peuvent être activées en définissant un `category_root` (pour le support de catégorie) ou un `archive_root` (pour la prise en charge de l'archivage) dans l'argument hashref associé au `@path : :modèles` saisie.
 
 ##### Catégories
 
-- le nouveau contenu est construit à l'aide du modèle `ssi` balises pointant vers l'emplacement du permalien, lors de la suppression du `Archiver` en-tête de la page source construite
+- le nouveau contenu est construit à l'aide du modèle `Ssi` balises pointant vers l'emplacement du permalien, lors de la suppression de `Archiver` en-tête de la page source construite
 - les catégories sont strictement additives (c'est-à-dire que la suppression d'une catégorie des en-têtes d'une page source ne la supprimera pas de cette catégorie sur le site en direct),
 - généré à la demande
-
+- supprimer toutes les catégories en une seule validation est un excellent moyen de les synchroniser avec les spécifications exactes dans les en-têtes de toutes les pages source, sans détruire le contenu de la catégorie préservée sur le site en direct
 
 ##### pages archivées
 
-Sur notre site, nous archivons agressivement des essais obsolètes pour maintenir les temps de construction des nouveaux essais à un niveau bas, tout en ne détruisant pas les permaliens vers les documents archivés. *Graphique de dépendance* par rapport à `/archives/`
+Sur notre site, nous archivons agressivement les essais obsolètes pour maintenir les temps de construction des nouveaux essais bas, tout en ne détruisant pas les permaliens vers les documents archivés. Le graphe *dependency* relatif à `/archives/` répertoire (pour notre site) est raisonnablement autonome selon les règles suivantes :
 
-- contenu construit à l'aide du modèle `ssi` balises pointant vers l'emplacement du permalien, lors de la suppression du `Catégories` et `Archiver` en-têtes de la page source construite
-- contenu dans `/(essais|clients)/` sont toujours permaliens, même après l'archivage
-
+- contenu construit à l'aide du modèle `Ssi` balises pointant vers l'emplacement du permalien, lors de la suppression de `Catégories` et `Archiver` en-têtes de la page source construite
+- contenu dans `/(essays|clients)/` sont toujours des permaliens, même après l'archivage
+- l'archivage supprime efficacement l'emplacement du permalien du *graphique de dépendance*, sans supprimer le permalien lui-même du site Web
 
 ##### Lede
 
-Commentaires HTML incorporés dans les limites de forme de prose Markdown du contenu de la lede. Nous utilisons **&#123;N° de lie&#125;
+Les commentaires HTML incorporés dans les limites de formulaire de prose Markdown du contenu lede. Nous utilisons **&#123;Nb de leads&#125;** à cette fin.
 
-Le traitement des ledes se fait avec le `lede` Filtre de modèle. Il est utile de combiner cela avec le `ssi`
+Le traitement des leds est effectué avec le `conduit` Filtre de modèle. Il est utile de combiner cela avec le `Ssi` filtre permettant d'indexer un fichier de catégorie contenant plusieurs pages de catégorie.
 
 Nb de conclusions
 
-Il existe des structures et des relations de données intéressantes à découvrir lorsque vous traitez le *graphique de dépendance* d'un site Web du point de vue des performances de construction, ce qui est un domaine d'intérêt beaucoup plus récent que la documentation de recherche explorant les structures de données et les problèmes associés entourant la *topologie de lien*<sup>1,2</sup>.
+Il existe des structures et des relations de données intéressantes à découvrir lorsque vous traitez le *graphique de dépendance* d'un site Web du point de vue des performances de construction, ce qui est un domaine d'intérêt beaucoup plus récent que la documentation de recherche qui explore les structures de données et les problèmes associés entourant la *topologie des liens*<sup>1,2</sup>.
 
-Les builds incrémentiels classiques pour les projets de développement de logiciels purs restent un sujet brûlant. Les recherches abordées dans <sup>3,4</sup> ont été publiées en octobre 2022, environ un mois avant la fin de cet essai. Le système de build *pluto*<sup>5</sup> possède des fonctionnalités assez similaires aux nôtres (le build lui-même peut régénérer et reconstruire dynamiquement les dépendances).
+Les builds incrémentiels classiques pour les projets de développement de logiciels purs restent un sujet brûlant. La recherche abordée dans le document <sup>3,4</sup> a été publiée en octobre 2022, environ un mois avant que cet essai ne soit terminé. Le système de construction *pluto*<sup>5</sup> a des fonctionnalités assez similaires aux nôtres (la construction elle-même peut régénérer et reconstruire dynamiquement les dépendances).
 
-La bonne nouvelle, c'est que nous vous avons couvert en tant que client. Nous vous tiendrons au courant des meilleures pratiques et de l'état de l'art dans ce domaine, de sorte que vous profiterez de nos leçons apprises au cours de la dernière décennie et dans demain.
+La bonne nouvelle est que nous vous avons couvert en tant que notre client. Nous vous tiendrons au courant des meilleures pratiques et de l'état de l'art dans cet espace, de sorte que vous bénéficierez de nos leçons apprises au cours de la dernière décennie et dans demain.
 
-## Notes de bas de page
+Nb de pieds de page
 
-1. [Identification des clusters dans le graphique Web en fonction de la topologie des liens](https://ieeexplore.ieee.org/abstract/document/1214919).
+1. [Identification des clusters dans le graphique Web en fonction de la topologie des liens](https://ieeexplore.ieee.org/abstract/document/1214919) Septième Symposium international sur l'ingénierie et les applications des bases de données, 2003. Actes.
 
-2. [Inférer des communautés Web à partir de la topologie de lien](https://dl.acm.org/doi/pdf/10.1145/276627.276652) Compte rendu de la neuvième conférence de l'ACM sur l'hypertexte et l'hypermédia : liens, objets, temps et espace &mdash; structure dans les systèmes hypermédias : liens, objets, temps et espace &mdash;
+2. [Inférer des communautés Web à partir de la topologie de lien](https://dl.acm.org/doi/pdf/10.1145/276627.276652) Compte rendu de la neuvième conférence de l'ACM sur l'hypertexte et l'hypermédia : liens, objets, temps et espace &mdash; structure dans les systèmes hypermédias : liens, objets, temps et espace &mdash; structure dans les systèmes hypermédias. 1998.
 
-3. [Sur les avantages et les limites des configurations logicielles de construction incrémentielles : une étude exploratoire](https://dl.acm.org/doi/abs/10.1145/3510003.3510190).
+3. [Sur les avantages et les limites des configurations logicielles de construction incrémentielles : une étude exploratoire](https://dl.acm.org/doi/abs/10.1145/3510003.3510190) ICSE '22 : Actes de la 44e Conférence internationale sur le génie logiciel, mai 2022
 
-4. [Vers la création incrémentielle de configurations logicielles](https://dl.acm.org/doi/10.1145/3510455.3512792).
+4. [Vers la création incrémentielle de configurations logicielles](https://dl.acm.org/doi/10.1145/3510455.3512792) ICSE-NIER '22 : Actes de la 44e Conférence internationale de l'ACM/IEEE sur le génie logiciel : nouvelles idées et résultats émergents, mai 2022
 
-5. [Un système de construction incrémentielle sain et optimal avec des dépendances dynamiques](https://dl.acm.org/doi/10.1145/2814270.2814316).
+5. [Un système de création incrémentielle sain et optimal avec des dépendances dynamiques](https://dl.acm.org/doi/10.1145/2814270.2814316) OOPSLA 2015 : Actes de la Conférence internationale ACM SIGPLAN 2015 sur la programmation orientée objet, les systèmes, les langues et les applications Octobre 2015
 
 <style type="text/css">
 
