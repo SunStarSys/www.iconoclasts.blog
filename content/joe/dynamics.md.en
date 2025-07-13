@@ -405,19 +405,19 @@ Curvature constraints on the commutativity of parallel transport determine that 
 
 ##### Brownian Motion on $$M$$ is Euclidean Wiener Measure on $$\mathscr D^{-1}$$
 
-##### The Cameron Martin Formula for the Kernel of $$\frac{1}{2}\Delta - \frac{1}{4}\mathcal R$$ $$k_t(q_0,q_f)$$ on a negatively curved $$M$$
+##### The Cameron Martin Formula for the heat kernel $$k_t(q_0,q_f)$$ on a negatively curved manifold $$M$$
 
 Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$q$$ and ending at $$\exp(t\mathcal B_t)\ q$$, and $$\mu_t$$ be Global Wiener Measure on $$TM$$, with $$E_t (f|A):=\int_{\set{c}} f(c) d(\mu_t|A)(c)$$. Then Equation (25) $$(D) \implies$$
 
 ```math
 \begin{aligned}
-k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{\lambda e^{-(\lambda\rho)^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{-t\mathcal {Ric}_{\mathcal B}\ /6\lambda}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}
+k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{\lambda e^{-(\lambda\rho)^2/2t + t\mathcal R(q_0)/12\lambda}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{\int_0^t\mathcal {Ric}_{\mathcal B}(\omega(t))dt\ /6\lambda}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
 |\mathcal B^\perp)
 \end{aligned}
 ```
 where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$, and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$. Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
 
-Also $$\mathcal {Ric}_{\mathcal B}(q_0)$$ is the Ricci curvature of $\mathcal B$$.
+Also $$\mathcal{Ric}_{\mathcal B} = \mathcal {Ric}(\mathcal B,\mathcal B)$$.
 
 Proof of this Equation <span class="eqno"></span> will be grist for a preprint article, not this survey.
 
