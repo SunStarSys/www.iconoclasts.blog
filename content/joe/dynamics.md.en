@@ -362,7 +362,7 @@ Significantly, we constructed $$\mathcal B_t$$ so that $$\dot q - \mathcal B_t$$
 
 What if we tried to use "successive convolutions" on the semi-classical expression in Equation (16) to construct Brownian Motion on a curved manifold by fiat?
 
-We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$-\frac{1}{4}\mathcal R$$, where $$\mathcal R$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel, where this term represents the contribution to the Hessian of *the metric form* $$g_{ij}$$ in [normal coordinates](https://en.wikipedia.org/wiki/Normal_coordinates).  However, when you add the full corrective potential $$\mathcal V = \frac{1}{12}\mathcal R + \frac{1}{6}\mathcal R = \frac{1}{4}\mathcal R$$ to the Hamiltonian, which when is Dewitt's $$\frac{1}{12} \mathcal R$$ metric term *plus* the volume form's $$\frac{1}{6}\mathcal R$$ contribution, this factor is eliminated from the short-term asymptotics.
+We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$-\frac{1}{4}\mathcal R$$, where $$\mathcal R$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel, where this term represents the contribution to the Hessian of *the metric form* $$g_{ij}$$ in [normal coordinates](https://en.wikipedia.org/wiki/Normal_coordinates).  However, when you add the full corrective potential $$\mathcal V = \frac{1}{12}\mathcal R + \frac{1}{6}\mathcal R = \frac{1}{4}\mathcal R$$ to the Hamiltonian, which when is Dewitt's $$\frac{1}{12} \mathcal R$$ volume form term *plus* the metric's $$\frac{1}{6}\mathcal R$$ contribution, this factor is eliminated from the short-term asymptotics.
 
 #### The Geometric Cameron-Martin Formula for $$g$$-invariant vector fields $$\mathcal B_t$$ (aka Quadratic Form Magic, Part 2)
 
@@ -411,11 +411,13 @@ Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$
 
 ```math
 \begin{aligned}
-k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{\lambda e^{-(\lambda\rho)^2/2t - t\mathcal R(q_0)/4\lambda}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}
+k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{\lambda e^{-(\lambda\rho)^2/2t - t\mathcal R_{\mathcal B}(q_0)/6\lambda}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}
 |\mathcal B^\perp)
 \end{aligned}
 ```
-where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the  geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ q_0$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$ and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$.  Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
+where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the  geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ (q_0)$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$ and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$. Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
+
+Also $$\mathcal R_{\mathcal B}(q_0)$$ is the averge sectional curvature along $$q(s) = \exp s \mathcal B_t \ (q_0)$$.
 
 Proof of this Equation <span class="eqno"></span> will be grist for a preprint article, not this survey.
 
