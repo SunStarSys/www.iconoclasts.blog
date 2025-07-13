@@ -358,7 +358,7 @@ e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B_t||^2/2}e^{-(\m
 
 Significantly, we constructed $$\mathcal B_t$$ so that $$\dot q - \mathcal B_t$$ represented a once-broken geodesic at $$s$$ that started and ended at $$q_0$$, and we saw that those curves are essentially $$\mathcal N(0,s\wedge t-s)$$ distributed. In the remainder of this article, we will decompose $$\Reals^n=<\mathcal B_t>\oplus \mathcal B_t^\perp$$ and integrate out $$<\mathcal B_t>$$.
 
-#### The DeWitt Scalar Curvature Path Integral Defect
+#### The DeWitt Scalar Curvature Path Integral Defect on Riemann Surfaces
 
 What if we tried to use "successive convolutions" on the semi-classical expression in Equation (16) to construct Brownian Motion on a curved manifold by fiat?
 
@@ -391,7 +391,7 @@ Noether's Theorem ensures $$d({g^{-1}\mathcal B}) = 0$$, so $$g^{-1}\mathcal B$$
 \end{aligned}
 ```
 so $$\gamma$$ is contained in a level set of $$\mathcal B$$.
-Curvature constraints on the commutativity of parallel transport determine that $$\gamma(t) != q_f$$ in general.
+Curvature constraints on the commutativity of parallel transport determine that $$\gamma(t) \ne q_f$$ in general.
 
 ```math
 \begin{aligned}
@@ -411,13 +411,13 @@ Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$
 
 ```math
 \begin{aligned}
-k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{\lambda e^{-(\lambda\rho)^2/2t - t\mathcal R_{\mathcal B}(q_0)/6\lambda}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)| }}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}
+k_t(q_0,\exp{\lambda\mathcal B_t}\ q_0) &= \frac{\lambda e^{-(\lambda\rho)^2/2t - t\mathcal R_{\mathcal B}(q_0)/6\lambda}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}}
 |\mathcal B^\perp)
 \end{aligned}
 ```
-where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the  geodesic $$\tilde \gamma(s) = \exp{s\mathcal B_t}\ (q_0)$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$ and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$. Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
+where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$ connecting $$q_0$$ to $$ q_f$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$, and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$. Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
 
-Also $$\mathcal R_{\mathcal B}(q_0)$$ is the averge sectional curvature along $$q(s) = \exp s \mathcal B_t \ (q_0)$$.
+Also $$\mathcal R_{\mathcal B}(q_0)$$ is the Ricci curvature of $\mathcal B$$.
 
 Proof of this Equation <span class="eqno"></span> will be grist for a preprint article, not this survey.
 
