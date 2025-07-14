@@ -422,9 +422,13 @@ Proof of this Equation <span class="eqno"></span> will be grist for a preprint a
 A nice corollary occurs in the constant $$\mathcal {Ric_{ij} } = \bar{\mathcal R} / \dim M$$ Ricci curvature case:
 
 ```math
-\int_{M/S^1\oplus S^1} k_t(q,e^{t\mathcal B_t}q) \sqrt gdx =\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1}\frac{1}{\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
-|\mathcal B^\perp)d\mathcal B^\perp d\hat{\mathcal B}
+\begin{aligned}
+\int_{M/S^1\oplus S^1} k_t(q,e^{t\mathcal B_t}q) \sqrt gdx &= \frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2} \int_{M/S^1\oplus S^1} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q)]}(\omega)}
+|\mathcal B^\perp)d\mathcal B^\perp(q) d\hat{\mathcal B}(q)\\
 
+&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \rho_0
+
+\end{aligned}
 ```
 ### Observables, Evolution Equation, and Lie Algebras
 
