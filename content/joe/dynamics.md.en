@@ -390,7 +390,7 @@ Noether's Theorem ensures $$d({g^{-1}\mathcal B}) = 0$$, so $$g^{-1}\mathcal B$$
 \frac{d\hat{\mathcal B}}{dt} &= 0\ ,
 \end{aligned}
 ```
-so $$\gamma$$ is contained in a level set of $$\mathcal B$$.
+so $$\gamma$$ is contained in a level set of $$\hat{\mathcal B}$$.
 Curvature constraints on the commutativity of parallel transport determine that $$\gamma(t) \ne q_f$$ in general.
 
 ```math
@@ -411,7 +411,7 @@ Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$
 
 ```math
 \begin{aligned}
-k_t(q_0,\exp{t\mathcal B_t}\ q_0)\frac{d(\sqrt g dx)}{d\mathcal B^\perp}(q_0)&= \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \int_0^t \sum_{i=1}^{\dim M}\mathcal {R_{sectional}}(\mathcal B, d\omega^i)/6}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
+k_t(q_0,\exp{t\mathcal B_t}\ q_0)\frac{d(\sqrt g dx)}{d\mathcal B^\perp}(q_0)&= \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \dim M \int_0^t \sum_{i=1}^{\dim M}\mathcal {R_{sectional}}(\mathcal B, d\omega^i)/6}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
 |\mathcal B^\perp)d\hat{\mathcal B}(q_0)
 \end{aligned}
 ```
