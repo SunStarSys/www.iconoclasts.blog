@@ -411,7 +411,7 @@ Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$
 
 ```math
 \begin{aligned}
-k_t(q_0,\exp{t\mathcal B_t}\ q_0)\frac{d(\sqrt g dx)}{d\mathcal B^\perp}(q_0)&= \frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}(q_0)/12}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{\int_0^t \sum_{i=1}^{\dim M}\mathcal {Ric}(d\omega^i, \mathcal B)(\omega) \ dt/6}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
+k_t(q_0,\exp{t\mathcal B_t}\ q_0)\frac{d(\sqrt g dx)}{d\mathcal B^\perp}(q_0)&= \frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}(q_0)/12}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{\int_0^t \sum_{i=1}^{\dim M}\mathcal {Ric}(d\omega^i, \mathcal B)(\omega) /6}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
 |\mathcal B^\perp)d\hat{\mathcal B}(q_0)
 \end{aligned}
 ```
@@ -419,6 +419,13 @@ where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\
 
 Proof of this Equation <span class="eqno"></span> will be grist for a preprint article, not this survey.
 
+A nice corollary occurs in the constant $$\mathcal {Ric_{ij} } = \bar{\mathcal R} / \dim M$$ Ricci curvature case:
+
+```math
+\int_{M/S^1\oplus S^1} k_t(q,e^{t\mathcal B_t}q) \sqrt gdx =\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1}\frac{1}{\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}} E_t({\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
+|\mathcal B^\perp)d\mathcal B^\perp d\hat{\mathcal B}
+
+```
 ### Observables, Evolution Equation, and Lie Algebras
 
 ### Chern-Simons Line-Bundle Action
