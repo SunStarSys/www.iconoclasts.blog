@@ -411,7 +411,7 @@ Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$
 
 ```math
 \begin{aligned}
-k_t(q_0,\exp{t\mathcal B_t}\ q_0)\frac{d(\sqrt g dx)}{d\mathcal B^\perp}(q_0)&= \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \dim M \int_0^t \mathcal {Ric}(\mathcal B,\mathcal B)(\omega(s))ds/6}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
+k_t(q_0,\exp{t\mathcal B_t}\ q_0)\frac{d(\sqrt g dx)}{d\mathcal B^\perp}(q_0)&= \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \dim M \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/6}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
 |\mathcal B^\perp)d\hat{\mathcal B}(q_0)
 \end{aligned}
 ```
@@ -419,7 +419,7 @@ where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\
 
 Proof of this Equation <span class="eqno"></span> will be grist for a preprint article, not this survey.
 
-A nice corollary occurs in the constant $$\mathcal {Ric} = \bar{\mathcal R} / \dim M$$ curvature case, where $$\mathcal B$$ descends to an $$S^1$$ action on Riemann Surface $$M$$:
+A nice corollary occurs in the constant $$\mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||}) = \bar{\mathcal R} / \dim M$$ curvature case, where $$\mathcal B$$ descends to an $$S^1$$ action on Riemann Surface $$M$$:
 
 ```math
 \begin{aligned}
