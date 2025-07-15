@@ -411,7 +411,7 @@ Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$
 
 ```math
 \begin{aligned}
-k_t(q_0,\exp{t\mathcal B_t}\ q_0)\frac{d(\sqrt g dx)}{d\mathcal B^\perp}(q_0)&= \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \dim M \int_0^t \sum_i \mathcal {Ric}(\mathcal B,\mathcal B)(\omega(s))ds/6}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
+k_t(q_0,\exp{t\mathcal B_t}\ q_0)\frac{d(\sqrt g dx)}{d\mathcal B^\perp}(q_0)&= \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \dim M \int_0^t \mathcal {Ric}(\mathcal B,\mathcal B)(\omega(s))ds/6}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
 |\mathcal B^\perp)d\hat{\mathcal B}(q_0)
 \end{aligned}
 ```
@@ -423,7 +423,7 @@ A nice corollary occurs in the constant $$\mathcal {Ric} = \bar{\mathcal R} / \d
 
 ```math
 \begin{aligned}
-\int_{M/S^1\oplus S^1} k_t(q,e^{t\mathcal B_t}q) \sqrt gdx &= \frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/12}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2} \int_{M/S^1\oplus S^1} E_t(e^{t\dim M\sum_i\bar{\mathcal R}/6\dim M}{\chi_{\mathscr D^{-1}[\Omega^B_t(q)]}(\omega)}
+\int_{M/S^1\oplus S^1} k_t(q,e^{t\mathcal B_t}q) \sqrt gdx &= \frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/12}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2} \int_{M/S^1\oplus S^1} E_t(e^{t\dim M\ \bar{\mathcal R}\ /6\dim M}{\chi_{\mathscr D^{-1}[\Omega^B_t(q)]}(\omega)}
 |\mathcal B^\perp)d\mathcal B^\perp(q) d\hat{\mathcal B}(q)\\
 
 &=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \rho_0
