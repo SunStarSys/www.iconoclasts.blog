@@ -415,7 +415,7 @@ k_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{
 |d\mathcal B^\perp)d\hat{\mathcal B}(q_0)
 ```
 
-where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$ connecting $$q_0$$ to $$ q_f$$ as $$\lambda$$ goes from $$0$$ to $$t$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$, and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$. Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
+where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the monodromy matrix along the curve $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$ connecting $$q_0$$ to $$ q_f$$ as $$\lambda$$ goes from $$0$$ to $$t$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$, and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$. Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
 
 Proof of this Equation <span class="eqno"></span> will be grist for a preprint article, not this survey.
 
@@ -423,19 +423,18 @@ A nice corollary occurs in the constant $$\mathcal {Ric}(\frac{\mathcal B}{||\ma
 
 ```math
 \begin{aligned}
-\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{\det |I-\mathcal J_\mathcal B(q)|}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/4}{\chi_{\Omega^B_t(q)}(\omega)}
-|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
+\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2 \sinh \sqrt{-\bar{\mathcal R}(q)}\rho/2}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/4}{\chi_{\Omega^B_t(q)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
 
 &=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B|d\mathcal B^\perp d\hat{\mathcal B}(q)), \ \text{ Bayes}\implies\\
 
-&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp(d\hat{\mathcal B}))}\\
+&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp d\hat{\mathcal B}|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp(d\hat{\mathcal B}))}d\hat{\mathcal B}\\
 
 &=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \rho_0\\
 
 \end{aligned}
 ```
 
-where $$\rho = \max_{q\in M}\frac{\hat{ \mathcal B}(\exp t\mathcal B \ q) - \hat {\mathcal B}(q)}{||t\mathcal B(q)||}$$ is the distance of the shortest orbit traveled under the $$S^1$$ action, and $$\rho_0$$ is that $$\rho$$ divided by the multiplicity of its associated orbit.  In the familiar terms of hyperbolic geometry, $$\mathcal B^\perp$$ are **horocycles** and the $$g$$-invariant $$S^1$$ action under $$\mathcal B$$ is said to be the **horocyclic flow**.
+where $$\rho = \min_{q\in M}dist(q, \exp t\mathcal B \ q)$$ is the distance of the shortest orbit traveled under the $$S^1$$ action, and $$\rho_0$$ is that $$\rho$$ divided by the multiplicity of its associated orbit.  In the familiar terms of hyperbolic geometry, $$\mathcal B^\perp$$ are **horocycles** and the $$g$$-invariant $$S^1$$ action under $$\mathcal B$$ is said to be the **horocyclic flow**.
 
 In other words, we have re-derived the Selberg Trace Formula vie Probability and Geometry, **instead of the usual Harmonic Analysis**.
 
