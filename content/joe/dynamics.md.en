@@ -390,8 +390,9 @@ Noether's Theorem ensures $$d({g^{-1}\mathcal B}) = 0$$, so $$g^{-1}\mathcal B$$
 \frac{d\hat{\mathcal B}}{dt} &= 0\ ,
 \end{aligned}
 ```
-so $$\gamma$$ is contained in a level set of $$\hat{\mathcal B}$$.
-Curvature constraints on the commutativity of parallel transport determine that $$\gamma(t) \ne q_f$$ in general.
+
+so $$\gamma$$ is contained in a level set of $$\hat{\mathcal B}$$ whenever $$c$$ is entirely contained within $$\mathcal B^\perp \subset T_qM$$.
+Curvature constraints on the commutativity of parallel transport ensure that $$\gamma(t) \ne q$$ in general. Furthermore,
 
 ```math
 \begin{aligned}
@@ -413,6 +414,7 @@ Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$
 k_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E^\mathcal B_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \dim M \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/6}\chi_{\Omega^B_t(q_0)}(\omega)}
 |d\mathcal B^\perp)d\hat{\mathcal B}(q_0)
 ```
+
 where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$ connecting $$q_0$$ to $$ q_f$$ as $$\lambda$$ goes from $$0$$ to $$t$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$, and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$. Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
 
 Proof of this Equation <span class="eqno"></span> will be grist for a preprint article, not this survey.
@@ -430,13 +432,12 @@ A nice corollary occurs in the constant $$\mathcal {Ric}(\frac{\mathcal B}{||\ma
 
 &=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \rho_0\\
 
-
 \end{aligned}
 ```
 
 where $$\rho = \max_{q\in M}\frac{\hat{ \mathcal B}(\exp t\mathcal B \ q) - \hat {\mathcal B}(q)}{||t\mathcal B(q)||}$$ is the distance of the shortest orbit traveled under the $$S^1$$ action, and $$\rho_0$$ is that $$\rho$$ divided by the multiplicity of its associated orbit.  In the familiar terms of hyperbolic geometry, $$\mathcal B^\perp$$ are **horocycles** and the $$g$$-invariant $$S^1$$ action under $$\mathcal B$$ is said to be the **horocyclic flow**.
 
-In other words, we have re-derived the Selberg Trace Formula vie Probability and Geometry, **instead of the usual Analysis**.
+In other words, we have re-derived the Selberg Trace Formula vie Probability and Geometry, **instead of the usual Harmonic Analysis**.
 
 ### Observables, Evolution Equation, and Lie Algebras
 
