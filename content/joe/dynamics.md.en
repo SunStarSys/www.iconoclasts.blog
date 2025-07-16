@@ -380,7 +380,7 @@ Solve for $$\tilde \gamma$$:
 
 ##### $$\tilde c(\tau)=\int_0^\tau\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ as the Inverse of the Development Map
 
-Noether's Theorem ensures $$d({g^{-1}\mathcal B}) = 0$$, so $$g^{-1}\mathcal B$$ is locally integrable to $$\hat{\mathcal B}$$, and its local level sets are orthogonal to $$\mathcal B = \nabla \hat{\mathcal B}$$. And because $$\hat \Gamma$$ preserves the metric, it preserves $$\mathcal B$$ and $$\mathcal B_\perp$$:
+Noether's Theorem ensures $$d({g^{-1}\mathcal B}) = 0$$, so $$g^{-1}\mathcal B$$ is locally integrable to $$\hat{\mathcal B}$$, and its local level sets are orthogonal to $$\mathcal B = \nabla \hat{\mathcal B}$$. And because $$\hat \Gamma$$ preserves the metric, it preserves $$\mathcal B$$ and $$\mathcal B^\perp$$:
 
 ```math
 \begin{aligned}
@@ -400,7 +400,7 @@ Curvature constraints on the commutativity of parallel transport ensure that $$\
 \tilde{c}(\tau) - c(\tau) &= \frac{t^2}{\rho^2(q_0,q_f)}\mathcal B_t\int_0^\tau \dot{\tilde c} \cdot \mathcal B_t\ ds\\
 &= \mathcal B\int_o^\tau\dot{\tilde c}\cdot \mathcal B \ ds\\
 &= \mathcal B\cdot \tilde c(\tau)\ \mathcal B\\
-&= d\hat{\mathcal B}(\tilde c)\ \mathcal B
+&= d\hat{\mathcal B}(\tilde c)\ \mathcal B \ .
 \end{aligned}
 ```
 
@@ -423,12 +423,12 @@ A nice corollary occurs in the constant $$\mathcal {Ric}(\frac{\mathcal B}{||\ma
 
 ```math
 \begin{aligned}
-\int_{M/S^1\oplus S^1} k_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{\det |I-\mathcal J_\mathcal B(q)|}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/4}{\chi_{\Omega^B_t(q)}(\omega)}
+\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{\det |I-\mathcal J_\mathcal B(q)|}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/4}{\chi_{\Omega^B_t(q)}(\omega)}
 |d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
 
-&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B|d\mathcal B^\perp)d\hat{\mathcal B}(q), \ \text{ Bayes}\implies\\
+&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B|d\mathcal B^\perp d\hat{\mathcal B}(q)), \ \text{ Bayes}\implies\\
 
-&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp|\Omega_t^\mathcal B)\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B)}{P^\mathcal B_{\mu_t}(\mathcal B^\perp)}d\hat{\mathcal B}\\
+&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp(d\hat{\mathcal B}))}\\
 
 &=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \rho_0\\
 
