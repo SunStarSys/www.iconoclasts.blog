@@ -411,8 +411,8 @@ Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$
 
 ```math
 \begin{aligned}
-k_t(q_0,\exp{t\mathcal B_t}\ q_0)\frac{d(\sqrt g dx)}{d\mathcal B^\perp}(q_0)&= \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \dim M \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/6}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
-|\mathcal B^\perp)d\hat{\mathcal B}(q_0)
+k_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0) dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \dim M \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/6}\chi_{\mathscr D^{-1}[\Omega^B_t(q_0)]}(\omega)}
+|d\mathcal B^\perp)d\hat{\mathcal B}(q_0)
 \end{aligned}
 ```
 where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the matrix of Jacobi Fields along the geodesic $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$ connecting $$q_0$$ to $$ q_f$$ as $$\lambda$$ goes from $$0$$ to $$t$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$, and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$. Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
@@ -424,11 +424,11 @@ A nice corollary occurs in the constant $$\mathcal {Ric}(\frac{\mathcal B}{||\ma
 ```math
 \begin{aligned}
 \int_{M/S^1\oplus S^1} k_t(q,e^{t\mathcal B_t}q) \sqrt gdx &= \frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/12}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}E_t(e^{t\dim M\ \bar{\mathcal R}\ /6\dim M}{\chi_{\mathscr D^{-1}[\Omega^B_t(q)]}(\omega)}
-|\mathcal B^\perp)d\mathcal B^\perp(q) d\hat{\mathcal B}(q)\\
+|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
 
-&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,t]}P_\mu(\Omega_t^\mathcal B(q)|\mathcal B^\perp)d\mathcal B^\perp(q) d\hat{\mathcal B}(q)\\
+&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,t]}P_\mu(\Omega_t^\mathcal B(q)|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
 
-&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_{\Reals\oplus[0,\rho_0]} \frac{e^{-y^2/2t}}{\sqrt{2\pi t}}dydx\\
+&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_{-\infty}^\infty \int_0^{\rho_0} \frac{e^{-y^2/2t}}{\sqrt{2\pi t}}\ dx\ dy\\
 
 &=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \rho_0\\
 
