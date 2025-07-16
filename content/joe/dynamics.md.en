@@ -411,11 +411,11 @@ Curvature constraints on the commutativity of parallel transport ensure that $$\
 Let $$\Omega^\mathcal B_t(q)$$ be the space of curves on $$M$$ originating at $$q$$ and ending at $$\exp(t\mathcal B_t)\ q$$, and $$\mu_t(\omega)$$ be Global Wiener Measure on $$\Omega^\mathcal B_t$$, with $$E_t^\mathcal B (f|A):=\int_{\Omega^\mathcal B_t} f(\omega) d(\mu_t|A)(\omega)$$ and $$P^\mathcal B_{\mu_t}(A) := \mu_t(A)/\mu_t(\Omega_t^{\mathcal B})\ \forall A\subset\Omega^\mathcal B_t $$ . Then Equation (25) $$(D) \implies$$
 
 ```math
-k_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(\tilde\gamma)|}}} E^\mathcal B_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \dim M \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/6}\chi_{\Omega^B_t(q_0)}(\omega)}
+k_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(q_0)|}}} E^\mathcal B_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \dim M \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/6}\chi_{\Omega^B_t(q_0)}(\omega)}
 |d\mathcal B^\perp)d\hat{\mathcal B}(q_0)
 ```
 
-where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(\tilde\gamma)$$ is the monodromy matrix along the curve $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$ connecting $$q_0$$ to $$ q_f$$ as $$\lambda$$ goes from $$0$$ to $$t$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$, nor $$\lambda$$, and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$. Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
+where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(q_0)$$ is the monodromy matrix associated to the foliation on $$M$$ induced by $$\hat{\mathcal B}$$, along the curve $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$, connecting $$q_0$$ to $$ q_f$$ as $$\lambda$$ goes from $$0$$ to $$t$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$; and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$. Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
 
 Proof of this Equation <span class="eqno"></span> will be grist for a preprint article, not this survey.
 
