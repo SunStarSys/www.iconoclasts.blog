@@ -427,9 +427,9 @@ A nice corollary occurs in the constant $$\mathcal {Ric}(\frac{\mathcal B}{||\ma
 \int_{M/S^1\oplus S^1} k_t(q,\exp{t\mathcal B_t}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/12}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}E^\mathcal B_t(e^{t\dim M\ \bar{\mathcal R}\ /6\dim M}{\chi_{\Omega^B_t(q)}(\omega)}
 |d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
 
-&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(q)|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
+&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B|d\mathcal B^\perp)d\hat{\mathcal B}(q), \ \text{ Bayes}\implies\\
 
-&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_{-\infty}^\infty \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\Omega_t^\mathcal B(d\hat{\mathcal B},dy))\\
+&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp|\Omega_t^\mathcal B)\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B)}{P^\mathcal B_{\mu_t}(\mathcal B^\perp)}d\hat{\mathcal B}\\
 
 &=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {-\bar{ \mathcal R}}\rho/2}\ \rho_0\\
 
