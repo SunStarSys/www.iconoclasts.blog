@@ -446,7 +446,7 @@ Additionally, consider Equation (30) $$(E)$$ where $$B$$ represents a rotational
 
 In other words, we have re-derived the Selberg Trace Formula vie Probability and Geometry, **instead of the usual Harmonic Analysis**.
 
-#### Nontrivial Curvature Example
+##### Nontrivial Curvature Example
 
 For smooth real-valued diffeomorphism $$h:\Reals\rightarrow\Reals$$ with $$h(0)=0$$, let $$ds^2 = (1+h^2(y)) dx^2 + 2h(y) dx\odot dy + dy^2$$.  This metric has negative Gaussian curvature $$-(\kappa(y)=\frac{d^2}{dy^2}h^2(y)/2)$$, which is only constant when $$h(y)$$ is affine; and $$\det(ds^2)= 1$$.  Then with $$\hat{\mathcal B}(x,y) = x$$, we see that
 
