@@ -459,7 +459,7 @@ If we take $$h(y) := y\sqrt{2y^2/3 + \kappa(0)} \implies \kappa(y) = 4 y^2 + \ka
 
 ```math
 
-\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t -t\kappa(0)/8}}{\sqrt{2\pi t \cosh t}}\int_0^\infty\frac{\rho_0}{\sinh \sqrt{4y^2+\kappa(0)}\rho }\ dy
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t -t\kappa(0)/8}}{\sqrt{2\pi t \cosh t}}\int_0^\infty\frac{\rho_0e^{-y^2/2t}}{\sqrt{2\pi t}\sinh \sqrt{4y^2+\kappa(0)}\rho }\ dy
 
 ```
 
