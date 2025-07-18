@@ -362,7 +362,7 @@ Significantly, we constructed $$\mathcal B_t$$ so that $$\dot q - \mathcal B_t$$
 
 What if we tried to use "successive convolutions" on the semi-classical expression in Equation (16) to construct Brownian Motion on a negatively curved manifold $$M$$?
 
-We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$-\frac{1}{8}\bar{\mathcal R}$$, where $$\bar{\mathcal R}$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel, where this term represents the contribution to the Hessian of *the metric form* $$g_{ij}$$ in [normal coordinates](https://en.wikipedia.org/wiki/Normal_coordinates).  However, when you add the full corrective potential $$\mathcal V = \frac{1}{12}\bar{\mathcal R} + \frac{1}{24}\bar{\mathcal R} = \frac{1}{8}\bar{\mathcal R}$$ to the Hamiltonian, which is Dewitt's $$\frac{1}{12}\bar{\mathcal R}$$ volume form term *plus* the metric's $$\frac{1}{24}\bar{\mathcal{R}}$$ contribution, this factor is eliminated from the short-term asymptotics.
+We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$-\frac{1}{16}\bar{\mathcal R}$$, where $$\bar{\mathcal R}$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel, where this term represents the contribution to the Hessian of *the metric form* $$g_{ij}$$ in [normal coordinates](https://en.wikipedia.org/wiki/Normal_coordinates).  However, when you add the full corrective potential $$\mathcal V = \frac{1}{24}\bar{\mathcal R} + \frac{1}{48}\bar{\mathcal R} = \frac{1}{16}\bar{\mathcal R}$$ to the Hamiltonian, which is Dewitt's $$\frac{1}{24}\bar{\mathcal R}$$ volume form term *plus* the metric's $$\frac{1}{48}\bar{\mathcal{R}}$$ contribution, this factor is eliminated from the short-term asymptotics.
 
 #### The Geometric Cameron-Martin Formula for $$g$$-invariant vector fields $$\mathcal B$$ (aka Quadratic Form Magic, Part 2)
 
@@ -413,7 +413,7 @@ Let $$\Omega^\mathcal B_t(q)$$ be the space of continuous curves on $$M$$ origin
 ```math
 \begin{equation}
 \tag{E}
-k_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(q_0)|}}} E^\mathcal B_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/12\ +\ \dim \mathcal B^\perp \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/12}\chi_{\Omega^B_t(q_0)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q_0) \ \ \ \ \ \ \
+k_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(q_0)|}}} E^\mathcal B_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/24\ +\ \dim \mathcal B^\perp \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/24}\chi_{\Omega^B_t(q_0)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q_0) \ \ \ \ \ \ \
 \end{equation}
 ```
 
@@ -425,18 +425,27 @@ A nice corollary occurs in the constant $$\mathcal {Ric}(\frac{\mathcal B}{||\ma
 
 ```math
 \begin{aligned}
-\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2 \sinh \sqrt{\kappa(q)}\rho/2}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/8}{\chi_{\Omega^B_t(q)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
+\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2 \sinh \sqrt{\kappa(q)}\rho/2}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/16}{\chi_{\Omega^B_t(q)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
 
-&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/8}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B})|d\mathcal B^\perp), \ \text{ Bayes}\implies\\
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B})|d\mathcal B^\perp), \ \text{ Bayes}\implies\\
 
-&=\frac{e^{-\rho^2/2t\ +\ t\bar{\mathcal R}/8}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp d\hat{\mathcal B}|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp d\hat{\mathcal B})}d\hat{\mathcal B}\\
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp d\hat{\mathcal B}|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp d\hat{\mathcal B})}d\hat{\mathcal B}\\
 
-&=\frac{e^{-\rho^2/2t\ -t\kappa/4}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \rho_0\\
+&=\frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \rho_0\\
 
 \end{aligned}
 ```
 
 where $$\rho = \min_{q\in M}dist(q, \exp t\mathcal B \ q)$$ is the distance of the shortest orbit traveled under the $$S^1$$ action, and $$\rho_0$$ is that $$\rho$$ divided by the multiplicity of its associated orbit.  In the familiar terms of hyperbolic geometry, $$\mathcal B^\perp$$ are **horocycles** and the $$g$$-invariant $$S^1$$ action under $$\mathcal B$$ is said to be the **horocyclic flow**.
+
+Additionally, consider Equation (30) $$(E)$$ where $$B$$ represents a rotational $$g$$-invariant symmetry around a fixed point $$q_0$$. Then with $$\Omega^0_t$$ the set of continuous contractible loops:
+
+```math
+\mu_t(\Omega_t^0) = \frac{vol(M)}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
+```
+
+
+
 
 In other words, we have re-derived the Selberg Trace Formula vie Probability and Geometry, **instead of the usual Harmonic Analysis**.
 
