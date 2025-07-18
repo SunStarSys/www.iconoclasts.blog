@@ -444,10 +444,26 @@ Additionally, consider Equation (30) $$(E)$$ where $$B$$ represents a rotational
 \mu_t(\Omega_t^0) = \frac{vol(M)}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
 ```
 
-
-
-
 In other words, we have re-derived the Selberg Trace Formula vie Probability and Geometry, **instead of the usual Harmonic Analysis**.
+
+#### Nontrivial Curvature Example
+
+For smooth real-valued diffeomorphism $$h:\Reals\rightarrow\Reals$$ with $$h(0)=0$$, let $$ds^2 = (1+h^2(y)) dx^2 + 2h(y) dx\odot dy + dy^2$$.  This metric has negative Gaussian curvature $$-(\kappa(y)=\frac{d^2}{dy^2}h^2(y)/2)$$, which is only constant when $$h(y)$$ is affine; and $$\det(ds^2)= 1$$.  Then with $$\hat{\mathcal B}(x,y) = x$$, we see that
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t}}{2\pi t}\int_{-\infty}^\infty\frac{\rho_0}{2 \sinh \sqrt{\kappa(y)}\rho } \int_{\Omega_t^\mathcal B(0,y)}e^{-\int_0^t\kappa(y(s))ds/8}d(\mu_t|\mathcal B^\perp)/dy \ dy
+
+```
+If we take $$h(y) := y\sqrt{2y^2/3 + \kappa(0)} \implies \kappa(y) = 4 y^2 + \kappa(0) \gt 0$$, then Equation (30)  $$(E)$$ predicts that
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t -t\kappa(0)/8}}{\sqrt{2\pi t \cosh t}}\int_0^\infty\frac{\rho_0}{\sinh \sqrt{4y^2+\kappa(0)}\rho }\ dy
+
+```
+
+which blows up at $$0$$, as expected, if we also take $$\kappa(0) = 0$$ for computability of the antiderivative in closed form.
 
 ### Observables, Evolution Equation, and Lie Algebras
 
