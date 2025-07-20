@@ -413,7 +413,7 @@ Let $$\Omega^\mathcal B_t(q)$$ be the space of continuous curves on $$M$$ origin
 ```math
 \begin{equation}
 \tag{E}
-k_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(q_0)|}}} E^\mathcal B_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/24\ +\ \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/24(\dim M - 1)}\chi_{\Omega^B_t(q_0)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q_0) \ \ \ \ \ \ \
+k_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J_{\mathcal B}(q_0)|}}} E^\mathcal B_t({e^{\int_0^t \bar {\mathcal R}(\omega(s))ds/24\ +\ \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/24}\chi_{\Omega^B_t(q_0)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q_0) \ \ \ \ \ \ \
 \end{equation}
 ```
 
