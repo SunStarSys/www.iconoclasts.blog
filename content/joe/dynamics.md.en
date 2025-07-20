@@ -419,7 +419,7 @@ k_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{
 
 where $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$,$$\mathcal J_{\mathcal B}(q_0)$$ is the monodromy matrix associated to the foliation on $$M$$ induced by $$\hat{\mathcal B}$$, along the curve $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$, connecting $$q_0$$ to $$ q_f$$ as $$\lambda$$ goes from $$0$$ to $$t$$. $$\mathcal J_{\mathcal B}$$ does not depend on $$t$$; and the curvature constraint ensures $$I-\mathcal J_\mathcal B$$ is always non-degenerate for $$q_0 \neq q_f$$. Replacing $$\mathcal B$$ with $$-\mathcal B$$ reverses the roles of $$q_0$$ and $$q_f$$, so clearly the expression is symmetric between them as expected.
 
-Proof of this Equation <span class="eqno"></span> will be grist for a preprint article, not this survey, but it is a straightforward application of the Feynman-Kac formula *applied to the kernal of the Laplacian plus the DeWitt-corrected Potential*, which is explicitly computable on both sides of the equation!
+Proof of this Equation <span class="eqno"></span> will be grist for a preprint article, not this survey, but it is a straightforward application of the Feynman-Kac formula *applied to the kernel of the Laplacian plus the DeWitt-corrected Potential*, which is explicitly computable on both sides of the equation!
 
 A nice corollary occurs in the constant $$\mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||}) = \bar{\mathcal R} / \dim M$$ negative Gaussian curvature $$-\kappa$$ case, where $$\mathcal B$$ descends to an $$S^1$$ action on a Riemann Surface $$M$$:
 
@@ -444,7 +444,7 @@ Additionally, consider Equation (30) $$(E)$$ where $$B$$ represents a rotational
 \mu_t(\Omega_t^0) = \frac{vol(M)}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ \sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
 ```
 
-In other words, we have re-derived the Selberg Trace Formula vie Probability and Geometry, **instead of the usual Harmonic Analysis on Symmetric Spaces**.
+In other words, we have re-derived the 2-dimensional Selberg Trace Formula via Probability and Geometry, **instead of the usual Harmonic Analysis on Symmetric Spaces**.
 
 ##### Nontrivial Curvature Example
 
