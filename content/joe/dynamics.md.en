@@ -427,13 +427,13 @@ A nice corollary occurs in the constant $$\mathcal {Ric}(\frac{\mathcal B}{||\ma
 
 ```math
 \begin{aligned}
-\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2 \sinh \sqrt{\kappa(q)}\rho/2}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/16}{\chi_{\Omega^B_t(q)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
+\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{\sqrt{\kappa(q)}}{2 \sinh \sqrt{\kappa(q)}\rho/2}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/16}{\chi_{\Omega^B_t(q)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
 
-&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B})|d\mathcal B^\perp), \ \text{ Bayes}\implies\\
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}\sqrt{\kappa}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B})|d\mathcal B^\perp), \ \text{ Bayes}\implies\\
 
-&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp d\hat{\mathcal B}|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp d\hat{\mathcal B})}d\hat{\mathcal B}\\
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}\sqrt{\kappa}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp d\hat{\mathcal B}|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp d\hat{\mathcal B})}d\hat{\mathcal B}\\
 
-&=\frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \rho_0\\
+&=\frac{e^{-\rho^2/2t\ -t\kappa/8}\sqrt{\kappa}}{\sqrt{2\pi t}\ 2\sinh \sqrt {\kappa}\rho/2}\ \rho_0\\
 
 \end{aligned}
 ```
@@ -443,7 +443,7 @@ where $$\rho = \min_{q\in M}dist(q, \exp t\mathcal B \ q)$$ is the distance of t
 Additionally, consider Equation (30) $$(E)$$ where $$B$$ represents a rotational $$g$$-invariant symmetry around a fixed point $$q_0$$. Then with $$\Omega^0_t$$ the set of continuous contractible loops:
 
 ```math
-\mu_t(\Omega_t^0) = \frac{vol(M)}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ \sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
+\mu_t(\Omega_t^0) = \frac{vol(M)\sqrt{\kappa}}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ \sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
 ```
 
 In other words, we have re-derived the 2-dimensional Selberg Trace Formula via Probability and Geometry, **instead of the usual Harmonic Analysis on Symmetric Spaces**.
@@ -454,14 +454,14 @@ For smooth real-valued diffeomorphism $$h:\Reals\rightarrow\Reals$$ with $$h(0)=
 
 ```math
 
-\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t}}{2\pi t}\int_{-\infty}^\infty\frac{\rho_0}{2 \sinh \sqrt{\kappa(y)}\rho } \int_{\Omega_t^\mathcal B(0,y)}e^{-\int_0^t\kappa(y(s))ds/8}d(\mu_t|\mathcal B^\perp)/dy \ dy
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t}}{2\pi t}\int_{-\infty}^\infty\frac{\rho_0\sqrt{\kappa(y)}}{2 \sinh \sqrt{\kappa(y)}\rho } \int_{\Omega_t^\mathcal B(0,y)}e^{-\int_0^t\kappa(y(s))ds/8}d(\mu_t|\mathcal B^\perp)/dy \ dy
 
 ```
 If we take $$h(y) := y\sqrt{2y^2/3 + \kappa(0)} \implies \kappa(y) = 4 y^2 + \kappa(0) \gt 0$$, then Equation (30)  $$(E)$$ predicts that
 
 ```math
 
-\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t -t\kappa(0)/8}}{\sqrt{2\pi t \cosh t}}\int_0^\infty\frac{\rho_0e^{-y^2/2t}}{\sqrt{2\pi t}\sinh \sqrt{4y^2+\kappa(0)}\rho }\ dy
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t -t\kappa(0)/8}}{\sqrt{2\pi t \cosh t}}\int_0^\infty\frac{\rho_0e^{-y^2/2t}\sqrt{4y^2+\kappa(0)}}{\sqrt{2\pi t}\sinh \sqrt{4y^2+\kappa(0)}\rho }\ dy
 
 ```
 
