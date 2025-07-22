@@ -364,9 +364,9 @@ What if we tried to use "successive convolutions" on the semi-classical expressi
 
 We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$-\frac{1}{16}\bar{\mathcal R}$$, where $$\bar{\mathcal R}$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel, where this term represents the contribution to the Hessian of *the metric form* $$g_{ij}$$ in [normal coordinates](https://en.wikipedia.org/wiki/Normal_coordinates).  However, when you add the full corrective potential $$\mathcal V = \frac{1}{24}\bar{\mathcal R} + \frac{1}{48}\bar{\mathcal R} = \frac{1}{16}\bar{\mathcal R}$$ to the Hamiltonian, which is Dewitt's $$\frac{1}{24}\bar{\mathcal R}$$ volume form term *plus* the metric's $$\frac{1}{48}\bar{\mathcal{R}}$$ contribution, this factor is eliminated from the short-term asymptotics.
 
-#### The Geometric Cameron-Martin Formula for $$g$$-invariant vector fields $$\mathcal B$$ (aka Quadratic Form Magic, Part 2)
+#### The Geometric Cameron-Martin Formula for $$g$$-invariant (Killing) vector fields $$\mathcal B$$ (aka Quadratic Form Magic, Part 2)
 
-Assume $$\mathcal B$$ is a $$g$$-invariant vector field on $$M$$ for the remainder of this article.
+Assume $$\mathcal B$$ is a $$g$$-invariant (aka [Killing](https://en.wikipedia.org/wiki/Killing_vector_field)) vector field on $$M$$ for the remainder of this article.
 
 ##### The Development Map $$\tilde \gamma = \mathscr D_q[\tilde c]$$ for $$c\in C^\infty([0,t],T_qM)$$.
 
