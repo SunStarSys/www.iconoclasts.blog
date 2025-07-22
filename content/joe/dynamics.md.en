@@ -446,7 +446,7 @@ Additionally, consider Equation (30) $$(E)$$ where $$B$$ represents a rotational
 \mu_t(\Omega_t^0) = \frac{vol(M)\sqrt{\kappa}}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ \sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
 ```
 
-As this equation is analytic in $$\kappa$$, we can see that analytic continuation from $$\kappa \rightarrow -\kappa$$ transforms this expression from $$\sinh $$ to $$ sin $$ in which case we have the correct equation for a *ghost 2-sphere* with constant positive Gaussian curvature $$|\kappa|$$.
+As this equation is analytic in $$\kappa$$, we can see that analytic continuation from $$\kappa \rightarrow -\kappa$$ transforms this expression from $$\sinh $$ to $$ \sin $$ in which case we have the correct equation for a *ghost 2-sphere* with constant positive Gaussian curvature $$|\kappa|$$.
 
 
 In other words, we have re-derived the 2-dimensional Selberg Trace Formula via Probability and Geometry, **instead of the usual Harmonic Analysis on Symmetric Spaces**.
