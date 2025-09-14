@@ -1,0 +1,76 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.de'
+keywords: POSIX, PThread, C, Mutex
+published: ~
+status: verifiziert=26807
+title: Thread-Bundles
+---
+
+[TOC]
+
+<div class="right">
+
+![KI-generiertes Thread-Bundle](thread-bundles.page/thread-bundle).
+
+</div>
+
+## {# lede #} POSIX-Threads {# lede #}
+
+Ich wurde dieses Jahr mit der Portierung unserer maximalen Wahrscheinlichkeitsfunktion von einer einzelnen Thread-Version auf eine Multithread-Version beauftragt, basierend auf der architektonischen Prämisse, dass der langsamste Teil dieses Codes darin besteht, dass sich die eigentliche Optimierungslogik über einen Index von Modellierungsgruppen-IDs schleift, wobei jede Iteration durch die Schleife vom Rest unabhängig sein sollte.
+
+Fun Problem beim Schleifen
+
+1. abhängige automatische Variablen nicht neu initialisieren,
+2. ändert mehrere globale Zeiger, die durch die Modellierungsgruppen-ID indiziert sind (`JG`),
+3. benötigt dringend thread_local-Variablen, um globale Speichersegmente zu trennen, die für die Berechnung bestimmt sind (auf Basis pro ID).
+
+1 und 3 waren einfach. Mit 2 entdeckte ich einen cleveren Algorithmus, der das Konzept eines `THREAD_BUNDLE`ist ein pro Thread-Block von Gruppen-IDs für die serielle Modellierung.
+
+Durch Sicherstellen `THREAD_BUNDLE` ist mindestens so groß wie eine Speicherseitengröße geteilt durch die Größe der einzelnen Zeiger in 2, können wir sicherstellen, dass verschiedene Threads auf unabhängigen [`Seiten`](https://en.wikipedia.org/wiki/Page_%28computer_memory%29) im virtuellen Speicher, sodass Mutex-Sperren auf diese Speicher-Schreibvorgänge verzichtet werden können. (Angenommen natürlich, die Threads verarbeiten ihre `THREAD_BUNDLE` in etwa der gleichen Geschwindigkeit).
+
+Darüber hinaus entfernte ich schließlich die "gleiche Geschwindigkeit" -Abhängigkeit, indem ich die Schleife in gerade/odd-Paare aufteilte, was mindestens einen Speicher garantiert. `Seite` trennt die aktive `THREAD_BUNDLE` Schleifen.
+
+Anz. Core-Schleifen
+
+```clike
+  /* EVEN */
+  for (jG = minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+
+#define SET_ARG(foo) arg->foo = (foo) 30 refs
+
+SET_ARG(jG);
+    ...
+
+#undef SET_ARG
+
+// rsim_mlf_thread loops over the index bundle
+	// from jG to MIN(numG, jG + THREAD_BUNDLE - minG), doing
+	// stuff with global data structures also indexed by jG
+
+pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
+    PUSH_STACK_ELT(thread_stack, ptid, pthread_t);
+  }
+
+{
+    pthread_t * ptid; 3 refs
+    while (POP_STACK_PTR(thread_stack, ptid, pthread_t) != NULL)
+    {
+      arg_t* arg; 6 refs
+      pthread_join(*ptid, (void**)&arg);
+      ...
+  }
+
+/* ODD */
+  for (jG = THREAD_BUNDLE + minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+    ...
+```
+
+<!-- $Date$ $Author$ $Revision$ -->
