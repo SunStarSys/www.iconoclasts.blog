@@ -368,13 +368,13 @@ We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash
 
 Assume $$\mathcal B$$ is a $$g$$-invariant (aka [Killing](https://en.wikipedia.org/wiki/Killing_vector_field)) vector field on $$M$$ for the remainder of this article.
 
-##### The Development Map $$\tilde \gamma = \mathscr D_q[\tilde c]$$ for $$c\in C^\infty([0,t],T_qM)$$.
+##### The Development Map $$\tilde \gamma = \mathscr D_q[\tilde c]$$ for $$\tilde c\in C^\infty([0,t],T_qM)$$.
 
 Solve for $$\tilde \gamma$$:
 ```math
 \begin{aligned}
 \tilde \gamma(0) &= q \\
-\dot {\tilde \gamma} &= \hat\Gamma(\tilde \gamma)\dot c
+\dot {\tilde \gamma} &= \hat\Gamma(\tilde \gamma)\dot{\tilde c}\\
 \end{aligned}
 ```
 
