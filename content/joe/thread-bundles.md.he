@@ -1,0 +1,76 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.he'
+keywords: POSIX, תהליכון, C, mutex
+published: ~
+status: אומת=26807
+title: חבילות הליכי משנה
+---
+
+[TOC]
+
+<div class="right">
+
+![חבילת הליכי משנה שנוצרה על-ידי AI](thread-bundles.page/thread-bundle).
+
+</div>
+
+## {# lede #} אשכולות POSIX {# lede #}
+
+הוטל עלי השנה להעביר את פונקציית הסבירות המרבית שלנו מגרסה משורשרת אחת לגרסה מרובת הליכי משנה, בהתבסס על ההנחה האדריכלית כי החלק האיטי ביותר של קוד זה הוא המקום שבו לוגיקת האופטימיזציה בפועל מתגלגלת על אינדקס של זיהויי קבוצת מידול, אשר על ידי עיצוב, כל חזרה דרך הלולאה צריכה להיות בלתי תלויה בשאר.
+
+בעיה מהנה כאשר הלולאה
+
+1. נכשל באתחול מחדש של משתנים אוטומטיים תלויים,
+2. משנה מספר מצביעים גלובליים ממופתחים לפי זיהוי קבוצת מידול (`עברית`),
+3. הוא צורך נורא של thread_local משתנים להפריד מקטעי זיכרון גלובליים המוקדשים לחישוב (על בסיס מזהה).
+
+1 ו-3 היו פשוטים. עם 2 גיליתי אלגוריתם חכם הכולל את הרעיון של `THREAD_BUNDLE`, שהוא בלוק לכל הליך משנה של מזהי קבוצת מידול סריאלי.
+
+על ידי הבטחת `THREAD_BUNDLE` הוא לפחות גדול כמו גודל דף זיכרון מחולק בגודל של מצביעים בודדים 2, אנו יכולים להבטיח כי הליכי משנה שונים פועלים על עצמאי [`דפים`](https://en.wikipedia.org/wiki/Page_%28computer_memory%29) בזיכרון הווירטואלי, כדי שנוכל לסתום נעילות mutex על כתיבות זיכרון אלה. (בהנחה ש-threads מעבדים את `THREAD_BUNDLE` בערך באותה מהירות).
+
+יתר על כן, בסופו של דבר הסרתי את התלות "אותה מהירות" על ידי פיצול הלולאה לזיווג זוגי / אוד, המבטיח לפחות זיכרון אחד `דף` מפריד בין פעיל `THREAD_BUNDLE` לולאות.
+
+## לולאות ליבה
+
+```clike
+  /* EVEN */
+  for (jG = minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+
+#define SET_ARG(foo) arg->foo = (foo) 30 refs
+
+SET_ARG(jG);
+    ...
+
+#undef SET_ARG
+
+// rsim_mlf_thread loops over the index bundle
+	// from jG to MIN(numG, jG + THREAD_BUNDLE - minG), doing
+	// stuff with global data structures also indexed by jG
+
+pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
+    PUSH_STACK_ELT(thread_stack, ptid, pthread_t);
+  }
+
+{
+    pthread_t * ptid; 3 refs
+    while (POP_STACK_PTR(thread_stack, ptid, pthread_t) != NULL)
+    {
+      arg_t* arg; 6 refs
+      pthread_join(*ptid, (void**)&arg);
+      ...
+  }
+
+/* ODD */
+  for (jG = THREAD_BUNDLE + minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+    ...
+```
+
+<!-- $Date$ $Author$ $Revision$ -->

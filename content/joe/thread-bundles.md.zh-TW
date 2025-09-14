@@ -1,34 +1,38 @@
-Title: Thread Bundles
-Keywords: POSIX, pthread, C, mutex
-status: verified=26807
-Dependencies: *.md.en
+---
+archived: ~
+categories: ~
+dependencies: '*.md.zh-TW'
+keywords: POSIX、pthread、C、mutex
+published: ~
+status: 已驗證 =26807
+title: 繫線組合
+---
 
 [TOC]
 
 <div class="right">
 
-![AI generated Thread Bundle](thread-bundles.page/thread-bundle)
+![AI 產生的繫線組合](thread-bundles.page/thread-bundle).
 
 </div>
 
-## {# lede #} POSIX threads {# lede #}
+## {# lede #} POSIX 執行緒{# lede #}
 
-I was tasked this year with porting our maximum likelihood function from a single threaded version to a multithreaded one, based on the architectural premise that the slowest portion of that code is where the actual optimization logic loops over an index of modeling group Id‘s, which by design, each iteration through the loop should be independent of the rest.
+我今年的任務是將最大可能性函數從單一執行緒版本移植到多重執行緒，根據該程式碼最慢部分的架構前提，實際最佳化邏輯在模型化群組 ID 的索引上迴圈，而模型化群組 ID 的每個重複都應該獨立於其餘部分。
 
-Fun problem when the loop
+迴圈時遇到問題
 
-1. fails to reinitialize dependent automatic variables,
-2. alters several global pointers indexed by modeling group id (`jG`),
-3. is in dire need of thread_local variables to separate global memory segments dedicated to the calculation (on a per id basis).
+1. 無法重新初始化相依的自動變數，
+2. 變更數個全域指標，其索引方式為建立群組 ID (`人才招聘`),
+3. 需要 thread_local 變數來區隔用於計算的全域記憶體區段 (以每個 ID 為基礎)。
 
-1 and 3 were straightforward. With 2 I discovered a clever algorithm involving the concept of a `THREAD_BUNDLE`, which is a per thread block of serial modeling group IDs.
+1 和 3 是直覺的。有了 2，我發現了一個與一個概念有關的聰明演算法`THREAD_BUNDLE`，這是序列模型化群組 ID 的每個繫線區塊。
 
-By ensuring `THREAD_BUNDLE` is at least as large as a memory page size divided by the size of the individual pointers in 2, we can ensure that different threads operate on independent [`pages`](https://en.wikipedia.org/wiki/Page_%28computer_memory%29) in virtual memory, so we can eschew mutex locks on those memory writes. (Assuming of course that the threads process their `THREAD_BUNDLE` at roughly the same velocity).
+透過確保`THREAD_BUNDLE` 至少與記憶體分頁大小除以個別指標的大小為 2，我們可以確保不同的執行緒在獨立運作。[`頁面`](https://en.wikipedia.org/wiki/Page_%28computer_memory%29) 在虛擬記憶體中，因此我們可以將 mutex 鎖定在這些記憶體寫入。(假設執行緒會處理它們的當然) `THREAD_BUNDLE` 速度大致相同。
 
-Moreover, I eventually removed the "same velocity" dependency by splitting the loop into even/odd pairings, which guarantees at least one memory `page` separates the active `THREAD_BUNDLE` loops.
+此外，我最終將迴圈分割成偶數 / 奇數配對，以移除「相同的速度」相依性，這保證至少有一個記憶體`頁面` 分離使用中`THREAD_BUNDLE` 迴圈。
 
-
-## Core Loops
+## 核心迴圈
 
 ```clike
   /* EVEN */
@@ -39,20 +43,20 @@ Moreover, I eventually removed the "same velocity" dependency by splitting the l
 
 #define SET_ARG(foo) arg->foo = (foo) 30 refs
 
-    SET_ARG(jG);
+SET_ARG(jG);
     ...
 
 #undef SET_ARG
 
-    // rsim_mlf_thread loops over the index bundle
+// rsim_mlf_thread loops over the index bundle
 	// from jG to MIN(numG, jG + THREAD_BUNDLE - minG), doing
 	// stuff with global data structures also indexed by jG
 
-    pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
+pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
     PUSH_STACK_ELT(thread_stack, ptid, pthread_t);
   }
 
-  {
+{
     pthread_t * ptid; 3 refs
     while (POP_STACK_PTR(thread_stack, ptid, pthread_t) != NULL)
     {
@@ -61,13 +65,12 @@ Moreover, I eventually removed the "same velocity" dependency by splitting the l
       ...
   }
 
-  /* ODD */
+/* ODD */
   for (jG = THREAD_BUNDLE + minG; jG <= numG; jG += 2*THREAD_BUNDLE)
   {
     pthread_t ptid; 3 refs
     arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
     ...
 ```
-
 
 <!-- $Date$ $Author$ $Revision$ -->
