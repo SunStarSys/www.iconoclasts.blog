@@ -11,7 +11,22 @@ Dependencies: *.md.en
 
 </div>
 
-{# lede #} POSIX threads {# lede #}
+## {# lede #} POSIX threads {# lede #}
+
+I was tasked this year with porting our maximum likelihood function from a single threaded version to a multithreaded one, based on the architectural premise that the slowest portion of that code is where the actual optimization logic loops over an index of modeling group Id‘s, which by design, each iteration through the loop should be independent of the rest.
+
+Fun problem when the loop
+
+1. fails to reinitialize dependent automatic variables,
+2. alters several global pointers indexed by modeling group id,
+3. is in dire need of thread_local variables to separate global memory segments dedicated to the calculation (on a per id basis).
+
+1 and 3 were straightforward. With 2 I discovered a clever algorithm involving the concept of a THREAD_BUNDLE, which is a per thread block of serial modeling group IDs.
+
+By ensuring THREAD_BUNDLE is at least as large as a memory page size divided by the size of the individual pointers in 2, we can ensure that different threads operate on independent pages in virtual memory, so we can eschew mutex locks on those memory writes. (Assuming of course that the threads process their THREAD_BUNDLE at roughly the same velocity).
+
+Moreover, I removed the "same velocity" dependency by splitting the loop into even/odd loop pairings, which guarantee at least one memory page separates the active THREAD_BUNDLE loops.
+
 
 ## [Slide Deck](thread-bundles.page/slide-deck.pptx)
 
