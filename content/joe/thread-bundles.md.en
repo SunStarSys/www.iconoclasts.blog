@@ -28,6 +28,43 @@ By ensuring THREAD_BUNDLE is at least as large as a memory page size divided by 
 Moreover, I removed the "same velocity" dependency by splitting the loop into even/odd loop pairings, which guarantee at least one memory page separates the active THREAD_BUNDLE loops.
 
 
+## Core Loops
+
+```c-mode
+  /* EVEN */
+  for (jG = minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+
+#define SET_ARG(foo) arg->foo = (foo) 30 refs
+
+    SET_ARG(jG);
+    ...
+
+#undef SET_ARG
+
+    pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
+    PUSH_STACK_ELT(thread_stack, ptid, pthread_t);
+  }
+
+  {
+    pthread_t * ptid; 3 refs
+    while (POP_STACK_PTR(thread_stack, ptid, pthread_t) != NULL)
+    {
+      arg_t* arg; 6 refs
+      pthread_join(*ptid, (void**)&arg);
+      ...
+  }
+
+  /* ODD */
+  for (jG = THREAD_BUNDLE + minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+    ...
+```
+
 ## [Slide Deck](thread-bundles.page/slide-deck.pptx)
 
 Presented September 5, 2025.
