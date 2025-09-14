@@ -1,0 +1,76 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.fr'
+keywords: POSIX, pthread, C, mutex
+published: ~
+status: vérifié=26807
+title: Groupes de threads
+---
+
+[TOC]
+
+<div class="right">
+
+![Groupe de threads généré par l'IA](thread-bundles.page/thread-bundle).
+
+</div>
+
+## {# lede #} Fils POSIX {# lede #}
+
+Cette année, j'ai été chargé de transférer notre fonction de probabilité maximale d'une version filetée unique à une version multithread, sur la base de l'hypothèse architecturale que la partie la plus lente de ce code est où la logique d'optimisation réelle boucle sur un index du groupe de modélisation Id, qui par conception, chaque itération à travers la boucle devrait être indépendante du reste.
+
+Problème amusant lors de la boucle
+
+1. ne parvient pas à réinitialiser les variables automatiques dépendantes,
+2. modifie plusieurs pointeurs globaux indexés par ID de groupe de modélisation (`jg`),
+3. a désespérément besoin de variables thread_local pour séparer les segments de mémoire globale dédiés au calcul (par ID).
+
+1 et 3 étaient simples. Avec 2 j'ai découvert un algorithme intelligent impliquant le concept de `THREAD_BUNDLE`, qui est un bloc par thread d'ID de groupe de modélisation série.
+
+En assurant `THREAD_BUNDLE` est au moins aussi grand qu'une taille de page de mémoire divisée par la taille des pointeurs individuels en 2, nous pouvons nous assurer que différents threads fonctionnent sur indépendant [`pages`](https://en.wikipedia.org/wiki/Page_%28computer_memory%29) dans la mémoire virtuelle, afin que nous puissions éviter les verrous mutex sur ces écritures de mémoire. (En supposant bien sûr que les threads traitent leurs `THREAD_BUNDLE` à peu près à la même vitesse).
+
+De plus, j'ai finalement supprimé la dépendance "à la même vitesse" en divisant la boucle en paires pair/impair, ce qui garantit au moins une mémoire `page` sépare l'actif `THREAD_BUNDLE` boucles.
+
+Nb de boucles principales
+
+```clike
+  /* EVEN */
+  for (jG = minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+
+#define SET_ARG(foo) arg->foo = (foo) 30 refs
+
+SET_ARG(jG);
+    ...
+
+#undef SET_ARG
+
+// rsim_mlf_thread loops over the index bundle
+	// from jG to MIN(numG, jG + THREAD_BUNDLE - minG), doing
+	// stuff with global data structures also indexed by jG
+
+pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
+    PUSH_STACK_ELT(thread_stack, ptid, pthread_t);
+  }
+
+{
+    pthread_t * ptid; 3 refs
+    while (POP_STACK_PTR(thread_stack, ptid, pthread_t) != NULL)
+    {
+      arg_t* arg; 6 refs
+      pthread_join(*ptid, (void**)&arg);
+      ...
+  }
+
+/* ODD */
+  for (jG = THREAD_BUNDLE + minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+    ...
+```
+
+<!-- $Date$ $Author$ $Revision$ -->
