@@ -30,7 +30,7 @@ Moreover, I removed the "same velocity" dependency by splitting the loop into ev
 
 ## Core Loops
 
-```c-mode
+```clike
   /* EVEN */
   for (jG = minG; jG <= numG; jG += 2*THREAD_BUNDLE)
   {
