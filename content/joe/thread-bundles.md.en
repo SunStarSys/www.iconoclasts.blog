@@ -45,7 +45,7 @@ Moreover, I eventually removed the "same velocity" dependency by splitting the l
 #undef SET_ARG
 
     // rsim_mlf_thread loops over the index bundle
-	// from jG to (jG + 2*THREAD_BUNDLE - minG), doing
+	// from jG to MIN(numG, jG + THREAD_BUNDLE - minG), doing
 	// stuff with global data structures also indexed by jG
 
     pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
