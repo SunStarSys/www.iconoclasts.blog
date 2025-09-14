@@ -18,7 +18,7 @@ I was tasked this year with porting our maximum likelihood function from a singl
 Fun problem when the loop
 
 1. fails to reinitialize dependent automatic variables,
-2. alters several global pointers indexed by modeling group id,
+2. alters several global pointers indexed by modeling group id (`jG`),
 3. is in dire need of thread_local variables to separate global memory segments dedicated to the calculation (on a per id basis).
 
 1 and 3 were straightforward. With 2 I discovered a clever algorithm involving the concept of a `THREAD_BUNDLE`, which is a per thread block of serial modeling group IDs.
