@@ -1,6 +1,6 @@
 Title: Thread Bundles
 Keywords: POSIX, pthread, C, mutex
-status: verified=26807
+status: verified=26810
 Dependencies: *.md.en
 
 [TOC]
@@ -69,5 +69,6 @@ Moreover, I eventually removed the "same velocity" dependency by splitting the l
     ...
 ```
 
+![Memory Layout](thread-bundles.page/memory-layout)
 
 <!-- $Date$ $Author$ $Revision$ -->
