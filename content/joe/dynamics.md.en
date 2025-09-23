@@ -377,7 +377,7 @@ We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash
 More precisely, by approximating $$1/2\ \nabla\vert_0\sqrt{g} = - 1/6\ \mathcal{Ric}_{ij}q^i\partial^j + o(||q||) \implies 1/2\ \nabla\cdot\nabla\vert_0 \sqrt{g} = -1/12\ \bar{\mathcal R}(0)$$, we see that the first derivatives vanish at the origin, so:
 
 ```math
-\frac{1}{2}(\Delta_M-2\mathcal V)\vert_0 e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_M\vert_0 e^{-1/2\ g_{ij}q^iq^j}) - 2\mathcal V(0) - \frac{1}{12}\ \bar{\mathcal R}(0)
+(\frac{1}{2}\Delta_M-\mathcal V)\vert_0 e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_M\vert_0 e^{-1/2\ g_{ij}q^iq^j}) - \mathcal V(0) - \frac{1}{12}\ \bar{\mathcal R}(0)
 ```
 
 which *is* the original Dewitt Term as he derived it.  As we are biasing on quantization in the presesence of Killing Fields, we take a slightly modified potential term.
