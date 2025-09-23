@@ -277,6 +277,8 @@ Instead of reinventing the Itô/Stratonovich/Malliavin SDE semimartingale calcul
 
 At the end of the day, we will want the Feynman Path-Integral Quantization to match the Schrödinger Quantization, or at least to understand the **deviation**. In particular, we need the Semiclassical Approximation to generate the Schrödinger PDE to $$o(t)$$ as $$t\downarrow 0$$.
 
+As it turns out, there is still controversy over the $$\mathcal V$$ term when the metric is non-flat. We explore this matter in full below, as it relates to known (Selberg like) summation formulae for non-flat metrics.
+
 ### Feynman-Kac Formula
 
 With $$V \in C^\infty(M)$$, by the Baker-Campbell-Hausdorff Formula:
