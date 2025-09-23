@@ -225,10 +225,10 @@ Well We Do in Quantum Dynamics!
 By completing the square and the translation invariance of Lebesgue Measure (in a fiber of $$T^\*M$$), recall that:
 
 ```math
-\hbar^n\int_{\Reals^n} e^{ p_i\dot q^i\Delta t - \frac{1}{2}\hbar^2 g^{ij}p_ip_j\Delta t}dp_1\dots dp_n = \hbar^n\int_{\Reals^n} e^{-\frac{1}{2}\hbar^2 g^{ij}(p_i - g_{ik}\dot q^k/\hbar)(p_j - g_{jk}\dot q^k/\hbar)\Delta t} dp_1\dots dp_n \cdot e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t} = 
+\hbar^n\int_{\Reals^n} e^{ p_i\dot q^i\Delta t - \frac{1}{2}\hbar^2 g^{ij}p_ip_j\Delta t}dp_1\dots dp_n = \hbar^n\int_{\Reals^n} e^{-\frac{1}{2}\hbar^2 g^{ij}(p_i - g_{ik}\dot q^k/\hbar)(p_j - g_{jk}\dot q^k/\hbar)\Delta t} dp_1\dots dp_n \cdot e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t} =
 \frac{e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t}}{\sqrt{(2\pi\Delta t)^n \det g^{ij}}}
 ```
-so the **Feynman Path Integral** expressions are morally equivalent in the quadratic Kinetic Energy case:
+so the **Feynman Path Integral** expressions are morally equivalent (yet formally infinite) in the quadratic Kinetic Energy case:
 
 ```math
 \begin{aligned}
@@ -243,12 +243,12 @@ Hence, with a **Wick rotation and a vector rescale by the Planck constant** $$\h
 ```math
 \begin{aligned}
 \int_{\set{\gamma}}e^{\hbar/i\ \mathcal S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}\mathcal D_{\hbar/i\ dt}\gamma &\approx \int_{\set{\tilde\gamma}} e^{\hbar/i \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\\
-&= \int_{\set{\tilde \gamma}}e^{-\frac{i}{\hbar}\mathcal S_{\mathcal L^{\hbar^2 \mathcal V}_{\mathcal B}}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\ .
+&= \int_{\set{\tilde \gamma}}e^{-\frac{i}{\hbar}\mathcal S_{\mathcal L^{\hbar^2 \mathcal V}_{\mathcal B}(\dot q, q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\ .
 
 \end{aligned}
 ```
 
-So when we want to approximate the right-hand-side of Equation <span class="eqno"></span> using the method of stationary phase (aka the semi-classical limit), we need to remember to solve the Euler-Lagrange Equations (14) $$(C)$$ with $$\mathcal V \mapsto \hbar^2 \mathcal V\approx 0$$.
+So when we want to approximate the right-hand-side of Equation <span class="eqno"></span> using the method of stationary phase (aka the semi-classical limit $$\hbar\downarrow 0$$), we need to remember to solve the Euler-Lagrange Equations (14) $$(C)$$ with $$\mathcal V \mapsto \hbar^2 \mathcal V\approx 0$$.
 
 ### Schrödinger Quantization
 
@@ -275,7 +275,7 @@ In other words, it is enough to study the dynamics of Equation (17), once we hav
 
 Instead of reinventing the Itô/Stratonovich/Malliavin SDE semimartingale calculus out of whole-cloth, we are going to proceed with a series of simple (flat-metric) examples that will carry us into the general theory.
 
-At the end of the day, we will want the Feynman Path-Integral Quantization to match the Schrödinger Quantization, or at least to understand the deviation.
+At the end of the day, we will want the Feynman Path-Integral Quantization to match the Schrödinger Quantization, or at least to understand the **deviation**. In particular, we need the Semiclassical Approximation to generate the Schrödinger PDE to $$o(t)$$ as $$t\downarrow 0$$.
 
 ### Feynman-Kac Formula
 
