@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=25333
+status: verified=26878
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
@@ -80,7 +80,7 @@ If every eigenvalue has multiplicity $$1$$, given a pair of eigenvalue preservin
 
 <br>
 
-The motivation for the study of $$\set{M^{i,j,k}}$$ is loosely derived from the study of the role of the **linear multiplication operator** $$Y:V\otimes V\rightarrow V((z))$$ in the definition of a Vertex Operator Algebra [[FBZ04]](#FBZ04) associated with a Chiral Conformal Field Theory. Here $$V$$ is the Vector Space of States and $$V((z))$$ is the space of formal Laurent series in $$z$$ with coefficients in $$V$$. Since $$V$$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $$Y$$ using the Fourier basis elements of $$V$$ is only slightly more involved than the $$M^{i,j,k}$$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
+The motivation for the study of $$\set{M^{i,j,k}}$$ is loosely derived from the study of the role of the **bilinear multiplication operator** $$Y:V\otimes V\rightarrow V((z))$$ in the definition of a Vertex Operator Algebra [[FBZ04]](#FBZ04) associated with a Chiral Conformal Field Theory. Here $$V$$ is the Vector Space of States and $$V((z))$$ is the space of formal Laurent series in $$z$$ with coefficients in $$V$$. Since $$V$$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $$Y$$ using the Fourier basis elements of $$V$$ is only slightly more involved than the $$M^{i,j,k}$$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
 These results were first demonstrated during a similarly titled talk by the author at **MSRI** in 1997, but they appear here in published form for the first time.
 
@@ -288,7 +288,7 @@ However, in order to apply our [Theorem](#theorem), it is essential that such a 
 
 must also preserve the "analytic" invariants &mdash; the Casimir-element induced figure $$4\pi^2\lVert\lambda_i\rVert^2$$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
 
-This representation-theoretical account [[AK01]](#AK01) is exactly equivalent to the prior development of *lattice congruence* [[NRR22]](#NRR22) traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $$B\in O(n,\Reals)$$, as described in the prior paragraph, **is** the contravariant Riemannian isometry between the tori, as provided by application of the *Gelfand-Naimark Representation Theorem* during the [Proof](#proof-of-theorem) of our [Theorem](#theorem).
+This representation-theoretical account [[AK01]](#AK01) is exactly equivalent to the prior development of *lattice congruence* [[NRR22]](#NRR22) traditionally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $$B\in O(n,\Reals)$$, as described in the prior paragraph, **is** the contravariant Riemannian isometry between the tori, as provided by application of the *Gelfand-Naimark Representation Theorem* during the [Proof](#proof-of-theorem) of our [Theorem](#theorem).
 
 ## Acknowledgements
 
