@@ -7,7 +7,7 @@ status: borrador
 title: Enlaces
 ---
 
-### Publicado en [NSS](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4793533).
+### Publicado en [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4793533) el 16 de abril de 2024
 
 - [PDF](triple-products.pdf.en).
 
@@ -15,4 +15,14 @@ title: Enlaces
 
 - [$$\LaTeX$$ Bibliografía](triple-products.bbl.en) como [JSON](triple-products.page/bibliography.json.en).
 
-<!-- $Date: 2024-04-18 20:36:35 +0000 (Thu, 18 Apr 2024) $ $Author: joe $ $Revision: 22425 $ -->
+### Publicado en [arXiv](https://arxiv.org/abs/2406.12868) el 21 de junio de 2024
+
+### [Rechazado de JST](triple-products.page/jst-review.txt) el 15 de septiembre de 2024
+
+### Reproducido y reenviado a SSRN el 26 de septiembre de 2024
+
+### Opinión de Facebook por [Joe Cox](triple-products.page/joe-cox.txt) el 5 de octubre de 2024
+
+### Primera cita de Anshul Adve <https://arxiv.org/abs/2509.17935> 22 de septiembre de 2025
+
+<!-- $Date: 2025-09-30 14:46:30 -0700 (Tue, 30 Sep 2025) $ $Author: joe $ $Revision: 26875 $ -->

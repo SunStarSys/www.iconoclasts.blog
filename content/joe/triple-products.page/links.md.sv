@@ -7,7 +7,7 @@ status: skiss
 title: Länkar
 ---
 
-### Publicerad till [Personnr](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4793533).
+### Publicerad till [Personnr](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4793533) den 16 april 2024
 
 - [PDF](triple-products.pdf.en).
 
@@ -15,4 +15,14 @@ title: Länkar
 
 - [$$\LaTeX$$ Bibliografi](triple-products.bbl.en) som [JSON](triple-products.page/bibliography.json.en).
 
-<!-- $Date: 2024-04-18 20:36:35 +0000 (Thu, 18 Apr 2024) $ $Author: joe $ $Revision: 22425 $ -->
+### Publicerat till [arXiv](https://arxiv.org/abs/2406.12868) den 21 juni 2024
+
+### [Avslagen från JST](triple-products.page/jst-review.txt) den 15 september 2024
+
+### Omarbetad och skickad till SSRN den 26 september 2024
+
+### Facebookgranskning av [Joe Cox](triple-products.page/joe-cox.txt) den 5 okt 2024
+
+### Första citat av Anshul Adve <https://arxiv.org/abs/2509.17935> 22 september 2025
+
+<!-- $Date: 2025-09-30 14:46:30 -0700 (Tue, 30 Sep 2025) $ $Author: joe $ $Revision: 26875 $ -->
