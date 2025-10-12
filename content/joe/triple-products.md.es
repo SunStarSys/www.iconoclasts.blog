@@ -5,40 +5,40 @@ dependencies: '*.md.es'
 keywords: teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verificado=25295
-title: Triple Productos de Eigenfunciones y Geometría Espectral
+status: verificado=26919
+title: Triple producto de funciones propias y geometría espectral
 ---
 
 <div class="right">
   <img src="../images/lawson6-pod.png" style="width:200px">
   <p style="width:200px;text-align:center;line-height:20px">
-  La superficie mínima de Lawson ξ<sub>6,1</sub> estereográficamente proyectada de S<sup>3</sup> a R<sup>3</sup>
+  La superficie mínima de Lawson ξ<sub>6,1</sub> proyectada estereográficamente de S<sup>3</sup> a R<sup>3</sup>
   </p>
 </div>
 
 [TOC]
 
-No de autores
+## Autor
 
 Joe Schaefer
 
 ## Resumen
 
-Uso de técnicas elementales de análisis geométrico, ecuaciones diferenciales parciales y abeliano $$C^*$$ Algebras, {# lede #}descubrimos una invariante geométrica global novedosa pero familiar{# lede #} &mdash;
+Uso de técnicas elementales de Análisis Geométrico, Ecuaciones Diferenciales Parciales y Abelian $$C^*$$ Algebras, {# lede #}Descubrimos una invariante geométrica global novedosa pero familiar{# lede #} &mdash; a saber **el conjunto indexado de integrales de productos triples de funciones propias del operador Laplace-Beltrami**, para caracterizar con precisión qué colectores isoespectrales cerrados de Riemannian son isométricos.
 
 ## Introducción
 
-Para un colector Riemannian cerrado $$(M,g)$$, caracterizando su **clase** de colectores isospectrales no isométricos, es un tipo de problema inverso [[DH11]](#DH11) en geometría espectral. Uno podría especular ingenuamente que esta clase siempre estaría vacía. Sin embargo, la literatura académica es rica en construcciones de décadas de pares específicos de contraejemplos: a partir de 1964 con el par de 16 dimensiones de tori plano isospectral no isométrico de John Milnor. [[JM64]](#JM64)y continuando [[CS92]](#CS92) hacia la caracterización dimensional genérica de tori plano en la tesis doctoral de Alexander Schiemann de 1993 [[AS94]](#AS94) &mdash; repleto de una búsqueda asistida por computadora para la crítica $$\dim = 3$$ caso.  Un estudio moderno de la historia completa del tori plano aparece en [[NRR22]](#NRR22).
+Para un colector Riemanniano cerrado $$(M,g)$$, caracterizando su **clase** de colectores isoespectrales no isométricos, es un tipo de problema inverso [[DH11]](#DH11) en Geometría Espectral. Naïvely uno podría especular que esta clase siempre estaría *vacía*. Sin embargo, la literatura académica es rica en construcciones de décadas de antigüedad de pares específicos de contraejemplos: comenzando en 1964 con el par de 16 dimensiones de John Milnor de tori plano isospectral no isométrico. [[JM64]](#JM64), y continuar [[CS92]](#CS92) hacia la caracterización dimensional genérica del tori plano en la tesis doctoral de Alexander Schiemann de 1993 [[AS94]](#AS94) &mdash; repleto de una búsqueda asistida por computadora para el crítico $$\dim = 3$$ caso.  Un estudio moderno de la historia completa del tori plano aparece en [[NRR22]](#NRR22).
 
-A lo largo del camino fueron reveladoras ramificaciones en espacios de cobertura simétrica más sofisticados y no euclidianos; la construcción de tales "duetas" isospectrales y no isométricos que involucran tensores de curvatura no triviales (y sus características de Euler determinadas por el espectro en la dimensión 2) [[MS67]](#MS67)Un ejemplo de este esfuerzo fue Toshikazu Sunada en 1985. [[TS85]](#TS85).
+A lo largo del camino se produjeron avances perspicaces en espacios de cobertura simétrica no euclidiana más sofisticados; construyendo tales "debates" isoespectrales y no isométricos que involucran tensores de curvatura no triviales (y sus características Euler determinadas por el espectro en la dimensión 2) [[MS67]](#MS67)Un buen ejemplo de este esfuerzo fue Toshikazu Sunada en 1985. [[TS85]](#TS85) La invención de un marco espacial de cobertura de propósito general, que luego desplegó en el mismo trabajo para construir dúos hiperbólicos en las dimensiones 2 y 3.
 
-Para métricas riemannianas inhomogéneas, Carolyn Gordon descubrió dúos que ni siquiera son isométricos localmente. [[CG93]](#CG93).
+Para las métricas Riemannian inhomogéneas, Carolyn Gordon descubrió dúos que ni siquiera son isométricos localmente. [[CG93]](#CG93).
 
-Continúa el trabajo en muchas áreas relacionadas [[DH11]](#DH11), como determinar las características topológicas de la clase de colectores isospectrales, no isométricos en general (vacío) [[ST80]](#ST80), finito [[AS94]](#AS94), rígido [[GK80]](#GK80)y compacto [[GZ97]](#GZ97).
+El trabajo continúa en muchas áreas relacionadas [[DH11]](#DH11), como la determinación de las características topológicas de la clase de colectores isoespectrales, no isométricos en general (vacío) [[ST80]](#ST80), finito [[AS94]](#AS94), rígido [[GK80]](#GK80), y compacto [[GZ97]](#GZ97)) como un subconjunto de diferentes espacios modulares de las métricas de Riemannian.
 
-Lo que ofrecemos en este artículo es una nueva perspectiva sobre una herramienta familiar: los coeficientes de Fourier indexados de productos pareados de funciones propias como una discreta "invariante algebraica/topológica" para complementar la existente, discreta "invariante analítica" &mdash; el espectro no negativo del operador *Laplace-Beltrami* (en lo sucesivo denominado **Laplaciano**) en $$L^2(M,g)$$
+Lo que ofrecemos en este artículo es una nueva perspectiva sobre una herramienta familiar: coeficientes de Fourier indexados de productos pareados de funciones propias como una discreta "invariante algebraica/topológica" para complementar la discreta "invariante analítica" existente. &mdash; el espectro no negativo del *operador Laplace-Beltrami* (en lo sucesivo denominado el **Laplaciano**) en $$ℋ = L^2(M,g)$$. Combinados, observamos que el par proporciona una "representación geométrica global discreta" de las clases de isometría de los colectores isoespectrales y cerrados de Riemann.
 
-### resultados
+### Resultados
 
 <br>
 
@@ -50,7 +50,7 @@ Lo que ofrecemos en este artículo es una nueva perspectiva sobre una herramient
 </div>
   <div class="card-body">
 
-Dada una (no disminución de los valores propios) base ortonormal de las funciones propias $$\set{e^i}_{i=0}^{\infty}$$ para el laplaciano (no negativo) $$\Delta_M$$ activado $$L^2(M,g)$$ asociado con un múltiple Riemannian cerrado $$(M,g)$$
+Dada una (no decreciente en los valores propios) base ortonormal de las funciones propias $$\set{e^i}_{i=0}^{\infty}$$ para el laplaciano (no negativo) $$\Delta_M$$ activado $$L^2(M,g)$$ asociado a un múltiple Riemanniano cerrado $$(M,g)$$, definir
 
 ```math
 
@@ -58,14 +58,14 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 ```
 
-Para ser isométrico $$(M,g)$$, es una condición *necesaria y suficiente* para que otro **iosospectral** cerrara el múltiple riemanniano para tener una base ortonormal de autofunciones (para su laplaciano) que tanto preserva los autovalores asociados como posee un invariante $$\set{M^{i,j,k}}$$
+Para ser isométrico a $$(M,g)$$, es una condición *necesaria y suficiente* para otro **isoespectral** cerrado múltiple riemanniano para tener una base ortonormal de funciones propias (para su laplaciano) que tanto preserva los valores propios asociados y posee una invariante $$\set{M^{i,j,k}}$$ bajo cada base.
 
 </div>
 </div>
 
 <br>
 
-* La simetría* juega un papel importante en los casos manejables computacionalmente [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), que se ilustra acertadamente en nuestro tori plano [Ejemplo](#example).
+*Simetría* juega un papel importante en casos computacionalmente tracables [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), que se ilustra acertadamente en nuestro tori plano [Ejemplo](#example) abajo. Sin embargo, la fuerza de nuestro enfoque tal vez se haga más evidente en el caso de los colectores con el menor número de simetrías de Riemann, que es el caso genérico que a menudo coincide con los valores propios que son * únicos * (es decir, sin multiplicidad no trivial). En este caso, ofrecemos los siguientes
 
 <br>
 
@@ -77,20 +77,20 @@ Para ser isométrico $$(M,g)$$, es una condición *necesaria y suficiente* para 
 </div>
   <div class="card-body">
 
-Si cada valor propio tiene multiplicidad $$1$$, dado un par de bases ortodormales preservadoras de autovalor como se describe en la hipótesis del teorema, los colectores son isométricos si y solo si el $$\set{M^{i,j,k}}$$
+Si cada valor propio tiene multiplicidad $$1$$, dado un par de bases ortormales preservantes de valor propio como se describe en la hipótesis del Teorema, los colectores son isométricos si y solo si el $$\set{M^{i,j,k}}$$ para una base está de acuerdo, hasta el valor absoluto en términos individuales, con la otra base.
 
 </div>
 </div>
 
 <br>
 
-La motivación para el estudio de $$\set{M^{i,j,k}}$$ se deriva vagamente del estudio del rol del **operador de multiplicación lineal** $$Y:V\otimes V\rightarrow V((z))$$ en la definición de un álgebra de operador de vértice [[FBZ04]](#FBZ04) asociado con una Teoría de Campo Conformal Chiral. Aquí $$V$$ es el espacio vectorial de los Estados y $$V((z))$$ es el espacio de la serie formal Laurent en $$z$$ con coeficientes en $$V$$. Desde $$V$$ a menudo viene equipado como un espacio de Hilbert con una base ortopédica tradicional de la serie Fourier, indexando $$Y$$ utilizando los elementos básicos de Fourier de $$V$$ sólo está ligeramente más implicado que $$M^{i,j,k}$$
+La motivación para el estudio de $$\set{M^{i,j,k}}$$ se deriva libremente del estudio del rol del **operador de multiplicación bilineal** $$Y:V\otimes V\rightarrow V((z))$$ en la definición de álgebra de operador de vértice [[FBZ04]](#FBZ04) Teoría de Campo Conformal Chiral. Aquí $$V$$ es el espacio vectorial de los Estados y $$V((z))$$ es el espacio de la serie formal Laurent en $$z$$ con coeficientes en $$V$$. Desde $$V$$ A menudo viene equipado como un espacio Hilbert con una base ortopédica tradicional de la serie Fourier, indexación $$Y$$ utilizando los elementos básicos de Fourier de $$V$$ está un poco más involucrado que $$M^{i,j,k}$$ caso estudiado aquí, pero bastante similar en espíritu. Sin embargo, una comparación detallada está fuera del alcance de este artículo.
 
 Estos resultados se demostraron por primera vez durante una charla similar titulada por el autor en **MSRI** en 1997, pero aparecen aquí en forma publicada por primera vez.
 
-No de preliminares
+## Preliminares
 
-Ahora con $$M,g,e^i,M^{i,j,k}$$ como se ha indicado anteriormente, ya que $$f \in C^\infty(M)$$ y $$i \geq 0$$
+Ahora con $$M,g,e^i,M^{i,j,k}$$ como antes, porque $$f \in C^\infty(M)$$ y $$i \geq 0$$ Tenga en cuenta que los **coeficientes más cuantiosos**
 
 ```math
 \begin{aligned}
@@ -105,7 +105,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
 
 ```
 
-desde $$f$$ es singularmente representable como su rápida convergencia **Fourier Series** ($$\Delta_M$$-incrustaciones específicas de Sobolev [[MT13]](#MT13) [[RS75]](#RS75)junto con la Ley Asintótica de Weyl [[HW11]](#HW11), implican que los términos de la suma son $$o(i^{-n})$$ * uniformemente en $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$.) Entonces vemos que para $$f_1, f_2 \in C^\infty(M)$$, los coeficientes de Fourier del producto en sentido puntual $$f_1 f_2 \in C^\infty(M)$$
+desde $$f$$ es representable de forma única, ya que su **Serie Cuádruple** que converge rápidamente ($$\Delta_M$$-Incrustaciones específicas de Sobolev [[MT13]](#MT13) [[RS75]](#RS75), junto con la Ley Asintótica de Weyl [[HW11]](#HW11), implica que los términos de la suma son $$o(i^{-n})$$ *de manera uniforme en $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$.) Entonces vemos que para $$f_1, f_2 \in C^\infty(M)$$, los coeficientes de Fourier del producto en sentido puntual $$f_1 f_2 \in C^\infty(M)$$ son
 
 ```math
 \begin{aligned}
@@ -123,7 +123,7 @@ f_1 = f^p_2,\space p \space \in \N \implies \\
 \end{aligned}
 ```
 
-y así, *críticamente*, cualquier polinomio multivariante $$\weierp \in \Complex[z_1,...,z_l]$$ (en funciones fluidas) **se conmuta** con cualquier preservación del espectro $$\Delta$$-eigenfunction mapa de base ortonormal $$\vec{F}$$ que preserva $$\set{M^{i,j,k}}$$
+y así, *críticamente*, cualquier polinomio multivariante $$\weierp \in \Complex[z_1,...,z_l]$$ (en funciones fluidas) **commite** con cualquier preservación del espectro $$\Delta$$-eigenfunction Orthonormal base mapa $$\vec{F}$$ que preserva $$\set{M^{i,j,k}}$$:
 
 ```math
 \begin{CD}
@@ -133,7 +133,7 @@ y así, *críticamente*, cualquier polinomio multivariante $$\weierp \in \Comple
 \end{CD}
 ```
 
-Además, si $$A\subset M$$ es medible por Borel, entonces los resultados anteriores mantienen la función *característica de $$A$$* en todas partes excepto a lo largo del límite de $$A$$: si $$f = f^2$$ y $$A:=\set{x\in M|f(x)=1}$$
+Además, si $$A\subset M$$ es medible con borel, luego los resultados anteriores se mantienen en sentido de punto para la función *característica de $$A$$* en todas partes, excepto a lo largo de la frontera de $$A$$: si $$f = f^2$$ y $$A:=\set{x\in M|f(x)=1}$$,
 
 ```math
 \sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \begin{cases}
@@ -150,11 +150,11 @@ y por singularidad, tenemos la siguiente identidad
 \end{aligned}
 ```
 
-Esto implica que cualquier mapa de base como el anterior tiene funciones características (como miembros de $$L^2(M,g)\subset L^1(M,g)$$
+Esto implica que cualquier mapa base como el anterior lleva funciones características (como miembros de $$L^2(M,g)\subset L^1(M,g)$$) a las funciones características de una manera que preserva la medida.
 
-El objetivo de estos cálculos es enfatizar el hecho de que $$\set{M^{i,j,k}}$$ **caracteriza** el análisis armónico del operador de multiplicación pointwise en $$C^\infty(M)$$, que es un denso subalgebra de los abelianos $$C^*$$ Álgebra $$C(M)$$
+El punto de estos cálculos es enfatizar el hecho de que $$\set{M^{i,j,k}}$$ **caracteriza** el análisis armónico del operador de multiplicación por puntos en $$C^\infty(M)$$, que es una densa subalgebra del Abeliano $$C^*$$ álgebra $$C(M)$$por el teorema de Stone-Weierstrass.
 
-Para la rápida convergencia de estas sumas que implican $$M^{i,j,k}$$, tenga en cuenta que los productos de las funciones propias son suaves, por lo que estos coeficientes de Fourier decaen como arriba (en cada índice). Para más detalles, vea el trabajo de Emmett Wyman en 2022 con estos coeficientes en relación con la desigualdad del triángulo en los valores propios. [[EW22]](#EW22).
+Para la rápida convergencia de estas sumas anteriores que implican $$M^{i,j,k}$$, tenga en cuenta que los productos de las funciones propias son suaves, por lo que estos coeficientes de Fourier decaen como arriba (en cada índice). Para más detalles, vea el trabajo de Emmett Wyman en 2022 con estos coeficientes en relación con la desigualdad del triángulo en los valores propios. [[EW22]](#EW22).
 
 Nota: siempre podemos asumir
 ```math
@@ -165,11 +165,11 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 \end{aligned}
 ```
 
-donde $$\delta_i$$ es el delta de Kronecker. Desde $$vol(M)$$ es una invariable espectral [[HW11]](#HW11).
+donde $$\delta_i$$ Es el delta de Kronecker. Desde $$vol(M)$$ es una invariante espectral [[HW11]](#HW11), esta información ya está disponible a partir de consideraciones de isoespectralidad.
 
-## Prueba del teorema
+## Prueba de Teorema
 
-Por necesidad, que $$F:(N,h)\rightarrow (M,g)$$ ser una isometría entre los colectores Riemannian cerrados, y dejar que la base ortonormal objetivo de las funciones propias en $$L^2(N,h)$$ ser el retroceso mediante $$F$$ de la base ortonormal $$\set{e^i}$$ activado $$(M,g)$$
+Por necesidad, dejemos que $$F:(N,h)\rightarrow (M,g)$$ ser una isometría entre colectores Riemannianos cerrados, y dejar que el objetivo ortodonormal base de funciones propias en $$L^2(N,h)$$ ser el retroceso a través de $$F$$ de la base ortopédica $$\set{e^i}$$ activado $$(M,g)$$ anterior. Desde
 
 ```math
 \begin{aligned}
@@ -179,17 +179,17 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 \end{aligned}
 ```
 
-hemos terminado con el argumento de la necesidad porque $$\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infty(M)$$
+acabamos con el argumento de la necesidad porque $$\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infty(M)$$.
 
-Para la suficiencia, ahora consideramos el mapa de bases ortopédicas lineales y bijetivas $$\vec{F}$$ desde $$C^\infty(M)$$ para $$C^\infty(N)$$ y señalar que a partir de los cálculos de [Preliminar](#preliminaries) arriba, $$\vec{F}$$ conserva los productos en sentido puntual para funciones suaves (y conserva las funciones características cuando se amplía a $$L^2(M,g)$$) por la premisa de que $$\set{M^{i,j,k}}$$
+Para suficiencia, ahora consideramos el mapa lineal, bijetivo de la base de la función propia ortopédica $$\vec{F}$$ desde $$C^\infty(M)$$ a $$C^\infty(N)$$ y observar que a partir de los cálculos en el [Preliminares](#preliminaries) arriba, $$\vec{F}$$ conserva los productos en sentido puntual para funciones suaves (y conserva las funciones características cuando se amplía a $$L^2(M,g)$$) por la premisa de que $$\set{M^{i,j,k}}$$ es invariante bajo este mapa.
 
 ### Lemma
 
-$$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ mantiene la norma uniforme.
+$$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ Conserva la norma uniforme.
 
 ### Prueba de Lemma
 
-Vamos $$\set{a_i}$$ ser una división suave de la unidad en $$M$$
+Permitir $$\set{a_i}$$ ser una división fluida de la unidad en $$M$$.
 
 ```math
 \begin{aligned}
@@ -199,7 +199,7 @@ Vamos $$\set{a_i}$$ ser una división suave de la unidad en $$M$$
 \end{aligned}
 ```
 
-Así $$\sum_i\hat{a_i}(j) = \delta_j\sqrt{vol(M)}$$
+Así pues, $$\sum_i\hat{a_i}(j) = \delta_j\sqrt{vol(M)}$$ (Kronecker delta).
 
 Por el teorema de convergencia dominado,
 
@@ -208,21 +208,21 @@ Por el teorema de convergencia dominado,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-que es una función característica de la medida positiva en cada subconjunto separado $$\set{x\in M | a_j(x) = 1}$$. Esto significa que el Lemma está probado para cada $$a_j$$, ya que se conserva la función característica limitante de un conjunto con medida positiva, y por lo tanto tiene norma uniforme 1, al igual que todas las $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$
+que es una función característica de la medida positiva en cada subconjunto separado $$\set{x\in M | a_j(x) = 1}$$. Esto significa que el Lemma está probado para cada $$a_j$$, ya que la función característica limitante de un conjunto con medida positiva se conserva, y por lo tanto tiene norma uniforme 1, como todos $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, por Diagrama (4).
 
-Sin pérdida de generalidad, podemos aplicar el resultado de caso especial mostrado para la división suave de la unidad $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, donde $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$
+Sin pérdida de generalidad, podemos aplicar el resultado de caso especial mostrado para la partición suave de la unidad $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, donde $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ tiene una medida positiva, y el Lemma está probado en su totalidad.
 
-Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto puede extenderse a un isomorfismo de $$C(M)$$ y $$C(N)$$
+Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto se puede extender a un isomorfismo de $$C(M)$$ y $$C(N)$$ en la misma categoría.
 
-Ahora aplicamos el teorema de representación de Gelfand-Naimark (en forma de funtor contravariante) para Abelian $$C^*$$ álgebras [[JC19]](#JC19) representar este isomorfismo por un homeomorfismo $$F$$ entre $$N$$ y $$M$$
+Ahora aplicamos el Teorema de Representación de Gelfand-Naimark (en forma de functor contravariante) para Abelian $$C^*$$ álgebras [[JC19]](#JC19) representar este isomorfismo por un homeomorfismo $$F$$ entre $$N$$ y $$M$$. Dado que es bijetivo en funciones lisas, también debe ser suave.
 
-Como este ahora diffeomorfismo $$F$$ preserva los valores propios y las funciones propias (por hipótesis sobre $$\vec{F}(f) = f\circ F$$), debe preservar el laplaciano en funciones suaves. Por lo tanto, también debe preservar los símbolos principales de estos mismos operadores elípticos. [[MT13]](#MT13).
+Como esto ahora diffeomorfismo $$F$$ conserva los valores propios y las funciones propias (por hipótesis sobre $$\vec{F}(f) = f\circ F$$), debe preservar el laplaciano en las funciones lisas. Por lo tanto, también debe preservar los símbolos principales de estos mismos operadores elípticos [[MT13]](#MT13). Los símbolos principales del laplaciano son simplemente otro medio de expresar la métrica riemanniana en los colectores en cuestión.
 
 Esto completa la prueba del teorema.
 
-### Discusión de la Conjetura
+### Discusión de Conjetura
 
-Con $$\set{M_0^{i,j,k}}$$ y $$\set{M_1^{i,j,k}}$$ representando los dos conjuntos de triple producto para las bases $$\set{e_0^i}$$ y $$\set{e_1^i}$$, dejar $$z_i \in \set{-1,1}$$ ser el $$\Z_2^\infty$$ acción sobre tal $$\R$$-base ortopédica valorada $$\set{e_1^i}$$. Por lo tanto, tenemos que elegir $$z_i$$ para que $$\set{z_ie_1^i}$$ rendimiento $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$
+Con $$\set{M_0^{i,j,k}}$$ y $$\set{M_1^{i,j,k}}$$ representando los dos conjuntos de productos triples para las bases $$\set{e_0^i}$$ y $$\set{e_1^i}$$, dejar $$z_i \in \set{-1,1}$$ ser el $$\Z_2^\infty$$ acción sobre tal $$\R$$-base ortodonormal valorada $$\set{e_1^i}$$. Por lo tanto, tenemos que elegir $$z_i$$ para que $$\set{z_ie_1^i}$$ rendimientos $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
 Observamos necesariamente que
 
@@ -230,9 +230,9 @@ Observamos necesariamente que
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-Podemos esperar que para cualquier $$k$$, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$. Al principio, esto no parece imposible si $$M$$ tiene un grupo de simetría "par/odd", y $$e^k$$ es extraño, pero la esperanza es verdadera para el caso plano-tori a continuación (que no satisface la multiplicidad de valor propio uniforme = 1 condición). Además, la Fórmula (11) para $$z_k$$ requiere tanto $$i$$-independencia y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conservas $$\set{M_0^{i,j,k}}$$
+Podemos esperar que para cualquier $$k$$, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$. En el primer rubor, esto no parece imposible si $$M$$ tiene un grupo de simetría "even/odd", y $$e^k$$ Es extraño, pero la esperanza es verdadera para el caso de toros planos a continuación (que no satisface la multiplicidad uniforme del valor propio = 1 condición). Además, la Fórmula (11) para $$z_k$$ requiere tanto $$i$$-independencia y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conserva $$\set{M_0^{i,j,k}}$$. Todos estos aspectos siguen siendo desconocidos.
 
-Sin embargo, calculemos algunas identidades relevantes para que algún investigador futuro intrépido pueda profundizar en esta conjetura:
+Sin embargo, vamos a calcular algunas identidades relevantes para que un futuro investigador intrépido pueda profundizar en esta conjetura:
 
 ```math
 \begin{aligned}
@@ -258,20 +258,20 @@ df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\l
 &= \widehat{g^2}(k). \\
 \end{aligned}
 ```
-Nota: para el caso de tori plano unidimensional que figura a continuación, $$\tilde{Q}_k(e^i,e^j) = 0$$ desde $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$
+Nota: para el caso de tori plano unidimensional que figura a continuación, $$\tilde{Q}_k(e^i,e^j) = 0$$ desde $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ es una verdadera derivación.
 
-Ejemplo ##
+## Ejemplo
 
-Vamos $$\set{\lambda_i} \subset \R^n$$ ser una clasificación indexada $$n$$ enrejado de los pesos de Lie Algebra para la representación espacial cociente de $$\frak{g}=\Reals^n$$ como campos vectoriales invariantes de traducción (es decir, constantes) en sí mismos, cuando $$\R^n$$ también se considera $$\frak{g}$$Grupo de Lie asociado sobre un toro definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Estos pesos definen ascensores integrables de 1 forma sobre el toro que se integran a los funcionales lineales. $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ como su grupo de mentiras (que cubre el toro). Estas funciones lineales pueden entonces ser reescaladas uniformemente (por $$2\pi \sqrt{-1}$$) y exponenciados para formar caracteres multiplicativos que descienden para formar una base ortonormal de $$L^2(\Reals^n/A\Z^n,dx)$$, con la medida Lebesgue (Haar) $$dx$$
+Permitir $$\set{\lambda_i} \subset \R^n$$ ser un rango indexado $$n$$ rejilla de pesos de álgebra de mentira para la representación del espacio cociente de $$\frak{g}=\Reals^n$$ como campos vectoriales invariantes de traducción (es decir, constantes) en sí mismos, cuando $$\R^n$$ también se considera que $$\frak{g}$$Grupo de mentiras asociado a un toro definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Estos pesos definen ascensores integrables de 1 forma sobre el toro que se integran a los funcionales lineales $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ como su grupo de mentiras (cubriendo el toro). Estas funciones lineales pueden entonces ser redimensionadas uniformemente (por $$2\pi \sqrt{-1}$$) y exponenciados para formar caracteres multiplicativos que descienden para formar una base ortonormal de $$L^2(\Reals^n/A\Z^n,dx)$$, con la medida Lebesgue (Haar) $$dx$$.
 
-Además, esta base diagonaliza simultáneamente el laplaciano del toro plano **porque** el laplaciano es la imagen de un elemento cuadrático cuadrático simétrico, negativo-definido de Casimir bajo esta (operador diferencial lineal de coeficiente constante) representación del espacio cociente del álgebra envolvente universal. Por lo tanto, sus valores propios están en proporción constante (de $$4\pi^2$$
+Además, esta base diagonaliza simultáneamente el laplaciano del toro plano **porque** el laplaciano es la imagen de un elemento cuadrático Casimir simétrico, negativo-definido bajo esta (operador diferencial lineal de coeficiente constante) representación espacial cociente del álgebra envolvente universal. Por lo tanto, sus valores propios están en constante proporción (de $$4\pi^2$$) al Casimir-elemento-determinado-longitud-cuadrado del peso de cada personaje en la red.
 
-Actualmente vemos la base anterior
+Consideramos actualmente la base anterior
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-ser nuestra base teórico-aplicable de Fourier de funciones propias ortonormales (carácter multiplicativo) (de esta representación cociente del elemento (negativo) euclidiano Casimir) directamente correspondiente a $$\set{\lambda_i}$$. Por las hipótesis de nuestro teorema, debemos tener $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$
+ser nuestra base de Fourier aplicable al teorema de las funciones propias ortonormales (carácter multiplicativo) (de esta representación del cociente del elemento (negativo) Casimir euclidiano) que corresponde directamente a $$\set{\lambda_i}$$. Por las hipótesis de nuestro Teorema, debemos tener $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (con la norma euclidiana sobre los pesos).
 
 Ahora podemos calcular
 
@@ -282,21 +282,21 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 ```
 
-Como esta ecuación <span class="eqno"></span> es lineal en la red de peso $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, sólo un $$L^2$$ mapa de base de función propia ortonormal ** que se induce a partir de un mapa lineal invertible que preserva el volumen entre dos de tales indexados, rango $$n$$ las celosías de peso** mantendrán el conjunto de datos indexado "algebraico/topológico" $$\set{M^{i,j,k}}$$
+Como esta ecuación <span class="eqno"></span> es *solamente* invariante bajo transformaciones lineales en el enrejado de peso $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, sólo un $$L^2$$ Ortodonormal eigenfunción mapa base ** que se induce de un volumen de conservación de mapa lineal invertible entre dos tales indexados, rango $$n$$ las celosías de peso** mantendrán el conjunto de datos indexado "algebraico/topológico" $$\set{M^{i,j,k}}$$ invariante.
 
-Sin embargo, para aplicar nuestra [Teorema](#theorem), es esencial que este mapa lineal $$B$$ ser $$B\in O(n,\Reals)$$ en la celosía de peso, porque el $$L^2$$
+Sin embargo, para aplicar nuestra [Teorema](#theorem), es esencial que tal mapa lineal $$B$$ ser $$B\in O(n,\Reals)$$ en la red del peso, porque la inducida $$L^2$$ mapa base de autofunción
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
-también deben preservar las invariantes "analíticas" &mdash; figura inducida por el elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$
+debe preservar también las invariantes "analíticas" &mdash; la figura inducida por el elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, es decir, los valores propios individuales del laplaciano del tori plano.
 
-Esta cuenta teórica de representación [[AK01]](#AK01) es exactamente equivalente al desarrollo previo de *congruencia de látex* [[NRR22]](#NRR22) se utiliza de forma comercial para delinear las clases de isometría de tori plano. De hecho, la matriz transpone tal mapa lineal $$B\in O(n,\Reals)$$, tal como se describe en el párrafo anterior, **es** la isometría contravariante de Riemann entre el tori, según lo dispuesto por la aplicación del *Teorema de Representación de Gelfand-Naimark* durante el [Prueba](#proof-of-theorem) de nuestros [Teorema](#theorem).
+Esta representación-cuenta teórica [[AK01]](#AK01) Es exactamente equivalente al desarrollo previo de *congruencia de la celosía* [[NRR22]](#NRR22) tradicionalmente utilizado para delinear clases de isometría de tori plano. De hecho, la matriz transpone tal mapa lineal $$B\in O(n,\Reals)$$, como se describe en el párrafo anterior, **es** la isometría de Riemannian contravariante entre el tori, según lo proporcionado por la aplicación del *Teorema de Representación de Gelfand-Naimark* durante el [Prueba](#proof-of-theorem) de nuestro [Teorema](#theorem).
 
-No de acuses de recibo
+## Reconocimientos
 
-La investigación original fue financiada en parte por un gracioso Premio de Investigación James Simons en 1995-1996, y el generoso apoyo de un Alfred P. Sloan Dissertation Fellowship en 1996-1997 en la Universidad de Stony Brook.
+La investigación original fue financiada en parte por un gracioso James Simons Research Award en 1995-1996, y el generoso apoyo de un Alfred P. Sloan Dissertation Fellowship en 1996-1997 en la Universidad de Stony Brook.
 
 El autor también desea agradecer a Tanya Christiansen, Carolyn Gordon, Hamid Hezari, Harish Seshadri, y especialmente a Leon Takhtajan por su asistencia técnica y revisión en la preparación de este manuscrito para su publicación.
 
