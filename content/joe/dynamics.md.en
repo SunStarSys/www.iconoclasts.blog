@@ -373,18 +373,18 @@ Significantly, we constructed $$\mathcal B_t$$ so that $$\dot q - \mathcal B_t$$
 
 What if we tried to use "successive convolutions" on the semi-classical expression in Equation (16) to construct Brownian Motion on a negatively curved manifold $$M$$?
 
-We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$-\frac{1}{12}\bar{\mathcal R}$$, where $$\bar{\mathcal R}$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel, where this term represents the contribution to the Hessian of *the metric form* $$g_{ij}$$ in [normal coordinates](https://en.wikipedia.org/wiki/Normal_coordinates).  However in then $$\dim = 2$$ case, when you add the full corrective potential $$\mathcal V = -\frac{1}{12}(\bar{\mathcal R} - \frac{1}{4}\bar{\mathcal R}) = -\frac{1}{16}\bar{\mathcal R}$$ to the Hamiltonian, which is Dewitt's $$\frac{1}{12}\bar{\mathcal R}$$ volume form term *minus* the presence of a Killing Field $$\mathcal B$$'s $$\frac{1}{24}\mathcal{Ric}(\mathcal B/||\mathcal B||, \mathcal B/||\mathcal B||)$$ contribution, this factor is eliminated from the semiclassical asymptotics of Selberg-like Trace Formulae.
+We'd get something, but it'd be *almost* Brownian Motion on curved spaces &mdash; we need to look to Feynman-Kac for the defect in its infinitesimal generator. It turns out there will be an effective potential function error $$-\frac{1}{6}\bar{\mathcal R}$$, where $$\bar{\mathcal R}$$ is the scalar curvature at each point. This was first discovered by Bryce DeWitt in the 1950's, and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel, where this term represents the contribution to the Hessian of *the metric form* $$g_{ij}$$ in [normal coordinates](https://en.wikipedia.org/wiki/Normal_coordinates).  However in then $$\dim = 2$$ case, when you add the full corrective potential $$\mathcal V = -\frac{1}{6}(\bar{\mathcal R} - \frac{1}{4}\bar{\mathcal R}) = \frac{1}{16}\bar{\mathcal R}$$ to the Hamiltonian, which is Dewitt's $$\frac{1}{6}\bar{\mathcal R}$$ volume form term *minus* the presence of a Killing Field $$\mathcal B$$'s $$\frac{1}{24}\mathcal{Ric}(\mathcal B/||\mathcal B||, \mathcal B/||\mathcal B||)$$ contribution, this factor is eliminated from the semiclassical asymptotics of Selberg-like Trace Formulae.
 
-More precisely, by approximating $$1/2\ \nabla\vert_0\sqrt{g} = - 1/6\ \mathcal{Ric}_{ij}q^i\partial^j + o(||q||) \implies 1/2\ \nabla\cdot\nabla\vert_0 \sqrt{g} = -1/12\ \bar{\mathcal R}(0)$$, we see that the first derivatives vanish at the origin, so:
+More precisely, by approximating $$1/2\ \nabla\vert_0\sqrt{g} = - 1/6\ \mathcal{Ric}_{ij}q^i\partial^j + o(||q||) \implies 1/2\ \nabla\cdot\nabla\vert_0 \sqrt{g} = -1/6\ \bar{\mathcal R}(0)$$, we see that the first derivatives vanish at the origin, so:
 
 ```math
-(\frac{1}{2}\Delta_M-\mathcal V)\vert_0 e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_{\Reals^n}\vert_0 e^{-1/2t\ g_{ij}q^iq^j}) - \mathcal V(0) - \frac{1}{12}\ \bar{\mathcal R}(0)
+(\frac{1}{2}\Delta_M-\mathcal V)\vert_0 e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_{\Reals^n}\vert_0 e^{-1/2t\ g_{ij}q^iq^j}) - \mathcal V(0) - \frac{1}{6}\ \bar{\mathcal R}(0)
 ```
 
 which *is* the original Dewitt Term as he derived it.  As we are biasing on quantization in the presesence of a Killing Field $$\mathcal B = \frac{\partial}{\partial x^1}$$ , we take a slightly modified potential term:
 
 ```math
-(\frac{1}{2}\Delta_M-\mathcal V)\vert_{x^1,\vec 0} e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_{\Reals^n}\vert_{x^1,\vec 0}, e^{-x^1x^1/2t}) - \mathcal V(x^1, \vec 0) - \frac{1}{12} \bar{\mathcal R}(x^1,\vec 0) + \frac{1}{24}\mathcal{Ric}_{11}(x^1, \vec 0).
+(\frac{1}{2}\Delta_M-\mathcal V)\vert_{x^1,\vec 0} e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_{\Reals^n}\vert_{x^1,\vec 0}e^{-x^1x^1/2t})\frac{1}{\sqrt{2\pi t\  det|I-\mathcal J_\mathcal B|}} - \mathcal V(x^1, \vec 0) + \frac{1}{8}\mathcal{Ric}_{11}(x^1, \vec 0).
 ```
 
 #### The Geometric Cameron-Martin Formula for $$g$$-invariant (Killing) vector fields $$\mathcal B$$ (aka Quadratic Form Magic, Part 2)
