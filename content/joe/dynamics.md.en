@@ -384,7 +384,7 @@ More precisely, by approximating $$1/2\ \nabla\vert_0\sqrt{g} = - 1/6\ \mathcal{
 which *is* the original Dewitt Term as he derived it.  As we are biasing on quantization in the presesence of a Killing Field $$\mathcal B = \frac{\partial}{\partial x^1}$$ , we take a slightly modified potential term:
 
 ```math
-\sqrt{(2\pi t)^{n}\ det |I-\mathcal J_\mathcal B|}(\frac{1}{2}\Delta_M-\mathcal V)\vert_{x^1,\vec 0} e^{-\mathcal L_\mathcal B(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_{\Reals^n}\vert_{x^1,\vec 0}e^{-x^1x^1/2t}) - \mathcal V(x^1, \vec 0) + \frac{1}{8}\mathcal{Ric}_{11}(x^1, \vec 0).
+\sqrt{(2\pi t)^{n}}(\frac{1}{2}\Delta_M-\mathcal V)\vert_{x^1,\vec 0} e^{-\mathcal L_\mathcal B(\dot q, q, t)}\frac{1}{det |I-\mathcal J_\mathcal B|} = (\frac{1}{2}\Delta_{\Reals^n}\vert_{x^1,\vec 0}e^{-x^1x^1/2t}) - \mathcal V(x^1, \vec 0) + \frac{1}{8}\mathcal{Ric}_{11}(x^1, \vec 0).
 ```
 
 #### The Geometric Cameron-Martin Formula for $$g$$-invariant (Killing) vector fields $$\mathcal B$$ (aka Quadratic Form Magic, Part 2)
