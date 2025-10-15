@@ -7,7 +7,7 @@ status: skiss
 title: Länkar
 ---
 
-### Publicerad till [Personnr](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4793533) den 16 april 2024
+#### Publicerad till [Personnr](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4793533) den 16 april 2024
 
 - [PDF](triple-products.pdf.en).
 
@@ -15,14 +15,24 @@ title: Länkar
 
 - [$$\LaTeX$$ Bibliografi](triple-products.bbl.en) som [JSON](triple-products.page/bibliography.json.en).
 
-### Publicerat till [arXiv](https://arxiv.org/abs/2406.12868) den 21 juni 2024
+#### Publicerat till [arXiv](https://arxiv.org/abs/2406.12868) den 21 juni 2024
 
-### [Avslagen från JST](triple-products.page/jst-review.txt) den 15 september 2024
+#### [Avslagen från JST](triple-products.page/jst-review.txt) den 15 september 2024
 
-### Omarbetad och skickad till SSRN den 26 september 2024
+#### Omarbetad och skickad till SSRN den 26 september 2024
 
-### Facebookgranskning av [Joe Cox](triple-products.page/joe-cox.txt) den 5 okt 2024
+#### Facebookgranskning av [Joe Cox](triple-products.page/joe-cox.txt) den 5 okt 2024
 
-### Första citat av Anshul Adve <https://arxiv.org/abs/2509.17935> 22 september 2025
+#### Första citat av Anshul Adve <https://arxiv.org/abs/2509.17935> den 22 september 2025
 
-<!-- $Date: 2025-09-30 14:46:30 -0700 (Tue, 30 Sep 2025) $ $Author: joe $ $Revision: 26875 $ -->
+Unikheten resulterar i Anshuls papper är starkt beroende av de tekniker som omfattas av mitt papper.  Mycket bra gjort!
+
+Hela uppkomsten av Inverse Problems in Spectral Theory kommer från Mark Kacs "Kan du höra formen på en trumma?"
+
+Min uppsats introduktion beskriver den senaste utvecklingen från 1997. Det är uppenbart att enbart Laplace-spektrumet är otillräckligt.  Men att komplettera det med trippel produktintegraler håller mycket löfte när det gäller att beskriva kartan $$(M,g) \mapsto \set{\lambda_i, M^{i,j,k}}$$.
+
+Vi måste förstå bilden av den kartan innan vi kan beskriva dess Inverse.
+
+Anshuls arbete åstadkommer båda och lyser upp den första vägen framåt.
+
+<!-- $Date: 2025-10-12 10:45:40 -0700 (Sun, 12 Oct 2025) $ $Author: joe $ $Revision: 26916 $ -->
