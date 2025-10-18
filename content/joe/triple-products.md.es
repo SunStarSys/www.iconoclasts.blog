@@ -5,7 +5,7 @@ dependencies: '*.md.es'
 keywords: teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verificado=26919
+status: verificado=26975
 title: Triple producto de funciones propias y geometría espectral
 ---
 
@@ -212,7 +212,7 @@ que es una función característica de la medida positiva en cada subconjunto se
 
 Sin pérdida de generalidad, podemos aplicar el resultado de caso especial mostrado para la partición suave de la unidad $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, donde $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ tiene una medida positiva, y el Lemma está probado en su totalidad.
 
-Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto se puede extender a un isomorfismo de $$C(M)$$ y $$C(N)$$ en la misma categoría.
+También está claro en la ecuación $$(2)$$ que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto se puede extender a un isomorfismo de $$C(M)$$ y $$C(N)$$ en la misma categoría.
 
 Ahora aplicamos el Teorema de Representación de Gelfand-Naimark (en forma de functor contravariante) para Abelian $$C^*$$ álgebras [[JC19]](#JC19) representar este isomorfismo por un homeomorfismo $$F$$ entre $$N$$ y $$M$$. Dado que es bijetivo en funciones lisas, también debe ser suave.
 
@@ -284,7 +284,7 @@ M^{i,j,k} = \begin{cases}
 
 Como esta ecuación <span class="eqno"></span> es *solamente* invariante bajo transformaciones lineales en el enrejado de peso $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, sólo un $$L^2$$ Ortodonormal eigenfunción mapa base ** que se induce de un volumen de conservación de mapa lineal invertible entre dos tales indexados, rango $$n$$ las celosías de peso** mantendrán el conjunto de datos indexado "algebraico/topológico" $$\set{M^{i,j,k}}$$ invariante.
 
-Sin embargo, para aplicar nuestra [Teorema](#theorem), es esencial que tal mapa lineal $$B$$ ser $$B\in O(n,\Reals)$$ en la red del peso, porque la inducida $$L^2$$ mapa base de autofunción
+Sin embargo, para aplicar nuestra [Teorema](#theorem), es esencial que tal mapa lineal $$B$$ ser $$B\in SO(n,\Reals)$$ en la red del peso, porque la inducida $$L^2$$ mapa base de autofunción
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
@@ -292,7 +292,7 @@ Sin embargo, para aplicar nuestra [Teorema](#theorem), es esencial que tal mapa 
 
 debe preservar también las invariantes "analíticas" &mdash; la figura inducida por el elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, es decir, los valores propios individuales del laplaciano del tori plano.
 
-Esta representación-cuenta teórica [[AK01]](#AK01) Es exactamente equivalente al desarrollo previo de *congruencia de la celosía* [[NRR22]](#NRR22) tradicionalmente utilizado para delinear clases de isometría de tori plano. De hecho, la matriz transpone tal mapa lineal $$B\in O(n,\Reals)$$, como se describe en el párrafo anterior, **es** la isometría de Riemannian contravariante entre el tori, según lo proporcionado por la aplicación del *Teorema de Representación de Gelfand-Naimark* durante el [Prueba](#proof-of-theorem) de nuestro [Teorema](#theorem).
+Esta representación-cuenta teórica [[AK01]](#AK01) Es exactamente equivalente al desarrollo previo de *congruencia de la celosía* [[NRR22]](#NRR22) tradicionalmente utilizado para delinear clases de isometría de tori plano. De hecho, la matriz transpone tal mapa lineal $$B\in SO(n,\Reals)$$, como se describe en el párrafo anterior, **es** la isometría de Riemannian contravariante entre el tori, según lo proporcionado por la aplicación del *Teorema de Representación de Gelfand-Naimark* durante el [Prueba](#proof-of-theorem) de nuestro [Teorema](#theorem).
 
 ## Reconocimientos
 

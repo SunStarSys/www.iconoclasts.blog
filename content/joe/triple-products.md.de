@@ -5,7 +5,7 @@ dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verifiziert=26919
+status: verifiziert=26975
 title: Dreifache Produkte von Eigenfunktionen und spektraler Geometrie
 ---
 
@@ -212,7 +212,7 @@ eine charakteristische Funktion des positiven Maßes für jede einzelne Teilmeng
 
 Ohne Verlust der Allgemeinheit können wir das für die reibungslose Teilung der Einheit gezeigte Sonderfallergebnis anwenden. $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, wobei $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ hat ein positives Maß, und das Lemma ist voll bewiesen.
 
-Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), wir haben festgestellt, $$\vec{F}$$ als Isomorphismus von Abelian $$C^*$$ Algebren und somit auf einen Isomorphismus von $$C(M)$$ und $$C(N)$$ in derselben Kategorie.
+Auch aus der Gleichung ist klar $$(2)$$ das $$\vec F(\bar f) = \bar{\vec F}(f)$$. Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), wir haben festgestellt, $$\vec{F}$$ als Isomorphismus von Abelian $$C^*$$ Algebren und somit auf einen Isomorphismus von $$C(M)$$ und $$C(N)$$ in derselben Kategorie.
 
 Nun wenden wir das Gelfand-Naimark-Repräsentationstheorem (in kontravarianter Funkform) für Abelian an $$C^*$$ Algebras [[JC19]](#JC19) um diesen Isomorphismus durch einen Homöomorphismus darzustellen $$F$$ zwischen $$N$$ und $$M$$. Da es sich bei glatten Funktionen um ein Bijektiv handelt, muss es auch glatt sein.
 
@@ -284,7 +284,7 @@ M^{i,j,k} = \begin{cases}
 
 Da diese Gleichung <span class="eqno"></span> unter linearen Transformationen auf dem Gewichtsgitter *nur* unveränderlich ist $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, nur eine $$L^2$$ orthonormale Eigenfunktions-Basiskarte **die aus einer volumenerhaltenden invertierbaren linearen Karte zwischen zwei solchen indizierten, Rang hervorgerufen wird $$n$$ Gewichtsgitter** halten den "algebraischen/topologischen" indexierten Datensatz $$\set{M^{i,j,k}}$$ invariant.
 
-Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ sein $$B\in O(n,\Reals)$$ auf dem Gewichtsgitter, weil die induzierte $$L^2$$ Eigenfunktion Basiskarte
+Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ sein $$B\in SO(n,\Reals)$$ auf dem Gewichtsgitter, weil die induzierte $$L^2$$ Eigenfunktion Basiskarte
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
@@ -292,7 +292,7 @@ Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ s
 
 müssen auch die "analytischen" Invarianten erhalten &mdash; die Casimir-Element-induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Laplacian des Flat-Tori.
 
-Dieses darstellungstheoretische Konto [[AK01]](#AK01) entspricht genau der vorherigen Entwicklung von *Gitterkongruenz* [[NRR22]](#NRR22) Traditionell verwendet, um Isometrieklassen von flachen Tori zu beschreiben. Tatsächlich ist die Matrix-Transpose einer solchen linearen Karte $$B\in O(n,\Reals)$$, wie im vorherigen Absatz beschrieben, **ist** die kontravariante Riemannsche Isometrie zwischen den Tori, wie sie durch Anwendung des *Gelfand-Naimark-Darstellungstheorems* während der [Nachweis](#proof-of-theorem) von unserer [Satz](#theorem).
+Dieses darstellungstheoretische Konto [[AK01]](#AK01) entspricht genau der vorherigen Entwicklung von *Gitterkongruenz* [[NRR22]](#NRR22) Traditionell verwendet, um Isometrieklassen von flachen Tori zu beschreiben. Tatsächlich ist die Matrix-Transpose einer solchen linearen Karte $$B\in SO(n,\Reals)$$, wie im vorherigen Absatz beschrieben, **ist** die kontravariante Riemannsche Isometrie zwischen den Tori, wie sie durch Anwendung des *Gelfand-Naimark-Darstellungstheorems* während der [Nachweis](#proof-of-theorem) von unserer [Satz](#theorem).
 
 Anzahl Bestätigungen
 

@@ -5,7 +5,7 @@ dependencies: '*.md.sv'
 keywords: spektralteori, riemanngeometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verifierad=26919
+status: verifierad=26975
 title: Trippelprodukter av Eigenfunctions och Spectral Geometry
 ---
 
@@ -212,7 +212,7 @@ som är en karakteristisk funktion av positivt mått på varje delad delmängd $
 
 Utan förlust av allmängiltighet kan vi tillämpa det speciella fallresultat som visas för den smidiga uppdelningen av enhet $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, där $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ har ett positivt mått, och Lemma är bevisat i sin helhet.
 
-Detta innebär att på en $$C(M)$$ (och $$C(N)$$), vi har upprättat $$\vec{F}$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$ i samma kategori.
+Det framgår också av ekvationen $$(2)$$ det där $$\vec F(\bar f) = \bar{\vec F}(f)$$. Detta innebär att på en $$C(M)$$ (och $$C(N)$$), vi har upprättat $$\vec{F}$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$ i samma kategori.
 
 Nu tillämpar vi Gelfand-Naimark representationssatsen (i kontravariant functor form) för Abelian $$C^*$$ algebra [[JC19]](#JC19) att representera denna isomorfism av en homeomorfism $$F$$ mellan $$N$$ och $$M$$. Eftersom det är bijektivt på smidiga funktioner måste det också vara smidigt.
 
@@ -284,7 +284,7 @@ M^{i,j,k} = \begin{cases}
 
 Eftersom denna ekvation <span class="eqno"></span> är *endast * invariant under linjära transformationer på viktgitter $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, endast en $$L^2$$ ortonormal egenfunktionsbaskarta **som induceras från en volymbevarande inverterbar linjär karta mellan två sådana indexerade, rangordnade $$n$$ viktgitter** behåller den "algebraiska/topologiska" indexerade datamängden $$\set{M^{i,j,k}}$$ oföränderlig.
 
-För att kunna tillämpa våra [Satsen](#theorem)Det är viktigt att en sådan linjär karta $$B$$ vara $$B\in O(n,\Reals)$$ på viktgitter, eftersom den inducerade $$L^2$$ baskarta för egenfunktion
+För att kunna tillämpa våra [Satsen](#theorem)Det är viktigt att en sådan linjär karta $$B$$ vara $$B\in SO(n,\Reals)$$ på viktgitter, eftersom den inducerade $$L^2$$ baskarta för egenfunktion
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
@@ -292,7 +292,7 @@ För att kunna tillämpa våra [Satsen](#theorem)Det är viktigt att en sådan l
 
 måste också bevara de "analytiska" varianterna &mdash; Casimir-element inducerad figur $$4\pi^2\lVert\lambda_i\rVert^2$$ för varje indexerad vikt, dvs. de individuella egenvärdena för flattoris laplacian.
 
-Detta representationsteoretiska konto [[AK01]](#AK01) är exakt likvärdig med tidigare utveckling av *lattice kongruens* [[NRR22]](#NRR22) traditionellt används för att avgränsa isometriska klasser av platt tori. I själva verket transponerar matrisen en sådan linjär karta $$B\in O(n,\Reals)$$, som beskrivs i föregående stycke, **är ** den kontravariant Riemannian isometri mellan tori, som tillhandahålls genom tillämpning av *Gelfand-Naimark Representation Theorem * under [Bevis](#proof-of-theorem) av våra [Satsen](#theorem).
+Detta representationsteoretiska konto [[AK01]](#AK01) är exakt likvärdig med tidigare utveckling av *lattice kongruens* [[NRR22]](#NRR22) traditionellt används för att avgränsa isometriska klasser av platt tori. I själva verket transponerar matrisen en sådan linjär karta $$B\in SO(n,\Reals)$$, som beskrivs i föregående stycke, **är ** den kontravariant Riemannian isometri mellan tori, som tillhandahålls genom tillämpning av *Gelfand-Naimark Representation Theorem * under [Bevis](#proof-of-theorem) av våra [Satsen](#theorem).
 
 Antal bekräftelser
 
