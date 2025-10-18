@@ -33,8 +33,8 @@ La introducción de mi artículo describe el estado del arte a partir de 1997. E
 
 Tenemos que entender la imagen de ese mapa antes de que podamos describir su Inverso.
 
-El presente trabajo de Anshul sobre paquetes tangentes de unidades de 2 orbifolds hiperbólicos logra ambos, y ilumina el camino inicial hacia adelante.
+El trabajo actual de Anshul sobre paquetes tangentes de unidades de 2 orbifolds hiperbólicos compactos logra ambos, y ilumina el camino inicial hacia adelante.
 
 #### Reproducido y reenviado a SSRN el 18 de octubre de 2025
 
-<!-- $Date: 2025-10-18 10:27:25 -0700 (Sat, 18 Oct 2025) $ $Author: joe $ $Revision: 27041 $ -->
+<!-- $Date: 2025-10-18 10:31:05 -0700 (Sat, 18 Oct 2025) $ $Author: joe $ $Revision: 27050 $ -->
