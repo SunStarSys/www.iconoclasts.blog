@@ -5,7 +5,7 @@ dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verifiziert=26975
+status: verifiziert=26976
 title: Dreifache Produkte von Eigenfunktionen und spektraler Geometrie
 ---
 
@@ -212,7 +212,7 @@ eine charakteristische Funktion des positiven Maßes für jede einzelne Teilmeng
 
 Ohne Verlust der Allgemeinheit können wir das für die reibungslose Teilung der Einheit gezeigte Sonderfallergebnis anwenden. $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, wobei $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ hat ein positives Maß, und das Lemma ist voll bewiesen.
 
-Auch aus der Gleichung ist klar $$(2)$$ das $$\vec F(\bar f) = \bar{\vec F}(f)$$. Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), wir haben festgestellt, $$\vec{F}$$ als Isomorphismus von Abelian $$C^*$$ Algebren und somit auf einen Isomorphismus von $$C(M)$$ und $$C(N)$$ in derselben Kategorie.
+Seit $$\set {\bar e^i}$$ ist auch eine gültige Fourier-Basis für $$L^2(M,g)$$ist klar aus Gleichung $$(2)$$ das $$\vec F(\bar f) = \bar{\vec F}(f)$$. Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), wir haben festgestellt, $$\vec{F}$$ als Isomorphismus von Abelian $$C^*$$ Algebren und somit auf einen Isomorphismus von $$C(M)$$ und $$C(N)$$ in derselben Kategorie.
 
 Nun wenden wir das Gelfand-Naimark-Repräsentationstheorem (in kontravarianter Funkform) für Abelian an $$C^*$$ Algebras [[JC19]](#JC19) um diesen Isomorphismus durch einen Homöomorphismus darzustellen $$F$$ zwischen $$N$$ und $$M$$. Da es sich bei glatten Funktionen um ein Bijektiv handelt, muss es auch glatt sein.
 

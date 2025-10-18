@@ -4,7 +4,7 @@ categories: 數學公式
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，利曼幾何，逆向問題，數學物理，諧波分析，表示理論
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: 已驗證 =26919
+status: 已驗證 =26976
 title: 三種特徵函數和光譜幾何產品
 ---
 
@@ -211,7 +211,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 保留均勻的規範。
 
 若未遺失一般性，我們可能會針對平滑的單位分割套用顯示的特殊案例結果$$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$，其中$$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ 有正面的衡量，而 Lemma 是全面的證明。
 
-這表示在密集的一組$$C(M)$$ (和$$C(N)$$)，我們已成立$$\vec{F}$$ 作為阿貝利亞的同形性$$C^*$$ 代數，因此可延伸至同形性$$C(M)$$ 以及$$C(N)$$ 在相同類別中。
+起自$$\set {\bar e^i}$$ 也是有效的 「傅立葉」基準$$L^2(M,g)$$，從方程式中清楚$$(2)$$ 該$$\vec F(\bar f) = \bar{\vec F}(f)$$。. . 這表示在密集的一組$$C(M)$$ (和$$C(N)$$)，我們已成立$$\vec{F}$$ 作為阿貝利亞的同形性$$C^*$$ 代數，因此可延伸至同形性$$C(M)$$ 以及$$C(N)$$ 在相同類別中。
 
 現在我們為阿貝利安申請了 Gelfand-Naimark 的代表理論 (以相反的博士形式) $$C^*$$ 代數[[JC19]](#JC19) 以同形態表示此同形態$$F$$ 介於$$N$$ 以及$$M$$。. . 由於它是平滑函數的反彈，因此也必須平滑。
 
@@ -283,7 +283,7 @@ M^{i,j,k} = \begin{cases}
 
 由於此「方程式」<span class="eqno"></span>為 *only* 重量格上線性轉換下的不變$$(A^{-1})^t\Z^n = \set{\lambda_i}$$，僅一個$$L^2$$ 正規特徵基準圖 ** 由容積保存的可逆線性圖在兩個索引，等級之間產生$$n$$ 加權格 ** 將會保留「代數 / 主題」索引資料集$$\set{M^{i,j,k}}$$ 不變。
 
-但是，為了應用我們的[理論](#theorem)，這對於這類的線性地圖至關重要$$B$$ 是$$B\in O(n,\Reals)$$ 在重量格子上，因為引發的$$L^2$$ 特徵基準圖
+但是，為了應用我們的[理論](#theorem)，這對於這類的線性地圖至關重要$$B$$ 是$$B\in SO(n,\Reals)$$ 在重量格子上，因為引發的$$L^2$$ 特徵基準圖
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
@@ -291,7 +291,7 @@ M^{i,j,k} = \begin{cases}
 
 必須同時保留「分析」不變量&mdash; 卡西米爾元素誘導數字$$4\pi^2\lVert\lambda_i\rVert^2$$ 每個已編列索引的權重，即扁平托里拉普拉西亞的個別特徵值。
 
-此表示法 - 理論科目[[AK01]](#AK01) 正好等同於 *lattice congruence* 的先前開發[[NRR22]](#NRR22) 傳統上用來分辨扁平大通的幾何類別。事實上，這種線性圖的矩陣轉置$$B\in O(n,\Reals)$$，如前段所述，** 是 ** 在 Tori 之間相異的 Riemannian 幾何，在 *Gelfand-Naimark 表示定理 * 應用時提供。[證明](#proof-of-theorem) 我們的[理論](#theorem).
+此表示法 - 理論科目[[AK01]](#AK01) 正好等同於 *lattice congruence* 的先前開發[[NRR22]](#NRR22) 傳統上用來分辨扁平大通的幾何類別。事實上，這種線性圖的矩陣轉置$$B\in SO(n,\Reals)$$，如前段所述，** 是 ** 在 Tori 之間相異的 Riemannian 幾何，在 *Gelfand-Naimark 表示定理 * 應用時提供。[證明](#proof-of-theorem) 我們的[理論](#theorem).
 
 ## 確認
 
