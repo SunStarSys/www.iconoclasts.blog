@@ -4,7 +4,7 @@ categories: 數學公式
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，利曼幾何，逆向問題，數學物理，諧波分析，表示理論
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: 已驗證 =26976
+status: 已驗證 =26996
 title: 三種特徵函數和光譜幾何產品
 ---
 
@@ -211,7 +211,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 保留均勻的規範。
 
 若未遺失一般性，我們可能會針對平滑的單位分割套用顯示的特殊案例結果$$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$，其中$$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ 有正面的衡量，而 Lemma 是全面的證明。
 
-起自$$\set {\bar e^i}$$ 也是有效的 「傅立葉」基準$$L^2(M,g)$$，從方程式中清楚$$(2)$$ 該$$\vec F(\bar f) = \bar{\vec F}(f)$$。. . 這表示在密集的一組$$C(M)$$ (和$$C(N)$$)，我們已成立$$\vec{F}$$ 作為阿貝利亞的同形性$$C^*$$ 代數，因此可延伸至同形性$$C(M)$$ 以及$$C(N)$$ 在相同類別中。
+起自$$\set {\bar e^i}$$ 亦為下列項目的傅立葉基準：$$L^2(M,g)$$，從方程式中清楚$$(2)$$ 該$$\vec F(\bar f) = \bar{\vec F}(f)$$。. . 這表示在密集的一組$$C(M)$$ (和$$C(N)$$)，我們已成立$$\vec{F}$$ 作為阿貝利亞的同形性$$C^*$$ 代數，因此可延伸至同形性$$C(M)$$ 以及$$C(N)$$ 在相同類別中。
 
 現在我們為阿貝利安申請了 Gelfand-Naimark 的代表理論 (以相反的博士形式) $$C^*$$ 代數[[JC19]](#JC19) 以同形態表示此同形態$$F$$ 介於$$N$$ 以及$$M$$。. . 由於它是平滑函數的反彈，因此也必須平滑。
 

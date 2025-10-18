@@ -5,7 +5,7 @@ dependencies: '*.md.sv'
 keywords: spektralteori, riemanngeometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verifierad=26976
+status: verifierad=26996
 title: Trippelprodukter av Eigenfunctions och Spectral Geometry
 ---
 
@@ -212,7 +212,7 @@ som är en karakteristisk funktion av positivt mått på varje delad delmängd $
 
 Utan förlust av allmängiltighet kan vi tillämpa det speciella fallresultat som visas för den smidiga uppdelningen av enhet $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, där $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ har ett positivt mått, och Lemma är bevisat i sin helhet.
 
-Sedan $$\set {\bar e^i}$$ är också en giltig Fourier bas för $$L^2(M,g)$$Det framgår tydligt av ekvationen $$(2)$$ det där $$\vec F(\bar f) = \bar{\vec F}(f)$$. Detta innebär att på en $$C(M)$$ (och $$C(N)$$), vi har upprättat $$\vec{F}$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$ i samma kategori.
+Sedan $$\set {\bar e^i}$$ Det är också en fourier bas för $$L^2(M,g)$$Det framgår tydligt av ekvationen $$(2)$$ det där $$\vec F(\bar f) = \bar{\vec F}(f)$$. Detta innebär att på en $$C(M)$$ (och $$C(N)$$), vi har upprättat $$\vec{F}$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$ i samma kategori.
 
 Nu tillämpar vi Gelfand-Naimark representationssatsen (i kontravariant functor form) för Abelian $$C^*$$ algebra [[JC19]](#JC19) att representera denna isomorfism av en homeomorfism $$F$$ mellan $$N$$ och $$M$$. Eftersom det är bijektivt på smidiga funktioner måste det också vara smidigt.
 

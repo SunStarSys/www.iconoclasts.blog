@@ -5,7 +5,7 @@ dependencies: '*.md.es'
 keywords: teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verificado=26976
+status: verificado=26996
 title: Triple producto de funciones propias y geometría espectral
 ---
 
@@ -212,7 +212,7 @@ que es una función característica de la medida positiva en cada subconjunto se
 
 Sin pérdida de generalidad, podemos aplicar el resultado de caso especial mostrado para la partición suave de la unidad $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, donde $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ tiene una medida positiva, y el Lemma está probado en su totalidad.
 
-Desde $$\set {\bar e^i}$$ base válida de Fourier para $$L^2(M,g)$$, está claro de la ecuación $$(2)$$ que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto se puede extender a un isomorfismo de $$C(M)$$ y $$C(N)$$ en la misma categoría.
+Desde $$\set {\bar e^i}$$ constituye también una base de Fourier para $$L^2(M,g)$$, está claro de la ecuación $$(2)$$ que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto se puede extender a un isomorfismo de $$C(M)$$ y $$C(N)$$ en la misma categoría.
 
 Ahora aplicamos el Teorema de Representación de Gelfand-Naimark (en forma de functor contravariante) para Abelian $$C^*$$ álgebras [[JC19]](#JC19) representar este isomorfismo por un homeomorfismo $$F$$ entre $$N$$ y $$M$$. Dado que es bijetivo en funciones lisas, también debe ser suave.
 
