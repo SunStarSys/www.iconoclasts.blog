@@ -33,6 +33,8 @@ Min uppsats introduktion beskriver den senaste utvecklingen från 1997. Det är 
 
 Vi måste förstå bilden av den kartan innan vi kan beskriva dess Inverse.
 
-Anshuls arbete åstadkommer båda och lyser upp den första vägen framåt.
+Anshuls arbete med $$PSL(2,\Reals)$$ åstadkommer båda och tänder den första vägen framåt.
 
-<!-- $Date: 2025-10-12 10:45:40 -0700 (Sun, 12 Oct 2025) $ $Author: joe $ $Revision: 26916 $ -->
+#### Omarbetad och skickad till SSRN den 18 oktober 2025
+
+<!-- $Date: 2025-10-15 15:19:35 -0400 (Wed, 15 Oct 2025) $ $Author: joe $ $Revision: 26972 $ -->

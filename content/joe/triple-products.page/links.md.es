@@ -33,6 +33,8 @@ La introducción de mi artículo describe el estado del arte a partir de 1997. E
 
 Tenemos que entender la imagen de ese mapa antes de que podamos describir su Inverso.
 
-El trabajo de Anshul logra ambos, y ilumina el camino inicial hacia adelante.
+trabajo de Anshul sobre $$PSL(2,\Reals)$$ logra ambos, y ilumina el camino inicial hacia adelante.
 
-<!-- $Date: 2025-10-12 10:45:40 -0700 (Sun, 12 Oct 2025) $ $Author: joe $ $Revision: 26916 $ -->
+#### Reproducido y reenviado a SSRN el 18 de octubre de 2025
+
+<!-- $Date: 2025-10-15 15:19:35 -0400 (Wed, 15 Oct 2025) $ $Author: joe $ $Revision: 26972 $ -->
