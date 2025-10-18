@@ -33,8 +33,8 @@ Min uppsats introduktion beskriver den senaste utvecklingen från 1997. Det är 
 
 Vi måste förstå bilden av den kartan innan vi kan beskriva dess Inverse.
 
-Anshuls arbete med $$PSL(2,\Reals)$$ åstadkommer båda och tänder den första vägen framåt.
+Anshuls arbete med cocompact representationsteori för enhetens tangentbuntar $$PSL(2,\Reals)$$ åstadkommer båda och tänder den första vägen framåt.
 
 #### Omarbetad och skickad till SSRN den 18 oktober 2025
 
-<!-- $Date: 2025-10-15 15:19:35 -0400 (Wed, 15 Oct 2025) $ $Author: joe $ $Revision: 26972 $ -->
+<!-- $Date: 2025-10-18 10:03:39 -0700 (Sat, 18 Oct 2025) $ $Author: joe $ $Revision: 27028 $ -->
