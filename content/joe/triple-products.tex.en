@@ -31,7 +31,7 @@
 
 % Metadata
 \title{Triple Products of Eigenfunctions and Spectral Geometry}
-\date{2024\\September}
+\date{2025\\October}
 \author{Joe Schaefer\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
 
 % Theorem, Lemma, etc
@@ -222,7 +222,7 @@ Without loss of generality, we may apply the special case result shown for  the 
 
 \end{subproof}
 
-This means that on a dense set of $C(M)$ (and $C(N)$), we have established $\vec{F}$ as an isomorphism of Abelian $C^*$ algebras, and thus can be extended to an isomorphism of $C(M)$ and $C(N)$ in the same category.
+Since $\set {\bar e^i}$ is also a Fourier basis for $L^2(M,g)$, it is clear from Equation (2) that $\vec F(\bar f) = \bar{\vec F}(f)$. This means that on a dense set of $C(M)$ (and $C(N)$), we have established $\vec{F}$ as an isomorphism of Abelian $C^*$ algebras, and thus can be extended to an isomorphism of $C(M)$ and $C(N)$ in the same category.
 
 Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$. Since $\vec{F}$ is bijective on smooth functions, $F$ too must be smooth.
 
@@ -300,7 +300,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 \end{equation}
 
-As this Equation~\ref{eqn:a} is linear on the weight lattice $(A^{-1})^t\mathbb{Z}^n = \set{\lambda_i}$, only an $L^2$ orthonormal eigenfunction basis map which is induced from a volume-preserving invertible linear map between two such indexed, rank $n$ weight lattices will keep the "algebraic/topological" indexed data set $\set{M^{i,j,k}}$ invariant.
+As this Equation~\ref{eqn:a} is only invariant under linear transformations on the weight lattice $(A^{-1})^t\mathbb{Z}^n = \set{\lambda_i}$, only an $L^2$ orthonormal eigenfunction basis map which is induced from a volume-preserving invertible linear map between two such indexed, rank $n$ weight lattices will keep the "algebraic/topological" indexed data set $\set{M^{i,j,k}}$ invariant.
 
 However, in order to apply Theorem~\ref{thm}, it is essential that such a linear map $B$ be $B\in O(n,\mathbb{R})$ on the weight lattice, because the induced $L^2$ eigenfunction basis map
 
