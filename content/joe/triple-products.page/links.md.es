@@ -27,6 +27,6 @@ title: Enlaces
 
 La singularidad da como resultado que el artículo de Anshul dependa en gran medida de las técnicas cubiertas en mi artículo.  Muy bien hecho!
 
-#### Reproducido y reenviado a SSRN el 18 de octubre de 2025
+#### Reproducido y reenviado a SSRN el 20 de octubre de 2025
 
-<!-- $Date: 2025-10-18 11:05:34 -0700 (Sat, 18 Oct 2025) $ $Author: joe $ $Revision: 27066 $ -->
+<!-- $Date: 2025-10-19 19:08:09 -0700 (Sun, 19 Oct 2025) $ $Author: joe $ $Revision: 27113 $ -->
