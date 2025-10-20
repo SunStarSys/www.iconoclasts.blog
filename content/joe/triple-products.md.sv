@@ -5,7 +5,7 @@ dependencies: '*.md.sv'
 keywords: spektralteori, riemanngeometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: skiss
+status: verifierad=27184
 title: Trippelprodukter av Eigenfunctions och Spectral Geometry
 ---
 
@@ -222,7 +222,7 @@ Utan förlust av allmängiltighet kan vi tillämpa det speciella fallresultat so
 
 Sedan $$\set {\bar e^i}$$ Det är också en fourier bas för $$L^2(M,g)$$Det framgår av Ekvation (3) att $$\vec F(\bar f) = \bar{\vec F}(f)$$. Detta innebär att på en $$C(M)$$ (och $$C(N)$$), vi har upprättat $$\vec{F}$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$ i samma kategori.
 
-Nu tillämpar vi Gelfand-Naimark representationssatsen (i kontravariant functor form) för Abelian $$C^*$$ algebra [[JC19]](#JC19) att representera denna isomorfism av en homeomorfism $$F$$ mellan $$N$$ och $$M$$. Eftersom det är bijektivt på smidiga funktioner måste det också vara smidigt.
+Nu tillämpar vi Gelfand-Naimarks representationssats (i kontravariant functor form) för unital Abelian $$C^*$$ algebra [[JC19]](#JC19) att representera denna isomorfism av en homeomorfism $$F$$ mellan $$N$$ och $$M$$. Eftersom det är bijektivt på smidiga funktioner måste det också vara smidigt.
 
 Som nu är diffeomorphism $$F$$ bevarar egenvärden och egenfunktioner (genom hypotes om $$\vec{F}(f) = f\circ F$$), det måste bevara Laplacian på smidiga funktioner. Därför måste den också bevara de viktigaste symbolerna för dessa samma elliptiska operatörer. [[MT13]](#MT13). De viktigaste symbolerna för Laplacian är helt enkelt ett annat sätt att uttrycka Riemannian metriska på de olika grenarna i fråga.
 

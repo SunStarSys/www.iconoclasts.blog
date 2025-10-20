@@ -5,7 +5,7 @@ dependencies: '*.md.es'
 keywords: teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: borrador
+status: verificado=27184
 title: Triple producto de funciones propias y geometría espectral
 ---
 
@@ -222,7 +222,7 @@ Sin pérdida de generalidad, podemos aplicar el resultado de caso especial mostr
 
 Desde $$\set {\bar e^i}$$ constituye también una base de Fourier para $$L^2(M,g)$$De la ecuación (3) se desprende que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto se puede extender a un isomorfismo de $$C(M)$$ y $$C(N)$$ en la misma categoría.
 
-Ahora aplicamos el Teorema de Representación de Gelfand-Naimark (en forma de functor contravariante) para Abelian $$C^*$$ álgebras [[JC19]](#JC19) representar este isomorfismo por un homeomorfismo $$F$$ entre $$N$$ y $$M$$. Dado que es bijetivo en funciones lisas, también debe ser suave.
+Ahora aplicamos el Teorema de Representación de Gelfand-Naimark (en forma de functor contravariante) para el abeliano unital $$C^*$$ álgebras [[JC19]](#JC19) representar este isomorfismo por un homeomorfismo $$F$$ entre $$N$$ y $$M$$. Dado que es bijetivo en funciones lisas, también debe ser suave.
 
 Como esto ahora diffeomorfismo $$F$$ conserva los valores propios y las funciones propias (por hipótesis sobre $$\vec{F}(f) = f\circ F$$), debe preservar el laplaciano en las funciones lisas. Por lo tanto, también debe preservar los símbolos principales de estos mismos operadores elípticos [[MT13]](#MT13). Los símbolos principales del laplaciano son simplemente otro medio de expresar la métrica riemanniana en los colectores en cuestión.
 

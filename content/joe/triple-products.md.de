@@ -5,7 +5,7 @@ dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: Entwurf
+status: verifiziert=27184
 title: Dreifache Produkte von Eigenfunktionen und spektraler Geometrie
 ---
 
@@ -222,7 +222,7 @@ Ohne Verlust der Allgemeinheit können wir das für die reibungslose Teilung der
 
 Seit $$\set {\bar e^i}$$ ist auch eine Fourier-Basis für $$L^2(M,g)$$Aus Gleichung (3) geht hervor, dass $$\vec F(\bar f) = \bar{\vec F}(f)$$. Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), wir haben festgestellt, $$\vec{F}$$ als Isomorphismus von Abelian $$C^*$$ Algebren und somit auf einen Isomorphismus von $$C(M)$$ und $$C(N)$$ in derselben Kategorie.
 
-Nun wenden wir das Gelfand-Naimark-Repräsentationstheorem (in kontravarianter Funkform) für Abelian an $$C^*$$ Algebras [[JC19]](#JC19) um diesen Isomorphismus durch einen Homöomorphismus darzustellen $$F$$ zwischen $$N$$ und $$M$$. Da es sich bei glatten Funktionen um ein Bijektiv handelt, muss es auch glatt sein.
+Nun wenden wir das Gelfand-Naimark-Repräsentationstheorem (in kontravarianter Funkform) für unitalen Abelian an $$C^*$$ Algebras [[JC19]](#JC19) um diesen Isomorphismus durch einen Homöomorphismus darzustellen $$F$$ zwischen $$N$$ und $$M$$. Da es sich bei glatten Funktionen um ein Bijektiv handelt, muss es auch glatt sein.
 
 Als dieser jetzt Diffeomorphismus $$F$$ Eigenwerte und Eigenfunktionen (durch Hypothese auf $$\vec{F}(f) = f\circ F$$), es muss den Laplacian auf glatten Funktionen erhalten. Daher müssen auch die Hauptsymbole dieser elliptischen Operatoren beibehalten werden. [[MT13]](#MT13). Die Hauptsymbole des Laplacian sind einfach ein weiteres Mittel, um die Riemannsche Metrik auf den betreffenden Mannigfaltigkeiten auszudrücken.
 

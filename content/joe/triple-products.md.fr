@@ -5,7 +5,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: projet
+status: vérifié=27184
 title: Triple produit des fonctions propres et de la géométrie spectrale
 ---
 
@@ -222,7 +222,7 @@ Sans perte de généralité, nous pouvons appliquer le résultat de cas spécial
 
 Depuis $$\set {\bar e^i}$$ est également une base de Fourier pour $$L^2(M,g)$$, il ressort clairement de l'équation (3) que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Cela signifie que sur un ensemble dense de $$C(M)$$ (et $$C(N)$$), nous avons établi $$\vec{F}$$ comme isomorphisme d'Abelian $$C^*$$ algébres, et peut donc être étendu à un isomorphisme de $$C(M)$$ et $$C(N)$$ dans la même catégorie.
 
-Maintenant, nous appliquons le théorème de représentation de Gelfand-Naimark (sous forme de foncteur contravariant) pour Abelian $$C^*$$ algèbres [[JC19]](#JC19) pour représenter cet isomorphisme par un homéomorphisme $$F$$ entre $$N$$ et $$M$$. Comme il est bijectif sur les fonctions lisses, il doit également être lisse.
+Maintenant, nous appliquons le théorème de représentation de Gelfand-Naimark (sous forme de foncteur contravariant) pour Abelian unital $$C^*$$ algèbres [[JC19]](#JC19) pour représenter cet isomorphisme par un homéomorphisme $$F$$ entre $$N$$ et $$M$$. Comme il est bijectif sur les fonctions lisses, il doit également être lisse.
 
 Comme ce diffeomorphisme $$F$$ préserve les valeurs propres et les fonctions propres (par hypothèse sur $$\vec{F}(f) = f\circ F$$), il doit préserver le Laplacien sur des fonctions lisses. Il doit donc aussi préserver les symboles principaux de ces mêmes opérateurs elliptiques [[MT13]](#MT13). Les principaux symboles du Laplacien sont simplement un autre moyen d'exprimer la métrique riemannienne sur les manifestes en question.
 
