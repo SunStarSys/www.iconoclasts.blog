@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=27006
+status: verified=27009
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
@@ -33,6 +33,14 @@ For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are n
 Work continues in many related areas [[DH11]](#DH11), such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty [[ST80]](#ST80), finite [[AS94]](#AS94), rigid [[GK80]](#GK80), and compact [[GZ97]](#GZ97)) as a subset of different moduli spaces of Riemannian metrics.
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" &mdash; the non-negative spectrum of the *Laplace-Beltrami operator* (herein referred to as the **Laplacian**) on $$ℋ = L^2(M,g)$$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
+
+If we consider the map
+
+```math
+(M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
+```
+
+this paper establishes the bijectivity of this map for closed Riemannian manifolds (up to Riemannian isometry in its domain). Further results which apply these techniques to describe its image (and inverse), within select moduli spaces of metrics, are just getting started [[AA25]](#AA25).  There, the author succesfully tackles unit tangent spaces of compact, hyperbolic 2-orbifolds using these same **structure constants** from Conformal Field Theory.
 
 ### Results
 
