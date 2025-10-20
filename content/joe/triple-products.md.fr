@@ -5,7 +5,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: vérifié=26996
+status: projet
 title: Triple produit des fonctions propres et de la géométrie spectrale
 ---
 
@@ -85,6 +85,14 @@ Si chaque valeur propre a une multiplicité $$1$$, étant donné une paire de va
 <br>
 
 La motivation pour l'étude de $$\set{M^{i,j,k}}$$ est vaguement dérivé de l'étude du rôle de l' **opérateur de multiplication bilinéaire** $$Y:V\otimes V\rightarrow V((z))$$ dans la définition d'une algèbre d'opérateur Vertex [[FBZ04]](#FBZ04) associé à une théorie de champ conformationnel chiral. Ici $$V$$ est l'espace vectoriel des États et $$V((z))$$ est l'espace de la série officielle Laurent en $$z$$ avec des coefficients en $$V$$. Depuis $$V$$ est souvent équipé comme un espace Hilbert avec une base orthonormale traditionnelle de la série Fourier, indexation $$Y$$ en utilisant les éléments de base de Fourier de $$V$$ est légèrement plus impliqué que $$M^{i,j,k}$$ cas étudié ici, mais assez similaire dans l'esprit. Cependant, une comparaison détaillée est hors de portée pour cet article.
+
+Si nous considérons la carte
+
+```math
+(M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
+```
+
+cet article établit la bijectivité de cette carte pour les collecteurs riemanniens fermés (jusqu'à l'isométrie riemannienne dans son domaine). D'autres résultats qui appliquent ces techniques pour décrire son image (et inversement), dans des espaces de mesure sélectionnés, ne font que commencer [[AA25]](#AA25). Là, l'auteur aborde avec succès les espaces tangents unitaires de 2 orbitales compactes et hyperboliques en utilisant ces mêmes **constantes de structure** de la théorie de champ conforme.
 
 Ces résultats ont été démontrés pour la première fois au cours d'une présentation similaire de l'auteur à l' **MSRI** en 1997, mais ils apparaissent ici sous forme publiée pour la première fois.
 
@@ -208,11 +216,11 @@ Par le théorème de convergence dominée,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-qui est une fonction caractéristique de mesure positive sur chaque sous-ensemble disjoint $$\set{x\in M | a_j(x) = 1}$$. Cela signifie que le Lemma est prouvé pour chaque $$a_j$$, étant donné que la fonction caractéristique limitative d'un ensemble avec mesure positive est préservée, et a donc une norme uniforme 1, comme tous les $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, par diagramme (4).
+qui est une fonction caractéristique de mesure positive sur chaque sous-ensemble disjoint $$\set{x\in M | a_j(x) = 1}$$. Cela signifie que le Lemma est prouvé pour chaque $$a_j$$, étant donné que la fonction caractéristique limitative d'un ensemble avec mesure positive est préservée, et a donc une norme uniforme 1, comme tous les $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, par diagramme (5).
 
 Sans perte de généralité, nous pouvons appliquer le résultat de cas spécial indiqué pour la partition harmonieuse de l'unité $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, où $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ a une mesure positive, et le Lemme est prouvé dans son intégralité.
 
-Depuis $$\set {\bar e^i}$$ est également une base de Fourier pour $$L^2(M,g)$$, il est clair de l'équation $$(2)$$ que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Cela signifie que sur un ensemble dense de $$C(M)$$ (et $$C(N)$$), nous avons établi $$\vec{F}$$ comme isomorphisme d'Abelian $$C^*$$ algébres, et peut donc être étendu à un isomorphisme de $$C(M)$$ et $$C(N)$$ dans la même catégorie.
+Depuis $$\set {\bar e^i}$$ est également une base de Fourier pour $$L^2(M,g)$$, il ressort clairement de l'équation (3) que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Cela signifie que sur un ensemble dense de $$C(M)$$ (et $$C(N)$$), nous avons établi $$\vec{F}$$ comme isomorphisme d'Abelian $$C^*$$ algébres, et peut donc être étendu à un isomorphisme de $$C(M)$$ et $$C(N)$$ dans la même catégorie.
 
 Maintenant, nous appliquons le théorème de représentation de Gelfand-Naimark (sous forme de foncteur contravariant) pour Abelian $$C^*$$ algèbres [[JC19]](#JC19) pour représenter cet isomorphisme par un homéomorphisme $$F$$ entre $$N$$ et $$M$$. Comme il est bijectif sur les fonctions lisses, il doit également être lisse.
 

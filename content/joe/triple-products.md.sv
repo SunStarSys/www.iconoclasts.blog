@@ -5,7 +5,7 @@ dependencies: '*.md.sv'
 keywords: spektralteori, riemanngeometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verifierad=26996
+status: skiss
 title: Trippelprodukter av Eigenfunctions och Spectral Geometry
 ---
 
@@ -85,6 +85,14 @@ Om varje egenvärde har mångfald $$1$$Med tanke på ett par egenvärdesbevarand
 <br>
 
 Motivationen för studien av $$\set{M^{i,j,k}}$$ är löst härledd från studien av den roll som **bilinär multiplikationsoperator** $$Y:V\otimes V\rightarrow V((z))$$ i definitionen av en Vertex Operator Algebra [[FBZ04]](#FBZ04) i samband med en chiral konform fältteori. Här $$V$$ är statens vektorrum och $$V((z))$$ är utrymmet för formella Laurent-serien i $$z$$ med koefficienter i $$V$$. Sedan $$V$$ ofta kommer utrustad som en Hilbert Space med en traditionell Fourier-serie ortonormal grund, indexering $$Y$$ använda Fourier-baselementen i $$V$$ är bara något mer involverad än $$M^{i,j,k}$$ fall studerat här, men ganska lika i anden. En detaljerad jämförelse är dock inte möjlig för denna artikel.
+
+Om vi betraktar kartan
+
+```math
+(M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
+```
+
+denna uppsats fastställer bijektiviteten av denna karta för stängda Riemannian mångfald (upp till Riemannian isometry i dess domän). Ytterligare resultat som tillämpar dessa tekniker för att beskriva dess bild (och invers), inom utvalda moduli-utrymmen av mätvärden, är bara att komma igång [[AA25]](#AA25). Där tacklar författaren framgångsrikt enhetens tangentutrymmen av kompakta, hyperboliska 2-orbifolds med samma **strukturkonstanter** från Conformal Field Theory.
 
 Dessa resultat visades först under ett liknande tal av författaren på ** MRT** 1997, men de visas här i publicerad form för första gången.
 
@@ -208,11 +216,11 @@ genom den dominerade konvergensatsen,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-som är en karakteristisk funktion av positivt mått på varje delad delmängd $$\set{x\in M | a_j(x) = 1}$$. Detta innebär att Lemma bevisas för varje $$a_j$$, eftersom den begränsande karakteristiska funktionen hos ett set med positivt mått bevaras, och därmed har enhetlig norm 1, liksom alla $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$enligt diagram (4).
+som är en karakteristisk funktion av positivt mått på varje delad delmängd $$\set{x\in M | a_j(x) = 1}$$. Detta innebär att Lemma bevisas för varje $$a_j$$, eftersom den begränsande karakteristiska funktionen hos ett set med positivt mått bevaras, och därmed har enhetlig norm 1, liksom alla $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$enligt diagram (5).
 
 Utan förlust av allmängiltighet kan vi tillämpa det speciella fallresultat som visas för den smidiga uppdelningen av enhet $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, där $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ har ett positivt mått, och Lemma är bevisat i sin helhet.
 
-Sedan $$\set {\bar e^i}$$ Det är också en fourier bas för $$L^2(M,g)$$Det framgår tydligt av ekvationen $$(2)$$ det där $$\vec F(\bar f) = \bar{\vec F}(f)$$. Detta innebär att på en $$C(M)$$ (och $$C(N)$$), vi har upprättat $$\vec{F}$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$ i samma kategori.
+Sedan $$\set {\bar e^i}$$ Det är också en fourier bas för $$L^2(M,g)$$Det framgår av Ekvation (3) att $$\vec F(\bar f) = \bar{\vec F}(f)$$. Detta innebär att på en $$C(M)$$ (och $$C(N)$$), vi har upprättat $$\vec{F}$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$ i samma kategori.
 
 Nu tillämpar vi Gelfand-Naimark representationssatsen (i kontravariant functor form) för Abelian $$C^*$$ algebra [[JC19]](#JC19) att representera denna isomorfism av en homeomorfism $$F$$ mellan $$N$$ och $$M$$. Eftersom det är bijektivt på smidiga funktioner måste det också vara smidigt.
 

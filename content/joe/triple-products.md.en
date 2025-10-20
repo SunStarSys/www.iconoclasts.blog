@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=27085
+status: draft
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
@@ -212,11 +212,11 @@ By the dominated convergence theorem,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-which is a characteristic function of positive measure on each disjoint subset $$\set{x\in M | a_j(x) = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved, and hence has uniform norm 1, as do all $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, by Diagram (4).
+which is a characteristic function of positive measure on each disjoint subset $$\set{x\in M | a_j(x) = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved, and hence has uniform norm 1, as do all $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, by Diagram (5).
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, where $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ has positive measure, and the Lemma is proven in full.
 
-Since $$\set {\bar e^i}$$ is also a Fourier basis for $$L^2(M,g)$$, it is clear from Equation (2) that $$\vec F(\bar f) = \bar{\vec F}(f)$$. This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established $$\vec{F}$$ as an isomorphism of Abelian $$C^*$$ algebras, and thus can be extended to an isomorphism of $$C(M)$$ and $$C(N)$$ in the same category.
+Since $$\set {\bar e^i}$$ is also a Fourier basis for $$L^2(M,g)$$, it is clear from Equation (3) that $$\vec F(\bar f) = \bar{\vec F}(f)$$. This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established $$\vec{F}$$ as an isomorphism of Abelian $$C^*$$ algebras, and thus can be extended to an isomorphism of $$C(M)$$ and $$C(N)$$ in the same category.
 
 Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras [[JC19]](#JC19) to represent this isomorphism by a homeomorphism $$F$$ between $$N$$ and $$M$$. Since it is bijective on smooth functions, it too must be smooth.
 

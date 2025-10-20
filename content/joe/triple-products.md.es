@@ -5,7 +5,7 @@ dependencies: '*.md.es'
 keywords: teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verificado=26996
+status: borrador
 title: Triple producto de funciones propias y geometría espectral
 ---
 
@@ -85,6 +85,14 @@ Si cada valor propio tiene multiplicidad $$1$$, dado un par de bases ortormales 
 <br>
 
 La motivación para el estudio de $$\set{M^{i,j,k}}$$ se deriva libremente del estudio del rol del **operador de multiplicación bilineal** $$Y:V\otimes V\rightarrow V((z))$$ en la definición de álgebra de operador de vértice [[FBZ04]](#FBZ04) Teoría de Campo Conformal Chiral. Aquí $$V$$ es el espacio vectorial de los Estados y $$V((z))$$ es el espacio de la serie formal Laurent en $$z$$ con coeficientes en $$V$$. Desde $$V$$ A menudo viene equipado como un espacio Hilbert con una base ortopédica tradicional de la serie Fourier, indexación $$Y$$ utilizando los elementos básicos de Fourier de $$V$$ está un poco más involucrado que $$M^{i,j,k}$$ caso estudiado aquí, pero bastante similar en espíritu. Sin embargo, una comparación detallada está fuera del alcance de este artículo.
+
+Si consideramos el mapa
+
+```math
+(M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
+```
+
+Este artículo establece la bijetividad de este mapa para los colectores de Riemann cerrados (hasta la isometría de Riemann en su dominio). Otros resultados que aplican estas técnicas para describir su imagen (y a la inversa), dentro de determinados espacios de métricas, están empezando [[AA25]](#AA25). Allí, el autor aborda con éxito los espacios tangentes de unidades de 2 orbifolds compactos e hiperbólicos utilizando estas mismas **constantes de estructura** de la Teoría de Campo Conformal.
 
 Estos resultados se demostraron por primera vez durante una charla similar titulada por el autor en **MSRI** en 1997, pero aparecen aquí en forma publicada por primera vez.
 
@@ -208,11 +216,11 @@ Por el teorema de convergencia dominado,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-que es una función característica de la medida positiva en cada subconjunto separado $$\set{x\in M | a_j(x) = 1}$$. Esto significa que el Lemma está probado para cada $$a_j$$, ya que la función característica limitante de un conjunto con medida positiva se conserva, y por lo tanto tiene norma uniforme 1, como todos $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, por Diagrama (4).
+que es una función característica de la medida positiva en cada subconjunto separado $$\set{x\in M | a_j(x) = 1}$$. Esto significa que el Lemma está probado para cada $$a_j$$, ya que la función característica limitante de un conjunto con medida positiva se conserva, y por lo tanto tiene norma uniforme 1, como todos $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, por Diagrama (5).
 
 Sin pérdida de generalidad, podemos aplicar el resultado de caso especial mostrado para la partición suave de la unidad $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, donde $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ tiene una medida positiva, y el Lemma está probado en su totalidad.
 
-Desde $$\set {\bar e^i}$$ constituye también una base de Fourier para $$L^2(M,g)$$, está claro de la ecuación $$(2)$$ que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto se puede extender a un isomorfismo de $$C(M)$$ y $$C(N)$$ en la misma categoría.
+Desde $$\set {\bar e^i}$$ constituye también una base de Fourier para $$L^2(M,g)$$De la ecuación (3) se desprende que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Esto significa que en un denso conjunto de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abelian $$C^*$$ álgebras, y por lo tanto se puede extender a un isomorfismo de $$C(M)$$ y $$C(N)$$ en la misma categoría.
 
 Ahora aplicamos el Teorema de Representación de Gelfand-Naimark (en forma de functor contravariante) para Abelian $$C^*$$ álgebras [[JC19]](#JC19) representar este isomorfismo por un homeomorfismo $$F$$ entre $$N$$ y $$M$$. Dado que es bijetivo en funciones lisas, también debe ser suave.
 

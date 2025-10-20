@@ -5,7 +5,7 @@ dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verifiziert=26996
+status: Entwurf
 title: Dreifache Produkte von Eigenfunktionen und spektraler Geometrie
 ---
 
@@ -85,6 +85,14 @@ Wenn jeder Eigenwert eine Mehrzahl hat $$1$$, bei einem Paar von Eigenwert erhal
 <br>
 
 Die Motivation für das Studium von $$\set{M^{i,j,k}}$$ wird lose aus der Untersuchung der Rolle des **bilinearen Multiplikationsoperators** abgeleitet $$Y:V\otimes V\rightarrow V((z))$$ in der Definition einer Vertex Operator Algebra [[FBZ04]](#FBZ04) Eine chirale konforme Feldtheorie. Hier $$V$$ ist der Vektorraum der Staaten und $$V((z))$$ ist der Raum der formalen Laurent-Serie in $$z$$ mit Koeffizienten in $$V$$. Seit $$V$$ oft als Hilbert Space mit einer traditionellen Fourier Serie orthonormal Basis ausgestattet, Indexierung $$Y$$ Verwendung der Fourier-Basiselemente von $$V$$ ist nur etwas stärker beteiligt als die $$M^{i,j,k}$$ Fall hier studiert, aber ganz ähnlich im Geist. Ein detaillierter Vergleich ist jedoch für diesen Artikel nicht möglich.
+
+Wenn wir die Karte betrachten
+
+```math
+(M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
+```
+
+Diese Arbeit stellt die Bijektivität dieser Karte für geschlossene Riemannsche Mannigfaltigkeiten (bis zur Riemannschen Isometrie in ihrem Bereich) fest. Weitere Ergebnisse, die diese Techniken anwenden, um sein Bild (und umgekehrt) innerhalb ausgewählter Modulräume von Metriken zu beschreiben, beginnen gerade erst [[AA25]](#AA25). Dort setzt sich der Autor erfolgreich mit den gleichen **Strukturkonstanten** aus der Conformal Field Theory gegen Tangensräume kompakter, hyperbolischer 2-orbifolds ein.
 
 Diese Ergebnisse wurden erstmals 1997 in einem ähnlich betitelten Vortrag des Autors bei **MSRI** gezeigt, erscheinen aber hier erstmals in veröffentlichter Form.
 
@@ -208,11 +216,11 @@ durch den dominierten Konvergenzsatz,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-eine charakteristische Funktion des positiven Maßes für jede einzelne Teilmenge $$\set{x\in M | a_j(x) = 1}$$. Das bedeutet, dass das Lemma für jeden $$a_j$$, da die limitierende charakteristische Funktion eines Satzes mit positivem Maß erhalten bleibt und daher eine einheitliche Norm 1 aufweist, wie alle $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, nach Diagramm (4).
+eine charakteristische Funktion des positiven Maßes für jede einzelne Teilmenge $$\set{x\in M | a_j(x) = 1}$$. Das bedeutet, dass das Lemma für jeden $$a_j$$, da die limitierende charakteristische Funktion eines Satzes mit positivem Maß erhalten bleibt und daher eine einheitliche Norm 1 aufweist, wie alle $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, nach Diagramm (5).
 
 Ohne Verlust der Allgemeinheit können wir das für die reibungslose Teilung der Einheit gezeigte Sonderfallergebnis anwenden. $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, wobei $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ hat ein positives Maß, und das Lemma ist voll bewiesen.
 
-Seit $$\set {\bar e^i}$$ ist auch eine Fourier-Basis für $$L^2(M,g)$$ist klar aus Gleichung $$(2)$$ das $$\vec F(\bar f) = \bar{\vec F}(f)$$. Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), wir haben festgestellt, $$\vec{F}$$ als Isomorphismus von Abelian $$C^*$$ Algebren und somit auf einen Isomorphismus von $$C(M)$$ und $$C(N)$$ in derselben Kategorie.
+Seit $$\set {\bar e^i}$$ ist auch eine Fourier-Basis für $$L^2(M,g)$$Aus Gleichung (3) geht hervor, dass $$\vec F(\bar f) = \bar{\vec F}(f)$$. Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), wir haben festgestellt, $$\vec{F}$$ als Isomorphismus von Abelian $$C^*$$ Algebren und somit auf einen Isomorphismus von $$C(M)$$ und $$C(N)$$ in derselben Kategorie.
 
 Nun wenden wir das Gelfand-Naimark-Repräsentationstheorem (in kontravarianter Funkform) für Abelian an $$C^*$$ Algebras [[JC19]](#JC19) um diesen Isomorphismus durch einen Homöomorphismus darzustellen $$F$$ zwischen $$N$$ und $$M$$. Da es sich bei glatten Funktionen um ein Bijektiv handelt, muss es auch glatt sein.
 
