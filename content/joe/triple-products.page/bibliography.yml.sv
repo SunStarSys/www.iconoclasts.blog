@@ -93,7 +93,7 @@ dependencies: ../triple-products.bib.sv
   number: '4'
   pages: 542-542
   title: Egenvärden för Laplace-operatören på vissa grenrör
-  type: proceedings
+  type: article
   volume: '51'
   year: '1964'
 - author: Nilsson, Erik och Rowlett, Julie och Rydell, Felix
@@ -181,8 +181,9 @@ dependencies: ../triple-products.bib.sv
   year: '1997'
 - archivePrefix: arXiv
   author: Adve, Anshul
+  doi: https://doi.org/10.48550/arXiv.2509.17935
   eprint: '2509.17935'
   id: AA25
   title: En omvänd sats för hyperboliskt ytterspektra och konform bootstrap
-  type: article
+  type: online
   year: '2025'

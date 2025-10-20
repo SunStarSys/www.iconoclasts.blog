@@ -94,7 +94,7 @@ dependencies: ../triple-products.bib.es
   number: '4'
   pages: 542--542
   title: Valores propios del operador Laplace en determinados colectores
-  type: proceedings
+  type: article
   volume: '51'
   year: '1964'
 - author: Nilsson, Erik y Rowlett, Julie y Rydell, Félix
@@ -183,9 +183,10 @@ dependencies: ../triple-products.bib.es
   year: '1997'
 - archivePrefix: arXiv
   author: Adve, Anshul
+  doi: https://doi.org/10.48550/arXiv.2509.17935
   eprint: '2509.17935'
   id: AA25
   title: Un teorema inverso para los espectros de superficie hiperbólica y el bootstrap
     conformal
-  type: article
+  type: online
   year: '2025'

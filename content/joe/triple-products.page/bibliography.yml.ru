@@ -94,7 +94,7 @@ dependencies: ../triple-products.bib.ru
   number: '4'
   pages: 542--542
   title: Собственные ценности оператора Лапласа на определенных многообразиях
-  type: proceedings
+  type: article
   volume: '51'
   year: 1964 год
 - author: Нильссон, Эрик и Роулетт, Джули и Райделл, Феликс
@@ -182,9 +182,10 @@ dependencies: ../triple-products.bib.ru
   year: '1997'
 - archivePrefix: arXiv
   author: Адве (Аньшуль)
+  doi: https://doi.org/10.48550/arXiv.2509.17935
   eprint: '2509.17935'
   id: AA25
   title: Конверсная теорема для гиперболических поверхностных спектров и конформной
     бутстрап
-  type: article
+  type: online
   year: 2025 год
