@@ -8,29 +8,29 @@ dependencies: ../triple-products.bib.ru
   journal: Журнал дифференциальной геометрии
   number: 1-2
   pages: 43--69
-  publisher: Университет Лихи
-  title: Кривизна и собственные величины лапласийского
+  publisher: Университет Лихай
+  title: Кривизна и собственные ценности лаплацкого языка
   type: article
   volume: '1'
   year: 1967 год
 - author: Конвей, Джон Б.
   id: JC19
   publisher: Спрингер
-  title: Курс функционального анализа
+  title: Курс по функциональному анализу
   type: book
   volume: '96'
-  year: 2019 год
-- author: Конвей, Джон Х и Слоун, Н. Дж.
+  year: 2019 г.
+- author: Конвей, Джон Х и Слоун, Н. Дж. А.
   id: CS92
-  journal: Интернат Математика Рес. Уведомления
+  journal: Интернат. Математика. Рес. Уведомления
   pages: 93--96
   title: Четырехмерные решетки с той же тета-серией
   type: article
   volume: '4'
   year: 1992 год
-- author: Дачев, Кирилл и Хезари, Хамид
+- author: Дачев, Кирил и Хезари, Хамид
   id: DH11
-  journal: 'Обратные задачи и приложения: Inside Out II'
+  journal: 'Обратные проблемы и приложения: Inside Out II'
   pages: 455--486
   title: Обратные задачи в спектральной геометрии
   type: article
@@ -38,15 +38,15 @@ dependencies: ../triple-products.bib.ru
   year: 2011 год
 - author: Френкель, Эдвард и Бен-Цви, Дэвид
   id: FBZ04
-  publisher: Американская математика.
-  title: Алгебры вершин и алгебраические кривые
+  publisher: Американский математический сок.
+  title: Алгебры и алгебраические кривые
   type: book
-  volume: '88'
+  volume: (88)
   year: 2004 год
 - author: Франке (Тобиас)
   date: 2023-09-01
   id: TF17
-  title: Тройной prod\-uct inte\grals
+  title: Тройной продукт\-выход inte\-grals
   type: online
   url: https://www.tobias-franke.eu/log/2017/04/19/triple-products.html
 - author: Гордон (Кэролин)
@@ -54,30 +54,30 @@ dependencies: ../triple-products.bib.ru
   journal: Журнал дифференциальной геометрии
   number: '3'
   pages: 639--649
-  title: Изоспектральные замкнутые римановые многообразия, которые не являются локально
+  title: Изоспектральные замкнутые риманнские многообразия, которые не являются локально
     изометрическими
   type: article
   volume: '37'
   year: 1993 год
-- author: Гильемен, Виктор и Каждан, Давид
+- author: Гильмен, Виктор и Каждан, Давид
   id: GK80
-  journal: Материалы симпозиумов в чистой математике
+  journal: Симпозиумы в чистой математике
   pages: 301--312
-  title: Некоторые обратные спектральные результаты для отрицательно изогнутых n-многообразов
+  title: Некоторые обратные спектральные результаты для отрицательно изогнутых n-манифольдов
   type: article
   volume: '36'
-  year: 1980 год
-- author: Хёрмандер
+  year: '1980'
+- author: Хёрмандер (Ларс)
   id: LH68
-  journal: Математические интегральные операторы прошлого и настоящего Фурье
+  journal: Математические операторы прошлого и настоящего Фурье
   pages: 217--242
   publisher: Спрингер Берлин Гейдельберг
-  title: спектральная функция эллиптического оператора
+  title: Спектральная функция эллиптического оператора
   type: article
   year: 1968 год
 - author: Кнапп, Энтони У
   id: AK01
-  publisher: Принстонский университет
+  publisher: Пресс-центр Принстонского университета
   title: 'Теория представления полупростых групп: обзор на основе примеров'
   type: book
   year: 2001 год
@@ -87,13 +87,13 @@ dependencies: ../triple-products.bib.ru
   id: LS18
   title: На точечных продуктах эллиптических собственных функций
   type: online
-  year: 2018 год
-- author: Милнор, Джон
+  year: 2018 г.
+- author: Мильнор, Джон
   id: JM64
   journal: Труды Национальной академии наук
   number: '4'
   pages: 542--542
-  title: Собственные значения оператора Лапласа на некоторых многообразиях
+  title: Собственные ценности оператора Лапласа на определенных многообразиях
   type: proceedings
   volume: '51'
   year: 1964 год
@@ -105,78 +105,86 @@ dependencies: ../triple-products.bib.ru
   title: Изоспектральная проблема плоских тори с трех точек зрения
   type: article
   volume: '60'
-  year: 2023 год
+  year: 2023 г.
 - author: Рид, Майкл и Саймон, Барри
   id: RS75
   publisher: Эльзевьер
-  title: 'Методы современной математической физики II: Фурье-анализ, самосопряженность'
+  title: 'Методы современной математической физики II: анализ Фурье, самосоединение'
   type: book
   volume: '2'
   year: 1975 год
-- author: Сарнак
+- author: Сарнак (Питер)
   id: PS94
-  journal: IMRN
+  journal: ИМРТ
   pages: 251--260
   title: Интегралы продуктов собственных функций
   type: article
   volume: '6'
   year: 1994 год
-- author: Шиман, Александр
+- author: Шиманн, Александр
   id: AS94
-  publisher: Боннер Мате\matische Schriften
-  school: Университет Бонн
-  title: Ternäre positiv четвёртый\-ratische Formen mit gleichen Darstellungs\-zahlen
+  publisher: Боннер Матхе\матише Шрифтен
+  school: Боннский университет
+  title: Ternäre positiv определенный quad\-ratische Formen mit gleichen Дарстеллунгс\-зален
   type: phdthesis
   volume: (268)
   year: 1993 год
-- author: Сунада
+- author: Сунада, Тосикадзу
   id: TS85
   journal: Анналы математики
   number: '1'
-  pages: 169-186
-  title: Римановые покрытия и изоспектральные манифольды
+  pages: 169--186
+  title: Риманнские покрытия и изоспектральные коллектора
   type: article
   volume: '121'
   year: 1985 год
-- author: Танно
+- author: Танно (Шукити)
   id: ST80
-  journal: Математика З.
+  journal: Математика. З.
   number: '3'
   pages: 267--274
   title: Характеристика канонических сфер по спектру
   type: article
-  volume: (175)
-  year: 1980 год
+  volume: 175 год
+  year: '1980'
 - author: Тейлор, Майкл
   id: MT13
-  publisher: Springer Science \&amp; Бизнес Медиа
+  publisher: Спрингер Наука \&amp; Бизнес Медиа
   title: 'Частичные дифференциальные уравнения II: качественные исследования линейных
     уравнений'
   type: book
-  volume: '116'
-  year: 2013 год
+  volume: (116)
+  year: 2013 г.
 - author: Вейль
   id: HW11
-  journal: Nach\richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu Геттинген
+  journal: Nach\richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu Гёттинген
   pages: 110--117
-  title: Uber умереть asymp\-totische Ver\-teilung der Eigen\-werte
+  title: Über die asymp\-totische Ver\-teilung der Eigen\-werte
   type: article
   year: 1911 год
-- author: Уайман, Эмметт Л
+- author: Уайман (Эмметт)
   doi: https://doi.org/10.1016/j.jfa.2022.109404
   id: EW22
   journal: Журнал функционального анализа
   number: '8'
   title: Треугольники и тройные продукты собственных функций Лапласа
   type: article
-  volum: (282)
+  volum: '282'
   year: 2022 год
 - author: Чжоу (Гэнцян)
   id: GZ97
-  journal: Пасифик Дж. Математика
+  journal: Тихий океан J. Математика
   number: '1'
   pages: 187-200
   title: Компактность изоспектральных компактных коллекторов с ограниченными кривизнами
   type: article
-  volume: (181)
-  year: 1997 год
+  volume: 181 год
+  year: '1997'
+- archivePrefix: arXiv
+  author: Адве (Аньшуль)
+  eprint: '2509.17935'
+  id: AA25
+  title: Конверсная теорема для гиперболических поверхностных спектров и конформной
+    бутстрап
+  type: article
+  year: 2025 год

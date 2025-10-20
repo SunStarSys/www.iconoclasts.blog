@@ -46,7 +46,7 @@ dependencies: ../triple-products.bib.sv
 - author: Franke, Tobias
   date: 2023-09-01
   id: TF17
-  title: Heltal för trippelprod\ukt
+  title: Heltal för trippelprod\ukta
   type: online
   url: https://www.tobias-franke.eu/log/2017/04/19/triple-products.html
 - author: Gordon, Carolyn
@@ -98,7 +98,7 @@ dependencies: ../triple-products.bib.sv
   year: '1964'
 - author: Nilsson, Erik och Rowlett, Julie och Rydell, Felix
   id: NRR22
-  journal: Kommuniké från American Mathematical Society
+  journal: Bulletin från American Mathematical Society
   number: '1'
   pages: 39-83
   title: Isospektralt problem för platt tori ur tre perspektiv
@@ -130,7 +130,7 @@ dependencies: ../triple-products.bib.sv
   year: '1993'
 - author: Sunada (ort)
   id: TS85
-  journal: Matematikens årtal
+  journal: Annaler i matematik
   number: '1'
   pages: 169-186
   title: Riemannbeläggningar och isospektrala grenrör
@@ -179,3 +179,10 @@ dependencies: ../triple-products.bib.sv
   type: article
   volume: '181'
   year: '1997'
+- archivePrefix: arXiv
+  author: Adve, Anshul
+  eprint: '2509.17935'
+  id: AA25
+  title: En omvänd sats för hyperboliskt ytterspektra och konform bootstrap
+  type: article
+  year: '2025'
