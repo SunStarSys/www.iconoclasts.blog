@@ -1,3 +1,12 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 @article{MS67,
   title={La courbure et les valeurs propres du Laplacien},
   journal={Journal de géométrie différentielle},
@@ -5,22 +14,22 @@
   volume={1},
   number={1-2},
   pages={43-69},
-  year={1967},
-  publisher={Université Lehigh}
+  year={(1967)},
+  publisher={Université de Lehigh}
 }
 }
 @book{JC19,
   author={Conway, John B.},
   title={Un cours d'analyse fonctionnelle},
-  volume={(96)},
+  volume={96},
   year={2019},
-  publisher={Printemps}
+  publisher={Châssis}
 }
 }
 @article{CS92,
  author={Conway, John H et Sloane, N. J. A.},
  title={Treillis à quatre dimensions avec la même série thêta},
- journal={Interne. Math. Rés. Avis},
+ journal={Internat. Math. Rés. Avis},
  volume={4},
  year={1992},
  pages={93-96}
@@ -28,7 +37,7 @@
 }
 @article{DH11,
   author={Datchev, Kiril et Hezari, Hamid},
-  title={Problèmes inverses de géométrie spectrale},
+  title={Problèmes inverses dans la géométrie spectrale},
   journal={Problèmes et applications inverses : Inside Out II},
   volume={60},
   year={2011},
@@ -37,27 +46,27 @@
 }
 @book{FBZ04,
  author={Frenkel, Edward et Ben-Zvi, David},
- title={Algèbres du sommet et courbes algébriques},
- volume={(88)},
+ title={Algèbre du sommet et courbes algébriques},
+ volume={88},
  publisher={Soc mathématique américain.},
  year={2004}
 }
 }
 @online{TF17,
   author={Franke (Tobias)},
-  title={Triple prod\-uct inte\-grals},
+  title={Trois entiers de prod\-uct},
   date={2023-09-01},
   url={https://www.tobias-franke.eu/log/2017/04/19/triple-products.html}
 }
 }
 @article{CG93,
   author={Gordon (ville)},
-  title={Variétés riemanniennes fermées isospectrales qui ne sont pas localement isométriques},
+  title={Variétés riemanniennes fermées isospectrales non isométriques locales},
   journal={Journal de géométrie différentielle},
-  volume={(37)},
+  volume={37},
   number={3},
   year={1993},
-  pages={639-649}
+  pages={639--649}
 }
 }
 @article{GK80,
@@ -70,18 +79,18 @@
 }
 }
 @article{LH68,
-  author={Hörmander, Lars},
+  author={Hörmander},
   title={La fonction spectrale d'un opérateur elliptique},
-  journal={Opérateurs intégraux de Fourier passés et présents},
+  journal={Opérateurs entiers de Fourier passés et présents},
   publisher={Springer Berlin Heidelberg},
-  year={1968},
+  year={(1968)},
   pages={217-242}
 }
 }
 @book{AK01,
   author={Knapp, Anthony W},
-  title={Théorie de représentation des groupes semi-simples : un aperçu basé sur des exemples},
-  publisher={Princeton University Press},
+  title={Théorie de la représentation des groupes semi-simples : un aperçu basé sur des exemples},
+  publisher={Université de Princeton},
   year={2001}
 }
 }
@@ -94,10 +103,10 @@
 }
 }
 @proceedings{JM64,
-  author={Milnor, John},
+  author={Milnor},
   title={Valeurs propres de l'opérateur Laplace sur certains collecteurs},
   journal={Actes de l'Académie nationale des sciences},
-  volume={(51)},
+  volume={51},
   number={4},
   year={1964},
   pages={542-542}
@@ -105,11 +114,11 @@
 }
 @article{NRR22,
   author={Nilsson, Erik et Rowlett, Julie et Rydell, Felix},
-  title={Le problème isospectral du tori plat sous trois angles},
+  title={Le problème isospectral de la tori plate à partir de trois perspectives},
   journal={Bulletin de l'American Mathematical Society},
   volume={60},
   number={1},
-  year={2023},
+  year={(2023)},
   pages={39-83}
 }
 }
@@ -118,12 +127,12 @@
   title={Méthodes de la physique mathématique moderne II : analyse de Fourier, auto-adjonction},
   volume={2},
   publisher={Elsevier},
-  year={1975}
+  year={(1975)}
 }
 }
 @article{PS94,
-  author={Sarnak, Peter},
-  title={Intégrations de produits de eigenfunctions},
+  author={Sarnak, Pierre},
+  title={Intégral des produits des fonctions propres},
   journal={IMRN},
   volume={6},
   year={1994},
@@ -132,7 +141,7 @@
 }
 @phdthesis{AS94,
   author={Schiemann, Alexander},
-  title={Ternäre positiv définitif quad\-ratische Formen mit gleichen Darstellungs\-zahlen},
+  title={Ternäre positiv défini quad\-ratische Formen mit gleichen Darstellungs\-zahlen},
   publisher={Bonner Mathe\matische Schriften},
   school={Université de Bonn},
   volume={(268)},
@@ -140,18 +149,18 @@
 }
 }
 @article{TS85,
-  author={Sunada, Toshikazu},
+  author={Sunada (Toshikazu)},
   title={Revêtements riemanniens et collecteurs isospectraux},
   journal={Annales de mathématiques},
   volume={(121)},
   number={1},
-  year={1985},
+  year={(1985)},
   pages={169-186}
 }
 }
 @article{ST80,
   author={Tanno (Shukichi)},
-  title={Une caractérisation des sphères canoniques par le spectre},
+  title={Caractérisation des sphères canoniques par le spectre},
   journal={Math. Z.},
   volume={(175)},
   number={3},
@@ -163,34 +172,42 @@
   author={Taylor, Michael},
   title={Équations différentielles partielles II : études qualitatives des équations linéaires},
   volume={(116)},
-  publisher={Springer Science \&amp; Médias d'affaires},
+  publisher={Springer Science \&amp; Médias commerciaux},
   year={2013}
 }
 }
 @article{HW11,
   author={Weyl (Hermann)},
   title={Über die asymp\-totische Ver\-teilung der Eigen\-werte},
-  journal={Nach\-richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu Göttingen},
+  journal={Nach\richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu Göttingen},
   year={1911},
   pages={110-117}
 }
 }
 @article{EW22,
   author={Wyman, Emmett L},
-  title={Triangles et triple produits de Laplace eigenfunctions},
+  title={Triangles et produits triples des fonctions propres de Laplace},
   journal={Journal d'analyse fonctionnelle},
   volum={(282)},
   number={8},
-  year={2022},
+  year={(2022)},
   doi = {https://doi.org/10.1016/j.jfa.2022.109404}
 }
 }
 @article{GZ97,
-  author={Zhou, Gengqiang},
+  author={Zhou (Gengqiang)},
   title={Compacité des collecteurs compacts isospectraux à courbures délimitées},
-  journal={Pacific J. Mathématique},
-  volume={(181)},
+  journal={Pacifique J. Mathématiques},
+  volume={181},
   number={1},
   year={1997},
   pages={187-200}
+}
+}
+@article{AA25,
+  author={Adve (ville)},
+  title={Théorème inversé pour spectres de surface hyperboliques et bootstrap conforme},
+  archivePrefix={arXiv},
+  eprint={2509.17935},
+  year={2025}
 }

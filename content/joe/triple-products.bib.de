@@ -1,138 +1,147 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 @article{MS67,
-  title={Krümmung und die Eigenwerte des Laplacians},
+  title={Krümmung und die Eigenwerte des Laplacian},
   journal={Zeitschrift für Differentialgeometrie},
-  author={McKean, Henry P. und Singer, Isadore M.},
+  author={McKean, Henry P. und Sänger, Isadore M.},
   volume={1},
   number={1-2},
-  pages={43-69},
+  pages={43--69},
   year={(1967)},
   publisher={Lehigh-Universität}
 }
 }
 @book{JC19,
   author={Conway, John B.},
-  title={Ein Kurs in der Funktionsanalyse},
+  title={Ein Kurs zur Funktionsanalyse},
   volume={96},
   year={2019},
   publisher={Springer}
 }
 }
 @article{CS92,
- author={Conway, John H und Sloane, N. J. A.},
- title={Vierdimensionale Gitter mit der gleichen theta-Serie},
- journal={Internat. Mathematisch Res. Hinweise},
+ author={Conway, John H. und Sloane, N. J. A.},
+ title={Vierdimensionale Gitter mit der gleichen Theta-Serie},
+ journal={Internat. Mathematik. Res. Hinweise},
  volume={4},
  year={(1992)},
- pages={93-96}
+ pages={93--96}
 }
 }
 @article{DH11,
-  author={Datschow, Kiril und Hezari, Hamid},
+  author={Datschew, Kiril und Hezari, Hamid},
   title={Inverse Probleme in der Spektralgeometrie},
   journal={Inverse Probleme und Anwendungen: Inside Out II},
   volume={60},
   year={2011},
-  pages={(455-486)}
+  pages={455--486}
 }
 }
 @book{FBZ04,
- author={Frenkel, Edward und Ben Zvi, David},
- title={Scheitel-Algebren und algebraische Kurven},
- volume={(88)},
- publisher={Amerikanische Mathematische Gesellschaft.},
- year={2004}
+ author={Frenkel, Edward und Ben-Zvi, David},
+ title={Vertex-Algebren und algebraische Kurven},
+ volume={88},
+ publisher={Amerikanische Mathematische Soz.},
+ year={(2004)}
 }
 }
 @online{TF17,
   author={Franke (Tobias)},
-  title={Dreifachprodukt\-uct inte\-grals},
+  title={Dreifach prod\-uct inte\-grals},
   date={2023-09-01},
   url={https://www.tobias-franke.eu/log/2017/04/19/triple-products.html}
 }
 }
 @article{CG93,
-  author={Gordon (Karolyn)},
-  title={Isospektrale geschlossene Riemannsche Verteiler, die nicht lokal isometrisch sind},
+  author={Gordon (Carolyn)},
+  title={Isospektral geschlossene Riemannsche Mannigfaltigkeiten, die nicht lokal isometrisch sind},
   journal={Zeitschrift für Differentialgeometrie},
   volume={37},
   number={3},
   year={(1993)},
-  pages={639-649}
+  pages={639--649}
 }
 }
 @article{GK80,
   author={Guillemin, Victor und Kazhdan, David},
   title={Einige inverse spektrale Ergebnisse für negativ gekrümmte n-Manifolds},
-  journal={Proceedings of Symposia in der reinen Mathematik},
+  journal={Proceedings of Symposien in der reinen Mathematik},
   volume={36},
-  pages={301-312},
+  pages={301--312},
   year={(1980)}
 }
 }
 @article{LH68,
   author={Hörmander (Lars)},
   title={Die spektrale Funktion eines elliptischen Operators},
-  journal={Frühere und gegenwärtige Fourier Integraloperatoren},
+  journal={Mathematik Vergangenheit und Gegenwart Fourier Integral Operators},
   publisher={Springer Berlin},
   year={(1968)},
-  pages={217-242}
+  pages={217--242}
 }
 }
 @book{AK01,
   author={Knapp, Anthony W},
-  title={Darstellungstheorie semisimple Gruppen: eine Übersicht anhand von Beispielen},
+  title={Darstellungstheorie von semisimple-Gruppen: eine Übersicht anhand von Beispielen},
   publisher={Presse der Universität Princeton},
   year={2001}
 }
 }
 @online{LS18,
-  author={Lu, Jianfeng und Steinerberger},
+  author={Lu, Jianfeng und Steinerberger, Stefan},
   title={Auf pointwise Produkten von elliptischen Eigenfunktionen},
   archivePrefix={arXiv},
-  eprint={1810.01024},
+  eprint={1810,01024},
   year={2018}
 }
 }
 @proceedings{JM64,
-  author={Milnor, John},
+  author={Milnor (John)},
   title={Eigenwerte des Laplace-Operators an bestimmten Verteilern},
-  journal={Verfahren der Nationalen Akademie der Wissenschaften},
+  journal={Proceedings der Nationalen Akademie der Wissenschaften},
   volume={51},
   number={4},
   year={(1964)},
-  pages={542-542}
+  pages={542--542}
 }
 }
 @article{NRR22,
   author={Nilsson, Erik und Rowlett, Julie und Rydell, Felix},
-  title={Das isospektrale Problem für flache Tori aus drei Perspektiven},
-  journal={Bulletin der Amerikanischen Mathematischen Gesellschaft},
+  title={Das isospektrale Problem der flachen Tori aus drei Perspektiven},
+  journal={Bulletin der American Mathematical Society},
   volume={60},
   number={1},
-  year={2023},
+  year={(2023)},
   pages={39-83}
 }
 }
 @book{RS75,
   author={Reed, Michael und Simon, Barry},
-  title={Methoden der modernen mathematischen Physik II: Fourier-Analyse, Selbstangleichung},
+  title={Methoden der modernen mathematischen Physik II: Fourier-Analyse, Selbst-Anpassung},
   volume={2},
   publisher={Elsevier},
   year={(1975)}
 }
 }
 @article{PS94,
-  author={Sarnak, Peter},
+  author={Sarnak},
   title={Integrale Produkte von Eigenfunktionen},
   journal={IMRN},
   volume={6},
   year={(1994)},
-  pages={251-260}
+  pages={251--260}
 }
 }
 @phdthesis{AS94,
-  author={Schiemann, Alexander},
-  title={Ternäre positiv definitive quad\-ratische Formen mit gleichen Darstellungs\-zahlen},
+  author={Schiemann},
+  title={Ternäre positiv definite quad\ratische Formen mit gleichen Darstellungs\-zahlen},
   publisher={Bonner Mathe\matische Schriften},
   school={Universität Bonn},
   volume={(268)},
@@ -141,38 +150,38 @@
 }
 @article{TS85,
   author={Sunada (Toshikazu)},
-  title={Riemannsche Verkleidungen und Isospektralkrümmer},
+  title={Riemannsche Verkleidungen und isospektrale Verteiler},
   journal={Annalen der Mathematik},
   volume={(121)},
   number={1},
   year={(1985)},
-  pages={169-186}
+  pages={169–186}
 }
 }
 @article{ST80,
-  author={Tanno (Schukichi)},
+  author={Tanno (Shukichi)},
   title={Eine Charakterisierung der kanonischen Sphären durch das Spektrum},
-  journal={Mathematisch Z.},
+  journal={Mathematik. Z.},
   volume={(175)},
   number={3},
   year={(1980)},
-  pages={267-274}
+  pages={267--274}
 }
 }
 @book{MT13,
   author={Taylor, Michael},
   title={Partielle Differentialgleichungen II: qualitative Studien linearer Gleichungen},
-  volume={(116)},
-  publisher={Springer Science \&amp; Business Media},
+  volume={116},
+  publisher={Springer Wissenschaft &amp; Business Media},
   year={2013}
 }
 }
 @article{HW11,
-  author={Weyl, Hermann},
+  author={Weyl (Hermann)},
   title={Über die asymp\-totische Ver\-teilung der Eigen\-werte},
   journal={Nach\-richten der König\-lichen Gesell\-schaft der Wissen\-schaften zu Göttingen},
   year={(1911)},
-  pages={110-117}
+  pages={110--117}
 }
 }
 @article{EW22,
@@ -181,16 +190,24 @@
   journal={Journal of Functional Analysis},
   volum={(282)},
   number={8},
-  year={2022},
+  year={(2022)},
   doi = {https://doi.org/10.1016/j.jfa.2022.109404}
 }
 }
 @article{GZ97,
   author={Zhou (Gengqiang)},
-  title={Kompaktheit der isospektralen Kompaktverteiler mit begrenzten Krümmungen},
+  title={Kompaktheit von isospektralen Kompaktverteilern mit begrenzten Krümmungen},
   journal={Pacific J. Mathematisch},
   volume={(181)},
   number={1},
-  year={1997},
-  pages={187-200}
+  year={(1997)},
+  pages={187--200}
+}
+}
+@article{AA25,
+  author={Adve (Anshul)},
+  title={Ein konversiver Satz für hyperbolische Oberflächenspektren und das konforme Bootstrap},
+  archivePrefix={arXiv},
+  eprint={2509.17935},
+  year={(2025)}
 }

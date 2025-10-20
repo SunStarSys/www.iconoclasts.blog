@@ -1,3 +1,12 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 @article{MS67,
   title={Kurvatur och Lapplands egenvärden},
   journal={Tidskrift för differentialgeometri},
@@ -45,7 +54,7 @@
 }
 @online{TF17,
   author={Franke, Tobias},
-  title={Heltal för trippelprod\ukt},
+  title={Heltal för trippelprod\ukta},
   date={2023-09-01},
   url={https://www.tobias-franke.eu/log/2017/04/19/triple-products.html}
 }
@@ -106,7 +115,7 @@
 @article{NRR22,
   author={Nilsson, Erik och Rowlett, Julie och Rydell, Felix},
   title={Isospektralt problem för platt tori ur tre perspektiv},
-  journal={Kommuniké från American Mathematical Society},
+  journal={Bulletin från American Mathematical Society},
   volume={60},
   number={1},
   year={2023},
@@ -142,7 +151,7 @@
 @article{TS85,
   author={Sunada (ort)},
   title={Riemannbeläggningar och isospektrala grenrör},
-  journal={Matematikens årtal},
+  journal={Annaler i matematik},
   volume={121},
   number={1},
   year={1985},
@@ -193,4 +202,12 @@
   number={1},
   year={1997},
   pages={187-200}
+}
+}
+@article{AA25,
+  author={Adve, Anshul},
+  title={En omvänd sats för hyperboliskt ytterspektra och konform bootstrap},
+  archivePrefix={arXiv},
+  eprint={2509.17935},
+  year={2025}
 }
