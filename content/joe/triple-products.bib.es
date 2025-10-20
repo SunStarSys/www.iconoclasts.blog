@@ -102,7 +102,7 @@ title: ~
   year={2018}
 }
 }
-@proceedings{JM64,
+@article{JM64,
   author={Milnor, John},
   title={Valores propios del operador Laplace en determinados colectores},
   journal={Actas de la Academia Nacional de Ciencias},
@@ -204,10 +204,11 @@ title: ~
   pages={187--200}
 }
 }
-@article{AA25,
+@online{AA25,
   author={Adve, Anshul},
   title={Un teorema inverso para los espectros de superficie hiperbólica y el bootstrap conformal},
   archivePrefix={arXiv},
   eprint={2509.17935},
-  year={2025}
+  year={2025},
+  doi={https://doi.org/10.48550/arXiv.2509.17935}
 }

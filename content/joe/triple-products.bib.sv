@@ -102,7 +102,7 @@ title: ~
   year={2018}
 }
 }
-@proceedings{JM64,
+@article{JM64,
   author={Milnor, John},
   title={Egenvärden för Laplace-operatören på vissa grenrör},
   journal={Förfaranden vid Vetenskapsakademien},
@@ -204,10 +204,11 @@ title: ~
   pages={187-200}
 }
 }
-@article{AA25,
+@online{AA25,
   author={Adve, Anshul},
   title={En omvänd sats för hyperboliskt ytterspektra och konform bootstrap},
   archivePrefix={arXiv},
   eprint={2509.17935},
-  year={2025}
+  year={2025},
+  doi={https://doi.org/10.48550/arXiv.2509.17935}
 }
