@@ -5,7 +5,7 @@ dependencies: '*.md.es'
 keywords: teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verificado=27161
+status: borrador
 title: Triple producto de funciones propias y geometría espectral
 ---
 
@@ -92,7 +92,7 @@ Si consideramos el mapa
 (M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
 ```
 
-Este artículo establece la bijetividad de este mapa para los colectores de Riemann cerrados (hasta la isometría de Riemann en su dominio). Otros resultados que aplican estas técnicas para describir su imagen (y a la inversa), dentro de determinados espacios de métricas, están empezando [[AA25]](#AA25). Allí, Anshul Adve aborda rigurosamente los espacios tangentes de unidades de 2 orbifolds compactos e hiperbólicos utilizando estas mismas **constantes de estructura** de la Teoría de Campo Conformal.
+Este artículo establece la inyectividad de este mapa para los colectores de Riemann cerrados (hasta la isometría de Riemann en su dominio). Otros resultados que aplican estas técnicas para describir su imagen (y a la inversa), dentro de determinados espacios de métricas, están empezando [[AA25]](#AA25). Allí, Anshul Adve aborda rigurosamente los espacios tangentes de unidades de 2 orbifolds compactos e hiperbólicos utilizando estas mismas **constantes de estructura** de la Teoría de Campo Conformal.
 
 Estos resultados se demostraron por primera vez durante una charla similar titulada por el autor en **MSRI** en 1997, pero aparecen aquí en forma publicada por primera vez.
 

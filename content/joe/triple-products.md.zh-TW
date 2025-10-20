@@ -4,7 +4,7 @@ categories: 數學公式
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，利曼幾何，逆向問題，數學物理，諧波分析，表示理論
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: 已驗證 =27161
+status: 草稿
 title: 三種特徵函數和光譜幾何產品
 ---
 
@@ -91,7 +91,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 (M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
 ```
 
-此文件為封閉的里曼尼亞人馬福德 (Riemannian isometry in 其領域) 建立此地圖的彈藥性。運用這些技術來描述其影像 (和反轉) 的進一步結果，在指標的精選模數空間內剛開始使用[[AA25]](#AA25)。. . 在那裡，Anshul Adve 使用這些相同的 ** 結構常數 ** 來自 Conformal Field Theory 的精巧，雙曲 2-orbifolds 的單位相切空間。
+此文件為封閉的里曼尼亞人馬福德 (Riemannian isometry in 其領域) 建立此地圖的注射性。運用這些技術來描述其影像 (和反轉) 的進一步結果，在指標的精選模數空間內剛開始使用[[AA25]](#AA25)。. . 在那裡，Anshul Adve 使用這些相同的 ** 結構常數 ** 來自 Conformal Field Theory 的精巧，雙曲 2-orbifolds 的單位相切空間。
 
 這些結果是在作者於 1997 年首次在 **MSRI** 進行類似標題的談話時進行示範，但這些結果是第一次以已發布的形式出現在這裡。
 
