@@ -5,7 +5,7 @@ dependencies: '*.md.sv'
 keywords: spektralteori, riemanngeometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verifierad=27139
+status: verifierad=27161
 title: Trippelprodukter av Eigenfunctions och Spectral Geometry
 ---
 
@@ -92,7 +92,7 @@ Om vi betraktar kartan
 (M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
 ```
 
-denna uppsats fastställer bijektiviteten av denna karta för stängda Riemannian mångfald (upp till Riemannian isometry i dess domän). Ytterligare resultat som tillämpar dessa tekniker för att beskriva dess bild (och invers), inom utvalda moduli-utrymmen av mätvärden, är bara att komma igång [[AA25]](#AA25). Där tacklar Anshul Adve framgångsrikt enhetens tangentutrymmen av kompakta, hyperboliska 2-orbifolds med samma **strukturkonstanter** från Conformal Field Theory.
+denna uppsats fastställer bijektiviteten av denna karta för stängda Riemannian mångfald (upp till Riemannian isometry i dess domän). Ytterligare resultat som tillämpar dessa tekniker för att beskriva dess bild (och invers), inom utvalda moduli-utrymmen av mätvärden, är bara att komma igång [[AA25]](#AA25). Där tar Anshul Adve noggrant itu med enhetens tangentutrymmen av kompakta, hyperboliska 2-orbifoldar med hjälp av samma **strukturkonstanter** från Conformal Field Theory.
 
 Dessa resultat visades först under ett liknande tal av författaren på ** MRT** 1997, men de visas här i publicerad form för första gången.
 
