@@ -311,7 +311,7 @@ M^{i,j,k} = \begin{cases}
 
 As this Equation~\ref{eqn:a} is only invariant under linear transformations on the weight lattice $(A^{-1})^t\mathbb{Z}^n = \set{\lambda_i}$, only an $L^2$ orthonormal eigenfunction basis map which is induced from a volume-preserving invertible linear map between two such indexed, rank $n$ weight lattices will keep the "algebraic/topological" indexed data set $\set{M^{i,j,k}}$ invariant.
 
-However, in order to apply Theorem~\ref{thm}, it is essential that such a linear map $B$ be $B\in O(n,\mathbb{R})$ on the weight lattice, because the induced $L^2$ eigenfunction basis map
+However, in order to apply Theorem~\ref{thm}, it is essential that such a linear map $B$ be $B\in SO(n,\mathbb{R})$ on the weight lattice, because the induced $L^2$ eigenfunction basis map
 
 \begin{equation}
 \{e^{2\pi\sqrt{-1}\bra{x}B\lambda_i\rangle}/\sqrt{|\det A|}\}_{i=0}^\infty
@@ -319,7 +319,7 @@ However, in order to apply Theorem~\ref{thm}, it is essential that such a linear
 
 must also preserve the "analytic" invariants -- the Casimir-element induced figure $4\pi^2\lVert\lambda_i\rVert^2$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
 
-This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of \textit{lattice congruence} \cite{NRR22} traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $B\in O(n,\mathbb{R})$, as described in the prior paragraph, \textbf{is} the contravariant Riemannian isometry between the tori, as provided by
+This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of \textit{lattice congruence} \cite{NRR22} traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $B\in SO(n,\mathbb{R})$, as described in the prior paragraph, \textbf{is} the contravariant Riemannian isometry between the tori, as provided by
 application of the \textit{Gelfand-Naimark Representation Theorem} during the proof of Theorem~\ref{thm}.
 
 \paragraph{Acknowledgements}
