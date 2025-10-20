@@ -27,14 +27,6 @@ title: Länkar
 
 Unikheten resulterar i Anshuls papper är starkt beroende av de tekniker som omfattas av mitt papper.  Mycket bra gjort!
 
-Hela uppkomsten av Inverse Problems in Spectral Theory kommer från Mark Kacs "Kan du höra formen på en trumma?"
-
-Min uppsats introduktion beskriver den senaste utvecklingen från 1997. Det är uppenbart att enbart Laplace-spektrumet är otillräckligt.  Men att komplettera det med trippel produktintegraler håller mycket löfte när det gäller att beskriva kartan $$(M,g) \mapsto \set{\lambda_i, M^{i,j,k}}$$.
-
-Vi måste förstå bilden av den kartan innan vi kan beskriva dess Inverse.
-
-Anshuls nuvarande arbete på enhetens tangentbuntar av kompakta hyperboliska 2-orbifolds åstadkommer båda och tänder den ursprungliga vägen framåt.
-
 #### Omarbetad och skickad till SSRN den 18 oktober 2025
 
-<!-- $Date: 2025-10-18 10:31:05 -0700 (Sat, 18 Oct 2025) $ $Author: joe $ $Revision: 27050 $ -->
+<!-- $Date: 2025-10-18 11:05:34 -0700 (Sat, 18 Oct 2025) $ $Author: joe $ $Revision: 27066 $ -->

@@ -27,14 +27,6 @@ title: Enlaces
 
 La singularidad da como resultado que el artículo de Anshul dependa en gran medida de las técnicas cubiertas en mi artículo.  Muy bien hecho!
 
-Toda la génesis de Inverse Problems in Spectral Theory proviene de Mark Kac: "¿Puedes escuchar la forma de un tambor?"
-
-La introducción de mi artículo describe el estado del arte a partir de 1997. Está claro que el espectro de Laplace por sí solo es inadecuado.  Sin embargo, complementarlo con integrales de producto triple es muy prometedor en términos de describir el mapa. $$(M,g) \mapsto \set{\lambda_i, M^{i,j,k}}$$.
-
-Tenemos que entender la imagen de ese mapa antes de que podamos describir su Inverso.
-
-El trabajo actual de Anshul sobre paquetes tangentes de unidades de 2 orbifolds hiperbólicos compactos logra ambos, y ilumina el camino inicial hacia adelante.
-
 #### Reproducido y reenviado a SSRN el 18 de octubre de 2025
 
-<!-- $Date: 2025-10-18 10:31:05 -0700 (Sat, 18 Oct 2025) $ $Author: joe $ $Revision: 27050 $ -->
+<!-- $Date: 2025-10-18 11:05:34 -0700 (Sat, 18 Oct 2025) $ $Author: joe $ $Revision: 27066 $ -->
