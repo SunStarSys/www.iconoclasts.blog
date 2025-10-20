@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=27184
+status: verified=27198
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
@@ -234,7 +234,7 @@ We observe necessarily that
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
 ```
 
-We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. At first blush, this doesn't seem impossible if $$M$$ has an "even/odd" symmetry group, and $$e^k$$ is odd, but the hope holds true for the flat-tori case below (which does not satisfy the uniform eigenvalue multiplicity = 1 condition). Furthermore, the Formula (11) for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$. All of these aspects remain unknown.
+We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. At first blush, this doesn't seem impossible if $$M$$ has an "even/odd" symmetry group, and $$e^k$$ is odd, but the hope holds true for the flat-tori case below (which does not satisfy the uniform eigenvalue multiplicity = 1 condition). Furthermore, the Formula <span class="eqno"></span> for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$. All of these aspects remain unknown.
 
 Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into this conjecture:
 
