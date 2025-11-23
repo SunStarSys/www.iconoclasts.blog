@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=27198
+status: verified=27218
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
@@ -228,7 +228,20 @@ This completes the proof of the Theorem.
 
 With $$\set{M_0^{i,j,k}}$$ and $$\set{M_1^{i,j,k}}$$ representing the two triple-product sets for the bases $$\set{e_0^i}$$ and $$\set{e_1^i}$$, let $$z_i \in \set{-1,1}$$ be the $$\Z_2^\infty$$ action on such an $$\R$$-valued orthonormal basis $$\set{e_1^i}$$. Thus, we need to choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
-We observe necessarily that
+Why is this the case? In general, the symmetry group acting on the space of possible orthonormal bases of eigenfunctions is the space of Unitary Operators $$U: \mathscr H\rightarrow\mathscr H$$ that commute with projections $$P_{\mathcal V_\lambda}$$ onto the finite-dimensional eigenspaces $$\mathcal V_{\lambda}$$ associated with each individual eigenvalue $$\lambda$$ of the Laplacian. Therefore
+
+```math
+\begin{aligned}
+P_{\mathcal V_{\lambda}}U(e^i) = UP_{\mathcal V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
+M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{kt} M^{r,s,t}
+\end{aligned}
+```
+
+is the image of $$M^{i,j,k}$$ under $$U$$'s basis action $$e^i \mapsto U(e^i)$$.
+
+Now under the conditions of the conjecture, each of the $$\mathcal V_\lambda$$ are one dimensional vector spaces over $$\Complex$$, but that also means they are one dimensional vector spaces over $$\Reals$$, and so the full multiplicative symmetry group is $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+
+Also, we observe necessarily that
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
