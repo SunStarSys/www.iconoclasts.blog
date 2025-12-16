@@ -121,7 +121,7 @@ Sample code:
 use v5.38;
 use Apache2::RequestRec;
 
-sub handler (Apache2::RequestRec $r) {
+sub handler :Sealed (Apache2::RequestRec $r) {
   $r->content_type("text/html"); #compile time method lookup
 }
 ```
