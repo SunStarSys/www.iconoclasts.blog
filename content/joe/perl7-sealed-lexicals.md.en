@@ -120,8 +120,6 @@ Sample code:
 ```perl
 use v5.38;
 use Apache2::RequestRec;
-use base 'sealed';
-use sealed 'deparse';
 
 sub handler :Sealed (Apache2::RequestRec $r) {
   $r->content_type("text/html"); #compile time method lookup
