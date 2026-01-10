@@ -1,5 +1,63 @@
 \documentclass{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage[type={CC},modifier={by-nc-nd},version={4.0}]{doclicense}
+\usepackage{fontspec}
+\usepackage[scr=rsfs]{mathalpha}
+
+\usepackage[margin=1in]{geometry}
+
+\newenvironment{subproof}[1][\proofname]{%
+  \renewcommand{\qedsymbol}{$\blacksquare$}%
+  \begin{proof}[#1]%
+}{%
+  \end{proof}%
+}
+
+% AMS Packages
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+% modern, utf8 friendly
+\PassOptionsToPackage{partial=upright}{unicode-math}
+\usepackage{fontsetup}
+\usepackage{tikz-cd}
+
+\usepackage[style=alphabetic]{biblatex}
+\addbibresource{content/joe/triple-products.bib.en}
+
+% useful math-physics macros
+\usepackage{braket}
+\usepackage{physics}
+
+% Metadata
+\title{Letter of Recommendation for William Braswell, Jr.}
+\date{2025\\October}
+\author{Joe Schaefer, Ph.D.\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
+
+% Theorem, Lemma, etc
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}{Claim}[theorem]
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{criterion}[theorem]{Criterion}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{principle}[theorem]{Principle}
+
 \begin{document}
+
+\maketitle
 
 To whom it may concern,
 
