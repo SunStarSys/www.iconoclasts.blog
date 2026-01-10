@@ -1,17 +1,9 @@
 \documentclass{article}
 \usepackage[hidelinks]{hyperref}
-\usepackage[type={CC},modifier={by-nc-nd},version={4.0}]{doclicense}
 \usepackage{fontspec}
 \usepackage[scr=rsfs]{mathalpha}
 
 \usepackage[margin=1in]{geometry}
-
-\newenvironment{subproof}[1][\proofname]{%
-  \renewcommand{\qedsymbol}{$\blacksquare$}%
-  \begin{proof}[#1]%
-}{%
-  \end{proof}%
-}
 
 % AMS Packages
 \usepackage{amsmath}
@@ -28,7 +20,7 @@
 \usepackage{physics}
 
 % Metadata
-\title{Recommendation for William Braswell, Jr.: Computer Science Ph.D. Program}
+\title{Letter of Recommendation for William Braswell, Jr.: Computer Science Ph.D. Program}
 \date{2026\\January}
 \author{Joe Schaefer\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
 
@@ -62,18 +54,19 @@ To whom it may concern,
 
 William is a seasoned, veteran Perl Programmer who is also exceptionally well-versed in its various compiler / type system technologies.
 
-As someone who has worked in closely related technologies as a core developer at the Apache-Perl (modperl) project, I am familiar with sort of technology background William brings to the table.
+As someone who has worked with closely related technologies as a core developer at the Apache-Perl (modperl) project, I am familiar with the sort of technology background William brings to the table.
 
-In my conversations with William, it is apparent to me that his long-range objective is to supplant the Perl5 Interpreter's internal optree technology with a compiler technology that emits WASM, C/C++, or native Assembler to achieve measurable performance gains over the Perl5 Interpreter's runtime optree walk that facilitates "Perl code" execution (albeit in C in terms of the optree's node data structures).
+In my conversations with William, it is apparent to me that his long-range objective is to supplant the Perl5 Interpreter's internal optree technology with a compiler technology that emits WASM, C/C++, or native Assembler to achieve measurable performance gains over the Perl5 Interpreter's runtime optree walk which implements "Perl code" execution (albeit in C in terms of the optree's node data structures).
 
-In addition, he seeks to buttress this effort with a Perl Type System William has Invented and partially implemented already.  Again, the distinguishing characteristic of his Type System is that it aims to provide compiler hints for optimization purposes, instead of yet another set of Design-By-Contract subroutine signature Constraint System. Such Constraints are often enforced in such an onerously underperforming manner that they must be disabled in production deployments. William's work on his type system neatly complements my own efforts with the 'sealed' package on CPAN, which is a feather in his cap given the deep technical expertise required to implement solutions that alter the Perl Intepreter's optree internals at compile-time.
+In addition, he seeks to buttress this effort with a Perl Type System William has invented and partially implemented already.  Again, the distinguishing characteristic of his Type System is that it aims to provide compiler hints for optimization purposes, instead of yet another set of Design-By-Contract subroutine signature constraint system. Such constraints are often enforced in such an onerously underperforming manner that they must be disabled in production deployments, which is anathema to William's aims. William's work on his type system neatly complements my own efforts with the "sealed" package on CPAN, which is a feather in his cap given the deep technical expertise required to implement solutions that alter/forego the Perl Intepreter's optree internals at compile-time.
 
-His final goal is a JIT Perl Compiler for runtime module loading and compiling, especially in cases involving string evaluation via Perl's `eval` command. If anyone is capable of producing solid results here, that person is William.
+His final goal is a JIT Perl Compiler for runtime module loading and compiling, especially in cases involving string evaluation via Perl's "eval" command. If anyone is capable of producing solid results here, that person is William.
 
-This Entire Effort has been met with mixed success in other programming language communities (PHP, Javascript, Python, etc), but is much more complicated in Perl given the language's native support for Interpreter Threads (`ithreads`), which are basically internal optree+symbol-table clones to permit POSIX threads to operate in parallel on the concurrent optree+symbol-table clones.  Optree Implementations for Dynamic Languages are notoriously difficult to deal with in the presence of POSIX threads, so the overarching traditional paradigm was to deal with them using a Global Interpreter Lock (GIL), which constrains the actual parallel processing to C-code that runs outside the direct control of the Interpreter's optree walker, which remains in "single-threaded mode" for the duration of the process.
+This laudible effort has been met with mixed success in other programming language communities (PHP, Javascript, Python, etc), but is much more complicated in Perl given the language's native support for Interpreter Threads ("ithreads"), which are basically internal optree+symbol-table clones to permit POSIX threads to operate in parallel on the concurrent optree+symbol-table clones.  Optree Implementations for Dynamic Languages are notoriously difficult to deal with in the presence of POSIX threads, so the overarching traditional paradigm was to deal with them using a Global Interpreter Lock (GIL), which constrains the actual parallel processing to non-interpreted, compiled C-code that runs outside the direct control of the Interpreter's optree walker, which remains in "single-threaded mode" for the duration of the processing.
 
-In short, William's Graduate School aims for his PhD work are not just timely for the present epoch, but meet with real uncertainty on my part that they are reasonably achievable within the normal timeframe of a PhD dissertation in Computer Science. I admire and respect the bold challenge Will has set himself upon attaining, and he has done a yeoman's job of putting together a working prototype in his `rperl` codebase.
-Even accomplishing a third of this work is worth professional recognition of doctoral mastery in the Computer Sciences.
+In short, William's Graduate School aims for his PhD work are not just timely for the present epoch, but meet with real uncertainty on my part that they are reasonably achievable within the normal timeframe of a PhD dissertation in Computer Science. I admire and respect the bold challenge Will has set himself upon attaining, and he has done a yeoman's job of putting together a working prototype in his "rperl" codebase.
+
+Even accomplishing a third of this work is worth professional recognition of doctoral-degree mastery in the Computer Sciences.
 
 I think his ambitious aims, combined with his documented CV accomplishments, make him excetionally well-suited for a PhD-degree seeking student in your Program.
 
