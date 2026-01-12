@@ -1,6 +1,5 @@
 \documentclass{article}
 \usepackage[hidelinks]{hyperref}
-\usepackage[type={CC},modifier={by-nc-nd},version={4.0}]{doclicense}
 \usepackage{fontspec}
 \usepackage[scr=rsfs]{mathalpha}
 
@@ -73,11 +72,11 @@ His final goal is a JIT Perl Compiler for runtime module loading and compiling, 
 
 This laudible effort has been met with mixed success in other programming language communities (PHP, Javascript, Python, etc), but is much more complicated in Perl given the language's native support for Interpreter Threads ("ithreads"), which are basically internal optree+symbol-table clones to permit POSIX threads to operate in parallel on the concurrent optree+symbol-table clones.  Optree Implementations for Dynamic Languages are notoriously difficult to deal with in the presence of POSIX threads, so the overarching traditional paradigm was to deal with them using a Global Interpreter Lock (GIL), which constrains the actual parallel processing to non-interpreted, compiled C-code that runs outside the direct control of the Interpreter's optree walker, which remains in "single-threaded mode" for the duration of the processing.
 
-In short, William's Graduate School aims for his Ph.D. work are not just timely for the present epoch, but meet with real uncertainty on my part that they are reasonably achievable within the normal timeframe of a Ph.D. dissertation in Computer Science. I admire and respect the bold challenge Will has set himself upon attaining, and he has done a yeoman's job of putting together a working prototype in his "rperl" codebase.
+In short, William's Graduate School aims for his Ph.D. work are not just timely for the present epoch, but meet with real uncertainty on my part that they are reasonably achievable within the normal timeframe of a Ph.D. dissertation in Computer Science. I admire and respect the bold challenge William has set himself upon attaining, and he has done a yeoman's job of putting together a working prototype in his "rperl" codebase.
 
 Even accomplishing a third of this work is worth professional recognition of doctoral-degree mastery in the Computer Sciences.
 
-I think his ambitious aims, combined with his documented CV accomplishments, make him excetionally well-suited for a Ph.D.-degree seeking student in your Program.
+I think his ambitious aims, combined with his documented CV accomplishments, make him exceptionally well-suited for a Ph.D.-degree seeking student in your Program.
 
 Sincerely Yours,
 
