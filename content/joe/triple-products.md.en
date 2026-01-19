@@ -120,9 +120,9 @@ since $$f$$ is uniquely representable as its rapidly converging **Fourier Series
 
 f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
 
-f_1 = f^p_2,\space p \space \in \N \implies \\
+f_1 = f^p_2,\space p > 2 \implies \\
 
-\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,...,i_p, k}\hat{f_2}(i_1)...\hat{f_2}(i_p)M^{i_1,i_2,i_3}M^{i_2,i_3,i_4}...M^{i_{p-1},i_p,k}e^k(x)
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)\hat{f_2}(i_7)...\hat{f_8}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x)
 
 \end{aligned}
 ```
@@ -248,17 +248,7 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. But by polarization and Cauchy-Schwartz:
-
-```math
-\begin{aligned}
-M^{i,j,k} = \frac{\bra{|e^i+e^j|^2 - |e^i - e^j|^2}\ket{e^k}}{4} &= \frac{M^{i,i,k} + M^{j,j,k} - \bra{|e^i-e^j|^2}\ket{e^k}}{2}\ , \\
-|M^{i,j,k}|^2 &\leq \frac{2|M^{i,i,k} + M^{j,j,k}|^2 + 2|M^{i,i,k} + M^{j,j,k}||M^{i,j,k}| + 4|M^{i,j,k}|^2}{4} \\
-|M^{i,j,k}| &\leq |M^{i,i,k}+M^{j,j,k}| = 0\ \forall i,j\implies e^k\text{ cannot be written as a product of two functions,}
-\end{aligned}
-```
-
-so we see that this hope can never be contradicted. Furthermore, the Formula (13) for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$. All of these aspects remain unknown.
+We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. Furthermore, the Formula <span class="eqno"></span> for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$. All of these aspects remain unknown.
 
 Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into this conjecture:
 
@@ -279,21 +269,27 @@ Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\s
 \tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
-f\in\mathscr H_k^\perp \implies df\cdot df = \sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
+Q_k(f,f) <= Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
+\sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
 &= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
  = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell \implies Q_0(f,f) = \frac{1}{\sqrt{vol(M)}} \sum_{i>k} |\hat f(i)|^2\lambda_i \geq \lambda_{k+1}||f||^2 \implies\\
  \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
 &= \widehat{g^2}(k). \\
-
-d \log f \cdot d\log f = \sum_{i,j,k,\ell,m} Q_\ell(f,f)\frac{M^{i,j,k}vol(M)}{\hat f(i)\hat f(j)}M^{\ell,k,m}e^m
-\\
-1 = f * 1/f = \sum_{i,j,k}M^{i,j,k}\hat f(i)\widehat{\frac{1}{f}}(j)e^k \implies \\
-||df \cdot df||^2 = \sum_{\ell}Q^2_\ell(f,f)\\
-\widehat{\frac{1}{f}}(i) = \frac{\sqrt{vol(M)}}{\hat{f}(i)}\\
-Q^2_{k+1}(f,f) &<= \sum_{i>k,j>k}(\hat f(i)\hat f(j))^2\bra{de^i\cdot de^j}\ket{e^{k+1}}^2 = \frac{1}{4}\sum_{i>k,j>k}|\hat f(i)\hat f(j)|^2|\lambda_i + \lambda_j - \lambda_{k+1}|^2|M^{i,j,k+1}|^2 \\
-
 \end{aligned}
+```
+
+However with $$\mathscr H_k^\perp$$ the orthogonal complement of the span of $$\set{e^0\dots e^k}$$, we have
+
+```math
+\inf_{f\in\mathscr H_k^\perp} \frac{Q_0(f,f)}{||f||^2} = \lambda_{k+1}\ ,\text{ with the infimum realized at } f = e^{k+1}\ .\\
+```
+For contradiction, assume $$e^{k+1}$$ is orthogonal to the vector space spanned by the squares of the eigenfunctions. But for any smooth function $$f\in\mathscr H_k^\perp$$:
+
+```math
+f^2 = \sum_{i,j}\hat f(i)\hat f(j)e^ie^j = \sum_{i>k}|\hat f(i)|^2|e^i|^2 + \sum_{i\ne j} \hat f(i)\hat f(j)e^i e^j \therefore \\
+
+\bra{f^2}\ket{e^{k+1}} = \sum_{i\ne j}\hat f(i)\hat f(j)M^{i,j,k+1}\\
+
 ```
 Note: for the one-dimensional flat-tori case below, $$\tilde{Q}_k(e^i,e^j) = 0$$ since $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ is a true derivation.
 
