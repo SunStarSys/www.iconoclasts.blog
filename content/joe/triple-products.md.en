@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=27452
+status: draft
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -261,7 +261,8 @@ M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambd
 
 \text {and so the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\ \\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} ,\\
+q_k(f,g) :&= \frac{1}{2}\sum_{M^{i,j,k} \ne 0}\hat f(i)\hat g(j)(\lambda_i + \lambda_i - \lambda_k) \\
 \text{Now with }J \text{ real-analytic}\\
 Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
 &= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
@@ -269,10 +270,10 @@ Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\s
 \tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_k(f,f) <= Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
+Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 \sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
 &= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
- = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell \implies Q_0(f,f) = \frac{1}{\sqrt{vol(M)}} \sum_{i>k} |\hat f(i)|^2\lambda_i \geq \lambda_{k+1}||f||^2 \implies\\
+ = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell\implies\\
  \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
 &= \widehat{g^2}(k). \\
 \end{aligned}
