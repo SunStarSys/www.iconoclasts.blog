@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: draft
+status: verified=27452
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -122,7 +122,7 @@ f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
 
 f_1 = f^p_2,\space p > 2 \implies \\
 
-\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)\hat{f_2}(i_7)...\hat{f_8}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x)
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)...\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x)
 
 \end{aligned}
 ```
@@ -278,19 +278,6 @@ Q_k(f,f) <= Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 \end{aligned}
 ```
 
-However with $$\mathscr H_k^\perp$$ the orthogonal complement of the span of $$\set{e^0\dots e^k}$$, we have
-
-```math
-\inf_{f\in\mathscr H_k^\perp} \frac{Q_0(f,f)}{||f||^2} = \lambda_{k+1}\ ,\text{ with the infimum realized at } f = e^{k+1}\ .\\
-```
-For contradiction, assume $$e^{k+1}$$ is orthogonal to the vector space spanned by the squares of the eigenfunctions. But for any smooth function $$f\in\mathscr H_k^\perp$$:
-
-```math
-f^2 = \sum_{i,j}\hat f(i)\hat f(j)e^ie^j = \sum_{i>k}|\hat f(i)|^2|e^i|^2 + \sum_{i\ne j} \hat f(i)\hat f(j)e^i e^j \therefore \\
-
-\bra{f^2}\ket{e^{k+1}} = \sum_{i\ne j}\hat f(i)\hat f(j)M^{i,j,k+1}\\
-
-```
 Note: for the one-dimensional flat-tori case below, $$\tilde{Q}_k(e^i,e^j) = 0$$ since $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ is a true derivation.
 
 ## Example
