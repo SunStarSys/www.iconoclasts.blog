@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=27458
+status: verified=27461
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -257,7 +257,7 @@ Nevertheless, let us compute some relevant identities so some intrepid future re
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\ 
-\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=e^{k+1}\ .\\
+\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
 
 \text {and so the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
