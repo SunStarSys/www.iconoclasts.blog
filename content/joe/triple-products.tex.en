@@ -262,7 +262,7 @@ Now under the conditions of the conjecture, each of the $\mathcal V_\lambda$ are
 Also, we observe that the proof of the conjecture involves proving this implication:
 
 \begin{equation}
-\tag{fml}
+\label{fml}
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\mathbb{N},\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
 \exists r,s,t \in \mathbb{N}\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 \end{equation}
