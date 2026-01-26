@@ -256,7 +256,9 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 \end{equation}
 
 is the image of $$M^{i,j,k}$$ under $$U$$’s basis action $$e^i \mapsto U(e^i)$$.
-Now under the conditions of the conjecture, each of the $$\mathcal V_\lambda$$ are one dimensional vector spaces over $$\Complex$$, but that also means they are one dimensional vector spaces over $$\Reals$$, and so the full multiplicative symmetry group is $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+
+Now under the conditions of the conjecture, each of the $$\mathcal V_\lambda$$ are one dimensional vector spaces over $$\mathbb{C}$$, but that also means they are one dimensional vector spaces over $$\mathbb{R}$$, and so the full multiplicative symmetry group is $$O(1,\mathbb{R})^\infty=\Z_2^\infty$$.
+
 Also, we observe that the proof of the conjecture involves proving this implication:
 
 \end{equation}
