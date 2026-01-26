@@ -246,12 +246,23 @@ This completes the proof of the Theorem.
 
 With $\set{M_0^{i,j,k}}$ and $\set{M_1^{i,j,k}}$ representing the two triple-product sets for the bases $\set{e_0^i}$ and $\set{e_1^i}$, let $z_i \in \set{-1,1}$ be the $\mathbb{Z}_2^\infty$ action on such an $\mathbb{R}$-valued orthonormal basis $\set{e_1^i}$. Thus, we need to choose $z_i$ so that $\set{z_ie_1^i}$ yields $\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$.
 
-We observe necessarily that
+Why is this the case? In general, the symmetry group acting on the space of possible orthonormal bases of eigenfunctions is the space of Unitary Operators $$U: \mathscr H\rightarrow\mathscr H$$ that commute with projections $$P_{\mathcal V_\lambda}$$ onto the finite-dimensional eigenspaces $$\mathcal V_{\lambda}$$ associated with each individual eigenvalue $$\lambda$$ of the Laplacian. Therefore
 
 \begin{equation}
-\label{fml}
-z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\mathbb{N},\,\nisd\, M_0^{i,i,k} \ne 0 \,.
+\begin{aligned}
+P_{\mathcal V_{\lambda}}U(e^i) = UP_{\mathcal V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
+M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
+\end{aligned}
 \end{equation}
+
+is the image of $$M^{i,j,k}$$ under $$U$$’s basis action $$e^i \mapsto U(e^i)$$.
+Now under the conditions of the conjecture, each of the $$\mathcal V_\lambda$$ are one dimensional vector spaces over $$\Complex$$, but that also means they are one dimensional vector spaces over $$\Reals$$, and so the full multiplicative symmetry group is $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+Also, we observe that the proof of the conjecture involves proving this implication:
+
+\end{equation}
+z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
+\begin{equation}
 
 We may hope that for any given $k$, $M_0^{i,i,k}$ cannot be identically $0$ for all $i$. At first blush, this doesn't seem impossible if $M$ has an "even/odd" symmetry group, and $e^k$ is odd, but the hope holds true for the flat-tori case below (which does not satisfy the uniform eigenvalue multiplicity = 1 condition). Furthermore, the Formula~\ref{fml} for $z_k$ requires both $i$-independence, and sufficiency, to establish the basis map $e_0^i \mapsto z_i e_1^i$ preserves $\set{M_0^{i,j,k}}$. All of these aspects remain unknown.
 
