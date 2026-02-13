@@ -14,8 +14,7 @@
 			   <a href="https://github.com/SunStarSys/{{website}}/blob/trunk/content{{path}}"><i class="fa-brands fa-sm fa-github"></i>&nbsp;origen</a>
 {% endifequal %}
 			 </em>
-
-
+           </small>
          <div class="right">
            <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch" id="watch">
              <i class="fa fa-eye fa-emoji" title="reloj"></i>

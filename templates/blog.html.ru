@@ -15,6 +15,7 @@
 {% endifequal %}
 			 </em>
 
+         </small>
 
          <div class="right">
            <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch" id="watch">
