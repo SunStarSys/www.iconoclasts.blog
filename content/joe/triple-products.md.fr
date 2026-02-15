@@ -6,7 +6,7 @@ keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, phy
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: vérifié=27501
+status: vérifié=27516
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -246,7 +246,7 @@ est l'image de $$M^{i,j,k}$$ sous $$U$$Action de base $$e^i \mapsto U(e^i)$$.
 
 Or, dans les conditions de la conjecture, chacun des $$\mathcal V_\lambda$$ sont des espaces vectoriels unidimensionnels sur $$\Complex$$, mais cela signifie également qu'ils sont des espaces vectoriels unidimensionnels sur $$\Reals$$et donc le groupe de symétrie multiplicative complet est $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Sans la contrainte de multiplicité, le prérequis associé de la conjecture "concernant l'accord en valeurs absolues" deviendrait simplement " la préservation de l'ensemble ordonné de valeurs singulières de $$\set{M^{i,j,k}}$$, lorsqu'il est considéré comme un ensemble de cartes à partir de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", qui sont un ensemble complet d'invariants unitaires. Dans ce cas, la conjecture tient par application directe du théorème (application à la multiplicité = 1 réduit au cas trivial où $$M^{i,j,k}$$ sont égaux).  Sans conservation de ces invariants, cette conjecture est censée être fausse, avec des contre-exemples probablement disponibles via la construction Sunada dans la dimension 2.
+Sans la contrainte de multiplicité, le prérequis associé de la conjecture "concernant l'accord en valeurs absolues" deviendrait simplement " la préservation de l'ensemble ordonné de valeurs singulières de $$\set{M^{i,j,k}}$$, lorsqu'il est considéré comme un ensemble de cartes à partir de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", qui sont un ensemble robuste d'invariants unitaires.
 
 En outre, nous observons que la preuve de la conjecture originale implique de prouver cette implication :
 

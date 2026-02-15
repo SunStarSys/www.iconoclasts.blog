@@ -5,7 +5,7 @@ dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verifierad=27501
+status: verifierad=27516
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -245,7 +245,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 Nu under förutsättningarna för gissningen, var och en av $$\mathcal V_\lambda$$ är ett dimensionellt vektorrum över $$\Complex$$, men det betyder också att de är endimensionella vektorrum över $$\Reals$$och så är hela den multiplikativa symmetrigruppen $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Utan multiplikationsbegränsningen skulle hypotesens tillhörande förutsättning "om överensstämmelse i absoluta värden" helt enkelt bli "bevarande av den ordnade uppsättningen av singulära värden för $$\set{M^{i,j,k}}$$, när den visas som en samling kartor från $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", som är en komplett uppsättning av Unitära Invarianter. I detta fall gäller antagandet genom direkt tillämpning av teoremen (tillämpning på mångfald = 1 reduceras till det triviala fallet där $$M^{i,j,k}$$ är lika).  Utan bevarande av dessa invarianter tros denna gissning vara falsk, med motexempel som sannolikt är tillgängliga via Sunada-konstruktion i dimension 2.
+Utan multiplikationsbegränsningen skulle hypotesens tillhörande förutsättning "om överensstämmelse i absoluta värden" helt enkelt bli "bevarande av den ordnade uppsättningen av singulära värden för $$\set{M^{i,j,k}}$$, när den visas som en samling kartor från $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsinvarianter.
 
 Dessutom observerar vi att beviset för den ursprungliga gissningen innebär att bevisa denna implikation:
 
