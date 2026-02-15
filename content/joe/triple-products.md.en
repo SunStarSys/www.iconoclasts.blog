@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=27461
+status: verified=27464
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -240,6 +240,8 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 is the image of $$M^{i,j,k}$$ under $$U$$'s basis action $$e^i \mapsto U(e^i)$$.
 
 Now under the conditions of the conjecture, each of the $$\mathcal V_\lambda$$ are one dimensional vector spaces over $$\Complex$$, but that also means they are one dimensional vector spaces over $$\Reals$$, and so the full multiplicative symmetry group is $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+
+Without the multiplicity constraint, the conjecture's associated prerequisite "regarding agreement in absolute values" would simply become "preservation of the ordered set of singular values of $$\set{M^{i,j,k}}$$, when viewed as a collection of maps from $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", which are a complete set of Unitary Invariants. In this case, the conjecture holds by direct application of the Theorem (application to multiplicity = 1 reduces to the trivial case where the $$M^{i,j,k}$$ are equal).  Without preservation of these invariants, this conjecure is believed to be false, with counterexamples likely available via Sunada construction in dimension 2.
 
 Also, we observe that the proof of the conjecture involves proving this implication:
 
