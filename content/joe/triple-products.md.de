@@ -5,7 +5,7 @@ dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: überprüft=27464
+status: überprüft=27501
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -245,9 +245,9 @@ ist das Bild von $$M^{i,j,k}$$ unter $$U$$'s Basismaßnahme $$e^i \mapsto U(e^i)
 
 Nun, unter den Bedingungen der Vermutung, jeder der $$\mathcal V_\lambda$$ sind eindimensionale Vektorräume über $$\Complex$$, aber das bedeutet auch, dass sie eindimensionale Vektorräume über $$\Reals$$und so ist die vollständige multiplikative Symmetriegruppe $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Ohne die Multiplizitätsbeschränkung würde die damit verbundene Voraussetzung der Vermutung "Übereinstimmung in absoluten Werten" einfach zur "Beibehaltung der geordneten Menge von Singularwerten von $$\set{M^{i,j,k}}$$, wenn sie als Sammlung von Karten aus $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"ein komplettes Set von Unarianten. In diesem Fall hält die Vermutung durch direkte Anwendung des Satzes (Anwendung auf Multiplizität = 1 reduziert sich auf den trivialen Fall, wenn die $$M^{i,j,k}$$ sind gleich).  Ohne die Erhaltung dieser Invarianten wird angenommen, dass dieses Conjecure falsch ist, mit Gegenbeispielen, die wahrscheinlich über die Sunada-Konstruktion in Dimension 2 verfügbar sind.
+Ohne die Multiplizitätsbeschränkung würde die damit verbundene Voraussetzung der Vermutung "Übereinstimmung in absoluten Werten" einfach zur "Beibehaltung der geordneten Menge von Singularwerten von $$\set{M^{i,j,k}}$$, wenn sie als Sammlung von Karten aus $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"ein komplettes Set von Unarianten. In diesem Fall hält die Vermutung durch direkte Anwendung des Satzes (Anwendung auf Multiplizität = 1 reduziert sich auf den trivialen Fall, wenn die $$M^{i,j,k}$$ sind gleich).  Ohne die Erhaltung dieser Invarianten wird angenommen, dass diese Vermutung falsch ist, mit Gegenbeispielen, die wahrscheinlich über die Sunada-Konstruktion in Dimension 2 verfügbar sind.
 
-Wir stellen auch fest, dass der Beweis der Vermutung darin besteht, diese Implikation zu beweisen:
+Außerdem stellen wir fest, dass der Beweis der ursprünglichen Vermutung darin besteht, diese Implikation zu beweisen:
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
