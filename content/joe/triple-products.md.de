@@ -1,18 +1,18 @@
 ---
 archived: ~
-categories: Mathematisch
+categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
-  Physik, harmonische Analyse, Darstellungstheorie
+  Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verifiziert=27184
-title: Dreifache Produkte von Eigenfunktionen und spektraler Geometrie
+status: überprüft=27464
+title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
 <div class="right">
   <img src="../images/lawson6-pod.png" style="width:200px">
   <p style="width:200px;text-align:center;line-height:20px">
-  Lawsons minimale Oberfläche ω<sub>6,1</sub> stereographisch von S<sup>3</sup> auf R<sup>3</sup> projiziert
+  Lawsons minimale Oberfläche <sub>6,1</sub> stereographisch von S<sup>3</sup> nach R<sup>3</sup> projiziert
   </p>
 </div>
 
@@ -24,19 +24,19 @@ Joe Schaefer
 
 ## Abstrakt
 
-Verwendung von elementaren Techniken aus der geometrischen Analyse, partiellen Differentialgleichungen und Abelian $$C^*$$ Algebren, {# lede #}Wir entdecken einen neuartigen, aber vertrauten, globalen geometrischen Invarianten{# lede #} &mdash; nämlich **der indizierte Satz von Integralen dreifacher Produkte von Eigenfunktionen des Laplace-Beltrami-Operators**, um genau zu charakterisieren, welche isospektralen geschlossenen Riemannschen Verteiler isometrisch sind.
+Verwendung elementarer Techniken aus der Geometrischen Analyse, partiellen Differentialgleichungen und Abelian $$C^*$$ Algebras, {# lede #}Wir entdecken einen neuartigen, aber bekannten, globalen geometrischen Invarianten{# lede #} &mdash; namentlich **der indexierte Satz von Integralen von dreifachen Produkten von Eigenfunktionen des Laplace-Beltrami-Operators**, um genau zu charakterisieren, welche ispektralen geschlossenen Riemannschen Mannigfaltigkeiten isometrisch sind.
 
 ## Einführung
 
-Für eine geschlossene Riemannsche Mannigfaltigkeit $$(M,g)$$, die ihre **Klasse** nicht-isometrischer, isospektraler Verteiler kennzeichnet, ist eine Art inverses Problem [[DH11]](#DH11) Spektrale Geometrie. Naiv könnte man spekulieren, dass diese Klasse immer *leer* wäre. Die wissenschaftliche Literatur ist jedoch reich an jahrzehntelangen Konstruktionen bestimmter Gegenbeispiele: ab 1964 mit John Milnors 16-dimensionalen Paar nichtisometrischer, isospektraler flacher Tori. [[JM64]](#JM64), und weiter [[CS92]](#CS92) zur generischen dimensionalen Charakterisierung von Flat Tori in Alexander Schiemanns Doktorarbeit von 1993 [[AS94]](#AS94) &mdash; mit einer computergestützten Suche nach dem kritischen $$\dim = 3$$ Fall.  Ein moderner Überblick über die gesamte flache Tori-Geschichte erscheint in [[NRR22]](#NRR22).
+Für eine geschlossene Riemannsche Mannigfaltigkeit $$(M,g)$$, die ihre **Klasse** von nicht-isometrischen, isospektralen Mannigfaltigkeiten charakterisiert, ist eine Art inverses Problem [[DH11]](#DH11) Spektrale Geometrie. Naïvely könnte man spekulieren, dass diese Klasse immer *leer* wäre. Die akademische Literatur ist jedoch reich an jahrzehntelangen Konstruktionen spezifischer Gegenbeispiele: ab 1964 mit John Milnors 16-dimensionalen Paar nicht-isometrischer, isospektraler flacher Tori [[JM64]](#JM64)und weiter [[CS92]](#CS92) zur generischen dimensionalen Charakterisierung flacher Tori in Alexander Schiemanns Doktorarbeit von 1993 [[AS94]](#AS94) &mdash; mit einer computergestützten Suche nach dem kritischen $$\dim = 3$$ Fall.  Eine moderne Vermessung der gesamten flachen Tori-Geschichte erscheint in [[NRR22]](#NRR22).
 
-Auf dem Weg waren aufschlussreiche Ableger in anspruchsvollere, nicht-euklidische symmetrische Abdeckräume; Konstruktion solcher isospektralen, nicht-isometrischen "Düsen" mit nicht-trivialen Krümmungstensoren (und deren spektrumbestimmten Euler-Eigenschaften in Dimension 2) [[MS67]](#MS67).) Ein Paradebeispiel für diese Bemühungen war Toshikazu Sunadas 1985 [[TS85]](#TS85) Erfindung eines universellen Abdeckraumgerüstes, das er dann in der gleichen Arbeit zum Aufbau von hyperbolischen Duetten in den Abmessungen 2 und 3 einsetzte.
+Auf dem Weg waren aufschlussreiche Abschiebungen in raffiniertere, nicht-euklidische symmetrische Abdeckräume; der Aufbau solcher isospektraler, nicht-isometrischer "Düsen" mit nichttrivialen Krümmungstensoren (und deren spektralbestimmte Euler-Eigenschaften in Dimension 2) [[MS67]](#MS67).) Ein Paradebeispiel für diese Bemühungen war Toshikazu Sunadas 1985. [[TS85]](#TS85) Erfindung eines allgemeinen Abdeckraumgerüsts, das er dann in derselben Arbeit zum Aufbau hyperbolischer Duette in den Dimensionen 2 und 3 einsetzte.
 
-Für inhomogene Riemannsche Metriken entdeckte Carolyn Gordon Duette, die nicht einmal lokal isometrisch sind [[CG93]](#CG93).
+Für inhomogene Riemannsche Metriken entdeckte Carolyn Gordon Duette, die nicht einmal lokal isometrisch sind. [[CG93]](#CG93).
 
-Arbeit wird in vielen verwandten Bereichen fortgesetzt [[DH11]](#DH11), wie die Bestimmung topologischer Merkmale der Klasse der isospektralen, nicht-isometrischen Verteiler im Allgemeinen (leer) [[ST80]](#ST80), endlich [[AS94]](#AS94), starr [[GK80]](#GK80), und kompakt [[GZ97]](#GZ97)) als Teilmenge verschiedener Modulräume von Riemannschen Metriken.
+Die Arbeit geht in vielen verwandten Bereichen weiter [[DH11]](#DH11), wie die Bestimmung der topologischen Eigenschaften der Klasse der isospektralen, nicht-isometrischen Mannigfaltigkeiten im Allgemeinen (leer [[ST80]](#ST80), endlich [[AS94]](#AS94), starr [[GK80]](#GK80)und kompakt [[GZ97]](#GZ97)) als Teilmenge verschiedener Modulräume von Riemannschen Metriken.
 
-Was wir in diesem Artikel anbieten, ist eine neue Perspektive auf ein bekanntes Werkzeug: indexierte Fourier-Koeffizienten von paarweisen Produkten von Eigenfunktionen als diskrete "algebraische/topologische Invariante" zur Ergänzung des bestehenden, diskreten "analytischen Invarianten". &mdash; das nicht-negative Spektrum des *Laplace-Beltrami-Betreibers* (im Folgenden **Laplacian**) auf $$ℋ = L^2(M,g)$$. Zusammen stellen wir fest, dass das Paar eine "diskrete globale geometrische Darstellung" der Isometrieklassen isospektraler, geschlossener Riemannschen Mannigfaltigkeiten liefert.
+Was wir in diesem Artikel bieten, ist eine neue Perspektive auf ein vertrautes Werkzeug: indizierte Fourier-Koeffizienten von paarweisen Produkten von Eigenfunktionen als diskreter "algebraischer/topologischer Invariant" zur Ergänzung der bestehenden, diskreten "analytischen Invariant". &mdash; das nicht-negative Spektrum des Betreibers *Laplace-Beltrami* (im Folgenden als **Laplacian** bezeichnet) am $$ℋ = L^2(M,g)$$. In Kombination sehen wir, dass das Paar eine "diskrete globale geometrische Darstellung" der Isometrieklassen isospektraler, geschlossener Riemannschen Mannigfaltigkeiten liefert.
 
 ### Ergebnisse
 
@@ -45,12 +45,12 @@ Was wir in diesem Artikel anbieten, ist eine neue Perspektive auf ein bekanntes 
 <div class="card border-dark">
   <div class="card-header">
 
-Satz ####
+#### Satz
 
 </div>
   <div class="card-body">
 
-Bei einer (nicht abnehmenden) Eigenwerte orthonormalen Basis von Eigenfunktionen $$\set{e^i}_{i=0}^{\infty}$$ für den (nicht-negativen) Laplacian $$\Delta_M$$ am $$L^2(M,g)$$ verbunden mit einer geschlossenen Riemannschen Mannigfaltigkeit $$(M,g)$$, definieren
+Bei einer (nicht abnehmenden) orthonormalen Basis von Eigenfunktionen $$\set{e^i}_{i=0}^{\infty}$$ für den (nicht-negativen) Laplacian $$\Delta_M$$ am $$L^2(M,g)$$ verbunden mit einer geschlossenen Riemannschen Mannigfaltigkeit $$(M,g)$$, definieren
 
 ```math
 
@@ -58,14 +58,14 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 ```
 
-Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingung * für eine andere **isospektrale** geschlossene Riemannsche Mannigfaltigkeit, eine orthonormale Basis von Eigenfunktionen (für seinen Laplacian) zu haben, die beide die zugehörigen Eigenwerte bewahrt und einen invaranten besitzt $$\set{M^{i,j,k}}$$ auf jeder Basis.
+Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingung* für eine andere **isospektrale** geschlossene Riemannsche Mannigfaltigkeit, eine orthonormale Basis von Eigenfunktionen (für ihren Laplacian) zu haben, die beide die zugehörigen Eigenwerte bewahrt und eine invariante $$\set{M^{i,j,k}}$$ auf jeder Basis.
 
 </div>
 </div>
 
 <br>
 
-*Symmetrie* spielt eine wichtige Rolle in rechnerisch traktierbaren Fällen [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), die in unserem flachen Tori treffend dargestellt ist [Beispiel](#example) unten. Die Stärke unseres Ansatzes lässt sich jedoch am besten bei Mannigfaltigkeiten mit der geringsten Anzahl von Riemannschen Symmetrien erkennen, was der generische Fall oft damit zusammenfällt, dass die Eigenwerte *einzigartig* sind (d.h. ohne nichttriviale Multiplikation). In diesem Fall bieten wir Folgendes an:
+*Symmetrie* spielt eine wichtige Rolle bei rechnerisch traktierbaren Fällen [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), die in unserem flachen Tori passend dargestellt ist [Beispiel](#example) unten. Die Stärke unseres Ansatzes wird jedoch vielleicht am besten bei Mannigfaltigkeiten mit der geringsten Anzahl von Riemannschen Symmetrien deutlich, was der generische Fall ist, der oft mit den Eigenwerten übereinstimmt, die *unique* (d.h. ohne nicht-triviale Multiplizität) sind. In diesem Fall bieten wir folgende
 
 <br>
 
@@ -77,14 +77,14 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 </div>
   <div class="card-body">
 
-Wenn jeder Eigenwert eine Mehrzahl hat $$1$$, bei einem Paar von Eigenwert erhaltenden orthormalen Basen, wie in der Hypothese des Theorems beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn und nur wenn die $$\set{M^{i,j,k}}$$ für eine Basis stimmt, bis zum absoluten Wert in den einzelnen Begriffen, mit der anderen Basis überein.
+Wenn jeder Eigenwert eine Multiplikation hat $$1$$, bei einem Paar von Eigenwerten, die orthormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn und nur, wenn die $$\set{M^{i,j,k}}$$ für eine Basis bis zum absoluten Wert in den einzelnen Begriffen mit der anderen Basis übereinstimmt.
 
 </div>
 </div>
 
 <br>
 
-Die Motivation für das Studium von $$\set{M^{i,j,k}}$$ wird lose aus der Untersuchung der Rolle des **bilinearen Multiplikationsoperators** abgeleitet $$Y:V\otimes V\rightarrow V((z))$$ in der Definition einer Vertex Operator Algebra [[FBZ04]](#FBZ04) Eine chirale konforme Feldtheorie. Hier $$V$$ ist der Vektorraum der Staaten und $$V((z))$$ ist der Raum der formalen Laurent-Serie in $$z$$ mit Koeffizienten in $$V$$. Seit $$V$$ oft als Hilbert Space mit einer traditionellen Fourier Serie orthonormal Basis ausgestattet, Indexierung $$Y$$ Verwendung der Fourier-Basiselemente von $$V$$ ist nur etwas stärker beteiligt als die $$M^{i,j,k}$$ Fall hier studiert, aber ganz ähnlich im Geist. Ein detaillierter Vergleich ist jedoch für diesen Artikel nicht möglich.
+Die Motivation für das Studium der $$\set{M^{i,j,k}}$$ wird lose aus der Untersuchung der Rolle des **bilinearen Multiplikationsoperators** abgeleitet. $$Y:V\otimes V\rightarrow V((z))$$ in der Definition einer Vertex Operator Algebra [[FBZ04]](#FBZ04) Eine chirale konforme Feldtheorie. Hier $$V$$ ist der Vektorraum der Staaten und $$V((z))$$ ist der Raum der formalen Laurent-Serie in $$z$$ mit Koeffizienten in $$V$$. Seit $$V$$ oft als Hilbert-Raum mit einer traditionellen Fourier-Serie orthonormal Basis ausgestattet, Indexierung $$Y$$ Verwendung der Fourier-Basiselemente von $$V$$ ist nur etwas mehr beteiligt als die $$M^{i,j,k}$$ Fall hier studiert, aber ganz ähnlich im Geist. Ein detaillierter Vergleich ist für diesen Artikel jedoch nicht möglich.
 
 Wenn wir die Karte betrachten
 
@@ -92,13 +92,13 @@ Wenn wir die Karte betrachten
 (M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
 ```
 
-In diesem Beitrag wird die Injektivität dieser Karte für geschlossene Riemannsche Mannigfaltigkeiten (bis zur Riemannschen Isometrie in ihrer Domäne) ermittelt. Weitere Ergebnisse, die diese Techniken anwenden, um sein Bild (und umgekehrt) innerhalb ausgewählter Modulräume von Metriken zu beschreiben, beginnen gerade erst [[AA25]](#AA25). Dort greift Anshul Adve Tangentenräume von kompakten, hyperbolischen 2-orbifolds mit denselben **Strukturkonstanten** aus der Conformal Field Theory rigoros an.
+Diese Arbeit legt die Injektivität dieser Karte für geschlossene Riemannsche Mannigfaltigkeiten (bis zur Riemannschen Isometrie in ihrer Domäne) fest. Weitere Ergebnisse, die diese Techniken anwenden, um ihr Bild (und umgekehrt) innerhalb ausgewählter Modulräume von Metriken zu beschreiben, beginnen gerade erst. [[AA25]](#AA25). Dort greift Anshul Adve mit denselben **Strukturkonstanten** aus der Conformal Field Theory Tangent Spaces von kompakten, hyperbolischen 2-orbifolds streng an.
 
-Diese Ergebnisse wurden erstmals 1997 in einem ähnlich betitelten Vortrag des Autors bei **MSRI** gezeigt, erscheinen aber hier erstmals in veröffentlichter Form.
+Diese Ergebnisse wurden erstmals 1997 in einem ähnlich betitelten Vortrag des Autors bei **MSRI** gezeigt, erscheinen hier aber erstmals in veröffentlichter Form.
 
-## Vorläufig
+## Vorbereitungen
 
-Jetzt mit $$M,g,e^i,M^{i,j,k}$$ wie oben, für $$f \in C^\infty(M)$$ und $$i \geq 0$$ Beachten Sie, dass die **Fourier-Koeffizienten**
+Jetzt mit $$M,g,e^i,M^{i,j,k}$$ wie oben, für $$f \in C^\infty(M)$$ und $$i \geq 0$$ Beachten Sie, dass die **Fourier Koeffizienten**
 
 ```math
 \begin{aligned}
@@ -113,7 +113,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
 
 ```
 
-seit $$f$$ ist als schnell konvergierende **Fourier Series** ($$\Delta_M$$-spezifische Sobolev-Einbettungen [[MT13]](#MT13) [[RS75]](#RS75)zusammen mit Weyls asymptotischem Gesetz [[HW11]](#HW11), implizieren die Bedingungen in der Summe sind $$o(i^{-n})$$ *gleichmäßig in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$Dann sehen wir das für $$f_1, f_2 \in C^\infty(M)$$, die Fourierkoeffizienten des pointwise Produktes $$f_1 f_2 \in C^\infty(M)$$ sind
+seit $$f$$ ist einzigartig als seine schnell konvergierende **Fourier-Serie** ($$\Delta_M$$-spezifische Sobolev-Einbettungen [[MT13]](#MT13) [[RS75]](#RS75)Zusammen mit Weyls asymptotischem Gesetz [[HW11]](#HW11)bedeutet, dass die Begriffe in der Summe $$o(i^{-n})$$ * einheitlich in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$Dann sehen wir das für $$f_1, f_2 \in C^\infty(M)$$, die Fourier-Koeffizienten des Spitzenprodukts $$f_1 f_2 \in C^\infty(M)$$ sind
 
 ```math
 \begin{aligned}
@@ -124,14 +124,14 @@ seit $$f$$ ist als schnell konvergierende **Fourier Series** ($$\Delta_M$$-spezi
 
 f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
 
-f_1 = f^p_2,\space p \space \in \N \implies \\
+f_1 = f^p_2,\space p > 2 \implies \\
 
-\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,...,i_p, k}\hat{f_2}(i_1)...\hat{f_2}(i_p)M^{i_1,i_2,i_3}M^{i_2,i_3,i_4}...M^{i_{p-1},i_p,k}e^k(x).
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)...\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x).
 
 \end{aligned}
 ```
 
-und so, *kritisch*, jedes multivariate Polynom $$\weierp \in \Complex[z_1,...,z_l]$$ (bei reibungslosen Funktionen) **Kommt** mit beliebigem Spektrum $$\Delta$$-eigenfunktion orthonormale Basiskarte $$\vec{F}$$ die bewahrt $$\set{M^{i,j,k}}$$:
+und so *kritisch*, jedes multivariate Polynom $$\weierp \in \Complex[z_1,...,z_l]$$ (auf glatten Funktionen) **kommutiert** mit beliebigem Spektrum $$\Delta$$-Eigenfunktion orthonormale Basiskarte $$\vec{F}$$ das bewahrt $$\set{M^{i,j,k}}$$:
 
 ```math
 \begin{CD}
@@ -141,7 +141,7 @@ und so, *kritisch*, jedes multivariate Polynom $$\weierp \in \Complex[z_1,...,z_
 \end{CD}
 ```
 
-Und wenn $$A\subset M$$ ist Borel messbar, dann halten die Ergebnisse oben pointwise für die *charakteristische Funktion von $$A$$* überall außer entlang der Grenze von $$A$$: wenn $$f = f^2$$ und $$A:=\set{x\in M|f(x)=1}$$,
+Auch wenn $$A\subset M$$ ist Borel messbar, dann halten die Ergebnisse oben für die *charakteristische Funktion von $$A$$* überall außer entlang der Grenze von $$A$$: wenn $$f = f^2$$ und $$A:=\set{x\in M|f(x)=1}$$,
 
 ```math
 \sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \begin{cases}
@@ -149,7 +149,7 @@ Und wenn $$A\subset M$$ ist Borel messbar, dann halten die Ergebnisse oben point
 0 & x \in \mathring{A^\complement}\end{cases}
 ```
 
-und durch Einzigartigkeit haben wir die folgende Identität
+und durch Einzigartigkeit haben wir folgende Identität
 
 ```math
 \begin{aligned}
@@ -158,13 +158,13 @@ und durch Einzigartigkeit haben wir die folgende Identität
 \end{aligned}
 ```
 
-Dies bedeutet, dass eine solche Basiskarte wie oben charakteristische Funktionen hat (als Mitglieder von $$L^2(M,g)\subset L^1(M,g)$$) zu charakteristischen Funktionen maßhaltig.
+Dies bedeutet, dass eine solche Basiskarte wie oben charakteristische Funktionen enthält (als Mitglieder von $$L^2(M,g)\subset L^1(M,g)$$) für charakteristische Funktionen maßhaltig.
 
-Der Sinn dieser Berechnungen ist es, die Tatsache zu betonen, dass $$\set{M^{i,j,k}}$$ ** kennzeichnet** die harmonische Analyse des pointwise Multiplikationsoperators auf $$C^\infty(M)$$, die eine dichte Subalgebra der Abelian $$C^*$$ Algebra $$C(M)$$nach dem Stein-Weierstrass-Theorem.
+Der Zweck dieser Berechnungen ist es, die Tatsache zu betonen, dass $$\set{M^{i,j,k}}$$ **charakterisiert** die Harmonische Analyse des Multiplikationsoperators auf $$C^\infty(M)$$, die eine dichte Subalgebra des Abelian ist $$C^*$$ Algebra $$C(M)$$nach dem Satz von Stone-Weierstrass.
 
-Für die rasche Konvergenz dieser oben genannten Beträge $$M^{i,j,k}$$Beachten Sie, dass Produkte von Eigenfunktionen glatt sind, so dass diese Fourierkoeffizienten wie oben (in jedem Index) abklingen. Weitere Details finden Sie in Emmett Wymans Arbeit im Jahr 2022 mit diesen Koeffizienten, da sie sich auf die Dreiecksungleichheit der Eigenwerte bezieht [[EW22]](#EW22).
+Für die rasche Konvergenz dieser vorgenannten Beträge $$M^{i,j,k}$$, beachten Sie, dass Produkte von Eigenfunktionen glatt sind, so dass diese Fourier-Koeffizienten wie oben (in jedem Index) zerfallen. Weitere Informationen finden Sie in Emmett Wymans Arbeit im Jahr 2022 mit diesen Koeffizienten, da sie sich auf die Dreieckungleichheit auf den Eigenwerten bezieht. [[EW22]](#EW22).
 
-Hinweis: Wir können immer davon ausgehen
+Hinweis: Wir können immer davon ausgehen,
 ```math
 \begin{aligned}
 e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
@@ -173,11 +173,11 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 \end{aligned}
 ```
 
-wobei $$\delta_i$$ Das Kronecker-Delta. Seit $$vol(M)$$ ist ein spektraler Invariant [[HW11]](#HW11), diese Informationen sind bereits aus isospektralen Erwägungen verfügbar.
+wobei $$\delta_i$$ Das Kronecker-Delta. Seit $$vol(M)$$ ist ein spektraler Invariant [[HW11]](#HW11)Diese Informationen sind bereits aus Gründen der Isospektralität verfügbar.
 
-## Theoremnachweis
+## Beweis des Satzes
 
-Notwendigkeit, lassen $$F:(N,h)\rightarrow (M,g)$$ eine Isometrie zwischen geschlossenen Riemannschen Mannigfaltigkeiten sein und die Zielorthonormalbasis von Eigenfunktionen auf $$L^2(N,h)$$ Sei der Rückzug über $$F$$ der orthonormalen Basis $$\set{e^i}$$ am $$(M,g)$$ oben. Seit
+Für die Notwendigkeit, lassen Sie $$F:(N,h)\rightarrow (M,g)$$ eine Isometrie zwischen geschlossenen Riemannschen Mannigfaltigkeiten sein und die Ziel-Orthonormalbasis von Eigenfunktionen auf $$L^2(N,h)$$ der Pullback via $$F$$ der orthonormalen Basis $$\set{e^i}$$ am $$(M,g)$$ oben. Seit
 
 ```math
 \begin{aligned}
@@ -187,9 +187,9 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 \end{aligned}
 ```
 
-mit dem Argument der Notwendigkeit, weil $$\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infty(M)$$.
+Wir sind mit dem Argument der Notwendigkeit fertig, weil $$\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infty(M)$$.
 
-Zur Suffizienz betrachten wir nun die lineare, bijektive orthonormale Eigenfunktionsbasiskarte $$\vec{F}$$ von $$C^\infty(M)$$ bis $$C^\infty(N)$$ Beachten Sie, dass aus den Berechnungen in der [Vorläufig](#preliminaries) oben, $$\vec{F}$$ bewahrt pointwise Produkte für glatte Funktionen (und bewahrt charakteristische Funktionen, wenn erweitert, um $$L^2(M,g)$$) unter der Prämisse, dass $$\set{M^{i,j,k}}$$ ist unveränderlich unter dieser Karte.
+Für die Suffizienz betrachten wir nun die lineare, bijektive orthonormale Eigenfunktion. $$\vec{F}$$ von $$C^\infty(M)$$ bis $$C^\infty(N)$$ Beachten Sie, dass aus den Berechnungen in der [Vorbereitungen](#preliminaries) oben, $$\vec{F}$$ bewahrt Spitzenprodukte für glatte Funktionen (und bewahrt charakteristische Funktionen, wenn sie erweitert werden auf $$L^2(M,g)$$) durch die Prämisse, dass $$\set{M^{i,j,k}}$$ ist unter dieser Karte unveränderlich.
 
 ### Lemma
 
@@ -207,50 +207,67 @@ Lassen $$\set{a_i}$$ eine glatte Teilung der Einheit auf $$M$$.
 \end{aligned}
 ```
 
-So $$\sum_i\hat{a_i}(j) = \delta_j\sqrt{vol(M)}$$ (Kronecker-Delta).
+So $$\sum_i\hat{a_i}(j) = \delta_j\sqrt{vol(M)}$$ (Kroneckerdelta).
 
-durch den dominierten Konvergenzsatz,
+nach dem dominierten Konvergenzsatz,
 
 ```math
 \lim_{p\rightarrow\infty}
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-eine charakteristische Funktion des positiven Maßes für jede einzelne Teilmenge $$\set{x\in M | a_j(x) = 1}$$. Das bedeutet, dass das Lemma für jeden $$a_j$$, da die limitierende charakteristische Funktion eines Satzes mit positivem Maß erhalten bleibt und daher eine einheitliche Norm 1 aufweist, wie alle $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, nach Diagramm (5).
+eine charakteristische Funktion des positiven Maßes für jede disjunktive Teilmenge $$\set{x\in M | a_j(x) = 1}$$. Dies bedeutet, dass die Lemma für jede $$a_j$$, da die limitierende charakteristische Funktion eines Satzes mit positivem Maß erhalten bleibt und somit einheitliche Norm 1 hat, wie alle $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, nach Diagramm (5).
 
-Ohne Verlust der Allgemeinheit können wir das für die reibungslose Teilung der Einheit gezeigte Sonderfallergebnis anwenden. $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, wobei $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ hat ein positives Maß, und das Lemma ist voll bewiesen.
+Ohne Verlust der Allgemeinheit können wir das für die reibungslose Aufteilung der Einheit gezeigte Sonderfallergebnis anwenden $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, wobei $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ hat ein positives Maß, und die Lemma ist vollständig bewiesen.
 
-Seit $$\set {\bar e^i}$$ ist auch eine Fourier-Basis für $$L^2(M,g)$$Aus Gleichung (3) geht hervor, dass $$\vec F(\bar f) = \bar{\vec F}(f)$$. Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), wir haben festgestellt, $$\vec{F}$$ als Isomorphismus von Abelian $$C^*$$ Algebren und somit auf einen Isomorphismus von $$C(M)$$ und $$C(N)$$ in derselben Kategorie.
+Seit $$\set {\bar e^i}$$ ist auch eine Fourier-Basis für $$L^2(M,g)$$Aus der Gleichung (3) wird deutlich, dass $$\vec F(\bar f) = \bar{\vec F}(f)$$. Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), haben wir $$\vec{F}$$ als Isomorphismus des Abelian $$C^*$$ Algebras und können so zu einem Isomorphismus von $$C(M)$$ und $$C(N)$$ in der gleichen Kategorie.
 
-Nun wenden wir das Gelfand-Naimark-Repräsentationstheorem (in kontravarianter Funkform) für unitalen Abelian an $$C^*$$ Algebras [[JC19]](#JC19) um diesen Isomorphismus durch einen Homöomorphismus darzustellen $$F$$ zwischen $$N$$ und $$M$$. Da es sich bei glatten Funktionen um ein Bijektiv handelt, muss es auch glatt sein.
+Jetzt wenden wir den Gelfand-Naimark Repräsentationstheorem (in kontravarianter Funkform) für unitales Abelian an. $$C^*$$ Algebras [[JC19]](#JC19) diesen Isomorphismus durch einen Homomorphismus darzustellen $$F$$ zwischen $$N$$ und $$M$$. Da es bijektiv auf glatte Funktionen ist, muss es auch glatt sein.
 
-Als dieser jetzt Diffeomorphismus $$F$$ Eigenwerte und Eigenfunktionen (durch Hypothese auf $$\vec{F}(f) = f\circ F$$), es muss den Laplacian auf glatten Funktionen erhalten. Daher müssen auch die Hauptsymbole dieser elliptischen Operatoren beibehalten werden. [[MT13]](#MT13). Die Hauptsymbole des Laplacian sind einfach ein weiteres Mittel, um die Riemannsche Metrik auf den betreffenden Mannigfaltigkeiten auszudrücken.
+Wie jetzt Diffeomorphismus $$F$$ Eigenwerte und Eigenfunktionen (nach Hypothese auf $$\vec{F}(f) = f\circ F$$), muss es den Laplacian auf glatten Funktionen bewahren. Daher muss es auch die Hauptsymbole dieser elliptischen Operatoren beibehalten. [[MT13]](#MT13). Die Hauptsymbole des Laplacian sind einfach ein anderes Mittel, um die Riemannsche Metrik auf den fraglichen Mannigfaltigkeiten auszudrücken.
 
-Damit ist der Nachweis des Theorems abgeschlossen.
+Damit ist der Beweis des Theorems abgeschlossen.
 
 ### Diskussion der Vermutung
 
-Mit $$\set{M_0^{i,j,k}}$$ und $$\set{M_1^{i,j,k}}$$ die zwei Dreifachproduktsätze für die Basen darstellen $$\set{e_0^i}$$ und $$\set{e_1^i}$$, lassen $$z_i \in \set{-1,1}$$ Sei der $$\Z_2^\infty$$ Aktion auf solche $$\R$$-Bewertete orthonormale Basis $$\set{e_1^i}$$. Daher müssen wir wählen $$z_i$$ so dass $$\set{z_ie_1^i}$$ Erträge $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+Mit $$\set{M_0^{i,j,k}}$$ und $$\set{M_1^{i,j,k}}$$ Darstellung der beiden Dreifach-Produkt-Sets für die Basen $$\set{e_0^i}$$ und $$\set{e_1^i}$$, lassen $$z_i \in \set{-1,1}$$ sind die $$\Z_2^\infty$$ Aktion auf einer solchen $$\R$$-bewertete orthonormale Basis $$\set{e_1^i}$$. Daher müssen wir wählen $$z_i$$ so dass $$\set{z_ie_1^i}$$ Erträge $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
-Wir beobachten notwendigerweise, dass
+Warum ist das der Fall? Im Allgemeinen ist die Symmetriegruppe, die auf den Raum möglicher orthonormaler Grundlagen von Eigenfunktionen wirkt, der Raum von Unitary Operators. $$U: \mathscr H\rightarrow\mathscr H$$ die mit Projektionen pendeln $$P_{\mathcal V_\lambda}$$ auf die endlichen Eigenräume $$\mathcal V_{\lambda}$$ für jeden einzelnen Eigenwert $$\lambda$$ Der Laplacian. Daher
 
 ```math
-z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \,.
+\begin{aligned}
+P_{\mathcal V_{\lambda}}U(e^i) = UP_{\mathcal V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
+M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
+\end{aligned}
 ```
 
-Wir können hoffen, dass jeder $$k$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$. Auf den ersten Blick scheint dies nicht unmöglich, wenn $$M$$ hat eine "even/odd" Symmetriegruppe und $$e^k$$ ist seltsam, aber die Hoffnung gilt für den flachen Tori-Fall unten (der die einheitliche Eigenwertvielfalt = 1 Bedingung nicht erfüllt). Die Formel (11) für $$z_k$$ erfordert beide $$i$$-Unabhängigkeit und Suffizienz zur Erstellung der Basiskarte $$e_0^i \mapsto z_i e_1^i$$ Konservierungen $$\set{M_0^{i,j,k}}$$. All diese Aspekte bleiben unbekannt.
+ist das Bild von $$M^{i,j,k}$$ unter $$U$$'s Basismaßnahme $$e^i \mapsto U(e^i)$$.
 
-Lassen Sie uns jedoch einige relevante Identitäten berechnen, damit einige unerschrockene zukünftige Forscher diese Vermutung untersuchen können:
+Nun, unter den Bedingungen der Vermutung, jeder der $$\mathcal V_\lambda$$ sind eindimensionale Vektorräume über $$\Complex$$, aber das bedeutet auch, dass sie eindimensionale Vektorräume über $$\Reals$$und so ist die vollständige multiplikative Symmetriegruppe $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+
+Ohne die Multiplizitätsbeschränkung würde die damit verbundene Voraussetzung der Vermutung "Übereinstimmung in absoluten Werten" einfach zur "Beibehaltung der geordneten Menge von Singularwerten von $$\set{M^{i,j,k}}$$, wenn sie als Sammlung von Karten aus $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"ein komplettes Set von Unarianten. In diesem Fall hält die Vermutung durch direkte Anwendung des Satzes (Anwendung auf Multiplizität = 1 reduziert sich auf den trivialen Fall, wenn die $$M^{i,j,k}$$ sind gleich).  Ohne die Erhaltung dieser Invarianten wird angenommen, dass dieses Conjecure falsch ist, mit Gegenbeispielen, die wahrscheinlich über die Sunada-Konstruktion in Dimension 2 verfügbar sind.
+
+Wir stellen auch fest, dass der Beweis der Vermutung darin besteht, diese Implikation zu beweisen:
+
+```math
+z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
+```
+
+Wir hoffen, dass $$k$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$. All diese Aspekte bleiben unbekannt.
+
+Lassen Sie uns jedoch einige relevante Identitäten berechnen, damit einige unerschrockene zukünftige Forscher in diese Vermutung eintauchen können:
 
 ```math
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
-M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
-\text{Now by polarization}\\
-M^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k}}{2},\\
+M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
+\frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\ 
+\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
+
 \text {and so the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\ \\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
 \text{Now with }J \text{ real-analytic}\\
 Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
 &= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
@@ -259,29 +276,30 @@ Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\s
 &= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
 Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
-df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)M^{i,j,k}e^k\\
-&= \frac{1}{4}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_k)(M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k})e^k\\
- = g^2 &= \sum_{i,j,k}\hat{g}(i)\hat{g}(j)M^{i,j,k}e^k \implies\\
+\sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
+&= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
+ = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell\implies\\
  \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
 &= \widehat{g^2}(k). \\
 \end{aligned}
 ```
-Anmerkung: für das eindimensionale flache Tori-Gehäuse unten, $$\tilde{Q}_k(e^i,e^j) = 0$$ seit $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ ist eine echte Ableitung.
+
+Hinweis: für das eindimensionale Flat-Tori-Gehäuse unten, $$\tilde{Q}_k(e^i,e^j) = 0$$ seit $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ ist eine wahre Ableitung.
 
 ## Beispiel
 
-Lassen $$\set{\lambda_i} \subset \R^n$$ ein indexierter Rang sein $$n$$ Gitter von Lie Algebra Gewichten für die Quotientenraumdarstellung $$\frak{g}=\Reals^n$$ als invariante (d.h. konstante) Vektorfelder auf sich selbst, wenn $$\R^n$$ wird auch als $$\frak{g}$$'s zugehörige Lie-Gruppe über einen Torus definiert durch $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Diese Gewichte definieren integrierbare Aufzüge von 1-Formen über den Torus, die sich in lineare Funktionen integrieren $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ als seine Lügengruppe (die den Torus bedeckt). Diese linearen Funktionen können dann gleichmäßig neu skaliert werden (durch $$2\pi \sqrt{-1}$$) und exponentiert, um multiplikative Zeichen zu bilden, die zu einer orthonormalen Basis von $$L^2(\Reals^n/A\Z^n,dx)$$, mit Lebesgue (Haar) Maßnahme $$dx$$.
+Lassen $$\set{\lambda_i} \subset \R^n$$ ein Index, Rang $$n$$ Gitter der Lie Algebra Gewichte für die Quotientenraumdarstellung von $$\frak{g}=\Reals^n$$ als invariante (d. h. konstante) Vektorfelder auf sich selbst, wenn $$\R^n$$ wird auch als $$\frak{g}$$Lie Group über einen Torus definiert durch $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Diese Gewichte definieren integrable Aufzüge von 1-Form über dem Torus, die sich in lineare Funktionen integrieren $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ Wie seine Lügengruppe (die den Torus bedeckt). Diese linearen Funktionalitäten können dann gleichmäßig (durch $$2\pi \sqrt{-1}$$) und exponentiert, um multiplikative Zeichen zu bilden, die zu einer orthonormalen Basis von $$L^2(\Reals^n/A\Z^n,dx)$$, mit Maß Lebesgue (Haar) $$dx$$.
 
-Darüber hinaus diagonalisiert diese Basis gleichzeitig den Laplacian des flachen Torus **weil** der Laplacian das Bild eines symmetrischen, negativ-definitiven quadratischen Casimir-Elements unter dieser (konstanten Koeffizienten linearen Differentialoperator) Quotientenraumdarstellung der universellen Hüllalgebra ist. Daher sind seine Eigenwerte in konstantem Verhältnis (von $$4\pi^2$$) zum Casimir-Element-bestimmten-Längen-Quadrat des Gewichts jedes Charakters im Gitter.
+Darüber hinaus diagonalisiert diese Basis gleichzeitig den flachen Torus Laplacian **weil** der Laplacian das Bild eines symmetrischen, negativ-definiten quadratischen Casimir-Elements unter dieser (konstanten Koeffizienten Linear Differential Operator) Quotientenraumdarstellung der universellen Hüllalgebra ist. Die Eigenwerte sind konstant (von $$4\pi^2$$) zum Casimir-Element-bestimmt-Länge-Quadrat jedes Charakters Gewicht im Gitter.
 
-Wir sehen derzeit die obige Basis
+Wir betrachten derzeit die obige Basis
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-als unsere theoretisch anwendbare Fourier-Basis von orthonormalen (multiplikativen) Eigenfunktionen (dieser Quotientendarstellung des (negativen) euklidischen Casimir-Elements), die direkt dem $$\set{\lambda_i}$$. Nach den Hypothesen unseres Theorems müssen wir $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (mit der euklidischen Norm über die Gewichte).
+als unsere theoretisch anwendbare Fourier-Basis orthonormaler (multiplikativer Charakter) Eigenfunktionen (dieser Quotientendarstellung des (negativen) euklidischen Casimir-Elements) direkt entsprechend $$\set{\lambda_i}$$. Nach den Hypothesen unseres Theorems müssen wir $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (mit der euklidischen Norm auf den Gewichten).
 
-Jetzt können Sie berechnen
+Jetzt können wir berechnen
 
 ```math
 M^{i,j,k} = \begin{cases}
@@ -290,7 +308,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 ```
 
-Da diese Gleichung <span class="eqno"></span> unter linearen Transformationen auf dem Gewichtsgitter *nur* unveränderlich ist $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, nur eine $$L^2$$ orthonormale Eigenfunktions-Basiskarte **die aus einer volumenerhaltenden invertierbaren linearen Karte zwischen zwei solchen indizierten, Rang hervorgerufen wird $$n$$ Gewichtsgitter** halten den "algebraischen/topologischen" indexierten Datensatz $$\set{M^{i,j,k}}$$ invariant.
+Da diese Gleichung <span class="eqno"></span> *nur* invariant unter linearen Transformationen auf dem Gewichtsgitter ist $$(A^{-1})^t\Z^n = \set{\lambda_i}$$nur eine $$L^2$$ orthonormale Eigenfunktion Basiskarte **, die aus einer volumenerhaltenden invertierbaren linearen Karte zwischen zwei solchen indizierten, Rang induziert wird $$n$$ Gewichtsgitter** halten den "algebraischen/topologischen" indizierten Datensatz $$\set{M^{i,j,k}}$$ invariant.
 
 Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ sein $$B\in SO(n,\Reals)$$ auf dem Gewichtsgitter, weil die induzierte $$L^2$$ Eigenfunktion Basiskarte
 
@@ -298,14 +316,14 @@ Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ s
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
-müssen auch die "analytischen" Invarianten erhalten &mdash; die Casimir-Element-induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Laplacian des Flat-Tori.
+müssen auch die "analytischen" Invarianten &mdash; Die Casimir-Element induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Flat-Tori-Laplacian.
 
-Dieses darstellungstheoretische Konto [[AK01]](#AK01) entspricht genau der vorherigen Entwicklung von *Gitterkongruenz* [[NRR22]](#NRR22) Traditionell verwendet, um Isometrieklassen von flachen Tori zu beschreiben. Tatsächlich ist die Matrix-Transpose einer solchen linearen Karte $$B\in SO(n,\Reals)$$, wie im vorherigen Absatz beschrieben, **ist** die kontravariante Riemannsche Isometrie zwischen den Tori, wie sie durch Anwendung des *Gelfand-Naimark-Darstellungstheorems* während der [Nachweis](#proof-of-theorem) von unserer [Satz](#theorem).
+Dieses repräsentationstheoretische Konto [[AK01]](#AK01) entspricht genau der vorherigen Entwicklung von *Gitterkongruenz* [[NRR22]](#NRR22) Traditionell verwendet, um Isometrieklassen von flachen Tori zu beschreiben. Tatsächlich ist die Matrix-Transpose einer solchen linearen Karte $$B\in SO(n,\Reals)$$, wie im vorstehenden Absatz beschrieben, **ist** die kontravariante Riemannsche Isometrie zwischen den Tori, wie sie durch die Anwendung des *Gelfand-Naimark Repräsentationstheorem* während der [Nachweis](#proof-of-theorem) von unseren [Satz](#theorem).
 
 Anzahl Bestätigungen
 
-Die ursprüngliche Forschung wurde zum Teil durch einen gütigen James Simons Research Award in den Jahren 1995-1996 und die großzügige Unterstützung eines Alfred P. finanziert. Sloan Dissertation Fellowship in 1996-1997 an der Universität in Stony Brook.
+Die ursprüngliche Forschung wurde 1995-1996 teilweise durch einen freundlichen James Simons Research Award und die großzügige Unterstützung eines Alfred P. finanziert. Sloan Dissertation Fellowship 1996-1997 an der Universität in Stony Brook.
 
-Der Autor dankt auch Tanya Christiansen, Carolyn Gordon, Hamid Hezari, Harish Seshadri und insbesondere Leon Takhtajan für ihre technische Unterstützung und Überprüfung bei der Erstellung dieses Manuskripts zur Veröffentlichung.
+Der Autor möchte sich auch bei Tanya Christiansen, Carolyn Gordon, Hamid Hezari, Harish Seshadri und insbesondere bei Leon Takhtajan für ihre technische Unterstützung und Überprüfung bei der Vorbereitung dieses Manuskripts zur Veröffentlichung bedanken.
 
 <!-- $Date$ $Author$ $Revision$ -->
