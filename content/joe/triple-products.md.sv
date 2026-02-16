@@ -5,7 +5,7 @@ dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verifierad=27538
+status: verifierad=27548
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -245,9 +245,9 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 Nu under förutsättningarna för gissningen, var och en av $$\mathcal V_\lambda$$ är ett dimensionellt vektorrum över $$\Complex$$, men det betyder också att de är endimensionella vektorrum över $$\Reals$$och så är hela den multiplikativa symmetrigruppen $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Utan multiplikationsbegränsningen skulle hypotesens tillhörande förutsättning "om överensstämmelse i absoluta värden" helt enkelt bli "bevarande av den ordnade uppsättningen av singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsinvarianter.
+Utan multiplikationsbegränsningen skulle hypotesens tillhörande förutsättning "om överensstämmelse i absoluta värden" helt enkelt bli "bevarande av den ordnade uppsättningen av singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsinvarianter.  Vi är betydligt mindre övertygade om att denna generaliserade gissning är sann, eftersom det kan vara möjligt att producera ett motexempel via explicit Sunada-konstruktion.
 
-Dessutom observerar vi att beviset för den ursprungliga gissningen innebär att bevisa denna implikation:
+Att komma tillbaka till den ursprungliga gissningen, observerar vi att beviset för den ursprungliga gissningen innebär att bevisa denna implikation:
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
