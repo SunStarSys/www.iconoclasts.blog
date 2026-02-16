@@ -6,7 +6,7 @@ keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, phy
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: vérifié=27548
+status: vérifié=27570
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -248,7 +248,7 @@ Or, dans les conditions de la conjecture, chacun des $$\mathcal V_\lambda$$ sont
 
 Sans la contrainte de multiplicité, le prérequis associé de la conjecture "concernant l'accord en valeurs absolues" deviendrait simplement " la préservation de l'ensemble ordonné de valeurs singulières de $$\set{M^{i,j,k}}$$ (compté avec multiplicité), lorsqu'il est considéré comme un ensemble de cartes $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", qui sont un ensemble robuste d'invariants unitaires.  Nous sommes beaucoup moins convaincus que cette conjecture généralisée est vraie, car il peut être possible de produire un contre-exemple via une construction Sunada explicite.
 
-En revenant à la conjecture originale, nous observons que la preuve de la conjecture originale implique de prouver cette implication :
+En revenant à la conjecture originale, nous observons que la preuve implique d'établir cette implication :
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies

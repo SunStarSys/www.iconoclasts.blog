@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=27548
+status: verified=27570
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -243,7 +243,7 @@ Now under the conditions of the conjecture, each of the $$\mathcal V_\lambda$$ a
 
 Without the multiplicity constraint, the conjecture's associated prerequisite "regarding agreement in absolute values" would simply become "preservation of the ordered set of singular values of $$\set{M^{i,j,k}}$$ (counted with multiplicity), when viewed as a collection of maps from $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", which are a robust set of Unitary Invariants.  We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
 
-Getting back to the original conjecture, we observe that the proof of the original conjecture involves proving this implication:
+Getting back to the original conjecture, we observe that the proof involves establishing this implication:
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies

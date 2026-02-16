@@ -4,7 +4,7 @@ categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: 驗證 =27548
+status: 驗證 =27570
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -246,7 +246,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 如果沒有多重性限制條件，則形容詞的相關先決條件「以絕對值來處理協議」只會變成「保留已排序的單一值集」$$\set{M^{i,j,k}}$$ 檢視為地圖集合時 (以多重性計算)，$$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$」，這是一組強大的單體不變量。我們對這種廣義的形容詞有極大的信心，因為可能可以通過明確的 Sunada 建築來產生一個反範例。
 
-回到原始的形容詞，我們觀察到原始的形容詞的證明涉及證明這種意涵：
+回到原始的形容詞，我們觀察到證明涉及建立此意涵：
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies

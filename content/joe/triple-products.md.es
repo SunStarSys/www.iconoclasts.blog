@@ -6,7 +6,7 @@ keywords: Teoría espectral, geometría riemanniana, problemas inversos, física
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verificado=27548
+status: verificado=27570
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -248,7 +248,7 @@ Ahora, bajo las condiciones de la conjetura, cada uno de los $$\mathcal V_\lambd
 
 Sin la restricción de la multiplicidad, el requisito previo asociado a la conjetura "con respecto al acuerdo en valores absolutos" simplemente se convertiría en "preservación del conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado con multiplicidad), cuando se ve como una colección de mapas de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", que son un conjunto robusto de invariantes unitarios.  Estamos significativamente menos seguros de que esta conjetura generalizada es cierta, ya que puede ser posible producir un contraejemplo a través de la construcción explícita de Sunada.
 
-Volviendo a la conjetura original, observamos que la prueba de la conjetura original implica demostrar esta implicación:
+Volviendo a la conjetura original, observamos que la prueba implica establecer esta implicación:
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
