@@ -4,7 +4,7 @@ categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: 驗證 =27516
+status: 驗證 =27538
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -244,7 +244,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 現在在形容詞的條件下，每個$$\mathcal V_\lambda$$ 一維向量空間超過$$\Complex$$，但這也表示它們是維度向量空間的上方$$\Reals$$，因此完整的乘對稱群組為$$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-如果沒有多重性限制條件，則形容詞的相關先決條件「以絕對值來處理協議」只會變成「保留已排序的單一值集」$$\set{M^{i,j,k}}$$，檢視為地圖集合時，從$$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$」，這是一組強大的單體不變量。
+如果沒有多重性限制條件，則形容詞的相關先決條件「以絕對值來處理協議」只會變成「保留已排序的單一值集」$$\set{M^{i,j,k}}$$ 檢視為地圖集合時 (以多重性計算)，$$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$」，這是一組強大的單體不變量。
 
 此外，我們也觀察到原始形容詞的證明涉及證明此意涵：
 

@@ -6,7 +6,7 @@ keywords: Teoría espectral, geometría riemanniana, problemas inversos, física
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
 published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verificado=27516
+status: verificado=27538
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -246,7 +246,7 @@ es la imagen de $$M^{i,j,k}$$ bajo $$U$$acción de base $$e^i \mapsto U(e^i)$$.
 
 Ahora, bajo las condiciones de la conjetura, cada uno de los $$\mathcal V_\lambda$$ son espacios vectoriales unidimensionales sobre $$\Complex$$, pero eso también significa que son espacios vectoriales unidimensionales sobre $$\Reals$$, por lo que el grupo de simetría multiplicativa completa es $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Sin la restricción de la multiplicidad, el requisito previo asociado a la conjetura "con respecto al acuerdo en valores absolutos" simplemente se convertiría en "preservación del conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$, cuando se ve como una colección de mapas de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", que son un conjunto robusto de invariantes unitarios.
+Sin la restricción de la multiplicidad, el requisito previo asociado a la conjetura "con respecto al acuerdo en valores absolutos" simplemente se convertiría en "preservación del conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado con multiplicidad), cuando se ve como una colección de mapas de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", que son un conjunto robusto de invariantes unitarios.
 
 Además, observamos que la prueba de la conjetura original implica demostrar esta implicación:
 
