@@ -2,47 +2,38 @@
 archived: ~
 categories: Perl，Orion，Performance，效能，Apache
 dependencies: '*.md.zh-TW'
-keywords: perl，dylan，static，method，lookup，compile，sealed，密封，apache，mod_perl，效能
+keywords: perl，dylan，static，靜態，方法，lookup，查詢，compile，編譯，sealed，apache，mod_perl，performance，效能
 published: ~
 status: 已封存
-title: Perl 7 功能要求：類型語彙的密封子
+title: Perl 7 功能要求：輸入詞彙的密封子
 ---
 
 <div class="right">
 
-![日星星級限定](../images/sunstarstaronly.png).
+![日本人無修正](../images/sunstarstaronly.png).
 
 </div>
 
 ## 問題
 
-{# lede #}Perl 5 的 OO 程式實際執行方法查詢效能超載比直接、具名子常式呼叫多出 50%{# lede #}
+{# lede #}Perl 5 的 OO 程式實際執行方法查尋比直接、具名子常式呼叫多出 50% 的效能超載{# lede #}.
 
-## 最初的解決方案：Doug MacEachern 的方法查詢最佳化
+## 最初的解決方案：Doug MacEachern 的方法查找優化
 
-Doug 是 mod_perl 專案的創作者，回歸 90s 中期，因此顯然撰寫了高效能 Perl 的作品。他的許多貢獻之一[p5p](https://lists.perl.org/list/perl5-porters.html) 使用方法 + <code> 將 OO 方法查詢超載的效能降低一半&#64;ISA</code> 階層快取，可查尋 mod_perl 物件 (例如) 的執行時期物件方法`Apache2::RequestRec`
+Doug 是 mod_perl 專案的創作者，回傳在 90s 中，因此顯然是高效能的 Perl。他的許多貢獻之一[p5p](https://lists.perl.org/list/perl5-porters.html) 是透過使用方法 + <code>，將 OO 方法查詢負荷的效能降低一半&#64;ISA</code> 階層快取，讓程式實際執行物件方法查尋 mod_perl 物件 (例如`Apache2::RequestRec` 盡可能簡化。但它只讓我們走半路。
 
-這不是處理來電的問題`C 結構` get-set 存取子方法&mdash; 許多 mod_perl API 的常見情況。Perl 在 httpd 的程式實際執行方法呼叫查尋罰款`結構 request_rec *`，mod_perl 會透過下列方式公開：`Apache2::RequestRec`
+這不是處理呼叫的問題`C 結構` 取得集存取器方法&mdash; 有許多 mod_perl API 的常見情況。Perl 在 httpd 的程式實際執行方法呼叫查尋罰款`結構 request_rec *`，該 mod_perl 會透過`Apache2::RequestRec` 模組的執行順序與呼叫的完整執行順序相同。對於讓數百萬個 XS 方法呼叫秒的 mod_perl 支持網站而言，這是非常浪費寶貴的 CPU 週期。
 
-什麼[Doug 正在尋找](https://www.perl.com/pub/2000/06/dougpatch.html/).
+什麼[道格在尋找](https://www.perl.com/pub/2000/06/dougpatch.html/) 這是告訴 Perl 5 在編譯階段執行方法查詢的一種方法，它與具名子常式呼叫的方式。每次道格試過，他都擊中社會或技術本質的障礙。也許是時候以 Perl 7 的冒險，在這個想法中再次通過。
 
-## [指標指令碼]({{snippetA.pretty_uri}}).
+## [指標命令檔]({{snippetA.pretty_uri}}).
 
 [snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
 
-## 基準結果
+## 指標結果
 
 ```perl
 1..3
-sealed: compiling main->reentrant lookup.
-sealed: compiling main->bar lookup.
-sub _foo :sealed {
-    package Foo;
-    use warnings;
-    use strict;
-    my main $x = shift();
-    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
-}
 sealed: compiling main->foo lookup.
 sub sealed :sealed {
     use warnings;
@@ -103,6 +94,15 @@ sub sealed2 :sealed {
         $obj->reentrant:compiled;
     }
 }
+sealed: compiling main->reentrant lookup.
+sealed: compiling main->bar lookup.
+sub _foo :sealed {
+    package Foo;
+    use warnings;
+    use strict;
+    my main $x = shift();
+    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
+}
 ok 1
              Rate  class method   anon   func sealed
 class  16129032/s     --    -4%   -26%   -33%   -36%
@@ -117,29 +117,28 @@ sealed 662252/s    21%     --
 ok 3
 ```
 
-## 建議的 Perl 7 解決方案：`：密封`
+## 提議的 Perl 7 解決方案：`：已密封` 打字語彙的子常式
 
 範例程式碼：
 
 ```perl
-use v7.0;
+use v5.38;
 use Apache2::RequestRec;
 
-sub handler :sealed {
-  my Apache2::RequestRec $r = shift;
+sub handler :Sealed (Apache2::RequestRec $r) {
   $r->content_type("text/html"); #compile time method lookup
 }
 ```
 
-## Production-Quality，Robust Perl v5.28+ 原型：sealed.pm {{facts.releases.sealed.tag}}
+## 生產 - 質量，強健性保存 v5.28+ 原型：sealed.pm {{facts.releases.sealed.tag}} (CPAN).
 
-您可以在下列位置取得 perl 5.30+ 的編譯指示：`sealed.pm` Pod 應執行 mod_perl2 (含執行緒) 和 httpd-2.4 (含事件 mpm)，而不是以 **any** 比例執行 segfault。測試日期`第 11.4 期` 以及`烏本土 22.04`
+5.30 以上版本的編譯指示可從以下位置取得：`sealed.pm` Pod 應執行 mod_perl2 (含 ithreads 和 httpd-2.4 (含事件 mpm)，而不是 **any** 比例的 segfault。測試日期`Solaris 11.4` 與`烏本圖 22.04` 在 amd64 上。
 
-好玩，試試看[單鍵修補]({{snippetB.pretty_uri}}) 終止`ModPerl::RegistryCooker`
+為了有趣，請試試看[猴修補]({{snippetB.pretty_uri}}) 至`ModPerl::RegistryCooker`:
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-它會啟用其效果`子處理程式 ：密封的 {script here}` 在您所有的`ModPerl：：登錄` script，類似[此項目](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+它會啟用下列項目的效果：`子處理程式 ：密封的 {script go here}` 在您所有的`ModPerl：：登錄` 文稿，類似的東西[這一個](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -177,10 +176,10 @@ time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
 req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
-請參閱<https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>。尋找`t/bench.pl`
+請參閱<https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>。尋找`t/bench.pl` 在上層目錄中。
 
-這將允許 Perl 5 執行範例代碼`content_type`
+這將允許 Perl 5 執行範例代碼`content_type` 在編譯階段進行方法查詢，不會造成任何回溯比較問題或獲得的 CPAN 程式碼器，因為此功能會針對應用程式開發人員進行目標。不可繼承的 OO 模組作者。
 
-這種「成就」的想法很感激地遭竊[狄倫](https://jim.studt.net/dirm/interim-5.html). [閱讀此文](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
+這個「成就」的想法是從[狄倫](https://jim.studt.net/dirm/interim-5.html). [閱讀此文章](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) CPython 從十年前開始的努力。
 
-<!-- $Date: 2025-03-21 15:33:26 -0700 (Fri, 21 Mar 2025) $ $Author: joe $ $Revision: 25741 $ -->
+<!-- $Date: 2026-01-08 19:55:12 -0700 (Thu, 08 Jan 2026) $ $Author: joe $ $Revision: 27387 $ -->

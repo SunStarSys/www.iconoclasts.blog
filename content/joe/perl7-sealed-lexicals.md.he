@@ -2,47 +2,38 @@
 archived: ~
 categories: פרל, אוריון, ביצועים, אפאצ'י
 dependencies: '*.md.he'
-keywords: perl,dylan,סטטי,שיטה,lookup,הידור, אטום,מטמון,mod_perl,ביצועים
+keywords: perl,dylan,סטטי,שיטה,lookup,הידור,חסום,apache,mod_perl,ביצועים
 published: ~
 status: הועבר לארכיב
-title: 'Perl 7: בקשת תכונה: תת-חסום לקסיקלים מוקלדים'
+title: 'Perl 7: בקשת תכונה: תת חתום לקסיקלים מוקלדים'
 ---
 
 <div class="right">
 
-![כוכב שמש בלבד](../images/sunstarstaronly.png).
+![כוכבת פורנו](../images/sunstarstaronly.png).
 
 </div>
 
-## הבעיה
+# הבעיה
 
-{# lede #}לקוד שיטת זמן ריצה של Perl 5 יש 50% יותר תקורת ביצועים מאשר הפעלה ישירה בשם של שגרת משנה{# lede #}
+{# lede #}ל-lookup של שיטת זמן הריצה OO של Perl 5 יש תקורת ביצועים גבוהה ב-50% בהשוואה להפעלה ישירה בשם שגרת משנה{# lede #}.
 
 ## הפתרון הראשוני: אופטימיזציות קוד השיטה של דאג מקאשרן
 
-דאג היה היוצר של פרויקט mod_perl באמצע 90s, אז ברור שכתיבת ביצועים גבוהים פרל היה המבצר שלו. אחת התרומות הרבות שלו [p5p](https://lists.perl.org/list/perl5-porters.html) היה לקצץ את קנס הביצועים של תקורת קוד שיטת OO בחצי, באמצעות שיטה + <code> &#64;ISA</code> מטמון היררכיה לביצוע lookup של שיטת אובייקט זמן ריצה לאובייקטים mod_perl כמו `Apache2::RequestRec`
+דאג היה היוצר של הפרויקט mod_perl בחזרה באמצע 90s, אז ברור שכתיבת ביצועים גבוהים פרל היה המבצר שלו. אחת התרומות הרבות שלו ל [p5p](https://lists.perl.org/list/perl5-porters.html) היה לחתוך את קנס הביצועים של תקורת lookup של שיטת OO לחצי, באמצעות השיטה + <code> &#64;מטמון היררכיה של ISA</code> כדי להפוך את קוד שיטת אובייקט זמן הריצה לאובייקטים של mod_perl כמו `Apache2::RequestRec` יעיל ככל האפשר.  זה רק מחצית הדרך לשם.
 
-זו אינה בעיה מטרידה עם שיחות ל `מבנה C` שיטות get-set accessor &mdash; המצב המשותף עם ממשקי API רבים של mod_perl. שיטת זמן ריצה של פרל - קנס קוד שיחה על httpd's `מבנה request_rec *`mod_perl חושף באמצעות `Apache2::RequestRec`
+זו אינה בעיה עם קריאות ל- `מבנה C` שיטות get-set accessor &mdash; המצב הנפוץ עם ממשקי API רבים של mod_perl. קנס lookup לשיטת זמן ריצה של פרל על httpd's `מבנה request_rec *`, ש-mod_perl חושף דרך `Apache2::RequestRec` מודול, נמצא באותו סדר גודל של ביצוע מלא של השיחה.  עבור mod_perl אתרים מגובים ביצוע מיליוני שיטת XS קורא שנייה, זה בזבוז נורא של מחזורי CPU יקרים.
 
-מה [דאג חיפש](https://www.perl.com/pub/2000/06/dougpatch.html/).
+מה [דאג חיפש](https://www.perl.com/pub/2000/06/dougpatch.html/) הייתה דרך לומר לפרל 5 לבצע את חיפוש השיטה בזמן ההידור, כפי שהוא עושה עם קריאות שגרתיות בשם.  בכל פעם שדאג ניסה, הוא נתקל במחסומים בעלי אופי חברתי או טכני.  אולי הגיע הזמן לעבור על הרעיון הזה עם כניסתו של פרל 7.
 
 ## [תסריט בוחן ביצועים]({{snippetA.pretty_uri}}).
 
 [snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
 
-## תוצאות בוחן ביצועים
+מס' תוצאות בוחן ביצועים
 
 ```perl
 1..3
-sealed: compiling main->reentrant lookup.
-sealed: compiling main->bar lookup.
-sub _foo :sealed {
-    package Foo;
-    use warnings;
-    use strict;
-    my main $x = shift();
-    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
-}
 sealed: compiling main->foo lookup.
 sub sealed :sealed {
     use warnings;
@@ -103,6 +94,15 @@ sub sealed2 :sealed {
         $obj->reentrant:compiled;
     }
 }
+sealed: compiling main->reentrant lookup.
+sealed: compiling main->bar lookup.
+sub _foo :sealed {
+    package Foo;
+    use warnings;
+    use strict;
+    my main $x = shift();
+    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
+}
 ok 1
              Rate  class method   anon   func sealed
 class  16129032/s     --    -4%   -26%   -33%   -36%
@@ -117,29 +117,28 @@ sealed 662252/s    21%     --
 ok 3
 ```
 
-## מוצע פתרון Perl 7: `:אטום`
+## פתרון פרל 7 מוצע: `:חסום` שגרות משנה לקסיקלים מוקלדים
 
 קוד לדוגמה:
 
 ```perl
-use v7.0;
+use v5.38;
 use Apache2::RequestRec;
 
-sub handler :sealed {
-  my Apache2::RequestRec $r = shift;
+sub handler :Sealed (Apache2::RequestRec $r) {
   $r->content_type("text/html"); #compile time method lookup
 }
 ```
 
-## ייצור-איכות, חזק פרל v5.28+ אב טיפוס: sealed.pm {{facts.releases.sealed.tag}}
+## ייצור-איכות, פרל חזק v5.28+ אב טיפוס: sealed.pm {{facts.releases.sealed.tag}} (על CPAN).
 
-הוראות הידור עבור perl 5.30+ זמינות ב `sealed.pm` תרמיל אם ברצונך להריץ mod_perl2 w/ ithreads ו-httpd-2.4 w/ event mpm, ולא segfault בקנה מידה של **any**.  נבדק ב- `סולאריס 11.4` וגם `אובונטו 22.04`
+הוראות הידור עבור פרל 5.30+ זמינות ב `sealed.pm` אם תרצה להריץ את mod_perl2 w/ ithreads ו-httpd-2.4 w/ event mpm, ולא segfault בקנה מידה **any**.  נבדק ב- `סולאריס 11.4` וגם `אובונטו 22.04` ב-amd64.
 
-בשביל הכיף, נסו את זה [טלאי קוף]({{snippetB.pretty_uri}}) אל `ModPerl::RegistryCooker`
+בשביל הכיף, נסו את זה [טלאי קוף]({{snippetB.pretty_uri}}) אל `ModPerl::RegistryCooker`:
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-הוא מאפשר את ההשפעות של `מטפל משנה: {script חסום מעביר לכאן}` על כל שלך `ModPerl::רישום` כתבות, משהו כמו [אחד כזה](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+זה מאפשר את ההשפעות של `sub handler: {script חתום כאן}` על כל שלך `ModPerl::רישום` תסריט, משהו כמו [זה אחד](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -177,10 +176,10 @@ time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
 req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
-ראה <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. חפש `טי/bench.pl`
+ראה <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. חפש `t/bench.pl` בספריית האב.
 
-זה יאפשר Perl 5 לעשות את הקוד לדוגמה של `content_type`
+זה יאפשר פרל 5 לעשות את הקוד לדוגמה `content_type` שיטה-lookup בזמן ההידור, מבלי לגרום לבעיות back-compat או מקודדים CPAN אגורה, שכן תכונה זו הייתה מכוונת למפתחי יישומים. לא מחברים מודול OO הניתנים לירושה.
 
-הרעיון הזה נגנב בחינם [דילן](https://jim.studt.net/dirm/interim-5.html).  [קרא את זה](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
+הרעיון הזה נגנב בחינם. [דילן](https://jim.studt.net/dirm/interim-5.html).  [קרא את זה](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) למאמץ CPython מלפני יותר מעשור.
 
-<!-- $Date: 2025-03-21 15:33:26 -0700 (Fri, 21 Mar 2025) $ $Author: joe $ $Revision: 25741 $ -->
+<!-- $Date: 2026-01-08 19:55:12 -0700 (Thu, 08 Jan 2026) $ $Author: joe $ $Revision: 27387 $ -->

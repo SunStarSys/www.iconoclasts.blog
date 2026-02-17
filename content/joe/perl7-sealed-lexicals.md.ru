@@ -1,32 +1,32 @@
 ---
 archived: ~
-categories: Перл, Орион, Перформанс, Апачи
+categories: Перл, Орион, Производительность, Апач
 dependencies: '*.md.ru'
-keywords: perl,dylan,static,ethod,lookup,compile, Герметичный,apache,mod_perl,производительность
+keywords: perl,dylan,static,метод,поиск,компиляция,запечатанный,apache,mod_perl,производительность
 published: ~
-status: архивировано
-title: 'Perl 7 Функция Запрос: запечатанные подмножества для типизированных лексик'
+status: архивированный
+title: 'Запрос функции Perl 7: запечатанные под для типизированных лексикалов'
 ---
 
 <div class="right">
 
-![солнцезвезда](../images/sunstarstaronly.png).
+![солнцезвездатолько](../images/sunstarstaronly.png).
 
 </div>
 
 ## Проблема
 
-{# lede #}Поиск метода выполнения OO для Perl 5 имеет на 50% больше накладных расходов на производительность, чем прямой вызов подпрограммы с именем{# lede #}
+{# lede #}Накладные расходы на производительность метода OO Perl 5 на 50% больше, чем на прямой вызов подпрограммы с именем{# lede #}.
 
-## Первоначальное решение: оптимизация поиска метода Дага МакЭахерна
+## Исходное решение: оптимизация поиска метода Дага МакЭачерна
 
-Даг был создателем проекта mod_perl еще в середине 90s, поэтому очевидно, что написание высокой производительности Перла было его форте. Один из его многочисленных вкладов в [p5p](https://lists.perl.org/list/perl5-porters.html) сокращение производительности для накладных расходов по поиску метода OO вдвое с помощью метода + <code> &#64;Кэш иерархии</code> ISA для поиска метода объекта среды выполнения для объектов mod_perl, таких как `Apache2::RequestRec`
+Даг был создателем проекта mod_perl еще в середине 90s, поэтому очевидно, что написание высокой производительности Перл было его форте. Один из его многочисленных вкладов в [p5p](https://lists.perl.org/list/perl5-porters.html) сократить накладные расходы на поиск метода OO вдвое, используя метод + <code> &#64;Кэш иерархии</code> ISA для поиска метода объекта времени выполнения для объектов mod_perl, таких как `Apache2::RequestRec` максимально упрощенным.  Но это только на полпути.
 
-Это не мелочь с призывами к `Структура C` методы аксессуаров get-set &mdash; общая ситуация со многими API mod_perl. Штраф за поиск для вызова метода выполнения Perl в httpd `Структура request_rec *`, что mod_perl показывает через `Apache2::RequestRec`
+Это не пустяковая проблема с вызовами к `Структура C` методы получения &mdash; общая ситуация со многими API mod_perl. Штраф за поиск вызова метода времени выполнения Perl для httpd `Структура request_rec *`, который mod_perl предоставляет через `Apache2::RequestRec` модуль, находится на том же порядке величины полного выполнения вызова.  Для сайтов, поддерживаемых mod_perl и использующих миллионы методов XS, это ужасная трата драгоценных циклов процессора.
 
-Что [Даг искал](https://www.perl.com/pub/2000/06/dougpatch.html/).
+Что [Даг ищет](https://www.perl.com/pub/2000/06/dougpatch.html/) Это был способ сказать Perl 5, чтобы выполнить поиск метода во время компиляции, как это происходит с именованными вызовами подпрограммы.  Каждый раз, когда Даг пытался, он сталкивался с препятствиями социального или технического характера.  Возможно, пришло время сделать еще один шаг к этой идее с появлением Perl 7.
 
-## [Сценарий эталонного теста]({{snippetA.pretty_uri}}).
+## [Базовый сценарий]({{snippetA.pretty_uri}}).
 
 [snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
 
@@ -34,15 +34,6 @@ title: 'Perl 7 Функция Запрос: запечатанные подмн�
 
 ```perl
 1..3
-sealed: compiling main->reentrant lookup.
-sealed: compiling main->bar lookup.
-sub _foo :sealed {
-    package Foo;
-    use warnings;
-    use strict;
-    my main $x = shift();
-    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
-}
 sealed: compiling main->foo lookup.
 sub sealed :sealed {
     use warnings;
@@ -103,6 +94,15 @@ sub sealed2 :sealed {
         $obj->reentrant:compiled;
     }
 }
+sealed: compiling main->reentrant lookup.
+sealed: compiling main->bar lookup.
+sub _foo :sealed {
+    package Foo;
+    use warnings;
+    use strict;
+    my main $x = shift();
+    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
+}
 ok 1
              Rate  class method   anon   func sealed
 class  16129032/s     --    -4%   -26%   -33%   -36%
@@ -117,29 +117,28 @@ sealed 662252/s    21%     --
 ok 3
 ```
 
-## Предлагаемое решение Perl 7: `:запечатанный`
+## Предлагаемое решение Perl 7: `:запечатанный` подпрограммы для типизированных лексикалов
 
-Пример кода:
+Образец кода:
 
 ```perl
-use v7.0;
+use v5.38;
 use Apache2::RequestRec;
 
-sub handler :sealed {
-  my Apache2::RequestRec $r = shift;
+sub handler :Sealed (Apache2::RequestRec $r) {
   $r->content_type("text/html"); #compile time method lookup
 }
 ```
 
-## Производство-Качество, Надежный Perl v5.28+ Прототип: sealed.pm {{facts.releases.sealed.tag}}
+## Качество продукции, надежный прототип Perl v5.28+: sealed.pm {{facts.releases.sealed.tag}} (на CPAN).
 
-Инструкции по компиляции для perl 5.30+ доступны в `sealed.pm` pod следует запустить mod_perl2 w/ ithreads и httpd-2.4 w/ event mpm, а не segfault в **any** масштабе.  Протестировано `Солярис 11.4` и `Убунту 22.04`
+Инструкции по компиляции для перла 5.30+ доступны в `sealed.pm` pod, если вы хотите запустить mod_perl2 с ithreads и httpd-2.4 w/ event mpm, а не segfault в **любом** масштабе.  Протестировано `Солярис 11.4` и `Убунту 22.04` на amd64.
 
-Для удовольствия попробуйте это [патч обезьяны]({{snippetB.pretty_uri}}) по `ModPerl::RegistryCooker`
+Для удовольствия попробуйте это [патч для обезьяны]({{snippetB.pretty_uri}}) по `ModPerl::RegistryCooker`:
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Это позволяет воздействовать на `под обработчик :запечатанный {script go here}` на всех ваших `ModPerl::Реестр` Сценарии, что-то вроде [этот](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+Это позволяет воздействовать на `обработчик под:запечатанный {script go here}` на всех ваших `ModPerl::Реестр` Сценарии, что-то вроде [этот](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -177,10 +176,10 @@ time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
 req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
-См. <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Поиск `т/bench.pl`
+См. <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Искать `т/bench.pl` в родительском каталоге.
 
-Это позволит Perl 5 сделать образец кода `content_type`
+Это позволит Perl 5 выполнять примеры кода `content_type` метод-поиск во время компиляции, не вызывая каких-либо проблем с бэк-компатом или поврежденных CPAN-кодеров, поскольку эта функция будет ориентирована на разработчиков приложений. Не наследуемые авторы ОО-модулей.
 
-Эта идея безвозмездно украдена из [Дилан](https://jim.studt.net/dirm/interim-5.html).  [Читать далее](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
+Эта идея безвозмездно украдена из [Дилан](https://jim.studt.net/dirm/interim-5.html).  [Прочитать](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) для усилий CPython более десяти лет назад.
 
 <!-- $Date$ $Author$ $Revision$ -->

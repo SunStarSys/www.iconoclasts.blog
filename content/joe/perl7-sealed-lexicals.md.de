@@ -2,47 +2,38 @@
 archived: ~
 categories: Perl, Orion, Performance, Apache
 dependencies: '*.md.de'
-keywords: perl,dylan,statisch,Methode,Lookup,kompilieren,versiegelt,apache,mod_perl,Performance
+keywords: perl,dylan,statisch,Methode,lookup,compile,sealed,apache,mod_perl,Performance
 published: ~
 status: archiviert
-title: 'Perl 7 Feature Request: versiegelte Subs für typisierte Lexika'
+title: 'Perl 7 Feature Request: versiegelte Unterteile für typisierte Lexika'
 ---
 
 <div class="right">
 
-![Sonnenstaronly](../images/sunstarstaronly.png).
+![Sonnenstern](../images/sunstarstaronly.png).
 
 </div>
 
 ## Das Problem
 
-{# lede #}Der OO-Laufzeitmethoden-Lookup von Perl 5 hat 50% mehr Performance-Overhead als ein direkter, benannter Subroutinen-Aufruf{# lede #}
+{# lede #}Der OO-Laufzeitmethoden-Lookup von Perl 5 hat 50% mehr Performance-Overhead als ein direkter, benannter Subroutinen-Aufruf{# lede #}.
 
-## Die erste Lösung: Doug MacEacherns Methoden-Lookup-Optimierungen
+## Die erste Lösung: Methoden-Lookup-Optimierungen von Doug MacEachern
 
-Doug war der Schöpfer des mod_perl-Projekts in der Mitte von 90s, also war offensichtlich das Schreiben von Hochleistungs-Perl sein Schicksal. Einer seiner vielen Beiträge zu [p5p](https://lists.perl.org/list/perl5-porters.html) sollte die Performanceeinbußen beim Overhead der OO-Methode-Lookup halbieren, indem eine Methode verwendet wurde + <code> &#64;ISA</code>-Hierarchiecache, um die Suche nach Laufzeitobjektmethoden für mod_perl-Objekte wie `Apache2::RequestRec`
+Doug war der Schöpfer des mod_perl-Projekts zurück in der Mitte von 90s, so offensichtlich schreiben hohe Leistung Perl war sein  forté. Einer seiner vielen Beiträge zu [p5p](https://lists.perl.org/list/perl5-porters.html) die Performanceeinbußen beim Lookup-Overhead der OO-Methode mit einer Methode + <code> um die Hälfte reduzieren &#64;ISA</code>-Hierarchiecache, um die Laufzeitobjektmethode für mod_perl-Objekte wie `Apache2::RequestRec` möglichst rationalisiert.  Aber es bringt uns nur auf halbem Weg dorthin.
 
-Dies ist kein kleines Problem mit Anrufen an `C Struktur` get-set-Accessor-Methoden &mdash; die allgemeine Situation mit vielen mod_perl-APIs. Laufzeit-Methode-Aufruf-Lookup-Strafe für HTTPD `Struktur request_rec *`, die mod_perl über die `Apache2::RequestRec`
+Dies ist kein trifling Problem mit Anrufen an `C-Struktur` get-set-Accessor-Methoden &mdash; die allgemeine Situation mit vielen mod_perl-APIs. Perls Runtime-Methode-Aufruf-Lookup-Strafe für HTTPDs `Struktur request_rec *`, die mod_perl über die `Apache2::RequestRec` Das Modul befindet sich in der gleichen Größenordnung wie die vollständige Ausführung des Aufrufs.  Für von mod_perl unterstützte Sites, die Millionen von XS-Methodenaufrufen pro Sekunde ausführen, ist dies eine schreckliche Verschwendung wertvoller CPU-Zyklen.
 
-Was [Doug sucht](https://www.perl.com/pub/2000/06/dougpatch.html/).
+Was [Doug sucht nach](https://www.perl.com/pub/2000/06/dougpatch.html/) war eine Möglichkeit, Perl 5 anzuweisen, die Methodensuche zur Kompilierungszeit auszuführen, wie dies bei benannten Subroutinenaufrufen der Fall ist.  Jedes Mal, wenn Doug es versuchte, traf er Straßensperren entweder sozialer oder technischer Natur.  Vielleicht ist es an der Zeit, mit dem Aufkommen von Perl 7 einen weiteren Pass auf diese Idee zu machen.
 
 ## [Benchmark-Skript]({{snippetA.pretty_uri}}).
 
 [snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
 
-## Benchmarkergebnisse
+## Benchmark-Ergebnisse
 
 ```perl
 1..3
-sealed: compiling main->reentrant lookup.
-sealed: compiling main->bar lookup.
-sub _foo :sealed {
-    package Foo;
-    use warnings;
-    use strict;
-    my main $x = shift();
-    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
-}
 sealed: compiling main->foo lookup.
 sub sealed :sealed {
     use warnings;
@@ -103,6 +94,15 @@ sub sealed2 :sealed {
         $obj->reentrant:compiled;
     }
 }
+sealed: compiling main->reentrant lookup.
+sealed: compiling main->bar lookup.
+sub _foo :sealed {
+    package Foo;
+    use warnings;
+    use strict;
+    my main $x = shift();
+    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
+}
 ok 1
              Rate  class method   anon   func sealed
 class  16129032/s     --    -4%   -26%   -33%   -36%
@@ -117,29 +117,28 @@ sealed 662252/s    21%     --
 ok 3
 ```
 
-## Vorgeschlagene Perl 7-Lösung: `:versiegelt`
+## Vorgeschlagene Lösung Perl 7: `:versiegelt` Subroutinen für typisierte Lexika
 
 Beispielcode:
 
 ```perl
-use v7.0;
+use v5.38;
 use Apache2::RequestRec;
 
-sub handler :sealed {
-  my Apache2::RequestRec $r = shift;
+sub handler :Sealed (Apache2::RequestRec $r) {
   $r->content_type("text/html"); #compile time method lookup
 }
 ```
 
-## Produktionsqualität, Robust Perl v5.28+ Prototyp: sealed.pm {{facts.releases.sealed.tag}}
+## Produktionsqualität, Robustes Perl v5.28+ Prototyp: sealed.pm {{facts.releases.sealed.tag}} (auf CPAN).
 
-Kompilieranweisungen für perl 5.30+ sind in der `sealed.pm` pod sollte mod_perl2 w/ ithreads und httpd-2.4 w/ event mpm und nicht segfault bei **any**-Skalierung ausführen.  Getestet am `Solaris 11.4` und `Ubuntu 22,04 Uhr`
+Kompilierungsanweisungen für perl 5.30+ sind in der `sealed.pm` pod, wenn Sie mod_perl2 mit ithreads und httpd-2.4 mit Ereignis-pm ausführen möchten, und nicht segfault auf **any**-Skala.  Getestet am `Solaris 11.4` und `Ubuntu 22.04` auf amd64.
 
-Zum Spaß versuchen Sie es [Affenpatch]({{snippetB.pretty_uri}}) bis `ModPerl::RegistryCooker`
+Zum Spaß, probieren Sie das [Affe Patch]({{snippetB.pretty_uri}}) bis `ModPerl::RegistryCooker`:
 
 [snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
 
-Es ermöglicht die Auswirkungen von `Sub-Handler: Verschlüsseltes {script goes here}` auf all Ihren `ModPerl::Registrierung` Skripte, so etwas wie [dieses eine](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+Es ermöglicht die Wirkung von `Unter-Handler: Verschlüsselte {script goes here}` auf alle Ihre `ModPerl::Registry` Skripte, etwas wie [diese](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
@@ -177,10 +176,10 @@ time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
 req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
-Siehe <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Suchen nach `t/bench.pl`
+Siehe <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Suchen nach `t/bench.pl` im übergeordneten Verzeichnis.
 
-Dadurch kann Perl 5 den Beispielcode ausführen `content_type`
+Dadurch kann Perl 5 den Beispielcode ausführen `content_type` Methoden-Lookup zur Kompilierungszeit, ohne Back-Compat-Probleme oder verschlimmerte CPAN-Codierer zu verursachen, da diese Funktion auf Anwendungsentwickler ausgerichtet wäre. Keine vererbbaren OO-Modulautoren.
 
-Diese verderbliche Idee wird unentgeltlich gestohlen [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Lesen Sie mehr](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf).
+Diese perlish Idee ist unentgeltlich gestohlen von [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Lesen Sie dies](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) für die CPython Anstrengung von vor mehr als einem Jahrzehnt.
 
 <!-- $Date$ $Author$ $Revision$ -->
