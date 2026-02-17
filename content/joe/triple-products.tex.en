@@ -95,7 +95,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 To be isometric to $(M,g)$, it is a necessary and sufficient condition for another isospectral closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $\set{M^{i,j,k}}$ under each basis.
 \end{theorem}
 
-\textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this instance. we offer the following
+\textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this instance, we offer the following
 
 \begin{conjecture}
 \label{conj}
@@ -134,12 +134,12 @@ since $f$ is uniquely representable as its rapidly converging \textit{Fourier Se
 \widehat{f_1 f_2}(k) &= \sum_{i,j}^\infty\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k} \\
 \implies \\
 f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
-f_1 = f^p_2,\space p > 2 \implies \\
-\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)...\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x)
+f_1 &= f^p_2,\, p > 2 \implies \\
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,\ldots,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)\ldots\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}\ldots M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x)
 \end{aligned}
 \end{equation}
 
-and so, critically, any multivariate polynomial $\wp \in \mathbb{C}[z_1,...,z_l]$ (on smooth functions) commutes with any spectrum-preserving $\Delta$-eigenfunction orthonormal basis map $\vec{F}$ that preserves $\set{M^{i,j,k}}$:
+and so, critically, any multivariate polynomial $\wp \in \mathbb{C}[z_1,\ldots,z_l]$ (on smooth functions) commutes with any spectrum-preserving $\Delta$-eigenfunction orthonormal basis map $\vec{F}$ that preserves $\set{M^{i,j,k}}$:
 
 \begin{equation}
 \label{fig}
@@ -161,8 +161,8 @@ and by uniqueness, we have the following identity
 
 \begin{equation}
 \begin{aligned}
-\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\,,\space \forall k\geq 0 \\
-\iff f&=f^2 \, \space a.e.
+\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\,,\, \forall k\geq 0 \\
+\iff f&=f^2 \, a.e.
 \end{aligned}
 \end{equation}
 
@@ -225,13 +225,13 @@ By the dominated convergence theorem,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx\,,
 \end{equation}
 
-which is a characteristic function of positive measure on each disjoint subset $\set{x\in M | a_j(x) = 1}$. This means the Lemma is proven for each $a_j$, since the limiting characteristic function of a set with positive measure is preserved, and hence has uniform norm 1, as do all $a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\mathbb{N}$, by Diagram~\ref{fig}.
+which is a characteristic function of positive measure on each disjoint subset $\set{x\in M | a_j(x) = 1}$. This means the Lemma is proven for each $a_j$, since the limiting characteristic function of a set with positive measure is preserved, and hence has uniform norm 1, as do all $a_j^p,\, \vec{F}(a_j^p)=\vec{F}(a_j)^p,\, p\in\mathbb{N}$, by Diagram~\ref{fig}.
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$, where $ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$ has positive measure, and the Lemma is proven in full.
 
 \end{subproof}
 
-Since $\set {\bar e^i}$ is also a Fourier basis for $L^2(M,g)$, it is clear from Equation \ref{eqn:Fourier} that $\vec F(\bar f) = \bar{\vec F}(f)$. This means that on a dense set of $C(M)$ (and $C(N)$), we have established $\vec{F}$ as an isomorphism of Abelian $C^*$ algebras, and thus can be extended to an isomorphism of $C(M)$ and $C(N)$ in the same category.
+Since $\set {\bar e^i}$ is also a Fourier basis for $L^2(M,g)$, it is clear from Equation~\ref{eqn:Fourier} that $\vec F(\bar f) = \bar{\vec F}(f)$. This means that on a dense set of $C(M)$ (and $C(N)$), we have established $\vec{F}$ as an isomorphism of Abelian $C^*$ algebras, and thus can be extended to an isomorphism of $C(M)$ and $C(N)$ in the same category.
 
 Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for unital Abelian $C^*$ algebras \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$. Since $\vec{F}$ is bijective on smooth functions, $F$ too must be smooth.
 
@@ -266,7 +266,7 @@ Getting back to the original conjecture, we observe that the proof involves esta
 \begin{equation}
 \label{fml}
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\mathbb{N},\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
-\exists r,s,t \in \mathbb{N}\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
+\exists r,s,t \in \mathbb{N}\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\,.
 \end{equation}
 
 We may hope that for any given $k$, $M_0^{i,i,k}$ cannot be identically $0$ for all $i$. At first blush, this doesn't seem impossible if $M$ has an "even/odd" symmetry group, and $e^k$ is odd, but the hope holds true for the flat-tori case below (which does not satisfy the uniform eigenvalue multiplicity = 1 condition). Furthermore, the Formula~\ref{fml} for $z_k$ requires both $i$-independence, and sufficiency, to establish the basis map $e_0^i \mapsto z_i e_1^i$ preserves $\set{M_0^{i,j,k}}$. All of these aspects remain unknown.
@@ -281,8 +281,8 @@ M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambd
 M^{i,j,k} &= \frac{\bra{(e^i+e^j)^2 - (e^i - e^j)^2}\ket{e^k}}{4} = \frac{M^{i,i,k} + M^{j,j,k} - \bra{(e^i-e^j)^2}\ket{e^k}}{2},\\
 \text {and so the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\ \\
-\text{Now with }J \text{ real-analytic}\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}.\\
+\text{Now with}\, J\, \text{real-analytic}\\
 Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
 &= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
@@ -303,7 +303,7 @@ Note: for the one-dimensional flat-tori case below, $\tilde{Q}_k(e^i,e^j) = 0$ s
 \section{Example}
 \label{sec:ex}
 
-Let $\set{\lambda_i} \subset \mathbb{R}^n$ be an indexed, rank $n$ lattice of Lie Algebra weights for the quotient space representation of $\mathfrak{g}=\mathbb{R}^n$ as translation invariant (i.e., constant) vector fields on itself, when $\mathbb{R}^n$ is also viewed as $\mathfrak{g}$'s associated Lie Group over a torus defined by $\mathbb{R}^n/A\mathbb{Z}^n, A \in GL(n,\mathbb{R})$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $\bra{x} \lambda_i\rangle,\space x\in\mathbb{R}^n$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $2\pi \sqrt{-1}$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $L^2(\mathbb{R}^n/A\mathbb{Z}^n,dx)$, with Lebesgue (Haar) measure $dx$.
+Let $\set{\lambda_i} \subset \mathbb{R}^n$ be an indexed, rank $n$ lattice of Lie Algebra weights for the quotient space representation of $\mathfrak{g}=\mathbb{R}^n$ as translation invariant (i.e., constant) vector fields on itself, when $\mathbb{R}^n$ is also viewed as $\mathfrak{g}$'s associated Lie Group over a torus defined by $\mathbb{R}^n/A\mathbb{Z}^n, A \in GL(n,\mathbb{R})$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $\bra{x} \lambda_i\rangle,\, x\in\mathbb{R}^n$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $2\pi \sqrt{-1}$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $L^2(\mathbb{R}^n/A\mathbb{Z}^n,dx)$, with Lebesgue (Haar) measure $dx$.
 
 Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian, because the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $4\pi^2$) to the Casimir-element-determined-length-squared of each character's weight in the lattice.
 
@@ -333,7 +333,7 @@ However, in order to apply Theorem~\ref{thm}, it is essential that such a linear
 \{e^{2\pi\sqrt{-1}\bra{x}B\lambda_i\rangle}/\sqrt{|\det A|}\}_{i=0}^\infty
 \end{equation}
 
-must also preserve the "analytic" invariants -- the Casimir-element induced figure $4\pi^2\lVert\lambda_i\rVert^2$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
+must also preserve the "analytic" invariants -- the Casimir-element induced figure $4\pi^2\lVert\lambda_i\rVert^2$ for each indexed weight, i.e.\ the individual eigenvalues of the flat-tori's Laplacian.
 
 This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of \textit{lattice congruence} \cite{NRR22} traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $B\in SO(n,\mathbb{R})$, as described in the prior paragraph, \textbf{is} the contravariant Riemannian isometry between the tori, as provided by
 application of the \textit{Gelfand-Naimark Representation Theorem} during the proof of Theorem~\ref{thm}.
