@@ -1,0 +1,156 @@
+---
+archived: ~
+categories: ~
+dependencies: /categories/*/index.html.ko
+keywords: 위키,지식
+published: ~
+status: 공개됨
+title: 의,에 의해 및 Iconoclasts
+---
+
+<div class=" float-lg-end" id="news">
+  <div class="card border-success" style="max-width:25rem;background-color:transparent">
+    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">이코노클라스트</a></div>
+
+<div class="card-body">
+<small>
+<pre class="card-title">
+명사 [ C ]   형식
+미국 /aˈḱ.nə.klæst/
+일반적으로 반대하는 사람
+인정된 믿음과 전통
+</pre>
+</small>
+
+&nbsp;
+
+{% for elt in iconoclasts.content|shuffle|slice:":3" %}
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.key}}" style="max-width:560;max-height:315" title="{{elt.name}}"></iframe>
+</div>
+&nbsp;
+{% endfor %}
+
+</div>
+</div>
+
+&nbsp;
+
+</div>
+
+![이코노클라스트](images/iconoclast.jpg).
+
+<div style="max-width:900px">
+
+환영합니다
+
+<center>
+
+**STEM/Academia/Politics/문화/아트**
+
+</center>
+
+블로그 커뮤니티! 지금 등록하십시오. [연락처](/contact) 우리의 프로모션 출시 동안 페이지!
+
+관련 리뷰: Please check out...  [오리온](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion 로고" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Enterprise Jamstack 위키</em></span>&trade; &mdash; Orion은 고유의 SCM 기반 엔터프라이즈 제품입니다. [인어-마인드맵](https://www.sunstarsys.com/orion/features) 통합!
+
+&nbsp;
+
+<div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/f55XLGCs3H0" style="min-width:400px;min-height:275px" title="비디오"></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+</div>
+
+&nbsp;
+
+## 추천 블로그
+
+&nbsp;
+
+- <span class="badge bg-success">신규</span> [자원봉사자 오픈 소스 기여자 요청](/jimjag/requiem) @jimjag에 의해,
+
+- [Eigenfunctions와 스펙트럼 기하학의 삼중 제품](/joe/triple-products) @joe=에 의해; SSRN에 게시,
+
+- [애플리케이션 성능](/joe/performance) &mdash; 작업 예제: 관찰 가능한 병목에서 효과적인 해결까지,
+
+- [정보 보안](/joe/infosec) &mdash; 기본 개념의 추상화는 광범위한 실제 적용성과 선명도로 이어집니다.
+
+- [펄 7에 대한 봉인된 렉시칼](/joe/perl7-sealed-lexicals) &mdash; 함수 정의에 <span class="text-info">:sealed</span>를 추가하고 형식이 지정된 모든 렉시칼에 대해 컴파일 타임 메소드 조회 속도를 더 높입니다.
+
+- [Git 및 비 거부, 재방문됨](/joe/git-and-non-repudiation) &mdash; 2025년 업데이트된 솔루션!
+
+&nbsp;
+
+## 사이트맵
+
+&nbsp;
+
+- [영어](sitemap.html.en)
+- [스페인어](sitemap.html.es)
+- [독일어](sitemap.html.de)
+- [프랑스어](sitemap.html.fr)
+- [포르투갈어](sitemap.html.pt-BR)
+- [러시아어](sitemap.html.ru)
+- [중국어](sitemap.html.zh-TW)
+- [한국어](sitemap.html.ko)
+- [일본어](sitemap.html.ja)
+- [아랍어](sitemsp.html.ar)
+- [히브리어](sitemap.html.he)
+- [스웨덴어](sitemap.html.sv).
+
+&nbsp;
+
+## 카테고리 색인
+
+&nbsp;
+
+<div style="text-align:justify">
+{% for d in deps|dictsort:0 %}<button type="button" class="btn btn-success"><a href="{{d.0}}">{{d.0|dirname|basename}}</a></button> {% endfor %}
+</div>
+
+<style type="text/css">
+h2 { font-size: 18px }
+
+button.btn a {
+    color:#fff;
+}
+div.jumbotron button.btn {
+    margin-bottom:5px;
+}
+
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes news {
+  0% {
+    left: 1000px;
+	top: 1000px;
+	position:relative;
+  }
+
+100% {top: 5px;position:relative}
+
+}
+
+#news {
+	animation: news;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date$ $Author$ $Revision$ -->
