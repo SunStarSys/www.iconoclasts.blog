@@ -16,11 +16,11 @@ title: Av, Av och För Iconoclasts
 <small>
 <pre class="card-title">
 substantiv [ C ]   formell
-US /aɪˈkː.nə.klæst/
-en person som starkt motsätter sig
+Förenta staterna /aɪˈkː.nə.klæst/
+en person som starkt motsätter sig i allmänhet
 accepterade övertygelser och traditioner
 </pre>
-
+</small>
 
 &nbsp;
 
@@ -50,9 +50,9 @@ Välkommen till vår
 
 </center>
 
-Bloggvärlden! Registrera dig redan idag på [Kontakta oss](/contact).
+Bloggvärlden! Anmäl dig idag på [Kontakta oss](/contact) sida under vår kampanjlansering!
 
-Vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orions logotyp" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wikisystemet Enterprise Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru mindmap](https://www.sunstarsys.com/orion/features).
+Också, vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotyp för Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wikin för Enterprise Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](https://www.sunstarsys.com/orion/features) integration!
 
 &nbsp;
 
@@ -69,31 +69,35 @@ Vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-
 
 &nbsp;
 
-- <span class="badge bg-success">Ny</span> [Requiem för volontärens bidragare med öppen källkod](/jimjag/requiem).
+- <span class="badge bg-success">Nytt</span> [Requiem för volontärens bidragare av öppen källkod](/jimjag/requiem) genom @jimjag,
 
-- [Trippelprodukter av Eigenfunctions och Spectral Geometry](/joe/triple-products).
+- [Trippelprodukter av Eigenfunktioner och spektral geometri](/joe/triple-products) av @joe=; publicerad på SSRN,
 
-- [Applikationsprestanda](/joe/performance) &mdash;
+- [Applikationsprestanda](/joe/performance) &mdash; Ett fungerande exempel: från en observerbar flaskhals till en effektiv lösning.
 
-- [Informationssäkerhet](/joe/infosec) &mdash;
+- [Informationssäkerhet](/joe/infosec) &mdash; abstraktion av de grundläggande begreppen leder till bred verklig tillämplighet och klarhet,
 
-- [Förseglade Lexicals för Perl 7](/joe/perl7-sealed-lexicals) &mdash;
+- [Förseglade Lexicals för Perl 7](/joe/perl7-sealed-lexicals) &mdash; lägg till <span class="text-info">:förseglad</span> i en funktionsdefinition och njut av extra snabbheten i uppslagningar av kompileringsmetoder för alla typangivna lexikaler.
 
-- [Git och Non-Repudiation, Revisited](/joe/git-and-non-repudiation) &mdash;
+- [Git och Non-repudiation, Revisited](/joe/git-and-non-repudiation) &mdash; lösningar uppdaterade för 2025!
 
 &nbsp;
 
-Antal webbkartor
+Antal webbplatskartor
 
 &nbsp;
 
 - [Engelska](sitemap.html.en)
 - [Spanska](sitemap.html.es)
-- [tyska](sitemap.html.de)
+- [Tyska](sitemap.html.de)
 - [Franska](sitemap.html.fr)
-- [ryska](sitemap.html.ru)
+- [Portugisiska](sitemap.html.pt-BR)
+- [Ryska](sitemap.html.ru)
 - [kinesiska](sitemap.html.zh-TW)
-- [hebreiska](sitemap.html.he)
+- [Koreanska](sitemap.html.ko)
+- [Japanska](sitemap.html.ja)
+- [arabiska](sitemsp.html.ar)
+- [Hebreiska](sitemap.html.he)
 - [Svenska](sitemap.html.sv).
 
 &nbsp;
@@ -149,4 +153,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-12-19 14:19:37 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25536 $ -->
+<!-- $Date: 2025-01-03 11:22:01 -0700 (Fri, 03 Jan 2025) $ $Author: joe $ $Revision: 25555 $ -->

@@ -5,22 +5,22 @@ dependencies: /categories/*/index.html.ru
 keywords: вики,знание
 published: ~
 status: опубликовано
-title: О, По и Для Иконоборцев
+title: Для иконоборцев,
 ---
 
 <div class=" float-lg-end" id="news">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Иконокласт</a></div>
+    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Иконоборчество</a></div>
 
 <div class="card-body">
 <small>
 <pre class="card-title">
-имя существительное [ C ]   формальный
+имя существительное [ C ]   форма
 США /aɪˈkː.nə.klæst/
-человек, который в целом выступает против
-общепринятые верования и традиции
+человек, который выступает против
+принятые верования и традиции
 </pre>
-
+</small>
 
 &nbsp;
 
@@ -38,7 +38,7 @@ title: О, По и Для Иконоборцев
 
 </div>
 
-![Иконокласт](images/iconoclast.jpg).
+![Иконоборчество](images/iconoclast.jpg).
 
 <div style="max-width:900px">
 
@@ -46,13 +46,13 @@ title: О, По и Для Иконоборцев
 
 <center>
 
-**STEM/Academia/Politics/Culture/Arts**
+**STEM/Академия/Политика/Культура/Искусство**
 
 </center>
 
-Сообщество блогов! Зарегистрируйтесь прямо сейчас [Свяжитесь с нами](/contact).
+Сообщество блогов! Зарегистрируйтесь сегодня в [Контакты](/contact) страница во время нашего рекламного запуска!
 
-Также, пожалуйста, проверьте  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-страница Enterprise Jamstack.</em></span>&trade; &mdash; Orion является единственным корпоративным продуктом на основе управления цепочками поставок с собственным [русалка-карта](https://www.sunstarsys.com/orion/features).
+Также, пожалуйста, проверьте  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-страница Enterprise Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](https://www.sunstarsys.com/orion/features) интеграция!
 
 &nbsp;
 
@@ -69,36 +69,40 @@ title: О, По и Для Иконоборцев
 
 &nbsp;
 
-- <span class="badge bg-success">Создать</span> [Реквием для волонтера с открытым исходным кодом](/jimjag/requiem).
+- <span class="badge bg-success">Новое</span> [Реквием для волонтера с открытым исходным кодом](/jimjag/requiem) @jimjag,
 
-- [Тройные продукты собственных функций и спектральной геометрии](/joe/triple-products).
+- [Тройные продукты собственных функций и спектральной геометрии](/joe/triple-products) по @joe=; опубликовано в SSRN,
 
-- [Производительность приложений](/joe/performance) &mdash;
+- [Производительность приложения](/joe/performance) &mdash; рабочий пример: от наблюдаемого узкого места до эффективного разрешения,
 
-- [Информационная безопасность](/joe/infosec) &mdash;
+- [Информационная безопасность](/joe/infosec) &mdash; абстрагирование основных понятий приводит к широкой реальной применимости и ясности,
 
-- [Герметичные лексические для Perl 7](/joe/perl7-sealed-lexicals) &mdash;
+- [Герметичные лексикалы для перла 7](/joe/perl7-sealed-lexicals) &mdash; добавьте <span class="text-info">:sealed</span> в определение функции и наслаждайтесь дополнительной скоростью поиска метода времени компиляции для всех его типизированных лексик,
 
-- [Git и Non-Repudiation, повторное посещение](/joe/git-and-non-repudiation) &mdash;
+- [Git и Non-Repudiation, Пересмотрено](/joe/git-and-non-repudiation) &mdash; Решения обновлены на 2025 год!
 
 &nbsp;
 
-## Карты сайта
+## Карта сайта
 
 &nbsp;
 
 - [Британские единицы](sitemap.html.en)
 - [Испанский](sitemap.html.es)
-- [Немецкий](sitemap.html.de)
+- [немецкий](sitemap.html.de)
 - [Французский](sitemap.html.fr)
+- [Португальский](sitemap.html.pt-BR)
 - [Русский](sitemap.html.ru)
 - [Китайский](sitemap.html.zh-TW)
-- [иврит](sitemap.html.he)
-- [Шведский](sitemap.html.sv).
+- [Корейский](sitemap.html.ko)
+- [Японский](sitemap.html.ja)
+- [Арабский](sitemsp.html.ar)
+- [Иврит](sitemap.html.he)
+- [шведский](sitemap.html.sv).
 
 &nbsp;
 
-## Индекс категории
+# индекс категории
 
 &nbsp;
 
@@ -149,4 +153,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2024-12-19 14:19:37 -0700 (Thu, 19 Dec 2024) $ $Author: joe $ $Revision: 25536 $ -->
+<!-- $Date: 2025-01-03 11:22:01 -0700 (Fri, 03 Jan 2025) $ $Author: joe $ $Revision: 25555 $ -->
