@@ -1,3 +1,12 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 <!DOCTYPE html>
 <html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}>
 <head>
@@ -8,11 +17,11 @@
     <meta content="Joe Schaefer" name="author">
     <meta content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}" name="keywords">
     <meta content="black" name="theme-color">
-	<meta content="/images/iconoclast.jpg" property="og:image">
+    <meta content="/images/iconoclast.jpg" property="og:image">
     <title>{% block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
-	{% if permalink %}
-	<link href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}" rel="bookmark">
-	{% endif %}
+    {% if permalink %}
+    <link href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}" rel="bookmark">
+    {% endif %}
     <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet">
     <link href="/css/katex.min.css" media="screen" rel="stylesheet">
     <link href="/css/mermaid.min.css" media="screen" rel="stylesheet">
@@ -34,8 +43,8 @@
 <body>
   <header class="container-xxl navbar navbar-expand-lg fixed-top" style="border-bottom:solid #aaa 1px; background-color: #fff;">
     <div class="container-fluid">
-	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img alt="Iconoclasta" src="/images/iconoclast"></a>
-      <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="La Torre" class="navbar-toggler" data-bs-target="#navbarResponsive" data-bs-toggle="collapse" type="button">
+	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img alt="Iconoclast" src="/images/iconoclast"></a>
+      <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Navegación de entradas" class="navbar-toggler" data-bs-target="#navbarResponsive" data-bs-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -43,28 +52,28 @@
         <ul class="navbar-nav">
           <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
             active
-            {% endif %}"><a class="nav-link text" href="/bloggers.html{{lang}}">Iconoclastas</a></li>
+            {% endif %}"><a class="nav-link text" href="/bloggers.html{{lang}}">Iconoclastos</a></li>
           <li class="nav-item{% if path|starts_with:"/contact.md" %}
              active
              {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">Contacto</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="products" role="button">Productos... <span class="caret"></span></a>
             <ul aria-labelledby="products" class="dropdown-menu me-auto mb-2 mb-lg-0">
-              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orión&trade; Wiki de empresa</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orión&trade; Plataforma wiki de Jamstack</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
-                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Planes de precios de Orion</a></li>
+                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Planes de precios de órdenes</a></li>
             </ul>
           </li>
 
 <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="more" role="button">Más... <span class="caret"></span></a>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="more" role="button">Más información... <span class="caret"></span></a>
             <ul aria-labelledby="more" class="dropdown-menu me-auto mb-2 mb-lg-0">
               <li class="dropdown-item">
                 <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">Origen de sitio</a>
               </li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">i18n</li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Español</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Inglés</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Español</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">Alemán</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Francés</a></li>
@@ -90,7 +99,7 @@
           <input name="lang" type="hidden" value="{{ lang }}">
           <input name="markdown_search" type="hidden" value="1">
           <input class="form-control me-2" type="text" name="regex"
-               placeholder="Búsqueda recursiva de CPRE" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
+               placeholder="PCRE Recursing Search" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
 	    </form>
   </div>
 </header>

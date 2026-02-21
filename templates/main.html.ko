@@ -1,3 +1,12 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 <!DOCTYPE html>
 <html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}>
 <head>
@@ -50,7 +59,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="products" role="button">제품... <span class="caret"></span></a>
             <ul aria-labelledby="products" class="dropdown-menu me-auto mb-2 mb-lg-0">
-              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">오리온&trade; 엔터프라이즈 위키</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">오리온&trade; Jamstack 위키 플랫폼</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
                 href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">오리온 가격 플랜</a></li>
             </ul>

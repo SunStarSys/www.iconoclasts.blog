@@ -1,3 +1,12 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 <!DOCTYPE html>
 <html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}>
 <head>
@@ -8,11 +17,11 @@
     <meta content="Joe Schaefer" name="author">
     <meta content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}" name="keywords">
     <meta content="black" name="theme-color">
-	<meta content="/images/iconoclast.jpg" property="og:image">
+    <meta content="/images/iconoclast.jpg" property="og:image">
     <title>{% block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
-	{% if permalink %}
-	<link href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}" rel="bookmark">
-	{% endif %}
+    {% if permalink %}
+    <link href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}" rel="bookmark">
+    {% endif %}
     <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet">
     <link href="/css/katex.min.css" media="screen" rel="stylesheet">
     <link href="/css/mermaid.min.css" media="screen" rel="stylesheet">
@@ -35,7 +44,7 @@
   <header class="container-xxl navbar navbar-expand-lg fixed-top" style="border-bottom:solid #aaa 1px; background-color: #fff;">
     <div class="container-fluid">
 	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img alt="איקונוקלסט" src="/images/iconoclast"></a>
-      <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="עברית" class="navbar-toggler" data-bs-target="#navbarResponsive" data-bs-toggle="collapse" type="button">
+      <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="איפוס סיסמה" class="navbar-toggler" data-bs-target="#navbarResponsive" data-bs-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -50,7 +59,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="products" role="button">רשימת מוצרים... <span class="caret"></span></a>
             <ul aria-labelledby="products" class="dropdown-menu me-auto mb-2 mb-lg-0">
-              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">אוריון&trade; Enterprise Wiki</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">אוריון&trade; פלטפורמת Jamstack Wiki</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
                 href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">תוכניות תמחור של אוריון</a></li>
             </ul>
@@ -81,7 +90,7 @@
 
 <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             active
-            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">מופעל באמצעות...</a>
+            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">מופעל על ידי...</a>
           </li>
         </ul>
 		</div>
@@ -90,7 +99,7 @@
           <input name="lang" type="hidden" value="{{ lang }}">
           <input name="markdown_search" type="hidden" value="1">
           <input class="form-control me-2" type="text" name="regex"
-               placeholder="PCRE חיפוש רקורסיבי" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
+               מציין מקום="PCRE Recursive Search" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
 	    </form>
   </div>
 </header>

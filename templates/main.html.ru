@@ -1,5 +1,14 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 <!DOCTYPE html>
-<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}>
+<html lang={{ lang|cut:"." }}{% ifequal lang ".he" %} dir=rtl (Русский){% endifequal %}>
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -8,11 +17,11 @@
     <meta content="Joe Schaefer" name="author">
     <meta content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}" name="keywords">
     <meta content="black" name="theme-color">
-	<meta content="/images/iconoclast.jpg" property="og:image">
+    <meta content="/images/iconoclast.jpg" property="og:image">
     <title>{% block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
-	{% if permalink %}
-	<link href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}" rel="bookmark">
-	{% endif %}
+    {% if permalink %}
+    <link href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}" rel="bookmark">
+    {% endif %}
     <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet">
     <link href="/css/katex.min.css" media="screen" rel="stylesheet">
     <link href="/css/mermaid.min.css" media="screen" rel="stylesheet">
@@ -34,7 +43,7 @@
 <body>
   <header class="container-xxl navbar navbar-expand-lg fixed-top" style="border-bottom:solid #aaa 1px; background-color: #fff;">
     <div class="container-fluid">
-	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img alt="Иконок" src="/images/iconoclast"></a>
+	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img alt="Иконоборчество" src="/images/iconoclast"></a>
       <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Навигация" class="navbar-toggler" data-bs-target="#navbarResponsive" data-bs-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -50,9 +59,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="products" role="button">Продукты... <span class="caret"></span></a>
             <ul aria-labelledby="products" class="dropdown-menu me-auto mb-2 mb-lg-0">
-              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Орион&trade; Корпоративные Wiki</a></li>
-              <li class="dropdown-item"><a class=«nav-link текст-темный»
-                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Ценовые планы Orion</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Орион&trade; Платформа Jamstack Wiki</a></li>
+              <li class="dropdown-item"><a class=nav-link text-dark
+                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}»>Планы ценообразования Orion</a></li>
             </ul>
           </li>
 
@@ -64,9 +73,9 @@
               </li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">i18n</li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Английский</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Британские единицы</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Испанский</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">Немецкий</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">немецкий</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Французский</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Русский</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Китайский</a></li>
@@ -81,7 +90,7 @@
 
 <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             active
-            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">На базе...</a>
+            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">При поддержке...</a>
           </li>
         </ul>
 		</div>
@@ -90,7 +99,7 @@
           <input name="lang" type="hidden" value="{{ lang }}">
           <input name="markdown_search" type="hidden" value="1">
           <input class=form-control me-2 type=text name=regex
-               placeholder="Рекурсивный поиск PCRE" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
+               placeholder=«Рекурсивный поиск PCRE» value=»{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
 	    </form>
   </div>
 </header>
@@ -108,7 +117,7 @@
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-        <img alt="Значок изменения" src="/images/edit.png" />
+        <img alt="Значок редактирования" src="/images/edit.png" />
       </a>
   </div>
   <h1>{{ headers.title|safe }}</h1>

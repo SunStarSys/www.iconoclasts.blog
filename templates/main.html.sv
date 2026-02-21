@@ -1,3 +1,12 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 <!DOCTYPE html>
 <html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}>
 <head>
@@ -8,11 +17,11 @@
     <meta content="Joe Schaefer" name="author">
     <meta content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}" name="keywords">
     <meta content="black" name="theme-color">
-	<meta content="/images/iconoclast.jpg" property="og:image">
+    <meta content="/images/iconoclast.jpg" property="og:image">
     <title>{% block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
-	{% if permalink %}
-	<link href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}" rel="bookmark">
-	{% endif %}
+    {% if permalink %}
+    <link href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}" rel="bookmark">
+    {% endif %}
     <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet">
     <link href="/css/katex.min.css" media="screen" rel="stylesheet">
     <link href="/css/mermaid.min.css" media="screen" rel="stylesheet">
@@ -43,16 +52,16 @@
         <ul class="navbar-nav">
           <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
             active
-            {% endif %}"><a class="nav-link text" href="/bloggers.html{{lang}}">Ikonoklast</a></li>
+            {% endif %}"><a class="nav-link text" href="/bloggers.html{{lang}}">Ikonokloster</a></li>
           <li class="nav-item{% if path|starts_with:"/contact.md" %}
              active
              {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">Kontakt</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="products" role="button">Produkter... <span class="caret"></span></a>
             <ul aria-labelledby="products" class="dropdown-menu me-auto mb-2 mb-lg-0">
-              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orion&trade; Wiki för företag</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orion&trade; Wiki-plattformen Jamstack</a></li>
               <li class="dropdown-item"><a class="nav-link text-mörk"
-                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Orionsprisplaner</a></li>
+                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Prisplaner för org.</a></li>
             </ul>
           </li>
 
@@ -66,11 +75,11 @@
               <li class="dropdown-header text-dark">i18n</li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Engelska</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Spanska</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">tyska</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">Tyska</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Franska</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">ryska</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Ryska</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">kinesiska</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">hebreiska</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebreiska</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Svenska</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Taxonomier</li>
@@ -90,7 +99,7 @@
           <input name="lang" type="hidden" value="{{ lang }}">
           <input name="markdown_search" type="hidden" value="1">
           <input class="form-control me-2" type="text" name="regex"
-               placeholder="PCRE rekursiv sökning" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
+               platshållare="PCRE Rekursiv sökning" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-search"></i></button>
 	    </form>
   </div>
 </header>
