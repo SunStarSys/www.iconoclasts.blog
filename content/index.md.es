@@ -52,7 +52,7 @@ Bienvenido a nuestro
 
 comunidad de blogs! Regístrese hoy en la [Contáctenos](/contact) página durante nuestro lanzamiento promocional!
 
-Además, por favor, echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki Enterprise Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](https://www.sunstarsys.com/orion/features) integración!
+Además, por favor, echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](https://www.sunstarsys.com/orion/features) integración!
 
 &nbsp;
 

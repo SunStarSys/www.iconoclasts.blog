@@ -52,7 +52,7 @@ Välkommen till vår
 
 Bloggvärlden! Anmäl dig idag på [Kontakta oss](/contact) sida under vår kampanjlansering!
 
-Också, vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotyp för Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wikin för Enterprise Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](https://www.sunstarsys.com/orion/features) integration!
+Också, vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotyp för Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](https://www.sunstarsys.com/orion/features) integration!
 
 &nbsp;
 
@@ -153,4 +153,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2025-01-03 11:22:01 -0700 (Fri, 03 Jan 2025) $ $Author: joe $ $Revision: 25555 $ -->
+<!-- $Date: 2026-02-17 21:35:00 -0700 (Tue, 17 Feb 2026) $ $Author: joe $ $Revision: 27812 $ -->

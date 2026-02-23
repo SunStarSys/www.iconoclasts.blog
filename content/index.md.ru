@@ -52,7 +52,7 @@ title: Для иконоборцев,
 
 Сообщество блогов! Зарегистрируйтесь сегодня в [Контакты](/contact) страница во время нашего рекламного запуска!
 
-Также, пожалуйста, проверьте  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-страница Enterprise Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](https://www.sunstarsys.com/orion/features) интеграция!
+Также, пожалуйста, проверьте  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-платформа Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](https://www.sunstarsys.com/orion/features) интеграция!
 
 &nbsp;
 
@@ -153,4 +153,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2025-01-03 11:22:01 -0700 (Fri, 03 Jan 2025) $ $Author: joe $ $Revision: 25555 $ -->
+<!-- $Date: 2026-02-17 21:35:00 -0700 (Tue, 17 Feb 2026) $ $Author: joe $ $Revision: 27812 $ -->
