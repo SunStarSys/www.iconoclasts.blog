@@ -46,4 +46,40 @@ In short:
 Wikis are still the best tool humanity has invented for collaborative, interconnected, editable long-form knowledge.
 Modern KMS treat them as critical content repositories — but wrap them in automation, AI context awareness, passive capture, and instant findability so the knowledge actually gets used instead of just stored.
 
+
+## Version Control
+
+Version control in a wiki is one of the most critical features for turning a simple collaborative space into a reliable, trustworthy part of your knowledge management system — especially when starting fresh.
+
+It acts as the "safety net" and "audit trail" for your company's living knowledge, preventing the common pitfalls of collaborative editing: accidental overwrites, bad changes that break processes, disputes over "who changed what," or losing valuable historical context.
+Core Ways Version Control Plays a Role
+
+### Reversibility & Recovery
+
+Mistakes happen — someone deletes a key section, overwrites a policy with outdated info, or a rogue edit introduces errors. Version history lets you view every past state, compare diffs (side-by-side changes), and roll back to any previous version in seconds. This keeps knowledge resilient instead of fragile.
+
+### Accountability & Transparency
+
+Every edit is timestamped with who made it and (often) a summary/comment. In regulated industries, compliance-heavy teams, or just high-stakes knowledge (e.g., security procedures, legal templates, financial models), this creates an audit trail: you can trace exactly how/when/why something evolved. It reduces "tribal knowledge" risks and builds trust in the docs.
+
+### Collaboration Without Fear
+
+Teams edit more freely when they know changes aren't permanent/destructive. Junior contributors experiment safely; seniors review/approve via history. It lowers the coordination overhead — no endless "did you see my edit?" Slack threads.
+
+### Content Freshness & Decay Management
+
+By seeing edit patterns over time, you spot stagnant pages (no changes in months/years = potential outdated knowledge). Some systems flag low-activity content for review. History also helps AI features (summarization, Q&A) understand evolution and prioritize current versions.
+Branching/Parallel Work (Advanced)
+In true Git-like wikis (e.g., GitLab Wiki, some XWiki setups), you can branch, merge, or experiment without affecting the main doc — ideal for major rewrites or A/B policy testing.
+
+### How It Looks in Fresh-Start Tools (2026 Landscape)
+
+1. Notion — Solid page version history with timelines, side-by-side diffs, and restore options. Retention varies by plan (7 days free → 30/90 days paid → indefinite on higher tiers). Great for most teams, but not infinite by default.
+2. Slite — Clean, reliable version history with easy rollback and change previews. Strong emphasis on keeping things simple and trustworthy — history helps verify edits without clutter.
+3. Confluence (if you lean enterprise) — One of the strongest: indefinite version history on most plans, detailed diffs, labels on versions, and restore without losing newer ones. Excellent for compliance/scale.
+4. Tettra / Guru — Unlimited version history across plans, often with verification workflows tied to versions (e.g., "verified on this date/version"). Guru cards track changes tightly to maintain accuracy.
+5. Bloomfire / others — Robust versioning with engagement insights (who viewed/edited when), helping spot drift.
+
+In a modern KMS starting fresh, version control isn't just a "nice-to-have wiki feature" — it's foundational for trustworthy, evolvable knowledge. Without it, collaboration turns into chaos; with it, your wiki becomes a durable, self-healing repository that supports AI layers (e.g., semantic search pulling from correct historical context) and survives team changes.
+
 <!-- $Date$ $Author$ $Revision$ -->
