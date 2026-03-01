@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=27986
+status: verified=27989
 Dependencies: *.md.en
 
 <div class="right">
@@ -104,6 +104,20 @@ LLM technology (Large Language Models like GPT-series, Claude, Gemini, Llama var
 ### Retrieval-Augmented Generation (RAG) — The Dominant Pattern
 
 The wiki's content (pages, versions, attachments) is chunked, embedded (turned into vectors), and indexed in a vector database. When you ask a question ("How do we handle customer escalations in Q1?"), the system retrieves the most relevant chunks from the wiki → feeds them as context to the LLM → the LLM generates a grounded, accurate answer with citations/links back to source pages. Why it matters: Eliminates hallucinations (LLM makes stuff up) by grounding answers in your actual company knowledge. Turns keyword search into semantic, intent-aware discovery.
+
+#### RAG Scaling Problems
+
+##### Indexing User Information Contexts in a Knowledge Management System
+
+Unfortunately server-side information contexts must be managed on a per-user basis, which means each user login session must have its own user-specific RAG **shipped from the wiki and into the LLM**.
+
+##### The a la carte Approach
+
+With Orion, all of the per-user information contexts are available as user-specific downloadable files and folders in a Subversion checkout stored on the user's local hardware.
+
+And every LLM technology that supports a command-line interface can ingest this filesystem based RAG content **on demand**, and preserve that context for as long as the user desires.
+
+Wins? Straightforward controls on cost, efficacy, scalability, and performance!
 
 ### Intelligent Content Creation & Enrichment
 
