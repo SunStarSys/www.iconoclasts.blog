@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=28025
+status: verified=28028
 Dependencies: *.md.en
 
 <div class="right">
@@ -152,7 +152,7 @@ With Orion, all of the per-user information contexts are available as user-speci
 
 And every LLM technology that supports a command-line interface can ingest this filesystem based RAG content **on demand**, and preserve that context for as long as the user desires.
 
-Wins? Straightforward controls on cost, efficacy, scalability, and performance.
+Wins? Straightforward controls on cost, efficacy, scalability, security, and performance.
 
 Moreover, you have the full power of Subversion to checkout a consistent snapshot (revision) of your *entire wiki* for doing **historical research powered by LLM technology**!
 
