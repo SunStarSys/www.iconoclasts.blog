@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=28001
+status: verified=28004
 Dependencies: *.md.en
 
 <div class="right">
@@ -8,34 +8,6 @@ Dependencies: *.md.en
 ![Orion](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
 
 </div>
-
-```mermaid
-mindmap
-  root((KMS))
-    Wikis
-    ::icon(fa fa-book)
-      Orion
-	  Confluence
-    Version Control
-	  Uses
-        Content Curation
-        Access Controls
-        Immutable History
-      Tools
-	    Git
-		Subversion
-    #Jamstack
-      Incremental
-        Authors
-		Researchers
-      Performance
-	    Developers
-		Architects
-    AI
-     RAG
-     CLI
-```
-
 
 [TOC]
 
@@ -176,5 +148,34 @@ LLMs power chatbots/agents embedded in Slack/Teams/IDE/browser that pull from th
 LLMs flag outdated content by comparing edit dates, version history, or semantic drift. Verification workflows: "Verify this page" → LLM cross-checks against sources or recent data. Combined with centralized version control, you get traceable, auditable AI-assisted edits.
 
 Traditional wikis store and link knowledge. LLM-powered wikis understand, generate, retrieve, and evolve it — turning passive docs into an active, always-on assistant that reduces repeated questions, speeds ramp-up, and captures tribal knowledge before it walks out the door.
+
+
+
+```mermaid
+mindmap
+  root((KMS))
+    Wikis
+    ::icon(fa fa-book)
+      Orion
+	  Confluence
+    Version Control
+	  Uses
+        Content Curation
+        Access Controls
+        Immutable History
+      Tools
+	    Git
+		Subversion
+    #Jamstack
+      Incremental
+        Authors
+		Researchers
+      Performance
+	    Developers
+		Architects
+    AI
+     RAG
+     CLI
+```
 
 <!-- $Date$ $Author$ $Revision$ -->
