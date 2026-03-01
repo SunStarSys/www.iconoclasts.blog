@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=27974
+status: verified=27977
 Dependencies: *.md.en
 
 <div class="right">
@@ -94,6 +94,8 @@ In a modern KMS starting fresh, version control isn't just a "nice-to-have wiki 
 Several version control-enabled wikis (especially those with true wiki-like editing but powered by Git or similar for versioning) are built around static site generation (SSG) principles. These store content as plain text files (usually Markdown) in a Git repo, use Git itself as the version control backend, and generate static HTML sites from those files — either on-the-fly (via a lightweight server) or pre-built for deployment (e.g., to GitHub Pages, Netlify, etc.).
 
 Unfortunately, none of these wikis have any form of online CMS Editing, since they are primarily focused on static sites that are managed by a small team of developers.  Content creation happens **elsewhere**, and so they all miss the smooth integration of both developers and content creators into the same system.
+
+### Distributed Version Control is Incompatible with KMS
 
 Further, there is no meaningful way to control **access** to restricted content, because git does not have meaningful in-repository access controls; the controls are implemented solely in the push/pull transport infrastructure.
 
