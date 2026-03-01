@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=27980
+status: verified=27983
 Dependencies: *.md.en
 
 <div class="right">
@@ -23,9 +23,7 @@ A knowledge management system is the single brain of your company:
 
 And it keeps getting smarter every day as your team uses it.
 
-Result: new people ramp up 2–3× faster, senior people stop answering the same questions repeatedly, decisions improve because tribal knowledge stops being tribal, and institutional memory actually survives turnover.
-
-In short: it turns your organization’s collective experience from a liability that leaks away into your most durable competitive advantage.
+Result: new people ramp up 2–3× faster, senior people stop answering the same questions repeatedly, decisions improve because tribal knowledge stops being tribal, and institutional memory actually survives turnover. It turns your organization’s collective experience from a liability that leaks away into your most durable competitive advantage.
 
 ## Wikis
 
@@ -48,10 +46,8 @@ The wiki (or wiki-like structured pages) becomes the authoritative long-form kno
 The KMS adds intelligent layers on top: automatic ingestion from chats/emails/meetings/tickets, semantic understanding, real-time relevance ranking, proactive surfacing ("before you finish typing"), AI summarization/freshness flagging, and integrations that pull wiki content into daily workflows without forcing people back to the wiki itself.
 Result: the wiki stops being a silo or a chore — it becomes the high-quality, human-curated backbone that feeds (and is fed by) the smarter, always-on system.
 
-In short:
 Wikis are still the best tool humanity has invented for collaborative, interconnected, editable long-form knowledge.
 Modern KMS treat them as critical content repositories — but wrap them in automation, AI context awareness, passive capture, and instant findability so the knowledge actually gets used instead of just stored.
-
 
 ## Version Control
 
@@ -117,7 +113,7 @@ Common in: Confluence AI, Notion AI Q&A, XWiki's LLM integrations, custom setups
 - Drafting assistance: While editing a wiki page, hit a button → LLM suggests sections, rewrites for clarity, translates to other languages, or fills gaps based on related pages.
 - Knowledge gap detection: LLM analyzes query logs, edit patterns, or stale pages → flags "This onboarding guide is outdated" or "We get asked about X a lot but have no page."
 
-Result: Wikis stay fresher with less manual effort; new content emerges faster.
+With AI, wikis stay fresher with less manual effort; new content emerges faster.
 
 3. Proactive & Contextual Surfacing
 
@@ -126,8 +122,6 @@ LLMs power chatbots/agents embedded in Slack/Teams/IDE/browser that pull from th
 4. Freshness, Trust & Governance Boost
 
 LLMs flag outdated content by comparing edit dates, version history, or semantic drift. Verification workflows: "Verify this page" → LLM cross-checks against sources or recent data. Combined with centralized version control, you get traceable, auditable AI-assisted edits.
-
-In short:
 
 Traditional wikis store and link knowledge.
 LLM-powered wikis understand, generate, retrieve, and evolve it — turning passive docs into an active, always-on assistant that reduces repeated questions, speeds ramp-up, and captures tribal knowledge before it walks out the door.
