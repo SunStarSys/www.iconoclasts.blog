@@ -1,12 +1,3 @@
----
-archived: ~
-categories: ~
-keywords: ~
-published: ~
-status: ~
-title: ~
----
-
 <!DOCTYPE html>
 <html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}>
 <head>
