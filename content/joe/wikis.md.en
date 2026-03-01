@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=27977
+status: verified=27980
 Dependencies: *.md.en
 
 <div class="right">
@@ -100,5 +100,36 @@ Unfortunately, none of these wikis have any form of online CMS Editing, since th
 Further, there is no meaningful way to control **access** to restricted content, because git does not have meaningful in-repository access controls; the controls are implemented solely in the push/pull transport infrastructure.
 
 In general, only Centralized Version Control Systems like Subversion are suitable platforms for VC-backed Wikis in a Knowledge Management System framework, because such [Information Architectures](ia) must always be contextualized on a per-user basis.
+
+## LLM (AI) Technology
+
+LLM technology (Large Language Models like GPT-series, Claude, Gemini, Llama variants, etc.) has become the core intelligence layer in modern knowledge management wikis by 2026 — shifting them from static, search-only repositories into dynamic, proactive "second brains" for teams. Instead of users manually hunting through pages or knowing exactly what to search, LLMs enable natural-language understanding, generation, and reasoning over the wiki's content. Here's how they fit in and deliver real value, especially when starting fresh:
+
+1. Retrieval-Augmented Generation (RAG) — The Dominant Pattern
+
+The wiki's content (pages, versions, attachments) is chunked, embedded (turned into vectors), and indexed in a vector database. When you ask a question ("How do we handle customer escalations in Q1?"), the system retrieves the most relevant chunks from the wiki → feeds them as context to the LLM → the LLM generates a grounded, accurate answer with citations/links back to source pages. Why it matters: Eliminates hallucinations (LLM makes stuff up) by grounding answers in your actual company knowledge. Turns keyword search into semantic, intent-aware discovery.
+
+Common in: Confluence AI, Notion AI Q&A, XWiki's LLM integrations, custom setups with MkDocs/Docusaurus + LangChain/LlamaIndex.
+
+2. Intelligent Content Creation & Enrichment
+
+- Auto-summarization: LLM reads long wiki pages/docs and generates executive summaries, TL;DRs, or audience-specific versions (e.g., "explain this architecture to a new sales rep").
+- Drafting assistance: While editing a wiki page, hit a button → LLM suggests sections, rewrites for clarity, translates to other languages, or fills gaps based on related pages.
+- Knowledge gap detection: LLM analyzes query logs, edit patterns, or stale pages → flags "This onboarding guide is outdated" or "We get asked about X a lot but have no page."
+
+Result: Wikis stay fresher with less manual effort; new content emerges faster.
+
+3. Proactive & Contextual Surfacing
+
+LLMs power chatbots/agents embedded in Slack/Teams/IDE/browser that pull from the wiki in real time. Before-you-ask intelligence: As you type in a ticket or email, the system surfaces relevant wiki snippets ("See our troubleshooting guide here"). Multi-modal & agentic evolution: Emerging in 2026 — LLM agents can chain actions (e.g., "Update the wiki page with this new process, summarize changes, notify owners").
+
+4. Freshness, Trust & Governance Boost
+
+LLMs flag outdated content by comparing edit dates, version history, or semantic drift. Verification workflows: "Verify this page" → LLM cross-checks against sources or recent data. Combined with centralized version control, you get traceable, auditable AI-assisted edits.
+
+In short:
+
+Traditional wikis store and link knowledge.
+LLM-powered wikis understand, generate, retrieve, and evolve it — turning passive docs into an active, always-on assistant that reduces repeated questions, speeds ramp-up, and captures tribal knowledge before it walks out the door.
 
 <!-- $Date$ $Author$ $Revision$ -->
