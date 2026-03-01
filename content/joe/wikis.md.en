@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=28034
+status: verified=28035
 Dependencies: *.md.en
 
 <div class="right">
@@ -12,26 +12,26 @@ Dependencies: *.md.en
 ```mermaid
 mindmap
   root((KMS))
-    Wiki Platforms
+    (Wiki Platforms)
       ((Orion))
 	  Confluence
-    Version Control
-	  Uses
+    (Version Control)
+	  [Uses]
         Content Curation
         Access Controls
         Immutable History
-      Tools
+      [Tools]
 	    Git
 		Subversion
-    #Jamstack
-      CMS
+    (#Jamstack)
+      [CMS]
         Authors
 		Researchers
 		Curators
-      Site Builds
+      [Site Builds]
 	    Developers
 		Architects
-	  Security
+	  [Security]
     AI
      RAG
      CLI
