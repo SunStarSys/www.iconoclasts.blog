@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=27992
+status: verified=27995
 Dependencies: *.md.en
 
 <div class="right">
@@ -109,7 +109,7 @@ The wiki's content (pages, versions, attachments) is chunked, embedded (turned i
 
 ##### Indexing User Information Contexts in a Knowledge Management System
 
-Unfortunately server-side information contexts must be managed on a per-user basis, which means each user login session must have its own user-specific RAG **shipped from the wiki and into the LLM**.
+Unfortunately server-side information contexts must be managed on a per-user basis, which means each user login session must have its own user-specific RAG *shipped from the wiki and into the LLM*.
 
 ##### The a la carte Approach
 
