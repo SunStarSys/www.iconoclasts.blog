@@ -4,7 +4,7 @@ categories: ~
 dependencies: '*.md.zh-TW'
 keywords: wiki、知識、kms、orion、subversion
 published: ~
-status: 驗證 =28082
+status: 驗證 =28102
 title: 知識管理系統中的 Wiki
 ---
 
@@ -160,7 +160,7 @@ Wiki 中的版本控制功能是將簡單的協作空間變成可靠且值得信
 
 此外，支援命令行介面的每個 LLM 技術都可以依需求 ** 攝取此檔案系統型 RAG 內容，並保留該內容，只要使用者需要即可。
 
-勝利？對成本、效率、擴展性、安全性和效能進行直接的控制。
+勝利？<span class="text-success">直接控制成本、效率、擴展性、安全性和效能。</span>
 
 此外，您擁有 Subversion 的完整功能，可查看您 *entire wiki* 一致的快照 (修訂版本)，以執行 **LLM 技術支援的歷史研究 **！
 

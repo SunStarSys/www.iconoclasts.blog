@@ -4,7 +4,7 @@ categories: ~
 dependencies: '*.md.sv'
 keywords: wiki, kunskap, kms, orion, subversion
 published: ~
-status: verifierad=28082
+status: verifierad=28102
 title: Wikis i kunskapshanteringssystem
 ---
 
@@ -160,7 +160,7 @@ Med Orion är alla informationskontexter per användare tillgängliga som använ
 
 Och varje LLM-teknik som har stöd för ett kommandoradsgränssnitt kan ta in detta filsystembaserade RAG-innehåll ** på begäran** och bevara detta sammanhang så länge användaren önskar.
 
-Vinster? Enkla kontroller av kostnad, effekt, skalbarhet, säkerhet och prestanda.
+Vinster? <span class="text-success">Framåtblickande kontroller av kostnad, effekt, skalbarhet, säkerhet och prestanda.</span>
 
 Dessutom har du den fulla kraften i Subversion för att kolla in en konsekvent ögonblicksbild (revision) av din * hela wiki * för att göra **historisk forskning som drivs av LLM-teknik**!
 

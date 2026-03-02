@@ -4,7 +4,7 @@ categories: ~
 dependencies: '*.md.ko'
 keywords: 위키, 지식, 킬로미터, orion, subversion
 published: ~
-status: 확인=28082
+status: 확인=28102
 title: 지식 관리 시스템 위키
 ---
 
@@ -160,7 +160,7 @@ Orion을 사용하면 모든 사용자별 정보 컨텍스트를 사용자의 �
 
 또한 명령행 인터페이스를 지원하는 모든 LLM 기술은 온디맨드 방식으로 이 파일 시스템 기반 RAG 콘텐츠를 수집하고, 사용자가 원하는 기간 동안 해당 컨텍스트를 유지할 수 있습니다.
 
-성공? 비용, 효능, 확장성, 보안 및 성능에 대한 철저한 제어
+성공? <span class="text-success">비용, 효능, 확장성, 보안 및 성능에 대한 엄격한 제어.</span>
 
 또한 Subversion의 모든 기능을 통해 *entire wiki*의 일관된 스냅샷(개정)을 체크아웃하여 **LLM 기술 기반의 역사적 연구**를 수행할 수 있습니다!
 

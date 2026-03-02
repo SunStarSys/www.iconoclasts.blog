@@ -4,7 +4,7 @@ categories: ~
 dependencies: '*.md.es'
 keywords: wiki, conocimiento, kms, orion, subversión
 published: ~
-status: verificado=28082
+status: verificado=28102
 title: Wikis en Sistemas de Gestión del Conocimiento
 ---
 
@@ -160,7 +160,7 @@ Con Orion, todos los contextos de información por usuario están disponibles co
 
 Y cada tecnología de LLM que admite una interfaz de línea de comandos puede ingerir este contenido de RAG basado en el sistema de archivos **a demanda**, y conservar ese contexto durante el tiempo que el usuario desee.
 
-¿Gana? Controles directos sobre costo, eficacia, escalabilidad, seguridad y rendimiento.
+¿Gana? <span class="text-success">Controles directos sobre costo, eficacia, escalabilidad, seguridad y rendimiento.</span>
 
 Además, usted tiene todo el poder de Subversion para comprobar una instantánea consistente (revisión) de su *entire wiki* para hacer **investigación histórica con tecnología LLM**!
 
