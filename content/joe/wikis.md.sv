@@ -4,7 +4,7 @@ categories: ~
 dependencies: '*.md.sv'
 keywords: wiki, kunskap, kms, orion, subversion
 published: ~
-status: verifierad=28102
+status: skiss
 title: Wikis i kunskapshanteringssystem
 ---
 
@@ -154,13 +154,13 @@ Wikis innehåll (sidor, versioner, bilagor) är blockindelat, inbäddat (omvandl
 
 Tyvärr måste informationskontexter på serversidan hanteras per användare, vilket innebär att varje användarinloggningssession måste ha en egen användarspecifik RAG *levereras från wikin och in i LLM*.
 
-#### A la carte-metoden
+#### En à la carte-strategi
 
 Med Orion är alla informationskontexter per användare tillgängliga som användarspecifika nedladdningsbara filer och mappar i en Subversion-kassa som lagras på användarens lokala maskinvara.
 
 Och varje LLM-teknik som har stöd för ett kommandoradsgränssnitt kan ta in detta filsystembaserade RAG-innehåll ** på begäran** och bevara detta sammanhang så länge användaren önskar.
 
-Vinster? <span class="text-success">Framåtblickande kontroller av kostnad, effekt, skalbarhet, säkerhet och prestanda.</span>
+Vinster? <span class="text-success">Framåtblickande kontroller av kostnad, effekt, skalbarhet, säkerhet, styrning, datasuveränitet och prestanda.</span>
 
 Dessutom har du den fulla kraften i Subversion för att kolla in en konsekvent ögonblicksbild (revision) av din * hela wiki * för att göra **historisk forskning som drivs av LLM-teknik**!
 

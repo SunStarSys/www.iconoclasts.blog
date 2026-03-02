@@ -4,7 +4,7 @@ categories: ~
 dependencies: '*.md.de'
 keywords: wiki, Knowledge, kms, orion, subversion
 published: ~
-status: überprüft=28102
+status: Entwurf
 title: Wikis in Wissensmanagementsysteme
 ---
 
@@ -154,13 +154,13 @@ Der Inhalt des Wikis (Seiten, Versionen, Anhänge) wird chunkiert, eingebettet (
 
 Leider müssen serverseitige Informationskontexte pro Benutzer verwaltet werden, was bedeutet, dass jede Benutzeranmeldesitzung eine eigene benutzerspezifische RAG haben muss, die aus dem Wiki und in das LLM* versendet wird.
 
-##### Der a la carte Ansatz
+##### Der à la carte Ansatz
 
 Mit Orion stehen alle Informationskontexte pro Benutzer als benutzerspezifische herunterladbare Dateien und Ordner in einem Subversion-Checkout zur Verfügung, der auf der lokalen Hardware des Benutzers gespeichert ist.
 
 Und jede LLM-Technologie, die eine Befehlszeilenschnittstelle unterstützt, kann diesen dateisystembasierten RAG-Inhalt **on demand** aufnehmen und diesen Kontext so lange beibehalten, wie der Benutzer es wünscht.
 
-Gewinnen? <span class="text-success">Einfache Kontrollen zu Kosten, Effizienz, Skalierbarkeit, Sicherheit und Performance.</span>
+Gewinnen? <span class="text-success">Einfache Kontrollen zu Kosten, Effizienz, Skalierbarkeit, Sicherheit, Governance, Datensouveränität und Performance.</span>
 
 Darüber hinaus haben Sie die volle Kraft von Subversion, um einen konsistenten Snapshot (Revision) Ihres *gesamten Wikis* für **historische Forschung mit LLM-Technologie** zu erhalten!
 
