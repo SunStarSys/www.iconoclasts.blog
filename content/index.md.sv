@@ -69,7 +69,9 @@ Också, vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span clas
 
 &nbsp;
 
-- <span class="badge bg-success">Nytt</span> [Requiem för volontärens bidragare av öppen källkod](/jimjag/requiem) genom @jimjag,
+- <span class="badge bg-success">Nytt</span> [Wikis i kunskapshanteringssystem](/joe/wikis) av @joe=,
+
+- [Requiem för volontärens bidragare av öppen källkod](/jimjag/requiem) av @jimjag=,
 
 - [Trippelprodukter av Eigenfunktioner och spektral geometri](/joe/triple-products) av @joe=; publicerad på SSRN,
 
@@ -153,4 +155,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-02-17 21:35:00 -0700 (Tue, 17 Feb 2026) $ $Author: joe $ $Revision: 27812 $ -->
+<!-- $Date: 2026-02-23 10:19:48 -0700 (Mon, 23 Feb 2026) $ $Author: joe $ $Revision: 27928 $ -->

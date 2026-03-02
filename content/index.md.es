@@ -69,7 +69,9 @@ Además, por favor, echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)
 
 &nbsp;
 
-- <span class="badge bg-success">Nuevo</span> [Réquiem para el colaborador de código abierto voluntario](/jimjag/requiem) en @jimjag,
+- <span class="badge bg-success">Nuevo</span> [Wikis en Sistemas de Gestión del Conocimiento](/joe/wikis) por @joe=,
+
+- [Réquiem para el colaborador de código abierto voluntario](/jimjag/requiem) por @jimjag=,
 
 - [Triple producto de autofunciones y geometría espectral](/joe/triple-products) por @joe=; publicado en SSRN,
 

@@ -69,7 +69,9 @@ title: Для иконоборцев,
 
 &nbsp;
 
-- <span class="badge bg-success">Новое</span> [Реквием для волонтера с открытым исходным кодом](/jimjag/requiem) @jimjag,
+- <span class="badge bg-success">Новое</span> [Википедия:Системы управления знаниями](/joe/wikis) по @joe=,
+
+- [Реквием для волонтера с открытым исходным кодом](/jimjag/requiem) по @jimjag=,
 
 - [Тройные продукты собственных функций и спектральной геометрии](/joe/triple-products) по @joe=; опубликовано в SSRN,
 
@@ -153,4 +155,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-02-17 21:35:00 -0700 (Tue, 17 Feb 2026) $ $Author: joe $ $Revision: 27812 $ -->
+<!-- $Date: 2026-02-23 10:19:48 -0700 (Mon, 23 Feb 2026) $ $Author: joe $ $Revision: 27928 $ -->
