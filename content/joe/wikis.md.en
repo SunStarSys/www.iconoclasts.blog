@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=28102
+status: draft
 Dependencies: *.md.en
 
 <div class="right">
@@ -149,7 +149,7 @@ The wiki's content (pages, versions, attachments) is chunked, embedded (turned i
 
 Unfortunately server-side information contexts must be managed on a per-user basis, which means each user login session must have its own user-specific RAG *shipped from the wiki and into the LLM*.
 
-##### The a la carte Approach
+##### The à la carte Approach
 
 With Orion, all of the per-user information contexts are available as user-specific downloadable files and folders in a Subversion checkout stored on the user's local hardware.
 
