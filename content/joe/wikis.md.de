@@ -152,13 +152,19 @@ Der Inhalt des Wikis (Seiten, Versionen, Anhänge) wird chunkiert, eingebettet (
 
 ##### Benutzerinformationskontexte in einem Knowledge Management-System indizieren
 
-Leider müssen serverseitige Informationskontexte pro Benutzer verwaltet werden, was bedeutet, dass jede Benutzeranmeldesitzung eine eigene benutzerspezifische RAG haben muss, die aus dem Wiki und in das LLM* versendet wird.
+Leider müssen serverseitige Informationskontexte pro Benutzer verwaltet werden, was bedeutet, dass jede Benutzeranmeldesitzung eine eigene benutzerspezifische RAG haben muss, die aus dem Wiki und in das LLM* pro Anforderung versendet wird.
+
+Im Wesentlichen ist RAG Lucene++, wo Sie eine Lucene-Suche durchführen, das relevante Material, auf das Sie Zugriff haben, exfiltrieren und ein paar Stücke im Wert dieser Ergebnisse an das LLM zur endgültigen Dispensation senden.
+
+Dieser von der Jury gestützte Prozess ist von Performance-, Sicherheits- und Zuverlässigkeitsprozessen in großem Maßstab geprägt.
 
 ##### Der à la carte Ansatz
 
 Mit Orion stehen alle Informationskontexte pro Benutzer als benutzerspezifische herunterladbare Dateien und Ordner in einem Subversion-Checkout zur Verfügung, der auf der lokalen Hardware des Benutzers gespeichert ist.
 
-Und jede LLM-Technologie, die eine Befehlszeilenschnittstelle unterstützt, kann diesen dateisystembasierten RAG-Inhalt **on demand** aufnehmen und diesen Kontext so lange beibehalten, wie der Benutzer es wünscht.
+Und jede LLM-Technologie, die eine Befehlszeilenschnittstelle unterstützt, kann diesen dateisystembasierten Inhalt **on demand** aufnehmen und diesen Kontext so lange beibehalten, wie der Benutzer es wünscht.
+
+Interagieren Sie wie gewohnt auf Ihrem eigenen Computer mit der KI, je nach Ihrem eigenen Zugriff auf kontrollierte Inhalte im KMS.
 
 Gewinnen? <span class="text-success">Einfache Kontrollen zu Kosten, Effizienz, Skalierbarkeit, Sicherheit, Governance, Datensouveränität und Performance.</span>
 

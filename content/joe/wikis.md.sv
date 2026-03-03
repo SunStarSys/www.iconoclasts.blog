@@ -152,13 +152,19 @@ Wikis innehåll (sidor, versioner, bilagor) är blockindelat, inbäddat (omvandl
 
 ##### Indexerar användarinformationskontexter i ett kunskapshanteringssystem
 
-Tyvärr måste informationskontexter på serversidan hanteras per användare, vilket innebär att varje användarinloggningssession måste ha en egen användarspecifik RAG *levereras från wikin och in i LLM*.
+Tyvärr måste informationskontexter på serversidan hanteras per användare, vilket innebär att varje användarinloggningssession måste ha en egen användarspecifik RAG *levereras från wikin och in i LLM* per begäran.
+
+I huvudsak är RAG Lucene++, där du kör en Lucene-sökning, exfiltrerar det relevanta materialet du har tillgång till och skickar några bitar av dessa resultat till LLM för slutlig dispensering.
+
+Den juryn-riggade processen är full av prestanda, säkerhet och tillförlitlighet process i stor skala.
 
 #### En à la carte-strategi
 
 Med Orion är alla informationskontexter per användare tillgängliga som användarspecifika nedladdningsbara filer och mappar i en Subversion-kassa som lagras på användarens lokala maskinvara.
 
-Och varje LLM-teknik som har stöd för ett kommandoradsgränssnitt kan ta in detta filsystembaserade RAG-innehåll ** på begäran** och bevara detta sammanhang så länge användaren önskar.
+Och varje LLM-teknik som har stöd för ett kommandoradsgränssnitt kan ta in detta filsystembaserade innehåll ** på begäran** och bevara den kontexten så länge användaren vill.
+
+Interagera med AI som du normalt skulle, på din egen maskin, enligt din egen tillgång till kontrollerat innehåll i KMS.
 
 Vinster? <span class="text-success">Framåtblickande kontroller av kostnad, effekt, skalbarhet, säkerhet, styrning, datasuveränitet och prestanda.</span>
 

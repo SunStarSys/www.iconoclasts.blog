@@ -152,13 +152,19 @@ El contenido de la wiki (páginas, versiones, archivos adjuntos) se fragmenta, s
 
 ##### Indexación de contextos de información de usuario en un sistema de gestión de conocimientos
 
-Desafortunadamente, los contextos de información del servidor se deben gestionar por usuario, lo que significa que cada sesión de inicio de sesión de usuario debe tener su propia RAG específica del usuario *enviada desde el wiki y al LLM*.
+Lamentablemente, los contextos de información del servidor se deben gestionar por usuario, lo que significa que cada sesión de inicio de sesión de usuario debe tener su propia RAG específica del usuario *enviada desde el wiki y al LLM* por solicitud.
+
+Esencialmente, RAG es Lucene++, donde ejecuta una búsqueda de Lucene, exfiltra el material relevante al que tiene acceso y envía algunos fragmentos de esos resultados al LLM para su dispensación final.
+
+Ese proceso organizado por jurado está plagado de procesos de rendimiento, seguridad y fiabilidad a escala.
 
 ##### El enfoque a la carta
 
 Con Orion, todos los contextos de información por usuario están disponibles como archivos y carpetas descargables específicos del usuario en una desprotección de Subversion almacenada en el hardware local del usuario.
 
-Y cada tecnología de LLM que admite una interfaz de línea de comandos puede ingerir este contenido de RAG basado en el sistema de archivos **a demanda**, y conservar ese contexto durante el tiempo que el usuario desee.
+Y cada tecnología de LLM que admite una interfaz de línea de comandos puede ingerir este contenido basado en el sistema de archivos **a demanda** y conservar ese contexto durante el tiempo que el usuario desee.
+
+Interactúe con la IA como lo haría normalmente, en su propia máquina, según su propio acceso al contenido controlado en el KMS.
 
 ¿Gana? <span class="text-success">Controles directos sobre costos, eficacia, escalabilidad, seguridad, gobernanza, soberanía y rendimiento de datos.</span>
 
