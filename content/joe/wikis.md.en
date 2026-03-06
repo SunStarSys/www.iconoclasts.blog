@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=28226
+status: verified=28229
 Dependencies: *.md.en
 
 <div class="right">
@@ -41,6 +41,7 @@ mindmap
 
 [TOC]
 
+-----
 ## Knowledge Management Systems
 
 Imagine if every brilliant insight, customer workaround, lesson learned, and half-finished idea your team ever had… didn’t disappear into Slack threads, email inboxes, or forgotten Notion pages.
@@ -55,6 +56,7 @@ And it keeps getting smarter every day as your team uses it.
 
 Result: new people ramp up 2–3× faster, senior people stop answering the same questions repeatedly, decisions improve because tribal knowledge stops being tribal, and institutional memory actually survives turnover. It turns your organization’s collective experience from a liability that leaks away into your most durable competitive advantage.
 
+-----
 ## Wikis
 
 Wikis remain a foundational piece in many knowledge management setups, but in 2026 they're usually no longer the whole story — especially for teams that want to stop leaking knowledge and start turning it into a real advantage.
@@ -79,6 +81,7 @@ Result: the wiki stops being a silo or a chore — it becomes the high-quality, 
 Wikis are still the best tool humanity has invented for collaborative, interconnected, editable long-form knowledge.
 Modern KMS treat them as critical content repositories — but wrap them in automation, AI context awareness, passive capture, and instant findability so the knowledge actually gets used instead of just stored.
 
+-----
 ## Version Control
 
 Version control in a wiki is one of the most critical features for turning a simple collaborative space into a reliable, trustworthy part of your knowledge management system — especially when starting fresh.
@@ -123,6 +126,7 @@ In true VCS-backed wikis, you can branch, merge, or experiment without affecting
 
 In a modern KMS starting fresh, version control isn't just a "nice-to-have wiki feature" — it's foundational for trustworthy, evolvable knowledge. Without it, collaboration turns into chaos; with it, your wiki becomes a durable, self-healing repository that supports AI layers (e.g., semantic search pulling from correct historical context) and survives team changes.
 
+-----
 ## The #Jamstack (SSG) Wiki Space
 
 Several version control-enabled wikis (especially those with true wiki-like editing but powered by Git or similar for versioning) are built around static site generation (SSG) principles. These store content as plain text files (usually Markdown) in a Git repo, use Git itself as the version control backend, and generate static HTML sites from those files — either on-the-fly (via a lightweight server) or pre-built for deployment (e.g., to GitHub Pages, Netlify, etc.).
@@ -135,6 +139,7 @@ Further, there is no meaningful way to control **access** to restricted content,
 
 In general, only Centralized Version Control Systems like Subversion are suitable platforms for VC-backed Wikis in a Knowledge Management System framework, because such [Information Architectures](ia) must always be contextualized on a per-user basis.
 
+-----
 ## LLM (AI) Technology
 
 LLM technology (Large Language Models like GPT-series, Claude, Gemini, Llama variants, etc.) has become the core intelligence layer in modern knowledge management wikis by 2026 — shifting them from static, search-only repositories into dynamic, proactive "second brains" for teams. Instead of users manually hunting through pages or knowing exactly what to search, LLMs enable natural-language understanding, generation, and reasoning over the wiki's content. Here's how they fit in and deliver real value, especially when starting fresh:
