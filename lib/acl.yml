@@ -26,4 +26,16 @@
     "@svnadmin": rw
     "@frontend": rw
     "@staff": rw
+
+- path: content/categories
+  rules:
+    "@svnadmin": rw
+	"@bloggers": rw
+    "@staff": rw
+
+-path: content/archives
+  rules:
+    "@svnadmin": rw
+	"@bloggers": rw
+    "@staff": rw
 #acl
