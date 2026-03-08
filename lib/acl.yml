@@ -30,12 +30,12 @@
 - path: content/categories
   rules:
     "@svnadmin": rw
-	"@bloggers": rw
+    "@bloggers": rw
     "@staff": rw
 
--path: content/archives
+- path: content/archives
   rules:
     "@svnadmin": rw
-	"@bloggers": rw
+    "@bloggers": rw
     "@staff": rw
 #acl
