@@ -134,7 +134,7 @@ walk_content_tree {
     my %cache;
     for (glob("content/*/index.md.*")) {
         next if /archives|categories/;
-        s!/index\.md\.[^/]+$!!;		
+        s!/index\.md\.[^/]+$!!;
 		push @acl, { path => $_, rules => {
              '@bloggers'  => 'rw',
              '@svnadmin' => 'rw',
