@@ -120,7 +120,7 @@ walk_content_tree {
 
     if ($path =~ s!/index\.html\.$lang$!!) {
       $dependencies{"$path/index.html.$lang"} = [
-        grep s/^content// && !archived,
+        grep s/^content// && !archived && utf8::decode($_),
         glob("'content$path'/*.md.$lang"),
         glob("'content$path'/*/index.html.$lang")
       ];
