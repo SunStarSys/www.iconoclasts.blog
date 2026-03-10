@@ -1,16 +1,16 @@
 ---
-acl: Дженнифер=rw
+acl: jennifer=rw
 archived: ~
-categories: Домашний декор
+categories: Главная Декор
 dependencies: '*.md.ru'
 keywords: ~
 published: ~
 status: черновик
-title: Главная Декор Блог Вход
+title: Главная Декор Блог Запись
 ---
 
-## Декор домашней страницы
+## Мой домашний декор
 
-{# lede #}Люби это!{# lede #}
+{# lede #}Любить!{# lede #}
 
-<!-- $Date: 2024-02-12 18:00:28 +0000 (Mon, 12 Feb 2024) $ $Author: jennifer $ $Revision: 17121 $ -->
+<!-- $Date: 2024-02-12 13:00:28 -0500 (Mon, 12 Feb 2024) $ $Author: jennifer $ $Revision: 17121 $ -->

@@ -6,11 +6,11 @@ dependencies: '*.md.sv'
 keywords: ~
 published: ~
 status: skiss
-title: Heminredning Blogginlägg
+title: Heminredning Blog Entry
 ---
 
-## Heminredning
+## Min heminredning
 
-{# lede #}Älskar den!{# lede #}
+{# lede #} Älska det!{# lede #}
 
-<!-- $Date: 2024-02-12 18:00:28 +0000 (Mon, 12 Feb 2024) $ $Author: jennifer $ $Revision: 17121 $ -->
+<!-- $Date: 2024-02-12 13:00:28 -0500 (Mon, 12 Feb 2024) $ $Author: jennifer $ $Revision: 17121 $ -->
