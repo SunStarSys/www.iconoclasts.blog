@@ -117,7 +117,7 @@ walk_content_tree {
 
     if (s!/index\.html\.$lang$!!) {
       $dependencies{"$_/index.html.$lang"} = [
-        grep s/^content// && !archived && utf8::decode($_),
+        grep s/^content// && !archived,
         glob("'content$_'/*.md.$lang"),
         glob("'content$_'/*/index.html.$lang")
       ];
@@ -126,13 +126,13 @@ walk_content_tree {
 }
   and do {
     while  (my ($k, $v) = each %{$facts->{dependencies}}) {
-      push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived && utf8::decode($_), map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
+      push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
 
     open my $fh, "<:raw", "lib/acl.yml" or die "Can't open acl.yml: $!";
     push @acl, @{Load join "", <$fh>};
     my %cache;
-    for (grep utf8::decode($_), glob("content/*/index.md.*")) {
+    for (glob("content/*/index.md.*")) {
         next if /archives|categories/;
         s!/index\.md\.[^/]+$!!;
 		push @acl, { path => $_, rules => {
