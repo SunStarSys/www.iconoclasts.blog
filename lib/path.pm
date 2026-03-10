@@ -105,18 +105,21 @@ walk_content_tree {
 
   seed_file_deps, seed_file_acl if /\.(?:md|ya?ml)\b[^\/]*$/;
 
+  my $path = $_;
+  utf8::is_utf8 $path or utf8::decode $path;
+
   for my $lang (qw/en es de fr ru sv he zh-TW ar ko ja pt-BR/) {
 
     if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/!) {
-      push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
+      push @{$dependencies{"/sitemap.html.$lang"}}, $path if !archived;
     }
 
     if (/^(.*)\.tex\.$lang$/ and -f "content$1.bib.lang") {
-      push @{$dependencies{$_}}, "$1.bib.$lang";
+      push @{$dependencies{$path}}, "$1.bib.$lang";
     }
 
     if (s!/index\.html\.$lang$!!) {
-      $dependencies{"$_/index.html.$lang"} = [
+      $dependencies{"$path/index.html.$lang"} = [
         grep s/^content// && !archived,
         glob("'content$_'/*.md.$lang"),
         glob("'content$_'/*/index.html.$lang")
