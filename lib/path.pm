@@ -118,11 +118,11 @@ walk_content_tree {
       push @{$dependencies{$path}}, "$1.bib.$lang";
     }
 
-    if (s!/index\.html\.$lang$!!) {
+    if ($path =~ s!/index\.html\.$lang$!!) {
       $dependencies{"$path/index.html.$lang"} = [
         grep s/^content// && !archived,
-        glob("'content$_'/*.md.$lang"),
-        glob("'content$_'/*/index.html.$lang")
+        glob("'content$path'/*.md.$lang"),
+        glob("'content$path'/*/index.html.$lang")
       ];
     }
   }
