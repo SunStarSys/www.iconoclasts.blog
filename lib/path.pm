@@ -51,7 +51,6 @@ our @patterns = (
     category_root   => "/categories",
     markdown_search => 1,
     permalink       => 1,
-	quick_deps      => 2,
   }],
 
   [qr!/index.md[^/]*$!, langify_template => {
