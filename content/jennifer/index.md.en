@@ -3,7 +3,7 @@ title: "Jennifer's (Private) Blog"
 status: draft
 dependencies: '*.md.en'
 keywords: "fashion,home decor,design"
-acl: jennifer=rw
+acl: jennifer=rw *=r
 ---
 
 ## {# lede #}Hi there{# lede #}
