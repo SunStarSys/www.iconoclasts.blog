@@ -1,4 +1,3 @@
-# coding: utf-8
 {% extends "main.html"|append:lang %}
 {% block title %}{{title|safe}} /{% if filter %}{{filter}}{% else
 %}{{regex}}{% endif %}/ги{% endblock %}
