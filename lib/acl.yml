@@ -32,10 +32,12 @@
     "@svnadmin": rw
     "@bloggers": rw
     "@staff": rw
+    "*": r
 
 - path: content/archives
   rules:
     "@svnadmin": rw
     "@bloggers": rw
     "@staff": rw
+    "*": r
 #acl
