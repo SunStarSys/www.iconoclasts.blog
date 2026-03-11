@@ -9,7 +9,7 @@
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
     <meta name="theme-color" content="black">
     <meta property="og:image" content="/images/iconoclast.jpg">
-    <title>{% block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
+    <title> block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
     {% if permalink %}
     <link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
     {% endif %}
@@ -43,21 +43,21 @@
         <ul class="navbar-nav">
           <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
             actif
-            {% endif %}"><a class="nav-link text" href="/bloggers.html{{lang}}">Iconoclastes</a></li>
+            {% endif %}<a class="nav-link text" href="/bloggers.html{{lang}}">Iconoclastes</a></li>
           <li class="nav-item{% if path|starts_with:"/contact.md" %}
              actif
-             {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">Contact</a></li>
+             {% endif %}<a class="nav-link" href="/contact.html{{lang}}">Interlocuteur</a></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">Produits... <span class="caret"></span></a>
             <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
               <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orion&trade; Plateforme Wiki Jamstack</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
-                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Plans de tarification d'Orion</a></li>
+                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}Plans de tarification Orion</a></li>
             </ul>
           </li>
 
 <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown"Plus... <span class="caret"></span></a>
+            <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">Plus... <span class="caret"></span></a>
             <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">
               <li class="dropdown-item">
                 <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">Source du site</a>
@@ -73,7 +73,7 @@
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hébreu</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Suédois</a></li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-dark">Taxonomies</li>
+              <li class="dropdown-header text-dark">Taxonomie</li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Catégories</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/archives/index.html{{lang}}">Archives</a></li>
             </ul>
@@ -81,16 +81,16 @@
 
 <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             actif
-            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">Alimenté par...</a>
+            {% endif %}<a class="nav-link" href="/powered-by.html{{lang}}">Propulsé par...</a>
           </li>
         </ul>
 		</div>
         <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="d-flex form-inline right" method="GET">
+            }}{% endifequal %} classe="d-flex forme-en ligne droite" méthode="Obtenir"
           <input type="hidden" name="lang" value="{{ lang }}" >
           <input type="hidden" name="markdown_search" value="1" >
           <input class="form-control me-2" type="text" name="regex"
-               placeholder="PCRE Recursive Search" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
+               espace réservé="Recherche récursive PCRE" valeur="{{ regex }} />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
 	    </form>
   </div>
 </header>
@@ -107,15 +107,15 @@
 <div class="container theme-showcase" id="content">
   {% block content %}
   <div class="breadcrumbs">
-      {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
+      {{ breadcrumbs|safe }}nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
         <img src="/images/edit.png" alt="Edit Icon" />
       </a>
   </div>
-  <h1>{{ headers.title|safe }}</h1>
-  <div class="jumbotron">{{ content|markdown }}</div>
+  <h1> headers.title|safe }}</h1>
+  <div class="jumbotron"> content|markdown }}</div>
   {% endblock %}
 
-<footer>{% block footer %}{% endblock footer %}</footer><!--
+<footer> block footer %}{% endblock footer %}</footer><!--
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
