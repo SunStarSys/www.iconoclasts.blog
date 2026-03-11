@@ -28,81 +28,82 @@
      {% endif %}##
      {% block header %}##
      {% endblock %}###
-3<link href="/css/local.css" rel="stylesheet" media="screen">
+<link href="/css/local.css" rel="stylesheet" media="screen"><link href="/images/favicon.png" rel="icon">
 
-<link href="/images/favicon.png" rel="icon">
-  </head>
-     <body>
-	   <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top"><div class="container-fluid"><a class="navbar-brand" href="https://{{website}}/index.html{{lang}}">
-       <img src="/images/iconoclast" alt="Iconoclast">
-           </a><button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon">
+</head>
+  <body>
+     <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
+	   <div class="container-fluid"><a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img src="/images/iconoclast" alt="Iconoclast">
+       </a>
+           <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">
+       </span>
 
-</span>
-         </button>
-           <div class="collapse navbar-collapse" id="navbarResponsive">
+</button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+           <ul class="navbar-nav">
              active
-             {% block analytics %}"><ul class="navbar-nav">Iconoclasts<li class="nav-item{% if path|starts_with:"/bloggers.md" %}<a class="nav-link text" href="/bloggers.html{{lang}}">
-           </a>
+             {% block analytics %}"><li class="nav-item{% if path|starts_with:"/bloggers.md" %}Iconoclasts<a class="nav-link text" href="/bloggers.html{{lang}}"></a>
+           </li>
              active
-             {% include "analytics.html" %}"></li>Contact<li class="nav-item{% if path|starts_with:"/contact.md" %}#<a class="nav-link" href="/contact.html{{lang}}">
-           </a>
-             </li>Products... <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">#<span class="caret">
-             </span>3&trade; Jamstack Wiki Platform</a>#<ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">#
-               <li class="dropdown-item">###
-                href=#"###//www.sunstarsys.com/orion/plans.html#https:#"#>Orion 定價計畫 <a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">##
+             {% include "analytics.html" %}"><li class="nav-item{% if path|starts_with:"/contact.md" %}Contact<a class="nav-link" href="/contact.html{{lang}}">#</a>
+           </li>
+             <li class="nav-item dropdown">Products... <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button"><span class="caret">#</span>
+             </a>3&trade; Jamstack Wiki Platform<ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">#<li class="dropdown-item">#
+               <a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">###
+                href=#"###//www.sunstarsys.com/orion/plans.html#https:#"#>Orion 定價計畫 </a>##
              #3
-           </a>#
+           </li>#
+
+<li class="dropdown-item">
+             <a class="nav-link text-dark"More... </a></li></ul>
+             </li>
+               <li class="nav-item dropdown">
+                 <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">Site Source##
+               <span class="caret">
+               </span></a>
+               <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">i18n<li class="dropdown-item">
+               <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/"></a>English##</li>#
+               <li class="dropdown-item divider">#</li>##
+               <li class="dropdown-header text-dark"></li>German##<li class="dropdown-item">######               <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">#</a>################               </li>####<li class="dropdown-item">######<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">#######               </a>################               </li>###########               <li class="dropdown-item">###################               <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">##############               #317  </a>#####</li>Categories###<li class="dropdown-item">#######               <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">######</a>########1
+        
 
 </li>
-             <li class="dropdown-item">More... <a class="nav-link text-dark"</a></li>
-             </ul>
-               </li>
-                 <li class="nav-item dropdown">Site Source##
-               <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">
-               <span class="caret"></span>
-               </a>i18n<ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">
-               <li class="dropdown-item"><a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">English##</a>#
-               </li>#<li class="dropdown-item divider">##
-               </li><li class="dropdown-header text-dark">German##</li>######               <li class="dropdown-item">#<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">################               </a>####</li>######<li class="dropdown-item">#######               <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">################               </a>###########               </li>###################               <li class="dropdown-item">##############               #317  <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">#####</a>Categories###</li>#######               <li class="dropdown-item">######<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">########19#        
-
-</a>
              active
-             {% endblock %}"></li>Powered by...<li class="dropdown-item">
-           <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">
-         </a>
-		 </li>
-         <li class="dropdown-item">
-             }}" class=d-flex form-inline right""# method=GET"#>#
-           <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">
+             {% endblock %}"><li class="dropdown-item">Powered by...<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">
            </a>
-           </li>"
-               placeholder=PCRE 遞迴搜尋 "#"## value=##"#/>##<li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">#</a>####3
-	     </li>
-  <li class="dropdown-item">#
-###<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">#
+         </li>
+		 <li class="dropdown-item">
+         <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">
+             }}" class=d-flex form-inline right""# method=GET"#>#
+           </a>
+           </li>
+           <li class="dropdown-item">"
+               placeholder=PCRE 遞迴搜尋 "#"## value=##"#/>##<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he"></a>#</li>####3
+	     <li class="dropdown-item">
+  <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">#
+###</a>#
 
 {% endif %}
   {% endif %}
-  </a>
-     </li><li class="dropdown-item divider">
-     {{ lang }}
   </li>
+     <li class="dropdown-item divider"></li>
+     {{ lang }}
+  <li class="dropdown-header text-dark">
   {% endif %}
 {% endifequal %}
 
-<li class="dropdown-header text-dark">
+</li>
   {{ regex }}
-  </li>
-       {% block alert %}&nbsp;&nbsp;<li class="dropdown-item">
-         <a class="nav-link text-dark" href="/categories/index.html{{lang}}">
-       </a>
-  </li>
-  <li class="dropdown-item">{% if alert %}#<a class="nav-link text-dark" href="/archives/index.html{{lang}}">
-  </a>{{ alert|markdown }}#</li>
+  <li class="dropdown-item">
+       {% block alert %}&nbsp;&nbsp;<a class="nav-link text-dark" href="/categories/index.html{{lang}}">
+         </a>
+       </li>
+  <li class="dropdown-item">
+  <a class="nav-link text-dark" href="/archives/index.html{{lang}}">{% if alert %}#</a>
+  </li>{{ alert|markdown }}#</ul>
   {% endif %}
 
-</ul>{% endblock %}{% block content %}</li><li class="nav-item{% if path|starts_with:"/powered-by.md" %}
+</li>{% endblock %}{% block content %}<li class="nav-item{% if path|starts_with:"/powered-by.md" %}<a class="nav-link" href="/powered-by.html{{lang}}">
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
@@ -203,6 +204,6 @@ if (permission === "granted") {
   </script>
   
   {{ breadcrumbs|safe }}#
-<a class="nav-link" href="/powered-by.html{{lang}}">#
-#</a>#
-</li>
+</a>#
+#</li>#
+</ul>

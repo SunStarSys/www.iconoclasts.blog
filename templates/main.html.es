@@ -73,46 +73,47 @@
               <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW"></a>Chinese</li><li class="dropdown-item">
               <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he"></a>Hebrew#              </li><li class="dropdown-item">Swedish<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv"></a>
               </li><li class="dropdown-item divider">
-              </li>Taxonomies <li class="dropdown-header text-dark">Taxonomies#              </li><li class="dropdown-item">Categories<a class="nav-link text-dark" href="/categories/index.html{{lang}}">#318  </a></li>Archives#            <li class="dropdown-item"><a class="nav-link text-dark" href="/archives/index.html{{lang}}">3#</a>            </li></ul>
-19#         </li><li class="nav-item{% if path|starts_with:"/powered-by.md" %}        
+              </li>Taxonomies <li class="dropdown-header text-dark">Taxonomies#              </li><li class="dropdown-item">Categories<a class="nav-link text-dark" href="/categories/index.html{{lang}}">#318  </a></li>Archives#            <li class="dropdown-item"><a class="nav-link text-dark" href="/archives/index.html{{lang}}"></a></li>            </ul></li>
+1
+         <li class="nav-item{% if path|starts_with:"/powered-by.md" %}<a class="nav-link" href="/powered-by.html{{lang}}">        
 
-<a class="nav-link" href="/powered-by.html{{lang}}">
+</a>
             activo
-            {% endifequal %}"></a>Powered por...</li>
-          </ul>
-        </div>
-		<form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-        <input type="hidden" name="lang" value="{{ lang }}" />
+            {% endifequal %}"></li>Powered por...</ul>
+          </div>
+        <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
+		<input type="hidden" name="lang" value="{{ lang }}" />
+        <input type="hidden" name="markdown_search" value="1" />
             }}{{ regex }}/" class="d-flex form-inline right" method="GET">
-          <input type="hidden" name="markdown_search" value="1" />
           <input class="form-control me-2" type="text" name="regex"
           <button type="submit" name="submit" value="1" class="btn btn-outline-danger">
-               placeholder="PCRE Búsqueda recursiva" value="{% block alert %}" />&nbsp;<i class="fa fa-search"></i></button>
-	    </form>
- </div>
-</header>
+          <i class="fa fa-search">
+               placeholder="PCRE Búsqueda recursiva" value="{% block alert %}" />&nbsp;</i></button></form>
+	    </div>
+ </header>
+<div class="alert alert-dismissible alert-info container">
 
 {% if alert %}
   {{ alert|markdown }}
-  <div class="alert alert-dismissible alert-info container">
-    <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal"></button>
+  <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal">
+    </button></div>
     {% endif %}
-  </div>
+  <div class="container theme-showcase" id="content">
   {% endblock %}
 {% block content %}
 
-<div class="container theme-showcase" id="content">
+<div class="breadcrumbs">
   {{ breadcrumbs|safe }}
-  <div class="breadcrumbs">
-      {{ headers.title|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-        <img src="/images/edit.png" alt="Edit Icon" />
-      </a>
-  </div>
-  <h1>{{ content|markdown }}</h1>
-  <div class="jumbotron">{% endblock %}</div>
+  <a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
+      {{ headers.title|safe }}&nbsp;&nbsp;<img src="/images/edit.png" alt="Edit Icon" />
+        </a>
+      </div>
+  <h1>
+  </h1>{{ content|markdown }}<div class="jumbotron">
+  </div>{% endblock %}<footer>
   {% block footer %}
 
-<footer>{% endblock footer %}{% block javascript %}</footer><!--
+</footer>{% endblock footer %}{% block javascript %}<!--</div>
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
@@ -120,8 +121,7 @@
   <script src="/editor.md/js/sequence-diagram.min.js"></script>
   <script src="/editor.md/js/d3.min.js"></script> -->
 
-1#
-  <script src="/editor.md/js/wasm/index.min.js"></script>
+<script src="/editor.md/js/wasm/index.min.js"></script>
   <script src="/editor.md/js/d3-graphviz.js"></script>
   <script src="/editor.md/lib/mermaid.min.js"></script>
   <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
@@ -213,7 +213,8 @@ if (permission === "granted") {
 	}
   </script>
   
+  
   {% endblock %}
-</div>
 </body>
 </html>
+

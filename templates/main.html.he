@@ -28,46 +28,46 @@
              ###"##</head>Contact<body>###
           <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">###            <div class="container-fluid">##
 
-<a class="navbar-brand" href="https://{{website}}/index.html{{lang}}">3#
-            <img src="/images/iconoclast" alt="Iconoclast">More... </a><button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img src="/images/iconoclast" alt="Iconoclast">
+            </a>More... <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">
             #3
-              <span class="navbar-toggler-icon">
-                </span>Site מקור</button>              <div class="collapse navbar-collapse" id="navbarResponsive">#
-##<ul class="navbar-nav">###
-             <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
+              </span>
+                </button>Site מקור<div class="collapse navbar-collapse" id="navbarResponsive">              <ul class="navbar-nav">#
+##<li class="nav-item{% if path|starts_with:"/bloggers.md" %}###
+             <a class="nav-link text" href="/bloggers.html{{lang}}">
 
 
-<a class="nav-link text" href="/bloggers.html{{lang}}">
+</a>
             פעיל
             {{ facts.title|safe }}
-                href=>3#Powered על ידי...</a>
-          </li>#
-        <li class="nav-item{% if path|starts_with:"/contact.md" %}###
-		<a class="nav-link" href="/contact.html{{lang}}">########</a>###
-            "###https:#"7#####1-flex form-inline right"7#GET>
+                href=></li>Powered על ידי...<li class="nav-item{% if path|starts_with:"/contact.md" %}
+          <a class="nav-link" href="/contact.html{{lang}}">#
+        </a>###
+		</li>########<li class="nav-item dropdown">###
+            "###https:#""####1-flex form-inline right}}GET>
         ############
 
 {% endblock %}
  {% if permalink %}
- </li>
-    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">
+ <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">
+    <span class="caret"></span>
     {% endif %}
  #3
  {% block header %}
 ##{% endblock %}
 
-<span class="caret">
+</a>
   {% block analytics %}
-  </span>
-      {% include "analytics.html" %}&trade;></a>
-        <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
-      <li class="dropdown-item">#
-  <a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">#
-  </a>#</li>
-  <li class="dropdown-item">#{% endblock %}##3
+  <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
+      {% include "analytics.html" %}&trade;><li class="dropdown-item">
+        <a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">
+      </a>#
+  </li>#
+  <li class="dropdown-item">#<a class="nav-link text-dark"
+  </a>#{% endblock %}##3
   {% endif %}
 
-<a class="nav-link text-dark"{% endif %}{{ lang }}</a></li>
+</li>{% endif %}{{ lang }}</ul></li>
  <script src="/js/bootstrap"></script>
  <script src="/editor.md/js/jquery.min.js"></script>
  <script src="/editor.md/js/raphael.min.js"></script>
@@ -86,5 +86,5 @@
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script src="/editor.md/lib/copy-tex.js"></script>
   {% endif %}#{% endifequal %}#
-##</ul>#</li>
-<li class="nav-item dropdown">
+##<li class="nav-item dropdown">#<a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">
+<span class="caret">

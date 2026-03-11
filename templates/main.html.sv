@@ -10,7 +10,8 @@
     <meta name="theme-color" content="black">
     ##3
     ##{% block title %}## - {{ headers.title|safe }}#3
-9####
+
+###
 ######⦅island_start:1<meta property="og:image" content="/images/iconoclast.jpg"><title>#####
 
 </title>
@@ -30,50 +31,50 @@
              active
             <img src="/images/iconoclast" alt="Iconoclast"></a>#
          #3
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Products<span class="navbar-toggler-icon">3#</span>#3
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Products<span class="navbar-toggler-icon"></span></button>#3
 
 
-</button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">More... <ul class="navbar-nav"><li class="nav-item{% if path|starts_with:"/bloggers.md" %}<a class="nav-link text" href="/bloggers.html{{lang}}">
-            </a>
-              </li>
-             Källa<li class="nav-item{% if path|starts_with:"/contact.md" %}
-            <a class="nav-link" href="/contact.html{{lang}}">#3
-8</a></li>3#
+<div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">More... <li class="nav-item{% if path|starts_with:"/bloggers.md" %}<a class="nav-link text" href="/bloggers.html{{lang}}"></a>
+            </li>
+              <li class="nav-item{% if path|starts_with:"/contact.md" %}
+             Källa<a class="nav-link" href="/contact.html{{lang}}">
+            </a>#3
+></li><li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">
 
-<li class="nav-item dropdown">
+<span class="caret">
             active
-            {% endblock %}"><a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">Powered av...<span class="caret">
-          </span>
-        </a>
-		<ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">#
+            {% endblock %}"&trade;</span>Powered av...</a>
+          <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
         <li class="dropdown-item">
+		<a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">#
+        </a>
             
-                href="#{% if permalink %}/https:"d-flexform-inline right"}}GET"&trade;
+                href="#{% if permalink %}/https:"d-flexform-inline right"}}GET">
          #3
-3<a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">#
+</li><li class="dropdown-item">#
 
 {% endif %}
   {% block header %}
-  </a>
-    </li><li class="dropdown-item">
-    {% endblock %}
   <a class="nav-link text-dark"
+    </a></li>
+    {% endblock %}
+  </ul>
   {% block analytics %}
 ###
 
-</a>
+</li>
   {% include "analytics.html" %}
-  </li>
-      {% endblock %}>></ul>
-        </li>
-      <li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">
-  <span class="caret">{% endif %}</span>
-  </a>#{% endif %}<ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">
+  <li class="nav-item dropdown">
+      {% endblock %}>><a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">
+        <span class="caret">
+      </span>
+  </a>
+  <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">{% endif %}<li class="dropdown-item">
+  <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">#{% endif %}</a>
   {{ lang }}
 
-<li class="dropdown-item">{% endif %}{% endifequal %}<a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/"></a>
+</li>{% endif %}{% endifequal %}<li class="dropdown-item divider"></li>
   <script src="/js/bootstrap"></script>
   <script src="/editor.md/js/jquery.min.js"></script>
   <script src="/editor.md/js/raphael.min.js"></script>
@@ -91,7 +92,7 @@
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script src="/editor.md/lib/copy-tex.js"></script>
   {{ regex }}{% block alert %}
-#</li>
-<li class="dropdown-item divider">
+#<li class="dropdown-header text-dark">
+</li>
 
 #
