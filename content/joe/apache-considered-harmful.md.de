@@ -4,60 +4,60 @@ categories: Apache (Perl)
 dependencies: '*.md.de'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: überprüft=28536
+status: Entwurf
 title: Apache HTTPd als schädlich erachtete Entwickler
 ---
 
-<div class="right"
+<div class="right">
 
-![gefroren und gefedert ](apache-considered-harmful.page/feather2.png  ) 
+![geteert und gefedert](apache-considered-harmful.page/feather2.png).
 
-</div
+</div>
 
 ## Hintergrund
 
-In den letzten 25 Jahren war ich der führende Entwickler der `Erforderlich` Unterprojekt innerhalb der [Apache HTTPd-Server ](https://httpd.apache.org  ) Übergeordnetes Projekt. Die ursprüngliche Idee von `libapreq` als Safe/Performant [HTML-Formularweiterleitung ](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html  ) und [ Cookie ](https://datatracker.ietf.org/doc/html/rfc6265  )  Parsing-Bibliothek, kam aus einer Zusammenarbeit zwischen Lincoln Stein und Doug MacEachern Ende 90s.
+In den letzten 25 Jahren war ich der führende Entwickler der `Apreq` Unterprojekt innerhalb der [Apache HTTPd-Server](https://httpd.apache.org) Übergeordnetes Projekt. Die ursprüngliche Idee von `libapreq` als sicher/performant [HTML-Formularweiterleitung](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) und [Cookie-Einstellungen](https://datatracker.ietf.org/doc/html/rfc6265) Parsing-Bibliothek, kam aus einer Zusammenarbeit zwischen Lincoln Stein und Doug MacEachern in der späten 90s.
 
-Damals war es meine Vision, die Bibliothek in eine generische, nicht perlbezogene Bibliothek zu verwandeln. `C` Bibliothek, die Sprachbindungen aus anderen Programmiersprachen unterstützen würde, weshalb ich für das Projekt [bewohnt ](https://httpd.apache.org/apreq  )  unter dem Schirm HTTPd statt der [Dorsch-Perl ](https://perl.apache.org/  ) Projekt.
+Damals war es meine Vision, die Bibliothek in eine generische, nicht perlbezogene Bibliothek zu verwandeln. `C` Bibliothek, die Sprachbindungen aus anderen Programmiersprachen unterstützt, weshalb ich für das Projekt [homosexuell](https://httpd.apache.org/apreq) unter dem Dach HTTPd statt der [Apache-Perl](https://perl.apache.org/) Projekt.
 
-Mit dem Aufkommen von `httpd-2. X` eine völlig neue `I/O-Filter` Architektur entstand aus `httpd` Kern, sowie die vollständige Trennung von `APR` vom Kern selbst als allgemeinere POSIX-ähnliche Portabilitätslaufzeit für `C` Projekte wie `Subversion` Tatsächlich `libapreq2` ist enger mit dem `Apache APR` Projekt in diesem Sinne und seine Perl API spiegelt dies als Teil seiner `APR::Anforderung` ausbauen.  Es verfügt über einen integrierten *CGI*-Modus für Standalone-Betrieb, außerhalb der `httpd` Laufzeit, die das Testen von Einheiten zum Kinderspiel macht.
+Mit dem Aufkommen von `httpd-2. X`eine völlig neue `I/O-Filter` Architektur entstand aus `httpd` Kern, sowie die vollständige Trennung von `Jährlich` aus dem Kern selbst als allgemeinere POSIX-ähnliche Portabilitätslaufzeit für `C` Projekte wie `Subversion` Tatsächlich `libapreq2` stärker mit dem `APR Apache` Projekt in diesem Sinne, und seine Perl API spiegelt dies als Teil seiner `APR::Anforderung` Aufbau.  Es verfügt über einen integrierten *CGI*-Modus für Standalone-Betrieb, außerhalb der `httpd` Laufzeit, die das Testen von Einheiten zum Kinderspiel macht.
 
-Die Schlüsselkomponente von `apreq2` war schon immer der `mod_apreq2` Apache-Modul, das zuerst von `Bill Wrowe` Anfang 2000s.  Was er während einer Brainstorming-Sitzung mit mir (persönlich) entwarf, war eine einzige Parser-Bibliothek. `httpd` diese **gemeinsam** die weitergeleitete Anforderung *body* mit jedem wichtigen Stakeholdermodul in der Laufzeit.  Das bedeutete, dass geparste Daten an Module bereitgestellt wurden, die mit der Anforderungsverarbeitungs-Engine *vor*, *während* und *nach* der Ausführung des Content Handlers verbunden sind. Und es musste auch für Unteranforderungen arbeiten, unabhängig davon, ob der Content Handler die geparsten Daten konsumiert oder den Raw Request Body selbst konsumiert und repariert hat.
+Die Schlüsselkomponente von `apreq2` war schon immer der `mod_apreq2` Apache-Modul, das zuerst von `Bill Wrowe` Anfang 2000s.  Was er während einer Brainstorming-Sitzung mit mir (persönlich) entwarf, war eine einzige Parser-Bibliothek. `httpd` dass **die weitergeleitete Anforderung *body* mit jedem wichtigen Stakeholdermodul in der Laufzeit geteilt wird.  Das bedeutete, dass geparste Daten an Module bereitgestellt wurden, die mit der Anforderungsverarbeitungs-Engine *vor*, *während* und *nach* der Ausführung des Content Handlers verbunden sind. Und es musste auch für Unteranforderungen arbeiten, unabhängig davon, ob der Content Handler die geparsten Daten konsumiert oder den Raw Request Body selbst konsumiert und repariert hat.
 
-Ich habe die Designziele im Laufe der Jahre mehrmals erklärt, auch im Jahr 2012. [dev@httpd ](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04  ) . Aber es war immer wie mit diesen Jungs mit dem Wind zu reden; sie kümmerten sich einfach nie.
+Ich habe die Designziele im Laufe der Jahre mehrmals erklärt, auch im Jahr 2012. [Gerät@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04) Aber es war immer wie mit diesen Jungs mit dem Wind zu reden; sie kümmerten sich einfach nie.
 
 ## Sturmwolken sammeln
 
-Während diese Vision sehr erfolgreich war, mit Sprachbindungen für mehrere Sprachen wie [`Perl` ](https://perl.apache.org/  ) , [`Deutsch` ](https://github.com/php/php-src/blob/master/main/rfc1867.c  ) ,  [`TCL` ](https://tcl.apache.org/  ) , [`R` ](https://github.com/jeffreyhorner/rapache  ) , etc., seit etwa 2010 hat es sich als tragisch für die [bestehende Benutzergemeinschaft ](https://webtechsurvey.com/technology/mod_apreq2  )  <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title=" {{commentAA.headers.title}} ">bestehend aus allen</aNicht nur die Mitglieder der `Perl` Gemeinschaft.
+Während diese Vision sehr erfolgreich war, mit Sprachbindungen für mehrere Sprachen wie [`Perl`](https://perl.apache.org/) [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c)  [`TCL`](https://tcl.apache.org/) [`R`](https://github.com/jeffreyhorner/rapache) etc., seit etwa 2010 hat es sich als tragisch für die [vorhandene Benutzercommunity](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}bestehend aus allen</a>Nicht nur die Mitglieder der `Perl` Gemeinschaft.
 
-Was ist passiert? [Philip Gollucci ](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci  ) , ein Perl/FreeBSD Kollege von mir zu der Zeit begann aufgeregt, dass wir das Projekt fördern, um innerhalb des HTTPd-Servers selbst veröffentlicht zu werden. Was  {# lede #}Philip wusste damals nicht sehr gut, wie völlig [peevish, vapid und territorial ](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html  ) Dieses Team wurde {# lede #} , was bedeutet hätte, direkt mit ihnen zusammenzuarbeiten [ Entscheidungen für Benutzer ](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html  ) über die Codebasis.
+Was ist passiert? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci) ein Perl/FreeBSD-Kollege zu der Zeit, begann aufgeregt, dass wir das Projekt fördern, das innerhalb des HTTPd-Servers selbst veröffentlicht werden soll. Was {# lede #}Philipp wusste damals nicht sehr gut, wie völlig [peevish, vapid und territorial](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) Das Team wurde{# lede #} was bedeutet hätte, direkt mit ihnen zusammenzuarbeiten [Entscheidungen für Benutzer](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) über die Codebasis.
 
-Im Jahr 2012 bekam Philip, was er wollte, und ich hörte auf zu widerstehen, so dass er [Gabel ](https://svn.apache.org/viewvc?view=revision&revision=1201372  ) das vorhandene Projekt und kopiert `C` Bibliothekskomponenten in HTTPd Core.
+Im Jahr 2012 bekam Philip, was er wollte, und ich hörte auf zu widerstehen, so dass er [Gabelung](https://svn.apache.org/viewvc?view=revision&revision=1201372) das vorhandene Projekt kopiert und `C` Bibliothekskomponenten in HTTPd Core.
 
 ## Fallout
 
-[2018 ](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1  )  Ich bin von der Stiftung en masse zurückgetreten. Sie können die Gründe erraten.
+[2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) Ich bin von der Stiftung en masse zurückgetreten. Sie können die Gründe erraten.
 
 Im Jahr 2020 oder so nutzte Googles Sicherheitsteam eine Alpha-Veröffentlichung von httpd 2.5, indem es seine 8-jährige Kopie von `apreq2` Sie fanden ein paar Hotspots, die repariert werden mussten.
 
-Anstatt die Höflichkeit zu haben, sich an Philip zu wenden, [Issac Goldstand ](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand  ) , [Max Kellermann ](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann  )  (@MaxKellermann), mich selbst (@joesuf4) oder andere an der Entwicklung von `libapreq2` ein Junior-Ingenieur im HTTPd-Team ging über das Geschäft "Bugfixing" der Schwachstellen, die Google gefunden hat. Sie können eine Aufzeichnung seiner Versuchs- und Fehlerarbeit in jeder Veröffentlichung seitdem sehen.
+Anstatt die Höflichkeit zu haben, sich an Philip zu wenden, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand) [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann), ich selbst (@joesuf4) oder andere an der Entwicklung von `libapreq2` ein Junior-Ingenieur im HTTPd-Team ging über das Geschäft der "Bugfixierung" der Schwachstellen, die Google gefunden hat. Sie können eine Aufzeichnung seiner Versuchs- und Fehlerarbeit in jeder Veröffentlichung seitdem sehen.
 
-Aber der Putsch der Gnade war die Freilassung von 2022. [2.17 ](https://www.google.com/search?q=libapreq2-2.17  ) , wobei der Rookie-Entwickler [absichtlich einen fatalen Bug in die Codebase eingeführt ](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891  ) , brechen [ein neunzehnjähriger Regressionstest ](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107  ) .
+Aber der Putsch der Gnade war die Freilassung von 2022. [2.17](https://www.google.com/search?q=libapreq2-2.17) wobei der Rookie-Entwickler [Absichtlich einen fatalen Bug in die Codebase eingeführt](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891) brechen [ein neunzehnjähriger Regressionstest](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
 ## Postmortem
 
-Wenn Sie sich fragen, wie etwas mit einem gebrochenen Regressionstest weitergeht [CPAN ](https://cpan-digger.perlmaven.com/dist/libapreq2  ) Sie müssen sich ansehen, wie [FREIGEBEN ](https://httpd.apache.org/dev/release.html  )  im Serverprojekt ausgeführt wird.
+Wenn Sie sich fragen, wie etwas mit einem gebrochenen Regressionstest weitergeht [PAN](https://cpan-digger.perlmaven.com/dist/libapreq2)Sie müssen sich ansehen, wie [RELENG](https://httpd.apache.org/dev/release.html) wird im Serverprojekt ausgeführt.
 
-Lange Geschichte kurz, [Sie kommentierten den Test ](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602  )  und versendet es trotzdem und nannte es ein Sicherheitsrelease, das [behebung einer Sicherheitsanfälligkeit, für die jede vorherige Veröffentlichung anfällig war ](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191  ) .
+Lange Geschichte kurz, [Sie kommentierten den Test](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) und es trotzdem versendet hat, und nannte es ein Sicherheitsrelease, das [Behebung einer Schwachstelle, die jede vorherige Veröffentlichung anfällig für](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
-<div class="right"
+<div class="right">
 
-![Superman-Logo ](apache-considered-harmful.page/superman.jpg  ) 
+![Superman-Logo](apache-considered-harmful.page/superman.jpg).
 
-</div
+</div>
 
-Warum kümmere ich mich jetzt? Weil ich der Sauger bin [Benutzer erreichen uns nach Antworten ](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html  ) als bekannter Sachverständiger.
+Warum kümmere ich mich jetzt? Weil ich der Sauger bin [Benutzer greifen auf Antworten zu](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) als bekannter Sachverständiger.
 
 Das ist scheiße, aber es tut mir leid, Ihnen zu sagen, dass meine Tage mit dem Superman-Umhang in Apache vor etwa einem Jahrzehnt endete.
 
-<!-- $Date$ $Author$ $Revision$ --
+<!-- $Date$ $Author$ $Revision$ -->
