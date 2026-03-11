@@ -52,7 +52,7 @@
             <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
               <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Орион&trade; Платформа Jamstack Wiki</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
-                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}"Ценовые планы Orion</a></li>
+                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Ценовые планы Orion</a></li>
             </ul>
           </li>
 
@@ -81,7 +81,7 @@
 
 <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             активный
-            {% endif %}"<a class="nav-link" href="/powered-by.html{{lang}}">При поддержке...</a>
+            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">При поддержке...</a>
           </li>
         </ul>
 		</div>
