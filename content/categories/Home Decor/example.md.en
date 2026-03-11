@@ -1,5 +1,5 @@
 ---
-acl: jennifer=rw
+acl: jennifer=rw, *=
 categories: Home Decor
 dependencies: '*.md.en'
 status: draft
@@ -8,3 +8,5 @@ title: Home Decor Blog Entry
 ---
 
 {% ssi `/jennifer/example.md.en` %}
+
+<!-- $Date$ $Author$ $Revision$ -->
