@@ -2,100 +2,124 @@
 <html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">%
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SunStar Systems">
     <meta name="author" content="Joe Schaefer">
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
     <meta name="theme-color" content="black">
     <meta property="og:image" content="/images/iconoclast.jpg">
-    <title>{% block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
-    {% if permalink %}
+    <title>{% block title %}4% - {{ headers.title|safe }}%%%3
+    %4
+    </title>
+    %4
     <link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
-    {% endif %}
+    %3
+    %3
+    %3
+    %3
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="/css/katex.min.css" rel="stylesheet" media="screen">
-    <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">
+    %3
+	<link href="/css/katex.min.css" rel="stylesheet" media="screen">
+	%3
+    <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">%
     <link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
-    <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
-    <link href="/editor.md/lib/codemirror/codemirror.min.css" rel="stylesheet" media="screen">
-    <link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" rel="stylesheet" media="screen">
-	<link href="/editor.md/lib/codemirror/theme/solarized.css" rel="stylesheet" media="screen">
-	<link href="/css/local.css" rel="stylesheet" media="screen">
-    <link href="/images/favicon.png" rel="icon">
-    <script src="/js/bootstrap"></script>
-	<script src="/editor.md/js/jquery.min.js"></script>
-    {% block header %}{% endblock %}
-    {% block analytics %}
-    {% include "analytics.html" %}
-    {% endblock %}
-</head>
+    <script src="/js/bootstrap"></script>%
+	%%
+    {{ facts.title|safe }}%
+    {% endblock %}%%%
+    {% if permalink %}%%%%
+    {% endif %}%{% block header %}%%%
+    {% endblock %}%%%%%%%%%%%%<link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">%%%
 
-<body>
-  <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img src="/images/iconoclast" alt="Iconoclast"></a>
-      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
+<link href="/editor.md/lib/codemirror/codemirror.min.css" rel="stylesheet" media="screen">
+  <link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" rel="stylesheet" media="screen">
+    <link href="/editor.md/lib/codemirror/theme/solarized.css" rel="stylesheet" media="screen">
+	  <link href="/css/local.css" rel="stylesheet" media="screen"><link href="/images/favicon.png" rel="icon">%3
+      </head>
+          <body><header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+
+<a class="navbar-brand" href="https://{{website}}/index.html{{lang}}">
+        <img src="/images/iconoclast" alt="Iconoclast">
+          </a>
+            actif
+            {% block analytics %}">3%Iconoclasts<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">
+          </span>
+             actif
+             {% include "analytics.html" %}%7></button>Contact<div class="collapse navbar-collapse" id="navbarResponsive"><ul class="navbar-nav">
+          %3
+            <li class="nav-item{% if path|starts_with:"/bloggers.md" %}Produits... <a class="nav-link text" href="/bloggers.html{{lang}}">3%</a>%
+            %3
+              </li>3%Orion&trade; Jamstack Wiki Platform<li class="nav-item{% if path|starts_with:"/contact.md" %}3%%
+              <a class="nav-link" href="/contact.html{{lang}}"></a>"
+                href=//www.sunstarsys.com/orion/plans.html%4"%>Orion Pricing Plans</li>3%
+            <li class="nav-item dropdown">%
+          <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">
+          <span class="caret">%
+
+</span>
+            </a>Plus... <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products"><li class="dropdown-item">%<a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">
+            </a>%
+              </li>
+                <li class="dropdown-item">Site Source<a class="nav-link text-dark"
+              </a>%
+              </li></ul>
+              </li>i18n<li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown"><span class="caret">Anglais</span></a>%%
+              <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more"><li class="dropdown-item">Espagnol<a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/"></a>
+              </li><li class="dropdown-item divider">Allemand</li>3%%
+              <li class="dropdown-header text-dark">3%Français</li>3%
+              <li class="dropdown-item">3<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">3%3
+              </a></li>Chinois<li class="dropdown-item">3%%
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">3</a>Hébreu</li>3%
+              <li class="dropdown-item">3%Suédois<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">3
+              </a>3%
+              </li>%
+              <li class="dropdown-item">%%
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">3</a>3</li>Catégories
+             <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">3%3
+19%
+
+</a>
+            actif
+            {% endblock %}https:>3%Powered by...</li>
+          <li class="dropdown-item">
+        <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">
+		</a>
+        </li>
+            ""{% endif %}/}7%}"d-flex form-inline right class=7%"GET">
+          <li class="dropdown-item">
+          <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">
+          </a> method=7"PCRE Recherche récursive"7%
+               placeholder=" />&nbsp;</li><li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">3%</a>%
+	    </li>
+  <li class="dropdown-item divider">
+  </li>
+%%%%  <li class="dropdown-header text-dark">%%
 
 {% endif %}
-        {% endif %}
-%          
-%%%%%%%%            active
-%%%            
-%%%%%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%         
-%%%%%%%%%%%%             active
-%%%%             
-%%%%%%%
+  {{ lang }}
+  </li>
+    <li class="dropdown-item">3%
+    {% endif %}
+  <a class="nav-link text-dark" href="/categories/index.html{{lang}}">
+  {% endifequal %}
+ {{ regex }}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-<div class="collapse navbar-collapse" id="navbarResponsive">"            {{ lang }}Plus... {% endif %}
-            
-%%%%%%             
-%%%%%%%%%%%                
-%
-%%%%%%%%
-%%%%%%%
-
-%%                 
-%
-%%%             >"
-%%%%%#%%%%%%%%%%%%%#%%%%%%%%%%%%%%#%%%%%%%%%%%%%#%%%%%%%#%%%%%%%%%%%#%%%%%%%%%%%%%%%%%#%%%%%%%%%%%#%%%%%%%#%%%%%%%%%#%%%%%%#%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%#%%%%%#%%%%%%%%%%%%%%#%%%%%%%%%%%%#%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%#%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%% #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{% endifequal %}>            actif
-%%            
-%%%
-%Powered by...
-%%%%%%%%%         
-%%%%%%%        
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{{ regex }}
+</a>
   {% block alert %}
-  <ul class="navbar-nav">
-    <li class="nav-item{% if path|starts_with:"/bloggers.md" %}<a class="nav-link text" href="/bloggers.html{{lang}}">
-    {% if alert %}
-  </a>
-  {{ alert|markdown }}
-{% endif %}
-
-</li>
+  </li>
+      {% if alert %}&nbsp;&nbsp;<li class="dropdown-item">
+        <a class="nav-link text-dark" href="/archives/index.html{{lang}}">
+      </a>
+  </li>
+  </ul>{{ alert|markdown }}</li>
+  <li class="nav-item{% if path|starts_with:"/powered-by.md" %}{% endif %}%<a class="nav-link" href="/powered-by.html{{lang}}">
   {% endblock %}
-  <li class="nav-item{% if path|starts_with:"/contact.md" %}
-      {% block content %}&trade;<a class="nav-link" href="/contact.html{{lang}}">
-        </a>
-      </li>
-  <li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">{{ breadcrumbs|safe }}<span class="caret">
-  </span>{{ headers.title|safe }}</a>
-  {{ content|markdown }}
 
-<ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">{% endblock %}{% block footer %}<li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">
+</a>{% block content %}{{ breadcrumbs|safe }}</li></ul>
+  <script src="/editor.md/js/jquery.min.js"></script>
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
@@ -194,7 +218,4 @@ if (permission === "granted") {
         }
 	}
   </script>
-  {% endblock footer %}{% block javascript %}
-</a>
-</li>
-<li class="dropdown-item">
+  {{ headers.title|safe }}4%</div>
