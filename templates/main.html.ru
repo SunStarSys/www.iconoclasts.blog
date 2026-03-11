@@ -39,53 +39,162 @@
           <span class="navbar-toggler-icon"></span>
       </button>
 
-<div class="collapse navbar-collapse" id="navbarResponsive">>        <ul class="navbar-nav"><li class="nav-item{% if path|starts_with:"/bloggers.md" %}         ########## <a class="nav-link text" href="/bloggers.html{{lang}}">            активный############             ########### </a>########### Иконописцев############ #################### ############# # <!##################### #################### # ################ # # # # # # ########## # <! ############ ###### # ####### # # # # # ##### # # ###### ### ##### ## ## ##### # # # ##### # #### # ### # # # # ## ## ## ## ### # # # ## #### ## ## ## ## ## # # # # # ## ## ## ## ## ## # # # ## ## ## ## ## ## ## ## ## # ## ## ## # # # ## ## ## # ## ## ## ## ## ## ## ## ## ## # # # # # ## ## ## ## ## ## ## ## # # # # # ## ## # # # # ## ## ## ## # # # # # # # # # # # # # # # ## ## ## # # # ## # ## ## # # # # # # # # # # # # # # ## ## ## ## # # # # # # # ## ## ## ## ## ## ## ## # ## ## ## # # ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## # # # # ## ## # # # # # ## ## # # # # # ## # # # # # ## ## ## ## ## ## ## ## ## ## ## ## # # # # ## # # # # # # # ## ## ## ## ## ## ## ## ## ## ## # # # # # # # # ## ## ## ## ## ## ## ## ## ## # ## # # # # # # # # # # # # # # # # # # # # # # ## ## ## ## ## ## ## ## ## ## ## ## ## # # # # # # ## ## # # # # # # # # # # # # # # # ## ## ## ## ## # ## ## ## # # ## ## ## ## # # # ## ## ## ## ## ## ## ## ## ## # # ## ## ## # ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## # # # # # # # # # # ## ## # # # ## ## # ## # # # # # ## ## ## # # # ## ## ## ## ## ## ## # ## # # ## ## ## ## ## # ## # 
+{% endif %}
+%        
+%         
+%%%            активный
+%%%%            
+%%%%%
+<div class="collapse navbar-collapse" id="navbarResponsive">Iconoclasts{% endif %}
+%%%          
+%%%%%%%%             активный
+%%%%%%%%%"{{ lang }}<ul class="navbar-nav">">
+%%
+%%%%%%%%%%%%%%          
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-<######### <!#########             <!############### <!############ ###### ###### <!######### ######             <!############### <!############             <!################# <!############                 <!#################### <!##################              <!####################### <!###################                 <!############# ######## ############# ########## ########## ################################################################################################################ <############################################################################################################################################################################################################################################################################################################################################################################################################## <############################################################################################################################################################################################################ 
-
-</li>>            активно
+<li class="nav-item{% if path|starts_with:"/bloggers.md" %}>            <a class="nav-link text" href="/bloggers.html{{lang}}">Более... &trade;
             
-
-########## # Powered by...############ ###########         ###############         ############### ############ 		!-- ################# ############## ##############         ################ # ############## # ############ ####### 		 ############## ###### ###### ##### ######## ##### ####### ###### ######### # <###### ########### #### ##### ##### ##### ### ### ### #### #### ######## ######## ## ## ### #### ### ## ####### ######## ###### ########## ################ # <########### ########## ####### ## ####### ###### ############### # ########### ########################## ############################## ############## ################# ################################################ ############################# <! 
+%%%%%%%             
+%%%%%%%                
+%%%%%%%%%%%%%%             
+%%%%%%%%%%%%%%%             
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {% endif %}
-  {% endif %}
-  <li class="nav-item{% if path|starts_with:"/contact.md" %}
-    <a class="nav-link" href="/contact.html{{lang}}"></a>
-    {{ lang }}
-  </li>
-  {% endif %}
+%            активный
+%            
+%%%
+%
+%%%         
+%%%%%%%        
+%%%%%%		
+%%%%%
+%%%        
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 {% endifequal %}
-
-<li class="nav-item dropdown">
   {{ regex }}
-  <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">
-      {% block alert %}&trade;<span class="caret">
-        </span>
-      </a>
-  <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
-  <li class="dropdown-item">{% if alert %}<a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">
-  </a>{{ alert|markdown }}</li>
+  </a>
+    </li><li class="nav-item{% if path|starts_with:"/contact.md" %}
+    {% block alert %}
+  <a class="nav-link" href="/contact.html{{lang}}">
+  {% if alert %}
+{{ alert|markdown }}
+
+</a>
   {% endif %}
-
-<li class="dropdown-item">{% endblock %}{% block content %}<a class="nav-link text-dark"</a>
   </li>
-  </ul>
-  </li>
-  <li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">
-
-<span class="caret">
+      {% endblock %}><li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">
+      <span class="caret">
   </span>
-  </a>
-  <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">
-  <li class="dropdown-item">
-  <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">
-  </a>
-  </li>
-  <li class="dropdown-item divider">
-  </li>
-  {{ breadcrumbs|safe }}{{ headers.title|safe }}
-<li class="dropdown-header text-dark">
+  </a>{% block content %}<ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
+  <li class="dropdown-item">{{ breadcrumbs|safe }}<a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">
+  {{ headers.title|safe }}
+
+</a>{{ content|markdown }}{% endblock %}</li><li class="dropdown-item">
+  <script src="/editor.md/js/raphael.min.js"></script>
+  <script src="/editor.md/js/underscore.min.js"></script>
+  <script src="/editor.md/js/flowchart.min.js"></script>
+  <script src="/editor.md/js/jquery.flowchart.min.js"></script>
+  <script src="/editor.md/js/sequence-diagram.min.js"></script> -->
+
+<script src="/editor.md/js/d3.min.js"></script>
+  <script src="/editor.md/js/wasm/index.min.js"></script>
+  <script src="/editor.md/js/d3-graphviz.js"></script>
+  <script src="/editor.md/lib/mermaid.min.js"></script>
+  <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
+  <script src="/editor.md/lib/codemirror/addons.min.js"></script>
+  <script src="/editor.md/lib/codemirror/modes.min.js"></script>
+  <script src="/editor.md/lib/copy-tex.js"></script>
+  <script blocking="render" type="text/javascript">
+    if (typeof(editormd) === "undefined") {
+        //mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
+        mermaid.initialize({theme: "light", startOnLoad: true, securityLevel: "loose"});
+        //$(".flowchart").flowChart();
+        //$(".sequence-diagram").sequenceDiagram();
+        for (const e of $("body").find(".graphviz").toArray()) {
+            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
+            e.innerHTML = ""
+        }
+        $("body").find("pre").parent().addClass("editormd-preview-theme-light");
+        CodeMirror.colorize();
+    }
+
+if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
+    document.cookie.indexOf("gdpr_decline=1") == -1) {
+        for (const h1 of document.getElementsByTagName("h1")) {
+            var html = `<div id="analytics"><br><div class="card border-warning">
+<div class="card-header">
+  <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
+</div>
+<div class="card-body">
+<p class="card-text">
+<small class="text-dark">Please choose your Analytics preference:</small><br>
+  <button type="button" class="btn btn-outline-warning text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
+  onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
+  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
+  <button type="button" class="btn btn-outline-danger text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
+  onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
+  $('#analytics').css('display', 'none');true">I
+  Decline.</button><br><small class="text-dark">Should you elect to
+  Decline, we will not ask again for the next 10 days.</small>
+</p>
+</div>
+</div>
+</div>`;
+            h1.insertAdjacentHTML('beforeend', html);
+        }
+    }
+
+else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
+        document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
+    }
+  </script>
+  <script async type="module">
+    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+		var permission = Notification.permission;
+		if (permission !== "granted") {
+            Notification.requestPermission().then((result) => {
+              permission = result;
+            });
+        }
+
+if (permission === "granted") {
+		   var revision;
+           var m = document.cookie.match(/last=([0-9]+)/);
+           if (m)
+			 revision = m[1];
+           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
+                           {credentials: 'same-origin'});
+           try {
+              const json = await response.json();
+              for (const e of json.log) {
+                  var msg = e[3] + "\n";
+                  for (const [key, val] of Object.entries(e[1])) {
+                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
+				  }
+				  var n = new Notification(e[2],
+     			    {
+					  body: msg,
+					  tag: e[0],
+					  icon: "/images/favicon",
+					  image: "/images/iconoclast",
+				    }
+			  	  );
+			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
+			  }
+		   }
+           catch (e) {
+              alert(e);
+		   }
+        }
+	}
+  </script>
+  {% block footer %}{% endblock footer %}
+<a class="nav-link text-dark"
+</a>
 </li>
-<li class="dropdown-item">
