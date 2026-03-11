@@ -1,20 +1,20 @@
 {% if bibliography %}
 {% filter markdown %}
 
-No de referencias
+## Referencias
 
 {% for b in bibliography.content|dictsort:"author" %}
 {% ifequal b.type "article" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: {{b.doi|utf8decode|cuts:"\\-"}}{% endif %}.
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
 {% endifequal %}
 {% ifequal b.type "book" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. {{b.title|utf8decode|cuts:"\\="|safe}}. {% if b.volume %}Vol. {{b.volume}}. {% endif %}{% if b.number %}No {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"|safe}}, {{b.year}}.
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. {{b.title|utf8decode|cuts:"\\="|safe}}. {% if b.volume %}Vol. {{b.volume}}. {% endif %}{% if b.number %}No. {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"|safe}}, {{b.year}}.
 {% endifequal %}
 {% ifequal b.type "online" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`URL`: {{b.url|utf8decode|cuts:"\\-"}}.{% endif %}{% if b.doi %}`DOI`" {{b.doi|utf8decode|cuts:"\\-"}}.{% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`URL`: <{{b.url|utf8decode|cuts:"\\-"}}>{% endif %}{% if b.doi %} `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>,  {% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
 {% endifequal %}
 {% ifequal b.type "proceedings" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: {{b.doi|utf8decode|cuts:"\\-"}}{% endif %}.
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
 {% endifequal %}
 {% ifequal b.type "phdthesis" %}
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.school|utf8decode|cuts:"\\-"|safe}} ({{b.year}}).
@@ -29,12 +29,12 @@ No de referencias
 {% endif %}
 
 {% if headers.published %}
-<span class="badge bg-success text-white"><a href="{{headers.published|safe}}" style="color:#fff">Publicado</a></span>&nbsp;
+<span class="badge bg-success text-white"><a style="color:#fff" href="{{headers.published|safe}}">Publicado</a></span>&nbsp;
 {% endif %}
 
 {% if archive_path %}{% ifequal headers.status "archived" %}
 <span class="badge bg-warning">
-  <a href="{{archive_path}}" style="color:#000">Archivado</a></span>&nbsp;
+  <a style="color:#000" href="{{archive_path}}">Archivado</a></span>&nbsp;
 {% endifequal %}{% endif %}
 
 {% for k in headers.keywords %}
@@ -50,46 +50,46 @@ No de referencias
 
 {% for c in headers.categories %}
 <button type="button" class="btn btn-success">
-  <a style="color:#fff" href="{{category_root|default_if_none:".."}}/{{c}}">{{c}}</a></button>
+  <a style="color:#fff" href="{{category_root|default_if_none:".."}}/{{c}}/index.html{{lang}}">{{c}}</a></button>
 &nbsp;
 {% endfor %}
 
 <hr>
 <div class="card border-warning">
 	<form action="https://cms.sunstarsys.com/redirect" id="form" method="GET">
-    <input id="action" name="action" type="hidden" value="comment">
-    <input name="lang" type="hidden" value="{{lang|cut:"."}}">
+    <input type="hidden" id="action" name="action" value="comment">
+    <input type="hidden" name="lang" value="{{lang|cut:"."}}">
     <div class="card-header">
       <h3 class="card-title">Comentarios {% if category_root %}{% if archive_root %} &nbsp;
         <button type="submit" name="uri"
-                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
-                class="btn btn-sm btn-outline-warning">>>
+                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.página/comment.md{{lang}}"
+                class="btn btn-sm btn-outline-warning">
           Nuevo
         </button>
 {% endif %}{% endif %}
 		</h3>
     </div>
 
-<div class="card-body" id="comments">
+<div id="comments" class="card-body">
       {% for c in comments %}
       {% if c.closed %}
       {% else %}
       <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
         <header>
           <h6 class="card-title" id="{{c.key}}">
-            <a class="reference-link" href="#{{c.key}}-link">{{c.headers.title}}</a>
+            <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
             por {{c.content|ssi|vcs_author:lang}}
             en <em><time>{{c.content|ssi|vcs_date:lang}}</time></em>
             {% if c.muted %}
             {% else %}
             {% if c.important %}
             &nbsp;
-            <span class="badge bg-danger text-white">Importante.</span>
+            <span class="badge bg-danger text-white">Importante!</span>
             {% endif %}
             {% if category_root %}{% if archive_root %}
 			  &nbsp;
             <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
-                    value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
+                    value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.página/{{c.key}}.md{{lang}}">
               Responder
             </button>
 			{% endif %}{% endif %}
@@ -113,7 +113,7 @@ No de referencias
 <div class="card border-dark">
   <div class="card-header">
     <h3 class="card-title">Anexos &nbsp;
-    <button class="btn btn-sm btn-outline-dark" type="button"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Gestionar</a></button>
+    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Gestionar</a></button>
 </h3>
   </div>
   <div class="card-body">
@@ -125,7 +125,7 @@ No de referencias
   </div>
   <div class="card-header">
     <h3 class="card-title">Enlaces &nbsp;
-    <button class="btn btn-sm btn-outline-dark" type="button"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Gestionar</a></button></h3>
+    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.página/links.md{{lang}};action=add">Gestionar</a></button></h3>
   </div>
   <div class="card-body">
     {{ links.content|markdown }}
