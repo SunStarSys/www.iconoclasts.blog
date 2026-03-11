@@ -52,7 +52,7 @@
             <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
               <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orión&trade; Plataforma Wiki de Jamstack</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
-                href="https:www.sunstarsys.com/orion/plans.html{{ lang }}"Planes de precios de pedidos</a></li>
+                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}"Planes de precios de Orion</a></li>
             </ul>
           </li>
 
@@ -86,9 +86,9 @@
         </ul>
 		</div>
         <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}" class="d-flex form-inline derecha" method="Obtener"
-          <input type="hidden" name="lang" value="{{ lang }}" >
-          <input type="hidden" name="markdown_search" value="1" >
+            }}{% endifequal %}/" class="d-flex form-inline derecha" method="Obtener"
+          <input type="hidden" name="lang" value="{{ lang }}" />
+          <input type="hidden" name="markdown_search" value="1" />
           <input class="form-control me-2" type="text" name="regex"
                placeholder="Búsqueda recursiva PCRE" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
 	    </form>
