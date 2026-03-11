@@ -9,7 +9,7 @@
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
     <meta name="theme-color" content="black">
     <meta property="og:image" content="/images/iconoclast.jpg">
-    <title> block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
+    <title>{% block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
     {% if permalink %}
     <link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
     {% endif %}
@@ -52,7 +52,7 @@
             <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
               <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Орион&trade; Платформа Jamstack Wiki</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
-                ссылка="https://www.sunstarsys.com/orion/plans.html{{ lang }}Ценовые планы Orion</a></li>
+                href="https:www.sunstarsys.com/orion/plans.html{{ lang }}Ценовые планы Orion</a></li>
             </ul>
           </li>
 
@@ -86,11 +86,11 @@
         </ul>
 		</div>
         <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %} класс="d-гибкая форма-встроенная справа" метод="Получить"
+            }}{% endifequal %} class="d-гибкая форма-встроенная справа" method="Получить"
           <input type="hidden" name="lang" value="{{ lang }}" >
           <input type="hidden" name="markdown_search" value="1" >
           <input class="form-control me-2" type="text" name="regex"
-               заполнитель="Рекурсивный поиск PCRE" значение="{{ regex }} />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
+               placeholder="Рекурсивный поиск PCRE" value="{{ regex }} />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
 	    </form>
   </div>
 </header>
@@ -111,11 +111,11 @@
         <img src="/images/edit.png" alt="Edit Icon" />
       </a>
   </div>
-  <h1> headers.title|safe }}</h1>
-  <div class="jumbotron"> content|markdown }}</div>
+  <h1>{{ headers.title|safe }}</h1>
+  <div class="jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-<footer> block footer %}{% endblock footer %}</footer><!--
+<footer>{% block footer %}{% endblock footer %}</footer><!--
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
