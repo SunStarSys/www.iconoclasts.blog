@@ -43,16 +43,16 @@
         <ul class="navbar-nav">
           <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
             активный
-            {% endif %}<a class="nav-link text" href="/bloggers.html{{lang}}">Иконоборцы</a></li>
+            {% endif %}"<a class="nav-link text" href="/bloggers.html{{lang}}">Иконоборцы</a></li>
           <li class="nav-item{% if path|starts_with:"/contact.md" %}
              активный
-             {% endif %}<a class="nav-link" href="/contact.html{{lang}}">Контакт</a></li>
+             {% endif %}"<a class="nav-link" href="/contact.html{{lang}}">Контакт</a></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">Продукты... <span class="caret"></span></a>
             <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
               <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Орион&trade; Платформа Jamstack Wiki</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
-                href="https:www.sunstarsys.com/orion/plans.html{{ lang }}Ценовые планы Orion</a></li>
+                href="https:www.sunstarsys.com/orion/plans.html{{ lang }}"Ценовые планы Orion</a></li>
             </ul>
           </li>
 
@@ -81,16 +81,16 @@
 
 <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             активный
-            {% endif %}<a class="nav-link" href="/powered-by.html{{lang}}">При поддержке...</a>
+            {% endif %}"<a class="nav-link" href="/powered-by.html{{lang}}">При поддержке...</a>
           </li>
         </ul>
 		</div>
         <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %} class="d-гибкая форма-встроенная справа" method="Получить"
+            }}{% endifequal %}" class="d-гибкая форма-встроенная справа" method="Получить"
           <input type="hidden" name="lang" value="{{ lang }}" >
           <input type="hidden" name="markdown_search" value="1" >
           <input class="form-control me-2" type="text" name="regex"
-               placeholder="Рекурсивный поиск PCRE" value="{{ regex }} />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
+               placeholder="Рекурсивный поиск PCRE" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
 	    </form>
   </div>
 </header>
