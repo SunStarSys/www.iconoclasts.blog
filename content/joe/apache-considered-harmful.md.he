@@ -4,7 +4,7 @@ categories: אפאצ'י
 dependencies: '*.md.he'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: טיוטה
+status: אומתה=28582
 title: אפאצ'י HTTPd Devs נחשב מזיק
 ---
 
@@ -28,7 +28,7 @@ title: אפאצ'י HTTPd Devs נחשב מזיק
 
 ## ענני סערה מתאספים
 
-בעוד חזון זה היה מוצלח מאוד, עם כריכות שפה זמין עבור מספר שפות כמו [`פרל`](https://perl.apache.org/) [`דף בית אישי`](https://github.com/php/php-src/blob/master/main/rfc1867.c)  [`גבול בקרה תחתון`](https://tcl.apache.org/) [`R`](https://github.com/jeffreyhorner/rapache)מאז 2010 היא הוכיחה את עצמה כטרגית. [קהילת משתמשים קיימת](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}התבססות על כולם</a>לא רק החברים של `פרל` קהילה.
+בעוד חזון זה היה מוצלח מאוד, עם כריכות שפה זמין עבור מספר שפות כמו [`פרל`](https://perl.apache.org/) [`דף בית אישי`](https://github.com/php/php-src/blob/master/main/rfc1867.c)  [`גבול בקרה תחתון`](https://tcl.apache.org/) [`R`](https://github.com/jeffreyhorner/rapache)מאז 2010 היא הוכיחה את עצמה כטרגית. [קהילת משתמשים קיימת](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">כולל את כולם</a>לא רק החברים של `פרל` קהילה.
 
 מה קרה? [פיליפ גולוצ'י](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci) פרל / FreeBSD עמית שלי באותו זמן, התחיל להרגיז כי אנו לקדם את הפרויקט להשתחרר מתוך שרת HTTPd עצמו. מה {# lede #}פיליפ לא ידע כל כך טוב אז זה היה עד כמה [פלבי, vapid וטריטוריאלי](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) הקבוצה הזו הפכה{# lede #}זה היה אומר שצריך לשתף איתם פעולה ישירות. [החלטות מוכוונות משתמש](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) על בסיס הקוד.
 

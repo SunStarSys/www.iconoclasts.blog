@@ -4,7 +4,7 @@ categories: Apache, Perl
 dependencies: '*.md.es'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: borrador
+status: verificado=28582
 title: Desarrolladores de Apache HTTPd considerados perjudiciales
 ---
 
@@ -28,7 +28,7 @@ Le expliqué los objetivos de diseño varias veces a lo largo de los años, incl
 
 ## Reunión de nubes de tormenta
 
-Si bien esta visión tuvo un gran éxito, con enlaces de idiomas disponibles para varios idiomas como [`Perl`](https://perl.apache.org/) [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c)  [`TCL`](https://tcl.apache.org/) [`R`](https://github.com/jeffreyhorner/rapache)desde 2010 ha demostrado ser trágico para la [comunidad de usuarios existente](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}consistiendo en todos ellos</a>No sólo los miembros del `Perl` comunidad.
+Si bien esta visión tuvo un gran éxito, con enlaces de idiomas disponibles para varios idiomas como [`Perl`](https://perl.apache.org/) [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c)  [`TCL`](https://tcl.apache.org/) [`R`](https://github.com/jeffreyhorner/rapache)desde 2010 ha demostrado ser trágico para la [comunidad de usuarios existente](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">compuesto por todos ellos</a>No sólo los miembros del `Perl` comunidad.
 
 ¿Qué pasó? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci) un colega mío de Perl/FreeBSD en ese momento, comenzó a agitar que promocionemos el proyecto para ser lanzado desde dentro del propio servidor HTTPd. Qué {# lede #}Felipe no sabía muy bien en aquel entonces era lo [peevish, vapid y territorial](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) ese equipo se había convertido en{# lede #}que habría significado tener que colaborar con ellos directamente en [decisiones orientadas al usuario](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) Sobre la base de código.
 

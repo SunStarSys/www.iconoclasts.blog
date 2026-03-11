@@ -4,7 +4,7 @@ categories: Апач (Перл)
 dependencies: '*.md.ru'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: черновик
+status: проверено=28582
 title: Apache HTTPd Devs Считается Вредным
 ---
 
@@ -28,7 +28,7 @@ title: Apache HTTPd Devs Считается Вредным
 
 ## Сбор облаков штормов
 
-Хотя это видение было дико успешным, с языковыми привязками, доступными для нескольких языков, таких как [`Перл`](https://perl.apache.org/) [`ЛДС`](https://github.com/php/php-src/blob/master/main/rfc1867.c)  [`TCL`](https://tcl.apache.org/) [`R`](https://github.com/jeffreyhorner/rapache) и т.д., с тех пор, как около 2010 года это оказалось трагическим для [существующее сообщество пользователей](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}состоящий из всех</a>не только членов `Перл` Сообщество.
+Хотя это видение было дико успешным, с языковыми привязками, доступными для нескольких языков, таких как [`Перл`](https://perl.apache.org/) [`ЛДС`](https://github.com/php/php-src/blob/master/main/rfc1867.c)  [`TCL`](https://tcl.apache.org/) [`R`](https://github.com/jeffreyhorner/rapache) и т.д., с тех пор, как около 2010 года это оказалось трагическим для [существующее сообщество пользователей](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">состоящих из всех</a>не только членов `Перл` Сообщество.
 
 Что случилось? [Филип Голлюччи](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci)В то время мой коллега по Perl/FreeBSD начал беспокоиться о том, что мы продвигаем проект, который будет выпущен из самого сервера HTTPd. Что {# lede #}Филипп не очень хорошо знал тогда, как совершенно [пивиш, вапид и территориальный](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) Эта команда стала{# lede #} что означало бы необходимость сотрудничать с ними непосредственно [решения для пользователей](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) О кодовой базе.
 

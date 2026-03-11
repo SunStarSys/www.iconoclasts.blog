@@ -4,7 +4,7 @@ categories: Apache (ort)
 dependencies: '*.md.sv'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: skiss
+status: verifierad=28582
 title: Apache HTTPd Devs betraktas som skadliga
 ---
 
@@ -28,7 +28,7 @@ Jag förklarade designmålen flera gånger under åren, även under 2012 på [de
 
 ## Stormmoln samlas
 
-Även om denna vision var väldigt framgångsrik, med språkbindningar tillgängliga för flera språk som [`Perl`](https://perl.apache.org/) [`Sjukpenning`](https://github.com/php/php-src/blob/master/main/rfc1867.c)  [`TCL`](https://tcl.apache.org/) [`R`](https://github.com/jeffreyhorner/rapache)Sedan 2010 har det varit tragiskt för [befintligt användarforum](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}Bestående av alla</a>Inte bara medlemmarna i `Perl` samhälle.
+Även om denna vision var väldigt framgångsrik, med språkbindningar tillgängliga för flera språk som [`Perl`](https://perl.apache.org/) [`Sjukpenning`](https://github.com/php/php-src/blob/master/main/rfc1867.c)  [`TCL`](https://tcl.apache.org/) [`R`](https://github.com/jeffreyhorner/rapache)Sedan 2010 har det varit tragiskt för [befintligt användarforum](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">som består av alla</a>Inte bara medlemmarna i `Perl` samhälle.
 
 Vad hände? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci) en Perl/FreeBSD kollega till mig vid den tiden, började agitera att vi främjar projektet som ska släppas inifrån HTTPd servern själv. Vad {# lede #}Filip visste inte mycket väl då var hur fullständigt [peevish, vapid och territorialvatten](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) Det laget hade blivit{# lede #}Det hade varit nödvändigt att samarbeta med dem direkt. [användarstyrda beslut](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) om kodbasen.
 

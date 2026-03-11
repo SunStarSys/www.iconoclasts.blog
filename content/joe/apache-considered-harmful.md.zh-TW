@@ -4,7 +4,7 @@ categories: Apache, Perl
 dependencies: '*.md.zh-TW'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: 草稿
+status: 驗證 =28582
 title: Apache HTTPd 認為有害裝置
 ---
 
@@ -28,7 +28,7 @@ title: Apache HTTPd 認為有害裝置
 
 ## 風暴雲收集
 
-雖然此願景大致成功，但語言組合適用於多種語言，例如[`佩爾`](https://perl.apache.org/) [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c) [`TCL`](https://tcl.apache.org/) [`零售`](https://github.com/jeffreyhorner/rapache)自 2010 年以來，它已經證明了悲劇[現有使用者社群](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}由所有人組成</a>不只是成員`佩爾` 社群。
+雖然此願景大致成功，但語言組合適用於多種語言，例如[`佩爾`](https://perl.apache.org/) [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c) [`TCL`](https://tcl.apache.org/) [`零售`](https://github.com/jeffreyhorner/rapache)自 2010 年以來，它已經證明了悲劇[現有使用者社群](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">包含所有</a>不只是成員`佩爾` 社群。
 
 發生了什麼事？[Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci)當時，Perl/FreeBSD 的礦場同事開始認同我們推廣該項目從 HTTPd 伺服器本身內部發行。什麼{# lede #}菲利普的背面不太清楚，那就是說的。[貧困、快速和領土](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) 該團隊已經成為{# lede #}這意味著必須直接與他們合作[使用者面向決策](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) 關於程式碼庫。
 
@@ -60,4 +60,4 @@ title: Apache HTTPd 認為有害裝置
 
 這件事情很抱歉，我很抱歉告訴你，我在阿帕奇穿著超級人帽的日子約 10 年前結束。
 
-<!-- $Date: 2026-03-11 13:57:18 -0700 (Wed, 11 Mar 2026) $ $Author: joe $ $Revision: 28572 $ -->
+<!-- $Date: 2026-03-11 14:12:56 -0700 (Wed, 11 Mar 2026) $ $Author: joe $ $Revision: 28582 $ -->
