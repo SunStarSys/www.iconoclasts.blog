@@ -2,36 +2,34 @@
 archived: ~
 categories: Sicherheit, IT, Perl
 dependencies: '*.md.de'
-keywords: Infosec,zerotrust,taint,dynamisch, Daten
+keywords: infosec,zerotrust,taint,dynamisch,data
 published: ~
 status: archiviert
-title: Informationssicherheits-Primer
+title: Information Security Primer
 ---
 
 [TOC]
 
 #### Was ist das primäre Ziel von InfoSec?
 
-*Um sicherzustellen, dass alle Änderungen an Kontextgrenzen gut geregelt sind.*
+*Um sicherzustellen, dass alle Änderungen an Kontextgrenzen gut reguliert sind.*
 
-Beispiel: Jeder **Systemaufruf** auf einer UNIX-Plattform erfüllt diese Bedingung im Hinblick auf das UNIX-Sicherheitsmodell für Benutzer/Gruppenprozess und Dateisystem. Die literale Definition eines **Kontext-Switches**, wie sie von **Systemaufrufen** typisiert wird, umfasst eine Überprüfung des Integritätsstatus der API-Nutzung auf der Kernel-Seite des Aufrufs.
+Beispiel: Jeder **Systemaufruf** auf einer UNIX-Plattform erfüllt diese Bedingung im Hinblick auf das Sicherheitsmodell UNIX-Benutzer/Gruppenprozess+Dateisystem. Die literale Definition eines **Kontext-Switches**, wie von **Systemaufrufen** angegeben, umfasst die Integritätsprüfung der API-Nutzung auf der Kernel-Seite des Aufrufs.
 
-In Bezug auf SaaS Lieferung, {# lede #}alle Daten, die aus einem UNIX **Systemaufruf** zur Laufzeit stammen, müssen als **erhalten** behandelt werden{# lede #}
+Im Hinblick auf die SaaS Lieferung, {# lede #}alle Daten, die von einem UNIX **Systemaufruf** zur Laufzeit stammen, müssen als **belegt** behandelt werden{# lede #} und an den Ingress-Punkten in den zugänglichen Prozessspeicher der Anwendung validiert. Diese Ingress-Punkte sollten als **infosec-Kontextgrenzen** für solche Anwendungsdaten betrachtet werden. Die entsprechende regulatorische Validierung sollte Zeichenfolgenmuster auf die Ausnahmeliste setzen (in der Regel über **regex**); **behandelte** Daten, bei denen die Ausnahmeliste und ihre abhängigen Daten gelöscht werden, können über einen anderen **Systemaufruf** sicher aus dem Prozessspeicher der Anwendung ausgeliefert werden. Bei diesen **Systemaufruf**-Egress-Punkten handelt es sich auch um **Infosec-Kontextgrenzen**. Was "sichere" Ausnahmelistenmuster für die ingress **behandelten** Daten ausmacht, wird durch diese spezifischen APIs an den Egress-Punkten informiert. Über den SSDLC werden sich diese Egress-Punkte weiterentwickeln, ebenso wie die entsprechenden Whitelists.
 
-Das UNIX-Sicherheitsmodell allein hat nie Vorkehrungen für die Entwicklung von vernetzten Client/Server-Anwendungen getroffen, da in der Vergangenheit die BSD-Socket-API, die vor dem Aufstieg von Network Computing in den 90er Jahren (Sun Microsystems) stand, über ein Jahrzehnt nach der Geburt von UNIX erfunden wurde (mit seinem OS-basierten Multiuser-Sicherheitsmodell, das bei der Geburt vollständig gebildet wurde). [MIT Kerberos](https://web.mit.edu/kerberos/).
+Das UNIX-Sicherheitsmodell allein hat nie Vorkehrungen für die Entwicklung von vernetzten Client/Server-Anwendungen getroffen, denn historisch gesehen wurde die BSD-Socket-API, die vor dem Aufstieg von Network Computing in der 90s (Sun Microsystems) lag, über ein Jahrzehnt nach der Geburt von UNIX erfunden (mit seinem OS-basierten Mehrbenutzersicherheitsmodell, das bei der Geburt vollständig gebildet wurde). [MIT Kerberos](https://web.mit.edu/kerberos/) war ein Schritt in die richtige Richtung, lässt aber in einem SaaS-Kontext viel zu wünschen übrig.
 
-Die sichere Planung von CPUs zur Ausführung von Arbeiten auf Kernel-Ebene im Namen eines "autorisierten Benutzer-/Gruppen-/Rollenkontextes", der nicht mit dem UNIX-Benutzer-/Gruppenkontext des zugrunde liegenden Prozesses verknüpft ist, lag immer außerhalb des UNIX-Modells. Viele Infosec-Initiativen erkennen nicht, dass diese regulatorische Verantwortung allein den Anwendungen gehört; lassen Sie sich nicht eins sein!
+Die sichere Planung von CPUs zur Ausführung von Arbeiten auf Kernel-Ebene im Namen eines "autorisierten Benutzer-/Gruppen-/Rollenkontexts", der nicht an den UNIX-Benutzer-/Gruppenkontext des zugrunde liegenden Prozesses gebunden ist, lag immer außerhalb des UNIX-Modells. Viele infosec-Initiativen erkennen nicht, dass diese regulatorische Verantwortung den Anwendungen allein gehört; lassen Sie nicht zu, dass Sie eins sind!
 
-Falls an dieser Stelle nicht klar ist, sollten sich DevOps/SRE-Teams, die SaaS-Sicherheitsvorfälle (**CAI**) auf Linux testen, mit [Top](fun-with-htop)'s `straße` Schnittstelle über die `s` Schlüssel! Besser noch zu meistern `straße`
+Falls es zu diesem Zeitpunkt nicht klar ist, sollten sich DevOps/SRE-Teams, die SaaS-Sicherheitsvorfälle (**CAI**) für Linux testen, mit <!-- ####### --htop](fun-with-htop) [Straße` Schnittstelle über `s` Schlüssel! Besser noch zu meistern `Straße` als Stand-alone. (FYI: Ich habe statische Kompilierungen dieser Binärdateien auf Github, die an K8s-Container oder -Knoten geliefert werden können, einschließlich über SSH/SSM-Zustellung, unter <https://github.com/joesuf4/home/tree/wsl/bin>).
 
-#### Wie bezieht sich das auf Zero-Trust-Initiativen als praktische Angelegenheit?
+#### Wie steht es um Zero-Trust-Initiativen als praktische Angelegenheit?
 
-[Zero-Trust-Architekturen](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf).
+<!-- ####### --Zero-Trust-Architekturen](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf) keine netzwerkspezifischen Infosec-Kontextgrenzen haben.
 
-Zwar gibt es VPN/Firewall-Kontexte in der Realität, aber keines dieser Details ist für InfoSec innerhalb eines Zero-Trust-Frameworks relevant. Mit anderen Worten, solche Netzwerktopologie-Sicherheitsinitiativen können Zero-Trust-Initiativen erweitern, aber sie werden niemals innerhalb einer Zero-Trust-Initiative auf der Basis-Server-Host-Sicherheitsebene auf der Ebene der Anwendung verlassen.
+Obwohl es in der Realität VPN/Firewall-Kontexte geben kann, ist keines dieser Details für InfoSec innerhalb eines Zero-Trust-Frameworks relevant. Mit anderen Worten, solche Sicherheitsinitiativen für Netzwerktopologie können Zero-Trust-Initiativen erweitern, aber sie werden niemals innerhalb einer Zero-Trust-Initiative auf der Basis-Server-Host-Sicherheitsebene auf der Anwendungsebene eingesetzt.
 
 MIT Kerberos und Active Directory sind beispielsweise Zero-Trust-konform.
-
-*$Datum: 2023-01-19 22:58:40 +0000 (Do, 19 Jan 2023) $*
 
 <!-- $Date$ $Author$ $Revision$ -->

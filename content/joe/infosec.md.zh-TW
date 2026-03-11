@@ -1,37 +1,35 @@
 ---
 archived: ~
-categories: Security，安全性，IT，Perl
+categories: 安全、IT、Perl
 dependencies: '*.md.zh-TW'
-keywords: Infosec，zerotrust，taint，動態，資料
+keywords: infosec，zerotrust，taint，動態，資料
 published: ~
 status: 已封存
-title: 資訊安全入門
+title: 資訊安全性入門
 ---
 
 [TOC]
 
 #### InfoSec 的主要目標是什麼？
 
-* 為了確保環境定義界限的所有變更均受到完善的管制。*
+* 為了確保環境定義界限的所有變更完全受到管制。*
 
-例如，就 UNIX 使用者 / 群組 process+filesystem 安全模型而言，UNIX 平台上的每個 ** 系統呼叫 ** 都會滿足此條件。** 相關資訊環境交換器 ** 的文字定義 (由 ** 系統呼叫 ** 輸入) 包括在呼叫核心端進行 API 使用狀況檢查。
+例如，就 UNIX 使用者 / 群組 process+filesystem 安全模型而言，UNIX 平台上的每個 ** 系統呼叫 ** 都滿足此條件。** 相關資訊環境交換器 ** 的文字定義 (依 ** 系統呼叫 ** 輸入) 包括呼叫核心端的 API 使用完整性檢查。
 
-就 SaaS 遞送而言，{# lede #}所有源自程式實際執行 UNIX ** 系統呼叫 ** 的資料都應視為 ** 保留 **{# lede #}
+就 SaaS 交付而言，{# lede #} 所有源自程式實際執行 UNIX ** 系統呼叫 ** 的資料都應被視為 ** 已確定 **{# lede #}，並在入口點進行驗證，以進入應用程式的可存取處理記憶體。這些輸入點應被視為這類應用程式資料的 **infosec 相關資訊環境界限 **。適當的管制驗證應將字串模式列入白名單 (通常透過 **regex**)；** 清算白名單的資料及其相依資料可能會透過另一個 ** 系統呼叫 ** 安全地從應用程式的處理作業記憶體出埠。這些 ** 系統呼叫 ** 傳出點也是 **infosec 相關資訊環境界限 **；傳出點上的這些特定 API 會通知傳出點上這些特定 API 的「安全」白名單模式。透過 SSDLC，這些輸出點會像對應的白名單一樣進化。
 
-UNIX 安全性模型永遠不會為網路用戶端 / 伺服器應用程式開發佈建，因為在歷史上，BSD 插槽 API 預測在 90 年代 (Sun Microsystems) 中網路運算崛起已於 UNIX 出生後十年內發明 (其以作業系統為基礎的多使用者安全性模型於出生時完全形成)。[MIT Kerberos](https://web.mit.edu/kerberos/).
+僅 UNIX 安全模型永遠不會為網路用戶端 / 伺服器應用程式開發提供佈建，因為在歷史上，在 UNIX 出生後 (其以作業系統為基礎的多使用者安全模型於出生時完全形成) 已發明超過十年的 BSD 通訊埠 API，預測 90s (Sun Microsystems) 中網路運算的興起。[MIT Kerberos](https://web.mit.edu/kerberos/) 是朝右方向邁進的步驟，但在 SaaS 相關資訊環境中可能會需要很多步驟。
 
-在 UNIX 模型之外，安全地排定 CPU 代表部分「授權的使用者 / 群組 / 角色相關資訊環境」執行核心層次工作，而未連線至相關處理作業的 UNIX 使用者 / 群組相關資訊環境。許多資訊科技計畫無法單獨辨識此法規責任屬於應用程式，請勿讓自己成為一個！
+安全地排定 CPU，代表部分「授權的使用者 / 群組 / 角色相關資訊環境」執行核心層次工作，而基礎處理作業的 UNIX 使用者 / 群組相關資訊環境則一律不在 UNIX 模型之外。許多資訊科技計畫無法辨識此法規責任屬於單獨的應用程式，不要讓您成為一個人！
 
-如果目前不清楚，DevOps/SRE 團隊在 Linux 上分類 SaaS 安全性 (**CAI**) 事件應熟悉自己[頂點](fun-with-htop)」s `寬限` 透過介面`秒鐘` 金鑰！更好的主人`寬限`
+如果此時不清楚，DevOps/SRE 團隊應熟悉 Linux 上的 SaaS 安全性 (**CAI**) 事件<!-- ####### --繁體中文](fun-with-htop) 的[ 版面` 通過接口`` 關鍵！更好的主力` 版面` 獨立。(僅供參考：我已在 Github 上靜態編譯這些二進位檔，這些二進位檔可以傳遞至 K8s 容器或節點，包括透過 SSH/SSM 傳遞，<https://github.com/joesuf4/home/tree/wsl/bin>).
 
-#### 這與零信任的舉措有何關係？
+#### 這與 Zero-Trust 計畫有何關係？
 
-[零信任架構](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf).
+` 零信任架構](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf) 沒有網路特定的 Infosec 相關資訊環境邊界。
 
-雖然實際上可能會有 VPN/ 防火牆環境定義，但在零信任架構內，這些細節都不會與 InfoSec 相關。換句話說，這類網路拓樸安全計畫可能會擴增「零信任」計畫，但這些計畫在基本伺服器主機安全層級的「零信任」計畫中從未仰賴到應用程式層級。
+雖然實際上可能會有 VPN/ 防火牆相關資訊環境，但這些詳細資訊都不會與 Zero-Trust 架構中的 InfoSec 相關。換句話說，這類網路拓樸安全措施可能會擴增「零信任」提案，但這些提案絕對不會在基礎伺服器主機安全層級的「零信任」提案中，依靠應用程式層級。
 
-例如，MIT Kerberos 和 Active Directory 符合零信任。
-
-* 日期：2023-01-19 22:58:40 +0000 (2023 年 1 月 19 日星期四) $*
+例如，MIT Kerberos 和 Active Directory 符合「零信任」規範。
 
 <!-- $Date$ $Author$ $Revision$ -->
