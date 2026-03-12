@@ -2,129 +2,129 @@
 <html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">#
-    <meta name="viewport" content="width=device-width, initial-scale=1">#
-    <meta name="description" content="SunStar Systems">#
-    <meta name="author" content="Joe Schaefer">#
-    <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">#
-    <meta name="theme-color" content="black">#
-    <meta property="og:image" content="/images/iconoclast.jpg">#
-    <title>{% block title %}{{ headers.title|safe }}## - {{ facts.title|safe }}##
-    {% endblock %}##
-    </title>
-    {% if permalink %}#
-    <link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">#
-    ##
-    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">#
-    <link href="/css/katex.min.css" rel="stylesheet" media="screen">#
-    <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">#
-    <link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">#
-	<link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
-	<link href="/editor.md/lib/codemirror/codemirror.min.css" rel="stylesheet" media="screen">#
-    <link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" rel="stylesheet" media="screen">##
-    ###<script src="/js/bootstrap"></script>#
-    ##<script src="/editor.md/js/jquery.min.js"></script>###
-    ###{% endif %}##
-    {% block header %}#
-    {% endblock %}###
-    {% block analytics %}####
-    ########
-##
-
-<link href="/editor.md/lib/codemirror/theme/solarized.css" rel="stylesheet" media="screen">
- <link href="/css/local.css" rel="stylesheet" media="screen">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SunStar Systems">
+    <meta name="author" content="Joe Schaefer">
+    <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
+    <meta name="theme-color" content="black">
+    <meta property="og:image" content="/images/iconoclast.jpg">
+    <title>{% block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
+    {% if permalink %}
+    <link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
+    {% endif %}
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/css/katex.min.css" rel="stylesheet" media="screen">
+    <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">
+    <link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
+    <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
+    <link href="/editor.md/lib/codemirror/codemirror.min.css" rel="stylesheet" media="screen">
+    <link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" rel="stylesheet" media="screen">
+	<link href="/editor.md/lib/codemirror/theme/solarized.css" rel="stylesheet" media="screen">
+	<link href="/css/local.css" rel="stylesheet" media="screen">
     <link href="/images/favicon.png" rel="icon">
-	  </head><body><header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img src="/images/iconoclast" alt="Iconoclast">#
-      </a>
+    <script src="/js/bootstrap"></script>
+	<script src="/editor.md/js/jquery.min.js"></script>
+    {% block header %}{% endblock %}
+    {% block analytics %}
+    {% include "analytics.html" %}
+    {% endblock %}
+</head>
 
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">
-          </span>
+<body>
+  <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img src="/images/iconoclast" alt="Iconoclast"></a>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+<div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
             активный
-            {% include "analytics.html" %}"#></button>Iconoclasts<div class="collapse navbar-collapse" id="navbarResponsive"><ul class="navbar-nav">#
-          <li class="nav-item{% if path|starts_with:"/bloggers.md" %}#
-             активный
-             {% endblock %}"><a class="nav-link text" href="/bloggers.html{{lang}}">Contact</a></li>##
+            {% endif %}"><a class="nav-link text" href="/bloggers.html{{lang}}">Иконоборцы</a></li>
           <li class="nav-item{% if path|starts_with:"/contact.md" %}
-            <a class="nav-link" href="/contact.html{{lang}}">Products... </a></li><li class="nav-item dropdown">##
-            <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">
-              <span class="caret"></span>Orion&trade; Вики-платформа Jamstack</a><ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">###
-              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">##
-                href=#"###https://www.sunstarsys.com/orion/plans.html##"##>Orion Тарифные планы</a>##
-            </li>#
-         <li class="dropdown-item"> <a class="nav-link text-dark"####
-
-</a>
-            </li>More... </ul></li><li class="nav-item dropdown">#
-            <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">#
-             <span class="caret">#
-                </span>Site Источник</a>#<ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">#
-              <li class="dropdown-item">#
-              <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/"></a>
-              </li>i18n<li class="dropdown-item divider">
-              </li><li class="dropdown-header text-dark">English</li><li class="dropdown-item">##
-              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en"></a>Spanish</li><li class="dropdown-item">##
-              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es"></a>#</li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">###
-              </a>##</li>Russian<li class="dropdown-item">#<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">####
-              </a></li>Chinese##<li class="dropdown-item">######
-              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">#</a>####
-              </li>##<li class="dropdown-item">#Swedish<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">###</a>###
-              </li><li class="dropdown-item">
-              #311<script src="/editor.md/js/raphael.min.js"></script>#3
-              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he"></a></li><li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">
-              </a></li><li class="dropdown-item divider">#</li>3
-               <li class="dropdown-header text-dark"></li><li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}"></a></li>
-             
-
-<li class="dropdown-item">
-            active
-            {% endif %}"><a class="nav-link text-dark" href="/archives/index.html{{lang}}">Powered по...</a>
+             активный
+             {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">Контакт</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">Продукты... <span class="caret"></span></a>
+            <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
+              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Орион&trade; Платформа Jamstack Wiki</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark"
+                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Ценовые планы Orion</a></li>
+            </ul>
           </li>
-        </ul>#
-		</li>##
-        <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
-            }}{% endif %}/" class="d-гибкая форма-встроенная справа" method="GET">
-          <a class="nav-link" href="/powered-by.html{{lang}}">
-          </a>#
+
+<li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">Подробнее... <span class="caret"></span></a>
+            <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">
+              <li class="dropdown-item">
+                <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">Источник отделения</a>
+              </li>
+              <li class="dropdown-item divider"></li>
+              <li class="dropdown-header text-dark">i18n</li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Британские единицы</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Испанский</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">немецкий</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Французский</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Русский</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Китайский</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Иврит</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">шведский</a></li>
+              <li class="dropdown-item divider"></li>
+              <li class="dropdown-header text-dark">Таксономии</li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Категории</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/archives/index.html{{lang}}">Архивы</a></li>
+            </ul>
           </li>
-               placeholder="PCRE Рекурсивный поиск" value=#"##{{ lang }}"# />###</ul>##</div>###
-  <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname#
-  <input type="hidden" name="lang" value="{{ lang }}" />#
-######<input type="hidden" name="markdown_search" value="1" />##
 
-{% endif %}
-  {% endifequal %}
-  <input class="form-control me-2" type="text" name="regex"
-    <button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search">#
-    {{ regex }}
-  </i>
-  {% block alert %}
-{% if alert %}
+<li class="nav-item{% if path|starts_with:"/powered-by.md" %}
+            активный
+            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">При поддержке...</a>
+          </li>
+        </ul>
+		</div>
+        <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
+            }}{% endifequal %}/" class="d-гибкая форма-встроенная справа" method="Получить">
+          <input type="hidden" name="lang" value="{{ lang }}" />
+          <input type="hidden" name="markdown_search" value="1" />
+          <input class="form-control me-2" type="text" name="regex"
+               placeholder="Рекурсивный поиск PCRE" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
+	    </form>
+  </div>
+</header>
 
-</button>
-  {{ alert|markdown }}
-  </form>
-      {% endif %}&nbsp;&nbsp;</div>
-        </header>
-      <div class="alert alert-dismissible alert-info container">
-  <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal">
-  </button>{% endblock %}</div>
-  <div class="container theme-showcase" id="content">#{% block content %}#3
-  <div class="breadcrumbs"><a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-  {{ breadcrumbs|safe }}
+{% block alert %}
+  {% if alert %}
+  <div class="alert alert-dismissible alert-info container">
+    <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal"></button>
+    {{ alert|markdown }}
+  </div>
+  {% endif %}
+{% endblock %}
 
-<img src="/images/edit.png" alt="Edit Icon" />{{ headers.title|safe }}{{ content|markdown }}</a></div>
+<div class="container theme-showcase" id="content">
+  {% block content %}
+  <div class="breadcrumbs">
+      {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
+        <img src="/images/edit.png" alt="Edit Icon" />
+      </a>
+  </div>
+  <h1>{{ headers.title|safe }}</h1>
+  <div class="jumbotron">{{ content|markdown }}</div>
+  {% endblock %}
+
+<footer>{% block footer %}{% endblock footer %}</footer><!--
+  <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
   <script src="/editor.md/js/jquery.flowchart.min.js"></script>
-  <script src="/editor.md/js/sequence-diagram.min.js"></script>
-  <script src="/editor.md/js/d3.min.js"></script>
-  <script src="/editor.md/js/wasm/index.min.js"></script> --&nbsp;
+  <script src="/editor.md/js/sequence-diagram.min.js"></script> -->
 
-<script src="/editor.md/js/d3-graphviz.js"></script>
+<script src="/editor.md/js/d3.min.js"></script>
+  <script src="/editor.md/js/wasm/index.min.js"></script>
+  <script src="/editor.md/js/d3-graphviz.js"></script>
   <script src="/editor.md/lib/mermaid.min.js"></script>
   <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
@@ -214,8 +214,7 @@ if (permission === "granted") {
         }
 	}
   </script>
-  
-  
-  
-  {% endblock %}{% block footer %}
- 3 3 3 3 3
+  {% block javascript %}{% endblock %}
+</div>
+</body>
+</html>

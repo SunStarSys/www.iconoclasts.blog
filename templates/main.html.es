@@ -22,106 +22,108 @@
     <link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" rel="stylesheet" media="screen">
 	<link href="/editor.md/lib/codemirror/theme/solarized.css" rel="stylesheet" media="screen">
 	<link href="/css/local.css" rel="stylesheet" media="screen">
-	<link href="/images/favicon.png" rel="icon">
-    </head>
+    <link href="/images/favicon.png" rel="icon">
     <script src="/js/bootstrap"></script>
 	<script src="/editor.md/js/jquery.min.js"></script>
-    {% block header %}{% endblock %}{% block analytics %}
+    {% block header %}{% endblock %}
+    {% block analytics %}
     {% include "analytics.html" %}
     {% endblock %}
-    {% endif %}
+</head>
+
 <body>
+  <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img src="/images/iconoclast" alt="Iconoclast"></a>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
 
-<header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}">
-	  <img src="/images/iconoclast" alt="Iconoclast"></a><button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">
-          </span></button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-
-<ul class="navbar-nav">
-        <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
-          <a class="nav-link text" href="/bloggers.html{{lang}}">
+<div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
             activo
-            {% endif %}"></a>Iconoclasts</li><li class="nav-item{% if path|starts_with:"/contact.md" %}
-          <a class="nav-link" href="/contact.html{{lang}}">
+            {% endif %}"><a class="nav-link text" href="/bloggers.html{{lang}}">Iconoclastos</a></li>
+          <li class="nav-item{% if path|starts_with:"/contact.md" %}
              activo
-             {{ lang }}"></a>Contact</li><li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">
-            <span class="caret">Products... </span></a><ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
-            <li class="dropdown-item">
-              <a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}"></a>Orion&trade; Plataforma Wiki Jamstack</li><li class="dropdown-item">
-              <a class="nav-link text-dark"</a>
-                href="https://www.sunstarsys.com/orion/plans.html{% endif %}">Orion Planes de precios</li></ul>
-            </li>
+             {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">Contacto</a></li>
           <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">Productos... <span class="caret"></span></a>
+            <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
+              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orión&trade; Plataforma Wiki de Jamstack</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark"
+                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Planes de precios de Orion</a></li>
+            </ul>
+          </li>
 
-<a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">
-            <span class="caret">More... </span></a><ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">
-            <li class="dropdown-item">
-              <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">
-                </a>Site Source</li>
-              <li class="dropdown-item divider">
-              </li><li class="dropdown-header text-dark">
-              </li>i18n<li class="dropdown-item">
-              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en"></a>English</li><li class="dropdown-item">
-              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es"></a>Spanish</li><li class="dropdown-item">
-              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de"></a>German</li><li class="dropdown-item">
-              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr"></a>French</li><li class="dropdown-item">
-              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru"></a>Russian</li><li class="dropdown-item">
-              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW"></a>Chinese</li><li class="dropdown-item">
-              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he"></a>Hebrew#              </li><li class="dropdown-item">Swedish<a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv"></a>
-              </li><li class="dropdown-item divider">
-              </li>Taxonomies <li class="dropdown-header text-dark">Taxonomies#              </li><li class="dropdown-item">Categories<a class="nav-link text-dark" href="/categories/index.html{{lang}}">#318  </a></li>Archives#            <li class="dropdown-item"><a class="nav-link text-dark" href="/archives/index.html{{lang}}"></a></li>            </ul></li>
-1
-         <li class="nav-item{% if path|starts_with:"/powered-by.md" %}<a class="nav-link" href="/powered-by.html{{lang}}">        
+<li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">Más... <span class="caret"></span></a>
+            <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">
+              <li class="dropdown-item">
+                <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">Origen de sitio</a>
+              </li>
+              <li class="dropdown-item divider"></li>
+              <li class="dropdown-header text-dark">i18n</li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Inglés</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Español</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">Alemán</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Francés</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Ruso</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Chino</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebreo</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Sueco</a></li>
+              <li class="dropdown-item divider"></li>
+              <li class="dropdown-header text-dark">Taxonomías</li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Categorías</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/archives/index.html{{lang}}">Archivos</a></li>
+            </ul>
+          </li>
 
-</a>
+<li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             activo
-            {% endifequal %}"></li>Powered por...</ul>
-          </div>
+            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">Desarrollado por...</a>
+          </li>
+        </ul>
+		</div>
         <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-		<input type="hidden" name="lang" value="{{ lang }}" />
-        <input type="hidden" name="markdown_search" value="1" />
-            }}{{ regex }}/" class="d-flex form-inline right" method="GET">
+            }}{% endifequal %}/" class="d-flex form-inline derecha" method="Obtener">
+          <input type="hidden" name="lang" value="{{ lang }}" />
+          <input type="hidden" name="markdown_search" value="1" />
           <input class="form-control me-2" type="text" name="regex"
-          <button type="submit" name="submit" value="1" class="btn btn-outline-danger">
-          <i class="fa fa-search">
-               placeholder="PCRE Búsqueda recursiva" value="{% block alert %}" />&nbsp;</i></button></form>
-	    </div>
- </header>
-<div class="alert alert-dismissible alert-info container">
+               placeholder="Búsqueda recursiva PCRE" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
+	    </form>
+  </div>
+</header>
 
-{% if alert %}
-  {{ alert|markdown }}
-  <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal">
-    </button></div>
-    {% endif %}
-  <div class="container theme-showcase" id="content">
+{% block alert %}
+  {% if alert %}
+  <div class="alert alert-dismissible alert-info container">
+    <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal"></button>
+    {{ alert|markdown }}
+  </div>
+  {% endif %}
+{% endblock %}
+
+<div class="container theme-showcase" id="content">
+  {% block content %}
+  <div class="breadcrumbs">
+      {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
+        <img src="/images/edit.png" alt="Edit Icon" />
+      </a>
+  </div>
+  <h1>{{ headers.title|safe }}</h1>
+  <div class="jumbotron">{{ content|markdown }}</div>
   {% endblock %}
-{% block content %}
 
-<div class="breadcrumbs">
-  {{ breadcrumbs|safe }}
-  <a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-      {{ headers.title|safe }}&nbsp;&nbsp;<img src="/images/edit.png" alt="Edit Icon" />
-        </a>
-      </div>
-  <h1>
-  </h1>{{ content|markdown }}<div class="jumbotron">
-  </div>{% endblock %}<footer>
-  {% block footer %}
-
-</footer>{% endblock footer %}{% block javascript %}<!--</div>
+<footer>{% block footer %}{% endblock footer %}</footer><!--
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
   <script src="/editor.md/js/jquery.flowchart.min.js"></script>
-  <script src="/editor.md/js/sequence-diagram.min.js"></script>
-  <script src="/editor.md/js/d3.min.js"></script> -->
+  <script src="/editor.md/js/sequence-diagram.min.js"></script> -->
 
-<script src="/editor.md/js/wasm/index.min.js"></script>
+<script src="/editor.md/js/d3.min.js"></script>
+  <script src="/editor.md/js/wasm/index.min.js"></script>
   <script src="/editor.md/js/d3-graphviz.js"></script>
   <script src="/editor.md/lib/mermaid.min.js"></script>
   <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
@@ -212,9 +214,7 @@ if (permission === "granted") {
         }
 	}
   </script>
-  
-  
-  {% endblock %}
+  {% block javascript %}{% endblock %}
+</div>
 </body>
 </html>
-
