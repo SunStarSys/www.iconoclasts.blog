@@ -4,7 +4,7 @@ categories: Apache (Perl)
 dependencies: '*.md.fr'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: vérifié=28582
+status: projet
 title: Apache HTTPd Devs considéré comme dangereux
 ---
 
@@ -14,23 +14,23 @@ title: Apache HTTPd Devs considéré comme dangereux
 
 </div>
 
-## Arrière-plan
+## Contexte
 
-Au cours des 25 dernières années, j'ai été le développeur principal de `apreq` sous-projet au sein de [Serveur Apache HTTPd](https://httpd.apache.org) Projet parent. L'idée originale de `libapreq` en tant que sûr/performant [Soumission de formulaire HTML](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) et [Piscine](https://datatracker.ietf.org/doc/html/rfc6265) parsing library, est né d'une collaboration entre Lincoln Stein et Doug MacEachern à la fin de 90s.
+Au cours des 25 dernières années, j'ai été le développeur principal de `apreq` sous-projet au sein de [Serveur Apache HTTPd](https://httpd.apache.org) Projet parent. L'idée originale de `libapreq`, en tant que sûr/performant [Soumission de formulaire HTML](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) et [Piscine](https://datatracker.ietf.org/doc/html/rfc6265) parsing library, est né d'une collaboration entre Lincoln Stein et Doug MacEachern à la fin de 90s.
 
 C'était ma vision à l'époque de transformer la bibliothèque en une bibliothèque générique, non liée à Perl. `C` bibliothèque qui prendrait en charge les liaisons linguistiques à partir d'autres langages de programmation, c'est pourquoi j'ai poussé pour que le projet soit [à domicile](https://httpd.apache.org/apreq) sous le parapluie HTTPd au lieu de [Apache-Perl](https://perl.apache.org/) projet.
 
-Avec l'avènement de `httpd-2. X` entièrement nouveau `Filtre d'E/S` L'architecture a émergé de `httpd` ainsi que la séparation complète des `Taux d'intérêt annuel` du noyau lui-même en tant qu'exécution de portabilité POSIX à usage plus général pour `C` projets comme `Subversion` En fait, `libapreq2` est plus étroitement liée à la `APR d'Apache` projet dans cet esprit, et son API Perl reflète cela dans son `APR : :Demande` buildout.  Il dispose d'un mode *CGI* intégré pour un fonctionnement autonome, en dehors de `httpd` l'exécution, ce qui rend les tests unitaires un jeu d'enfant.
+Avec l'avènement de `httpd-2. X`, entièrement nouveau `Filtre d'E/S` L'architecture a émergé de `httpd` ainsi que la séparation complète des `Taux d'intérêt annuel` du noyau lui-même en tant qu'exécution de portabilité POSIX à usage plus général pour `C` projets comme `Subversion`. En fait, `libapreq2` est plus étroitement liée à la `APR d'Apache` projet dans cet esprit, et son API Perl reflète cela dans son `APR : :Demande` buildout.  Il dispose d'un mode *CGI* intégré pour un fonctionnement autonome, en dehors de `httpd` l'exécution, ce qui rend les tests unitaires un jeu d'enfant.
 
-Pourtant, l'élément clé de `apreq2` a toujours été le `mod_apreq2` Module Apache, conçu pour la première fois par `Bill Wrowe` au début 2000s.  Ce qu'il a conçu, lors d'une séance de brainstorming avec moi (en personne), était une seule bibliothèque d'analyseurs interne à `httpd` qui **partage** le *corps* de la demande soumise avec chaque module de parties prenantes clé dans l'exécution.  Cela signifiait fournir des données analysées aux modules connectés au moteur de traitement des demandes *avant*, *pendant* et *après* l'exécution du gestionnaire de contenu. Il devait également fonctionner pour les sous-demandes, que le gestionnaire de contenu ait consommé ou non les données analysées, ou qu'il ait consommé et analysé le corps de la demande brute lui-même.
+Pourtant, l'élément clé de `apreq2` a toujours été le `mod_apreq2` Module Apache, conçu pour la première fois par `Bill Wrowe` au début 2000s.  Ce qu'il a conçu, lors d'une séance de brainstorming avec moi (en personne), était une seule bibliothèque d'analyseurs interne à `httpd`, qui **partage** le *corps* de la demande soumise avec chaque module de parties prenantes clé dans l'exécution.  Cela signifiait fournir des données analysées aux modules connectés au moteur de traitement des demandes *avant*, *pendant* et *après* l'exécution du gestionnaire de contenu. Il devait également fonctionner pour les sous-demandes, que le gestionnaire de contenu ait consommé ou non les données analysées, ou qu'il ait consommé et analysé le corps de la demande brute lui-même.
 
-J'ai expliqué les objectifs de conception plusieurs fois au fil des ans, même en 2012 sur [dev@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04) Mais c'était toujours comme parler au vent avec ces gars ; ils ne se souciaient tout simplement pas.
+J'ai expliqué les objectifs de conception plusieurs fois au fil des ans, même en 2012 sur [dev@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04). Mais c'était toujours comme parler au vent avec ces gars ; ils ne se souciaient tout simplement pas.
 
 ## Rassemblement de nuages orageux
 
-Bien que cette vision ait été extrêmement réussie, avec des liaisons linguistiques disponibles pour plusieurs langues comme [`Perl`](https://perl.apache.org/) [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c)  [`TCL`](https://tcl.apache.org/) [`R`](https://github.com/jeffreyhorner/rapache) etc., depuis environ 2010, il a prouvé tragique pour la [communauté d'utilisateurs existante](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">composé de tous</a>pas seulement les membres de `Perl` communauté.
+Bien que cette vision ait été extrêmement réussie, avec des liaisons linguistiques disponibles pour plusieurs langues comme [`Perl`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache), etc., depuis environ 2010, il a prouvé tragique pour la [communauté d'utilisateurs existante](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">composé de tous</a>pas seulement les membres de `Perl` communauté.
 
-Que s'est-il passé ? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci) un de mes collègues Perl/FreeBSD à l'époque, a commencé à s'agiter pour promouvoir le projet à sortir de l'intérieur du serveur HTTPd lui-même. Quoi {# lede #}Philippe ne savait pas très bien à l'époque à quel point [peevish, vapid et territorial](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) Cette équipe était devenue{# lede #} qui aurait dû collaborer directement avec eux sur [décisions utilisateur](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) sur la base de code.
+Que s'est-il passé ? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci), un de mes collègues Perl/FreeBSD à l'époque, a commencé à s'agiter pour promouvoir le projet à sortir de l'intérieur du serveur HTTPd lui-même. Quoi {# lede #}Philippe n'a'Je savais très bien à l'époque à quel point [peevish, vapid et territorial](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) Cette équipe était devenue{# lede #}, qui aurait dû collaborer directement avec eux sur [décisions utilisateur](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) sur la base de code.
 
 En 2012, Philippe a obtenu ce qu'il voulait et j'ai cessé de résister. [fourchu](https://svn.apache.org/viewvc?view=revision&revision=1201372) le projet existant et copié le `C` composants de la bibliothèque dans le noyau HTTPd.
 
@@ -38,15 +38,15 @@ En 2012, Philippe a obtenu ce qu'il voulait et j'ai cessé de résister. [fourch
 
 [En 2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) J'ai démissionné de la Fondation en masse. Vous pouvez deviner les raisons.
 
-En 2020 environ, l'équipe de sécurité de Google a profité d'une version alpha de httpd 2.5 en flouant sa copie de 8 ans de `apreq2` Ils ont trouvé quelques points chauds qui ont besoin de réparation.
+En 2020 ou plus, Google'L'équipe de sécurité a profité d'une version alpha de httpd 2.5 en fuzzant sa copie de 8 ans `apreq2`. Ils ont trouvé quelques points chauds qui ont besoin de réparation.
 
-Au lieu d'avoir la courtoisie de tendre la main à Philippe, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand) [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann), moi-même (@joesuf4), ou toute autre personne impliquée dans le développement de `libapreq2` un ingénieur junior de l'équipe HTTPd s'est penché sur le problème de la "correction des bogues" des vulnérabilités trouvées par Google. Vous pouvez voir un enregistrement de son travail d'essai et d'erreur dans chaque version depuis.
+Au lieu d'avoir la courtoisie de tendre la main à Philippe, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann), moi-même (@joesuf4), ou toute autre personne impliquée dans le développement de `libapreq2`, un ingénieur junior de l'équipe HTTPd s'est occupé de "correction de bug" les vulnérabilités trouvées par Google. Vous pouvez voir un enregistrement de son travail d'essai et d'erreur dans chaque version depuis.
 
-Mais le coup de grâce a été la libération de 2022 [2.17](https://www.google.com/search?q=libapreq2-2.17) dans lequel le développeur recrue [introduit intentionnellement un bug fatal dans la base de code](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891) rupture [un test de régression de dix-neuf ans](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
+Mais le coup de grâce a été la libération de 2022 [2.17](https://www.google.com/search?q=libapreq2-2.17), dans lequel le développeur recrue [introduit intentionnellement un bug fatal dans la base de code](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891), rupture [un test de régression de dix-neuf ans](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
-## Résumé
+## Affaire
 
-Si vous demandez comment quelque chose avec un test de régression cassé se termine sur [CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2) vous devrez examiner comment [RELENG](https://httpd.apache.org/dev/release.html) est effectuée dans le projet serveur.
+Si vous demandez comment quelque chose avec un test de régression cassé se termine sur [CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2), vous'll doit regarder comment [RELENG](https://httpd.apache.org/dev/release.html) est effectuée dans le projet serveur.
 
 Longue histoire courte, [Ils ont commenté le test](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) et l'a envoyé quand même, et l'a appelé une version de sécurité qui [a corrigé une vulnérabilité chaque version antérieure était susceptible de](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
@@ -56,8 +56,8 @@ Longue histoire courte, [Ils ont commenté le test](https://github.com/apache/ap
 
 </div>
 
-Pourquoi je m'en soucie maintenant ? Parce que je suis le suceur [les utilisateurs contactent pour obtenir des réponses](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) en tant qu'expert connu.
+Pourquoi je m'en soucie maintenant ? Parce que je'm le suceur [les utilisateurs contactent pour obtenir des réponses](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) en tant qu'expert connu.
 
-Cela craint, mais je suis désolé de vous dire que mes jours de port de la cape Superman à Apache se sont terminés il y a environ une décennie.
+C'est nul, mais je'Désolé de vous dire que mes jours de port de la cape Superman à Apache se sont terminés il y a environ une décennie.
 
 <!-- $Date$ $Author$ $Revision$ -->
