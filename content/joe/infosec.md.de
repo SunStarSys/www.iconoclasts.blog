@@ -8,25 +8,31 @@ status: archiviert
 title: Information Security Primer
 ---
 
+<div class="right">
+
+![InfoSec](infosec.page/infosec).
+
+</div>
+
 [TOC]
 
-#### Was ist das primäre Ziel von InfoSec?
+#### Was ist das Hauptziel von InfoSec?
 
 *Um sicherzustellen, dass alle Änderungen an Kontextgrenzen gut reguliert sind.*
 
-Beispiel: Jeder **Systemaufruf** auf einer UNIX-Plattform erfüllt diese Bedingung im Hinblick auf das Sicherheitsmodell UNIX-Benutzer/Gruppenprozess+Dateisystem. Die literale Definition eines **Kontext-Switches**, wie von **Systemaufrufen** angegeben, umfasst die Integritätsprüfung der API-Nutzung auf der Kernel-Seite des Aufrufs.
+Beispiel: Jeder **Systemaufruf** auf einer UNIX-Plattform erfüllt diese Bedingung im Hinblick auf das Sicherheitsmodell UNIX-Benutzer/Gruppenprozess+Dateisystem. Die Literaldefinition eines **Kontext-Switches**, wie von **Systemaufrufen** angegeben, umfasst die Integritätsprüfung der API-Nutzung für den Kernel's Seite des Anrufs.
 
-Im Hinblick auf die SaaS Lieferung, {# lede #}alle Daten, die von einem UNIX **Systemaufruf** zur Laufzeit stammen, müssen als **belegt** behandelt werden{# lede #} und an den Ingress-Punkten in den zugänglichen Prozessspeicher der Anwendung validiert. Diese Ingress-Punkte sollten als **infosec-Kontextgrenzen** für solche Anwendungsdaten betrachtet werden. Die entsprechende regulatorische Validierung sollte Zeichenfolgenmuster auf die Ausnahmeliste setzen (in der Regel über **regex**); **behandelte** Daten, bei denen die Ausnahmeliste und ihre abhängigen Daten gelöscht werden, können über einen anderen **Systemaufruf** sicher aus dem Prozessspeicher der Anwendung ausgeliefert werden. Bei diesen **Systemaufruf**-Egress-Punkten handelt es sich auch um **Infosec-Kontextgrenzen**. Was "sichere" Ausnahmelistenmuster für die ingress **behandelten** Daten ausmacht, wird durch diese spezifischen APIs an den Egress-Punkten informiert. Über den SSDLC werden sich diese Egress-Punkte weiterentwickeln, ebenso wie die entsprechenden Whitelists.
+Im Hinblick auf die SaaS Lieferung, {# lede #}Alle Daten, die von einem UNIX **Systemaufruf** zur Laufzeit stammen, müssen als **bearbeitet** behandelt werden{# lede #}an den Eingangspunkten in die Anwendung validiert und's zugänglicher Prozessspeicher. Diese Ingress-Punkte sollten als **infosec-Kontextgrenzen** für solche Anwendungsdaten betrachtet werden. Die entsprechende regulatorische Validierung sollte Zeichenfolgenmuster auf die Ausnahmeliste setzen (in der Regel über **regex**); **behandelte** Daten, bei denen die Ausnahmeliste und ihre abhängigen Daten gelöscht werden, können über einen anderen **Systemaufruf** sicher aus dem Prozessspeicher der Anwendung ausgeliefert werden. Diese **Systemaufruf**-Egress-Punkte sind auch **Infosec-Kontextgrenzen**. "sicher" Ausnahmelistenmuster für die **behandelten** Ingress-Daten werden von diesen spezifischen APIs an den Egress-Punkten informiert. Über den SSDLC werden sich diese Egress-Punkte weiterentwickeln, ebenso wie die entsprechenden Whitelists.
 
 Das UNIX-Sicherheitsmodell allein hat nie Vorkehrungen für die Entwicklung von vernetzten Client/Server-Anwendungen getroffen, denn historisch gesehen wurde die BSD-Socket-API, die vor dem Aufstieg von Network Computing in der 90s (Sun Microsystems) lag, über ein Jahrzehnt nach der Geburt von UNIX erfunden (mit seinem OS-basierten Mehrbenutzersicherheitsmodell, das bei der Geburt vollständig gebildet wurde). [MIT Kerberos](https://web.mit.edu/kerberos/) war ein Schritt in die richtige Richtung, lässt aber in einem SaaS-Kontext viel zu wünschen übrig.
 
-Die sichere Planung von CPUs zur Ausführung von Arbeiten auf Kernel-Ebene im Namen eines "autorisierten Benutzer-/Gruppen-/Rollenkontexts", der nicht an den UNIX-Benutzer-/Gruppenkontext des zugrunde liegenden Prozesses gebunden ist, lag immer außerhalb des UNIX-Modells. Viele infosec-Initiativen erkennen nicht, dass diese regulatorische Verantwortung den Anwendungen allein gehört; lassen Sie nicht zu, dass Sie eins sind!
+Sichere Planung von CPUs zur Ausführung von Aufgaben auf Kernel-Ebene im Namen einiger "Autorisierter Benutzer-/Gruppen-/Rollenkontext" nicht an den zugrunde liegenden Prozess gebunden'UNIX-Benutzer-/Gruppenkontext war immer außerhalb des UNIX-Modells. Viele infosec-Initiativen erkennen nicht an, dass diese regulatorische Verantwortung allein den Anwendungen gehört; don'Lass deine eins sein!
 
-Falls es zu diesem Zeitpunkt nicht klar ist, sollten sich DevOps/SRE-Teams, die SaaS-Sicherheitsvorfälle (**CAI**) für Linux testen, mit <!-- ####### --htop](fun-with-htop) [Straße` Schnittstelle über `s` Schlüssel! Besser noch zu meistern `Straße` als Stand-alone. (FYI: Ich habe statische Kompilierungen dieser Binärdateien auf Github, die an K8s-Container oder -Knoten geliefert werden können, einschließlich über SSH/SSM-Zustellung, unter <https://github.com/joesuf4/home/tree/wsl/bin>).
+Für den Fall'Zu diesem Zeitpunkt sind DevOps/SRE-Teams, die SaaS-Sicherheitsvorfälle (**CAI**) für Linux durchführen, nicht klar, sollten sich mit diesen vertraut machen [htop](fun-with-htop)'s `Straffung` Schnittstelle über `s` Schlüssel! Besser noch zu meistern `Straffung` als Stand-alone. (FYI: Ich habe statische Kompilierungen dieser Binärdateien auf Github, die an K8s-Container oder -Knoten geliefert werden können, einschließlich über SSH/SSM-Zustellung, unter <https://github.com/joesuf4/home/tree/wsl/bin>).
 
-#### Wie steht es um Zero-Trust-Initiativen als praktische Angelegenheit?
+#### Wie geht das mit Zero-Trust-Initiativen in der Praxis um?
 
-<!-- ####### --Zero-Trust-Architekturen](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf) keine netzwerkspezifischen Infosec-Kontextgrenzen haben.
+[Zero Trust-Architekturen](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf) keine netzwerkspezifischen Infosec-Kontextgrenzen haben.
 
 Obwohl es in der Realität VPN/Firewall-Kontexte geben kann, ist keines dieser Details für InfoSec innerhalb eines Zero-Trust-Frameworks relevant. Mit anderen Worten, solche Sicherheitsinitiativen für Netzwerktopologie können Zero-Trust-Initiativen erweitern, aber sie werden niemals innerhalb einer Zero-Trust-Initiative auf der Basis-Server-Host-Sicherheitsebene auf der Anwendungsebene eingesetzt.
 

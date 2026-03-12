@@ -8,25 +8,31 @@ status: archivé
 title: Introduction à la sécurité des informations
 ---
 
+<div class="right">
+
+![InfoSec](infosec.page/infosec).
+
+</div>
+
 [TOC]
 
 #### Quel est l'objectif principal de InfoSec ?
 
-*S'assurer que tous les changements aux limites du contexte sont bien réglementés.*
+*Pour s'assurer que tous les changements aux limites du contexte sont bien réglementés.*
 
-Par exemple, chaque **appel système** sur une plate-forme UNIX satisfait à cette condition, en termes de modèle de sécurité utilisateur/groupe + système de fichiers UNIX. La définition littérale d'un **commutateur de contexte**, telle qu'elle est indiquée par les **appels système**, implique une vérification de l'intégrité de l'utilisation de l'API du côté du noyau de l'appel.
+Par exemple, chaque **appel système** sur une plate-forme UNIX satisfait à cette condition, en termes de modèle de sécurité utilisateur/groupe + système de fichiers UNIX. La définition littérale d'un **commutateur de contexte**, telle qu'elle est indiquée par les **appels système**, implique une vérification de l'intégrité de l'utilisation de l'API sur le noyau'côté de l'appel.
 
-En termes de livraison SaaS, {# lede #}toutes les données provenant d'un **appel système** UNIX d'exécution doivent être traitées comme **réalisées**{# lede #} et validé aux points d'entrée dans la mémoire de processus accessible de l'application. Ces points d'entrée doivent être considérés comme des **limites contextuelles d'infosec** pour ces données d'application. La validation réglementaire appropriée doit inclure des modèles de chaîne de liste blanche (généralement via **regex**). Les données **réalisées** qui effacent la liste blanche et ses données dépendantes peuvent être expédiées en toute sécurité depuis la mémoire de processus de l'application via un autre **appel système**. Ces **points de sortie d'appel système** sont également des **limites de contexte d'infosec** ; ce qui constitue des modèles de liste blanche "sûrs" sur les données d'entrée **obtenues** sont informés par ces API spécifiques sur les points de sortie. Sur le SSDLC, ces points de sortie évolueront, tout comme les listes blanches correspondantes.
+En termes de livraison SaaS, {# lede #}toutes les données provenant d'un **appel système** UNIX d'exécution doivent être traitées comme **réalisées**{# lede #}et validé aux points d'entrée dans l'application's mémoire de processus accessible. Ces points d'entrée doivent être considérés comme des **limites contextuelles d'infosec** pour ces données d'application. La validation réglementaire appropriée doit inclure des modèles de chaîne de liste blanche (généralement via **regex**). Les données **réalisées** qui effacent la liste blanche et ses données dépendantes peuvent être expédiées en toute sécurité depuis la mémoire de processus de l'application via un autre **appel système**. Ces **points de sortie d'appel système** sont également des **limites de contexte d'infosec** ; ce qui constitue "sécurité" les modèles de liste blanche sur les données entrantes **obtenues** sont informés par ces API spécifiques sur les points de sortie. Sur le SSDLC, ces points de sortie évolueront, tout comme les listes blanches correspondantes.
 
 Le modèle de sécurité UNIX seul n'a jamais pris de dispositions pour le développement d'applications client/serveur en réseau, car historiquement, l'API de socket BSD qui a précédé l'essor de l'informatique réseau dans le 90s (Sun Microsystems) a été inventée plus d'une décennie après la naissance d'UNIX (avec son modèle de sécurité multiutilisateur basé sur le système d'exploitation entièrement formé à la naissance). [MIT Kerberos](https://web.mit.edu/kerberos/) était un pas dans la bonne direction, mais laisse beaucoup à désirer dans un contexte SaaS.
 
-La planification sécurisée des CPU pour effectuer un travail au niveau du noyau pour le compte d'un "contexte utilisateur/groupe/rôle autorisé" non lié au contexte utilisateur/groupe UNIX du processus sous-jacent a toujours été en dehors du modèle UNIX. De nombreuses initiatives d'infosec ne reconnaissent pas que cette responsabilité réglementaire appartient uniquement aux applications ; ne laissez pas la vôtre en faire une !
+Planification sécurisée des CPU pour effectuer des tâches au niveau du noyau pour le compte de certains "contexte utilisateur/groupe/rôle autorisé" non lié au processus sous-jacent's Le contexte utilisateur/groupe UNIX a toujours été en dehors du modèle UNIX. De nombreuses initiatives d'infosec ne reconnaissent pas que cette responsabilité réglementaire appartient aux seules applications ;'Que le vôtre soit un !
 
-Si ce n'est pas clair à ce stade, les équipes DevOps/SRE qui trient les incidents de sécurité SaaS (**CAI**) sur Linux doivent se familiariser avec [haut](fun-with-htop) `strace` interface via `s` clé ! Mieux vaut maîtriser `strace` comme autonome. (FYI : J'ai des compilations statiques de ces fichiers binaires sur github qui peuvent être livrés à des conteneurs ou des nœuds K8s, y compris via la livraison SSH/SSM, à <https://github.com/joesuf4/home/tree/wsl/bin>).
+Au cas où'n'est pas clair à ce stade, les équipes DevOps/SRE qui trient les incidents de sécurité SaaS (**CAI**) sur Linux doivent se familiariser avec [htop](fun-with-htop)'s `strace` interface via le `s` clé ! Mieux vaut maîtriser `strace` comme autonome. (FYI : J'ai des compilations statiques de ces fichiers binaires sur github qui peuvent être livrés à des conteneurs ou des nœuds K8s, y compris via la livraison SSH/SSM, à <https://github.com/joesuf4/home/tree/wsl/bin>).
 
-#### Comment cela se rapporte-t-il aux initiatives de confiance zéro, en pratique ?
+#### Comment cela se rapporte-t-il aux initiatives de confiance zéro, en tant que question pratique ?
 
-[Architectures de confiance zéro](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf) n'ont pas de limites de contexte d'infosec propres au réseau.
+[Architectures sans confiance](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf) n'ont pas de limites de contexte d'infosec propres au réseau.
 
 Bien qu'il puisse y avoir des contextes VPN/Firewall en réalité, aucun de ces détails ne concerne InfoSec dans un cadre de confiance zéro. En d'autres termes, ces initiatives de sécurité de topologie de réseau peuvent augmenter les initiatives Zero-Trust, mais elles ne sont jamais utilisées dans le cadre d'une initiative Zero-Trust au niveau de la sécurité serveur-hôte de base jusqu'au niveau de l'application.
 
