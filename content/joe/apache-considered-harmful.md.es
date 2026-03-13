@@ -4,7 +4,7 @@ categories: Apache, Perl
 dependencies: '*.md.es'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: borrador
+status: verificado=28910
 title: Desarrolladores de Apache HTTPd considerados perjudiciales
 ---
 
@@ -59,5 +59,7 @@ Cuento largo, [comentaron la prueba](https://github.com/apache/apreq/commit/ee43
 ¿Por qué me importa ahora? Porque yo'm el ventoso [los usuarios se ponen en contacto para obtener respuestas](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) como un experto en temas conocidos.
 
 Esto apesta, pero yo'Lamento decirles que mis días usando la capa de Superman en Apache terminaron hace aproximadamente una década.
+
+En cualquier caso, lo mejor que puedo hacer en este punto es mostrarle mi árbol de origen de producción para libapreq2 &mdash; @joesuf4/solicitud.
 
 <!-- $Date$ $Author$ $Revision$ -->

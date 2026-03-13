@@ -4,7 +4,7 @@ categories: Апач (Перл)
 dependencies: '*.md.ru'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: черновик
+status: проверено=28910
 title: Apache HTTPd Devs Считается Вредным
 ---
 
@@ -59,5 +59,7 @@ title: Apache HTTPd Devs Считается Вредным
 Почему меня волнует сейчас? Потому что я'м сосание [пользователи получают ответы](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) как известный эксперт по предмету.
 
 Это сосет, но я'Простите, что мои дни в мысе Супермена в Апаче закончились около десяти лет назад.
+
+В любом случае, лучшее, что я могу сделать на этом этапе, это показать вам мое дерево производственных источников для libapreq2 &mdash; @joesuf4/апрель.
 
 <!-- $Date$ $Author$ $Revision$ -->

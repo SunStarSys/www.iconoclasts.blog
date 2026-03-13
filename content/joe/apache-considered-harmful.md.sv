@@ -4,7 +4,7 @@ categories: Apache (ort)
 dependencies: '*.md.sv'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: skiss
+status: verifierad=28910
 title: Apache HTTPd Devs betraktas som skadliga
 ---
 
@@ -59,5 +59,7 @@ Lång historia kort, [De kommenterade provet](https://github.com/apache/apreq/co
 Varför bryr jag mig nu? Eftersom jag'Den där sucker [användare når ut till för svar](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) som känd ämnesexpert.
 
 Det här suger, men jag'Ledsen att berätta att mina dagar som bär Superman cape på Apache slutade ungefär ett decennium sedan.
+
+Hur som helst, det bästa jag kan göra just nu är att visa er mitt produktionskällträd för libapreq2 &mdash; @joesuf4/apreq.
 
 <!-- $Date$ $Author$ $Revision$ -->
