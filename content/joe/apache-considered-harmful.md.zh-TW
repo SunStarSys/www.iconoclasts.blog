@@ -4,7 +4,7 @@ categories: Apache, Perl
 dependencies: '*.md.zh-TW'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: 驗證 =29026
+status: 草稿
 title: Apache HTTPd 認為有害裝置
 ---
 
@@ -46,7 +46,7 @@ title: Apache HTTPd 認為有害裝置
 
 ## 後期攤銷
 
-假如你想知道有什麼問題，有破損的迴歸測試會發生[CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2)，您'll 必須查看如何[重連](https://httpd.apache.org/dev/release.html) 在伺服器專案中完成。
+假如你想知道有什麼問題，有破損的迴歸測試會發生[CPAN](https://metacpan.org/dist/libapreq2)，您'll 必須查看如何[重連](https://httpd.apache.org/dev/release.html) 在伺服器專案中完成。
 
 長篇短篇，[他們對這項測驗發表了評論](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) 並將它寄出，並稱之為「安全發行版本」，[修正每個先前版本容易遭受的漏洞](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
@@ -64,6 +64,6 @@ title: Apache HTTPd 認為有害裝置
 
 ## 註腳
 
-1. 不要'簡單"辭職於 ASF"。若要清理休息，必須從不只是「ASF」會員資格辭職，但從每個專案 / 委員會中，一個是其成員。除此之外，在永不停滯的 Apache 電子郵件垃圾郵件中風暴。
+1. 不要'簡單"辭職於 ASF"。若要清理休息，必須從不只是「ASF」會員資格辭職，但從每個專案 / 委員會中，一個是其成員。否則，一陣子在永不停滯的 Apache 電子郵件垃圾郵件中溺斃。
 
-<!-- $Date: 2026-03-14 07:39:07 -0700 (Sat, 14 Mar 2026) $ $Author: joe $ $Revision: 29026 $ -->
+<!-- $Date: 2026-03-16 12:34:18 -0700 (Mon, 16 Mar 2026) $ $Author: joe $ $Revision: 29062 $ -->

@@ -4,7 +4,7 @@ categories: Apache (Perl)
 dependencies: '*.md.fr'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: vérifié=29026
+status: projet
 title: Apache HTTPd Devs considéré comme dangereux
 ---
 
@@ -46,7 +46,7 @@ Mais le coup de grâce a été la libération de 2022 [2.17](https://www.google.
 
 ## Affaire
 
-Si vous demandez comment quelque chose avec un test de régression cassé se termine sur [CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2), vous'll doit regarder comment [RELENG](https://httpd.apache.org/dev/release.html) est effectuée dans le projet serveur.
+Si vous demandez comment quelque chose avec un test de régression cassé se termine sur [CPAN](https://metacpan.org/dist/libapreq2), vous'll doit regarder comment [RELENG](https://httpd.apache.org/dev/release.html) est effectuée dans le projet serveur.
 
 Longue histoire courte, [Ils ont commenté le test](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) et l'a envoyé quand même, et l'a appelé une version de sécurité qui [a corrigé une vulnérabilité chaque version antérieure était susceptible de](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
@@ -64,6 +64,6 @@ Dans tous les cas, le mieux que je puisse faire à ce stade est de vous montrer 
 
 ## Notes de bas de page
 
-1. Un'simplement "démission de l'ASF". Pour faire une pause propre, il faut démissionner non seulement de l'adhésion à l'ASF, mais de chaque projet / comité dont un est membre.  Sinon, vous finissez par vous noyer dans le spam e-mail d'Apache sans fin.
+1. Un'simplement "démission de l'ASF". Pour faire une pause propre, il faut démissionner non seulement de l'adhésion à l'ASF, mais de chaque projet / comité dont un est membre.  Sinon, on finit par se noyer dans le spam e-mail d'Apache sans fin.
 
 <!-- $Date$ $Author$ $Revision$ -->

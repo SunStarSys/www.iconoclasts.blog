@@ -4,7 +4,7 @@ categories: אפאצ'י
 dependencies: '*.md.he'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: אומתה=29026
+status: טיוטה
 title: אפאצ'י HTTPd Devs נחשב מזיק
 ---
 
@@ -46,7 +46,7 @@ title: אפאצ'י HTTPd Devs נחשב מזיק
 
 ## פוסטמורטם
 
-אם אתה תוהה איך משהו עם מבחן רגרסיה שבורה מתפתח [איפוס סיסמה](https://cpan-digger.perlmaven.com/dist/libapreq2)אתה'צריך לבדוק איך [רלנג](https://httpd.apache.org/dev/release.html) זה נעשה בפרוייקט השרת.
+אם אתה תוהה איך משהו עם מבחן רגרסיה שבורה מתפתח [איפוס סיסמה](https://metacpan.org/dist/libapreq2)אתה'צריך לבדוק איך [רלנג](https://httpd.apache.org/dev/release.html) זה נעשה בפרוייקט השרת.
 
 סיפור ארוך קצר, [הם ציינו את המבחן](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) הוא שלח אותה בכל מקרה, וקרא לה "מהדורת אבטחה". [תיקון פגיעות שכל שחרור קודם היה רגיש לה](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
@@ -64,6 +64,6 @@ title: אפאצ'י HTTPd Devs נחשב מזיק
 
 ## הערות שוליים
 
-1. אחד לא'T פשוט "התפטרות מ-ASF". כדי לעשות הפסקה נקייה, יש להתפטר לא רק מחברות ASF, אלא מכל פרויקט / ועדה אחד הוא חבר.  אחרת אתה בסופו של דבר טובע בספאם אימייל אפאצ'י לא נגמר.
+1. אחד לא'T פשוט "התפטרות מ-ASF". כדי לעשות הפסקה נקייה, יש להתפטר לא רק מחברות ASF, אלא מכל פרויקט / ועדה אחד הוא חבר.  אחרת אחד בסופו של דבר טובע בספאם אימייל אפאצ'י גיהנום.
 
 <!-- $Date$ $Author$ $Revision$ -->

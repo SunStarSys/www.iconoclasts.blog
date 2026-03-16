@@ -4,7 +4,7 @@ categories: Apache, Perl
 dependencies: '*.md.es'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: verificado=29026
+status: borrador
 title: Desarrolladores de Apache HTTPd considerados perjudiciales
 ---
 
@@ -46,7 +46,7 @@ Pero el golpe de gracia fue la liberación de 2022 de [2.17](https://www.google.
 
 ## Postmortem
 
-Si te preguntas cómo termina algo con una prueba de regresión rota [CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2)usted'Tendrá que examinar cómo [RELENG](https://httpd.apache.org/dev/release.html) se realiza en el proyecto del servidor.
+Si te preguntas cómo termina algo con una prueba de regresión rota [CPAN](https://metacpan.org/dist/libapreq2)usted'Tendrá que examinar cómo [RELENG](https://httpd.apache.org/dev/release.html) se realiza en el proyecto del servidor.
 
 Cuento largo, [comentaron la prueba](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) y lo envió de todos modos, y lo llamó una liberación de seguridad que [Se solucionó una vulnerabilidad a la que cada versión anterior era susceptible de](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
@@ -64,6 +64,6 @@ En cualquier caso, lo mejor que puedo hacer en este punto es mostrarle mi árbol
 
 ## Notas al pie
 
-1. Uno no't simplemente "dimisión de la ASF". Para hacer una pausa limpia, uno debe renunciar no solo a la membresía de la ASF, sino a cada proyecto / comité del que uno es miembro.  De lo contrario, terminas ahogándote en el infinito correo no deseado de Apache.
+1. Uno no't simplemente "dimisión de la ASF". Para hacer una pausa limpia, uno debe renunciar no solo a la membresía de la ASF, sino a cada proyecto / comité del que uno es miembro.  De lo contrario, uno termina ahogándose en el e-mail spam infernal de Apache.
 
 <!-- $Date$ $Author$ $Revision$ -->

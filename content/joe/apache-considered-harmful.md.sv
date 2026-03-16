@@ -4,7 +4,7 @@ categories: Apache (ort)
 dependencies: '*.md.sv'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: verifierad=29026
+status: skiss
 title: Apache HTTPd Devs betraktas som skadliga
 ---
 
@@ -46,7 +46,7 @@ Men statskuppen var 2022 års frigivning av [2.17](https://www.google.com/search
 
 ## Postkort
 
-Om du undrar hur något med ett trasigt regressionstest hamnar på [CPAN](https://cpan-digger.perlmaven.com/dist/libapreq2), du'Måste titta på hur [RELENG](https://httpd.apache.org/dev/release.html) Detta görs i serverprojektet.
+Om du undrar hur något med ett trasigt regressionstest hamnar på [CPAN](https://metacpan.org/dist/libapreq2), du'Måste titta på hur [RELENG](https://httpd.apache.org/dev/release.html) Detta görs i serverprojektet.
 
 Lång historia kort, [De kommenterade provet](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) och skickade det ändå och kallade det en säkerhetsutgåva som [fixade en sårbarhet varje tidigare utgåva var mottaglig för](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
@@ -64,6 +64,6 @@ Hur som helst, det bästa jag kan göra just nu är att visa er mitt produktions
 
 ## Fotnoter
 
-1. En gör'helt enkelt "avgå från ASF". För att göra en ren paus måste man avgå från inte bara ASF-medlemskapet, men från varje projekt / kommitté är man medlem i.  Annars hamnar du drunkna i oändliga helvetiska Apache e-post spam.
+1. En gör'helt enkelt "avgå från ASF". För att göra en ren paus måste man avgå från inte bara ASF-medlemskapet, men från varje projekt / kommitté är man medlem i.  Annars hamnar man drunkna i oändliga helvetiska Apache e-post spam.
 
 <!-- $Date$ $Author$ $Revision$ -->

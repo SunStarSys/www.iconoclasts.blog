@@ -4,7 +4,7 @@ categories: Apache (Perl)
 dependencies: '*.md.de'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: überprüft=29026
+status: Entwurf
 title: Apache HTTPd als schädlich erachtete Entwickler
 ---
 
@@ -46,7 +46,7 @@ Aber der Putsch der Gnade war die Freilassung von 2022. [2.17](https://www.googl
 
 ## Postmortem
 
-Wenn Sie sich fragen, wie etwas mit einem gebrochenen Regressionstest weitergeht [PAN](https://cpan-digger.perlmaven.com/dist/libapreq2)Sie'Sie müssen sich ansehen, wie [RELENG](https://httpd.apache.org/dev/release.html) wird im Serverprojekt ausgeführt.
+Wenn Sie sich fragen, wie etwas mit einem gebrochenen Regressionstest weitergeht [PAN](https://metacpan.org/dist/libapreq2)Sie'Sie müssen sich ansehen, wie [RELENG](https://httpd.apache.org/dev/release.html) wird im Serverprojekt ausgeführt.
 
 Lange Geschichte kurz, [Sie kommentierten den Test](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) und es trotzdem versendet hat, und nannte es ein Sicherheitsrelease, das [Behebung einer Schwachstelle, die jede vorherige Veröffentlichung anfällig für](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
@@ -64,6 +64,6 @@ In jedem Fall kann ich an dieser Stelle am besten meinen Produktionsquellenbaum 
 
 ## Fußnoten
 
-1. Eine tut'einfach "Rücktritt von der ASF". Um eine saubere Pause zu machen, muss man nicht nur von der ASF-Mitgliedschaft zurücktreten, sondern von jedem Projekt / Ausschuss, in dem man Mitglied ist.  Ansonsten ertrinken Sie in nie endender höllischer Apache-E-Mail-Spam.
+1. Eine tut'einfach "Rücktritt von der ASF". Um eine saubere Pause zu machen, muss man nicht nur von der ASF-Mitgliedschaft zurücktreten, sondern von jedem Projekt / Ausschuss, in dem man Mitglied ist.  Ansonsten ertrinkt man in nie endender höllischer Apache-E-Mail-Spam.
 
 <!-- $Date$ $Author$ $Revision$ -->
