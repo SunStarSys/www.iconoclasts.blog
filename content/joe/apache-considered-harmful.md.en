@@ -1,4 +1,4 @@
-status: verified=29003
+status: verified=29026
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -33,7 +33,7 @@ In 2012, Philip got what he wanted and I stopped resisting, so he [forked](https
 
 ## Fallout
 
-[In 2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) I resigned from the Foundation en masse. You can guess the reasons.
+[In 2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) I resigned from the Foundation en masse<sup>1</sup>. You can guess the reasons.
 
 In 2020 or so, Google's Security Team took advantage of an alpha release of httpd 2.5 by fuzzing its 8 year old copy of `apreq2`. They found a few hotspots that needed repair.
 
@@ -58,5 +58,9 @@ Why do I care now? Because I'm the sucker [users reach out to for answers](https
 This sucks, but I'm sorry to tell you that my days wearing the Superman cape at Apache ended about a decade ago.
 
 In any case, best I can do at this point is show you my production source tree for libapreq2 &mdash; @joesuf4/apreq .
+
+## Footnotes
+
+1. One doesn't simply "resign from The ASF".  To make a clean break, one must resign from not just The ASF membership, but from every project/committee one is a member of.  Otherwise you wind up drowning in neverending hellish Apache email spam.
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -4,7 +4,7 @@ categories: Apache (Perl)
 dependencies: '*.md.de'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: überprüft=28910
+status: überprüft=29026
 title: Apache HTTPd als schädlich erachtete Entwickler
 ---
 
@@ -36,7 +36,7 @@ Im Jahr 2012 bekam Philip, was er wollte, und ich hörte auf zu widerstehen, so 
 
 ## Fallout
 
-[2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) Ich bin von der Stiftung en masse zurückgetreten. Sie können die Gründe erraten.
+[2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) Ich bin von der Stiftung en masse zurückgetreten<sup>1</sup>. Sie können die Gründe erraten.
 
 2020 oder so, google's Security Team nutzte eine Alpha-Veröffentlichung von httpd 2.5, indem es seine 8-jährige Kopie von `apreq2`. Sie fanden ein paar Hotspots, die repariert werden mussten.
 
@@ -61,5 +61,9 @@ Warum kümmere ich mich jetzt? Weil ich'm der sucker [Benutzer greifen auf Antwo
 Das ist scheiße, aber ich'Es tut mir leid, Ihnen zu sagen, dass meine Tage mit dem Superman-Umhang in Apache vor etwa einem Jahrzehnt endete.
 
 In jedem Fall kann ich an dieser Stelle am besten meinen Produktionsquellenbaum für libapreq2 zeigen. &mdash; @joesuf4/apreq.
+
+## Fußnoten
+
+1. Eine tut'einfach "Rücktritt von der ASF". Um eine saubere Pause zu machen, muss man nicht nur von der ASF-Mitgliedschaft zurücktreten, sondern von jedem Projekt / Ausschuss, in dem man Mitglied ist.  Ansonsten ertrinken Sie in nie endender höllischer Apache-E-Mail-Spam.
 
 <!-- $Date$ $Author$ $Revision$ -->

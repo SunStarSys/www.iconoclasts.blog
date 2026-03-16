@@ -4,7 +4,7 @@ categories: Apache (Perl)
 dependencies: '*.md.fr'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: vérifié=28910
+status: vérifié=29026
 title: Apache HTTPd Devs considéré comme dangereux
 ---
 
@@ -36,7 +36,7 @@ En 2012, Philippe a obtenu ce qu'il voulait et j'ai cessé de résister. [fourch
 
 ## Chute
 
-[En 2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) J'ai démissionné de la Fondation en masse. Vous pouvez deviner les raisons.
+[En 2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) J'ai démissionné de la Fondation en masse<sup>1</sup>. Vous pouvez deviner les raisons.
 
 En 2020 ou plus, Google'L'équipe de sécurité a profité d'une version alpha de httpd 2.5 en fuzzant sa copie de 8 ans `apreq2`. Ils ont trouvé quelques points chauds qui ont besoin de réparation.
 
@@ -60,6 +60,10 @@ Pourquoi je m'en soucie maintenant ? Parce que je'm le suceur [les utilisateurs 
 
 C'est nul, mais je'Désolé de vous dire que mes jours de port de la cape Superman à Apache se sont terminés il y a environ une décennie.
 
-Dans tous les cas, le mieux que je puisse faire à ce stade est de vous montrer mon arbre source de production pour libapreq2 &mdash; @joesuf4/demande.
+Dans tous les cas, le mieux que je puisse faire à ce stade est de vous montrer mon arbre source de production pour libapreq2 &mdash; @joesuf4/apreq .
+
+## Notes de bas de page
+
+1. Un'simplement "démission de l'ASF". Pour faire une pause propre, il faut démissionner non seulement de l'adhésion à l'ASF, mais de chaque projet / comité dont un est membre.  Sinon, vous finissez par vous noyer dans le spam e-mail d'Apache sans fin.
 
 <!-- $Date$ $Author$ $Revision$ -->

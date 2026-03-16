@@ -4,7 +4,7 @@ categories: Апач (Перл)
 dependencies: '*.md.ru'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: проверено=28910
+status: проверено=29026
 title: Apache HTTPd Devs Считается Вредным
 ---
 
@@ -36,7 +36,7 @@ title: Apache HTTPd Devs Считается Вредным
 
 ## Выпадение
 
-[В 2018 году](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) Я подал в отставку из фонда в массовом порядке. Вы можете угадать причины.
+[В 2018 году](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) Я ушел из фонда в массовом порядке<sup>1</sup>. Вы можете угадать причины.
 
 В 2020 году или около того, Google's Security Team воспользовалась альфа-выпуском httpd 2.5, разбив его 8-летнюю копию `apreq2`. Они нашли несколько горячих точек, которые нуждались в ремонте.
 
@@ -61,5 +61,9 @@ title: Apache HTTPd Devs Считается Вредным
 Это сосет, но я'Простите, что мои дни в мысе Супермена в Апаче закончились около десяти лет назад.
 
 В любом случае, лучшее, что я могу сделать на этом этапе, это показать вам мое дерево производственных источников для libapreq2 &mdash; @joesuf4/апрель.
+
+## Сноски
+
+1. Один не'только "Уйти из ASF". Чтобы сделать чистый перерыв, нужно уйти не только от членства в ASF, но и от каждого проекта/комитета, членом которого является.  В противном случае вы утонете в постоянном адском спаме электронной почты Apache.
 
 <!-- $Date$ $Author$ $Revision$ -->

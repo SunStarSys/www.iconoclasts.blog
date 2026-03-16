@@ -4,7 +4,7 @@ categories: Apache (ort)
 dependencies: '*.md.sv'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: verifierad=28910
+status: verifierad=29026
 title: Apache HTTPd Devs betraktas som skadliga
 ---
 
@@ -36,7 +36,7 @@ Vad hände? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:
 
 ## Fallout
 
-[År 2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) Jag avgick från stiftelsen en masse. Du kan gissa orsakerna.
+[År 2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) Jag avgick från stiftelsen en masse<sup>1</sup>. Du kan gissa orsakerna.
 
 Under 2020 eller så, Google's Security Team utnyttjade en alfautgåva av httpd 2.5 genom att fuzzing sin 8-åriga kopia av `apreq2`. De hittade några hotspots som behövde repareras.
 
@@ -60,6 +60,10 @@ Varför bryr jag mig nu? Eftersom jag'Den där sucker [användare når ut till f
 
 Det här suger, men jag'Ledsen att berätta att mina dagar som bär Superman cape på Apache slutade ungefär ett decennium sedan.
 
-Hur som helst, det bästa jag kan göra just nu är att visa er mitt produktionskällträd för libapreq2 &mdash; @joesuf4/apreq.
+Hur som helst, det bästa jag kan göra just nu är att visa er mitt produktionskällträd för libapreq2 &mdash; @joesuf4/apreq .
+
+## Fotnoter
+
+1. En gör'helt enkelt "avgå från ASF". För att göra en ren paus måste man avgå från inte bara ASF-medlemskapet, men från varje projekt / kommitté är man medlem i.  Annars hamnar du drunkna i oändliga helvetiska Apache e-post spam.
 
 <!-- $Date$ $Author$ $Revision$ -->

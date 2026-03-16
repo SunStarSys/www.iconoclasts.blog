@@ -4,7 +4,7 @@ categories: Apache, Perl
 dependencies: '*.md.es'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: verificado=28910
+status: verificado=29026
 title: Desarrolladores de Apache HTTPd considerados perjudiciales
 ---
 
@@ -36,7 +36,7 @@ En 2012, Philip consiguió lo que quería y dejé de resistir, por lo que [bifur
 
 ## Fallo
 
-[En 2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) Renuncié a la Fundación en masa. Puedes adivinar las razones.
+[En 2018](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) Renuncié a la Fundación en masa<sup>1</sup>. Puedes adivinar las razones.
 
 En 2020 más o menos, Google'El equipo de seguridad de s aprovechó una versión alfa de httpd 2.5 al difuminar su copia de 8 años de antigüedad de `apreq2`. Encontraron algunos puntos de acceso que necesitaban reparación.
 
@@ -61,5 +61,9 @@ Cuento largo, [comentaron la prueba](https://github.com/apache/apreq/commit/ee43
 Esto apesta, pero yo'Lamento decirles que mis días usando la capa de Superman en Apache terminaron hace aproximadamente una década.
 
 En cualquier caso, lo mejor que puedo hacer en este punto es mostrarle mi árbol de origen de producción para libapreq2 &mdash; @joesuf4/solicitud.
+
+## Notas al pie
+
+1. Uno no't simplemente "dimisión de la ASF". Para hacer una pausa limpia, uno debe renunciar no solo a la membresía de la ASF, sino a cada proyecto / comité del que uno es miembro.  De lo contrario, terminas ahogándote en el infinito correo no deseado de Apache.
 
 <!-- $Date$ $Author$ $Revision$ -->

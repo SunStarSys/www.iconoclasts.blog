@@ -4,7 +4,7 @@ categories: Apache, Perl
 dependencies: '*.md.zh-TW'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: 驗證 =28910
+status: 驗證 =29026
 title: Apache HTTPd 認為有害裝置
 ---
 
@@ -36,7 +36,7 @@ title: Apache HTTPd 認為有害裝置
 
 ## 誤差
 
-[2018 年](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) 我從基金會辭職。您可以猜測原因。
+[2018 年](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) 我已從基金會辭職<sup>1 個</sup>。您可以猜測原因。
 
 2020 年左右，Google's 安全團隊透過對其 8 年歷史的 httpd 2.5 版本進行解謎`apreq2`。他們發現一些需要修復的熱點。
 
@@ -62,4 +62,8 @@ title: Apache HTTPd 認為有害裝置
 
 在任何情況下，我現在可以做到最好是顯示 libapreq2 的生產來源樹狀結構。&mdash; @joesuf4/ 要求。
 
-<!-- $Date: 2026-03-13 11:03:18 -0700 (Fri, 13 Mar 2026) $ $Author: joe $ $Revision: 28999 $ -->
+## 註腳
+
+1. 不要'簡單"辭職於 ASF"。若要清理休息，必須從不只是「ASF」會員資格辭職，但從每個專案 / 委員會中，一個是其成員。除此之外，在永不停滯的 Apache 電子郵件垃圾郵件中風暴。
+
+<!-- $Date: 2026-03-14 07:39:07 -0700 (Sat, 14 Mar 2026) $ $Author: joe $ $Revision: 29026 $ -->
