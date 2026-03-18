@@ -4,7 +4,7 @@ categories: Apache (ort)
 dependencies: '*.md.sv'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
 published: ~
-status: skiss
+status: verifierad=29072
 title: Apache HTTPd Devs betraktas som skadliga
 ---
 
@@ -60,7 +60,7 @@ Varför bryr jag mig nu? Eftersom jag'Den där sucker [användare når ut till f
 
 Det här suger, men jag'Ledsen att berätta att mina dagar som bär Superman cape på Apache slutade ungefär ett decennium sedan.
 
-Hur som helst, det bästa jag kan göra just nu är att visa er mitt produktionskällträd för libapreq2 &mdash; @joesuf4/apreq .
+Hur som helst, det bästa jag kan göra just nu är att visa er mitt produktionskällträd för libapreq2 &mdash; @joesuf4/apreq (och @joesuf4/mod_perl).
 
 ## Fotnoter
 
