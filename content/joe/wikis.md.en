@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=28238
+status: verified=28244
 Categories: Orion
 Dependencies: *.md.en
 
@@ -158,6 +158,8 @@ Unfortunately server-side information contexts must be managed on a per-user bas
 Essentially RAG is Lucene++, where you run a Lucene search, exfiltrate the relevant material you have access to, and ship a few chunks worth of those results to the LLM for final dispensation.
 
 That jury-rigged process is riddled with performance, security, and reliability problems at scale.
+
+Can you say data denormalization SNAFU?  I can!
 
 ##### The à la carte Approach
 
