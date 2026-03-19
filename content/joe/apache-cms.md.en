@@ -1,0 +1,28 @@
+Title: Apache CMS Retrospective
+Keywords: apache,OpenOffice,cms,wiki
+Status: draft
+Dependencies: *.md.en
+
+[TOC]
+
+## Retrospective
+
+To be clear: when others speak of dependency management, they are predominately concerned with software dependencies, not content dependencies.
+
+It all boils down to well-regulated content "includes" in the templating+build system, which is not at all the same thing as software deps.
+
+This feature was absolutely critical in supporting Apache's massive <OpenOffice.org> website.  The RDBMS CMS Sun provided would fall over and die if you wanted to fix a typo.
+
+If you look at the content editing going on with OpenOffice's website, you can clearly see a massive dropoff in activity when Apache forced them off the Apache CMS, and channeled all contribution activity through GitHub PR.
+
+Without some gluing CMS like service that can get a contributor into an editing session for the page they want to repair IN A SINGLE CLICK, the cognitive energy is too great to go fish that page out of a github repo, fork the repo, edit the page, commit the change, push it, and create a PR.
+
+With the Apache CMS, sharing a committable "patch" over email was a one-click operation for any person on Earth, as well as a one-click operation to commit+build+publish for a committer to apply on the project.
+
+The whole One-Click Amazon Patent was critical to customer satisfaction for them.  Same here; but The Apache CMS was all alone in this space.
+
+The Apache CMS was that essential coordination switchboard between all that volunteer energy that has left the org behind.
+
+
+
+<!-- $Date$ $Author$ $Revision$ -->
