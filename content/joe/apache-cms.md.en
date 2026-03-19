@@ -13,6 +13,8 @@ Dependencies: *.md.en
 
 ## Retrospective
 
+The [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) was always ahead of its time.  Never more clearly evidenced than in its content dependency management functionality in the early years of the Sun donation of OpenOffice to Apache.
+
 To be clear: when others speak of dependency management, they are predominately concerned with software dependencies, not [content dependencies](dependencies).
 
 It all boils down to well-regulated content "includes" in the templating+build system, which is not at all the same thing as software deps.
