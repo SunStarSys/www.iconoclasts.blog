@@ -34,7 +34,7 @@ Without some gluing CMS like service that can get a contributor into an editing 
 7. **wait** until a committer approves and merges the PR
 8. [**wait** 10-15 minutes for the staging build to finish](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Staging-Site-Build/)
 9. **wait** for a committer find and review the published changed content somewhere on the [staging site](https://www.staging.openoffice.org/)
-10. **wait** for that committer to promote the build to production
+10. **wait** for that committer to promote the **entire site** to production
 11. [**wait** another 5-10 minutes for the publication build to finish](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Publish-Site/)
 12. **wait** for gitpubsub to push the new content out to Apache's edge webservers.
 
