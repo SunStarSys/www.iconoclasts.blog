@@ -1,6 +1,6 @@
 Title: Apache CMS Retrospective
 Keywords: apache,OpenOffice,cms,wiki
-status: verified=29271
+status: verified=29274
 Dependencies: *.md.en
 
 <div class="right">
@@ -13,7 +13,7 @@ The [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.or
 
 To be clear: when others speak of dependency management, they are predominately concerned with software dependencies, not [content dependencies](dependencies). {# lede #}It all boils down to well-regulated content "includes" in the templating+build system{# lede #}, which is not at all the same thing as software deps.
 
-This feature was absolutely critical in supporting Apache's massive <https://OpenOffice.org> (OOo) website.  The RDBMS CMS Sun originally provided to OOo would fall over and die even if you just wanted to fix a typo. In contrast, The Apache CMS ran on a FreeBSD jail on brutus.apache.org: a moderately provisioned, IBM-donated box that ran on 4 CPU and less than 8 GB of RAM across several jails, and flew through the worflow with relative ease.
+This feature was absolutely critical in supporting Apache's massive <https://OpenOffice.org> (OOo) website.  The RDBMS CMS Sun originally provided to OOo would fall over and die even if you just wanted to fix a typo. In contrast, The Apache CMS ran on a FreeBSD jail on baldr.apache.org: a moderately provisioned, IBM-donated box that ran on 4 CPU and less than 8 GB of RAM across several jails, and flew through the worflow with relative ease.
 
 Without some gluing CMS like service that can get a contributor into an editing session for the page they want to repair IN A SINGLE CLICK, the cognitive energy is far too great to fix a typo on a webpage today:
 
@@ -48,7 +48,7 @@ There are several excuses Apache's Infrastructure Leadership made as to why it w
 
 5. git is better (thanks Greg!)
 
-But the real motive was *spite*.  Between the time it was deprecated in March 2015 and the time it was finally decommissioned in January 2022, it had been running on autopilot in a FreeBSD jail on Brutus for nearly 7 years. The only maintenance required was (quarterly?) host reboots due to item 3 above, and annual SSL certificate renewals. That's IT.
+But the real motive was *spite*.  Between the time it was deprecated in March 2015 and the time it was finally decommissioned in January 2022, it had been running on autopilot in a FreeBSD jail on baldr.apache.org for nearly 7 years. The only maintenance required was (quarterly?) host reboots due to item 3 above, and annual SSL certificate renewals. That's IT.
 
 When push came to shove in late 2021, I offered Dave Fisher to host the OpenOffice website on Orion at a steep discount. The Apache Infrastructure Team put Dave in the unenviable position of declaring his now exclusive loyalties, according to them: to me and by extension the project's **volunteer community**, or to **The ASF**.
 
