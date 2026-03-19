@@ -15,9 +15,9 @@ To be clear: when others speak of dependency management, they are predominately 
 
 {# lede #}It all boils down to well-regulated content "includes" in the templating+build system{# lede #}, which is not at all the same thing as software deps.
 
-This feature was absolutely critical in supporting Apache's massive <https://OpenOffice.org> website.  The RDBMS CMS Sun provided would fall over and die if you wanted to fix a typo.
+This feature was absolutely critical in supporting Apache's massive <https://OpenOffice.org> website.  The RDBMS CMS Sun provided would fall over and die if you wanted to fix a typo. In contrast, The Apache CMS ran on a FreeBSD jail on brutus.apache.org: a moderately provisioned, IBM-donated box that ran on 4 CPU and less than 8 GB of RAM across several jails.
 
-If you look at the content editing going on with OpenOffice's website on GitHub lately, you can clearly see a massive dropoff in activity when Apache forced them off the Apache CMS, and channeled all contribution activity through GitHub PR.
+Sadly, if you look at the content editing going on with OpenOffice's website on GitHub lately, you can clearly see a massive dropoff in activity when The Apache Infrastructure Team forced them off the Apache CMS, and channeled all contribution activity through GitHub PR.
 
 Without some gluing CMS like service that can get a contributor into an editing session for the page they want to repair IN A SINGLE CLICK, the cognitive energy is far too great to fix a typo on a webpage:
 
@@ -42,21 +42,23 @@ The Apache CMS (webgui) was that essential coordination switchboard between all 
 
 There are several excuses Apache's Infrastructure Leadership made as to why it was dropped:
 
-1. a bus-factor of 1 (me)
+1. a bus-factor of 1 (me),
 
-2. mod_perl, not python (but apparently mod_lua was kosher)
+2. [mod_perl](https://perl.apache.org/), not python (but apparently [mod_lua](https://lists.apache.org/) is kosher),
 
-3. buggy (unreliable zfs clones from a tiny FreeBSD jail)
+3. buggy (unreliable zfs clones from a tiny FreeBSD jail),
 
-4. ugly (gee thanks, Rich!)
+4. ugly (thanks, Rich!),
 
 5. git is better (thanks Greg!)
 
-But the real motive was spite.  Between the time it was deprecated in March 2015 and the time it was finally decommissioned in January 2022, it had been running on autopilot in a FreeBSD jail on Brutus for nearly 7 years. The only maintenance required was (quarterly?) host reboots due to item 3 above.
+But the real motive was *spite*.  Between the time it was deprecated in March 2015 and the time it was finally decommissioned in January 2022, it had been running on autopilot in a FreeBSD jail on Brutus for nearly 7 years. The only maintenance required was (quarterly?) host reboots due to item 3 above, and annual SSL certificate renewals. That's IT.
 
-When push came to shove, I offered to host the OpenOffice website on Orion at a steep discount. The Apache Infrastructure Team put Dave Fisher in the unenviable position of declaring his now exclusive loyalties:  to me and the project, or to "The ASF".
+When push came to shove in late 2021, I offered Dave Fisher to host the OpenOffice website on Orion at a steep discount. The Apache Infrastructure Team put Dave in the unenviable position of declaring his now exclusive loyalties, according to them: to me and by extension the project's **volunteer community**, or to **The ASF**.
 
 Dave was the key innovator and collaborator behind the scalability successes of The Apache CMS's incremental build technology.  He didn't solve the problems; but he worked productively with me on how I added the scalability features he needed to ensure high performance builds from The Apache CMS as applied to the OpenOffice website- which at the time was delivering north of 25M requests a day! Together we discovered a profound application of SSI in his efforts, which I believe are still carried through in the JBake templating system in use today.
+
+I don't blame Dave for the ugly choice he was forced to make, nor for the predetermined outcome, but we are obviously are no longer on speaking terms since that day.
 
 
 <!-- $Date$ $Author$ $Revision$ -->
