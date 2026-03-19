@@ -1,6 +1,6 @@
 Title: Apache CMS Retrospective
 Keywords: apache,OpenOffice,cms,wiki
-status: draft
+status: verified=29294
 Dependencies: *.md.en
 
 <div class="right">
@@ -13,7 +13,7 @@ The [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.or
 
 To be clear: when others speak of dependency management, they are predominately concerned with software dependencies, not [content dependencies](dependencies). {# lede #}It all boils down to well-regulated content "includes" in the templating+build system{# lede #}, which is not at all the same thing as software deps.
 
-This feature was absolutely critical in supporting Apache's massive <https://OpenOffice.org> (OOo) website.  The RDBMS CMS Sun originally provided to OOo would fall over and die even if you just wanted to fix a typo. In contrast, The Apache CMS ran on a FreeBSD jail on baldr.apache.org: a moderately provisioned, [Dell 1950 box that ran on 8 CPU and 24 GB of RAM](https://web.archive.org/web/20120112034217/http://www.apache.org/dev/machines.html) across several jails, and flew through the worflow with relative ease.
+This feature was absolutely critical in supporting Apache's massive <https://OpenOffice.org> (OOo) website.  The RDBMS CMS Sun originally provided to OOo would fall over and die even if you just wanted to fix a typo. In contrast, The Apache CMS ran on a FreeBSD jail on baldr.apache.org: a moderately provisioned, [Dell 1950 box that ran on 8 CPU and 24 GB of RAM](https://web.archive.org/web/20120112034217/http://www.apache.org/dev/machines.html#:~:text=baldr) across several jails, and flew through the worflow with relative ease.
 
 Without some gluing CMS like service that can get a contributor into an editing session for the page they want to repair IN A SINGLE CLICK, the cognitive energy is far too great to fix a typo on a webpage today:
 
