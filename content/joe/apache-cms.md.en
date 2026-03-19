@@ -23,11 +23,24 @@ This feature was absolutely critical in supporting Apache's massive <https://Ope
 
 If you look at the content editing going on with OpenOffice's website on GitHub lately, you can clearly see a massive dropoff in activity when Apache forced them off the Apache CMS, and channeled all contribution activity through GitHub PR.
 
-Without some gluing CMS like service that can get a contributor into an editing session for the page they want to repair IN A SINGLE CLICK, the cognitive energy is too great to go fish that page out of a github repo, fork the repo, edit the page, commit the change, push it, and create a PR, wait until someone merges the PR, and then [wait 10-15 minutes for the staging build to finish](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Staging-Site-Build/),have a committer find and review the changed content somewhere on the [staging site](https://www.staging.openoffice.org/), and then wait for someone to promote the build to production , and then [wait another 5-10 minutes for the publication build to finish](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Publish-Site/), and then wait for gitpubsub to push the new content out to Apache's edge webservers.
+Without some gluing CMS like service that can get a contributor into an editing session for the page they want to repair IN A SINGLE CLICK, the cognitive energy is far too great to fix a typo on a webpage:
+
+1. go fish that page out of a github repo,
+2. fork the repo
+3. edit the page
+4. commit the change
+5. push it
+6. create a PR
+7. **wait** until a committer approves and merges the PR
+8. [**wait** 10-15 minutes for the staging build to finish](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Staging-Site-Build/)
+9. **wait** for a committer find and review the published changed content somewhere on the [staging site](https://www.staging.openoffice.org/)
+10. **wait** for that committer to promote the build to production
+11. [**wait** another 5-10 minutes for the publication build to finish](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Publish-Site/)
+12. **wait** for gitpubsub to push the new content out to Apache's edge webservers.
 
 With the Apache CMS (webgui), sharing a committable "patch/diff" over email was a one-click operation for any person on Earth, as well as a one-click operation to commit+build+publish for a committer to apply on the project. The whole thing revolved around the sharing of capability URLs. They allowed an Apache committer on the project to "clone" the zfs filesystem of a contributor's (uncommitted) checkout; and subsequently inspect, alter, and commit that cloned checkout by the Apache committer themselves **as the committer and not the contributor**.  Once that commit happens, the CMS not only built it in *seconds*, but it also provided **links** to the live rendering of the content on the staging site for review prior to promotion to production.
 
-The whole One-Click Amazon Patent was critical to customer satisfaction for them.  Same here; but The Apache CMS was all alone in this space.
+The whole **One-Click** Amazon Patent was critical to customer satisfaction for them.  Same thing here; but The Apache CMS was all alone in this space.
 
 The Apache CMS (webgui) was that essential coordination switchboard between all that volunteer energy that has sadly left the org behind.
 
