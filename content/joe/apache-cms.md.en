@@ -15,7 +15,7 @@ To be clear: when others speak of dependency management, they are predominately 
 
 This feature was absolutely critical in supporting Apache's massive <https://OpenOffice.org> (OOo) website.  The RDBMS CMS Sun originally provided to OOo would fall over and die even if you just wanted to fix a typo. In contrast, The Apache CMS ran on a FreeBSD jail on brutus.apache.org: a moderately provisioned, IBM-donated box that ran on 4 CPU and less than 8 GB of RAM across several jails, and flew through the worflow with relative ease.
 
-Without some gluing CMS like service that can get a contributor into an editing session for the page they want to repair IN A SINGLE CLICK, the cognitive energy is far too great to fix a typo on a webpage:
+Without some gluing CMS like service that can get a contributor into an editing session for the page they want to repair IN A SINGLE CLICK, the cognitive energy is far too great to fix a typo on a webpage today:
 
 1. go fish that page out of a github repo,
 2. fork the repo,
