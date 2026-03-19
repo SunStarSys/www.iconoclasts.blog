@@ -9,15 +9,11 @@ Dependencies: *.md.en
 
 </div>
 
-The [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; invented in October 2010 by select members of The Apache Infrastructure Team ([Paul Querna (VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), and myself), [formally deprecated in June 2015](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb), and finally [decommissioned in January 2022](https://apache.org/dev/cms) &mdash; was always ahead of its time.  Never more clearly evidenced than in its content dependency management functionality in the early years of the Oracle donation of OpenOffice to Apache in June 2011.
+The [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; invented in October 2010 by select members of The Apache Infrastructure Team ([Paul Querna (VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), and myself), [formally deprecated in June 2015](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb), and finally [decommissioned in January 2022](https://apache.org/dev/cms) &mdash; was always ahead of its time.  At its peak, over 100 Apache Top-Level Projects relied on it, but none more than Apache OpenOffice. Never was its prescient performance technology more clearly evidenced than in its content dependency management functionality in the early years of the Oracle donation of OpenOffice to Apache in June 2011.
 
-To be clear: when others speak of dependency management, they are predominately concerned with software dependencies, not [content dependencies](dependencies).
+To be clear: when others speak of dependency management, they are predominately concerned with software dependencies, not [content dependencies](dependencies). {# lede #}It all boils down to well-regulated content "includes" in the templating+build system{# lede #}, which is not at all the same thing as software deps.
 
-{# lede #}It all boils down to well-regulated content "includes" in the templating+build system{# lede #}, which is not at all the same thing as software deps.
-
-This feature was absolutely critical in supporting Apache's massive <https://OpenOffice.org> website.  The RDBMS CMS Sun provided would fall over and die if you wanted to fix a typo. In contrast, The Apache CMS ran on a FreeBSD jail on brutus.apache.org: a moderately provisioned, IBM-donated box that ran on 4 CPU and less than 8 GB of RAM across several jails.
-
-Sadly, if you look at the content editing going on with OpenOffice's website on GitHub lately, you can clearly see a massive dropoff in activity when The Apache Infrastructure Team forced them off the Apache CMS, and channeled all contribution activity through GitHub PR.
+This feature was absolutely critical in supporting Apache's massive <https://OpenOffice.org> (OOo) website.  The RDBMS CMS Sun originally provided to OOo would fall over and die even if you just wanted to fix a typo. In contrast, The Apache CMS ran on a FreeBSD jail on brutus.apache.org: a moderately provisioned, IBM-donated box that ran on 4 CPU and less than 8 GB of RAM across several jails, and flew through the worflow with relative ease.
 
 Without some gluing CMS like service that can get a contributor into an editing session for the page they want to repair IN A SINGLE CLICK, the cognitive energy is far too great to fix a typo on a webpage:
 
@@ -58,8 +54,8 @@ When push came to shove in late 2021, I offered Dave Fisher to host the OpenOffi
 
 Dave was the key innovator and collaborator behind the scalability successes of The Apache CMS's incremental build technology.  He didn't solve the problems; but he worked productively with me on how I added the scalability features he needed to ensure high performance builds from The Apache CMS as applied to the OpenOffice website- which at the time was delivering north of 25M requests a day! Together we discovered a profound application of SSI in his efforts, which I believe are still carried through in the JBake templating system in use today.
 
-I don't blame Dave for the ugly choice he was forced to make, nor for the predetermined outcome, but we are obviously are no longer on speaking terms since that day.
+Unfortunately, if you look at the content editing going on with OpenOffice's website on GitHub lately, you can clearly see a massive dropoff in activity when The Apache Infrastructure Team forced Dave to move them off the Apache CMS, and as a result channeled all contribution activity through GitHub alone.
 
-Sad.
+I don't blame Dave for the ugly choice he was forced to make, nor for the predetermined outcome, but we are obviously are no longer on speaking terms since that day.
 
 <!-- $Date$ $Author$ $Revision$ -->
