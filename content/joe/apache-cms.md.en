@@ -25,11 +25,11 @@ If you look at the content editing going on with OpenOffice's website on GitHub 
 
 Without some gluing CMS like service that can get a contributor into an editing session for the page they want to repair IN A SINGLE CLICK, the cognitive energy is too great to go fish that page out of a github repo, fork the repo, edit the page, commit the change, push it, and create a PR.
 
-With the Apache CMS, sharing a committable "patch/diff" over email was a one-click operation for any person on Earth, as well as a one-click operation to commit+build+publish for a committer to apply on the project.
+With the Apache CMS (webgui), sharing a committable "patch/diff" over email was a one-click operation for any person on Earth, as well as a one-click operation to commit+build+publish for a committer to apply on the project. The whole thing revolved around the sharing of capability URLs. They allowed an Apache committer on the project to "clone" the zfs filesystem of a contributor's (uncommitted) checkout; and subsequently inspect, alter, and commit that cloned checkout by the Apache committer themselves **as the committer and not the contributor**.
 
 The whole One-Click Amazon Patent was critical to customer satisfaction for them.  Same here; but The Apache CMS was all alone in this space.
 
-The Apache CMS was that essential coordination switchboard between all that volunteer energy that has sadly left the org behind.
+The Apache CMS (webgui) was that essential coordination switchboard between all that volunteer energy that has sadly left the org behind.
 
 There are several excuses Apache's Infrastructure Leadership made as to why it was dropped:
 
@@ -39,7 +39,7 @@ There are several excuses Apache's Infrastructure Leadership made as to why it w
 
 3. buggy (unreliable zfs clones from a tiny FreeBSD jail)
 
-4. ugly (gee thanks!)
+4. ugly (gee thanks, Rich!)
 
 But the real motive was spite.  By the time it was finally decommissioned, it had been running on autopilot in a FreeBSD jail on Brutus for over 5 years. The only maintenance required was (quarterly?) host reboots due to item 3 above.
 
