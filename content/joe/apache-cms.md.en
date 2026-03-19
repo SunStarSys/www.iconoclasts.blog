@@ -17,7 +17,7 @@ The [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.or
 
 To be clear: when others speak of dependency management, they are predominately concerned with software dependencies, not [content dependencies](dependencies).
 
-It all boils down to well-regulated content "includes" in the templating+build system, which is not at all the same thing as software deps.
+{# lede #}It all boils down to well-regulated content "includes" in the templating+build system{# lede #}, which is not at all the same thing as software deps.
 
 This feature was absolutely critical in supporting Apache's massive <https://OpenOffice.org> website.  The RDBMS CMS Sun provided would fall over and die if you wanted to fix a typo.
 
