@@ -9,7 +9,7 @@ Dependencies: *.md.en
 
 </div>
 
-The [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms), invented in October 2010 by members of The Apache Infrastructure Team, and finally decommissioned in January 2022, was always ahead of its time.  Never more clearly evidenced than in its content dependency management functionality in the early years of the Oracle donation of OpenOffice to Apache in June 2011.
+The [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; invented in October 2010 by select members of The Apache Infrastructure Team (Paul Querna VP, Daniel Shahaf (SVN dev), and myself), formally deprecated in June 2015, and finally decommissioned in January 2022 &mdash; was always ahead of its time.  Never more clearly evidenced than in its content dependency management functionality in the early years of the Oracle donation of OpenOffice to Apache in June 2011.
 
 To be clear: when others speak of dependency management, they are predominately concerned with software dependencies, not [content dependencies](dependencies).
 
@@ -42,9 +42,9 @@ The Apache CMS (webgui) was that essential coordination switchboard between all 
 
 There are several excuses Apache's Infrastructure Leadership made as to why it was dropped:
 
-1. a bus-factor of 0 post my 2018 resignation
+1. a bus-factor of 1 (me)
 
-2. perl, not python
+2. mod_perl, not python (but apparently mod_lua was kosher)
 
 3. buggy (unreliable zfs clones from a tiny FreeBSD jail)
 
@@ -52,7 +52,7 @@ There are several excuses Apache's Infrastructure Leadership made as to why it w
 
 5. git is better (thanks Greg!)
 
-But the real motive was spite.  By the time it was finally decommissioned, it had been running on autopilot in a FreeBSD jail on Brutus for over 5 years. The only maintenance required was (quarterly?) host reboots due to item 3 above.
+But the real motive was spite.  Between the time it was deprecated in March 2015 and the time it was finally decommissioned in January 2022, it had been running on autopilot in a FreeBSD jail on Brutus for nearly 7 years. The only maintenance required was (quarterly?) host reboots due to item 3 above.
 
 When push came to shove, I offered to host the OpenOffice website on Orion at a steep discount. The Apache Infrastructure Team put Dave Fisher in the unenviable position of declaring his now exclusive loyalties:  to me and the project, or to "The ASF".
 
