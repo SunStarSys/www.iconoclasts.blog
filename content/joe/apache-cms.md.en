@@ -1,6 +1,6 @@
 Title: Apache CMS Retrospective
 Keywords: apache,OpenOffice,cms,wiki
-Status: draft
+status: verified=29265
 Dependencies: *.md.en
 
 <div class="right">
@@ -52,7 +52,7 @@ But the real motive was *spite*.  Between the time it was deprecated in March 20
 
 When push came to shove in late 2021, I offered Dave Fisher to host the OpenOffice website on Orion at a steep discount. The Apache Infrastructure Team put Dave in the unenviable position of declaring his now exclusive loyalties, according to them: to me and by extension the project's **volunteer community**, or to **The ASF**.
 
-Dave was the key innovator and collaborator behind the scalability successes of The Apache CMS's incremental build technology.  He didn't solve the problems; but he worked productively with me on how I added the scalability features he needed to ensure high performance builds from The Apache CMS as applied to the OpenOffice website- which at the time was delivering north of 25M requests a day! Together we discovered a profound application of SSI in his efforts, which I believe are still carried through in the JBake templating system in use today.
+Dave was the key innovator and collaborator behind the scalability successes of The Apache CMS's incremental build technology.  He didn't solve the problems; but he worked productively with me on how I added the scalability features he needed to ensure high performance builds from The Apache CMS as applied to the OpenOffice website- which at the time was delivering north of 25M requests a day! Together we discovered a profound application of [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) in his efforts, which I believe are still carried through in the JBake templating system in use today.
 
 Unfortunately, if you look at the content editing going on with OpenOffice's website on GitHub lately, you can clearly see a massive dropoff in activity when The Apache Infrastructure Team forced Dave to move them off the Apache CMS, and as a result channeled all contribution activity through GitHub alone.
 
