@@ -1,6 +1,6 @@
 Title: Apache CMS Retrospective
 Keywords: apache,OpenOffice,cms,wiki
-status: verified=29340
+status: draft
 Dependencies: *.md.en
 
 <div class="right">
@@ -25,7 +25,7 @@ Without some gluing CMS like service that can get a contributor into an editing 
 6. create a PR,
 7. **wait** until a committer approves and merges the PR,
 8. [**wait** 10-15 minutes for the staging build to finish](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Staging-Site-Build/) while it grinds through all 40K+ of buildable assets (~4GB total size),
-9. **wait** for a committer find and review the published changed content somewhere on the [staging site](https://www.staging.openoffice.org/),
+9. **wait** for a committer to find and review the published changed content somewhere on the [staging site](https://www.staging.openoffice.org/),
 10. **wait** for that committer to promote the **entire site** to production,
 11. [**wait** another 5-10 minutes for the publication build to finish](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Publish-Site/),
 12. **wait** for gitpubsub to push the new content out to Apache's edge webservers.
@@ -64,9 +64,9 @@ I don't blame Dave for the ugly choice he was forced to make, nor for the predet
 
 What is shocking about the whole affair was the absolute belligerence of The Apache Infrastructure Team about the whole effort.  I personally held the hand of every project we onboarded to the Apache CMS; to see all of the goodwill that created **burned to the ground by autocratic decree** was simply unfathomable to me as a long time member of the organization.
 
-All they ever did was give the stranded Apache projects callous ultimatums, and never a single hour of effort dedicated to personally offboarding them to **anything else**. It was no different with OOo, they simply abused, hazed, and coerced Dave to do their bidding.  And so he did.
+All they ever did was give the stranded Apache projects callous ultimatums, and never a single hour of effort dedicated to personally offboarding them to **anything else**. It was no different with OOo; they simply abused, hazed, and coerced Dave to do their bidding.  And so he did.
 
-I resigned in 2018. Couldn't carry on witnessing it.  What I did instead in 2020 was build [Orion](https://sunstarsys.com/orion) from the ashes.  But even that avenue was foreclosed for Apache projects by The ASF.
+I resigned in 2018. Couldn't carry on witnessing it.  What I did instead in 2020 was build [Orion](https://sunstarsys.com/orion) from the ashes.  But even that avenue was foreclosed for Apache projects by the Apache Infrastructure Team.
 
 All for *spite*.
 
