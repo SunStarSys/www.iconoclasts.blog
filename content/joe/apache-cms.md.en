@@ -1,6 +1,6 @@
 Title: Apache CMS Retrospective
 Keywords: apache,OpenOffice,cms,wiki
-status: verified=29318
+status: verified=29321
 Dependencies: *.md.en
 
 <div class="right">
@@ -50,7 +50,7 @@ There are several excuses Apache's Infrastructure Leadership made as to why it w
 
 5. git is better (thanks Greg!)
 
-But the real motive was *spite*.  Between the time it was deprecated in March 2015 and the time it was finally decommissioned in January 2022, it had been running on autopilot in a FreeBSD jail on baldr.apache.org for nearly 7 years. The only maintenance required was (quarterly?) host reboots due to item 3 above, and annual SSL certificate renewals. That's IT.
+But the real motive was *spite*.  Between the time it was deprecated in March 2015 and the time it was finally decommissioned in January 2022, it had been running on autopilot in a FreeBSD jail on baldr.apache.org for nearly 7 years. The only maintenance required was (quarterly?) host reboots due to item 4 above, and annual SSL certificate renewals. That's IT.
 
 When push came to shove in late 2021, I offered Dave Fisher to host the OpenOffice website on Orion at a steep discount. At first, Dave petitioned the board and they **approved the expense**. Dave offered The ASF to waive the finding fee I agreed to pay him and told me to put that money towards the hosting costs.
 
