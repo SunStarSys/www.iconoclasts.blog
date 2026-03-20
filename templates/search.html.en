@@ -167,7 +167,9 @@
       {% endifequal %}
       <div class="right">
         <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname|append:"/"|append:w.name}};action=unwatch">
-          <i class="fa fa-eye-slash fa-emoji" title="unwatch"></i>
+          <i class="fa fa-eye-slash fa-emoji"
+			 title="unsubscribe">
+			</i>
         </a>
       </div>
     </div>
