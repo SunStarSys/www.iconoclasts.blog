@@ -1,0 +1,10 @@
+---
+categories: Perl, Apache, ZFS
+dependencies: '*.md.en'
+keywords: apache,OpenOffice,cms,wiki
+status: verified=29384
+title: Apache CMS Retrospective
+
+---
+
+{% ssi `/joe/apache-cms.md.en` %}
