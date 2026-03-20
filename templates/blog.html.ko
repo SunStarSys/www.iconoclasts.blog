@@ -8,7 +8,7 @@
          <small>
            [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"0-9="}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"0-9="}}</span></a>]
            <em>
-			   <b>에 의해 <a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">최종 업데이트</a>{{ content|ssi|vcs_author:lang }}<b>의 </b>{{ content|ssi|vcs_date:lang }}</b>
+			   <a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">최종 업데이트</a> 제작: <b>{{ content|ssi|vcs_author:lang }}</b> <b>{{ content|ssi|vcs_date:lang }}</b>
 {% ifequal repos "public" %}
 			   &nbsp;
 			   <a href="https://github.com/SunStarSys/{{website}}/blob/trunk/content{{path}}"><i class="fa-brands fa-sm fa-github"></i>&nbsp;소스</a>
@@ -16,11 +16,15 @@
 			 </em>
          </small>
          <div class="right">
-           <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch" id="watch">
-             <i class="fa fa-eye fa-emoji" title="보기"></i>
+           <a id="watch" href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch">
+             <i class="fa fa-eye fa-emoji"
+				title="구독">
+			 </i>
            </a>
-           <a href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1#:~:text={{path|parse_filename:"1.."}}" id="unwatch">
-            <i class="fa fa-eye-slash fa-emoji" title="해제"></i>
+           <a id="unwatch" href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1#:~:text={{path|parse_filename:"1.."}}">
+            <i class="fa fa-eye-slash fa-emoji"
+			   title="구독 취소">
+			</i>
            </a>
          </div>
          <br>&nbsp;

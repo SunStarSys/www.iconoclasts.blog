@@ -2,26 +2,29 @@
 {% block content %}
    <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
 
-   <h1>{{ headers.title|safe }}</h1>
+<h1>{{ headers.title|safe }}</h1>
      <div class="essay col-lg-12 container">
        <div style="color:#aaa">
          <small>
            [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"0-9="}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"0-9="}}</span></a>]
            <em>
-			   <a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">Senast uppdaterad</a> av <b>{{ content|ssi|vcs_author:lang }}</b> den <b>{{ content|ssi|vcs_date:lang }}</b>
+			   <a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">Senast uppdaterad</a> av <b>{{ content|ssi|vcs_author:lang }}</b> på <b>{{ content|ssi|vcs_date:lang }}</b>
 {% ifequal repos "public" %}
 			   &nbsp;
 			   <a href="https://github.com/SunStarSys/{{website}}/blob/trunk/content{{path}}"><i class="fa-brands fa-sm fa-github"></i>&nbsp;källa</a>
 {% endifequal %}
 			 </em>
-           </small>
-
+         </small>
          <div class="right">
-           <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch" id="watch">
-             <i class="fa fa-eye fa-emoji" title="klocka"></i>
+           <a id="watch" href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch">
+             <i class="fa fa-eye fa-emoji"
+				title="prenumerera">
+			 </i>
            </a>
-           <a href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1#:~:text={{path|parse_filename:"1.."}}" id="unwatch">
-            <i class="fa fa-eye-slash fa-emoji" title="mörda"></i>
+           <a id="unwatch" href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1#:~:text={{path|parse_filename:"1.."}}">
+            <i class="fa fa-eye-slash fa-emoji"
+			   title="avsluta prenumeration">
+			</i>
            </a>
          </div>
          <br>&nbsp;
@@ -47,12 +50,12 @@
 	vertical-align: middle;
   }
 
-  .katex-display::after {
+.katex-display::after {
     counter-increment: eqno;
 	content: "(" counter(eqno) ")";
   }
 
-  .eqno::after {
+.eqno::after {
     content: "(" counter(eqno) ")";
   }
 
@@ -74,7 +77,7 @@
       }
       catch (e) {
 
-      }
+}
   }
 </script>
 {% endblock %}
