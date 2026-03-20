@@ -1,0 +1,80 @@
+---
+archived: ~
+categories: Perl, Apache, ZFS
+dependencies: '*.md.fr'
+keywords: apache,OpenOffice,cms,wiki
+published: ~
+status: vérifié=29384
+title: Apache CMS Rétrospective
+---
+
+<div class="right">
+
+![taré et à plumes](apache-considered-harmful.page/feather2).
+
+</div>
+
+Le [CMS Apache](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; inventé en octobre 2010 par certains membres de l'équipe d'infrastructure Apache ([Paul Querna (VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), et moi-même, [officiellement déconseillé en juin 2015](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)et enfin [mis hors service en janvier 2022](https://apache.org/dev/cms) &mdash; Il était toujours en avance sur son temps.  À son apogée, plus de 100 projets de premier niveau Apache s'y sont appuyés, mais pas plus qu'Apache OpenOffice. Jamais sa technologie de performance prémonitoire n'a été plus clairement mise en évidence que dans sa fonctionnalité de gestion de la dépendance au contenu au cours des premières années du don d'Oracle de OpenOffice à Apache en juin 2011.
+
+Pour être clair : lorsque d'autres parlent de la gestion des dépendances, ils sont principalement concernés par les dépendances logicielles, pas [dépendances de contenu](dependencies). {# lede #}Tout se résume à un contenu bien réglementé "inclut" dans le système templating+build{# lede #}, ce qui n'est pas du tout la même chose que les services logiciels.
+
+Cette fonctionnalité était absolument essentielle pour soutenir Apache'massif <https://OpenOffice.org> (OOo) site Web.  Le CMS Sun du SGBDR fourni à l'origine à OOo tomberait et disparaîtrait même si vous vouliez simplement corriger une faute de frappe. En revanche, The Apache CMS a couru sur une prison de FreeBSD sur baldr.apache.org : un moyennement provisionné, [Boîte Dell 1950 fonctionnant avec 8 CPU et 24 Go de RAM avec une paire de disques durs en miroir de 96 Go](https://web.archive.org/web/20120112034217/http://www.apache.org/dev/machines.html#:~:text=baldr) à travers plusieurs prisons, et a parcouru le flux de travail avec une relative facilité.
+
+Sans un service de type CMS collant qui peut amener un contributeur à une session d'édition pour la page qu'il souhaite réparer EN UN CLIQUETTE UNIQUE, l'énergie cognitive est beaucoup trop grande pour corriger une faute de frappe sur une page web aujourd'hui :
+
+1. sortir cette page d'un repo github,
+2. fourche le repo,
+3. modifier la page,
+4. valider la modification,
+5. le pousser,
+6. créer un PR,
+7. **attendez** qu'un validateur approuve et fusionne le PR,
+8. [**attendre** 10 à 15 minutes pour que le build intermédiaire se termine](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Staging-Site-Build/) pendant qu'il broie tous les 40K+ de ressources pouvant être créées (taille totale de ~4 Go),
+9. **attendez** qu'un committer trouve et examine le contenu modifié publié quelque part dans la [site intermédiaire](https://www.staging.openoffice.org/),
+10. **attendez** que ce validateur fasse la promotion du **site entier** vers la production,
+11. [**attendre** 5 à 10 minutes supplémentaires avant la fin du build de publication](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Publish-Site/),
+12. **attendez** que gitpubsub transfère le nouveau contenu vers Apache'serveurs Web en périphérie.
+
+Avec l'Apache CMS (webgui), partagez un committable "patch/diff" over email était une opération en un clic pour toute personne sur Terre, ainsi qu'une opération en un clic pour commit+build+publish pour un committer à appliquer sur le projet. Le tout tournait autour du partage d'URL de capacité dans le contexte d'un éditeur Markdown en direct avec des aperçus HTML instantanés à double volet. Ils ont permis à un commissionnaire Apache sur le projet de "clonage" le système de fichiers zfs hébergé par baldr-jail d'un contributeur's (non validé) checkout ; puis inspecter, modifier et valider ce checkout cloné par le committer Apache lui-même **en tant que committer et non contributeur**.  Une fois cette validation effectuée, le CMS non seulement l'a créée en *secondes* (puisqu'elle's uniquement la création des fichiers modifiés et de leur poignée de fichiers dépendants), mais il a également fourni des **liens** vers le build et le rendu en direct du contenu sur le site intermédiaire pour examen avant la promotion vers la production.
+
+L'ensemble du brevet Amazon en un clic était essentiel à la satisfaction du client pour eux.  Même chose ici, mais le CMS Apache était tout seul dans cet espace.
+
+Le CMS Apache (webgui) était ce tableau de coordination essentiel entre toute cette énergie bénévole qui a malheureusement laissé l'organisation derrière elle.
+
+Il y a plusieurs excuses Apache's Le leadership en matière d'infrastructure a permis de déterminer pourquoi il a été abandonné :
+
+1. un facteur de bus de 1 (moi),
+
+2. suppression progressive de FreeBSD ([OpenZFS](https://openzfs.org/wiki/Main_Page) fonctionne sur Ubuntu),
+
+3. [mod_perl](https://perl.apache.org/), pas python (mais apparemment [mod_lua](https://lists.apache.org/) est casher),
+
+4. buggy (clones zfs peu fiables d'une minuscule prison de FreeBSD),
+
+5. laid (merci, riche !),
+
+5. git est mieux (merci Greg !).
+
+Mais le véritable motif était *spite*.  Entre le moment où il a été abandonné en mars 2015 et le moment où il a finalement été mis hors service en janvier 2022, il fonctionnait en pilote automatique dans une prison FreeBSD sur baldr.apache.org depuis près de 7 ans. La seule maintenance requise était (trimestriellement ?) la réinitialisation de l'hôte en raison de l'article 4 ci-dessus et le renouvellement annuel du certificat SSL. Ce's Informatique.
+
+À la fin de 2021, j'ai proposé à Dave Fisher d'héberger le site Web OpenOffice sur Orion à un rabais élevé. Au début, Dave a demandé au conseil d'administration et ils ont **approuvé la dépense**. Dave a proposé à l'ASF de renoncer aux frais de recherche que j'ai accepté de lui payer et m'a dit de mettre cet argent aux frais d'hébergement.
+
+Ce qui s'est passé ensuite a été vraiment remarquable : l'équipe d'infrastructure d'Apache, immédiatement et de manière persistante sur une période de semaines, a mis Dave dans la position peu enviable de déclarer ses loyautés désormais exclusives, selon eux : pour moi et par extension le projet's **communauté de bénévoles**, ou à **la PPA**.
+
+Dave était le principal innovateur et collaborateur derrière les succès de l'évolutivité d'Apache CMS's technologie de construction incrémentielle.  Il a't inventer les solutions ; mais il a travaillé de manière productive avec moi sur la façon dont j'ai ajouté les fonctionnalités d'évolutivité dont il avait besoin pour assurer des builds de haute performance à partir du CMS Apache tel qu'appliqué au site Web OpenOffice- qui à l'époque livrait au nord des demandes 25M par jour ! Ensemble, nous avons découvert une application profonde de [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) dans ses efforts, qui, je crois, sont toujours poursuivis dans le système de tentation JBake utilisé aujourd'hui.
+
+Malheureusement, si vous regardez l'édition de contenu en cours avec OpenOffice's site Web sur GitHub récemment, vous pouvez clairement voir une baisse massive de l'activité lorsque l'équipe d'infrastructure Apache a forcé Dave à les déplacer hors du CMS Apache, et par conséquent canalisé toute activité de contribution à travers GitHub seul.
+
+Non'Il ne faut pas blâmer Dave pour le mauvais choix qu'il a été forcé de faire, ni pour le résultat prédéterminé, mais nous ne sommes évidemment plus en termes de discours depuis ce jour-là.
+
+Ce qui est choquant dans toute l'affaire, c'est la belligérance absolue de l'équipe d'infrastructure d'Apache sur tout l'effort.  J'ai personnellement tenu la main de chaque projet que nous avons embarqué à la CMS d'Apache ; voir toute la bonne volonté qui a créé **brûlé au sol par décret autocratique** était tout simplement insondable pour moi en tant que membre de longue date de l'organisation.
+
+Tout ce qu'ils ont fait, c'est donner aux projets Apache échoués des ultimatums impitoyables, et jamais une seule heure d'effort dédiée à leur départ personnel pour **tout le reste**. Ce n'était pas différent avec OOo ; ils ont simplement abusé, brouillé et contraint Dave à faire leurs enchères.  Et il l'a fait.
+
+Je démissionnais en 2018. Impossible'continuer à l'assister.  Ce que j'ai fait à la place en 2020 a été construit [Orion](https://sunstarsys.com/orion) des cendres.  Mais même cette avenue a été exclue pour les projets Apache par l'équipe d'infrastructure Apache.
+
+Tout pour *spite*.
+
+Triste.
+
+<!-- $Date$ $Author$ $Revision$ -->
