@@ -89,7 +89,7 @@
           <input type="hidden" name="lang" value="{{ lang }}" />
           <input type="hidden" name="markdown_search" value="1" />
           <input class="form-control me-2" type="text" name="regex"
-               placeholder="Recherche récursive PCRE" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
+               placeholder="Recherche récursive PCRE" valeur="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
 	    </form>
   </div>
 </header>
@@ -191,6 +191,7 @@ if (permission === "granted") {
                            {credentials: 'same-origin'});
            try {
               const json = await response.json();
+			  if (json.log)
               for (const e of json.log) {
                   var msg = e[3] + "\n";
                   for (const [key, val] of Object.entries(e[1])) {
