@@ -1,0 +1,561 @@
+Title: Perl5 as a Data Science Language
+Keywords: 
+Status: finished
+Dependencies: 
+
+# Perl5 as a Data Science Language
+
+> **Series introduction — Post 0 of N**
+> This post is the first in a series documenting the co-development of a
+> vector-database engine (VDBE) written entirely in Perl5 + PDL.  Later posts walk
+> through every component of that engine; this one sets the stage. 
+> The main impetus for this series is NOT to have you dump your VDBE as I make no
+> performance claims, but to show how one may use Perl to achieve pretty much 
+> anything you can achieve with any other language, but smarter!
+
+---
+
+## Table of Contents
+
+1. [Why Perl5 for Data Science?](#why-perl5-for-data-science)
+2. [The Perl Data-Type System — Strengths and Cache-Era Limits](#the-perl-data-type-system)
+3. [Enter PDL: Strongly Typed N-Dimensional Arrays](#enter-pdl)
+4. [Type Comparison: Perl, PDL, and R Side-by-Side](#type-comparison-table)
+5. [Road Map: What the Rest of This Series Covers](#road-map)
+
+---
+
+## 1. Why Perl5 for Data Science? <a id="why-perl5-for-data-science"></a>
+
+When data scientists discuss language choices the conversation quickly converges on
+Python, R, or Julia.  Perl5 rarely gets a seat at the table — yet it carries a
+compelling set of traits that deserve a second look. These traits have not materially
+changed over the years (Perl5 has always been this way!), but unless you have been 
+exposed to the language and learned to appreciate its tercity, rationality, flexibility,
+expressibility and actually used it to drive your work forward, you would not know these
+features not only come for free with Perl5, but can help you drive your projects forward.
+
+### Ubiquity and zero-install deployment
+
+Perl5 ships as a default component of virtually every UNIX-like operating system —
+Linux distributions, macOS, BSDs, and many embedded Linux environments all include
+a working `perl` binary out of the box.  Python has been making inroads here, but
+it is still common to find headless servers, network appliances, or HPC login nodes
+where Perl is present and a full Python stack is not.  A data pipeline written in
+Perl can run on day one without a `conda` environment, a `venv`, or a container.
+
+### Portability from the data centre to the edge
+
+The same script that analyses a terabyte dataset on a 256-core HPC node can, with
+minor configuration changes, run on a Raspberry Pi, an IoT gateway, or an embedded
+controller.  Perl's single-binary deployment model and low runtime overhead make it
+a genuine "write once, run anywhere" language in environments where Python's
+interpreter overhead or Julia's JIT warm-up time would be unacceptable.
+if you are planning to deploy anywhere and _everywhere_ Perl5 is your obvious choice.
+
+### A heritage built on text and data munging
+
+Perl was designed from the ground up for text processing, regular expressions, and
+"glue" work between system components.  In practice, scientific data pipelines are
+dominated not by numerical computation but by *data wrangling*: reading heterogeneous
+file formats, cleaning messy records, joining datasets from different sources, and
+routing results to downstream consuming components.  Perl's regex engine remains among the most
+powerful available, and one-liners can accomplish data-cleaning tasks that would
+require helper libraries in other languages. If you are in the domain of scientific computing,
+you may have come across the notion of *workflow management systems* and *reproducible research*.
+They both rely on the execution of end to end data transformations and workflow to eliminate the 
+manual, error-prone and tedious point and click activities that analysts and scientists have to do to morph 
+their data into insights and inferences respectively. In this brave new world, Perl5's rich
+history allows it to shine both as a component of workflows, or as a the application language that
+implements these workflows. 
+
+### CPAN: a battle-tested module ecosystem
+
+The Comprehensive Perl Archive Network (CPAN) hosts over 200,000 modules across
+every domain imaginable.  While the data science offerings are not nearly as extensive as Python, 
+the basic components for dedicated builders ARE there: 
+
+- **PDL** (Perl Data Language) — vectorised numerical computing with strongly typed
+  N-dimensional arrays (covered in depth below).
+- **PDL::Stats** — descriptive statistics, regression, clustering (k-means,
+  mini-batch k-means), and more, built on top of PDL ndarrays.
+- **AI::MXNet**, **AI::TensorFlow** — deep learning bindings.
+- **Statistics::Regression**, **Statistics::Descriptive** — classical statistics
+  without the PDL dependency.
+- **Text::CSV**, **Spreadsheet::XLSX**, **Data::MessagePack**, **Sereal** —
+  high-performance serialisation and I/O.
+- **DBI** + dozens of database drivers — SQL access to every major RDBMS.
+- **MCE** (Many-Core Engine) — structured parallelism for shared- and
+  distributed-memory workloads.
+- **Inline::C**, **Inline::CPP** — embed C or C++ code directly inside a Perl
+  source file; the compiler is invoked transparently the first time the script
+  runs, making it trivial to drop performance-critical kernels into an otherwise
+  pure-Perl program without a full XS build system.
+- **FFI::Platypus** — call functions in any shared library (`.so` / `.dylib` /
+  `.dll`) from Perl without writing a single line of XS or C glue code.  Platypus
+  supports all C-equivalent types, structs, callbacks, and closures, and is the
+  modern way to bind Perl to BLAS, LAPACK, HDF5, or any other native library.
+
+### Modern Perl is not your grandfather's Perl
+
+The features below are drawn directly from the official release notes
+(`perl5360delta`, `perl5380delta`, `perl5400delta`) and organised by the
+release in which they reached **stable** status or were first introduced.
+Only features relevant to data-science and scientific-computing workloads are
+highlighted.
+
+#### Perl 5.36 — May 2022
+
+- **`use v5.36`** — the feature bundle now automatically enables `use warnings`
+  in addition to `use strict`.  It also disables the `indirect` method-call
+  syntax and `multidimensional` hash-key simulation, eliminating two common
+  sources of subtle bugs.
+
+- **Named subroutine signatures** *(stable since 5.36; experimental since 5.20)*
+  — function parameters are now declared by name, with optional defaults.
+  The `//=` and `||=` default-value operators were further added to signatures
+  in 5.38, allowing defaults that trigger on `undef` or falseness respectively:
+
+  ```perl
+  use v5.36;
+  sub clamp ($val, $lo = 0, $hi //= 1) {
+      $val < $lo ? $lo : $val > $hi ? $hi : $val;
+  }
+  ```
+
+- **`isa` class-instance operator** *(stable since 5.36; introduced in 5.32)*
+  — `$obj isa "ClassName"` returns a boolean; cleaner than
+  `ref($obj) eq "ClassName"`.
+
+- **`builtin` module** *(stable since 5.40; experimental since 5.36)* —
+  lexically importable functions built directly into the interpreter.  The
+  stable 5.40 bundle includes, among others:
+  - `ceil`, `floor` — integer rounding without `use POSIX`.
+  - `trim` — strip leading/trailing whitespace from a string.
+  - `indexed` — pairs each element with its index; the idiomatic companion to
+    multi-value `for` loops (see below).
+  - `true`, `false`, `is_bool` — typed boolean sentinels; serialisers can now
+    emit JSON `true`/`false` rather than `1`/`0`.
+  - `weaken`, `unweaken`, `is_weak` — reference-count control for building
+    bidirectional data structures without memory leaks.
+  - `blessed`, `reftype`, `refaddr` — reference introspection.
+
+- **Stable boolean tracking** *(5.36)* — scalars created as booleans (e.g.,
+  `!!1`) now retain their boolean nature through assignment, enabling reliable
+  type-aware serialisation to JSON and MessagePack.
+
+- **Multi-value `for` loops** *(stable since 5.40; experimental since 5.36)*
+  Iterate over pairs or N-tuples without manual index arithmetic:
+
+  ```perl
+  use v5.40;
+  use builtin 'indexed';
+
+  for my ($i, $val) (indexed @scores)  { ... } # index and value
+  ```
+
+  Or grab multiple values at the same time
+
+  ```perl
+  use v5.40;
+
+  for my ($val1, $val2, $val3) (@scores)  { ... }
+  ```
+
+- **`defer` blocks** *(experimental since 5.36)* — a scope-exit guard that
+  runs cleanup code unconditionally when a block exits, whether normally or via
+  exception — a natural replacement for destructor-based scope-guard objects
+  and an important pattern for resource management in data pipelines.
+
+#### Perl 5.38 — July 2023
+
+- **`PERL_RAND_SEED` environment variable** *(5.38)* — setting this variable
+  before a run makes every `rand` call (without an explicit `srand`) produce the
+  same sequence, enabling **reproducible** stochastic algorithms — simulations,
+  random sampling, Monte Carlo methods — without modifying source code.
+
+- **`class` / `field` / `method` syntax** *(experimental since 5.38)* — a
+  purpose-built, lexically-scoped object system requiring neither `bless` nor
+  `@ISA` nor any CPAN module.  Useful for defining typed value objects such as
+  dataset rows, model parameters, or pipeline stages:
+
+  ```perl
+  use feature 'class';
+  no warnings 'experimental::class';
+
+  class Vector2D {
+      field $x :param;
+      field $y :param;
+      method magnitude { sqrt($x**2 + $y**2) }
+  }
+  my $v = Vector2D->new(x => 3, y => 4);
+  say $v->magnitude;    # 5
+  ```
+
+
+#### Perl 5.40 — June 2024
+
+- **`try` / `catch` exception handling** *(stable since 5.40; experimental since
+  5.34; `finally` block added in 5.36)* — structured exception handling is now
+  a core language feature; no CPAN module required:
+
+  ```perl
+  use v5.40;
+  try {
+      my $result = load_and_process($file);
+  }
+  catch ($e) {
+      warn "Pipeline error: $e";
+  }
+  finally {
+      close_resources();   # runs whether or not an exception was thrown
+  }
+  ```
+
+  (`Try::Tiny` / `Feature::Compat::Try` are only needed when targeting perls
+  older than 5.34.)
+
+- **Multi-value `for` loops** *(stable since 5.40)* — see 5.36 entry above;
+  they graduated from experimental to stable in this release.
+
+- **`builtin::inf` and `builtin::nan`** *(experimental since 5.40)* — typed
+  floating-point infinity and Not-a-Number constants, eliminating `9**9**9` or
+  POSIX hacks in numerical code.
+
+- **`^^` logical XOR operator** *(5.40)* — completes the medium-precedence
+  logical operator set (`&&`, `||`, `^^`); handy for boolean mask operations.
+
+- **`use v5.40` imports builtin functions** — beyond enabling the feature bundle,
+  `use v5.40` also imports the corresponding `builtin` version bundle, making
+  all stable `builtin::` functions available as short names without a separate
+  `use builtin` statement.
+
+#### Longstanding features (pre-5.36)
+
+- **`say` and `state`** *(since 5.10)* — `say` is `print` with an implicit
+  newline; `state` declares a lexical that persists across invocations of its
+  enclosing sub (a lightweight memoisation primitive).
+- **First-class references and closures** — anonymous subs, closures, and
+  reference construction are fundamental and have been stable since Perl 5.
+- **`use constant`** or the CPAN `Readonly` module for named constants;
+  `Readonly` enforces deep immutability that `use constant` does not.
+
+Combined with [`perlbrew`](https://perlbrew.pl/) or [`plenv`](https://github.com/tokuhirom/plenv) for version management and [`carton`](https://metacpan.org/pod/Carton) for
+reproducible dependency snapshots, a modern Perl project looks and feels like a
+first-class software engineering effort.
+
+### Honest limitations
+
+No case for Perl is complete without honesty about where it falls short:
+
+- **Visualisation** — Perl has no equivalent to `ggplot2` or `matplotlib`.
+  Plots typically require an external call to R, gnuplot, or a web library. 
+  At times this weakness can become an actual strength, allowing one to use Perl5 as the application
+  language that orchestrates and enhances the other actors. 
+- **Community momentum** — the data-science community has converged on Python and R.
+  Finding ready-made tutorials, Stack Overflow answers, and co-authors is harder.
+- **Object orientation** — without Moose/Moo the OOP model is verbose; with them it
+  adds a dependency. The new `class` feature may solve some of these problems
+- **Type safety at scale** — the core language's dynamic scalars make large,
+  collaborative numerical codebases harder to reason about (see next section).
+
+---
+
+## 2. The Perl Data-Type System — Strengths and Cache-Era Limits <a id="the-perl-data-type-system"></a>
+
+### Core Perl types
+
+Perl's fundamental data model centres on three constructs:
+
+| Construct | Sigil | What it holds |
+|-----------|-------|---------------|
+| **Scalar** | `$` | A single value: number, string, reference, or `undef` |
+| **Array** | `@` | An ordered list of scalars, indexed by integer |
+| **Hash** | `%` | An unordered collection of scalar values keyed by string |
+
+Everything else — objects, closures, complex data structures — is built from these
+three primitives via *references* (`\@array`, `\%hash`, `sub { ... }`).
+
+This model is extraordinarily flexible.  A single array can hold integers, floating-
+point numbers, strings, and nested references simultaneously.  That flexibility is
+exactly what made Perl the dominant system-administration and web-scripting language
+for two decades.
+
+### The cache-hierarchy problem
+
+Modern CPUs achieve peak throughput only when data flows through L1/L2/L3 cache<sup><a id="cache-ref" href="#fn-cache">†</a></sup> in
+large, contiguous blocks — a property called *spatial locality*.  Perl arrays do not
+provide this.  Under the hood, a Perl array is a C array of *pointers* to heap-
+allocated scalar (`SV`) structs.  Each scalar carries a reference count, a type tag,
+and padding — typically 24–56 bytes per scalar on a 64-bit build.  Iterating over a
+million-element Perl array therefore involves a million pointer dereferences scattered
+across the heap, producing a cache-miss pattern that completely negates the speed
+advantage of modern SIMD pipelines.
+
+A concrete consequence: a dot product of two 1 000-element vectors written in pure
+Perl is roughly **100–1000× slower** than the equivalent operation on a pair of PDL
+float ndarrays, which occupy two flat, 4 000-byte memory regions that fit comfortably
+in L1 cache.
+
+### Contrast with R
+
+R occupies a curious middle ground.  Like Perl, it is a dynamic, interpreted
+language — variables are untyped containers, functions are first-class values, and
+the interactive REPL is the primary development environment.  R even has direct
+analogues to Perl's three core types:
+
+| Perl concept | R analogue |
+|---|---|
+| `$scalar` | length-1 atomic vector or scalar-in-list |
+| `@array` | `list()` |
+| `%hash` | named `list()` |
+| Reference (`\@arr`) | R does not use explicit references; copy-on-modify semantics instead |
+
+But R's *workhorse* type, i.e.  the **atomic vector** has no straightforward Perl counterpart.
+An R atomic vector is a contiguous, homogeneously typed block of memory — exactly the
+layout that a CPU cache rewards.  Every built-in scalar in R is actually a length-1
+atomic vector; there is no "bare scalar" outside of atomic vectors.  This design
+choice means that R code naturally operates on vectors of millions of doubles with
+BLAS-level throughput, without the user writing a single loop or allocating a special
+"array" object.
+
+R's atomic types are:
+
+| R atomic type | Storage | C equivalent |
+|---|---|---|
+| `logical` | 4 bytes/element | `int` (with NA sentinel) |
+| `integer` | 4 bytes/element | `int32_t` |
+| `double` | 8 bytes/element | `double` |
+| `complex` | 16 bytes/element | `_Complex double` |
+| `character` | pointer to CHARSXP | `char *` (interned) |
+| `raw` | 1 byte/element | `uint8_t` |
+
+R also defines higher-level structures built on atomic vectors:
+
+- **matrix** — a 2-D atomic vector with a `dim` attribute.
+- **array** — an N-D atomic vector with a `dim` attribute.
+- **data.frame** — a named list of equal-length atomic vectors; the lingua franca of
+  tabular data in R.
+- **factor** — an integer vector with a `levels` attribute; encodes categorical data.
+
+The lesson: R's computing performance when used in statistical and data science applications 
+flows directly from its contiguous atomic vectors.  Perl's equivalent path to performance is 
+an extension (which also is a stand alone `matlab` like enviroment), the Perl Data Language [`PDL`](https://pdl.perl.org/).
+
+---
+
+## 3. Enter PDL: Strongly Typed N-Dimensional Arrays <a id="enter-pdl"></a>
+
+The **Perl Data Language** (PDL, `pdl.perl.org`) extends Perl with *ndarrays*
+(N-dimensional arrays): contiguous, strongly typed memory buffers that look and feel
+like first-class Perl objects.
+
+```perl
+use PDL;
+
+# A 1-D float ndarray — 4 bytes × 5 elements in one contiguous block
+my $v = float( 1.0, 2.0, 3.0, 4.0, 5.0 );
+
+# A 128-dimensional random database of 1000 vectors — all in cache-friendly memory
+my $db = random( 128, 1000 );   # double by default
+
+# Dot product of every DB vector against a query — a single BLAS call
+my $scores = $db x $query->transpose;
+```
+
+### PDL primitive types
+
+PDL exposes the full palette of C numeric types as first-class constructors:
+
+| PDL type | Bytes | C type | Constructor |
+|---|---|---|---|
+| `byte` | 1 | `uint8_t` | `byte(...)` |
+| `short` | 2 | `int16_t` | `short(...)` |
+| `ushort` | 2 | `uint16_t` | `ushort(...)` |
+| `long` | 4 | `int32_t` | `long(...)` |
+| `indx` | 4 or 8 | `ssize_t` | `indx(...)` |
+| `longlong` | 8 | `int64_t` | `longlong(...)` |
+| `float` | 4 | `float` | `float(...)` |
+| `double` | 8 | `double` | `double(...)` |
+| `cfloat` | 8 | `_Complex float` | `cfloat(...)` |
+| `cdouble` | 16 | `_Complex double` | `cdouble(...)` |
+
+### Threading and SIMD
+
+One of PDL's most distinctive features is *implicit threading*: operations broadcast
+automatically over extra dimensions, eliminating explicit loops in user code and
+delegating inner loops to optimised C or Fortran kernels.  Combined with
+`set_autopthread_targ(N)`, PDL will automatically parallelise independent slices
+across `N` OS threads — without the user writing a single `fork` or `Thread::Queue`
+call.
+
+### Bad values
+
+PDL has a built-in concept of *bad values* (`PDL::Bad`), directly analogous to R's
+`NA`.  An ndarray can be flagged as "bad-value aware", and PDL operations propagate
+badness correctly through arithmetic, statistics, and I/O.
+
+---
+
+## 4. Type Comparison: Perl, PDL, and R Side-by-Side <a id="type-comparison-table"></a>
+
+The table below maps every commonly used R type to its closest Perl and PDL
+counterparts, highlighting where the three languages agree, differ, or complement
+each other.
+
+| R type | Perl equivalent | PDL equivalent | Notes |
+|---|---|---|---|
+| `double` (length-1) | `$x = 3.14` (scalar) | `double(3.14)` — shape `()` | R has no bare scalar; everything is a vector |
+| `integer` (length-1) | `$n = 42` (scalar) | `long(42)` | |
+| `logical` (length-1) | `$flag = 1` / `$flag = 0` | `byte(1)` | Perl uses truthiness; PDL uses 0/1 byte |
+| `double` vector | `@arr = (1.1, 2.2, 3.3)` | `double(1.1, 2.2, 3.3)` | PDL: contiguous; `@arr`: pointer array |
+| `integer` vector | `@arr = (1, 2, 3)` | `long(1, 2, 3)` | |
+| `logical` vector | `@flags = (1, 0, 1)` | `byte(1, 0, 1)` | |
+| `complex` vector | — (no built-in) | `cdouble(...)` | Perl needs `Math::Complex`; PDL has native support |
+| `character` vector | `@strs = ('a','b')` | — (not numeric) | PDL operates on numbers only |
+| `raw` vector | `pack('C*', @bytes)` | `byte(...)` | |
+| `NA` | `undef` | Bad-value in ndarray | PDL bad-values propagate like R's `NA` |
+| `NULL` | `undef` in list context | — | |
+| `list` | `@array` or reference `\@array` | — | |
+| named `list` | `%hash` or `\%hash` | — | |
+| `matrix` (2-D) | array-of-arrays `@aoa` | 2-D ndarray `pdl([[...],[...]])` | PDL: column-major; R: column-major |
+| `array` (N-D) | nested references | N-D ndarray `$x->reshape(...)` | |
+| `data.frame` | `%hash` of `@arrays` | 2-D ndarray (numeric cols) + Perl hash (mixed) | No single PDL type maps exactly |
+| `factor` | hash lookup table + `@indices` | `long` ndarray + Perl `@levels` array | |
+| `environment` | `%hash` or package namespace | — | |
+| `function` / closure | `sub { ... }` / closure | — | PDL PP defines compiled kernels |
+| `S3 / S4 object` | blessed reference + method dispatch | PDL object (blessed ndarray) | PDL objects are first-class Perl objects |
+
+### Key takeaways
+
+- For **pure numeric, homogeneous data** (vectors, matrices, tensors), PDL ndarrays
+  and R atomic vectors are functionally equivalent and comparably efficient.
+- For **heterogeneous tabular data** (mixed types, string columns, factors), R's
+  `data.frame` is more ergonomic; Perl typically uses a hash of arrays or a
+  dedicated module such as `Data::Frame` or `PDL::IO::CSV`.
+- For **text, irregular structures, and system glue**, Perl's native types are
+  superior to both R and Python.
+- The Perl+PDL combination therefore provides the *union* of what R offers as a
+  statistical language and what Perl offers as a systems language — at the cost of a
+  steeper learning curve and less out-of-the-box nd frankly limited statistical tooling.
+  However the combination of Perl+PDL+R (with the latter used as a component, or [instrumentalized](https://chrisarg.github.io/Killing-It-with-PERL/2025/01/18/Timing-Peak-DRAM-Use-In-R-With-Perl-Part-1.html) via Perl)
+
+---
+
+## 5. Road Map: What the Rest of This Series Covers <a id="road-map"></a>
+
+This series documents the construction of a **vector database engine** built in
+Perl5 + PDL from scratch.  Vector databases underpin modern retrieval-augmented
+generation (RAG) pipelines, semantic search, and nearest-neighbour recommendation
+systems.  Implementing one from first principles is an excellent vehicle for
+demonstrating PDL's numerical capabilities alongside Perl's systems-programming
+strengths.
+
+The directory co-developed alongside these posts contains the following components,
+each of which will be the subject of one or more dedicated posts that will reference files 
+in a dedicated repository 
+
+### Post 1 — Serialisation and I/O: the `VectorIO` module
+
+*File: `VectorIO.pm`*
+
+The engine stores vectors as packed binary blobs inside
+[MessagePack](https://msgpack.org/) payloads.  This post covers:
+
+- Designing a module with a clean `Exporter`-based public API under `use v5.40`.
+- Validation helpers that enforce schema correctness at system boundaries.
+
+### Post 2 — Simulating a Vector Database
+
+*File: `simulate_vectorDB.pl`*
+
+Before we can search a database we need one.  This post shows:
+
+- Generating reproducible random float vectors with `PDL::random`.
+- Using `GetOpt::Long` for ergonomic CLI option parsing.
+- Writing a `--seed`-controlled simulation that produces identical databases across
+  runs — essential for benchmarking.
+
+### Post 3 — Benchmarking: the `timing_DB` Module
+
+*File: `timing_DB.pm`*
+
+Performance claims require measurement.  This post introduces:
+
+- A reusable Perl benchmarking harness built on `Time::HiRes`.
+- Methodology for fair wall-clock comparisons between Perl/PDL and R
+  implementations.
+- Interpreting throughput (vectors/second) vs. latency (ms/query) for different
+  workload sizes.
+
+### Post 4 — K-Means Clustering with `PDL::Stats::Kmeans`
+
+*File: `kmeans.pl`*
+
+K-means clustering is the backbone of the inverted-file index (IVF) approach to
+approximate nearest-neighbour search.  This post covers:
+
+- The `PDL::Stats::Kmeans` interface and its return contract
+  (`centroid`, `cluster`, `n`, `R2`, `ss`).
+- Interpreting the `[obs × clusters]` membership mask returned by `run_kmeans`.
+- Comparing Perl/PDL k-means centroids against R's `kmeans()` and
+  `ClusterR::MiniBatchKmeans()` to validate numerical correctness.
+
+### Post 5 — Mini-Batch K-Means: Scaling to Large Datasets
+
+*File: `compare_kmeans_centroids.pl`*
+
+Full k-means requires all data in memory for every iteration.  Mini-batch k-means
+trades a small amount of centroid accuracy for a large reduction in memory and
+compute.  This post explores:
+
+- Implementing a true re-sampled mini-batch loop in PDL.
+- Quantifying centroid drift between full and mini-batch variants.
+- Side-by-side output with R's `MiniBatchKmeans` from the `ClusterR` package.
+
+### Post 6 — Inverted File Index (IVF) Search
+
+*File: `compare_ivf_search.pl`*
+
+With centroids in hand we can partition the database and perform sub-linear
+approximate nearest-neighbour search.  This post covers:
+
+- Building the inverted lists: mapping each database vector to its nearest centroid.
+- The `unpack_inverted_lists` helper in `VectorIO`.
+- Querying: finding the top-K nearest centroids, then searching only those lists.
+- Accuracy vs. speed trade-offs as the number of probed lists varies.
+
+
+### Post 7 — Validating Against R: Numerical Correctness and Cross-Language Pipelines
+
+*Files: `compare_kmeans_centroids.R`, `compare_kmeans_centroids_pure.R`,
+`plot_centroid_coordinates.R`*
+
+The final post in the foundation series closes the loop between Perl and R:
+
+- Exporting PDL results to CSV and reading them in R for independent validation.
+- Using ggplot2 to visualise centroid coordinates from both languages
+  simultaneously.
+- A workflow pattern for "compute in Perl, visualise in R" that leverages the
+  strengths of both ecosystems.
+
+---
+
+> **Next up — Post 1:** Serialisation and I/O with `VectorIO.pm`
+
+---
+
+<a id="fn-cache"></a>
+
+**†** Modern CPUs have multiple levels of fast, on-chip memory called **caches** (L1, L2, L3)
+that sit between the processor cores and main RAM.  L1 is the smallest (typically 32–64 KB per
+core) and fastest (1–4 clock cycles latency); L2 is larger (256 KB–1 MB) and slightly slower;
+L3 is shared across cores (4–64 MB) with higher latency still.  Main RAM sits further away at
+60–100 ns latency — roughly 200× slower than L1.  When a computation touches memory in a
+predictable, contiguous pattern the hardware *prefetcher* can load upcoming data into L1/L2
+before it is needed, achieving near-peak throughput.  Scattered pointer-chasing (such as
+traversing a Perl array of heap-allocated scalars) defeats prefetching, stalling the CPU while
+it waits for each cache miss to be resolved from RAM.
+
+
+<!-- $Date$ $Author$ $Revision$ -->
