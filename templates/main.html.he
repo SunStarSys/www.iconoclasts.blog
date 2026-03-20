@@ -191,7 +191,7 @@ if (permission === "granted") {
                            {credentials: 'same-origin'});
            try {
               const json = await response.json();
-			  if (json.log)
+			  if (json.log !== null)
               for (const e of json.log) {
                   var msg = e[3] + "\n";
                   for (const [key, val] of Object.entries(e[1])) {
