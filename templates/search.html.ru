@@ -1,15 +1,15 @@
 {% extends "main.html"|append:lang %}
-{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% else
+{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% больше
 %}{{regex}}{% endif %}/ги{% endblock %}
 {% block headers %}
-<link href="/fontawesome/css/all.min.css" media="screen" rel="stylesheet">
-<link href="/editor.md/css/editormd.min.css" media="screen" rel="stylesheet">
-<link href="/editor.md/lib/codemirror/codemirror.min.css" media="screen" rel="stylesheet">
-<link href="/editor.md/lib/codemirror/theme/solarized.css" media="screen" rel="stylesheet">
+<link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
+<link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
+<link href="/editor.md/lib/codemirror/codemirror.min.css" rel="stylesheet" media="screen">
+<link href="/editor.md/lib/codemirror/theme/solarized.css" rel="stylesheet" media="screen">
 {% endblock %}
 {% block content %}
 <h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{%
-  else %}{{regex}}{% endif %}<span class="text-danger">/ги</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
+  больше %}{{regex}}{% endif %}<span class="text-danger">/ги</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
 <div class="container">
   {% for k in specials_re|admit:"a-z=|"|split:"\\|"|dictsort %}
   <a href="./?regex={{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-success text-white">{{k}}</span></a>
@@ -20,18 +20,18 @@
   &nbsp;
   {% endfor %}
 
-  {% if duration %}
+{% if duration %}
   <script src="/editor.md/js/chart.umd.js"></script>
-  <canvas height="800px" id="myChart" width="100%"></canvas>
+  <canvas id="myChart" width="100%" height="800px"></canvas>
   {% endif %}
   {% ifequal specials "diff=" %}
   <div class="card text-dark border-success mb-3">
     <div class="card-header">{{meta|vcs_author:r.path_info}}
-      <small><em> в {{ meta|vcs_date:lang }} на {{meta|vcs_time:lang}}</em></small>
+      <small><em> включено {{ meta|vcs_date:lang }} в {{meta|vcs_time:lang}}</em></small>
 	</div>
     <div class="card-body">
       <h3 class="card-title"><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=log={{
-      revision }};lang={{lang}};markdown_search={{markdown_search}}">Журнал</a></h3>
+      версия }};язык={{lang}};markdown_search={{markdown_search}}">Лог</a></h3>
       <pre>{{ log|safe }}</pre>
   </div>
 
@@ -48,7 +48,7 @@
     <dl>
       {% for e in log %}
       <dt><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
-        {{e.3|vcs_author:r.path_info}} <small><em> в {{e.3|vcs_date:lang}} на {{e.3|vcs_time:lang}}</em></small></dt>
+        {{e.3|vcs_author:r.path_info}} <small><em> включено {{e.3|vcs_date:lang}} в {{e.3|vcs_time:lang}}</em></small></dt>
         {% for k, v in e.1 %}
       <dd>
         <code>{{v.action}}</code>&nbsp;
@@ -85,7 +85,7 @@
         {{e.3|vcs_author:r.path_info}} <small><em>
             включено
             {{e.3|vcs_date:lang}}
-            на
+            в
             {{e.3|vcs_time:lang}}</em></small></dt>
         {% for k, v in e.1 %}
       <dd>
@@ -148,7 +148,7 @@
   {% endif %}
   {% endfor %}
 
-  {% if watch.0 %}
+{% if watch.0 %}
   {% for w in watch %}
   <div class="card text-dark border-warning mb-3">
     <div class="card-header">
@@ -167,7 +167,9 @@
       {% endifequal %}
       <div class="right">
         <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname|append:"/"|append:w.name}};action=unwatch">
-          <i class="fa fa-eye-slash fa-emoji" title="разворот"></i>
+          <i class="fa fa-eye-slash fa-emoji"
+			 title="отписаться">
+			</i>
         </a>
       </div>
     </div>
@@ -188,13 +190,13 @@
   {% if diff %}
   {% filter markdown %}
 
-## [Разница](./?regex=diff={{revision}};язык={{lang}};markdown_search={{markdown_search}}).
+## [Разница](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}}).
 
-  {% endfilter %}
+{% endfilter %}
 
 <pre><code data-lang="diff">{{ diff }}</code></pre>
 
-  {% endif %}
+{% endif %}
   {% endifequal %}
   {% if specials %}
   {% ifequal specials "svnauthz=" %}
@@ -203,22 +205,22 @@
   {% endif %}
   {% endifequal %}
 
-  {% else %}
-  <form class="form-inline row" method="POST">
+{% else %}
+  <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>Всего соответствий = {{ count }}, Всего документов = {{ file_count }}. Заказано по числу совпадений &amp; Версия документа.</pre></div>
 	  <div class="right" id="filter">
 	    <div class="d-flex float-end">
-    		<input name="hash" type="hidden" value="{{hash}}">
+    		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"
-             placeholder="Рекурсивный поиск PCRE" value="{{ filter }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa fa-filter fa-emoji" title="Фильтр"></i></button>
+             placeholder="Рекурсивный поиск PCRE" значение="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
         </div>
 	  </div>
       <div>
         <dl>
           {% for m in matches %}
           <dt>{{ m.0|safe }}</dt>
-          <input name="files" type="hidden" value="{{m.1}}" />
+          <input type="hidden" name="files" value="{{m.1}}" />
           {% for hit in m.2 %}
           <dd>{{ hit|safe }}</dd>
           {% endfor %}
@@ -233,7 +235,7 @@
 
 {% block footer %}
 <script type="text/javascript">
-  document.cookie = "can_search=1; path=/; max-age=" + (86400 * 30);
+  document.cookie = "can_search=1; path=/; max-age=" + (86400 *30);
 </script>
 {% if duration %}
 <script async="" type="text/javascript">
@@ -244,7 +246,7 @@
   for (var i=0; i < values.length; ++i)
       total += +values[i];
 
-  const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" +
+const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" +
   x[4]);
   var myChart = new Chart(
       ctx,
@@ -257,7 +259,7 @@
                   data: values.reverse(),
                   backgroundColor: "#8f99fb",
 
-              }],
+}],
           },
           options: {
               indexAxis: "y",
