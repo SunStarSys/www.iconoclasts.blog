@@ -1,0 +1,80 @@
+---
+archived: ~
+categories: Perl, Apache, ZFS
+dependencies: '*.md.zh-TW'
+keywords: apache,OpenOffice,cms,wiki
+published: ~
+status: 驗證 =29384
+title: 快取 CMS 回溯性
+---
+
+<div class="right">
+
+![刺青與羽毛](apache-considered-harmful.page/feather2).
+
+</div>
+
+繁體中文[快取 CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; 2010 年 10 月由 Apache 基礎建設小組成員發明 ([Paul Querna (副總裁)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)，Daniel Shahaf，Ph.D. (SVN dev) 和 myself)，[2015 年 6 月正式棄用](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)，最後[於 2022 年 1 月退役](https://apache.org/dev/cms) &mdash; 一直超前。尖峰時，超過 100 個 Apache 最上層專案依靠它，但不超過 Apache OpenOffice。相較於 Oracle 於 2011 年 6 月向 Apache 捐贈 OpenOffice 的早期幾年，從來沒有比其內容相依性管理功能更清楚地證明了過去的效能技術。
+
+清楚地說：當其他人說到相依性管理時，他們主要關心軟體相依性，而不是[內容相依性](dependencies). {# lede #}這一切都歸功於嚴格規範的內容"包含" 在 templating+build 系統中{# lede #}，其功能與軟體描述完全不同。
+
+此功能對於支援 Apache 絕對重要'大量<https://OpenOffice.org> (OOo) 網站。原先提供給 OOo 的 RDBMS CMS Sun 會停止運作，即使您只是想要修正打字錯誤也一樣。相反地，Apache CMS 在 baldr.apache.org 上執行 FreeBSD 監獄：適度佈建、[Dell 1950 盒裝在 8 個 CPU 上，並配備 96GB 鏡像硬碟，配備 24 GB RAM](https://web.archive.org/web/20120112034217/http://www.apache.org/dev/machines.html#:~:text=baldr) 穿過數個監獄，以相對簡單的方式飛過工作流程。
+
+如果沒有像 CMS 一樣的服務，可以讓貢獻者進入他們想要修復的網頁的編輯工作階段。在單擊中，認知能量遠遠太適合在今天的網頁上修復打字：
+
+1. 去魚，從 github repo 分頁，
+2. 分叉，
+3. 編輯頁面，
+4. 確認變更，
+5. 推，
+6. 建立 PR、
+7. **等待** 直到提交者批准和合併公關，
+8. [** 等待 **10-15 分鐘完成暫存組建](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Staging-Site-Build/) 當所有可建立資產的 40K+ (總大小約 4GB)，
+9.** 等待 **承諾者尋找並複查發布的變更內容[暫存位置](https://www.staging.openoffice.org/),
+10.** 等待 **承諾者將** 整個網站 **推廣至生產環境，
+11. [** 等待 **另外 5-10 分鐘完成發布組建](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Publish-Site/),
+12.** 等待 **gitpubsub 將新內容推送至 Apache's 邊緣 Web 伺服器。
+
+透過 Apache CMS (webgui)，共用可確認的項目"修補 / 差異" over email 是為地球上的任何人提供的一鍵式操作，以及一個單鍵操作來提交 +build+publish，承諾者可在專案上申請。在即時 Markdown 編輯器的相關資訊環境中，透過雙窗格即時 HTML 預覽來共用功能 URL 的整個問題。他們允許專案上的 Apache 確認者"複製" 貢獻者的 baldr-jail 代管 zfs 檔案系統's (未確認) 結帳；隨後檢查、更改和確認 Apache 承諾者本身所複製的結帳** 作為承諾者，而非提供者 **。一旦發生確認，CMS 不僅以 *seconds* (因為) 內建's 僅建立變更的檔案及其許多相依檔案，但也提供 **連結** 給暫存網站內容的建置和即時轉譯，以便在升級至生產之前進行複查。
+
+整個 **一鍵** Amazon 專利對於客戶滿意度至關重要。這裡的東西相同，但 Apache CMS 都是獨自在此空間中。
+
+Apache CMS (webgui) 是所有志願者能量之間的基本協調切換板，這些能量已悲傷地離開組織後方。
+
+有幾種藉口 Apache's 基礎建設的領導力是基於丟棄的原因：
+
+1. 1 (我) 的巴士因素，
+
+2. 逐步淘汰 FreeBSD ([OpenZFS](https://openzfs.org/wiki/Main_Page) 在 Ubuntu 上執行，
+
+3. [mod_perl](https://perl.apache.org/)，不是 python (但顯然) [mod_lua](https://lists.apache.org/) 是 kosher)，
+
+4. buggy (從小 FreeBSD jail 複製無法辨識的 zfs)，
+
+5. ugly (感謝，Rich！)，
+
+5. git 比較好 (感謝 Greg！).
+
+但真正的動機是 *spite*。在 2015 年 3 月不再使用的時間到 2022 年 1 月完全退役的時間之間，它已經在 baldr.apache.org 的 FreeBSD 監獄中以自動駕駛方式執行了近 7 年。唯一需要的維護是 (每季？) 因上述項目 4 而導致主機重新啟動，以及年度 SSL 憑證續約。那個'IT。
+
+當推播於 2021 年末開始時，我向 Dave Fisher 提供在 Orion 代管 OpenOffice 網站的優惠折扣。戴夫一開始請董事會並 **核准該費用 **。戴維提供 ASF 豁免我同意支付的發現費用，並告訴我把這筆錢付給託管費用。
+
+未來發生了什麼事是真正令人讚嘆的：阿帕奇基礎建設團隊立刻且持續數週，讓戴夫在宣告他現在獨有的忠誠度的不可避免位置上，根據他們：對我和延伸計畫'** 志工社群 **，或 **ASF**。
+
+Dave 是 Apache CMS 擴展性成功背後的關鍵創新者和協作人員's 增量建置技術。他沒有'改寫解決方案；但他與我合作，瞭解如何新增所需的擴展性功能，以確保從 Apache CMS 建置高效能 (適用於 OpenOffice 網站) - 當時每天提供 25M 北方要求！我們一起發現了深遠的應用[SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) 在他所做的努力中，我相信仍在 JBake 樣板系統中使用。
+
+很抱歉，如果您使用 OpenOffice 來查看正在編輯的內容'GitHub 的網站最近，當 Apache 基礎架構團隊強制 Dave 將它們移出 Apache CMS 時，您可以清楚地看到活動中的大量投放，因此只要透過 GitHub 即可完成所有投放活動。
+
+我不'戴夫對他被迫做出的醜陋選擇，也沒有預定的結果，但我們顯然從那天起就不再說話了。
+
+對整個事務感到震驚的是，Apache Infrastructure 團隊對整個工作有絕對的理解。我個人持有我們加入 Apache CMS 的每個專案手；查看所有由自主決策 **產生的商譽 **，只是對我來說是組織長期成員。
+
+他們曾經做過的所有事情，都給了流浪的 Apache 專案 callous ultimatums，而從來沒有一個小時的努力，致力於將它們個人化地移到 **其他任何項目 **。與 OOo 並不相同；他們只是遭到濫用、危害，並迫使戴夫進行出價。他這樣做。
+
+我於 2018 年辭任。無法執行't 繼續目睹它。我在 2020 年改編了什麼[奧里昂](https://sunstarsys.com/orion) 從骨灰。但即使 Apache 基礎架構團隊已針對 Apache 專案放棄該大道。
+
+全部適用於 *spite*。
+
+悲傷
+
+<!-- $Date$ $Author$ $Revision$ -->
