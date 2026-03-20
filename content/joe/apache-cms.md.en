@@ -1,6 +1,6 @@
 Title: Apache CMS Retrospective
 Keywords: apache,OpenOffice,cms,wiki
-status: verified=29300
+status: verified=29303
 Dependencies: *.md.en
 
 <div class="right">
@@ -50,17 +50,19 @@ There are several excuses Apache's Infrastructure Leadership made as to why it w
 
 But the real motive was *spite*.  Between the time it was deprecated in March 2015 and the time it was finally decommissioned in January 2022, it had been running on autopilot in a FreeBSD jail on baldr.apache.org for nearly 7 years. The only maintenance required was (quarterly?) host reboots due to item 3 above, and annual SSL certificate renewals. That's IT.
 
-When push came to shove in late 2021, I offered Dave Fisher to host the OpenOffice website on Orion at a steep discount. The Apache Infrastructure Team put Dave in the unenviable position of declaring his now exclusive loyalties, according to them: to me and by extension the project's **volunteer community**, or to **The ASF**.
+When push came to shove in late 2021, I offered Dave Fisher to host the OpenOffice website on Orion at a steep discount. At first, Dave petitioned the board and they **approved the expense**. Dave offered The ASF to waive the finding fee I agreed to pay him and told me to put that money towards the hosting costs.
 
-Dave was the key innovator and collaborator behind the scalability successes of The Apache CMS's incremental build technology.  He didn't solve the problems; but he worked productively with me on how I added the scalability features he needed to ensure high performance builds from The Apache CMS as applied to the OpenOffice website- which at the time was delivering north of 25M requests a day! Together we discovered a profound application of [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) in his efforts, which I believe are still carried through in the JBake templating system in use today.
+What happened next was truly remarkable: the Apache Infrastructure Team, immediately and persistently over a span of weeks, put Dave in the unenviable position of declaring his now exclusive loyalties, according to them: to me and by extension the project's **volunteer community**, or to **The ASF**.
+
+Dave was the key innovator and collaborator behind the scalability successes of The Apache CMS's incremental build technology.  He didn't invent the solutions; but he worked productively with me on how I added the scalability features he needed to ensure high performance builds from The Apache CMS as applied to the OpenOffice website- which at the time was delivering north of 25M requests a day! Together we discovered a profound application of [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) in his efforts, which I believe are still carried through in the JBake templating system in use today.
 
 Unfortunately, if you look at the content editing going on with OpenOffice's website on GitHub lately, you can clearly see a massive dropoff in activity when The Apache Infrastructure Team forced Dave to move them off the Apache CMS, and as a result channeled all contribution activity through GitHub alone.
 
 I don't blame Dave for the ugly choice he was forced to make, nor for the predetermined outcome, but we are obviously are no longer on speaking terms since that day.
 
-What is shocking about the whole affair was the absolute belligerence of The Apache Infrastructure Team about the whole deprecation/decommissioning effort.  I personally held the hand of every project we onboarded to the Apache CMS; too see all of the goodwill that created **burned to the ground by autocratic decree** was simply unfathomable to me as a long time member of the organization.
+What is shocking about the whole affair was the absolute belligerence of The Apache Infrastructure Team about the whole effort.  I personally held the hand of every project we onboarded to the Apache CMS; too see all of the goodwill that created **burned to the ground by autocratic decree** was simply unfathomable to me as a long time member of the organization.
 
-All they ever did was give the stranded Apache projects projects callous ultimatums, and never a single hour of effort dedicated to personally offboarding them to **anything else**.
+All they ever did was give the stranded Apache projects projects callous ultimatums, and never a single hour of effort dedicated to personally offboarding them to **anything else**. It was no different with OOo, they simply abused and coerced Dave to do their bidding.  And so he did.
 
 I resigned in 2018. Couldn't carry on witnessing it.  What I did instead in 2020 was build [Orion](https://sunstarsys.com/orion) from the ashes.  But even that avenue was foreclosed for Apache projects by The ASF.
 
