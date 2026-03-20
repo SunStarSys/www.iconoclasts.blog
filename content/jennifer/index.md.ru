@@ -1,5 +1,5 @@
 ---
-acl: jennifer=rw
+acl: jennifer=rw, *=, joe=rw
 archived: ~
 categories: ~
 dependencies: '*.md.ru'
@@ -14,4 +14,4 @@ title: Блог Дженнифер (частный)
 
 Теперь!
 
-<!-- $Date: 2024-02-13 11:38:46 -0500 (Tue, 13 Feb 2024) $ $Author: joe $ $Revision: 17192 $ -->
+<!-- $Date: 2026-03-10 16:34:18 -0700 (Tue, 10 Mar 2026) $ $Author: joe $ $Revision: 28478 $ -->
