@@ -4,7 +4,7 @@ categories: Perl, Apache, ZFS
 dependencies: '*.md.sv'
 keywords: apache,OpenOffice,cms,wiki
 published: ~
-status: verifierad=29384
+status: skiss
 title: Apache CMS retrospektiv
 ---
 

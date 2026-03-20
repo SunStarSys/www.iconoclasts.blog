@@ -4,7 +4,7 @@ categories: Perl, Apache, ZFS
 dependencies: '*.md.es'
 keywords: apache,OpenOffice,cms,wiki
 published: ~
-status: verificado=29384
+status: borrador
 title: CMS retrospectivo de apache
 ---
 
