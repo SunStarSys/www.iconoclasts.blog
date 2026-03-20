@@ -1,6 +1,6 @@
 Title: Apache CMS Retrospective
 Keywords: apache,OpenOffice,cms,wiki
-status: verified=29309
+status: verified=29312
 Dependencies: *.md.en
 
 <div class="right">
@@ -40,11 +40,13 @@ There are several excuses Apache's Infrastructure Leadership made as to why it w
 
 1. a bus-factor of 1 (me),
 
-2. [mod_perl](https://perl.apache.org/), not python (but apparently [mod_lua](https://lists.apache.org/) is kosher),
+2. phasing out FreeBSD ([OpenZFS](https://openzfs.org/wiki/Main_Page) runs on Ubuntu),
 
-3. buggy (unreliable zfs clones from a tiny FreeBSD jail),
+3. [mod_perl](https://perl.apache.org/), not python (but apparently [mod_lua](https://lists.apache.org/) is kosher),
 
-4. ugly (thanks, Rich!),
+4. buggy (unreliable zfs clones from a tiny FreeBSD jail),
+
+5. ugly (thanks, Rich!),
 
 5. git is better (thanks Greg!)
 
@@ -60,7 +62,7 @@ Unfortunately, if you look at the content editing going on with OpenOffice's web
 
 I don't blame Dave for the ugly choice he was forced to make, nor for the predetermined outcome, but we are obviously are no longer on speaking terms since that day.
 
-What is shocking about the whole affair was the absolute belligerence of The Apache Infrastructure Team about the whole effort.  I personally held the hand of every project we onboarded to the Apache CMS; too see all of the goodwill that created **burned to the ground by autocratic decree** was simply unfathomable to me as a long time member of the organization.
+What is shocking about the whole affair was the absolute belligerence of The Apache Infrastructure Team about the whole effort.  I personally held the hand of every project we onboarded to the Apache CMS; to see all of the goodwill that created **burned to the ground by autocratic decree** was simply unfathomable to me as a long time member of the organization.
 
 All they ever did was give the stranded Apache projects callous ultimatums, and never a single hour of effort dedicated to personally offboarding them to **anything else**. It was no different with OOo, they simply abused, hazed, and coerced Dave to do their bidding.  And so he did.
 
