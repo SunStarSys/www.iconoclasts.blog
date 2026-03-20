@@ -1,6 +1,6 @@
 Title: Apache CMS Retrospective
 Keywords: apache,OpenOffice,cms,wiki
-status: verified=29312
+status: verified=29315
 Dependencies: *.md.en
 
 <div class="right">
@@ -24,13 +24,13 @@ Without some gluing CMS like service that can get a contributor into an editing 
 5. push it,
 6. create a PR,
 7. **wait** until a committer approves and merges the PR,
-8. [**wait** 10-15 minutes for the staging build to finish](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Staging-Site-Build/),
+8. [**wait** 10-15 minutes for the staging build to finish](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Staging-Site-Build/) while it grinds through all 40K+ of buildable assets (~4GB total size),
 9. **wait** for a committer find and review the published changed content somewhere on the [staging site](https://www.staging.openoffice.org/),
 10. **wait** for that committer to promote the **entire site** to production,
 11. [**wait** another 5-10 minutes for the publication build to finish](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Publish-Site/),
 12. **wait** for gitpubsub to push the new content out to Apache's edge webservers.
 
-With the Apache CMS (webgui), sharing a committable "patch/diff" over email was a one-click operation for any person on Earth, as well as a one-click operation to commit+build+publish for a committer to apply on the project. The whole thing revolved around the sharing of capability URLs in the context of a live Markdown editor with dual-pane instantaneous HTML previews. They allowed an Apache committer on the project to "clone" the baldr-jail-hosted zfs filesystem of a contributor's (uncommitted) checkout; and subsequently inspect, alter, and commit that cloned checkout by the Apache committer themselves **as the committer and not the contributor**.  Once that commit happens, the CMS not only built it in *seconds*, but it also provided **links** to the build and to the live rendering of the content on the staging site for review prior to promotion to production.
+With the Apache CMS (webgui), sharing a committable "patch/diff" over email was a one-click operation for any person on Earth, as well as a one-click operation to commit+build+publish for a committer to apply on the project. The whole thing revolved around the sharing of capability URLs in the context of a live Markdown editor with dual-pane instantaneous HTML previews. They allowed an Apache committer on the project to "clone" the baldr-jail-hosted zfs filesystem of a contributor's (uncommitted) checkout; and subsequently inspect, alter, and commit that cloned checkout by the Apache committer themselves **as the committer and not the contributor**.  Once that commit happens, the CMS not only built it in *seconds*, (since it's only building the changed files and their handful of dependencies), but it also provided **links** to the build and to the live rendering of the content on the staging site for review prior to promotion to production.
 
 The whole **One-Click** Amazon Patent was critical to customer satisfaction for them.  Same thing here; but The Apache CMS was all alone in this space.
 
