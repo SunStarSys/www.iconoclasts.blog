@@ -1,5 +1,5 @@
 ---
-acl: jennifer=rw
+acl: jennifer=rw, *=
 archived: ~
 categories: Heminredning
 dependencies: '*.md.sv'
@@ -9,8 +9,8 @@ status: skiss
 title: Heminredning Blog Entry
 ---
 
-## Min heminredning
+## Jennifer's Heminredning
 
-{# lede #} Älska det!{# lede #}
+{# lede #}Älskar den!{# lede #}
 
-<!-- $Date: 2024-02-12 13:00:28 -0500 (Mon, 12 Feb 2024) $ $Author: jennifer $ $Revision: 17121 $ -->
+<!-- $Date: 2026-03-10 17:06:11 -0700 (Tue, 10 Mar 2026) $ $Author: joe $ $Revision: 28485 $ -->
