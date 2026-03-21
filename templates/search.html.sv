@@ -1,6 +1,5 @@
 {% extends "main.html"|append:lang %}
-{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% annars
-%}{{regex}}{% endif %}/gi{% endblock %}
+{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% else %}{{regex}}{% endif %}/gi{% endblock %}
 {% block headers %}
 <link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
 <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
