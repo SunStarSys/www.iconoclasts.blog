@@ -4,7 +4,7 @@ categories: Perl, Apache, ZFS
 dependencies: '*.md.zh-TW'
 keywords: apache,OpenOffice,cms,wiki
 published: ~
-status: 驗證 =29496
+status: 驗證 =29498
 title: 快取 CMS 回溯性
 ---
 
@@ -14,7 +14,7 @@ title: 快取 CMS 回溯性
 
 </div>
 
-繁體中文[快取 CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; 2010 年 10 月由 Apache 基礎建設小組成員發明 ([Paul Querna (副總裁)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)，Daniel Shahaf，Ph.D. (SVN dev) 和 myself)，[2015 年 6 月正式棄用](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)，最後[於 2022 年 1 月退役](https://apache.org/dev/cms) &mdash; 一直超前。尖峰時，超過 100 個 Apache 最上層專案依靠它，但不超過 Apache OpenOffice。相較於 Oracle 於 2011 年 6 月向 Apache 捐贈 OpenOffice 的早期幾年，從來沒有比其內容相依性管理功能更清楚地證明了過去的效能技術。
+繁體中文[快取 CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; 2010 年 10 月由 Apache 基礎建設小組成員發明 ([Paul Querna (副總裁)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)，Daniel Shahaf，Ph.D. (SVN dev) 和 myself)，[2015 年 6 月正式棄用](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)，最後[於 2022 年 1 月退役](https://apache.org/dev/cms) &mdash; 一直超前。尖峰時，超過 100 個 Apache 最上層專案和超過 4K 個使用者依靠它，但不超過 Apache OpenOffice。相較於 Oracle 於 2011 年 6 月向 Apache 捐贈 OpenOffice 的早期幾年，從來沒有比其內容相依性管理功能更清楚地證明了過去的效能技術。
 
 清楚地說：當其他人說到相依性管理時，他們主要關心軟體相依性，而不是[內容相依性](dependencies). {# lede #}這一切都歸功於嚴格規範的內容"包含" 在 templating+build 系統中{# lede #}，其功能與軟體描述完全不同。
 

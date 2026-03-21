@@ -4,7 +4,7 @@ categories: Perl, Apache, ZFS
 dependencies: '*.md.de'
 keywords: apache,OpenOffice,cms,wiki
 published: ~
-status: überprüft=29496
+status: überprüft=29498
 title: Apache CMS - Retrospektiv
 ---
 
@@ -14,7 +14,7 @@ title: Apache CMS - Retrospektiv
 
 </div>
 
-Die [Apache-CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; im Oktober 2010 von ausgewählten Mitgliedern des Apache Infrastructure Teams ([Paul Querna (Politiker)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), und ich, [im Juni 2015 offiziell eingestellt](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)und schließlich [im Januar 2022 außer Betrieb genommen](https://apache.org/dev/cms) &mdash; war seiner Zeit immer voraus.  Auf seinem Höhepunkt verließen sich über 100 Apache Top-Level-Projekte darauf, aber nicht mehr als Apache OpenOffice. Nie war seine vorausschauende Leistungstechnologie deutlicher belegt als in der Content Dependency Management-Funktionalität in den Anfangsjahren der Oracle-Spende von OpenOffice an Apache im Juni 2011.
+Die [Apache-CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; im Oktober 2010 von ausgewählten Mitgliedern des Apache Infrastructure Teams ([Paul Querna (Politiker)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), und ich, [im Juni 2015 offiziell eingestellt](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)und schließlich [im Januar 2022 außer Betrieb genommen](https://apache.org/dev/cms) &mdash; war seiner Zeit immer voraus.  Zu seinem Höhepunkt verließen sich über 100 Apache Top-Level-Projekte und über 4K-Benutzer darauf, aber nicht mehr als Apache OpenOffice. Nie war seine vorausschauende Leistungstechnologie deutlicher belegt als in der Content Dependency Management-Funktionalität in den Anfangsjahren der Oracle-Spende von OpenOffice an Apache im Juni 2011.
 
 Um klar zu sein: Wenn andere von Abhängigkeitsmanagement sprechen, sind sie überwiegend mit Softwareabhängigkeiten beschäftigt, nicht [Inhaltsabhängigkeiten](dependencies). {# lede #}Alles kocht auf gut regulierten Inhalt "enthält" im templating+build System{# lede #}Das ist nicht das Gleiche wie Software deps.
 

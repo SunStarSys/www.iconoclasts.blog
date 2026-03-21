@@ -4,7 +4,7 @@ categories: Perl, Apache, ZFS
 dependencies: '*.md.ru'
 keywords: apache,OpenOffice,cms,wiki
 published: ~
-status: проверено=29496
+status: проверено=29498
 title: Ретроспекция CMS Apache
 ---
 
@@ -14,7 +14,7 @@ title: Ретроспекция CMS Apache
 
 </div>
 
-The [CMS Apache](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; изобретен в октябре 2010 года избранными членами команды инфраструктуры Apache ([Пол Керна (вице-президент)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Даниэль Шахаф, Ph.D. (SVN dev), и я), [официально исключен в июне 2015 года](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb), и наконец [выведен из эксплуатации в январе 2022 года](https://apache.org/dev/cms) &mdash; Он всегда опережал свое время.  На его пике полагались более 100 проектов верхнего уровня Apache, но не более, чем Apache OpenOffice. Никогда не было более очевидным, чем в его функциональности управления зависимостью от контента, в первые годы пожертвования OpenOffice в Apache в июне 2011 года.
+The [CMS Apache](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; изобретен в октябре 2010 года избранными членами команды инфраструктуры Apache ([Пол Керна (вице-президент)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Даниэль Шахаф, Ph.D. (SVN dev), и я), [официально исключен в июне 2015 года](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb), и наконец [выведен из эксплуатации в январе 2022 года](https://apache.org/dev/cms) &mdash; Он всегда опережал свое время.  На своем пике более 100 проектов верхнего уровня Apache и более 4K пользователей полагались на него, но не более, чем Apache OpenOffice. Никогда не было более очевидным, чем в его функциональности управления зависимостью от контента, в первые годы пожертвования OpenOffice в Apache в июне 2011 года.
 
 Чтобы было ясно: когда другие говорят об управлении зависимостями, они преимущественно связаны с зависимостями программного обеспечения, а не [зависимости контента](dependencies). {# lede #}Все сводится к хорошо регулируемому контенту "включает" в системе templating+build{# lede #}Это совсем не то же самое, что программное обеспечение.
 

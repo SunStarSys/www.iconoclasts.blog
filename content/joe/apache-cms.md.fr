@@ -4,7 +4,7 @@ categories: Perl, Apache, ZFS
 dependencies: '*.md.fr'
 keywords: apache,OpenOffice,cms,wiki
 published: ~
-status: vérifié=29496
+status: vérifié=29498
 title: Apache CMS Rétrospective
 ---
 
@@ -14,7 +14,7 @@ title: Apache CMS Rétrospective
 
 </div>
 
-Le [CMS Apache](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; inventé en octobre 2010 par certains membres de l'équipe d'infrastructure Apache ([Paul Querna (VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), et moi-même, [officiellement déconseillé en juin 2015](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)et enfin [mis hors service en janvier 2022](https://apache.org/dev/cms) &mdash; Il était toujours en avance sur son temps.  À son apogée, plus de 100 projets de premier niveau Apache s'y sont appuyés, mais pas plus qu'Apache OpenOffice. Jamais sa technologie de performance prémonitoire n'a été plus clairement mise en évidence que dans sa fonctionnalité de gestion de la dépendance au contenu au cours des premières années du don d'Oracle de OpenOffice à Apache en juin 2011.
+Le [CMS Apache](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; inventé en octobre 2010 par certains membres de l'équipe d'infrastructure Apache ([Paul Querna (VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), et moi-même, [officiellement déconseillé en juin 2015](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)et enfin [mis hors service en janvier 2022](https://apache.org/dev/cms) &mdash; Il était toujours en avance sur son temps.  À son apogée, plus de 100 projets de premier niveau Apache et plus de 4K utilisateurs s'y sont fiés, mais pas plus qu'Apache OpenOffice. Jamais sa technologie de performance prémonitoire n'a été plus clairement mise en évidence que dans sa fonctionnalité de gestion de la dépendance au contenu au cours des premières années du don d'Oracle de OpenOffice à Apache en juin 2011.
 
 Pour être clair : lorsque d'autres parlent de la gestion des dépendances, ils sont principalement concernés par les dépendances logicielles, pas [dépendances de contenu](dependencies). {# lede #}Tout se résume à un contenu bien réglementé "inclut" dans le système templating+build{# lede #}, ce qui n'est pas du tout la même chose que les services logiciels.
 

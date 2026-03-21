@@ -4,7 +4,7 @@ categories: 펄, 아파치, ZFS
 dependencies: '*.md.ko'
 keywords: apache, OpenOffice, cms, 위키
 published: ~
-status: 확인=29496
+status: 확인=29498
 title: 아파치 CMS 소급
 ---
 
@@ -14,7 +14,7 @@ title: 아파치 CMS 소급
 
 </div>
 
-해당 [아파치 CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; 2010년 10월 The Apache Infrastructure Team ([Paul Querna(VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), 다니엘 샤하프, Ph.D. (SVN dev), 나 자신), [2015년 6월 공식적으로 지원 중단됨](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)그리고 드디어 [2022년 1월 해체](https://apache.org/dev/cms) &mdash; 그것은 항상 그의 시간보다 앞서 있었다.  최대치에서 100개 이상의 아파치 최상위 프로젝트들이 그것에 의존했지만, 아파치 OpenOffice를 넘지 않았다. 2011년 6월에 오라클이 아파치에 OpenOffice을 기부한 초기에 콘텐츠 종속성 관리 기능보다 더 명확하게 입증된 것은 결코 없었다.
+해당 [아파치 CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; 2010년 10월 The Apache Infrastructure Team ([Paul Querna(VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), 다니엘 샤하프, Ph.D. (SVN dev), 나 자신), [2015년 6월 공식적으로 지원 중단됨](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)그리고 드디어 [2022년 1월 해체](https://apache.org/dev/cms) &mdash; 그것은 항상 그의 시간보다 앞서 있었다.  100개 이상의 아파치 최고급 프로젝트와 4K 이상의 사용자들이 그것에 의존했지만 아파치 OpenOffice를 넘지 않았다. 2011년 6월에 오라클이 아파치에 OpenOffice을 기부한 초기에 콘텐츠 종속성 관리 기능보다 더 명확하게 입증된 것은 결코 없었다.
 
 명확히 하자면, 다른 사람들이 의존성 관리에 관해 말할 때, 그들은 주로 소프트웨어 의존성에 관여하지 않습니다. [콘텐츠 종속성](dependencies). {# lede #}그것은 모두 잘 규제 된 내용으로 내려갑니다. "포함" templating+build 시스템{# lede #}, 이는 소프트웨어 deps와 전혀 동일한 것은 아닙니다.
 

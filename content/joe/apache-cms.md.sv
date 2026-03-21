@@ -4,7 +4,7 @@ categories: Perl, Apache, ZFS
 dependencies: '*.md.sv'
 keywords: apache,OpenOffice,cms,wiki
 published: ~
-status: verifierad=29496
+status: verifierad=29498
 title: Apache CMS retrospektiv
 ---
 
@@ -14,7 +14,7 @@ title: Apache CMS retrospektiv
 
 </div>
 
-Den [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; uppfanns i oktober 2010 av utvalda medlemmar i Apache Infrastructure Team ([Paul Querna (VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), och jag själv), [formellt föråldrad i juni 2015](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)och slutligen [avvecklad i januari 2022](https://apache.org/dev/cms) &mdash; Alltid före sin tid.  Vid sin höjdpunkt förlitade sig över 100 Apache-projekt på det, men inget mer än Apache OpenOffice. Aldrig var dess nuvarande prestandateknik tydligare bevisad än i dess funktioner för hantering av innehållsberoende under de första åren av Oracle-donationen av OpenOffice till Apache i juni 2011.
+Den [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; uppfanns i oktober 2010 av utvalda medlemmar i Apache Infrastructure Team ([Paul Querna (VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), och jag själv), [formellt föråldrad i juni 2015](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)och slutligen [avvecklad i januari 2022](https://apache.org/dev/cms) &mdash; Alltid före sin tid.  Vid sin höjdpunkt förlitade sig över 100 Apache-projekt på toppnivå och över 4K-användare på det, men ingen mer än Apache OpenOffice. Aldrig var dess nuvarande prestandateknik tydligare bevisad än i dess funktioner för hantering av innehållsberoende under de första åren av Oracle-donationen av OpenOffice till Apache i juni 2011.
 
 För att vara tydlig: när andra talar om beroendehantering, är de främst intresserade av programberoenden, inte [innehållsberoenden](dependencies). {# lede #}Allt kokar ner till välreglerat innehåll "inkluderar" i templating+build-systemet{# lede #}, vilket inte alls är samma sak som mjukvarudeps.
 

@@ -4,7 +4,7 @@ categories: Perl, Apache, ZFS
 dependencies: '*.md.es'
 keywords: apache,OpenOffice,cms,wiki
 published: ~
-status: verificado=29496
+status: verificado=29498
 title: CMS retrospectivo de apache
 ---
 
@@ -14,7 +14,7 @@ title: CMS retrospectivo de apache
 
 </div>
 
-El [CMS de apache](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; inventado en octubre de 2010 por miembros selectos de The Apache Infrastructure Team ([Paul Querna (VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), y yo mismo, [formalmente en desuso en junio de 2015](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)y finalmente [clausurado en enero de 2022](https://apache.org/dev/cms) &mdash; siempre se adelantó a su tiempo.  En su apogeo, más de 100 proyectos de nivel superior de Apache se basaron en él, pero ninguno más que Apache OpenOffice. Nunca se evidenció su antigua tecnología de rendimiento más claramente que en su funcionalidad de gestión de dependencia de contenido en los primeros años de la donación de Oracle de OpenOffice a Apache en junio de 2011.
+El [CMS de apache](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; inventado en octubre de 2010 por miembros selectos de The Apache Infrastructure Team ([Paul Querna (VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), y yo mismo, [formalmente en desuso en junio de 2015](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb)y finalmente [clausurado en enero de 2022](https://apache.org/dev/cms) &mdash; siempre se adelantó a su tiempo.  En su apogeo, más de 100 proyectos de nivel superior de Apache y más de 4K usuarios confiaron en él, pero ninguno más que Apache OpenOffice. Nunca se evidenció su antigua tecnología de rendimiento más claramente que en su funcionalidad de gestión de dependencia de contenido en los primeros años de la donación de Oracle de OpenOffice a Apache en junio de 2011.
 
 Para ser claros: cuando otros hablan de gestión de dependencias, están predominantemente preocupados por las dependencias de software, no [dependencias de contenido](dependencies). {# lede #}Todo se reduce a un contenido bien regulado "incluye" en el sistema templating+build{# lede #}, que no es lo mismo que los deps de software.
 
