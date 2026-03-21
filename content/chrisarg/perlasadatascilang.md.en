@@ -1,5 +1,5 @@
 Title: Perl5 as a Data Science Language
-Keywords: 
+Keywords: pdl,perl5
 Status: finished
 Dependencies: *.md.en
 Categories: Perl
@@ -7,22 +7,13 @@ Categories: Perl
 # Perl5 as a Data Science Language
 
 > **Series introduction — Post 0 of N**
-> This post is the first in a series documenting the co-development of a
-> vector-database engine (VDBE) written entirely in Perl5 + PDL.  Later posts walk
-> through every component of that engine; this one sets the stage. 
-> The main impetus for this series is NOT to have you dump your VDBE as I make no
-> performance claims, but to show how one may use Perl to achieve pretty much 
-> anything you can achieve with any other language, but smarter!
+> This post is the first in a series documenting the co-development of a vector-database engine (VDBE) written entirely in Perl5 + PDL.  Later posts walk through every component of that engine; this one sets the stage. The main impetus for this series is NOT to have you dump your VDBE as I make no performance claims, but to show how one may use Perl to achieve pretty much anything you can achieve with any other language, but smarter!
 
 ---
 
 ## Table of Contents
 
-1. [Why Perl5 for Data Science?](#why-perl5-for-data-science)
-2. [The Perl Data-Type System — Strengths and Cache-Era Limits](#the-perl-data-type-system)
-3. [Enter PDL: Strongly Typed N-Dimensional Arrays](#enter-pdl)
-4. [Type Comparison: Perl, PDL, and R Side-by-Side](#type-comparison-table)
-5. [Road Map: What the Rest of This Series Covers](#road-map)
+[TOC]
 
 ---
 
