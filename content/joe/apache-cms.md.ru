@@ -1,10 +1,10 @@
 ---
 archived: ~
-categories: Perl, Apache, ZFS
+categories: Perl, Apache, ZFS, Орион
 dependencies: '*.md.ru'
 keywords: apache,OpenOffice,cms,wiki
 published: ~
-status: проверено=29498
+status: проверено=29791
 title: Ретроспекция CMS Apache
 ---
 
