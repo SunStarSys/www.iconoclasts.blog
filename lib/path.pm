@@ -32,7 +32,7 @@ our @patterns = (
 # the "memoize" view corrects most of the speed problems with quick_deps == 3:
 
   [qr!/(index|sitemap)\.html!, sitemap => {
-    compress   => 1,
+#    compress   => 1,
     nest       => 1,
     markdown_search => 1,
     facts      => $facts,
@@ -45,7 +45,7 @@ our @patterns = (
     template        => "blog.html",
     view            => [qw/asymptote langify_template single_narrative/],
     preprocess      => 1,
-    compress        => 1,
+#    compress        => 1,
     facts           => $facts,
     archive_root    => "/archives",
     category_root   => "/categories",
@@ -56,7 +56,7 @@ our @patterns = (
   [qr!/index.md[^/]*$!, langify_template => {
     view            =>[qw/single_narrative/],
     template        => "main.html",
-    compress        => 1,
+#    compress        => 1,
     preprocess      => 1,
     facts           => $facts,
     markdown_search => 1,
@@ -64,7 +64,7 @@ our @patterns = (
 
   [qr!^/(categories|archives)/.*\.md[^/]*!, set_template_from_capture => {
     view       => [qw/ssi snippet single_narrative/],
-    compress   => 1,
+ #   compress   => 1,
     facts      => $facts,
   }],
 
@@ -84,7 +84,7 @@ our @patterns = (
   [qr!\.md[^/]*$!, langify_template => {
     view            => [qw/single_narrative/],
     template        => "main.html",
-    compress        => 1,
+  #  compress        => 1,
     preprocess      => 1,
     facts           => $facts,
     markdown_search => 1,
