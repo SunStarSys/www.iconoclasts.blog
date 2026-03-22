@@ -1,20 +1,20 @@
 {% if bibliography %}
 {% filter markdown %}
 
-Число ссылок
+## Ссылки
 
 {% for b in bibliography.content|dictsort:"author" %}
 {% ifequal b.type "article" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `Дои`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
 {% endifequal %}
 {% ifequal b.type "book" %}
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. {{b.title|utf8decode|cuts:"\\="|safe}}. {% if b.volume %}Объем. {{b.volume}}. {% endif %}{% if b.number %}Нет. {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"|safe}}, {{b.year}}.
 {% endifequal %}
 {% ifequal b.type "online" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`URL`: <{{b.url|utf8decode|cuts:"\\-"}}>{% endif %}{% if b.doi %} `Дои`: <{{b.doi|utf8decode|cuts:"\\-"}}>,  {% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`URL`: <{{b.url|utf8decode|cuts:"\\-"}}>{% endif %}{% if b.doi %} `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>,  {% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
 {% endifequal %}
 {% ifequal b.type "proceedings" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `Дои`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
 {% endifequal %}
 {% ifequal b.type "phdthesis" %}
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.school|utf8decode|cuts:"\\-"|safe}} ({{b.year}}).
@@ -25,7 +25,7 @@
 {% endif %}
 
 {% if permalink %}
-<span class="badge bg-info" style="color:#000">Пермалинк</span>&nbsp;
+<span class="badge bg-info" style="color:#000">Постоянная ссылка</span>&nbsp;
 {% endif %}
 
 {% if headers.published %}
@@ -39,8 +39,7 @@
 
 {% for k in headers.keywords %}
 <span class="badge bg-danger text-white">
-  <a style="color:#fff"
-     href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};язык={{lang}};markdown_search=1">#{{k}}</a>
+  <a style="color:#fff" href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}};markdown_search=1">#{{k}}</a>
 </span>&nbsp;
 {% endfor %}
 
@@ -63,8 +62,8 @@
       <h3 class="card-title">Комментарии {% if category_root %}{% if archive_root %} &nbsp;
         <button type="submit" name="uri"
                 value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
-                class=btn btn-sm btn-outline-warning>
-          Создать
+                class="btn btn-sm btn-outline-предупреждение">
+          Новый
         </button>
 {% endif %}{% endif %}
 		</h3>
@@ -74,12 +73,12 @@
       {% for c in comments %}
       {% if c.closed %}
       {% else %}
-      <article id="article-{{c.key}}" {% if c.muted %}class=«текстовый-скрытый»{% endif %}>
+      <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
         <header>
           <h6 class="card-title" id="{{c.key}}">
-            <a href="#{{c.key}}ссылка class=reference-link»>{{c.headers.title}}</a>
-            по {{c.content|ssi|vcs_author:lang}}
-            на <em><time>{{c.content|ssi|vcs_date:lang}}</time></em>
+            <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
+            кем {{c.content|ssi|vcs_author:lang}}
+            включено <em><time>{{c.content|ssi|vcs_date:lang}}</time></em>
             {% if c.muted %}
             {% else %}
             {% if c.important %}
@@ -90,7 +89,7 @@
 			  &nbsp;
             <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
                     value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
-              Ответ
+              Ответить
             </button>
 			{% endif %}{% endif %}
             {% endif %}
@@ -171,7 +170,7 @@ thread_comments();
 {% filter markdown %}
 --------
 
-# индекс
+## Индекс
 
 <dl id="index">
 {% for d in deps %}

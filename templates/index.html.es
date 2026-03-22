@@ -39,8 +39,7 @@
 
 {% for k in headers.keywords %}
 <span class="badge bg-danger text-white">
-  <a style="color:#fff"
-     href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}};markdown_search=1">#{{k}}</a>
+  <a style="color:#fff" href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}};markdown_search=1">#{{k}}</a>
 </span>&nbsp;
 {% endfor %}
 
@@ -63,7 +62,7 @@
       <h3 class="card-title">Comentarios {% if category_root %}{% if archive_root %} &nbsp;
         <button type="submit" name="uri"
                 value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.página/comment.md{{lang}}"
-                class="btn btn-sm btn-outline-warning">
+                class="btn-sm btn-outlinewarning">
           Nuevo
         </button>
 {% endif %}{% endif %}
@@ -79,12 +78,12 @@
           <h6 class="card-title" id="{{c.key}}">
             <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
             por {{c.content|ssi|vcs_author:lang}}
-            en <em><time>{{c.content|ssi|vcs_date:lang}}</time></em>
+            activado <em><time>{{c.content|ssi|vcs_date:lang}}</time></em>
             {% if c.muted %}
             {% else %}
             {% if c.important %}
             &nbsp;
-            <span class="badge bg-danger text-white">Importante!</span>
+            <span class="badge bg-danger text-white">Importante</span>
             {% endif %}
             {% if category_root %}{% if archive_root %}
 			  &nbsp;
@@ -112,7 +111,7 @@
 {% if category_root %}{% if archive_root %}
 <div class="card border-dark">
   <div class="card-header">
-    <h3 class="card-title">Anexos &nbsp;
+    <h3 class="card-title">Archivos adjuntos &nbsp;
     <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Gestionar</a></button>
 </h3>
   </div>
@@ -125,7 +124,7 @@
   </div>
   <div class="card-header">
     <h3 class="card-title">Enlaces &nbsp;
-    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.página/links.md{{lang}};action=add">Gestionar</a></button></h3>
+    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Gestionar</a></button></h3>
   </div>
   <div class="card-body">
     {{ links.content|markdown }}

@@ -8,7 +8,7 @@
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
 {% endifequal %}
 {% ifequal b.type "book" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. {{b.title|utf8decode|cuts:"\\="|safe}}. {% if b.volume %}Vol. {{b.volume}}. {% endif %}{% if b.number %}Non {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"|safe}}, {{b.year}}.
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. {{b.title|utf8decode|cuts:"\\="|safe}}. {% if b.volume %}Vol. {{b.volume}}. {% endif %}{% if b.number %}Non. {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"|safe}}, {{b.year}}.
 {% endifequal %}
 {% ifequal b.type "online" %}
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`URL`: <{{b.url|utf8decode|cuts:"\\-"}}>{% endif %}{% if b.doi %} `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>,  {% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
@@ -39,8 +39,7 @@
 
 {% for k in headers.keywords %}
 <span class="badge bg-danger text-white">
-  <a style="color:#fff"
-     href="/dynamic/search{{path|dirname}}/ ?expression régulière=%23{{k}} ;lang={{lang}} ;markdown_search=1">#{{k}}</a>
+  <a style="color:#fff" href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}};markdown_search=1">#{{k}}</a>
 </span>&nbsp;
 {% endfor %}
 
@@ -63,7 +62,7 @@
       <h3 class="card-title">Commentaires {% if category_root %}{% if archive_root %} &nbsp;
         <button type="submit" name="uri"
                 value="https ://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
-                class="btn btn-sm btn-outline-warning">
+                class="btn btn-sm btn-outline-avertissement">
           Nouveau
         </button>
 {% endif %}{% endif %}
@@ -77,9 +76,9 @@
       <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
         <header>
           <h6 class="card-title" id="{{c.key}}">
-            <a href="#{{c.key}}-link" class="lien de référence">{{c.headers.title}}</a>
+            <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
             par {{c.content|ssi|vcs_author:lang}}
-             activé <em><time>{{c.content|ssi|vcs_date:lang}}</time></em>
+            le <em><time>{{c.content|ssi|vcs_date:lang}}</time></em>
             {% if c.muted %}
             {% else %}
             {% if c.important %}
@@ -89,8 +88,8 @@
             {% if category_root %}{% if archive_root %}
 			  &nbsp;
             <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
-                    value="https ://{{website}}{{path|dirname}}/{{path|basename:0}} page/{{c.key}}.md{{lang}}">
-             Répondre
+                    value="https ://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
+              Répondre
             </button>
 			{% endif %}{% endif %}
             {% endif %}
@@ -112,8 +111,8 @@
 {% if category_root %}{% if archive_root %}
 <div class="card border-dark">
   <div class="card-header">
-    <h3 class="card-title">Documents joints &nbsp;
-    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/ ;action=add">Gérer</a></button>
+    <h3 class="card-title">Pièces jointes &nbsp;
+    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Gérer</a></button>
 </h3>
   </div>
   <div class="card-body">
@@ -125,7 +124,7 @@
   </div>
   <div class="card-header">
     <h3 class="card-title">Liens &nbsp;
-    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}} ;action=add">Gérer</a></button></h3>
+    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Gérer</a></button></h3>
   </div>
   <div class="card-body">
     {{ links.content|markdown }}

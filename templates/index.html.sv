@@ -8,10 +8,10 @@
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
 {% endifequal %}
 {% ifequal b.type "book" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. {{b.title|utf8decode|cuts:"\\="|safe}}. {% if b.volume %} Vol. {{b.volume}}. {% endif %}{% if b.number %}Nej {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"|safe}}, {{b.year}}.
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. {{b.title|utf8decode|cuts:"\\="|safe}}. {% if b.volume %}Volym {{b.volume}}. {% endif %}{% if b.number %}Nej. {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"|safe}}, {{b.year}}.
 {% endifequal %}
 {% ifequal b.type "online" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`URL`: <{{b.url|utf8decode|cuts:"\\-"}}>{% endif %}{% if b.doi %} `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>,  {% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`Webbadress`: <{{b.url|utf8decode|cuts:"\\-"}}>{% endif %}{% if b.doi %} `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>,  {% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
 {% endifequal %}
 {% ifequal b.type "proceedings" %}
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
@@ -29,18 +29,17 @@
 {% endif %}
 
 {% if headers.published %}
-<span class="badge bg-success text-white"><a style="color:#fff" href="{{headers.published|safe}} Publicerad</a></span>&nbsp;
+<span class="badge bg-success text-white"><a style="color:#fff" href="{{headers.published|safe}}">Publicerad</a></span>&nbsp;
 {% endif %}
 
 {% if archive_path %}{% ifequal headers.status "archived" %}
 <span class="badge bg-warning">
-  <a style="color:#000" href="{{archive_path}} > Arkiverad</a></span>&nbsp;
+  <a style="color:#000" href="{{archive_path}}">Arkiverad</a></span>&nbsp;
 {% endifequal %}{% endif %}
 
 {% for k in headers.keywords %}
 <span class="badge bg-danger text-white">
-  <a style="color:#fff"
-     href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}};markdown_search=1">#{{k}}</a>
+  <a style="color:#fff" href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}};markdown_search=1">#{{k}}</a>
 </span>&nbsp;
 {% endfor %}
 
@@ -60,10 +59,10 @@
     <input type="hidden" id="action" name="action" value="comment">
     <input type="hidden" name="lang" value="{{lang|cut:"."}}">
     <div class="card-header">
-      <h3 class="card-title"> Kommentarer {% if category_root %}{% if archive_root %} &nbsp;
+      <h3 class="card-title">Kommentarer {% if category_root %}{% if archive_root %} &nbsp;
         <button type="submit" name="uri"
                 value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
-                class="btn btn-sm btn-outline-warning">
+                class="btn btn-sm btn-outline-varning">
           Nytt
         </button>
 {% endif %}{% endif %}
@@ -77,7 +76,7 @@
       <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
         <header>
           <h6 class="card-title" id="{{c.key}}">
-            <a href="#{{c.key}}-link" class="referens-länk">{{c.headers.title}}</a>
+            <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
             av {{c.content|ssi|vcs_author:lang}}
             på <em><time>{{c.content|ssi|vcs_date:lang}}</time></em>
             {% if c.muted %}
