@@ -30,7 +30,7 @@ mindmap
       [Tools]
 	    Git
 		Subversion
-    (#Jamstack)
+    (Jamstack)
       [CMS]
         Authors
 		Researchers
@@ -128,7 +128,7 @@ Wiki 中的版本控制功能是將簡單的協作空間變成可靠且值得信
 
 在新一代的 KMS 中，版本控制不僅僅是「一對一的 Wiki 功能」，更是值得信賴且可發展知識的基礎。如果沒有，協同合作就會變成混亂；而您的 Wiki 則成為支援 AI 層 (例如，從正確的歷史相關資訊環境提取語意搜尋) 的持久性自我修復儲存區域，並讓團隊持續進行變更。
 
-## #Jamstack (SSG) Wiki Space
+## Jamstack (SSG) Wiki Space
 
 數個啟用版本控制功能的 Wiki (特別是那些使用類似 Wiki 的編輯，但使用 Git 或類似版本設計的 Wiki) 都以靜態網站產生 (SSG) 原則為基礎。這些內容會以純文字檔案 (通常是 Markdown) 儲存在 Git 儲存區域中，使用 Git 本身作為版本控制後端，並且從這些檔案產生靜態 HTML 網站 - 即時 (透過輕量型伺服器) 或預先建置以進行建置 (例如 GitHub 頁面、Netlify 等)。
 

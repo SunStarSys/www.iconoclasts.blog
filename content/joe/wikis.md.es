@@ -30,7 +30,7 @@ mindmap
       [Tools]
 	    Git
 		Subversion
-    (#Jamstack)
+    (Jamstack)
       [CMS]
         Authors
 		Researchers
@@ -128,7 +128,7 @@ En los verdaderos wikis respaldados por VCS, puede ramificarse, fusionarse o exp
 
 En un KMS moderno que comienza de nuevo, el control de versiones no es solo una "buena función wiki", sino que es fundamental para un conocimiento confiable y evolutivo. Sin ella, la colaboración se convierte en caos; con ella, tu wiki se convierte en un repositorio duradero y autorreparable que admite capas de IA (por ejemplo, la búsqueda semántica que extrae del contexto histórico correcto) y sobrevive a los cambios del equipo.
 
-## El espacio Wiki #Jamstack (SSG).
+## El espacio Wiki Jamstack (SSG).
 
 Varios wikis habilitados para el control de versiones (especialmente aquellos con verdadera edición wiki, pero impulsados por Git o similares para el control de versiones) se construyen en torno a los principios de generación de sitios estáticos (SSG). Estos almacenan el contenido como archivos de texto sin formato (generalmente Markdown) en un repositorio de Git, utilizan Git como el propio backend de control de versiones y generan sitios HTML estáticos a partir de esos archivos, ya sea sobre la marcha (a través de un servidor ligero) o prediseñados para su despliegue (por ejemplo, a GitHub Pages, Netlify, etc.).
 

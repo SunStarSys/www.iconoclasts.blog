@@ -26,7 +26,7 @@ mindmap
       [Tools]
 	    Git
 		Subversion
-    (#Jamstack)
+    (Jamstack)
       [CMS]
         Authors
 		Researchers
@@ -128,7 +128,7 @@ In true VCS-backed wikis, you can branch, merge, or experiment without affecting
 In a modern KMS starting fresh, version control isn't just a "nice-to-have wiki feature" — it's foundational for trustworthy, evolvable knowledge. Without it, collaboration turns into chaos; with it, your wiki becomes a durable, self-healing repository that supports AI layers (e.g., semantic search pulling from correct historical context) and survives team changes.
 
 -----
-## The #Jamstack (SSG) Wiki Space
+## The Jamstack (SSG) Wiki Space
 
 Several version control-enabled wikis (especially those with true wiki-like editing but powered by Git or similar for versioning) are built around static site generation (SSG) principles. These store content as plain text files (usually Markdown) in a Git repo, use Git itself as the version control backend, and generate static HTML sites from those files — either on-the-fly (via a lightweight server) or pre-built for deployment (e.g., to GitHub Pages, Netlify, etc.).
 

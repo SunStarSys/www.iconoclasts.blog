@@ -30,7 +30,7 @@ mindmap
       [Tools]
 	    Git
 		Subversion
-    (#Jamstack)
+    (Jamstack)
       [CMS]
         Authors
 		Researchers
@@ -128,7 +128,7 @@ In echten VCS-unterstützten Wikis können Sie verzweigen, zusammenführen oder 
 
 In einem modernen KMS, das neu beginnt, ist die Versionskontrolle nicht nur eine "nice-to-have-Wiki-Funktion" - sie ist die Grundlage für vertrauenswürdiges, weiterentwickelbares Wissen. Ohne sie verwandelt sich die Zusammenarbeit in Chaos; damit wird Ihr Wiki zu einem dauerhaften, selbstheilenden Repository, das KI-Ebenen unterstützt (z. B. semantische Suche, die aus dem richtigen historischen Kontext stammt) und Teamänderungen überlebt.
 
-## Der Wiki-Raum #Jamstack (SSG).
+## Der Wiki-Raum Jamstack (SSG).
 
 Mehrere wikis mit aktivierter versionierung (insbesondere wikis mit echter wiki-ähnlicher bearbeitung, die jedoch von git oder ähnlich zur versionierung angetrieben werden) basieren auf den grundsätzen der statischen site-generierung (SSG). Diese speichern Inhalte als Nur-Text-Dateien (in der Regel Markdown) in einem Git-Repository, verwenden Git selbst als Versionskontroll-Backend und generieren statische HTML-Sites aus diesen Dateien – entweder on-the-fly (über einen Lightweight-Server) oder für das Deployment vordefiniert (z. B. auf GitHub Pages, Netlify usw.).
 
