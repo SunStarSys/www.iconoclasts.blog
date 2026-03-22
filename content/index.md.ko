@@ -8,7 +8,7 @@ status: 공개됨
 title: 의,에 의해 및 Iconoclasts
 ---
 
-<div class=" float-lg-end" id="news">
+<div id="news" class=" float-lg-end">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">이코노클라스트</a></div>
 
@@ -26,7 +26,7 @@ title: 의,에 의해 및 Iconoclasts
 
 {% for elt in iconoclasts.content|shuffle|slice:":3" %}
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.key}}" style="max-width:560;max-height:315" title="{{elt.name}}"></iframe>
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" title="{{elt.name}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 &nbsp;
 {% endfor %}
@@ -46,18 +46,26 @@ title: 의,에 의해 및 Iconoclasts
 
 <center>
 
-**STEM/Academia/Politics/문화/아트**
+**STEM/학술/정치/문화/예술**
 
 </center>
 
-블로그 커뮤니티! 지금 등록하십시오. [연락처](/contact) 우리의 프로모션 출시 동안 페이지!
+블로그 커뮤니티! 지금 등록하십시오. [연락처](/contact) 페이지!
 
-관련 리뷰: Please check out...  [오리온](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion 로고" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼.</em></span>&trade; &mdash; Orion은 고유의 SCM 기반 엔터프라이즈 제품입니다. [인어-마인드맵](https://www.sunstarsys.com/orion/features) 통합!
+## 임시 작문 카테고리 2026 Q2
+
+- April: 전쟁
+- May: AI
+- June: 코로나
+
+&nbsp;
+
+이 사이트는 Orion에서 호스팅됩니다. 체크아웃  [오리온](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's 본래 CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade; &mdash; 오리온은 고유의 SCM 기반 엔터프라이즈 위키입니다. [인어-마인드맵](https://www.sunstarsys.com/orion/features) 통합!
 
 &nbsp;
 
 <div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/f55XLGCs3H0" style="min-width:400px;min-height:275px" title="비디오"></iframe>
+	 	<iframe title="video" class="embed-responsive-item" style="min-width:400px;min-height:275px" src="https://www.youtube.com/embed/f55XLGCs3H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -69,7 +77,9 @@ title: 의,에 의해 및 Iconoclasts
 
 &nbsp;
 
-- <span class="badge bg-success">신규</span> [지식 관리 시스템 위키](/joe/wikis) @joe=에 의해,
+- <span class="badge bg-success">신규</span> [데이터 과학 언어로서의 펄](chrisarg/perlasadatascilang) @chrisarg=에 의해,
+
+- [지식 관리 시스템 위키](/joe/wikis) @joe=에 의해,
 
 - [자원봉사자 오픈 소스 기여자 요청](/jimjag/requiem) @jimjag=에 의해,
 
@@ -79,7 +89,7 @@ title: 의,에 의해 및 Iconoclasts
 
 - [정보 보안](/joe/infosec) &mdash; 기본 개념의 추상화는 광범위한 실제 적용성과 선명도로 이어집니다.
 
-- [펄 7에 대한 봉인된 렉시칼](/joe/perl7-sealed-lexicals) &mdash; 함수 정의에 <span class="text-info">:sealed</span>를 추가하고 형식이 지정된 모든 렉시칼에 대해 컴파일 타임 메소드 조회 속도를 더 높입니다.
+- [펄 7에 대한 봉인된 렉시칼](/joe/perl7-sealed-lexicals) &mdash; 추가 <span class="text-info">:봉인됨</span> to a function함수 definition정의 and enjoy여분 speed속도 of compile-time컴파일-time메소드 lookups룩업 for all of its typed타입 된 lexicals렉시칼 ,
 
 - [Git 및 비 거부, 재방문됨](/joe/git-and-non-repudiation) &mdash; 2025년 업데이트된 솔루션!
 

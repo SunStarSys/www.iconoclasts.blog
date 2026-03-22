@@ -8,7 +8,7 @@ status: 已發布
 title: Of、By 和 For Iconoclasts
 ---
 
-<div class=" float-lg-end" id="news">
+<div id="news" class=" float-lg-end">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">圖示最後一個</a></div>
 
@@ -26,7 +26,7 @@ title: Of、By 和 For Iconoclasts
 
 {% for elt in iconoclasts.content|shuffle|slice:":3" %}
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.key}}" style="max-width:560;max-height:315" title="{{elt.name}}"></iframe>
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" title="{{elt.name}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 &nbsp;
 {% endfor %}
@@ -50,14 +50,22 @@ title: Of、By 和 For Iconoclasts
 
 </center>
 
-部落格社群！立即報名參加[聯絡我們](/contact) 在我們的推廣活動期間頁面！
+部落格社群！立即報名參加[聯絡我們](/contact) 頁面！
 
-此外，請查看[奧里昂](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion 標誌" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 平台。</em></span>&trade; &mdash; Orion 是唯一具備原生功能的 SCM 企業產品[美人魚陣圖](https://www.sunstarsys.com/orion/features) 整合！
+## 2026 年暫定寫作類別 Q2
+
+- April: 戰爭
+- May: AI
+- June: 新冠肺炎
+
+&nbsp;
+
+此網站由 Orion 代管。查看更多[奧里昂](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz'原創 CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 平台。</em></span>&trade; &mdash; Orion 是唯一具有原生功能的 SCM 企業 Wiki [美人魚陣圖](https://www.sunstarsys.com/orion/features) 整合！
 
 &nbsp;
 
 <div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/f55XLGCs3H0" style="min-width:400px;min-height:275px" title="視訊"></iframe>
+	 	<iframe title="video" class="embed-responsive-item" style="min-width:400px;min-height:275px" src="https://www.youtube.com/embed/f55XLGCs3H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -69,7 +77,9 @@ title: Of、By 和 For Iconoclasts
 
 &nbsp;
 
-- <span class="badge bg-success">新建</span> [知識管理系統中的 Wiki](/joe/wikis) 由 @joe=，
+- <span class="badge bg-success">新建</span> [個人資料科學語言](chrisarg/perlasadatascilang) 由 @chrisarg=，
+
+- [知識管理系統中的 Wiki](/joe/wikis) 由 @joe=，
 
 - [志工開放原始碼貢獻者的津貼](/jimjag/requiem) 由 @jimjag=，
 
@@ -79,7 +89,7 @@ title: Of、By 和 For Iconoclasts
 
 - [資訊安全](/joe/infosec) &mdash; 基本概念的抽象使現實世界的適用性和清晰度更廣，
 
-- [Perl 7 的密封語彙](/joe/perl7-sealed-lexicals) &mdash; 將 <span class="text-info">：sealed</span> 加到函數定義，並享受其所有類型詞彙的額外編譯階段方法查詢速度。
+- [Perl 7 的密封語彙](/joe/perl7-sealed-lexicals) &mdash; 新增<span class="text-info">：已密封</span> 至函數定義，並享受其所有類型詞彙的編譯階段方法查詢的額外速度，
 
 - [Git 和不可否認，已修訂](/joe/git-and-non-repudiation) &mdash; 2025 年解決方案更新！
 
@@ -155,4 +165,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-02-23 10:19:48 -0700 (Mon, 23 Feb 2026) $ $Author: joe $ $Revision: 27928 $ -->
+<!-- $Date: 2026-03-20 19:00:45 -0700 (Fri, 20 Mar 2026) $ $Author: joe $ $Revision: 29531 $ -->

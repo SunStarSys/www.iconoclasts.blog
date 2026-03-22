@@ -8,7 +8,7 @@ status: פורסם
 title: של, על ידי ועבור Iconoclasts
 ---
 
-<div class=" float-lg-end" id="news">
+<div id="news" class=" float-lg-end">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">איקונוקלסט</a></div>
 
@@ -26,7 +26,7 @@ title: של, על ידי ועבור Iconoclasts
 
 {% for elt in iconoclasts.content|shuffle|slice:":3" %}
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.key}}" style="max-width:560;max-height:315" title="{{elt.name}}"></iframe>
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" title="{{elt.name}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 &nbsp;
 {% endfor %}
@@ -50,14 +50,22 @@ title: של, על ידי ועבור Iconoclasts
 
 </center>
 
-קהילת בלוגים! הירשמו עוד היום [צור קשר](/contact) דף במהלך השקת המבצע שלנו!
+קהילת בלוגים! הירשמו עוד היום [צור קשר](/contact) דף!
 
-בבקשה תבדקו  [אוריון](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="לוגו Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>פלטפורמת Jamstack Wiki.</em></span>&trade; &mdash; אוריון הוא המוצר הארגוני היחיד המבוסס על SCM עם native [מפת חשיבה בתולת ים](https://www.sunstarsys.com/orion/features) אינטגרציה!
+## קטגוריות כתיבה טנטטיבית עבור 2026 Q2
+
+- April: מלחמה
+- May: בינה מלאכותית
+- June: קוביד
+
+&nbsp;
+
+אתר זה מתארח באוריון. הוצאת פריט  [אוריון](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's המקורי CC BySA v4.0 --> &nbsp;<em>אתר Jamstack Wiki.</em></span>&trade; &mdash; אוריון הוא הוויקי הארגוני היחיד המבוסס על SCM עם יליד [מפת חשיבה בתולת ים](https://www.sunstarsys.com/orion/features) אינטגרציה!
 
 &nbsp;
 
 <div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/f55XLGCs3H0" style="min-width:400px;min-height:275px" title="וידאו"></iframe>
+	 	<iframe title="video" class="embed-responsive-item" style="min-width:400px;min-height:275px" src="https://www.youtube.com/embed/f55XLGCs3H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -65,11 +73,13 @@ title: של, על ידי ועבור Iconoclasts
 
 &nbsp;
 
-#בלוגים מומלצים
+## בלוגים מומלצים
 
 &nbsp;
 
-- <span class="badge bg-success">חדש</span> [ויקי במערכות ניהול ידע](/joe/wikis) מאת @joe=,
+- <span class="badge bg-success">חדש</span> [פרל כשפת מדעי נתונים](chrisarg/perlasadatascilang) מאת @chrisarg=,
+
+- [ויקי במערכות ניהול ידע](/joe/wikis) מאת @joe=,
 
 - [תנאי רישום לקוד פתוח של מתנדב](/jimjag/requiem) מאת @jimjag=,
 
@@ -79,13 +89,13 @@ title: של, על ידי ועבור Iconoclasts
 
 - [אבטחת מידע](/joe/infosec) &mdash; הפשטה של המושגים הבסיסיים מובילה לישימות רחבה בעולם האמיתי ובהירות,
 
-- [לקסיקלים אטומים לפרל 7](/joe/perl7-sealed-lexicals) &mdash; הוסף <span class="text-info">: אטום</span> להגדרת פונקציה ותוכל ליהנות מהמהירות הנוספת של lookups של שיטת הידור-זמן עבור כל הלקסיקלים המוקלדים שלה,
+- [לקסיקלים אטומים לפרל 7](/joe/perl7-sealed-lexicals) &mdash; הוסף <span class="text-info">:חסום</span> להגדרת פונקציה וליהנות מהמהירות הנוספת של קודי שיטת זמן הידור עבור כל הלקסיקלים המוקלדים שלה,
 
 - [Git and Non-Repudiation, ביקור חוזר](/joe/git-and-non-repudiation) &mdash; עודכנו פתרונות לשנת 2025!
 
 &nbsp;
 
-מס' מפות האתר
+## מפות אתרים
 
 &nbsp;
 
@@ -104,7 +114,7 @@ title: של, על ידי ועבור Iconoclasts
 
 &nbsp;
 
-## אינדקס קטגוריה
+## מדד קטגוריה
 
 &nbsp;
 
@@ -155,4 +165,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-02-23 10:19:48 -0700 (Mon, 23 Feb 2026) $ $Author: joe $ $Revision: 27928 $ -->
+<!-- $Date: 2026-03-20 19:00:45 -0700 (Fri, 20 Mar 2026) $ $Author: joe $ $Revision: 29531 $ -->

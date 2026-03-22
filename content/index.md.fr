@@ -8,7 +8,7 @@ status: publié
 title: De, par et pour les iconoclastes
 ---
 
-<div class=" float-lg-end" id="news">
+<div id="news" class=" float-lg-end">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclaste</a></div>
 
@@ -26,7 +26,7 @@ croyances et traditions acceptées
 
 {% for elt in iconoclasts.content|shuffle|slice:":3" %}
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.key}}" style="max-width:560;max-height:315" title="{{elt.name}}"></iframe>
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" title="{{elt.name}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 &nbsp;
 {% endfor %}
@@ -50,14 +50,22 @@ Bienvenue dans notre
 
 </center>
 
-Bloguer la communauté ! Inscrivez-vous dès aujourd'hui au [Nous contacter](/contact) page lors de notre lancement promotionnel !
+Bloguer la communauté ! Inscrivez-vous dès aujourd'hui au [Nous contacter](/contact) page !
 
-Aussi, s'il vous plaît vérifier  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logo Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plateforme Wiki Jamstack.</em></span>&trade; &mdash; Orion est le seul produit d'entreprise basé sur SCM avec natif [mermaid-mindmap](https://www.sunstarsys.com/orion/features) intégration !
+## Catégories d'écriture provisoire pour 2026 Q2
+
+- April: Guerre
+- May: IA
+- June: COVID
+
+&nbsp;
+
+Ce site est hébergé sur Orion. Départ  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plateforme Wiki de Jamstack.</em></span>&trade; &mdash; Orion est le seul wiki d'entreprise basé sur SCM avec natif [mermaid-mindmap](https://www.sunstarsys.com/orion/features) intégration !
 
 &nbsp;
 
 <div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/f55XLGCs3H0" style="min-width:400px;min-height:275px" title="vidéo"></iframe>
+	 	<iframe title="video" class="embed-responsive-item" style="min-width:400px;min-height:275px" src="https://www.youtube.com/embed/f55XLGCs3H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -65,11 +73,13 @@ Aussi, s'il vous plaît vérifier  [Orion](https://www.sunstarsys.com/orion/)<sp
 
 &nbsp;
 
-## blogs vedettes
+## Blogs en vedette
 
 &nbsp;
 
-- <span class="badge bg-success">Nouveau</span> [Wikis dans les systèmes de gestion des connaissances](/joe/wikis) par @joe=,
+- <span class="badge bg-success">Nouveau</span> [Perl en tant que Data Science Language](chrisarg/perlasadatascilang) par @chrisarg=,
+
+- [Wikis dans les systèmes de gestion des connaissances](/joe/wikis) par @joe=,
 
 - [Requiem pour le contributeur open source Bénévole](/jimjag/requiem) par @jimjag=,
 
@@ -79,7 +89,7 @@ Aussi, s'il vous plaît vérifier  [Orion](https://www.sunstarsys.com/orion/)<sp
 
 - [Sécurité des informations](/joe/infosec) &mdash; l'abstraction des concepts de base conduit à une large applicabilité et clarté du monde réel,
 
-- [Lexiques scellés pour Perl 7](/joe/perl7-sealed-lexicals) &mdash; ajouter <span class="text-info"> :sealed</span> à une définition de fonction et profiter de la vitesse supplémentaire des recherches de méthode de compilation pour tous ses lexiques typés,
+- [Lexiques scellés pour Perl 7](/joe/perl7-sealed-lexicals) &mdash; ajouter <span class="text-info"> : scellé</span> à une définition de fonction et profitez de la vitesse supplémentaire des recherches de méthode de compilation pour tous ses lexiques typés,
 
 - [Git et non-répudiation, revisité](/joe/git-and-non-repudiation) &mdash; solutions mises à jour pour 2025 !
 
@@ -155,4 +165,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-02-23 10:19:48 -0700 (Mon, 23 Feb 2026) $ $Author: joe $ $Revision: 27928 $ -->
+<!-- $Date: 2026-03-20 19:00:45 -0700 (Fri, 20 Mar 2026) $ $Author: joe $ $Revision: 29531 $ -->

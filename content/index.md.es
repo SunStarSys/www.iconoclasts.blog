@@ -8,7 +8,7 @@ status: publicado
 title: De, Por y Para Iconoclastas
 ---
 
-<div class=" float-lg-end" id="news">
+<div id="news" class=" float-lg-end">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclast</a></div>
 
@@ -26,7 +26,7 @@ creencias y tradiciones aceptadas
 
 {% for elt in iconoclasts.content|shuffle|slice:":3" %}
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.key}}" style="max-width:560;max-height:315" title="{{elt.name}}"></iframe>
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" title="{{elt.name}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 &nbsp;
 {% endfor %}
@@ -50,14 +50,22 @@ Bienvenido a nuestro
 
 </center>
 
-comunidad de blogs! Regístrese hoy en la [Contáctenos](/contact) página durante nuestro lanzamiento promocional!
+comunidad de blogs! Regístrese hoy en la [Contáctenos](/contact) página!
 
-Además, por favor, echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](https://www.sunstarsys.com/orion/features) integración!
+## Categorías provisionales de escritura para 2026 Q2
+
+- April: Guerra
+- May: IA
+- June: COVID
+
+&nbsp;
+
+Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's CC original BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es la única wiki empresarial basada en SCM con nativo [mapa de mente de sirena](https://www.sunstarsys.com/orion/features) integración!
 
 &nbsp;
 
 <div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/f55XLGCs3H0" style="min-width:400px;min-height:275px" title="vídeo"></iframe>
+	 	<iframe title="video" class="embed-responsive-item" style="min-width:400px;min-height:275px" src="https://www.youtube.com/embed/f55XLGCs3H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -69,7 +77,9 @@ Además, por favor, echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)
 
 &nbsp;
 
-- <span class="badge bg-success">Nuevo</span> [Wikis en Sistemas de Gestión del Conocimiento](/joe/wikis) por @joe=,
+- <span class="badge bg-success">Nuevo</span> [Perl como lenguaje de ciencia de datos](chrisarg/perlasadatascilang) por @chrisarg=,
+
+- [Wikis en Sistemas de Gestión del Conocimiento](/joe/wikis) por @joe=,
 
 - [Réquiem para el colaborador de código abierto voluntario](/jimjag/requiem) por @jimjag=,
 
@@ -79,13 +89,13 @@ Además, por favor, echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)
 
 - [Seguridad de la información](/joe/infosec) &mdash; abstracción de los conceptos básicos conduce a una amplia aplicabilidad y claridad en el mundo real,
 
-- [Léxico sellado para Perl 7](/joe/perl7-sealed-lexicals) &mdash; agregar <span class="text-info">:sealed</span> a una definición de función y disfrutar de la velocidad adicional de las consultas de método de tiempo de compilación para todos sus léxicos escritos,
+- [Léxico sellado para Perl 7](/joe/perl7-sealed-lexicals) &mdash; agregar <span class="text-info">:sellado</span> a una definición de función y disfrutar de la velocidad adicional de las búsquedas de métodos de tiempo de compilación para todos sus léxicos mecanografiados,
 
 - [Git y no repudio, revisado](/joe/git-and-non-repudiation) &mdash; ¡Soluciones actualizadas para 2025!
 
 &nbsp;
 
-## Asignaciones de sitio
+## Asignaciones de sitios
 
 &nbsp;
 
@@ -104,7 +114,7 @@ Además, por favor, echa un vistazo  [Orión](https://www.sunstarsys.com/orion/)
 
 &nbsp;
 
-## Índice de categoría
+## Índice de categorías
 
 &nbsp;
 

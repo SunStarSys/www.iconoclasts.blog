@@ -8,7 +8,7 @@ status: publicerad
 title: Av, Av och För Iconoclasts
 ---
 
-<div class=" float-lg-end" id="news">
+<div id="news" class=" float-lg-end">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Ikonoklast</a></div>
 
@@ -26,7 +26,7 @@ accepterade övertygelser och traditioner
 
 {% for elt in iconoclasts.content|shuffle|slice:":3" %}
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.key}}" style="max-width:560;max-height:315" title="{{elt.name}}"></iframe>
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" title="{{elt.name}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 &nbsp;
 {% endfor %}
@@ -50,14 +50,22 @@ Välkommen till vår
 
 </center>
 
-Bloggvärlden! Anmäl dig idag på [Kontakta oss](/contact) sida under vår kampanjlansering!
+Bloggvärlden! Anmäl dig idag på [Kontakta oss](/contact) sida!
 
-Också, vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Logotyp för Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](https://www.sunstarsys.com/orion/features) integration!
+## Preliminära skrivkategorier för 2026 Q2
+
+- April: Krig
+- May: AI
+- June: COVID
+
+&nbsp;
+
+Denna webbplats är värd på Orion. Checka ut  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagswikin med inbyggd [sjöjungfru-mindmap](https://www.sunstarsys.com/orion/features) integration!
 
 &nbsp;
 
 <div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/f55XLGCs3H0" style="min-width:400px;min-height:275px" title="video"></iframe>
+	 	<iframe title="video" class="embed-responsive-item" style="min-width:400px;min-height:275px" src="https://www.youtube.com/embed/f55XLGCs3H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -69,7 +77,9 @@ Också, vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span clas
 
 &nbsp;
 
-- <span class="badge bg-success">Nytt</span> [Wikis i kunskapshanteringssystem](/joe/wikis) av @joe=,
+- <span class="badge bg-success">Nytt</span> [Perl som datavetenskapsspråk](chrisarg/perlasadatascilang) av @chrisarg=,
+
+- [Wikis i kunskapshanteringssystem](/joe/wikis) av @joe=,
 
 - [Requiem för volontärens bidragare av öppen källkod](/jimjag/requiem) av @jimjag=,
 
@@ -79,13 +89,13 @@ Också, vänligen kolla in  [Orion](https://www.sunstarsys.com/orion/)<span clas
 
 - [Informationssäkerhet](/joe/infosec) &mdash; abstraktion av de grundläggande begreppen leder till bred verklig tillämplighet och klarhet,
 
-- [Förseglade Lexicals för Perl 7](/joe/perl7-sealed-lexicals) &mdash; lägg till <span class="text-info">:förseglad</span> i en funktionsdefinition och njut av extra snabbheten i uppslagningar av kompileringsmetoder för alla typangivna lexikaler.
+- [Förseglade Lexicals för Perl 7](/joe/perl7-sealed-lexicals) &mdash; summera <span class="text-info">:förseglad</span> till en funktionsdefinition och njuta av den extra hastigheten av kompileringstid metoduppslagningar för alla dess typangivna lexikaler,
 
 - [Git och Non-repudiation, Revisited](/joe/git-and-non-repudiation) &mdash; lösningar uppdaterade för 2025!
 
 &nbsp;
 
-Antal webbplatskartor
+## Webbkartor
 
 &nbsp;
 
@@ -155,4 +165,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-02-23 10:19:48 -0700 (Mon, 23 Feb 2026) $ $Author: joe $ $Revision: 27928 $ -->
+<!-- $Date: 2026-03-20 19:00:45 -0700 (Fri, 20 Mar 2026) $ $Author: joe $ $Revision: 29531 $ -->

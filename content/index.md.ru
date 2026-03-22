@@ -8,7 +8,7 @@ status: опубликовано
 title: Для иконоборцев,
 ---
 
-<div class=" float-lg-end" id="news">
+<div id="news" class=" float-lg-end">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Иконоборчество</a></div>
 
@@ -26,7 +26,7 @@ title: Для иконоборцев,
 
 {% for elt in iconoclasts.content|shuffle|slice:":3" %}
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/{{elt.key}}" style="max-width:560;max-height:315" title="{{elt.name}}"></iframe>
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/{{elt.key}}" title="{{elt.name}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 &nbsp;
 {% endfor %}
@@ -46,18 +46,26 @@ title: Для иконоборцев,
 
 <center>
 
-**STEM/Академия/Политика/Культура/Искусство**
+**STEM / Академия / Политика / Культура / Искусство**
 
 </center>
 
-Сообщество блогов! Зарегистрируйтесь сегодня в [Контакты](/contact) страница во время нашего рекламного запуска!
+Сообщество блогов! Зарегистрируйтесь сегодня в [Контакты](/contact) страница!
 
-Также, пожалуйста, проверьте  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-платформа Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](https://www.sunstarsys.com/orion/features) интеграция!
+## Предварительные категории письма на 2026 год Q2
+
+- April: Война
+- May: ИИ
+- June: COVID
+
+&nbsp;
+
+Этот сайт размещен на Orion. Изъять  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's оригинал CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade; &mdash; Orion – единственная корпоративная вики-страница на основе SCM с нативным [русалка](https://www.sunstarsys.com/orion/features) интеграция!
 
 &nbsp;
 
 <div class="embed-responsive embed-responsive-16by9" style="min-width:400px">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/f55XLGCs3H0" style="min-width:400px;min-height:275px" title="видео"></iframe>
+	 	<iframe title="video" class="embed-responsive-item" style="min-width:400px;min-height:275px" src="https://www.youtube.com/embed/f55XLGCs3H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -69,7 +77,9 @@ title: Для иконоборцев,
 
 &nbsp;
 
-- <span class="badge bg-success">Новое</span> [Википедия:Системы управления знаниями](/joe/wikis) по @joe=,
+- <span class="badge bg-success">Новый</span> [Перл как язык науки о данных](chrisarg/perlasadatascilang) по @chrisarg=,
+
+- [Википедия:Системы управления знаниями](/joe/wikis) по @joe=,
 
 - [Реквием для волонтера с открытым исходным кодом](/jimjag/requiem) по @jimjag=,
 
@@ -79,7 +89,7 @@ title: Для иконоборцев,
 
 - [Информационная безопасность](/joe/infosec) &mdash; абстрагирование основных понятий приводит к широкой реальной применимости и ясности,
 
-- [Герметичные лексикалы для перла 7](/joe/perl7-sealed-lexicals) &mdash; добавьте <span class="text-info">:sealed</span> в определение функции и наслаждайтесь дополнительной скоростью поиска метода времени компиляции для всех его типизированных лексик,
+- [Герметичные лексикалы для перла 7](/joe/perl7-sealed-lexicals) &mdash; прибавить <span class="text-info">:запечатанный</span> для определения функции и наслаждайтесь дополнительной скоростью поиска метода компиляции времени для всех его типизированных лексикалов,
 
 - [Git и Non-Repudiation, Пересмотрено](/joe/git-and-non-repudiation) &mdash; Решения обновлены на 2025 год!
 
@@ -104,7 +114,7 @@ title: Для иконоборцев,
 
 &nbsp;
 
-# индекс категории
+## Индекс категории
 
 &nbsp;
 
@@ -155,4 +165,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-02-23 10:19:48 -0700 (Mon, 23 Feb 2026) $ $Author: joe $ $Revision: 27928 $ -->
+<!-- $Date: 2026-03-20 19:00:45 -0700 (Fri, 20 Mar 2026) $ $Author: joe $ $Revision: 29531 $ -->
