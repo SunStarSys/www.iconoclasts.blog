@@ -79,7 +79,7 @@ our @patterns = (
   [qr!\.(?:bib|tt)\b[^/]*$!, skip => {}],
 
   # transform yml to json
-  [qr!\.ya?ml\b[^/]*$!, yml2ext => { compress => 1 }],
+  [qr!\.ya?ml\b[^/]*$!, yml2ext => { }],#compress => 1 }],
 
   [qr!\.md[^/]*$!, langify_template => {
     view            => [qw/single_narrative/],
