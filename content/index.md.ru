@@ -103,12 +103,9 @@ title: Для иконоборцев,
 - [Испанский](sitemap.html.es)
 - [немецкий](sitemap.html.de)
 - [Французский](sitemap.html.fr)
-- [Португальский](sitemap.html.pt-BR)
 - [Русский](sitemap.html.ru)
 - [Китайский](sitemap.html.zh-TW)
 - [Корейский](sitemap.html.ko)
-- [Японский](sitemap.html.ja)
-- [Арабский](sitemsp.html.ar)
 - [Иврит](sitemap.html.he)
 - [шведский](sitemap.html.sv).
 
@@ -165,4 +162,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-03-20 19:00:45 -0700 (Fri, 20 Mar 2026) $ $Author: joe $ $Revision: 29531 $ -->
+<!-- $Date: 2026-03-21 17:51:29 -0700 (Sat, 21 Mar 2026) $ $Author: joe $ $Revision: 29672 $ -->

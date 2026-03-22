@@ -103,12 +103,9 @@ Denna webbplats är värd på Orion. Checka ut  [Orion](https://www.sunstarsys.c
 - [Spanska](sitemap.html.es)
 - [Tyska](sitemap.html.de)
 - [Franska](sitemap.html.fr)
-- [Portugisiska](sitemap.html.pt-BR)
 - [Ryska](sitemap.html.ru)
 - [kinesiska](sitemap.html.zh-TW)
 - [Koreanska](sitemap.html.ko)
-- [Japanska](sitemap.html.ja)
-- [arabiska](sitemsp.html.ar)
 - [Hebreiska](sitemap.html.he)
 - [Svenska](sitemap.html.sv).
 
@@ -165,4 +162,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-03-20 19:00:45 -0700 (Fri, 20 Mar 2026) $ $Author: joe $ $Revision: 29531 $ -->
+<!-- $Date: 2026-03-21 17:51:29 -0700 (Sat, 21 Mar 2026) $ $Author: joe $ $Revision: 29672 $ -->
