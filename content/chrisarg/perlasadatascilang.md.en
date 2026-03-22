@@ -4,6 +4,12 @@ Status: finished
 Dependencies: *.md.en
 Categories: Perl
 
+<div class="right">
+
+![Data Science](perlasadatascilang.page/datasci)
+
+</div>
+
 > **Series introduction — Post 0 of N**
 > This post is the first in a series documenting the co-development of a vector-database engine (VDBE) written entirely in Perl5 + PDL.  Later posts walk through every component of that engine; this one sets the stage. The main impetus for this series is NOT to have you dump your VDBE as I make no performance claims, but to show how one may use Perl to achieve pretty much anything you can achieve with any other language, but smarter!
 
