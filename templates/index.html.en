@@ -68,7 +68,7 @@
 {% endif %}{% endif %}
 		</h3>
     </div>
-
+    <!--#config errmsg="" -->
     <div id="comments" class="card-body">
       {% for c in comments %}
       {% if c.closed %}
