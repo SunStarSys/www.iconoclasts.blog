@@ -32,10 +32,17 @@ our @patterns = (
 # the "memoize" view corrects most of the speed problems with quick_deps == 3:
 
   [qr!/(index|sitemap)\.html!, sitemap => {
-#    compress   => 1,
-    nest       => 1,
+    nest            => 1,
     markdown_search => 1,
-    facts      => $facts,
+    facts           => $facts,
+  }],
+
+  [qr!\.page/comment\w+\.md[^/]*$!, snippet => {
+    template      => "comment.html.en",
+    view          => [qw/comment/],
+    archive_root  => "/archives",
+    category_root => "/categories",
+    facts         => $facts,
   }],
 
   # don't build markdown files within attachment dirs
@@ -45,7 +52,6 @@ our @patterns = (
     template        => "blog.html",
     view            => [qw/asymptote langify_template single_narrative/],
     preprocess      => 1,
-#    compress        => 1,
     facts           => $facts,
     archive_root    => "/archives",
     category_root   => "/categories",
@@ -56,7 +62,6 @@ our @patterns = (
   [qr!/index.md[^/]*$!, langify_template => {
     view            =>[qw/single_narrative/],
     template        => "main.html",
-#    compress        => 1,
     preprocess      => 1,
     facts           => $facts,
     markdown_search => 1,
@@ -64,7 +69,6 @@ our @patterns = (
 
   [qr!^/(categories|archives)/.*\.md[^/]*!, set_template_from_capture => {
     view       => [qw/ssi snippet single_narrative/],
- #   compress   => 1,
     facts      => $facts,
   }],
 
@@ -79,12 +83,11 @@ our @patterns = (
   [qr!\.(?:bib|tt)\b[^/]*$!, skip => {}],
 
   # transform yml to json
-  [qr!\.ya?ml\b[^/]*$!, yml2ext => { }],#compress => 1 }],
+  [qr!\.ya?ml\b[^/]*$!, yml2ext => { }],
 
   [qr!\.md[^/]*$!, langify_template => {
     view            => [qw/single_narrative/],
     template        => "main.html",
-  #  compress        => 1,
     preprocess      => 1,
     facts           => $facts,
     markdown_search => 1,
