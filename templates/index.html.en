@@ -74,7 +74,7 @@
       {% if c.closed %}
       {% else %}
 		<article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
-		<!--#include virtual="{{path|basename:0}}.page/comment.html{{lang}}" -->
+		<!--#include virtual="{{path|basename:0}}.page/{{c.key}}.html{{lang}}" -->
         </article>
       {% endif %}
       {% endfor %}
