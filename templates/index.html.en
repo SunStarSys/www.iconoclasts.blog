@@ -73,9 +73,7 @@
       {% for c in comments %}
       {% if c.closed %}
       {% else %}
-		<article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
-		<!--#include virtual="{{path|basename:0}}.page/{{c.key}}.html{{lang}}" -->
-        </article>
+        <!--#include virtual="{{path|basename:0}}.page/{{c.key}}.html{{lang}}" -->
       {% endif %}
       {% endfor %}
     </div>

@@ -1,3 +1,4 @@
+      <article id="article-{{key}}" {% if muted %}class="text-muted"{% endif %}>
         <header>
           <h6 class="card-title" id="{{key}}">
             <a href="#{{key}}-link" class="reference-link">{{headers.title}}</a>
@@ -24,3 +25,4 @@
           <hr>
           <p>&nbsp;</p>
         </small>
+      </article>
