@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=28244
+status: verified=29877
 Categories: Orion
 Dependencies: *.md.en
 
@@ -176,6 +176,15 @@ Moreover, you have the full power of Subversion to checkout a consistent snapsho
 Questions like "How did the conceptual evolution and adoption of KPI happen within the actual KMS records of the firm?" are well within your grasp with this approach.
 
 How would you address this with your current KMS?
+
+Moreover, imagine this workflow with Orion:
+
+1. You use Claude to write code.
+2. You keep a git-svn clone of your Orion wiki sources in `/foo`.
+3. You show `/foo` to Claude and have it git-commit several markdown/yaml files documenting your code's API.
+4. You run `git svn dcommit` to push those changes to Orion for publication on your corporate wiki!
+
+<span class="text-success">How could the process be more effective (and less painless) for your firm?</span>
 
 ### Intelligent Content Creation & Enrichment
 
