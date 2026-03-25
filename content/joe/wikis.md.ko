@@ -4,7 +4,7 @@ categories: 오리온
 dependencies: '*.md.ko'
 keywords: 위키, 지식, 킬로미터, orion, subversion
 published: ~
-status: 확인=29877
+status: 확인=30100
 title: 지식 관리 시스템 위키
 ---
 
@@ -22,6 +22,7 @@ mindmap
     (Wiki Platforms)
       ((Orion))
 	  [Confluence]
+	  [Notion]
     (Version Control)
 	  [Uses]
         Content Curation
@@ -177,7 +178,7 @@ KMS에서 제어되는 콘텐츠에 대한 사용자 고유의 액세스 권한�
 
 또한 Subversion의 모든 기능을 통해 *entire wiki*의 일관된 스냅샷(개정)을 체크아웃하여 **LLM 기술 기반의 역사적 연구**를 수행할 수 있습니다!
 
-다음과 같은 질문 "회사의 실제 KMS 기록 내에서 KPI의 개념적 발전과 채택은 어떻게 이루어졌습니까?" 이 접근법에 대해 잘 알고 있습니다.
+다음과 같은 질문 "회사의 실제 KMS 기록 내에서 OKR의 개념적 진화와 채택은 어떻게 이루어졌습니까?" 이 접근법에 대해 잘 알고 있습니다.
 
 현재 KMS로 이 문제를 어떻게 해결하시겠습니까?
 

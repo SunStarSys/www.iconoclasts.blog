@@ -4,7 +4,7 @@ categories: Orion
 dependencies: '*.md.sv'
 keywords: wiki, kunskap, kms, orion, subversion
 published: ~
-status: verifierad=29877
+status: verifierad=30100
 title: Wikis i kunskapshanteringssystem
 ---
 
@@ -22,6 +22,7 @@ mindmap
     (Wiki Platforms)
       ((Orion))
 	  [Confluence]
+	  [Notion]
     (Version Control)
 	  [Uses]
         Content Curation
@@ -177,7 +178,7 @@ Vinster? <span class="text-success">Okomplicerade kontroller av kostnader, effek
 
 Dessutom har du den fulla kraften i Subversion för att kolla in en konsekvent ögonblicksbild (revision) av din *hela wiki* för att göra **historisk forskning som drivs av LLM-teknik**!
 
-Frågor som "Hur skedde den konceptuella utvecklingen och antagandet av KPI inom företagets faktiska KMS-register?" är väl inom räckhåll med detta tillvägagångssätt.
+Frågor som "Hur skedde den konceptuella utvecklingen och antagandet av OKR inom företagets faktiska KMS-register?" är väl inom räckhåll med detta tillvägagångssätt.
 
 Hur skulle du hantera detta med ditt nuvarande KMS?
 

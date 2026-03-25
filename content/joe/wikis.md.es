@@ -4,7 +4,7 @@ categories: Orión
 dependencies: '*.md.es'
 keywords: wiki, conocimiento, kms, orion, subversión
 published: ~
-status: verificado=29877
+status: verificado=30100
 title: Wikis en Sistemas de Gestión del Conocimiento
 ---
 
@@ -22,6 +22,7 @@ mindmap
     (Wiki Platforms)
       ((Orion))
 	  [Confluence]
+	  [Notion]
     (Version Control)
 	  [Uses]
         Content Curation
@@ -177,7 +178,7 @@ Interactúe con la IA como lo haría normalmente, en su propia máquina, según 
 
 Además, usted tiene todo el poder de Subversion para comprobar una instantánea consistente (revisión) de su *entire wiki* para hacer **investigación histórica con tecnología LLM**!
 
-Preguntas como "¿Cómo se produjo la evolución conceptual y la adopción de KPI dentro de los registros reales de KMS de la empresa?" están a su alcance con este enfoque.
+Preguntas como "¿Cómo se produjo la evolución conceptual y la adopción de OKR dentro de los registros reales de KMS de la empresa?" están a su alcance con este enfoque.
 
 ¿Cómo abordaría esto con su KMS actual?
 
