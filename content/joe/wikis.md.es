@@ -4,7 +4,7 @@ categories: Orión
 dependencies: '*.md.es'
 keywords: wiki, conocimiento, kms, orion, subversión
 published: ~
-status: verificado=30100
+status: verificado=30121
 title: Wikis en Sistemas de Gestión del Conocimiento
 ---
 
@@ -167,6 +167,8 @@ Ese proceso manipulado por jurado está plagado de problemas de rendimiento, seg
 ¿Se puede decir desnormalización de datos SNAFU?  ¡Si!
 
 ##### Enfoque a la carta
+
+<span class="text-success">Traiga su propia IA (BYOAI)</span>
 
 Con Orion, todos los contextos de información por usuario están disponibles como archivos y carpetas descargables específicos del usuario en una desprotección de Subversion almacenada en el usuario.'hardware local.
 

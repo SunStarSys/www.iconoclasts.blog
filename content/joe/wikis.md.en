@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=30100
+status: verified=30121
 Categories: Orion
 Dependencies: *.md.en
 
@@ -163,6 +163,8 @@ That jury-rigged process is riddled with performance, security, and reliability 
 Can you say data denormalization SNAFU?  I can!
 
 ##### The à la carte Approach
+
+<span class="text-success">Bring Your Own AI (BYOAI)</span>
 
 With Orion, all of the per-user information contexts are available as user-specific downloadable files and folders in a Subversion checkout stored on the user's local hardware.
 

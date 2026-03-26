@@ -4,7 +4,7 @@ categories: 奧里昂
 dependencies: '*.md.zh-TW'
 keywords: wiki、知識、kms、orion、subversion
 published: ~
-status: 驗證 =30100
+status: 驗證 =30121
 title: 知識管理系統中的 Wiki
 ---
 
@@ -167,6 +167,8 @@ LLM 技術 (如 GPT 系列、Claude、Gemini、Llama 變體等大型語言模型
 您能說資料去標準化 SNAFU 嗎？行！
 
 ##### à la carte 方法
+
+<span class="text-success">自備 AI (BYOAI)</span>
 
 使用 Orion 時，所有個別使用者資訊相關資訊環境在使用者儲存的 Subversion 取出中，可作為使用者特定的可下載檔案和資料夾使用's 本機硬體。
 

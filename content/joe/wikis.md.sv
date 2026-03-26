@@ -4,7 +4,7 @@ categories: Orion
 dependencies: '*.md.sv'
 keywords: wiki, kunskap, kms, orion, subversion
 published: ~
-status: verifierad=30100
+status: verifierad=30121
 title: Wikis i kunskapshanteringssystem
 ---
 
@@ -167,6 +167,8 @@ Den juryn-riggade processen är fylld med prestanda, säkerhet och tillförlitli
 Kan du säga dataavnormalisering SNAFU?  Ja, det kan jag!
 
 ##### En à la carte-strategi
+
+<span class="text-success">Använd egen AI (BYOAI)</span>
 
 Med Orion är alla informationskontexter per användare tillgängliga som användarspecifika nedladdningsbara filer och mappar i en Subversion-kassa som lagras på användaren'lokal hårdvara.
 
