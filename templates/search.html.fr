@@ -206,6 +206,15 @@
   <pre class="text-primary">{{ translation }}</pre>
   {% endif %}
   {% endifequal %}
+  {% ifequal specials "weblog=" %}
+  {% if weblog.1 %}
+<div id="meta"><pre>Accès réussis = {{hits}}. Erreurs : 4xx = {{e4xx}}, 5xx = {{e5xx}}.
+Durée (µs) : Total = {{tdur}}, Moyenne = {{meandur}}, StdDev = {{stddur}}, Médiane = {{meddur}}, Max = {{maxdur}}, Min = {{mindur }}.
+Bande passante (ko) : Total = {{ tbw }}, Moyenne = {{meanbw}}, StdDev = {{stdbw}}, Médiane = {{medbw}}, Max = {{maxbw}}, Min = {{minbw}}.</pre></div>
+{% for w in weblog %}{{ w|safe }}<br>
+{% endfor %}
+  {% endif %}
+  {% endifequal %}
 
 {% else %}
   <form method="POST" class="form-inline row">

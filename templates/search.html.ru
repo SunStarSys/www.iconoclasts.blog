@@ -206,6 +206,15 @@
   <pre class="text-primary">{{ translation }}</pre>
   {% endif %}
   {% endifequal %}
+  {% ifequal specials "weblog=" %}
+  {% if weblog.1 %}
+<div id="meta"><pre>Попадания = {{hits}}. Ошибки: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
+Длительность (мкс):  Всего = {{tdur}}, среднее значение = {{meandur}}, StdDev = {{stddur}}, медиана = {{meddur}}, Макс = {{maxdur}}, мин. = {{mindur }}.
+Пропускная способность (КБ): Итого = {{ tbw }}, среднее значение = {{meanbw}}, StdDev = {{stdbw}}, медиана = {{medbw}}, Макс = {{maxbw}}, мин. = {{minbw}}.</pre></div>
+{% for w in weblog %}{{ w|safe }}<br>
+{% endfor %}
+  {% endif %}
+  {% endifequal %}
 
 {% else %}
   <form method="POST" class="form-inline row">

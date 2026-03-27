@@ -206,6 +206,15 @@
   <pre class="text-primary">{{ translation }}</pre>
   {% endif %}
   {% endifequal %}
+  {% ifequal specials "weblog=" %}
+  {% if weblog.1 %}
+<div id="meta"><pre>Träffar = {{hits}}. Fel: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
+Varaktighet (μs): Totalt = {{tdur}}, medelvärde = {{meandur}}, StdDev = {{stddur}}, Median = {{meddur}}, Max = {{maxdur}}, Min = {{mindur }}.
+Bandbredd (kbyte): Totalt = {{ tbw }}, medelvärde = {{meanbw}}, StdDev = {{stdbw}}, Median = {{medbw}}, Max = {{maxbw}}, Min = {{minbw}}.</pre></div>
+{% for w in weblog %}{{ w|safe }}<br>
+{% endfor %}
+  {% endif %}
+  {% endifequal %}
 
 {% else %}
   <form method="POST" class="form-inline row">
