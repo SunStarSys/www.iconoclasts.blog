@@ -207,7 +207,7 @@
   {% endif %}
   {% endifequal %}
   {% ifequal specials "weblog=" %}
-  {% if weblog.1 %}
+  {% if weblog.0 %}
   <form method="POST" class="form-inline row">
    <div id="meta"><pre>조회수 = {{hits}}. 오류: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 기간(μs):  합계 = {{tdur}}, 평균 = {{meandur}}, StdDev = {{stddur}}, 중앙값 = {{meddur}}, 최대 = {{maxdur}}, 최소 = {{mindur }}.
