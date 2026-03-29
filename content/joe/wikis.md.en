@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=30121
+status: verified=30509
 Categories: Orion
 Dependencies: *.md.en
 
@@ -114,17 +114,17 @@ In true VCS-backed wikis, you can branch, merge, or experiment without affecting
 
 ### How It Looks in Fresh-Start Tools (2026 Landscape)
 
-0. [Orion](https://sunstarsys.com/orion/) &mdash; Everything is backed by [Subversion](https://subversion.apache.org/); all clients have direct access to the Subversion version control service.  Unlimited immutable sequentially versioned records with easy copy / branch / merge / revert / rollback functionality.
+1. [Orion](https://sunstarsys.com/orion/) &mdash; Everything is backed by [Subversion](https://subversion.apache.org/); all clients have direct access to the Subversion version control service.  Unlimited immutable sequentially versioned records with easy copy / branch / merge / revert / rollback functionality.
 
-1. Notion — Solid page version history with timelines, side-by-side diffs, and restore options. Retention varies by plan (7 days free → 30/90 days paid → indefinite on higher tiers). Great for most teams, but not infinite by default.
+2. Notion — Solid page version history with timelines, side-by-side diffs, and restore options. Retention varies by plan (7 days free → 30/90 days paid → indefinite on higher tiers). Great for most teams, but not infinite by default.
 
-2. Slite — Clean, reliable version history with easy rollback and change previews. Strong emphasis on keeping things simple and trustworthy — history helps verify edits without clutter.
+3. Slite — Clean, reliable version history with easy rollback and change previews. Strong emphasis on keeping things simple and trustworthy — history helps verify edits without clutter.
 
-3. Confluence (if you lean enterprise) — One of the strongest: indefinite version history on most plans, detailed diffs, labels on versions, and restore without losing newer ones. Excellent for compliance/scale.
+4. Confluence (if you lean enterprise) — One of the strongest: indefinite version history on most plans, detailed diffs, labels on versions, and restore without losing newer ones. Excellent for compliance/scale.
 
-4. Tettra / Guru — Unlimited version history across plans, often with verification workflows tied to versions (e.g., "verified on this date/version"). Guru cards track changes tightly to maintain accuracy.
+5. Tettra / Guru — Unlimited version history across plans, often with verification workflows tied to versions (e.g., "verified on this date/version"). Guru cards track changes tightly to maintain accuracy.
 
-5. Bloomfire / others — Robust versioning with engagement insights (who viewed/edited when), helping spot drift.
+6. Bloomfire / others — Robust versioning with engagement insights (who viewed/edited when), helping spot drift.
 
 In a modern KMS starting fresh, version control isn't just a "nice-to-have wiki feature" — it's foundational for trustworthy, evolvable knowledge. Without it, collaboration turns into chaos; with it, your wiki becomes a durable, self-healing repository that supports AI layers (e.g., semantic search pulling from correct historical context) and survives team changes.
 
