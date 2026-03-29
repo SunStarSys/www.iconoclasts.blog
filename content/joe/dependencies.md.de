@@ -65,7 +65,7 @@ Ganz komplex, auch für eine kleine Website wie diese! Viele Kantenschnittmengen
 
 Beachten Sie auch die interne, im Wesentlichen isolierte Vernetzung der Elemente in `/Kategorien/*/*` und `/archives/2022/11/*`. Die einzigen externen Abhängigkeiten beinhalten nicht archivierte Inhalte in `/Tag/*`. Das ist durch Design &mdash; Die archivierten Essays sollten sich nur *adiabatisch* ändern, vielleicht nur für Anpassungen ihrer `Kategorie` Kopfzeilen Keine dieser Änderungen wirkt sich wesentlich auf den bereits vorhandenen Inhalt aus.'t verfolgen Sie es in `%path::Abhängigkeiten`.
 
-Natürlich unsere [Orion Enterprise Wiki](/orion/) Es gab nie Probleme mit zyklischen Abhängigkeiten.
+Natürlich unsere [Orion Enterprise Wiki](https://sunstarsys.com/orion/) Es gab nie Probleme mit zyklischen Abhängigkeiten.
 
 ### Isn'Sind das nur Hyperlinks?
 

@@ -65,7 +65,7 @@ Muy complejo, incluso para un sitio web pequeño como este! Muchas interseccione
 
 Observe también la interconexión interna, esencialmente aislada de los elementos en `/categorías/*/*` y `/archives/2022/11/*`. Las únicas dependencias externas implican contenido no archivado en `/ensayos/*`. Esto es por diseño &mdash; los ensayos archivados solo deben cambiar *adiabéticamente*, tal vez solo para ajustes en sus `Categoría` encabezados. Ninguno de esos cambios afecta materialmente el contenido preexistente, por lo que no't rastrearlo en `%path::dependencias`.
 
-Por supuesto, nuestro [Orion Enterprise Wiki](/orion/) Nunca ha tenido problemas para lidiar con las dependencias cíclicas.
+Por supuesto, nuestro [Orion Enterprise Wiki](https://sunstarsys.com/orion/) Nunca ha tenido problemas para lidiar con las dependencias cíclicas.
 
 ### Esn'¿Esto es solo sobre hipervínculos?
 

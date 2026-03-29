@@ -65,7 +65,7 @@ title: <em>Smart Content Dependency Management ™</em> 的相關資訊是什麼
 
 另請注意下列元素的內部、基本上隔離的互連性：`/ 類別 /*/*` 與`/archives/2022/11/*`。唯一外部相依性涉及未封存的內容`繁體中文`。這是根據設計&mdash; 封存的文章應僅變更 *adiabatically*，可能僅用於調整其內容`分類` 標頭。這些變更都不會對預先存在的內容造成重大影響，因此我們不會'追蹤於`%path::dependencies`.
 
-當然，我們的[Orion Enterprise Wiki](/orion/) 處理循環相依性從未發生過問題。
+當然，我們的[Orion Enterprise Wiki](https://sunstarsys.com/orion/) 處理循環相依性從未發生過問題。
 
 ### Isn'這只是關於超連結？
 
@@ -190,4 +190,4 @@ Syntax:
 #links img { width:100% }
 </style>
 
-<!-- $Date: 2026-03-19 10:24:07 -0700 (Thu, 19 Mar 2026) $ $Author: joe $ $Revision: 29217 $  $Id: dependencies.md.en 29217 2026-03-19 17:24:07Z joe $ -->
+<!-- $Date: 2026-03-29 05:02:33 -0700 (Sun, 29 Mar 2026) $ $Author: $ $Revision: 30843 $  $Id: dependencies.md.en 30843 2026-03-29 12:02:33Z  $ -->

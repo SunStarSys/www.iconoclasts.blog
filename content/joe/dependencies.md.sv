@@ -65,7 +65,7 @@ Ganska komplicerat, även för en liten webbplats som denna! Många kantskärnin
 
 Notera också den interna, väsentligen isolerade sammankopplingen av elementen i `/kategorier/*/*` och `/archives/2022/11/*`. De enda externa beroendena involverar icke-arkiverat innehåll i `/essays/*`. Detta är genom design &mdash; De arkiverade uppsatserna bör endast ändras *adiabatiskt* kanske enbart för justeringar av deras `Kategori` rubriker. Ingen av dessa förändringar påverkar väsentligt det redan existerande innehållet, så vi't spåra den i `%path::beroenden`.
 
-Självklart vår [Wiki för Orion Enterprise](/orion/) Har aldrig haft problem med att hantera cykliska beroenden.
+Självklart vår [Wiki för Orion Enterprise](https://sunstarsys.com/orion/) Har aldrig haft problem med att hantera cykliska beroenden.
 
 ### Isn'Det här handlar om hyperlänkar.
 

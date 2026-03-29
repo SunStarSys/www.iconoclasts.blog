@@ -65,7 +65,7 @@ Assez complexe, même pour un petit site comme celui-ci ! De nombreuses intersec
 
 Notez également l'interconnexion interne, essentiellement isolée, des éléments dans `/Catégories/*/*` et `/archives/2022/11/*`. Les seules dépendances externes impliquent un contenu non archivé dans `/essais/*`. C'est par design &mdash; les essais archivés ne devraient changer que *adiabatically*, peut-être uniquement pour des ajustements à leur `Catégorie` en-têtes. Aucun de ces changements n'affecte matériellement le contenu préexistant, nous ne'le suivre dans `%path : :dépendances`.
 
-Bien sûr, notre [Wiki d'Orion Enterprise](/orion/) n'a jamais eu de problèmes avec les dépendances cycliques.
+Bien sûr, notre [Wiki d'Orion Enterprise](https://sunstarsys.com/orion/) n'a jamais eu de problèmes avec les dépendances cycliques.
 
 ### Isn'Est-ce à propos des hyperliens ?
 
