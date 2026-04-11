@@ -76,7 +76,7 @@
               $("#watch").css("display", "inline");
       }
       catch (e) {
-
+          alert(e);
       }
   }
 </script>
