@@ -23,7 +23,7 @@
 	<link href="/editor.md/lib/codemirror/theme/solarized.css" rel="stylesheet" media="screen">
 	<link href="/css/local.css" rel="stylesheet" media="screen">
     <link href="/images/favicon.png" rel="icon">
-    <script src="/js/bootstrap.bundle.min.js></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
 	<script src="/editor.md/js/jquery.min.js"></script>
     {% block header %}{% endblock %}
     {% block analytics %}
