@@ -85,13 +85,7 @@ Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com
 
 - [Triple producto de autofunciones y geometría espectral](/joe/triple-products) por @joe=; publicado en SSRN,
 
-- [Rendimiento de aplicaciones](/joe/performance) &mdash; un ejemplo práctico: desde un cuello de botella observable hasta una resolución eficaz,
-
-- [Seguridad de la información](/joe/infosec) &mdash; abstracción de los conceptos básicos conduce a una amplia aplicabilidad y claridad en el mundo real,
-
-- [Léxico sellado para Perl 7](/joe/perl7-sealed-lexicals) &mdash; agregar <span class="text-info">:sellado</span> a una definición de función y disfrutar de la velocidad adicional de las búsquedas de métodos de tiempo de compilación para todos sus léxicos mecanografiados,
-
-- [Git y no repudio, revisado](/joe/git-and-non-repudiation) &mdash; ¡Soluciones actualizadas para 2025!
+- [Léxico sellado para Perl 7](/joe/perl7-sealed-lexicals) &mdash; agregar <span class="text-info">:sellado</span> a una definición de función y disfrute de la velocidad adicional de las consultas de método de tiempo de compilación para todos sus léxicos mecanografiados.
 
 &nbsp;
 
@@ -107,6 +101,7 @@ Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com
 - [Chino](sitemap.html.zh-TW)
 - [Coreano](sitemap.html.ko)
 - [Hebreo](sitemap.html.he)
+- [Árabe](sitemap.html.ar)
 - [Sueco](sitemap.html.sv).
 
 &nbsp;

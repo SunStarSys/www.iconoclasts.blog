@@ -85,13 +85,7 @@ Denna webbplats är värd på Orion. Checka ut  [Orion](https://www.sunstarsys.c
 
 - [Trippelprodukter av Eigenfunktioner och spektral geometri](/joe/triple-products) av @joe=; publicerad på SSRN,
 
-- [Applikationsprestanda](/joe/performance) &mdash; Ett fungerande exempel: från en observerbar flaskhals till en effektiv lösning.
-
-- [Informationssäkerhet](/joe/infosec) &mdash; abstraktion av de grundläggande begreppen leder till bred verklig tillämplighet och klarhet,
-
-- [Förseglade Lexicals för Perl 7](/joe/perl7-sealed-lexicals) &mdash; summera <span class="text-info">:förseglad</span> till en funktionsdefinition och njuta av den extra hastigheten av kompileringstid metoduppslagningar för alla dess typangivna lexikaler,
-
-- [Git och Non-repudiation, Revisited](/joe/git-and-non-repudiation) &mdash; lösningar uppdaterade för 2025!
+- [Förseglade Lexicals för Perl 7](/joe/perl7-sealed-lexicals) &mdash; summera <span class="text-info">:förseglad</span> till en funktionsdefinition och njut av den extra hastigheten av kompileringstidsmetoduppslagningar för alla dess typangivna lexikaler.
 
 &nbsp;
 
@@ -107,6 +101,7 @@ Denna webbplats är värd på Orion. Checka ut  [Orion](https://www.sunstarsys.c
 - [kinesiska](sitemap.html.zh-TW)
 - [Koreanska](sitemap.html.ko)
 - [Hebreiska](sitemap.html.he)
+- [arabiska](sitemap.html.ar)
 - [Svenska](sitemap.html.sv).
 
 &nbsp;
@@ -162,4 +157,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-03-21 17:51:29 -0700 (Sat, 21 Mar 2026) $ $Author: joe $ $Revision: 29672 $ -->
+<!-- $Date: 2026-03-29 18:33:20 -0700 (Sun, 29 Mar 2026) $ $Author: joe $ $Revision: 30908 $ -->
