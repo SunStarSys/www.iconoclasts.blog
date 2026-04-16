@@ -32,23 +32,17 @@ where Perl is present and a full Python stack is not.  A data pipeline written i
 
 ### Portability from the data centre to the edge
 
-The same script that analyses a terabyte dataset on a 256-core HPC node can, with minor configuration changes, run on a Raspberry Pi, an IoT gateway, or an embedded
-controller.  Perl's single-binary deployment model and low runtime overhead make it a genuine "write once, run anywhere" language in environments where Python's
-interpreter overhead or Julia's JIT warm-up time would be unacceptable.
+The same script that analyses a terabyte dataset on a 256-core HPC node can, with minor configuration changes, run on a Raspberry Pi, an IoT gateway, or an embedded controller.  Perl's single-binary deployment model and low runtime overhead make it a genuine "write once, run anywhere" language in environments where Python's interpreter overhead or Julia's JIT warm-up time would be unacceptable.
 
 If you are planning to deploy anywhere and _everywhere_ Perl5 is your obvious choice.
 
 ### A heritage built on text and data munging
 
-Perl was designed from the ground up for text processing, regular expressions, and "glue" work between system components.  In practice, scientific data pipelines are
-dominated not by numerical computation but by *data wrangling*: reading heterogeneous file formats, cleaning messy records, joining datasets from different sources, and
-routing results to downstream consuming components.
+Perl was designed from the ground up for text processing, regular expressions, and "glue" work between system components.  In practice, scientific data pipelines are dominated not by numerical computation but by *data wrangling*: reading heterogeneous file formats, cleaning messy records, joining datasets from different sources, and routing results to downstream consuming components.
 
-Perl's regex engine remains among the most
-powerful available, and one-liners can accomplish data-cleaning tasks that would require helper libraries in other languages.
+Perl's regex engine remains among the most powerful available, and one-liners can accomplish data-cleaning tasks that would require helper libraries in other languages.
 
-If you are in the domain of scientific computing,
-you may have come across the notion of *workflow management systems* and *reproducible research*. They both rely on the execution of end to end data transformations and workflow to eliminate the manual, error-prone and tedious point and click activities that analysts and scientists have to do to morph their data into insights and inferences respectively.
+If you are in the domain of scientific computing, you may have come across the notion of *workflow management systems* and *reproducible research*. They both rely on the execution of end to end data transformations and workflow to eliminate the manual, error-prone and tedious point and click activities that analysts and scientists have to do to morph their data into insights and inferences respectively.
 
 In this brave new world, Perl5's rich history allows it to shine both as a component of workflows, or as a the application language that implements these workflows.
 
@@ -173,9 +167,10 @@ The features below are drawn directly from the official release notes (`perl5360
 #### Longstanding features (pre-5.36)
 
 - **`say` and `state`** *(since 5.10)* — `say` is `print` with an implicit newline; `state` declares a lexical that persists across invocations of its enclosing sub (a lightweight memoisation primitive).
+
 - **First-class references and closures** — anonymous subs, closures, and reference construction are fundamental and have been stable since Perl 5.
-- **`use constant`** or the CPAN `Readonly` module for named constants;
-  `Readonly` enforces deep immutability that `use constant` does not.
+
+- **`use constant`** or the CPAN `Readonly` module for named constants; `Readonly` enforces deep immutability that `use constant` does not.
 
 Combined with [`perlbrew`](https://perlbrew.pl/) or [`plenv`](https://github.com/tokuhirom/plenv) for version management and [`carton`](https://metacpan.org/pod/Carton) for reproducible dependency snapshots, a modern Perl project looks and feels like a first-class software engineering effort.
 
@@ -226,7 +221,9 @@ R occupies a curious middle ground.  Like Perl, it is a dynamic, interpreted lan
 | `%hash` | named `list()` |
 | Reference (`\@arr`) | R does not use explicit references; copy-on-modify semantics instead |
 
-But R's *workhorse* type, i.e.  the **atomic vector** has no straightforward Perl counterpart. An R atomic vector is a contiguous, homogeneously typed block of memory — exactly the layout that a CPU cache rewards.  Every built-in scalar in R is actually a length-1 atomic vector; there is no "bare scalar" outside of atomic vectors.  This design choice means that R code naturally operates on vectors of millions of doubles with BLAS-level throughput, without the user writing a single loop or allocating a special "array" object.
+But R's *workhorse* type, i.e.  the **atomic vector** has no straightforward Perl counterpart. An R atomic vector is a contiguous, homogeneously typed block of memory — exactly the layout that a CPU cache rewards.  Every built-in scalar in R is actually a length-1 atomic vector; there is no "bare scalar" outside of atomic vectors.
+
+This design choice means that R code naturally operates on vectors of millions of doubles with BLAS-level throughput, without the user writing a single loop or allocating a special "array" object.
 
 R's atomic types are:
 
@@ -247,7 +244,7 @@ R also defines higher-level structures built on atomic vectors:
   tabular data in R.
 - **factor** — an integer vector with a `levels` attribute; encodes categorical data.
 
-The lesson: R's computing performance when used in statistical and data science applications flows directly from its contiguous atomic vectors.  Perl's equivalent path to performance is an extension (which also is a stand alone `matlab` like enviroment), the Perl Data Language [`PDL`](https://pdl.perl.org/).
+The lesson: R's computing performance when used in statistical and data science applications flows directly from its contiguous atomic vectors. Perl's equivalent path to performance is an extension (which also is a stand alone `matlab` like enviroment), the Perl Data Language [`PDL`](https://pdl.perl.org/).
 
 ---
 
@@ -306,6 +303,9 @@ The table below maps every commonly used R type to its closest Perl and PDL coun
 | `logical` (length-1) | `$flag = 1` / `$flag = 0` | `byte(1)` | Perl uses truthiness; PDL uses 0/1 byte |
 | `double` vector | `@arr = (1.1, 2.2, 3.3)` | `double(1.1, 2.2, 3.3)` | PDL: contiguous; `@arr`: pointer array |
 | `integer` vector | `@arr = (1, 2, 3)` | `long(1, 2, 3)` | |
+
+| R type | Perl equivalent | PDL equivalent | Notes |
+|---|---|---|---|
 | `logical` vector | `@flags = (1, 0, 1)` | `byte(1, 0, 1)` | |
 | `complex` vector | — (no built-in) | `cdouble(...)` | Perl needs `Math::Complex`; PDL has native support |
 | `character` vector | `@strs = ('a','b')` | — (not numeric) | PDL operates on numbers only |
@@ -320,6 +320,9 @@ The table below maps every commonly used R type to its closest Perl and PDL coun
 | `matrix` (2-D) | array-of-arrays `@aoa` | 2-D ndarray `pdl([[...],[...]])` | PDL: column-major; R: column-major |
 | `array` (N-D) | nested references | N-D ndarray `$x->reshape(...)` | |
 | `data.frame` | `%hash` of `@arrays` | 2-D ndarray (numeric cols) + Perl hash (mixed) | No single PDL type maps exactly |
+
+| R type | Perl equivalent | PDL equivalent | Notes |
+|---|---|---|---|
 | `factor` | hash lookup table + `@indices` | `long` ndarray + Perl `@levels` array | |
 | `environment` | `%hash` or package namespace | — | |
 | `function` / closure | `sub { ... }` / closure | — | PDL PP defines compiled kernels |
@@ -341,8 +344,7 @@ However the combination of Perl+PDL+R (with the latter used as a component, or [
 
 ## 5. Road Map: What the Rest of This Series Covers <a id="road-map"></a>
 
-This series documents the construction of a **vector database engine** built in Perl5 + PDL from scratch.  Vector databases underpin modern retrieval-augmented generation (RAG) pipelines, semantic search, and nearest-neighbour recommendation systems.  Implementing one from first principles is an excellent vehicle for demonstrating PDL's numerical capabilities alongside Perl's systems-programming
-strengths.
+This series documents the construction of a **vector database engine** built in Perl5 + PDL from scratch.  Vector databases underpin modern retrieval-augmented generation (RAG) pipelines, semantic search, and nearest-neighbour recommendation systems.  Implementing one from first principles is an excellent vehicle for demonstrating PDL's numerical capabilities alongside Perl's systems-programming strengths.
 
 The directory co-developed alongside these posts contains the following components, each of which will be the subject of one or more dedicated posts that will reference files in a dedicated repository.
 
@@ -389,8 +391,7 @@ K-means clustering is the backbone of the inverted-file index (IVF) approach to 
 
 *File: `compare_kmeans_centroids.pl`*
 
-Full k-means requires all data in memory for every iteration.  Mini-batch k-means trades a small amount of centroid accuracy for a large reduction in memory and
-compute.  This post explores:
+Full k-means requires all data in memory for every iteration.  Mini-batch k-means trades a small amount of centroid accuracy for a large reduction in memory and compute.  This post explores:
 
 - Implementing a true re-sampled mini-batch loop in PDL.
 - Quantifying centroid drift between full and mini-batch variants.
