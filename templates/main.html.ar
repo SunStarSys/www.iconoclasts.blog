@@ -74,6 +74,7 @@
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">اللغة العبرية</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">العربية</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">السويدية</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">البرتغالية</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">التصنيفات</li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">الفئات</a></li>

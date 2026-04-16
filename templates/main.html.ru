@@ -74,6 +74,7 @@
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Иврит</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">Арабский</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">шведский</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">Португальский</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Таксономии</li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Категории</a></li>

@@ -74,6 +74,7 @@
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebreiska</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">arabiska</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Svenska</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">Portugisiska</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Taxonomier</li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Kategorier</a></li>

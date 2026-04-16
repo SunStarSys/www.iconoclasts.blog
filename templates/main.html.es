@@ -74,6 +74,7 @@
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebreo</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">Árabe</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Sueco</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">Portugués</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Taxonomías</li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Categorías</a></li>
