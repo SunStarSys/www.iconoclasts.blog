@@ -8,7 +8,7 @@ status: опубликовано
 title: Для иконоборцев,
 ---
 
-<div id="news" class=" float-lg-end">
+<div id="news" class=" float-lg right">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Иконоборчество</a></div>
 
@@ -157,4 +157,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-03-29 18:33:20 -0700 (Sun, 29 Mar 2026) $ $Author: joe $ $Revision: 30908 $ -->
+<!-- $Date: 2026-04-15 14:35:36 -0700 (Wed, 15 Apr 2026) $ $Author: $ $Revision: 31412 $ -->

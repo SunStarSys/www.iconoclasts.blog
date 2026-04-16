@@ -8,7 +8,7 @@ status: publicado
 title: De, Por y Para Iconoclastas
 ---
 
-<div id="news" class=" float-lg-end">
+<div id="news" class=" float-lg right">
   <div class="card border-success" style="max-width:25rem;background-color:transparent">
     <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclast</a></div>
 
