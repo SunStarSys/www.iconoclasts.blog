@@ -60,47 +60,18 @@
     <input type="hidden" name="lang" value="{{lang|cut:"."}}">
     <div class="card-header">
       <h3 class="card-title">Kommentarer {% if category_root %}{% if archive_root %} &nbsp;
-        <button type="submit" name="uri"
-                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
-                class="btn btn-sm btn-outline-varning">
+        <button type="submit" name="uri" value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}" class="btn btn-sm btn-outline-warning">
           Nytt
         </button>
 {% endif %}{% endif %}
-		</h3>
+      </h3>
     </div>
-
-<div id="comments" class="card-body">
+    <!--#config errmsg="" -->
+    <div id="comments" class="card-body">
       {% for c in comments %}
       {% if c.closed %}
       {% else %}
-      <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
-        <header>
-          <h6 class="card-title" id="{{c.key}}">
-            <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
-            av {{c.content|ssi|vcs_author:lang}}
-            på <em><time>{{c.content|ssi|vcs_date:lang}}</time></em>
-            {% if c.muted %}
-            {% else %}
-            {% if c.important %}
-            &nbsp;
-            <span class="badge bg-danger text-white">Viktigt!</span>
-            {% endif %}
-            {% if category_root %}{% if archive_root %}
-			  &nbsp;
-            <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
-                    value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.sida/{{c.key}}.md{{lang}}">
-              Svara
-            </button>
-			{% endif %}{% endif %}
-            {% endif %}
-          </h6>
-        </header>
-        <small>
-          <p class="card-text">{{c.content|removetags:"script"|markdown}}</p>
-          <hr>
-          <p>&nbsp;</p>
-        </small>
-      </article>
+        <!--#include virtual="{{path|basename:0}}.sida/{{c.key}}.html{{lang}}" -->
       {% endif %}
       {% endfor %}
     </div>

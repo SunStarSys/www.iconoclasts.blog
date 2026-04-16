@@ -60,13 +60,11 @@
     <input type="hidden" name="lang" value="{{lang|cut:"."}}">
     <div class="card-header">
       <h3 class="card-title">Comments {% if category_root %}{% if archive_root %} &nbsp;
-        <button type="submit" name="uri"
-                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
-                class="btn btn-sm btn-outline-warning">
+        <button type="submit" name="uri" value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}" class="btn btn-sm btn-outline-warning">
           New
         </button>
 {% endif %}{% endif %}
-		</h3>
+      </h3>
     </div>
     <!--#config errmsg="" -->
     <div id="comments" class="card-body">
