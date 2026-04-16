@@ -102,7 +102,8 @@ title: Для иконоборцев,
 - [Корейский](sitemap.html.ko)
 - [Иврит](sitemap.html.he)
 - [Арабский](sitemap.html.ar)
-- [шведский](sitemap.html.sv).
+- [шведский](sitemap.html.sv)
+- [Португальский (Бразилия)](sitemap.html.pt-BR).
 
 &nbsp;
 
@@ -157,4 +158,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date: 2026-04-15 14:35:36 -0700 (Wed, 15 Apr 2026) $ $Author: $ $Revision: 31412 $ -->
+<!-- $Date: 2026-04-15 19:43:34 -0700 (Wed, 15 Apr 2026) $ $Author: $ $Revision: 31499 $ -->
