@@ -105,6 +105,10 @@
   {% endif %}
 {% endblock %}
 
+<style type="text/css">
+{% ifequal lang ".he" %} .right {float:left}{% endifequal %}"{% ifequal lang ".ar" %}.right {float:left}{% endifequal %}
+</style>
+
 <div class="container theme-showcase" id="content">
   {% block content %}
   <div class="breadcrumbs">
