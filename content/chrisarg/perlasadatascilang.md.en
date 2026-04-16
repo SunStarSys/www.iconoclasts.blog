@@ -23,8 +23,7 @@ Categories: Perl
 
 ## 1. Why Perl5 for Data Science? <a id="why-perl5-for-data-science"></a>
 
-When data scientists discuss language choices the conversation quickly converges on
-Python, R, or Julia.  Perl5 rarely gets a seat at the table — yet it carries a compelling set of traits that deserve a second look. These traits have not materially changed over the years (Perl5 has always been this way!), but unless {# lede #}you have been exposed to the language and learned to appreciate its tercity, rationality, flexibility, expressibility and actually used it to drive your work forward{# lede #}, you would not know these features not only come for free with Perl5, but can help you drive your projects forward.
+When data scientists discuss language choices the conversation quickly converges on Python, R, or Julia.  Perl5 rarely gets a seat at the table — yet it carries a compelling set of traits that deserve a second look. These traits have not materially changed over the years (Perl5 has always been this way!), but unless {# lede #}you have been exposed to the language and learned to appreciate its tercity, rationality, flexibility, expressibility and actually used it to drive your work forward{# lede #}, you would not know these features not only come for free with Perl5, but can help you drive your projects forward.
 
 ### Ubiquity and zero-install deployment
 
@@ -312,6 +311,9 @@ The table below maps every commonly used R type to its closest Perl and PDL coun
 | `character` vector | `@strs = ('a','b')` | — (not numeric) | PDL operates on numbers only |
 | `raw` vector | `pack('C*', @bytes)` | `byte(...)` | |
 | `NA` | `undef` | Bad-value in ndarray | PDL bad-values propagate like R's `NA` |
+
+| R type | Perl equivalent | PDL equivalent | Notes |
+|---|---|---|---|
 | `NULL` | `undef` in list context | — | |
 | `list` | `@array` or reference `\@array` | — | |
 | named `list` | `%hash` or `\%hash` | — | |
