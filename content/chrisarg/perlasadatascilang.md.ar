@@ -1,0 +1,436 @@
+---
+archived: ~
+categories: بيرل
+dependencies: '*.md.ar'
+keywords: pdl,perl5
+published: ~
+status: منتهي
+title: Perl5 كلغة علوم بيانات
+---
+
+<div class="right">
+
+![علوم البيانات](perlasadatascilang.page/datasci).
+
+</div>
+
+> **مقدمة السلسلة — Post 0 of N**
+> هذا المنشور هو الأول في سلسلة توثق التطوير المشترك لمحرك قاعدة بيانات متجه (VDBE) مكتوب بالكامل في Perl5 + PDL.  في وقت لاحق، تمر المشاركات عبر كل مكون من مكونات هذا المحرك ؛ هذا واحد يضع المسرح. الزخم الرئيسي لهذه السلسلة ليس أن تقوم بتفريغ VDBE الخاص بك لأنني لا أقوم بمطالبات الأداء، ولكن لإظهار كيف يمكن للمرء استخدام Perl لتحقيق أي شيء يمكنك تحقيقه بأي لغة أخرى، ولكن أكثر ذكاءً!
+
+---
+
+## جدول المحتويات
+
+[TOC]
+
+---
+
+## 1. لماذا Perl5 لعلوم البيانات؟ <a id="why-perl5-for-data-science"></a>
+
+عندما يناقش علماء البيانات خيارات اللغة، تتقارب المحادثة بسرعة على بايثون أو R أو جوليا.  نادرا ما يحصل Perl5 على مقعد على الطاولة - لكنه يحمل مجموعة مقنعة من السمات التي تستحق نظرة ثانية. هذه السمات لم تتغير ماديا على مر السنين (Perl5 كان دائما بهذه الطريقة!)، ولكن ما لم {# lede #}لقد تعرضت للغة وتعلمت أن تقدر قسوتها وعقلانيتها ومرونتها وإمكانية التعبير عنها واستخدمتها فعليًا لدفع عملك إلى الأمام.{# lede #}، كنت لا تعرف هذه الميزات لا تأتي فقط مجانا مع Perl5، ولكن يمكن أن تساعدك على دفع مشاريعك إلى الأمام.
+
+### نشر في كل مكان بدون تثبيت
+
+Perl5 يتم الشحن كمكون افتراضي لكل نظام تشغيل يشبه UNIX تقريبًا - تتضمن توزيعات لينكس وmacOS وBSDs والعديد من بيئات لينكس المضمنة جميعها عملًا `بيرل` ثنائي خارج الصندوق.  تعمل بايثون على تحقيق تقدم هنا، ولكن لا يزال من الشائع العثور على خوادم بدون رأس أو أجهزة شبكة أو عقد تسجيل دخول HPC.
+حيث بيرل موجود وكومة بايثون كاملة ليست كذلك.  يمكن تشغيل مسار بيانات مكتوب في Perl في اليوم الأول بدون `اتفاق` بيئة، a `ثؤلول`أو حاوية.
+
+### إمكانية النقل من مركز البيانات إلى الحافة
+
+يمكن تشغيل نفس الاسكربت الذي يحلل مجموعة بيانات تيرابايت على نقطة توصيل الحوسبة عالية الأداء (HPC) ذات 256 نواة، مع تغييرات تكوين بسيطة، على Raspberry Pi أو عبّارة IoT أو وحدة تحكم مضمنة.  بيرل'نموذج النشر الثنائي الأحادي والنفقات الإضافية المنخفضة لوقت التشغيل تجعله حقيقيًا "الكتابة مرة واحدة، تشغيل في أي مكان" اللغة في البيئات حيث بايثون'المترجم العلوية أو جوليا'وقت الإحماء JIT سيكون غير مقبول.
+
+إذا كنت تخطط للنشر في أي مكان و _everywhere_ Perl5 هو خيارك الواضح.
+
+### تراث مبني على نصوص وبيانات
+
+تم تصميم Perl من الألف إلى الياء لمعالجة النصوص والتعبيرات العادية و "لزاق" العمل بين مكونات النظام.  في الممارسة العملية، تهيمن على خطوط البيانات العلمية ليس من خلال الحساب الرقمي ولكن من خلال *التنازع على البيانات *: قراءة تنسيقات الملفات غير المتجانسة، وتنظيف السجلات الفوضوية، والانضمام إلى مجموعات البيانات من مصادر مختلفة، ونتائج التوجيه إلى المكونات المستهلكة في المراحل النهائية.
+
+بيرل'لا يزال محرك regex من بين أقوى ما هو متاح، ويمكن للخط الواحد إنجاز مهام تنظيف البيانات التي تتطلب مكتبات مساعدة بلغات أخرى.
+
+إذا كنت في مجال الحوسبة العلمية، فقد تكون قد صادفت فكرة *أنظمة إدارة سير العمل* و*البحث القابل لإعادة الإنتاج*. يعتمد كلاهما على تنفيذ عمليات تحويل البيانات من طرف إلى طرف وسير العمل للقضاء على الأنشطة اليدوية المعرضة للخطأ والمملة والنقر على الأنشطة التي يتعين على المحللين والعلماء القيام بها لتحويل بياناتهم إلى رؤى واستدلالات على التوالي.
+
+في هذا العالم الجديد الشجاع، Perl5'يسمح التاريخ الغني له بالتألق كمكون لسير العمل أو كلغة تطبيق تقوم بتنفيذ عمليات سير العمل هذه.
+
+### CPAN: نظام بيئي للوحدة تم اختباره في المعركة
+
+تستضيف شبكة أرشيف بيرل الشاملة (CPAN) أكثر من 200,000 وحدة عبر كل مجال يمكن تخيله.  على الرغم من أن عروض علوم البيانات ليست واسعة مثل بايثون، إلا أن المكونات الأساسية للبناة المخصصين موجودة:
+
+- **PDL** (لغة بيانات بيرل) - الحوسبة الرقمية المتجهة مع صفائف N-الأبعاد المكتوبة بقوة (تغطي في العمق أدناه).
+
+- **PDL::Stats** - إحصاءات وصفية، وانحدار، وتجميع (k-means، مصغرة دفعة k-means)، وأكثر من ذلك، بنيت على رأس PDL ndarrays.
+
+- **AI::MXNet**، **AI::TensorFlow** - روابط التعلم العميق.
+
+- **الإحصائيات::الانحدار**، **الإحصائيات::الوصف** — الإحصائيات الكلاسيكية بدون تبعية PDL.
+
+- **Text::CSV**، **Spreadsheet::XLSX**، **Data::MessagePack**، **Sereal** - تسلسل عالي الأداء وI/O.
+
+- **DBI** + العشرات من برامج تشغيل قاعدة البيانات — وصول SQL إلى كل نظام RDBMS رئيسي.
+
+- **MCE** (Many-Core Engine) - توازي منظم لأحمال عمل الذاكرة المشتركة والموزعة.
+
+- **Inline::C**، **Inline::CPP** — تضمين C أو C++ التعليمات البرمجية مباشرة داخل ملف مصدر بيرل; يتم استدعاء المجمع بشفافية في المرة الأولى التي يتم فيها تشغيل البرنامج النصي، مما يجعل من التافهة لإسقاط نواة الأداء الحرجة في برنامج نقي بيرل خلاف ذلك دون نظام بناء XS كامل.
+
+- **FFI::Platypus** — وظائف الاتصال في أي مكتبة مشتركة (`.حتى` / `ديليب` / `.dll`) من بيرل دون كتابة سطر واحد من XS أو C رمز الغراء.  يدعم Platypus جميع الأنواع المكافئة C، والبنيات، واستدعاءات، والإغلاق، وهو الطريقة الحديثة لربط Perl بـ BLAS أو LAPACK أو HDF5 أو أي مكتبة أصلية أخرى.
+
+### بيرل الحديثة ليست جدك's بيرل
+
+يتم سحب الميزات أدناه مباشرة من ملاحظات الإصدار الرسمية (`perl5360delta`, `perl5380delta`, `perl5400delta`) ويتم تنظيمها من خلال الإصدار الذي وصلت فيه إلى حالة **مستقرة** أو تم تقديمها لأول مرة. يتم تمييز الميزات ذات الصلة بأحمال عمل علوم البيانات والحوسبة العلمية فقط.
+
+#### بيرل 5.36 — مايو 2022
+
+- **`استخدام v5.36`** — تتيح حزمة الميزات الآن تلقائيًا `يستخدم التحذيرات` بالإضافة إلى `يستخدم الصارم`. كما يؤدي إلى تعطيل `غير مباشر` صياغة استدعاء الأسلوب و `متعدد الأبعاد` محاكاة hash-key، والقضاء على مصدرين مشتركين من الأخطاء الدقيقة.
+
+*(مستقر منذ 5.36؛ تجريبي منذ 5.20)* — يتم الآن تعريف معلمات الوظيفة بالاسم، مع افتراضات اختيارية. الـ `//=` و `||=` تمت إضافة عوامل تشغيل القيمة الافتراضية إلى التوقيعات في الإصدار 5.38، مما يسمح بالقيم الافتراضية التي يتم تشغيلها `إلغاء تعريف` أو زيف على التوالي:
+
+```perl
+  use v5.36;
+  sub clamp ($val, $lo = 0, $hi //= 1) {
+      $val < $lo ? $lo : $val > $hi ? $hi : $val;
+  }
+  ```
+
+- **`isa` class-instance operator** *(stable since 5.36; introduced in 5.32)* — `$obj isa "ClassName"` returns a boolean; cleaner than `ref($obj) eq "ClassName"`.
+
+- **`builtin` module** *(stable since 5.40; experimental since 5.36)* — lexically importable functions built directly into the interpreter.  The stable 5.40 bundle includes, among others:
+
+- `ceil`, `floor` — integer rounding without `use POSIX`.
+  - `trim` — strip leading/trailing whitespace from a string.
+  - `indexed` — pairs each element with its index; the idiomatic companion to multi-value `for` loops (see below).
+  - `true`, `false`, `is_bool` — typed boolean sentinels; serialisers can now emit JSON `true`/`false` rather than `1`/`0`.
+  - `weaken`, `unweaken`, `is_weak` — reference-count control for building bidirectional data structures without memory leaks.
+  - `blessed`, `reftype`, `refaddr` — reference introspection.
+
+- **Stable boolean tracking** *(5.36)* — scalars created as booleans (e.g., `!!1`) now retain their boolean nature through assignment, enabling reliable type-aware serialisation to JSON and MessagePack.
+
+- **Multi-value `for` loops** *(stable since 5.40; experimental since 5.36)* Iterate over pairs or N-tuples without manual index arithmetic:
+
+```perl
+  use v5.40;
+  use builtin 'indexed';
+
+for my ($i, $val) (indexed @scores)  { ... } # index and value
+  ```
+
+Or grab multiple values at the same time
+
+```perl
+  use v5.40;
+
+for my ($val1, $val2, $val3) (@scores)  { ... }
+  ```
+
+- **`defer` blocks** *(experimental since 5.36)* — a scope-exit guard that runs cleanup code unconditionally when a block exits, whether normally or via exception — a natural replacement for destructor-based scope-guard objects and an important pattern for resource management in data pipelines.
+
+#### Perl 5.38 — July 2023
+
+- **`PERL_RAND_SEED` environment variable** *(5.38)* — setting this variable before a run makes every `rand` call (without an explicit `srand`) produce the same sequence, enabling **reproducible** stochastic algorithms — simulations, random sampling, Monte Carlo methods — without modifying source code.
+
+- **`class` / `field` / `method` syntax** *(experimental since 5.38)* — a purpose-built, lexically-scoped object system requiring neither `bless` nor `@ISA` nor any CPAN module.  Useful for defining typed value objects such as dataset rows, model parameters, or pipeline stages:
+
+```perl
+  use feature 'class';
+  no warnings 'experimental::class';
+
+class Vector2D {
+      field $x :param;
+      field $y :param;
+      method magnitude { sqrt($x**2 + $y**2) }
+  }
+  my $v = Vector2D->new(x => 3, y => 4);
+  say $v->magnitude;    # 5
+  ```
+
+#### Perl 5.40 — June 2024
+
+- **`try` / `catch` exception handling** *(stable since 5.40; experimental since 5.34; `finally` block added in 5.36)* — structured exception handling is now a core language feature; no CPAN module required:
+
+```perl
+  use v5.40;
+  try {
+      my $result = load_and_process($file);
+  }
+  catch ($e) {
+      warn "Pipeline error: $e";
+  }
+  finally {
+      close_resources();   # runs whether or not an exception was thrown
+  }
+  ```
+
+(`Try::Tiny` / `Feature::Compat::Try` are only needed when targeting perls older than 5.34.).
+
+- **Multi-value `for` loops** *(stable since 5.40)* — see 5.36 entry above; they graduated from experimental to stable in this release.
+
+- **`builtin::inf` and `builtin::nan`** *(experimental since 5.40)* — typed floating-point infinity and Not-a-Number constants, eliminating `9**9**9` or POSIX hacks in numerical code.
+
+- **`^^` logical XOR operator** *(5.40)* — completes the medium-precedence logical operator set (`&&`, `||`, `^^`); handy for boolean mask operations.
+
+- **`use v5.40` imports builtin functions** — beyond enabling the feature bundle, `use v5.40` also imports the corresponding `builtin` version bundle, making all stable `builtin::` functions available as short names without a separate `use builtin` statement.
+
+#### Longstanding features (pre-5.36).
+
+- **`say` and `state`** *(since 5.10)* — `say` is `print` with an implicit newline; `state` declares a lexical that persists across invocations of its enclosing sub (a lightweight memoisation primitive).
+
+- **First-class references and closures** — anonymous subs, closures, and reference construction are fundamental and have been stable since Perl 5.
+
+- **`use constant`** or the CPAN `Readonly` module for named constants; `Readonly` enforces deep immutability that `use constant` does not.
+
+Combined with [`perlbrew`](https://perlbrew.pl/) or [`plenv`](https://github.com/tokuhirom/plenv) for version management and [`carton`](https://metacpan.org/pod/Carton) for reproducible dependency snapshots, a modern Perl project looks and feels like a first-class software engineering effort.
+
+### Honest limitations
+
+No case for Perl is complete without honesty about where it falls short:
+
+- **Visualisation** — Perl has no equivalent to `ggplot2` or `matplotlib`. Plots typically require an external call to R, gnuplot, or a web library. At times this weakness can become an actual strength, allowing one to use Perl5 as the application language that orchestrates and enhances the other actors.
+
+- **Community momentum** — the data-science community has converged on Python and R. Finding ready-made tutorials, Stack Overflow answers, and co-authors is harder.
+
+- **Object orientation** — without Moose/Moo the OOP model is verbose; with them it adds a dependency. The new `class` feature may solve some of these problems
+
+- **Type safety at scale** — the core language's dynamic scalars make large, collaborative numerical codebases harder to reason about (see next section).
+
+---
+
+## 2. The Perl Data-Type System — Strengths and Cache-Era Limits <a id="the-perl-data-type-system"></a>
+
+### Core Perl types
+
+Perl's fundamental data model centres on three constructs:
+
+| Construct | Sigil | What it holds |
+|-----------|-------|---------------|
+| **Scalar** | `$` | A single value: number, string, reference, or `undef` |
+| **Array** | `@` | An ordered list of scalars, indexed by integer |
+| **Hash** | `%` | An unordered collection of scalar values keyed by string |
+
+Everything else — objects, closures, complex data structures — is built from these three primitives via *references* (`\@array`, `\%hash`, `sub { ... }`).
+
+This model is extraordinarily flexible.  A single array can hold integers, floating-point numbers, strings, and nested references simultaneously.  That flexibility is exactly what made Perl the dominant system-administration and web-scripting language for two decades.
+
+### The cache-hierarchy problem
+
+Modern CPUs achieve peak throughput only when data flows through L1/L2/L3 cache<sup><a id="cache-ref" href="#fn-cache">†</a></sup> in large, contiguous blocks — a property called *spatial locality*.  Perl arrays do not provide this.  Under the hood, a Perl array is a C array of *pointers* to heap-allocated scalar (`SV`) structs.  Each scalar carries a reference count, a type tag, and padding — typically 24–56 bytes per scalar on a 64-bit build.  Iterating over a million-element Perl array therefore involves a million pointer dereferences scattered across the heap, producing a cache-miss pattern that completely negates the speed advantage of modern SIMD pipelines.
+
+A concrete consequence: a dot product of two 1 000-element vectors written in pure Perl is roughly **100–1000× slower** than the equivalent operation on a pair of PDL float ndarrays, which occupy two flat, 4 000-byte memory regions that fit comfortably in L1 cache.
+
+### Contrast with R
+
+R occupies a curious middle ground.  Like Perl, it is a dynamic, interpreted language — variables are untyped containers, functions are first-class values, and the interactive REPL is the primary development environment.  R even has direct analogues to Perl's three core types:
+
+| Perl concept | R analogue |
+|---|---|
+| `$scalar` | length-1 atomic vector or scalar-in-list |
+| `@array` | `list()` |
+| `%hash` | named `list()` |
+| Reference (`\@arr`) | R does not use explicit references; copy-on-modify semantics instead |
+
+But R's *workhorse* type, i.e.  the **atomic vector** has no straightforward Perl counterpart. An R atomic vector is a contiguous, homogeneously typed block of memory — exactly the layout that a CPU cache rewards.  Every built-in scalar in R is actually a length-1 atomic vector; there is no "bare scalar" outside of atomic vectors.
+
+This design choice means that R code naturally operates on vectors of millions of doubles with BLAS-level throughput, without the user writing a single loop or allocating a special "array" object.
+
+R's atomic types are:
+
+| R atomic type | Storage | C equivalent |
+|---|---|---|
+| `logical` | 4 bytes/element | `int` (with NA sentinel) |
+| `integer` | 4 bytes/element | `int32_t` |
+| `double` | 8 bytes/element | `double` |
+| `complex` | 16 bytes/element | `_Complex double` |
+| `character` | pointer to CHARSXP | `char *` (interned) |
+| `raw` | 1 byte/element | `uint8_t` |
+
+R also defines higher-level structures built on atomic vectors:
+
+- **matrix** — a 2-D atomic vector with a `dim` attribute.
+- **array** — an N-D atomic vector with a `dim` attribute.
+- **data.frame** — a named list of equal-length atomic vectors; the lingua franca of
+  tabular data in R.
+- **factor** — an integer vector with a `levels` attribute; encodes categorical data.
+
+The lesson: R's computing performance when used in statistical and data science applications flows directly from its contiguous atomic vectors. Perl's equivalent path to performance is an extension (which also is a stand alone `matlab` like enviroment), the Perl Data Language [`PDL`](https://pdl.perl.org/).
+
+---
+
+## 3. Enter PDL: Strongly Typed N-Dimensional Arrays <a id="enter-pdl"></a>
+
+The **Perl Data Language** (PDL, `pdl.perl.org`) extends Perl with *ndarrays* (N-dimensional arrays): contiguous, strongly typed memory buffers that look and feel like first-class Perl objects.
+
+```perl
+use PDL;
+
+# A 1-D float ndarray — 4 bytes × 5 elements in one contiguous block
+my $v = float( 1.0, 2.0, 3.0, 4.0, 5.0 );
+
+# A 128-dimensional random database of 1000 vectors — all in cache-friendly memory
+my $db = random( 128, 1000 );   # double by default
+
+# Dot product of every DB vector against a query — a single BLAS call
+my $scores = $db x $query->transpose;
+```
+
+### أنواع PDL البدائية
+
+يعرض PDL لوحة الألوان الكاملة للأنواع الرقمية C كمكونات من الدرجة الأولى:
+
+| نوع PDL | وحدات البايت | النوع C | المكون |
+|---|---|---|---|
+| `بايت` | 1 | `uint8_t` | `بايت (...)` |
+| `قصور` | 2 | `int16_t` | `قصيرة (...)` |
+| `قلعة` | 2 | `uint16_t` | `ushort(...)` |
+| `طويل` | 4 | `int32_t` | `طويل (...)` |
+| `الهند` | 4 أو 8 | `ssize_t` | `إنديكس(...)` |
+| `طويل` | 8 | `int64_t` | `طويلة (...)` |
+| `عائم` | 4 | `عائم` | `عائم(...)` |
+| `مزدوج` | 8 | `مزدوج` | `مزدوج (...)` |
+| `عرس` | 8 | `تعويم مركب _Complex` | `تعويم(...)` |
+| `مزدوج` | 16 | `_مركب مزدوج` | `cdouble(...)` |
+
+### الخيوط و SIMD
+
+واحدة من PDL'الميزات الأكثر تميزًا هي *خيوط ضمنية *: يتم بث العمليات تلقائيًا عبر أبعاد إضافية، مما يؤدي إلى التخلص من الحلقات الصريحة في رمز المستخدم وتفويض الحلقات الداخلية إلى نواة C أو Fortran المحسنة.  مدمج مع `set_autopthread_targ(N)`، سوف PDL موازية تلقائيا شرائح مستقلة عبر `لا` سلاسل عمليات نظام التشغيل — دون أن يقوم المستخدم بكتابة واحدة `شوكة` أو `الموضوع::قائمة الانتظار` اتصل.
+
+### قيم غير صحيحة
+
+PDL لديها مفهوم مدمج للقيم *السيئة* (`PDL::سيئة`)، مماثلة مباشرة لR'ss `غير متاح`. يمكن وضع علامة على مصفوفة ndarray على أنها "واعي بالقيمة السيئة"تقوم عمليات، وPDL بنشر الخطأ بشكل صحيح من خلال العمليات الحسابية والإحصائية وعمليات الإدخال/الإخراج.
+
+---
+
+## 4. نوع المقارنة: بيرل، PDL، وR جنبا إلى جنب <a id="type-comparison-table"></a>
+
+يخطط الجدول أدناه كل نوع R شائع الاستخدام إلى أقرب نظرائه من Perl و PDL، مع تسليط الضوء على المكان الذي تتفق فيه اللغات الثلاث أو تختلف أو تكمل بعضها البعض.
+
+| نوع R | مكافئ Perl | مكافئ PDL | الملاحظات |
+|---|---|---|---|
+| `مزدوج` (طول-1) `$x = 3.14` (سكالار) | `مزدوج(3.14)` — شكل `()` R ليس له سلخ فروة الرأس العارية؛ كل شيء متجه |
+| `عدد صحيح` (طول-1) `$n = 42` (سكالار) | `طويل(42)` | |
+| `منطق` (طول-1) `علامة $ = 1` / `$flag = 0` | `بايت(1)` يستخدم بيرل الصدق؛ يستخدم PDL 0/1 بايت |
+| `مزدوج` متجه | `@arr = (1-1، 2-2، 3-3)` | `مزدوج (1.1، 2.2، 3.3)` PDL: متجاورة. `@arr`: صفيف المؤشر |
+| `عدد صحيح` متجه | `@arr = (1، 2، 3)` | `طويل(1، 2، 3)` | |
+
+| نوع R | مكافئ Perl | مكافئ PDL | الملاحظات |
+|---|---|---|---|
+| `منطق` متجه | `@flags = (1، 0، 1)` | `بايت (1، 0، 1)` | |
+| `معقد` متجه | — (غير مضمن) | `cdouble(...)` احتياجات بيرل `الرياضيات::Complex`; PDL لديها دعم أصلي |
+| `رمز` متجه | `@strs = ('عام','كيف')` | — (غير رقمي) | PDL تعمل على الأرقام فقط |
+| `خام` متجه | `حزمة('C*', @bytes)` | `بايت (...)` | |
+| `غير متاح` | `إلغاء تعريف` | القيمة غير الصحيحة في ndarray | يتم نشر القيم غير الصحيحة لـ PDL مثل R'ss `غير متاح` |
+
+| نوع R | مكافئ Perl | مكافئ PDL | الملاحظات |
+|---|---|---|---|
+| `خالٍ` | `إلغاء تعريف` في سياق القائمة | — |
+| `قائمة` | `@array` أو مرجع `\@array` | — | |
+| مسمى `قائمة` | `%hash` أو `\%شفرة هاش` | — | |
+| `ماتريكس` (2-D) | مصفوفة الصفائف `@aoa` | 2-D ندراي `pdl([[...],[...]])` | PDL: عمود رئيسي; R: عمود رئيسي |
+| `صفيف` (N-D) | المراجع المتداخلة | N-D ndarray `$x->reshape(...)` | |
+| `data.frame` | `%hash` من `@arrays` | 2-D ndarray (أعمدة رقمية) + شفرة هاش بيرل (مختلطة) | لا يوجد تعيينات من نوع PDL واحد بالضبط |
+
+| نوع R | مكافئ Perl | مكافئ PDL | الملاحظات |
+|---|---|---|---|
+| `عامل` | جدول البحث هاش + `@indices` | `طويل` ندراي + بيرل `@levels` صفيف |
+| `بيئة` | `%hash` أو مساحة اسم الحزمة | — |
+| `وظيفة` / إغلاق `تحتي { ... }` / إغلاق | — | PDL PP يعرّف النواة المجمعة |
+| `كائن S3 / S4` | المرجع المبارك + إرسال الأسلوب | كائن PDL (مصفوفة ndarray المبسطة) | كائنات PDL هي كائنات Perl من الدرجة الأولى |
+
+### الوجبات الرئيسية
+
+- بالنسبة إلى **البيانات الرقمية المتجانسة النقية** (الناقلات، والمصفوفات، والموترات)، وندرايز PDL والنواقل الذرية R متكافئة وظيفيا وفعالة نسبيا.
+
+- بالنسبة إلى **البيانات الجدولية غير المتجانسة** (الأنواع المختلطة وأعمدة السلاسل والعوامل)، R'ss `data.frame` هو أكثر راحة؛ يستخدم بيرل عادة شفرة هاش من الصفائف أو وحدة مخصصة مثل `البيانات::Frame` أو `PDL::IO::CSV`.
+
+- ل **النص، الهياكل غير النظامية، ونظام الغراء**، بيرل'الأنواع الأصلية متفوقة على كل من R و Python.
+
+- وبالتالي، فإن مجموعة Perl+PDL توفر *union* لما تقدمه R كلغة إحصائية وما تقدمه Perl كلغة نظامية - على حساب منحنى تعليمي أكثر انحدارًا وأقل الأدوات الإحصائية المحدودة بشكل صريح.
+
+ومع ذلك، فإن الجمع بين Perl+PDL+R (مع استخدام الأخير كمكون، أو [فعال](https://chrisarg.github.io/Killing-It-with-PERL/2025/01/18/Timing-Peak-DRAM-Use-In-R-With-Perl-Part-1.html) عبر بيرل).
+
+---
+
+## 5. خريطة الطريق: ما تغطيه بقية هذه السلسلة <a id="road-map"></a>
+
+توثق هذه السلسلة تكوين محرك قاعدة بيانات **vector** مضمن في Perl5 + PDL من البداية.  تدعم قواعد بيانات المتجهات مسارات الإنشاء المعزز للاستعادة الحديثة (RAG) والبحث الدلالي وأنظمة التوصية الأقرب إلى الجوار.  تطبيق واحد من المبادئ الأولى هو وسيلة ممتازة لإظهار PDL's القدرات العددية جنبا إلى جنب مع بيرل'نقاط قوة برمجة الأنظمة.
+
+يحتوي الدليل الذي تم تطويره جنبًا إلى جنب مع هذه المنشورات على المكونات التالية، والتي سيكون كل منها موضوعًا لواحدة أو أكثر من المنشورات المخصصة التي ستشير إلى الملفات في مستودع مخصص.
+
+### المشاركة 1 - التسلسل والإدخال/الإخراج: `VectorIO` الوحدة النمطية
+
+*ملف:  `VectorIO.pm`*
+
+المحرك يخزن ناقلات كما معبأة بلوب ثنائي داخل [MessagePack](https://msgpack.org/) الحمولات.  هذا المقال يغطي:
+
+- تصميم وحدة مع نظافة `المُصدِّر`واجهة برمجة التطبيقات العامة المستندة إلى `استخدام v5.40`.
+- مساعدو المراجعة الذين يفرضون صحة المخطط عند حدود النظام.
+
+### Post 2 — محاكاة قاعدة بيانات متجهات
+
+*ملف:  `simulate_vectorDB.pl`*
+
+قبل أن نتمكن من البحث في قاعدة بيانات نحتاج إلى واحدة.  هذا المقال يظهر:
+
+- توليد ناقلات عشوائية قابلة لإعادة الإنتاج مع `PDL::عشوائي`.
+- استخدام `GetOpt::طويل` لتحليل خيار CLI المريح.
+- كتابة a `--البذور`المحاكاة التي يتم التحكم فيها والتي تنتج قواعد بيانات متطابقة عبر عمليات التشغيل - ضرورية لقياس الأداء.
+
+### آخر 3 — قياس: `timing_DB` الوحدة النمطية
+
+*ملف:  `timing_DB.pm`*
+
+تتطلب مطالبات الأداء قياسًا.  تقدم هذه المقالة:
+
+- تسخير قياس بيرل قابل لإعادة الاستخدام مبني على `الوقت::HiRes`.
+- منهجية للمقارنات العادلة على مدار الساعة بين عمليات تنفيذ Perl/PDL وR.
+- تفسير الإنتاجية (الموجهات/الثانية) مقابل زمن الوصول (مللي ثانية/الاستعلام) لأحجام أحمال العمل المختلفة.
+
+### Post 4 — K-Means تجميع مع `PDL::الإحصائيات::Kmeans`
+
+*ملف:  `kmeans.pl`*
+
+K-means clustering هو العمود الفقري لنهج مؤشر الملف المقلوب (IVF) لتقريب أقرب بحث جار.  هذا المقال يغطي:
+
+- ال `PDL::الإحصائيات::Kmeans` الواجهة وعقد الإرجاع الخاص بها (`غنيمة`, `العنقود`, `لا`, `R2`, `ss`).
+- تفسير `[هوس × عناقيد]` تم إرجاع قناع العضوية بواسطة `run_kmeans`.
+- مقارنة Perl/PDL k-means centroids ضد R'ss `kmeans()` و `ClusterR::MiniBatchKmeans()` للتحقق من صحة الأرقام.
+
+### Post 5 — Mini-Batch K-Means: التوسع إلى مجموعات البيانات الكبيرة
+
+*ملف:  `compare_kmeans_centroids.pl`*
+
+يتطلب k-means الكامل كل البيانات في الذاكرة لكل تكرار.  مجموعة صغيرة k يعني يتداول كمية صغيرة من دقة سنترويد لانخفاض كبير في الذاكرة والحوسبة.  هذا المقال يستكشف:
+
+- تنفيذ سلسلة جمل برمجية صغيرة تم إعادة أخذ عينات منها في PDL.
+- قياس انجراف الدرقية المركزية بين متغيرات الدفعات الكاملة والمصغرة.
+- الإخراج جنبا إلى جنب مع R'ss `MiniBatchKmeans` من `ClusterR` حزمة.
+
+### Post 6 — Inverted File Index (IVF) بحث
+
+*ملف:  `compare_ivf_search.pl`*
+
+مع سنترويد في متناول اليد يمكننا تقسيم قاعدة البيانات وإجراء خط فرعي تقريبي أقرب بحث الجوار.  هذا المقال يغطي:
+
+- بناء القوائم المقلوبة: رسم خرائط لكل ناقل قاعدة بيانات إلى أقرب سنترويد له.
+- ال `unpack_inverted_lists` يساعد `VectorIO`.
+- Querying: العثور على أعلى K أقرب سنترويدات، ثم البحث فقط تلك القوائم.
+- دقة مقابل سرعة المقايضات كما عدد من القوائم التحقيق يختلف.
+
+### Post 7 — التحقق ضد R: التصحيح العددي وخطوط الأنابيب عبر اللغات
+
+*الملفات: `compare_kmeans_centroids.R`, `compare_kmeans_centroids_pure.R`, `plot_centroid_coordinates.R`*
+
+آخر مشاركة في سلسلة الأساس يغلق حلقة بين بيرل وR:
+
+- تصدير نتائج PDL إلى CSV وقراءتها في R للتحقق المستقل.
+- استخدام ggplot2 لتصور إحداثيات سنترويد من كلتا اللغتين في وقت واحد.
+- نمط سير عمل لـ "الحوسبة في بيرل، التمثيل المرئي في R" التي تستفيد من نقاط القوة في كل من النظم الإيكولوجية.
+
+---
+
+> **التالي — نشر 1:** التسلسل وI / O مع `VectorIO.pm`
+
+---
+
+<a id="fn-cache"></a>
+
+**†** تحتوي وحدات المعالجة المركزية الحديثة على مستويات متعددة من الذاكرة السريعة على الشريحة تسمى **الذاكرة الوسيطة** (L1، L2، L3) التي تقع بين أنوية المعالج وذاكرة الوصول العشوائي الرئيسية.  L1 هو الأصغر (عادة 32-64 كيلوبايت لكل نواة) والأسرع (زمن انتقال دورات الساعة 1-4)؛ L2 أكبر (256 كيلوبايت - 1 ميغابايت) وأبطأ قليلاً؛ تتم مشاركة L3 عبر النوى (4-64 ميغابايت) مع زمن انتقال أعلى لا يزال.  تجلس ذاكرة الوصول العشوائي الرئيسية بعيدًا عن زمن الوصول من 60 إلى 100 ns - أبطأ بمقدار 200 × تقريبًا من L1.
+
+عندما تمس الحوسبة الذاكرة بنمط متجاور يمكن التنبؤ به، يمكن للجهاز *prefetcher* تحميل البيانات القادمة إلى L1/L2 قبل الحاجة إليها، مما يحقق إنتاجية قريبة من الذروة.  تهزم عملية مسح المؤشرات المتفرقة (مثل اجتياز صفيف Perl من عمليات المسح المخصصة للكومة) عملية السحب المسبق، مما يؤدي إلى إيقاف وحدة المعالجة المركزية (CPU) أثناء انتظار حل كل خطأ في ذاكرة التخزين المؤقت من ذاكرة الوصول العشوائي (RAM).
+
+<!-- $Date$ $Author$ $Revision$ -->
