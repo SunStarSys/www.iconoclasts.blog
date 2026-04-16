@@ -4,8 +4,8 @@ categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
 published: ~
-status: verifierad=25400
-title: Joe's slumpmässiga tankar
+status: skiss
+title: Joes slumpartade tankar
 ---
 
 
@@ -15,26 +15,28 @@ title: Joe's slumpmässiga tankar
 
 </div>
 
-## {# lede #}Välkommen!{# lede #}
+## Välkommen!
 
-Vi övar [Öppen vetenskap](triple-products).
+{# lede #}Vi övar [Öppen vetenskap](triple-products) här{# lede #}.
 
 ## Om mig
 
-Jag är en [INOM A](https://www.16personalities.com/intj-personality) Typ av person som vårdar de eklektiska, onormala, atypiska aspekterna av livet. Jag behärskar [Wing Chun](https://www.youtube.com/watch?v=Qexxe6ANG2o) i gymnasiet, [Fysisk matematik](https://www.math.stonybrook.edu/~leontak/) vid universitetet, och [Optimeringsteknik](https://www.linkedin.com/in/joesuf4/).
+Jag'm ett [INTERN-A](https://www.16personalities.com/intj-personality) typ av person som vårdar de eklektiska, onormala, atypiska aspekterna av livet. Jag behärskar [Wing Chun](https://www.youtube.com/watch?v=Qexxe6ANG2o) i högstadiet, [Fysisk matematik](https://www.math.stonybrook.edu/~leontak/#:~:text=joseph%20schaefer) vid universitetet och [Optimeringsteknik](https://www.linkedin.com/in/joesuf4/) i min yrkeskarriär.
 
 ### Privatliv
 
-Gift med den mest fantastiska kvinnan på jorden, vars kärlek till mig välsignade oss båda med en dyrbar dotter.  Vi bor i södra Florida och driver gemensamt min S-CORP <https://sunstarsys.com>, som tillhandahåller infrastrukturhårdvara och programvara för den här webbplatsen.
+Gift med den mest fantastiska kvinnan på jorden, vars kärlek till mig välsignade oss båda med en dyrbar dotter.  Vi bor i södra Florida och driver tillsammans min S-CORP <https://sunstarsys.com>, som tillhandahåller infrastrukturmaskinvara och -programvara för den här webbplatsen.
 
-### Delia Frees, till mig
+### Delia Frees, för mig
 
 Känner du till rollen som Heyók ⁇ a?
-    spelar i den amerikanska kulturen? Du, min
+    spelar i indiansk kultur? Du, min
+    Älskade, är min egen personliga Heyók ⁇ a.
 
+![Grok Heyoka](index.page/heyoka-grok).
 
-Jag skapade <https://iconoclasts.blog> för att tillgodose besläktade sprit på nätet, som behöver en offentlig, censurfri, långformig uppsatsskrivande gemenskap &mdash;
+Jag har skapat <https://iconoclasts.blog> för att tillgodose släkt sprit på nätet; som behöver en offentlig, censurfri, långformig uppsatsskrivande gemenskap &mdash; Att dela och interagera med varandra'mest politiskt obekväma, avantgardistiska idéer.
 
-Om det låter som du, [vänligen registrera dig](/contact).
+Om det låter som du, [registrera dig](/contact)!
 
 <!-- $Date$ $Author$ $Revision$ -->
