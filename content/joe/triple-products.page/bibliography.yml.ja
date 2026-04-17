@@ -1,13 +1,8 @@
 ---
-archived: ~
-categories: ~
+title: Bibliography
+status: generated
 dependencies: ../triple-products.bib.ja
-keywords: ~
-published: ~
-status: 生成場所
-title: 参考文献
 ---
-
 - author: McKean、Henry P.およびSinger、Isadore M.
   id: MS67
   journal: 差分ジオメトリのジャーナル
@@ -15,14 +10,14 @@ title: 参考文献
   pages: 43-69
   publisher: レハイ大学
   title: ラプラシア語の曲率と固有値
-  type: 記事
+  type: article
   volume: '1'
   year: '1967'
 - author: ジョン・B・コンウェイ
   id: JC19
   publisher: スプリンガー
   title: 機能分析のコース
-  type: 登録する
+  type: book
   volume: '96'
   year: '2019'
 - author: ジョン・H・スローン、N・J・A
@@ -30,7 +25,7 @@ title: 参考文献
   journal: 内部数学生産資源通知
   pages: 93-96
   title: 同じシータ系を持つ4次元格子
-  type: 記事
+  type: article
   volume: '4'
   year: '1992'
 - author: Datchev、Kiril、Hezari、Hamid
@@ -38,21 +33,21 @@ title: 参考文献
   journal: '逆の問題とアプリケーション: Inside Out II'
   pages: 455--486
   title: スペクトルジオメトリの逆の問題
-  type: 記事
+  type: article
   volume: '60'
   year: '2011'
 - author: Frenkel, Edward and Ben-Zvi, David
   id: FBZ04
   publisher: アメリカの数学社会
   title: 頂点代数と代数曲線
-  type: 登録する
+  type: book
   volume: '88'
   year: '2004'
 - author: Franke, Tobias
   date: 2023-09-01
   id: TF17
   title: トリプル製品/ダクト・インテグレーション
-  type: オンライン
+  type: online
   url: https://www.tobias-franke.eu/log/2017/04/19/triple-products.html
 - author: ゴードン、キャロリン
   id: CG93
@@ -60,7 +55,7 @@ title: 参考文献
   number: '3'
   pages: 639-649
   title: IsospectralはローカルアイソメメトリックではないRiemannianマニホールドを閉じました
-  type: 記事
+  type: article
   volume: '37'
   year: '1993'
 - author: Guillemin、Victor、Kazhdan、David
@@ -68,7 +63,7 @@ title: 参考文献
   journal: 純粋な数学におけるシンポジウム
   pages: 301--312
   title: 負曲線n- マニホールドの逆スペクトル結果
-  type: 記事
+  type: article
   volume: '36'
   year: '1980'
 - author: Hörmander、 Lars
@@ -77,20 +72,20 @@ title: 参考文献
   pages: 217--242
   publisher: Springer Berlin Heidelberg
   title: 楕円演算子のスペクトル関数
-  type: 記事
+  type: article
   year: '1968'
 - author: Knapp, Anthony W
   id: AK01
   publisher: プリンストン大学プレス
   title: '半単純群の表現理論: 例に基づく概要'
-  type: 登録する
+  type: book
   year: '2001'
 - archivePrefix: arXiv
   author: Lu、Jianfeng、Steinerberger、Stefan
   eprint: '1810.01024'
   id: LS18
   title: 楕円固有関数のポイントワイズ製品
-  type: オンライン
+  type: online
   year: '2018'
 - author: ミルナー、ジョン
   id: JM64
@@ -98,7 +93,7 @@ title: 参考文献
   number: '4'
   pages: 542--542
   title: 特定のマニホールド上のLaplace演算子の固有値
-  type: 記事
+  type: article
   volume: '51'
   year: '1964'
 - author: Nilsson、 Erik and Rowlett、 Julie and Rydell、フェリックス
@@ -107,14 +102,15 @@ title: 参考文献
   number: '1'
   pages: 39-83
   title: 三つの視点から平らな通路の等分性問題
-  type: 記事
+  type: article
   volume: '60'
   year: '2023'
 - author: リード、マイケル、サイモン、バリー
   id: RS75
   publisher: エルゼビア
-  title: 'オリジナルタイトル: Methods of Modern Mathematical Physics II: Fourier Analysis、 Self-Adjointness'
-  type: 登録する
+  title: 'オリジナルタイトル: Methods of Modern Mathematical Physics II: Fourier Analysis、
+    Self-Adjointness'
+  type: book
   volume: '2'
   year: '1975'
 - author: サルナク、ピーター
@@ -122,7 +118,7 @@ title: 参考文献
   journal: IMRN
   pages: 251--260
   title: 固有関数の製品の積分
-  type: 記事
+  type: article
   volume: '6'
   year: '1994'
 - author: Schiemann, Alexander
@@ -139,7 +135,7 @@ title: 参考文献
   number: '1'
   pages: 169-186
   title: Riemannianカバーとisospectralマニホールド
-  type: 記事
+  type: article
   volume: '121'
   year: '1985'
 - author: Tanno, Shukichi
@@ -148,23 +144,22 @@ title: 参考文献
   number: '3'
   pages: 267-274
   title: スペクトルによる正規球の特徴付け
-  type: 記事
+  type: article
   volume: '175'
   year: '1980'
 - author: テイラー、マイケル
   id: MT13
   publisher: Springer Science &amp;ビジネス・メディア
   title: '部分微分方程式II: 線形方程式の定性的研究'
-  type: 登録する
+  type: book
   volume: '116'
   year: '2013'
 - author: Weyl, Hermann
   id: HW11
-  journal: Nach\-richten derKönig\-lichen Gesell\-schaft der Wissen\-schaften zu
-    Göttingen
+  journal: Nach\-richten derKönig\-lichen Gesell\-schaft der Wissen\-schaften zuGöttingen
   pages: 110-117
   title: Überdie asymp\-totische Ver\-teilung der Eigen\-werte
-  type: 記事
+  type: article
   year: '1911'
 - author: ワイマン、 Emmett L
   doi: https://doi.org/10.1016/j.jfa.2022.109404
@@ -172,7 +167,7 @@ title: 参考文献
   journal: 機能分析のジャーナル
   number: '8'
   title: Laplace eigenfunctionsの三角形とトリプル製品
-  type: 記事
+  type: article
   volum: '282'
   year: '2022'
 - author: Zhou, Gengqiang
@@ -181,7 +176,7 @@ title: 参考文献
   number: '1'
   pages: 187-200
   title: 境界曲率による等スペクトルのコンパクトマニホールドのコンパクトさ
-  type: 記事
+  type: article
   volume: '181'
   year: '1997'
 - archivePrefix: arXiv
@@ -190,5 +185,5 @@ title: 参考文献
   eprint: '2509.17935'
   id: AA25
   title: 双曲面スペクトルと適合ブートストラップの収束定理
-  type: オンライン
+  type: online
   year: '2025'
