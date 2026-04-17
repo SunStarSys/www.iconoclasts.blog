@@ -1,0 +1,78 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ja'
+keywords: POSIX、pthread、C、mutex
+published: ~
+status: 確認済み=26810
+title: スレッド・バンドル
+---
+
+[TOC]
+
+<div class="right">
+
+![AI生成スレッド・バンドル](thread-bundles.page/thread-bundle).
+
+</div>
+
+## {# lede #} POSIXスレッド{# lede #}
+
+今年は、1つのスレッド・バージョンからマルチスレッド・バージョンまでの最大確率関数を、そのコードの最も遅い部分がモデリング・グループIDのインデックス上でループするアーキテクチャ上の前提に基づいて、そのコードの最大確率関数を移植するように任命されました。これは、設計上、ループを通る各反復は残りの部分から独立している必要があります。
+
+ループ時の楽しい問題
+
+1. 依存自動変数の再初期化に失敗し、
+2. モデリンググループIDでインデックス付けされた複数のグローバルポインタを変更します(`jG`),
+3. 計算専用のグローバル・メモリー・セグメントを(ID単位で)分離するには、thread_local変数が必要です。
+
+1と3は簡単でした。2で、私はaの概念を含む賢いアルゴリズムを見つけました`THREAD_BUNDLE`シリアルモデリンググループIDのスレッド単位ブロックです。
+
+保証`THREAD_BUNDLE` 少なくとも2のメモリページサイズを個々のポインタのサイズで割った大きさで、我々は異なるスレッドが独立して動作することを保証することができます[`ページ`](https://en.wikipedia.org/wiki/Page_%28computer_memory%29) 仮想メモリでは、これらのメモリ書き込みで相互排他ロックをエシェウできます。(もちろん、スレッドがそのスレッドを処理すると仮定します) `THREAD_BUNDLE` ほぼ同じ速度で)。
+
+ついに削除しました。"同じ速度" ループを偶数/oddペアに分割することで、少なくとも1つのメモリーを保証します。`ページ` アクティブを分離`THREAD_BUNDLE` ループ。
+
+## コア・ループ
+
+```clike
+  /* EVEN */
+  for (jG = minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+
+#define SET_ARG(foo) arg->foo = (foo) 30 refs
+
+SET_ARG(jG);
+    ...
+
+#undef SET_ARG
+
+// rsim_mlf_thread loops over the index bundle
+	// from jG to MIN(numG, jG + THREAD_BUNDLE - minG), doing
+	// stuff with global data structures also indexed by jG
+
+pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
+    PUSH_STACK_ELT(thread_stack, ptid, pthread_t);
+  }
+
+{
+    pthread_t *ptid; 3 refs
+    while (POP_STACK_PTR(thread_stack, ptid, pthread_t) != NULL)
+    {
+      arg_t* arg; 6 refs
+      pthread_join(*ptid, (void**)&arg);
+      ...
+  }
+
+/* ODD */
+  for (jG = THREAD_BUNDLE + minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+    ...
+```
+
+![メモリー・レイアウト](thread-bundles.page/memory-layout).
+
+<!-- $Date: 2025-09-19 14:02:02 -0700 (Fri, 19 Sep 2025) $ $Author: joe $ $Revision: 26842 $ -->

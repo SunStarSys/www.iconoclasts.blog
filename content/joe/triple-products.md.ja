@@ -1,0 +1,328 @@
+---
+archived: ~
+categories: 数学
+dependencies: '*.md.ja'
+keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
+published: https://dx.doi.org/10.2139/ssrn.4793533
+status: 確認済み=27570
+title: 固有関数とスペクトルジオメトリのトリプル製品
+---
+
+<div class="right">
+  <img src="../images/lawson6-pod.png" style="width:200px">
+  <p style="width:200px;text-align:center;line-height:20px">
+  ローソン'最低の表面 ξ<sub>6,1</sub> Sから立体的に投影<sup>3</sup> Rへ<sup>3</sup>
+  </p>
+</div>
+
+[TOC]
+
+## 作成者
+
+Joe Schaefer
+
+## 抽象画
+
+Geometric Analysis、Partial Differential Equations、Abelianの基本技術$$C^*$$ 代数、{# lede #}私たちは、小説を発見、まだ馴染みのある、グローバルな幾何学的不変{# lede #} &mdash; すなわち**Laplace-Beltrami演算子の固有関数の三重積分の指数集合**は、どの等分スペクトル閉じたRiemannianマニホールドがアイソメトリックであるかを正確に特徴付ける。
+
+## はじめに
+
+閉じたRiemannianマニホールドのため$$(M,g)$$非アイソメトリックの**クラス**を特徴付ける、アイソスペクトルのマニホールドは逆問題の一種です[[DH11]](#DH11) Spectral Geometryとは単純に、このクラスが常に空であることは推測できるかもしれません。しかし、学術文献は数十年にわたる反例の特定のペアリングの構造が豊富で、1964年にジョン・ミルナーと共に始まる。's非アイソメトリックの16次元ペア、アイソスペクトルの平らな通路[[JM64]](#JM64)および継続[[CS92]](#CS92) アレクサンダー・シーマンにおけるフラット・トーリの汎用的な次元特性化に向けて'1993年博士論文[[AS94]](#AS94) &mdash; 重要なコンピュータ支援検索で補完$$\dim = 3$$ ケース。平らな通りの歴史の現代的な調査が、[[NRR22]](#NRR22).
+
+途中、より洗練された非ユークリッド対称カバースペースへの洞察力に富んだオフシュートでした。そのような等分スペクトル、非アイソメトリックの構築"デュエット" 非微小な曲率テンソル(および次元2におけるスペクトル決定ユーラー特性)を含む[[MS67]](#MS67)(この取り組みのもっとも大きな例が太陽田敏和だった)'1985年[[TS85]](#TS85) 汎用カバー・スペース・フレームワークの発明で、2次元と3次元で双曲線デュエットを構築するために同じ作業にデプロイしました。
+
+不均質なリーマン指標のために、キャロリン・ゴードンは、局所的なアイソメ化さえしないデュエットを発見した。[[CG93]](#CG93).
+
+さまざまな関連分野での取り組み[[DH11]](#DH11)イソスペクトルのクラスの位相的特性を決定するような、一般的には非アイソメトリックマニホールド(空) [[ST80]](#ST80)、有限[[AS94]](#AS94)、堅い[[GK80]](#GK80)、コンパクト[[GZ97]](#GZ97))は、Riemannianメトリックのさまざまなモジュリ空間のサブセットです。
+
+この記事では、使い慣れたツールに関する新しい視点: 離散物としての固有関数のペアワイズ製品のインデックス付きフーリエ係数"代数/位相不変" 既存、個別を補完する"分析不変条件" &mdash; *Laplace-Beltrami演算子* (ここでは**Laplacian**)の負でないスペクトル$$ℋ = L^2(M,g)$$。組み合わせて、ペアは、"個別のグローバル幾何表現" isospectralのisometryクラス、閉じたRiemannianマニホールド。
+
+### 結果
+
+<br>
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### 定理
+
+</div>
+  <div class="card-body">
+
+(固有値では減少しない)固有関数の直交的基礎$$\set{e^i}_{i=0}^{\infty}$$ (負でない)ラプラシア語$$\Delta_M$$ 日付$$L^2(M,g)$$ 閉じたRiemannianマニホールドに関連する$$(M,g)$$定義
+
+```math
+
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
+
+```
+
+アイソメトリックになるには$$(M,g)$$、それは別の**isospectral**のために必要かつ十分な条件*は、関連する固有値を保持し、不変性を所有する固有関数の正統な基礎(ラプラシアン用)を持つためにリーマンマニホールドを閉じた。$$\set{M^{i,j,k}}$$ それぞれのベースで。
+
+</div>
+</div>
+
+<br>
+
+*Symmetry*は、計算的に追跡可能なケースにおいて重要な役割を果たします。[[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94)私たちの平らな通路でよく説明されている[例](#example) 下。しかし、私たちのアプローチの強さは、おそらく最も少ない数のリーマン対称性を持つマニホールドの場合、最もよく見せられます。一般的なケースは、固有値*unique*(つまり、非些細な多重度なし)と一致することがよくあります。この例では、次のものを提供します。
+
+<br>
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### 予想
+
+</div>
+  <div class="card-body">
+
+すべての固有値に多重度がある場合$$1$$定理の仮説で説明されているように、固有値保存直交基のペアを考えると、マニホールドは、$$\set{M^{i,j,k}}$$ For one basis agree、 up to absolute value in the individual terms、 with the other basis.一方の基準は、個々の用語で絶対値まで、他方の基準に同意する。
+
+</div>
+</div>
+
+<br>
+
+研究の動機$$\set{M^{i,j,k}}$$ **ビリニア乗算演算子**の役割の研究からゆるく導出されます$$Y:V\otimes V\rightarrow V((z))$$ 頂点演算子代数の定義[[FBZ04]](#FBZ04) 原題はChiral Conformal Field Theory。こちら$$V$$ 国家のベクトル空間であり、$$V((z))$$ 正式なLaurentシリーズのスペース$$z$$ の係数$$V$$。次以降$$V$$ 伝統的なフーリエシリーズの正統な基礎を持つヒルバートスペースとして装備され、インデックス作成$$Y$$ Fourierベース要素の使用$$V$$ ほんの少しだけ関わっている$$M^{i,j,k}$$ ここに書いてあるが、精神的に似ている。ただし、詳細な比較はこの記事の範囲外です。
+
+地図を考えるなら
+
+```math
+(M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
+```
+
+閉じたRiemannianマニホールド(その領域ではRiemannian isometryまで)に対するこのマップの注入性を確立した。これらの手法を適用して、そのイメージ(および逆)を説明するさらなる結果は、メトリックの選択モジュリ領域内で開始されます。[[AA25]](#AA25)。Anshul Adveは、Conformal Field Theoryと同じ**構造定数**を使用して、コンパクトで双曲型の2-orbifoldsのユニット接線スペースに厳密に取り組んでいます。
+
+これらの結果は、1997年に**MSRI**の著者が同様のタイトルの講演で最初に実証されましたが、それらは初めて公開された形式でここに表示されます。
+
+## 事前審査
+
+現在$$M,g,e^i,M^{i,j,k}$$ 上記のように、$$f \in C^\infty(M)$$ および$$i \geq 0$$ **フーリエ係数**
+
+```math
+\begin{aligned}
+
+\hat{f}(i) &:= \int_M f(x)\bar{e^i}(x)\sqrt{g(x)}dx \\
+
+\implies \\
+
+f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
+
+\end{aligned}
+
+```
+
+以降$$f$$ 急速に収束する**Fourierシリーズ**として一意に表現可能です$$\Delta_M$$- 特定のソボレフ埋め込み[[MT13]](#MT13) [[RS75]](#RS75)一緒にWeyl'アシンプト法[[HW11]](#HW11)は、和の項が$$o(i^{-n})$$ *ユニフォーム$$x$$* [[LH68]](#LH68), $$\forall n\in\N$$]からのWe See That For $$f_1, f_2 \in C^\infty(M)$$、ポイントワイズプロダクトのフーリエ係数$$f_1 f_2 \in C^\infty(M)$$ アール
+
+```math
+\begin{aligned}
+
+\widehat{f_1 f_2}(k) &= \sum_{i,j}^\infty\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k} \\
+
+\implies \\
+
+f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
+
+f_1 = f^p_2,\space p > 2 \implies \\
+
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)...\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x).
+
+\end{aligned}
+```
+
+そして、*critically*、多変量多項式$$\weierp \in \Complex[z_1,...,z_l]$$ (スムーズな機能で)**任意のスペクトル保存で通勤** $$\Delta$$-eigenfunction orthonormalベースマップ$$\vec{F}$$ 保存する$$\set{M^{i,j,k}}$$:
+
+```math
+\begin{CD}
+  C^\infty(M,\space\Complex^l) @>\weierp >> C^\infty(M)\\
+   @V\underbrace{\vec{F}\oplus\dots\oplus \vec{F}}_{l\space\text{times}}VV @VV\vec{F}V\\
+  C^\infty(N,\space\Complex^l) @>>\weierp > C^\infty(N)
+\end{CD}
+```
+
+さらに、$$A\subset M$$ Borel-measurable、そして上の結果は*characteristic機能のためにポイントワイズを握ります$$A$$*境界線以外のすべての場所$$A$$次の場合: $$f = f^2$$ および$$A:=\set{x\in M|f(x)=1}$$,
+
+```math
+\sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \begin{cases}
+1 & x \in \mathring{A} \\
+0 & x \in \mathring{A^\complement}\end{cases}
+```
+
+独自性により、以下のアイデンティティを有しています。
+
+```math
+\begin{aligned}
+\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\space\space \forall k\geq 0 \\
+\iff f&=f^2 \space a.e.
+\end{aligned}
+```
+
+これは、上記のようなベース・マップが特性関数(メンバーとして)を保持することを意味します。$$L^2(M,g)\subset L^1(M,g)$$)は、測定保存方式で特徴的な機能に。
+
+これらの計算のポイントは、$$\set{M^{i,j,k}}$$ **特徴**ポイントワイズ乗算演算子の調和解析$$C^\infty(M)$$アベリア人の密集した代数である。$$C^*$$ 代数学$$C(M)$$Stone-Weierstrassの定理
+
+上記の和の急速な収束のために$$M^{i,j,k}$$固有関数の生成物は滑らかであるので、これらのフーリエ係数は上記のように(各インデックスで)減衰します。詳細については、Emmett Wymanを参照してください。'2022年に、固有値の三角形の不等式に関連するこれらの係数で作業する。[[EW22]](#EW22).
+
+Note: 常に仮定する
+```math
+\begin{aligned}
+e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
+\implies \\
+M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
+\end{aligned}
+```
+
+場所$$\delta_i$$ Kronecker deltaです。次以降$$vol(M)$$ スペクトル不変[[HW11]](#HW11)この情報は、等分性に関する考慮事項からすでに入手できます。
+
+## 定理の証明
+
+必要であれば、$$F:(N,h)\rightarrow (M,g)$$ 閉じたRiemannianマニホールド間のアイソメトリーであり、固有関数のターゲット正準基準を$$L^2(N,h)$$ BETHEPULLBACKBY $$F$$ 「Orthonormal Basis」$$\set{e^i}$$ 日付$$(M,g)$$ 上。次以降
+
+```math
+\begin{aligned}
+M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
+          &= \int_N e^i(F(x)) e^j(F(x))\bar{e^k}(F(x))\sqrt{h}dx
+
+\end{aligned}
+```
+
+必要性の議論は、$$\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infty(M)$$.
+
+直線的、生体的直交的固有関数ベースマップを検討した。$$\vec{F}$$ 場所$$C^\infty(M)$$ から$$C^\infty(N)$$ の計算から、[事前審査](#preliminaries) 上、$$\vec{F}$$ 滑らかな機能のためのポイントワイズなプロダクトを保って下さい(そして延長されたとき特徴的な機能を維持して下さい$$L^2(M,g)$$という前提で。$$\set{M^{i,j,k}}$$ この地図では不変です。
+
+### レマ
+
+$$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 均一な基準を維持します。
+
+### レマの証明
+
+許可$$\set{a_i}$$ ユニティのスムーズなパーティションになる$$M$$.
+
+```math
+\begin{aligned}
+1 &= \sum_i a_i(x) \\
+       &= \sum_{i,j} \hat{a_i}(j)e^j(x) \\
+	   &= \sum_j e^j(x)\sum_i \hat{a_i}(j)
+\end{aligned}
+```
+
+したがって$$\sum_i\hat{a_i}(j) = \delta_j\sqrt{vol(M)}$$ (クロネッカー デルタ)。
+
+支配的な収束定理によって、
+
+```math
+\lim_{p\rightarrow\infty}
+\sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
+```
+
+これは、各非結合サブセットの正の測定の特徴的な機能です$$\set{x\in M | a_j(x) = 1}$$。これは、レマがそれぞれに証明されていることを意味します$$a_j$$正の測定を用いるセットの限定的な特徴的な機能は保たれ、従ってすべてのように均一規範1がありますので、$$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$ダイアグラム(5).
+
+ジェネラリティを失うことなく、統一のスムーズなパーティションに示された特別なケース結果を適用できます$$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$ここで$$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ ポジティブな手段があり、レマは完全に証明されています。
+
+次以降$$\set {\bar e^i}$$ フーリエの基礎でもある。$$L^2(M,g)$$という方程式(3)から、$$\vec F(\bar f) = \bar{\vec F}(f)$$。これは、密集した一連の$$C(M)$$ および$$C(N)$$)を確立した。$$\vec{F}$$ アベリア人の同型$$C^*$$ 代数は、したがって、同型に拡張することができます$$C(M)$$ および$$C(N)$$ 同じカテゴリーで。
+
+今度は、Gelfand-Naimark Representation Theorem (in contravariant functor form)をunital Abelianに適用します。$$C^*$$ 代数学[[JC19]](#JC19) ホメオモルフィズムによってこのアイソモルフィズムを表す$$F$$ 次の間$$N$$ および$$M$$。スムーズな機能では形容詞なので、スムーズでなければなりません。
+
+今日のdiffomorphism $$F$$ 固有値および固有関数を保持します(仮説による) $$\vec{F}(f) = f\circ F$$)、滑らかな機能でラプラシアンを保持する必要があります。したがって、これらの同じ楕円演算子の主要シンボルも保持する必要があります。[[MT13]](#MT13)。Laplacianの主なシンボルは、問題のマニホールドに関するRiemannianメトリックを表現するもう一つの手段です。
+
+これで定理の証明は完了です。
+
+### 予想の議論
+
+次を含む$$\set{M_0^{i,j,k}}$$ および$$\set{M_1^{i,j,k}}$$ 基底の2つの三重プロダクトセットを表す$$\set{e_0^i}$$ および$$\set{e_1^i}$$Let $$z_i \in \set{-1,1}$$ である$$\Z_2^\infty$$ そのような行為$$\R$$- 正統基準の評価$$\set{e_1^i}$$。したがって、私たちは選択する必要があります$$z_i$$ したがって$$\set{z_ie_1^i}$$ 降伏$$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+
+このケースはなぜですか。一般に、固有関数の正準基底の空間に作用する対称群は、単項演算子の空間である。$$U: \mathscr H\rightarrow\mathscr H$$ プロジェクションと合致する$$P_{\mathcal V_\lambda}$$ 有限次元異次元空間$$\mathcal V_{\lambda}$$ 個々の固有値に関連付けられる$$\lambda$$ Laplacianです。したがって、
+
+```math
+\begin{aligned}
+P_{\mathcal V_{\lambda}}U(e^i) = UP_{\mathcal V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
+M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
+\end{aligned}
+```
+
+次のイメージです$$M^{i,j,k}$$ 真下付き$$U$$'基準処理$$e^i \mapsto U(e^i)$$.
+
+今、予想の条件の下で、それぞれの$$\mathcal V_\lambda$$ 1次元ベクトル空間$$\Complex$$しかし、それはまた、それらが一次元ベクトル空間であることを意味する。$$\Reals$$のように、完全な多重対称グループは$$O(1,\Reals)^\infty=\Z_2^\infty$$.
+
+多重度拘束がなければ、予想'関連する前提条件"絶対値に関する合意" 単に"単数値の順序付きセットの保存$$\set{M^{i,j,k}}$$ (多重度でカウント)マップの集合として表示する場合$$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"これは、Unitary Invariantsの堅牢なセットです。我々は、この一般化された予想が、明示的なSunada建設を介して反例を作り出すことが可能である可能性があるので、真であることは、あまり確信がない。
+
+元の予想に戻ると、この証明には次のような意味があることがわかります。
+
+```math
+z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
+```
+
+ご希望の方へ$$k$$, $$M_0^{i,i,k}$$ 同じにはできません$$0$$ すべて$$i$$。さらに、Formula <span class="eqno"></span> 対象$$z_k$$ 両方が必要$$i$$ベースマップを確立するための独立性と効率性$$e_0^i \mapsto z_i e_1^i$$ 保存$$\set{M_0^{i,j,k}}$$。これらのすべての側面は未知のままです。
+
+それにもかかわらず、いくつかの関連するアイデンティティを計算して、いくつかの困難な将来の研究者がこの予想を掘り下げることができます。
+
+```math
+\begin{aligned}
+\Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
+M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
+\frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\ 
+\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
+
+\text {and so the quadratic form} \\
+Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
+\text{Now with }J \text{ real-analytic}\\
+Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
+&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
+\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
+Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
+\sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
+&= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
+ = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell\implies\\
+ \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
+&= \widehat{g^2}(k). \\
+\end{aligned}
+```
+
+Note: 下の平らな通路の場合、$$\tilde{Q}_k(e^i,e^j) = 0$$ 以降$$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ 真の派生である。
+
+## 例
+
+許可$$\set{\lambda_i} \subset \R^n$$ 索引付き、ランク$$n$$ Lie代数ウェイト(Lie Algebra Weights)の格子$$\frak{g}=\Reals^n$$ 翻訳不変(定数)ベクトルフィールドとして、$$\R^n$$ また、次のように表示されます。$$\frak{g}$$'によって定義されたトーラス上の嘘グループ$$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$。これらのウェイトは、線形関数に統合されるトルス上の1フォームの積分可能なリフトを定義します$$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ Lie Group(ルーシー・グループ) これらの線形関数は、均一に再スケールできます( $$2\pi \sqrt{-1}$$)および指数関数して、直交的基礎を形成するために降下する多重文字を形成する$$L^2(\Reals^n/A\Z^n,dx)$$レベスゲ(Leebesgue) $$dx$$.
+
+さらに、この基礎は平らなトーラスを同時に対角化します'Laplacian **because** the Laplacian is the image of a symmetric、 negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra.ラプラシアンは、この(定数係数線形微分演算子)の下で、対称で負の定数の四角形のカシミール要素のイメージである。したがって、その固有値は一定の割合(of)です$$4\pi^2$$)から各文字のカシミール要素決定長さ2乗'ラティスの重さ
+
+上記の基準を現在見ています。
+
+```math
+\set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+```
+(負の)ユークリッドカシミール要素(Euclidean Casimir element)を直接対応する正準(multiplicative character)固有関数の定理適用可能なフーリエ基準となるため$$\set{\lambda_i}$$。私たちの定理'仮説は、我々は持っている必要があります$$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (重さのユークリッド基準).
+
+計算できるようになりました
+
+```math
+M^{i,j,k} = \begin{cases}
+1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0 \\
+0 & \text{otherwise}
+\end{cases}
+```
+
+この方程式として<span class="eqno"></span> 重量格子の線形変換では*only*不変$$(A^{-1})^t\Z^n = \set{\lambda_i}$$単なる$$L^2$$ orthonormal eigenfunction basis map **これは、このようなインデックス付き、ランク間の体積保持の反転線形マップから誘発されます$$n$$ 重量格子**は保ちます"代数/位相" 索引付きデータ・セット$$\set{M^{i,j,k}}$$ 不変
+
+ただし、[定理](#theorem)そのような線形の地図が不可欠です。$$B$$ ある$$B\in SO(n,\Reals)$$ 重さの格子で、なぜなら、$$L^2$$ 固有関数基準マップ
+
+```math
+\set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+```
+
+また、"分析" 不変条件&mdash; カシミール要素誘起図$$4\pi^2\lVert\lambda_i\rVert^2$$ 各インデックス付き重量、つまりフラット通りの個々の固有値'Laplacianです。
+
+この表示- 理論勘定[[AK01]](#AK01) は、*lattice congruence*の以前の開発とまったく同じです。[[NRR22]](#NRR22) 伝統的に平らな通路の等量クラスを描写するために使用されます。実際、そのような線形マップのマトリックス転写$$B\in SO(n,\Reals)$$前項で説明したように、**は、通路間の矛盾するRiemannian等量であり、*Gelfand-Naimark表現定理*の適用によって提供されています。[プルーフ](#proof-of-theorem) 私たちの[定理](#theorem).
+
+## 確認
+
+最初の研究は、1995年から1996年にかけて優雅なジェームズ・シモンズ研究賞と、アルフレッドPの寛大な支援によって一部資金提供されました。Sloan Dissertation Fellowship in 1996-1997 at the University at Stony Brook(ストニー・ブルック大学).
+
+著者はまた、Tanya Christiansen、Carolyn Gordon、Hamid Hezari、Harish Seshadri、特にLeon Takhtajanの技術的な支援に感謝し、この原稿の出版準備をレビューしたいと考えています。
+
+<!-- $Date: 2026-02-16 11:07:56 -0700 (Mon, 16 Feb 2026) $ $Author: joe $ $Revision: 27586 $ -->

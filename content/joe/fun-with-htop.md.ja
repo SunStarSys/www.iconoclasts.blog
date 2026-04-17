@@ -1,0 +1,55 @@
+---
+archived: ~
+categories: ツール
+dependencies: '*.md.ja'
+keywords: ~
+published: ~
+status: アーカイブ済
+title: htopの楽しみ
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/iEUZJ44mldI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+## {# lede #}人気のUnixプラットフォーム上の高度なhtop機能{# lede #}
+
+- デルタ`独楽`
+
+- 高度な対話型動作
+	- テーマ、**セマンティック**色スキーム
+	- 完全なプロセスだけでなく、POSIXスレッドレベルで動作します
+
+- 機能
+
+- 表示をカスタマイズします`C`
+	- 検索`/` またはフィルタ`\` 名前による軽量プロセス(LWP、別名pthreads)
+	- ユーザー名でLWPをフィルタ`あなた`
+	- トグル`t` ツリービュー
+	- LWPごとのコマンド
+		- `s` システム・トレース
+		- `ll` オープン・ファイル記述子のリスト
+		- `Eメール` 環境変数
+		- `k` killでシグナルを送信する
+
+### ログイン
+
+OOTBの完全動作機能セット。
+
+### OSXポート
+
+- DTraceを有効にします(必須) [リカバリ・モードで起動してSIPを無効にする](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
+- コピー[dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) から`~/bin` そして作成するために実行`売春婦` リンク集
+- 起動`htop` ルートとして
+
+### [Solaris 11](https://github.com/joesuf4/htop/tree/solaris-stable) / FreeBSDポート
+
+- ZFS ARC統計
+- ゾーン名/ID列
+- Solaris LWPアカウンティングデルタ
+	- バイレベルPID + LWPID
+	- 完全なコマンド引数を指定せず、コマンド名のみを指定
+
+<!-- $Date: 2023-01-19 17:58:40 -0500 (Thu, 19 Jan 2023) $ $Author: joe $ -->

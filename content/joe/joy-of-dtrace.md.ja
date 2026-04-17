@@ -1,0 +1,33 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ja'
+keywords: dtrace、solaris、bpftrace、modperl
+published: ~
+status: 下書き
+title: DTraceの喜び
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/SwnZf3j4f1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+[TOC]
+
+## {# lede #}コード最適化の取り組みに着手する前に、2回測定して1回削減{# lede #}.
+
+prodの測定がDTraceより簡単になるものはありません。
+
+## [動画ソース]({{snippetA.pretty_uri}}).
+
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
+
+## [ターゲット設定の最適化]({{snippetB.pretty_uri}}).
+
+すべて`ドルフ` 次のclass-method-callはコンパイル時に次のように実行されます。`: シール済み`:
+
+[snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
+
+<!-- $Date: 2026-03-16 08:35:13 -0700 (Mon, 16 Mar 2026) $ $Author: joe $ $Revision: 29049 $ -->

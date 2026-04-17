@@ -1,0 +1,510 @@
+---
+archived: ~
+categories: 数学、ダイナミクス
+dependencies: '*.md.ja'
+keywords: ダイナミクス、力学、量子、古典、熱カーネル、殺し場、 feynman kac、キャメロンmartin
+published: ~
+status: メッセンジャー
+title: ダイナミクス、クラシック、量子
+---
+
+<div class="right">
+
+![QM](dynamics.page/dynamics).
+
+</div>
+
+{# lede #}差分ジオメトリ'Sアプローチ{# lede #}
+
+Prerequisites:
+
+1. ストークス(Stokes)' 微分外部テンソル代数の定理$$n$$- 立体マニホールド$$M$$.
+
+2. 基本的なRiemannian Geometryへの露出、アインシュタイン/PAIN表記を含む局所座標。
+
+3.Smooth and Stochastic Dynamical Systems including Brownian Motion and Martingale Theoryのその他の作品
+
+[TOC]
+
+## クラシックダイナミクス
+
+### ハミルトン・ジャコビ/ラグラン・フォーマリズム
+
+### コタンジェントバンドルの仕組み
+
+スムーズ**ハミルトン**の定義$$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ のように$$\mathcal H(p,q,t)$$.
+
+#### 許可$$\theta := p\ dq - \mathcal H(p,q,t)\ dt\in T^\*(T^\*M\oplus\Reals)$$.
+
+定義$$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ スムーズに$$\gamma:[0,t]\rightarrow T^{\*}M\oplus\Reals$$.
+
+そのようなカーブが2つある場合$$\gamma_1, \gamma_2$$ 完全に同じ境界エンドポイントを持ち、逆組成で**減算**を定義します。$$\gamma_1 - \gamma_2$$ トラバースによって定義された閉ループです。$$\gamma_1$$ 前方方向、そして$$\gamma_2$$ 逆に。許可$$S$$ この閉ループによって境界される任意の2次元サーフェス: $$\gamma_1 - \gamma_2 = \partial S$$。したがって
+
+```math
+\begin{aligned}
+\mathcal S_\mathcal H(\gamma_1) - \mathcal S_\mathcal H(\gamma_2) &= \int_{\gamma_1 - \gamma_2}\theta \\
+&= \int_{\partial S}\theta\\
+&= \int_S d\theta
+\end{aligned}
+```
+byストークス' 定理
+
+そのような表面の有無にかかわらず$$S$$ 実は、行動のために$$\mathcal S_\mathcal H$$ 次のエンドポイントにのみ依存します。$$\gamma$$、私達は必然的に最初の順序の条件を持っていなければなりません$$d\theta$$ サイトマップ$$\gamma$$.
+
+#### 許可$$\omega_\mathcal H := d\theta = dp\wedge dq - d\mathcal H \wedge dt\in\bigwedge^2T^\*(T^\*M\oplus\Reals)$$.
+
+```math
+\begin{aligned}
+\omega_\mathcal H|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial \mathcal H}{\partial p}dp\wedge dt - \frac{\partial \mathcal H}{\partial q}dq\wedge dt \\
+        &= (-\dot{p}_i - \frac{\partial \mathcal H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial \mathcal H}{\partial p_i}) dp_i\wedge dt
+\end{aligned}
+```
+
+#### $$\therefore \omega_\mathcal H|_\gamma = 0 \iff \gamma(t)$$ ハミルトン・ジャコビ方程式
+```math
+\begin{aligned}
+\dot p &= -\frac{\partial \mathcal H}{\partial q} \\
+\dot q &= \ \ \ \frac{\partial \mathcal H}{\partial p}
+\end{aligned}
+```
+
+$$\iff \gamma:[0,t]\rightarrow T^*M\oplus\R  $$ アクションの*固定曲線*です$$\mathcal S_\mathcal H(\gamma)=\int_\gamma \theta$$.
+
+#### 凡例変換
+次の場合$$\mathcal H$$ 「Convex In」$$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  満足する$$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$。これは、凡例変換を定義します。$$\mathcal L$$ の$$\mathcal H$$:
+```math
+\begin{aligned}
+\mathcal{L}(\dot q,q,t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) \\&= p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
+\mathcal S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
+\end{aligned}
+```
+Action*の*Lagrangian表現です。$$\pi: T^*M\oplus\Reals \rightarrow M\oplus\Reals$$ ファイバー投影演算子(forgetful fiber projection operator) $$(p,q,t)\mapsto (q,t)$$.
+
+#### 最小限の行動の原則
+
+The Principle of Least Action、 simply claims that Classical Dynamics of Nature Itself tends to select trajectories that minimize(最小限の行動の原理は、自然自体の古典的ダイナミクスが最小限の軌道を選択する傾向があると主張するだけだ) $$\mathcal S_\mathcal{L}$$.
+
+一般的に、この主張は**false**です。しかし、セット固定カーブ$$\mathcal S_\mathcal H$$ 発見することは常に興味深いです、そしてそれらは去る曲線と同じです$$\mathcal S_\mathcal{L}$$ 固定局所的には、**これらの静止軌道の微分方程式は同一**です。$$\mathcal S_\mathcal H = \mathcal S_\mathcal{L}$$ それらの曲線にラグランジ式では、これらの共変方程式は**オイラー- ラグレンジ方程式**と呼ばれています。$$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
+
+```math
+\frac{\partial \mathcal L}{\partial q} = \frac{d}{dt}\frac{\partial \mathcal L}{\partial \dot q}
+```
+
+2番目のODE $$t \mapsto q(t)$$はい$$2\dim M+1$$ 初期条件$$(\dot q_0, q_0, t_0)$$ハミルトン・ジャコビ方程式(Hamilton-Jacobi Equations) Picard-Lindelöf定理によって、これらの方程式は、初期値問題として組み立てられたときに局所的にユニークな解を持つ。
+
+しかし、興味深い側面は$$\mathcal S_\mathcal L(\pi\circ\gamma)$$ 独自に定義できるときの自己表示$$\pi\circ\gamma$$ エンドポイントに基づいて暗黙的に$$(q_0, t_0)$$ および$$(q_f, t_f)$$したがって、この境界値問題を初期値問題に変換する必要があります*。言い換えれば、私たちはAのために解決しなければならない。$$\dot q_0$$ ターゲットにヒットします$$(q_f, t_f)$$ (unique?)固定曲線$$\pi\circ\gamma$$ Euler-Lagrange方程式を解きます。このように考えることができます。$$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ **遷移関数**として、固定の選択に依存しないことを前提としています$$\pi\circ\gamma$$その他$$\gamma$$ トランジションポイントのペアを接続するスムーズカーブのソリューションスペースに実際に存在します。ローカルでは、これは暗黙関数定理の適用ですが、グローバルに、そのようなものを構築するための位相障害がある可能性があります$$\gamma$$.
+
+許可'一歩下がって、よりシンプルなものを定義してください。"水平" エレベーター$$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q}^{\*}M\oplus \Reals$$ 割り当てる
+
+```math
+(\dot q, q,t)\mapsto (p_{max}(\dot q), q, t)\ .
+```
+Now We've Gotシングル"予定" スムーズカーブ(固定カーブのみではない) $$\tilde\gamma:[0,t]\rightarrow M\oplus\R$$:
+
+```math
+\begin{aligned}
+
+\mathcal S_\mathcal{L}(\tilde\gamma) &= \mathcal S_\mathcal H(\mathcal A\circ \tilde\gamma) \ .
+\end{aligned}
+```
+
+Note: 次に対する凸拘束$$\mathcal H$$ ユニークであることを保証$$p_{max}(0)$$ そのような静止曲線のwiith $$\dot q = 0$$。この網は静止曲線です$$\gamma$$ *ファイバー内に持続的な動きが含まれていない* $$\pi^{-1}$$したがって、世代を失うことなく、私たちは単に非定常性を考慮する$$\tilde \gamma$$ 持ち上げて。$$\mathcal A$$ 曲線の適切なクラスとして"統合" 後で。
+
+#### 四角形の魔法、パート1
+
+次の場合$$\mathcal H(p,q,t)$$'s $$p$$-dependence(別名Kinetic Energy成分)は非変性、対称性二次形式であり、我々はそれを疑似Riemannianメトリックとして表すことができる。$$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$ 逆の場合$$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$。ローカル座標の凡例変換は、次のように関連付けられます。
+
+```math
+\begin{aligned}
+\mathcal H^\mathcal V(p,q,t) &= \frac{1}{2}\ g^{ij}(q,t)\ p_ip_j + \mathcal V(q,t) \implies\\
+\mathcal{L}^\mathcal V(q,\dot q, t) &= \frac{1}{2}\ g_{ij}(q,t)\dot{q}^i\dot{q}^j - \mathcal V(q,t)\ .
+\end{aligned}
+```
+
+Levi-Civitaコネクション'クリストフェルのシンボル$$g$$ 単にKoszul Formulaによって定義される
+
+```math
+\begin{aligned}
+\Gamma^k_{ij} &= \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})\\
+\Gamma_k^{ij} &= \frac{1}{2}g_{ka}(\partial^ig^{ja} + \partial^j g^{ia} - \partial^ag^{ij}).
+
+\end{aligned}
+```
+対象$$\partial_i := \frac{\partial}{\partial q^i}$$ および$$\partial^i := g^{ij}\partial_j$$。関連共変量デリバティブ$$\nabla$$ ローカル座標
+```math
+\begin{aligned}
+\nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or}\\
+\nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k \text{ , and contravariantly}\\
+\nabla_{\partial^i}\partial^j &= \Gamma^{ij}_k\partial^k \text{, so} \\
+\nabla &= d + \Gamma
+\end{aligned}
+```
+
+すべてのテンソルフィールド特に$$\Gamma$$ 対称$$(i, j)$$; および$$\nabla [g_{ij}] = \nabla [g^{ij}] = 0$$.
+
+Anecdotally、Riemann-Christoffel Curvature Tensorは、
+
+```math
+\mathcal R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
+```
+
+##### ラグレンジ乗数$$\mathcal H$$ 無限翻訳として$$\mathcal L$$
+
+さらに、$$\mathcal H = \mathcal H\_B$$ 追加速度フィールド・コンポーネントがあります$$\mathcal B(q,t)\in T_qM$$、すなわち線形機能$$p\in T^{\*}_qM$$、私達は**正方形**を完了し、再計算できます$$\mathcal{L}_B$$ から$$\mathcal L$$:
+
+```math
+\begin{aligned}
+\mathcal H_\mathcal B(p,q,t) &= \mathcal H + \mathcal Bp \implies\\
+\mathcal L_\mathcal B(\dot q,q,t) &=\max_p p(\dot q - \mathcal B) - \mathcal H\\
+&\ \begin{equation}
+\tag{A}= \mathcal{L}(q,\dot{q}-\mathcal B, t)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\end{equation}\\
+\mathcal H_\mathcal B &= \frac{1}{2}\ g^{ij}p_ip_j + p\mathcal B + \mathcal V \implies\\
+\mathcal L_\mathcal B &\ \begin{equation}\tag{B}= \mathcal L - g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j\ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+ここで、Lagrange Multiplier間の接続を確認します。$$\mathcal B$$ 日付$$\mathcal H$$ 無限の漂流としてのその同等の表現$$\mathcal L$$。コンテキスト化$$\mathcal B$$ 残りには様々な便利な方法があります。**両方の式$$(A)$$ および$$(B)$$ 対象$$\mathcal{L}_\mathcal B$$ 方程式<span class="eqno"></span> 批判的**
+
+##### 水平リフト$$\mathcal A$$
+
+次以降$$\frac{\partial \mathcal H}{\partial p_i}(p,q,t) = g^{ij}p_j \implies \frac{\partial^2\mathcal H}{\partial p_i \partial p_j} = g^{ij}$$、水平リフトを明示的に計算できます
+
+```math
+\begin{aligned}
+{p_{max}}_i &= g_{ij}\dot q^j = \frac{\partial \mathcal L}{\partial \dot q_i}\implies \\
+\mathcal A(\dot q, q, t) &= ([g] \dot q, q, t)\ .
+\end{aligned}
+```
+
+次の場合$$g^{ij}$$ は正定値であり、逆であり、これは、$$\mathcal S_\mathcal L(\tilde\gamma) = \mathcal S_\mathcal H(\mathcal A\circ\tilde\gamma)$$ は、実際のRiemannianメトリックを含む固定曲線上のローカル**最小化**です。
+
+方程式(12) $$(A), (B)$$のEuler-Lagrange方程式$$\mathcal L^\mathcal V_\mathcal B$$ 次のようになります。
+
+```math
+\begin{aligned}
+
+\frac{1}{2}\partial_i g_{jk}(\dot q^j-\mathcal B^j)(\dot q^k -\mathcal B^k)-\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)(\dot q^j - \mathcal B^j) = {\dot p^\mathcal B_{max}}_i\ ,\\
+
+- \partial^i \mathcal V &= \frac{1}{2} (\partial^i   g_{jk})(\dot q^j-\mathcal B^j) (\dot q^k-\mathcal B^k) - g_{jk}(\partial^i\mathcal B^j)(\dot q^k - \mathcal B^k) + \frac{d}{dt} (\dot q^i - B^i) + g^{ij}\frac{\partial g_{jk}}{\partial t}(\dot q^k -\mathcal B^k)\\
+
+-\nabla\mathcal V(q,t)&\begin{equation}\tag{C}=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B +(\partial_t [\log g])(\dot q-\mathcal B) \ .\ \ \ \ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+まさに**ニュートン'『Laws Of Motion』$$F/m = a$$ 対象$$\partial_t := \frac{\partial}{\partial t}$$ 潜在的なエネルギー$$\mathcal V$$ 速度フィールド$$\mathcal B$$、時間依存の設定。
+
+### 対称ジオメトリ
+
+シンプレクティックマニホールド$$N$$ 接線バンドルの抽象化$$T^\*(M\oplus \Reals)$$、閉じた非生成2形式$$\omega \in \bigwedge^2T^\*N$$. $$N$$このカテゴリの-isomorphismは保持します$$\omega$$.
+
+必要$$d\omega = 0$$ 潜在的なローカルな統合性条件$$\theta$$ 満足する$$d\theta = \omega$$ただし、トポロジ上の制約がある場合があります。$$\omega$$'グローバルな統合性
+
+ダイナミクスのために私たちが気にしていることは、行動です$$\mathcal S(\gamma) = \int_\gamma \theta$$したがって、この記事ではコタンジェントバンドルに焦点を当てています。ここでは、適切な$$\theta$$ 関数の観点から分類するのは簡単です$$\mathcal H$$ 日付$$N$$。もちろん、Wick-rotated $$\theta$$ の普遍的なカバーに$$N$$ 場合によっては、その*フェーズ*で統合性条件を満たすことがあります(つまり、$$\theta$$ complex-line-bundleに値があるかのように$$N$$一貫した価値を提供するために、その想像上の部分に焦点を当てる$$e^\mathcal S$$ の下降$$N$$.
+
+#### 自然対称体積形式$$\omega^n/n!$$
+
+#### ポアソンブラケットと嘘グループ
+
+## 量子力学
+
+クラシカルダイナミクスが最小アクションの原則を満たす曲線を見つけることである場合、量子ダイナミクスは、非定常カーブのクラス全体にわたってその値を統合し、適切な制限概念を持つアクションの指数です。"無限次元レベスゲ測定" $$\mathcal D_{dt}\tilde \gamma$$,
+
+実はガウシアンだけ"結合"
+
+```math
+\int_{\set{\tilde \gamma}} e^{-\mathcal S_{\mathcal L_\mathcal B^{\mathcal V}}(\gamma)}\mathcal D_{dt}\tilde \gamma
+```
+
+いくつかについて*a(複素数)の測定として解釈する必要がある$$\set{\tilde \gamma}$$*、しかし、この建設は、ますます洗練された例のシリーズとして、今後の私たちの焦点になります。どんなものであろうと、実際の価値が明らかになるでしょう。$$\mathcal S$$ これらの曲線は、$$\infty$$キャンセル: $$\infty$$* "時間分割ノーマ" 固有の$$dt$$ 要素$$\mathcal D_{dt}\tilde \gamma$$。近似の収束に影響を与える近似の構築にはいくつかの選択肢がありますが、些細な計算可能なケースの地理的不変に焦点を当てて、それらをすべて横に並べます。
+
+### アクションの重要性
+
+あまりに良い点を置くわけではありませんが、Classical Mechanicsはアクションを終わりの手段として定義します。それは、その実際の価値**が何を意味するのかを理解すること自体を心配することはありません。必要な微分方程式を作成するためにそれを使用するだけで、$$\mathcal S$$ *定常曲線*によるエンドポイント間の遷移関数定常的な要求により、私たちは解釈することができました$$\mathcal S$$ パス不変の表現として、しかし、私たちはその実際の価値を気にすることはありません。その理由$$\theta \mapsto \theta + df $$ いくつか$$f \in C^\infty(T^\*M)$$ Gauge-invariant Transformation: The Classical Equations of Motion Remains Unchanged byゲージ不変変換とみなされます。$$f$$.
+
+「Quantum Dynamics」
+
+### 自然(共変量)パス積分量化
+
+正方形とレベスゲ尺度の翻訳不変を完了することによって(ファイバーで) $$T^\*M$$)、次のことを思い出してください。
+
+```math
+\hbar^n\int_{\Reals^n} e^{ p_i\dot q^i\Delta t - \frac{1}{2}\hbar^2 g^{ij}p_ip_j\Delta t}dp_1\dots dp_n = \hbar^n\int_{\Reals^n} e^{-\frac{1}{2}\hbar^2 g^{ij}(p_i - g_{ik}\dot q^k/\hbar)(p_j - g_{jk}\dot q^k/\hbar)\Delta t} dp_1\dots dp_n \cdot e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t} =
+\frac{e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t}}{\sqrt{(2\pi\Delta t)^n \det g^{ij}}}
+```
+したがって、**Feynman Path Integral**式は、四次運動エネルギーの場合の道徳的に同等(ただし、正式には無限)です。
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H^\mathcal V_\mathcal B} (\gamma)} \mathcal D_{dt}\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H^\mathcal V_\mathcal B(p,q,t))\Delta t}\omega_0^n/n!\\
+&= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{\mathcal L^{\mathcal V}_\mathcal B(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
+&\approx \int_{\set{\tilde \gamma}} e^{\mathcal S_{\mathcal L^{\mathcal V}_\mathcal B}(\tilde \gamma)} \mathcal D_{dt}\tilde \gamma \ .
+ \end{aligned}
+```
+
+したがって、**ウィック回転とプランク定数によるベクトル再スケール** $$\hbar = h/2\pi$$送信$$dt\mapsto \hbar/i\ dt, \ p\mapsto \hbar p, \ \dot q\mapsto \dot q/\hbar,\  \mathcal B\mapsto \mathcal B/\hbar$$:
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}}e^{\hbar/i\ \mathcal S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}\mathcal D_{\hbar/i\ dt}\gamma &\approx \int_{\set{\tilde\gamma}} e^{\hbar/i \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\\
+&= \int_{\set{\tilde \gamma}}e^{-\frac{i}{\hbar}\mathcal S_{\mathcal L^{\hbar^2 \mathcal V}_{\mathcal B}(\dot q, q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\ .
+
+\end{aligned}
+```
+
+したがって、方程式の右側を近似したい場合<span class="eqno"></span> 静止相の方法(半古典的限界とも呼ばれる) $$\hbar\downarrow 0$$オイラーラグレンジ方程式(14) $$(C)$$ 対象$$\mathcal V \mapsto \hbar^2 \mathcal V\approx 0$$.
+
+### シュレーディンガー量子化
+
+```math
+\begin{aligned}
+\mathcal H(p,q) &\ = \mathcal T(p,q) + \mathcal V(q)\ \text {, where } \mathcal T = \frac{1}{2}g^{ij}(q)p_ip_j \implies \\
+
+e^{-it/\hbar \hat{\mathcal H}}\ket{\psi} &:= e^{-it/\hbar(-\frac{\hbar^2}{2} \Delta_M + \mathcal V)} \ket{\psi} \implies \\
+
+i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mathcal V\ket{\psi}
+
+\end{aligned}
+```
+($$\Delta_M$$ Laplace-Beltramiオペレータ$$g$$)を線形微分演算子とする。問題は、ソリューションが**分析**であることです$$t$$ 上部半平面上、および$$dt\mapsto i/\hbar\ dt,\ p\mapsto p/\hbar $$ Wick-unrotated diffusion equationの略。
+
+```math
+\frac{d}{dt}e^{-t\hat{\mathcal H}}\ket{\psi} = (\frac{1}{2}\Delta_M - \mathcal V) e^{-t\hat{\mathcal H}}\ket{\psi} \ .
+
+```
+
+これは、サンプルパスベースの確率解析に対応できる形式であり、Feynman Path-Integralsを、楕円拡散方程式に対する解の解析的継続と右半平面全体に合わせる意味のある方法を提供します。基本的には、明確に定義されます。"測定値" 右半分平面から境界線付き線形演算子のセットへの分析マップ$$\mathscr H = L^2(M,g)$$シュレーディンガー方程式(SchrödingerEquation)'単項進化演算子は、架空線上の境界値です。$$it\hbar\ ,t\in\Reals$$。それはフォン・ノイマンを理解するのに役立ちますが'閉じた、無制限の自己結合演算子の調和的な分解のためのsスペクトル定理(例えば$$\Delta_M$$) $$\mathscr H$$それ'この記事の残りの部分については必要ありません。
+
+言い換えれば、方程式のダイナミクス(17)を研究するには十分であり、その示唆的経路積分表現の明示的な定義に関与する微妙な微妙な関係を明らかにした。
+
+Itô/Stratonovich/Malliavin SDEセミマーチンゲール計算を全布から再発明する代わりに、一般的な理論に私たちをもたらす一連の単純な(フラットメトリック)例を進めるつもりです。
+
+一日の終わりに、Feynman Path-Integral QuantizationがSchrödingerQuantizationと一致するか、少なくとも**deviation**を理解するようにします。特に、SchrödingerPDEを生成するには、Semiclassical Approximationが必要です。$$o(t)$$ のように$$t\downarrow 0$$.
+
+ということで、今も論争が続いている。$$\mathcal V$$ 指標がフラットでない場合の用語。この問題は、非フラット・メトリックの既知の(セルベルクのような)合計式に関連しているため、以下で詳しく説明します。
+
+### フェインマン- カック式
+
+次を含む$$V \in C^\infty(M)$$バイカー- キャンベル- ハウスドルフ式:
+```math
+e^{-it/\hbar -\Delta^\hbar_M/2} e^{-it/\hbar V} = e^{-it/\hbar(-\Delta^\hbar_M /2 + V - it/4\hbar [\Delta^\hbar_M,V] + O(t^2))}
+```
+
+Feynman-Kac Formulaは、ユークリッド空間におけるBrownian Motionの経路積分式に従っている。これは、私たちが集中できるということです。$$\mathcal V = 0$$ というわけで、進みます。
+
+#### パラレル・トランスポートのIsometry $$\hat\Gamma$$
+
+任意のベクトルを$$v \in T_qM$$。パラレル転送$$\hat\Gamma_t(\gamma)v \in T_{\gamma(t)}M$$ 線形一次ODEを解くことによって得られるベクトルです。
+
+```math
+\begin{aligned}
+v(0) &= v \\
+\nabla_{\dot \gamma(t)}\dot v &= 0
+\end{aligned}
+```
+
+特に$$\nabla_{\dot \gamma}\hat\Gamma_t(\gamma) = 0$$、および曲率のテンソル$$\mathcal R(X,Y) = [\nabla_X,\nabla_Y] - \nabla_{[X,Y]}$$ 最初の順序依存度を測定します。$$\hat \Gamma$$ 曲線の選択$$\gamma$$ エンドポイントの接続$$\mathcal R = 0 \iff \hat\Gamma_t$$ 次に依存しない$$\gamma$$.
+
+つまり、パラレル・トランスポートを無限小移動として分解しようとした場合$$\mathcal B^\perp$$ infintitesimal movementたった今$$\mathcal B$$方程式は次のようになります。
+```math
+\begin{aligned}
+\hat\Gamma(\gamma) &= \hat\Gamma(\gamma|_\mathcal B)\hat\Gamma(\gamma|_{\mathcal B^\perp}) - \frac{1}{2}\mathcal R(\dot{\gamma}|_\mathcal B, \dot{\gamma}|_{\mathcal B^\perp})dt + O(dt^2) \ \\
+\nabla_{\dot \gamma}\hat\Gamma(\gamma) &= \nabla_{\dot \gamma|_\mathcal B}\hat\Gamma(\gamma|_{\mathcal B^\perp}) + \nabla_{\dot \gamma|{\mathcal B^\perp}}\hat\Gamma(\gamma|_{\mathcal B})  - \frac{1}{2}\mathcal R(\dot\gamma|_\mathcal B,\dot{\gamma}|_{\mathcal B^\perp}) = 0
+\end{aligned}
+```
+
+#### セミクラスメカニクス
+
+##### Semiclassical Asymptoticsは、フラットマニホールドの正確なソリューションです
+
+方程式の右側(16)は、一定係数(in)の熱カーネルの正確な定式化である。$$q$$ メトリック$$g_{ij}$$。すべてのフラットマニホールド'sの普遍的なカバーはユークリッドのスペースにアイソメトリックです$$g_{ij} = \delta_{i-j}$$.
+
+この**は、標準のヒート・カーネルです$$n$$- 立体的なブラウン運動。
+
+許可'この場合は、*transition function*を思い出してください。$$\mathcal S_\mathcal L(q_0,t_0, q_f, t_f) = \rho^2(q_0, q_f)/2(t_f - t_i)$$ここで$$\rho$$ 距離はRiemannian Distance $$q_0$$ および$$q_f$$.
+逃す$$||q||^2 = q\cdot q$$ ユークリッドノルムの正方形$$q$$:
+
+```math
+\begin{aligned}
+RHS^{16}_t(q_0,q_f) &:= \frac{e^{-\mathcal S_\mathcal L(q_0, 0, q_f, t)}}{\sqrt{(2 \pi t)^n}} \sqrt{g(q_f)}\\
+\mathcal R=0 \implies \\
+&\ = \frac{e^{\frac{-||q_f - q_i||^2}{2t}}}{\sqrt{(2\pi t)^n}} \\
+                   &\ = \int_{\Reals ^n}RHS^{16}_{s}(q_i, q)\ RHS^{16}_{t-s}(q, q_f)\ dq^1...dq^n\ \forall s\in (0, t)
+\end{aligned}
+```
+
+なぜこの最後の方程式が正しいのか。許可'パス空間からの画像を見てみましょう: 直線測地線が接続されています$$q_0$$ から$$q_f$$ 時間内$$t$$で発生している中間ブレークポイントとそれらを接続する壊れた測地線$$s$$。実質的には、Cameron-Martin Formulaを使用して直線測地線を次のように表すことで、一度壊れた測地線を統合しています。$$g$$- 不変ベクトルフィールド$$\mathcal B$$。次に、その測地線からのブレークポイントデルタを統合します($$\dot q-\mathcal B$$)を中心としたガウス$$\Reals^n$$.
+
+指定された定数ベクトル・フィールドを明示的に指定します。$$\mathcal B_t = (q_f - q_0) / t$$一度壊れたユークリッドの測地学
+
+```math
+q(\tau) = \mathcal B_t\tau + q_0 + q\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t - \tau)/(t-s)& s\leq\tau\leq t
+\end{cases}
+````
+for fixed $$q\in\Reals^n$$ representing the "break point" at $$s$$.
+
+By Equation (12) $$(A)$$ and $$(B)$$:
+
+```math
+\begin{aligned}
+-\mathcal L(\dot q, q, \tau) &= \begin{equation}\tag{D}-\mathcal L(\dot q(\tau) - \mathcal B_t, q(\tau), \tau) - \mathcal B_t\cdot (\dot q(\tau)-\mathcal B_t) - \frac{1}{2}\mathcal B_t \cdot B_t \ \ \ \ \ \ \ \ \ \end{equation}\\
+\implies \\
+
+e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B_t||^2/2}e^{-(\mathcal B_t -q_0)\cdot (q(\tau)-\mathcal B_t\tau - q_0) -\mathcal S_{\mathcal L_{\mathcal B_t}(\dot q,q,\tau)}} \\
+
+&= e ^{-\tau||q_f-q_0||^2/2t^2  - \mathcal S_{\mathcal L(\dot q-\mathcal B, q, \tau)}}e^{-(q_f - q_0)/t\ \cdot q
+\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t-\tau)/(t-s) & s\leq\tau\leq t
+\end{cases}
+}\\
+\implies\\
+
+\frac{1}{\sqrt{((2\pi)^2 s(t-s))^n}}\int_{\Reals^n} e^{-\mathcal S_{\mathcal L}(q_0,q,s)}e^{\mathcal S_{\mathcal L}(q,q_f,t-s)}dq^1...dq^n &= \frac{e^{-(s+t-s)||q_f - q_0||^2/2t^2}}{\sqrt{((2\pi)^2 s(t-s))^n}}
+\int_{\Reals^n}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
+&= \frac{e^{-\rho^2(q_f, q_0)/2t}}{\sqrt{(2\pi t)^n}}\\
+&= RHS^{16}_t(q_0,q_f) \ .
+\end{aligned}
+```
+
+大きく、構築しました。$$\mathcal B_t$$ したがって$$\dot q - \mathcal B_t$$ 一度壊れた測地線を表す$$s$$ 始まりと終わり$$q_0$$そして、これらの曲線は本質的に$$\mathcal N(0,s\wedge t-s)$$ 配布この記事の残りの部分では、分解します$$\Reals^n=<\mathcal B_t>\oplus \mathcal B_t^\perp$$ 統合$$<\mathcal B_t>$$.
+
+#### DeWitt Riemannサーフェス上のスカラー曲率パス積分欠陥
+
+使用しようとしたら"連続した関係" 方程式の半古典式(16)で、否定的に曲がったマニホールドにブラウン運動を構築する$$M$$?
+
+私たち'何かを得るけど、'd be *almost*曲線空間のブラウン運動&mdash; 私たちは、Feynman-Kacにその無限小の発電機の欠陥を調べる必要があります。効果的な潜在的な機能エラーがあることが判明$$-\frac{1}{6}\bar{\mathcal R}$$ここで$$\bar{\mathcal R}$$ は各点のスカラー曲率です。これは1950年にブライスDeWittによって最初に発見された。's、 and made famous in the 1972 McKean-Singer paper on the short-time asymptotics of the trace of the Heat Kernel、 where this term represents the Contribution to the Hessian of *the metric form*(ヒートカーネルの痕跡の短時間漸近論に関するシンガー紙) $$g_{ij}$$ 場所[標準座標](https://en.wikipedia.org/wiki/Normal_coordinates)。しかし、その後$$\dim = 2$$ 完全な是正可能性を追加した場合$$\mathcal V = -\frac{1}{6}(\bar{\mathcal R} - \frac{1}{4}\bar{\mathcal R}) = \frac{1}{16}\bar{\mathcal R}$$ ハミルトニアン(Hamiltonian) - Dewitt's $$\frac{1}{6}\bar{\mathcal R}$$ ボリュームフォーム用語*マイナス*キリングフィールドの存在$$\mathcal B$$'s $$\frac{1}{24}\mathcal{Ric}(\mathcal B/||\mathcal B||, \mathcal B/||\mathcal B||)$$ 貢献、この要因は、セルベルグのようなトレース式の半古典的無症状から排除されます。
+
+より正確に言うと、近似$$1/2\ \nabla\vert_0\sqrt{g} = - 1/6\ \mathcal{Ric}_{ij}q^i\partial^j + o(||q||) \implies 1/2\ \nabla\cdot\nabla\vert_0 \sqrt{g} = -1/6\ \bar{\mathcal R}(0)$$では、最初の派生物が起源で消滅していることがわかります。
+
+```math
+\sqrt{(2\pi t)^n}(\frac{1}{2}\Delta_M-\mathcal V)\vert_0 e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_{\Reals^n}\vert_0 e^{-1/2t\ g_{ij}q^iq^j}) - \mathcal V(0) - \frac{1}{6}\ \bar{\mathcal R}(0)
+```
+
+*は、彼が導出した元のデューイット用語です。殺人現場の存在における量子化のバイアスとして$$\mathcal B = \frac{\partial}{\partial x^1}$$ 、我々は、若干の変更された潜在的な用語を取る:
+
+```math
+\sqrt{(2\pi t)^{n}}(\frac{1}{2}\Delta_M-\mathcal V)\vert_{x^1,\vec 0} e^{-\mathcal L_\mathcal B(\dot q, q, t)}\frac{1}{det |I-\mathcal J_\mathcal B|} = (\frac{1}{2}\Delta_{\Reals^n}\vert_{x^1,\vec 0}e^{-x^1x^1/2t}) - \mathcal V(x^1, \vec 0) + \frac{1}{8}\mathcal{Ric}_{11}(x^1, \vec 0).
+```
+
+#### Geometric Cameron-Martin Formulaとは$$g$$-invariant (Killing)ベクトルフィールド$$\mathcal B$$ Quadratic Form Magic (第2部).
+
+仮定$$\mathcal B$$ A $$g$$-invariant (aka) [強制終了](https://en.wikipedia.org/wiki/Killing_vector_field))ベクトルフィールド$$M$$ この記事の残りの部分。
+
+##### 開発マップ$$\tilde \gamma = \mathscr D_q[\tilde c]$$ 対象$$\tilde c\in C^\infty([0,t],T_qM)$$.
+
+解決対象$$\tilde \gamma$$:
+```math
+\begin{aligned}
+\tilde \gamma(0) &= q \\
+\dot {\tilde \gamma} &= \hat\Gamma(\tilde \gamma)\dot{\tilde c}\\
+\end{aligned}
+```
+
+##### $$\tilde c(\tau)=\int_0^\tau\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ 開発マップの逆として
+
+ネザー'定理は保障します$$d({g^{-1}\mathcal B}) = 0$$など$$g^{-1}\mathcal B$$ ローカルで統合可能$$\hat{\mathcal B}$$で、そのローカルレベルセットは直交$$\mathcal B = \nabla \hat{\mathcal B}$$。理由$$\hat \Gamma$$ メトリックを保持します。$$\mathcal B$$ および$$\mathcal B^\perp$$:
+
+```math
+\begin{aligned}
+\\
+\dot{c}\cdot\mathcal B &= 0 \implies\\
+\dot{\gamma}\cdot \mathcal B &= 0 \implies\\
+\frac{d\hat{\mathcal B}}{dt} &= 0\ ,
+\end{aligned}
+```
+
+その上$$\gamma$$ レベル・セットに含まれます。$$\hat{\mathcal B}$$ いつでも$$c$$ 完全に含まれている$$\mathcal B^\perp \subset T_qM$$.
+平行輸送の可換性に関する曲率制約により、$$\gamma(t) \ne q$$ 一般的に。さらに、
+
+```math
+\begin{aligned}
+||\mathcal B_t|| &= \frac{\rho(q_0,q_f)}{t} \implies \\
+\tilde{c}(\tau) - c(\tau) &= \frac{t^2}{\rho^2(q_0,q_f)}\mathcal B_t\int_0^\tau \dot{\tilde c} \cdot \mathcal B_t\ ds\\
+&= \mathcal B\int_o^\tau\dot{\tilde c}\cdot \mathcal B \ ds\\
+&= \mathcal B\cdot \tilde c(\tau)\ \mathcal B\\
+&= d\hat{\mathcal B}(\tilde c)\ \mathcal B \ .
+\end{aligned}
+```
+
+##### Brownian Motionたった今$$M$$ EuclideanのWienerの測定オン$$\mathscr D^{-1}$$
+
+##### 熱カーネルのためのキャメロンマーティン式$$k^{\hat{\mathcal H}}_t(q_0,q_f)$$ 負の曲線マニホールド上$$M$$ここで$$\hat{\mathcal H} = -\Delta/2 +\mathcal V$$
+
+許可$$\Omega^\mathcal B_t(q)$$ 連続したカーブのスペース$$M$$ 起点$$q$$ で終わる$$\exp{t\mathcal B}\ q$$および$$\mu_t(\omega)$$ グローバルWiener測定$$\omega\in \Omega^\mathcal B_t := \set{\Omega^\mathcal B_t(q): q\in M}$$で$$E_t^\mathcal B (f|A):=\int_{\Omega^\mathcal B_t} f(\omega) d(\mu_t|A)(\omega)$$ および$$P^\mathcal B_{\mu_t}(A) := \mu_t(A)/\mu_t(\Omega_t^{\mathcal B})\ \forall A\subset\Omega^\mathcal B_t $$ . 方程式(26) $$(D) \implies$$
+
+```math
+\begin{equation}
+\tag{E}
+k^{\hat{\mathcal H}}_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J^{\mathcal B}(q_0)|}}} E^\mathcal B_t({e^{-\int_0^t V(\omega(s))ds\ +\ \int_0^t \bar {\mathcal R}(\omega(s))ds/12\ -\ \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/24}\chi_{\Omega^B_t(q_0)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q_0) \ \ \ \ \ \ \
+\end{equation}
+```
+
+場所$$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$, $$\mathcal J^{\mathcal B}(q_0)$$ 折り曲げに関連するモノドロミー行列です$$M$$ によって誘発される$$\hat{\mathcal B}$$カーブに沿って$$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$接続$$q_0$$ から$$ q_f$$ のように$$\lambda$$ 移動元$$0$$ から$$t$$. $$\mathcal J^{\mathcal B}$$ 次に依存しない$$t$$; および曲率拘束は保証します$$I-\mathcal J^\mathcal B$$ 常に非生成$$q_0 \neq q_f$$。置換中$$\mathcal B$$ 対象$$-\mathcal B$$ ロールの戻し処理$$q_0$$ および$$q_f$$はっきり言って、表現は期待どおりにそれらの間で対称である。
+
+次以降$$\mathcal R$$ 一定$$\tilde \gamma$$および$$\gamma$$ *は測地線(長さの改名まで)です。$$\mathcal J^\mathcal B(q_0)$$ **Jacobi Fields**の点で簡単に計算できます$$\mathcal J(\lambda)$$ に沿って$$\tilde \gamma$$ これは単なる定常係数二次線形ODEへの解であり、時間を通して進化した後に評価される$$\lambda=t$$.
+
+この方程式の証明<span class="eqno"></span> このアンケートではなく、事前印刷記事が欲しくなりますが、Feynman-Kac公式の*適用の簡単な適用です$$\mathcal V = \frac{1}{12}(\bar{\mathcal R} - \frac{1}{2} \mathcal {Ric}(\mathcal B / ||\mathcal B||, \mathcal B/||\mathcal B||)$$計算全体がその時点で一定の曲率の場合に減少するため、方程式の両側で明示的に計算できる。
+
+素敵なコロラリーは定数で発生します$$\mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||}) = \bar{\mathcal R} / \dim M$$ 負のガウス曲率$$-\kappa$$ case、where $$\mathcal B$$ 降順$$S^1$$ Riemann Surfaceについて$$M$$:
+
+```math
+\begin{aligned}
+
+\det |I - \mathcal J^\mathcal B| = (2 \kappa\sinh(\sqrt{\kappa}\rho/2))^2 \implies \\
+
+\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k^{-\Delta/2}_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2\kappa(q) \sinh \sqrt{\kappa(q)}\rho/2}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/16}{\chi_{\Omega^B_t(q)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B})|d\mathcal B^\perp), \ \text{ Bayes}\implies\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp d\hat{\mathcal B}|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp d\hat{\mathcal B})}d\hat{\mathcal B}\\
+
+&=\frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \rho_0\\
+
+\end{aligned}
+```
+
+場所$$\rho = \min_{q\in M}dist(q, \exp t\mathcal B \ q)$$ 最短の軌道の距離は、$$S^1$$ アクション、および$$\rho_0$$ その$$\rho$$ 関連する軌道の多重度で除算されます。ハイパボリックジオメトリの使い慣れた用語では、$$\mathcal B^\perp$$ **ホロサイクル**および$$g$$- 不変$$S^1$$ アクション$$\mathcal B$$ これは**ホロサイクル・フロー**と言われています。
+
+方程式(32) $$(E)$$ 場所$$B$$ 回転を表します$$g$$- 固定点の周りの不変対称$$q_0$$。次を含む$$\Omega^0_t$$ 連続的な契約可能なループのセット:
+
+```math
+\mu_t(\Omega_t^0) = \frac{vol(M)}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ \kappa\sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
+```
+
+この方程式は、$$\kappa$$、分析の継続が$$\kappa \rightarrow -\kappa$$ この式を$$\sinh $$ から$$ \sin $$ この場合、一定の正のガウス曲率を持つ*ゴースト2球*の正しい方程式があります$$|\kappa|$$.
+
+言い換えれば、確率とジオメトリを介して2次元のセルバーグトレース式を再導出した**対称空間の通常の調和解析ではなく**。
+
+##### 小さな曲率の例
+
+滑らかな実質価値のdiffeomorphismのため$$h:\Reals\rightarrow\Reals$$ 対象$$h(0)=0$$Let $$ds^2 = (1+h^2(y)) dx^2 + 2h(y) dx\odot dy + dy^2$$。このメトリックには負のガウス曲率があります$$-(\kappa(y)=\frac{d^2}{dy^2}h^2(y)/2)$$の場合のみ一定$$h(y)$$ 悩みの種である。$$\det(ds^2)= 1$$。次を含む$$\hat{\mathcal B}(x,y) = x$$We See Thatシングル
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t}}{2\pi t}\int_{-\infty}^\infty\frac{\rho_0}{2 \sinh \sqrt{\kappa(y)}\rho/2} \int_{\Omega_t^\mathcal B(0,y)}e^{-\int_0^t\kappa(y(s))ds/8}d(\mu_t|\mathcal B^\perp)/dy \ dy
+
+```
+Ifあなたtake $$h(y) := y\sqrt{2y^2/3 + \kappa(0)} \implies \kappa(y) = 4 y^2 + \kappa(0) \gt 0$$方程式(32) $$(E)$$ それを予測
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t -t\kappa(0)/8}}{\sqrt{2\pi t \cosh t}}\int_0^\infty\frac{\rho_0e^{-y^2/2t}}{\sqrt{2\pi t}\sinh \sqrt{4y^2+\kappa(0)}\rho/2 }\ dy
+
+```
+
+Blow Up Atシングル$$0$$予想通り、もし、$$\kappa(0) = 0$$。また、$$t\rightarrow 0$$、積分はまた適当な漸近的行為(一定した曲率の周りを飛び回る)を持っています$$-\kappa(0)$$ Selberg Trace Formulaの対応する構成要素が、その半面的な制限として機能しているかのように状況$$t\rightarrow 0$$).
+
+### 可観測性、進化方程式、嘘代数
+
+### Chern-Simons Line-Bundleアクション
+
+### オリジナルタイトル: Dynamics of General Relativity
+
+- 外部時間軸は人工的なので、`時間` 4次元マニホールド自体のジオメトリに埋め込まれています。
+これは、進化演算子が'定常的なシュロディンガー方程式だけが重要である。
+- 道の積分形成はのために吹きます`-1` 組み込みにおけるロレンツィアン指標の署名`時間` 方向。$$\det{g}$$ が負で、各cotangentバンドルのFourier変換's繊維は、分析継続を使用しない限り、その方向にも無限です(本来のウィック回転とも呼ばれる)。`時間`).
+
+<!-- $Date: 2026-03-14 15:24:59 -0700 (Sat, 14 Mar 2026) $ $Author: joe $ $Revision: 29029 $ -->

@@ -1,0 +1,69 @@
+---
+archived: ~
+categories: Apache, Perl
+dependencies: '*.md.ja'
+keywords: apache、httpd、mod_apreq2、libapreq2、mod_perl
+published: ~
+status: 確認済み=29072
+title: Apache HTTPd Devs Considered Harmful
+---
+
+<div class="right">
+
+![tarredとfeathered](apache-considered-harmful.page/feather2.png).
+
+</div>
+
+## 背景
+
+過去25年間、私は`アプレック` 内のサブプロジェクト[Apache HTTPdサーバー](https://httpd.apache.org) 親プロジェクト。オリジナルアイデア`ライブラリ`、安全/性能として[HTMLフォーム提出](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) および[クッキー](https://datatracker.ietf.org/doc/html/rfc6265) 解析ライブラリは、Lincoln SteinとDoug MacEachernの間のコラボレーションにより、後期90sに登場しました。
+
+当時の私のビジョンは、ライブラリを一般的な非Perl関連に変換することでした`C` 他のプログラミング言語からの言語バインディングをサポートするライブラリ。そのため、プロジェクトをプッシュしました[ホームページ](https://httpd.apache.org/apreq) の代わりに HTTPd傘の下[Apache-Perl](https://perl.apache.org/) プロジェクト
+
+THEADVENTOF `httpd-2。X`まったく新しい`I/Oフィルタ` アーキテクチャの出現元`httpd` コア、および完全な分離`買掛金` より汎用的なPOSIXのような移植性ランタイムとしてコア自体から`C` プロジェクト`Subversion`。実際、`libapreq2` より厳密には、`Apache APR` その精神のプロジェクトとそのPerl APIは、その一部としてそれを反映しています`APR:: 要求` ビルドアウトスタンドアロン操作用の*CGI*モードが内蔵されており、`httpd` ランタイム。ユニット・テストが簡単になります。
+
+しかし、主なコンポーネント`apreq2` 常に`mod_apreq2` Apacheモジュール(最初に考案したモジュール) `Bill Wrowe` 初期の2000s 彼が設計したのは、私とのブレーンストーミングセッション中(個人的には)は、内部にある単一のパーサーライブラリでした`httpd`発行したリクエスト*body*を、実行時にすべての主要な利害関係者モジュールと共有します。つまり、コンテンツ・ハンドラが実行される前に*、*during*および*after*リクエスト処理エンジンに接続されたモジュールに解析済データを提供することでした。また、コンテンツ・ハンドラが解析されたデータを消費したか、RAWリクエスト本文自体を消費して再解析したかに関係なく、サブリクエストに対しても機能する必要がありました。
+
+私は2012年でさえ、何年にもわたってデザイン目標を何度も説明しました[開発@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04)。けれども、この人たちと風に話しかけてきたようなもので、彼らは決して気にかけなかった。
+
+## 嵐雲収集
+
+このビジョンは大成功しましたが、次のような複数の言語で言語バインディングを利用できます。[`Perl`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c), [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache)、等、2010年頃からそれはのための悲劇的な証明しました[既存のユーザー・コミュニティ](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">それらすべてから構成される</a>メンバーだけではなく、`Perl` コミュニティ
+
+何が起こったのですか。[Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci)当時、Perl/FreeBSDの同僚が、HTTPdサーバー自体の中から解放されるプロジェクトをプロモートすることを積極的に開始しました。内容{# lede #}フィリップは'よく知っていた当時は、どれくらい完全に[ピービッシュ、急速、領土](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) チームは{# lede #}直接協力する必要があった。[ユーザー対応の決定](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) コードベースについて
+
+2012年、フィリップは彼が望むものを得て、私は抵抗するのをやめた。[フォーク](https://svn.apache.org/viewvc?view=revision&revision=1201372) 既存のプロジェクトをコピー`C` HTTPdコアへのライブラリ・コンポーネント。
+
+## フォールアウト
+
+[2018年](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) 私はFoundation en masseから辞任しました<sup>1</sup>。理由を推測できます。
+
+2020年以降、グーグル'sセキュリティチームは、httpd 2.5のアルファ版リリースを利用して、8年前のコピーをファズしました。`apreq2`。修理が必要なホットスポットを見つけました。
+
+フィリップに手を差し伸べる代わりに、[Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann)、自分自身(@joesuf4)、または開発に関与する他のユーザー`libapreq2`、 HTTPdチームのジュニアエンジニアは、"バグ修正" グーグルが発見した脆弱性それ以降、すべてのリリースで試行錯誤の記録を確認できます。
+
+しかし、クーデター・デ・グレースは2022年のリリースでした。[2.17](https://www.google.com/search?q=libapreq2-2.17)ルーキー開発者[意図的にコードベースに致命的なバグを導入](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891)【Breaking】[19歳の回帰テスト](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
+
+## ポストモーテム
+
+壊れた回帰テストで何が起こるか疑問に思っている場合[パン](https://metacpan.org/dist/libapreq2)あなた'どのように見なければならない[関連](https://httpd.apache.org/dev/release.html) はサーバープロジェクトで実行されます。
+
+短い長い物語、[彼らはテストをコメントしました](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) そして、それをとにかく出荷し、それをセキュリティリリースと呼んだ。[以前のリリースごとに脆弱性を修正しました。](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
+
+<div class="right">
+
+![スーパーマンのロゴ](apache-considered-harmful.page/superman.jpg).
+
+</div>
+
+なぜ今気になるのか。なぜなら'm吸盤[ユーザーがアンサーにリーチ](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) 既知の問題の専門家です。
+
+ツッコミですが、私'アパチェでスーパーマンの帽子をかぶった私の日々は、約十年前に終わったと言ってごめんなさい。
+
+いずれにせよ、この時点でできる最善のことは、libapreq2の本番ソース・ツリーを表示することです&mdash; @joesuf4/apreq (および@joesuf4/mod_perl)。
+
+## 脚注
+
+1.1 つ't単純"ASFからの辞任"。クリーンな休憩をするには、ASFのメンバーシップだけでなく、すべてのプロジェクト/委員会のメンバーから辞任する必要があります。そうでなければ、一人は地獄のApacheメールスパムに溺れてしまう。
+
+<!-- $Date: 2026-03-18 06:50:37 -0700 (Wed, 18 Mar 2026) $ $Author: joe $ $Revision: 29123 $ -->

@@ -1,0 +1,185 @@
+---
+archived: ~
+categories: Perl、 Orion、パフォーマンス、 Apache
+dependencies: '*.md.ja'
+keywords: perl、dylan、静的な、方法、ルックアップ、コンパイル、密封された、apache、mod_perlの性能
+published: ~
+status: アーカイブ済
+title: 'Perl 7機能要求: 型付き字句の密封されたサブ'
+---
+
+<div class="right">
+
+![サンスターのみ](../images/sunstarstaronly.png).
+
+</div>
+
+## 問題
+
+{# lede #}ページ5'OOランタイム・メソッド参照では、直接指定サブルーチン起動よりパフォーマンス・オーバーヘッドが50%多くなっています。{# lede #}.
+
+## 最初の解決策: Doug MacEachern'sメソッド検索の最適化
+
+ダグは90sの中盤でmod_perlプロジェクトの作成者だったので、明らかに高性能のパールを書くことは彼の幸運だった。彼の多くの貢献の一つ[p5p](https://lists.perl.org/list/perl5-porters.html) メソッド+を使用して、OOメソッド参照オーバーヘッドのパフォーマンス・ペナルティを半分に削減することでした。<code> &#64;ISA</code> 次のようなmod_perlオブジェクトのランタイム・オブジェクト・メソッド参照を行う階層キャッシュ`Apache2::RequestRec` なるべく合理化。でも、中途半端になってしまいます。
+
+これは'呼び出しに関する些細な問題`C構造体` get-setアクセッサ・メソッド&mdash; 多数のmod_perl APIの一般的な状況。Perl'httpdでのランタイム・メソッド・コール参照ペナルティ's `構造体 request_rec *`mod_perlは、`Apache2::RequestRec` moduleは、コールの完全実行の大きさと同じ順序になります。1秒間に数百万のXSメソッド・コールを実行するmod_perlバックアップ・サイトの場合、これは貴重なCPUサイクルのひどい無駄です。
+
+内容[ダグは探していた。](https://www.perl.com/pub/2000/06/dougpatch.html/) 名前付きサブルーチン呼び出しの場合と同様に、コンパイル時にメソッド検索を実行するようにPerl 5に指示する方法でした。ダグが試みる度に、社会的または技術的な性質の障害に遭遇した。おそらく'ペル7の出現でこのアイデアに別のパスを作る時間。
+
+## [ベンチマーク・スクリプト]({{snippetA.pretty_uri}}).
+
+[snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
+
+## ベンチマーク結果
+
+```perl
+1..3
+sealed: compiling main->foo lookup.
+sub sealed :sealed {
+    use warnings;
+    use strict;
+    $y->foo:compiled;
+}
+sealed: compiling Benchmark->cmpthese lookup.
+sealed: compiling Foo->foo lookup.
+sealed: compiling main->foo lookup.
+sealed: compiling Foo->bar lookup.
+sealed: tweak() aborted: sealed: invalid lookup: Foo->bar - did you forget to 'use Foo' first?
+sub __ANON__ :sealed {
+    use warnings;
+    use strict;
+    my Foo $b = $a;
+    $inner->foo($b->foo:compiled($inner->bar, $inner, $bench->cmpthese:compiled));
+    $a = $inner;
+    $a->foo:compiled;
+    $b->bar;
+}
+sealed: compiling main->bar lookup.
+sub also_sealed :sealed {
+    use warnings;
+    use strict;
+    my main $a = shift();
+    if ($a) {
+        my Benchmark $bench = 'Benchmark';
+        my $inner = $a;
+        return sub {
+            my Foo $b = $a;
+            $inner->foo($b->foo:compiled($inner->bar, $inner, $bench->cmpthese:compiled));
+            $a = $inner;
+            $a->foo:compiled;
+            $b->bar;
+        }
+        ;
+    }
+    $a->bar:compiled;
+}
+sealed: compiling main->_foo lookup.
+sub reentrant :sealed {
+    use warnings;
+    use strict;
+    my main $b = shift();
+    (local our(@Q)) = 1;
+    my $c = $b->_foo:compiled;
+}
+sealed: compiling main->foo lookup.
+sealed: compiling main->bar lookup.
+sealed: compiling main->reentrant lookup.
+sub sealed2 :sealed {
+    use warnings;
+    use strict;
+    my main $obj = 'main';
+    foreach $_ (1 .. 3) {
+        $obj->foo:compiled;
+        $obj->bar:compiled;
+        $obj->reentrant:compiled;
+    }
+}
+sealed: compiling main->reentrant lookup.
+sealed: compiling main->bar lookup.
+sub _foo :sealed {
+    package Foo;
+    use warnings;
+    use strict;
+    my main $x = shift();
+    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
+}
+ok 1
+             Rate  class method   anon   func sealed
+class  16129032/s     --    -4%   -26%   -33%   -36%
+method 16806723/s     4%     --   -23%   -30%   -34%
+anon   21739130/s    35%    29%     --   -10%   -14%
+func   24096386/s    49%    43%    11%     --    -5%
+sealed 25316456/s    57%    51%    16%     5%     --
+ok 2
+           Rate method sealed
+method 546448/s     --   -17%
+sealed 662252/s    21%     --
+ok 3
+```
+
+## 提案されたPerl 7の解決: `: 密封` 型付き字句のサブルーチン
+
+サンプル・コード:
+
+```perl
+use v5.38;
+use Apache2::RequestRec;
+
+sub handler :Sealed (Apache2::RequestRec $r) {
+  $r->content_type("text/html"); #compile time method lookup
+}
+```
+
+## 生産品質、堅牢なパールv5.28 +プロトタイプ:sealed.pm {{facts.releases.sealed.tag}} (CPAN).
+
+perl 5.30+のコンパイル手順については、`sealed.pm` podは、mod_perl2をithreadsおよびhttpd-2.4をイベントmpmで実行し、**any**スケールでsegfaultを実行しないようにする必要があります。テスト日`Solaris 11.4` および`ウブントゥ22.04` amd64。
+
+楽しくやってみる[ジャケット]({{snippetB.pretty_uri}}) から`ModPerl::RegistryCooker`:
+
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+
+これにより、`サブハンドラ: シール済み{スクリプトはここにあります}` すべて`ModPerl:: レジストリ` スクリプト、Something Like [こちら](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+
+```shell
+~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
+starting benchmark...
+spawning thread #0: 100 total client(s). 10000 total requests
+spawning thread #1: 100 total client(s). 10000 total requests
+spawning thread #2: 100 total client(s). 10000 total requests
+spawning thread #3: 100 total client(s). 10000 total requests
+spawning thread #4: 100 total client(s). 10000 total requests
+spawning thread #5: 100 total client(s). 10000 total requests
+spawning thread #6: 100 total client(s). 10000 total requests
+spawning thread #7: 100 total client(s). 10000 total requests
+spawning thread #8: 100 total client(s). 10000 total requests
+spawning thread #9: 100 total client(s). 10000 total requests
+Application protocol: h2c
+progress: 10% done
+progress: 20% done
+progress: 30% done
+progress: 40% done
+progress: 50% done
+progress: 60% done
+progress: 70% done
+progress: 80% done
+progress: 90% done
+progress: 100% done
+
+finished in 13.07s, 7652.14 req/s, 11.83MB/s
+requests: 100000 total, 100000 started, 100000 done, 100000 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 100000 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 154.61MB (162119955) total, 566.39KB (579980) headers (space savings 95.47%), 152.30MB (159700000) data
+                       min         max         mean         sd        +/- sd
+time for request:     5.74ms      12.77s       6.39s       3.61s    58.14%
+time for connect:      304us    293.01ms     70.17ms     76.83ms    74.80%
+time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
+req/s           :       7.71      248.17       19.60       28.07    92.70%
+```
+
+参照<https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>。検索`bench.pl` 親ディレクトリ内
+
+これにより、Perl 5がサンプル・コードを実行できるようになります。's `content_type` コンパイル時のメソッドルックアップ。この機能はアプリケーション開発者をターゲットにするため、バックコンパイルの問題や不具合のあるCPANコーダを引き起こすことはありません。継承可能なOOモジュール作成者ではありません。
+
+このPerlishのアイデアは、無償で盗まれています。[ディラン](https://jim.studt.net/dirm/interim-5.html). [この記事を読む](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) 10年以上前のCPythonの努力のため。
+
+<!-- $Date: 2026-01-08 19:55:12 -0700 (Thu, 08 Jan 2026) $ $Author: joe $ $Revision: 27387 $ -->

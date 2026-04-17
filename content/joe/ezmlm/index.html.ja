@@ -1,0 +1,21 @@
+{% extends "main.html"|append:lang %}
+{% block content %}
+<div class="page-header"><div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))"><img src="/images/edit.png" /></a></div>
+  <h1>{{ headers.title }}</h1></div>
+<div class="jumbotron">
+{% filter markdown %}
+### レイアウト
+
+実行可能ファイルは`ビン/`とparallel `ライブラリ/` ディレクトリ
+pull_header.pm. 次のものがある場合`svn` クライアントの便利な、最も簡単な方法
+このツリーを取得"下位" 経由:
+
+```shell
+	% svn co https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/content/essays/ezmlm
+```
+
+{% endfilter %}
+
+{{ content|markdown }}
+</div>
+{% endblock %}

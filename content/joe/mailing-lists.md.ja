@@ -1,0 +1,52 @@
+---
+archived: ~
+categories: IT、パール、メール、ツール
+dependencies: '*.md.ja'
+keywords: ezmlm-idx、BATV、DMARC、SRS
+published: ~
+status: アーカイブ済
+title: メーリングリスト
+---
+
+## ezmlm-idx
+
+メーリングリストソフトウェアに関する私の経験は、[qmail](http://cr.yp.to/qmail.html) および[ezmlm-idx](http://untroubled.org/ezmlm/)。いくつかの小さなスクリプトで、本質的にサポートされていない様々な新しいユースケースをサポートできました`ezmlm-idx` 自分。外で一般的に役立つ機能[アパチェソフトウェア財団](http://www.apache.org) 下にレイアウトされています。これらのファイルを使用するには、次の手順に従います。[レイアウト](ezmlm/) スクリプト内のパスを自分で調整する場合を除きます。
+
+### BATVおよびSRS
+
+[bin/sender-demunger](ezmlm/bin/sender-demunger.pl) 次を可能にする小さなラッパー・スクリプトです。`BATV` および`SRS` `送信者` 降格`ezmlm-idx`。これを使用するには、その行をプリフィクスとしてすべての行に追加します。`</editor />` および`</manager />` 次のブロック`.ezmlmrc` 実行`ezmlm-make -+` あなたのリスト、またはあなたが実行しないことを前提にピンチで`エズムルメイク` リストで再度、`編集者` および`マネージャ` リスト・ディレクトリ内のファイル。
+
+[BATV](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) および[SRS](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme) ユニークな問題`ezmlm-idx` 他のメーリングリストソフトウェアとは異なり、`メール送信元` の部分`SMTP` 封筒ではなく、"開始" メッセージヘッダー内のアドレス。
+
+どちらの仕様も、一時的な住所を`メール送信元` 簡単に解読可能な方法で元のアドレスを埋め込むエンベロープ部分。ただし、{# lede #}これらの一時的なアドレスは、`ezmlm-idx`'サブスクリプションおよびモデレーション・システム{# lede #}および`送信者- demunger.pl` 前述のスクリプトは、一度デプロイすると修正します。
+
+<div class="alert alert-info">
+   <div class="alert-header">注意</div>
+   <div class="alert-body">
+リリースノートによると、バージョン7.0.0以降、ezmlm-idxにはBATVとSRSが組み込まれている必要があります。いずれにせよ、送信者非難は本当に勝った'後はコールドローンチ 驚異の追尾能力!
+   </div>
+</div>
+
+### DMARC
+
+参照[ビン/ezmlm-dmarc-filter.pl](ezmlm/bin/ezmlm-dmarc-filter.pl) および[bin/ezmlm-seekable-stdin.pl](ezmlm/bin/ezmlm-seekable-stdin.pl) および[lib/pull_header.pm](ezmlm/lib/pull_header.pm)。これらのスクリプトを使用するには、`</editor />` セクション`.ezmlmrc` このコール`ezmlmゲート`, `ezmlmストア`または`ezmlm- 送信`のようになります。
+
+```shell
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/ezmlm-seekable-stdin.pl /path/to/bin/sender-demunger.pl <#B#>/ezmlm-gate -rY '<#D#>' '<#D#>' '<#D#>/digest' '<#D#>/allow' '<#D#>/mod'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/sender-demunger.pl <#B#>/ezmlm-store '<#D#>'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | <#B#>/ezmlm-send -r '<#D#>'
+```
+
+これは、次のようなファイルに触れることを前提としています。`ダーマー` フィルタを有効にするリストディレクトリ内。構成できます。`.ezmlmrc` これを行うには、そのファイルに次のブロックを追加します。
+
+```shell
+	</-dmarc#FXT/>
+	</dmarc#f/>
+	</dmarc#t/>
+	</dmarc#x/>
+```
+次の処理を実行する構成のみがリストされます。`DMARC` である。`-f`, `-t` または`-x` 設定。上記の構成はこれに合わせて調整されます。
+
+IfYouHave'時代に遅れず、最近の動きがあり、強く紹介します[DMARC](http://en.wikipedia.org/wiki/DMARC) 失敗するメッセージを拒否するポリシー[DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) 署名テストFacebook、Twitter、LinkedIn、Yahoo!、そして現在、AOLは、この料金を新しい領域に導いており、メーリングリストのオペレータがこの状況に対処することを余儀なくされている。内容`ezmlm-dmarc-filter.pl` やる、これは'問題の唯一の可能な解決策は、`DKIM署名` そのようなドメインのヘッダーを追加し、`。無効` 送信者への接尾辞's `開始` ヘッダー・アドレス。それは最もシンプルなソリューションの一つであることの利点を持っているので、私は'ここで提供します。これまでのところ、strictをデプロイするドメイン`DMARC` ポリシーはすべて適切`返信先` これらの変更を加えたヘッダー`ezmlm-dmarc-filter.pl` このようなメッセージに対するRFC準拠の電子メール・レスポンスの操作には影響しません。
+
+$Date: 2023-01-19 15:58:40 -0700 (木、2023年1月19日) $

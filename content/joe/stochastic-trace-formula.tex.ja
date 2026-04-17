@@ -1,0 +1,176 @@
+\documentclass{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage[タイプ={CC}、修飾子={by-nc-nd}、バージョン={4.0}]{doclicense}
+\usepackage[マージン=1in]{geometry}
+
+\newenvironment{subproof}[1][\proofname]{%
+  \renewcommand{\qedsymbol}{$\blacksquare$}%
+    \begin{proof}[#1]%
+    }{%
+    \end{proof}%
+}
+
+AMSパッケージの割合(%).
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+最新の utf8フレンドリオプションの% (完全にamscdと互換性がありません):
+\PassOptionsToPackage{partial=upright}{unicode-math}
+\usepackage{フォントセットアップ}
+\usepackage{tikz-cd}
+
+\usepackage[スタイル= アルファベット]{biblatex}
+\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
+%役に立つ数学物理学マクロ
+\usepackage{braket}
+\usepackage{物理}
+Unicode %
+\usepackage[utf8]{inputenc}
+
+%メタデータ
+\title{閉じたネガティブ曲線マニホールドのための確率的トレース式}
+\date{2024\\May}
+\author{ジョー・シェーファー\\\href{mailto://Joe\%20Schaefer\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
+
+%定理、レンマなど
+\定理スタイル{plain}
+\新定理{定理}{定理}
+\newtheorem{corollary}[定理]{コロラリー}
+\newtheorem{lemma}[定理]{レムマ}
+\newtheorem{要求}{要求}[定理]
+\newtheorem{axiom}[定理]{Axiom}
+\newtheorem{conjecture}[定理]{Conjecture}
+\newtheorem{fact}[定理]{ファクト}
+\newtheorem{仮説}[定理]{仮説}
+\newtheorem{仮定}[定理]{仮定}
+\newtheorem{proposition}[定理]{提案}
+\newtheorem{criterion}[定理]{基準}
+\定理スタイル{定義}
+\newtheorem{定義}[定理]{定義}
+\newtheorem{example}[定理]{例}
+\newtheorem{remark}[定理]{Remark}
+\newtheorem{problem}[定理]{問題}
+\newtheorem{principle}[定理]{原則
+
+\begin{document}
+\maketitle
+
+\内容表
+
+私の\textit{1997 Ph.D. thesis}はブログエントリです。
+
+\section{n次元Wienerメジャーは1つのみです
+
+\section{Brownian Motionに対するピースワイズリニア近似}
+
+\section{開発マップDM}
+
+\section{キャメロン- マーティン式}
+
+\section{Weiner MeasureのRadon-Nicodym Derivativesとしてのヒートカーネル}
+
+\section{注釈}
+
+$M$は、メトリック$g$、メトリック接続$\nabla$、および(負でない) Laplace-Beltramiオペレータ$\Delta_M$を持つ、負曲線$\dim=n$閉じたRiemannianマニホールドです。$k_{-t\Delta/2}(x、y)$は$M$のヒート・カーネルを表します。
+
+したがって、$k_{-t\Delta/2}(x、x) = dDM_*\mu/\sqrt{g}dx$はn次元Wiener Measure $\mu$のRadon-Nicodymデリバティブで、Weinerメジャー保存開発マップ$DM$の逆方向を介して連続ループスペース$\Omega_t(M)\vert_x$のプルバックに制限されます。*ノート:* $DM^{-1}\Omega_t\vert_x$はループスペースではありません。
+
+$\Omega_t^0$は、$M$の連続的な契約可能なループの領域です。
+
+$\Omega_t[\gamma]$は、閉じた測地線$\gamma$への$M$ホモトピック上の連続ループのスペースです。$\gamma_0$をプリミティブループにします。
+
+$DM^{-1}\Omega_t^0[\gamma]$は、$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1)、0\leq s \leq t$に相同的に書き込まれた$M$の連続的な契約可能なループのプリイメージです。Think Horocyclic Coordinates -- 各ファイバは、周期的な測地球$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0))、0\leq s \leq t、k\rightarrow\infty$の幾何学的限界値として、$\gamma_0$上の標準バンドルでベクトル化されています。曲率の制約は、$\gamma_0$ごとにホロサイクル座標が$\Omega_t^0[\gamma]$のスムーズで$DM$互換の座標マップとして存在することを意味します。
+
+$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$は、$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1)、0\leq s \leq t$への"offset" \textit{kinked geodesic}同位体の\textit{undeveloped}エンドポイントです。曲線は周期$\ell(\gamma_0)$で周期的であり、$t$の時点でその近似開始点$DM(\vec{x}(\tau))$を再訪問し、フォワード・デリバティブ$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$トラクタブルを$T_{DM(\vec{x}(\tau))}M$の線形オートモーフィズムとして計算します。重要なことに、$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$は\textbf{Jacobi Fields}を使用して構築できます。$DM$ \textbf{is}は、$\mathbb{R}^n$内の一連の接続された直線に沿って(反復された)指数マップであるためです。$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$をソリューションで検討します
+
+\begin{equation}
+\begin{aligned}
+X_t &amp;= X_0 + \int_0^t \sqrt{J}_{X_t} dB_t  \\
+\end{aligned}
+\end{equation}
+
+$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x、x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$は、ヒートカーネルのトレースです。
+
+最後に、Radon-Nicodym誘導体から以下を定義しましょう。
+
+\begin{equation}
+\begin{aligned}
+DM_*\mu(\Omega_t) &amp;:= \int_M DM_*\mu(\Omega_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\オメガ^0_t) &amp;:= \int_M DM_*\mu(\Omega^0_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega_t[\gamma)) &amp;:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx) \\
+\end{aligned}
+\end{equation}
+
+\section{確率的トレース式}
+
+\begin{equation}
+\begin{aligned}
+Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t) &amp;= DM_*\mu(\Omega^0_t) + \sum_{\set{\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
+DM_*\mu(\Omega_t^0) &amp;\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\space \small\text{by McKean-Singer}\\
+DM_*\mu(\Omega_t[\gamma) &amp;= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
+&amp;= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
+\frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}}&amp;\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau)、\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\small \text{セミクラシカルリミット}\\
+\text{ホロサイクル座標}: z(\tau) - x(\tau) &amp;= x + \ell(\gamma)\vec{e}^1\implies\\
+\int_{M/S^1\oplus S^1}k_t(x,z) dx &amp;=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\bra{J_{X^j_t}\vec{x}}\ket{\vec{x}}})\\
+\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_{M^j/S^1\oplus S^1}\frac{1}{\sqrt{2\pi t}^{jn}\det|I-J_{X^j}|}e^{-\ell(X^j)^2/2t}X^{j}\\
+\end{aligned}
+\end{equation}
+
+\section{近似とセルベルグのトレース式}
+
+$\dim = 2$定数曲率$-\kappa^2$表面ケースでは、
+
+\begin{equation}
+\begin{aligned}
+\sqrt{J_{\vec{x}, \vec{y}}}dRB&amp;=
+\begin{pmatrix}
+e^{\kappa d(\vec{x},\vec{y})/2} &amp;&amp; 0\\
+0 &amp;&amp; e^{-\kappa d(\vec{x},\vec{y})/2}\\
+\end{pmatrix}
+\implies&amp;\\
+\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} &amp;= e^{\kappa \ell(B)}dRB_1^2 - e^{-\kappa \ell(B)}dRB_2^2\\
+\int_0^t \bra{\sqrt{ J}dB}\ket{\sqrt{ J}dB} &amp;= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
+\det I-J_{\gamma} &amp;= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
+\end{aligned}
+\end{equation}
+
+これは$(\vec{x}、\tau)$に対して一定であるため、方程式(2)の$\approx_{t\rightarrow 0}$の近似行は\textit{exact}になります。
+
+\begin{equation}
+\begin{aligned}
+DM_*\mu(\Omega_t[\gamma]) &amp;= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gamma)/2} -e^{-\kappa\ell(\gamma)/2})}\\
+\gamma(t) = \gamma_0(kt)\implies \\
+\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+\end{aligned}
+\end{equation}
+
+$\dim=3$ハイパボリックマニホールドの場合、通常のバンドルで複雑な座標$(z、\bar{z})$を使用して書き込みます
+
+\begin{equation}
+\begin{aligned}
+J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1})} &amp;=
+\begin{pmatrix}
+e^{\kappa\ell(\gamma)} &amp;&amp; 0 &amp;&amp; 0\\
+0 &amp;&amp; e^{-\kappa\ell(\gamma)+i\theta(\gamma)} &amp;&amp; 0 \\
+0 &amp;&amp; 0 &amp;&amp; e^{-\kappa\ell(\gamma)-i\theta(\gamma)} \\
+\end{pmatrix}\\
+\\
+\det I-{\perp_{\gamma_0}}^k &amp;= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
+\end{aligned}
+\end{equation}
+$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$であるため、方程式(2)の近似が再度正確になります。
+
+\begin{equation}
+\begin{aligned}
+\kappa &amp;= 1 \implies \\
+DM_*\mu(\Omega_t[\gamma))
+&amp;=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (1-e^{-k\ell(\gamma_0)})}|e^{k\ell(\gamma_0)/2}-e^{-k(\ell(\gamma_0)/2-i\theta(\gamma_0))}|}\\
+\end{aligned}
+\end{equation}
+
+\doclicenseThis
+\ページブレーク
+\printbibliography
+
+\end{document}
