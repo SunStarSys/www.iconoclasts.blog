@@ -1,4 +1,10 @@
 /* local overrides */
+
+.rtl { direction: rtl; }
+.ltr { direction: ltr; }
+
+.rtl .editormd *, .rtl .editormd-preview * { text-align: right !important }
+
 div.jumbotron img {
 	width: 200px;
 }
@@ -149,6 +155,7 @@ div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
     float:        right;
     text-align:   right;
     margin:  0 0 0 auto;
+    padding: 0 0 0 auto;
 }
 
 pre {
