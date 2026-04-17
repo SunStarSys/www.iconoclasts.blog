@@ -1,0 +1,28 @@
+      <article id="article-{{key}}" {% if muted %}class="text-muted"{% endif %}>
+        <header>
+          <h6 class="card-title" id="{{key}}">
+            <a href="#{{key}}-link" class="reference-link">{{headers.title}}</a>
+            מאת {{content|vcs_author:lang}}
+            פעיל <em><time>{{content|vcs_date:lang}}</time></em>
+            {% if muted %}
+            {% else %}
+            {% if important %}
+            &nbsp;
+            <span class="badge bg-danger text-white">חשוב!</span>
+            {% endif %}
+            {% if category_root %}{% if archive_root %}
+			  &nbsp;
+            <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
+                    value="https://{{website}}{{path|dirname}}/{{key}}.md{{lang}}">
+              השב
+            </button>
+			{% endif %}{% endif %}
+            {% endif %}
+          </h6>
+        </header>
+        <small>
+          <p class="card-text">{{content|removetags:"script,style"|markdown}}</p>
+          <hr>
+          <p>&nbsp;</p>
+        </small>
+      </article>

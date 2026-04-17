@@ -1,0 +1,65 @@
+\מחלקת מסמכים{% templatetag openbrace %}מאמר}
+ארונות[hidelinks]{% templatetag openbrace %}היפר-ref}
+\usepackage[type={% templatetag openbrace %}CC},מתאם מחיר={% templatetag openbrace %}{{license}}},גרסה={% templatetag openbrace %}4.0}]{% templatetag openbrace %}מסמך
+\usepackage[margin=1in]{% templatetag openbrace %}גיאומטריה
+
+\סביבה חדשה{% templatetag openbrace %}חסין משנה[1][\proofname]{% templatetag openbrace %}%
+  \פקודה מחדש{% templatetag openbrace %}\סמל סיד}{% templatetag openbrace %}$\blacksquare$%
+    \התחל{% templatetag openbrace %}הוכחה}[#1]%
+    }{% templatetag openbrace %}%
+    סוף{% templatetag openbrace %}%הוכחה
+}
+
+% חבילות AMS
+
+ארונות{% templatetag openbrace %}אמסמת'
+ארונות{% templatetag openbrace %}אמסטם
+ארונות{% templatetag openbrace %}אמסימב
+% מודרני, utf8 אפשרויות ידידותיות (לא תואם לחלוטין עם amscd):
+\PassOptionsToPackage{% templatetag openbrace %}חלקי=ימין}{% templatetag openbrace %}מתמטי יוניקוד
+ארונות{% templatetag openbrace %}הגדרות גופנים
+ארונות{% templatetag openbrace %}תקליטור
+
+\usepackage[style=אלפבית]{% templatetag openbrace %}biblatex
+\addbibresource{% templatetag openbrace %}{{path|dirname}}/{{path|basename:0}}.bib.{{lang}}}
+% פקודות מאקרו שימושיות לפיזיקה מתמטית
+ארונות{% templatetag openbrace %}ברוקט
+ארונות{% templatetag openbrace %}פיזיקה}
+% יוניקוד
+\אריזות[utf8]{% templatetag openbrace %}קלטנס 
+
+% מטאדטה
+כותרת{% templatetag openbrace %}{{headers.title|lower|capfirst}}}
+\תאריך{% templatetag openbrace %}{{time|date:"Y"}}\\{{time|date:"F"}}}
+מחבר{% templatetag openbrace %}{{author}}\\\href{% templatetag openbrace %}דוא"ל אל://{{author|urlencode|md2tex}}\%20<{{email}}>}{% templatetag openbrace %}{{email}}}}
+
+% משפט, למה וכו'
+תאורמה{% templatetag openbrace %}פשוט}
+חדשות המשפט{% templatetag openbrace %}משפט}{% templatetag openbrace %}משפט}
+חדשות המשפט{% templatetag openbrace %}[משפט]{% templatetag openbrace %}קורולארי}
+חדשות המשפט{% templatetag openbrace %}[משפט]{% templatetag openbrace %}למה
+חדשות המשפט{% templatetag openbrace %}תביעה}{% templatetag openbrace %}תביעה (משפט)
+חדשות המשפט{% templatetag openbrace %}אקסיומה[עריכת קוד מקור]{% templatetag openbrace %}אקסיומה}
+חדשות המשפט{% templatetag openbrace %}[משפט]{% templatetag openbrace %}השערות}
+חדשות המשפט{% templatetag openbrace %}[משפט]{% templatetag openbrace %}עובדה}
+חדשות המשפט{% templatetag openbrace %}תיאוריה[עריכת קוד מקור]{% templatetag openbrace %}השערה
+חדשות המשפט{% templatetag openbrace %}[משפט]{% templatetag openbrace %}הנחת עבודה}
+חדשות המשפט{% templatetag openbrace %}[משפט]{% templatetag openbrace %}הצעה
+חדשות המשפט{% templatetag openbrace %}[משפט]{% templatetag openbrace %}קריטריון}
+תאורמה{% templatetag openbrace %}הגדרה}
+חדשות המשפט{% templatetag openbrace %}[משפט]{% templatetag openbrace %}הגדרה}
+חדשות המשפט{% templatetag openbrace %}[משפט]{% templatetag openbrace %}דוגמה}
+חדשות המשפט{% templatetag openbrace %}הערה[עריכת קוד מקור]{% templatetag openbrace %}הערה
+חדשות המשפט{% templatetag openbrace %}[משפט]{% templatetag openbrace %}בעיה}
+חדשות המשפט{% templatetag openbrace %}עיקרון[עריכת קוד מקור]{% templatetag openbrace %}עקרון}
+
+\התחל{% templatetag openbrace %}מסמך}
+מקטיט
+
+{{content|md2tex}}
+
+\doclicenseThis
+\שבירת דף
+הדפס ביבליוגרפיה
+
+סוף{% templatetag openbrace %}מסמך}

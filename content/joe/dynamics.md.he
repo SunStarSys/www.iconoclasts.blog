@@ -1,0 +1,511 @@
+---
+archived: ~
+categories: מתמטיקה, דינמיקה
+dependencies: '*.md.he'
+keywords: דינמיקה, מכניקה, קוונטית, קלאסית, גרעין חום, שדה הרג, פיינמן קאק, קמרון
+  מרטין
+published: ~
+status: בלגן
+title: דינמיקה, קלאסית וקוונטית
+---
+
+<div class="right">
+
+![ק"מ](dynamics.page/dynamics).
+
+</div>
+
+{# lede #}גיאומטר דיפרנציאלי'אודות{# lede #}
+
+Prerequisites:
+
+1. היכרות עם סטוקס' משפט על דיפרנציאל חיצוני טנסור אלגברה של $$n$$תמרונים ממדיים $$M$$.
+
+2. חשיפה לגיאומטריה רימאנית בסיסית, esp בקואורדינטות מקומיות, כולל איינשטיין / PPAIN Notation.
+
+3. עניין במערכות דינמיות חלקות וסטוכסטיות, כולל תנועה בראונית ותיאוריית מרטינגל.
+
+[TOC]
+
+## דינמיקה קלאסית
+
+### המילטון-יעקובי / לגראנז' פורמליזם
+
+### המכניקה של חבילות קוטנג'נט
+
+הגדרת החלק **המילטוניאן** $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ כמו $$\mathcal H(p,q,t)$$.
+
+#### לתת $$\theta := p\ dq - \mathcal H(p,q,t)\ dt\in T^\*(T^\*M\oplus\Reals)$$.
+
+הגדר $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ לחלק $$\gamma:[0,t]\rightarrow T^{\*}M\oplus\Reals$$.
+
+אם שתי עקומות כאלה $$\gamma_1, \gamma_2$$ יש לו בדיוק אותן נקודות קצה של גבול, הגדר את **subtraction** על-ידי קומפוזיציה הפוכה, כך $$\gamma_1 - \gamma_2$$ היא לולאה סגורה המוגדרת באמצעות מעבר שיטתי $$\gamma_1$$ בכיוון קדימה, ו $$\gamma_2$$ הפוך. לתת $$S$$ להיות כל משטח 2-ממד תחום על ידי לולאה סגורה זו: $$\gamma_1 - \gamma_2 = \partial S$$. אז
+
+```math
+\begin{aligned}
+\mathcal S_\mathcal H(\gamma_1) - \mathcal S_\mathcal H(\gamma_2) &= \int_{\gamma_1 - \gamma_2}\theta \\
+&= \int_{\partial S}\theta\\
+&= \int_S d\theta
+\end{aligned}
+```
+על ידי Stokes' משפט.
+
+לא משנה אם משטח כזה או לא. $$S$$ למעשה קיים, עבור הפעולה $$\mathcal S_\mathcal H$$ תלוי רק בנקודות הקצה של $$\gamma$$אנו חייבים לקבל את תנאי הסדר הראשון אשר $$d\theta$$ ייעלם בתאריך $$\gamma$$.
+
+#### לתת $$\omega_\mathcal H := d\theta = dp\wedge dq - d\mathcal H \wedge dt\in\bigwedge^2T^\*(T^\*M\oplus\Reals)$$.
+
+```math
+\begin{aligned}
+\omega_\mathcal H|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial \mathcal H}{\partial p}dp\wedge dt - \frac{\partial \mathcal H}{\partial q}dq\wedge dt \\
+        &= (-\dot{p}_i - \frac{\partial \mathcal H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial \mathcal H}{\partial p_i}) dp_i\wedge dt
+\end{aligned}
+```
+
+#### $$\therefore \omega_\mathcal H|_\gamma = 0 \iff \gamma(t)$$ משוואות המילטון-יעקובי
+```math
+\begin{aligned}
+\dot p &= -\frac{\partial \mathcal H}{\partial q} \\
+\dot q &= \ \ \ \frac{\partial \mathcal H}{\partial p}
+\end{aligned}
+```
+
+$$\iff \gamma:[0,t]\rightarrow T^*M\oplus\R  $$ הוא *עקומה סטציונרית* של הפעולה $$\mathcal S_\mathcal H(\gamma)=\int_\gamma \theta$$.
+
+#### טרנספורמציית לז'נדר
+מתי $$\mathcal H$$ הוא convex ב $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  מספק $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$. תגית: Legendre Transform $$\mathcal L$$ מתוך $$\mathcal H$$:
+```math
+\begin{aligned}
+\mathcal{L}(\dot q,q,t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) \\&= p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
+\mathcal S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
+\end{aligned}
+```
+הוא הייצוג הלגראנז'י של הפעולה *, כאשר $$\pi: T^*M\oplus\Reals \rightarrow M\oplus\Reals$$ היא מפעילת הקרנת הסיבים (שכחה) $$(p,q,t)\mapsto (q,t)$$.
+
+#### עקרון הפעולה הפחותה
+
+העיקרון של הפעולה הקטנה ביותר פשוט טוען שהדינמיקה הקלאסית של הטבע עצמה נוטה לבחור מסלולים שממזערים את הטבע. $$\mathcal S_\mathcal{L}$$.
+
+באופן כללי, טענה זו היא **שקר**. אבל סט עקומות נייחים של $$\mathcal S_\mathcal H$$ תמיד מעניין לגלות, והם זהים לעקומות שעוזבות $$\mathcal S_\mathcal{L}$$ נייח.  באופן מקומי, **המשוואות הדיפרנציאליות עבור אותם מסלולים נייחים זהות**, וכך $$\mathcal S_\mathcal H = \mathcal S_\mathcal{L}$$ על העקומות האלה.  בגיבוש הלגראנז'י, משוואות משתנות אלו ידועות כ- **משוואות אוילר-לגראנז'** $$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
+
+```math
+\frac{\partial \mathcal L}{\partial q} = \frac{d}{dt}\frac{\partial \mathcal L}{\partial \dot q}
+```
+
+מהו ODE מסדר שני ב $$t \mapsto q(t)$$כך היה $$2\dim M+1$$ תנאים ראשוניים $$(\dot q_0, q_0, t_0)$$בדיוק כמו עם משוואות המילטון-ג'קובי. לפי משפט פיקארד-לינדלף, למשוואות אלה יש פתרונות ייחודיים מקומית כאשר הן ממוסגרות כבעיית ערך אינטימית.
+
+עם זאת, היבט מעניין של $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ מגלה את עצמה כאשר אנו יכולים להגדיר באופן ייחודי $$\pi\circ\gamma$$ מבוסס באופן משתמע על נקודות הקצה $$(q_0, t_0)$$ וגם $$(q_f, t_f)$$, לכן עלינו *להמיר את בעיית ערך הגבול לבעיה ראשונית*. במילים אחרות, עלינו לפתור את $$\dot q_0$$ זה יפגע במטרה $$(q_f, t_f)$$ עם עקומה נייחת (ייחודית?) $$\pi\circ\gamma$$ אשר פותר את משוואות אוילר-לגראנז'. בדרך זו אנו יכולים לחשוב על $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ כפונקציה **מעבר**, בהנחה שזה לא תלוי בבחירה של נייח $$\pi\circ\gamma$$וכו' $$\gamma$$ למעשה קיים במרחב הפתרון של עקומות חלקות המחברות את זוג נקודות המעבר.  באופן מקומי, זהו יישום של משפט הפונקציה המשתמע, אבל באופן גלובלי, ייתכנו מכשולים טופולוגיים לבניית כל כזה. $$\gamma$$.
+
+לתת'לקחת צעד אחורה ולהגדיר משהו פשוט יותר: ייחודי "אופקי" מעלית $$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q}^{\*}M\oplus \Reals$$ על ידי הקצאה
+
+```math
+(\dot q, q,t)\mapsto (p_{max}(\dot q), q, t)\ .
+```
+עכשיו יש לנו, עבור **כל** "חזוי" עקומה חלקה (לא רק נייחים) $$\tilde\gamma:[0,t]\rightarrow M\oplus\R$$:
+
+```math
+\begin{aligned}
+
+\mathcal S_\mathcal{L}(\tilde\gamma) &= \mathcal S_\mathcal H(\mathcal A\circ \tilde\gamma) \ .
+\end{aligned}
+```
+
+Note: אילוצי הקמור על $$\mathcal H$$ מבטיח שיש ייחודי $$p_{max}(0)$$ על כל עקומה נייחת כזו wiith $$\dot q = 0$$. הרשת של זה היא כי עקומות נייחים $$\gamma$$ *אין תנועה מתמשכת הכלולה בתוך סיב של* $$\pi^{-1}$$לכן, ללא אובדן הכלליות אנו פשוט מחשיבים לא-סטציונריים. $$\tilde \gamma$$ להרים אותם עם $$\mathcal A$$ כמו סוג מתאים של עקומות כדי "אינטגרציה מעל" אחר כך.
+
+#### קסם של צורה ריבועית, חלק 1
+
+מתי $$\mathcal H(p,q,t)$$'s $$p$$-תלות (הידועה גם כרכיב האנרגיה הקינטית) היא צורה ריבועית לא מנוונת, סימטרית, אנו עשויים לייצג אותה כמדד פסאודו-רימאני $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$ עם היפוך $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$. הטרנספורמציה האגדית בקואורדינטות המקומיות מתייחסת אליהן כך:
+
+```math
+\begin{aligned}
+\mathcal H^\mathcal V(p,q,t) &= \frac{1}{2}\ g^{ij}(q,t)\ p_ip_j + \mathcal V(q,t) \implies\\
+\mathcal{L}^\mathcal V(q,\dot q, t) &= \frac{1}{2}\ g_{ij}(q,t)\dot{q}^i\dot{q}^j - \mathcal V(q,t)\ .
+\end{aligned}
+```
+
+הקשר לוי-צ'יוויטה'סמלי כריסטופל עבור $$g$$ הם פשוט מוגדרים על ידי נוסחת קוסול
+
+```math
+\begin{aligned}
+\Gamma^k_{ij} &= \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})\\
+\Gamma_k^{ij} &= \frac{1}{2}g_{ka}(\partial^ig^{ja} + \partial^j g^{ia} - \partial^ag^{ij}).
+
+\end{aligned}
+```
+עם $$\partial_i := \frac{\partial}{\partial q^i}$$ וגם $$\partial^i := g^{ij}\partial_j$$. נגזרת משתנה הקובייה המשויכת $$\nabla$$ בקואורדינטות המקומיות
+```math
+\begin{aligned}
+\nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or}\\
+\nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k \text{ , and contravariantly}\\
+\nabla_{\partial^i}\partial^j &= \Gamma^{ij}_k\partial^k \text{, so} \\
+\nabla &= d + \Gamma
+\end{aligned}
+```
+
+לכל שדות טנזור. בפרט $$\Gamma$$ סימטרי ב $$(i, j)$$; וגם  $$\nabla [g_{ij}] = \nabla [g^{ij}] = 0$$.
+
+אנקדוטלית, טנסור העקמומיות רימן-כריסטופל הוא
+
+```math
+\mathcal R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
+```
+
+##### כופלי טווח הזמנים בתאריך $$\mathcal H$$ תרגום אינפיניטסימלי של $$\mathcal L$$
+
+יתר על כן, אם $$\mathcal H = \mathcal H\_B$$ בעל רכיב שדה מהירות נוסף $$\mathcal B(q,t)\in T_qM$$, כלומר לינארי פונקציונלי על $$p\in T^{\*}_qM$$אנחנו יכולים **להשלים את הכיכר** ולחשוב מחדש $$\mathcal{L}_B$$ במונחים של $$\mathcal L$$:
+
+```math
+\begin{aligned}
+\mathcal H_\mathcal B(p,q,t) &= \mathcal H + \mathcal Bp \implies\\
+\mathcal L_\mathcal B(\dot q,q,t) &=\max_p p(\dot q - \mathcal B) - \mathcal H\\
+&\ \begin{equation}
+\tag{A}= \mathcal{L}(q,\dot{q}-\mathcal B, t)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\end{equation}\\
+\mathcal H_\mathcal B &= \frac{1}{2}\ g^{ij}p_ip_j + p\mathcal B + \mathcal V \implies\\
+\mathcal L_\mathcal B &\ \begin{equation}\tag{B}= \mathcal L - g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j\ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+כאן אנו רואים את הקשר בין מכפיל לגראנז' $$\mathcal B$$ פעיל $$\mathcal H$$ והביטוי המקביל שלה כמו סחף אינפיניטסימלי על $$\mathcal L$$. אנחנו נהיה קונטקסטואליים $$\mathcal B$$ במגוון דרכים שימושיות בשאר. **שני הביטויים $$(A)$$ וגם $$(B)$$ עבור $$\mathcal{L}_\mathcal B$$ במשוואה <span class="eqno"></span> זה קריטי**.
+
+##### המינוף האופקי $$\mathcal A$$
+
+מאז $$\frac{\partial \mathcal H}{\partial p_i}(p,q,t) = g^{ij}p_j \implies \frac{\partial^2\mathcal H}{\partial p_i \partial p_j} = g^{ij}$$אנו יכולים לחשב את המעלית האופקית באופן מפורש
+
+```math
+\begin{aligned}
+{p_{max}}_i &= g_{ij}\dot q^j = \frac{\partial \mathcal L}{\partial \dot q_i}\implies \\
+\mathcal A(\dot q, q, t) &= ([g] \dot q, q, t)\ .
+\end{aligned}
+```
+
+מתי $$g^{ij}$$ הוא חיובי-מוגדר, כך גם ההופכי שלו, מה שמרמז על רכיב האנרגיה הקינטית של $$\mathcal S_\mathcal L(\tilde\gamma) = \mathcal S_\mathcal H(\mathcal A\circ\tilde\gamma)$$ הוא מקומי **מזערי** בעקומות נייחות הכוללות מדדים רימאניים אמיתיים.
+
+על ידי משוואה (12) $$(A), (B)$$משוואות אוילר-לגראנז' עבור $$\mathcal L^\mathcal V_\mathcal B$$ הפוך:
+
+```math
+\begin{aligned}
+
+\frac{1}{2}\partial_i g_{jk}(\dot q^j-\mathcal B^j)(\dot q^k -\mathcal B^k)-\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)(\dot q^j - \mathcal B^j) = {\dot p^\mathcal B_{max}}_i\ ,\\
+
+- \partial^i \mathcal V &= \frac{1}{2} (\partial^i   g_{jk})(\dot q^j-\mathcal B^j) (\dot q^k-\mathcal B^k) - g_{jk}(\partial^i\mathcal B^j)(\dot q^k - \mathcal B^k) + \frac{d}{dt} (\dot q^i - B^i) + g^{ij}\frac{\partial g_{jk}}{\partial t}(\dot q^k -\mathcal B^k)\\
+
+-\nabla\mathcal V(q,t)&\begin{equation}\tag{C}=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B +(\partial_t [\log g])(\dot q-\mathcal B) \ .\ \ \ \ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+ניוטון (Newton)'חוקי תנועה** $$F/m = a$$ עם $$\partial_t := \frac{\partial}{\partial t}$$ נתון לאנרגיה פוטנציאלית $$\mathcal V$$ שדה מהירות $$\mathcal B$$בתוך מסגרת זמן תלויה.
+
+### גאומטריה סימפלקטית
+
+סעפת סימפלקטית $$N$$ הוא הפשטה של החבילה המתנגשת $$T^\*(M\oplus \Reals)$$עם טופס 2 סגור ולא מנוון $$\omega \in \bigwedge^2T^\*N$$. $$N$$-איזומורפיזמים בקטגוריה זו שומרים $$\omega$$.
+
+מחייב $$d\omega = 0$$ הוא תנאי אינטגרציה מקומי לפוטנציאל $$\theta$$ מספק $$d\theta = \omega$$אבל ייתכן שיש מגבלות טופולוגיות על $$\omega$$'אינטגרציה גלובלית.
+
+מה שמעניין אותנו בדינמיקה הוא הפעולה. $$\mathcal S(\gamma) = \int_\gamma \theta$$לכן, אנו מתמקדים בחבילות קוטנגנס במאמר זה. הנה, מתאים $$\theta$$ זה טריוויאלי לסווג במונחים של פונקציה $$\mathcal H$$ פעיל $$N$$. כמובן, Wick-Rotated $$\theta$$ על הכיסוי האוניברסלי של $$N$$ לפעמים יכול להיות קנס עם תנאי אינטגרציה על הפאזה *שלה (כלומר, לחשוב על $$\theta$$ כמו שיש להם ערכים בחבילה מורכבת-קו מעל $$N$$, ולהתמקד בחלק הדמיוני שלה), על מנת לספק ערכים עקביים של $$e^\mathcal S$$ יורד אל $$N$$.
+
+#### צורת הנפח הסימפלקטי הטבעי $$\omega^n/n!$$
+
+#### קבוצות שקר ופואסון
+
+## דינמיקה קוונטית
+
+אם הדינמיקה הקלאסית עוסקת במציאת עקומות העונות על עקרון הפעולה הקטנה ביותר, הדינמיקה הקוונטית עוסקת במעריכי הפעולה כאשר אנו משלבים את ערכה על קבוצה שלמה של עקומות לא סטציונריות (בדרך כלל), עם מושג מגביל מתאים של פעולה. "מדד לבג הממדי האינסופי" $$\mathcal D_{dt}\tilde \gamma$$,
+
+במציאות, רק גאוס "צימוד"
+
+```math
+\int_{\set{\tilde \gamma}} e^{-\mathcal S_{\mathcal L_\mathcal B^{\mathcal V}}(\gamma)}\mathcal D_{dt}\tilde \gamma
+```
+
+זקוק לפרשנות כ-*a (ערך מורכב) מידה על כמה $$\set{\tilde \gamma}$$*, אבל בנייה זו, כסדרה של דוגמאות מתוחכמות יותר ויותר, תהיה ההתמקדות שלנו קדימה.  לא משנה מה זה מתברר להיות, יהיה ברור כי הערך בפועל של $$\mathcal S$$ על עקומות אלה יהיה $$\infty$$*לבטל את $$\infty$$* של "מנרמל חלוקת זמן" הטבוע ב- $$dt$$ רכיבים של $$\mathcal D_{dt}\tilde \gamma$$. ישנן מספר אפשרויות המעורבות בבניית הקירובים המשפיעים על התכנסות הקירובים, אך נעמיק את כולם על ידי התמקדות בשונות הגיאומטרית של מקרים מחושבים טריוויאליים.
+
+### חשיבותו של ערך הפעולה
+
+לא לשים נקודה עדינה מדי על זה, אבל מכניקה קלאסית מגדירה את הפעולה כאמצעי לסיום.  היא מעולם לא התעניינה בהבנה כלשהי מה הערך הממשי שלה**.  אנחנו פשוט משתמשים בו כדי לבנות משוואות דיפרנציאליות דרושות כדי שנוכל לחשוב על $$\mathcal S$$ כמו פונקציית המעבר בין נקודות הקצה שלה באמצעות *עקומות סטציונריות*.  הדרישה הניידת אפשרה לנו לפרש  $$\mathcal S$$ כביטוי משתנה-נתיב, אך מעולם לא היה אכפת לנו מהערך הממשי שלו. זו הסיבה $$\theta \mapsto \theta + df $$ לכמה $$f \in C^\infty(T^\*M)$$ הוא נחשב לטרנספורמציה של משתנה השעון: המשוואות הקלאסיות של התנועה נשארות ללא שינוי על ידי $$f$$.
+
+ובכן, אנחנו עושים דינמיקה קוונטית!
+
+### קוונטיזציה משולבת של נתיב טבעי (משתנה משותף).
+
+על ידי השלמת הכיכר ואת פער התרגום של מדד לבג (בסיב של $$T^\*M$$), זכור כי:
+
+```math
+\hbar^n\int_{\Reals^n} e^{ p_i\dot q^i\Delta t - \frac{1}{2}\hbar^2 g^{ij}p_ip_j\Delta t}dp_1\dots dp_n = \hbar^n\int_{\Reals^n} e^{-\frac{1}{2}\hbar^2 g^{ij}(p_i - g_{ik}\dot q^k/\hbar)(p_j - g_{jk}\dot q^k/\hbar)\Delta t} dp_1\dots dp_n \cdot e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t} =
+\frac{e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t}}{\sqrt{(2\pi\Delta t)^n \det g^{ij}}}
+```
+אז הביטוי **Feynman Path Integral** שווה מבחינה מוסרית (עדיין באופן רשמי אינסופי) במקרה של אנרגיה קינטית ריבועית:
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H^\mathcal V_\mathcal B} (\gamma)} \mathcal D_{dt}\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H^\mathcal V_\mathcal B(p,q,t))\Delta t}\omega_0^n/n!\\
+&= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{\mathcal L^{\mathcal V}_\mathcal B(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
+&\approx \int_{\set{\tilde \gamma}} e^{\mathcal S_{\mathcal L^{\mathcal V}_\mathcal B}(\tilde \gamma)} \mathcal D_{dt}\tilde \gamma \ .
+ \end{aligned}
+```
+
+לפיכך, עם **סיבוב פתאומי וחילוץ וקטורי על ידי קבוע פלאנק** $$\hbar = h/2\pi$$, שליחה $$dt\mapsto \hbar/i\ dt, \ p\mapsto \hbar p, \ \dot q\mapsto \dot q/\hbar,\  \mathcal B\mapsto \mathcal B/\hbar$$:
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}}e^{\hbar/i\ \mathcal S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}\mathcal D_{\hbar/i\ dt}\gamma &\approx \int_{\set{\tilde\gamma}} e^{\hbar/i \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\\
+&= \int_{\set{\tilde \gamma}}e^{-\frac{i}{\hbar}\mathcal S_{\mathcal L^{\hbar^2 \mathcal V}_{\mathcal B}(\dot q, q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\ .
+
+\end{aligned}
+```
+
+כאשר אנו רוצים להתקרב לצד הימני של המשוואה <span class="eqno"></span> שימוש בשיטה של שלב נייח (הידועה גם כגבול חצי קלאסי) $$\hbar\downarrow 0$$), עלינו לזכור לפתור את משוואות אוילר-לגראנז' (14) $$(C)$$ עם $$\mathcal V \mapsto \hbar^2 \mathcal V\approx 0$$.
+
+### קוונטיזציית שרדינגר
+
+```math
+\begin{aligned}
+\mathcal H(p,q) &\ = \mathcal T(p,q) + \mathcal V(q)\ \text {, where } \mathcal T = \frac{1}{2}g^{ij}(q)p_ip_j \implies \\
+
+e^{-it/\hbar \hat{\mathcal H}}\ket{\psi} &:= e^{-it/\hbar(-\frac{\hbar^2}{2} \Delta_M + \mathcal V)} \ket{\psi} \implies \\
+
+i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mathcal V\ket{\psi}
+
+\end{aligned}
+```
+($$\Delta_M$$ הוא מפעיל Laplace-Beltrami עבור $$g$$) כאופרטורים דיפרנציאליים לינאריים. הנקודה היא שהפתרון הוא **אנליטי** ב $$t$$ על חצי המטוס העליון, $$dt\mapsto i/\hbar\ dt,\ p\mapsto p/\hbar $$ היא משוואת הדיפוזיה של Wick Unrotated:
+
+```math
+\frac{d}{dt}e^{-t\hat{\mathcal H}}\ket{\psi} = (\frac{1}{2}\Delta_M - \mathcal V) e^{-t\hat{\mathcal H}}\ket{\psi} \ .
+
+```
+
+זוהי צורה שניתן לדגום ניתוח סטוכסטי מבוסס נתיבים, ונותנת לנו דרך משמעותית ליישר את פיינמן Path-Integrals עם ההמשך האנליטי של פתרונות למשוואות דיפוזיה אליפטית לכל חצי המטוס הימני שלה.  למעשה, יהיה לנו מוגדר היטב. "מידה-תיאורטית" מפה אנליטית מחצי המישור הימני לתוך קבוצה של אופרטורים לינאריים מוגבלים על $$\mathscr H = L^2(M,g)$$משוואת שרדינגר'אופרטור האבולוציה היחידה הוא ערך הגבול שלו על הקו הדמיוני $$it\hbar\ ,t\in\Reals$$. למרות שזה עוזר להבין את פון נוימן'משפט ספקטרלי לפירוק הרמוני של מפעילים סגורים ובלתי מוגבלים (כמו למשל) $$\Delta_M$$) בתאריך $$\mathscr H$$זה'לא נדרש עבור שאר המאמר.
+
+במילים אחרות, זה מספיק כדי ללמוד את הדינמיקה של משוואה (17), ברגע שהבהרנו את הדקויות המעורבות בהגדרה מפורשת של הביטוי האינטגרלי של הנתיב המרמז שלה.
+
+במקום להמציא מחדש את חשבון ה-Semimartingale של Itô/Stratonovich/Malliavin SDE מתוך בד שלם, נמשיך עם סדרה של דוגמאות פשוטות (שטוחות-מטריות) שיובילו אותנו לתיאוריה הכללית.
+
+בסופו של יום, אנחנו רוצים שהקוונטיזציה של נתיב פיינמן-אינטגרלי תתאים לקוונטיזציה של שרדינגר, או לפחות להבין את **הסטייה**. בפרט, אנו זקוקים לקירוב חצי-קלאסי כדי ליצור את ה- PDE שרדינגר כדי $$o(t)$$ כמו $$t\downarrow 0$$.
+
+כפי שמתברר, עדיין יש מחלוקת על $$\mathcal V$$ מונח כאשר המדד אינו שטוח. אנו בוחנים את העניין במלואו למטה, כפי שהוא מתייחס לנוסחאות הסיכום הידועות (כמו סלברג) למדדים שאינם שטוחים.
+
+### נוסחת פיינמן-קאק
+
+עם $$V \in C^\infty(M)$$נוסחת בייקר-קמפבל-האוסדורף:
+```math
+e^{-it/\hbar -\Delta^\hbar_M/2} e^{-it/\hbar V} = e^{-it/\hbar(-\Delta^\hbar_M /2 + V - it/4\hbar [\Delta^\hbar_M,V] + O(t^2))}
+```
+
+נוסחת פיינמן-קאק (באנגלית: Feynman-Kac Formula) היא נוסחת מסלול-אינטגרלי לתנועה בראונית בחלל האוקלידי. הסיבה לכך היא שאנחנו יכולים להתמקד $$\mathcal V = 0$$ מקרה, אז אנחנו הולכים קדימה.
+
+#### איזומטריית התעבורה המקבילה $$\hat\Gamma$$
+
+קח כל וקטור ב- $$v \in T_qM$$. העברה מקבילית $$\hat\Gamma_t(\gamma)v \in T_{\gamma(t)}M$$ הוא הווקטור שאתה מקבל על ידי פתרון ליניארי סדר ראשון ODE:
+
+```math
+\begin{aligned}
+v(0) &= v \\
+\nabla_{\dot \gamma(t)}\dot v &= 0
+\end{aligned}
+```
+
+בעיקר $$\nabla_{\dot \gamma}\hat\Gamma_t(\gamma) = 0$$, ואת טנזור העקמומיות $$\mathcal R(X,Y) = [\nabla_X,\nabla_Y] - \nabla_{[X,Y]}$$ מודד את התלות בסדר הראשון של $$\hat \Gamma$$ על הבחירה של עקומה $$\gamma$$ חיבור נקודות הקצה. $$\mathcal R = 0 \iff \hat\Gamma_t$$ אינו תלוי ב- $$\gamma$$.
+
+במילים אחרות, אם ניסינו לפרק תחבורה מקבילה כתנועה אינפינטסימלית לאורך $$\mathcal B^\perp$$ בעקבות תנועה אינפיניטסימלית יחד $$\mathcal B$$המשוואות יהפכו ל:
+```math
+\begin{aligned}
+\hat\Gamma(\gamma) &= \hat\Gamma(\gamma|_\mathcal B)\hat\Gamma(\gamma|_{\mathcal B^\perp}) - \frac{1}{2}\mathcal R(\dot{\gamma}|_\mathcal B, \dot{\gamma}|_{\mathcal B^\perp})dt + O(dt^2) \ \\
+\nabla_{\dot \gamma}\hat\Gamma(\gamma) &= \nabla_{\dot \gamma|_\mathcal B}\hat\Gamma(\gamma|_{\mathcal B^\perp}) + \nabla_{\dot \gamma|{\mathcal B^\perp}}\hat\Gamma(\gamma|_{\mathcal B})  - \frac{1}{2}\mathcal R(\dot\gamma|_\mathcal B,\dot{\gamma}|_{\mathcal B^\perp}) = 0
+\end{aligned}
+```
+
+#### מכניקה חצי קלאסית
+
+##### אסימפטוטיקה חצי קלאסית היא פתרון מדויק במניפולדס שטוח
+
+הצד הימני של המשוואה (16) הוא ניסוח מדויק של גרעין החום עבור מקדם קבוע (ב $$q$$ מדדים $$g_{ij}$$. כל סעפת שטוחה'הכיסוי האוניברסלי הוא איזומטרי לחלל האוקלידי, שבו $$g_{ij} = \delta_{i-j}$$.
+
+זה **הוא** גרעין החום לסטנדרט $$n$$תנועה בראונית ממדית.
+
+לתת'הבהירו זאת, זכרו את פונקציית המעבר* במקרה זה: $$\mathcal S_\mathcal L(q_0,t_0, q_f, t_f) = \rho^2(q_0, q_f)/2(t_f - t_i)$$, היכן $$\rho$$ המרחק בין רימאני $$q_0$$ וגם $$q_f$$.
+לתת $$||q||^2 = q\cdot q$$ להיות הכיכר של הנורמה האוקלידית של $$q$$:
+
+```math
+\begin{aligned}
+RHS^{16}_t(q_0,q_f) &:= \frac{e^{-\mathcal S_\mathcal L(q_0, 0, q_f, t)}}{\sqrt{(2 \pi t)^n}} \sqrt{g(q_f)}\\
+\mathcal R=0 \implies \\
+&\ = \frac{e^{\frac{-||q_f - q_i||^2}{2t}}}{\sqrt{(2\pi t)^n}} \\
+                   &\ = \int_{\Reals ^n}RHS^{16}_{s}(q_i, q)\ RHS^{16}_{t-s}(q, q_f)\ dq^1...dq^n\ \forall s\in (0, t)
+\end{aligned}
+```
+
+מדוע המשוואה האחרונה נכונה?  לתת'מבט על התמונה ממרחב הנתיב: יש לנו גיאודזיה קו ישר שמתחברת $$q_0$$ אל $$q_f$$ בזמן $$t$$, וגיאודזיה שבורה שמחברת אותם עם נקודת עצירה ביניים המתרחשת ב $$s$$. למעשה אנחנו משלבים את הגיאודזיה פעם שבורה על ידי שימוש בנוסחת קמרון-מרטין כדי לייצג את הקו הישר הגיאודזי כגיאודזיה $$g$$-שדה וקטורי משתנה $$\mathcal B$$. לאחר מכן אנו משלבים את דלתות נקודת העצירה מהגיאודזיה ($$\dot q-\mathcal B$$) עם מרכז גאוס עבור $$\Reals^n$$.
+
+באופן מפורש, ניתן שדה וקטור קבוע $$\mathcal B_t = (q_f - q_0) / t$$הגאודזיה האוקלידית שבורה פעם
+
+```math
+q(\tau) = \mathcal B_t\tau + q_0 + q\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t - \tau)/(t-s)& s\leq\tau\leq t
+\end{cases}
+````
+for fixed $$q\in\Reals^n$$ representing the "break point" at $$s$$.
+
+By Equation (12) $$(A)$$ and $$(B)$$:
+
+```math
+\begin{aligned}
+-\mathcal L(\dot q, q, \tau) &= \begin{equation}\tag{D}-\mathcal L(\dot q(\tau) - \mathcal B_t, q(\tau), \tau) - \mathcal B_t\cdot (\dot q(\tau)-\mathcal B_t) - \frac{1}{2}\mathcal B_t \cdot B_t \ \ \ \ \ \ \ \ \ \end{equation}\\
+\implies \\
+
+e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B_t||^2/2}e^{-(\mathcal B_t -q_0)\cdot (q(\tau)-\mathcal B_t\tau - q_0) -\mathcal S_{\mathcal L_{\mathcal B_t}(\dot q,q,\tau)}} \\
+
+&= e ^{-\tau||q_f-q_0||^2/2t^2  - \mathcal S_{\mathcal L(\dot q-\mathcal B, q, \tau)}}e^{-(q_f - q_0)/t\ \cdot q
+\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t-\tau)/(t-s) & s\leq\tau\leq t
+\end{cases}
+}\\
+\implies\\
+
+\frac{1}{\sqrt{((2\pi)^2 s(t-s))^n}}\int_{\Reals^n} e^{-\mathcal S_{\mathcal L}(q_0,q,s)}e^{\mathcal S_{\mathcal L}(q,q_f,t-s)}dq^1...dq^n &= \frac{e^{-(s+t-s)||q_f - q_0||^2/2t^2}}{\sqrt{((2\pi)^2 s(t-s))^n}}
+\int_{\Reals^n}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
+&= \frac{e^{-\rho^2(q_f, q_0)/2t}}{\sqrt{(2\pi t)^n}}\\
+&= RHS^{16}_t(q_0,q_f) \ .
+\end{aligned}
+```
+
+באופן משמעותי, בנינו $$\mathcal B_t$$ כך $$\dot q - \mathcal B_t$$ מייצג גיאודזיה שבורה פעם ב $$s$$ זה התחיל ונגמר ב $$q_0$$וראינו כי עקומות אלה הן בעצם $$\mathcal N(0,s\wedge t-s)$$ מופץ. בשאר המאמר הזה, אנחנו נפרק. $$\Reals^n=<\mathcal B_t>\oplus \mathcal B_t^\perp$$ ולשלב $$<\mathcal B_t>$$.
+
+#### DeWitt פגם אינטגרלי בנתיב עקמומיות סקלרי על משטחי רימן
+
+מה אם ננסה להשתמש "החלטות רציפות" על הביטוי חצי קלאסי במשוואה (16) כדי לבנות תנועה בראונית על סעפת מעוקלת שלילית $$M$$?
+
+אנחנו'קחו משהו, אבל'D Be *כמעט* Brownian Motion on curved spaces &mdash; אנחנו צריכים לחפש את פיינמן-קאק עבור הפגם בגנרטור האינפיניטסימלי שלה. מתברר שתהיה שגיאה פוטנציאלית יעילה $$-\frac{1}{6}\bar{\mathcal R}$$, היכן $$\bar{\mathcal R}$$ היא העקמומיות הסקלרית בכל נקודה. זה התגלה לראשונה על ידי ברייס DeWitt בשנת 1950's, והתפרסם ב 1972 McKean-Singer נייר על אסימפטוטיקה זמן קצר של עקבות הליבה חום, שבו מונח זה מייצג את התרומה הסיאן של *טופס המדד* $$g_{ij}$$ בתוך [קואורדינטות רגילות](https://en.wikipedia.org/wiki/Normal_coordinates). אבל אז $$\dim = 2$$ במקרה, כאשר אתה מוסיף את מלוא פוטנציאל התיקון $$\mathcal V = -\frac{1}{6}(\bar{\mathcal R} - \frac{1}{4}\bar{\mathcal R}) = \frac{1}{16}\bar{\mathcal R}$$ ההמילטוניאן - Dewitt's $$\frac{1}{6}\bar{\mathcal R}$$ שם הספר בלועזית : Minus* The Presence of a Killing Field $$\mathcal B$$'s $$\frac{1}{24}\mathcal{Ric}(\mathcal B/||\mathcal B||, \mathcal B/||\mathcal B||)$$ תרומתם, גורם זה מבוטל מן האסימפטוטיקה חצי קלאסית של פורמולה Trace דמוי סלברג.
+
+ליתר דיוק, בקירוב $$1/2\ \nabla\vert_0\sqrt{g} = - 1/6\ \mathcal{Ric}_{ij}q^i\partial^j + o(||q||) \implies 1/2\ \nabla\cdot\nabla\vert_0 \sqrt{g} = -1/6\ \bar{\mathcal R}(0)$$אנו רואים כי הנגזרים הראשונים נעלמים במקור, כך:
+
+```math
+\sqrt{(2\pi t)^n}(\frac{1}{2}\Delta_M-\mathcal V)\vert_0 e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_{\Reals^n}\vert_0 e^{-1/2t\ g_{ij}q^iq^j}) - \mathcal V(0) - \frac{1}{6}\ \bar{\mathcal R}(0)
+```
+
+אשר *הוא* תקופת דיוויט המקורית כפי שהוא נגזר ממנה.  כאשר אנו מוטים על קוונטיזציה בנוכחות שדה הורג $$\mathcal B = \frac{\partial}{\partial x^1}$$ אנו לוקחים מונח פוטנציאלי מעט שונה:
+
+```math
+\sqrt{(2\pi t)^{n}}(\frac{1}{2}\Delta_M-\mathcal V)\vert_{x^1,\vec 0} e^{-\mathcal L_\mathcal B(\dot q, q, t)}\frac{1}{det |I-\mathcal J_\mathcal B|} = (\frac{1}{2}\Delta_{\Reals^n}\vert_{x^1,\vec 0}e^{-x^1x^1/2t}) - \mathcal V(x^1, \vec 0) + \frac{1}{8}\mathcal{Ric}_{11}(x^1, \vec 0).
+```
+
+#### נוסחת קמרון-מרטין הגיאומטרית של $$g$$-שדות וקטוריים משתנים (הרג) $$\mathcal B$$ (הופנה מהדף Quadratic Form Magic, Part 2).
+
+הנחה $$\mathcal B$$ הוא $$g$$-משתנה (aka) [הריגה](https://en.wikipedia.org/wiki/Killing_vector_field)) שדה וקטורי ב- $$M$$ לשארית המאמר הזה.
+
+##### מפת הפיתוח $$\tilde \gamma = \mathscr D_q[\tilde c]$$ עבור $$\tilde c\in C^\infty([0,t],T_qM)$$.
+
+פתור עבור $$\tilde \gamma$$:
+```math
+\begin{aligned}
+\tilde \gamma(0) &= q \\
+\dot {\tilde \gamma} &= \hat\Gamma(\tilde \gamma)\dot{\tilde c}\\
+\end{aligned}
+```
+
+##### $$\tilde c(\tau)=\int_0^\tau\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ ההיפך ממפת הפיתוח
+
+נתר'S המשפט מבטיח $$d({g^{-1}\mathcal B}) = 0$$, כך $$g^{-1}\mathcal B$$ ניתן לשילוב מקומי ל- $$\hat{\mathcal B}$$, וערכות הרמה המקומיות שלה הן אורתוגונליות ל $$\mathcal B = \nabla \hat{\mathcal B}$$. וכי $$\hat \Gamma$$ שומר על המדד, הוא שומר $$\mathcal B$$ וגם $$\mathcal B^\perp$$:
+
+```math
+\begin{aligned}
+\\
+\dot{c}\cdot\mathcal B &= 0 \implies\\
+\dot{\gamma}\cdot \mathcal B &= 0 \implies\\
+\frac{d\hat{\mathcal B}}{dt} &= 0\ ,
+\end{aligned}
+```
+
+כך $$\gamma$$ נכלל בסל רמות של $$\hat{\mathcal B}$$ בכל פעם $$c$$ הכל כלול בתוך $$\mathcal B^\perp \subset T_qM$$.
+אילוצי עקמומיות על הקומוטטיביות של תעבורה מקבילה מבטיחים כי $$\gamma(t) \ne q$$ באופן כללי. יתר על כן,
+
+```math
+\begin{aligned}
+||\mathcal B_t|| &= \frac{\rho(q_0,q_f)}{t} \implies \\
+\tilde{c}(\tau) - c(\tau) &= \frac{t^2}{\rho^2(q_0,q_f)}\mathcal B_t\int_0^\tau \dot{\tilde c} \cdot \mathcal B_t\ ds\\
+&= \mathcal B\int_o^\tau\dot{\tilde c}\cdot \mathcal B \ ds\\
+&= \mathcal B\cdot \tilde c(\tau)\ \mathcal B\\
+&= d\hat{\mathcal B}(\tilde c)\ \mathcal B \ .
+\end{aligned}
+```
+
+##### בראוניאן Motion on $$M$$ Euclidean Wiener Measure על $$\mathscr D^{-1}$$
+
+##### נוסחת קמרון מרטין לגרעין החום $$k^{\hat{\mathcal H}}_t(q_0,q_f)$$ על סעפת עקומה שלילית $$M$$, היכן $$\hat{\mathcal H} = -\Delta/2 +\mathcal V$$
+
+לתת $$\Omega^\mathcal B_t(q)$$ להיות החלל של עקומות רציפות על $$M$$ מקורו ב- $$q$$ ומסתיים ב- $$\exp{t\mathcal B}\ q$$, וגם $$\mu_t(\omega)$$ מדד Wiener גלובלי ב- $$\omega\in \Omega^\mathcal B_t := \set{\Omega^\mathcal B_t(q): q\in M}$$, עם $$E_t^\mathcal B (f|A):=\int_{\Omega^\mathcal B_t} f(\omega) d(\mu_t|A)(\omega)$$ וגם $$P^\mathcal B_{\mu_t}(A) := \mu_t(A)/\mu_t(\Omega_t^{\mathcal B})\ \forall A\subset\Omega^\mathcal B_t $$ . משוואה (26) $$(D) \implies$$
+
+```math
+\begin{equation}
+\tag{E}
+k^{\hat{\mathcal H}}_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J^{\mathcal B}(q_0)|}}} E^\mathcal B_t({e^{-\int_0^t V(\omega(s))ds\ +\ \int_0^t \bar {\mathcal R}(\omega(s))ds/12\ -\ \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/24}\chi_{\Omega^B_t(q_0)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q_0) \ \ \ \ \ \ \
+\end{equation}
+```
+
+היכן $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$, $$\mathcal J^{\mathcal B}(q_0)$$ האם מטריצת המונודרומיה המקושרת לפוליסה בתאריך $$M$$ נוצר על ידי $$\hat{\mathcal B}$$, לאורך העקומה $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$, התחברות $$q_0$$ אל $$ q_f$$ כמו $$\lambda$$ עובר מ- $$0$$ אל $$t$$. $$\mathcal J^{\mathcal B}$$ אינו תלוי ב- $$t$$; ואילוצי העקמומיות מבטיחים $$I-\mathcal J^\mathcal B$$ הוא תמיד לא מנוון עבור $$q_0 \neq q_f$$. מחליף $$\mathcal B$$ עם $$-\mathcal B$$ הופך את התפקידים של $$q_0$$ וגם $$q_f$$כל כך ברור שהביטוי סימטרי ביניהם כצפוי.
+
+מאז $$\mathcal R$$ קבוע לאורך $$\tilde \gamma$$, וגם $$\gamma$$ *הוא* גיאודזי (עד לחריגה ממושכת), $$\mathcal J^\mathcal B(q_0)$$ ניתן לחישוב טריוויאלי במונחים של **שדות יעקובי** $$\mathcal J(\lambda)$$ יחד $$\tilde \gamma$$ כי הם רק הפתרון למקדם קבוע סדר שני ליניארי ODEs, מוערך לאחר שהתפתח לאורך זמן $$\lambda=t$$.
+
+הוכחת משוואה זו <span class="eqno"></span> יהיה גריסט עבור מאמר מודפס מראש, לא סקר זה, אבל זה יישום פשוט של נוסחת פיינמן-קאק *החל על $$\mathcal V = \frac{1}{12}(\bar{\mathcal R} - \frac{1}{2} \mathcal {Ric}(\mathcal B / ||\mathcal B||, \mathcal B/||\mathcal B||)$$, שניתן לחשב באופן מפורש משני צדי המשוואה, מכיוון שכל החישוב מקטין למקרה העקמומיות הקבוע באותה נקודה.
+
+קורולרי נחמד מתרחש קבוע $$\mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||}) = \bar{\mathcal R} / \dim M$$ עקמומיות גאוס שלילית $$-\kappa$$ מקרה, כאשר $$\mathcal B$$ יורד אל a $$S^1$$ פעולה על משטח רימן $$M$$:
+
+```math
+\begin{aligned}
+
+\det |I - \mathcal J^\mathcal B| = (2 \kappa\sinh(\sqrt{\kappa}\rho/2))^2 \implies \\
+
+\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k^{-\Delta/2}_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2\kappa(q) \sinh \sqrt{\kappa(q)}\rho/2}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/16}{\chi_{\Omega^B_t(q)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B})|d\mathcal B^\perp), \ \text{ Bayes}\implies\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp d\hat{\mathcal B}|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp d\hat{\mathcal B})}d\hat{\mathcal B}\\
+
+&=\frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \rho_0\\
+
+\end{aligned}
+```
+
+היכן $$\rho = \min_{q\in M}dist(q, \exp t\mathcal B \ q)$$ הוא המרחק של המסלול הקצר ביותר שנסע מתחת $$S^1$$ פעולה, ו $$\rho_0$$ זה $$\rho$$ מחולקת על ידי ריבוי של מסלול קשור שלה.  במונחים המוכרים של גאומטריה היפרבולית, $$\mathcal B^\perp$$ שם הספר בלועזית : Horocycles** and the $$g$$-משתנה $$S^1$$ פעולה תחת $$\mathcal B$$ נאמר כי הוא "הזרם ההורוציקלי".
+
+משוואה (32) $$(E)$$ היכן $$B$$ מייצג סיבוב $$g$$סימטריה משתנה סביב נקודה קבועה $$q_0$$. לאחר מכן עם $$\Omega^0_t$$ קבוצה של לולאות חוזיות רציפות:
+
+```math
+\mu_t(\Omega_t^0) = \frac{vol(M)}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ \kappa\sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
+```
+
+כי משוואה זו היא אנליטית $$\kappa$$אנו יכולים לראות את ההמשך האנליטי מ $$\kappa \rightarrow -\kappa$$ ממיר ביטוי זה מ- $$\sinh $$ אל $$ \sin $$ במקרה זה יש לנו את המשוואה הנכונה עבור 2-ספירה רפאים* עם עקמומיות גאוסית חיובית קבועה $$|\kappa|$$.
+
+במילים אחרות, גזרנו מחדש את נוסחת המעקב של סלברג 2-ממדי באמצעות הסתברות וגיאומטריה, **במקום הניתוח ההרמוני הרגיל על מרחבים סימטריים**.
+
+##### דוגמה לעקמומיות לא טריוויאלית
+
+דיפומורפיזם חלק בעל ערך ממשי $$h:\Reals\rightarrow\Reals$$ עם $$h(0)=0$$, תן $$ds^2 = (1+h^2(y)) dx^2 + 2h(y) dx\odot dy + dy^2$$. למדד זה יש עקמומיות גאוסית שלילית $$-(\kappa(y)=\frac{d^2}{dy^2}h^2(y)/2)$$, אשר קבוע רק כאשר $$h(y)$$ וַיִּשְׂרָאֵל; ו $$\det(ds^2)= 1$$. לאחר מכן עם $$\hat{\mathcal B}(x,y) = x$$אנחנו רואים את זה
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t}}{2\pi t}\int_{-\infty}^\infty\frac{\rho_0}{2 \sinh \sqrt{\kappa(y)}\rho/2} \int_{\Omega_t^\mathcal B(0,y)}e^{-\int_0^t\kappa(y(s))ds/8}d(\mu_t|\mathcal B^\perp)/dy \ dy
+
+```
+אם ניקח $$h(y) := y\sqrt{2y^2/3 + \kappa(0)} \implies \kappa(y) = 4 y^2 + \kappa(0) \gt 0$$משוואה (32)  $$(E)$$ מנבאים כי
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t -t\kappa(0)/8}}{\sqrt{2\pi t \cosh t}}\int_0^\infty\frac{\rho_0e^{-y^2/2t}}{\sqrt{2\pi t}\sinh \sqrt{4y^2+\kappa(0)}\rho/2 }\ dy
+
+```
+
+אשר מתפוצץ ב $$0$$כצפוי, אם גם אנחנו $$\kappa(0) = 0$$. כמו $$t\rightarrow 0$$לאינטגרל יש גם התנהגות אסימפטוטית נכונה (התנגשות סביב עקמומיות קבועה) $$-\kappa(0)$$ המצב כאילו הרכיב המקביל של נוסחת מעקב סלברג משמש כגבול חצי-קלאסי שלו $$t\rightarrow 0$$).
+
+### משוואת האבולוציה, משוואת השקר
+
+### צ'רן-סימונס - פעולת חבילה
+
+### הערות על הדינמיקה של היחסות הכללית
+
+ציר הזמן החיצוני הוא מלאכותי, שכן `זמן` הוא מוטבע לתוך הגיאומטריה של סעפת 4 הממדים עצמה.
+משמעות הדבר היא שמפעילי האבולוציה הם'רק משוואת שרדינגר הנייחת חשובה.
+- הדרך אינטגרלית פורצת בגלל `-1` חתימה על המדד הלורנזי `זמן` כיוון. $$\det{g}$$ הוא שלילי, ואת Fourier Transform על כל cotangent-bundle'הסיבים הם אינסופיים גם בכיוון זה, אלא אם כן אנו משתמשים בהמשכיות אנליטית (הידועה גם כ-Wick Rotation on the intrinsic). `זמן`).
+
+<!-- $Date: 2026-03-14 15:24:59 -0700 (Sat, 14 Mar 2026) $ $Author: joe $ $Revision: 29029 $ -->

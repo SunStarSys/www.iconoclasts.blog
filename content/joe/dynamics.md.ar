@@ -1,0 +1,511 @@
+---
+archived: ~
+categories: الرياضيات والديناميكيات
+dependencies: '*.md.ar'
+keywords: الديناميات، الميكانيكا، الكم، الكلاسيكية، نواة الحرارة، حقل القتل، فاينمان
+  كاك، مصور مارتن
+published: ~
+status: ضجة
+title: الديناميات والكلاسيكية والكمية
+---
+
+<div class="right">
+
+![إدارة الجودة](dynamics.page/dynamics).
+
+</div>
+
+{# lede #}مقياس جغرافي تفاضلي'مقاربة s{# lede #}
+
+Prerequisites:
+
+1. الإلمام بالستوكس' نظرية على التفاضلية الخارجية الموتر الجبر من $$n$$-متعدد الأبعاد $$M$$.
+
+2. التعرض للهندسة الريمانية الأساسية، esp في الإحداثيات المحلية، بما في ذلك مجموعة رموز أينشتاين / PIN.
+
+3. الاهتمام بالأنظمة الديناميكية السلسة والمؤقتة بما في ذلك حركة براون ونظرية مارتينغال.
+
+[TOC]
+
+## ديناميكيات كلاسيكية
+
+### هاميلتون-جاكوبي / لاغرانج الرسمية
+
+### ميكانيكا حزم كوتانغنت
+
+تحديد **Hamiltonian** السلس $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ مثل $$\mathcal H(p,q,t)$$.
+
+#### دع $$\theta := p\ dq - \mathcal H(p,q,t)\ dt\in T^\*(T^\*M\oplus\Reals)$$.
+
+تحديد $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ على نحو سلس $$\gamma:[0,t]\rightarrow T^{\*}M\oplus\Reals$$.
+
+إذا اثنين من هذه المنحنيات $$\gamma_1, \gamma_2$$ لها نفس نقاط النهاية الحدودية بالضبط، وتعرف **الطرح** عن طريق التكوين العكسي، لذلك $$\gamma_1 - \gamma_2$$ عبارة عن سلسلة جمل برمجية مغلقة يتم تعريفها بواسطة الاجتياز $$\gamma_1$$ في الاتجاه الأمامي، و $$\gamma_2$$ بالعكس. دع $$S$$ يكون أي سطح 2-dimensonal يحدها هذه الحلقة المغلقة: $$\gamma_1 - \gamma_2 = \partial S$$. لذلك
+
+```math
+\begin{aligned}
+\mathcal S_\mathcal H(\gamma_1) - \mathcal S_\mathcal H(\gamma_2) &= \int_{\gamma_1 - \gamma_2}\theta \\
+&= \int_{\partial S}\theta\\
+&= \int_S d\theta
+\end{aligned}
+```
+بواسطة Stokes' مبرهنة
+
+بغض النظر عما إذا كان هذا السطح أم لا $$S$$ في الواقع، للعمل $$\mathcal S_\mathcal H$$ يعتمد فقط على نقاط انتهاء $$\gamma$$، يجب أن يكون لدينا بالضرورة شرط النظام الأول الذي $$d\theta$$ يتلاشى على $$\gamma$$.
+
+#### دع $$\omega_\mathcal H := d\theta = dp\wedge dq - d\mathcal H \wedge dt\in\bigwedge^2T^\*(T^\*M\oplus\Reals)$$.
+
+```math
+\begin{aligned}
+\omega_\mathcal H|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial \mathcal H}{\partial p}dp\wedge dt - \frac{\partial \mathcal H}{\partial q}dq\wedge dt \\
+        &= (-\dot{p}_i - \frac{\partial \mathcal H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial \mathcal H}{\partial p_i}) dp_i\wedge dt
+\end{aligned}
+```
+
+#### $$\therefore \omega_\mathcal H|_\gamma = 0 \iff \gamma(t)$$ يرضي معادلات هاميلتون-جاكوبي
+```math
+\begin{aligned}
+\dot p &= -\frac{\partial \mathcal H}{\partial q} \\
+\dot q &= \ \ \ \frac{\partial \mathcal H}{\partial p}
+\end{aligned}
+```
+
+$$\iff \gamma:[0,t]\rightarrow T^*M\oplus\R  $$ *منحنى ثابت* للإجراء $$\mathcal S_\mathcal H(\gamma)=\int_\gamma \theta$$.
+
+#### تحويل مفتاح الرسم
+متى $$\mathcal H$$ محدب في $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  مرضي $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$. يحدد هذا تحويل مفتاح الرسم (المتضمن) $$\mathcal L$$ من $$\mathcal H$$:
+```math
+\begin{aligned}
+\mathcal{L}(\dot q,q,t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) \\&= p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
+\mathcal S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
+\end{aligned}
+```
+*التمثيل اللاغرانجي للعمل*، حيث $$\pi: T^*M\oplus\Reals \rightarrow M\oplus\Reals$$ هو مشغل إسقاط الألياف (النسيان) $$(p,q,t)\mapsto (q,t)$$.
+
+#### مبدأ العمل الأقل
+
+مبدأ العمل الأقل يدعي ببساطة أن الديناميات الكلاسيكية للطبيعة نفسها تميل إلى اختيار المسارات التي تقلل من $$\mathcal S_\mathcal{L}$$.
+
+بشكل عام، هذه المطالبة **خطأ**. ولكن مجموعة المنحنيات الثابتة من $$\mathcal S_\mathcal H$$ هي دائما مثيرة للاهتمام لاكتشاف، وأنها مطابقة للمنحنيات التي تترك $$\mathcal S_\mathcal{L}$$ ثابت.  محليًا، **المعادلات التفاضلية لتلك المسارات الثابتة متطابقة**، وهكذا $$\mathcal S_\mathcal H = \mathcal S_\mathcal{L}$$ على تلك المنحنيات.  في صياغة Lagrangian، تعرف هذه المعادلات المتباينة باسم **معادلات Euler-Lagrange** $$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
+
+```math
+\frac{\partial \mathcal L}{\partial q} = \frac{d}{dt}\frac{\partial \mathcal L}{\partial \dot q}
+```
+
+الذي هو من الدرجة الثانية ODE في $$t \mapsto q(t)$$، وكذلك $$2\dim M+1$$ الشروط الأولية $$(\dot q_0, q_0, t_0)$$كما هو الحال مع معادلات هاميلتون-جاكوبي. من قبل نظرية Picard-Lindelöf، هذه المعادلات لديها حلول فريدة محليا عند تأطيرها كمشكلة القيمة الأولية.
+
+ومع ذلك، هناك جانب مثير للاهتمام من $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ يكشف عن نفسه عندما يمكننا تعريف فريد $$\pi\circ\gamma$$ مستند ضمنيًا إلى نقاط الانتهاء $$(q_0, t_0)$$ و $$(q_f, t_f)$$لذلك نحن بحاجة إلى *تحويل هذه المشكلة ذات القيمة الحدودية إلى مشكلة ذات قيمة أولية*. وبعبارة أخرى، يجب أن نحل من أجل $$\dot q_0$$ التي ستضرب الهدف $$(q_f, t_f)$$ مع منحنى ثابت (فريد؟) $$\pi\circ\gamma$$ الذي يحل المعادلات Euler-Lagrange. وبهذه الطريقة يمكننا التفكير $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ كوظيفة انتقالية**، على افتراض أنها لا تعتمد على اختيار ثابت $$\pi\circ\gamma$$، ومثل $$\gamma$$ يوجد بالفعل في مساحة الحل من المنحنيات الناعمة التي تربط زوج من نقاط الانتقال.  محليا، وهذا هو تطبيق لنظرية وظيفة ضمنية، ولكن على الصعيد العالمي، قد تكون هناك عوائق طوبولوجية لبناء أي من هذا القبيل $$\gamma$$.
+
+دع'خذ خطوة إلى الوراء وحدد شيئًا أبسط: فريد من نوعه "أفقي" مصعد $$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q}^{\*}M\oplus \Reals$$ عن طريق التعيين
+
+```math
+(\dot q, q,t)\mapsto (p_{max}(\dot q), q, t)\ .
+```
+الآن لدينا ل **أي** "متوقع" منحنى سلس (وليس فقط الثابتة منها) $$\tilde\gamma:[0,t]\rightarrow M\oplus\R$$:
+
+```math
+\begin{aligned}
+
+\mathcal S_\mathcal{L}(\tilde\gamma) &= \mathcal S_\mathcal H(\mathcal A\circ \tilde\gamma) \ .
+\end{aligned}
+```
+
+Note: قيد محدب على $$\mathcal H$$ يضمن أن هناك فريدة من نوعها $$p_{max}(0)$$ على أي من هذا المنحنى الثابت wiith $$\dot q = 0$$. الشبكة من هذا هو أن المنحنيات الثابتة $$\gamma$$ *لا توجد حركة مستدامة مضمنة داخل ألياف* $$\pi^{-1}$$لذلك دون فقدان العمومية نعتبر ببساطة غير ثابتة $$\tilde \gamma$$ ورفعها مع $$\mathcal A$$ كفئة مناسبة من المنحنيات إلى "تكامل" في وقت لاحق.
+
+#### Quadratic Form Magic، الجزء 1
+
+متى $$\mathcal H(p,q,t)$$'ss $$p$$-الاعتماد (المعروف باسم مكون الطاقة الحركية) هو شكل رباعي متناظر غير متجدد، قد نمثله كمقياس ريماني زائف $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$ مع عكس $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$. يرتبط تحويل الأسطورة في الإحداثيات المحلية بما يلي:
+
+```math
+\begin{aligned}
+\mathcal H^\mathcal V(p,q,t) &= \frac{1}{2}\ g^{ij}(q,t)\ p_ip_j + \mathcal V(q,t) \implies\\
+\mathcal{L}^\mathcal V(q,\dot q, t) &= \frac{1}{2}\ g_{ij}(q,t)\dot{q}^i\dot{q}^j - \mathcal V(q,t)\ .
+\end{aligned}
+```
+
+اتصال ليفي-سيفيتا's رموز كريستوفل ل $$g$$ يتم تعريفها ببساطة بواسطة صيغة كوسزول
+
+```math
+\begin{aligned}
+\Gamma^k_{ij} &= \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})\\
+\Gamma_k^{ij} &= \frac{1}{2}g_{ka}(\partial^ig^{ja} + \partial^j g^{ia} - \partial^ag^{ij}).
+
+\end{aligned}
+```
+مع $$\partial_i := \frac{\partial}{\partial q^i}$$ و $$\partial^i := g^{ij}\partial_j$$. المشتق المتنوع المرتبط $$\nabla$$ في الإحداثيات المحلية
+```math
+\begin{aligned}
+\nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or}\\
+\nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k \text{ , and contravariantly}\\
+\nabla_{\partial^i}\partial^j &= \Gamma^{ij}_k\partial^k \text{, so} \\
+\nabla &= d + \Gamma
+\end{aligned}
+```
+
+لجميع حقول الموتر. وعلى وجه الخصوص $$\Gamma$$ متماثل في $$(i, j)$$؛ و  $$\nabla [g_{ij}] = \nabla [g^{ij}] = 0$$.
+
+حكاية، ريمان كريستوفل انحناء الموتر هو
+
+```math
+\mathcal R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
+```
+
+##### مضاعفات لاغرانج في $$\mathcal H$$ ترجمة Infinitesimal على $$\mathcal L$$
+
+وعلاوة على ذلك، إذا $$\mathcal H = \mathcal H\_B$$ يحتوي على مكون حقل سرعة إضافي $$\mathcal B(q,t)\in T_qM$$، أي وظيفة خطية على $$p\in T^{\*}_qM$$، يمكننا **إكمال الساحة** وإعادة الحساب $$\mathcal{L}_B$$ فيما يتعلق بـ $$\mathcal L$$:
+
+```math
+\begin{aligned}
+\mathcal H_\mathcal B(p,q,t) &= \mathcal H + \mathcal Bp \implies\\
+\mathcal L_\mathcal B(\dot q,q,t) &=\max_p p(\dot q - \mathcal B) - \mathcal H\\
+&\ \begin{equation}
+\tag{A}= \mathcal{L}(q,\dot{q}-\mathcal B, t)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\end{equation}\\
+\mathcal H_\mathcal B &= \frac{1}{2}\ g^{ij}p_ip_j + p\mathcal B + \mathcal V \implies\\
+\mathcal L_\mathcal B &\ \begin{equation}\tag{B}= \mathcal L - g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j\ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+هنا نرى العلاقة بين مضاعف Lagrange $$\mathcal B$$ يعمل $$\mathcal H$$ وما يعادلها من التعبير كما الانجراف لا نهاية لها على $$\mathcal L$$. سنقوم بوضع السياق $$\mathcal B$$ في مجموعة متنوعة من الطرق المفيدة في بقية. **كلا من التعبيرات $$(A)$$ و $$(B)$$ من أجل $$\mathcal{L}_\mathcal B$$ في المعادلة <span class="eqno"></span> حرجة**.
+
+##### الرفع الأفقي $$\mathcal A$$
+
+منذ $$\frac{\partial \mathcal H}{\partial p_i}(p,q,t) = g^{ij}p_j \implies \frac{\partial^2\mathcal H}{\partial p_i \partial p_j} = g^{ij}$$، يمكننا حساب المصعد الأفقي صراحة
+
+```math
+\begin{aligned}
+{p_{max}}_i &= g_{ij}\dot q^j = \frac{\partial \mathcal L}{\partial \dot q_i}\implies \\
+\mathcal A(\dot q, q, t) &= ([g] \dot q, q, t)\ .
+\end{aligned}
+```
+
+متى $$g^{ij}$$ هو إيجابي إلى أجل غير مسمى، وكذلك هو عكسها، والذي يعني عنصر الطاقة الحركية من $$\mathcal S_\mathcal L(\tilde\gamma) = \mathcal S_\mathcal H(\mathcal A\circ\tilde\gamma)$$ محليًا **مصغر** على منحنيات ثابتة تتضمن مقاييس ريمانيان الحقيقية.
+
+المعادلة (12) $$(A), (B)$$، المعادلات Euler-Lagrange ل $$\mathcal L^\mathcal V_\mathcal B$$ تصبح:
+
+```math
+\begin{aligned}
+
+\frac{1}{2}\partial_i g_{jk}(\dot q^j-\mathcal B^j)(\dot q^k -\mathcal B^k)-\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)(\dot q^j - \mathcal B^j) = {\dot p^\mathcal B_{max}}_i\ ,\\
+
+- \partial^i \mathcal V &= \frac{1}{2} (\partial^i   g_{jk})(\dot q^j-\mathcal B^j) (\dot q^k-\mathcal B^k) - g_{jk}(\partial^i\mathcal B^j)(\dot q^k - \mathcal B^k) + \frac{d}{dt} (\dot q^i - B^i) + g^{ij}\frac{\partial g_{jk}}{\partial t}(\dot q^k -\mathcal B^k)\\
+
+-\nabla\mathcal V(q,t)&\begin{equation}\tag{C}=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B +(\partial_t [\log g])(\dot q-\mathcal B) \ .\ \ \ \ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+هذه بالضبط **نيوتن'قوانين الحركة** $$F/m = a$$ مع $$\partial_t := \frac{\partial}{\partial t}$$ تخضع لطاقة محتملة $$\mathcal V$$ مجال السرعة $$\mathcal B$$، في وضع يعتمد على الوقت.
+
+### هندسة عقلية
+
+مجموعة رمزية $$N$$ هو اختزال للحزمة المتعارضة $$T^\*(M\oplus \Reals)$$، مع شكل 2 مغلق غير متجدد $$\omega \in \bigwedge^2T^\*N$$. $$N$$-isomorphisms في هذه الفئة الحفاظ $$\omega$$.
+
+مطلوب $$d\omega = 0$$ هو حالة عدم قابلية محلية للإمكانات $$\theta$$ مرضي $$d\theta = \omega$$، ولكن قد تكون هناك قيود طوبولوجية على $$\omega$$'قابلية التكامل العالمية.
+
+ما نهتم به للديناميات هو العمل $$\mathcal S(\gamma) = \int_\gamma \theta$$لذلك نحن نركز على حزم cotangent في هذه المقالة. هنا، مناسبة $$\theta$$ هو تافه للتصنيف من حيث وظيفة $$\mathcal H$$ يعمل $$N$$. بطبيعة الحال، تدور الفتيل $$\theta$$ على الغطاء العالمي من $$N$$ قد تكون في بعض الأحيان مزينة بشروط عدم القدرة على الاستيعاب على مرحلتها *(أي التفكير في $$\theta$$ وجود قيم في حزمة خط معقدة عبر $$N$$، والتركيز على جزءها الخيالي)، من أجل توفير قيم متسقة من $$e^\mathcal S$$ التي تنحدر إلى $$N$$.
+
+#### شكل الحجم الطبيعي الوهمي $$\omega^n/n!$$
+
+#### قوس بواسون ومجموعات الكذب
+
+## ديناميكيات الكم
+
+إذا كانت الديناميكيات الكلاسيكية تدور حول إيجاد منحنيات تفي بمبدأ أقل عمل، فإن ديناميكيات الكم تدور حول الأسية للعمل حيث ندمج قيمته على فئة كاملة من المنحنيات غير الثابتة (عادة)، مع فكرة مقيدة مناسبة عن "لانهائي الأبعاد مقياس ليبيسج" $$\mathcal D_{dt}\tilde \gamma$$,
+
+في الواقع، فقط الغاوسي "اقتران"
+
+```math
+\int_{\set{\tilde \gamma}} e^{-\mathcal S_{\mathcal L_\mathcal B^{\mathcal V}}(\gamma)}\mathcal D_{dt}\tilde \gamma
+```
+
+يحتاج إلى تفسير كتدبير* (معقد القيمة) على بعض $$\set{\tilde \gamma}$$* ولكن هذا البناء، كسلسلة من الأمثلة المتطورة بشكل متزايد، سيكون تركيزنا على المضي قدما.  مهما اتضح أن هذه المجموعة ستكون، سيكون من الواضح أن القيمة الفعلية لـ $$\mathcal S$$ على تلك المنحنيات سيكون $$\infty$$*إلغاء $$\infty$$* من "مُعدِّل قسم الوقت" متأصل في $$dt$$ عناصر من $$\mathcal D_{dt}\tilde \gamma$$. هناك العديد من الخيارات التي تنطوي عليها في بناء التقريب التي تؤثر على تقارب التقريب، ولكننا سوف تتجاهل كل منهم من خلال التركيز على التفاوت الجيولوجي للحالات القابلة للحساب تافهة.
+
+### أهمية العمل
+
+ليس لوضع نقطة على ما يرام، ولكن يعرف الميكانيكا الكلاسيكية العمل كوسيلة لتحقيق الغاية.  وهي لا تهتم أبدا بالتوصل إلى أي فهم لما تعنيه قيمتها الفعلية**.  نحن نستخدمها فقط للتغلب على المعادلات التفاضلية المطلوبة حتى نتمكن من التفكير في $$\mathcal S$$ كما وظيفة الانتقال بين نقاط النهاية الخاصة بها عن طريق *منحنيات ثابتة *.  الشرط الثابت سمح لنا بتفسير  $$\mathcal S$$ كتعبير متغير المسار، لكننا لم نهتم أبدًا بقيمته الفعلية. لهذا السبب $$\theta \mapsto \theta + df $$ لبعض $$f \in C^\infty(T^\*M)$$ يعتبر تحولاً متغيّرًا في المقياس: تبقى المعادلات الكلاسيكية للحركة دون تغيير. $$f$$.
+
+حسنا نحن نفعل في ديناميات الكم!
+
+### تحديد الكميات المتكاملة للمسار الطبيعي (المتغير).
+
+من خلال استكمال الساحة وتباين الترجمة في مقياس ليبيسغ (في ألياف من $$T^\*M$$)، تذكر ما يلي:
+
+```math
+\hbar^n\int_{\Reals^n} e^{ p_i\dot q^i\Delta t - \frac{1}{2}\hbar^2 g^{ij}p_ip_j\Delta t}dp_1\dots dp_n = \hbar^n\int_{\Reals^n} e^{-\frac{1}{2}\hbar^2 g^{ij}(p_i - g_{ik}\dot q^k/\hbar)(p_j - g_{jk}\dot q^k/\hbar)\Delta t} dp_1\dots dp_n \cdot e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t} =
+\frac{e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t}}{\sqrt{(2\pi\Delta t)^n \det g^{ij}}}
+```
+لذا فإن تعبيرات **Feynman Path Integral** متكافئة أخلاقياً (لكنها غير محدودة رسميًا) في حالة الطاقة الحركية الرباعية:
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H^\mathcal V_\mathcal B} (\gamma)} \mathcal D_{dt}\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H^\mathcal V_\mathcal B(p,q,t))\Delta t}\omega_0^n/n!\\
+&= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{\mathcal L^{\mathcal V}_\mathcal B(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
+&\approx \int_{\set{\tilde \gamma}} e^{\mathcal S_{\mathcal L^{\mathcal V}_\mathcal B}(\tilde \gamma)} \mathcal D_{dt}\tilde \gamma \ .
+ \end{aligned}
+```
+
+وبالتالي، مع **تدوير الفتيل وإعادة توجيه ناقل بواسطة ثابت بلانك** $$\hbar = h/2\pi$$، إرسال $$dt\mapsto \hbar/i\ dt, \ p\mapsto \hbar p, \ \dot q\mapsto \dot q/\hbar,\  \mathcal B\mapsto \mathcal B/\hbar$$:
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}}e^{\hbar/i\ \mathcal S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}\mathcal D_{\hbar/i\ dt}\gamma &\approx \int_{\set{\tilde\gamma}} e^{\hbar/i \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\\
+&= \int_{\set{\tilde \gamma}}e^{-\frac{i}{\hbar}\mathcal S_{\mathcal L^{\hbar^2 \mathcal V}_{\mathcal B}(\dot q, q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\ .
+
+\end{aligned}
+```
+
+لذلك عندما نريد تقريب الجانب الأيمن من المعادلة <span class="eqno"></span> استخدام طريقة المرحلة الثابتة (المعروفة أيضًا باسم الحد شبه الكلاسيكي) $$\hbar\downarrow 0$$)، نحن بحاجة إلى أن نتذكر لحل المعادلات Euler-Lagrange (14) $$(C)$$ مع $$\mathcal V \mapsto \hbar^2 \mathcal V\approx 0$$.
+
+### شرودنغر كوانتيل
+
+```math
+\begin{aligned}
+\mathcal H(p,q) &\ = \mathcal T(p,q) + \mathcal V(q)\ \text {, where } \mathcal T = \frac{1}{2}g^{ij}(q)p_ip_j \implies \\
+
+e^{-it/\hbar \hat{\mathcal H}}\ket{\psi} &:= e^{-it/\hbar(-\frac{\hbar^2}{2} \Delta_M + \mathcal V)} \ket{\psi} \implies \\
+
+i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mathcal V\ket{\psi}
+
+\end{aligned}
+```
+($$\Delta_M$$ هو مشغل Laplace-Beltrami ل $$g$$) كعاملين تفاضليين خطيين. النقطة هي أن الحل هو **تحليل** في $$t$$ في النصف العلوي من الطائرة، و $$dt\mapsto i/\hbar\ dt,\ p\mapsto p/\hbar $$ هي معادلة نشر Wick-unrotated:
+
+```math
+\frac{d}{dt}e^{-t\hat{\mathcal H}}\ket{\psi} = (\frac{1}{2}\Delta_M - \mathcal V) e^{-t\hat{\mathcal H}}\ket{\psi} \ .
+
+```
+
+هذا شكل قابل للتحليل العشوائي القائم على مسار العينة، ويعطينا طريقة ذات مغزى لمواءمة Feynman Path-Integrals مع الاستمرار التحليلي لحلول معادلات الانتشار البيضاوي إلى نصف الطائرة اليمنى بأكملها.  في جوهرها، سيكون لدينا تعريف جيد "يقيس النظريات" خريطة تحليلية من مستوى النصف الأيمن إلى مجموعة من عوامل التشغيل الخطية المحددة على $$\mathscr H = L^2(M,g)$$، ومعادلة شرودنجر'مشغل التطور الوحدوي هو قيمته الحدية على الخط الوهمي $$it\hbar\ ,t\in\Reals$$. في حين أنه يساعد على فهم فون نيومان'نظرية طيفية للتحلل التوافقي للمشغلين المغلقين غير المحدودين (مثل $$\Delta_M$$) في $$\mathscr H$$،'ليس مطلوبا لبقية هذه المادة.
+
+وبعبارة أخرى، يكفي دراسة ديناميات المعادلة (17)، بمجرد أن نوضح التفاصيل الدقيقة المشاركة في تعريف صريح للتعبير المتكامل للمسار المقترح.
+
+فبدلاً من إعادة اختراع حساب التفاضل والتكامل شبه الحركي لـ Itô/Stratonovich/Malliavin SDE من القماش الكامل، سنشرع في سلسلة من الأمثلة البسيطة (المترية المسطحة) التي ستحملنا إلى النظرية العامة.
+
+في نهاية اليوم، نريد أن يتطابق Feynman Path-Integral Quantization مع Schrödinger Quantization، أو على الأقل لفهم **الانحراف**. على وجه الخصوص، نحن بحاجة إلى التقريب شبه الكلاسيكي لتوليد PDE Schrödinger إلى $$o(t)$$ مثل $$t\downarrow 0$$.
+
+كما اتضح، لا يزال هناك جدل حول $$\mathcal V$$ المصطلح عندما يكون القياس غير ثابت. نحن نستكشف هذه المسألة بالكامل أدناه، لأنها تتعلق بصيغ الجمع المعروفة (Selberg like) للمقاييس غير المسطحة.
+
+### فيينمان-كاك فورمولا
+
+مع $$V \in C^\infty(M)$$بواسطة صيغة Baker-Campbell-Hausdorff:
+```math
+e^{-it/\hbar -\Delta^\hbar_M/2} e^{-it/\hbar V} = e^{-it/\hbar(-\Delta^\hbar_M /2 + V - it/4\hbar [\Delta^\hbar_M,V] + O(t^2))}
+```
+
+وتتبع صيغة فاينمان-كاك صيغة المسار المتكاملة لحركة براونيان في الفضاء إقليدي. والنتيجة هي أنه يمكننا التركيز على $$\mathcal V = 0$$ لذلك سنمضي قدما.
+
+#### ايزومتري الموازي للنقل $$\hat\Gamma$$
+
+خذ أي متجه في $$v \in T_qM$$. النقل الموازي $$\hat\Gamma_t(\gamma)v \in T_{\gamma(t)}M$$ هو المتجه الذي تحصل عليه عن طريق حل ODE الخطية من الدرجة الأولى:
+
+```math
+\begin{aligned}
+v(0) &= v \\
+\nabla_{\dot \gamma(t)}\dot v &= 0
+\end{aligned}
+```
+
+ملحوظة $$\nabla_{\dot \gamma}\hat\Gamma_t(\gamma) = 0$$، وموتر الانحناء $$\mathcal R(X,Y) = [\nabla_X,\nabla_Y] - \nabla_{[X,Y]}$$ يقيس الدرجة الأولى من الاعتماد على $$\hat \Gamma$$ على اختيار المنحنى $$\gamma$$ توصيل نقاط الانتهاء. $$\mathcal R = 0 \iff \hat\Gamma_t$$ لا يعتمد على $$\gamma$$.
+
+وبعبارة أخرى، إذا حاولنا تحليل النقل المتوازي كحركة غير محدودة على طول $$\mathcal B^\perp$$ متبوعة الحركة اللانهائية على طول $$\mathcal B$$ستصبح المعادلات:
+```math
+\begin{aligned}
+\hat\Gamma(\gamma) &= \hat\Gamma(\gamma|_\mathcal B)\hat\Gamma(\gamma|_{\mathcal B^\perp}) - \frac{1}{2}\mathcal R(\dot{\gamma}|_\mathcal B, \dot{\gamma}|_{\mathcal B^\perp})dt + O(dt^2) \ \\
+\nabla_{\dot \gamma}\hat\Gamma(\gamma) &= \nabla_{\dot \gamma|_\mathcal B}\hat\Gamma(\gamma|_{\mathcal B^\perp}) + \nabla_{\dot \gamma|{\mathcal B^\perp}}\hat\Gamma(\gamma|_{\mathcal B})  - \frac{1}{2}\mathcal R(\dot\gamma|_\mathcal B,\dot{\gamma}|_{\mathcal B^\perp}) = 0
+\end{aligned}
+```
+
+#### ميكانيكا شبه زجاجية
+
+##### الأعراض شبه الكلاسيكية هي الحل الدقيق على المنوعات المسطحة
+
+الجانب الأيمن من المعادلة (16) هو الصيغة الدقيقة لنواة الحرارة للمعامل الثابت (في $$q$$ المقاييس $$g_{ij}$$. كل شقة متعددة'الغطاء العالمي isometric إلى الفضاء إقليدية، حيث $$g_{ij} = \delta_{i-j}$$.
+
+**هذه **هي النواة الحرارية للمعيار $$n$$-الحركة براونيان الأبعاد.
+
+دع'وضح ذلك، مع التذكير بوظيفة *الانتقال* في هذه الحالة: $$\mathcal S_\mathcal L(q_0,t_0, q_f, t_f) = \rho^2(q_0, q_f)/2(t_f - t_i)$$أين $$\rho$$ هي المسافة الريمانية بين $$q_0$$ و $$q_f$$.
+فسا $$||q||^2 = q\cdot q$$ أن تكون ساحة قاعدة إقليدية $$q$$:
+
+```math
+\begin{aligned}
+RHS^{16}_t(q_0,q_f) &:= \frac{e^{-\mathcal S_\mathcal L(q_0, 0, q_f, t)}}{\sqrt{(2 \pi t)^n}} \sqrt{g(q_f)}\\
+\mathcal R=0 \implies \\
+&\ = \frac{e^{\frac{-||q_f - q_i||^2}{2t}}}{\sqrt{(2\pi t)^n}} \\
+                   &\ = \int_{\Reals ^n}RHS^{16}_{s}(q_i, q)\ RHS^{16}_{t-s}(q, q_f)\ dq^1...dq^n\ \forall s\in (0, t)
+\end{aligned}
+```
+
+لماذا هذه المعادلة الأخيرة صحيحة؟  دع'انظر إلى الصورة من مساحة المسار: لدينا جيوديسي مستقيم يربط $$q_0$$ لكي $$q_f$$ في الوقت المحدد $$t$$، وجيوديسي مكسور يربطهم بنقطة الفصل المتوسطة التي تحدث عند $$s$$. نحن بفعالية ندمج الجيوديسيا التي كانت مكسورة مرة واحدة باستخدام صيغة كاميرون مارتن لتمثيل الجيوديسيا الخط المستقيم كجيوديسيا. $$g$$-حقل ناقل متغير $$\mathcal B$$. ثم نقوم بدمج دلتا نقطة التوقف من تلك الجيوديسية ($$\dot q-\mathcal B$$) مع مركز غاوسي ل $$\Reals^n$$.
+
+صراحة، بالنظر إلى حقل متجه ثابت $$\mathcal B_t = (q_f - q_0) / t$$، الجيوديسيا إقليدية مرة واحدة هي
+
+```math
+q(\tau) = \mathcal B_t\tau + q_0 + q\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t - \tau)/(t-s)& s\leq\tau\leq t
+\end{cases}
+````
+for fixed $$q\in\Reals^n$$ representing the "break point" at $$s$$.
+
+By Equation (12) $$(A)$$ and $$(B)$$:
+
+```math
+\begin{aligned}
+-\mathcal L(\dot q, q, \tau) &= \begin{equation}\tag{D}-\mathcal L(\dot q(\tau) - \mathcal B_t, q(\tau), \tau) - \mathcal B_t\cdot (\dot q(\tau)-\mathcal B_t) - \frac{1}{2}\mathcal B_t \cdot B_t \ \ \ \ \ \ \ \ \ \end{equation}\\
+\implies \\
+
+e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B_t||^2/2}e^{-(\mathcal B_t -q_0)\cdot (q(\tau)-\mathcal B_t\tau - q_0) -\mathcal S_{\mathcal L_{\mathcal B_t}(\dot q,q,\tau)}} \\
+
+&= e ^{-\tau||q_f-q_0||^2/2t^2  - \mathcal S_{\mathcal L(\dot q-\mathcal B, q, \tau)}}e^{-(q_f - q_0)/t\ \cdot q
+\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t-\tau)/(t-s) & s\leq\tau\leq t
+\end{cases}
+}\\
+\implies\\
+
+\frac{1}{\sqrt{((2\pi)^2 s(t-s))^n}}\int_{\Reals^n} e^{-\mathcal S_{\mathcal L}(q_0,q,s)}e^{\mathcal S_{\mathcal L}(q,q_f,t-s)}dq^1...dq^n &= \frac{e^{-(s+t-s)||q_f - q_0||^2/2t^2}}{\sqrt{((2\pi)^2 s(t-s))^n}}
+\int_{\Reals^n}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
+&= \frac{e^{-\rho^2(q_f, q_0)/2t}}{\sqrt{(2\pi t)^n}}\\
+&= RHS^{16}_t(q_0,q_f) \ .
+\end{aligned}
+```
+
+بشكل كبير، قمنا ببناء $$\mathcal B_t$$ لذلك $$\dot q - \mathcal B_t$$ يمثل جيوديسيا مكسورة مرة واحدة في $$s$$ التي بدأت وانتهت في $$q_0$$، ورأينا أن هذه المنحنيات هي في الأساس $$\mathcal N(0,s\wedge t-s)$$ موزعة. في الجزء المتبقي من هذه المقالة، سوف نتحلل. $$\Reals^n=<\mathcal B_t>\oplus \mathcal B_t^\perp$$ ودمج $$<\mathcal B_t>$$.
+
+#### DeWitt Scalar Curvature Path Integral Defect on Riemann Surfaces (باللغة الإنجليزية).
+
+ماذا لو حاولنا استخدام "القناعات المتتالية" على التعبير شبه الكلاسيكي في المعادلة (16) لبناء حركة براونيان على مشعب منحني سلبا $$M$$?
+
+أربعاء'الحصول على شيء، ولكن'd be *تقريبا* حركة براونيان على المساحات المنحنية &mdash; نحن بحاجة إلى النظر إلى Feynman-Kac للعيب في مولدها اللانهائي. اتضح أنه سيكون هناك خطأ وظيفة محتملة فعالة $$-\frac{1}{6}\bar{\mathcal R}$$أين $$\bar{\mathcal R}$$ هو انحناء فروة الرأس في كل نقطة. تم اكتشاف هذا لأول مرة من قبل برايس DeWitt في عام 1950's، وجعلت مشهورة في 1972 McKean-ورقة المغني على أعراض قصيرة من أثر نواة الحرارة، حيث يمثل هذا المصطلح مساهمة في هسيان من *شكل متري* $$g_{ij}$$ في [الإحداثيات العادية](https://en.wikipedia.org/wiki/Normal_coordinates). ولكن في ذلك الوقت $$\dim = 2$$ عندما تضيف الإمكانات التصحيحية الكاملة $$\mathcal V = -\frac{1}{6}(\bar{\mathcal R} - \frac{1}{4}\bar{\mathcal R}) = \frac{1}{16}\bar{\mathcal R}$$ إلى هاميلتون، وهو ديويت'ss $$\frac{1}{6}\bar{\mathcal R}$$ مصطلح نموذج الحجم *ناقص* وجود حقل القتل $$\mathcal B$$'ss $$\frac{1}{24}\mathcal{Ric}(\mathcal B/||\mathcal B||, \mathcal B/||\mathcal B||)$$ المساهمة، يتم القضاء على هذا العامل من الأعراض شبه الكلاسيكية لصيغ التتبع مثل Selberg.
+
+وبشكل أكثر دقة، عن طريق التقريب $$1/2\ \nabla\vert_0\sqrt{g} = - 1/6\ \mathcal{Ric}_{ij}q^i\partial^j + o(||q||) \implies 1/2\ \nabla\cdot\nabla\vert_0 \sqrt{g} = -1/6\ \bar{\mathcal R}(0)$$، نرى أن المشتقات الأولى تتلاشى في الأصل، لذلك:
+
+```math
+\sqrt{(2\pi t)^n}(\frac{1}{2}\Delta_M-\mathcal V)\vert_0 e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_{\Reals^n}\vert_0 e^{-1/2t\ g_{ij}q^iq^j}) - \mathcal V(0) - \frac{1}{6}\ \bar{\mathcal R}(0)
+```
+
+الذي *هو* مصطلح ديويت الأصلي كما استمد منه.  كما نحن متحيزون على القياس الكمي في وجود حقل قتل $$\mathcal B = \frac{\partial}{\partial x^1}$$ ، نأخذ مصطلحًا محتملًا معدلًا قليلاً:
+
+```math
+\sqrt{(2\pi t)^{n}}(\frac{1}{2}\Delta_M-\mathcal V)\vert_{x^1,\vec 0} e^{-\mathcal L_\mathcal B(\dot q, q, t)}\frac{1}{det |I-\mathcal J_\mathcal B|} = (\frac{1}{2}\Delta_{\Reals^n}\vert_{x^1,\vec 0}e^{-x^1x^1/2t}) - \mathcal V(x^1, \vec 0) + \frac{1}{8}\mathcal{Ric}_{11}(x^1, \vec 0).
+```
+
+#### الصيغة الهندسية الكاميرون مارتن ل $$g$$-invariant (قتل) ناقلات الحقول $$\mathcal B$$ (المعروف أيضًا باسم Quadratic Form Magic، الجزء 2).
+
+افترض $$\mathcal B$$ هو $$g$$-متغير (aka) [قتل](https://en.wikipedia.org/wiki/Killing_vector_field)) حقل متجه على $$M$$ في بقية هذه المقالة.
+
+##### خريطة التنمية $$\tilde \gamma = \mathscr D_q[\tilde c]$$ من أجل $$\tilde c\in C^\infty([0,t],T_qM)$$.
+
+حل من أجل $$\tilde \gamma$$:
+```math
+\begin{aligned}
+\tilde \gamma(0) &= q \\
+\dot {\tilde \gamma} &= \hat\Gamma(\tilde \gamma)\dot{\tilde c}\\
+\end{aligned}
+```
+
+##### $$\tilde c(\tau)=\int_0^\tau\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ كما عكس خريطة التنمية
+
+نويذر'نظرية s يضمن $$d({g^{-1}\mathcal B}) = 0$$، هكذا $$g^{-1}\mathcal B$$ غير قابل للتداخل محليًا مع $$\hat{\mathcal B}$$، ومجموعات المستوى المحلي متعامدة مع $$\mathcal B = \nabla \hat{\mathcal B}$$. ولأن $$\hat \Gamma$$ يحافظ على المقياس، فإنه يحافظ $$\mathcal B$$ و $$\mathcal B^\perp$$:
+
+```math
+\begin{aligned}
+\\
+\dot{c}\cdot\mathcal B &= 0 \implies\\
+\dot{\gamma}\cdot \mathcal B &= 0 \implies\\
+\frac{d\hat{\mathcal B}}{dt} &= 0\ ,
+\end{aligned}
+```
+
+أوبرا الصابون $$\gamma$$ موجود في مجموعة مستويات $$\hat{\mathcal B}$$ متى $$c$$ موجود بالكامل في $$\mathcal B^\perp \subset T_qM$$.
+وتكفل القيود المفروضة على حركة النقل الموازي أن $$\gamma(t) \ne q$$ بشكل عام. وعلاوة على ذلك،
+
+```math
+\begin{aligned}
+||\mathcal B_t|| &= \frac{\rho(q_0,q_f)}{t} \implies \\
+\tilde{c}(\tau) - c(\tau) &= \frac{t^2}{\rho^2(q_0,q_f)}\mathcal B_t\int_0^\tau \dot{\tilde c} \cdot \mathcal B_t\ ds\\
+&= \mathcal B\int_o^\tau\dot{\tilde c}\cdot \mathcal B \ ds\\
+&= \mathcal B\cdot \tilde c(\tau)\ \mathcal B\\
+&= d\hat{\mathcal B}(\tilde c)\ \mathcal B \ .
+\end{aligned}
+```
+
+##### حركة براونيان على $$M$$ هو قياس إقليديان وينر على $$\mathscr D^{-1}$$
+
+##### صيغة كاميرون مارتن لنواة الحرارة $$k^{\hat{\mathcal H}}_t(q_0,q_f)$$ على متعدد منحني سلبا $$M$$أين $$\hat{\mathcal H} = -\Delta/2 +\mathcal V$$
+
+دع $$\Omega^\mathcal B_t(q)$$ تكون مساحة المنحنيات المستمرة على $$M$$ منشأ عند $$q$$ وتنتهي عند $$\exp{t\mathcal B}\ q$$، و $$\mu_t(\omega)$$ كن مقياس Wiener العالمي على $$\omega\in \Omega^\mathcal B_t := \set{\Omega^\mathcal B_t(q): q\in M}$$، مع $$E_t^\mathcal B (f|A):=\int_{\Omega^\mathcal B_t} f(\omega) d(\mu_t|A)(\omega)$$ و $$P^\mathcal B_{\mu_t}(A) := \mu_t(A)/\mu_t(\Omega_t^{\mathcal B})\ \forall A\subset\Omega^\mathcal B_t $$ . ثم المعادلة (26) $$(D) \implies$$
+
+```math
+\begin{equation}
+\tag{E}
+k^{\hat{\mathcal H}}_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J^{\mathcal B}(q_0)|}}} E^\mathcal B_t({e^{-\int_0^t V(\omega(s))ds\ +\ \int_0^t \bar {\mathcal R}(\omega(s))ds/12\ -\ \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/24}\chi_{\Omega^B_t(q_0)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q_0) \ \ \ \ \ \ \
+\end{equation}
+```
+
+أينَ $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$, $$\mathcal J^{\mathcal B}(q_0)$$ هو مصفوفة مونودرومي المرتبطة فوليشن على $$M$$ مستحث بواسطة $$\hat{\mathcal B}$$، على طول المنحنى $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$، الاتصال $$q_0$$ لكي $$ q_f$$ مثل $$\lambda$$ من $$0$$ لكي $$t$$. $$\mathcal J^{\mathcal B}$$ لا يعتمد على $$t$$؛ ويضمن قيد الانحناء $$I-\mathcal J^\mathcal B$$ دائمًا لا يتم الإنشاء لـ $$q_0 \neq q_f$$. استبدال $$\mathcal B$$ مع $$-\mathcal B$$ عكس أدوار $$q_0$$ و $$q_f$$ومن الواضح أن التعبير متماثل بينهما كما هو متوقع.
+
+منذ $$\mathcal R$$ ثابت على طول $$\tilde \gamma$$، و $$\gamma$$ *هو* جيوديسي (حتى إعادة تطبيع الطول)، $$\mathcal J^\mathcal B(q_0)$$ يمكن حسابه بشكل تافه من حيث **حقول جاكوبي** $$\mathcal J(\lambda)$$ على طول $$\tilde \gamma$$ التي هي مجرد حل لمعامل ثابت من الدرجة الثانية ODEs الخطية، يتم تقييمها بعد التطور عبر الزمن $$\lambda=t$$.
+
+دليل على هذه المعادلة <span class="eqno"></span> سيكون ممتنًا لمقال ما قبل الطباعة، وليس هذا الاستطلاع، ولكنه تطبيق مباشر لصيغة Feynman-Kac *المطبقة على $$\mathcal V = \frac{1}{12}(\bar{\mathcal R} - \frac{1}{2} \mathcal {Ric}(\mathcal B / ||\mathcal B||, \mathcal B/||\mathcal B||)$$وهي قابلة للحساب بشكل صريح على كلا جانبي المعادلة، حيث أن الحساب بأكمله يقلل من حالة الانحناء المستمر عند تلك النقطة.
+
+يحدث نتيجة طبيعية لطيفة في الثابت $$\mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||}) = \bar{\mathcal R} / \dim M$$ انحناء غاوسي سلبي $$-\kappa$$ حالة، حيث $$\mathcal B$$ ينحدر إلى $$S^1$$ العمل على سطح ريمان $$M$$:
+
+```math
+\begin{aligned}
+
+\det |I - \mathcal J^\mathcal B| = (2 \kappa\sinh(\sqrt{\kappa}\rho/2))^2 \implies \\
+
+\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k^{-\Delta/2}_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2\kappa(q) \sinh \sqrt{\kappa(q)}\rho/2}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/16}{\chi_{\Omega^B_t(q)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B})|d\mathcal B^\perp), \ \text{ Bayes}\implies\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp d\hat{\mathcal B}|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp d\hat{\mathcal B})}d\hat{\mathcal B}\\
+
+&=\frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \rho_0\\
+
+\end{aligned}
+```
+
+أينَ $$\rho = \min_{q\in M}dist(q, \exp t\mathcal B \ q)$$ هو المسافة من أقصر مدار يسافر تحت $$S^1$$ العمل، و $$\rho_0$$ هو $$\rho$$ مقسومًا على تعدد المدار المرتبط به.  في المصطلحات المألوفة للهندسة الزائدة، $$\mathcal B^\perp$$ ** دورات هوائية** و $$g$$-متغير $$S^1$$ إجراء بموجب $$\mathcal B$$ ويقال أن يكون **تدفق هوروسيك**.
+
+بالإضافة إلى ذلك، النظر في المعادلة (32) $$(E)$$ أينَ $$B$$ يمثل عملية تناوب $$g$$تناظر متغير حول نقطة ثابتة $$q_0$$. ثم مع $$\Omega^0_t$$ مجموعة من الحلقات التعاقدية المستمرة:
+
+```math
+\mu_t(\Omega_t^0) = \frac{vol(M)}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ \kappa\sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
+```
+
+لأن هذه المعادلة تحليلية في $$\kappa$$، يمكننا أن نرى أن استمرار التحليل من $$\kappa \rightarrow -\kappa$$ يحول هذا التعبير من $$\sinh $$ لكي $$ \sin $$ في هذه الحالة لدينا المعادلة الصحيحة لـ *الشبح 2-المجال* مع انحناء غاوسي إيجابي ثابت $$|\kappa|$$.
+
+وبعبارة أخرى، قمنا بإعادة اشتقاق صيغة Selberg Trace ثنائية الأبعاد عبر الاحتمالية والهندسة، **بدلاً من التحليل التوافقي المعتاد على المساحات المتماثلة**.
+
+##### مثال انحناء غير ريفي
+
+من أجل التشابه السلس ذو القيمة الحقيقية $$h:\Reals\rightarrow\Reals$$ مع $$h(0)=0$$، دع $$ds^2 = (1+h^2(y)) dx^2 + 2h(y) dx\odot dy + dy^2$$. يحتوي هذا القياس على انحناء غاوسي سالب $$-(\kappa(y)=\frac{d^2}{dy^2}h^2(y)/2)$$التي تكون ثابتة فقط عندما $$h(y)$$ (وَإِنَّ اللَّهَ عَلَى الْأَرْضِ) $$\det(ds^2)= 1$$. ثم مع $$\hat{\mathcal B}(x,y) = x$$، نرى أن
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t}}{2\pi t}\int_{-\infty}^\infty\frac{\rho_0}{2 \sinh \sqrt{\kappa(y)}\rho/2} \int_{\Omega_t^\mathcal B(0,y)}e^{-\int_0^t\kappa(y(s))ds/8}d(\mu_t|\mathcal B^\perp)/dy \ dy
+
+```
+إذا أخذنا $$h(y) := y\sqrt{2y^2/3 + \kappa(0)} \implies \kappa(y) = 4 y^2 + \kappa(0) \gt 0$$ثم المعادلة (32)  $$(E)$$ يتنبأ بأن
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t -t\kappa(0)/8}}{\sqrt{2\pi t \cosh t}}\int_0^\infty\frac{\rho_0e^{-y^2/2t}}{\sqrt{2\pi t}\sinh \sqrt{4y^2+\kappa(0)}\rho/2 }\ dy
+
+```
+
+الذي ينفجر في $$0$$كما هو متوقع، إذا أخذنا أيضًا $$\kappa(0) = 0$$. أيضا، كما $$t\rightarrow 0$$، التكامل لديه أيضا السلوك غير المقارن الصحيح (التجمع حول الانحناء المستمر) $$-\kappa(0)$$ الوضع كما لو أن المكون المقابل لصيغة سيلبرج تتبع هو بمثابة الحد شبه الكلاسيكي لها كما $$t\rightarrow 0$$).
+
+### المراقبين، معادلة التطور، والكذب الجبر
+
+### إجراء مجموعة خطوط تشيرن سيمونز
+
+### ملاحظات حول ديناميات النسبية العامة
+
+- المحور الزمني الخارجي اصطناعي، لأن `وقت` هو جزءا لا يتجزأ من الهندسة من 4 الأبعاد متعددة نفسها.
+- وهذا يعني أن مشغلي التطور'لا علاقة لها ؛ فقط المسائل الثابتة Schrodinger المعادلة.
+- الطريق صياغة متكاملة تهب بسبب `-1` توقيع مقياس لورينزيان في الجوهر `وقت` الاتجاه. $$\det{g}$$ سلبي، وتحويل فورييه على كل حزمة cotangent'الألياف s هي لانهائية في هذا الاتجاه أيضا، إلا إذا استخدمنا استمرار تحليلي (المعروف باسم دوران الفتيل على الجوهر `وقت`).
+
+<!-- $Date: 2026-03-14 15:24:59 -0700 (Sat, 14 Mar 2026) $ $Author: joe $ $Revision: 29029 $ -->

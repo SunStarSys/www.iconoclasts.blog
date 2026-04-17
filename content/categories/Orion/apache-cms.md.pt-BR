@@ -4,9 +4,9 @@ categories: Perl, Apache, ZFS, Orion
 dependencies: '*.md.pt-BR'
 keywords: apache,OpenOffice,cms,wiki
 published: ~
-status: rascunho
+status: verificado=29569
 title: Apache CMS - Retrospectivo
-
 ---
 
-{% ssi `/joe/apache-cms.md.pt-BR` %}
+
+{% ssi `/joe/apache-cms.md.en` %}

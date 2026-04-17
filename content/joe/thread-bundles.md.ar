@@ -1,0 +1,78 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ar'
+keywords: POSIX، pthread، C، mutex
+published: ~
+status: التحقق = 26810
+title: حزم سلاسل العمليات
+---
+
+[TOC]
+
+<div class="right">
+
+![حزمة سلاسل العمليات التي تم إنشاؤها بواسطة الذكاء الاصطناعي](thread-bundles.page/thread-bundle).
+
+</div>
+
+## {# lede #} سلاسل عمليات POSIX {# lede #}
+
+لقد كُلفت هذا العام بنقل وظيفة الحد الأقصى للاحتمالية من إصدار مترابط واحد إلى إصدار متعدد سلاسل العمليات، استنادًا إلى الفرضية المعمارية التي مفادها أن الجزء الأبطأ من هذا الرمز هو المكان الذي يتكرر فيه منطق التحسين الفعلي عبر فهرس معرف مجموعة النمذجة، والذي من خلال التصميم، يجب أن يكون كل تكرار من خلال الحلقة مستقلًا عن الباقي.
+
+مشكلة في المرح أثناء سلسلة الجمل البرمجية
+
+1. فشل في إعادة تهيئة المتغيرات التلقائية التابعة،
+2. يغير العديد من المؤشرات العامة المفهرسة بواسطة نمذجة معرف المجموعة (`جي جي`),
+3. في حاجة ماسة إلى متغيرات thread_local لفصل مقاطع الذاكرة العامة المخصصة للحساب (على أساس كل معرف).
+
+1 و 3 كانت واضحة. مع 2 اكتشفت خوارزمية ذكية تنطوي على مفهوم `THREAD_BUNDLE`، وهي عبارة عن مجموعة لكل سلسلة عمليات لمعرفات مجموعة إنشاء النماذج التسلسلية.
+
+عن طريق ضمان `THREAD_BUNDLE` على الأقل حجم صفحة الذاكرة مقسومًا على حجم المؤشرات الفردية في 2، يمكننا التأكد من أن المواضيع المختلفة تعمل على مستقل [`الصفحات`](https://en.wikipedia.org/wiki/Page_%28computer_memory%29) في الذاكرة الافتراضية، حتى نتمكن من تجنب أقفال mutex على تلك الذاكرة يكتب. (على افتراض أن المواضيع تعالج `THREAD_BUNDLE` بنفس السرعة تقريباً).
+
+علاوة على ذلك، قمت في النهاية بإزالة "سرعة مماثلة" التبعية عن طريق تقسيم الحلقة إلى أزواج زوجية / زوجية، مما يضمن ذاكرة واحدة على الأقل `صفحة` يفصل النشاط `THREAD_BUNDLE` سلاسل الجمل البرمجية.
+
+## سلاسل الجمل البرمجية الأساسية
+
+```clike
+  /* EVEN */
+  for (jG = minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+
+#define SET_ARG(foo) arg->foo = (foo) 30 refs
+
+SET_ARG(jG);
+    ...
+
+#undef SET_ARG
+
+// rsim_mlf_thread loops over the index bundle
+	// from jG to MIN(numG, jG + THREAD_BUNDLE - minG), doing
+	// stuff with global data structures also indexed by jG
+
+pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
+    PUSH_STACK_ELT(thread_stack, ptid, pthread_t);
+  }
+
+{
+    pthread_t *ptid; 3 refs
+    while (POP_STACK_PTR(thread_stack, ptid, pthread_t) != NULL)
+    {
+      arg_t* arg; 6 refs
+      pthread_join(*ptid, (void**)&arg);
+      ...
+  }
+
+/* ODD */
+  for (jG = THREAD_BUNDLE + minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+    ...
+```
+
+![نسق الذاكرة](thread-bundles.page/memory-layout).
+
+<!-- $Date: 2025-09-19 14:02:02 -0700 (Fri, 19 Sep 2025) $ $Author: joe $ $Revision: 26842 $ -->

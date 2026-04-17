@@ -1,0 +1,200 @@
+---
+archived: ~
+categories: الرياضيات
+dependencies: '*.md.ar'
+keywords: قياس الوينر، أسطح الريمان، الاحتمالات، الهندسة
+published: ~
+status: مُسَوَّدَة
+title: معادلة تتبع مؤشر ستوكاستيك للمجموعات المنحنية المغلقة والسلبية
+---
+
+<div class="right">
+
+![قرص العسل الفائق](stochastic-trace-formula.page/hyperbolic-honeycomb.png).
+
+</div>
+
+[TOC]
+
+```asy
+// tubular trefoil knot -*- asy -*-
+
+import tube;
+import graph3;
+import palette;
+
+size(0, 8cm);
+currentlight=White;
+real redPortion = 143 / 256;
+real greenPortion = 153 / 256;
+real bluePortion = 251 / 156;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
+// currentlight.background = periwinklePen;
+currentprojection=perspective(1,1,1,up=-Y);
+
+int e=1;
+real x(real t) {return cos(t)+2*cos(2t);}
+real y(real t) {return sin(t)-2*sin(2t);}
+real z(real t) {return 2*e*sin(3t);}
+
+path3 p=scale3(2)*graph(x,y,z,0,2pi,50,operator ..)&cycle;
+
+pen[] pens=Gradient(6,red,blue,purple);
+pens.push(yellow);
+for (int i=pens.length-2; i >= 0 ; --i)
+  pens.push(pens[i]);
+
+path sec=scale(0.25)*texpath("$\pi$")[0];
+
+coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
+
+draw(tube(p,colorsec),render(merge=true));
+
+```
+
+{# lede #}بلدي *1997 Ph.D. أطروحة* كإدخال بلوق.{# lede #}
+
+## لا يوجد سوى قياس واحد أحادي الأبعاد $$\mu$$
+
+## التقارب الخطي Piecewise إلى حركة براونيان
+
+## خريطة التنمية DM
+
+## صيغة كاميرون مارتن
+
+## حبات الحرارة كمشتقات رادون-نيكوديم لقياس وينر
+
+## مجموعة الرموز
+
+$$M$$ هو منحني سلبا $$\dim=n$$ مغلق ريمانيان متعددة مع متري $$g$$، اتصال القياس $$\nabla$$، و(غير سلبي) مشغل لابلاس-بلترامي $$\Delta_M$$. دع $$k_{-t\Delta/2}(x,y)$$ يمثل نواة الحرارة قيد التشغيل $$M$$.
+
+وبالتالي $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ هو مشتق Radon-Nicodym من قياس Wiener n-dimensional $$\mu$$، يقتصر على الانسحاب من مساحة حلقة مستمرة $$\Omega_t(M)\vert_x$$، عبر عكس خريطة تطوير الحفاظ على قياس Weiner $$DM$$. *ملاحظة:* $$DM^{-1}\Omega_t\vert_x$$ ليست مساحة لسلسلة الجمل البرمجية بشكل عام.
+
+$$\Omega_t^0$$ هو مساحة الحلقات القابلة للتعاقد المستمر على $$M$$.
+
+$$\Omega_t[\gamma]$$ هي مساحة الحلقات المستمرة على $$M$$ منظار إلى الجيوديسية المغلقة $$\gamma$$. دع $$\gamma_0$$ سلسلة الجمل البرمجية البدائية.
+
+$$DM^{-1}\Omega_t^0[\gamma]$$ هو الصورة الأولية للحلقات القابلة للتعاقد المستمرة على $$M$$ مشطوب كإزاحة متجانسة إلى $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. فكر في الإحداثيات الحلقية &mdash; كل ألياف كحد هندسي للمجالات الجيوديسية الدورية $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$، متجه في الحزمة العادية أكثر $$\gamma_0$$. قيود انحناءنا تعني إحداثيات هوروسيك لكل $$\gamma_0$$ وجود على نحو سلس، $$DM$$- خريطة تنسيق متوافقة ل $$\Omega_t^0[\gamma]$$.
+في إحداثيات هوروكسيك، $$\det{g(\vec{x})} = 1$$:
+
+```math
+\begin{aligned}
+ds^2 &= dx\odot dx + h(x,y) dx\odot dy +  (1+h^2(x,y)) dy\odot dy \\
+g(x,0) &= 0,\\
+\sigma_1 &= dx + h(x,y)dy \\
+\sigma_2 &= h(x,y)dx + (1+h^2(x,y))dy \\
+\sigma_1 \wedge \sigma_2 &= dx \wedge dy\\
+d\sigma_1 &= \frac{\partial h}{\partial x}dx\wedge dy \\
+d\sigma_2 &= (-\frac{\partial h}{\partial y}+2h\frac{\partial h}{\partial x}) dx\wedge dy \\
+
+\end{aligned}
+```
+لذلك الاتصال 1-شكل $$\alpha := Adx + Bdy$$ يرضي
+```math
+\begin{aligned}
+d\sigma_1 &= \alpha \wedge \sigma_1 \\
+d\sigma_2 &= \sigma_2 \wedge \alpha \\
+\implies \\
+A &= \frac{\partial h}{\partial y} - 3h\frac{\partial h}{\partial x} \\
+B &= h\frac{\partial h}{\partial y} - (1+3h^2)\frac{\partial h}{\partial x} \\
+ \\
+K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
+ &= \frac{\partial h}{\partial x}\frac{\partial h}{\partial y} - 6h\frac{\partial h}{\partial x}^2 - (1+3h^2)\frac{\partial^2 h}{\partial x \partial x}
+ - \frac{\partial^2 h}{\partial y \partial y} + 2h \frac{\partial^2 h}{\partial x \partial y} ,\\
+h &= h(y) \implies \\
+
+\alpha &= \frac{\partial }{\partial y} (hdx +\frac{h^2}{2} dy)\\
+
+K(y) &= -\frac{\partial^2 h}{\partial y \partial y}\ \\
+ \text{has Galilean Symmetry:} \\
+ h \mapsto h(y,\beta) &= h(y) + \beta y \ .\\
+\end{aligned}
+```
+
+**مهم** لذلك، عندما $$h=h(y)$$، معادلة النقل الموازية تقلل إلى $$\dot{\vec{c}}(t) = -\alpha(\dot{\gamma}(t))\vec{c}(t) = -\partial_y(h\ dx/dt + h^2/2\ dy/dt)\vec{c}(t)$$. وبالطبع فإن هذا قد أغلق الحل.
+
+```math
+\vec{c}(t) = exp(-((h+\beta y)\ dx/dt + (h^2/2 + (\beta y)^2/2 + \beta y h) \ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
+```
+
+التي هي وظيفة منحنى النقل $$\gamma$$'نقاط انتهاء s **منفردة**. تشير هذه الحقيقة إلى أن خريطة التطوير تحافظ على الحلقات.
+
+$$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ هو أثر نواة الحرارة.
+
+وأخيرا دعونا نحدد ما يلي من مشتقات رادون نيكوديم:
+
+```math
+\begin{aligned}
+DM_*\mu(\Omega_t) &:= \int_M DM_*\mu(\Omega_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega^0_t) &:= \int_M DM_*\mu(\Omega^0_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega_t[\gamma]) &:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx) \\
+\end{aligned}
+```
+
+## معادلة التتبع الاحتمالي
+
+```math
+\begin{aligned}
+Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t) &= DM_*\mu(\Omega^0_t) + \sum_{\set{\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
+
+DM_*\mu(\Omega_t^0) &\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\space \small\text{by McKean-Singer}\\
+
+DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
+
+&= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
+\end{aligned}
+```
+```math
+\begin{aligned}
+\text{Horocyclic coordinates}: \\
+
+h&= h(y) \implies \\
+&=\frac{\ell(\gamma_0)}{2\pi t}\int_{\Reals}\frac{e^{- (1+h^2(y))\ell(\gamma)^2/2t}}{2\sinh \sqrt{-K(y)}\ell(\gamma)/2}\ell(\gamma) dy\ ,\\
+
+h(y) = y \implies \\
+&= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh \sqrt {-K}\ell(\gamma)/2}\int_{\Reals}e^{-y^2\ell(\gamma)^2/2t}{\frac{\ell(\gamma)dy}{\sqrt{2\pi t}}}
+\end{aligned}
+```
+## التقريب وصيغة تتبع Selberg
+
+في $$\dim = 2$$ انحناء مستمر $$K = -\kappa^2$$ حالة،
+
+```math
+\begin{aligned}
+
+\det |I-J_\gamma| &= (e^{\kappa\ell(\gamma)} - 1)(1 - e^{-\kappa\ell(\gamma)}) = 2 \sinh \kappa\ell(\gamma)/2\\
+
+\gamma(t) = \gamma_0(kt)\implies \\
+
+DM_*\mu(\Omega_t[\gamma])&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+\end{aligned}
+```
+
+في $$\dim=3$$ حالة متعددة القطع الزائد، ونحن نستخدم الإحداثيات المعقدة $$(z,\bar{z})$$ على الحزمة العادية للكتابة
+
+```math
+\begin{aligned}
+J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1)} &=
+\begin{pmatrix}
+e^{\kappa\ell(\gamma)} && 0 && 0\\
+0 && e^{-\kappa\ell(\gamma)+i\theta(\gamma)} && 0 \\
+0 && 0 && e^{-\kappa\ell(\gamma)-i\theta(\gamma)} \\
+\end{pmatrix}\\
+
+\implies& \\
+\det I-{\perp_{\gamma_0}}^k &= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
+\end{aligned}
+```
+ومنذ $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$، يصبح التقريب في المعادلة (2) مرة أخرى بالضبط:
+
+```math
+\begin{aligned}
+\kappa &= 1 \implies \\
+
+DM_*\mu(\Omega_t[\gamma])
+&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (1-e^{-k\ell(\gamma_0)})}|e^{k\ell(\gamma_0)/2}-e^{-k(\ell(\gamma_0)/2-i\theta(\gamma_0))}|}\\
+
+\end{aligned}
+```
+
+<!-- $Date: 2025-03-30 15:41:48 -0700 (Sun, 30 Mar 2025) $ $Author: joe $ $Revision: 26414 $ -->

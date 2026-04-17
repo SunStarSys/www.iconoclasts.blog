@@ -1,0 +1,11 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.pt-BR'
+keywords: qpsmtpd,Apache::Qpsmtpd, earlytalker, antispam, sendmail, postfix, exim
+published: ~
+status: ~
+title: Sobre o problema do spam...
+---
+
+{% ssi `/joe/spam.md.en` %}

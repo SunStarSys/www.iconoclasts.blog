@@ -1,0 +1,65 @@
+\documentclass{% templatetag openbrace %}المقالة
+\usepackage[hidelinks]{% templatetag openbrace %}hyperref}
+\usepackage[النوع={% templatetag openbrace %}CC}، المعدل={% templatetag openbrace %}{{license}}إصدار={% templatetag openbrace %}4.0}]{% templatetag openbrace %}doclicense
+\usepackage[هامش=1in]{% templatetag openbrace %}الهندسة
+
+\بيئة جديدة{% templatetag openbrace %}subproof}[1][\proofname]{% templatetag openbrace %}%
+  \renewcommand{% templatetag openbrace %}\qedsymbol}{% templatetag openbrace %}$\blacksquare$%
+    \ابدأ{% templatetag openbrace %}تدقيق}[#1]%
+    }{% templatetag openbrace %}%
+    \نهاية{% templatetag openbrace %}تصحيح%
+}
+
+النسبة المئوية لحزم AMS
+
+\usepacking{% templatetag openbrace %}صدمة
+\usepacking{% templatetag openbrace %}أمستم
+\usepacking{% templatetag openbrace %}عربي
+الخيارات المألوفة % الحديثة utf8 (غير متوافقة تمامًا مع amscd):
+\PassOptionsToPackage{% templatetag openbrace %}جزئي=مستقيم{% templatetag openbrace %}يونيكود-ماث
+\usepacking{% templatetag openbrace %}مجموعة الخطوط
+\usepacking{% templatetag openbrace %}تيكتس سي دي
+
+\usepackage[style=alphabetic]{% templatetag openbrace %}بلاتكس
+\addbibresource{% templatetag openbrace %}{{path|dirname}}/{{path|basename:0}}بيب.{{lang}}}
+نسبة وحدات ماكرو فيزياء الرياضيات المفيدة
+\usepacking{% templatetag openbrace %}براكيت
+\usepacking{% templatetag openbrace %}فيزياء
+% يونيكود
+\usepackage[utf8]{% templatetag openbrace %}المدخلات
+
+نسبة ميتاديتا
+\tعنوان{% templatetag openbrace %}{{headers.title|lower|capfirst}}}
+\تاريخ{% templatetag openbrace %}{{time|date:"Y"}}\\{{time|date:"F"}}}
+\مؤلف{% templatetag openbrace %}{{author}}\\\المرجع{% templatetag openbrace %}mailto://{{author|urlencode|md2tex}}\%20<{{email}}>}{% templatetag openbrace %}{{email}}}}
+
+النسبة المئوية للنظرية، Lemma، إلخ
+\نمط النظرية{% templatetag openbrace %}عادي
+\نظرية جديدة{% templatetag openbrace %}مبرهنة{% templatetag openbrace %}مبرهنة
+\نظرية جديدة{% templatetag openbrace %}[النظرية]{% templatetag openbrace %}المرجانية
+\نظرية جديدة{% templatetag openbrace %}ليما[theorem]{% templatetag openbrace %}ليما
+\نظرية جديدة{% templatetag openbrace %}مطالبة{% templatetag openbrace %}المطالبة}[theorem]
+\نظرية جديدة{% templatetag openbrace %}بديهية[theorem]{% templatetag openbrace %}أكسيوم
+\نظرية جديدة{% templatetag openbrace %}نظرية [theorem]{% templatetag openbrace %}تخمين
+\نظرية جديدة{% templatetag openbrace %}الحقيقة[theorem]{% templatetag openbrace %}البيانات الفعلية
+\نظرية جديدة{% templatetag openbrace %}فرضية[theorem]{% templatetag openbrace %}فرضية}
+\نظرية جديدة{% templatetag openbrace %}نظرية[theorem]{% templatetag openbrace %}الافتراض
+\نظرية جديدة{% templatetag openbrace %}نظرية[theorem]{% templatetag openbrace %}الاقتراح}
+\نظرية جديدة{% templatetag openbrace %}المعيار[theorem]{% templatetag openbrace %}المعيار}
+\نمط النظرية{% templatetag openbrace %}تعريف
+\نظرية جديدة{% templatetag openbrace %}تعريف[theorem]{% templatetag openbrace %}التعريف}
+\نظرية جديدة{% templatetag openbrace %}مثال }[theorem]{% templatetag openbrace %}المثال}
+\نظرية جديدة{% templatetag openbrace %}نظرية[theorem]{% templatetag openbrace %}ملاحظة
+\نظرية جديدة{% templatetag openbrace %}مشكلة[theorem]{% templatetag openbrace %}مشكلة}
+\نظرية جديدة{% templatetag openbrace %}مبدأ[نظرية]{% templatetag openbrace %}المبدأ
+
+\ابدأ{% templatetag openbrace %}مستند
+\maketitle
+
+{{content|md2tex}}
+
+\doclicenseThis
+فاصل الصفحات
+\printbibliography
+
+\نهاية{% templatetag openbrace %}مستند

@@ -1,0 +1,176 @@
+\documentclass{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage[type={CC}،modifier={by-nc-nd}،version={4.0}]{doclicense}
+\usepackage[هامش=1in]{geometry}
+
+\newenvironment{subproof}[1][\proofname]{%
+  \renewcommand{\qedsymbol}{$\blacksquare$}%
+    \begin{proof}[#1]%
+    }{%
+    \end{proof}%
+}
+
+النسبة المئوية لحزم AMS
+
+\usepackage{amsmath}
+\usepacking{amsthm}
+\usepackage{amssymb}
+الخيارات المألوفة % الحديثة utf8 (غير متوافقة تمامًا مع amscd):
+\PassOptionsToPackage{partial=upright}{unicode-math}
+\usepackage{fontsetup}
+\usepackage{tikz-cd}
+
+\usepackage[style=alphabetic]{biblatex}[نمط=أبجدي]
+\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
+نسبة وحدات ماكرو فيزياء الرياضيات المفيدة
+\usepackage{braket}
+\usepackage{physics}
+% يونيكود
+\usepackage[utf8]{inputenc}
+
+نسبة ميتاديتا
+\tالعنوان{صيغة التتبع التكتيكي للتشعبات المغلقة المنحنية سلبًا}
+\date{2024\\May}
+\المؤلف{Joe Schaefer\\href{mailto://Joe\%20Schaefer\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
+
+النسبة المئوية للنظرية، Lemma، إلخ
+\نمط النظرية{plain}
+\نظرية جديدة{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[نظرية]{Lemma}
+\newtheorem{claim}{Claim}[theorem]
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{fact}[theorem]{Fact}
+\نظرية جديدة{hypothesis}[نظرية]{فرضية}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{criterion}[theorem]{Criterion}
+\نمط النظرية{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{principle}[نظرية]{Principle}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\textit{1997 Ph.D. thesis} كإدخال مدونة.
+
+\القسم{لا يوجد سوى قياس Wiener أحادي البُعد}
+
+\القسم{Piecewise Linear Approximations to Brownian Motion}
+
+\القسم{خريطة التطوير DM}
+
+\القسم{صيغة كاميرون مارتن}
+
+\القسم{نواة الحرارة كمشتقات Radon-Nicodym لقياس Weiner}
+
+\القسم{Notation}
+
+$M$ هو منحنى سلبيا $\dim=n$ مغلق ريمانيان متعددة مع القياس $g$، اتصال القياس $\nabla$، و (غير سالب) لابلاس-بلترامي المشغل $\Delta_M$.  دع $k_{-t\Delta/2}(x،y)$ يمثل نواة الحرارة على $M$.
+
+ومن ثم فإن $k_{-t\Delta/2}(x،x) = dDM_*\mu/\sqrt{g}dx$ هو مشتق Radon-Nicodym من قياس Wiener n-dimensional $\mu$، مقيد بسحب مساحة الحلقة المستمرة $\Omega_t(M)\vert_x$، عبر عكس مخطط تطوير Weiner لحفظ القياس $DM$. *ملاحظة:* $DM^{-1}\Omega_t\vert_x$ ليست مساحة حلقة.
+
+$\Omega_t^0$ هي مساحة الحلقات القابلة للتعاقد المستمرة على $M$.
+
+$\Omega_t[\gamma]$ هي مساحة الحلقات المستمرة على موقع $M$ إلى الجيوديسي المغلق $\gamma$. دع $\gamma_0$ يكون حلقة بدائية.
+
+$DM^{-1}\Omega_t^0[\gamma]$ هي الصورة الأولية للحلقات المستمرة القابلة للتعاقد على $M$ والتي تم شطبها كمقاصات متماثلة مع $\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1)، 0\leq s \leq t$. اعتبر الإحداثيات الحلقية -- كل ألياف كحد هندسي للمجالات الجيوديسية الدورية $S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0))، 0\leq s \leq t، k\rightarrow\infty$، متجه في الحزمة العادية أكثر من $\gamma_0$. تشير قيود الانحناء لدينا إلى وجود إحداثيات دورية لكل $\gamma_0$ كخريطة تنسيق سلسة ومتوافقة مع $DM$ لـ $\Omega_t^0[\gamma]$.
+
+الآن $\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$ هي نقطة نهاية \textit{undeveloped} لموضع "offset" \textit{kinked geodesic} لـ $\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1)، 0\leq s \leq t$. المنحنى دوري مع الفترة $\ell(\gamma_0)$، ويعيد النظر في نقطة البداية المرتبطة $DM(\vec{x}(\tau))$ في الوقت $t$، مع حساب المشتق الآجل $J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$ قابل للتتبع كأتمتة خطية من $T_{DM(\vec{x}(\tau))}M$. الأهم من ذلك هو أنه يمكن إنشاء $J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$ باستخدام \textbf{Jacobi Fields}، نظرًا لأن $DM$ \textbf{is} الخريطة الأسية (المكررة) على طول أي سلسلة من الخطوط المستقيمة المتصلة في $\mathbb{R}^n$. سوف ندرس 1/2 $ \int_0^t \bra{dX}\ket{dX}_s$، مع الحل
+
+\بدء{equation}
+\بدء{aligned}
+X_t &amp;= X_0 + \int_0^t \sqrt{J}_{X_t} dB_t  \\
+\end{aligned}
+\end{equation}
+
+$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x،x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$ هو أثر نواة الحرارة.
+
+وأخيرا دعونا نحدد ما يلي من مشتقات رادون نيكوديم:
+
+\بدء{equation}
+\بدء{aligned}
+DM_*\mu(\Omega_t) &amp;= \int_M DM_*\mu(\Omega_t\vert_x \sqrt{g}dx)\\\
+DM_*\mu(\أوميغا^0_t) و:= \int_M DM_*\mu(\Omega^0_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega_t[\gamma]) و:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx) \\
+\end{aligned}
+\end{equation}
+
+\sالقسم{صيغة التتبع المرن}
+
+\بدء{equation}
+\بدء{aligned}
+Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t) و= DM_*\mu(\Omega^0_t) + \sum_{\set{\gamma} DM_*\mu(\Omega_t[\gamma]) \\
+DM_*\mu(\Omega_t^0) &amp;\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\space \small\text{by McKean-Singer}\\
+DM_*\mu(\Omega_t[\gamma]) &amp;= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
+&amp;= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} هـ(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\
+\frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}&amp;\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau),\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\\small \text{ semical limit}\\\\\\\\
+\text{الإحداثيات الدورية: z(\tau) - x(\tau) و= x + \ell(\gamma)\vec{e}^1\implies\\
+\int_{M/S^1\oplus S^1}k_t(x,z) dx &amp;=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}E(e^{\bra{J_{X^j_t}\vec{x}}\ket{\vec{x}})\\
+&amp;=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}\int_{M^j/S^1\oplus S^1}\frac{1}{\sqrt{2\pi t}^{jn}\det|I-J_{X^j}|}e^{-\ell(X^j)^2/2tس^{j}\\
+\end{aligned}
+\end{equation}
+
+\sقسم{تقريب وصيغة تتبع Selberg}
+
+في $\dim = 2$ انحناء ثابت $-\kappa^2$ حالة السطح،
+
+\بدء{equation}
+\بدء{aligned}
+\sqrt{J_{\vec{x}، \vec{y}}dRB&amp;=
+\بدء{pmatrix}
+e^{\kappa d(\vec{x},\vec{y})/2} &amp;&amp; 0\\\
+0 &amp;&amp; e^{-\kappa d(\vec{x},\vec{y})/2}\\
+\end{pmatrix}
+\implies&amp;\\
+\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} و= ه^{\kappa \ell(B)}dRB_1^2 - ه^{-\kappa \ell(B)}dRB_2^2\\
+\int_0^t \bra{\sqrt{ J}dB}\ket{\sqrt{ J}dB} و= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
+\et I-J_{\gamma} &amp;= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
+\end{aligned}
+\end{equation}
+
+وهو ثابت فوق $(\vec{x}،\tau)$، لذا يصبح خط $\approx_{t\rightarrow 0}$ التقريبي في المعادلة (2) \textit{exact}:
+
+\بدء{equation}
+\بدء{aligned}
+DM_*\mu(\Omega_t[\gamma]) &amp;= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gamma)/2} -e^{-\kappa\ell(\gamma)/2})}\\\
+\gamma(t) = \gamma_0(kt)\implies \\
+&amp;=\frac{e^{-k^2\ell(\gamma_0^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\\
+\end{aligned}
+\end{equation}
+
+في الحالة المتعددة للقطع الزائد $\dim=3$، نستخدم الإحداثيات المعقدة $(z،\bar{z})$ في الحزمة العادية للكتابة
+
+\بدء{equation}
+\بدء{aligned}
+J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1} و=
+\بدء{pmatrix}
+e^{\kappa\ell(\gamma)} &amp;&amp; 0 &amp;&amp; 0\\\
+0 &amp;&amp; e^{-\kappa\ell(\gamma)+i\theta(\gamma)} &amp;&amp; 0 \\
+0 &amp;&amp; 0 &amp;&amp; e^{-\kappa\ell(\gamma)-i\theta(\gamma)} \\
+\end{pmatrix}\
+\implies و \\
+\et I-{\perp_{\gamma_0}^k &amp;= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
+\end{aligned}
+\end{equation}
+وبما أن $z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$، التقريب في المعادلة (2) يصبح بالضبط مرة أخرى:
+
+\بدء{equation}
+\بدء{aligned}
+\kappa &amp;= 1 \implies \\
+DM_*\mu(\Omega_t[\gamma])
+&amp;=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (1-e^{-k\ell(\gamma_0)})}|e^{k\ell(\gamma_0)/2}-e^{-k(\ell(\gamma_0)/2-i\theta(\gamma_0))}|}\\\
+\end{aligned}
+\end{equation}
+
+\doclicenseThis
+فاصل الصفحات
+\printbibliography
+
+\end{document}
