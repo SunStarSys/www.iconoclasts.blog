@@ -49,7 +49,9 @@
              {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">Контакт</a></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">Продукты... <span class="caret"></span></a>
-            <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="products">
+
+<ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
+			aria-labelledby="продукты">
               <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Орион&trade; Платформа Jamstack Wiki</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
                 href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Ценовые планы Orion</a></li>
@@ -58,7 +60,8 @@
 
 <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">Подробнее... <span class="caret"></span></a>
-            <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu" aria-labelledby="more">
+            <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
+			aria-labelledby="больше">
               <li class="dropdown-item">
                 <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">Источник отделения</a>
               </li>
