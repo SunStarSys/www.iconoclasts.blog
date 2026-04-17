@@ -89,20 +89,20 @@ Funktionerna nedan är hämtade direkt från den officiella releaseinformationen
   }
   ```
 
-- **`isa` class-instance operator** *(stable since 5.36; introduced in 5.32)* — `$obj isa "ClassName"` returns a boolean; cleaner than `ref($obj) eq "ClassName"`.
+- **`isa` klassinstansoperator** *(stabil sedan 5.36; introducerad i 5.32)* — `$obj isa "ClassName"` returnerar ett booleskt värde; renare än `ref($obj) eq "ClassName"`.
 
-- **`builtin` module** *(stable since 5.40; experimental since 5.36)* — lexically importable functions built directly into the interpreter.  The stable 5.40 bundle includes, among others:
+- **`inbyggd` modul** *(stabil sedan 5.40; experimentell sedan 5.36)* — lexikalt importabla funktioner som är inbyggda direkt i tolken.  Det stabila 5.40-paketet innehåller bland annat:
 
-- `ceil`, `floor` — integer rounding without `use POSIX`.
-  - `trim` — strip leading/trailing whitespace from a string.
-  - `indexed` — pairs each element with its index; the idiomatic companion to multi-value `for` loops (see below).
-  - `true`, `false`, `is_bool` — typed boolean sentinels; serialisers can now emit JSON `true`/`false` rather than `1`/`0`.
-  - `weaken`, `unweaken`, `is_weak` — reference-count control for building bidirectional data structures without memory leaks.
-  - `blessed`, `reftype`, `refaddr` — reference introspection.
+- `tak`, `våning` heltalsavrundning utan `använd POSIX`.
+  - `trimma` — ta bort inledande/avslutande blanktecken från en sträng.
+  - `indexerad` - parar varje element med sitt index; den idiomatiska följeslagaren till flera värden `för` öglor (se nedan).
+  - `sant`, `falskt`, `is_bool` — Booleska sentineltyper; serialiserare kan nu avge JSON `sant`/`falskt` snarare än `1`/`0`.
+  - `försvaga`, `väcka`, `is_weak` — Kontroll av referensantal för att bygga dubbelriktade datastrukturer utan minnesläckor.
+  - `välsignad`, `returtyp`, `adressera` Referensintrospektion.
 
-- **Stable boolean tracking** *(5.36)* — scalars created as booleans (e.g., `!!1`) now retain their boolean nature through assignment, enabling reliable type-aware serialisation to JSON and MessagePack.
+- **Tabell boolesk spårning** *(5.36)* – skalärer skapade som booleska värden (t.ex. `!!1`) behåller nu sin booleska karaktär genom tilldelning, vilket möjliggör tillförlitlig typmedveten serialisering till JSON och MessagePack.
 
-- **Multi-value `for` loops** *(stable since 5.40; experimental since 5.36)* Iterate over pairs or N-tuples without manual index arithmetic:
+- **Multivärde `för` loopar** *(stabil sedan 5.40; experimentell sedan 5.36)* Iterera över par eller N-tupler utan manuell indexaritmetik:
 
 ```perl
   use v5.40;
@@ -111,7 +111,7 @@ Funktionerna nedan är hämtade direkt från den officiella releaseinformationen
 for my ($i, $val) (indexed @scores)  { ... } # index and value
   ```
 
-Or grab multiple values at the same time
+Eller hämta flera värden samtidigt
 
 ```perl
   use v5.40;
@@ -119,13 +119,13 @@ Or grab multiple values at the same time
 for my ($val1, $val2, $val3) (@scores)  { ... }
   ```
 
-- **`defer` blocks** *(experimental since 5.36)* — a scope-exit guard that runs cleanup code unconditionally when a block exits, whether normally or via exception — a natural replacement for destructor-based scope-guard objects and an important pattern for resource management in data pipelines.
+- **`skjuts` block** *(experimentellt sedan 5.36)* – ett omfattnings-exit-skydd som kör rensningskoden villkorslöst när ett block avslutas, antingen normalt eller via undantag – en naturlig ersättning för destruktorbaserade omfattningsbevakningsobjekt och ett viktigt mönster för resurshantering i datapipeliner.
 
-#### Perl 5.38 — July 2023
+#### Perl 5.38 – juli 2023
 
-- **`PERL_RAND_SEED` environment variable** *(5.38)* — setting this variable before a run makes every `rand` call (without an explicit `srand`) produce the same sequence, enabling **reproducible** stochastic algorithms — simulations, random sampling, Monte Carlo methods — without modifying source code.
+- **`PERL_RAND_SEED` miljövariabel** *(5.38)* – ställer in den här variabeln innan en körning gör varje `rand` samtal (utan uttrycklig `srand`) producerar samma sekvens, vilket möjliggör **reproducerbara **stokastiska algoritmer - simuleringar, slumpmässig provtagning, Monte Carlo-metoder - utan att ändra källkoden.
 
-- **`class` / `field` / `method` syntax** *(experimental since 5.38)* — a purpose-built, lexically-scoped object system requiring neither `bless` nor `@ISA` nor any CPAN module.  Useful for defining typed value objects such as dataset rows, model parameters, or pipeline stages:
+- **`socialklass` / `slagfält` / `metod` syntax** *(experimentellt sedan 5.38)* – ett specialbyggt, lexikaliskt begränsat objektsystem som inte kräver något `välsigna` och `@ISA` eller någon CPAN-modul.  Användbart för att definiera typangivna värdeobjekt, t.ex. datauppsättningsrader, modellparametrar eller pipelinesteg:
 
 ```perl
   use feature 'class';
@@ -140,9 +140,9 @@ class Vector2D {
   say $v->magnitude;    # 5
   ```
 
-#### Perl 5.40 — June 2024
+#### Perl 5.40 – juni 2024
 
-- **`try` / `catch` exception handling** *(stable since 5.40; experimental since 5.34; `finally` block added in 5.36)* — structured exception handling is now a core language feature; no CPAN module required:
+- **`försöka` / `fånga` undantagshantering** *(stabil sedan 5.40; experimentell sedan 5.34; `någon gång` block tillagt i 5.36)* – strukturerad undantagshantering är nu en huvudspråkfunktion; ingen CPAN-modul krävs:
 
 ```perl
   use v5.40;
@@ -157,103 +157,103 @@ class Vector2D {
   }
   ```
 
-(`Try::Tiny` / `Feature::Compat::Try` are only needed when targeting perls older than 5.34.).
+(`Försök::Tiny` / `Funktion::Compat::Försök` behövs endast vid målinriktning av perls äldre än 5,34.).
 
-- **Multi-value `for` loops** *(stable since 5.40)* — see 5.36 entry above; they graduated from experimental to stable in this release.
+- **Multivärde `för` loopar** *(stabil sedan 5.40)* — se 5.36 posten ovan; de tog examen från experimentell till stabil i denna utgåva.
 
-- **`builtin::inf` and `builtin::nan`** *(experimental since 5.40)* — typed floating-point infinity and Not-a-Number constants, eliminating `9**9**9` or POSIX hacks in numerical code.
+- **`inbyggt::inf` och `inbyggt::nan`** *(experimentell sedan 5.40)* — typade flytande-punkt oändlighet och Not-a-Number konstanter, eliminera `9**9**9` eller POSIX-hack i numerisk kod.
 
-- **`^^` logical XOR operator** *(5.40)* — completes the medium-precedence logical operator set (`&&`, `||`, `^^`); handy for boolean mask operations.
+- **`^^` logisk XOR-operator** *(5.40)* – slutför den logiska operatoruppsättningen med medelhög prioritet (`&&`, `||`, `^^`); praktiskt för booleska maskoperationer.
 
-- **`use v5.40` imports builtin functions** — beyond enabling the feature bundle, `use v5.40` also imports the corresponding `builtin` version bundle, making all stable `builtin::` functions available as short names without a separate `use builtin` statement.
+- **`Använd v5.40` importerar inbyggda funktioner** – utöver att aktivera funktionspaketet `Använd v5.40` importerar även motsvarande `inbyggd` versionspaket, vilket gör alla stabila `inbyggd:` Funktioner tillgängliga som kortnamn utan separat `använd inbyggd` sats.
 
-#### Longstanding features (pre-5.36).
+#### Långvariga funktioner (före 5.36).
 
-- **`say` and `state`** *(since 5.10)* — `say` is `print` with an implicit newline; `state` declares a lexical that persists across invocations of its enclosing sub (a lightweight memoisation primitive).
+- **`säga` och `delstat`** *(sedan 5.10)* — `säga` är `trycka` med en implicit ny linje; `delstat` förklarar en lexikal som kvarstår över anrop av dess omslutande sub (en lätt primitiv memoar).
 
-- **First-class references and closures** — anonymous subs, closures, and reference construction are fundamental and have been stable since Perl 5.
+- **Referenser och stängningar i första klass** – anonyma del-, stängnings- och referenskonstruktioner är grundläggande och har varit stabila sedan Perl 5.
 
-- **`use constant`** or the CPAN `Readonly` module for named constants; `Readonly` enforces deep immutability that `use constant` does not.
+- **`använd konstant`** eller CPAN `Skrivskyddad` Modul för namngivna konstanter. `Skrivskyddad` genomdriver djup oföränderlighet som `använd konstant` gör det inte.
 
-Combined with [`perlbrew`](https://perlbrew.pl/) or [`plenv`](https://github.com/tokuhirom/plenv) for version management and [`carton`](https://metacpan.org/pod/Carton) for reproducible dependency snapshots, a modern Perl project looks and feels like a first-class software engineering effort.
+Kombinerad med [`perlbreiska`](https://perlbrew.pl/) eller [`plenarförsamling`](https://github.com/tokuhirom/plenv) för versionshantering och [`kartong`](https://metacpan.org/pod/Carton) För reproducerbara beroendeögonblicksbilder ser ett modernt Perl-projekt ut och känns som en förstklassig programvaruutveckling.
 
-### Honest limitations
+### Ärliga begränsningar
 
-No case for Perl is complete without honesty about where it falls short:
+Inget fall för Perl är komplett utan ärlighet om var det faller kort:
 
-- **Visualisation** — Perl has no equivalent to `ggplot2` or `matplotlib`. Plots typically require an external call to R, gnuplot, or a web library. At times this weakness can become an actual strength, allowing one to use Perl5 as the application language that orchestrates and enhances the other actors.
+- **Visualisering** – Perl har ingen motsvarighet `ggplot2` eller `mullvad`. Plottningar kräver vanligtvis ett externt anrop till R, gnuplot eller ett webbbibliotek. Ibland kan denna svaghet bli en verklig styrka, så att man kan använda Perl5 som applikationsspråk som orkestrerar och förbättrar de andra aktörerna.
 
-- **Community momentum** — the data-science community has converged on Python and R. Finding ready-made tutorials, Stack Overflow answers, and co-authors is harder.
+- **Gemenskapens drivkraft** - Datavetenskapssamhället har konvergerat på Python och R. Att hitta färdiga handledningar, Stack Overflow-svar och medförfattare är svårare.
 
-- **Object orientation** — without Moose/Moo the OOP model is verbose; with them it adds a dependency. The new `class` feature may solve some of these problems
+- **Objektorientering** - utan Älg/Moo är OOP-modellen utförlig; med dem lägger det till ett beroende. Den nya `socialklass` funktionen kan lösa några av dessa problem
 
-- **Type safety at scale** — the core language's dynamic scalars make large, collaborative numerical codebases harder to reason about (see next section).
+- **Typsäkerhet i stor skala** — Kärnspråket's dynamiska skalärer gör stora, samarbetande numeriska kodbaser svårare att resonera om (se nästa avsnitt).
 
 ---
 
-## 2. The Perl Data-Type System — Strengths and Cache-Era Limits <a id="the-perl-data-type-system"></a>
+## 2. Perl Data-Type System – Styrkor och Cache-Era-gränser <a id="the-perl-data-type-system"></a>
 
-### Core Perl types
+### Kärna perl-typer
 
-Perl's fundamental data model centres on three constructs:
+Perl's grundläggande datamodell centrerar på tre konstruktioner:
 
-| Construct | Sigil | What it holds |
+Konstruktion | Sigil | Vad den håller |
 |-----------|-------|---------------|
-| **Scalar** | `$` | A single value: number, string, reference, or `undef` |
-| **Array** | `@` | An ordered list of scalars, indexed by integer |
-| **Hash** | `%` | An unordered collection of scalar values keyed by string |
+| **Skalär** | `$` | Ett enstaka värde: tal, sträng, referens eller `ofördelaktig` |
+| **Uppställning** | `@` | En ordnad lista över skalärer, indexerade efter heltal |
+| **Hash** | `%` | En osorterad samling skalära värden som anges med sträng |
 
-Everything else — objects, closures, complex data structures — is built from these three primitives via *references* (`\@array`, `\%hash`, `sub { ... }`).
+Allt annat - objekt, förslutningar, komplexa datastrukturer - byggs från dessa tre primitiver via *referenser *(`\@array`, `\%hash`, `nedsänkt { ... }`).
 
-This model is extraordinarily flexible.  A single array can hold integers, floating-point numbers, strings, and nested references simultaneously.  That flexibility is exactly what made Perl the dominant system-administration and web-scripting language for two decades.
+Denna modell är extremt flexibel.  En enskild array kan innehålla heltal, flyttal, strängar och kapslade referenser samtidigt.  Den flexibiliteten är precis vad som gjorde Perl till det dominerande systemadministrations- och webbskriptspråket i två decennier.
 
-### The cache-hierarchy problem
+### Problemet med cachehierarkin
 
-Modern CPUs achieve peak throughput only when data flows through L1/L2/L3 cache<sup><a id="cache-ref" href="#fn-cache">†</a></sup> in large, contiguous blocks — a property called *spatial locality*.  Perl arrays do not provide this.  Under the hood, a Perl array is a C array of *pointers* to heap-allocated scalar (`SV`) structs.  Each scalar carries a reference count, a type tag, and padding — typically 24–56 bytes per scalar on a 64-bit build.  Iterating over a million-element Perl array therefore involves a million pointer dereferences scattered across the heap, producing a cache-miss pattern that completely negates the speed advantage of modern SIMD pipelines.
+Moderna processorer uppnår toppdataflöde endast när data flödar genom cachen L1/L2/L3<sup><a id="cache-ref" href="#fn-cache">†</a></sup> i stora, sammanhängande block - en egenskap som kallas *spatial locality*.  Perl-matriser tillhandahåller inte detta.  Under huven är en Perl-matris en C-matris med *pekare* till högallokerad skalär (`SV`) strukturerna.  Varje skalär har ett referensantal, en typtagg och utfyllnad - vanligtvis 24-56 byte per skalär på en 64-bitarsversion.  Iterera över en miljon-element Perl array innebär därför en miljon pekare avreferenser spridda över heap, vilket ger en cache-miss mönster som helt förnekar hastighetsfördelen med moderna SIMD rörledningar.
 
-A concrete consequence: a dot product of two 1 000-element vectors written in pure Perl is roughly **100–1000× slower** than the equivalent operation on a pair of PDL float ndarrays, which occupy two flat, 4 000-byte memory regions that fit comfortably in L1 cache.
+En konkret konsekvens: en punktprodukt av två 1 000-elementvektorer skrivna i ren Perl är ungefär **100-1000 × långsammare** än motsvarande operation på ett par PDL-float ndarrays, som upptar två platta minnesregioner på 4 000 byte som passar bekvämt i L1-cachen.
 
-### Contrast with R
+### Jämför med R
 
-R occupies a curious middle ground.  Like Perl, it is a dynamic, interpreted language — variables are untyped containers, functions are first-class values, and the interactive REPL is the primary development environment.  R even has direct analogues to Perl's three core types:
+R upptar en märklig medelväg.  Liksom Perl är det ett dynamiskt, tolkat språk - variabler är otypade behållare, funktioner är förstklassiga värden och den interaktiva REPL är den primära utvecklingsmiljön.  R har även direkta analoger till Perl's tre kärntyper:
 
-| Perl concept | R analogue |
+Perl koncept | R analog |
 |---|---|
-| `$scalar` | length-1 atomic vector or scalar-in-list |
-| `@array` | `list()` |
-| `%hash` | named `list()` |
-| Reference (`\@arr`) | R does not use explicit references; copy-on-modify semantics instead |
+| `$skalär` | längd-1 atomär vektor eller skalär-i-lista |
+| `@array` | `lista()` |
+| `% hash` | namngiven `lista()` |
+| Referens (`\@arr`) | R använder inte uttryckliga referenser; copy-on-modify semantik i stället |
 
-But R's *workhorse* type, i.e.  the **atomic vector** has no straightforward Perl counterpart. An R atomic vector is a contiguous, homogeneously typed block of memory — exactly the layout that a CPU cache rewards.  Every built-in scalar in R is actually a length-1 atomic vector; there is no "bare scalar" outside of atomic vectors.
+Men R'typen s *workhorse*, dvs. den **atomiska vektorn** har ingen enkel Perl-motsvarighet. En R-atomvektor är ett sammanhängande, homogent typat minnesblock - exakt den layout som en CPU-cache belönar.  Varje inbyggd skalär i R är faktiskt en längd-1 atomär vektor; det finns ingen "blottad skalär" Utanför atomvektorer.
 
-This design choice means that R code naturally operates on vectors of millions of doubles with BLAS-level throughput, without the user writing a single loop or allocating a special "array" object.
+Detta designval innebär att R-kod naturligt fungerar på vektorer av miljontals dubbletter med BLAS-nivå genomströmning, utan att användaren skriver en enda slinga eller allokerar en speciell "uppställning" objekt.
 
-R's atomic types are:
+R'atomtyperna är:
 
-| R atomic type | Storage | C equivalent |
+| R atomär typ | Lagring | C ekvivalent |
 |---|---|---|
-| `logical` | 4 bytes/element | `int` (with NA sentinel) |
-| `integer` | 4 bytes/element | `int32_t` |
-| `double` | 8 bytes/element | `double` |
-| `complex` | 16 bytes/element | `_Complex double` |
-| `character` | pointer to CHARSXP | `char *` (interned) |
-| `raw` | 1 byte/element | `uint8_t` |
+| `logisk` | 4 byte/element | `heltal` (Omdirigerad från NA Sentinel) |
+| `heltal` | 4 byte/element | `int32_t` |
+| `fördubbla` | 8 byte/element | `fördubbla` |
+| `komplex` | 16 byte/element | `_Komplex dubbel` |
+| `skrivtecken` | pekare till CHARSXP | `tecken *` (internerad) |
+| `rå` | 1 byte/element | `uint8_t` |
 
-R also defines higher-level structures built on atomic vectors:
+R definierar också högre strukturer byggda på atomvektorer:
 
-- **matrix** — a 2-D atomic vector with a `dim` attribute.
-- **array** — an N-D atomic vector with a `dim` attribute.
-- **data.frame** — a named list of equal-length atomic vectors; the lingua franca of
-  tabular data in R.
-- **factor** — an integer vector with a `levels` attribute; encodes categorical data.
+- **matris** — en 2-D atomär vektor med en `dimma` attribut
+- **array** – en N-D-atomvektor med en `dimma` attribut
+- **data.frame** — en namngiven lista över atomvektorer av samma längd; lingua franca av
+  tabelldata i R.
+- **faktor** – en heltalsvektor med en `nivåer` attribut; kodar kategoriska data.
 
-The lesson: R's computing performance when used in statistical and data science applications flows directly from its contiguous atomic vectors. Perl's equivalent path to performance is an extension (which also is a stand alone `matlab` like enviroment), the Perl Data Language [`PDL`](https://pdl.perl.org/).
+Lärdom: R'beräkningsprestanda när den används i statistiska och datavetenskapliga applikationer flödar direkt från dess angränsande atomvektorer. Perl'motsvarande väg till prestanda är en förlängning (som också är en fristående `matris` som miljö), Perl Data Language [`PDL`](https://pdl.perl.org/).
 
 ---
 
-## 3. Enter PDL: Strongly Typed N-Dimensional Arrays <a id="enter-pdl"></a>
+## 3. Ange PDL: Starkt typade N-dimensionella uppställningar <a id="enter-pdl"></a>
 
-The **Perl Data Language** (PDL, `pdl.perl.org`) extends Perl with *ndarrays* (N-dimensional arrays): contiguous, strongly typed memory buffers that look and feel like first-class Perl objects.
+**Perl-dataspråk** (PDL, `pdl.perl.org`) utökar Perl med *ndarrays *(N-dimensionella matriser): sammanhängande, starkt skrivna minnesbuffertar som ser ut och känns som förstklassiga Perl-objekt.
 
 ```perl
 use PDL;
@@ -270,9 +270,9 @@ my $scores = $db x $query->transpose;
 
 ### PDL-primitiva typer
 
-PDL exponerar hela paletten av C numeriska typer som förstklassiga konstruktorer:
+PDL visar hela paletten med numeriska C-typer som förstklassiga konstruktorer:
 
-| PDL-typ | Byte | C-typ | Konstruktör |
+| PDL typ | Byte | C typ | Konstruktör |
 |---|---|---|---|
 | `byte` | 1 | `uint8_t` | `byte(...)` |
 | `kortslutning` | 2 | `int16_t` | `kort(...)` |
@@ -299,22 +299,22 @@ PDL har ett inbyggt koncept med *dåliga värden* (`PDL::Fel`), direkt analogt m
 
 Tabellen nedan kartlägger varje vanlig R-typ till sina närmaste Perl- och PDL-motsvarigheter, och belyser var de tre språken är överens, skiljer sig åt eller kompletterar varandra.
 
-| R typ | Perl ekvivalent | PDL ekvivalent | Anmärkningar |
+| R typ | Perl ekvivalent | PDL ekvivalent | Anteckningar |
 |---|---|---|---|
-| `fördubbla` (längd-1) | `$x = 3,14` (skalär) | `dubbel(3.14)` — form `()` R har ingen skalär; allt är en vektor
+| `fördubbla` (längd-1) | `$x = 3,14` (skalär) | `dubbel(3.14)` — form `()` R har ingen skalär; allt är en vektor |
 | `heltal` (längd-1) | `$n = 42` (skalär) | `lång(42)` | |
 | `logisk` (längd-1) | `$flag = 1` / `$flag = 0` | `byte(1)` Perl använder sanningsenlighet; PDL använder 0/1 byte |
 | `fördubbla` vektor | `@arr = (1.1, 2.2, 3.3)` | `dubbel (1.1, 2.2, 3.3)` | PDL: sammanhängande; `@arr`: pekaruppställning |
 | `heltal` vektor | `@arr = (1, 2, 3)` | `lång(1, 2, 3)` | |
 | `logisk` vektor | `@flags = (1, 0, 1)` | `byte(1, 0, 1)` | |
-| `komplex` vektor | — (ingen inbyggd) | `dubbel(...)` Perl behov `Matematik::Komplex`PDL har inbyggt stöd.
-| `skrivtecken` vektor | `@strs = ('år','b)')` | — (inte numeriskt) | PDL används endast på nummer |
+| `komplex` vektor | — (ingen inbyggd) | `dubbel(...)` Perl behov `Matematik::Komplex`PDL har inbyggt stöd |
+| `skrivtecken` vektor | `@strs = ('år','b)')` | — (inte numeriskt) | PDL används endast på siffror |
 | `rå` vektor | `pack('C*', @bytes)` | `byte(...)` | |
 | `Ej tillämpligt` | `ofördelaktig` | Dåligt värde i ndarray | PDL dåliga värden sprids som R's `Ej tillämpligt` |
 | `NULL` | `ofördelaktig` i förteckningssammanhang | — | |
 | `lista` | `@array` eller referens `\@array` | — | |
 | namngiven `lista` | `% hash` eller `\%hash` | — | |
-| `matris` (2-D) | array-of-arrays `@aoa` | 2D ndarray `pdl([[...],[...]])` | PDL: kolumnhuvudämne; R: kolumnhuvudämne |
+| `matris` (2-D) | array-of-arrays `@aoa` | 2D ndarray `pdl([[...],[...]])` | PDL: kolumn-huvud; R: kolumn-huvudämne |
 | `uppställning` (N-D) | kapslade referenser | N-D ndarray `$x->reshape(...)` | |
 | `data.frame` | `% hash` av `@arrays` | 2-D ndarray (numeriska kolon) + Perl hash (blandad) | Inga enskilda PDL-typkartor exakt |
 | `faktor` | hash söktabell + `@indices` | `hög` ndarray + perl `@levels` uppställning | |
@@ -346,7 +346,7 @@ Katalogen som samutvecklas tillsammans med dessa inlägg innehåller följande k
 
 *Fil: `VectorIO.pm`*
 
-Motorn lagrar vektorer som packade binära blobbar inuti [MessagePack](https://msgpack.org/) nyttolaster.  Det här inlägget täcker:
+Motorn lagrar vektorer som packade binära blobbar inuti [MessagePack](https://msgpack.org/) nyttolaster.  Detta inlägg täcker:
 
 - Designa en modul med en ren `Exportör`-baserat offentligt API under `Använd v5.40`.
 - Valideringshjälpmedel som upprätthåller schemanättighet vid systemgränser.
@@ -375,7 +375,7 @@ Prestationsanspråk kräver mätning.  Detta inlägg introducerar:
 
 *Fil: `kmeans.pl`*
 
-K-medel klustring är ryggraden i inverterad fil index (IVF) tillvägagångssätt för ungefärlig närmaste granne sökning.  Det här inlägget täcker:
+K-medel klustring är ryggraden i inverterad fil index (IVF) tillvägagångssätt för ungefärlig närmaste granne sökning.  Detta inlägg täcker:
 
 - Den `PDL::Stat::Kmedel` gränssnitt och dess returavtal (`centroid`, `kluster`, `n`, `R2`, `ss`).
 - Att tolka `[obs × kluster]` medlemskapsmask returnerad av `run_kmeans`.
@@ -385,7 +385,7 @@ K-medel klustring är ryggraden i inverterad fil index (IVF) tillvägagångssät
 
 *Fil: `compare_kmeans_centroids.pl`*
 
-Full k-means kräver alla data i minnet för varje iteration.  Mini-batch k-medel handlar en liten mängd centroid noggrannhet för en stor minskning av minne och beräkning.  Denna artikel utforskar:
+Full k-means kräver alla data i minnet för varje iteration.  Mini-batch k-medel handlar en liten mängd centroid noggrannhet för en stor minskning av minne och beräkning.  Den här artikeln utforskar:
 
 - Genomföra en sann återsamplad mini-batch loop i PDL.
 - Kvantifiera centroid drift mellan full och mini-batch varianter.
@@ -395,7 +395,7 @@ Full k-means kräver alla data i minnet för varje iteration.  Mini-batch k-mede
 
 *Fil: `compare_ivf_search.pl`*
 
-Med centroider i handen kan vi partitionera databasen och utföra sublinjär ungefärlig närmaste granne sökning.  Det här inlägget täcker:
+Med centroider i handen kan vi partitionera databasen och utföra sublinjär ungefärlig närmaste granne sökning.  Detta inlägg täcker:
 
 - Bygga inverterade listor: kartlägga varje databasvektor till närmaste centroid.
 - Den `unpack_inverted_lists` hjälpare i `VectorIO`.

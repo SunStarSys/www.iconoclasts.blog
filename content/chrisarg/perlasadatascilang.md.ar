@@ -89,20 +89,20 @@ Perl5 يتم الشحن كمكون افتراضي لكل نظام تشغيل ي�
   }
   ```
 
-- **`isa` class-instance operator** *(stable since 5.36; introduced in 5.32)* — `$obj isa "ClassName"` returns a boolean; cleaner than `ref($obj) eq "ClassName"`.
+- **`جزيرة` عامل تشغيل مثيل الفصل** *(مستقر منذ 5.36؛ تم تقديمه في 5.32)* - `$obj isa "ClassName"` إرجاع قيمة منطقية؛ أنظف من `المرجع($obj) eq "ClassName"`.
 
-- **`builtin` module** *(stable since 5.40; experimental since 5.36)* — lexically importable functions built directly into the interpreter.  The stable 5.40 bundle includes, among others:
+- **`مدمج` *(مستقر منذ 5.40 ؛ تجريبي منذ 5.36)* - وظائف قابلة للاستيراد معجميا مدمجة مباشرة في المترجم.  تتضمن حزمة 5.40 المستقرة، من بين أمور أخرى:
 
-- `ceil`, `floor` — integer rounding without `use POSIX`.
-  - `trim` — strip leading/trailing whitespace from a string.
-  - `indexed` — pairs each element with its index; the idiomatic companion to multi-value `for` loops (see below).
-  - `true`, `false`, `is_bool` — typed boolean sentinels; serialisers can now emit JSON `true`/`false` rather than `1`/`0`.
-  - `weaken`, `unweaken`, `is_weak` — reference-count control for building bidirectional data structures without memory leaks.
-  - `blessed`, `reftype`, `refaddr` — reference introspection.
+- `سقيفة`, `دور` — تقريب عدد صحيح بدون `يستخدم POSIX`.
+  - `تقليم` — إزالة مسافة بيضاء بادئة/لاحقة من سلسلة.
+  - `مفهرس` - أزواج كل عنصر مع مؤشره ؛ رفيق تعبيري إلى متعدد القيم `من أجل` سلاسل الجمل البرمجية (انظر أدناه).
+  - `صحيح`, `خطأ`, `is_bool` — كتب boolean sentinels; المسلسلات يمكن أن تنبعث الآن JSON `صحيح`/`خطأ` بدلا من `1`/`0`.
+  - `يضعف`, `استيقظ`, `is_weak` — التحكم في عدد المراجع لبناء هياكل بيانات ثنائية الاتجاه دون تسرب للذاكرة.
+  - `مبارك`, `نوع إعادة الكتابة`, `عنوان` — فحص مرجعي.
 
-- **Stable boolean tracking** *(5.36)* — scalars created as booleans (e.g., `!!1`) now retain their boolean nature through assignment, enabling reliable type-aware serialisation to JSON and MessagePack.
+- **تتبع منطقي مستقر** *(5.36)* — يتم إنشاء قيم الاستهلاك كقيم منطقية (على سبيل المثال، `!!1`) تحتفظ الآن بطبيعتها المنطقية من خلال التعيين، مما يتيح التسلسل الموثوق به على دراية بالنوع إلى JSON و MessagePack.
 
-- **Multi-value `for` loops** *(stable since 5.40; experimental since 5.36)* Iterate over pairs or N-tuples without manual index arithmetic:
+- **متعدد القيم `من أجل` الحلقات** *(مستقر منذ 5.40 ؛ تجريبي منذ 5.36)* كرر على أزواج أو N-tuples دون حساب الفهرس اليدوي:
 
 ```perl
   use v5.40;
@@ -111,7 +111,7 @@ Perl5 يتم الشحن كمكون افتراضي لكل نظام تشغيل ي�
 for my ($i, $val) (indexed @scores)  { ... } # index and value
   ```
 
-Or grab multiple values at the same time
+أو الحصول على قيم متعددة في نفس الوقت
 
 ```perl
   use v5.40;
@@ -119,13 +119,13 @@ Or grab multiple values at the same time
 for my ($val1, $val2, $val3) (@scores)  { ... }
   ```
 
-- **`defer` blocks** *(experimental since 5.36)* — a scope-exit guard that runs cleanup code unconditionally when a block exits, whether normally or via exception — a natural replacement for destructor-based scope-guard objects and an important pattern for resource management in data pipelines.
+- **`تأجيل` كتل*** *(تجريبية منذ 5.36)* — حارس خروج النطاق الذي يدير رمز تنظيف دون قيد أو شرط عند خروج كتلة، سواء بشكل طبيعي أو عن طريق استثناء — بديل طبيعي لكائنات حماية النطاق القائمة على المدمرة ونمط مهم لإدارة الموارد في خطوط البيانات.
 
-#### Perl 5.38 — July 2023
+#### بيرل 5.38 — يوليو 2023
 
-- **`PERL_RAND_SEED` environment variable** *(5.38)* — setting this variable before a run makes every `rand` call (without an explicit `srand`) produce the same sequence, enabling **reproducible** stochastic algorithms — simulations, random sampling, Monte Carlo methods — without modifying source code.
+- **`PERL_RAND_SEED` متغير البيئة** *(5.38)* — تعيين هذا المتغير قبل إجراء التشغيل `راند` مكالمة (بدون صريح) `جراند`) ينتج نفس التسلسل، مما يتيح **خوارزميات عشوائية قابلة لإعادة الإنتاج** — عمليات المحاكاة وأخذ العينات العشوائية وأساليب مونت كارلو — دون تعديل التعليمات البرمجية المصدر.
 
-- **`class` / `field` / `method` syntax** *(experimental since 5.38)* — a purpose-built, lexically-scoped object system requiring neither `bless` nor `@ISA` nor any CPAN module.  Useful for defining typed value objects such as dataset rows, model parameters, or pipeline stages:
+- **`فئة اجتماعية` / `حقل` / `طريقة` الصياغة** *(تجريبية منذ 5.38)* — نظام كائن مصمم لغرض معين ومجال معجمي لا يتطلب أي منهما `بركة` ولا `@ISA` ولا أي وحدة CPAN.  مفيد لتعريف كائنات القيمة المكتوبة مثل صفوف مجموعة البيانات أو معلمات النموذج أو مراحل مسار العمليات:
 
 ```perl
   use feature 'class';
@@ -140,9 +140,9 @@ class Vector2D {
   say $v->magnitude;    # 5
   ```
 
-#### Perl 5.40 — June 2024
+#### بيرل 5.40 — يونيو 2024
 
-- **`try` / `catch` exception handling** *(stable since 5.40; experimental since 5.34; `finally` block added in 5.36)* — structured exception handling is now a core language feature; no CPAN module required:
+- **`محاولة` / `القبض` معالجة الاستثناء** *(مستقر منذ 5.40 ؛ تجريبي منذ 5.34 ؛ `أخيرًا` تمت إضافة الكتلة في 5.36)* — أصبح التعامل مع الاستثناءات المهيكلة الآن ميزة أساسية للغة؛ ولا يلزم وجود وحدة CPAN:
 
 ```perl
   use v5.40;
@@ -157,103 +157,103 @@ class Vector2D {
   }
   ```
 
-(`Try::Tiny` / `Feature::Compat::Try` are only needed when targeting perls older than 5.34.).
+(`جرب::صغير` / `ميزة::Compat::جرب` هناك حاجة فقط عند استهداف بيرلز أقدم من 5.34.).
 
-- **Multi-value `for` loops** *(stable since 5.40)* — see 5.36 entry above; they graduated from experimental to stable in this release.
+- **متعدد القيم `من أجل` الحلقات** *(مستقرة منذ 5.40)* - انظر 5.36 دخول أعلاه؛ تخرجوا من تجريبية إلى مستقرة في هذا الإصدار.
 
-- **`builtin::inf` and `builtin::nan`** *(experimental since 5.40)* — typed floating-point infinity and Not-a-Number constants, eliminating `9**9**9` or POSIX hacks in numerical code.
+- **`المدمج::inf` و `المدمج::نان`** *(تجريبية منذ 5.40)* — ثوابت الفاصلة العائمة المكتوبة والثوابت غير الرقمية، مما يؤدي إلى التخلص من `9**9**9` أو اختراقات POSIX في الكود الرقمي.
 
-- **`^^` logical XOR operator** *(5.40)* — completes the medium-precedence logical operator set (`&&`, `||`, `^^`); handy for boolean mask operations.
+- **`^^` عامل تشغيل XOR المنطقي** *(5.40)* — يكمل مجموعة عوامل التشغيل المنطقية ذات الأسبقية المتوسطة (`&&`, `||`, `^^`)؛ مفيد لعمليات القناع المنطقي.
 
-- **`use v5.40` imports builtin functions** — beyond enabling the feature bundle, `use v5.40` also imports the corresponding `builtin` version bundle, making all stable `builtin::` functions available as short names without a separate `use builtin` statement.
+- **`استخدام v5.40` استيراد الوظائف المضمنة** — بما يتجاوز تمكين حزمة الميزات، `استخدام v5.40` أيضا استيراد المقابلة `مدمج` حزمة الإصدار، مما يجعل كل مستقرة `المدمج::` الدوال المتاحة كأسماء قصيرة دون فصل `يستخدم المدمج` بيان.
 
-#### Longstanding features (pre-5.36).
+#### ميزات قديمة (pre-5.36).
 
-- **`say` and `state`** *(since 5.10)* — `say` is `print` with an implicit newline; `state` declares a lexical that persists across invocations of its enclosing sub (a lightweight memoisation primitive).
+- **`قال` و `الولاية`** *(منذ 5.10)* — `قال` هو `طباعة` مع خط جديد ضمني؛ `الولاية` يعلن المعجم الذي يستمر عبر الاستدعاءات من الضميمة الفرعية (بدائية المذكرة خفيفة الوزن).
 
-- **First-class references and closures** — anonymous subs, closures, and reference construction are fundamental and have been stable since Perl 5.
+** المراجع من الدرجة الأولى والإغلاق** - الغواصات المجهولة، والإغلاق، والبناء المرجعي أساسي وكانت مستقرة منذ بيرل 5.
 
-- **`use constant`** or the CPAN `Readonly` module for named constants; `Readonly` enforces deep immutability that `use constant` does not.
+- **`يستخدم الثابت`** أو CPAN `للقراءة فقط` وحدة الثوابت المسماة ؛ `للقراءة فقط` يفرض الثبات العميق الذي `يستخدم الثابت` لا.
 
-Combined with [`perlbrew`](https://perlbrew.pl/) or [`plenv`](https://github.com/tokuhirom/plenv) for version management and [`carton`](https://metacpan.org/pod/Carton) for reproducible dependency snapshots, a modern Perl project looks and feels like a first-class software engineering effort.
+مدمج مع [`عربدة`](https://perlbrew.pl/) أو [`تلفن`](https://github.com/tokuhirom/plenv) لإدارة الإصدارات و [`كرتون`](https://metacpan.org/pod/Carton) بالنسبة إلى لقطات التبعية القابلة لإعادة الإنتاج، يبدو مشروع Perl الحديث ويشبه جهدًا هندسيًا للبرامج من الدرجة الأولى.
 
-### Honest limitations
+### قيود صادقة
 
-No case for Perl is complete without honesty about where it falls short:
+لا توجد حالة لبيرل كاملة دون صدق حول مكان قصورها:
 
-- **Visualisation** — Perl has no equivalent to `ggplot2` or `matplotlib`. Plots typically require an external call to R, gnuplot, or a web library. At times this weakness can become an actual strength, allowing one to use Perl5 as the application language that orchestrates and enhances the other actors.
+- **التصوير** — بيرل ليس لديه ما يعادل `ggplot2` أو `قطعة صغيرة`. تتطلب المخططات عادةً مكالمة خارجية إلى R أو gnuplot أو مكتبة ويب. في بعض الأحيان، يمكن أن يصبح هذا الضعف قوة فعلية، مما يسمح للمرء باستخدام Perl5 كلغة تطبيق تنظم وتعزز الجهات الفاعلة الأخرى.
 
-- **Community momentum** — the data-science community has converged on Python and R. Finding ready-made tutorials, Stack Overflow answers, and co-authors is harder.
+**الزخم المجتمعي** - تجمع مجتمع علوم البيانات على بايثون و R. إن العثور على دروس جاهزة وإجابات تجاوز المكدس والمؤلفين المشاركين أصعب.
 
-- **Object orientation** — without Moose/Moo the OOP model is verbose; with them it adds a dependency. The new `class` feature may solve some of these problems
+- **توجيه الكائن** - بدون موس / مو نموذج OOP مطول ؛ معهم يضيف تبعية. الجديد `فئة اجتماعية` قد تحل الميزة بعض هذه المشكلات
 
-- **Type safety at scale** — the core language's dynamic scalars make large, collaborative numerical codebases harder to reason about (see next section).
+- **اكتب السلامة على نطاق واسع** — اللغة الأساسية'تجعل الاستهلاكات الديناميكية قواعد كود رقمية كبيرة وتعاونية أكثر صعوبة في التفكير فيها (انظر القسم التالي).
 
 ---
 
-## 2. The Perl Data-Type System — Strengths and Cache-Era Limits <a id="the-perl-data-type-system"></a>
+## 2. نظام Perl Data-Type — نقاط القوة وحدود Cache-Era <a id="the-perl-data-type-system"></a>
 
-### Core Perl types
+### أنواع بيرل الأساسية
 
-Perl's fundamental data model centres on three constructs:
+بيرل'مركز نموذج البيانات الأساسي على ثلاثة بنى:
 
-| Construct | Sigil | What it holds |
+بناء | سيجل | ما يحمله |
 |-----------|-------|---------------|
-| **Scalar** | `$` | A single value: number, string, reference, or `undef` |
-| **Array** | `@` | An ordered list of scalars, indexed by integer |
-| **Hash** | `%` | An unordered collection of scalar values keyed by string |
+**الاستهلاك** | `$` | قيمة واحدة: رقم أو سلسلة أو مرجع أو `إلغاء تعريف` |
+**الصفيف** | `@` | قائمة مرتبة من الحروف، مفهرسة بعدد صحيح |
+** هش** | `%` | مجموعة غير مرتبة من قيم الاستهلاك التي تم إدخالها بواسطة السلسلة |
 
-Everything else — objects, closures, complex data structures — is built from these three primitives via *references* (`\@array`, `\%hash`, `sub { ... }`).
+كل شيء آخر — الكائنات، الإغلاق، هياكل البيانات المعقدة — مبني من هذه القيم البدائية الثلاثة عبر *المراجع* (`\@array`, `\%شفرة هاش`, `تحتي { ... }`).
 
-This model is extraordinarily flexible.  A single array can hold integers, floating-point numbers, strings, and nested references simultaneously.  That flexibility is exactly what made Perl the dominant system-administration and web-scripting language for two decades.
+هذا النموذج مرن للغاية.  يمكن أن يحتوي الصفيف الواحد على أعداد صحيحة وأرقام فاصلة عشرية وسلاسل ومراجع متداخلة في وقت واحد.  هذه المرونة هي بالضبط ما جعل بيرل اللغة المهيمنة لإدارة النظام وكتابة الويب لمدة عقدين.
 
-### The cache-hierarchy problem
+### مشكلة تدرج الذاكرة المخبئية
 
-Modern CPUs achieve peak throughput only when data flows through L1/L2/L3 cache<sup><a id="cache-ref" href="#fn-cache">†</a></sup> in large, contiguous blocks — a property called *spatial locality*.  Perl arrays do not provide this.  Under the hood, a Perl array is a C array of *pointers* to heap-allocated scalar (`SV`) structs.  Each scalar carries a reference count, a type tag, and padding — typically 24–56 bytes per scalar on a 64-bit build.  Iterating over a million-element Perl array therefore involves a million pointer dereferences scattered across the heap, producing a cache-miss pattern that completely negates the speed advantage of modern SIMD pipelines.
+لا تحقق وحدات المعالجة المركزية الحديثة أقصى إنتاجية إلا عند تدفق البيانات عبر ذاكرة التخزين المؤقت L1/L2/L3<sup><a id="cache-ref" href="#fn-cache">†</a></sup> في كتل كبيرة ومتجاورة — خاصية تسمى *الموقع المكاني*.  صفائف Perl لا توفر هذا.  تحت غطاء محرك السيارة، صفيف بيرل هو صفيف C من *مؤشرات* إلى كومة مخصصة (`SV`) الهياكل.  يحمل كل مقياس عدد مرجعي وعلامة نوع وحشو - عادة 24-56 بايت لكل استهلاك على بناء 64 بت.  وبالتالي فإن تكرار أكثر من مليون عنصر من صفيف بيرل ينطوي على مليون مؤشر متناثر عبر الكومة، مما ينتج نمطًا لخطأ الذاكرة المخبئية ينفي تمامًا ميزة السرعة لخطوط أنابيب SIMD الحديثة.
 
-A concrete consequence: a dot product of two 1 000-element vectors written in pure Perl is roughly **100–1000× slower** than the equivalent operation on a pair of PDL float ndarrays, which occupy two flat, 4 000-byte memory regions that fit comfortably in L1 cache.
+نتيجة ملموسة: منتج نقطة من اثنين من ناقلات 1 000 عنصر مكتوبة في بيرل النقي هو تقريبا **100-1000 × أبطأ** من العملية المكافئة على زوج من ndarrays تعويم PDL، والتي تحتل منطقتين مسطحتين، 4 000 بايت منطقة الذاكرة التي تناسب بشكل مريح في ذاكرة التخزين المؤقت L1.
 
-### Contrast with R
+### قارن مع R
 
-R occupies a curious middle ground.  Like Perl, it is a dynamic, interpreted language — variables are untyped containers, functions are first-class values, and the interactive REPL is the primary development environment.  R even has direct analogues to Perl's three core types:
+R تحتل أرضية وسط غريبة.  مثل بيرل، إنها لغة ديناميكية ومفسرة - المتغيرات هي حاويات غير مكتوبة، والوظائف هي قيم من الدرجة الأولى، و REPL التفاعلي هو بيئة التطوير الأساسية.  R حتى لديه نظائر مباشرة إلى بيرل'الأنواع الثلاثة الأساسية:
 
-| Perl concept | R analogue |
+| مفهوم بيرل | R التناظرية |
 |---|---|
-| `$scalar` | length-1 atomic vector or scalar-in-list |
-| `@array` | `list()` |
-| `%hash` | named `list()` |
-| Reference (`\@arr`) | R does not use explicit references; copy-on-modify semantics instead |
+| `$scalar` المتجه الذري length-1 أو قائمة الاستهلاك |
+| `@array` | `أسلوب القائمة` |
+| `%hash` | مسمى `أسلوب القائمة` |
+| المرجع (`\@arr`) | لا يستخدم R مراجع صريحة؛ دلالات النسخ عند التعديل بدلاً من ذلك |
 
-But R's *workhorse* type, i.e.  the **atomic vector** has no straightforward Perl counterpart. An R atomic vector is a contiguous, homogeneously typed block of memory — exactly the layout that a CPU cache rewards.  Every built-in scalar in R is actually a length-1 atomic vector; there is no "bare scalar" outside of atomic vectors.
+لكن R's *workhorse* type، أي  **atomic vector** ليس له نظير Perl مباشر. المتجه الذري R هو كتلة متجاورة ومكتوبة بشكل متجانس من الذاكرة - بالضبط التخطيط الذي تكافئه ذاكرة التخزين المؤقت لوحدة المعالجة المركزية.  كل فروة رأس مدمجة في R هي في الواقع ناقل ذري طوله 1 ؛ لا يوجد "أحادي القيمة" خارج ناقلات الذرية.
 
-This design choice means that R code naturally operates on vectors of millions of doubles with BLAS-level throughput, without the user writing a single loop or allocating a special "array" object.
+يعني اختيار التصميم هذا أن شفرة R تعمل بشكل طبيعي على ناقلات الملايين من الزوجي مع إنتاجية مستوى BLAS، دون أن يكتب المستخدم حلقة واحدة أو يخصص حلقة خاصة "صفيف" كائن.
 
-R's atomic types are:
+RR'الأنواع الذرية هي:
 
-| R atomic type | Storage | C equivalent |
+النوع الذري R | التخزين | C المكافئ |
 |---|---|---|
-| `logical` | 4 bytes/element | `int` (with NA sentinel) |
-| `integer` | 4 bytes/element | `int32_t` |
-| `double` | 8 bytes/element | `double` |
-| `complex` | 16 bytes/element | `_Complex double` |
-| `character` | pointer to CHARSXP | `char *` (interned) |
-| `raw` | 1 byte/element | `uint8_t` |
+| `منطق` | 4 بايت / عنصر | `عدد صحيح` (بالإنجليزية: NA sentinel) |
+| `عدد صحيح` | 4 بايت / عنصر | `int32_t` |
+| `مزدوج` | 8 بايت / عنصر | `مزدوج` |
+| `معقد` 16 بايت/عنصر | `_مركب مزدوج` |
+| `رمز` مؤشر إلى CHARSXP | `حرف *` (متدرب) |
+| `خام` | 1 بايت / عنصر | `uint8_t` |
 
-R also defines higher-level structures built on atomic vectors:
+R يحدد أيضا الهياكل ذات المستوى الأعلى المبنية على ناقلات الذرية:
 
-- **matrix** — a 2-D atomic vector with a `dim` attribute.
-- **array** — an N-D atomic vector with a `dim` attribute.
-- **data.frame** — a named list of equal-length atomic vectors; the lingua franca of
-  tabular data in R.
-- **factor** — an integer vector with a `levels` attribute; encodes categorical data.
+- **مصفوفة** - ناقل ذري ثنائي الأبعاد مع a `خافت` السمة.
+- **صفيف** - ناقل ذري N-D مع `خافت` السمة.
+**data.frame** - قائمة مسمّاة بالنواقل الذرية المتساوية الطول؛
+  البيانات الجدولية في R.
+- **عامل** — متجه عدد صحيح مع `مستويات` السمة؛ ترميز البيانات الفئوية.
 
-The lesson: R's computing performance when used in statistical and data science applications flows directly from its contiguous atomic vectors. Perl's equivalent path to performance is an extension (which also is a stand alone `matlab` like enviroment), the Perl Data Language [`PDL`](https://pdl.perl.org/).
+الدرس: R'يتدفق أداء الحوسبة عند استخدامه في التطبيقات الإحصائية وعلوم البيانات مباشرة من ناقلاتها الذرية المتجاورة. بيرل'المسار المكافئ للأداء هو امتداد (وهو أيضًا مستقل `ماتلاب` مثل البيئة)، لغة بيانات بيرل [`لغة تعريف البيانات`](https://pdl.perl.org/).
 
 ---
 
-## 3. Enter PDL: Strongly Typed N-Dimensional Arrays <a id="enter-pdl"></a>
+## 3. إدخال PDL: الصفائف N-Dimensional المكتوبة بشكل قوي <a id="enter-pdl"></a>
 
-The **Perl Data Language** (PDL, `pdl.perl.org`) extends Perl with *ndarrays* (N-dimensional arrays): contiguous, strongly typed memory buffers that look and feel like first-class Perl objects.
+**لغة بيانات بيرل** (PDL، `pdl.perl.org`) يمتد بيرل مع *ndarrays* (صفائف N-dimensional): مخازن مؤقتة للذاكرة متجاورة ومكتوبة بقوة تبدو وكأنها كائنات بيرل من الدرجة الأولى.
 
 ```perl
 use PDL;
@@ -301,24 +301,24 @@ PDL لديها مفهوم مدمج للقيم *السيئة* (`PDL::سيئة`)،
 
 | نوع R | مكافئ Perl | مكافئ PDL | الملاحظات |
 |---|---|---|---|
-| `مزدوج` (طول-1) `$x = 3.14` (سكالار) | `مزدوج(3.14)` — شكل `()` R ليس له سلخ فروة الرأس العارية؛ كل شيء متجه |
+| `مزدوج` (طول-1) `$x = 3.14` (سكالار) | `مزدوج(3.14)` — شكل `()` | R ليس لديه مستعر; كل شيء متجه |
 | `عدد صحيح` (طول-1) `$n = 42` (سكالار) | `طويل(42)` | |
 | `منطق` (طول-1) `علامة $ = 1` / `$flag = 0` | `بايت(1)` يستخدم بيرل الصدق؛ يستخدم PDL 0/1 بايت |
-| `مزدوج` متجه | `@arr = (1-1، 2-2، 3-3)` | `مزدوج (1.1، 2.2، 3.3)` PDL: متجاورة. `@arr`: صفيف المؤشر |
+| `مزدوج` متجه | `@arr = (1-1، 2-2، 3-3)` | `مزدوج (1.1، 2.2، 3.3)` PDL: متجاورة. `@arr`: مصفوفة المؤشر |
 | `عدد صحيح` متجه | `@arr = (1، 2، 3)` | `طويل(1، 2، 3)` | |
 | `منطق` متجه | `@flags = (1، 0، 1)` | `بايت (1، 0، 1)` | |
 | `معقد` متجه | — (غير مضمن) | `cdouble(...)` احتياجات بيرل `الرياضيات::Complex`; PDL لديها دعم أصلي |
 | `رمز` متجه | `@strs = ('عام','كيف')` | — (غير رقمي) | PDL تعمل على الأرقام فقط |
 | `خام` متجه | `حزمة('C*', @bytes)` | `بايت (...)` | |
 | `غير متاح` | `إلغاء تعريف` | القيمة غير الصحيحة في ndarray | يتم نشر القيم غير الصحيحة لـ PDL مثل R'ss `غير متاح` |
-| `خالٍ` | `إلغاء تعريف` في سياق القائمة | — |
+| `خالٍ` | `إلغاء تعريف` في سياق القائمة | — | |
 | `قائمة` | `@array` أو مرجع `\@array` | — | |
 | مسمى `قائمة` | `%hash` أو `\%شفرة هاش` | — | |
-| `ماتريكس` (2-D) | مصفوفة الصفائف `@aoa` | 2-D ندراي `pdl([[...],[...]])` | PDL: عمود رئيسي; R: عمود رئيسي |
+| `ماتريكس` (2-D) | مصفوفة الصفائف `@aoa` | 2-D ندراي `pdl([[...],[...]])` | PDL: العمود الرئيسي؛ R: العمود الرئيسي |
 | `صفيف` (N-D) | المراجع المتداخلة | N-D ndarray `$x->reshape(...)` | |
-| `data.frame` | `%hash` من `@arrays` | 2-D ndarray (أعمدة رقمية) + شفرة هاش بيرل (مختلطة) | لا يوجد تعيينات من نوع PDL واحد بالضبط |
-| `عامل` | جدول البحث هاش + `@indices` | `طويل` ندراي + بيرل `@levels` صفيف |
-| `بيئة` | `%hash` أو مساحة اسم الحزمة | — |
+| `data.frame` | `%hash` من `@arrays` | 2-D ndarray (أعمدة رقمية) + شفرة هاش بيرل (مختلطة) | لا يوجد تخطيط من نوع PDL واحد بالضبط |
+| `عامل` | جدول البحث هاش + `@indices` | `طويل` ندراي + بيرل `@levels` صفيف | |
+| `بيئة` | `%hash` أو مساحة اسم الحزمة | — | |
 | `وظيفة` / إغلاق `تحتي { ... }` / إغلاق | — | PDL PP يعرّف النواة المجمعة |
 | `كائن S3 / S4` | المرجع المبارك + إرسال الأسلوب | كائن PDL (مصفوفة ndarray المبسطة) | كائنات PDL هي كائنات Perl من الدرجة الأولى |
 
@@ -355,7 +355,7 @@ PDL لديها مفهوم مدمج للقيم *السيئة* (`PDL::سيئة`)،
 
 *ملف:  `simulate_vectorDB.pl`*
 
-قبل أن نتمكن من البحث في قاعدة بيانات نحتاج إلى واحدة.  هذا المقال يظهر:
+قبل أن نتمكن من البحث في قاعدة بيانات نحتاج إلى واحدة.  هذا المنشور يظهر:
 
 - توليد ناقلات عشوائية قابلة لإعادة الإنتاج مع `PDL::عشوائي`.
 - استخدام `GetOpt::طويل` لتحليل خيار CLI المريح.
@@ -365,7 +365,7 @@ PDL لديها مفهوم مدمج للقيم *السيئة* (`PDL::سيئة`)،
 
 *ملف:  `timing_DB.pm`*
 
-تتطلب مطالبات الأداء قياسًا.  تقدم هذه المقالة:
+تتطلب مطالبات الأداء قياسًا.  يقدم هذا المنشور:
 
 - تسخير قياس بيرل قابل لإعادة الاستخدام مبني على `الوقت::HiRes`.
 - منهجية للمقارنات العادلة على مدار الساعة بين عمليات تنفيذ Perl/PDL وR.

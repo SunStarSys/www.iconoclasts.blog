@@ -52,7 +52,7 @@ Perl5 поставляется в качестве компонента по у�
 
 ### CPAN: испытанная битвой экосистема модулей
 
-Комплексная сеть архивов Perl (CPAN) содержит более 200 000 модулей по всем возможным доменам.  Хотя предложения по изучению данных не так обширны, как Python, основные компоненты для выделенных разработчиков существуют:
+Комплексная сеть архивов Perl (CPAN) содержит более 200 000 модулей по всем возможным доменам.  Хотя предложения по Data Science не так обширны, как Python, основные компоненты для выделенных разработчиков существуют там.:
 
 **PDL** (Perl Data Language) – векторизованные числовые вычисления с сильно типизированными N-мерными массивами (покрытыми ниже).
 
@@ -80,7 +80,7 @@ Perl5 поставляется в качестве компонента по у�
 
 - **`использование v5.36`** – набор функций теперь автоматически включает `использовать предупреждения` в дополнение к `использовать строго`. Это также отключает `косвенный` синтаксис вызова метода и `многомерный` хэш-ключевое моделирование, устраняющее два общих источника тонких ошибок.
 
-**Именованные подпрограммные подписи** *(стабильные с 5.36; экспериментальные с 5.20)* – параметры функции теперь объявляются по имени, с необязательными значениями по умолчанию. The `//=` и `||=` операторы значения по умолчанию добавлены к подписям в версии 5.38, что позволяет использовать значения по умолчанию, которые запускаются `неопределённая` или ложь соответственно:
+**Именованные подпрограммные подписи** *(стабильные с 5.36; экспериментальные с 5.20)* – параметры функции теперь объявляются по имени, с необязательными значениями по умолчанию. The `//=` и `||=` операторы значения по умолчанию добавлены к подписям в версии 5.38, что позволяет использовать значения по умолчанию, которые запускаются `неопределённая` Ложность соответственно:
 
 ```perl
   use v5.36;
@@ -89,20 +89,20 @@ Perl5 поставляется в качестве компонента по у�
   }
   ```
 
-- **`isa` class-instance operator** *(stable since 5.36; introduced in 5.32)* — `$obj isa "ClassName"` returns a boolean; cleaner than `ref($obj) eq "ClassName"`.
+- **`иса` оператор class-instance***(стабильный с 5.36; введен в 5.32)* – `$obj isa "ClassName"` возвращает логическое значение; чище, чем `ref($obj) eq "ClassName"`.
 
-- **`builtin` module** *(stable since 5.40; experimental since 5.36)* — lexically importable functions built directly into the interpreter.  The stable 5.40 bundle includes, among others:
+- **`встроенный` модуль** *(стабильный с 5.40; экспериментальный с 5.36)* – лексически импортируемые функции, встроенные непосредственно в интерпретатор.  Стабильный пакет 5.40 включает, среди прочего:
 
-- `ceil`, `floor` — integer rounding without `use POSIX`.
-  - `trim` — strip leading/trailing whitespace from a string.
-  - `indexed` — pairs each element with its index; the idiomatic companion to multi-value `for` loops (see below).
-  - `true`, `false`, `is_bool` — typed boolean sentinels; serialisers can now emit JSON `true`/`false` rather than `1`/`0`.
-  - `weaken`, `unweaken`, `is_weak` — reference-count control for building bidirectional data structures without memory leaks.
-  - `blessed`, `reftype`, `refaddr` — reference introspection.
+- `потолок`, `под` – целое округление без `использовать POSIX`.
+  - `отделка` – прокладка начального/конечного пробела из строки.
+  - `индексировано` – соединяет каждый элемент со своим индексом; идиоматический компаньон с многозначным `для` петли (см. ниже).
+  - `истина`, `ложный`, `is_bool` – набранные логические сентинели; сериализаторы теперь могут излучать JSON `истина`/`ложный` вместо `1`/`0`.
+  - `саботировать`, `ослаблять`, `is_weak` – контроль эталонного числа для построения двунаправленных структур данных без утечек памяти.
+  - `благословенный`, `повторный тип`, `ссылка` – ссылка на интроспекцию.
 
-- **Stable boolean tracking** *(5.36)* — scalars created as booleans (e.g., `!!1`) now retain their boolean nature through assignment, enabling reliable type-aware serialisation to JSON and MessagePack.
+- **Стабильное логическое отслеживание** *(5.36)* – скаляры, созданные в виде булянов (например, `1`) теперь сохраняют свой логический характер путем присвоения, что позволяет надежно производить сериализацию с учетом типа для JSON и MessagePack.
 
-- **Multi-value `for` loops** *(stable since 5.40; experimental since 5.36)* Iterate over pairs or N-tuples without manual index arithmetic:
+- **Многозначный `для` петли** *(стабильный с 5.40; экспериментальный с 5.36)* Итерация по парам или N-кортежам без ручного индекса арифметика:
 
 ```perl
   use v5.40;
@@ -111,7 +111,7 @@ Perl5 поставляется в качестве компонента по у�
 for my ($i, $val) (indexed @scores)  { ... } # index and value
   ```
 
-Or grab multiple values at the same time
+Или захватить несколько значений одновременно
 
 ```perl
   use v5.40;
@@ -119,13 +119,13 @@ Or grab multiple values at the same time
 for my ($val1, $val2, $val3) (@scores)  { ... }
   ```
 
-- **`defer` blocks** *(experimental since 5.36)* — a scope-exit guard that runs cleanup code unconditionally when a block exits, whether normally or via exception — a natural replacement for destructor-based scope-guard objects and an important pattern for resource management in data pipelines.
+- **`откладывать` Блоки** *(экспериментальный с 5.36)* – защитник, который безоговорочно выполняет код очистки при выходе блока, как обычно, так и через исключение, – естественная замена объектов защиты области на основе деструктора и важная модель управления ресурсами в конвейерах данных.
 
-#### Perl 5.38 — July 2023
+#### Перл 5.38 – июль 2023
 
-- **`PERL_RAND_SEED` environment variable** *(5.38)* — setting this variable before a run makes every `rand` call (without an explicit `srand`) produce the same sequence, enabling **reproducible** stochastic algorithms — simulations, random sampling, Monte Carlo methods — without modifying source code.
+- **`PERL_RAND_SEED` переменная окружения** *(5.38)* – установка этой переменной перед выполнением `рэнд` вызов (без явного `сранд`) производят одну и ту же последовательность, позволяя **воспроизводимым** стохастическим алгоритмам – симуляциям, случайной выборке, методам Монте-Карло – без изменения исходного кода.
 
-- **`class` / `field` / `method` syntax** *(experimental since 5.38)* — a purpose-built, lexically-scoped object system requiring neither `bless` nor `@ISA` nor any CPAN module.  Useful for defining typed value objects such as dataset rows, model parameters, or pipeline stages:
+- **`занятия` / `нива` / `метод` синтаксис** *(экспериментальный с 5.38)* – специально созданная система объектов с лексическим диапазоном, не требующая ни `благословение` нет `@ISA` ни какого-либо модуля CPAN.  Используется для определения объектов с типизированными значениями, таких как строки набора данных, параметры модели или этапы конвейера:
 
 ```perl
   use feature 'class';
@@ -140,9 +140,9 @@ class Vector2D {
   say $v->magnitude;    # 5
   ```
 
-#### Perl 5.40 — June 2024
+#### Перл 5.40 – июнь 2024
 
-- **`try` / `catch` exception handling** *(stable since 5.40; experimental since 5.34; `finally` block added in 5.36)* — structured exception handling is now a core language feature; no CPAN module required:
+- **`попытка` / `поймать` обработка исключений** *(стабильная с 5.40; экспериментальная с 5.34; `наконец` блок добавлен в 5.36)* – структурированная обработка исключений теперь является основной функцией языка; модуль CPAN не требуется:
 
 ```perl
   use v5.40;
@@ -157,103 +157,103 @@ class Vector2D {
   }
   ```
 
-(`Try::Tiny` / `Feature::Compat::Try` are only needed when targeting perls older than 5.34.).
+(`Попробуйте::Tiny` / `Особенность::Compat::Try` требуется только при нацеливании перлов старше 5,34.).
 
-- **Multi-value `for` loops** *(stable since 5.40)* — see 5.36 entry above; they graduated from experimental to stable in this release.
+- **Многозначный `для` петли** *(стабильный с 5.40)* – см. запись 5.36 выше; они окончили экспериментальный до стабильный в этом выпуске.
 
-- **`builtin::inf` and `builtin::nan`** *(experimental since 5.40)* — typed floating-point infinity and Not-a-Number constants, eliminating `9**9**9` or POSIX hacks in numerical code.
+- **`Построенный::inf` и `встроенный::nan`** *(эксперимент с 5.40)* – набранная бесконечность с плавающей точкой и константы без числа, исключающие `9**9**9` или POSIX хаки в числовом коде.
 
-- **`^^` logical XOR operator** *(5.40)* — completes the medium-precedence logical operator set (`&&`, `||`, `^^`); handy for boolean mask operations.
+- **`^^` логический оператор XOR** *(5.40)* – завершает набор логических операторов со средним приоритетом (`&&`, `||`, `^^`); подходит для операций с логической маской.
 
-- **`use v5.40` imports builtin functions** — beyond enabling the feature bundle, `use v5.40` also imports the corresponding `builtin` version bundle, making all stable `builtin::` functions available as short names without a separate `use builtin` statement.
+- **`использование v5.40` импортирует встроенные функции** – помимо включения пакета функций, `использование v5.40` также импортирует соответствующие `встроенный` пакет версии, делая все стабилизированным `встроенный::` функции, доступные как краткие имена без отдельного `использовать встроенный` заявление.
 
-#### Longstanding features (pre-5.36).
+#### Долгосрочные характеристики (до 5.36).
 
-- **`say` and `state`** *(since 5.10)* — `say` is `print` with an implicit newline; `state` declares a lexical that persists across invocations of its enclosing sub (a lightweight memoisation primitive).
+- **`сказать` и `государство`** *(с 5.10)* – `сказать` является `печатать` с неявной новой линией; `государство` объявляет лексику, которая сохраняется при вызовах ее закрывающей подлодки (легкая примитивная память).
 
-- **First-class references and closures** — anonymous subs, closures, and reference construction are fundamental and have been stable since Perl 5.
+**Ссылки и закрытия первого класса** – анонимные подписки, закрытия и эталонная конструкция являются фундаментальными и стабильными с Perl 5.
 
-- **`use constant`** or the CPAN `Readonly` module for named constants; `Readonly` enforces deep immutability that `use constant` does not.
+- **`использовать постоянную`** или CPAN `Только чтение` модуль для названных констант; `Только чтение` обеспечивает глубокую неизменность, которая `использовать постоянную` нет.
 
-Combined with [`perlbrew`](https://perlbrew.pl/) or [`plenv`](https://github.com/tokuhirom/plenv) for version management and [`carton`](https://metacpan.org/pod/Carton) for reproducible dependency snapshots, a modern Perl project looks and feels like a first-class software engineering effort.
+В сочетании с [`перламутр`](https://perlbrew.pl/) или [`плен`](https://github.com/tokuhirom/plenv) для управления версиями и [`коробка`](https://metacpan.org/pod/Carton) для воспроизводимых снимков зависимостей современный проект Perl выглядит и выглядит как первоклассная разработка программного обеспечения.
 
-### Honest limitations
+### Честные ограничения
 
-No case for Perl is complete without honesty about where it falls short:
+Ни один случай для Перла не является полным без честности о том, где он падает:
 
-- **Visualisation** — Perl has no equivalent to `ggplot2` or `matplotlib`. Plots typically require an external call to R, gnuplot, or a web library. At times this weakness can become an actual strength, allowing one to use Perl5 as the application language that orchestrates and enhances the other actors.
+**Визуализация** – Perl не имеет эквивалента `ggplot2` или `матрац`. Для печати обычно требуется внешний вызов R, gnuplot или веб-библиотеки. Иногда эта слабость может стать реальной силой, позволяя использовать Perl5 в качестве языка приложения, который управляет и улучшает других участников.
 
-- **Community momentum** — the data-science community has converged on Python and R. Finding ready-made tutorials, Stack Overflow answers, and co-authors is harder.
+**Движение сообщества** – сообщество науки о данных объединилось на Python и R. Найти готовые учебные пособия, ответы Stack Overflow и соавторов сложнее.
 
-- **Object orientation** — without Moose/Moo the OOP model is verbose; with them it adds a dependency. The new `class` feature may solve some of these problems
+**Ориентация объекта** – без Moose/Moo модель OOP является вербальной; с ними она добавляет зависимость. Новый `занятия` функция может решить некоторые из этих проблем
 
-- **Type safety at scale** — the core language's dynamic scalars make large, collaborative numerical codebases harder to reason about (see next section).
+**Безопасность в масштабе** – основной язык's динамические скаляры делают большие, совместные числовые кодовые базы сложнее рассуждать (см. следующий раздел).
 
 ---
 
-## 2. The Perl Data-Type System — Strengths and Cache-Era Limits <a id="the-perl-data-type-system"></a>
+## 2. Система типа данных Perl – сильные стороны и ограничения кэша-эры <a id="the-perl-data-type-system"></a>
 
-### Core Perl types
+### Типы базовых перфораторов
 
-Perl's fundamental data model centres on three constructs:
+Перл'фундаментальная модель данных, основанная на трех конструкциях:
 
-| Construct | Sigil | What it holds |
+| Построение | Сигил | Что это держит |
 |-----------|-------|---------------|
-| **Scalar** | `$` | A single value: number, string, reference, or `undef` |
-| **Array** | `@` | An ordered list of scalars, indexed by integer |
-| **Hash** | `%` | An unordered collection of scalar values keyed by string |
+**Скаляр** | `$` | Одно значение: число, строка, ссылка или `неопределённая` |
+| **Массив** | `@` | Упорядоченный список скаляров, индексированный целым числом |
+| **Хеш** | `%` | Незаказанная коллекция скалярных значений с ключом по строке |
 
-Everything else — objects, closures, complex data structures — is built from these three primitives via *references* (`\@array`, `\%hash`, `sub { ... }`).
+Все остальное – объекты, замки, сложные структуры данных – построено из этих трех примитивов с помощью *ссылок* (`\@array`, `\%хеш`, `нижн.индекс { ... }`).
 
-This model is extraordinarily flexible.  A single array can hold integers, floating-point numbers, strings, and nested references simultaneously.  That flexibility is exactly what made Perl the dominant system-administration and web-scripting language for two decades.
+Эта модель чрезвычайно гибкая.  Один массив может содержать целые числа, числа с плавающей запятой, строки и вложенные ссылки одновременно.  Именно эта гибкость сделала Перла доминирующим языком системного администрирования и веб-скриптов в течение двух десятилетий.
 
-### The cache-hierarchy problem
+### Проблема иерархии кэша
 
-Modern CPUs achieve peak throughput only when data flows through L1/L2/L3 cache<sup><a id="cache-ref" href="#fn-cache">†</a></sup> in large, contiguous blocks — a property called *spatial locality*.  Perl arrays do not provide this.  Under the hood, a Perl array is a C array of *pointers* to heap-allocated scalar (`SV`) structs.  Each scalar carries a reference count, a type tag, and padding — typically 24–56 bytes per scalar on a 64-bit build.  Iterating over a million-element Perl array therefore involves a million pointer dereferences scattered across the heap, producing a cache-miss pattern that completely negates the speed advantage of modern SIMD pipelines.
+Современные ЦП достигают пиковой пропускной способности только при передаче данных через кэш L1/L2/L3<sup><a id="cache-ref" href="#fn-cache">†</a></sup> в больших, смежных блоках – свойство, называемое *пространственной локальностью*.  Массивы Perl этого не предоставляют.  Под капотом массив Perl представляет собой массив C из *указателей* для высокоразмещенного скаляра (`ПС`) структуры.  Каждый скаляр содержит количество ссылок, тег типа и заполнение – обычно 24–56 байт на скаляр в 64-битной сборке.  Таким образом, итерация более миллиона элементов массива Perl включает в себя миллионы ссылок, разбросанных по куче, создавая шаблон пропуска кэша, который полностью отрицает преимущество скорости современных трубопроводов SIMD.
 
-A concrete consequence: a dot product of two 1 000-element vectors written in pure Perl is roughly **100–1000× slower** than the equivalent operation on a pair of PDL float ndarrays, which occupy two flat, 4 000-byte memory regions that fit comfortably in L1 cache.
+Конкретное следствие: точечный продукт из двух 1 000-элементных векторов, написанных в чистом перле, примерно **100-1000× медленнее**, чем эквивалентная операция на паре плавающих ndarrays PDL, которые занимают две плоские, 4 000-байтовые области памяти, которые удобно помещаются в кэш L1.
 
-### Contrast with R
+### Контраст с R
 
-R occupies a curious middle ground.  Like Perl, it is a dynamic, interpreted language — variables are untyped containers, functions are first-class values, and the interactive REPL is the primary development environment.  R even has direct analogues to Perl's three core types:
+R занимает любопытную середину.  Как и Перл, это динамический, интерпретируемый язык – переменные – это нетипированные контейнеры, функции – первоклассные значения, а интерактивный REPL – основная среда разработки.  R даже имеет прямые аналоги с Perl's три основных типа:
 
-| Perl concept | R analogue |
+Концепция Perl | R аналог |
 |---|---|
-| `$scalar` | length-1 atomic vector or scalar-in-list |
-| `@array` | `list()` |
-| `%hash` | named `list()` |
-| Reference (`\@arr`) | R does not use explicit references; copy-on-modify semantics instead |
+| `$скаляр` | длина-1 атомный вектор или скаляр в списке |
+| `@array` | `список()` |
+| `%hash` |имя | `список()` |
+| Ссылка (`\@arr`) | R не использует явные ссылки; вместо этого используется семантика копирования при изменении |
 
-But R's *workhorse* type, i.e.  the **atomic vector** has no straightforward Perl counterpart. An R atomic vector is a contiguous, homogeneously typed block of memory — exactly the layout that a CPU cache rewards.  Every built-in scalar in R is actually a length-1 atomic vector; there is no "bare scalar" outside of atomic vectors.
+Ноль R's *workhorse* тип, т.е. **атомный вектор** не имеет прямого аналога Perl. Атомный вектор R – это непрерывный, однородно типизированный блок памяти – именно тот макет, который вознаграждает кэш процессора.  Каждый встроенный скаляр в R на самом деле является атомным вектором длины-1; нет "скалярный" вне атомных векторов.
 
-This design choice means that R code naturally operates on vectors of millions of doubles with BLAS-level throughput, without the user writing a single loop or allocating a special "array" object.
+Этот выбор дизайна означает, что R-код естественным образом работает на векторах миллионов двойников с пропускной способностью уровня BLAS, без написания пользователем одного цикла или выделения специального "массив" объект.
 
-R's atomic types are:
+R'Атомные типы:
 
-| R atomic type | Storage | C equivalent |
+| Атомный тип | Хранение | C эквивалент |
 |---|---|---|
-| `logical` | 4 bytes/element | `int` (with NA sentinel) |
-| `integer` | 4 bytes/element | `int32_t` |
-| `double` | 8 bytes/element | `double` |
-| `complex` | 16 bytes/element | `_Complex double` |
-| `character` | pointer to CHARSXP | `char *` (interned) |
-| `raw` | 1 byte/element | `uint8_t` |
+| `логический` | 4 байт/элемент | `интрига` (с NA sentinel) |
+| `целое число` | 4 байт/элемент | `int32_t` |
+| `удвоить` | 8 байт/элемент | `удвоить` |
+| `комплекс` | 16 байт/элемент | `_Сложный двойной` |
+| `характер` | указатель на CHARSXP | `символ *` (внутренний) |
+| `необработанный` |1 байт/элемент | `uint8_t` |
 
-R also defines higher-level structures built on atomic vectors:
+R также определяет структуры более высокого уровня, построенные на атомных векторах:
 
-- **matrix** — a 2-D atomic vector with a `dim` attribute.
-- **array** — an N-D atomic vector with a `dim` attribute.
-- **data.frame** — a named list of equal-length atomic vectors; the lingua franca of
-  tabular data in R.
-- **factor** — an integer vector with a `levels` attribute; encodes categorical data.
+- **матрица** – 2D атомный вектор с `затемнять` атрибут.
+- **массив** – атомный вектор N-D с `затемнять` атрибут.
+- **data.frame** – именованный список атомных векторов равной длины; lingua franca of
+  табличные данные в R.
+- **фактор** – целочисленный вектор с `уровни` атрибут; кодирует категорические данные.
 
-The lesson: R's computing performance when used in statistical and data science applications flows directly from its contiguous atomic vectors. Perl's equivalent path to performance is an extension (which also is a stand alone `matlab` like enviroment), the Perl Data Language [`PDL`](https://pdl.perl.org/).
+Урок: R'производительность вычислений при использовании в приложениях статистики и науки о данных поступает непосредственно из смежных атомных векторов. Перл's эквивалентный путь к производительности является расширением (которое также является автономным) `matlab` например, окружающая среда), язык данных Perl [`PDL`](https://pdl.perl.org/).
 
 ---
 
-## 3. Enter PDL: Strongly Typed N-Dimensional Arrays <a id="enter-pdl"></a>
+## 3. Введите PDL: сильно набитые N-мерные массивы <a id="enter-pdl"></a>
 
-The **Perl Data Language** (PDL, `pdl.perl.org`) extends Perl with *ndarrays* (N-dimensional arrays): contiguous, strongly typed memory buffers that look and feel like first-class Perl objects.
+**Perl Data Language** (PDL, `pdl.perl.org`) расширяет Perl с *ndarrays* (N-мерные массивы): смежные, сильно типизированные буферы памяти, которые выглядят и чувствуют себя первоклассными объектами Perl.
 
 ```perl
 use PDL;
@@ -301,26 +301,26 @@ PDL имеет встроенную концепцию *плохих значе�
 
 | Тип R | эквивалент Perl | эквивалент PDL | Заметки |
 |---|---|---|---|
-| `удвоить` (длина-1) `$x = 3,14` (скалярный) `двойной(3.14)` – форма `()` R не имеет чистого скаляра; все является вектором.
+| `удвоить` (длина-1) `$x = 3,14` (скалярный) `двойной(3.14)` – форма `()` R не имеет чистого скаляра; все является вектором |
 | `целое число` (длина-1) `$n = 42` (скалярный) `длинные(42)` | |
-| `логический` (длина-1) `$flag = 1` / `$flag = 0` | `байт(1)` Перл использует правдивость; PDL использует 0/1 байт.
+| `логический` (длина-1) `$flag = 1` / `$flag = 0` | `байт(1)` Перл использует правдивость; PDL использует 0/1 байт |
 | `удвоить` вектор | `@arr = (1.1, 2.2, 3.3)` | `двойной(1.1, 2.2, 3.3)` | PDL: непрерывный; `@arr`: массив указателей |
 | `целое число` вектор | `@arr = (1, 2, 3)` | `длинный(1, 2, 3)` | |
 | `логический` вектор | `@flags = (1, 0, 1)` | `байт(1, 0, 1)` | |
 | `комплекс` вектор | – (без встроенных) | `cdouble(...)` | Потребности Perl `Математика::Комплекс`; PDL имеет встроенную поддержку |
-| `характер` вектор | `@strs = ('a','b')` | – (не числовой) | PDL работает только на числах |
+| `характер` вектор | `@strs = ('a','b')` | – (не числовой) | PDL работает только с числами |
 | `необработанный` вектор | `упаковка'C*', @bytes)` | `байт(...)` | |
 | `Н/Д` | `неопределённая` | Неверное значение в ndarray | Плохие значения PDL распространяются, как R'с `Н/Д` |
-| `NULL` | `неопределённая` в контексте списка | – |
+| `NULL` | `неопределённая` в контексте списка | – | |
 | `список` | `@array` или ссылка `\@array` | — | |
 |имя | `список` | `%hash` или `\%хеш` | — | |
 | `матрица` (2-D) | массив массивов `@aoa` | 2D ndarray `pdl()[[...],[...]])` | PDL: основной столбец; R: основной столбец |
 | `массив` (N-D) | вложенные ссылки | N-D ndarray `$x->обновить(...)` | |
-| `data.frame` | `%hash` из `@arrays` | 2-D ndarray (числовые столбцы) + Perl хэш (смешанный) | Нет однозначных карт типа PDL точно |
-| `фактор` | таблица поиска хеша + `@indices` | `длинный` Ндаррей + Перл `@levels` массив |
+| `data.frame` | `%hash` из `@arrays` | 2-D ndarray (числовые столбцы) + Perl хэш (смешанный) | Нет однозначных карт типа PDL |
+| `фактор` | таблица поиска хеша + `@indices` | `длинный` Ндаррей + Перл `@levels` массив | |
 | `окружающая среда` | `%hash` или пространство имен пакета | |
 | `вечеринка` / закрытие | `нижн.индекс { ... }` / закрытие | – | PDL PP определяет скомпилированные ядра |
-| `S3 / S4 объект` | благословленная ссылка + метод диспетчеризации | PDL объект (благословенный ndarray) | PDL объекты первого класса объектов Perl |
+| `S3 / S4 объект` | блаженная ссылка + метод диспетчеризации | Объект PDL (блаженный ndarray) | Объекты PDL являются первоклассными объектами Perl |
 
 ### Основные выводы
 
@@ -365,7 +365,7 @@ PDL имеет встроенную концепцию *плохих значе�
 
 *Файл: `timing_DB.pm`*
 
-Требования к исполнению требуют измерения.  Это сообщение представляет:
+Требования к исполнению требуют измерения.  Эта статья представляет:
 
 - Многоразовый бенчмаркинг Perl, построенный на `Время::HiRes`.
 - Методология сравнения справедливых настенных часов между реализациями Perl/PDL и R.
@@ -406,7 +406,7 @@ PDL имеет встроенную концепцию *плохих значе�
 
 *Файлы: `compare_kmeans_centroids.R`, `compare_kmeans_centroids_pure.R`, `plot_centroid_coordinates.R`*
 
-Окончательный пост в серии фундаментов закрывает петлю между Perl и R:
+Последний пост в серии фундаментов закрывает петлю между Perl и R:
 
 - Экспорт результатов PDL в CSV и чтение их в R для независимой проверки.
 - Использование ggplot2 для визуализации координат центроидов с обоих языков одновременно.

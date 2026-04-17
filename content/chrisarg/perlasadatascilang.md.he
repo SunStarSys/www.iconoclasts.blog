@@ -52,7 +52,7 @@ Perl5 נשלח כרכיב ברירת מחדל של כמעט כל מערכת הפ
 
 ### CPAN: מערכת אקולוגית של מודול שנבדק בקרב
 
-רשת ארכיון פרל המקיפה (CPAN) מארחת מעל 200,000 מודולים בכל תחום שניתן להעלות על הדעת.  בעוד שההיצע של מדעי הנתונים אינו נרחב כמעט כמו פייתון, המרכיבים הבסיסיים של בונים ייעודיים נמצאים שם:
+רשת ארכיון פרל המקיפה (CPAN) מארחת מעל 200,000 מודולים בכל תחום שניתן להעלות על הדעת.  בעוד שההיצע של מדעי הנתונים אינו נרחב כמו פייתון, המרכיבים הבסיסיים של בונים ייעודיים נמצאים שם:
 
 - **PDL** (Perl Data Language) — מחשוב מספרי וקטורי עם מערכי N-ממדים בעלי סיווג חזק (מכוסים לעומק להלן).
 
@@ -89,20 +89,20 @@ Perl5 נשלח כרכיב ברירת מחדל של כמעט כל מערכת הפ
   }
   ```
 
-- **`isa` class-instance operator** *(stable since 5.36; introduced in 5.32)* — `$obj isa "ClassName"` returns a boolean; cleaner than `ref($obj) eq "ClassName"`.
+- **`איסה` מפעיל מופע מחלקה** *(יציב מאז 5.36; הציג ב 5.32)* — `$obj עזה "ClassName"` מחזיר ערך בוליאני; נקי מ- `אסמכתא($obj) eq "ClassName"`.
 
-- **`builtin` module** *(stable since 5.40; experimental since 5.36)* — lexically importable functions built directly into the interpreter.  The stable 5.40 bundle includes, among others:
+- **`מובנה` מודול** *(יציב מאז 5.40; ניסיוני מאז 5.36)* — פונקציות לייבוא לקסיקלי מובנות ישירות לתוך המתורגמן.  החבילה היציבה של 5.40 כוללת, בין היתר:
 
-- `ceil`, `floor` — integer rounding without `use POSIX`.
-  - `trim` — strip leading/trailing whitespace from a string.
-  - `indexed` — pairs each element with its index; the idiomatic companion to multi-value `for` loops (see below).
-  - `true`, `false`, `is_bool` — typed boolean sentinels; serialisers can now emit JSON `true`/`false` rather than `1`/`0`.
-  - `weaken`, `unweaken`, `is_weak` — reference-count control for building bidirectional data structures without memory leaks.
-  - `blessed`, `reftype`, `refaddr` — reference introspection.
+- `תקרה`, `רצפה` - עיגול שלם בלי `השתמש ב-POSIX`.
+  - `גימור` - רצועה מובילה / נגררת whitespace ממחרוזת.
+  - `ממופתח` - משלב כל אלמנט עם האינדקס שלו; השותף האידיומטי לריבוי ערכים `עבור` (ראה להלן).
+  - `אמת`, `שקר`, `is_bool` - סנטינלים בוליאניים מוקלדים; טוריזרים יכולים עכשיו לפלוט JSON `אמת`/`שקר` במקום `1`/`0`.
+  - `נחלש`, `לא נלקח`, `is_weak` - בקרת ספירת ייחוס לבניית מבני נתונים דו-כיווניים ללא דליפות זיכרון.
+  - `ברוך`, `סוג קובץ`, `כתובת חדשה` התייחסות לבחינה עצמית.
 
-- **Stable boolean tracking** *(5.36)* — scalars created as booleans (e.g., `!!1`) now retain their boolean nature through assignment, enabling reliable type-aware serialisation to JSON and MessagePack.
+- **מעקב בוליאני יציב** *(5.36)* — סקלרים שנוצרו כבוליאנים (לדוגמה, `!!1`) עכשיו לשמור על האופי הבוליאני שלהם באמצעות הקצאה, המאפשר טוריזציה אמינה עם מודעות לסוג ל-JSON ו-MessagePack.
 
-- **Multi-value `for` loops** *(stable since 5.40; experimental since 5.36)* Iterate over pairs or N-tuples without manual index arithmetic:
+- **ריבוי ערכים `עבור` לולאות** *(יציבות מאז 5.40; ניסיוני מאז 5.36)* חזרו על זוגות או N-tuples ללא אריתמטיקה של אינדקס ידני:
 
 ```perl
   use v5.40;
@@ -111,7 +111,7 @@ Perl5 נשלח כרכיב ברירת מחדל של כמעט כל מערכת הפ
 for my ($i, $val) (indexed @scores)  { ... } # index and value
   ```
 
-Or grab multiple values at the same time
+או תפוס ערכים מרובים בו-זמנית
 
 ```perl
   use v5.40;
@@ -119,13 +119,13 @@ Or grab multiple values at the same time
 for my ($val1, $val2, $val3) (@scores)  { ... }
   ```
 
-- **`defer` blocks** *(experimental since 5.36)* — a scope-exit guard that runs cleanup code unconditionally when a block exits, whether normally or via exception — a natural replacement for destructor-based scope-guard objects and an important pattern for resource management in data pipelines.
+- **`דחייה` block** *(experimental since 5.36)* — שומר בעל היקף יציאה המריץ קוד ניקוי ללא תנאי כאשר בלוק יוצא, בדרך כלל או באמצעות חריגה - תחליף טבעי לאובייקטים מבוססי-היקף של destructor ותבנית חשובה לניהול משאבים בצינורות נתונים.
 
-#### Perl 5.38 — July 2023
+#### Perl 5.38 – יולי 2023
 
-- **`PERL_RAND_SEED` environment variable** *(5.38)* — setting this variable before a run makes every `rand` call (without an explicit `srand`) produce the same sequence, enabling **reproducible** stochastic algorithms — simulations, random sampling, Monte Carlo methods — without modifying source code.
+- **`PERL_RAND_SEED` משתנה סביבתי** *(5.38)* — הגדרת משתנה זה לפני ריצה הופכת כל `ראנד` קריאה (ללא פירוט) `סרנד`) לייצר את אותו רצף, המאפשר **להפיק** אלגוריתמים סטוכסטיים — הדמיות, דגימה אקראית, שיטות מונטה קרלו — מבלי לשנות קוד מקור.
 
-- **`class` / `field` / `method` syntax** *(experimental since 5.38)* — a purpose-built, lexically-scoped object system requiring neither `bless` nor `@ISA` nor any CPAN module.  Useful for defining typed value objects such as dataset rows, model parameters, or pipeline stages:
+- **`מחלקה` / `שדה` / `שיטה` תחביר** *(ניסיוני מאז 5.38)* — מערכת אובייקטים בנויה למטרה, עם טווח לקסיקלי, שאינה דורשת דבר `ברכה` לא `@ISA` או כל מודול CPAN.  שימושי להגדרת אובייקטי ערך שהוקלדו כגון שורות סל נתונים, פרמטרים של מודל או שלבים בצפי:
 
 ```perl
   use feature 'class';
@@ -140,9 +140,9 @@ class Vector2D {
   say $v->magnitude;    # 5
   ```
 
-#### Perl 5.40 — June 2024
+#### Perl 5.40 — יוני 2024
 
-- **`try` / `catch` exception handling** *(stable since 5.40; experimental since 5.34; `finally` block added in 5.36)* — structured exception handling is now a core language feature; no CPAN module required:
+- **`נסו` / `לתפוס` טיפול בחריגים** *(יציב מאז 5.40; ניסיוני מאז 5.34; `סופסוף` בלוק נוסף ב-5.36)* — טיפול מובנה בחריגים הוא כעת תכונת ליבה של השפה; אין צורך במודול CPAN:
 
 ```perl
   use v5.40;
@@ -157,103 +157,103 @@ class Vector2D {
   }
   ```
 
-(`Try::Tiny` / `Feature::Compat::Try` are only needed when targeting perls older than 5.34.).
+(`נסו: זעיר` / `תכונה::Compat::Try` יש צורך רק כאשר מיקוד perls מעל 5.34.).
 
-- **Multi-value `for` loops** *(stable since 5.40)* — see 5.36 entry above; they graduated from experimental to stable in this release.
+- **ריבוי ערכים `עבור` *(יציב מאז 5.40)* — ראה כניסה של 5.36 לעיל; הם סיימו את לימודיהם בניסוי ליציב במהדורה זו.
 
-- **`builtin::inf` and `builtin::nan`** *(experimental since 5.40)* — typed floating-point infinity and Not-a-Number constants, eliminating `9**9**9` or POSIX hacks in numerical code.
+- **`מובנה::inf` וגם `מובנה::nan`**(ניסיוני מאז 5.40)* — אינסוף מוקלד של נקודה צפה וקבועים מסוג Not-a-Number, ובכך מבטלת את `9**9**9` או פריצות POSIX בקוד מספרי.
 
-- **`^^` logical XOR operator** *(5.40)* — completes the medium-precedence logical operator set (`&&`, `||`, `^^`); handy for boolean mask operations.
+- **`^^` אופרטור XOR לוגי** *(5.40)* — משלים את קבוצת האופרטורים הלוגיים בעלי הקדימות הבינונית (`&&`, `||`, `^^`); שימושי עבור פעולות מסיכה בוליאנית.
 
-- **`use v5.40` imports builtin functions** — beyond enabling the feature bundle, `use v5.40` also imports the corresponding `builtin` version bundle, making all stable `builtin::` functions available as short names without a separate `use builtin` statement.
+- **`שימוש v5.40` מייבא פונקציות מובנות** — מעבר לאפשור חבילת התכונות, `שימוש v5.40` גם מייבא את המתאים `מובנה` חבילת גירסה, מה שהופך את הכל יציב `מובנה::` פונקציות זמינות כשמות קצרים ללא שם נפרד `שימוש מובנה` הצהרה.
 
-#### Longstanding features (pre-5.36).
+#### תכונות ארוכות טווח (לפני 5.36).
 
-- **`say` and `state`** *(since 5.10)* — `say` is `print` with an implicit newline; `state` declares a lexical that persists across invocations of its enclosing sub (a lightweight memoisation primitive).
+- **`לומר` וגם `מצב`**(מאז 5.10)* — `לומר` הוא `הדפסה` עם קו חדש משתמע; `מצב` מכריז על לקסיקלי המתמיד על פני פלישות של המשנה המקיף שלו (תזכיר קל משקל פרימיטיבי).
 
-- **First-class references and closures** — anonymous subs, closures, and reference construction are fundamental and have been stable since Perl 5.
+- **התייחסויות וסגירות מהשורה הראשונה** - תת-סגירות אנונימיות, ובניית ייחוס הם יסוד ויציבים מאז פרל 5.
 
-- **`use constant`** or the CPAN `Readonly` module for named constants; `Readonly` enforces deep immutability that `use constant` does not.
+- **`השתמש קבוע`** או CPAN `קריאה בלבד` מודול עבור קבועים נקובים; `קריאה בלבד` אוכף חוסר נימוס עמוק אשר `השתמש קבוע` לא.
 
-Combined with [`perlbrew`](https://perlbrew.pl/) or [`plenv`](https://github.com/tokuhirom/plenv) for version management and [`carton`](https://metacpan.org/pod/Carton) for reproducible dependency snapshots, a modern Perl project looks and feels like a first-class software engineering effort.
+משולב עם [`עברית`](https://perlbrew.pl/) או [`פלנב`](https://github.com/tokuhirom/plenv) לניהול גרסאות וגם [`קרטון`](https://metacpan.org/pod/Carton) עבור תצלומי-בזק של תלות הניתנת לשחזור, פרויקט Perl מודרני נראה ומרגיש כמו מאמץ הנדסי של תוכנה מהשורה הראשונה.
 
-### Honest limitations
+### הגבלות כנות
 
-No case for Perl is complete without honesty about where it falls short:
+שום מקרה עבור פרל אינו שלם ללא כנות לגבי איפה הוא נופל קצר.:
 
-- **Visualisation** — Perl has no equivalent to `ggplot2` or `matplotlib`. Plots typically require an external call to R, gnuplot, or a web library. At times this weakness can become an actual strength, allowing one to use Perl5 as the application language that orchestrates and enhances the other actors.
+- **המחשה גרפית** - לפרל אין ערך `ggplot2` או `מטפליוטליב`. התווים דורשים בדרך כלל קריאה חיצונית ל-R, gnuplot או ספריית אינטרנט. לפעמים חולשה זו יכולה להפוך לחוזק אמיתי, ומאפשרת לאחד להשתמש Perl5 כשפת היישום שמתזמרת ומשפרת את השחקנים האחרים.
 
-- **Community momentum** — the data-science community has converged on Python and R. Finding ready-made tutorials, Stack Overflow answers, and co-authors is harder.
+- **תנופת הקהילה** - קהילת מדעי הנתונים התכנסה בפייתון ו-R. קשה יותר למצוא הדרכות מוכנות לשימוש, תשובות של Stack Overflow ומחברים משותפים.
 
-- **Object orientation** — without Moose/Moo the OOP model is verbose; with them it adds a dependency. The new `class` feature may solve some of these problems
+- **אוריינטציה אובייקט** — ללא מוס / מו מודל OOP הוא מילולי; איתם זה מוסיף תלות. החדש `מחלקה` תכונה עשויה לפתור חלק מהבעיות הללו
 
-- **Type safety at scale** — the core language's dynamic scalars make large, collaborative numerical codebases harder to reason about (see next section).
+- **הקלד בטיחות בקנה מידה** — שפת הליבה's סקלרים דינמיים מקשים על בסיס קוד מספרי גדול ומשתף פעולה (ראה הסעיף הבא).
 
 ---
 
-## 2. The Perl Data-Type System — Strengths and Cache-Era Limits <a id="the-perl-data-type-system"></a>
+## 2. מערכת Perl Data-Type — Strengths and Cache-Era Limits <a id="the-perl-data-type-system"></a>
 
-### Core Perl types
+### סוגי ליבה פרל
 
-Perl's fundamental data model centres on three constructs:
+פרל'מרכזי מודל נתונים בסיסיים על שלושה מבנים:
 
-| Construct | Sigil | What it holds |
+זיגיל | Sigil | What It Hold |
 |-----------|-------|---------------|
-| **Scalar** | `$` | A single value: number, string, reference, or `undef` |
-| **Array** | `@` | An ordered list of scalars, indexed by integer |
-| **Hash** | `%` | An unordered collection of scalar values keyed by string |
+*סקלאר. `$` | ערך יחיד: מספר, מחרוזת, הפניה או `ביטול הגדרה` |
+**מערך** | `@` | רשימה מסודרת של סקלרים, ממופתחת לפי מספר שלם |
+| עברית `%` | אוסף לא מסודר של ערכים סקלריים שממפותחים לפי מחרוזת |
 
-Everything else — objects, closures, complex data structures — is built from these three primitives via *references* (`\@array`, `\%hash`, `sub { ... }`).
+כל דבר אחר - אובייקטים, סגירות, מבני נתונים מורכבים - בנוי משלושת הפרימיטיבים הללו באמצעות *הפניות* (`\@array`, `\%גיבוב`, `תחתי { ... }`).
 
-This model is extraordinarily flexible.  A single array can hold integers, floating-point numbers, strings, and nested references simultaneously.  That flexibility is exactly what made Perl the dominant system-administration and web-scripting language for two decades.
+דגם זה גמיש באופן יוצא מן הכלל.  מערך יחיד יכול להכיל מספרים שלמים, מספרי נקודות צפות, מחרוזות והפניות מקוננות בו-זמנית.  גמישות זו היא בדיוק מה שהפך את פרל לשפה הדומיננטית של ניהול המערכת וכתיבת האינטרנט במשך שני עשורים.
 
-### The cache-hierarchy problem
+### בעיית היררכיית המטמון
 
-Modern CPUs achieve peak throughput only when data flows through L1/L2/L3 cache<sup><a id="cache-ref" href="#fn-cache">†</a></sup> in large, contiguous blocks — a property called *spatial locality*.  Perl arrays do not provide this.  Under the hood, a Perl array is a C array of *pointers* to heap-allocated scalar (`SV`) structs.  Each scalar carries a reference count, a type tag, and padding — typically 24–56 bytes per scalar on a 64-bit build.  Iterating over a million-element Perl array therefore involves a million pointer dereferences scattered across the heap, producing a cache-miss pattern that completely negates the speed advantage of modern SIMD pipelines.
+CPU מודרניים משיגים תפוקת שיא רק כאשר זרימות נתונים דרך מטמון L1/L2/L3<sup><a id="cache-ref" href="#fn-cache">†</a></sup> בבלוקים גדולים ורציפים - מאפיין הנקרא *מקומיות מרחבית*.  מערכי Perl אינם מספקים זאת.  מתחת למכסה המנוע, מערך Perl הוא מערך C של *מצביעים* לקרקפת שהוקצתה לערימה (`SV`) מבנים.  כל סקלר נושא ספירת הפניות, תג סוג וריפוד - בדרך כלל 24-56 בתים לכל סקלר על בנייה של 64 סיביות.  איטרציה של מערך פרל של למעלה ממיליון אלמנטים כוללת, לפיכך, מיליון הפניות של מצביע הפזורות על פני הערימה, ויוצרת תבנית חסרה במטמון ששוללת לחלוטין את יתרון המהירות של צינורות SIMD מודרניים.
 
-A concrete consequence: a dot product of two 1 000-element vectors written in pure Perl is roughly **100–1000× slower** than the equivalent operation on a pair of PDL float ndarrays, which occupy two flat, 4 000-byte memory regions that fit comfortably in L1 cache.
+תוצאה קונקרטית: תוצר נקודה של שני וקטורי 1 000-אלמנט שנכתבו בפרל טהור הוא בערך **100-1000× איטי יותר** מאשר הפעולה המקבילה על זוג מערכי PDL צפים, אשר תופסים שני אזורי זיכרון שטוחים, 4 000-בייט שמתאימים בנוחות במטמון L1.
 
-### Contrast with R
+### ניגודיות עם R
 
-R occupies a curious middle ground.  Like Perl, it is a dynamic, interpreted language — variables are untyped containers, functions are first-class values, and the interactive REPL is the primary development environment.  R even has direct analogues to Perl's three core types:
+R תופסת קרקע אמצעית סקרנית.  כמו פרל, זוהי שפה דינמית ומפורשת - משתנים הם מכולות ללא סוג, פונקציות הן ערכים מהשורה הראשונה, וה-REPL האינטראקטיבי הוא סביבת הפיתוח העיקרית.  R אפילו יש אנלוגים ישירים פרל'שלושה סוגי ליבה:
 
-| Perl concept | R analogue |
+תגית: R Analogue |
 |---|---|
-| `$scalar` | length-1 atomic vector or scalar-in-list |
-| `@array` | `list()` |
-| `%hash` | named `list()` |
-| Reference (`\@arr`) | R does not use explicit references; copy-on-modify semantics instead |
+| `$סקלר` אורך-1 וקטור אטומי או סקלר ברשימה |
+| `@array` | `רשימה()` |
+| `% גיבוב` | שם `רשימה()` |
+| אסמכתא (`\@arr`R אינו משתמש בהפניות מפורשות; במקום זאת, העתק-על-שינוי סמנטיקה |
 
-But R's *workhorse* type, i.e.  the **atomic vector** has no straightforward Perl counterpart. An R atomic vector is a contiguous, homogeneously typed block of memory — exactly the layout that a CPU cache rewards.  Every built-in scalar in R is actually a length-1 atomic vector; there is no "bare scalar" outside of atomic vectors.
+אבל R's *workhhorse* type, כלומר, לווקטור **atomic** אין מקבילה ישירה ל-Perl. וקטור אטומי R הוא בלוק זיכרון רציף, המוקלד בצורה הומוגנית - בדיוק הפריסה שמטמון ה-CPU מתגמל.  כל סקלר מובנה ב-R הוא למעשה וקטור אטומי באורך 1; אין "סקלרי חשוף" מחוץ לווקטורים אטומיים.
 
-This design choice means that R code naturally operates on vectors of millions of doubles with BLAS-level throughput, without the user writing a single loop or allocating a special "array" object.
+בחירת עיצוב זו פירושה שקוד R פועל באופן טבעי על וקטורים של מיליוני זוגות עם תפוקה ברמת BLAS, מבלי שהמשתמש יכתוב לולאה אחת או יקצה לולאה מיוחדת. "מערך" אובייקט.
 
-R's atomic types are:
+R'סוגי האטום הם:
 
-| R atomic type | Storage | C equivalent |
+| R סוג אטומי | אחסון | C שווה ערך |
 |---|---|---|
-| `logical` | 4 bytes/element | `int` (with NA sentinel) |
-| `integer` | 4 bytes/element | `int32_t` |
-| `double` | 8 bytes/element | `double` |
-| `complex` | 16 bytes/element | `_Complex double` |
-| `character` | pointer to CHARSXP | `char *` (interned) |
-| `raw` | 1 byte/element | `uint8_t` |
+| `לוגי` 4 בייטים/אלמנט `מספר שלם` (הופנה מהדף NA Sentinel) |
+| `מספר שלם` 4 בייטים/אלמנט `int32_t` |
+| `כפול` 8 בייטים/אלמנט `כפול` |
+| `מורכב` 16 בתים/אלמנט `_קומפלקס כפול` |
+| `תו` מצביע על CHARSXP `תו *` (כלואים) |
+| `גולמי` 1 בייט/אלמנט `uint8_t` |
 
-R also defines higher-level structures built on atomic vectors:
+R מגדיר גם מבנים ברמה גבוהה יותר המבוססים על וקטורים אטומיים:
 
-- **matrix** — a 2-D atomic vector with a `dim` attribute.
-- **array** — an N-D atomic vector with a `dim` attribute.
-- **data.frame** — a named list of equal-length atomic vectors; the lingua franca of
-  tabular data in R.
-- **factor** — an integer vector with a `levels` attribute; encodes categorical data.
+- **מטריקס** — וקטור אטומי 2-D עם וקטור אטומי `עמום` תכונה.
+- **מערך** — וקטור אטומי N-D עם וקטור אטומי `עמום` תכונה.
+- **data.frame** — רשימה בעלת שם של וקטורים אטומיים באורך שווה; לינגואה פרנקה של
+  נתונים טבלאיים ב-R
+- **פקטור** — וקטור מספר שלם עם `רמות` תכונה; מקודד נתונים קטגוריים.
 
-The lesson: R's computing performance when used in statistical and data science applications flows directly from its contiguous atomic vectors. Perl's equivalent path to performance is an extension (which also is a stand alone `matlab` like enviroment), the Perl Data Language [`PDL`](https://pdl.perl.org/).
+שיעור: R'ביצועי המחשוב כאשר משתמשים בהם ביישומים סטטיסטיים ומדעי הנתונים זורמים ישירות מהווקטורים האטומיים הרציפים שלה. פרל'הנתיב המקביל לביצועים הוא הרחבה (שהיא גם עצמאית). `מטלב` כמו סביבה, שפת נתוני Perl [`PDL`](https://pdl.perl.org/).
 
 ---
 
-## 3. Enter PDL: Strongly Typed N-Dimensional Arrays <a id="enter-pdl"></a>
+## 3. הזן PDL: מערכים N-ממדיים בעלי סיווג חזק <a id="enter-pdl"></a>
 
-The **Perl Data Language** (PDL, `pdl.perl.org`) extends Perl with *ndarrays* (N-dimensional arrays): contiguous, strongly typed memory buffers that look and feel like first-class Perl objects.
+**שפת נתוני פרל** (PDL, `pdl.perl.org`) מרחיב את Perl עם *ndarrays* (N-dimensional arrays): מאגרי זיכרון רציפים, בעלי סיווג חזק, שנראים ומרגישים כמו אובייקטי Perl מהשורה הראשונה.
 
 ```perl
 use PDL;
@@ -301,24 +301,24 @@ PDL חושף את לוח הצבעים המלא של סוגים מספריים C 
 
 | סוג R | שווה ערך פרל | שווה ערך ל-PDL | הערות |
 |---|---|---|---|
-| `כפול` (1) `$x = 3.14` (סקלר) | `כפול(3.14)` — צורה `()` ל-R אין סקלר חשוף, הכל וקטור.
+| `כפול` (1) `$x = 3.14` (סקלר) | `כפול(3.14)` — צורה `()` ל-R אין סקלר חשוף; הכל וקטור |
 | `מספר שלם` (1) `$n = 42` (סקלר) | `ארוך(42)` | |
 | `לוגי` (1) `$flag = 1` / `$flag = 0` | `בייט(1)` פרל משתמש באמת; PDL משתמש 0/1 בייט |
 | `כפול` וקטור | `@arr = (1.1, 2.2, 3.3)` | `כפול(1.1, 2.2, 3.3)` PDL: רציף; `@arr`: מערך מצביע |
 | `מספר שלם` וקטור | `@arr = (1, 2, 3)` | `ארוך(1, 2, 3)` | |
 | `לוגי` וקטור | `@flags = (1, 0, 1)` | `בייט(1, 0, 1)` | |
-| `מורכב` וקטור | — (לא מובנה) | `כפול(...)` פרל צרכים `מתמטיקה::מורכבים`ל-PDL יש תמיכה מקורית.
+| `מורכב` וקטור | — (לא מובנה) | `כפול(...)` פרל צרכים `מתמטיקה::מורכבים`ל-PDL יש תמיכה מקורית |
 | `תו` וקטור | `@strs = ('א','ב'')` - (לא נומרי) | PDL פועל על מספרים בלבד |
 | `גולמי` וקטור | `אריזה('ק*', @bytes)` | `בייט(...)` | |
 | `לא ישים` | `ביטול הגדרה` | ערך רע ב-ndarray | ערכי PDL רעים מתפשטים כמו R's `לא ישים` |
-| `NULL` | `ביטול הגדרה` בקונטקסט רשימה | - |
+| `NULL` | `ביטול הגדרה` ב-list context. |
 | `רשימה` | `@array` או הפניה `\@array` | — | |
 | שם `רשימה` | `% גיבוב` או `\%גיבוב` | — | |
 | `מטריצה` (2-D) | מערך מערכים `@aoa` 2-D נדרי `pdl([[...],[...]])` | PDL: עמודה ראשית; R: עמודה ראשית |
 | `מערך` (N-D) | הפניות מקוננות | N-D ndarray `$x->סגנון מחדש(...)` | |
 | `data.frame` | `% גיבוב` מתוך `@arrays` | 2-D ndarray (עמודות מספריות) + גיבוב פרל (מעורב) | אין מפות בודדות מסוג PDL בדיוק |
 | `פקטור` | טבלת hash lookup + `@indices` | `ארוך` ndarray + פרל `@levels` מערך | |
-| `סביבה` | `% גיבוב` או Namespace של חבילה.
+| `סביבה` | `% גיבוב` או Namespace של חבילה. |
 | `פונקציה` סגירה | `תחתי { ... }` / סגירה | — | PDL PP מגדיר גרעין מהודר |
 | `אובייקט S3 / S4` | הפניה מבורכת + שיגור שיטה | אובייקט PDL (מערך מבורך) | אובייקטי PDL הם אובייקטי Perl ממחלקה ראשונה |
 
@@ -424,4 +424,4 @@ k-means מלא דורש את כל הנתונים בזיכרון עבור כל א
 
 כאשר חישוב נוגע בזיכרון בתבנית רציפה וצפויה, החומרה *prefetcher* יכולה לטעון נתונים קרובים אל L1/L2 לפני שהם נחוצים, תוך השגת תפוקה כמעט שיא.  ריצוף מצביע מפוזר (כגון מעבר במערך Perl של סקלרים שהוקצו לערימה) מביס prefetching, מעכב את ה- CPU בזמן שהוא ממתין שכל מטמון לא ייפתר מ- RAM.
 
-<!-- $Date: 2026-04-16 16:45:10 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31803 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

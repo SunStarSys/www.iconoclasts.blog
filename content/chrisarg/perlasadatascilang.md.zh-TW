@@ -52,7 +52,7 @@ Perl 從頭開始設計，用於文字處理、正規表示式，以及"膠" 在
 
 ### CPAN：經戰測試的模組生態系統
 
-全方位的 Perl Archive Network (CPAN) 可讓每個網域擁有超過 200,000 個模組。雖然資料科學產品與 Python 幾乎不一樣廣泛，但專屬建構者的基本元件在以下位置：
+全方位的 Perl Archive Network (CPAN) 可讓每個網域擁有超過 200,000 個模組。雖然資料科學產品不像 Python 一樣廣泛，但專用的建構工具的基本元件都在這裡:
 
 - **PDL** (Perl Data Language) — 具有強烈鍵入 N 維度陣列的向量化數值運算 (涵蓋在下方深度)。
 
@@ -80,7 +80,7 @@ Perl 從頭開始設計，用於文字處理、正規表示式，以及"膠" 在
 
 - **`使用 v5.36`** — 功能組合現在會自動啟用`使用警告` 除了`使用嚴格`。它也會停用`間接` 方法呼叫語法與`多維` 雜湊金鑰模擬，消除兩個常見的細微錯誤來源。
 
-- **指定的子常式簽章** *(自 5.36 起；自 5.20 起的實驗) * — 現在依名稱宣告函數參數 (選擇性預設值)。繁體中文`//=` 與`||=` 預設值運算子已進一步新增至 5.38 中的簽名，允許觸發的預設值`未定義` 分別或虛度：
+- **指定的子常式簽章** *(自 5.36 起；自 5.20 起的實驗) * — 現在依名稱宣告函數參數 (選擇性預設值)。繁體中文`//=` 與`||=` 預設值運算子已進一步新增至 5.38 中的簽名，允許觸發的預設值`未定義` 或分別虛偽:
 
 ```perl
   use v5.36;
@@ -89,20 +89,20 @@ Perl 從頭開始設計，用於文字處理、正規表示式，以及"膠" 在
   }
   ```
 
-- **`isa` class-instance operator** *(stable since 5.36; introduced in 5.32)* — `$obj isa "ClassName"` returns a boolean; cleaner than `ref($obj) eq "ClassName"`.
+- **`異形` 類別實例運算子 ** *(自 5.36 起穩定；5.32 導入)* —`$obj isa "ClassName"` 傳回布林值；清除時間比`ref ($obj) 等級"ClassName"`.
 
-- **`builtin` module** *(stable since 5.40; experimental since 5.36)* — lexically importable functions built directly into the interpreter.  The stable 5.40 bundle includes, among others:
+- **`內建` 模組 ** *(自 5.40 起穩定；自 5.36 起的實驗)* — 直接內建於解譯器的詞彙可匯入功能。穩定的 5.40 組合包包括 (其中包括):
 
-- `ceil`, `floor` — integer rounding without `use POSIX`.
-  - `trim` — strip leading/trailing whitespace from a string.
-  - `indexed` — pairs each element with its index; the idiomatic companion to multi-value `for` loops (see below).
-  - `true`, `false`, `is_bool` — typed boolean sentinels; serialisers can now emit JSON `true`/`false` rather than `1`/`0`.
-  - `weaken`, `unweaken`, `is_weak` — reference-count control for building bidirectional data structures without memory leaks.
-  - `blessed`, `reftype`, `refaddr` — reference introspection.
+- `天花板`, `地板` — 無整數捨入`使用 POSIX`.
+  - `修剪` — 從字串分割前置 / 尾端空格。
+  - `已編製索引` — 將每個元素與其索引配對；idiomatic companion to multi-value `針對` 迴圈 (請參閱下文)。
+  - `真偽`, `假`, `is_bool` — 輸入布林值句子；序列器現在可以發出 JSON `真偽`/`假` 而非`1 個`/`0`.
+  - `弱勢`, `未減弱`, `is_weak` — 用於建立雙向資料結構且不會發生記憶體流失的參照計數控制。
+  - `束縛`, `網型`, `重新加載` — 參考自我檢查。
 
-- **Stable boolean tracking** *(5.36)* — scalars created as booleans (e.g., `!!1`) now retain their boolean nature through assignment, enabling reliable type-aware serialisation to JSON and MessagePack.
+- **穩定的布林值追蹤** *(5.36) * — 以布林值建立的純量 (例如，`!!1`) 現在透過指派來保留其布林性質，以實現對 JSON 和 MessagePack 的可靠類型感知序列化。
 
-- **Multi-value `for` loops** *(stable since 5.40; experimental since 5.36)* Iterate over pairs or N-tuples without manual index arithmetic:
+- **多重值`針對` 迴圈** *(自 5.40 起穩定；自 5.36 起的實驗) * 重複過對或不使用手動索引算術的 N 元組:
 
 ```perl
   use v5.40;
@@ -111,7 +111,7 @@ Perl 從頭開始設計，用於文字處理、正規表示式，以及"膠" 在
 for my ($i, $val) (indexed @scores)  { ... } # index and value
   ```
 
-Or grab multiple values at the same time
+或同時擷取多個值
 
 ```perl
   use v5.40;
@@ -119,13 +119,13 @@ Or grab multiple values at the same time
 for my ($val1, $val2, $val3) (@scores)  { ... }
   ```
 
-- **`defer` blocks** *(experimental since 5.36)* — a scope-exit guard that runs cleanup code unconditionally when a block exits, whether normally or via exception — a natural replacement for destructor-based scope-guard objects and an important pattern for resource management in data pipelines.
+- **`延緩` blocks** *(自 5.36 起即為實驗性)* — 範圍結束保護，可在區塊結束時 (無論是一般還是透過異常狀況) 無條件地執行清除程式碼 - 自然取代以破壞者為基礎的範圍保護物件，以及資料管線中資源管理的重要模式。
 
-#### Perl 5.38 — July 2023
+#### Perl 5.38 — 2023 年 7 月
 
-- **`PERL_RAND_SEED` environment variable** *(5.38)* — setting this variable before a run makes every `rand` call (without an explicit `srand`) produce the same sequence, enabling **reproducible** stochastic algorithms — simulations, random sampling, Monte Carlo methods — without modifying source code.
+- **`PERL_RAND_SEED` 環境變數 ** *(5.38)* — 在執行前設定此變數，每個`蘭特` 呼叫 (沒有明確的) `砂漿`) 會產生相同的順序，啟用 **可重現** 隨機演算法 — 模擬、隨機抽樣、Monte Carlo 方法 — 而無需修改原始程式碼。
 
-- **`class` / `field` / `method` syntax** *(experimental since 5.38)* — a purpose-built, lexically-scoped object system requiring neither `bless` nor `@ISA` nor any CPAN module.  Useful for defining typed value objects such as dataset rows, model parameters, or pipeline stages:
+- **`類別` / `欄位` / `方法` 語法 ** *(自 5.38 以來的實驗性)* — 專為特定目的而設計的詞彙化物件系統，不需要`無聊` 不`@ISA` 或任何 CPAN 模組。可用於定義類型值物件，例如資料集資料列、模型參數或管線階段:
 
 ```perl
   use feature 'class';
@@ -140,9 +140,9 @@ class Vector2D {
   say $v->magnitude;    # 5
   ```
 
-#### Perl 5.40 — June 2024
+#### Perl 5.40 — 2024 年 6 月
 
-- **`try` / `catch` exception handling** *(stable since 5.40; experimental since 5.34; `finally` block added in 5.36)* — structured exception handling is now a core language feature; no CPAN module required:
+- **`嘗試` / `捕捉` 例外處理 ** *(自 5.40 起穩定；自 5.34 起實驗；`最後` 區塊以 5.36 新增)* — 結構化異常狀況處理現在是核心語言功能；不需要 CPAN 模組:
 
 ```perl
   use v5.40;
@@ -157,103 +157,103 @@ class Vector2D {
   }
   ```
 
-(`Try::Tiny` / `Feature::Compat::Try` are only needed when targeting perls older than 5.34.).
+(`嘗試：：Tiny` / `特色：：Compat：：Try` 只有當定位超過 5.34 的磁柱時才需要使用。).
 
-- **Multi-value `for` loops** *(stable since 5.40)* — see 5.36 entry above; they graduated from experimental to stable in this release.
+- **多重值`針對` 迴圈** *(自 5.40 起穩定) * — 請參閱上方 5.36 項目；它們在本版本中從實驗中畢業到穩定。
 
-- **`builtin::inf` and `builtin::nan`** *(experimental since 5.40)* — typed floating-point infinity and Not-a-Number constants, eliminating `9**9**9` or POSIX hacks in numerical code.
+- **`內建：：inf` 與`內建：：nan`** *(實驗自 5.40 起)* — 輸入的浮點數無限和非數字常數，消除`9**9**9` 或 POSIX hacks in numerical code。
 
-- **`^^` logical XOR operator** *(5.40)* — completes the medium-precedence logical operator set (`&&`, `||`, `^^`); handy for boolean mask operations.
+- **`^^` 邏輯 XOR 運算子 ** *(5.40)* — 完成中優先順序邏輯運算子集 (`&&`, `||`, `^^`)；適用於布林遮罩作業。
 
-- **`use v5.40` imports builtin functions** — beyond enabling the feature bundle, `use v5.40` also imports the corresponding `builtin` version bundle, making all stable `builtin::` functions available as short names without a separate `use builtin` statement.
+- **`使用 v5.40` 匯入內建函數 **— 超出啟用功能組合，`使用 v5.40` 也會匯入對應的`內建` 版本組合，使所有穩定`內建：：` 函數可用為不含個別名稱的簡稱`使用內建` 敘述句。
 
-#### Longstanding features (pre-5.36).
+#### 長效功能 (5.36 之前).
 
-- **`say` and `state`** *(since 5.10)* — `say` is `print` with an implicit newline; `state` declares a lexical that persists across invocations of its enclosing sub (a lightweight memoisation primitive).
+- **`說` 與`狀態`** *(自 5.10 起)* —`說` 是`列印` 以隱含的換行；`狀態` 宣告在內含子 (輕量型備忘原始類型) 的呼叫中持續存在的詞彙。
 
-- **First-class references and closures** — anonymous subs, closures, and reference construction are fundamental and have been stable since Perl 5.
+- **一流的參考和結案** — 匿名子項、結案和參考構建都是基本的，而且自 Perl 5 起穩定。
 
-- **`use constant`** or the CPAN `Readonly` module for named constants; `Readonly` enforces deep immutability that `use constant` does not.
+- **`使用常數`** 或 CPAN `唯讀` 已命名常數的模組；`唯讀` 強制執行深度的不可變性`使用常數` 不是。
 
-Combined with [`perlbrew`](https://perlbrew.pl/) or [`plenv`](https://github.com/tokuhirom/plenv) for version management and [`carton`](https://metacpan.org/pod/Carton) for reproducible dependency snapshots, a modern Perl project looks and feels like a first-class software engineering effort.
+結合與[`紅外線`](https://perlbrew.pl/) 或[`普倫夫`](https://github.com/tokuhirom/plenv) 版本管理與[`紙箱`](https://metacpan.org/pod/Carton) 對於可重現的依賴性快照，現代的 Perl 專案看起來和一流的軟體工程工作一樣。
 
-### Honest limitations
+### 誠信限制
 
-No case for Perl is complete without honesty about where it falls short:
+沒有任何案例可以讓 Perl 完全不誠實地知道它在哪裡很短:
 
-- **Visualisation** — Perl has no equivalent to `ggplot2` or `matplotlib`. Plots typically require an external call to R, gnuplot, or a web library. At times this weakness can become an actual strength, allowing one to use Perl5 as the application language that orchestrates and enhances the other actors.
+- **視覺化** — Perl 沒有相等的項目`ggplot2` 或`Matplotlib`。繪圖通常需要對 R、gnuplot 或 Web 程式庫進行外部呼叫。有時此弱點會成為實際的強度，允許使用 Perl5 作為協調和增強其他動作者的應用程式語言。
 
-- **Community momentum** — the data-science community has converged on Python and R. Finding ready-made tutorials, Stack Overflow answers, and co-authors is harder.
+- **社群力量** — 數據科學社群融合了 Python 和 R。尋找現成的教學課程、Stack Overflow 回答，以及共同作者則較難。
 
-- **Object orientation** — without Moose/Moo the OOP model is verbose; with them it adds a dependency. The new `class` feature may solve some of these problems
+- **物件方向** — 若無 Moose/Moo，OOP 模型為詳細；其中會新增相依性。新功能`類別` 功能可能解決這些問題
 
-- **Type safety at scale** — the core language's dynamic scalars make large, collaborative numerical codebases harder to reason about (see next section).
+- **大規模輸入安全** — 核心語言's 動態純量會讓較大的協作數字程式碼庫更難推理 (請參閱下一節)。
 
 ---
 
-## 2. The Perl Data-Type System — Strengths and Cache-Era Limits <a id="the-perl-data-type-system"></a>
+## 2.Perl Data-Type System — 優勢和快取時代限制<a id="the-perl-data-type-system"></a>
 
-### Core Perl types
+### 核心 Perl 類型
 
-Perl's fundamental data model centres on three constructs:
+佩爾'三個建構的基礎資料模型中心:
 
-| Construct | Sigil | What it holds |
+| 建構 | Sigil | 它擁有什麼|
 |-----------|-------|---------------|
-| **Scalar** | `$` | A single value: number, string, reference, or `undef` |
-| **Array** | `@` | An ordered list of scalars, indexed by integer |
-| **Hash** | `%` | An unordered collection of scalar values keyed by string |
+| **定量** | `$` | 單一值：數字、字串、參照或`未定義` |
+| **陣列** | `@` | 依整數編製索引的已排序純量清單|
+| **雜湊** | `%` | 依字串輸入之純量值的未排序集合|
 
-Everything else — objects, closures, complex data structures — is built from these three primitives via *references* (`\@array`, `\%hash`, `sub { ... }`).
+其他所有項目 (物件、結案、複雜的資料結構) 都是透過 *參考資料* 從這三個基礎元構建而成 (`\@array`, `\% 雜湊`, `下標{ ... }`).
 
-This model is extraordinarily flexible.  A single array can hold integers, floating-point numbers, strings, and nested references simultaneously.  That flexibility is exactly what made Perl the dominant system-administration and web-scripting language for two decades.
+此模型具有額外的彈性。單一陣列可以同時保存整數、浮點數、字串以及巢狀參照。這種靈活性正是 Perl 20 年來主導的系統管理和 Web 文稿語言。
 
-### The cache-hierarchy problem
+### cache-hierarchy 問題
 
-Modern CPUs achieve peak throughput only when data flows through L1/L2/L3 cache<sup><a id="cache-ref" href="#fn-cache">†</a></sup> in large, contiguous blocks — a property called *spatial locality*.  Perl arrays do not provide this.  Under the hood, a Perl array is a C array of *pointers* to heap-allocated scalar (`SV`) structs.  Each scalar carries a reference count, a type tag, and padding — typically 24–56 bytes per scalar on a 64-bit build.  Iterating over a million-element Perl array therefore involves a million pointer dereferences scattered across the heap, producing a cache-miss pattern that completely negates the speed advantage of modern SIMD pipelines.
+只有在資料流經 L1/L2/L3 快取時，現代 CPU 才會達到尖峰傳輸量<sup><a id="cache-ref" href="#fn-cache">†</a></sup> 在大型的連續區塊中 — 一個名為 *spatial locality* 的屬性。Perl 陣列未提供此項目。在背後，Perl 陣列是 *pointers* 的 C 陣列，用於堆集配置的純量 (`歷史`) 結構。每個純量都有參照計數、類型標記和填補 — 在 64 位元的建置上，每個純量通常為 24 到 56 個位元組。因此，重複超過百萬個元素的 Perl 陣列，涉及整個堆集散佈的百萬個指標取消參照，產生完全忽略現代 SIMD 管線的速度優勢的快取遺漏樣式。
 
-A concrete consequence: a dot product of two 1 000-element vectors written in pure Perl is roughly **100–1000× slower** than the equivalent operation on a pair of PDL float ndarrays, which occupy two flat, 4 000-byte memory regions that fit comfortably in L1 cache.
+具體後果：以純 Perl 撰寫的兩個 1 000 元素向量的點產品大約比對 PDL 浮點數陣列的同等作業慢 **100 – 1000 × **1000 × **1000 × **1000 × **，該陣列佔用兩個平坦、4 000 位元組記憶體區域，適合 L1 快取。
 
-### Contrast with R
+### 對比 R
 
-R occupies a curious middle ground.  Like Perl, it is a dynamic, interpreted language — variables are untyped containers, functions are first-class values, and the interactive REPL is the primary development environment.  R even has direct analogues to Perl's three core types:
+R 佔據了好奇的中間地。就像 Perl 一樣，它是動態且解譯的語言 — 變數是未鍵入的容器，函數是一流的值，而互動式 REPL 則是主要開發環境。R 甚至有直接類比到 Perl'三核心類型:
 
-| Perl concept | R analogue |
+| Perl 概念 | R 類比|
 |---|---|
-| `$scalar` | length-1 atomic vector or scalar-in-list |
-| `@array` | `list()` |
-| `%hash` | named `list()` |
-| Reference (`\@arr`) | R does not use explicit references; copy-on-modify semantics instead |
+| `$scalar` | length-1 原子向量或純量列表|
+| `@array` | `清單 ()` |
+| `%hash` | 名稱`清單 ()` |
+| 參考 (`\@arr`) | R 不使用明確的參照；改為複製修改語意|
 
-But R's *workhorse* type, i.e.  the **atomic vector** has no straightforward Perl counterpart. An R atomic vector is a contiguous, homogeneously typed block of memory — exactly the layout that a CPU cache rewards.  Every built-in scalar in R is actually a length-1 atomic vector; there is no "bare scalar" outside of atomic vectors.
+但 R's *workhorse* 類型，例如 **原子向量** 沒有直向的 Perl 對應項。R 原子向量是連續的，同質上打字的記憶體區塊 — CPU 快取所獎勵的佈局 。R 中的每個內建純量實際上都是一個長度為 1 的原子向量；沒有"裸純量" 不在原子向量 。
 
-This design choice means that R code naturally operates on vectors of millions of doubles with BLAS-level throughput, without the user writing a single loop or allocating a special "array" object.
+此設計選擇意謂著 R 程式碼會以 BLAS 層次傳輸量的數百萬倍，自然在向量上運作，而不需要使用者編寫單一迴圈或配置特殊的迴圈。"陣列" 物件。
 
-R's atomic types are:
+零售'單元類型為:
 
-| R atomic type | Storage | C equivalent |
+| R 原子類型 | 儲存 | C 等效|
 |---|---|---|
-| `logical` | 4 bytes/element | `int` (with NA sentinel) |
-| `integer` | 4 bytes/element | `int32_t` |
-| `double` | 8 bytes/element | `double` |
-| `complex` | 16 bytes/element | `_Complex double` |
-| `character` | pointer to CHARSXP | `char *` (interned) |
-| `raw` | 1 byte/element | `uint8_t` |
+| `邏輯` | 4 個位元組 / 元素 | `整數 Data type` (含 NA 片語) |
+| `整數` | 4 個位元組 / 元素 | `int32_t` |
+| `雙重` | 8 個位元組 / 元素 | `雙重` |
+| `複合` | 16 個位元組 / 元素 | `複雜雙精度浮點數 (_C)` |
+| `字元` | 指向 CHARSXP | `字元 *` (實習) |
+| `原始` | 1 個位元組 / 元素 | `uint8_t` |
 
-R also defines higher-level structures built on atomic vectors:
+R 也定義建構在原子向量上的高階結構:
 
-- **matrix** — a 2-D atomic vector with a `dim` attribute.
-- **array** — an N-D atomic vector with a `dim` attribute.
-- **data.frame** — a named list of equal-length atomic vectors; the lingua franca of
-  tabular data in R.
-- **factor** — an integer vector with a `levels` attribute; encodes categorical data.
+- **矩陣** — 具有 2D 原子向量的`二維` 屬性。
+- **陣列** — N-D 原子向量與`二維` 屬性。
+- **data.frame** — 具名的等長原子向量清單；lingua franca of
+  R 中的表格式資料。
+- **因素** — 含有 1 個整數向量`階層` 屬性；將類別資料編碼。
 
-The lesson: R's computing performance when used in statistical and data science applications flows directly from its contiguous atomic vectors. Perl's equivalent path to performance is an extension (which also is a stand alone `matlab` like enviroment), the Perl Data Language [`PDL`](https://pdl.perl.org/).
+課程：R'在統計和資料科學應用程式中使用時，計算效能會直接從其連續的原子向量流出。佩爾'對等的效能路徑為擴充 (亦為獨立路徑) `墊片` 如環境)，Perl 資料語言[`PDL`](https://pdl.perl.org/).
 
 ---
 
-## 3. Enter PDL: Strongly Typed N-Dimensional Arrays <a id="enter-pdl"></a>
+## 3. 輸入 PDL：強烈鍵入的 N 維度陣列<a id="enter-pdl"></a>
 
-The **Perl Data Language** (PDL, `pdl.perl.org`) extends Perl with *ndarrays* (N-dimensional arrays): contiguous, strongly typed memory buffers that look and feel like first-class Perl objects.
+**Perl Data Language** (PDL、`pdl.perl.org`) 以 *ndarrays* (N-dimensional Arrays) 擴充 Perl：連續、強式輸入的記憶體緩衝區，其外觀與感覺就像一流的 Perl 物件。
 
 ```perl
 use PDL;
@@ -270,9 +270,9 @@ my $scores = $db x $query->transpose;
 
 ### PDL 原始類型
 
-PDL 會將 C 數值類型的完整選用區顯示為一流的建構子：
+PDL 會將 C 數值類型的完整選用區顯示為一流的建構子:
 
-| PDL 類型 | 位元組 | C 類型 | 建構子 |
+| PDL 類型 | 位元組 | C 類型 | 建構子|
 |---|---|---|---|
 | `位元組` | 1 | `uint8_t` | `位元組 (...)` |
 | `簡短` | 2 | `int16_t` | `短 (...)` |
@@ -299,28 +299,28 @@ PDL 有內建的 *錯誤值概念* (`PDL：：錯誤`)，直接類似於 R'秒�
 
 下表將每個常用的 R 類型對應至其最接近的 Perl 和 PDL 對等部分，強調三種語言彼此同意、不同或互補的位置。
 
-| R 類型 | 永久對等 | PDL 對等 | 備註 |
+| R 類型 | Perl 等效 | PDL 等效 | 備註|
 |---|---|---|---|
-| `雙重` (長度 -1) | `$x = 3.14` (純量) | `雙倍 (3.14)` — 形狀`()` | R 沒有稀有純量；一切都是向量 |
+| `雙重` (長度 -1) | `$x = 3.14` (純量) | `雙倍 (3.14)` — 形狀`()` | R 沒有稀有純量；一切都是向量|
 | `整數` (長度 -1) | `$n = 42` (純量) | `長 (42)` | |
-| `邏輯` (長度 -1) | `$flag = 1` / `$flag = 0` | `位元組 (1)` | Perl 使用真實性；PDL 使用 0/1 位元組 |
-| `雙重` 向量 | `@arr = (1.1、2.2、3.3)` | `雙倍 (1.1、2.2、3.3)` | PDL：連續；`@arr`：指標陣列 |
+| `邏輯` (長度 -1) | `$flag = 1` / `$flag = 0` | `位元組 (1)` | Perl 使用真實性；PDL 使用 0/1 位元組|
+| `雙重` 向量 | `@arr = (1.1、2.2、3.3)` | `雙倍 (1.1、2.2、3.3)` | PDL：連續；`@arr`：指標陣列|
 | `整數` 向量 | `@arr = (1、2、3)` | `長 (1、2、3)` | |
 | `邏輯` 向量 | `@flags = (1、0、1)` | `位元組 (1，0，1)` | |
-| `複合` 向量 | — (無內建) | `cdouble (...)` | Perl 需要`數學：：複雜`PDL 的原生支援 |
-| `字元` 向量 | `@strs = ('一個','b')` | — (非數字) | PDL 僅對數字運作 |
+| `複合` 向量 | — (無內建) | `cdouble (...)` | Perl 需要`數學：：複雜`；PDL 具有原生支援|
+| `字元` 向量 | `@strs = ('一個','b')` | — (非數字) | PDL 僅對數字運作|
 | `原始` 向量 | `包裝 ('C*', @bytes)` | `位元組 (...)` | |
 | `不適用` | `未定義` | ndarray 中的錯誤值 | PDL 錯誤值傳輸，例如 R'秒鐘`不適用` |
-| `空值` | `未定義` 在清單相關資訊環境中 | — |
+| `空值` | `未定義` 在清單相關資訊環境中 | — | |
 | `清單` | `@array` 或參考`\@array` | — | |
 | 名稱`清單` | `%hash` 或`\% 雜湊` | — | |
-| `矩陣` (2-D) | 陣列`@aoa` | 2D ndarray `pdl ([[...],[...]])` | PDL：資料欄主修；R：資料欄主修 |
+| `矩陣` (2-D) | 陣列`@aoa` | 2D ndarray `pdl ([[...],[...]])` | PDL：資料欄主修；R：資料欄主修|
 | `陣列` (N-D) | 巢狀參照 | N-D ndarray `$x-> 新產品 (...)` | |
-| `data.frame` | `%hash` 總共`@arrays` | 2-D ndarray (數值資料欄) + Perl 雜湊 (混合) | 沒有完全相同的單一 PDL 類型對應 |
+| `data.frame` | `%hash` 總共`@arrays` | 2-D ndarray (數值資料欄) + Perl 雜湊 (混合) | 沒有完全相同的單一 PDL 類型對應|
 | `因子` | 雜湊查尋表格 + `@indices` | `長整數` ndarray + Perl `@levels` 陣列 | |
-| `環境` | `%hash` 或套裝程式命名空間 | — |
-| `函數` / 關閉 | `下標{ ... }` / 關閉 | — | PDL PP 定義編譯的核心 |
-| `S3 / S4 物件` | blessed reference + method dispatch | PDL 物件 (繫結的 ndarray) | PDL 物件是第一個類別 Perl 物件 |
+| `環境` | `%hash` 或套裝程式命名空間 | — | |
+| `函數` / 關閉 | `下標{ ... }` / close | — | PDL PP 定義已編譯的核心|
+| `S3 / S4 物件` | blessed reference + method dispatch | PDL 物件 (繫結的 ndarray) | PDL 物件是第一個類別 Perl 物件|
 
 ### 關鍵概要
 
@@ -346,7 +346,7 @@ PDL 有內建的 *錯誤值概念* (`PDL：：錯誤`)，直接類似於 R'秒�
 
 *檔案：`VectorIO.pm`*
 
-該引擎將向量儲存為內裝的二進制小點[MessagePack](https://msgpack.org/) 有效負載。本文涵蓋：
+該引擎將向量儲存為內裝的二進制小點[MessagePack](https://msgpack.org/) 有效負載。本文涵蓋:
 
 - 設計一個乾淨的模組`出口商`- 基礎公用 API `使用 v5.40`.
 - 在系統界限強制實行綱要正確性的驗證協助程式。
@@ -355,7 +355,7 @@ PDL 有內建的 *錯誤值概念* (`PDL：：錯誤`)，直接類似於 R'秒�
 
 *檔案：`simulate_vectorDB.pl`*
 
-在搜尋資料庫之前，我們需要一個資料庫。此文章顯示：
+在搜尋資料庫之前，我們需要一個資料庫。此文章顯示:
 
 - 產生可再現的隨機浮點向量與`PDL：：隨機`.
 - 使用`GetOpt：：龍` 用於人體工學 CLI 選項剖析。
@@ -365,7 +365,7 @@ PDL 有內建的 *錯誤值概念* (`PDL：：錯誤`)，直接類似於 R'秒�
 
 *檔案：`timing_DB.pm`*
 
-績效申請需要評量。本文介紹：
+績效申請需要評量。本文介紹:
 
 - 內建可重複使用的 Perl 基準線束`時間：：HiRes`.
 - Perl/PDL 與 R 實作之間公平壁鐘比較的方法。
@@ -375,7 +375,7 @@ PDL 有內建的 *錯誤值概念* (`PDL：：錯誤`)，直接類似於 R'秒�
 
 *檔案：`kmeans.pl`*
 
-K-means clustering 是反向檔案索引 (IVF) 方法的骨幹，其近似鄰近的搜尋。本文涵蓋：
+K-means clustering 是反向檔案索引 (IVF) 方法的骨幹，其近似鄰近的搜尋。本文涵蓋:
 
 - The `PDL：：統計：：代表` 介面及其退貨合約 (`中心`, `叢集`, `n 個`, `R2`, `秒`).
 - 解譯`[日本人無修正]` 成員遮罩傳回者`run_kmeans`.
@@ -385,7 +385,7 @@ K-means clustering 是反向檔案索引 (IVF) 方法的骨幹，其近似鄰近
 
 *檔案：`compare_kmeans_centroids.pl`*
 
-完整 k-means 需要在記憶體中執行所有資料以進行每次重複。Mini-batch k-means 會交易少量的甲狀腺準確度，以大幅減少記憶體和運算。這篇文章探討：
+完整 k-means 需要在記憶體中執行所有資料以進行每次重複。Mini-batch k-means 會交易少量的甲狀腺準確度，以大幅減少記憶體和運算。這篇文章探索:
 
 - 在 PDL 中實作真正的重新取樣迷你批次迴圈。
 - 量身定制全迷你批次變體之間的甲狀腺漂移。
@@ -395,7 +395,7 @@ K-means clustering 是反向檔案索引 (IVF) 方法的骨幹，其近似鄰近
 
 *檔案：`compare_ivf_search.pl`*
 
-有了甲狀腺功能，我們可以分割資料庫，並執行近似鄰近搜尋的子線性。本文涵蓋：
+有了甲狀腺功能，我們可以分割資料庫，並執行近似鄰近搜尋的子線性。本文涵蓋:
 
 - 建立反轉清單：將每個資料庫向量對應至其最接近的形心。
 - The `unpack_inverted_lists` 協助者進入`VectorIO`.
@@ -406,7 +406,7 @@ K-means clustering 是反向檔案索引 (IVF) 方法的骨幹，其近似鄰近
 
 *檔案：`compare_kmeans_centroids.R`, `compare_kmeans_centroids_pure.R`, `plot_centroid_coordinates.R`*
 
-基礎系列的最後一篇文章關閉 Perl 與 R 之間的迴路：
+基礎系列的最後一個文章關閉了 Perl 與 R 之間的迴路:
 
 - 將 PDL 結果匯出成 CSV 並在 R 中讀取，以進行獨立驗證。
 - 使用 ggplot2 可同時從兩種語言視覺化甲狀腺座標。

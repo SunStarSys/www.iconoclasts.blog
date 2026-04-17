@@ -52,7 +52,7 @@ Perl's regexエンジンは、利用可能な最も強力なものの1つであ�
 
 ### CPAN: テスト済みのモジュール・エコシステム
 
-Comprehensive Perl Archive Network(CPAN)は、想像できるすべてのドメインで200,000を超えるモジュールをホストします。データ・サイエンスの提供はPythonほど広範囲ではありませんが、専用ビルダーの基本的なコンポーネントは次のとおりです。
+Comprehensive Perl Archive Network(CPAN)は、想像できるすべてのドメインで200,000を超えるモジュールをホストします。データ・サイエンスの提供はPythonほど広範囲ではありませんが、専用ビルダーの基本的なコンポーネントはそこにあります:
 
 - **PDL** (Perl Data Language)— 強く型付けされたN次元配列を持つベクトル化された数値計算(以下で詳しく説明します)。
 
@@ -80,7 +80,7 @@ Comprehensive Perl Archive Network(CPAN)は、想像できるすべてのドメ�
 
 - **`使用v5.36`**— 機能バンドルが自動的に有効になりました`警告の使用` その上`厳密な使用`。また、無効化されます。`間接` method-callの構文と`多次元` ハッシュキーシミュレーション。微妙なバグの2つの一般的なソースを排除します。
 
-- **名前付きサブルーチン署名** *(5.36以降は安定、5.20以降は実験的)*— 関数のパラメータは、オプションのデフォルトで名前で宣言されるようになりました。▲`//=` および`||=` default-value演算子はさらに5.38の署名に追加され、`無防備` または、それぞれ虚偽:
+- **名前付きサブルーチン署名** *(5.36以降は安定、5.20以降は実験的)*— 関数のパラメータは、オプションのデフォルトで名前で宣言されるようになりました。▲`//=` および`||=` default-value演算子はさらに5.38の署名に追加され、`無防備` またはそれぞれ虚偽:
 
 ```perl
   use v5.36;
@@ -89,20 +89,20 @@ Comprehensive Perl Archive Network(CPAN)は、想像できるすべてのドメ�
   }
   ```
 
-- **`isa` class-instance operator** *(stable since 5.36; introduced in 5.32)* — `$obj isa "ClassName"` returns a boolean; cleaner than `ref($obj) eq "ClassName"`.
+- **`等号` class-instance演算子** *(5.36以降安定、5.32で導入)*— `$obj isa "ClassName"` 次の値よりクリーンなブール値を返します`ref($obj) eq "ClassName"`.
 
-- **`builtin` module** *(stable since 5.40; experimental since 5.36)* — lexically importable functions built directly into the interpreter.  The stable 5.40 bundle includes, among others:
+- **`組込み` module** *(stable since 5.40; experiment since 5.36)*— 字句的に読み込み可能な関数がインタプリタに直接組み込まれています。安定した5.40バンドルには、とりわけ:
 
-- `ceil`, `floor` — integer rounding without `use POSIX`.
-  - `trim` — strip leading/trailing whitespace from a string.
-  - `indexed` — pairs each element with its index; the idiomatic companion to multi-value `for` loops (see below).
-  - `true`, `false`, `is_bool` — typed boolean sentinels; serialisers can now emit JSON `true`/`false` rather than `1`/`0`.
-  - `weaken`, `unweaken`, `is_weak` — reference-count control for building bidirectional data structures without memory leaks.
-  - `blessed`, `reftype`, `refaddr` — reference introspection.
+- `天井`, `フロア` — 整数丸めなし`POSIXを使用`.
+  - `トリム` — 文字列から先頭/末尾の空白を削除します。
+  - `インデックス付き` - 各要素をインデックスとペアにします。`対象` ループ(以下を参照)。
+  - `真偽`, `偽り`, `is_bool` — 型付きブールセンチネル; シリアライザがJSONを生成できるようになりました`真偽`/`偽り` というより`1`/`0`.
+  - `弱める`, `弱く`, `is_weak` — メモリーリークのない双方向データ構造体を構築するための参照カウント制御。
+  - `祝福`, `再入力`, `refaddr` - 参照イントロスペクション。
 
-- **Stable boolean tracking** *(5.36)* — scalars created as booleans (e.g., `!!1`) now retain their boolean nature through assignment, enabling reliable type-aware serialisation to JSON and MessagePack.
+- **安定したブール追跡** *(5.36)*— ブールとして作成されたスカラー(例: `!!1`)は、代入を通じてブール性を保持するようになり、JSONおよびMessagePackへの信頼できる型認識シリアライズが可能になります。
 
-- **Multi-value `for` loops** *(stable since 5.40; experimental since 5.36)* Iterate over pairs or N-tuples without manual index arithmetic:
+- **複数値`対象` loops** *(stable since 5.40; experiment since 5.36)*手動でインデックス演算を行わずにペアまたはNタプルを反復する:
 
 ```perl
   use v5.40;
@@ -111,7 +111,7 @@ Comprehensive Perl Archive Network(CPAN)は、想像できるすべてのドメ�
 for my ($i, $val) (indexed @scores)  { ... } # index and value
   ```
 
-Or grab multiple values at the same time
+または複数の値を同時に取得します。
 
 ```perl
   use v5.40;
@@ -119,13 +119,13 @@ Or grab multiple values at the same time
 for my ($val1, $val2, $val3) (@scores)  { ... }
   ```
 
-- **`defer` blocks** *(experimental since 5.36)* — a scope-exit guard that runs cleanup code unconditionally when a block exits, whether normally or via exception — a natural replacement for destructor-based scope-guard objects and an important pattern for resource management in data pipelines.
+- **`断る` blocks** *(experimental since 5.36)*— ブロックが通常または例外を問わず、無条件にクリーンアップ・コードを実行するスコープ終了ガード。デストラクタベースのスコープガード・オブジェクトの自然な置換であり、データ・パイプラインでのリソース管理のための重要なパターンです。
 
-#### Perl 5.38 — July 2023
+#### Perl 5.38—2023年7月
 
-- **`PERL_RAND_SEED` environment variable** *(5.38)* — setting this variable before a run makes every `rand` call (without an explicit `srand`) produce the same sequence, enabling **reproducible** stochastic algorithms — simulations, random sampling, Monte Carlo methods — without modifying source code.
+- **`PERL_RAND_SEED` 環境変数** *(5.38)*— 実行前にこの変数を設定すると、`ランドリー` コール(明示なし) `王座`)は同じシーケンスを生成し、ソース・コードを変更せずに**再現可能**確率アルゴリズム(シミュレーション、ランダム・サンプリング、モンテカルロ・メソッド)を有効にします。
 
-- **`class` / `field` / `method` syntax** *(experimental since 5.38)* — a purpose-built, lexically-scoped object system requiring neither `bless` nor `@ISA` nor any CPAN module.  Useful for defining typed value objects such as dataset rows, model parameters, or pipeline stages:
+- **`クラス` / `原野` / `メソッド` syntax** *(experimental since 5.38)*— どちらも必要ない、専用の字句スコープのオブジェクトシステム`祝福` なし`@ISA` CPANモジュールもありません。データセット行、モデル・パラメータ、パイプライン・ステージなどの型付き値オブジェクトの定義に役立ちます。:
 
 ```perl
   use feature 'class';
@@ -140,9 +140,9 @@ class Vector2D {
   say $v->magnitude;    # 5
   ```
 
-#### Perl 5.40 — June 2024
+#### Perl 5.40 - 2024年6月
 
-- **`try` / `catch` exception handling** *(stable since 5.40; experimental since 5.34; `finally` block added in 5.36)* — structured exception handling is now a core language feature; no CPAN module required:
+- **`試みる` / `捕まえる` 例外処理** *(5.40以降安定、5.34以降実験) `やっと` 5.36で追加されたブロック*— 構造化例外処理がコア言語機能になりました。CPANモジュールは必要ありません:
 
 ```perl
   use v5.40;
@@ -157,103 +157,103 @@ class Vector2D {
   }
   ```
 
-(`Try::Tiny` / `Feature::Compat::Try` are only needed when targeting perls older than 5.34.).
+(`試してみる:: 小` / `機能::Compat:: 試してみる` 5.34より古いperlsをターゲティングする場合にのみ必要です。).
 
-- **Multi-value `for` loops** *(stable since 5.40)* — see 5.36 entry above; they graduated from experimental to stable in this release.
+- **複数値`対象` loops** *(stable since 5.40)*— 上記の5.36エントリを参照; 彼らはこのリリースで実験から安定に卒業しました。
 
-- **`builtin::inf` and `builtin::nan`** *(experimental since 5.40)* — typed floating-point infinity and Not-a-Number constants, eliminating `9**9**9` or POSIX hacks in numerical code.
+- **`組み込み::inf` および`組み込み::nan`** *(5.40以降の実験値)*— 型付き浮動小数点無限大および非数値定数、消去`9**9**9` POSIXは数値コードでハッキングします。
 
-- **`^^` logical XOR operator** *(5.40)* — completes the medium-precedence logical operator set (`&&`, `||`, `^^`); handy for boolean mask operations.
+- **`^^` logical XOR operator** *(5.40)*— 中優先論理演算子セットを完了します(`&&`, `||`, `^^`); ブールマスク操作に便利です。
 
-- **`use v5.40` imports builtin functions** — beyond enabling the feature bundle, `use v5.40` also imports the corresponding `builtin` version bundle, making all stable `builtin::` functions available as short names without a separate `use builtin` statement.
+- **`使用v5.40` 組み込み関数をインポート**— 機能バンドルを有効にする以外に、`使用v5.40` 対応するものもインポートします。`組込み` バージョンバンドル、すべての安定した`組み込み::` 個別の名前のない短縮名として使用できる関数`ビルトインの使用` 文。
 
-#### Longstanding features (pre-5.36).
+#### 長年の機能(5.36以前).
 
-- **`say` and `state`** *(since 5.10)* — `say` is `print` with an implicit newline; `state` declares a lexical that persists across invocations of its enclosing sub (a lightweight memoisation primitive).
+- **`言う` および`国家`** *(5.10以降)*— `言う` 次である`印刷する` 暗黙の復帰改行`国家` 包含サブ(軽量メモリプリミティブ)の呼出し間で永続する字句を宣言します。
 
-- **First-class references and closures** — anonymous subs, closures, and reference construction are fundamental and have been stable since Perl 5.
+- **ファーストクラスの参照と閉鎖** - 匿名のサブ、閉鎖、参照構造は基本であり、Perl 5以来安定しています。
 
-- **`use constant`** or the CPAN `Readonly` module for named constants; `Readonly` enforces deep immutability that `use constant` does not.
+- **`使用定数`**またはCPAN `読み取り専用` 指定された定数のモジュール`読み取り専用` 深い不変性を、`使用定数` できません。
 
-Combined with [`perlbrew`](https://perlbrew.pl/) or [`plenv`](https://github.com/tokuhirom/plenv) for version management and [`carton`](https://metacpan.org/pod/Carton) for reproducible dependency snapshots, a modern Perl project looks and feels like a first-class software engineering effort.
+結合[`perlbrew`](https://perlbrew.pl/) または[`プレンフ`](https://github.com/tokuhirom/plenv) バージョン管理と[`カートン`](https://metacpan.org/pod/Carton) 再現可能な依存性スナップショットの場合、最新のPerlプロジェクトは、一流のソフトウェア・エンジニアリング作業のように見えて感じます。
 
-### Honest limitations
+### 正直な制限
 
-No case for Perl is complete without honesty about where it falls short:
+No case for Perl is complete without honest about where it falls short.(ペルのケースは、どこが短くなったかについて正直に言うと完全ではない):
 
-- **Visualisation** — Perl has no equivalent to `ggplot2` or `matplotlib`. Plots typically require an external call to R, gnuplot, or a web library. At times this weakness can become an actual strength, allowing one to use Perl5 as the application language that orchestrates and enhances the other actors.
+- **可視化**—Perlは同等ではありません`ggplot2` または`マット`。通常、プロットには、R、gnuplot、またはWebライブラリへの外部コールが必要です。この弱点が実際の強みになる場合があり、他のアクターを編成および拡張するアプリケーション言語としてPerl5を使用できます。
 
-- **Community momentum** — the data-science community has converged on Python and R. Finding ready-made tutorials, Stack Overflow answers, and co-authors is harder.
+- **コミュニティの勢い** - データサイエンスコミュニティがPythonとRに集約されました。既製のチュートリアル、スタックオーバーフローの回答、および共著者の検索はより困難です。
 
-- **Object orientation** — without Moose/Moo the OOP model is verbose; with them it adds a dependency. The new `class` feature may solve some of these problems
+- **オブジェクトの向き** - Moose/Mooを使用しない場合、OOPモデルは冗長で、依存関係が追加されます。新しい`クラス` 機能はこれらの問題を解決するかもしれません
 
-- **Type safety at scale** — the core language's dynamic scalars make large, collaborative numerical codebases harder to reason about (see next section).
+- **規模の安全性**— コア言語'sの動的スカラーは、大規模で協調的な数値コードベースを推論しにくくします(次のセクションを参照)。
 
 ---
 
-## 2. The Perl Data-Type System — Strengths and Cache-Era Limits <a id="the-perl-data-type-system"></a>
+## 2.Perlデータ型システム — 長所とキャッシュ時代の限界<a id="the-perl-data-type-system"></a>
 
-### Core Perl types
+### コアPerlタイプ
 
-Perl's fundamental data model centres on three constructs:
+Perl'3つの構成要素の基本的なデータ・モデル・センター:
 
-| Construct | Sigil | What it holds |
+「Construct」Sigil「What It Holds」|
 |-----------|-------|---------------|
-| **Scalar** | `$` | A single value: number, string, reference, or `undef` |
-| **Array** | `@` | An ordered list of scalars, indexed by integer |
-| **Hash** | `%` | An unordered collection of scalar values keyed by string |
+| **スカラー** `$` |単一の値: number、string、reference、または`無防備` |
+**アレイ** `@` |整数で索引付けされたスカラーの順序付きリスト|
+**ハッシュ** `%` |文字列をキーとするスカラー値の順序なしコレクション|
 
-Everything else — objects, closures, complex data structures — is built from these three primitives via *references* (`\@array`, `\%hash`, `sub { ... }`).
+他のすべてのもの(オブジェクト、クローズ、複雑なデータ構造)は、これらの3つのプリミティブから*references*を介して構築されます。`\@array`, `\%ハッシュ`, `下付き{ ... }`).
 
-This model is extraordinarily flexible.  A single array can hold integers, floating-point numbers, strings, and nested references simultaneously.  That flexibility is exactly what made Perl the dominant system-administration and web-scripting language for two decades.
+このモデルは非常に柔軟です。1つの配列で、整数、浮動小数点数、文字列およびネストされた参照を同時に保持できます。こうした柔軟性こそが、ペルが二十年にわたって支配的なシステム管理とウェブスクリプティング言語になったのである。
 
-### The cache-hierarchy problem
+### キャッシュ階層の問題
 
-Modern CPUs achieve peak throughput only when data flows through L1/L2/L3 cache<sup><a id="cache-ref" href="#fn-cache">†</a></sup> in large, contiguous blocks — a property called *spatial locality*.  Perl arrays do not provide this.  Under the hood, a Perl array is a C array of *pointers* to heap-allocated scalar (`SV`) structs.  Each scalar carries a reference count, a type tag, and padding — typically 24–56 bytes per scalar on a 64-bit build.  Iterating over a million-element Perl array therefore involves a million pointer dereferences scattered across the heap, producing a cache-miss pattern that completely negates the speed advantage of modern SIMD pipelines.
+最新のCPUは、データがL1/L2/L3キャッシュを流れる場合にのみ、ピーク・スループットを実現します。<sup><a id="cache-ref" href="#fn-cache">†</a></sup> 大規模で連続するブロック- *spatial locality*と呼ばれるプロパティPerl配列はこれを提供しません。フードの下では、Perl配列は、ヒープ割当てスカラーへの*ポインタ*のC配列です(`SV`)構造。各スカラーには、参照カウント、型タグ、およびパディング(通常は64ビット構築のスカラーあたり24 - 56バイト)が格納されます。したがって、100万要素以上のPerl配列を反復するには、ヒープ全体に散在する100万ポインタ間接参照が必要であり、最新のSIMDパイプラインの速度優位性を完全に否定するキャッシュミス・パターンが生成されます。
 
-A concrete consequence: a dot product of two 1 000-element vectors written in pure Perl is roughly **100–1000× slower** than the equivalent operation on a pair of PDL float ndarrays, which occupy two flat, 4 000-byte memory regions that fit comfortably in L1 cache.
+具体的な結果: 純粋なPerlで記述された2つの1 000要素ベクトルのドット積は、L1キャッシュに快適に収まる2つの平らな4 000バイトのメモリー領域を占めるPDL浮動ndarraysのペアに対する同等の操作より、およそ**100–1000×低速**です。
 
-### Contrast with R
+### Rとの対比
 
-R occupies a curious middle ground.  Like Perl, it is a dynamic, interpreted language — variables are untyped containers, functions are first-class values, and the interactive REPL is the primary development environment.  R even has direct analogues to Perl's three core types:
+Rは好奇心旺盛な中盤。Perlと同様に、動的で解釈された言語です。変数は型付けされていないコンテナで、関数はファーストクラスの値で、対話型REPLは主要な開発環境です。RはPerlに直接類似しています'3つのコア・タイプ:
 
-| Perl concept | R analogue |
+| Perlのコンセプト| Rアナログ|
 |---|---|
-| `$scalar` | length-1 atomic vector or scalar-in-list |
-| `@array` | `list()` |
-| `%hash` | named `list()` |
-| Reference (`\@arr`) | R does not use explicit references; copy-on-modify semantics instead |
+| `スカラー` | length-1原子ベクトルまたはスカラーインリスト|
+| `@array` | `リスト()` |
+| `%hash` 名前付き`リスト()` |
+|リファレンス(`\@arr`) | Rは明示的な参照を使用しません。代わりにcopy-on-modifyセマンティクスを使用します。|
 
-But R's *workhorse* type, i.e.  the **atomic vector** has no straightforward Perl counterpart. An R atomic vector is a contiguous, homogeneously typed block of memory — exactly the layout that a CPU cache rewards.  Every built-in scalar in R is actually a length-1 atomic vector; there is no "bare scalar" outside of atomic vectors.
+ただし、R's *workhorse*型、つまり**原子ベクトル**には、対応するPerlがありません。Rアトミック・ベクトルは、連続的で均質に型付けされたメモリー・ブロックであり、まさにCPUキャッシュが与えるレイアウトです。Rのすべての組込みスカラーは、実際にはlength-1原子ベクトルです。"ベアスカラー" 原子ベクトルの外
 
-This design choice means that R code naturally operates on vectors of millions of doubles with BLAS-level throughput, without the user writing a single loop or allocating a special "array" object.
+この設計の選択は、ユーザーが単一のループを記述したり特別なループを割り当てたりすることなく、RコードがBLASレベルのスループットで数百万倍ものベクトルに対して自然に動作することを意味します。"配列" オブジェクト。
 
-R's atomic types are:
+R'アトミック型は:
 
-| R atomic type | Storage | C equivalent |
+| Rアトミック型|ストレージ| C相当|
 |---|---|---|
-| `logical` | 4 bytes/element | `int` (with NA sentinel) |
-| `integer` | 4 bytes/element | `int32_t` |
-| `double` | 8 bytes/element | `double` |
-| `complex` | 16 bytes/element | `_Complex double` |
-| `character` | pointer to CHARSXP | `char *` (interned) |
-| `raw` | 1 byte/element | `uint8_t` |
+| `論理` | 4バイト/要素| `整数` (NAセンチネル) |
+| `整数` | 4バイト/要素| `int32_t` |
+| `二重` | 8バイト/要素| `二重` |
+| `錯体` | 16バイト/要素| `_コンプレックスダブル` |
+| `文字` | CHARSXPへのポインタ| `文字*` (インターネット) |
+| `生の` | 1バイト/要素| `uint8_t` |
 
-R also defines higher-level structures built on atomic vectors:
+Rでは、原子ベクトルに基づいて構築された上位レベルの構造も定義されます。:
 
-- **matrix** — a 2-D atomic vector with a `dim` attribute.
-- **array** — an N-D atomic vector with a `dim` attribute.
-- **data.frame** — a named list of equal-length atomic vectors; the lingua franca of
-  tabular data in R.
-- **factor** — an integer vector with a `levels` attribute; encodes categorical data.
+- **matrix**—a 2-D原子ベクトル`薄く` 属性。
+- **アレイ**—N-D原子ベクトル`薄く` 属性。
+- **data.frame**— 等長原子ベクトルの名前付きリスト。
+  Rの表形式データ。
+- **factor**— 整数ベクトル`レベル` 属性; 質的データをエンコードします。
 
-The lesson: R's computing performance when used in statistical and data science applications flows directly from its contiguous atomic vectors. Perl's equivalent path to performance is an extension (which also is a stand alone `matlab` like enviroment), the Perl Data Language [`PDL`](https://pdl.perl.org/).
+レッスン:R'統計およびデータ・サイエンス・アプリケーションで使用される場合のコンピューティング・パフォーマンスは、その連続した原子ベクトルから直接流れます。Perl'パフォーマンスへの同等のパスは拡張です(これはスタンドアロンでもある)。`マトラブ` 例えば、Perl Data Language [`PDL`](https://pdl.perl.org/).
 
 ---
 
-## 3. Enter PDL: Strongly Typed N-Dimensional Arrays <a id="enter-pdl"></a>
+## 3.PDLの入力: 強い型指定のN次元配列<a id="enter-pdl"></a>
 
-The **Perl Data Language** (PDL, `pdl.perl.org`) extends Perl with *ndarrays* (N-dimensional arrays): contiguous, strongly typed memory buffers that look and feel like first-class Perl objects.
+**Perl Data Language** (PDL) `pdl.perl.org`)は、Perlを*ndarrays* (N次元配列)で拡張します。これは、一流のPerlオブジェクトのようにルック・アンド・フィールとなる、強く型付けされた連続したメモリー・バッファです。
 
 ```perl
 use PDL;
@@ -270,7 +270,7 @@ my $scores = $db x $query->transpose;
 
 ### PDLプリミティブ型
 
-PDLは、C数値型の完全なパレットをファーストクラスのコンストラクタとして公開します。
+PDLは、C数値型の完全なパレットをファーストクラスのコンストラクタとして公開します。:
 
 | PDLタイプ|バイト| Cタイプ|コンストラクタ|
 |---|---|---|---|
@@ -299,28 +299,28 @@ PDLには、*bad values*という概念が組み込まれています。`PDL:: �
 
 次の表は、一般的に使用されるすべてのR型を最も近いPerlとPDLの対応型にマップし、3つの言語が互いに一致、異なる、または補完している箇所を強調しています。
 
-| R型| Perl相当| PDL相当|メモ|
+| R型| Perl相当| PDL相当|ノート|
 |---|---|---|---|
-| `二重` (長さ1) `$x = 3.14` (スカラー) `ダブル(3.14)` — シェイプ`()` Rにはベア・スカラーがありません。すべてがベクトルです。
+| `二重` (長さ1) `$x = 3.14` (スカラー) `ダブル(3.14)` — シェイプ`()` | Rにはベア・スカラーがありません。すべてがベクトルです|
 | `整数` (長さ1) `$n = 42` (スカラー) `ロング(42)` | |
-| `論理` (長さ1) `$flag = 1` / `$flag = 0` | `バイト(1)` | Perlはtruthinessを使用し、PDLは0/1バイトを使用します|
+| `論理` (長さ1) `$flag = 1` / `$flag = 0` | `バイト(1)` | Perlはtruthinessを使用します。PDLは0/1バイトを使用します|
 | `二重` ベクトル| `@arr = (1.1、2.2、3.3)` | `double(1.1、2.2、3.3)` PDL: 連続する`@arr`: ポインタ配列|
 | `整数` ベクトル| `@arr = (1、2、3)` | `long(1、2、3)` | |
 | `論理` ベクトル| `@flags = (1、0、1)` | `byte(1、0、1)` | |
-| `錯体` ベクトル|—(組み込みなし) | `cdouble(...)` Perlの必要性`数学:: 複雑`PDLはネイティブサポート
+| `錯体` ベクトル|—(組み込みなし) | `cdouble(...)` Perlの必要性`数学:: 複雑`PDLはネイティブサポート|
 | `文字` ベクトル| `@strs = ('A','b')` |—(数値ではない) | PDLは数値でのみ動作します|
 | `生の` ベクトル| `パック'C*', @bytes)` | `バイト(...)` | |
 | `NA` | `無防備` | ndarrayの不正な値| PDLの不正な値はRのように伝播します's `NA` |
-| `NULL` | `無防備` リストコンテキスト|—|
+| `NULL` | `無防備` リストコンテキスト|—| |
 | `リスト` | `@array` または参照`\@array` | — | |
 名前付き`リスト` | `%hash` または`\%ハッシュ` | — | |
 | `行列` (2-D) |配列`@aoa` | 2-D ndarray `pdl([[...],[...]])` | PDL: column-major; R: column-major |
 | `配列` (N-D) |ネストされた参照| N-D ndarray `$x->サイズ変更(...)` | |
-| `data.frame` | `%hash` の`@arrays` | 2-D ndarray (numeric cols) + Perl hash (mixed) |シングルPDL型マップなし|
-| `係数` |ハッシュルックアップテーブル+ `@indices` | `長い` ndarray + Perl `@levels` アレイ|
-| `環境` | `%hash` パッケージの名前空間| | |
+| `data.frame` | `%hash` の`@arrays` | 2-D ndarray (numeric cols) + Perl hash (mixed) |単一のPDL型マップは正確にはありません|
+| `係数` |ハッシュルックアップテーブル+ `@indices` | `長い` ndarray + Perl `@levels` 配列| |
+| `環境` | `%hash` パッケージ名前空間|—| |
 | `集まり` 閉鎖| `下付き{ ... }` /クローズ|—| PDL PPはコンパイルされたカーネルを定義します|
-| `S3/S4オブジェクト` | blessed reference + method dispatch | PDL object (blessed ndarray) | PDL object are first-class Perl objects(PDLオブジェクト) |
+| `S3/S4オブジェクト` | blessed reference + method dispatch | PDL object (blessed ndarray) | PDL object is first class Perl objects(PDLオブジェクト) |
 
 ### 主なポイント
 
@@ -355,7 +355,7 @@ PDLには、*bad values*という概念が組み込まれています。`PDL:: �
 
 *ファイル: `simulate_vectorDB.pl`*
 
-データベースを検索する前に、データベースが必要です。この記事では、次の内容を示します。
+データベースを検索する前に、データベースが必要です。この記事は:
 
 - 再現可能なランダムフロートベクトルの生成`PDL:: ランダム`.
 - 使用`GetOpt:: 長い` 人間工学的なCLIオプション解析用。
@@ -365,7 +365,7 @@ PDLには、*bad values*という概念が組み込まれています。`PDL:: �
 
 *ファイル: `timing_DB.pm`*
 
-パフォーマンス要求には測定が必要です。この記事では、次のことを紹介します。
+パフォーマンス要求には測定が必要です。この記事では、:
 
 - 再利用可能なパールベンチマーキングハーネス`時間::HiRes`.
 - Perl/PDLとR実装間の公正な壁時計比較の方法論。
@@ -385,7 +385,7 @@ K-meansクラスタリングは、近似近傍検索に対する逆ファイル�
 
 *ファイル: `compare_kmeans_centroids.pl`*
 
-完全なk-meansでは、反復ごとにメモリー内のすべてのデータが必要です。ミニバッチk-meansは、メモリと計算を大幅に削減するために、少量の重心精度を取引します。この記事では、次の点を調査します。
+完全なk-meansでは、反復ごとにメモリー内のすべてのデータが必要です。ミニバッチk-meansは、メモリと計算を大幅に削減するために、少量の重心精度を取引します。この投稿は調査します:
 
 - PDLで真の再サンプリングされたミニバッチループを実装する。
 - フルバッチバリアントとミニバッチバリアントの間の重心ドリフト。
@@ -406,7 +406,7 @@ K-meansクラスタリングは、近似近傍検索に対する逆ファイル�
 
 *ファイル: `compare_kmeans_centroids.R`, `compare_kmeans_centroids_pure.R`, `plot_centroid_coordinates.R`*
 
-基礎シリーズの最後の投稿では、PerlとRの間のループが閉じます。
+基礎シリーズの最後の投稿は、PerlとRの間のループを閉じます:
 
 - PDLの結果をCSVにエクスポートし、独立した検証のためにRで読み取ります。
 - ggplot2を使用して、両方の言語の重心座標を同時に視覚化します。
