@@ -1,0 +1,55 @@
+---
+archived: ~
+categories: Ferramentas
+dependencies: '*.md.pt-BR'
+keywords: ~
+published: ~
+status: arquivado
+title: Diversão com htop
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/iEUZJ44mldI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+## {# lede #}Recursos avançados do htop em plataformas populares do Unix{# lede #}
+
+- Deltas de `topo`
+
+- comportamentos interativos sofisticados
+	- esquemas de cores temáticos, **semânticos**
+	- opera no nível de thread POSIX, não apenas em processos completos
+
+- Recursos
+
+- personalizar exibição `C`
+	- pesquisa `/` ou filtrar `\` processos leves (LWP, aka pthreads) por nome
+	- filtrar LWP por nome de usuário `você`
+	- alternar `t` exibição em árvore
+	- comandos por LWP
+		- `s` rastreamento do sistema
+		- `l` lista de descritores de arquivo abertos
+		- `e` variáveis de ambiente
+		- `k` enviar um sinal com kill
+
+### O nas
+
+Conjunto de recursos totalmente operacional OOTB.
+
+### Porta OSX
+
+- Ativar DTrace (requer [inicializar no Modo de Recuperação para desativar SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
+- copiar [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) para `~/compartimento` e executar para criar `coçar` linksimples
+- lançamento `topo` como raiz
+
+### [Solaris 11](https://github.com/joesuf4/htop/tree/solaris-stable) / Portas FreeBSD
+
+- Estatísticas ARC do ZFS
+- Colunas de Nome/ID da Zona
+- Solaris LWP - Deltas Contábeis
+	- PID bi-nível + LWPID
+	- não fornece argumentos de comando completos, apenas o nome do comando
+
+<!-- $Date: 2023-01-19 17:58:40 -0500 (Thu, 19 Jan 2023) $ $Author: joe $ -->

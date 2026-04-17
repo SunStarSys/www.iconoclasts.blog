@@ -1,0 +1,37 @@
+---
+archived: ~
+categories: TI, Segurança, Desempenho, Confiabilidade
+dependencies: '*.md.pt-BR'
+keywords: infosec, appsec, desempenho, escalabilidade, HA, confiabilidade
+published: ~
+status: verificado=24957
+title: Segurança de Informações, Desempenho de Aplicativos e Confiabilidade
+---
+
+<div class="right">
+
+![NonFunctional Testes](spr.page/nft).
+
+</div>
+
+{# lede #}"Não funcional" a engenharia de software gira em torno de três questões principais: segurança, desempenho e confiabilidade (**SPR**){# lede #}; que "funcional" a engenharia de software envolve o ciclo de vida normal de desenvolvimento de software baseado em recursos. Uma adequada [LISTA 800-160v1r1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1r1.pdf) O SSDLC baseado equilibra aspectos funcionais e não funcionais do ciclo de vida do software em um todo coerente, para o CTO em baixo.
+
+Algumas empresas obtiveram um valor incrível ao dividir o desenvolvimento funcional de software não funcional em duas hierarquias independentes na parte de engenharia do organograma. Você pode encontrar arquitetos do **SPR** como eu para liderar essa equipe do **SPR**, com uma combinação flexível de funções subordinadas em evolução:
+
+1. **Engenharia Crítica de Sistemas** (focada na criação e monitoramento de métricas de observabilidade, ferramentas de rastreamento dinâmico e construção de runtime compatível e análise de perfil de espectro completo para o desenvolvimento de soluções de desempenho/segurança de alto impacto),
+
+2. **Engenharia de Triagem** (focada no processamento de despejos de rastreamento de pilha em desenvolvimento e produção e na obtenção dos problemas técnicos subjacentes reportados à equipe de desenvolvimento certa para resolução),
+
+3. **Engenharia de QA** (focada na criação de software de teste específico para SPR e relatórios associados),
+
+4. **Engenharia de Qualidade de Dados** (focada no fornecimento de infraestrutura automatizada de relatórios/processamento/visualização para a atividade de Triagem e QA).
+
+Construir uma equipe **SPR** dedicada envolve alguns desafios organizacionais. No nível de gerenciamento, deve haver aceitação de que os especialistas em desempenho/segurança do **SPR** tenham algumas expectativas razoáveis de que suas recomendações e patches de software enviados testados com sucesso serão incorporados em tempo hábil à base de código de produção. Para gerar as relações de trabalho efetivas necessárias entre as equipes de engenharia funcional e não funcional, os engenheiros de desempenho devem ser parcialmente incorporados às equipes de desenvolvimento de produtos funcionais como pares, com privilégios de revisão/compromisso baseados em pares nas bases de código.
+
+Com uma equipe **SPR** dedicada, o gerenciamento pode liberar os engenheiros de produtos (fazendo desenvolvimento funcional) de terem que criar/gerenciar/testar modelos de seus ambientes de produção adequados para o desempenho/escalonamento/segurança/durabilidade/confiabilidade. Muitas equipes simplesmente não'têm os ciclos para gastar com isso, apesar da importância de dimensionar corretamente seus ativos de nuvem e tempos de execução de software dependentes para acomodar um crescimento rápido.
+
+Há também uma especialização considerável no trabalho em termos de ferramentas de observabilidade e técnicas de rastreamento baseadas em kernel, que os bons engenheiros de sistema passam a manter no topo de seu campo. É difícil contratar essas habilidades auxiliares ao buscar talentos de qualidade para engenheiros tradicionais de produtos ágeis / pilha completa e / ou cientistas de dados.
+
+Software robusto, seguro, escalável, econômico e de bom desempenho está ao alcance de qualquer equipe de engenharia de pequeno/médio porte com os investimentos certos em **SPR**. [Alcance](/contact) Se você está interessado em aprender como!
+
+<!-- $Date: 2024-06-06 14:06:29 -0700 (Thu, 06 Jun 2024) $ $Author: joe $ $Revision: 25081 $ -->

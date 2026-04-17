@@ -1,0 +1,510 @@
+---
+archived: ~
+categories: 數學、動力學
+dependencies: '*.md.zh-TW'
+keywords: 動力學，力學，量子，古典，熱核心，殺死場，feynman kac，cameron martin
+published: ~
+status: 訊息
+title: 動力學、古典與量子
+---
+
+<div class="right">
+
+![QM](dynamics.page/dynamics).
+
+</div>
+
+{# lede #}差動測距儀'取向{# lede #}
+
+Prerequisites:
+
+1. 熟悉斯托克斯' 差動式外側張量代數理論$$n$$立體歧管$$M$$.
+
+2. 暴露於基本里曼尼亞幾何，當地座標間諜活動，包括愛因斯坦 /PAIN 表示法。
+
+3. 對包括布朗運動和馬丁堡理論的平滑和隨機動力系統感興趣。
+
+[TOC]
+
+## 傳統動力學
+
+### 漢密爾頓 - 賈科比 / 拉格朗日正式主義
+
+### 矩形束機制
+
+定義順暢的 **Hamiltonian** $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ 作為$$\mathcal H(p,q,t)$$.
+
+#### 開始$$\theta := p\ dq - \mathcal H(p,q,t)\ dt\in T^\*(T^\*M\oplus\Reals)$$.
+
+定義$$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ 平滑$$\gamma:[0,t]\rightarrow T^{\*}M\oplus\Reals$$.
+
+如果兩條此類曲線$$\gamma_1, \gamma_2$$ 具有完全相同的邊界端點，請依反向組合定義 **減法 **，因此$$\gamma_1 - \gamma_2$$ 是周遊所定義的封閉迴圈$$\gamma_1$$ 在正向方向，以及$$\gamma_2$$ 反轉。開始$$S$$ 是受此封閉迴路約束的任何二維曲面：$$\gamma_1 - \gamma_2 = \partial S$$。所以
+
+```math
+\begin{aligned}
+\mathcal S_\mathcal H(\gamma_1) - \mathcal S_\mathcal H(\gamma_2) &= \int_{\gamma_1 - \gamma_2}\theta \\
+&= \int_{\partial S}\theta\\
+&= \int_S d\theta
+\end{aligned}
+```
+由 Stokes' 定理
+
+無論此曲面是否為何$$S$$ 實際存在，針對動作$$\mathcal S_\mathcal H$$ 僅視以下項目的端點而定：$$\gamma$$，我們一定要有第一個訂單條件，$$d\theta$$ 消失於$$\gamma$$.
+
+#### 開始$$\omega_\mathcal H := d\theta = dp\wedge dq - d\mathcal H \wedge dt\in\bigwedge^2T^\*(T^\*M\oplus\Reals)$$.
+
+```math
+\begin{aligned}
+\omega_\mathcal H|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial \mathcal H}{\partial p}dp\wedge dt - \frac{\partial \mathcal H}{\partial q}dq\wedge dt \\
+        &= (-\dot{p}_i - \frac{\partial \mathcal H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial \mathcal H}{\partial p_i}) dp_i\wedge dt
+\end{aligned}
+```
+
+#### $$\therefore \omega_\mathcal H|_\gamma = 0 \iff \gamma(t)$$ 滿足 Hamilton-Jacobi 方程式
+```math
+\begin{aligned}
+\dot p &= -\frac{\partial \mathcal H}{\partial q} \\
+\dot q &= \ \ \ \frac{\partial \mathcal H}{\partial p}
+\end{aligned}
+```
+
+$$\iff \gamma:[0,t]\rightarrow T^*M\oplus\R  $$ 是「動作」的 *固定曲線* $$\mathcal S_\mathcal H(\gamma)=\int_\gamma \theta$$.
+
+#### Legendre 轉換
+時間$$\mathcal H$$ 凸入$$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  滿意$$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$。這定義 (絕對) 圖例轉換$$\mathcal L$$ 總共$$\mathcal H$$:
+```math
+\begin{aligned}
+\mathcal{L}(\dot q,q,t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) \\&= p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
+\mathcal S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
+\end{aligned}
+```
+是 Action* 的 *Lagrangian 表示法，其中$$\pi: T^*M\oplus\Reals \rightarrow M\oplus\Reals$$ 是 (忘記) 光纖投影運算子$$(p,q,t)\mapsto (q,t)$$.
+
+#### 最少動作的原則
+
+「最少行動原則」只聲稱「自然的傳統動力學」傾向於選擇最小化的軌跡$$\mathcal S_\mathcal{L}$$.
+
+一般而言，此宣告為 **false**。但設定固定曲線的$$\mathcal S_\mathcal H$$ 一律有興趣尋找，而且它們與離開的曲線相同$$\mathcal S_\mathcal{L}$$ 固定。本地 **這些固定軌跡的差分方程式相同 **，依此類推$$\mathcal S_\mathcal H = \mathcal S_\mathcal{L}$$ 在那些曲線上。在拉格朗吉安配方中，這些可變方程式稱為 **歐拉格朗吉方程式** $$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
+
+```math
+\frac{\partial \mathcal L}{\partial q} = \frac{d}{dt}\frac{\partial \mathcal L}{\partial \dot q}
+```
+
+這是 ODE 的第二階$$t \mapsto q(t)$$，所以有$$2\dim M+1$$ 初始條件$$(\dot q_0, q_0, t_0)$$，如同對稱的漢密爾頓 - 賈科比方程式。透過 Picard-Lindelöf Theorem，這些方程式在被框架為初始價值問題時具有當地獨特的解決方案。
+
+然而，有趣的層面$$\mathcal S_\mathcal L(\pi\circ\gamma)$$ 當我們可以唯一定義時顯示自己$$\pi\circ\gamma$$ 根據端點隱含$$(q_0, t_0)$$ 與$$(q_f, t_f)$$，因此我們需要將此邊界值問題轉換成初始值問題 *。換句話說，我們必須解決一個$$\dot q_0$$ 將達到目標$$(q_f, t_f)$$ (唯一？) 固定曲線$$\pi\circ\gamma$$ 可解決尤拉 - 拉格朗日方程式。以這種方式，我們可以考慮$$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ 作為 **轉換函數 **，假設它不依賴選擇固定函數$$\pi\circ\gamma$$，和這樣的$$\gamma$$ 實際上存在於連接轉換點配對的平滑曲線解決方案空間中。在本地端，這是隱含函數定理的應用，但全域上可能會有拓樸障礙物來建構任何此類物件$$\gamma$$.
+
+開始'往回一步並定義更簡單的內容：唯一的"水平" 升降$$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q}^{\*}M\oplus \Reals$$ 依指定
+
+```math
+(\dot q, q,t)\mapsto (p_{max}(\dot q), q, t)\ .
+```
+現在我們有 **任何** "預計" 平滑曲線 (不只是固定曲線) $$\tilde\gamma:[0,t]\rightarrow M\oplus\R$$:
+
+```math
+\begin{aligned}
+
+\mathcal S_\mathcal{L}(\tilde\gamma) &= \mathcal S_\mathcal H(\mathcal A\circ \tilde\gamma) \ .
+\end{aligned}
+```
+
+Note: 凸性限制於$$\mathcal H$$ 確保有獨特的$$p_{max}(0)$$ 在任何此類固定曲線 wiith 上$$\dot q = 0$$。這是固定曲線的淨值 。$$\gamma$$ *不具有* 光纖內所含的持續移動 *$$\pi^{-1}$$，所以沒有失去一般性，我們只考慮非固定性$$\tilde \gamma$$ 將它們提升為$$\mathcal A$$ 做為適合的曲線類別到"整合" 稍後再開啟。
+
+#### 二次形式魔術，第 1 部分
+
+時間$$\mathcal H(p,q,t)$$'秒鐘$$p$$-dependence (又稱 Kinetic Energy 組件) 是非生成的對稱二次形式，我們可能將其表示為虛擬 - 里曼尼亞度量$$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$ 反相$$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$。本端座標中的「圖例轉換」與其相關，如下所示：
+
+```math
+\begin{aligned}
+\mathcal H^\mathcal V(p,q,t) &= \frac{1}{2}\ g^{ij}(q,t)\ p_ip_j + \mathcal V(q,t) \implies\\
+\mathcal{L}^\mathcal V(q,\dot q, t) &= \frac{1}{2}\ g_{ij}(q,t)\dot{q}^i\dot{q}^j - \mathcal V(q,t)\ .
+\end{aligned}
+```
+
+Levi-Civita 連線 Name's Christoffel 符號 - $$g$$ 由 Koszul 公式定義
+
+```math
+\begin{aligned}
+\Gamma^k_{ij} &= \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})\\
+\Gamma_k^{ij} &= \frac{1}{2}g_{ka}(\partial^ig^{ja} + \partial^j g^{ia} - \partial^ag^{ij}).
+
+\end{aligned}
+```
+取代為$$\partial_i := \frac{\partial}{\partial q^i}$$ 與$$\partial^i := g^{ij}\partial_j$$。相關聯協變量金融衍生工具$$\nabla$$ 本地座標為
+```math
+\begin{aligned}
+\nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or}\\
+\nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k \text{ , and contravariantly}\\
+\nabla_{\partial^i}\partial^j &= \Gamma^{ij}_k\partial^k \text{, so} \\
+\nabla &= d + \Gamma
+\end{aligned}
+```
+
+所有張數欄位。特別$$\Gamma$$ 對稱輸入$$(i, j)$$；和$$\nabla [g_{ij}] = \nabla [g^{ij}] = 0$$.
+
+無論如何，Riemann-Christoffel Curvature Tensor 都是
+
+```math
+\mathcal R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
+```
+
+##### 拉格朗日乘數$$\mathcal H$$ 作為無限翻譯$$\mathcal L$$
+
+此外，如果$$\mathcal H = \mathcal H\_B$$ 有額外的速度欄位元件$$\mathcal B(q,t)\in T_qM$$，即線性函數開啟$$p\in T^{\*}_qM$$，我們可以 **完成方形** 並重新計算$$\mathcal{L}_B$$ 就下列項目而言$$\mathcal L$$:
+
+```math
+\begin{aligned}
+\mathcal H_\mathcal B(p,q,t) &= \mathcal H + \mathcal Bp \implies\\
+\mathcal L_\mathcal B(\dot q,q,t) &=\max_p p(\dot q - \mathcal B) - \mathcal H\\
+&\ \begin{equation}
+\tag{A}= \mathcal{L}(q,\dot{q}-\mathcal B, t)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\end{equation}\\
+\mathcal H_\mathcal B &= \frac{1}{2}\ g^{ij}p_ip_j + p\mathcal B + \mathcal V \implies\\
+\mathcal L_\mathcal B &\ \begin{equation}\tag{B}= \mathcal L - g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j\ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+在這裡，我們看到 Lagrange 乘數間的連線$$\mathcal B$$ 開啟$$\mathcal H$$ 與其對等表示式為無限漂移開啟$$\mathcal L$$。我們將情境化$$\mathcal B$$ 在其餘的各種實用方法中。** 兩個表示式$$(A)$$ 與$$(B)$$ 針對$$\mathcal{L}_\mathcal B$$ 在方程式中<span class="eqno"></span> 重要 **。
+
+##### 水平提升$$\mathcal A$$
+
+開始日期$$\frac{\partial \mathcal H}{\partial p_i}(p,q,t) = g^{ij}p_j \implies \frac{\partial^2\mathcal H}{\partial p_i \partial p_j} = g^{ij}$$，我們可以明確地計算水平升降機
+
+```math
+\begin{aligned}
+{p_{max}}_i &= g_{ij}\dot q^j = \frac{\partial \mathcal L}{\partial \dot q_i}\implies \\
+\mathcal A(\dot q, q, t) &= ([g] \dot q, q, t)\ .
+\end{aligned}
+```
+
+時間$$g^{ij}$$ 是正確定的，所以是其反的，意味著以下的動能成分：$$\mathcal S_\mathcal L(\tilde\gamma) = \mathcal S_\mathcal H(\mathcal A\circ\tilde\gamma)$$ 本地 **最小化** 涉及真實里曼尼亞指標的固定曲線。
+
+依方程式 (12) $$(A), (B)$$，Euler-Lagrange 方程式$$\mathcal L^\mathcal V_\mathcal B$$ 成為：
+
+```math
+\begin{aligned}
+
+\frac{1}{2}\partial_i g_{jk}(\dot q^j-\mathcal B^j)(\dot q^k -\mathcal B^k)-\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)(\dot q^j - \mathcal B^j) = {\dot p^\mathcal B_{max}}_i\ ,\\
+
+- \partial^i \mathcal V &= \frac{1}{2} (\partial^i   g_{jk})(\dot q^j-\mathcal B^j) (\dot q^k-\mathcal B^k) - g_{jk}(\partial^i\mathcal B^j)(\dot q^k - \mathcal B^k) + \frac{d}{dt} (\dot q^i - B^i) + g^{ij}\frac{\partial g_{jk}}{\partial t}(\dot q^k -\mathcal B^k)\\
+
+-\nabla\mathcal V(q,t)&\begin{equation}\tag{C}=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B +(\partial_t [\log g])(\dot q-\mathcal B) \ .\ \ \ \ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+這些正好是 **牛頓's 動法** $$F/m = a$$ 取代為$$\partial_t := \frac{\partial}{\partial t}$$ 受限於潛在能量$$\mathcal V$$ 與速度場$$\mathcal B$$，在依時間設定中。
+
+### 症狀幾何
+
+交感性歧管$$N$$ 是相切組合的縮減$$T^\*(M\oplus \Reals)$$，具有已關閉且非產生的 2 表單$$\omega \in \bigwedge^2T^\*N$$. $$N$$此類異形物保留$$\omega$$.
+
+需要$$d\omega = 0$$ 是潛在的本機整合性條件$$\theta$$ 滿意$$d\theta = \omega$$，但是可能有拓樸限制在$$\omega$$'s 全球可整合性。
+
+我們關心的動態是行動$$\mathcal S(\gamma) = \int_\gamma \theta$$，所以我們專注於本文中的無形組合。此處適用$$\theta$$ 就函數而言是相當重要的分類$$\mathcal H$$ 開啟$$N$$。當然，一隻威克龍$$\theta$$ 通用封面$$N$$ 有時可能會因其 *phase* 的整合性條件而感到不適 (亦即，認為$$\theta$$ 如在複雜行組合中具有值，$$N$$，並專注於其虛構部分，以提供一致的價值$$e^\mathcal S$$ 下降至$$N$$.
+
+#### 自然的徵狀體積形式$$\omega^n/n!$$
+
+#### 帕森支架及小隊
+
+## 量子動力學
+
+如果 Classical Dynamics 是關於尋找符合「最少動作原則」的曲線，Quantum Dynamics 是關於「動作」的指數，因為我們整合了整個類別 (通常) 非固定曲線的價值，並具有適當的限制概念"無限尺寸黎巴嫩測量" $$\mathcal D_{dt}\tilde \gamma$$,
+
+在現實中，只有高斯"耦合"
+
+```math
+\int_{\set{\tilde \gamma}} e^{-\mathcal S_{\mathcal L_\mathcal B^{\mathcal V}}(\gamma)}\mathcal D_{dt}\tilde \gamma
+```
+
+需要解釋為 *a (複雜值) 測量$$\set{\tilde \gamma}$$* 但作為一系列日益複雜的例子，這種建築將是我們未來的重點。無論哪個設定開始，都會清楚明白其實際值$$\mathcal S$$ 將在這些曲線上$$\infty$$，以 *取消$$\infty$$* 的"分時標準化程式" 固有於$$dt$$ 元素$$\mathcal D_{dt}\tilde \gamma$$。建構影響近似值收斂的近似值時，涉及多種選擇，但我們將聚焦於真正可計算案例的幾何不變之處，以消除它們。
+
+### 動作的價值
+
+不要在上面放置太細的點，但是「古典力學」將「動作」定義為結束的方法。絕不關心自己對其實際價值 **平均** 的理解。我們只用它來建構必備的微分方程式，以便我們可以考慮$$\mathcal S$$ 作為其端點透過 *stationary curves* 之間的轉換函數。固定要求使我們能夠解釋$$\mathcal S$$ 作為路徑不變的表示式，但我們從不關心其實際值。這就是為什麼$$\theta \mapsto \theta + df $$ 對某些$$f \in C^\infty(T^\*M)$$ 被認為是量表不變的轉換：運動的古典方程式維持不變$$f$$.
+
+我們做在量子動力！
+
+### 自然 (共變量) 路徑整數量化
+
+完成「黎貝斯格計量」的方形和轉換不變量 (以下列光纖為單位) $$T^\*M$$)，回想一下：
+
+```math
+\hbar^n\int_{\Reals^n} e^{ p_i\dot q^i\Delta t - \frac{1}{2}\hbar^2 g^{ij}p_ip_j\Delta t}dp_1\dots dp_n = \hbar^n\int_{\Reals^n} e^{-\frac{1}{2}\hbar^2 g^{ij}(p_i - g_{ik}\dot q^k/\hbar)(p_j - g_{jk}\dot q^k/\hbar)\Delta t} dp_1\dots dp_n \cdot e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t} =
+\frac{e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t}}{\sqrt{(2\pi\Delta t)^n \det g^{ij}}}
+```
+因此 **Feynman Path Integral** 表示式在二次動能案例中具有道德等效 (但正式為無限)：
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H^\mathcal V_\mathcal B} (\gamma)} \mathcal D_{dt}\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H^\mathcal V_\mathcal B(p,q,t))\Delta t}\omega_0^n/n!\\
+&= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{\mathcal L^{\mathcal V}_\mathcal B(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
+&\approx \int_{\set{\tilde \gamma}} e^{\mathcal S_{\mathcal L^{\mathcal V}_\mathcal B}(\tilde \gamma)} \mathcal D_{dt}\tilde \gamma \ .
+ \end{aligned}
+```
+
+因此，透過 **快速旋轉，並以 Planck 常數重新調整向量** $$\hbar = h/2\pi$$，傳送$$dt\mapsto \hbar/i\ dt, \ p\mapsto \hbar p, \ \dot q\mapsto \dot q/\hbar,\  \mathcal B\mapsto \mathcal B/\hbar$$:
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}}e^{\hbar/i\ \mathcal S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}\mathcal D_{\hbar/i\ dt}\gamma &\approx \int_{\set{\tilde\gamma}} e^{\hbar/i \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\\
+&= \int_{\set{\tilde \gamma}}e^{-\frac{i}{\hbar}\mathcal S_{\mathcal L^{\hbar^2 \mathcal V}_{\mathcal B}(\dot q, q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\ .
+
+\end{aligned}
+```
+
+因此，當我們想要接近「方程式」的右手邊時<span class="eqno"></span> 使用固定相位的方法 (亦即半古典極限) $$\hbar\downarrow 0$$)，我們需要記得解決尤拉 - 拉格朗格方程式 (14) $$(C)$$ 取代為$$\mathcal V \mapsto \hbar^2 \mathcal V\approx 0$$.
+
+### Schrödinger Quantization
+
+```math
+\begin{aligned}
+\mathcal H(p,q) &\ = \mathcal T(p,q) + \mathcal V(q)\ \text {, where } \mathcal T = \frac{1}{2}g^{ij}(q)p_ip_j \implies \\
+
+e^{-it/\hbar \hat{\mathcal H}}\ket{\psi} &:= e^{-it/\hbar(-\frac{\hbar^2}{2} \Delta_M + \mathcal V)} \ket{\psi} \implies \\
+
+i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mathcal V\ket{\psi}
+
+\end{aligned}
+```
+($$\Delta_M$$ 是 Laplace-Beltrami 操作員$$g$$) 作為線性差動運算子。此點是解決方案 **分析 **：$$t$$ 上半平面、$$dt\mapsto i/\hbar\ dt,\ p\mapsto p/\hbar $$ 它是威克無旋轉擴散方程式：
+
+```math
+\frac{d}{dt}e^{-t\hat{\mathcal H}}\ket{\psi} = (\frac{1}{2}\Delta_M - \mathcal V) e^{-t\hat{\mathcal H}}\ket{\psi} \ .
+
+```
+
+這是一個能夠以樣本路徑為基礎的隨機分析的形式，讓我們能夠以有意義的方式將 Feynman Path-Integrals 與解決方案的分析延續對齊其整個右半平面。本質上，我們將有明確的定義"測量理論" 從右半平面到一組有界線運算子的分析圖$$\mathscr H = L^2(M,g)$$，以及史洛丁格方程式's Unitary Evolution 運算子是虛線的邊界值$$it\hbar\ ,t\in\Reals$$。雖然它有助於瞭解 von-Neumann's Spectral 定理用於和諧分解封閉、無邊界的自合運算子 (如$$\Delta_M$$) 於$$\mathscr H$$，它'本文的其餘部分不需要。
+
+換句話說，一旦我們釐清其建議路徑積分運算式的明確定義所涉及的子特徵，就足以研究方程式 (17) 的動態。
+
+我們不用把 Itô/Stratonovich/Malliavin SDE semimartingale 計算機重新塑造為一體，而是將繼續執行一系列簡單 (均一公尺) 的範例，並將我們帶入一般理論。
+
+在一天結束時，我們將希望 Feynman Path-Integral Quantization 符合 Schrödinger Quantization，或至少瞭解 **偏差 **。特別是，我們需要半眼鏡近似值來產生施萊丁格 PDE $$o(t)$$ 作為$$t\downarrow 0$$.
+
+當它結束時，仍有爭議$$\mathcal V$$ 度量為非均一的詞彙。我們會在下方完整探討此事項，因為它與已知 (類似 Selberg) 的非均一評量標準總和公式相關。
+
+### Feynman-Kac 公式
+
+使用$$V \in C^\infty(M)$$，由 Baker-Campbell-Hausdorff 方程式：
+```math
+e^{-it/\hbar -\Delta^\hbar_M/2} e^{-it/\hbar V} = e^{-it/\hbar(-\Delta^\hbar_M /2 + V - it/4\hbar [\Delta^\hbar_M,V] + O(t^2))}
+```
+
+Feynman-Kac 公式來自於歐幾里德空間布朗尼運動的路徑整體配方。這是我們可以專注於這一點的快照$$\mathcal V = 0$$ 如有，我們將繼續。
+
+#### 平行傳輸幾何$$\hat\Gamma$$
+
+將任何向量移入$$v \in T_qM$$。平行傳輸$$\hat\Gamma_t(\gamma)v \in T_{\gamma(t)}M$$ 是您透過解決線性一階 ODE 所得到的向量 ：
+
+```math
+\begin{aligned}
+v(0) &= v \\
+\nabla_{\dot \gamma(t)}\dot v &= 0
+\end{aligned}
+```
+
+特別$$\nabla_{\dot \gamma}\hat\Gamma_t(\gamma) = 0$$，和曲率張量$$\mathcal R(X,Y) = [\nabla_X,\nabla_Y] - \nabla_{[X,Y]}$$ 測量第一個順序的相依性$$\hat \Gamma$$ 在曲線選擇上$$\gamma$$ 連接端點。$$\mathcal R = 0 \iff \hat\Gamma_t$$ 不相依於$$\gamma$$.
+
+換句話說，如果我們嘗試將平行傳輸分解為非動物性移動$$\mathcal B^\perp$$ 後面跟著無限的移動$$\mathcal B$$，方程式會變成：
+```math
+\begin{aligned}
+\hat\Gamma(\gamma) &= \hat\Gamma(\gamma|_\mathcal B)\hat\Gamma(\gamma|_{\mathcal B^\perp}) - \frac{1}{2}\mathcal R(\dot{\gamma}|_\mathcal B, \dot{\gamma}|_{\mathcal B^\perp})dt + O(dt^2) \ \\
+\nabla_{\dot \gamma}\hat\Gamma(\gamma) &= \nabla_{\dot \gamma|_\mathcal B}\hat\Gamma(\gamma|_{\mathcal B^\perp}) + \nabla_{\dot \gamma|{\mathcal B^\perp}}\hat\Gamma(\gamma|_{\mathcal B})  - \frac{1}{2}\mathcal R(\dot\gamma|_\mathcal B,\dot{\gamma}|_{\mathcal B^\perp}) = 0
+\end{aligned}
+```
+
+#### 半玻璃機械
+
+##### Semiclassical Asymptotics 是扁平化手柄上的完美解決方案
+
+方程式的右手邊 (16) 是用於固定係數的「熱核心」精確配方 (在$$q$$ 度量$$g_{ij}$$。每個平坦歧管'宇宙覆蓋層對歐幾里德空間有幾何，其中$$g_{ij} = \delta_{i-j}$$.
+
+此 **是** 標準的「熱核心」$$n$$-dimensional Brownian Motion
+
+開始'釐清這一點，在這種情況下，請恢復 *轉換功能 *：$$\mathcal S_\mathcal L(q_0,t_0, q_f, t_f) = \rho^2(q_0, q_f)/2(t_f - t_i)$$，其中$$\rho$$ 里曼尼亞距離介於$$q_0$$ 與$$q_f$$.
+讓我們$$||q||^2 = q\cdot q$$ 是歐氏常數的方形$$q$$:
+
+```math
+\begin{aligned}
+RHS^{16}_t(q_0,q_f) &:= \frac{e^{-\mathcal S_\mathcal L(q_0, 0, q_f, t)}}{\sqrt{(2 \pi t)^n}} \sqrt{g(q_f)}\\
+\mathcal R=0 \implies \\
+&\ = \frac{e^{\frac{-||q_f - q_i||^2}{2t}}}{\sqrt{(2\pi t)^n}} \\
+                   &\ = \int_{\Reals ^n}RHS^{16}_{s}(q_i, q)\ RHS^{16}_{t-s}(q, q_f)\ dq^1...dq^n\ \forall s\in (0, t)
+\end{aligned}
+```
+
+為何此最後的方程式為真？開始'從路徑空間查看圖片：我們有一個連接的直線幾何圖形$$q_0$$ 至$$q_f$$ 時間$$t$$，以及一個中斷的地理代碼，以中間的中斷點連接它們$$s$$。我們正在使用 Cameron-Martin 公式 (Cameron-Martin 公式) 將一經破損的地理代碼整合為直線地形$$g$$- 不變向量場$$\mathcal B$$。然後我們整合了來自該地理代碼的中斷點差異 ($$\dot q-\mathcal B$$) 以高斯為中心$$\Reals^n$$.
+
+明確地指定常數向量欄位$$\mathcal B_t = (q_f - q_0) / t$$，一次破裂的歐幾里德地形是
+
+```math
+q(\tau) = \mathcal B_t\tau + q_0 + q\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t - \tau)/(t-s)& s\leq\tau\leq t
+\end{cases}
+````
+for fixed $$q\in\Reals^n$$ representing the "break point" at $$s$$.
+
+By Equation (12) $$(A)$$ and $$(B)$$:
+
+```math
+\begin{aligned}
+-\mathcal L(\dot q, q, \tau) &= \begin{equation}\tag{D}-\mathcal L(\dot q(\tau) - \mathcal B_t, q(\tau), \tau) - \mathcal B_t\cdot (\dot q(\tau)-\mathcal B_t) - \frac{1}{2}\mathcal B_t \cdot B_t \ \ \ \ \ \ \ \ \ \end{equation}\\
+\implies \\
+
+e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B_t||^2/2}e^{-(\mathcal B_t -q_0)\cdot (q(\tau)-\mathcal B_t\tau - q_0) -\mathcal S_{\mathcal L_{\mathcal B_t}(\dot q,q,\tau)}} \\
+
+&= e ^{-\tau||q_f-q_0||^2/2t^2  - \mathcal S_{\mathcal L(\dot q-\mathcal B, q, \tau)}}e^{-(q_f - q_0)/t\ \cdot q
+\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t-\tau)/(t-s) & s\leq\tau\leq t
+\end{cases}
+}\\
+\implies\\
+
+\frac{1}{\sqrt{((2\pi)^2 s(t-s))^n}}\int_{\Reals^n} e^{-\mathcal S_{\mathcal L}(q_0,q,s)}e^{\mathcal S_{\mathcal L}(q,q_f,t-s)}dq^1...dq^n &= \frac{e^{-(s+t-s)||q_f - q_0||^2/2t^2}}{\sqrt{((2\pi)^2 s(t-s))^n}}
+\int_{\Reals^n}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
+&= \frac{e^{-\rho^2(q_f, q_0)/2t}}{\sqrt{(2\pi t)^n}}\\
+&= RHS^{16}_t(q_0,q_f) \ .
+\end{aligned}
+```
+
+重要，我們構建$$\mathcal B_t$$ 因此$$\dot q - \mathcal B_t$$ 代表一次破損的地形，位於$$s$$ 開始與結束時間$$q_0$$，我們看到這些曲線基本上是$$\mathcal N(0,s\wedge t-s)$$ 分散式。在本文的其餘部分中，我們將分解$$\Reals^n=<\mathcal B_t>\oplus \mathcal B_t^\perp$$ 並整合$$<\mathcal B_t>$$.
+
+#### DeWitt 定量曲率路徑里曼曲面上的完整瑕疵
+
+如果我們嘗試使用"連續旋積" 在方程式 (16) 中的半古典表達式上，建構在負曲線法上的布朗運動$$M$$?
+
+我們'得到一些東西，但'd be *幾乎* 布朗尼運動在曲面空間&mdash; 我們需要尋找 Feynman-Kac 的無限產生器中的缺陷。它指出會有有效的潛在函數錯誤$$-\frac{1}{6}\bar{\mathcal R}$$，其中$$\bar{\mathcal R}$$ 是每個點的定量曲率。這是 Bryce DeWitt 在 1950 年首次發現的。's，在 1972 年 McKean- 辛格紙上以「熱核心」追蹤的短時間漸近點為名，此術語代表對「熱核心」追蹤的「赫西安」的貢獻 *$$g_{ij}$$ 中的[正常座標](https://en.wikipedia.org/wiki/Normal_coordinates)。然而，$$\dim = 2$$ case，當您新增完整的更正潛力時$$\mathcal V = -\frac{1}{6}(\bar{\mathcal R} - \frac{1}{4}\bar{\mathcal R}) = \frac{1}{16}\bar{\mathcal R}$$ 到 Hamiltonian，Dewitt'秒鐘$$\frac{1}{6}\bar{\mathcal R}$$ 體積形式術語* 減 *存在終止欄位$$\mathcal B$$'秒鐘$$\frac{1}{24}\mathcal{Ric}(\mathcal B/||\mathcal B||, \mathcal B/||\mathcal B||)$$ 貢獻，此因子會從類似 Selberg 之 Trace Formulae 的太陽眼鏡漸近線中消除。
+
+更精確，通過近似$$1/2\ \nabla\vert_0\sqrt{g} = - 1/6\ \mathcal{Ric}_{ij}q^i\partial^j + o(||q||) \implies 1/2\ \nabla\cdot\nabla\vert_0 \sqrt{g} = -1/6\ \bar{\mathcal R}(0)$$，我們看到第一個衍生工具在原點消失，因此：
+
+```math
+\sqrt{(2\pi t)^n}(\frac{1}{2}\Delta_M-\mathcal V)\vert_0 e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_{\Reals^n}\vert_0 e^{-1/2t\ g_{ij}q^iq^j}) - \mathcal V(0) - \frac{1}{6}\ \bar{\mathcal R}(0)
+```
+
+該* 是他衍生的原始 Dewitt Term。由於我們正逐步量化殺死場的存在$$\mathcal B = \frac{\partial}{\partial x^1}$$ ，我們採用稍微修改的潛在術語：
+
+```math
+\sqrt{(2\pi t)^{n}}(\frac{1}{2}\Delta_M-\mathcal V)\vert_{x^1,\vec 0} e^{-\mathcal L_\mathcal B(\dot q, q, t)}\frac{1}{det |I-\mathcal J_\mathcal B|} = (\frac{1}{2}\Delta_{\Reals^n}\vert_{x^1,\vec 0}e^{-x^1x^1/2t}) - \mathcal V(x^1, \vec 0) + \frac{1}{8}\mathcal{Ric}_{11}(x^1, \vec 0).
+```
+
+#### 幾何 Cameron-Martin 公式$$g$$- 不變量 (終止) 向量欄位$$\mathcal B$$ (又稱「二次式魔術」，第 2 部分).
+
+假設$$\mathcal B$$ 是一個$$g$$- 不變量 (aka) [終止](https://en.wikipedia.org/wiki/Killing_vector_field)) 向量欄位開啟$$M$$ 本文的其餘部分。
+
+##### 發展地圖$$\tilde \gamma = \mathscr D_q[\tilde c]$$ 針對$$\tilde c\in C^\infty([0,t],T_qM)$$.
+
+解決對象$$\tilde \gamma$$:
+```math
+\begin{aligned}
+\tilde \gamma(0) &= q \\
+\dot {\tilde \gamma} &= \hat\Gamma(\tilde \gamma)\dot{\tilde c}\\
+\end{aligned}
+```
+
+##### $$\tilde c(\tau)=\int_0^\tau\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ 作為發展地圖的反面
+
+諾瑟'定理確保$$d({g^{-1}\mathcal B}) = 0$$，所以$$g^{-1}\mathcal B$$ 本機可整合至$$\hat{\mathcal B}$$，其本端層次集正交至$$\mathcal B = \nabla \hat{\mathcal B}$$。因為$$\hat \Gamma$$ 保留測量結果，它會保留$$\mathcal B$$ 與$$\mathcal B^\perp$$:
+
+```math
+\begin{aligned}
+\\
+\dot{c}\cdot\mathcal B &= 0 \implies\\
+\dot{\gamma}\cdot \mathcal B &= 0 \implies\\
+\frac{d\hat{\mathcal B}}{dt} &= 0\ ,
+\end{aligned}
+```
+
+所以$$\gamma$$ 包含在層級集合中$$\hat{\mathcal B}$$ 永遠$$c$$ 完全包含於$$\mathcal B^\perp \subset T_qM$$.
+平行傳輸對稱性的曲率限制可確保$$\gamma(t) \ne q$$ 一般而言。此外，
+
+```math
+\begin{aligned}
+||\mathcal B_t|| &= \frac{\rho(q_0,q_f)}{t} \implies \\
+\tilde{c}(\tau) - c(\tau) &= \frac{t^2}{\rho^2(q_0,q_f)}\mathcal B_t\int_0^\tau \dot{\tilde c} \cdot \mathcal B_t\ ds\\
+&= \mathcal B\int_o^\tau\dot{\tilde c}\cdot \mathcal B \ ds\\
+&= \mathcal B\cdot \tilde c(\tau)\ \mathcal B\\
+&= d\hat{\mathcal B}(\tilde c)\ \mathcal B \ .
+\end{aligned}
+```
+
+##### 布朗運動開啟$$M$$ 是歐幾里丹 Wiener 測量$$\mathscr D^{-1}$$
+
+##### 熱核心的 Cameron Martin 公式$$k^{\hat{\mathcal H}}_t(q_0,q_f)$$ 在負彎曲的歧管上$$M$$，其中$$\hat{\mathcal H} = -\Delta/2 +\mathcal V$$
+
+開始$$\Omega^\mathcal B_t(q)$$ 是連續曲線的空間$$M$$ 原始於$$q$$ 結束於$$\exp{t\mathcal B}\ q$$，和$$\mu_t(\omega)$$ 全球 Wiener 測量$$\omega\in \Omega^\mathcal B_t := \set{\Omega^\mathcal B_t(q): q\in M}$$，使用$$E_t^\mathcal B (f|A):=\int_{\Omega^\mathcal B_t} f(\omega) d(\mu_t|A)(\omega)$$ 與$$P^\mathcal B_{\mu_t}(A) := \mu_t(A)/\mu_t(\Omega_t^{\mathcal B})\ \forall A\subset\Omega^\mathcal B_t $$ . 接著方程式 (26) $$(D) \implies$$
+
+```math
+\begin{equation}
+\tag{E}
+k^{\hat{\mathcal H}}_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J^{\mathcal B}(q_0)|}}} E^\mathcal B_t({e^{-\int_0^t V(\omega(s))ds\ +\ \int_0^t \bar {\mathcal R}(\omega(s))ds/12\ -\ \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/24}\chi_{\Omega^B_t(q_0)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q_0) \ \ \ \ \ \ \
+\end{equation}
+```
+
+位置$$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$, $$\mathcal J^{\mathcal B}(q_0)$$ 是與摺疊的單色矩陣$$M$$ 誘導者$$\hat{\mathcal B}$$，沿著曲線$$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$，連接$$q_0$$ 至$$ q_f$$ 作為$$\lambda$$ 開始日期$$0$$ 至$$t$$. $$\mathcal J^{\mathcal B}$$ 不相依於$$t$$；和曲率約束可確保$$I-\mathcal J^\mathcal B$$ 一律不產生$$q_0 \neq q_f$$。取代$$\mathcal B$$ 取代為$$-\mathcal B$$ 撤銷下列項目的角色：$$q_0$$ 與$$q_f$$，所以清楚地說，表示式在它們之間是對稱的。
+
+開始日期$$\mathcal R$$ 是常數沿著$$\tilde \gamma$$，和$$\gamma$$ *為大地測量 (最大長度重新命名)，$$\mathcal J^\mathcal B(q_0)$$ 就 **Jacobi Fields** 而言，可真正計算$$\mathcal J(\lambda)$$ 沿著$$\tilde \gamma$$ 這只是用於常數係數第二階線性 ODE 的解決方案，在經過一段時間演變後進行評估$$\lambda=t$$.
+
+此方程式的證明<span class="eqno"></span> 對預印文章，而非這份調查，但這是一種直接應用 Feynman-Kac 公式的 *。$$\mathcal V = \frac{1}{12}(\bar{\mathcal R} - \frac{1}{2} \mathcal {Ric}(\mathcal B / ||\mathcal B||, \mathcal B/||\mathcal B||)$$，它可以在方程式的兩側明確計算，因為整個計算會減少到該點的常數曲率大小寫。
+
+在常數中會出現一個很好的珊瑚礁$$\mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||}) = \bar{\mathcal R} / \dim M$$ 高斯負曲率$$-\kappa$$ 個案，其中$$\mathcal B$$ 降級為$$S^1$$ Riemann Surface 的動作$$M$$:
+
+```math
+\begin{aligned}
+
+\det |I - \mathcal J^\mathcal B| = (2 \kappa\sinh(\sqrt{\kappa}\rho/2))^2 \implies \\
+
+\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k^{-\Delta/2}_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2\kappa(q) \sinh \sqrt{\kappa(q)}\rho/2}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/16}{\chi_{\Omega^B_t(q)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B})|d\mathcal B^\perp), \ \text{ Bayes}\implies\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp d\hat{\mathcal B}|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp d\hat{\mathcal B})}d\hat{\mathcal B}\\
+
+&=\frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \rho_0\\
+
+\end{aligned}
+```
+
+位置$$\rho = \min_{q\in M}dist(q, \exp t\mathcal B \ q)$$ 是行進最短軌道的距離$$S^1$$ 動作，與$$\rho_0$$ 是$$\rho$$ 除以其相關軌道的多重性。在熟悉的雙曲幾何術語中，$$\mathcal B^\perp$$ **週期** 和$$g$$- 不變量$$S^1$$ 動作下方$$\mathcal B$$ 據說是 **正環流 **。
+
+此外，請考慮方程式 (32) $$(E)$$ 位置$$B$$ 代表旋轉$$g$$- 固定點周圍的不變對稱$$q_0$$。然後使用$$\Omega^0_t$$ 一組連續可承包迴路：
+
+```math
+\mu_t(\Omega_t^0) = \frac{vol(M)}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ \kappa\sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
+```
+
+此方程式分析於$$\kappa$$，我們可以看到分析的延續來源$$\kappa \rightarrow -\kappa$$ 轉換此表示式來源$$\sinh $$ 至$$ \sin $$ 在這種情況下，我們對於具有固定正高斯曲率的 *最高 2 球* 具有正確的方程式$$|\kappa|$$.
+
+換句話說，我們已透過機率和幾何圖形重新建構二維 Selberg 追蹤公式 **，而不是對稱空間常用的調和分析 **。
+
+##### 非傳統曲率範例
+
+平滑實值型變形$$h:\Reals\rightarrow\Reals$$ 取代為$$h(0)=0$$，讓我們$$ds^2 = (1+h^2(y)) dx^2 + 2h(y) dx\odot dy + dy^2$$。此度量的高斯曲率為負值$$-(\kappa(y)=\frac{d^2}{dy^2}h^2(y)/2)$$，只有當$$h(y)$$ 是情感；並且$$\det(ds^2)= 1$$。然後使用$$\hat{\mathcal B}(x,y) = x$$，我們看到
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t}}{2\pi t}\int_{-\infty}^\infty\frac{\rho_0}{2 \sinh \sqrt{\kappa(y)}\rho/2} \int_{\Omega_t^\mathcal B(0,y)}e^{-\int_0^t\kappa(y(s))ds/8}d(\mu_t|\mathcal B^\perp)/dy \ dy
+
+```
+如果需要$$h(y) := y\sqrt{2y^2/3 + \kappa(0)} \implies \kappa(y) = 4 y^2 + \kappa(0) \gt 0$$，然後方程式 (32) $$(E)$$ 預測
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t -t\kappa(0)/8}}{\sqrt{2\pi t \cosh t}}\int_0^\infty\frac{\rho_0e^{-y^2/2t}}{\sqrt{2\pi t}\sinh \sqrt{4y^2+\kappa(0)}\rho/2 }\ dy
+
+```
+
+在$$0$$，如預期，如果我們還需要$$\kappa(0) = 0$$。此外，如$$t\rightarrow 0$$，整體也具有適當的漸近行為 (在固定曲率周圍傾斜) $$-\kappa(0)$$ 與 Selberg Trace 公式的對應元件作為其半古典限制時的情況$$t\rightarrow 0$$).
+
+### 可觀察、演化方程式與小代數工具
+
+### Chern-Simons 搭售品動作
+
+### 一般關係的動態注意事項
+
+- 外部時間軸為人工，自`時間` 嵌入至 4 維 manifold 本身的幾何中。
+- 這表示發生演化運算子't 相關；只有固定的施羅丁格方程式很重要。
+- 路徑積分配方會因為`-1` 內在 Lorenzian 度量的簽章`時間` 方向。$$\det{g}$$ 為負數，且每個餘切組合的傅立葉轉換'除非我們使用內在的分析延續 (又稱 Wick Rotation) ，否則光纖在該方向上是無限的。`時間`).
+
+<!-- $Date: 2026-03-14 15:24:59 -0700 (Sat, 14 Mar 2026) $ $Author: joe $ $Revision: 29029 $ -->

@@ -1,0 +1,117 @@
+---
+archived: ~
+categories: 성능, 툴
+dependencies: '*.md.ko'
+keywords: ~
+published: ~
+status: 아카이브됨
+title: 애플리케이션 성능
+---
+
+{# lede #}많은 개발자들이 성능 최적화라는 사고의 함정에 빠지는 것은 각 코드 행을 가능한 한 효율적으로 만드는 것입니다.{# lede #}, 또는 그들이 찾을 수있는 가장 빠른 프로그래밍 언어로 전체 응용 프로그램을 작성하도록 선택.
+
+해당'실제로는 반대입니다. 응용 프로그램의 구조적 제약 조건부터 시작하여 이러한 제약 조건을 사용하여 관찰된 "가장 느림" 프로그램의 일부. 해당 부분'**구현**은 필요한 다른 모든 성능 선택을 안내합니다. 모든 것'이 부분만큼 느리지는 않지만 더 이상 최적화 할 필요가 없습니다. 대신, 인간의 표현과 구현의 단순성과 명확성에 초점을 맞추고, 비전문가 독자들에게 `SSDLC` 소프트웨어, 프로그램의 나머지 부분's 코드
+
+You can iterate on this playbook 하지만 난'내 직업에서 3 반복을 넘어 갈 필요가 없습니다.
+
+따라서 계속 진행하고 다음과 같은 우아한 프로그래밍 언어를 사용하십시오. `Python3` 또는 `자바스크립트`/`필사본`, 그리고 오픈 소스 세계에서 Subject Matter Experts (**SME**)가 당신에게 강력한 것을 줄 수 있도록 `C`/`C++` 당신의 특별한 목적 필요를 위한 고유 바인딩. 비즈니스 로직을 위해 할 일은 **모든** 동적 프로그래밍 언어가 **즉시** 제공할 수 있는 것보다 더 빠른 속도가 필요하지 않습니다.
+
+종속성이 없는 bash 스크립트조차도 많은 기본 작업을 위한 작업 가능한 솔루션입니다. 여기'원제 : Augmented Reality Company [매직 리프](https://magicleap.com) 몇 년 전, 클럼시를 대체하기 위해 [OpenGrok](https://oracle.github.io/opengrok/) 다중 프로세서 병렬화를 활용하는 `xargs -P`및 지원 [PCRE](https://www.pcre.org/) 간단한 검색 `에맥스`/`Vim` 바인딩.
+
+https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
+
+이 스크립트는 GitHub의 일반적인 용의자보다 훨씬 빠르며, 모두 정적 컴파일된 프로그래밍 언어로 작성되었습니다. 그러나 정확한 병목 지점을 식별하여 `바시` (높은 볼륨으로 루핑) `포크+엑섹스` 중간의 호출) 및 사용 `xarg` 대신 10행으로 구현된 핵심 알고리즘을 사용하여 이 스크립트와 많이 유사한 스크립트를 얻을 수 있습니다. `셸`.
+
+해당'**SME**의 오픈 소스 커뮤니티 사용'다른 방법 대신에 똑똑한 방법으로 "필터링된 순환 grep" GitHub의 구현은 다음과 같습니다. 내부적으로 내 자신의 (스레드) 구현을 채택하고 유지하는 대신 `찾기`, `xarg`및 `그룹`, 사전 설치된 실행 파일을 다른 **SME**로 재사용합니다.'s는 수십 년 동안 **있는 그대로** 완벽 해 왔으며, 주로 나머지 부분에 쉘 *builtins *를 사용합니다. 그렇지 않습니다'구현을 마스터할 필요성, `CLI`s입니다. 그렇지 않습니다'심지어 그들을 마스터하고 싶어, 그's **그들의** bailiwick. 응용 프로그램에 따라 성능 델타는 몇 초 이상인 경우에만 중요'예상(인간) 사용 사례입니다.
+
+스크립트의 나머지 부분은 주로 순수하게 구현되는 bash 셸 내장 기능을 활용합니다. `C`.
+
+모든 것이 사내에서 이루어지고 완전히 미세 최적화되었으며 여전히 할 수있는 반대의 태크를 보려면'기본 검색 옵션과 사용 가능한 캐싱 시스템이 없는 이 스크립트를 이길 수 있습니다. <https://github.com/BurntSushi/ripgrep>
+
+첫 번째 #performance #benchmark를 해당 페이지에서 끌어내어 장난감 샘플 트리 크기(linux 커널 소스)에서 이기종 트리로 확장합니다.'초 `23GB`: (3번 반복 후 가장 좋은 동작; `언어=en_US.UTF-8`).
+
+```shell
+    % du -sh .
+    23G .
+    % time rg -uuniw '[A-Z]+_SUSPEND' | wc -l
+    6259
+    rg -uuniw '[A-Z]+_SUSPEND' 9.46s user 16.08s system 261% cpu 9.759 total
+    wc -l 0.00s user 0.07s system 0% cpu 9.759 total
+    % time pffxg.sh -- -wnE '[A-Z]+_SUSPEND' | wc -l
+    5855
+    pffxg.sh -- -wnE '[A-Z]+_SUSPEND' 16.66s user 2.68s system 429% cpu 4.501 total
+    wc -l 0.00s user 0.00s system 0% cpu 4.501 total
+```
+
+해당'아주 어리석은 것, 즉'커널의 상태에 깊이 연결됨'검색용 파일 시스템 캐시입니다. 성능 타이밍의 변화는 파일 코퍼스에 대한 액세스 속도에 의해 좌우됩니다.' 콘텐츠는 최종 결과에 대한 다른 요소보다 관련성이 높은 크기입니다. 현재 위치 `NVMe` 도움이 되지만 이 공간에는 아무 것도 없습니다. `RAM` 자체.
+
+해당'큰 파일 코퍼스에 대한 인메모리 압축 캐시가 있으면 성능 타이밍이 안정화됩니다. 아무도 이것이 지원하기에 충분히 중요하다고 생각하지 않았습니다.
+
+해당 페이지에서 두번째 #performance #benchmark를 가져와서 이전과 동일하게 확장합니다. `23GB` 트리:
+
+```shell
+	% time rg -tc -uuuiwn '[A-Z]+_SUSPEND' | wc -l
+    5629
+    rg -tc -uuuiwn '[A-Z]+_SUSPEND' 3.51s user 1.71s system 1141% cpu 0.457 total
+    wc -l 0.00s user 0.05s system 11% cpu 0.457 total
+    % time LANG=C pffxg.sh --cache /tmp/pffxg-$USER --workers 32 --cc -- -wE '[A-Z]+_SUSPEND' | wc -l
+    5628
+    LANG=C pffxg.sh --cache /tmp/pffxg-$USER --workers 32 --cc -- -wE  3.14s user 0.88s system 1055% cpu 0.381 total
+    wc -l 0.00s user 0.00s system 0% cpu 0.381 total
+```
+
+튜닝된 `pffxg.sh` 이 작업을 위해 ripgrep를 미세 최적화하는 모든 작업에도 불구하고 여전히 더 빠릅니다. `C`파일 조회입니다.
+
+이 스크립트를 사용하는 방법 [AOSP](https://source.android.com) 스케줄 a `저장소` 동기화 및 후속 `pffxg.sh` **`lz4`-압축 캐시 시드-대-`tmpfs`* 매일 아침 일하기 전에 달리기 (via) `크론탭`), 포함 `PFFXG_CACHE=...` 내 설정 `~/.pffxg.conf` 파일. 따라서 `pffxg.sh` 작업일 내내 실행된 호출은 압축된 캐시를 `tmpfs`커널의 상태에 상관없이'당시에는 파일 시스템 캐시가 있었습니다.
+
+.25M LOC 범위 `립그레프` 및 [추녀](https://github.com/Genivia/ugrep).를 위한 632 LOC `pffxg.sh`. 바보
+
+왜냐하면'이렇게 작은 쉘 프로그램, `pffxg.sh` 당신은 거의 제로 노력으로 내부에 강력한 후크를 줄 수 있습니다. 심지어 `그룹` 명령 자체는 사용자 정의할 수 있습니다. 인수 끝에 추가된 파일 이름 목록을 수락할 수 있는 파일의 선택 코퍼스에서 실행해야 하는 모든 명령은 공정한 게임입니다. 여기's "총 라인 수 `MiLOC`" 리눅스 커널 git 저장소 연습:
+
+```shell
+	% time find *-type f | xargs wc -l | awk '{ $2 == "total" {a+=$1} END {print a/1024**2}'
+    28.451
+    find *-type f 0.00s user 0.06s system 2% cpu 2.733 total
+    xargs wc -l 0.53s user 1.02s system 54% cpu 2.853 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.23s user 0.59s system 28% cpu 2.853 total
+
+% time pffxg.sh --workers 8 --cmd wc --all -- -l | awk '{$2 == "total" {a+=$1} END {print a/1024**2}'
+    28.4506
+    pffxg.sh --workers 8 --cmd wc --all -- -l 0.92s user 0.66s system 826% cpu 0.192 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 11% cpu 0.192 total
+```
+
+`립그레프` 버전:
+
+```shell
+	% time rg -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
+    28.4284
+    rg -c \$ 2.12s user 2.19s system 276% cpu 1.564 total
+    awk -F : '{a+=$2} END {print a/1024**2}' 0.58s user 0.45s system 66% cpu 1.564 total
+```
+
+여기에서는 `C`-files(동일한 Linux 트리):
+
+```shell
+	% time pffxg.sh --workers 8 --cc --cmd wc -- -l | awk '$2 == "total" {a+=$1} END {print a/1024**2}'
+    25.3935
+    pffxg.sh --workers 8 --cc --cmd wc -- -l 0.76s user 0.54s system 734% cpu 0.177 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 9% cpu 0.177 total
+```
+
+및 `립그레프` 버전:
+
+```shell
+	% time rg -tc -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
+    25.3844
+    rg -tc -c \$ 3.49s user 1.54s system 441% cpu 1.140 total
+    awk -F : '{a+=$2} END {print a/1024**2}' 0.38s user 0.38s system 66% cpu 1.140 total
+```
+
+실제 **애플리케이션 성능**은 균형, 유연성 및 기능적 프로그래밍 기법에서 비롯됩니다. 균형 및 유연성 관점에서 작업할 수 있는 정적 컴파일된 프로그래밍 언어의 필수 미세 최적화 전술에 대한 수정에서 비롯되지 않습니다. 이러한 과장된 필수 언어는 매우 구체적인 문제 도메인에 대한 훌륭한 목표이지만 시스템 차원의 애플리케이션 성능에는 끔찍합니다.
+
+`pffxg.sh` 은(는) 제품이 아니며 판매 피치가 아닙니다. 해당'내 요점을 매우 극적인 방식으로 설명하기 위한 **예제**입니다. GitHub에서 필터링 된 순환 대표 솔루션의 오랜 역사에 익숙하다면 모두 Andy Lester의 문제라는 개념에 전제됩니다.'s 원본 `펄` 구현 [승인](https://beyondgrep.com/)그것은 기록된 것이었다. `펄`. 성능 관점에서 유일한 실제 문제는 `펄` Andy에 의해 작성되었습니다, 누가't는 시스템 성능 개념(예: farming out)에 대한 간극이 있는 것 같습니다. `찾기` 특별히 제작된 병렬화 작업 `C` 바이너리), 그러나 대신 단일 스레드 Pure로 전체 코드를 캡처하려고함으로써 게으른 이식성을 목표로 `펄` 이상함.
+
+천 개의 꽃이 피고 어리석은 것처럼 보일지라도!
+
+<!-- $Date: 2026-01-10 10:31:18 -0700 (Sat, 10 Jan 2026) $ $Author: joe $ $Revision: 27390 $ -->

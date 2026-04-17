@@ -1,0 +1,78 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ko'
+keywords: POSIX, pthread, C, 뮤텍스
+published: ~
+status: 확인=26810
+title: 스레드 번들
+---
+
+[TOC]
+
+<div class="right">
+
+![AI에서 생성된 스레드 번들](thread-bundles.page/thread-bundle).
+
+</div>
+
+## {# lede #} POSIX 스레드 {# lede #}
+
+나는 올해 단일 스레드 버전에서 다중 스레드 버전으로 우리의 최대 가능성 기능을 포팅, 그 코드의 가장 느린 부분이 모델링 그룹 ID의 인덱스에 실제 최적화 로직 루프를 기반으로, 디자인에 의해, 루프를 통해 각 반복은 나머지와 독립적이어야 아키텍처 전제에 기초하여 임무를했다.
+
+루프 시 재미있는 문제
+
+1. 종속 자동 변수를 다시 초기화하지 못했습니다.
+2. 그룹 ID 모델링으로 인덱스화된 여러 전역 포인터를 변경합니다(`JG`),
+3. 계산 전용 글로벌 메모리 세그먼트를 구분하기 위해 thread_local 변수가 필요합니다(ID별 기준).
+
+1과 3은 간단했다. 2로 나는의 개념을 포함하는 영리한 알고리즘을 발견했다 `THREAD_BUNDLE`는 직렬 모델링 그룹 ID의 스레드당 블록입니다.
+
+확인 `THREAD_BUNDLE` 적어도 메모리 페이지 크기를 2에서 개별 포인터의 크기로 나눈 크기만큼 크다, 우리는 서로 다른 스레드가 독립적으로 작동하도록 보장 할 수 있습니다 [`페이지`](https://en.wikipedia.org/wiki/Page_%28computer_memory%29) 가상 메모리에서 이러한 메모리 쓰기에 대해 상호 배제 잠금을 조정할 수 있습니다. (물론 스레드는 `THREAD_BUNDLE` 거의 같은 속도(?).
+
+또한, 나는 결국 삭제 "동일한 속도" 짝수/홀수 페어링으로 루프를 분할하여 하나 이상의 메모리를 보장하는 종속성 `페이지` 활성 항목 구분 `THREAD_BUNDLE` 루프.
+
+## 코어 루프
+
+```clike
+  /* EVEN */
+  for (jG = minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+
+#define SET_ARG(foo) arg->foo = (foo) 30 refs
+
+SET_ARG(jG);
+    ...
+
+#undef SET_ARG
+
+// rsim_mlf_thread loops over the index bundle
+	// from jG to MIN(numG, jG + THREAD_BUNDLE - minG), doing
+	// stuff with global data structures also indexed by jG
+
+pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
+    PUSH_STACK_ELT(thread_stack, ptid, pthread_t);
+  }
+
+{
+    pthread_t *ptid; 3 refs
+    while (POP_STACK_PTR(thread_stack, ptid, pthread_t) != NULL)
+    {
+      arg_t* arg; 6 refs
+      pthread_join(*ptid, (void**)&arg);
+      ...
+  }
+
+/* ODD */
+  for (jG = THREAD_BUNDLE + minG; jG <= numG; jG += 2*THREAD_BUNDLE)
+  {
+    pthread_t ptid; 3 refs
+    arg_t* arg = mal (sizeof(*arg), "arg_t"); 12 refs
+    ...
+```
+
+![메모리 레이아웃](thread-bundles.page/memory-layout).
+
+<!-- $Date: 2025-09-19 14:02:02 -0700 (Fri, 19 Sep 2025) $ $Author: joe $ $Revision: 26842 $ -->

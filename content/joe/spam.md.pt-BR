@@ -1,0 +1,21 @@
+---
+archived: ~
+categories: Perl, Apache, TI, Correio, Ferramentas
+dependencies: '*.md.pt-BR'
+keywords: qpsmtpd,Apache::Qpsmtpd, earlytalker, antispam, sendmail, postfix, exim
+published: ~
+status: arquivado
+title: Sobre o problema do spam...
+---
+
+Como eu escrevi sobre [em outros lugares](/clients/apache), uma das melhores ferramentas de código aberto disponíveis para um administrador de email'O arsenal de ferramentas antispam é [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), que é apenas um servidor de email de entrada front-end que precisa de um servidor de email totalmente funcional como `qmail`, `enviar email`, `exim`, ou `correio` para entrega de saída.  O que `qpsmtpd` é muito semelhante ao que `httpd` fez para webservers: introduz ganchos customizáveis em cada fase do `SMTP` sessão.
+
+{# lede #}O melhor plugin para `qpsmtpd`Embora seja difícil entender por que{# lede #}, é o `earlytalker` plug-in.  O que `earlytalker` é colocado `qpsmtpd` para dormir por um período de tempo configurável, ouvindo no soquete (via `selecione(2)`) para não conformes com a RFC "cedo" comunicações vindas do outro extremo do soquete (`qpsmtpd` normalmente bifurca um servidor para cada conexão de entrada para que ele's apenas o processo de criança dormir em `selecione(2)`). Se ele vir qualquer entrada na conexão, ele simplesmente elimina a conexão depois de emitir uma resposta 4xx ou 5xx apropriada, dependendo do administrador de email'gostos.
+
+Por que uma ferramenta tão simples é tão poderosa no administrador'O arsenal?  Porque introduz atrasos obrigatórios para cada conexão de email, que, como acontece, atinge a maioria dos spammers onde eles podem medi-lo, em termos de amarrar seu agente de entrega de email de lidar com o resto de sua fila.  É importante perceber que os spammers estão administrando um negócio, muitos dos quais não têm interesse direto no conteúdo do que eles entregam. Eles são pagos para gerenciar uma rede sofisticada e tipicamente ilegal (zumbi) de agentes de envio e fornecerão serviços de entrega para qualquer cliente com o dinheiro para cobrir seu uso mais lucros.  Muitos deles ganham renda anual bem acima da minha ou da sua :-).
+
+Há abordagens mais sofisticadas para ter certeza, como apenas atrasar mensagens de "não confiável" remetentes, mas você pode ir muito mais longe do que isso se o seu servidor tem esse tipo de conhecimento disponível para ele.  Mas em termos de bang para o buck, correndo `earlytalker` com um atraso substancial de até 30 segundos irá conduzir spammers fora de seus servidores para sempre.  Promessa.
+
+<!-- $Date: 2023-01-29 15:02:19 -0500 (Sun, 29 Jan 2023) $ $Author: joe $ $Revision: 12483 $ -->
+
+@joe=

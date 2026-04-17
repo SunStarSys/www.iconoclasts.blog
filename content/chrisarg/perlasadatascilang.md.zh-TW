@@ -1,0 +1,436 @@
+---
+archived: ~
+categories: 佩爾
+dependencies: '*.md.zh-TW'
+keywords: pdl、perl5
+published: ~
+status: 已完成
+title: Perl5 作為資料科學語言
+---
+
+<div class="right">
+
+![資料科學](perlasadatascilang.page/datasci).
+
+</div>
+
+> **系列介紹 — 0 篇 N**
+> 這篇文章是一系列中第一篇以 Perl5 + PDL 撰寫的向量資料庫引擎 (VDBE) 共同開發的文章。後續的貼文會逐步引導該引擎的每個元件；這會設定階段。這個系列的主要動力不是因為我沒有做出任何效能索償而傾印您的 VDBE，而是展示如何利用 Perl 實現任何其他語言所能實現的任何事情，但更聰明！
+
+---
+
+## 目錄
+
+[TOC]
+
+---
+
+## 1. 為什麼選擇 Perl5 for Data Science？<a id="why-perl5-for-data-science"></a>
+
+當資料科學家討論語言選擇時，對話會快速融合 Python、R 或 Julia。Perl5 很少在桌子上拿了一個座位，但它擁有一套令人注目的特徵，值得一看。這些特徵多年來沒有重大變化 (Perl5 一直都是這種方式！)，但除非{# lede #}您已經接觸到這個語言，並學習如何欣賞他們的慈悲、理性、靈活性、表達性，並實際用它來推動您的工作。{# lede #}，您不僅知道 Perl5 的這些功能是免費的，還能協助您推動專案發展。
+
+### Ubiquity 和零安裝部署
+
+Perl5 提供幾乎所有類似 UNIX 作業系統的預設元件 — Linux 發行軟體、macOS、BSD 和許多嵌入式 Linux 環境均包含工作`輪廓` 立即可用的二進位檔。Python 一直都在這裡製造，但還是常見於尋找無頭伺服器、網路設備或 HPC 登入節點
+其中 Perl 存在，而且沒有完整的 Python 堆疊。以 Perl 撰寫的資料管線可以在第一天執行，不需要`錐體` 環境，a `靜脈`，或容器。
+
+### 從資料中心到邊緣的可攜性
+
+分析 256 核心 HPC 節點上 TB 資料集的相同命令檔，若有少量組態變更，可以在 Raspberry Pi、IoT 閘道或內嵌控制器上執行。佩爾's 單一二進位部署模型和低運行時間開銷，使其成為真正的"寫入一次，隨處執行" Python 環境中的語言'解譯器間接費用或 Julia'無法接受 S JIT 暖機時間。
+
+如果您打算在任何地方部署，而 _everywhere_ Perl5 是您的明顯選擇。
+
+### 以文字和資料融合為基礎的傳統
+
+Perl 從頭開始設計，用於文字處理、正規表示式，以及"膠" 在系統元件之間工作。實際上，科學資料管線並非由數值運算所主導，而是 *資料整理 *：讀取異質檔案格式、清理訊息記錄、結合不同來源的資料集，以及將結果路由至下游耗用元件。
+
+佩爾'正規表示式引擎仍然是最強大的可用項目之一，而且單線可以完成需要其他語言的協助程式程式庫的資料清除工作。
+
+如果您在科學計算領域，您可能發現 *工作流程管理系統* 和 *可重現研究* 的概念。他們都依賴端對端資料轉換和工作流程的執行，以消除手動、容易出錯和繁瑣的點按活動，分析師和科學家必須分別將資料轉化為洞察力和推論。
+
+在這個勇敢的新世界，Perl5'豐富的歷史記錄可以將兩者視為工作流程的組成部分，或作為實行這些工作流程的應用程式語言。
+
+### CPAN：經戰測試的模組生態系統
+
+全方位的 Perl Archive Network (CPAN) 可讓每個網域擁有超過 200,000 個模組。雖然資料科學產品與 Python 幾乎不一樣廣泛，但專屬建構者的基本元件在以下位置：
+
+- **PDL** (Perl Data Language) — 具有強烈鍵入 N 維度陣列的向量化數值運算 (涵蓋在下方深度)。
+
+- **PDL：：Stats** — 描述性統計資料，迴歸，叢集 (k-means，mini-batch k-means) 等，建置在 PDL ndarray 上。
+
+- **AI：：MXNet**，**AI：：TensorFlow** — 深度學習連結。
+
+- **統計資料：：迴歸 **，** 統計資料：：描述性 **— 沒有 PDL 相依性的傳統統計資料。
+
+-** 文字：：CSV**，** 試算表：：XLSX**，** 資料：：MessagePack**，** 穀物 **— 高效能序列化和 I/O。
+
+- **DBI** + 數十個資料庫驅動程式 - 對每個主要 RDBMS 的 SQL 存取權。
+
+- **MCE** (多核心引擎) — 共用記憶體和分散式記憶體工作負載的結構化平行程度。
+
+- **內嵌：：C**，** 內嵌：：CPP** — 將 C 或 C++ 程式碼直接內嵌在 Perl 來源檔案中；第一次執行命令檔時，會以通透的方式呼叫編譯器，讓它在沒有完整 XS 組建系統的情況下，將效能關鍵核心刪除。
+
+- **FFI：：Platypus** — 任何共用程式庫中的呼叫函數 (`.so` / `.dylib` / `.dll`) 從 Perl 而不撰寫單行 XS 或 C 膠條碼。Platypus 支援所有等同於 C 的類型、結構、回呼和關閉，是將 Perl 連結至 BLAS、LAPACK、HDF5 或任何其他原生程式庫的現代化方式。
+
+### Modern Perl 不是你的祖父's Perl
+
+以下功能直接取自官方版本說明 (`perl5360delta`, `perl5380delta`, `perl5400delta`) 並由其達到 **穩定** 狀態或首次引入的版本組織。僅強調與資料科學和科學運算工作負載相關的功能。
+
+#### Perl 5.36 — 2022 年 5 月
+
+- **`使用 v5.36`** — 功能組合現在會自動啟用`使用警告` 除了`使用嚴格`。它也會停用`間接` 方法呼叫語法與`多維` 雜湊金鑰模擬，消除兩個常見的細微錯誤來源。
+
+- **指定的子常式簽章** *(自 5.36 起；自 5.20 起的實驗) * — 現在依名稱宣告函數參數 (選擇性預設值)。繁體中文`//=` 與`||=` 預設值運算子已進一步新增至 5.38 中的簽名，允許觸發的預設值`未定義` 分別或虛度：
+
+```perl
+  use v5.36;
+  sub clamp ($val, $lo = 0, $hi //= 1) {
+      $val < $lo ? $lo : $val > $hi ? $hi : $val;
+  }
+  ```
+
+- **`isa` class-instance operator** *(stable since 5.36; introduced in 5.32)* — `$obj isa "ClassName"` returns a boolean; cleaner than `ref($obj) eq "ClassName"`.
+
+- **`builtin` module** *(stable since 5.40; experimental since 5.36)* — lexically importable functions built directly into the interpreter.  The stable 5.40 bundle includes, among others:
+
+- `ceil`, `floor` — integer rounding without `use POSIX`.
+  - `trim` — strip leading/trailing whitespace from a string.
+  - `indexed` — pairs each element with its index; the idiomatic companion to multi-value `for` loops (see below).
+  - `true`, `false`, `is_bool` — typed boolean sentinels; serialisers can now emit JSON `true`/`false` rather than `1`/`0`.
+  - `weaken`, `unweaken`, `is_weak` — reference-count control for building bidirectional data structures without memory leaks.
+  - `blessed`, `reftype`, `refaddr` — reference introspection.
+
+- **Stable boolean tracking** *(5.36)* — scalars created as booleans (e.g., `!!1`) now retain their boolean nature through assignment, enabling reliable type-aware serialisation to JSON and MessagePack.
+
+- **Multi-value `for` loops** *(stable since 5.40; experimental since 5.36)* Iterate over pairs or N-tuples without manual index arithmetic:
+
+```perl
+  use v5.40;
+  use builtin 'indexed';
+
+for my ($i, $val) (indexed @scores)  { ... } # index and value
+  ```
+
+Or grab multiple values at the same time
+
+```perl
+  use v5.40;
+
+for my ($val1, $val2, $val3) (@scores)  { ... }
+  ```
+
+- **`defer` blocks** *(experimental since 5.36)* — a scope-exit guard that runs cleanup code unconditionally when a block exits, whether normally or via exception — a natural replacement for destructor-based scope-guard objects and an important pattern for resource management in data pipelines.
+
+#### Perl 5.38 — July 2023
+
+- **`PERL_RAND_SEED` environment variable** *(5.38)* — setting this variable before a run makes every `rand` call (without an explicit `srand`) produce the same sequence, enabling **reproducible** stochastic algorithms — simulations, random sampling, Monte Carlo methods — without modifying source code.
+
+- **`class` / `field` / `method` syntax** *(experimental since 5.38)* — a purpose-built, lexically-scoped object system requiring neither `bless` nor `@ISA` nor any CPAN module.  Useful for defining typed value objects such as dataset rows, model parameters, or pipeline stages:
+
+```perl
+  use feature 'class';
+  no warnings 'experimental::class';
+
+class Vector2D {
+      field $x :param;
+      field $y :param;
+      method magnitude { sqrt($x**2 + $y**2) }
+  }
+  my $v = Vector2D->new(x => 3, y => 4);
+  say $v->magnitude;    # 5
+  ```
+
+#### Perl 5.40 — June 2024
+
+- **`try` / `catch` exception handling** *(stable since 5.40; experimental since 5.34; `finally` block added in 5.36)* — structured exception handling is now a core language feature; no CPAN module required:
+
+```perl
+  use v5.40;
+  try {
+      my $result = load_and_process($file);
+  }
+  catch ($e) {
+      warn "Pipeline error: $e";
+  }
+  finally {
+      close_resources();   # runs whether or not an exception was thrown
+  }
+  ```
+
+(`Try::Tiny` / `Feature::Compat::Try` are only needed when targeting perls older than 5.34.).
+
+- **Multi-value `for` loops** *(stable since 5.40)* — see 5.36 entry above; they graduated from experimental to stable in this release.
+
+- **`builtin::inf` and `builtin::nan`** *(experimental since 5.40)* — typed floating-point infinity and Not-a-Number constants, eliminating `9**9**9` or POSIX hacks in numerical code.
+
+- **`^^` logical XOR operator** *(5.40)* — completes the medium-precedence logical operator set (`&&`, `||`, `^^`); handy for boolean mask operations.
+
+- **`use v5.40` imports builtin functions** — beyond enabling the feature bundle, `use v5.40` also imports the corresponding `builtin` version bundle, making all stable `builtin::` functions available as short names without a separate `use builtin` statement.
+
+#### Longstanding features (pre-5.36).
+
+- **`say` and `state`** *(since 5.10)* — `say` is `print` with an implicit newline; `state` declares a lexical that persists across invocations of its enclosing sub (a lightweight memoisation primitive).
+
+- **First-class references and closures** — anonymous subs, closures, and reference construction are fundamental and have been stable since Perl 5.
+
+- **`use constant`** or the CPAN `Readonly` module for named constants; `Readonly` enforces deep immutability that `use constant` does not.
+
+Combined with [`perlbrew`](https://perlbrew.pl/) or [`plenv`](https://github.com/tokuhirom/plenv) for version management and [`carton`](https://metacpan.org/pod/Carton) for reproducible dependency snapshots, a modern Perl project looks and feels like a first-class software engineering effort.
+
+### Honest limitations
+
+No case for Perl is complete without honesty about where it falls short:
+
+- **Visualisation** — Perl has no equivalent to `ggplot2` or `matplotlib`. Plots typically require an external call to R, gnuplot, or a web library. At times this weakness can become an actual strength, allowing one to use Perl5 as the application language that orchestrates and enhances the other actors.
+
+- **Community momentum** — the data-science community has converged on Python and R. Finding ready-made tutorials, Stack Overflow answers, and co-authors is harder.
+
+- **Object orientation** — without Moose/Moo the OOP model is verbose; with them it adds a dependency. The new `class` feature may solve some of these problems
+
+- **Type safety at scale** — the core language's dynamic scalars make large, collaborative numerical codebases harder to reason about (see next section).
+
+---
+
+## 2. The Perl Data-Type System — Strengths and Cache-Era Limits <a id="the-perl-data-type-system"></a>
+
+### Core Perl types
+
+Perl's fundamental data model centres on three constructs:
+
+| Construct | Sigil | What it holds |
+|-----------|-------|---------------|
+| **Scalar** | `$` | A single value: number, string, reference, or `undef` |
+| **Array** | `@` | An ordered list of scalars, indexed by integer |
+| **Hash** | `%` | An unordered collection of scalar values keyed by string |
+
+Everything else — objects, closures, complex data structures — is built from these three primitives via *references* (`\@array`, `\%hash`, `sub { ... }`).
+
+This model is extraordinarily flexible.  A single array can hold integers, floating-point numbers, strings, and nested references simultaneously.  That flexibility is exactly what made Perl the dominant system-administration and web-scripting language for two decades.
+
+### The cache-hierarchy problem
+
+Modern CPUs achieve peak throughput only when data flows through L1/L2/L3 cache<sup><a id="cache-ref" href="#fn-cache">†</a></sup> in large, contiguous blocks — a property called *spatial locality*.  Perl arrays do not provide this.  Under the hood, a Perl array is a C array of *pointers* to heap-allocated scalar (`SV`) structs.  Each scalar carries a reference count, a type tag, and padding — typically 24–56 bytes per scalar on a 64-bit build.  Iterating over a million-element Perl array therefore involves a million pointer dereferences scattered across the heap, producing a cache-miss pattern that completely negates the speed advantage of modern SIMD pipelines.
+
+A concrete consequence: a dot product of two 1 000-element vectors written in pure Perl is roughly **100–1000× slower** than the equivalent operation on a pair of PDL float ndarrays, which occupy two flat, 4 000-byte memory regions that fit comfortably in L1 cache.
+
+### Contrast with R
+
+R occupies a curious middle ground.  Like Perl, it is a dynamic, interpreted language — variables are untyped containers, functions are first-class values, and the interactive REPL is the primary development environment.  R even has direct analogues to Perl's three core types:
+
+| Perl concept | R analogue |
+|---|---|
+| `$scalar` | length-1 atomic vector or scalar-in-list |
+| `@array` | `list()` |
+| `%hash` | named `list()` |
+| Reference (`\@arr`) | R does not use explicit references; copy-on-modify semantics instead |
+
+But R's *workhorse* type, i.e.  the **atomic vector** has no straightforward Perl counterpart. An R atomic vector is a contiguous, homogeneously typed block of memory — exactly the layout that a CPU cache rewards.  Every built-in scalar in R is actually a length-1 atomic vector; there is no "bare scalar" outside of atomic vectors.
+
+This design choice means that R code naturally operates on vectors of millions of doubles with BLAS-level throughput, without the user writing a single loop or allocating a special "array" object.
+
+R's atomic types are:
+
+| R atomic type | Storage | C equivalent |
+|---|---|---|
+| `logical` | 4 bytes/element | `int` (with NA sentinel) |
+| `integer` | 4 bytes/element | `int32_t` |
+| `double` | 8 bytes/element | `double` |
+| `complex` | 16 bytes/element | `_Complex double` |
+| `character` | pointer to CHARSXP | `char *` (interned) |
+| `raw` | 1 byte/element | `uint8_t` |
+
+R also defines higher-level structures built on atomic vectors:
+
+- **matrix** — a 2-D atomic vector with a `dim` attribute.
+- **array** — an N-D atomic vector with a `dim` attribute.
+- **data.frame** — a named list of equal-length atomic vectors; the lingua franca of
+  tabular data in R.
+- **factor** — an integer vector with a `levels` attribute; encodes categorical data.
+
+The lesson: R's computing performance when used in statistical and data science applications flows directly from its contiguous atomic vectors. Perl's equivalent path to performance is an extension (which also is a stand alone `matlab` like enviroment), the Perl Data Language [`PDL`](https://pdl.perl.org/).
+
+---
+
+## 3. Enter PDL: Strongly Typed N-Dimensional Arrays <a id="enter-pdl"></a>
+
+The **Perl Data Language** (PDL, `pdl.perl.org`) extends Perl with *ndarrays* (N-dimensional arrays): contiguous, strongly typed memory buffers that look and feel like first-class Perl objects.
+
+```perl
+use PDL;
+
+# A 1-D float ndarray — 4 bytes × 5 elements in one contiguous block
+my $v = float( 1.0, 2.0, 3.0, 4.0, 5.0 );
+
+# A 128-dimensional random database of 1000 vectors — all in cache-friendly memory
+my $db = random( 128, 1000 );   # double by default
+
+# Dot product of every DB vector against a query — a single BLAS call
+my $scores = $db x $query->transpose;
+```
+
+### PDL 原始類型
+
+PDL 會將 C 數值類型的完整選用區顯示為一流的建構子：
+
+| PDL 類型 | 位元組 | C 類型 | 建構子 |
+|---|---|---|---|
+| `位元組` | 1 | `uint8_t` | `位元組 (...)` |
+| `簡短` | 2 | `int16_t` | `短 (...)` |
+| `期別` | 2 | `uint16_t` | `ushort (...)` |
+| `長整數` |4 日 | `int32_t` | `長 (...)` |
+| `索引` | 4 或 8 | `ssize_t` | `indx (...)` |
+| `長長` | 8 | `int64_t` | `長隆 (...)` |
+| `浮點` |4 日 | `浮點` | `浮點 (...)` |
+| `雙重` | 8 | `雙重` | `雙倍 (...)` |
+| `浮動` | 8 | `複合浮動 (_C)` | `cfloat (...)` |
+| `雙倍` | 16 | `複雜雙精度浮點數 (_C)` | `cdouble (...)` |
+
+### 執行緒與 SIMD
+
+PDL 其中之一'最明顯的功能是 *隱含執行緒 *：作業會自動透過額外的維度廣播，排除使用者程式碼中的明確迴圈，並將內部迴圈委派給最佳化的 C 或 Fortran 核心。結合與`set_autopthread_targ (N)`，PDL 將自動平行多個獨立磁碟片段`否` 作業系統執行緒 — 不讓使用者編寫單一執行緒`叉` 或`執行緒：：佇列` 呼叫。
+
+### 值錯誤
+
+PDL 有內建的 *錯誤值概念* (`PDL：：錯誤`)，直接類似於 R'秒鐘`不適用`。可以將 ndarray 標示為"值感知錯誤"，PDL 作業會透過算術、統計資料及 I/O 正確傳輸錯誤。
+
+---
+
+## 4. 類型比較：Perl、PDL 和 R 並排<a id="type-comparison-table"></a>
+
+下表將每個常用的 R 類型對應至其最接近的 Perl 和 PDL 對等部分，強調三種語言彼此同意、不同或互補的位置。
+
+| R 類型 | 永久對等 | PDL 對等 | 備註 |
+|---|---|---|---|
+| `雙重` (長度 -1) | `$x = 3.14` (純量) | `雙倍 (3.14)` — 形狀`()` | R 沒有稀有純量；一切都是向量 |
+| `整數` (長度 -1) | `$n = 42` (純量) | `長 (42)` | |
+| `邏輯` (長度 -1) | `$flag = 1` / `$flag = 0` | `位元組 (1)` | Perl 使用真實性；PDL 使用 0/1 位元組 |
+| `雙重` 向量 | `@arr = (1.1、2.2、3.3)` | `雙倍 (1.1、2.2、3.3)` | PDL：連續；`@arr`：指標陣列 |
+| `整數` 向量 | `@arr = (1、2、3)` | `長 (1、2、3)` | |
+
+| R 類型 | 永久對等 | PDL 對等 | 備註 |
+|---|---|---|---|
+| `邏輯` 向量 | `@flags = (1、0、1)` | `位元組 (1，0，1)` | |
+| `複合` 向量 | — (無內建) | `cdouble (...)` | Perl 需要`數學：：複雜`PDL 的原生支援 |
+| `字元` 向量 | `@strs = ('一個','b')` | — (非數字) | PDL 僅對數字運作 |
+| `原始` 向量 | `包裝 ('C*', @bytes)` | `位元組 (...)` | |
+| `不適用` | `未定義` | ndarray 中的錯誤值 | PDL 錯誤值傳輸，例如 R'秒鐘`不適用` |
+
+| R 類型 | 永久對等 | PDL 對等 | 備註 |
+|---|---|---|---|
+| `空值` | `未定義` 在清單相關資訊環境中 | — |
+| `清單` | `@array` 或參考`\@array` | — | |
+| 名稱`清單` | `%hash` 或`\% 雜湊` | — | |
+| `矩陣` (2-D) | 陣列`@aoa` | 2D ndarray `pdl ([[...],[...]])` | PDL：資料欄主修；R：資料欄主修 |
+| `陣列` (N-D) | 巢狀參照 | N-D ndarray `$x-> 新產品 (...)` | |
+| `data.frame` | `%hash` 總共`@arrays` | 2-D ndarray (數值資料欄) + Perl 雜湊 (混合) | 沒有完全相同的單一 PDL 類型對應 |
+
+| R 類型 | 永久對等 | PDL 對等 | 備註 |
+|---|---|---|---|
+| `因子` | 雜湊查尋表格 + `@indices` | `長整數` ndarray + Perl `@levels` 陣列 | |
+| `環境` | `%hash` 或套裝程式命名空間 | — |
+| `函數` / 關閉 | `下標{ ... }` / 關閉 | — | PDL PP 定義編譯的核心 |
+| `S3 / S4 物件` | blessed reference + method dispatch | PDL 物件 (繫結的 ndarray) | PDL 物件是第一個類別 Perl 物件 |
+
+### 關鍵概要
+
+- 對於 **純數字、同質資料** (向量、矩陣、張數)、PDL ndarray 和 R 原子向量的功能同等且相對有效率。
+
+- 若為 **異質列表化資料** (混合類型、字串資料欄、因子)，R'秒鐘`data.frame` 較符合人體工學；Perl 通常會使用陣列雜湊或專用的模組，例如`資料：：框架` 或`PDL::IO::CSV`.
+
+- 適用於 **文字、不規則結構及系統膠水 **、Perl'原生類型優於 R 和 Python。
+
+- 因此，Perl+PDL 的組合提供了 R 提供的 *union* 作為統計語言，而 Perl 以系統語言提供的項目 — 以較陡的學習曲線和較少立即可用的 nd 法郎有限的統計工具。
+
+不過，Perl+PDL+R 的組合 (後者用作元件，或[儀器化](https://chrisarg.github.io/Killing-It-with-PERL/2025/01/18/Timing-Peak-DRAM-Use-In-R-With-Perl-Part-1.html) 透過 Perl).
+
+---
+
+## 5. 藍圖：此系列的其餘部分涵蓋<a id="road-map"></a>
+
+此系列記錄了從頭開始建構 Perl5 + PDL 內建的 **向量資料庫引擎 **。向量資料庫是現代化的檢索增強生成 (RAG) 管線、語意搜尋和最近的鄰居建議系統。從第一項原則中導入一項是展示 PDL 的絕佳工具'數值功能與 Perl's 系統程式設計強度。
+
+與這些張貼項目共同開發的目錄包含下列元件，每個元件都會成為一或多個將參照專用儲存區域中檔案之專用張貼項目的主體。
+
+### Post 1 — 序列化和 I/O：`VectorIO` 模組
+
+*檔案：`VectorIO.pm`*
+
+該引擎將向量儲存為內裝的二進制小點[MessagePack](https://msgpack.org/) 有效負載。本文涵蓋：
+
+- 設計一個乾淨的模組`出口商`- 基礎公用 API `使用 v5.40`.
+- 在系統界限強制實行綱要正確性的驗證協助程式。
+
+### Post 2 — 模擬向量資料庫
+
+*檔案：`simulate_vectorDB.pl`*
+
+在搜尋資料庫之前，我們需要一個資料庫。此文章顯示：
+
+- 產生可再現的隨機浮點向量與`PDL：：隨機`.
+- 使用`GetOpt：：龍` 用於人體工學 CLI 選項剖析。
+- 寫一個`-- 種子`- 受控制的模擬會在執行時產生相同的資料庫，對於基準而言至關重要。
+
+### 第 3 篇文章 — 標竿：`timing_DB` 模組
+
+*檔案：`timing_DB.pm`*
+
+績效申請需要評量。本文介紹：
+
+- 內建可重複使用的 Perl 基準線束`時間：：HiRes`.
+- Perl/PDL 與 R 實作之間公平壁鐘比較的方法。
+- 解譯不同工作負載大小的傳輸量 (向量 / 秒) 與延遲 (毫秒 / 查詢)。
+
+### Post 4 — K-Means 叢集與`PDL：：統計：：代表`
+
+*檔案：`kmeans.pl`*
+
+K-means clustering 是反向檔案索引 (IVF) 方法的骨幹，其近似鄰近的搜尋。本文涵蓋：
+
+- The `PDL：：統計：：代表` 介面及其退貨合約 (`中心`, `叢集`, `n 個`, `R2`, `秒`).
+- 解譯`[日本人無修正]` 成員遮罩傳回者`run_kmeans`.
+- 比較 Perl/PDL k-means 中心與 R'秒鐘`Kmeans()` 與`ClusterR::MiniBatchKmeans()` 以驗證數值正確性。
+
+### Post 5 — Mini-Batch K-Means：擴展至大型資料集
+
+*檔案：`compare_kmeans_centroids.pl`*
+
+完整 k-means 需要在記憶體中執行所有資料以進行每次重複。Mini-batch k-means 會交易少量的甲狀腺準確度，以大幅減少記憶體和運算。這篇文章探討：
+
+- 在 PDL 中實作真正的重新取樣迷你批次迴圈。
+- 量身定制全迷你批次變體之間的甲狀腺漂移。
+- R 的並排輸出'秒鐘`MiniBatchKmeans` 從`ClusterR` 套件。
+
+### Post 6 — 反轉檔案索引 (IVF) 搜尋
+
+*檔案：`compare_ivf_search.pl`*
+
+有了甲狀腺功能，我們可以分割資料庫，並執行近似鄰近搜尋的子線性。本文涵蓋：
+
+- 建立反轉清單：將每個資料庫向量對應至其最接近的形心。
+- The `unpack_inverted_lists` 協助者進入`VectorIO`.
+- Querying: 尋找最接近 K 的甲狀腺，然後只搜尋這些清單。
+- 準確度與加速權衡，因為試用名單數量不同。
+
+### Post 7 — 對 R 進行驗證：數字正確性和跨語言管線
+
+*檔案：`compare_kmeans_centroids.R`, `compare_kmeans_centroids_pure.R`, `plot_centroid_coordinates.R`*
+
+基礎系列的最後一篇文章關閉 Perl 與 R 之間的迴路：
+
+- 將 PDL 結果匯出成 CSV 並在 R 中讀取，以進行獨立驗證。
+- 使用 ggplot2 可同時從兩種語言視覺化甲狀腺座標。
+- 工作流程模式"Perl 中的運算，R 中的視覺化" 利用兩個生態系統的優勢。
+
+---
+
+> **下一步 — 過帳 1：** 序列化與 I/O 搭配`VectorIO.pm`
+
+---
+
+<a id="fn-cache"></a>
+
+**† **現代 CPU 在處理器核心與主要 RAM 之間具有多個稱為 **caches** (L1、L2、L3) 的快速晶片內建記憶體。L1 是最小的 (每個核心通常為 32 – 64 KB) 和最快的 (1 – 4 時鐘週期延遲)；L2 較大 (256 KB – 1 MB) 且速度較慢；L3 可在仍有較高延遲的核心 (4 – 64 MB) 之間共用。主要 RAM 延遲為 60 – 100 ns，比 L1 慢約 200 倍。
+
+當運算以可預測的連續模式處理記憶體時，硬體 *prefetcher* 可以在需要之前將即將到來的資料載入 L1/L2，以達到接近尖峰的輸送量。散佈的指標連接 (例如周遊 Perl 堆集配置的定量陣列) 會擊敗預先擷取，並在等待從 RAM 解析每個快取遺漏時將 CPU 停滯。
+
+<!-- $Date: 2026-04-16 16:45:10 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31803 $ -->

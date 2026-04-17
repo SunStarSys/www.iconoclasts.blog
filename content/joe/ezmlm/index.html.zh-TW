@@ -1,0 +1,21 @@
+{% extends "main.html"|append:lang %}
+{% block content %}
+<div class="page-header"><div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))"><img src="/images/edit.png" /></a></div>
+  <h1>{{ headers.title }}</h1></div>
+<div class="jumbotron">
+{% filter markdown %}
+### 版面配置
+
+執行檔應該位於`儲位 /`，與平行`程式庫 /` 目錄
+pull_header.pm. 如果您有`服務` 客戶方便，最簡單的方式
+以抓取此樹狀圖"就地" 透過：
+
+```shell
+	% svn co https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/content/essays/ezmlm
+```
+
+{% endfilter %}
+
+{{ content|markdown }}
+</div>
+{% endblock %}

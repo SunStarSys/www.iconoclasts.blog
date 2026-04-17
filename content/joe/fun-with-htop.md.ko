@@ -1,0 +1,55 @@
+---
+archived: ~
+categories: 도구
+dependencies: '*.md.ko'
+keywords: ~
+published: ~
+status: 아카이브됨
+title: 재미와 htop
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/iEUZJ44mldI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+## {# lede #}인기 있는 유닉스 플랫폼의 고급 htop 기능{# lede #}
+
+- 델타 From `위쪽`
+
+- 정교한 대화형 동작
+	- 주제, **의미** 색 구성표
+	- 전체 프로세스뿐만 아니라 POSIX 스레드 수준에서 작동합니다.
+
+- 기능
+
+- 표시 사용자 정의 `C`
+	- 검색 `/` 또는 필터 `\` 이름별 경량 프로세스(LWP, 일명 스레드)
+	- 사용자 이름으로 LWP 필터링 `너`
+	- 토글 `t` 트리 뷰
+	- LWP별 명령
+		- `초` 시스템 추적
+		- `l` 열린 파일 설명자 목록
+		- `e` 환경 변수
+		- `ko` 킬로 신호 보내기
+
+### 리눅스
+
+OOTB 완전 작동 기능 세트입니다.
+
+### OSX 포트
+
+- DTrace를 사용으로 설정합니다(필수). [복구 모드로 부팅하여 SIP 비활성화](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
+- 복사 [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) 종료 `~/bin` 생성 및 실행 `문자열` 심볼 링크
+- 출시 `상단` 루트로
+
+### [솔라리스 11](https://github.com/joesuf4/htop/tree/solaris-stable) / FreeBSD 포트
+
+- ZFS ARC 통계
+- 구역 이름/ID 열
+- Solaris LWP 회계 델타
+	- 이중 레벨 PID + LWPID
+	-는 전체 명령 인수를 제공하지 않으며 명령 이름만 제공합니다.
+
+<!-- $Date: 2023-01-19 17:58:40 -0500 (Thu, 19 Jan 2023) $ $Author: joe $ -->

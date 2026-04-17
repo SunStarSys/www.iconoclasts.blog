@@ -1,0 +1,25 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ko'
+keywords: 화면,htop,solaris,oci,observability
+published: ~
+status: 초안
+title: Htop의 기쁨
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/_rWTTN5Ajjg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+[TOC]
+
+## {# lede #}Solaris 11의 htop{# lede #}.
+
+### [비디오 소스]({{snippetA.pretty_uri}}).
+
+[snippet:repo=joesuf4/home:path=.ocirc:lines=417-425:lang=shell:branch=wsl]
+
+<!-- $Date: 2024-04-17 19:39:08 -0400 (Wed, 17 Apr 2024) $ $Author: joe $ $Revision: 22371 $ -->

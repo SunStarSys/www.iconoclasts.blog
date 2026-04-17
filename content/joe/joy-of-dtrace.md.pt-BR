@@ -1,0 +1,33 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.pt-BR'
+keywords: dtrace,solaris,bpftrace,modperl
+published: ~
+status: rascunho
+title: A Alegria do DTrace
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/SwnZf3j4f1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+[TOC]
+
+## {# lede #}Meça duas vezes, corte uma vez, antes de iniciar um esforço de otimização de código{# lede #}.
+
+Nada torna o produto de medição mais fácil do que DTrace.
+
+## [Fontes de vídeo]({{snippetA.pretty_uri}}).
+
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
+
+## [Otimização direcionada]({{snippetB.pretty_uri}}).
+
+A cada `$dtlv` class-method-call abaixo é feito no tempo de compilação por `: Lacrado`:
+
+[snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
+
+<!-- $Date: 2026-03-16 08:35:13 -0700 (Mon, 16 Mar 2026) $ $Author: joe $ $Revision: 29049 $ -->

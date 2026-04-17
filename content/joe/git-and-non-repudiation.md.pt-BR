@@ -1,0 +1,35 @@
+---
+archived: ~
+categories: Controle de Versão, Apache
+dependencies: '*.md.pt-BR'
+keywords: segurança, não repúdio, DVCS, controle de versão, icla
+published: ~
+status: arquivado
+title: Git e não repúdio, revisitado
+---
+
+Este ensaio realmente pertence ao DVCS em geral, não apenas ao git per se.  Mas vamos focar a atenção no git porque ele continua a ser o DVCS mais popular em torno de hoje.
+
+[Não repúdio](http://en.wikipedia.org/wiki/Non-repudiation) é um conceito importante nos círculos de segurança.  O que significa é satisfazer uma empresa's necessidade de adquirir registros de atividade que "não pode ser afastado depois do fato".
+
+Com uma ferramenta de controle de versão centralizada tradicional, esses registros estão prontamente disponíveis no histórico de commits.  Cada commit no sistema passa por um mecanismo de autorização para garantir que a pessoa que fez a alteração esteja autorizada a carregá-la.  Esses registros são vitais para a empresa para garantir que sejam mantidos registros precisos que indiquem quem é responsável por carregar cada linha de código para o software em questão.
+
+Com git, ou controle de versão distribuído em geral, {# lede #}Há uma clara distinção entre "fazer commit" História e "fazer upload" história{# lede #} &mdash; que aqui me referirei como "registros de envio". Os commits no git não são autenticados, porque acontecem localmente, com metadados locais e não verificados adicionados ao histórico.  A etapa de upload, também conhecida como `git push` é um passo separado, e é aqui que os registros push entram em jogo.
+
+Com [A Fundação Apache Software](https://www.apache.org/)'s rollout of git, nós incorporamos no sistema uma maneira de gravar esses registros push de uma forma que traz níveis paralelos de registros não repudiáveis   que a organização desfruta com seu serviço de subversão de longa data. Para que o sistema funcione corretamente, é imperativo que os committers enviem suas alterações diretamente para o ASF's git repo.
+
+Por que isso é importante?  Bem, para começar, deixe-me abordar um equívoco comum sobre a necessidade de Acordos de Licença de Colaborador (ICLAs) para os committers da Apache.  Muitas pessoas não'T parece entender que, tanto quanto um committer'trabalhos individuais de autoria, não há diferença entre a língua aplicável no [ICLA](http://www.apache.org/licenses/icla.txt) e o [Licença Apache 2.0](http://www.apache.org/licenses/license-2.0). A distinção reside no fato de que a organização precisa de um acordo contratual entre committers e The ASF para lidar com o processo adequado para lidar com contribuições de terceiros. São essas formas de contribuições que exigem a ICLA, não alguma propensão bizarra de cinturões e suspensórios para contrair com outros.
+
+O que os registros push fornecem então é uma maneira de rastrear, para cada linha de código em uma versão, o committer individual responsável por enviar esse código para o ASF'repositório s git. Isto é criticamente importante na determinação da proveniência de uma contribuição de terceiros com git, porque é infelizmente possível para tal contribuinte "caminhar" a partir de sua contribuição para um projeto git devido à natureza distribuída dos logs de commit do DVCS.  O responsável, então, de acordo com a ICLA, torna-se o committer que empurrou o código.
+
+Estratégias de mitigação precoce e adequada giram em torno da remoção da contribuição abandonada, mas o dano ao projeto pode já ter sido feito.  E sem os registros push, nós'd literalmente não ter nenhum processo autorizado para determinar como esse código realmente entrou em nosso repositório, além de arrastar através de registros alternativos em rastreadores de problemas ou comunicações na lista.  Confiar apenas em logs de commit de mesclagem para determinar a proveniência não é muito satisfatório do ponto de vista de segurança, porque requer aderência rígida a um tipo específico de fluxo de trabalho, o que não'Você quer ditar.
+
+Sem essas coisas nós'd necessidade de obrigar pelo menos PGP-assinatura de cada contribuinte's commit, o que é oneroso para muitos projetos.  Os registros push fornecem um processo transparente que não afeta um projeto'workflow s, exceto para garantir o ASF's git repo é o verdadeiro repositório mestre.
+
+## Atualização de 2025
+
+O Git tem suporte nativo para `SSH-SK-ED25519@openssh.com` chaves de assinatura, que são um ótimo ajuste para a adoção organizacional de uma infraestrutura de assinatura de Commit/Tag 2FA que incorpora USB-C YubiKeys para uso em laptop/estação de trabalho.
+
+O inchaço desnecessário e a complexidade de uma Infraestrutura PGP completa não são mais relevantes para resolver os problemas de não repúdio discutidos acima, em toda a organização ou em um nível por projeto. E a boa integração com o GitHub facilita esse esforço na íntegra.
+
+<!-- $Date: 2025-01-03 11:07:18 -0700 (Fri, 03 Jan 2025) $ $Author: joe $ $Revision: 25541 $ -->

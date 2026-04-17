@@ -1,0 +1,511 @@
+---
+archived: ~
+categories: Mathematik, Dynamik
+dependencies: '*.md.de'
+keywords: Dynamik, Mechanik, Quanten, Klassik, Wärmekern, Tötungsfeld, Feynman Kac,
+  Kameramartin
+published: ~
+status: Durcheinander
+title: Dynamik, Klassik und Quantum
+---
+
+<div class="right">
+
+![QM](dynamics.page/dynamics).
+
+</div>
+
+{# lede #}Ein Differenzgeometer's Ansatz{# lede #}
+
+Prerequisites:
+
+1. Vertrautheit mit Stokes' Satz über Differential-Außensensor-Algebren von $$n$$-dimensionale Verteiler $$M$$.
+
+2. Exposition gegenüber der grundlegenden Riemannschen Geometrie, insbesondere in lokalen Koordinaten, einschließlich Einstein/PAIN Notation.
+
+3. Interesse an glatten und stochastischen dynamischen Systemen, einschließlich Brownian Motion und Martingale Theory.
+
+[TOC]
+
+## Klassische Dynamik
+
+### Hamilton-Jacobi / Lagrange Formalismus
+
+### Die Mechanik von Cotangent Bundles
+
+Definieren Sie den glatten **Hamiltonian** $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ als $$\mathcal H(p,q,t)$$.
+
+#### Lassen $$\theta := p\ dq - \mathcal H(p,q,t)\ dt\in T^\*(T^\*M\oplus\Reals)$$.
+
+Definieren $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ für glatt $$\gamma:[0,t]\rightarrow T^{\*}M\oplus\Reals$$.
+
+Wenn zwei solcher Kurven $$\gamma_1, \gamma_2$$ die gleichen Grenzendpunkte haben, **Subtraktion** durch inverse Zusammensetzung definieren, $$\gamma_1 - \gamma_2$$ ist eine durch Durchlaufen definierte geschlossene Schleife $$\gamma_1$$ in die vordere Richtung und $$\gamma_2$$ umgekehrt. Lassen $$S$$ eine beliebige 2-Dimensonale Fläche sein, die von dieser geschlossenen Schleife begrenzt wird: $$\gamma_1 - \gamma_2 = \partial S$$. So
+
+```math
+\begin{aligned}
+\mathcal S_\mathcal H(\gamma_1) - \mathcal S_\mathcal H(\gamma_2) &= \int_{\gamma_1 - \gamma_2}\theta \\
+&= \int_{\partial S}\theta\\
+&= \int_S d\theta
+\end{aligned}
+```
+von Stokes' Satz.
+
+Unabhängig davon, ob eine solche Oberfläche $$S$$ tatsächlich existiert, für die Aktion $$\mathcal S_\mathcal H$$ nur von den Endpunkten der $$\gamma$$Wir müssen unbedingt die Bedingung der ersten Ordnung haben, dass $$d\theta$$ verschwinden am $$\gamma$$.
+
+#### Lassen $$\omega_\mathcal H := d\theta = dp\wedge dq - d\mathcal H \wedge dt\in\bigwedge^2T^\*(T^\*M\oplus\Reals)$$.
+
+```math
+\begin{aligned}
+\omega_\mathcal H|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial \mathcal H}{\partial p}dp\wedge dt - \frac{\partial \mathcal H}{\partial q}dq\wedge dt \\
+        &= (-\dot{p}_i - \frac{\partial \mathcal H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial \mathcal H}{\partial p_i}) dp_i\wedge dt
+\end{aligned}
+```
+
+#### $$\therefore \omega_\mathcal H|_\gamma = 0 \iff \gamma(t)$$ erfüllt die Hamilton-Jacobi-Gleichungen
+```math
+\begin{aligned}
+\dot p &= -\frac{\partial \mathcal H}{\partial q} \\
+\dot q &= \ \ \ \frac{\partial \mathcal H}{\partial p}
+\end{aligned}
+```
+
+$$\iff \gamma:[0,t]\rightarrow T^*M\oplus\R  $$ ist eine *stationäre Kurve* für die Aktion $$\mathcal S_\mathcal H(\gamma)=\int_\gamma \theta$$.
+
+#### Legendre-Transformation
+Wenn $$\mathcal H$$ ist konvex in $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  zufriedenstellend $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$. Dies definiert die (involutive) Legendre-Transformation $$\mathcal L$$ von $$\mathcal H$$:
+```math
+\begin{aligned}
+\mathcal{L}(\dot q,q,t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) \\&= p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
+\mathcal S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
+\end{aligned}
+```
+ist die *lagrangische Darstellung der Aktion*, wo $$\pi: T^*M\oplus\Reals \rightarrow M\oplus\Reals$$ ist der (vergessene) Faserprojektionsoperator $$(p,q,t)\mapsto (q,t)$$.
+
+#### Das Prinzip der geringsten Aktion
+
+Das Prinzip der geringsten Handlung behauptet einfach, dass die klassische Dynamik der Natur selbst dazu neigt, Flugbahnen auszuwählen, die minimieren $$\mathcal S_\mathcal{L}$$.
+
+Im Allgemeinen ist dieser Anspruch **falsch**. Aber die festen Kurven von $$\mathcal S_\mathcal H$$ sind immer interessant zu entdecken, und sie sind identisch mit den Kurven, die $$\mathcal S_\mathcal{L}$$ stationär.  Lokal **sind die Differentialgleichungen für diese stationären Trajektorien identisch**, und so $$\mathcal S_\mathcal H = \mathcal S_\mathcal{L}$$ auf diese Kurven.  In der Lagrangschen Formulierung werden diese kovarianten Gleichungen als **Euler-Lagrange-Gleichungen** bezeichnet. $$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
+
+```math
+\frac{\partial \mathcal L}{\partial q} = \frac{d}{dt}\frac{\partial \mathcal L}{\partial \dot q}
+```
+
+ein ODE zweiter Ordnung in $$t \mapsto q(t)$$, so hat $$2\dim M+1$$ Anfangsbedingungen $$(\dot q_0, q_0, t_0)$$, genau wie bei den kontravarianten Hamilton-Jacobi-Gleichungen. Nach dem Picard-Lindelöf-Theorem haben diese Gleichungen lokal einzigartige Lösungen, wenn sie als intiales Wertproblem gerahmt werden.
+
+Ein interessanter Aspekt von $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ offenbart sich, wenn wir $$\pi\circ\gamma$$ implizit basierend auf den Endpunkten $$(q_0, t_0)$$ und $$(q_f, t_f)$$, also müssen wir dieses Grenzwertproblem in ein Anfangswertproblem *umwandeln. Mit anderen Worten, wir müssen für eine $$\dot q_0$$ Das wird das Ziel treffen $$(q_f, t_f)$$ mit einer (einzigartigen?) stationären Kurve $$\pi\circ\gamma$$ der die Euler-Lagrange-Gleichungen löst. So können wir uns vorstellen $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ als **Übergangsfunktion**, vorausgesetzt, sie hängt nicht von der Wahl des stationären $$\pi\circ\gamma$$und so ein $$\gamma$$ tatsächlich im Lösungsraum von glatten Kurven vorhanden ist, die das Paar von Übergangspunkten verbinden.  Lokal ist dies eine Anwendung des impliziten Funktionssatzes, aber global kann es topologische Hindernisse geben, um solche zu konstruieren. $$\gamma$$.
+
+Lassen'einen Schritt zurückgehen und etwas Einfacheres definieren: ein einzigartiges "horizontal" Aufzug $$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q}^{\*}M\oplus \Reals$$ durch Zuweisen
+
+```math
+(\dot q, q,t)\mapsto (p_{max}(\dot q), q, t)\ .
+```
+Jetzt haben wir für **any** "Prognostiziert" Glatte Kurve (nicht nur stationäre) $$\tilde\gamma:[0,t]\rightarrow M\oplus\R$$:
+
+```math
+\begin{aligned}
+
+\mathcal S_\mathcal{L}(\tilde\gamma) &= \mathcal S_\mathcal H(\mathcal A\circ \tilde\gamma) \ .
+\end{aligned}
+```
+
+Note: die Konvexitätsbeschränkung auf $$\mathcal H$$ stellt sicher, dass es ein einzigartiges $$p_{max}(0)$$ auf eine solche stationäre Kurve wiith $$\dot q = 0$$. Das Netz davon ist, dass stationäre Kurven $$\gamma$$ *hat keine anhaltende Bewegung in einer Faser von* $$\pi^{-1}$$, also ohne Verlust der Allgemeinheit betrachten wir einfach nicht stationär $$\tilde \gamma$$ und heben sie mit $$\mathcal A$$ als geeignete Kurvenklasse "Integration über" später.
+
+#### Quadratische Form Magie, Teil 1
+
+Wenn $$\mathcal H(p,q,t)$$'s $$p$$-Abhängigkeit (auch als Kinetic Energy-Komponente bekannt) ist eine nicht-degenerierte, symmetrische quadratische Form, wir können sie als pseudo-riemannsche Metrik darstellen $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$ mit Umkehrung $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$. Die Legendre-Transformation in lokalen Koordinaten bezieht sie so:
+
+```math
+\begin{aligned}
+\mathcal H^\mathcal V(p,q,t) &= \frac{1}{2}\ g^{ij}(q,t)\ p_ip_j + \mathcal V(q,t) \implies\\
+\mathcal{L}^\mathcal V(q,\dot q, t) &= \frac{1}{2}\ g_{ij}(q,t)\dot{q}^i\dot{q}^j - \mathcal V(q,t)\ .
+\end{aligned}
+```
+
+Die Levi-Civita-Verbindung's Christoffel Symbole für $$g$$ werden einfach durch die Koszul-Formel definiert
+
+```math
+\begin{aligned}
+\Gamma^k_{ij} &= \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})\\
+\Gamma_k^{ij} &= \frac{1}{2}g_{ka}(\partial^ig^{ja} + \partial^j g^{ia} - \partial^ag^{ij}).
+
+\end{aligned}
+```
+mit $$\partial_i := \frac{\partial}{\partial q^i}$$ und $$\partial^i := g^{ij}\partial_j$$. Derivat des Kovarianten $$\nabla$$ in lokalen Koordinaten ist
+```math
+\begin{aligned}
+\nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or}\\
+\nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k \text{ , and contravariantly}\\
+\nabla_{\partial^i}\partial^j &= \Gamma^{ij}_k\partial^k \text{, so} \\
+\nabla &= d + \Gamma
+\end{aligned}
+```
+
+für alle Tensorfelder. Insbesondere $$\Gamma$$ ist symmetrisch in $$(i, j)$$; und  $$\nabla [g_{ij}] = \nabla [g^{ij}] = 0$$.
+
+Anekdotisch ist der Riemann-Christoffel Curvature Tensor
+
+```math
+\mathcal R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
+```
+
+##### Multiplikatoren für Lagrange $$\mathcal H$$ als Infinitesimalübersetzungen auf $$\mathcal L$$
+
+Darüber hinaus, wenn $$\mathcal H = \mathcal H\_B$$ hat eine zusätzliche Geschwindigkeitsfeldkomponente $$\mathcal B(q,t)\in T_qM$$, also eine lineare Funktion auf $$p\in T^{\*}_qM$$, können wir **das Quadrat vervollständigen** und neu berechnen $$\mathcal{L}_B$$ in Bezug auf $$\mathcal L$$:
+
+```math
+\begin{aligned}
+\mathcal H_\mathcal B(p,q,t) &= \mathcal H + \mathcal Bp \implies\\
+\mathcal L_\mathcal B(\dot q,q,t) &=\max_p p(\dot q - \mathcal B) - \mathcal H\\
+&\ \begin{equation}
+\tag{A}= \mathcal{L}(q,\dot{q}-\mathcal B, t)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\end{equation}\\
+\mathcal H_\mathcal B &= \frac{1}{2}\ g^{ij}p_ip_j + p\mathcal B + \mathcal V \implies\\
+\mathcal L_\mathcal B &\ \begin{equation}\tag{B}= \mathcal L - g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j\ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+Hier sehen wir die Verbindung zwischen dem Lagrange Multiplier $$\mathcal B$$ am $$\mathcal H$$ und seinen äquivalenten Ausdruck als unendliche Drift auf $$\mathcal L$$. Wir kontextualisieren $$\mathcal B$$ in einer Vielzahl von nützlichen Möglichkeiten im Rest. **Beide Ausdrücke $$(A)$$ und $$(B)$$ für $$\mathcal{L}_\mathcal B$$ in Gleichung <span class="eqno"></span> kritisch**.
+
+##### Der horizontale Lift $$\mathcal A$$
+
+Seit $$\frac{\partial \mathcal H}{\partial p_i}(p,q,t) = g^{ij}p_j \implies \frac{\partial^2\mathcal H}{\partial p_i \partial p_j} = g^{ij}$$, können wir den horizontalen Lift explizit berechnen
+
+```math
+\begin{aligned}
+{p_{max}}_i &= g_{ij}\dot q^j = \frac{\partial \mathcal L}{\partial \dot q_i}\implies \\
+\mathcal A(\dot q, q, t) &= ([g] \dot q, q, t)\ .
+\end{aligned}
+```
+
+Wenn $$g^{ij}$$ ist positiv-definit, ebenso wie seine inverse, was die kinetische Energiekomponente von $$\mathcal S_\mathcal L(\tilde\gamma) = \mathcal S_\mathcal H(\mathcal A\circ\tilde\gamma)$$ ist lokal **minimiert** auf stationären Kurven mit echten Riemannschen Metriken.
+
+Nach Gleichung (12) $$(A), (B)$$, die Euler-Lagrange Gleichungen für $$\mathcal L^\mathcal V_\mathcal B$$ werden:
+
+```math
+\begin{aligned}
+
+\frac{1}{2}\partial_i g_{jk}(\dot q^j-\mathcal B^j)(\dot q^k -\mathcal B^k)-\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)(\dot q^j - \mathcal B^j) = {\dot p^\mathcal B_{max}}_i\ ,\\
+
+- \partial^i \mathcal V &= \frac{1}{2} (\partial^i   g_{jk})(\dot q^j-\mathcal B^j) (\dot q^k-\mathcal B^k) - g_{jk}(\partial^i\mathcal B^j)(\dot q^k - \mathcal B^k) + \frac{d}{dt} (\dot q^i - B^i) + g^{ij}\frac{\partial g_{jk}}{\partial t}(\dot q^k -\mathcal B^k)\\
+
+-\nabla\mathcal V(q,t)&\begin{equation}\tag{C}=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B +(\partial_t [\log g])(\dot q-\mathcal B) \ .\ \ \ \ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+Das ist genau **Newton'Gesetze der Bewegung** $$F/m = a$$ mit $$\partial_t := \frac{\partial}{\partial t}$$ einer potentiellen Energie $$\mathcal V$$ und Geschwindigkeitsfeld $$\mathcal B$$in einer zeitabhängigen Einstellung.
+
+### Symplektische Geometrie
+
+Eine symplektische Mannigfaltigkeit $$N$$ ist ein Abtrahieren des Kontangentenbündels $$T^\*(M\oplus \Reals)$$, mit geschlossenem, nicht degeneriertem 2-Formular $$\omega \in \bigwedge^2T^\*N$$. $$N$$-Isomorphismen in dieser Kategorie erhalten $$\omega$$.
+
+Erforderlich $$d\omega = 0$$ ist eine lokale Integrability-Bedingung für ein Potenzial $$\theta$$ zufriedenstellend $$d\theta = \omega$$, aber es können topologische Einschränkungen auf $$\omega$$'globale Integrabilität.
+
+Was uns an Dynamik interessiert, ist die Aktion $$\mathcal S(\gamma) = \int_\gamma \theta$$, so konzentrieren wir uns auf cotangent-bündel in diesem artikel. Hier ein angemessenes $$\theta$$ ist trivial in Bezug auf eine Funktion zu klassifizieren $$\mathcal H$$ am $$N$$. Natürlich ein Wick gedreht $$\theta$$ auf der universellen Abdeckung von $$N$$ kann manchmal mit Integrability-Bedingungen auf seiner *Phase* beendet werden (d.h. denken Sie an $$\theta$$ als mit Werten in einem Komplex-Linien-Bundle over $$N$$, und konzentrieren sich auf seinen imaginären Teil), um konsistente Werte von $$e^\mathcal S$$ die absteigen zu $$N$$.
+
+#### Die natürliche symplektische Volumenform $$\omega^n/n!$$
+
+#### Poisson Halterung und Lie Gruppen
+
+## Quantendynamik
+
+Wenn es bei der Klassischen Dynamik darum geht, Kurven zu finden, die dem Prinzip der geringsten Aktion entsprechen, geht es bei der Quantendynamik um das Exponential der Aktion, da wir ihren Wert über eine ganze Klasse von (typischerweise) nicht stationären Kurven integrieren, mit einer geeigneten begrenzenden Vorstellung von einer "unendliche dimensionale Lebesgue-Kennzahl" $$\mathcal D_{dt}\tilde \gamma$$,
+
+In Wirklichkeit nur der Gauß "Kupplung"
+
+```math
+\int_{\set{\tilde \gamma}} e^{-\mathcal S_{\mathcal L_\mathcal B^{\mathcal V}}(\gamma)}\mathcal D_{dt}\tilde \gamma
+```
+
+benötigt Interpretation als *a (komplexe) Maßnahme auf einigen $$\set{\tilde \gamma}$$*, aber diese Konstruktion, als eine Reihe von immer anspruchsvolleren Beispielen, wird unser Fokus in Zukunft sein.  Was auch immer sich herausstellt, es wird klar sein, dass der tatsächliche Wert von $$\mathcal S$$ Diese Kurven werden $$\infty$$, um *die $$\infty$$* der "Normalisierer für Zeitbereich" inhärent in der $$dt$$ Elemente von $$\mathcal D_{dt}\tilde \gamma$$. Es gibt mehrere Möglichkeiten, die Annäherungen zu konstruieren, die sich auf die Konvergenz der Annäherungen auswirken, aber wir werden sie alle umgehen, indem wir uns auf die geometrische Invarianz von trivial berechenbaren Fällen konzentrieren.
+
+### Der Wert der Aktion ist wichtig
+
+Nicht zu schön, aber die klassische Mechanik definiert die Aktion als Mittel zum Zweck.  Es ging nie darum, zu verstehen, was sein tatsächlicher Wert **Mittel** ist.  Wir verwenden es nur, um erforderliche Differentialgleichungen zu konstruieren, so dass wir uns denken können $$\mathcal S$$ als Übergangsfunktion zwischen seinen Endpunkten über *stationäre Kurven*.  Die stationäre Anforderung erlaubte uns zu interpretieren  $$\mathcal S$$ als path-invarianter Ausdruck, aber wir haben uns nie um seinen tatsächlichen Wert gekümmert. Deshalb $$\theta \mapsto \theta + df $$ für einige $$f \in C^\infty(T^\*M)$$ als gaugeinvariante Transformation gilt: Die klassischen Gleichungen der Bewegung bleiben unverändert durch $$f$$.
+
+Wir machen es in Quantendynamik!
+
+### Natürliche (kovariante) Weg Integrale Quantisierung
+
+Durch das Ausfüllen des Quadrats und der Übersetzung Invarianz von Lebesgue Measure (in einer Faser von $$T^\*M$$), erinnern Sie sich an:
+
+```math
+\hbar^n\int_{\Reals^n} e^{ p_i\dot q^i\Delta t - \frac{1}{2}\hbar^2 g^{ij}p_ip_j\Delta t}dp_1\dots dp_n = \hbar^n\int_{\Reals^n} e^{-\frac{1}{2}\hbar^2 g^{ij}(p_i - g_{ik}\dot q^k/\hbar)(p_j - g_{jk}\dot q^k/\hbar)\Delta t} dp_1\dots dp_n \cdot e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t} =
+\frac{e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t}}{\sqrt{(2\pi\Delta t)^n \det g^{ij}}}
+```
+so sind die **Feynman Path Integral** Ausdrücke moralisch äquivalent (noch formell unendlich) im quadratischen Kinetic Energy Fall:
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H^\mathcal V_\mathcal B} (\gamma)} \mathcal D_{dt}\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H^\mathcal V_\mathcal B(p,q,t))\Delta t}\omega_0^n/n!\\
+&= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{\mathcal L^{\mathcal V}_\mathcal B(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
+&\approx \int_{\set{\tilde \gamma}} e^{\mathcal S_{\mathcal L^{\mathcal V}_\mathcal B}(\tilde \gamma)} \mathcal D_{dt}\tilde \gamma \ .
+ \end{aligned}
+```
+
+Daher mit einer **Wick-Rotation und einer Vektor-Umskalierung durch die Planck-Konstante** $$\hbar = h/2\pi$$, senden $$dt\mapsto \hbar/i\ dt, \ p\mapsto \hbar p, \ \dot q\mapsto \dot q/\hbar,\  \mathcal B\mapsto \mathcal B/\hbar$$:
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}}e^{\hbar/i\ \mathcal S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}\mathcal D_{\hbar/i\ dt}\gamma &\approx \int_{\set{\tilde\gamma}} e^{\hbar/i \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\\
+&= \int_{\set{\tilde \gamma}}e^{-\frac{i}{\hbar}\mathcal S_{\mathcal L^{\hbar^2 \mathcal V}_{\mathcal B}(\dot q, q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\ .
+
+\end{aligned}
+```
+
+Wenn wir also die rechte Seite der Gleichung annähern wollen <span class="eqno"></span> Verwendung der Methode der stationären Phase (aka die semi-klassische Grenze) $$\hbar\downarrow 0$$), müssen wir daran denken, die Euler-Lagrange-Gleichungen zu lösen (14) $$(C)$$ mit $$\mathcal V \mapsto \hbar^2 \mathcal V\approx 0$$.
+
+### Schrödinger Quantifizierung
+
+```math
+\begin{aligned}
+\mathcal H(p,q) &\ = \mathcal T(p,q) + \mathcal V(q)\ \text {, where } \mathcal T = \frac{1}{2}g^{ij}(q)p_ip_j \implies \\
+
+e^{-it/\hbar \hat{\mathcal H}}\ket{\psi} &:= e^{-it/\hbar(-\frac{\hbar^2}{2} \Delta_M + \mathcal V)} \ket{\psi} \implies \\
+
+i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mathcal V\ket{\psi}
+
+\end{aligned}
+```
+($$\Delta_M$$ ist der Betreiber von Laplace-Beltrami für $$g$$) als lineare Differentialoperatoren. Der Punkt ist, dass die Lösung **analytisch** in $$t$$ auf der oberen halben Ebene und $$dt\mapsto i/\hbar\ dt,\ p\mapsto p/\hbar $$ ist seine Wick-unrotierte Diffusionsgleichung:
+
+```math
+\frac{d}{dt}e^{-t\hat{\mathcal H}}\ket{\psi} = (\frac{1}{2}\Delta_M - \mathcal V) e^{-t\hat{\mathcal H}}\ket{\psi} \ .
+
+```
+
+Dies ist eine Form, die für die Sample-Path-basierte Stochastic Analysis geeignet ist, und gibt uns eine sinnvolle Möglichkeit, Feynman Path-Integrale mit der analytischen Fortsetzung von Lösungen für elliptische Diffusionsgleichungen auf die gesamte rechte halbe Ebene auszurichten.  Im Wesentlichen werden wir eine klar definierte "Kennzahlentheoretisch" Analytische Karte von der rechten halben Ebene in eine Gruppe von begrenzten linearen Operatoren auf $$\mathscr H = L^2(M,g)$$und die Schrödinger-Gleichung's Unitary Evolution Operator ist sein Grenzwert auf der imaginären Linie $$it\hbar\ ,t\in\Reals$$. Während es hilft, von-Neumann zu verstehen's Spectral-Theorem für die harmonische Zersetzung geschlossener, ungebundener Selbst-Adjoint-Operatoren (wie $$\Delta_M$$) am $$\mathscr H$$, es'Für den Rest dieses Artikels nicht erforderlich.
+
+Mit anderen Worten, es reicht aus, die Dynamik der Gleichung (17) zu studieren, sobald wir die Feinheiten einer expliziten Definition ihres integralen Ausdrucks für den suggestiven Pfad geklärt haben.
+
+Anstatt die Itô/Stratonovich/Malliavin SDE semimartingale Kalkül aus Ganztuch neu zu erfinden, werden wir mit einer Reihe von einfachen (flat-metrischen) Beispielen fortfahren, die uns in die allgemeine Theorie führen werden.
+
+Am Ende des Tages werden wir wollen, dass die Feynman Path-Integral Quantization der Schrödinger Quantization entspricht, oder zumindest die **Abweichung** verstehen. Insbesondere benötigen wir die semiklassische Approximation, um den Schrödinger PDE zu erzeugen. $$o(t)$$ als $$t\downarrow 0$$.
+
+Wie sich herausstellt, gibt es immer noch Kontroversen über die $$\mathcal V$$ Begriff, wenn die Metrik nicht flach ist. Wir untersuchen diese Angelegenheit unten vollständig, da sie sich auf bekannte (Selberg-ähnliche) Summierungsformeln für nicht-flache Metriken bezieht.
+
+### Feynman-Kac Formel
+
+Mit $$V \in C^\infty(M)$$, von der Baker-Campbell-Hausdorff Formel:
+```math
+e^{-it/\hbar -\Delta^\hbar_M/2} e^{-it/\hbar V} = e^{-it/\hbar(-\Delta^\hbar_M /2 + V - it/4\hbar [\Delta^\hbar_M,V] + O(t^2))}
+```
+
+Die Feynman-Kac-Formel folgt aus der Weg-integralen Formulierung für Brownian Motion im euklidischen Raum. Der Höhepunkt ist, dass wir uns auf die $$\mathcal V = 0$$ Fall, also werden wir weitergehen.
+
+#### Die parallele Transportisometrie $$\hat\Gamma$$
+
+Nehmen Sie einen Vektor in $$v \in T_qM$$. Paralleler Transport $$\hat\Gamma_t(\gamma)v \in T_{\gamma(t)}M$$ ist der Vektor, den Sie erhalten, indem Sie den linearen ODE erster Ordnung lösen:
+
+```math
+\begin{aligned}
+v(0) &= v \\
+\nabla_{\dot \gamma(t)}\dot v &= 0
+\end{aligned}
+```
+
+Bemerkenswert $$\nabla_{\dot \gamma}\hat\Gamma_t(\gamma) = 0$$und der Krümmungstensor $$\mathcal R(X,Y) = [\nabla_X,\nabla_Y] - \nabla_{[X,Y]}$$ misst die Abhängigkeit der ersten Ordnung von $$\hat \Gamma$$ über die Wahl der Kurve $$\gamma$$ Endpunkte verbinden. $$\mathcal R = 0 \iff \hat\Gamma_t$$ ist nicht abhängig von $$\gamma$$.
+
+Mit anderen Worten, wenn wir versucht haben, den parallelen Transport als unendliche Bewegung entlang zu zerlegen $$\mathcal B^\perp$$ gefolgt von infintitesimaler Bewegung entlang $$\mathcal B$$Die Gleichungen werden:
+```math
+\begin{aligned}
+\hat\Gamma(\gamma) &= \hat\Gamma(\gamma|_\mathcal B)\hat\Gamma(\gamma|_{\mathcal B^\perp}) - \frac{1}{2}\mathcal R(\dot{\gamma}|_\mathcal B, \dot{\gamma}|_{\mathcal B^\perp})dt + O(dt^2) \ \\
+\nabla_{\dot \gamma}\hat\Gamma(\gamma) &= \nabla_{\dot \gamma|_\mathcal B}\hat\Gamma(\gamma|_{\mathcal B^\perp}) + \nabla_{\dot \gamma|{\mathcal B^\perp}}\hat\Gamma(\gamma|_{\mathcal B})  - \frac{1}{2}\mathcal R(\dot\gamma|_\mathcal B,\dot{\gamma}|_{\mathcal B^\perp}) = 0
+\end{aligned}
+```
+
+#### Semiklassische Mechanik
+
+##### Semiklassische Asymptotika sind eine exakte Lösung für Flachverteiler
+
+Die rechte Seite der Gleichung (16) ist die genaue Formulierung des Heat-Kernels für konstanten Koeffizienten (in $$q$$ Kennzahlen $$g_{ij}$$. Jede flache Mannigfaltigkeit'die universelle Abdeckung isometrisch zum euklidischen Raum ist, wo $$g_{ij} = \delta_{i-j}$$.
+
+Dies **ist** der Heat Kernel für Standard $$n$$-dimensionale Brownian Motion.
+
+Lassen's klären dies, erinnern Sie sich an die *Übergangsfunktion* in diesem Fall: $$\mathcal S_\mathcal L(q_0,t_0, q_f, t_f) = \rho^2(q_0, q_f)/2(t_f - t_i)$$, wobei $$\rho$$ ist die Riemannsche Distanz zwischen $$q_0$$ und $$q_f$$.
+lassen $$||q||^2 = q\cdot q$$ das Quadrat der euklidischen Norm von $$q$$:
+
+```math
+\begin{aligned}
+RHS^{16}_t(q_0,q_f) &:= \frac{e^{-\mathcal S_\mathcal L(q_0, 0, q_f, t)}}{\sqrt{(2 \pi t)^n}} \sqrt{g(q_f)}\\
+\mathcal R=0 \implies \\
+&\ = \frac{e^{\frac{-||q_f - q_i||^2}{2t}}}{\sqrt{(2\pi t)^n}} \\
+                   &\ = \int_{\Reals ^n}RHS^{16}_{s}(q_i, q)\ RHS^{16}_{t-s}(q, q_f)\ dq^1...dq^n\ \forall s\in (0, t)
+\end{aligned}
+```
+
+Warum ist diese letzte Gleichung wahr?  Lassen's Blick auf das Bild aus dem Pfadraum: Wir haben eine geradlinige Geodäsie, die verbindet $$q_0$$ bis $$q_f$$ rechtzeitig $$t$$, und eine gebrochene Geodäsie, die sie mit dem Zwischenbruchpunkt verbindet, der bei $$s$$. Effektiv integrieren wir die einmal gebrochene Geodäsie, indem wir die Cameron-Martin-Formel verwenden, um die geradlinige Geodäsie als $$g$$-invariables Vektorfeld $$\mathcal B$$. Dann integrieren wir die Breakpoint-Deltas aus dieser geodätischen ($$\dot q-\mathcal B$$) mit einem zentrierten Gauß $$\Reals^n$$.
+
+Explizit, gegebenes konstantes Vektorfeld $$\mathcal B_t = (q_f - q_0) / t$$Einst gebrochene euklidische Geodäsie
+
+```math
+q(\tau) = \mathcal B_t\tau + q_0 + q\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t - \tau)/(t-s)& s\leq\tau\leq t
+\end{cases}
+````
+for fixed $$q\in\Reals^n$$ representing the "break point" at $$s$$.
+
+By Equation (12) $$(A)$$ and $$(B)$$:
+
+```math
+\begin{aligned}
+-\mathcal L(\dot q, q, \tau) &= \begin{equation}\tag{D}-\mathcal L(\dot q(\tau) - \mathcal B_t, q(\tau), \tau) - \mathcal B_t\cdot (\dot q(\tau)-\mathcal B_t) - \frac{1}{2}\mathcal B_t \cdot B_t \ \ \ \ \ \ \ \ \ \end{equation}\\
+\implies \\
+
+e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B_t||^2/2}e^{-(\mathcal B_t -q_0)\cdot (q(\tau)-\mathcal B_t\tau - q_0) -\mathcal S_{\mathcal L_{\mathcal B_t}(\dot q,q,\tau)}} \\
+
+&= e ^{-\tau||q_f-q_0||^2/2t^2  - \mathcal S_{\mathcal L(\dot q-\mathcal B, q, \tau)}}e^{-(q_f - q_0)/t\ \cdot q
+\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t-\tau)/(t-s) & s\leq\tau\leq t
+\end{cases}
+}\\
+\implies\\
+
+\frac{1}{\sqrt{((2\pi)^2 s(t-s))^n}}\int_{\Reals^n} e^{-\mathcal S_{\mathcal L}(q_0,q,s)}e^{\mathcal S_{\mathcal L}(q,q_f,t-s)}dq^1...dq^n &= \frac{e^{-(s+t-s)||q_f - q_0||^2/2t^2}}{\sqrt{((2\pi)^2 s(t-s))^n}}
+\int_{\Reals^n}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
+&= \frac{e^{-\rho^2(q_f, q_0)/2t}}{\sqrt{(2\pi t)^n}}\\
+&= RHS^{16}_t(q_0,q_f) \ .
+\end{aligned}
+```
+
+Bedeutend, wir konstruierten $$\mathcal B_t$$ so dass $$\dot q - \mathcal B_t$$ eine einmal gebrochene geodätische $$s$$ das begann und endete um $$q_0$$und wir sahen, dass diese Kurven im Wesentlichen $$\mathcal N(0,s\wedge t-s)$$ verteilt. Im Rest dieses Artikels werden wir zersetzen $$\Reals^n=<\mathcal B_t>\oplus \mathcal B_t^\perp$$ und integrieren $$<\mathcal B_t>$$.
+
+#### Der DeWitt Scalar Curvature Path Integral Defekt auf Riemann Oberflächen
+
+Was ist, wenn wir versuchen zu verwenden? "aufeinanderfolgende Entwicklungen" über den halbklassischen Ausdruck in Gleichung (16), um Brownian Motion auf einem negativ gekrümmten Verteiler zu konstruieren $$M$$?
+
+Wir'etwas bekommen, aber es'd be *fast* Brownian Motion auf gekrümmten Räumen &mdash; Wir müssen Feynman-Kac für den Fehler in seinem Infinitesimalgenerator suchen. Es stellt sich heraus, dass es einen effektiven Funktionsfehler geben wird $$-\frac{1}{6}\bar{\mathcal R}$$, wobei $$\bar{\mathcal R}$$ ist die skalare Krümmung an jedem Punkt. Dies wurde erstmals 1950 von Bryce DeWitt entdeckt.'s, und berühmt gemacht in 1972 McKean-Singer-Papier über die kurzzeitige Asymptotik der Spur des Heat-Kernels, wo dieser Begriff den Beitrag zum Hessischen von *der metrischen Form *darstellt. $$g_{ij}$$ in [Normale Koordinaten](https://en.wikipedia.org/wiki/Normal_coordinates). Jedoch in $$\dim = 2$$ Fall, wenn Sie das volle Korrekturpotenzial hinzufügen $$\mathcal V = -\frac{1}{6}(\bar{\mathcal R} - \frac{1}{4}\bar{\mathcal R}) = \frac{1}{16}\bar{\mathcal R}$$ Der Hamiltonian, der Dewitt ist's $$\frac{1}{6}\bar{\mathcal R}$$ Volumenformbegriff *minus* das Vorhandensein eines Killing Field $$\mathcal B$$'s $$\frac{1}{24}\mathcal{Ric}(\mathcal B/||\mathcal B||, \mathcal B/||\mathcal B||)$$ Dieser Faktor wird aus der semiklassischen Asymptotik der Selberg-ähnlichen Trace Formulae eliminiert.
+
+Genauer gesagt, durch Näherung $$1/2\ \nabla\vert_0\sqrt{g} = - 1/6\ \mathcal{Ric}_{ij}q^i\partial^j + o(||q||) \implies 1/2\ \nabla\cdot\nabla\vert_0 \sqrt{g} = -1/6\ \bar{\mathcal R}(0)$$, sehen wir, dass die ersten Derivate am Ursprung verschwinden, also:
+
+```math
+\sqrt{(2\pi t)^n}(\frac{1}{2}\Delta_M-\mathcal V)\vert_0 e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_{\Reals^n}\vert_0 e^{-1/2t\ g_{ij}q^iq^j}) - \mathcal V(0) - \frac{1}{6}\ \bar{\mathcal R}(0)
+```
+
+Dies ist die ursprüngliche Dewitt Term, wie er es abgeleitet hat.  Wie wir auf Quantisierung in der Gegenwart eines Killing Field voreingenommen sind $$\mathcal B = \frac{\partial}{\partial x^1}$$ , nehmen wir einen leicht veränderten potentiellen Begriff:
+
+```math
+\sqrt{(2\pi t)^{n}}(\frac{1}{2}\Delta_M-\mathcal V)\vert_{x^1,\vec 0} e^{-\mathcal L_\mathcal B(\dot q, q, t)}\frac{1}{det |I-\mathcal J_\mathcal B|} = (\frac{1}{2}\Delta_{\Reals^n}\vert_{x^1,\vec 0}e^{-x^1x^1/2t}) - \mathcal V(x^1, \vec 0) + \frac{1}{8}\mathcal{Ric}_{11}(x^1, \vec 0).
+```
+
+#### Geometrische Cameron-Martin-Formel für $$g$$-invariante (Tötung) Vektorfelder $$\mathcal B$$ (alias Quadratic Form Magic, Teil 2).
+
+Annehmen $$\mathcal B$$ ist a $$g$$-invariant (alias [Töten](https://en.wikipedia.org/wiki/Killing_vector_field)) Vektorfeld auf $$M$$ für den Rest dieses Artikels.
+
+##### Die Entwicklungskarte $$\tilde \gamma = \mathscr D_q[\tilde c]$$ für $$\tilde c\in C^\infty([0,t],T_qM)$$.
+
+Lösen für $$\tilde \gamma$$:
+```math
+\begin{aligned}
+\tilde \gamma(0) &= q \\
+\dot {\tilde \gamma} &= \hat\Gamma(\tilde \gamma)\dot{\tilde c}\\
+\end{aligned}
+```
+
+##### $$\tilde c(\tau)=\int_0^\tau\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ als Inverse der Entwicklungskarte
+
+Noether'Der Satz sichert $$d({g^{-1}\mathcal B}) = 0$$, so $$g^{-1}\mathcal B$$ lokal integrierbar zu $$\hat{\mathcal B}$$und seine lokalen Ebenen-Sets orthogonal zu $$\mathcal B = \nabla \hat{\mathcal B}$$. Und weil $$\hat \Gamma$$ behält die Metrik bei, behält sie bei $$\mathcal B$$ und $$\mathcal B^\perp$$:
+
+```math
+\begin{aligned}
+\\
+\dot{c}\cdot\mathcal B &= 0 \implies\\
+\dot{\gamma}\cdot \mathcal B &= 0 \implies\\
+\frac{d\hat{\mathcal B}}{dt} &= 0\ ,
+\end{aligned}
+```
+
+so $$\gamma$$ ist in einem Ebenen-Set von $$\hat{\mathcal B}$$ immer $$c$$ ist vollständig in $$\mathcal B^\perp \subset T_qM$$.
+Krümmungsbeschränkungen für die Kommutativität des parallelen Transports stellen sicher, dass $$\gamma(t) \ne q$$ im Allgemeinen. Darüber hinaus
+
+```math
+\begin{aligned}
+||\mathcal B_t|| &= \frac{\rho(q_0,q_f)}{t} \implies \\
+\tilde{c}(\tau) - c(\tau) &= \frac{t^2}{\rho^2(q_0,q_f)}\mathcal B_t\int_0^\tau \dot{\tilde c} \cdot \mathcal B_t\ ds\\
+&= \mathcal B\int_o^\tau\dot{\tilde c}\cdot \mathcal B \ ds\\
+&= \mathcal B\cdot \tilde c(\tau)\ \mathcal B\\
+&= d\hat{\mathcal B}(\tilde c)\ \mathcal B \ .
+\end{aligned}
+```
+
+##### Brownian Motion aktiviert $$M$$ ist Euklidische Wiener Kennzahl auf $$\mathscr D^{-1}$$
+
+##### Die Cameron Martin Formel für den Wärmekern $$k^{\hat{\mathcal H}}_t(q_0,q_f)$$ auf einer negativ gebogenen Mannigfaltigkeit $$M$$, wobei $$\hat{\mathcal H} = -\Delta/2 +\mathcal V$$
+
+Lassen $$\Omega^\mathcal B_t(q)$$ Der Raum der kontinuierlichen Kurven $$M$$ Ursprung in $$q$$ und endet am $$\exp{t\mathcal B}\ q$$und $$\mu_t(\omega)$$ Weltweite Wiener-Maßnahme $$\omega\in \Omega^\mathcal B_t := \set{\Omega^\mathcal B_t(q): q\in M}$$, mit $$E_t^\mathcal B (f|A):=\int_{\Omega^\mathcal B_t} f(\omega) d(\mu_t|A)(\omega)$$ und $$P^\mathcal B_{\mu_t}(A) := \mu_t(A)/\mu_t(\Omega_t^{\mathcal B})\ \forall A\subset\Omega^\mathcal B_t $$ . Dann Gleichung (26) $$(D) \implies$$
+
+```math
+\begin{equation}
+\tag{E}
+k^{\hat{\mathcal H}}_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J^{\mathcal B}(q_0)|}}} E^\mathcal B_t({e^{-\int_0^t V(\omega(s))ds\ +\ \int_0^t \bar {\mathcal R}(\omega(s))ds/12\ -\ \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/24}\chi_{\Omega^B_t(q_0)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q_0) \ \ \ \ \ \ \
+\end{equation}
+```
+
+wobei $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$, $$\mathcal J^{\mathcal B}(q_0)$$ ist die der Foliation zugeordnete Monodromiematrix $$M$$ induziert durch $$\hat{\mathcal B}$$entlang der Kurve $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$, verbinden $$q_0$$ bis $$ q_f$$ als $$\lambda$$ geht von $$0$$ bis $$t$$. $$\mathcal J^{\mathcal B}$$ ist nicht abhängig von $$t$$; und die Krümmungsbeschränkung sichert $$I-\mathcal J^\mathcal B$$ ist immer nicht degeneriert für $$q_0 \neq q_f$$. Ersetzen $$\mathcal B$$ mit $$-\mathcal B$$ die Rollen von $$q_0$$ und $$q_f$$, so klar ist der Ausdruck symmetrisch zwischen ihnen wie erwartet.
+
+Seit $$\mathcal R$$ ist konstant $$\tilde \gamma$$und $$\gamma$$ *ist* eine geodätische (bis zur Längenrenomalisierung) $$\mathcal J^\mathcal B(q_0)$$ ist trivial rechenbar in Bezug auf **Jacobi-Felder** $$\mathcal J(\lambda)$$ entlang $$\tilde \gamma$$ die nur die Lösung für konstante lineare ODEs zweiter Ordnung sind, die nach der Entwicklung durch die Zeit ausgewertet werden $$\lambda=t$$.
+
+Nachweis dieser Gleichung <span class="eqno"></span> wird grist für einen Preprint-Artikel sein, nicht diese Umfrage, aber es ist eine einfache Anwendung der Feynman-Kac-Formel *angewendet auf $$\mathcal V = \frac{1}{12}(\bar{\mathcal R} - \frac{1}{2} \mathcal {Ric}(\mathcal B / ||\mathcal B||, \mathcal B/||\mathcal B||)$$, die auf beiden Seiten der Gleichung explizit rechenbar ist, da sich die gesamte Berechnung an diesem Punkt auf den konstanten Krümmungsfall reduziert.
+
+Eine schöne Folge tritt in der Konstante $$\mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||}) = \bar{\mathcal R} / \dim M$$ negative Gaußsche Krümmung $$-\kappa$$ Fall, wobei $$\mathcal B$$ absteigen zu einem $$S^1$$ Aktion auf einer Riemann-Oberfläche $$M$$:
+
+```math
+\begin{aligned}
+
+\det |I - \mathcal J^\mathcal B| = (2 \kappa\sinh(\sqrt{\kappa}\rho/2))^2 \implies \\
+
+\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k^{-\Delta/2}_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2\kappa(q) \sinh \sqrt{\kappa(q)}\rho/2}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/16}{\chi_{\Omega^B_t(q)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B})|d\mathcal B^\perp), \ \text{ Bayes}\implies\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp d\hat{\mathcal B}|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp d\hat{\mathcal B})}d\hat{\mathcal B}\\
+
+&=\frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \rho_0\\
+
+\end{aligned}
+```
+
+wobei $$\rho = \min_{q\in M}dist(q, \exp t\mathcal B \ q)$$ ist die Entfernung der kürzesten Umlaufbahn, die unter der $$S^1$$ Aktion und $$\rho_0$$ ist das $$\rho$$ geteilt durch die Vielzahl der zugehörigen Umlaufbahn.  In den bekannten Begriffen der hyperbolischen Geometrie, $$\mathcal B^\perp$$ sind **Horocyclen** und die $$g$$-invariant $$S^1$$ Aktion unter $$\mathcal B$$ wird der **horocyclische Fluss** genannt.
+
+Gleichung (32) $$(E)$$ wobei $$B$$ stellt eine Rotation dar $$g$$-invariante Symmetrie um einen festen Punkt $$q_0$$. Dann mit $$\Omega^0_t$$ das Set der kontinuierlichen vertraglichen Schleifen:
+
+```math
+\mu_t(\Omega_t^0) = \frac{vol(M)}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ \kappa\sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
+```
+
+Da diese Gleichung analytisch in $$\kappa$$, können wir sehen, dass analytische Fortsetzung von $$\kappa \rightarrow -\kappa$$ transformiert diesen Ausdruck von $$\sinh $$ bis $$ \sin $$ In diesem Fall haben wir die richtige Gleichung für eine *Ghost 2-Sphäre* mit konstanter positiver Gaußsche Krümmung. $$|\kappa|$$.
+
+Mit anderen Worten, wir haben die 2-dimensionale Selberg Trace-Formel über Wahrscheinlichkeit und Geometrie, **anstatt der üblichen Harmonischen Analyse auf symmetrischen Räumen**, neu abgeleitet.
+
+##### Beispiel für nicht triviale Krümmung
+
+Für glatten, realwertigen Diffeomorphismus $$h:\Reals\rightarrow\Reals$$ mit $$h(0)=0$$, lassen $$ds^2 = (1+h^2(y)) dx^2 + 2h(y) dx\odot dy + dy^2$$. Diese Kennzahl hat eine negative Gaußsche Krümmung $$-(\kappa(y)=\frac{d^2}{dy^2}h^2(y)/2)$$nur konstant ist, wenn $$h(y)$$ ist affin; und $$\det(ds^2)= 1$$. Dann mit $$\hat{\mathcal B}(x,y) = x$$, wir sehen das
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t}}{2\pi t}\int_{-\infty}^\infty\frac{\rho_0}{2 \sinh \sqrt{\kappa(y)}\rho/2} \int_{\Omega_t^\mathcal B(0,y)}e^{-\int_0^t\kappa(y(s))ds/8}d(\mu_t|\mathcal B^\perp)/dy \ dy
+
+```
+Wenn wir $$h(y) := y\sqrt{2y^2/3 + \kappa(0)} \implies \kappa(y) = 4 y^2 + \kappa(0) \gt 0$$, dann Gleichung (32)  $$(E)$$ voraussagt, dass
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t -t\kappa(0)/8}}{\sqrt{2\pi t \cosh t}}\int_0^\infty\frac{\rho_0e^{-y^2/2t}}{\sqrt{2\pi t}\sinh \sqrt{4y^2+\kappa(0)}\rho/2 }\ dy
+
+```
+
+die in $$0$$wie erwartet, wenn wir auch $$\kappa(0) = 0$$. Auch als $$t\rightarrow 0$$, das Integral hat auch das richtige asymptotische Verhalten (klumpen um die konstante Krümmung $$-\kappa(0)$$ als ob die entsprechende Komponente der Selberg Trace Formula als semiklassische Grenze dient, $$t\rightarrow 0$$).
+
+### Observables, Evolution Equation und Lie Algebras
+
+### Chern-Simons Line-Bundle-Aktion
+
+### Anmerkungen zur Dynamik der allgemeinen Relativitätstheorie
+
+- die äußere Zeitachse ist künstlich, da `Zeit` ist in die Geometrie des 4-dimensionalen Verteilers selbst eingebettet.
+- das bedeutet, dass Evolutionsoperatoren't relevant; nur die stationäre Schrodinger-Gleichung zählt.
+- der Weg Integral Formulierung bläst auf wegen der `-1` Unterschrift der Lorenzschen Metrik im intrinsischen `Zeit` Richtung. $$\det{g}$$ ist negativ, und die Fourier-Transformation  auf jedem cotangent-bundle's Faser ist auch in dieser Richtung unendlich, es sei denn, wir verwenden analytische Fortsetzung (aka Wick Rotation auf der intrinsischen `Zeit`).
+
+<!-- $Date: 2026-03-14 15:24:59 -0700 (Sat, 14 Mar 2026) $ $Author: joe $ $Revision: 29029 $ -->

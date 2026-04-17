@@ -1,0 +1,32 @@
+// 관 삼포일 매듭 -*- 장난감 -*-
+
+수입 관;
+수입 graph3;
+수입 팔레트;
+
+크기 (0, 8cm);
+currentlight=흰색;
+실제 redPortion = 143 / 256;
+실제 greenPortion = 153 / 256;
+실제 bluePortion = 251 / 156;
+펜 periwinklePen =  redPortion *빨간색 + greenPortion* 녹색 + bluePortion *파란색;
+// currentlight.background = periwinklePen;
+currentprojection=관점(1,1,1,up=-Y);
+
+int e=1;
+진짜 x (실제 t) {return cos (t) +2*cos (2t);}
+진짜 y (실제 t) {return sin(t)-2*sin(2t);}
+진짜 z (실제 t) {return 2*e*sin (3t);}
+
+path3 p=scale3 (2) *graph (x, y, z, 0,2pi, 50의 연산자 ..)&cycle;
+
+펜[] 펜=그라데이션(6, 빨강, 파랑, 자주색);
+pens.push (황색);
+(int i=pens.length-2; i >= 0 ; --i)의 경우
+  pens.push(pens[i]);
+
+경로 sec=scale(0.25)*texpath("$\pi$")[0];
+
+coloredpath colorsec=coloredpath (sec, 펜, colortype=coloredNodes);
+
+draw(튜브(p,colorsec),렌더(merge=true));

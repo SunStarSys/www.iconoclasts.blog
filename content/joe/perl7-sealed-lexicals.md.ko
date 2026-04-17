@@ -1,0 +1,185 @@
+---
+archived: ~
+categories: 펄, 오리온, 퍼포먼스, 아파치
+dependencies: '*.md.ko'
+keywords: perl, dylan, 정적, 방법, 조회, 컴파일, 밀봉, 아파치, mod_perl, 성능
+published: ~
+status: 아카이브됨
+title: 'Perl 7 기능 요청: 입력된 lexicals를 위한 밀봉된 subs'
+---
+
+<div class="right">
+
+![일광욕실](../images/sunstarstaronly.png).
+
+</div>
+
+## 문제
+
+{# lede #}펄 5'OO 런타임 메소드 조회는 직접 서브 루틴 호출보다 50% 더 많은 성능 오버헤드를 가집니다.{# lede #}.
+
+## 초기 솔루션: Doug MacEachern's 메소드 조회 최적화
+
+Doug는 90s 중반에 mod_perl 프로젝트의 창시자 였으므로 분명히 고성능 Perl을 쓰는 것은 그의 요새였습니다. 그의 많은 기여 중 하나 [p5p](https://lists.perl.org/list/perl5-porters.html) + 메소드를 사용하여 OO 메소드 조회 오버헤드의 성능 저하를 절반으로 줄였습니다. <code> &#64;ISA</code> mod_perl 객체에 대한 런타임 객체 메소드 조회를 수행할 계층 캐시 `Apache2::RequestRec` 최대한 간소화.  그러나 그것은 단지 우리를 반으로 데려 간다.
+
+다음과 같음'T: 호출과 관련된 문제 해결 `C 구조체` get-set accessor 메소드 &mdash; 많은 mod_perl API의 일반적인 상황. 펄'httpd에서 s 런타임 메소드 호출 조회 페널티'초 `구조 request_rec *`, mod_perl는 `Apache2::RequestRec` 모듈은 호출의 전체 실행 크기와 동일한 순서에 있습니다.  수백만 개의 XS 메서드를 호출하는 mod_perl 지원 사이트의 경우 귀중한 CPU 주기 낭비입니다.
+
+대상 [더그가 찾고 있는](https://www.perl.com/pub/2000/06/dougpatch.html/) Perl 5가 명명된 서브루틴 호출에서 수행하는 방식인 컴파일 시 메소드 조회를 수행하도록 지시하는 방법이었습니다.  Doug가 시도 할 때마다 그는 사회적 또는 기술적 인 성격의 장애물을 쳤습니다.  그렇지 않을 수도 있습니다'Perl 7의 출현으로이 아이디어에서 또 다른 패스를 할 시간입니다.
+
+## [벤치마크 스크립트]({{snippetA.pretty_uri}}).
+
+[snippet:repo=SunStarSys/sealed:path=t/bench.pl:lang=perl]
+
+## 벤치마크 결과
+
+```perl
+1..3
+sealed: compiling main->foo lookup.
+sub sealed :sealed {
+    use warnings;
+    use strict;
+    $y->foo:compiled;
+}
+sealed: compiling Benchmark->cmpthese lookup.
+sealed: compiling Foo->foo lookup.
+sealed: compiling main->foo lookup.
+sealed: compiling Foo->bar lookup.
+sealed: tweak() aborted: sealed: invalid lookup: Foo->bar - did you forget to 'use Foo' first?
+sub __ANON__ :sealed {
+    use warnings;
+    use strict;
+    my Foo $b = $a;
+    $inner->foo($b->foo:compiled($inner->bar, $inner, $bench->cmpthese:compiled));
+    $a = $inner;
+    $a->foo:compiled;
+    $b->bar;
+}
+sealed: compiling main->bar lookup.
+sub also_sealed :sealed {
+    use warnings;
+    use strict;
+    my main $a = shift();
+    if ($a) {
+        my Benchmark $bench = 'Benchmark';
+        my $inner = $a;
+        return sub {
+            my Foo $b = $a;
+            $inner->foo($b->foo:compiled($inner->bar, $inner, $bench->cmpthese:compiled));
+            $a = $inner;
+            $a->foo:compiled;
+            $b->bar;
+        }
+        ;
+    }
+    $a->bar:compiled;
+}
+sealed: compiling main->_foo lookup.
+sub reentrant :sealed {
+    use warnings;
+    use strict;
+    my main $b = shift();
+    (local our(@Q)) = 1;
+    my $c = $b->_foo:compiled;
+}
+sealed: compiling main->foo lookup.
+sealed: compiling main->bar lookup.
+sealed: compiling main->reentrant lookup.
+sub sealed2 :sealed {
+    use warnings;
+    use strict;
+    my main $obj = 'main';
+    foreach $_ (1 .. 3) {
+        $obj->foo:compiled;
+        $obj->bar:compiled;
+        $obj->reentrant:compiled;
+    }
+}
+sealed: compiling main->reentrant lookup.
+sealed: compiling main->bar lookup.
+sub _foo :sealed {
+    package Foo;
+    use warnings;
+    use strict;
+    my main $x = shift();
+    $n++ ? $x->bar:compiled : $x->reentrant:compiled;
+}
+ok 1
+             Rate  class method   anon   func sealed
+class  16129032/s     --    -4%   -26%   -33%   -36%
+method 16806723/s     4%     --   -23%   -30%   -34%
+anon   21739130/s    35%    29%     --   -10%   -14%
+func   24096386/s    49%    43%    11%     --    -5%
+sealed 25316456/s    57%    51%    16%     5%     --
+ok 2
+           Rate method sealed
+method 546448/s     --   -17%
+sealed 662252/s    21%     --
+ok 3
+```
+
+## 제안된 Perl 7 해결책: `:봉인됨` 입력된 렉시칼의 서브루틴
+
+샘플 코드:
+
+```perl
+use v5.38;
+use Apache2::RequestRec;
+
+sub handler :Sealed (Apache2::RequestRec $r) {
+  $r->content_type("text/html"); #compile time method lookup
+}
+```
+
+## 생산 품질, 강력한 펄 v5.28 + 프로토 타입 : sealed.pm {{facts.releases.sealed.tag}} (CPAN).
+
+perl 5.30+에 대한 컴파일 지침은 `sealed.pm` Pod는 mod_perl2(ithreads 포함) 및 httpd-2.4(이벤트 mpm 포함)를 실행하고 **모든** 스케일에서 segfault를 실행하지 않아야 합니다.  테스트 일자 `솔라리스 11.4` 및 `우분투 22.04` 에 amd64.
+
+재미를 위해, 이것을 시도하십시오 [원숭이 패치]({{snippetB.pretty_uri}}) 종료 `ModPerl::RegistryCooker`:
+
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+
+이를 통해 `하위 처리기: 봉인됨 {스크립트 위치}` 당신의 모든 `ModPerl::등록` 스크립트, 유사 [이 하나](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+
+```shell
+~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
+starting benchmark...
+spawning thread #0: 100 total client(s). 10000 total requests
+spawning thread #1: 100 total client(s). 10000 total requests
+spawning thread #2: 100 total client(s). 10000 total requests
+spawning thread #3: 100 total client(s). 10000 total requests
+spawning thread #4: 100 total client(s). 10000 total requests
+spawning thread #5: 100 total client(s). 10000 total requests
+spawning thread #6: 100 total client(s). 10000 total requests
+spawning thread #7: 100 total client(s). 10000 total requests
+spawning thread #8: 100 total client(s). 10000 total requests
+spawning thread #9: 100 total client(s). 10000 total requests
+Application protocol: h2c
+progress: 10% done
+progress: 20% done
+progress: 30% done
+progress: 40% done
+progress: 50% done
+progress: 60% done
+progress: 70% done
+progress: 80% done
+progress: 90% done
+progress: 100% done
+
+finished in 13.07s, 7652.14 req/s, 11.83MB/s
+requests: 100000 total, 100000 started, 100000 done, 100000 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 100000 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 154.61MB (162119955) total, 566.39KB (579980) headers (space savings 95.47%), 152.30MB (159700000) data
+                       min         max         mean         sd        +/- sd
+time for request:     5.74ms      12.77s       6.39s       3.61s    58.14%
+time for connect:      304us    293.01ms     70.17ms     76.83ms    74.80%
+time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
+req/s           :       7.71      248.17       19.60       28.07    92.70%
+```
+
+참조 <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. 찾기 `t/bench.pl` 상위 디렉토리에 있습니다.
+
+이렇게 하면 Perl 5가 샘플 코드를 수행할 수 있습니다.'초 `content_type` 이 기능은 응용 프로그램 개발자를 대상으로 하기 때문에 컴파일 시 method-lookup으로 백컴패트 문제나 불쾌한 CPAN 코더를 유발하지 않습니다. 상속 가능한 OO 모듈 작성자가 아닙니다.
+
+이 Perlish 아이디어는 격렬하게 도난 당했습니다. [딜런](https://jim.studt.net/dirm/interim-5.html).  [읽기](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) 10년 전부터 CPython 노력을 기울였습니다.
+
+<!-- $Date: 2026-01-08 19:55:12 -0700 (Thu, 08 Jan 2026) $ $Author: joe $ $Revision: 27387 $ -->

@@ -1,0 +1,193 @@
+---
+archived: ~
+categories: Orion, Arquitetura
+dependencies: '*.md.pt-BR'
+keywords: arquitetura,incremental,website,geração,construções,dependências,topologia,wiki,gráfico
+published: ~
+status: whitepaper
+title: O que é o <em>Smart Content Dependency Management™</em>?
+---
+
+<div class="right">
+
+![árvore](https://www.sunstarsys.com/orion/index.page/lightning).
+
+</div>
+
+[TOC]
+
+-----
+## Resumo
+
+*Gerenciamento de Dependência de Conteúdo Inteligente&trade;* é sobre o círculo de ideias relacionadas ao fornecimento de suporte e facilitação para *construções incrementais*, mantendo-se fiel ao **Princípio de Normalização de Conteúdo** &mdash; que [*permalinks*](https://en.wikipedia.org/wiki/Permalink) deve ser a única fonte da verdade, não importa como seu conteúdo seja selecionado em toda a árvore de origem e os artefatos de compilação resultantes.
+
+Este artigo apresenta a <https://sunstarsys.com/> website como estudo de caso para uma demonstração das melhores práticas e análise das topologias gráficas associadas.
+
+-----
+## Cavernas
+
+Isso só importa quando você precisa pesar a despesa de realizar compilações completas do site sempre que precisar ajustar o conteúdo em uma página da web. Se o seu site tiver menos de 1K arquivos de origem, **relaxar** e ler o seguinte com um olho para suas necessidades futuras. Você escolheu usar nossa plataforma, que'Ele é projetado para escalar com você, não contra você. Para a maioria das páginas, este material abaixo é sobre gráficos de dependência de conteúdo *esparso* para sites com mais de páginas 1K.
+
+Por exemplo, o Apache <https://www.OpenOffice.Org> site foi capaz de construir seus arquivos 40K+ usando a versão Apache original deste sistema de compilação, com suporte totalmente integrado para builds incrementais &mdash; sem qualquer dependência configurada &mdash; usando apenas a tecnologia SSI tradicional.
+
+Por padrão, nosso sistema de compilação irá construir apenas os arquivos que você alterou, sem preocupação com as dependências intra-arquivo (a menos que você especificá-los em `%path::dependências` &mdash; mais sobre isso abaixo). Se o arquivo alterado estiver no `modelos/` ou `lib/` diretório, uma compilação completa do site será acionada.
+
+-----
+## Tecelando seu site's *Gráfico de Dependência* Juntos
+
+Matematicamente, uma *Topologia* `$$\tau$$` é uma especificação completa dos subconjuntos *open* de um espaço `$$X$$`, cujo objetivo é indicar as relações de proximidade entre *pontos* `$$x$$` do espaço `$$X$$`. Quando `$$X$$` é um gráfico, uma *topologia* `$$\tau$$` para `$$X$$` para especificar as bordas que conectam os vértices do gráfico juntos (aqui os vértices são vistos como os *pontos* de `$$X$$`, e as bordas de conexão determinam os bairros desses pontos como conjuntos abertos *basis* para a topologia).  Uma topologia de gráfico *dirigida* é essencialmente a mesma coisa, mas incorpora uma referência a uma incorporação topológica de `$$(X,\tau)$$` em um espaço topológico maior `$$(Y,\sigma)$$` onde a incorporação'as conexões de borda s são representadas por curvas direcionais, não interseccionais (Jordânia).
+
+O último conceito é o que utilizaremos ao discutir o gráfico de dependência *'topologia s* `$$\tau$$` associado ao espaço `$$X$$` de arquivos de origem abaixo do seu site's `conteúdo/` subdiretório (aqui `$$(Y,\sigma)$$` é `$$\mathbb{R}^n$$` com sua topologia métrica para `$$n \in \{2,3\}$$`e as bordas de `$$X$$` são curvas Jordan direcionadas e sem interseção que conectam um arquivo `$$x \in X$$` ao seu conjunto de arquivos sobre os quais `$$x$$` depende: `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$`).
+
+Tendo {# lede #}uma compreensão clara do seu site'o *gráfico de dependência* garantirá que você possa maximizar o desempenho de nossa tecnologia de construção em escala{# lede #}. Levamos as informações que você fornece para `%path::dependências` durante a criação'Carga do seu site's `lib/path.pm` arquivo, construir um mapa reverso de arquivos dependentes e usar *que mapa reverso* para determinar o corpus completo de arquivos para construir para qualquer dado `commit svn` você faz para o nosso sistema.
+
+It'é importante observar que as relações de dependência entre os arquivos de origem podem e devem ser totalmente capturadas pelo `%path::dependências` hash durante o sistema de compilação'carga de inicialização de s de `lib/path.pm` de sua árvore de origem, que é como as vistas incorporadas contidas em nosso `SunStarSys::Visualizar` O pacote Perl deve funcionar. O `walk_content_tree`, `arquivado`, e `seed_file_deps` funções de utilitário importáveis de `SunStarSys::Util` são úteis na construção do `%path::dependências` hash, com suporte integrado para gerenciar um cache de dependência para acelerar builds incrementais em escala.
+
+Aqui'Essa parte da nossa vida [`lib/path.pm`]({{snippetA.pretty_uri}}):
+
+[snippet:lang=perl:repo=SunStarSys/www:branch=trunk:path=lib/path.pm:token=#snippet]
+
+Por favor, avalie esse código para obter ideias sobre como você deseja que o seu site funcione. Sim, há alguma complexidade razoável (envolvendo ambos Perl's expressões regulares e Perl's C-shell UNIX `globo` interfaces, de uma forma muito precisa) em torno de como `%path::dependências` é construído nesse arquivo, mas em vez de apenas ver isso como um trabalho de otimização, em vez disso, olhe para ele como fornecendo os ingredientes básicos necessários para interpretar os principais aspectos da topologia *link *de uma forma automatizada, gerada dinamicamente.
+
+Onde inserir `%path::dependências` originar? Se não nascerem de uma invocação de `walk_content_tree { seed_file_deps ... }`, (que basicamente mergulha em seus arquivos de origem de markdown)' cabeçalhos e conteúdo), então eles são apenas codificados em `lib/path.pm` no momento da carga.
+
+### Gráficos de dependência cíclica são a norma
+
+Nosso site atualmente consiste em `240 arquivos de origem` em `conteúdo/`. Aqui's um `85 vértices x 465 bordas`, representação gráfica direcionada bidimensional e rolável de um instantâneo recente das dependências de página do idioma inglês no **nosso site** ([usando GraphViz's `ponto`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl)):
+
+<div id="deps">
+
+![Dependências do Idioma Inglês](../images/deps).
+
+</div>
+
+Muito complexo, mesmo para um pequeno site como este! Muitas interseções de borda ao tomar `$$n=2$$` (evitável em dimensão `$$n=3$$`). De particular atenção é o conjunto central de densas dependências cíclicas nos arquivos não arquivados em nosso site's `/mensagens/` diretório, em direção ao centro-direito inferior do gráfico, que é o que um bom blog site'O gráfico de dependência s deve ser semelhante. Essas dependências são extraídas em `curvas vermelhas` na imagem.
+
+Observe também a interconexão interna, essencialmente isolada dos elementos em `/categorias/*/*` e `/archives/2022/11/*`. As únicas dependências externas envolvem conteúdo não arquivado no `/ensaios/*`. Isto é por design &mdash; os ensaios arquivados só devem mudar *adiabaticamente*, talvez apenas para ajustes aos seus `Categoria` cabeçalhos. Nenhuma dessas mudanças afeta materialmente o conteúdo pré-existente, por isso não'rastrear em `%path::dependências`.
+
+Claro, o nosso [Wiki do Orion Enterprise](https://sunstarsys.com/orion/) Nunca teve problemas em lidar com dependências cíclicas.
+
+### Én'Isso é sobre hiperlinks?
+
+**Na verdade, a topologia *link* do seu site é um assunto totalmente separado da árvore de origem.'s *gráfico de dependência*.  Um mecanismo de pesquisa irá, naturalmente, descobrir a topologia *link*, mas não tem nenhuma visão do gráfico *dependency*.
+
+Aqui's a `240+ vértices x bordas 3859`, gráfico atual de observação de aves do gráfico inglês *link topology* para **nosso site** ([usando GraphViz's `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl)):
+
+<div id="links">
+
+![Inglês Língua Links](../images/links).
+
+</div>
+
+Você pode identificar o `bordas vermelhas` conforme especificado no gráfico *dependência*? O gráfico *link topology* é qualitativamente e quantitativamente **muito diferente** do gráfico *dependência* descrito acima (dramaticamente menor e menos interconectado).
+
+### Como a tecnologia SSI pode ajudar
+
+#### Tradicional [Inclui](https://httpd.apache.org/docs/2.4/howto/ssi.html) (SSI).
+
+- **Ótimo** para podar seu site's *gráfico de dependência* para tamanho gerenciável sem sacrificar a latência de entrega da página
+- **ótimo** para diminuir a rotatividade de texto padronizado em grandes mensagens de commit para melhor revisão por pares e supervisão de seus conjuntos de alterações criados
+- **lousy** para recontexualizar páginas inteiras em um local diferente na raiz do documento'Hierarquia s
+
+#### APIs de Modelo
+
+##### tag ssi
+
+Syntax:
+
+&#123;% `ssi` &#96;/content_rooted/path/to/source_file&#96; %&#125;
+
+- caminhos com raiz em `conteúdo` diretório de origem
+- ignora a parte do cabeçalho do arquivo de origem a ser `ssi` incluído
+- reescreve urls relativos para urls absolutos no caminho de destino'conteúdo incluído s
+
+##### filtro ssi
+
+Syntax:
+
+&#123;&#123; conteúdo|ssi &#125;&#125;
+
+- avaliações recursivas `ssi` tags no valor a ser filtrado
+- útil para evitar o uso de um grande valor (3+) de `quick_deps` em um `@path::padrões` entrada'hashref de argumento s, que pode afetar o desempenho
+
+#### Por que não SymLinks?
+
+- abstração do sistema de arquivos barebones que é difícil de suportar com segurança em um `<VirtualHost>` contexto
+- mesmas desvantagens com tradicional `ssi` em páginas web completas
+- nosso [Wiki do Orion Enterprise](https://sunstarsys.com/orion/) O sistema não os suporta
+
+#### Criar Ferramentas para Permalinks
+
+##### Curadoria de Documento
+
+Orion'O sistema s build tem suporte integrado para o que chamamos de *Document Curation*, que é o processo de recontextualização e reorganização do seu conteúdo com base na forma como você define o `Categorias` e `Arquivar` cabeçalhos em seus arquivos de origem de Markdown. Esses recursos estão desabilitados por padrão, mas podem ser ativados definindo um `category_root` (para suporte de categoria) ou um `archive_root` (para suporte de Arquivamento) no argumento hashref associado ao desejado `@path::padrões` entrada.
+
+##### Categorias
+
+- novo conteúdo é construído usando Modelo `ssi` tags que apontam para o local do permalink, ao remover o `Arquivar` cabeçalho da página de origem construída
+- As categorias são estritamente aditivas (ou seja, remover uma categoria de uma página de origem)'os cabeçalhos s não o removerão dessa categoria no site ao vivo),
+- gerado sob demanda
+- deletar todas as categorias em um único commit é uma ótima maneira de sincronizá-las com as especificações exatas em todas as páginas de origem' cabeçalhos, sem destruir o conteúdo de categoria preservado no site ao vivo
+
+##### Páginas Arquivadas
+
+Em nosso site, arquivamos agressivamente ensaios obsoletos para manter os tempos de construção de novos ensaios baixos, sem destruir os links permanentes para documentos arquivados. O *gráfico de dependência* relativo ao `/arquivos/` diretório (para o nosso site) é razoavelmente autossuficiente conforme as seguintes regras:
+
+- conteúdo construído usando Modelo `ssi` tags que apontam para o local do permalink, ao remover o `Categorias` e `Arquivar` cabeçalhos da página de origem construída
+- conteúdo em `/(ensaios|clientes)/` são sempre permalinks, mesmo após o arquivamento
+- o arquivamento remove efetivamente a localização do permalink do gráfico *dependency*, sem remover o permalink do site
+
+##### Lede
+
+Comentários HTML incorporados nos limites do formulário de prosa Markdown do conteúdo lede. Usamos **&#123;# lede #&#125;** para este fim.
+
+O processamento de ledes é feito com o `lede` Filtro de modelo. É útil combinar isso com o `ssi` para indexar um arquivo de Categoria com mais de uma página de categoria dentro dele.
+
+-----
+## Conclusões
+
+Existem estruturas de dados interessantes e relações a serem descobertas ao lidar com um site's *gráfico de dependência* de uma perspectiva de desempenho de compilação, que é uma área de interesse muito mais nova do que a literatura de pesquisa que investiga as estruturas de dados e emissões associadas em torno da topologia *link*<sup>1,2</sup>.
+
+Construções incrementais convencionais para projetos de desenvolvimento de software puro ainda são um tópico importante. A pesquisa abordada em <sup>3,4</sup> foi publicado em outubro de 2022, cerca de um mês antes de este ensaio ser concluído. O *pluto*<sup>5</sup> o sistema de build tem recursos bastante semelhantes aos nossos (a própria build pode gerar novamente e recriar dependências dinamicamente).
+
+A boa notícia é que temos você coberto como nosso cliente. Vamos mantê-lo informado sobre as melhores práticas e o estado da arte neste espaço, para que você se beneficie de nossas lições aprendidas na última década e no futuro.
+
+-----
+## Rodapés
+
+1. [Identificação de clusters no gráfico da Web com base na topologia do link](https://ieeexplore.ieee.org/abstract/document/1214919) Sétimo Simpósio Internacional de Engenharia de Banco de Dados e Aplicações, 2003. Procedimentos.
+
+2. [Inferindo Comunidades Web da Topologia de Links](https://dl.acm.org/doi/pdf/10.1145/276627.276652) Anais da nona conferência ACM sobre hipertexto e hipermídia: links, objetos, tempo e espaço &mdash; estrutura em sistemas de hipermídia: links, objetos, tempo e espaço &mdash; estrutura em sistemas de hipermídia. 1998.
+
+3. [Sobre os benefícios e limites das configurações incrementais de software de construção: um estudo exploratório](https://dl.acm.org/doi/abs/10.1145/3510003.3510190) ICSE '22: Anais da 44ª Conferência Internacional de Engenharia de Software, maio de 2022
+
+4. [Para criação incremental de configurações de software](https://dl.acm.org/doi/10.1145/3510455.3512792) ICSE-NIER '22: Proceedings of the ACM/IEEE 44th International Conference on Software Engineering: New Ideas and Emerging Results, maio de 2022
+
+5. [Um sistema de criação incremental sólido e ideal com dependências dinâmicas](https://dl.acm.org/doi/10.1145/2814270.2814316) OOPSLA 2015: Anais da Conferência Internacional ACM SIGPLAN de 2015 sobre Programação Orientada a Objetos, Sistemas, Linguagens e Aplicações Outubro de 2015
+
+<style type="text/css">
+
+#deps {
+  width:100%;
+  overflow:auto;
+  margin-bottom:10px;
+  padding-top:0;
+  height:1000px;
+}
+
+#links {
+  width:100%;
+  overflow:auto;
+  margin-bottom:10px;
+  padding-top:0;
+  height:1000px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #links { height: 300px }
+}
+
+#links img { width:100% }
+</style>
+
+<!-- $Date: 2026-04-13 07:27:15 -0700 (Mon, 13 Apr 2026) $ $Author: $ $Revision: 31245 $  $Id: dependencies.md.en 31245 2026-04-13 14:27:15Z  $ -->

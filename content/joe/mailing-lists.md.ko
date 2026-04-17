@@ -1,0 +1,52 @@
+---
+archived: ~
+categories: IT, 펄, 메일, 툴
+dependencies: '*.md.ko'
+keywords: ezmlm-idx, BATV, DMARC, SRS
+published: ~
+status: 아카이브됨
+title: 메일링 리스트
+---
+
+## ezmlm-idx
+
+메일링 리스트 소프트웨어에 대한 경험 개선 [qmail](http://cr.yp.to/qmail.html) 및 [ezmlm-idx](http://untroubled.org/ezmlm/). 몇 가지 작은 스크립트를 사용하여 기본적으로 지원되지 않는 다양한 새로운 사용 사례를 지원할 수 있었습니다. `ezmlm-idx` 자체.  외부에서 일반적으로 유용한 기능 [아파치 소프트웨어 재단](http://www.apache.org) 아래에 배치되어 있습니다.  이 파일을 사용하려면 다음을 따르십시오. [레이아웃](ezmlm/) 당신이 직접 스크립트의 경로를 조정하는 데 익숙하지 않은 경우.
+
+### BATV 및 SRS
+
+[bin/sender-demunger](ezmlm/bin/sender-demunger.pl) 은(는) `BATV` 및 `SRS` `발신자` 데모 대상 `ezmlm-idx`. 이를 사용하려면 유저의 모든 행에 접두어로 `</editor />` 및 `</manager />` 블록 내부 `사이트맵` 실행 `ezmlm-make -+` 당신의 목록에, 또는 당신이 실행되지 않을 것으로 가정 핀치에 `ezmlm 만들기` 리스트에서 다시 `편집기` 및 `관리자` 파일을 리스트 디렉토리에 저장합니다.
+
+[BATV](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) 및 [SRS](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme) 고유한 문제 포즈 `ezmlm-idx` 다른 메일링 리스트 소프트웨어와 달리 이 소프트웨어는 `메일 보낸 사람` 부분 `일시적` 봉투가 아니라 "보낸 사람" 주소는 메시지 헤더에 있습니다.
+
+두 사양은 모두 임시 주소를 `메일 보낸 사람` 쉽게 해독할 수 있는 방법으로 원래 주소를 포함하는 envelope 부분입니다.  그러나 {# lede #}이러한 임시 주소는 `ezmlm-idx`'구독 및 조정 시스템{# lede #}및 `발신자-demunger.pl` 위에서 언급 한 스크립트는 일단 배포 된 것을 수정할 것입니다.
+
+<div class="alert alert-info">
+   <div class="alert-header">노트</div>
+   <div class="alert-body">
+릴리스 노트에 따르면 버전 7.0.0부터 ezmlm-idx는 내장된 BATV 및 SRS를 지원해야 합니다. 어쨌든 sender-demunger가 실제로 우승했습니다.'경우에 따라 상처를 입습니다 :-)
+   </div>
+</div>
+
+### DMARC
+
+참조 [빈/ezmlm-dmarc-filter.pl](ezmlm/bin/ezmlm-dmarc-filter.pl) 및 [bin/ezmlm-seekable-stdin.pl](ezmlm/bin/ezmlm-seekable-stdin.pl) 및 [라이브러리/pull_header.pm](ezmlm/lib/pull_header.pm). 이러한 스크립트를 사용하려면 `</editor />` 섹션 `사이트맵` 해당 호출 `ezmlm 게이트`, `ezmlm 저장소`또는 `ezmlm 전송`, 다음과 같이 표시됩니다.
+
+```shell
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/ezmlm-seekable-stdin.pl /path/to/bin/sender-demunger.pl <#B#>/ezmlm-gate -rY '<#D#>' '<#D#>' '<#D#>/digest' '<#D#>/allow' '<#D#>/mod'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/sender-demunger.pl <#B#>/ezmlm-store '<#D#>'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | <#B#>/ezmlm-send -r '<#D#>'
+```
+
+이 경우 이름이 지정된 파일을 터치한다고 가정합니다. `dmarc` 필터를 사용으로 설정할 모든 목록 디렉토리  다음과 같이 `사이트맵` 이 작업을 수행하려면 해당 파일에 다음 블록을 추가합니다.
+
+```shell
+	</-dmarc#FXT/>
+	</dmarc#f/>
+	</dmarc#t/>
+	</dmarc#x/>
+```
+다음과 같이 실행되는 유일한 목록 구성 `DMARC` 그들과 함께 `-f`, `-t` 또는 `-x` 설정 위의 구성이 이에 맞게 조정됩니다.
+
+만약 당신이't는 시대에 따라 유지, 강한 소개 하는 최근 운동이 있다 [DMARC](http://en.wikipedia.org/wiki/DMARC) 실패한 메시지를 거부하는 정책 [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) 서명 테스트 페이스 북, 트위터, LinkedIn, 야후! 그리고 지금 AOL은 새로운 영역으로이 요금을 주도하고있다, 메일 링리스트 운영자가 상황을 처리하도록 강요. 무엇을 `ezmlm-dmarc-filter.pl` 할 수 있고 이것은'문제에 대한 유일한 해결 방법은 `DKIM-서명` 해당 도메인의 헤더 및 추가 `. 유효하지 않음` 보낸 사람에게 접미어'초 `보낸 사람` 헤더 주소입니다.  그것은 작동하는 가장 간단한 솔루션 중 하나가되는 장점을 가지고, 그래서 나는'm 여기서 제공한다.  지금까지 엄격하게 배포된 도메인 `DMARC` 정책 모두 적절한 제공 `회신 주소` 헤더: 변경된 내용 `ezmlm-dmarc-filter.pl` 이(가) 해당 메시지에 대한 RFC 준수 전자메일 응답의 작업에 영향을 주지 않습니다.
+
+$날짜: 2023-01-19 15:58:40 -0700 (목, 19 Jan 2023) $

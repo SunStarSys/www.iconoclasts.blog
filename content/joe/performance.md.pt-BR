@@ -1,0 +1,117 @@
+---
+archived: ~
+categories: Desempenho, Ferramentas
+dependencies: '*.md.pt-BR'
+keywords: ~
+published: ~
+status: arquivado
+title: Desempenho do Aplicativo
+---
+
+{# lede #}Muitos desenvolvedores caem na armadilha de pensar que a otimização de desempenho é sobre tornar cada linha de código o mais eficiente possível.{# lede #}, ou optar por escrever todo o seu aplicativo na linguagem de programação mais rápida que eles podem encontrar.
+
+It'Na verdade, é o oposto. Você começa com as restrições de arquitetura do aplicativo e as usa para fazer drill-down até o observado "mais lento" parte do programa. Essa parte'A **implementação** orienta todas as outras opções de desempenho que você precisa fazer. Qualquer coisa que's não tão lento como essa parte, não precisa ser otimizado ainda mais. Em vez disso, concentre-se na expressão humana e na simplicidade e clareza da implementação, para leitores não especialistas sobre o `SSDLC` do software, para o resto do seu programa's código.
+
+Você pode iterar neste playbook, mas eu'Nunca precisei ir além de 3 iterações na minha carreira profissional.
+
+Então vá em frente e use uma linguagem de programação elegante como `Python3` ou `Javascript`/`Histórico de Tipos`, e deixe os especialistas no assunto (**SME**) lá fora no mundo de código aberto dar-lhe poderoso `C`/`C++` ligações nativas para suas necessidades de finalidade especial. Nada do que você faz para a lógica de negócios precisa de mais velocidade do que **qualquer** linguagem de programação dinâmica pode oferecer **pronto para uso**.
+
+Mesmo um script bash sem dependência é uma solução viável para muitas tarefas básicas. Aqui's one Eu escrevi para a empresa Realidade Aumentada [Salto Mágico](https://magicleap.com) anos atrás, para substituir um desajeitado [OpenGrok](https://oracle.github.io/opengrok/) serviço com algo que aproveita a paralelização de multiprocessadores com `xargs -P`, e suporta [O nas](https://www.pcre.org/) pesquisa com simples `Emacs`/`Vim` associações.
+
+https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
+
+Esse script é uma ordem de magnitude mais rápida do que os suspeitos habituais no GitHub, que foram todos escritos em linguagens de programação estáticas e compiladas. Mas identificando o gargalo exato no `bash` (looping com alto volume `garfo+exec` chamadas no meio), e usando `xargs` em vez disso, você obtém um script que se parece muito com este, com o algoritmo central implementado em 10 linhas de `concha`.
+
+It's também usando a Comunidade de Código Aberto do **SME**'s de uma maneira inteligente, em vez do outro "grep recursiva filtrada" implementações em GitHub. Em vez de adotar e manter internamente minha própria implementação (threaded) de `localizar`, `xargs`, e `gancho`, acabo de reutilizar os executáveis pré-instalados outros **SME**'s foram aperfeiçoando ao longo de décadas **como está**, e principalmente usar shell *builtins* para o restante. Sim'necessidade de dominar suas implementações, apenas reutilizar suas `CLIENTE`s. Sim'T mesmo quer dominá-los, que's **seu** bailiwick. Os deltas de desempenho só importam quando há vários segundos ou mais, dado o aplicativo's casos de uso esperados (humanos).
+
+O restante do roteiro aproveita principalmente as construções bash shell, que são implementadas em `C`.
+
+Para ver o rumo oposto, onde tudo é feito internamente, totalmente microotimizado e ainda pode't bater este script com as opções de pesquisa padrão, e nenhum sistema de cache disponível, aqui está um bom exemplo <https://github.com/BurntSushi/ripgrep>
+
+Apenas para extrair o primeiro #performance #benchmark dessa página e dimensioná-lo de um tamanho de árvore de amostra de brinquedo (origens de kernel de linhagem), para uma árvore heterogênea que's `23GB`: (melhores corridas após 3 iterações; `LANG=en_US.UTF-8`).
+
+```shell
+    % du -sh .
+    23G .
+    % time rg -uuniw '[A-Z]+_SUSPEND' | wc -l
+    6259
+    rg -uuniw '[A-Z]+_SUSPEND' 9.46s user 16.08s system 261% cpu 9.759 total
+    wc -l 0.00s user 0.07s system 0% cpu 9.759 total
+    % time pffxg.sh -- -wnE '[A-Z]+_SUSPEND' | wc -l
+    5855
+    pffxg.sh -- -wnE '[A-Z]+_SUSPEND' 16.66s user 2.68s system 429% cpu 4.501 total
+    wc -l 0.00s user 0.00s system 0% cpu 4.501 total
+```
+
+It'é bastante bobo para microotimizar algo que's profundamente ligado ao estado do kernel'cache do sistema de arquivos s para sua pesquisa. A variação nos tempos de desempenho é dominada pela velocidade de acesso ao corpus de arquivos' é uma ordem de magnitude mais relevante do que qualquer outro fator para os resultados finais. Estar em um `NVMe` ajuda, mas nada neste espaço bate `RAM` o próprio.
+
+Que's por que ter um cache compactado na memória para um grande corpus de arquivos estabilizará os tempos de desempenho. É surpreendente que ninguém mais pensasse que isso era importante o suficiente para apoiar.
+
+Tire o segundo #performance #benchmark dessa página e expanda-o como antes (mesmo `23GB` árvore):
+
+```shell
+	% time rg -tc -uuuiwn '[A-Z]+_SUSPEND' | wc -l
+    5629
+    rg -tc -uuuiwn '[A-Z]+_SUSPEND' 3.51s user 1.71s system 1141% cpu 0.457 total
+    wc -l 0.00s user 0.05s system 11% cpu 0.457 total
+    % time LANG=C pffxg.sh --cache /tmp/pffxg-$USER --workers 32 --cc -- -wE '[A-Z]+_SUSPEND' | wc -l
+    5628
+    LANG=C pffxg.sh --cache /tmp/pffxg-$USER --workers 32 --cc -- -wE  3.14s user 0.88s system 1055% cpu 0.381 total
+    wc -l 0.00s user 0.00s system 0% cpu 0.381 total
+```
+
+Um ajustado `pffxg.sh` ainda é mais rápido, apesar de todo o trabalho colocado em microotimização ripgrep para isso `C`-pesquisa de arquivo.
+
+A maneira como eu usei este script com [AOSP](https://source.android.com) era para agendar um `resgate` sincronização e uma subsequente `pffxg.sh` **`lz4`-compactado-cache semente-para-`tmpfs`** correr todas as manhãs antes do trabalho (via `crontab`), com `PFFXG_CACHE=...` no meu `~/.pffxg.conf` arquivo. Assim, qualquer `pffxg.sh` as chamadas que executei durante todo o dia de trabalho usariam o cache compactado no `tmpfs`Não importa o estado do kernel'o cache do sistema de arquivos s estava no momento.
+
+.25M LOC entre `ripgrep` e [ugrep](https://github.com/Genivia/ugrep). 632 LOC para `pffxg.sh`. Silêncio.
+
+Porque'um programa de shell tão pequeno, `pffxg.sh` pode dar-lhe ganchos poderosos em seus internos com esforço quase zero. Até o `gancho` comando em si é personalizável: qualquer comando que você precisa para executar em um corpus de arquivos selecionados, que pode aceitar uma lista de nomes de arquivos anexados ao final de seus argumentos, é jogo justo. Aqui's a "contagem total de linhas em `MiLOC`" exercício no repositório git do kernel linux:
+
+```shell
+	% time find *-type f | xargs wc -l | awk '{ $2 == "total" {a+=$1} END {print a/1024**2}'
+    28.451
+    find *-type f 0.00s user 0.06s system 2% cpu 2.733 total
+    xargs wc -l 0.53s user 1.02s system 54% cpu 2.853 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.23s user 0.59s system 28% cpu 2.853 total
+
+% time pffxg.sh --workers 8 --cmd wc --all -- -l | awk '{$2 == "total" {a+=$1} END {print a/1024**2}'
+    28.4506
+    pffxg.sh --workers 8 --cmd wc --all -- -l 0.92s user 0.66s system 826% cpu 0.192 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 11% cpu 0.192 total
+```
+
+`ripgrep` versão:
+
+```shell
+	% time rg -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
+    28.4284
+    rg -c \$ 2.12s user 2.19s system 276% cpu 1.564 total
+    awk -F : '{a+=$2} END {print a/1024**2}' 0.58s user 0.45s system 66% cpu 1.564 total
+```
+
+Aqui é restrito a `C`-files (mesma árvore linux):
+
+```shell
+	% time pffxg.sh --workers 8 --cc --cmd wc -- -l | awk '$2 == "total" {a+=$1} END {print a/1024**2}'
+    25.3935
+    pffxg.sh --workers 8 --cc --cmd wc -- -l 0.76s user 0.54s system 734% cpu 0.177 total
+    awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 9% cpu 0.177 total
+```
+
+e o `ripgrep` versão:
+
+```shell
+	% time rg -tc -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
+    25.3844
+    rg -tc -c \$ 3.49s user 1.54s system 441% cpu 1.140 total
+    awk -F : '{a+=$2} END {print a/1024**2}' 0.38s user 0.38s system 66% cpu 1.140 total
+```
+
+Real **Desempenho do Aplicativo** vem de equilíbrio, flexibilidade e técnicas de programação funcional; não vem da fixação em táticas imperativas de microotimização em linguagens de programação estáticas e compiladas que são um suporte para trabalhar a partir das perspectivas de equilíbrio e flexibilidade. Essas linguagens imperativas e exageradas são ótimas metas para domínios problemáticos muito específicos, mas são terríveis para o desempenho de aplicativos em todo o sistema.
+
+`pffxg.sh` não é um produto, e este não é um passo de vendas para ele. It'Um **exemplo** para ilustrar meu ponto de uma maneira muito dramática. Se você está familiarizado com a longa história de soluções de grep-recursivas filtradas no GitHub, todas elas se baseiam na noção de que o problema com Andy Lester's original `Perl` implementação [confirmar](https://beyondgrep.com/)foi que foi escrito em `Perl`. O único problema real do ponto de vista do desempenho foi que o `Perl` foi escrito por Andy, que'parece ter algum talento para conceitos de desempenho de sistemas (como cultivar `localizar` trabalho de paralelização a um propósito `C` binário), mas em vez disso visava a portabilidade preguiçosa, tentando capturar todo o código como um single-threaded Pure `Perl` estranheza.
+
+Que mil flores floresçam, por mais bobas que pareçam!
+
+<!-- $Date: 2026-01-10 10:31:18 -0700 (Sat, 10 Jan 2026) $ $Author: joe $ $Revision: 27390 $ -->

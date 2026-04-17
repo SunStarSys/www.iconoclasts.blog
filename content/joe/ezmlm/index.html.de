@@ -1,0 +1,21 @@
+{% extends "main.html"|append:lang %}
+{% block content %}
+<div class="page-header"><div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))"><img src="/images/edit.png" /></a></div>
+  <h1>{{ headers.title }}</h1></div>
+<div class="jumbotron">
+{% filter markdown %}
+### Layout
+
+Die ausführbaren Dateien sollten in `Lagerplatz/`und parallel `Bibliothek/` Verzeichnis für
+pull_header.pm.  Wenn Sie eine `svn` Client handlich, der einfachste Weg
+um diesen Baum abzurufen "Ort" ist via:
+
+```shell
+	% svn co https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/content/essays/ezmlm
+```
+
+{% endfilter %}
+
+{{ content|markdown }}
+</div>
+{% endblock %}

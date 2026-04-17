@@ -1,0 +1,65 @@
+\classe de document{% templatetag openbrace %}article
+\usepackage[liens cachés]{% templatetag openbrace %}hyperref}
+\usepackage[type={% templatetag openbrace %}CC,modificateur={% templatetag openbrace %}{{license}},version={% templatetag openbrace %}4.0}]{% templatetag openbrace %}doclicense
+\usepackage[margin=1in]{% templatetag openbrace %}géométrie}
+
+\nnnouvel environnement{% templatetag openbrace %}subproof}[1][\proofname]{% templatetag openbrace %}%
+  \rrenouvellementcommande{% templatetag openbrace %}\qedsymbole}{% templatetag openbrace %}$\blacksquare$} %
+    \début{% templatetag openbrace %}preuve}[#1]%
+    }{% templatetag openbrace %}%
+    \end{% templatetag openbrace %}preuve : %
+}
+
+% de packages AMS
+
+\usepackage{% templatetag openbrace %}amsmath}
+\usepackage{% templatetag openbrace %}amsthm
+\usepackage{% templatetag openbrace %}amssymb}
+% d'options modernes et conviviales utf8 (entièrement incompatibles avec amscd) :
+\PassOptionsToPackage{% templatetag openbrace %}partiel=à droite}{% templatetag openbrace %}unicode-math
+\usepackage{% templatetag openbrace %}jeu de polices
+\usepackage{% templatetag openbrace %}tikz-cd
+
+\usepackage[style=alphabétique]{% templatetag openbrace %}Biblatex
+\addbibresource{% templatetag openbrace %}{{path|dirname}}/{{path|basename:0}}bib.{{lang}}}
+% de macros mathématiques utiles
+\usepackage{% templatetag openbrace %}crochet
+\usepackage{% templatetag openbrace %}physique
+% Unicode
+\usepackage[utf8]{% templatetag openbrace %}inputenc}
+
+% de métadonnées
+\titre{% templatetag openbrace %}{{headers.title|lower|capfirst}}}
+\date{% templatetag openbrace %}{{time|date:"Y"}}\\{{time|date:"F"}}}
+\auteur{% templatetag openbrace %}{{author}}\\\hréf{% templatetag openbrace %}mailto ://{{author|urlencode|md2tex}}\%20<{{email}}>}{% templatetag openbrace %}{{email}}}}
+
+% Théorème, Lemme, etc.
+\théorème{% templatetag openbrace %}plaine
+\nnnouveau théorème{% templatetag openbrace %}Théorème{% templatetag openbrace %}Théorème
+\nnnouveau théorème{% templatetag openbrace %}corollaire}[théorème]{% templatetag openbrace %}Corollaire
+\nnnouveau théorème{% templatetag openbrace %}lemma}[théorème]{% templatetag openbrace %}Lemme
+\nnnouveau théorème{% templatetag openbrace %}réclamation{% templatetag openbrace %}Réclamation (théorème)
+\nnnouveau théorème{% templatetag openbrace %}axiome [théorème]{% templatetag openbrace %}Axiome
+\nnnouveau théorème{% templatetag openbrace %}conjecture}[thème]{% templatetag openbrace %}Conjecture
+\nnnouveau théorème{% templatetag openbrace %}fact}[théorème]{% templatetag openbrace %}Fait
+\nnnouveau théorème{% templatetag openbrace %}hypothèse[théorème]{% templatetag openbrace %}Hypothèse
+\nnnouveau théorème{% templatetag openbrace %}hypothèse}[théorème]{% templatetag openbrace %}Hypothèse
+\nnnouveau théorème{% templatetag openbrace %}proposition}[théorème]{% templatetag openbrace %}Proposition
+\nnnouveau théorème{% templatetag openbrace %}critère}[théorème]{% templatetag openbrace %}Critère
+\théorème{% templatetag openbrace %}définition
+\nnnouveau théorème{% templatetag openbrace %}définition}[théorème]{% templatetag openbrace %}Définition
+\nnnouveau théorème{% templatetag openbrace %}exemple}[théorème]{% templatetag openbrace %}Exemple}
+\nnnouveau théorème{% templatetag openbrace %}remarque}[théorème]{% templatetag openbrace %}Remarque}
+\nnnouveau théorème{% templatetag openbrace %}problème}[théorème]{% templatetag openbrace %}Problème
+\nnnouveau théorème{% templatetag openbrace %}principe[théorème]{% templatetag openbrace %}Principe
+
+\début{% templatetag openbrace %}document
+\maketitle
+
+{{content|md2tex}}
+
+\doclicenseThis
+\pagebreak
+Bibliographie
+
+\end{% templatetag openbrace %}document

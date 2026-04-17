@@ -1,0 +1,510 @@
+---
+archived: ~
+categories: 수학, 역학
+dependencies: '*.md.ko'
+keywords: 역학, 역학, 양자, 고전, 열 커널, 죽이는 분야, feynman kac, cameron martin
+published: ~
+status: 메시지
+title: 역학, 고전 및 양자
+---
+
+<div class="right">
+
+![QM](dynamics.page/dynamics).
+
+</div>
+
+{# lede #}미분 지오미터's 접근{# lede #}
+
+Prerequisites:
+
+1. Stokes에 대한 기본적인 이해' 미분 외장 텐서 대수학의 정리 $$n$$-차원 매니폴드 $$M$$.
+
+2. 기본 Riemannian 기하학에 노출, 아인슈타인 / PAIN 표기법을 포함한 로컬 좌표의 esp.
+
+3. Brownian Motion 및 Martingale Theory를 포함한 Smooth 및 Stochastic Dynamical Systems에 대한 관심.
+
+[TOC]
+
+## 고전 역학
+
+### 해밀턴-자코비/라그랑주 형식주의
+
+### 코탄젠트 번들 메커니즘
+
+부드러운 **Hamiltonian** 정의 $$\mathcal H:T_q^{\*}M\oplus\Reals\rightarrow\Reals$$ 기준 $$\mathcal H(p,q,t)$$.
+
+#### 허가 $$\theta := p\ dq - \mathcal H(p,q,t)\ dt\in T^\*(T^\*M\oplus\Reals)$$.
+
+정의 $$\mathcal S_\mathcal H(\gamma) := \int_\gamma \theta$$ 부드러운 $$\gamma:[0,t]\rightarrow T^{\*}M\oplus\Reals$$.
+
+두 개의 커브가 $$\gamma_1, \gamma_2$$ 정확히 동일한 경계 끝점을 가지며 역구성별로 **빼기**를 정의합니다. $$\gamma_1 - \gamma_2$$ 순회에 의해 정의된 닫힌 루프입니다. $$\gamma_1$$ 앞으로의 방향, 그리고 $$\gamma_2$$ 반대로. 허가 $$S$$ 이 닫힌 반복에 의해 경계되는 어떤 2 차원 표면든지: $$\gamma_1 - \gamma_2 = \partial S$$. 그래서
+
+```math
+\begin{aligned}
+\mathcal S_\mathcal H(\gamma_1) - \mathcal S_\mathcal H(\gamma_2) &= \int_{\gamma_1 - \gamma_2}\theta \\
+&= \int_{\partial S}\theta\\
+&= \int_S d\theta
+\end{aligned}
+```
+의해 stokes' 정리
+
+이러한 표면의 여부와 상관없이 $$S$$ 실제로 존재하고, 행동을 위해 $$\mathcal S_\mathcal H$$ 의 끝점에만 종속됩니다. $$\gamma$$반드시 다음과 같은 첫 번째 주문 조건이 있어야 합니다. $$d\theta$$ 사라짐 $$\gamma$$.
+
+#### 허가 $$\omega_\mathcal H := d\theta = dp\wedge dq - d\mathcal H \wedge dt\in\bigwedge^2T^\*(T^\*M\oplus\Reals)$$.
+
+```math
+\begin{aligned}
+\omega_\mathcal H|_\gamma &= \dot{p}\ dt\wedge dq + \dot{q}\ dp\wedge dt - \frac{\partial \mathcal H}{\partial p}dp\wedge dt - \frac{\partial \mathcal H}{\partial q}dq\wedge dt \\
+        &= (-\dot{p}_i - \frac{\partial \mathcal H}{\partial q^i}) dq^i \wedge dt+  (\dot{q}^i - \frac{\partial \mathcal H}{\partial p_i}) dp_i\wedge dt
+\end{aligned}
+```
+
+#### $$\therefore \omega_\mathcal H|_\gamma = 0 \iff \gamma(t)$$ 해밀턴-자코비 방정식(Hamilton-Jacobi Equations)
+```math
+\begin{aligned}
+\dot p &= -\frac{\partial \mathcal H}{\partial q} \\
+\dot q &= \ \ \ \frac{\partial \mathcal H}{\partial p}
+\end{aligned}
+```
+
+$$\iff \gamma:[0,t]\rightarrow T^*M\oplus\R  $$ 은(는) 작업에 대한 *정상 곡선*입니다. $$\mathcal S_\mathcal H(\gamma)=\int_\gamma \theta$$.
+
+#### 레전드르 변환
+시기 $$\mathcal H$$ 볼록 위치 $$p$$, $$\forall \dot{q} \in T_q M\ \exists !\ p=p_{max}(\dot q)$$  만족 $$\dot{q} = \frac{\partial \mathcal H}{\partial p}(p_{max},q,t)$$. (연속) Legendre 변환을 정의합니다. $$\mathcal L$$ 의 $$\mathcal H$$:
+```math
+\begin{aligned}
+\mathcal{L}(\dot q,q,t) &:= \max_p p\dot{q} - \mathcal H(p,q,t) \\&= p_{max}(\dot q)\dot q - \mathcal H(p_{max}(\dot q),q,t) \\
+\mathcal S_\mathcal{L}(\pi(\gamma)) &= \int_{\pi(\gamma)} \mathcal{L}(\dot q, q, t)\ dt
+\end{aligned}
+```
+*Lagrangian representation of the Action*의 약어입니다. $$\pi: T^*M\oplus\Reals \rightarrow M\oplus\Reals$$ (forgetful) 섬유 투사 연산자 $$(p,q,t)\mapsto (q,t)$$.
+
+#### 최소 행동의 원칙
+
+최소 행동의 원칙은 단순히 자연의 고전 역학 자체가 최소화하는 궤적을 선택하는 경향이 있다고 주장한다. $$\mathcal S_\mathcal{L}$$.
+
+일반적으로 이 청구는 **거짓**입니다. 상기 고정 곡선은 The fixed curves of $$\mathcal S_\mathcal H$$ 항상 발견하는 것이 흥미롭고 떠나는 곡선과 동일합니다. $$\mathcal S_\mathcal{L}$$ 고정.  로컬에서 **정지 궤적에 대한 차등 방정식은 동일합니다**, 등 $$\mathcal S_\mathcal H = \mathcal S_\mathcal{L}$$ 그 커브에  라그랑기 공식에서 이러한 공변 방정식은 오일러-라그랑기 방정식(Euler-Lagrange Equations)으로 알려져 있다. $$(d\mathcal{L}\wedge dt)|_{\pi(\gamma)} = 0:$$
+
+```math
+\frac{\partial \mathcal L}{\partial q} = \frac{d}{dt}\frac{\partial \mathcal L}{\partial \dot q}
+```
+
+두 번째 순서의 ODE $$t \mapsto q(t)$$그래서, $$2\dim M+1$$ 초기 조건 $$(\dot q_0, q_0, t_0)$$해밀턴-자코비 방정식과 마찬가지로. Picard-Lindelöf 정리에 의해,이 방정식은 초기 가치 문제로 프레임 할 때 지역적으로 독특한 솔루션을 가지고 있습니다.
+
+하지만 흥미로운 점은 $$\mathcal S_\mathcal L(\pi\circ\gamma)$$ 우리가 독특하게 정의 할 수있을 때 자신을 드러냅니다. $$\pi\circ\gamma$$ 끝점을 기반으로 암시적으로 수행 $$(q_0, t_0)$$ 및 $$(q_f, t_f)$$따라서 이 경계 값 문제를 초기 값 문제*로 변환해야 합니다. 다시 말해, 우리는 $$\dot q_0$$ 그것은 목표를 달성 할 것입니다. $$(q_f, t_f)$$ 고정 원곡선(고유?) $$\pi\circ\gamma$$ 오일러-지연 방정식을 해결합니다. 이런 식으로 우리는 생각할 수 있습니다. $$\mathcal S = \mathcal S(q_0,t_0, q_f, t_f)$$ **전환 함수**로, 고정 옵션에 종속되지 않는다고 가정합니다. $$\pi\circ\gamma$$그리고 그런 a $$\gamma$$ 실제로 전환점 쌍을 연결하는 부드러운 곡선의 솔루션 공간에 존재합니다.  국소적으로, 이것은 암시적 기능 정리(Implicit Function Theorem)의 적용이지만, 전 세계적으로, 이러한 것들을 건설하는 위상적 장애물이 있을 수 있다. $$\gamma$$.
+
+허가'한 걸음 물러서서 더 간단한 것을 정의하십시오. "가로" 리프트 $$\mathcal A=\dot q\oplus \pi^{-1}:T_{q} M\oplus \Reals \rightarrow T_{q}^{\*}M\oplus \Reals$$ 할당
+
+```math
+(\dot q, q,t)\mapsto (p_{max}(\dot q), q, t)\ .
+```
+이제 우리는 **모든** "예상" 부드러운 곡선(정지 곡선뿐만 아니라) $$\tilde\gamma:[0,t]\rightarrow M\oplus\R$$:
+
+```math
+\begin{aligned}
+
+\mathcal S_\mathcal{L}(\tilde\gamma) &= \mathcal S_\mathcal H(\mathcal A\circ \tilde\gamma) \ .
+\end{aligned}
+```
+
+Note: 볼록성 제약 조건 $$\mathcal H$$ 고유 항목이 있는지 확인합니다. $$p_{max}(0)$$ 이러한 고정 곡선 wiith $$\dot q = 0$$. 이 부분의 본문은 고정 곡선입니다. $$\gamma$$ *의 섬유 안에 포함된 지속적인 움직임이 없습니다 *$$\pi^{-1}$$그래서 일반성의 손실없이 우리는 단순히 비 정지 고려 $$\tilde \gamma$$ 그들을 들어 올려 $$\mathcal A$$ 적합한 커브 클래스로 "통합" 나중에.
+
+#### 이차형 양식 매직, 파트 1
+
+시기 $$\mathcal H(p,q,t)$$'초 $$p$$-dependence (일명 운동 에너지 성분)는 비 퇴행성, 대칭 이차적인 모양입니다, 우리는 의사 리만 미터법으로 그것을 대표할지도 모릅니다 $$[g^{ij}]: M\oplus\Reals\rightarrow TM\odot TM$$ 역방향 $$[g_{ij}]: M\oplus\Reals\rightarrow T^{\*}M\odot T^{\*}M$$. 로컬 좌표의 Legendre Transform은 다음과 같이 관련됩니다.
+
+```math
+\begin{aligned}
+\mathcal H^\mathcal V(p,q,t) &= \frac{1}{2}\ g^{ij}(q,t)\ p_ip_j + \mathcal V(q,t) \implies\\
+\mathcal{L}^\mathcal V(q,\dot q, t) &= \frac{1}{2}\ g_{ij}(q,t)\dot{q}^i\dot{q}^j - \mathcal V(q,t)\ .
+\end{aligned}
+```
+
+Levi-Civita 연결's 크리스토펠 기호 $$g$$ 코줄 공식(Koszul Formula).
+
+```math
+\begin{aligned}
+\Gamma^k_{ij} &= \frac{1}{2} g^{ka}(\partial_i g_{ja} + \partial_j g_{ia} - \partial_a g_{ij})\\
+\Gamma_k^{ij} &= \frac{1}{2}g_{ka}(\partial^ig^{ja} + \partial^j g^{ia} - \partial^ag^{ij}).
+
+\end{aligned}
+```
+포함 $$\partial_i := \frac{\partial}{\partial q^i}$$ 및 $$\partial^i := g^{ij}\partial_j$$. 연계된 공변량 파생상품 $$\nabla$$ 로컬 좌표에서
+```math
+\begin{aligned}
+\nabla_{a^i\partial_i} b^j\partial_j &=d b^j(a^i\partial_i)\partial_j + \Gamma_{ij}^k a^ib ^j\partial_k\ ,\text{ or}\\
+\nabla_{\partial_i}\partial_j &= \Gamma_{ij}^k\partial_k \text{ , and contravariantly}\\
+\nabla_{\partial^i}\partial^j &= \Gamma^{ij}_k\partial^k \text{, so} \\
+\nabla &= d + \Gamma
+\end{aligned}
+```
+
+모든 텐서 필드. 특히 $$\Gamma$$ 대칭 위치 $$(i, j)$$; 및  $$\nabla [g_{ij}] = \nabla [g^{ij}] = 0$$.
+
+일화적으로, Riemann-Christoffel 곡률 텐서는
+
+```math
+\mathcal R^{\rho }{}_{\sigma \mu \nu }=\partial _{\mu }\Gamma ^{\rho }{}_{\nu \sigma }-\partial _{\nu }\Gamma ^{\rho }{}_{\mu \sigma }+\Gamma ^{\rho }{}_{\mu \lambda }\Gamma ^{\lambda }{}_{\nu \sigma }-\Gamma ^{\rho }{}_{\nu \lambda }\Gamma ^{\lambda }{}_{\mu \sigma }
+```
+
+##### 지연 승수 켜짐 $$\mathcal H$$ 브랜드명 상품명 Infinitesimal Translations on $$\mathcal L$$
+
+또한 $$\mathcal H = \mathcal H\_B$$ 추가 속도 필드 구성요소가 있습니다. $$\mathcal B(q,t)\in T_qM$$, 즉 선형 기능 $$p\in T^{\*}_qM$$, 우리는 **광장을 완료 할 수 있습니다** 다시 계산 $$\mathcal{L}_B$$ 의 관점에서 $$\mathcal L$$:
+
+```math
+\begin{aligned}
+\mathcal H_\mathcal B(p,q,t) &= \mathcal H + \mathcal Bp \implies\\
+\mathcal L_\mathcal B(\dot q,q,t) &=\max_p p(\dot q - \mathcal B) - \mathcal H\\
+&\ \begin{equation}
+\tag{A}= \mathcal{L}(q,\dot{q}-\mathcal B, t)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\end{equation}\\
+\mathcal H_\mathcal B &= \frac{1}{2}\ g^{ij}p_ip_j + p\mathcal B + \mathcal V \implies\\
+\mathcal L_\mathcal B &\ \begin{equation}\tag{B}= \mathcal L - g_{ij}\mathcal B^i\dot q^j + \frac{1}{2}\ g_{ij}\mathcal B^i\mathcal B^j\ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+여기서 Lagrange Multiplier 간의 연결을 확인합니다. $$\mathcal B$$ 켜기 $$\mathcal H$$ 그리고 그것의 동등한 표현은 무한한 드리프트로 $$\mathcal L$$. 컨텍스트화 $$\mathcal B$$ 나머지 부분에서 다양한 유용한 방법으로. **두 표현식 모두 $$(A)$$ 및 $$(B)$$ 대상 $$\mathcal{L}_\mathcal B$$ 방정식 <span class="eqno"></span> 매우 중요합니다.**
+
+##### 수평 상승 $$\mathcal A$$
+
+시작일 $$\frac{\partial \mathcal H}{\partial p_i}(p,q,t) = g^{ij}p_j \implies \frac{\partial^2\mathcal H}{\partial p_i \partial p_j} = g^{ij}$$, 수평 리프트를 명시적으로 계산할 수 있습니다.
+
+```math
+\begin{aligned}
+{p_{max}}_i &= g_{ij}\dot q^j = \frac{\partial \mathcal L}{\partial \dot q_i}\implies \\
+\mathcal A(\dot q, q, t) &= ([g] \dot q, q, t)\ .
+\end{aligned}
+```
+
+시기 $$g^{ij}$$ 긍정-무한, 그래서 그것의 역입니다, 이는의 운동 에너지 구성 요소를 의미 $$\mathcal S_\mathcal L(\tilde\gamma) = \mathcal S_\mathcal H(\mathcal A\circ\tilde\gamma)$$ 실제 Riemannian 측정항목과 관련된 고정 곡선에서 **최소화된** 로컬입니다.
+
+방정식에 의하여 (12) $$(A), (B)$$오일러-라그랑주 방정식 Euler-Lagrange Equations for $$\mathcal L^\mathcal V_\mathcal B$$ 다음과 같이 하십시오.
+
+```math
+\begin{aligned}
+
+\frac{1}{2}\partial_i g_{jk}(\dot q^j-\mathcal B^j)(\dot q^k -\mathcal B^k)-\partial_i \mathcal V &= \frac{d}{dt}g_{ij}(q,t)(\dot q^j - \mathcal B^j) = {\dot p^\mathcal B_{max}}_i\ ,\\
+
+- \partial^i \mathcal V &= \frac{1}{2} (\partial^i   g_{jk})(\dot q^j-\mathcal B^j) (\dot q^k-\mathcal B^k) - g_{jk}(\partial^i\mathcal B^j)(\dot q^k - \mathcal B^k) + \frac{d}{dt} (\dot q^i - B^i) + g^{ij}\frac{\partial g_{jk}}{\partial t}(\dot q^k -\mathcal B^k)\\
+
+-\nabla\mathcal V(q,t)&\begin{equation}\tag{C}=\nabla_{\dot q-\mathcal B} (\dot q - \mathcal B) -\partial_t \mathcal B +(\partial_t [\log g])(\dot q-\mathcal B) \ .\ \ \ \ \ \ \ \ \ \end{equation}
+\end{aligned}
+```
+
+이것들은 정확히 **뉴턴'모션의 법칙 (Law of Motion) $$F/m = a$$ 포함 $$\partial_t := \frac{\partial}{\partial t}$$ 잠재적인 에너지에 따라 $$\mathcal V$$ 및 velocity field $$\mathcal B$$시간 종속 설정의 경우
+
+### 심플렉틱 기하학
+
+공칭 매니폴드 $$N$$ 은(는) 연속 번들의 빼기입니다. $$T^\*(M\oplus \Reals)$$, 닫힌, 비degenerate 2 모양으로 $$\omega \in \bigwedge^2T^\*N$$. $$N$$이 범주의 isomorphisms 보존 $$\omega$$.
+
+필요 $$d\omega = 0$$ 잠재적인 로컬 통합성 조건임 $$\theta$$ 만족 $$d\theta = \omega$$의 위상 구속조건이 있을 수 있습니다. $$\omega$$'글로벌 통합성
+
+우리가 역학에 관심이있는 것은 행동입니다. $$\mathcal S(\gamma) = \int_\gamma \theta$$그래서 우리는이 기사에서 코탄젠트 번들에 초점을 맞추고 있습니다. 여기서 적합한 $$\theta$$ 함수의 관점에서 분류하는 것은 매우 간단합니다. $$\mathcal H$$ 켜기 $$N$$. 당연히 Wick-rotated $$\theta$$ 상기 범용 커버는 The universal cover of $$N$$ *phase*의 통합성 조건(즉, $$\theta$$ 복합 라인 번들에 값이 있는 경우 $$N$$의 일관된 값을 제공하기 위해, 그리고 상상의 부분에 초점을 맞춥니다. $$e^\mathcal S$$ 다음으로 내림 $$N$$.
+
+#### 자연적인 symplectic 양 모양 $$\omega^n/n!$$
+
+#### 포아송 브래킷과 거짓말 그룹
+
+## 양자역학
+
+고전 역학이 최소 동작의 원리를 충족하는 곡선을 찾는 경우 Quantum Dynamics는 전체 클래스의 (일반적으로) 고정되지 않은 곡선에 대한 값을 통합하면서 동작의 지수에 관한 것입니다. "무한 치수 Lebesgue 측정" $$\mathcal D_{dt}\tilde \gamma$$,
+
+실제로는 오직 Gaussian "커플링"
+
+```math
+\int_{\set{\tilde \gamma}} e^{-\mathcal S_{\mathcal L_\mathcal B^{\mathcal V}}(\gamma)}\mathcal D_{dt}\tilde \gamma
+```
+
+일부에서 *a(복잡한 값) 측정으로 해석이 필요합니다. $$\set{\tilde \gamma}$$* 그러나이 건설은 점점 더 정교한 사례의 시리즈로서 앞으로 우리의 초점이 될 것입니다.  그것이 무엇이 되었든 간에, 실제 가치는 $$\mathcal S$$ 그 커브에서 $$\infty$$을(를) 취소하려면 $$\infty$$* 의 "시간부 정규화자" 내재된 $$dt$$ 요소 $$\mathcal D_{dt}\tilde \gamma$$. 근사값의 수렴에 영향을 미치는 근사값을 구성하는 데에는 여러 가지 선택이 있지만, 사소한 계산 가능한 경우의 기하학적 불변성에 초점을 맞추어 모든 항목을 자세히 설명하겠습니다.
+
+### 액션의 가치는
+
+그 위에 너무 좋은 점을 두지 말고, 고전적인 역학은 액션을 끝의 수단으로 정의합니다.  그것은 자신의 실제 가치 **의 의미**에 대한 어떤 이해에 오는 것에 결코 관심이 없습니다.  우리는 단지 우리가 생각할 수 있도록 필요한 미분 방정식을 구성하기 위해 그것을 사용합니다. $$\mathcal S$$ *stationary curves*를 통해 끝점 사이의 전환 기능입니다.  고정 요구 사항을 통해 해석 가능  $$\mathcal S$$ 경로 변수 표현으로, 그러나 우리는 그것의 실제적인 가치에 관하여 결코 신경 쓰지 않았다. 이것이 $$\theta \mapsto \theta + df $$ 일부 $$f \in C^\infty(T^\*M)$$ 게이지 변수 변환으로 간주됩니다. 클래식 모션 방정식은 다음과 같이 변경되지 않습니다. $$f$$.
+
+우리는 Quantum Dynamics에 있습니다!
+
+### 자연(공변량) 경로 완전 양자화
+
+광장과 Lebesgue 측정 (섬유의 섬유)의 번역 불변을 완료함으로써 $$T^\*M$$), 다음 사항을 기억하십시오.
+
+```math
+\hbar^n\int_{\Reals^n} e^{ p_i\dot q^i\Delta t - \frac{1}{2}\hbar^2 g^{ij}p_ip_j\Delta t}dp_1\dots dp_n = \hbar^n\int_{\Reals^n} e^{-\frac{1}{2}\hbar^2 g^{ij}(p_i - g_{ik}\dot q^k/\hbar)(p_j - g_{jk}\dot q^k/\hbar)\Delta t} dp_1\dots dp_n \cdot e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t} =
+\frac{e^{\frac{1}{2\hbar^2}g_{ij}\dot q^i\dot q^j\Delta t}}{\sqrt{(2\pi\Delta t)^n \det g^{ij}}}
+```
+**Feynman Path Integral** 표현식은 quadratic Kinetic Energy 사례에서 도덕적으로 동등합니다(아직 공식적으로 무한함).
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}} e^{\mathcal S_{\mathcal H^\mathcal V_\mathcal B} (\gamma)} \mathcal D_{dt}\gamma &\approx \int_{\Reals^{2n}} e^{(p\dot q - \mathcal H^\mathcal V_\mathcal B(p,q,t))\Delta t}\omega_0^n/n!\\
+&= \frac{1}{\sqrt{(2\pi\Delta t)^n}}\int_{\Reals^n}e^{\mathcal L^{\mathcal V}_\mathcal B(\dot q, q, t)\Delta t}\sqrt{\det g_{ij}}\  dq^1...dq^n\\
+&\approx \int_{\set{\tilde \gamma}} e^{\mathcal S_{\mathcal L^{\mathcal V}_\mathcal B}(\tilde \gamma)} \mathcal D_{dt}\tilde \gamma \ .
+ \end{aligned}
+```
+
+따라서 **윅 회전과 플랑크 상수에 의한 벡터 배율 조정** $$\hbar = h/2\pi$$보내는 중 $$dt\mapsto \hbar/i\ dt, \ p\mapsto \hbar p, \ \dot q\mapsto \dot q/\hbar,\  \mathcal B\mapsto \mathcal B/\hbar$$:
+
+```math
+\begin{aligned}
+\int_{\set{\gamma}}e^{\hbar/i\ \mathcal S_{\mathcal H_{\mathcal B/\hbar}^{\mathcal V}(\hbar p, q, t)}(\gamma)}\mathcal D_{\hbar/i\ dt}\gamma &\approx \int_{\set{\tilde\gamma}} e^{\hbar/i \ \mathcal S_{\mathcal L_{\mathcal B/\hbar}^{\mathcal V}(\dot q/\hbar,q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\\
+&= \int_{\set{\tilde \gamma}}e^{-\frac{i}{\hbar}\mathcal S_{\mathcal L^{\hbar^2 \mathcal V}_{\mathcal B}(\dot q, q, t)}(\tilde \gamma)}\mathcal D_{\hbar/i\ dt}\tilde\gamma\ .
+
+\end{aligned}
+```
+
+그래서 우리가 방정식의 오른쪽을 근사하고 싶을 때 <span class="eqno"></span> 고정상(Semi-classical limit) $$\hbar\downarrow 0$$), 우리는 오일러-라그랑주 방정식을 해결하기 위해 기억해야합니다 (14) $$(C)$$ 포함 $$\mathcal V \mapsto \hbar^2 \mathcal V\approx 0$$.
+
+### 슈뢰딩거 양자화
+
+```math
+\begin{aligned}
+\mathcal H(p,q) &\ = \mathcal T(p,q) + \mathcal V(q)\ \text {, where } \mathcal T = \frac{1}{2}g^{ij}(q)p_ip_j \implies \\
+
+e^{-it/\hbar \hat{\mathcal H}}\ket{\psi} &:= e^{-it/\hbar(-\frac{\hbar^2}{2} \Delta_M + \mathcal V)} \ket{\psi} \implies \\
+
+i\hbar \frac{d}{dt}\ket{\psi} &\ = -\frac{\hbar ^2}{2}\Delta_M \ket{\psi} + \mathcal V\ket{\psi}
+
+\end{aligned}
+```
+($$\Delta_M$$ Laplace-Beltrami Operator의 약어입니다. $$g$$)는 선형 차등 연산자입니다. 요점은 솔루션이 **분석**이라는 것입니다. $$t$$ 상기 상부 하프플레인은, The upper half-plane, $$dt\mapsto i/\hbar\ dt,\ p\mapsto p/\hbar $$ Wick-unrotated diffusion equation의 발음을 Wick-unrotated diffusion equation [en]
+
+```math
+\frac{d}{dt}e^{-t\hat{\mathcal H}}\ket{\psi} = (\frac{1}{2}\Delta_M - \mathcal V) e^{-t\hat{\mathcal H}}\ket{\psi} \ .
+
+```
+
+이것은 샘플 경로 기반 확률 분석에 amenable 형식이며, 타원 확산 방정식에 대한 솔루션의 분석 연속과 Feynman Path-Integrals를 전체 오른쪽 반평면에 정렬하는 의미있는 방법을 제공합니다.  본질적으로, 우리는 잘 정의되어있을 것입니다 "측정-이론" 오른쪽 절반 평면에서 경계 선형 연산자 세트로 분석 맵 $$\mathscr H = L^2(M,g)$$슈뢰딩거 방정식(Schrödinger Equation)'s Unitary Evolution 연산자는 가상 행의 경계 값입니다. $$it\hbar\ ,t\in\Reals$$. 폰 노이만(Von-Neumann)을 이해하는 데 도움이 된다.'s 폐쇄, 무제한 자기 합동 연산자의 조화 분해에 대한 스펙트럼 정리 (예 : $$\Delta_M$$) 켜짐 $$\mathscr H$$, 그것'이 문서의 나머지 부분에는 필요하지 않습니다.
+
+즉, 방정식 (17)의 역학을 연구하기에 충분하며, 일단 제안 경로 적분 표현의 명시적 정의와 관련된 미묘함을 명확히 한 것입니다.
+
+Itô/Stratonovich/Malliavin SDE semimartingale calculus를 전체 천에서 재설계하는 대신, 우리는 일반적인 이론으로 우리를 수행 할 일련의 간단한 (평면 미터법) 예제를 진행할 것입니다.
+
+하루가 끝나면 Feynman Path-Integral Quantization이 Schrödinger Quantization과 일치하거나 최소한 **deviation**을 이해하기를 원할 것입니다. 특히, 우리는 Schrödinger PDE를 생성하기 위해 Semiclassical Approximation이 필요합니다 $$o(t)$$ 기준 $$t\downarrow 0$$.
+
+그것이 밝혀지면, 여전히 논란이 있습니다. $$\mathcal V$$ 메트릭이 평평하지 않을 때의 용어입니다. 우리는 비 플랫 메트릭에 대한 알려진 (Selberg 같은) 합산 공식과 관련하여 아래에서이 문제를 전체적으로 탐구합니다.
+
+### Feynman-Kac 공식
+
+대상 $$V \in C^\infty(M)$$Baker-Campbell-Hausdorff 공식:
+```math
+e^{-it/\hbar -\Delta^\hbar_M/2} e^{-it/\hbar V} = e^{-it/\hbar(-\Delta^\hbar_M /2 + V - it/4\hbar [\Delta^\hbar_M,V] + O(t^2))}
+```
+
+Feynman-Kac Formula는 유클리드 공간에서 Brownian Motion의 경로 통합 공식에서 나옵니다. 이것의 핵심은 우리가 집중할 수 있다는 것입니다. $$\mathcal V = 0$$ 그래서 우리는 앞으로 나아갈 것입니다.
+
+#### 병렬 전송 기하학 $$\hat\Gamma$$
+
+벡터 사용 위치 $$v \in T_qM$$. 병렬 전송 $$\hat\Gamma_t(\gamma)v \in T_{\gamma(t)}M$$ 선형 첫 번째 순서 ODE를 해결하여 얻을 수 있는 벡터입니다.
+
+```math
+\begin{aligned}
+v(0) &= v \\
+\nabla_{\dot \gamma(t)}\dot v &= 0
+\end{aligned}
+```
+
+특히 $$\nabla_{\dot \gamma}\hat\Gamma_t(\gamma) = 0$$및 곡률 텐서 $$\mathcal R(X,Y) = [\nabla_X,\nabla_Y] - \nabla_{[X,Y]}$$ 의 첫 번째 순서 종속성을 측정합니다. $$\hat \Gamma$$ 원곡선 선택 시 $$\gamma$$ 끝점을 연결합니다. $$\mathcal R = 0 \iff \hat\Gamma_t$$ 의존하지 않음 $$\gamma$$.
+
+다시 말해서, 우리가 병렬 전송을 무한한 움직임으로 분해하려고한다면 $$\mathcal B^\perp$$ 영문상품명 : Infintitesimal Movement $$\mathcal B$$방정식은 다음과 같습니다.
+```math
+\begin{aligned}
+\hat\Gamma(\gamma) &= \hat\Gamma(\gamma|_\mathcal B)\hat\Gamma(\gamma|_{\mathcal B^\perp}) - \frac{1}{2}\mathcal R(\dot{\gamma}|_\mathcal B, \dot{\gamma}|_{\mathcal B^\perp})dt + O(dt^2) \ \\
+\nabla_{\dot \gamma}\hat\Gamma(\gamma) &= \nabla_{\dot \gamma|_\mathcal B}\hat\Gamma(\gamma|_{\mathcal B^\perp}) + \nabla_{\dot \gamma|{\mathcal B^\perp}}\hat\Gamma(\gamma|_{\mathcal B})  - \frac{1}{2}\mathcal R(\dot\gamma|_\mathcal B,\dot{\gamma}|_{\mathcal B^\perp}) = 0
+\end{aligned}
+```
+
+#### 세미클래스 기계공
+
+##### Semiclassical Asymptotics는 플랫 매니폴드에 대한 정확한 해결책입니다.
+
+방정식 (16)의 오른쪽은 일정한 계수를 위한 열 커널의 정확한 공식화입니다 (에서 $$q$$ 측정항목 $$g_{ij}$$. 모든 플랫 매니폴드's 보편적인 덮개 isometric 유클리드 공간에 어디에 $$g_{ij} = \delta_{i-j}$$.
+
+이것은 **표준에 대한 히트 커널입니다. $$n$$- 차원 Brownian 운동.
+
+허가'이 경우 *transition function*을 기억하십시오. $$\mathcal S_\mathcal L(q_0,t_0, q_f, t_f) = \rho^2(q_0, q_f)/2(t_f - t_i)$$여기서 $$\rho$$ 사이 Riemannian 거리 $$q_0$$ 및 $$q_f$$.
+허용 $$||q||^2 = q\cdot q$$ 유클리드 규범의 사각형이 되십시오. $$q$$:
+
+```math
+\begin{aligned}
+RHS^{16}_t(q_0,q_f) &:= \frac{e^{-\mathcal S_\mathcal L(q_0, 0, q_f, t)}}{\sqrt{(2 \pi t)^n}} \sqrt{g(q_f)}\\
+\mathcal R=0 \implies \\
+&\ = \frac{e^{\frac{-||q_f - q_i||^2}{2t}}}{\sqrt{(2\pi t)^n}} \\
+                   &\ = \int_{\Reals ^n}RHS^{16}_{s}(q_i, q)\ RHS^{16}_{t-s}(q, q_f)\ dq^1...dq^n\ \forall s\in (0, t)
+\end{aligned}
+```
+
+왜 마지막 방정식은 사실입니까?  허가's 경로 공간에서 사진을보고 : 우리는 연결하는 직선 지오데식이 있습니다 $$q_0$$ 종료 $$q_f$$ 시간 내 $$t$$에서 발생하는 중간 끊기 점과 연결하는 끊어진 지오데식 $$s$$. 사실상 우리는 Cameron-Martin Formula를 사용하여 직선 지오데직을 다음과 같이 표현함으로써 한 번 깨진 지오데직을 통합하고 있습니다. $$g$$-변형 벡터 필드 $$\mathcal B$$. 그런 다음 해당 지오데식에서 중단점 델타를 통합합니다($$\dot q-\mathcal B$$중앙 가우시안과 함께 $$\Reals^n$$.
+
+지정된 상수 벡터 필드 $$\mathcal B_t = (q_f - q_0) / t$$한때 깨진 유클리드 지질학은
+
+```math
+q(\tau) = \mathcal B_t\tau + q_0 + q\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t - \tau)/(t-s)& s\leq\tau\leq t
+\end{cases}
+````
+for fixed $$q\in\Reals^n$$ representing the "break point" at $$s$$.
+
+By Equation (12) $$(A)$$ and $$(B)$$:
+
+```math
+\begin{aligned}
+-\mathcal L(\dot q, q, \tau) &= \begin{equation}\tag{D}-\mathcal L(\dot q(\tau) - \mathcal B_t, q(\tau), \tau) - \mathcal B_t\cdot (\dot q(\tau)-\mathcal B_t) - \frac{1}{2}\mathcal B_t \cdot B_t \ \ \ \ \ \ \ \ \ \end{equation}\\
+\implies \\
+
+e^{\mathcal -S_\mathcal L(q_0, q, \tau)} &= e^{-\tau||\mathcal B_t||^2/2}e^{-(\mathcal B_t -q_0)\cdot (q(\tau)-\mathcal B_t\tau - q_0) -\mathcal S_{\mathcal L_{\mathcal B_t}(\dot q,q,\tau)}} \\
+
+&= e ^{-\tau||q_f-q_0||^2/2t^2  - \mathcal S_{\mathcal L(\dot q-\mathcal B, q, \tau)}}e^{-(q_f - q_0)/t\ \cdot q
+\begin{cases}
+\tau/s & 0\leq\tau\leq s\\
+(t-\tau)/(t-s) & s\leq\tau\leq t
+\end{cases}
+}\\
+\implies\\
+
+\frac{1}{\sqrt{((2\pi)^2 s(t-s))^n}}\int_{\Reals^n} e^{-\mathcal S_{\mathcal L}(q_0,q,s)}e^{\mathcal S_{\mathcal L}(q,q_f,t-s)}dq^1...dq^n &= \frac{e^{-(s+t-s)||q_f - q_0||^2/2t^2}}{\sqrt{((2\pi)^2 s(t-s))^n}}
+\int_{\Reals^n}e^{-t||q||^2/2s(t-s)} dq^1...dq^n \\
+&= \frac{e^{-\rho^2(q_f, q_0)/2t}}{\sqrt{(2\pi t)^n}}\\
+&= RHS^{16}_t(q_0,q_f) \ .
+\end{aligned}
+```
+
+특히, 우리는 건설했습니다. $$\mathcal B_t$$ 이렇게 $$\dot q - \mathcal B_t$$ 한 번 깨진 geodesic $$s$$ 시작 및 종료 시간 $$q_0$$그리고 우리는 그 곡선이 본질적으로 $$\mathcal N(0,s\wedge t-s)$$ 분산. 이 문서의 나머지 부분에서, 우리는 분해 할 것입니다 $$\Reals^n=<\mathcal B_t>\oplus \mathcal B_t^\perp$$ 통합 $$<\mathcal B_t>$$.
+
+#### DeWitt 스칼라 곡률 경로 Riemann 표면의 완전한 결함
+
+사용하려고 하면 어떻게 됩니까? "연속적인 신념" on the semi-classical expression in Equation (16) to construct Brownian Motion on a negative curved 매니폴드 $$M$$?
+
+우리'd는 무언가를 얻지만,'d be *거의* 곡선 공간에서 Brownian Motion &mdash; 우리는 Feynman-Kac의 무한 발전기의 결함을 찾아야합니다. 그것은 효과적인 잠재적 인 기능 오류가있을 것입니다 $$-\frac{1}{6}\bar{\mathcal R}$$여기서 $$\bar{\mathcal R}$$ 은 각 점의 스칼라 곡률입니다. 이것은 1950 년 Bryce DeWitt에 의해 처음 발견되었습니다.'s, 그리고 히트 커널의 흔적의 짧은 시간 asymptotics에 1972 McKean 가수 종이에서 유명하게 만든, 이 용어는 *미터법 양식 *의 헤시안에 기여를 나타냅니다 $$g_{ij}$$ 위치 [일반 좌표](https://en.wikipedia.org/wiki/Normal_coordinates). 하지만 그때 $$\dim = 2$$ 사례: 전체 수정 가능성을 추가할 때 $$\mathcal V = -\frac{1}{6}(\bar{\mathcal R} - \frac{1}{4}\bar{\mathcal R}) = \frac{1}{16}\bar{\mathcal R}$$ 해밀턴 인 (Hamiltonian)은 Dewitt'초 $$\frac{1}{6}\bar{\mathcal R}$$ 볼륨 양식 용어 *마이너스 *킬링 필드의 존재 $$\mathcal B$$'초 $$\frac{1}{24}\mathcal{Ric}(\mathcal B/||\mathcal B||, \mathcal B/||\mathcal B||)$$ 기여,이 요인은 Selberg와 같은 Trace Formulae의 세미클래식 asymptotics에서 제거됩니다.
+
+더 정확하게는, 대략적으로 $$1/2\ \nabla\vert_0\sqrt{g} = - 1/6\ \mathcal{Ric}_{ij}q^i\partial^j + o(||q||) \implies 1/2\ \nabla\cdot\nabla\vert_0 \sqrt{g} = -1/6\ \bar{\mathcal R}(0)$$, 우리는 첫 번째 파생 상품이 원산지에서 사라지는 것을 볼 수 있습니다, 그래서:
+
+```math
+\sqrt{(2\pi t)^n}(\frac{1}{2}\Delta_M-\mathcal V)\vert_0 e^{-\mathcal L(\dot q, q, t)}\sqrt{g(q)} = (\frac{1}{2}\Delta_{\Reals^n}\vert_0 e^{-1/2t\ g_{ij}q^iq^j}) - \mathcal V(0) - \frac{1}{6}\ \bar{\mathcal R}(0)
+```
+
+* 원래 Dewitt Term은 파생 된 그대로입니다.  우리가 킬링 필드 (Killing Field)의 존재에서 양자화에 편향 할 때 $$\mathcal B = \frac{\partial}{\partial x^1}$$ , 우리는 약간 수정된 잠재적인 용어를 가지고 갑니다:
+
+```math
+\sqrt{(2\pi t)^{n}}(\frac{1}{2}\Delta_M-\mathcal V)\vert_{x^1,\vec 0} e^{-\mathcal L_\mathcal B(\dot q, q, t)}\frac{1}{det |I-\mathcal J_\mathcal B|} = (\frac{1}{2}\Delta_{\Reals^n}\vert_{x^1,\vec 0}e^{-x^1x^1/2t}) - \mathcal V(x^1, \vec 0) + \frac{1}{8}\mathcal{Ric}_{11}(x^1, \vec 0).
+```
+
+#### 브랜드명 상품명 The Geometric Cameron-Martin Formula $$g$$-변형(킬링) 벡터 필드 $$\mathcal B$$ (일명 Quadratic Form Magic, Part 2).
+
+가정 $$\mathcal B$$ 는 $$g$$-invariant(aka) [킬링](https://en.wikipedia.org/wiki/Killing_vector_field)) 벡터 필드 $$M$$ 이 문서의 나머지 부분을 위해.
+
+##### 개발 맵 $$\tilde \gamma = \mathscr D_q[\tilde c]$$ 대상 $$\tilde c\in C^\infty([0,t],T_qM)$$.
+
+해결 대상 $$\tilde \gamma$$:
+```math
+\begin{aligned}
+\tilde \gamma(0) &= q \\
+\dot {\tilde \gamma} &= \hat\Gamma(\tilde \gamma)\dot{\tilde c}\\
+\end{aligned}
+```
+
+##### $$\tilde c(\tau)=\int_0^\tau\hat\Gamma_s^{-1}(\tilde\gamma)\dot{\tilde\gamma} ds$$ 개발 맵의 역방향으로
+
+노에테르'정리가 보장하는 $$d({g^{-1}\mathcal B}) = 0$$기타 $$g^{-1}\mathcal B$$ 다음으로 로컬 통합 가능 $$\hat{\mathcal B}$$및 해당 로컬 레벨 세트는 $$\mathcal B = \nabla \hat{\mathcal B}$$. 그 이유는 $$\hat \Gamma$$ 측정 단위를 보존합니다. $$\mathcal B$$ 및 $$\mathcal B^\perp$$:
+
+```math
+\begin{aligned}
+\\
+\dot{c}\cdot\mathcal B &= 0 \implies\\
+\dot{\gamma}\cdot \mathcal B &= 0 \implies\\
+\frac{d\hat{\mathcal B}}{dt} &= 0\ ,
+\end{aligned}
+```
+
+그래서 $$\gamma$$ 의 레벨 세트에 포함됨 $$\hat{\mathcal B}$$ 매번 $$c$$ 내부에 완전히 포함됨 $$\mathcal B^\perp \subset T_qM$$.
+병렬 전송의 통상성에 대한 곡률 제약 조건은 $$\gamma(t) \ne q$$ 일반적으로 또한
+
+```math
+\begin{aligned}
+||\mathcal B_t|| &= \frac{\rho(q_0,q_f)}{t} \implies \\
+\tilde{c}(\tau) - c(\tau) &= \frac{t^2}{\rho^2(q_0,q_f)}\mathcal B_t\int_0^\tau \dot{\tilde c} \cdot \mathcal B_t\ ds\\
+&= \mathcal B\int_o^\tau\dot{\tilde c}\cdot \mathcal B \ ds\\
+&= \mathcal B\cdot \tilde c(\tau)\ \mathcal B\\
+&= d\hat{\mathcal B}(\tilde c)\ \mathcal B \ .
+\end{aligned}
+```
+
+##### 브라운 모션 $$M$$ Euclidean Wiener 측정 켜짐 $$\mathscr D^{-1}$$
+
+##### 열 커널용 Cameron Martin Formula $$k^{\hat{\mathcal H}}_t(q_0,q_f)$$ 부정적으로 곡선된 매니폴드 $$M$$여기서 $$\hat{\mathcal H} = -\Delta/2 +\mathcal V$$
+
+허가 $$\Omega^\mathcal B_t(q)$$ 연속 곡선의 공간이 $$M$$ 시작 시간 $$q$$ 종료 위치 $$\exp{t\mathcal B}\ q$$및 $$\mu_t(\omega)$$ 글로벌 Wiener 측정 켜짐 $$\omega\in \Omega^\mathcal B_t := \set{\Omega^\mathcal B_t(q): q\in M}$$를 사용하여 $$E_t^\mathcal B (f|A):=\int_{\Omega^\mathcal B_t} f(\omega) d(\mu_t|A)(\omega)$$ 및 $$P^\mathcal B_{\mu_t}(A) := \mu_t(A)/\mu_t(\Omega_t^{\mathcal B})\ \forall A\subset\Omega^\mathcal B_t $$ . 다음 방정식 (26) $$(D) \implies$$
+
+```math
+\begin{equation}
+\tag{E}
+k^{\hat{\mathcal H}}_t(q_0,\exp{t\mathcal B_t}\ q_0)\sqrt g(q_0)\ dq = \frac{e^{-\rho^2/2t}}{\sqrt{2 \pi t\det{|I-\mathcal J^{\mathcal B}(q_0)|}}} E^\mathcal B_t({e^{-\int_0^t V(\omega(s))ds\ +\ \int_0^t \bar {\mathcal R}(\omega(s))ds/12\ -\ \int_0^t \mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||})(\omega(s))ds/24}\chi_{\Omega^B_t(q_0)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q_0) \ \ \ \ \ \ \
+\end{equation}
+```
+
+여기서 $$\rho=||t\mathcal B_t||=dist(q_0,q_f)$$, $$\mathcal J^{\mathcal B}(q_0)$$ 은(는) 다음의 폴링에 연계된 모노드로미 매트릭스입니다. $$M$$ 유도자 $$\hat{\mathcal B}$$곡선을 따라 $$\tilde \gamma(\lambda) = \exp{\lambda\mathcal B_t}\ (q_0)$$, 연결 $$q_0$$ 종료 $$ q_f$$ 기준 $$\lambda$$ 시작 $$0$$ 종료 $$t$$. $$\mathcal J^{\mathcal B}$$ 의존하지 않음 $$t$$; 및 곡률 구속조건은 $$I-\mathcal J^\mathcal B$$ 항상 생성되지 않음 $$q_0 \neq q_f$$. 바꾸기 $$\mathcal B$$ 포함 $$-\mathcal B$$ 역할 바꾸기 $$q_0$$ 및 $$q_f$$그래서 분명히 표현은 예상대로 그들 사이에 대칭입니다.
+
+시작일 $$\mathcal R$$ 일정함 $$\tilde \gamma$$및 $$\gamma$$ *is* 지오데식(최대 길이 변형) $$\mathcal J^\mathcal B(q_0)$$ **Jacobi Fields**의 관점에서 사소하게 호환됩니다. $$\mathcal J(\lambda)$$ 유지 $$\tilde \gamma$$ 그것은 단지 일정한 계수 두번째 순서 선형 ODEs에 해결책, 시간을 통해 진화한 후에 평가됩니다 $$\lambda=t$$.
+
+이 방정식의 증거 <span class="eqno"></span> 이 설문 조사가 아니라 사전 인쇄 기사에 감사 할 것이지만 Feynman-Kac 공식 *적용의 간단한 적용입니다. $$\mathcal V = \frac{1}{12}(\bar{\mathcal R} - \frac{1}{2} \mathcal {Ric}(\mathcal B / ||\mathcal B||, \mathcal B/||\mathcal B||)$$방정식의 양쪽에서 명시적으로 계산할 수 있습니다. 전체 계산이 해당 시점의 상수 곡률 대소문자로 줄어들기 때문입니다.
+
+좋은 코롤러는 상수에서 발생합니다. $$\mathcal {Ric}(\frac{\mathcal B}{||\mathcal B||},\frac{\mathcal B}{||\mathcal B||}) = \bar{\mathcal R} / \dim M$$ 음의 가우스 곡률 $$-\kappa$$ 케이스, 여기서 $$\mathcal B$$ 내림차순 $$S^1$$ 리만 서피스 (Riemann Surface) $$M$$:
+
+```math
+\begin{aligned}
+
+\det |I - \mathcal J^\mathcal B| = (2 \kappa\sinh(\sqrt{\kappa}\rho/2))^2 \implies \\
+
+\mu_t(\Omega_t^\mathcal B) = \int_{M/S^1\oplus S^1} k^{-\Delta/2}_t(q,\exp{t\mathcal B}\ q) \sqrt g(q)\ dq &= \frac{e^{-\rho^2/2t}}{\sqrt{2\pi t}} \int_{M/S^1\oplus S^1} \frac{1}{2\kappa(q) \sinh \sqrt{\kappa(q)}\rho/2}E^\mathcal B_t(e^{\int_0^t \bar{\mathcal R}(\omega(s))\ ds/16}{\chi_{\Omega^B_t(q)}(\omega)}|d\mathcal B^\perp)d\hat{\mathcal B}(q)\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_{\mathcal B^\perp\oplus[0,\rho_0]}P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B})|d\mathcal B^\perp), \ \text{ Bayes}\implies\\
+
+&=\frac{e^{-\rho^2/2t\ -\ t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \int_0^{\rho_0} P_{\mu_t}^\mathcal B(\mathcal B^\perp d\hat{\mathcal B}|\Omega_t^\mathcal B(d\hat{\mathcal B}))\frac{P^\mathcal B_{\mu_t}(\Omega_t^\mathcal B(d\hat{\mathcal B}))}{P^\mathcal B_{\mu_t}(\mathcal B^\perp d\hat{\mathcal B})}d\hat{\mathcal B}\\
+
+&=\frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ 2\kappa\sinh \sqrt {\kappa}\rho/2}\ \rho_0\\
+
+\end{aligned}
+```
+
+여기서 $$\rho = \min_{q\in M}dist(q, \exp t\mathcal B \ q)$$ 는 가장 짧은 궤도의 거리입니다. $$S^1$$ 작업 및 $$\rho_0$$ 해당 $$\rho$$ 연관된 궤도의 배수로 나눕니다.  쌍곡선 형상의 친숙한 용어에서, $$\mathcal B^\perp$$ **Horocycles** 및 $$g$$-변형 $$S^1$$ 아래 작업 $$\mathcal B$$ 이것은 "Horocyclic Flow"라고 합니다.
+
+방정식을 고려하십시오 (32) $$(E)$$ 여기서 $$B$$ 회전을 나타냅니다. $$g$$고정점 주위의 -변동 대칭 $$q_0$$. 다음으로 $$\Omega^0_t$$ 연속 계약 가능 루프 세트:
+
+```math
+\mu_t(\Omega_t^0) = \frac{vol(M)}{2\pi t}\int_0^\infty \frac{e^{-\rho^2/2t\ -t\kappa/8}}{\sqrt{2\pi t}\ \kappa\sinh \sqrt {\kappa}\rho/2}\ \rho d\rho
+```
+
+이 방정식이 분석적이기 때문에 $$\kappa$$에서 분석 연속을 확인할 수 있습니다. $$\kappa \rightarrow -\kappa$$ 이 표현식을 $$\sinh $$ 종료 $$ \sin $$ 이 경우 우리는 일정한 양의 가우스 곡률이있는 *ghost 2-sphere *에 대한 올바른 방정식이 있습니다. $$|\kappa|$$.
+
+다시 말해서, 우리는 확률과 기하학을 통해 2 차원 Selberg 추적 공식을 다시 파생, **대칭 공간에 대한 일반적인 조화 분석 대신**.
+
+##### 사소한 곡률 예
+
+매끄러운 진짜 가치 diffeomorphism를 위해 $$h:\Reals\rightarrow\Reals$$ 포함 $$h(0)=0$$의 Let $$ds^2 = (1+h^2(y)) dx^2 + 2h(y) dx\odot dy + dy^2$$. 이 측정항목은 음수 가우스 곡률을 가집니다. $$-(\kappa(y)=\frac{d^2}{dy^2}h^2(y)/2)$$의 경우 상수만 $$h(y)$$ 그분은 성령이시며 $$\det(ds^2)= 1$$. 다음으로 $$\hat{\mathcal B}(x,y) = x$$우리는 그것을 본다.
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t}}{2\pi t}\int_{-\infty}^\infty\frac{\rho_0}{2 \sinh \sqrt{\kappa(y)}\rho/2} \int_{\Omega_t^\mathcal B(0,y)}e^{-\int_0^t\kappa(y(s))ds/8}d(\mu_t|\mathcal B^\perp)/dy \ dy
+
+```
+만약 우리가 $$h(y) := y\sqrt{2y^2/3 + \kappa(0)} \implies \kappa(y) = 4 y^2 + \kappa(0) \gt 0$$방정식 (32)  $$(E)$$ 예측
+
+```math
+
+\mu_t(\Omega_t^\mathcal B) = \frac{e^{-\rho^2/2t -t\kappa(0)/8}}{\sqrt{2\pi t \cosh t}}\int_0^\infty\frac{\rho_0e^{-y^2/2t}}{\sqrt{2\pi t}\sinh \sqrt{4y^2+\kappa(0)}\rho/2 }\ dy
+
+```
+
+그대여, 그대여 $$0$$예상대로, 만약 우리가 $$\kappa(0) = 0$$. 또한 $$t\rightarrow 0$$, 적분은 또한 적당한 asymptotic 행동을 가지고 있습니다 (일정한 곡률의 주위에 뛰어오르는) $$-\kappa(0)$$ Selberg Trace Formula의 해당 구성 요소가 다음과 같은 의미 제한으로 사용되는 경우 $$t\rightarrow 0$$).
+
+### 관측소, 진화 방정식 및 거짓말 대수학
+
+### Chern-Simons 라인 번들 작업
+
+### General Relativity의 발음을 General Relativity [en]
+
+- 외부 시간 축은 인공, 때문에 `시간` 는 4차원 매니폴드 자체의 형상에 포함됩니다.
+이것은 진화 연산자가't relevaant; 고정 된 슈로딩거 방정식 만 중요합니다.
+- 경로 적분 배합이 불어오기 때문에 `-1` 본질에 있는 Lorenzian 미터법의 서명 `시간` 방향. $$\det{g}$$ 는 음수이고 푸리에 변환은 각 코탄젠트 번들에서 수행됩니다.'s fiber is infinite in that direction as well, unless we use analytic continuousation (일명 Wick Rotation on the intrinsic) 분석적 지속을 사용하지 않는 한, 섬유는 그 방향으로도 무한하다. `시간`).
+
+<!-- $Date: 2026-03-14 15:24:59 -0700 (Sat, 14 Mar 2026) $ $Author: joe $ $Revision: 29029 $ -->

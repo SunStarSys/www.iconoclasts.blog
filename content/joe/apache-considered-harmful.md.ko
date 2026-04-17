@@ -1,0 +1,69 @@
+---
+archived: ~
+categories: 아파치, 펄
+dependencies: '*.md.ko'
+keywords: 아파치, httpd,mod_apreq2,libapreq2,mod_perl
+published: ~
+status: 확인=29072
+title: 아파치 HTTPd Devs Considered Harmful
+---
+
+<div class="right">
+
+![타르와 깃털](apache-considered-harmful.page/feather2.png).
+
+</div>
+
+## 배경
+
+지난 25 년 동안, 나는의 리드 개발자였습니다 `apreq` 하위 프로젝트 [아파치 HTTPd 서버](https://httpd.apache.org) 상위 프로젝트. 원래 아이디어 `라이브러리`안전/수행자로 [HTML 폼 제출](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) 및 [쿠키](https://datatracker.ietf.org/doc/html/rfc6265) parsing library는 90s 후반에 Lincoln Stein과 Doug MacEachern 간의 공동 작업에서 나왔습니다.
+
+그때부터 도서관을 일반적이고 Perl이 아닌 관련 도서관으로 바꾸는 것은 나의 비전이었습니다. `C` 다른 프로그래밍 언어의 언어 바인딩을 지원하는 라이브러리, 그래서 나는 프로젝트를 밀어 [홈](https://httpd.apache.org/apreq) HTTPd 우산 대신 [아파치펄](https://perl.apache.org/) 프로젝트
+
+[중고] [중고]의 출현 `httpd-2입니다. X`완전히 새로운 `I/O 필터` 아키텍처는 `httpd` 핵심 및 전체 분리 `APR` 보다 일반적인 용도의 POSIX와 유사한 이식성 런타임으로 코어 자체에서 `C` 프로젝트 유사 `하위 버전`. 사실, `libapreq2` 이(가) `아파치 APR` 그 정신에 있는 프로젝트 및 그것의 Perl API는 그것의 한 부분으로 그것을 반영합니다 `APR::요청` 빌드아웃.  독립형 작업을 위한 *CGI* 모드가 내장되어 있습니다. `httpd` runtime(런타임) - 장치 테스트가 번거로워집니다.
+
+핵심 구성 요소 `apreq2` 은 항상 `mod_apreq2` 아파치 모듈(Apache module)은 `빌 브로` 초기 2000s.  그가 설계 한 것은 (대면) 나와 브레인 스토밍 세션 중에 내부의 단일 파서 라이브러리였습니다. `httpd`즉, 제출된 요청 *body*를 런타임에 모든 주요 이해 관계자 모듈과 공유했습니다.  즉, 콘텐츠 처리기가 실행되기 전에 *before*, *during* 및 *after* 요청 처리 엔진에 연결된 모듈에 구문 분석된 데이터를 제공합니다. 또한 콘텐츠 처리기가 구문 분석된 데이터를 소비했는지 또는 원시 요청 본문 자체를 소비하고 구문 재분석했는지 여부에 관계없이 하위 요청에 대해서도 작업해야 했습니다.
+
+나는 몇 년 동안 디자인 목표를 여러 번 설명, 심지어 2012에서 [개발@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04). 그러나 그것은 항상이 사람들과 바람과 이야기하는 것과 같았고, 그들은 결코 신경 쓰지 않았습니다.
+
+## Storm Clouds 수집
+
+이 비전은 매우 성공적이었지만 언어 바인딩은 다음과 같은 여러 언어에서 사용할 수 있습니다. [`펄`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache), etc., 2010 년경부터 지금까지 그것은 비극적 인 것으로 입증되었습니다. [기존 사용자 커뮤니티](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">그들 모두로 구성된</a>의 구성원뿐만 아니라 `펄` 커뮤니티
+
+어떤 결과가 발생했습니까? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci)당시 내 Perl / FreeBSD 동료가 HTTPd 서버 내부에서 프로젝트를 출시 할 것을 촉구하기 시작했습니다. 대상 {# lede #}Philip은't는 그때 얼마나 완전히 잘 알고 있었다 [피비시, 바피드, 영토](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) 이 팀은{# lede #}즉, 직접 협력해야 한다는 의미입니다. [사용자 대면 의사 결정](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) 코드 베이스에 대해
+
+2012 년 필립은 그가 원하는 것을 얻었고 저항하기를 중단했기 때문에 그는 [포크됨](https://svn.apache.org/viewvc?view=revision&revision=1201372) 기존 프로젝트를 복사하고 `C` 라이브러리 구성 요소를 HTTPd 코어로
+
+## 폴아웃
+
+[2018년](https://www.mail-archive.com/search?l=modperl@perl.apache.org&q=subject:%22Re%5C%3A+New+release+of+libapreq2%22&o=newest&f=1) 나는 재단에서 사임<sup>1</sup>. 이유를 추측할 수 있습니다.
+
+2020년, 구글's 보안 팀은 httpd 2.5의 알파 릴리스를 이용하여 8 년 된 사본의 fuzzing `apreq2`. 그들은 수리가 필요한 몇 가지 핫스팟을 발견했습니다.
+
+빌립에게 닿는 예의를 갖지 않고, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann), 나 (@joesuf4) 또는 개발과 관련된 다른 사람 `libapreq2`, HTTPd 팀의 주니어 엔지니어가 "버그 수정" 구글이 발견한 취약점 이후 모든 릴리스에서 해당 시도 및 오류 작업에 대한 레코드를 볼 수 있습니다.
+
+그러나 쿠데타 드 그레이스는 2022 년 출시되었습니다. [2.17](https://www.google.com/search?q=libapreq2-2.17)로키 개발자 The rookie developer [의도적으로 코드베이스에 치명적인 버그를 도입했습니다.](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891), 끊기 [19년 된 회귀 테스트](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
+
+## 포스트모템
+
+깨진 회귀 테스트가있는 것이 어떻게 작동하는지 궁금하다면 [CPAN](https://metacpan.org/dist/libapreq2)너는'll 어떻게 보아야 하는가 [릴렝](https://httpd.apache.org/dev/release.html) 은(는) 서버 프로젝트에서 수행됩니다.
+
+긴 이야기 짧은, [그들은 테스트를 언급했다.](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) 그곳에선 어쨌든, 그것을 '보안 릴리스(Security Release)'라고 불렀다. [이전 릴리스마다 취약한 취약점 수정](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
+
+<div class="right">
+
+![슈퍼맨 로고](apache-considered-harmful.page/superman.jpg).
+
+</div>
+
+나는 왜 지금 신경 쓰는가? 왜냐하면 내가'm 빨판 [사용자에게 답변 요청](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) 알려진 주제 전문가로서.
+
+이 짜증, 하지만 난'아파치에서 슈퍼맨 케이프를 입은 날이 약 십 년 전에 끝났다는 것을 알려드립니다.
+
+어쨌든이 시점에서 할 수있는 최선의 방법은 libapreq2에 대한 내 생산 소스 트리를 보여줍니다. &mdash; @joesuf4/apreq(및 @joesuf4/mod_perl).
+
+## 각주
+
+1. 하나만'간단하게 "ASF에서 사직". 깨끗한 휴식을 취하려면 ASF 회원뿐만 아니라 모든 프로젝트 / 위원회에서 사임해야합니다.  그렇지 않으면 결코 지옥의 아파치 이메일 스팸에 익사 바람.
+
+<!-- $Date: 2026-03-18 06:50:37 -0700 (Wed, 18 Mar 2026) $ $Author: joe $ $Revision: 29123 $ -->

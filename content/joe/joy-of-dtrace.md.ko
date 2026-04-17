@@ -1,0 +1,33 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ko'
+keywords: dtrace, solaris, bpftrace, modperl
+published: ~
+status: 초안
+title: 기쁨의 DTrace
+---
+
+<div style="float:right" class="col-lg-5">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/SwnZf3j4f1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+[TOC]
+
+## {# lede #}코드 최적화에 착수하기 전에 두 번 측정하고 한 번만 줄입니다.{# lede #}.
+
+아무것도 측정 prod DTrace 보다 쉬운.
+
+## [비디오 소스]({{snippetA.pretty_uri}}).
+
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
+
+## [목표 최적화]({{snippetB.pretty_uri}}).
+
+매번 `$dtlv` 아래 class-method-call은 컴파일 시 `:봉인됨`:
+
+[snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
+
+<!-- $Date: 2026-03-16 08:35:13 -0700 (Mon, 16 Mar 2026) $ $Author: joe $ $Revision: 29049 $ -->

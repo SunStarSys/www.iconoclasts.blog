@@ -1,0 +1,71 @@
+---
+archived: ~
+categories: Saúde, Matemática, Dinâmica
+dependencies: '*.md.pt-BR'
+keywords: exponencial, potência, covid-19, epidemia, pandemia, SARS
+published: ~
+status: arquivado
+title: Crescimento exponencial e COVID-19
+---
+
+Deixe-me tentar dar-lhe uma análise qualitativa do que um gráfico de função exponencial (também conhecido como poder) é geometricamente, e como se aplica à epidemia de covid-19 que varre o planeta.  It'Não é uma leitura longa e complexa, então {# lede #}reserve seu tempo com a **seção matemática** &mdash; it'é importante ser um consumidor educado de estatísticas relevantes para a pandemia atual{# lede #}. Um fundo no calouro [cálculo](https://en.wikipedia.org/wiki/Calculus) certamente ajuda, mas isso é destinado a ser acessível a qualquer pessoa universitária.
+
+### Matemática
+
+No início, os valores da função exponencial são microscopicamente pequenos, e mal aumentam ao longo do tempo (no `eixo x`). Mas a questão fundamental é que **sua taxa de mudança está sempre em proporção fixa ao seu valor atual<sup>1</sup>**, o que significa que, eventualmente, atingirá um ponto em que os aumentos são astronômicos.  Os gráficos a seguir retratam esse fenômeno de forma bastante sucinta, pois representam totais *mundial* para covid-19 no final de março de 2020.
+
+![Março de 2020 COVID-19](../images/covid-march-2020-e.png).
+
+Para ilustrar isso por analogia: imagine o quão rápido você estaria indo agora se a velocidade do seu carro estivesse sempre ligada, por uma constante de proporcionalidade, à quilometragem em seu odômetro. Sob esta hipótese, para cada intervalo de tempo fixo que passa, tanto a velocidade do seu carro quanto a distância total percorrida *multiplica* pela mesma quantidade fixa (maior que um). Na verdade, é [tartarugas todo o caminho para baixo](https://en.wikipedia.org/wiki/Turtles_all_the_way_down): aceleração do seu carro, empurrão, etc. (ou seja, todos [derivados](https://en.wikipedia.org/wiki/Derivative)) todos teriam esse mesmo *multiplicador* (sobre esses mesmos intervalos).
+
+Em um [escala logarítmica](https://en.wikipedia.org/wiki/Logarithmic_scale) para o `eixo y`, os gráficos de tais funções de energia aparecem como **linhas retas**.  O par de gráficos abaixo tem linhas de crescimento paralelas (que eu adicionei em preto a estes [Mundo](https://www.worldometers.info/coronavirus/) fontes), e refletem os mesmos totais *worldwide* como o par acima. Se representamos estes "linhas" em `log y = mx + b` forma, o `m`-valores (`encostas`) concordaria; apenas o `b`-valores (`interceptações y de log`) diferente.  O ponto-chave aqui é concentrar a atenção na **invariante** `inclinação`Não a variação `interceptações`para qualquer conjunto de estatísticas de pandemia por idade-demográfica ou por região geográfica, ou combinações das mesmas.  Multiplicando `10 = 2,302585...` com o `inclinação` aqui produz a constante de proporcionalidade fundamental igualando as funções exponenciais representadas' valores com suas taxas *instantâneas* de mudança.  Em outras palavras, concentrando-se nas percentagens relativas entre diferentes estatísticas, como [condicional](https://en.wikipedia.org/wiki/Conditional_expectation) taxas de mortalidade, está *perdendo o ponto*: que'uma conversa sobre o `b`-valores, não o `m`-valores que *governam a dinâmica*.
+
+Para ser claro, a diferença em `b`-valores é mais sobre as diferenças de tempo no `eixo x` do que as diferenças em `sim`-valores; em termos de equações: `log y = mx + b = m(x + b/m)` é uma tradução implícita da linha `y = mx`, `b` unidades ao longo do `eixo y`, ou de forma equivalente `b/m` unidades ao longo do `eixo x` (na direção oposta).   **Qualquer tipo de estatística relativa ****(como Taxa de Fatalidade do Caso) pode ser capturado em termos de traduções de tempo, uma vez `m` é conhecido (e não-zero).  Novamente, a estatística *crítica* é `m`!
+
+![Escala logarítmica de COVID-19 de março de 2020](../images/covid-march-2020.png).
+
+### A pandemia de COVID-19 nos Estados Unidos
+
+O `Duplicação do período de 5 dias` do total da população infectada em NY esta semana, bem como a `Duplicação do período de 3 dias` para os EUA, são lembretes gritantes deste efeito (o *multiplicador* acima para ambos os casos é 2).  Os valores de **10 dias** dos EUA são ainda mais preocupantes: **tudo aumenta 10 vezes**, assim como indicado pelas linhas paralelas pretas que adicionei aos seguintes gráficos de worldômetros. Projetar isso para um mês inteiro nos deixa com um *multiplicador* em algum lugar em torno de **1000x** para os números dos EUA, o que é **grotesco**, dados os atrasos de um mês em ver uma resposta substancial do governo à pandemia.
+
+![Março de 2020 COVID-19 Escala logarítmica dos EUA](../images/covid-us-march-2020.png).
+
+![Março de 2020 COVID-19 EUA Escala logarítmica de mortes](../images/covid-us-march-2020-deaths.png).
+
+Aqui está a *boa notícia:* as epidemias seguem apenas funções exponenciais para a parte inicial do surto. Eventualmente, a taxa de mudança se achatará e ficará negativa, indicativo de uma queda do nível total da população que está atualmente doente.
+
+A má notícia é que o [QUEM](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) está relatando que o mundo não está nem perto dessa eventualidade.  Segundo eles, as taxas diárias de infecção ainda estão aumentando (ou seja, a epidemia está acelerando; o mundo ainda está *pisando no pedal de gás *).
+
+### Fallout
+
+Não é vodu causar uma epidemia para começar a se afastar [crescimento exponencial](https://en.wikipedia.org/wiki/Exponential_growth). Isso significa que está se deparando com alguns recursos ambientais *constraints*: alguns *natural*, como divisões geográficas, ou a população infectada não sendo mais contagiosa após um período de tempo; e alguns *manmade*, como uma vacina desenvolvida e implantada, ou quarentena obrigatória em massa.
+
+O que os epidemiologistas estão tentando realizar é iniciar esse processo o mais rápido possível.  Cada dia perdido significa uma perda acelerada de vida, aumento do impulso de casos graves e maior risco de sobrecarregar totalmente o sistema de saúde à medida que o gráfico se encaixa.
+
+Inevitavelmente, o achatamento acontecerá. Se não é por causa da sabedoria social humana, então é porque o vírus não pode reinfectar vítimas passadas. <sup>2</sup>e simplesmente infecta a maioria da população antes de se afastar e persistir para infectar recém-nascidos, ou simplesmente desaparecendo completamente.
+
+#### Notas de rodapé (24 de setembro de 2020).
+
+1. I'm sendo intencionalmente vago sobre o *intervalo de tempo* real para a taxa de alteração, mas não'Realmente importa o valor verdadeiro da afirmação.  Diferentes intervalos de tempo produzem diferentes constantes de proporcionalidade, mas essas constantes dependem apenas do tamanho do intervalo de tempo, não do(s) instante(s) de tempo medido(s) (nos pontos finais).
+
+2. O júri ainda está fora disso.  Dependendo de quais cepas estão na natureza, combinadas com a gravidade da doença que um paciente contrai, a reinfecção pode ser possível, pelo menos algumas vezes.
+
+#### Postmortem
+
+Este artigo foi escrito no final de março de 2020, quando pouco se sabia sobre as origens da COVID que'pura propaganda fora do NIH e CDC.
+
+Avançar para Trump'segundo mandato, e agora está claro que houve uma conspiração massiva e concertada do mundo ocidental para enganar o planeta: sobre a verdadeira origem da COVID, e o governo dos EUA'papel s na criação do vírus associado.
+
+É muito claro neste momento que [SARS2 foi um germe feito pelo homem](https://jimhaslam.substack.com/); que a maior parte da comunidade médica acadêmica permanece cúmplice em deturpar esse fato para o público; e que o público está agora pronto para queimar toda a Ciência&trade; ao chão em retribuição.
+
+Como sabemos com certeza?
+
+Resumidamente, toda a casa de cartões em torno de SARS2 como zoonose foi plataformas por um único [papel shoddy](https://www.science.org/doi/full/10.1126/science.abp8337) com afirmações que simplesmente não podem ser apoiadas pelo próprio corpo do trabalho. Mas se não fosse pelo [esforços incansáveis de desmascaramento](https://pubpeer.com/publications/3FB983CC74C0A93394568A373167CE#28) do membro DRASTIC Angus McCowan, as críticas técnicas em torno do artigo permaneceriam em dúvida.
+
+Angus publicou recentemente um [Pré-impressão de arXiv](https://arxiv.org/abs/2502.20076) Isso colocou o assunto para descansar. Você pode encontrar um [maravilhosa exposição da relevância de seu artigo pelo Dr. Michael Weissman](https://michaelweissman.substack.com/p/explanation-of-and-comments-on-mccowans).
+
+QED.
+
+Esperemos que a responsabilidade interna chegue ao FBI, CDC, NIH, DoD, DARPA, CIA e à NSF antes que tudo isso seja vaporizado em desgosto.
+
+<!-- $Date: 2025-03-06 15:19:50 -0700 (Thu, 06 Mar 2025) $ $Author: joe $ $Revision: 25605 $ -->

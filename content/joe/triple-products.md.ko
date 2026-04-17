@@ -1,0 +1,329 @@
+---
+archived: ~
+categories: 수학
+dependencies: '*.md.ko'
+keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
+  이론
+published: https://dx.doi.org/10.2139/ssrn.4793533
+status: 확인=27570
+title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
+---
+
+<div class="right">
+  <img src="../images/lawson6-pod.png" style="width:200px">
+  <p style="width:200px;text-align:center;line-height:20px">
+  로슨's 최소 표면 8<sub>6,1</sub> S에서 스테레오그래프 투영<sup>3</sup> R로<sup>3</sup>
+  </p>
+</div>
+
+[TOC]
+
+## 작성자
+
+Joe Schaefer
+
+## 요약
+
+Geometric Analysis, Partial Differential Equations 및 Abelian의 기본 기법 사용 $$C^*$$ Algebras, {# lede #}우리는 소설, 아직 익숙한, 글로벌 기하학적 불변을 발견{# lede #} &mdash; 즉 **Laplace-Beltrami 연산자의 eigenfunctions의 삼중 제품의 통합 세트**, 정확히 어떤 isospectral 폐쇄 Riemannian 매니폴드 isometric 특징.
+
+## 소개
+
+폐쇄 Riemannian 매니폴드 $$(M,g)$$비 아이소메트릭의 **클래스**를 특징으로 하는 isospectral 매니폴드는 역방향 문제의 한 유형입니다. [[DH11]](#DH11) Spectral Geometry의 약어입니다. Naïvely는이 클래스가 항상 비어있을 것이라고 추측 할 수 있습니다. 그러나 학술 문학은 수십 년 된 반예의 특정 쌍의 구조로 풍부합니다 : 1964 년 John Milnor와 함께 시작's 16 차원 쌍 비 아이소메트릭, isospectral 플랫 토리 [[JM64]](#JM64)및 지속 [[CS92]](#CS92) Alexander Schiemann의 플랫 토리의 일반적인 차원 특성화's 1993 박사 학위 논문 [[AS94]](#AS94) &mdash; 컴퓨터 지원 검색으로 다시 작성 $$\dim = 3$$ 케이스.  전체 플랫 토리 역사에 대한 현대적인 조사가 나타납니다. [[NRR22]](#NRR22).
+
+길을 따라 더 정교하고 비 유클리드 대칭 커버 공간으로 통찰력있는 오프 슈트했다; 같은 isospectral, 비 아이소메트릭을 건설 "듀엣" Nontrivial 곡률 텐서 (및 차원 2에 있는 그들의 스펙트럼 결정된 오일러 특성)를 포함하는 [[MS67]](#MS67)이 노력의 주요 예는 Toshikazu Sunada였습니다.'1985년 [[TS85]](#TS85) 범용 커버 공간 프레임 워크의 발명, 그는 차원 2 및 3에서 쌍곡선 이불을 건설하기 위해 같은 작업에 배치.
+
+Inhomogeneous Riemannian metrics의 경우 Carolyn Gordon은 로컬 등각투영이 아닌 이불을 발견했습니다. [[CG93]](#CG93).
+
+많은 관련 영역에서 작업이 계속됨 [[DH11]](#DH11)isospectral, non-isometric 매니폴드 클래스의 위상적 특성을 결정하는 것과 같이, 일반적으로 (비어 있음) [[ST80]](#ST80), 유한 [[AS94]](#AS94), 엄밀한 [[GK80]](#GK80)및 Compact [[GZ97]](#GZ97)) Riemannian 메트릭의 다른 모듈리 공간의 하위 집합으로.
+
+우리가이 기사에서 제공하는 것은 익숙한 도구에 대한 새로운 관점입니다 : 고유 함수의 쌍방식 제품의 색인 푸리에 계수 이산 "대수/위상 불변성" 기존 비연속 보완 "분석 불변성" &mdash; *Laplace-Beltrami 연산자*의 음이 아닌 스펙트럼(여기서는 **Laplacian**이라고 함) $$ℋ = L^2(M,g)$$. 결합, 우리는 쌍이 제공하는 것을 관찰 "이산 전역 기하학적 표현" isospectral의 isometry 클래스의, 닫힌 Riemannian 매니폴드.
+
+### 결과
+
+<br>
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### 정리
+
+</div>
+  <div class="card-body">
+
+고유 함수의 정형외과(non-decreasing on the eigenvalues) 기준 $$\set{e^i}_{i=0}^{\infty}$$ 라플라시안(Laplacian) $$\Delta_M$$ 켜기 $$L^2(M,g)$$ 폐쇄 Riemannian 매니폴드와 관련된 $$(M,g)$$, 정의
+
+```math
+
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
+
+```
+
+아이소메트릭 To $$(M,g)$$, 그것은 다른 **isospectral** 닫힌 Riemannian 매니폴드에 대한 *필수적이고 충분한 조건 *모두 연관된 고유 값을 보존하고 불변을 소유하는 고유 기능 (Laplacian에 대한)의 정형 기초를 가지고 $$\set{M^{i,j,k}}$$ 각 기준에 따라
+
+</div>
+</div>
+
+<br>
+
+*대칭*은 계산적으로 추적 가능한 경우에 중요한 역할을 합니다. [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94)우리의 평평한 토리에 적절하게 묘사 된 [예제](#example) 아래. 그러나, 우리의 접근 방식의 강점은 아마도 가장 적은 수의 Riemannian 대칭을 가진 매니폴드의 경우 명백하게 만들어지며, 이것은 종종 고유 값과 일치합니다 *unique *(즉, 사소한 다수없이). 이 경우 다음과 같은 기능을 제공합니다.
+
+<br>
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### 추측
+
+</div>
+  <div class="card-body">
+
+모든 고유 값에 다중성이 있는 경우 $$1$$, 정리의 가설에 설명된 대로 정형 기지를 보존하는 eigenvalue 쌍을 주어, 매니폴드는 다음과 같은 경우에만 아이소메트릭입니다. $$\set{M^{i,j,k}}$$ 한 가지 기준은 개별 용어의 절대값까지 다른 기준과 함께 동의한다.
+
+</div>
+</div>
+
+<br>
+
+의 연구에 대한 동기 $$\set{M^{i,j,k}}$$ **bilinear 곱셈 연산자**의 역할에 대한 연구에서 느슨하게 파생됨 $$Y:V\otimes V\rightarrow V((z))$$ 정점 연산자 대수학의 정의에서 [[FBZ04]](#FBZ04) Chiral Conformal Field Theory에 대한 리뷰 보기 여기 $$V$$ 미국의 벡터 공간과 $$V((z))$$ 공식 Laurent 시리즈의 공간입니다. $$z$$ 계수 포함 $$V$$. 시작일 $$V$$ 종종 전통적인 푸리에 시리즈 orthonormal 기초와 힐베르트 공간으로 장착 제공, 색인 $$Y$$ 다음의 푸리에 기준 요소 사용 $$V$$ 이보다 약간 더 많이 관련된 $$M^{i,j,k}$$ 사례는 여기에서 연구되었지만 정신적으로는 상당히 비슷합니다. 그러나 자세한 비교는 이 문서의 범위를 벗어납니다.
+
+지도를 고려할 때
+
+```math
+(M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
+```
+
+이 논문은 닫힌 Riemannian 매니폴드 (도메인에 Riemannian isometry까지)에 대한이지도의 주사를 설정합니다. 메트릭의 일부 모듈 공간 내에서 해당 이미지(및 역)를 설명하기 위해 이러한 기술을 적용하는 추가 결과가 이제 막 시작되었습니다. [[AA25]](#AA25). 그곳에서 Anshul Adve는 Conformal Field Theory의 동일한 **구조 상수**를 사용하여 컴팩트하고 쌍곡선 2-orbifolds의 단위 접선 공간을 엄격하게 해결합니다.
+
+이러한 결과는 1997년 **MSRI**의 저자가 비슷한 제목으로 이야기하는 동안 처음 입증되었지만 처음 게시된 형식으로 여기에 나타납니다.
+
+## 예비
+
+이제 $$M,g,e^i,M^{i,j,k}$$ 위와 같이, For $$f \in C^\infty(M)$$ 및 $$i \geq 0$$ **Fourier 계수**를 확인합니다.
+
+```math
+\begin{aligned}
+
+\hat{f}(i) &:= \int_M f(x)\bar{e^i}(x)\sqrt{g(x)}dx \\
+
+\implies \\
+
+f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
+
+\end{aligned}
+
+```
+
+이후 $$f$$ **Fourier Series**의 급속한 융합으로 고유하게 표현할 수 있습니다($$\Delta_M$$특정 Sobolev 임베딩 [[MT13]](#MT13) [[RS75]](#RS75)Weyl과 함께'asymptotic 법칙 [[HW11]](#HW11)즉, 합계의 조건이 $$o(i^{-n})$$ *일일하게 $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$그런 다음 우리는 그것을 볼 수 있습니다. $$f_1, f_2 \in C^\infty(M)$$, 점방식 제품의 푸리에 계수 $$f_1 f_2 \in C^\infty(M)$$ 다음과 같음
+
+```math
+\begin{aligned}
+
+\widehat{f_1 f_2}(k) &= \sum_{i,j}^\infty\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k} \\
+
+\implies \\
+
+f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
+
+f_1 = f^p_2,\space p > 2 \implies \\
+
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)...\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x).
+
+\end{aligned}
+```
+
+다변량 다항식(multivariate polynomial) $$\weierp \in \Complex[z_1,...,z_l]$$ (매끄러운 기능에) **명령** 모든 스펙트럼 보존 $$\Delta$$-eigenfunction orthonormal 기초 지도 $$\vec{F}$$ 보존하는 $$\set{M^{i,j,k}}$$:
+
+```math
+\begin{CD}
+  C^\infty(M,\space\Complex^l) @>\weierp >> C^\infty(M)\\
+   @V\underbrace{\vec{F}\oplus\dots\oplus \vec{F}}_{l\space\text{times}}VV @VV\vec{F}V\\
+  C^\infty(N,\space\Complex^l) @>>\weierp > C^\infty(N)
+\end{CD}
+```
+
+또한 $$A\subset M$$ Borel-measurable, 그 후에 위의 결과는 *characteristic 기능에 대한 pointwise를 유지합니다 $$A$$* 경계를 제외한 모든 곳 $$A$$: if $$f = f^2$$ 및 $$A:=\set{x\in M|f(x)=1}$$,
+
+```math
+\sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \begin{cases}
+1 & x \in \mathring{A} \\
+0 & x \in \mathring{A^\complement}\end{cases}
+```
+
+그리고 독창성으로, 우리는 다음과 같은 정체성을 가지고 있습니다.
+
+```math
+\begin{aligned}
+\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\space\space \forall k\geq 0 \\
+\iff f&=f^2 \space a.e.
+\end{aligned}
+```
+
+이는 위와 같은 기준 맵이 특성 함수( $$L^2(M,g)\subset L^1(M,g)$$() 측정 보존 방식으로 특징적인 기능.
+
+이러한 계산의 요점은 $$\set{M^{i,j,k}}$$ **특성** 포인트 방식 곱셈 연산자의 조화 분석 $$C^\infty(M)$$, 아벨의 조밀한 subalgebra입니다 $$C^*$$ 대수학 $$C(M)$$Stone-Weierstrass theorem에 의하여
+
+위 합계의 급속한 융합을 위해 $$M^{i,j,k}$$, eigenfunctions의 제품은 매끄럽다는 것을 주의하십시오, 그래서 이 푸리에 계수는 위와 같이 붕괴합니다 (각 색인에서). 자세한 내용은 Emmett Wyman을 참조하십시오.'s는 2022년에 고유값에 대한 삼각형 불평등과 관련되어 있는 이 계수를 사용합니다. [[EW22]](#EW22).
+
+Note: 우리는 항상 추측 할 수 있습니다.
+```math
+\begin{aligned}
+e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
+\implies \\
+M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
+\end{aligned}
+```
+
+여기서 $$\delta_i$$ 크로네커 델타 Kronecker delta 시작일 $$vol(M)$$ 스펙트럼 불변량 Spectral Invariant [[HW11]](#HW11)이 정보는 이미 isospectrality 고려 사항에서 사용할 수 있습니다.
+
+## 정리 증명
+
+필요한 경우, $$F:(N,h)\rightarrow (M,g)$$ 닫힌 Riemannian 다기관 사이 isometry가 되고, 표적으로 eigenfunctions의 정형 기초를 두십시오 $$L^2(N,h)$$ be the pull-back을 통해 $$F$$ 브랜드명 상품명 The orthonormal basis $$\set{e^i}$$ 켜기 $$(M,g)$$ 위. 시작일
+
+```math
+\begin{aligned}
+M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
+          &= \int_N e^i(F(x)) e^j(F(x))\bar{e^k}(F(x))\sqrt{h}dx
+
+\end{aligned}
+```
+
+우리는 필연적 인 주장을 가지고 있습니다. $$\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infty(M)$$.
+
+충분성을 위해, 우리는 지금 선형, bijective orthonormal eigenfunction 기초 지도를 고려합니다 $$\vec{F}$$ 시작일 $$C^\infty(M)$$ 종료 $$C^\infty(N)$$ 의 계산에서 [예비](#preliminaries) 위, $$\vec{F}$$ 매끄러운 기능을 위해 점방식 제품 보존(확장 시 특성 기능 보존) $$L^2(M,g)$$상기 전제는 The premise that $$\set{M^{i,j,k}}$$ 이 지도 아래에는 변함이 없다.
+
+### 렘마
+
+$$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 유니폼 규범을 유지합니다.
+
+### 렘마 증명
+
+허가 $$\set{a_i}$$ be a smooth partition분할 of unity단일 on $$M$$.
+
+```math
+\begin{aligned}
+1 &= \sum_i a_i(x) \\
+       &= \sum_{i,j} \hat{a_i}(j)e^j(x) \\
+	   &= \sum_j e^j(x)\sum_i \hat{a_i}(j)
+\end{aligned}
+```
+
+따라서 $$\sum_i\hat{a_i}(j) = \delta_j\sqrt{vol(M)}$$ 크로네커 델타(Kronecker delta).
+
+지배적 컨버전스 정리(dominated convergence theorem,
+
+```math
+\lim_{p\rightarrow\infty}
+\sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
+```
+
+각 분리 하위 세트에 대한 긍정적 측정의 특성 함수입니다. $$\set{x\in M | a_j(x) = 1}$$. 이것은 Lemma가 각각에 대해 입증되었음을 의미합니다. $$a_j$$, 긍정적인 측정을 가진 세트의 제한 특성 기능이 보존되기 때문에, 따라서 모든 것과 같이 획일한 규범 1이, $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$그림 (5).
+
+일반성 손실 없이 원활한 통합 분할에 대해 표시된 특수 사례 결과를 적용할 수 있습니다. $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$여기서 $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ 렘마는 긍정적 인 척도를 가지고 있으며, 렘마는 전체적으로 입증되었습니다.
+
+시작일 $$\set {\bar e^i}$$ 이것은 또한 Fourier의 기초입니다. $$L^2(M,g)$$방정식 (3)에서 분명하다. $$\vec F(\bar f) = \bar{\vec F}(f)$$. 즉, 고밀도 집합에서 $$C(M)$$ (그리고 $$C(N)$$), 우리는 설치했습니다 $$\vec{F}$$ 아벨의 isomorphism $$C^*$$ algebras, 따라서 isomorphism의 확장 될 수있다 $$C(M)$$ 및 $$C(N)$$ 같은 범주에서.
+
+이제 우리는 Gelfand-Naimark Representation Theorem (in contravariant functor form)을 unital Abelian에 적용합니다. $$C^*$$ 대수학 [[JC19]](#JC19) 이 동형성을 동형성(homeomorphism)으로 표현하기 $$F$$ 사이 $$N$$ 및 $$M$$. 그것은 매끄러운 기능에 bijective이기 때문에, 그것 또한 매끄럽습니다.
+
+현재로서는 diffeomorphism $$F$$ eigenvalues 및 eigenfunctions 보존 (가설에 의해) $$\vec{F}(f) = f\circ F$$), 그것은 부드러운 기능에 라플라시안을 보존해야합니다. 따라서 동일한 타원 연산자의 기본 기호도 보존해야 합니다. [[MT13]](#MT13). 라플라시안의 주요 상징은 단순히 Riemannian 메트릭을 문제의 다양성에 표현하는 또 다른 수단입니다.
+
+이것은 정리의 증거를 완성합니다.
+
+### 추측 토론
+
+대상 $$\set{M_0^{i,j,k}}$$ 및 $$\set{M_1^{i,j,k}}$$ 기본에 대한 두 개의 삼중 제품 세트를 나타냅니다. $$\set{e_0^i}$$ 및 $$\set{e_1^i}$$의 Let $$z_i \in \set{-1,1}$$ 다음과 같이 하십시오. $$\Z_2^\infty$$ 해당 작업 $$\R$$- 평가된 직교 기준 $$\set{e_1^i}$$. 그래서 우리는 선택해야합니다. $$z_i$$ 이렇게 $$\set{z_ie_1^i}$$ 수율 $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+
+이게 왜 케이스인가요? 일반적으로, eigenfunctions의 가능한 직교 기지의 공간에 작용하는 대칭 그룹은 단일 연산자의 공간입니다 $$U: \mathscr H\rightarrow\mathscr H$$ 프로젝션과 함께 $$P_{\mathcal V_\lambda}$$ 유한 차원의 eigenspaces $$\mathcal V_{\lambda}$$ 각 개별 고유 값과 연관됨 $$\lambda$$ 라플라시안 The Laplacian 따라서
+
+```math
+\begin{aligned}
+P_{\mathcal V_{\lambda}}U(e^i) = UP_{\mathcal V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
+M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
+\end{aligned}
+```
+
+의 이미지입니다. $$M^{i,j,k}$$ 아래 $$U$$'s 기준 작업 $$e^i \mapsto U(e^i)$$.
+
+이제 추측의 조건 하에서, 각각의 $$\mathcal V_\lambda$$ 1차원 벡터 공간 $$\Complex$$그러나 그것은 또한 그들이 하나의 차원 벡터 공간을 의미 $$\Reals$$, 따라서 전체 다중 대칭 그룹은 $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+
+다중성 구속조건이 없으면 추측'연관된 필요 조건 "절대값의 계약 관련" 그저 그렇게 될 뿐 "정렬된 단수 값 집합 보존 $$\set{M^{i,j,k}}$$ (다중성으로 계산됨), 에서 맵 모음으로 표시되는 경우 $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"의 강력한 단일 불변 집합입니다.  우리는이 일반화 된 추측이 사실임을 확신하지 못하는데, 이는 명백한 Sunada 건설을 통해 반예제를 생산할 수 있기 때문입니다.
+
+원래 추측으로 돌아가면 증거가이 의미를 확립하는 것을 관찰합니다.
+
+```math
+z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
+```
+
+우리는 어떤 주어진 것을 기대할 수 있습니다. $$k$$, $$M_0^{i,i,k}$$ 동일할 수 없습니다. $$0$$ 모두 $$i$$. 또한, Formula <span class="eqno"></span> 대상 $$z_k$$ 둘 다 필요 $$i$$- 독립성 및 충분성, 기본 맵 설정 $$e_0^i \mapsto z_i e_1^i$$ 보존 $$\set{M_0^{i,j,k}}$$. 이러한 모든 측면은 아직 알려지지 않았습니다.
+
+그럼에도 불구하고, 우리는 몇 가지 관련 ID를 계산 하자 그래서 일부 전염성 미래 연구자가이 추측에 파고 수 있습니다:
+
+```math
+\begin{aligned}
+\Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
+M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
+\frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\ 
+\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
+
+\text {and so the quadratic form} \\
+Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
+\text{Now with }J \text{ real-analytic}\\
+Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
+&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
+\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
+&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
+Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
+\sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
+&= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
+ = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell\implies\\
+ \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
+&= \widehat{g^2}(k). \\
+\end{aligned}
+```
+
+Note: 아래와 같은 원차원 플랫 토리 케이스의 경우, $$\tilde{Q}_k(e^i,e^j) = 0$$ 이후 $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ 이것은 진정한 파생입니다.
+
+## 예제
+
+허가 $$\set{\lambda_i} \subset \R^n$$ 인덱스화, 순위 지정 $$n$$ 의 quotient 공간 표현을위한 거짓말 대수 중량의 격자 $$\frak{g}=\Reals^n$$ 번역 불변 (즉, 상수) 벡터 필드 자체로, 때 $$\R^n$$ 또한 다음과 같이 표시됩니다. $$\frak{g}$$'에 의해 정의된 토러스 위에 연결된 리 그룹 $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. 이러한 가중치는 선형 기능에 통합되는 토러스를 통해 1형식의 통합 가능한 리프트를 정의합니다. $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ [중고] 리 그룹(Lie Group) 그런 다음 이러한 선형 함수가 균일하게 재조정될 수 있습니다. $$2\pi \sqrt{-1}$$) 및 의 직교적 기초를 형성하기 위해 내려오는 다수 문자를 형성하기 위해 지수화 $$L^2(\Reals^n/A\Z^n,dx)$$Lebesgue (Haar) 측정 $$dx$$.
+
+또한 이 기준은 동시에 플랫 토러스를 대각선화합니다.'라플라시안 **왜냐하면** 라플라시안은 이 (일정한 계수 선형 미분 연산자) 보편적 봉투 대수학의 몫 공간 표현 아래 대칭적이고 부정적인 이차적 카시미르 요소의 이미지입니다. 따라서 고유값은 일정한 비율( $$4\pi^2$$각 캐릭터의 카시미르-요소-결정-길이-제곱'격자에 있는 s 무게.
+
+우리는 현재 위의 기준을 본다.
+
+```math
+\set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+```
+정형외과(멀티플릭티브 캐릭터) 고유 기능(이러한 네거티브 표현의 유클리드 카시미르 요소)의 Theorem-applicable Fourier base of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) 유클리드 카시미르 요소) directly corresponding to $$\set{\lambda_i}$$. 우리의 Theorem's 가설, we must have $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (유클리드 표준과 함께).
+
+이제 컴퓨트할 수 있습니다.
+
+```math
+M^{i,j,k} = \begin{cases}
+1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0 \\
+0 & \text{otherwise}
+\end{cases}
+```
+
+이 방정식으로 <span class="eqno"></span> *only* 무게 격자에 선형 변환의 불변입니다. $$(A^{-1})^t\Z^n = \set{\lambda_i}$$또는 $$L^2$$ orthonormal eigenfunction base map **이러한 두 인덱스화 된 순위 사이의 볼륨 보존 반전 가능한 선형 맵에서 유도됩니다 $$n$$ 무게 격자**는 지킬 것입니다 "대수학/위상학" 인덱스화된 데이터 집합 $$\set{M^{i,j,k}}$$ 불변.
+
+그러나, 우리의 [정리](#theorem)이러한 선형 맵이 필수적입니다. $$B$$ 다음 $$B\in SO(n,\Reals)$$ 무게 격자에, 때문에 유도된 $$L^2$$ 고유기능 기반 맵
+
+```math
+\set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+```
+
+또한 다음을 보존해야 합니다. "분석" 불변성 &mdash; Casimir-element 유도된 숫자 $$4\pi^2\lVert\lambda_i\rVert^2$$ 각 인덱싱된 중량, 즉 플랫 토리의 개별 고유 값'라플라시안
+
+이 표현 이론적 계정 [[AK01]](#AK01) *격자 congruence*의 이전 발달과 정확하게 동등합니다 [[NRR22]](#NRR22) 전통적으로 플랫 토리의 형상 클래스를 구분하는 데 사용됩니다. 사실, 이러한 선형 맵의 행렬 전치 $$B\in SO(n,\Reals)$$, 이전 단락에서 설명 된 바와 같이, **는 *Gelfand-Naimark 표현 정리 *의 적용에 의해 제공 된 토리 사이의 논란 Riemannian 기하학입니다 [검증](#proof-of-theorem) 우리의 [정리](#theorem).
+
+## 승인
+
+원래 연구는 1995-1996 년에 은혜로운 제임스 시몬스 연구 상 (James Simons Research Award)과 알프레드 P의 관대 한 지원에 의해 부분적으로 자금을 지원했다. Sloan Dissertation Fellowship 1996-1997 University at Stony Brook 부근의 호텔
+
+저자는 또한 Tanya Christiansen, Carolyn Gordon, Hamid Hezari, Harish Seshadri, 특히 Leon Takhtajan에게 기술 지원 및 출판을위한이 원고의 준비에 대한 검토에 감사드립니다.
+
+<!-- $Date: 2026-02-16 11:07:56 -0700 (Mon, 16 Feb 2026) $ $Author: joe $ $Revision: 27586 $ -->

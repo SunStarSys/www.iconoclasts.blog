@@ -1,0 +1,41 @@
+---
+archived: ~
+categories: Segurança, TI, Perl
+dependencies: '*.md.pt-BR'
+keywords: infosec,zerotrust,taint,dinâmico,dados
+published: ~
+status: arquivado
+title: Guia de segurança de informações
+---
+
+<div class="right">
+
+![InfoSec](infosec.page/infosec).
+
+</div>
+
+[TOC]
+
+#### Qual é a principal meta do InfoSec?
+
+*Para garantir que todas as mudanças nos limites do contexto sejam bem regulamentadas.*
+
+Por exemplo, cada **chamada do sistema** em uma plataforma UNIX satisfaz essa condição, em termos do modelo de segurança process+filesystem do usuário/grupo UNIX. A definição literal de um **interruptor de contexto**, conforme tipificado por **chamadas do sistema**, envolve a verificação de integridade de uso da API no kernel'lado da chamada.
+
+Em termos de entrega do SaaS, {# lede #}todos os dados originados de uma **chamada do sistema** UNIX de runtime devem ser tratados como **contidos**{# lede #}, e validado nos pontos de entrada no aplicativo's memória de processo acessível. Esses pontos de entrada devem ser considerados **limites de contexto de segurança** para esses dados do aplicativo. A validação regulatória apropriada deve incluir padrões de string na lista branca (por meio do **regex** normalmente); os dados **tainted** que limpam a lista branca e seus dados dependentes podem ser enviados com segurança da memória de processo do aplicativo por meio de outra **chamada do sistema**. Esses pontos de saída **de chamada do sistema** também são **limites de contexto infosecciosos**; o que constitui "seguro" os padrões de lista branca nos dados **inseridos** são informados por essas APIs específicas nos pontos de saída. Ao longo do SSDLC, esses pontos de saída evoluirão, assim como as listas de permissões correspondentes.
+
+O modelo de segurança UNIX sozinho nunca fez provisões para o desenvolvimento de aplicativos cliente/servidor em rede, porque historicamente a API de soquete BSD que antecedeu o surgimento da Computação em Rede no 90s (Sun Microsystems) foi inventada mais de uma década após o nascimento do UNIX (com seu modelo de segurança multiusuário baseado em SO totalmente formado no nascimento). [MIT Kerberos](https://web.mit.edu/kerberos/) foi um passo na direção certa, mas deixa muito a desejar em um contexto SaaS.
+
+Agendando CPUs com segurança para executar trabalhos no nível do kernel em nome de alguns "contexto de usuário/grupo/função autorizado" desvinculado do processo subjacente's O contexto de usuário/grupo UNIX sempre esteve fora do modelo UNIX. Muitas iniciativas de infosec não reconhecem que essa responsabilidade regulatória pertence apenas às aplicações;'Deixe o seu ser um!
+
+No caso'não está claro neste momento, as equipes de DevOps/SRE que fazem a triagem de incidentes de segurança SaaS (**CAI**) no Linux devem se familiarizar com [topo](fun-with-htop)'s `coçar` interface através do `s` chave! Melhor ainda dominar `coçar` como um autônomo. (FYI: Tenho compilações estáticas desses binários no github que podem ser entregues em contêineres ou nós K8s, inclusive via entrega SSH/SSM, em <https://github.com/joesuf4/home/tree/wsl/bin>).
+
+#### Como isso se relaciona com iniciativas de confiança zero, como uma questão prática?
+
+[Arquiteturas de confiança zero](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf) não têm limites de contexto de infosec específicos da rede.
+
+Embora possa haver contextos de VPN/Firewall na realidade, nenhum desses detalhes é relevante para o InfoSec dentro de um framework Zero-Trust. Em outras palavras, essas iniciativas de segurança de topologia de rede podem aumentar as iniciativas Zero-Trust, mas nunca são confiáveis dentro de uma iniciativa Zero-Trust no nível de segurança base servidor-host em nível de aplicativo.
+
+MIT Kerberos e Active Directory são compatíveis com Zero-Trust, por exemplo.
+
+<!-- $Date: 2026-03-12 15:07:58 -0700 (Thu, 12 Mar 2026) $ $Author: joe $ $Revision: 28923 $ -->

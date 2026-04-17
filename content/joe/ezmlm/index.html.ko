@@ -1,0 +1,21 @@
+{% extends "main.html"|append:lang %}
+{% block content %}
+<div class="page-header"><div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))"><img src="/images/edit.png" /></a></div>
+  <h1>{{ headers.title }}</h1></div>
+<div class="jumbotron">
+{% filter markdown %}
+### 레이아웃
+
+실행 파일은 `저장소/`및 병렬 `라이브러리/` 디렉토리 대상
+pull_header.pm.  다음과 같은 경우 `서비스` 가장 간단한 방법, 가장 간단한 방법
+이 트리를 가져오려면 "사이트 내" 다음을 통해:
+
+```shell
+	% svn co https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/content/essays/ezmlm
+```
+
+{% endfilter %}
+
+{{ content|markdown }}
+</div>
+{% endblock %}

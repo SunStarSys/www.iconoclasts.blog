@@ -1,0 +1,112 @@
+---
+archived: ~
+categories: Orion, Arquitetura, ZFS
+dependencies: '*.md.pt-BR'
+keywords: informações, topologia, hipermídia, descanso, arquitetura, hateoas
+published: ~
+status: rascunho
+title: Arquitetura da Informação
+---
+
+<div class="right">
+
+![Arquitetura da Informação](ia.page/ia.jpg).
+
+</div>
+
+[TOC]
+
+## Introdução
+
+Arquitetura da Informação **organizações** e **organizações** {# lede #}toda a gama de tecnologias relevantes para o design, apresentação, relacionamentos e restrições arquitetônicas que cobrem cada URL que você atende{# lede #} HTTP, tanto em público como em privado.  Este ensaio é um levantamento de alto nível da minha experiência nestas áreas; está longe de ser abrangente, dado o vasto campo que pretende cobrir.
+
+## Usabilidade, Descoberta e Topologia de Links: Visão Geral
+
+## Comparando Heirarquias com Pesquisa Marcada
+
+### Rearquitetar radicalmente a pesquisa Wiki
+
+#### Metas da Interface Humana
+
+##### Poderosa sintaxe
+
+##### As pesquisas com hashtag são específicas de palavras-chave em vez de pesquisas genéricas de palavras
+
+##### Expansão de Escopo Fácil
+
+##### Mecanismo interativo da filtragem dos resultados
+
+Consulte a seção sobre HATEOAS para obter uma visão geral.
+
+##### Dimensionamento de Desempenho Incorporado para árvores de documentos 100K
+
+##### Ordenação/priorização de resultados abrangentes
+
+##### Resultados Contextualizados da Segurança por Usuário (ACL).
+
+##### Ocorrências Vinculadas Diretamente a Locais de Documento Específicos do Destino
+
+##### Live, RealTime Results (também conhecido como No Stale Indexed Corpus).
+
+#### Metas de Adoção do Cliente
+
+##### Entregável como "aplicativo/json" Mediante Solicitação
+
+Options:
+
+- passe "as_json=1" na string de consulta
+- conjunto "Aceitar: application/json" nos cabeçalhos da solicitação
+
+##### O Estilo é Semanticamente Controlado pela Instalação do Cliente do `/content/css/boostrap.min.css` Arquivo
+
+##### `search.html` O Modelo é Substituível pela Instalação do Cliente do `/templates/search.html` Arquivo
+
+##### `main.html` O modelo derivado pode ser substituído pela instalação do cliente do `/templates/main.html` Arquivo
+
+## REST, HATEOAS e Negociação de Conteúdo
+
+## URLs bonitas &mdash; Permanente e transitório
+
+## Conteúdo MultiMedia Estruturado e Preparado para o Futuro
+
+### GitHub Markdown com Sabor com $$\KaTeX$$ e Integração Mermaid.js
+
+### Cabeçalhos YAML para MetaData
+
+#### Uma linguagem de programação completa de Turing't Dados - não faz'T pertencem às suas fontes de conteúdo
+
+### O Valor da Ativação do Pré-processamento de Modelo no Conteúdo
+
+- Mecanismos de processamento de dados em linha
+
+- incorporado, "seguro" literais json em arquivos construídos
+  - geração da tabela de markdown de tempo de construção
+
+#### Configuração Centralizada e em Evolução Lenta de Fatos Wiki
+
+- urls de serviço corporativo
+- locais de artefatos de software e números de versão
+
+### O papel de `ssi` Tags em sua estratégia MultiMedia
+
+## Controles de Acesso ao Conteúdo, na Perspectiva de uma Única Fonte da Verdade
+
+- `walk_content_tree()` em `path.pm`
+  - acls
+  - dependências
+- `acl.yml`
+
+## SunStar Sistemas' Orion&trade; para plataformas apoiadas pelo ZFS
+
+1. clones zfs
+2. zfs enviar/receber
+
+## StageMaster: Experimentação com Mecanismo de Estado Puro do Cliente
+
+## GitOps workflows de build
+
+1. Front-end
+2. Backend
+3. Documentação
+
+<!-- $Date: 2024-03-10 23:02:57 -0400 (Sun, 10 Mar 2024) $ $Author: joe $ $Revision: 19680 $ -->

@@ -1,0 +1,200 @@
+---
+archived: ~
+categories: 수학
+dependencies: '*.md.ko'
+keywords: weiner 측정,riemann 표면, 확률, 기하학
+published: ~
+status: 초안
+title: 마감, 음수 곡선 매니폴드에 대한 확률적 추적 공식
+---
+
+<div class="right">
+
+![쌍곡선 벌집](stochastic-trace-formula.page/hyperbolic-honeycomb.png).
+
+</div>
+
+[TOC]
+
+```asy
+// tubular trefoil knot -*- asy -*-
+
+import tube;
+import graph3;
+import palette;
+
+size(0, 8cm);
+currentlight=White;
+real redPortion = 143 / 256;
+real greenPortion = 153 / 256;
+real bluePortion = 251 / 156;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
+// currentlight.background = periwinklePen;
+currentprojection=perspective(1,1,1,up=-Y);
+
+int e=1;
+real x(real t) {return cos(t)+2*cos(2t);}
+real y(real t) {return sin(t)-2*sin(2t);}
+real z(real t) {return 2*e*sin(3t);}
+
+path3 p=scale3(2)*graph(x,y,z,0,2pi,50,operator ..)&cycle;
+
+pen[] pens=Gradient(6,red,blue,purple);
+pens.push(yellow);
+for (int i=pens.length-2; i >= 0 ; --i)
+  pens.push(pens[i]);
+
+path sec=scale(0.25)*texpath("$\pi$")[0];
+
+coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
+
+draw(tube(p,colorsec),render(merge=true));
+
+```
+
+{# lede #}내 *1997 Ph.D. 블로그 항목으로 논문 *.{# lede #}
+
+## N차원 Wiener 측정이 하나만 있습니다. $$\mu$$
+
+## 브라운 모션에 대한 조각 방향 선형 근사치
+
+## 개발 맵 DM
+
+## Cameron-Martin 공식
+
+## Weiner 측정의 Radon-Nicodym 유도체로서의 열 커널
+
+## 표기법
+
+$$M$$ 부정적으로 곡선됨 $$\dim=n$$ 미터법으로 마감된 Riemannian 매니폴드 $$g$$, 측정항목 접속 $$\nabla$$및 (음수 아님) Laplace-Beltrami Operator $$\Delta_M$$. 허가 $$k_{-t\Delta/2}(x,y)$$ 열 커널을 나타냅니다. $$M$$.
+
+따라서 $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ n차원 Wiener 측정의 Radon-Nicodym 유도체입니다. $$\mu$$, 연속 루프 공간의 풀백으로 제한됨 $$\Omega_t(M)\vert_x$$Weiner 측정 보존 개발 맵의 역을 통해 $$DM$$. *참고:* $$DM^{-1}\Omega_t\vert_x$$ 이것은 일반적으로 루프 공간이 아닙니다.
+
+$$\Omega_t^0$$ 연속 계약 가능 루프의 공간입니다. $$M$$.
+
+$$\Omega_t[\gamma]$$ 연속 루프의 공간입니다. $$M$$ 닫힌 측지학에 homotopic $$\gamma$$. 허가 $$\gamma_0$$ 그것의 원시 루프.
+
+$$DM^{-1}\Omega_t^0[\gamma]$$ 연속 계약 가능 루프의 이미지입니다. $$M$$ 제목 : Offset Homotopic to $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Horocyclic 좌표 &mdash; 각 섬유는 주기적인 측지 구의 기하학적 한계로 $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$, 위의 일반 번들에서 벡터화됨 $$\gamma_0$$. 우리의 곡률 제약은 모든 것에 대해 Horocyclic 좌표를 의미합니다. $$\gamma_0$$ 부드럽게 존재하며, $$DM$$-호환 좌표 맵 대상 $$\Omega_t^0[\gamma]$$.
+수평 순환 좌표에서, In horocyclic coordinates, $$\det{g(\vec{x})} = 1$$:
+
+```math
+\begin{aligned}
+ds^2 &= dx\odot dx + h(x,y) dx\odot dy +  (1+h^2(x,y)) dy\odot dy \\
+g(x,0) &= 0,\\
+\sigma_1 &= dx + h(x,y)dy \\
+\sigma_2 &= h(x,y)dx + (1+h^2(x,y))dy \\
+\sigma_1 \wedge \sigma_2 &= dx \wedge dy\\
+d\sigma_1 &= \frac{\partial h}{\partial x}dx\wedge dy \\
+d\sigma_2 &= (-\frac{\partial h}{\partial y}+2h\frac{\partial h}{\partial x}) dx\wedge dy \\
+
+\end{aligned}
+```
+따라서 연결 1-form $$\alpha := Adx + Bdy$$ 만족
+```math
+\begin{aligned}
+d\sigma_1 &= \alpha \wedge \sigma_1 \\
+d\sigma_2 &= \sigma_2 \wedge \alpha \\
+\implies \\
+A &= \frac{\partial h}{\partial y} - 3h\frac{\partial h}{\partial x} \\
+B &= h\frac{\partial h}{\partial y} - (1+3h^2)\frac{\partial h}{\partial x} \\
+ \\
+K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
+ &= \frac{\partial h}{\partial x}\frac{\partial h}{\partial y} - 6h\frac{\partial h}{\partial x}^2 - (1+3h^2)\frac{\partial^2 h}{\partial x \partial x}
+ - \frac{\partial^2 h}{\partial y \partial y} + 2h \frac{\partial^2 h}{\partial x \partial y} ,\\
+h &= h(y) \implies \\
+
+\alpha &= \frac{\partial }{\partial y} (hdx +\frac{h^2}{2} dy)\\
+
+K(y) &= -\frac{\partial^2 h}{\partial y \partial y}\ \\
+ \text{has Galilean Symmetry:} \\
+ h \mapsto h(y,\beta) &= h(y) + \beta y \ .\\
+\end{aligned}
+```
+
+**중요** 따라서, $$h=h(y)$$병렬 전송 방정식은 $$\dot{\vec{c}}(t) = -\alpha(\dot{\gamma}(t))\vec{c}(t) = -\partial_y(h\ dx/dt + h^2/2\ dy/dt)\vec{c}(t)$$. 물론, 이것은 닫힌 해결책입니다.
+
+```math
+\vec{c}(t) = exp(-((h+\beta y)\ dx/dt + (h^2/2 + (\beta y)^2/2 + \beta y h) \ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
+```
+
+전송 곡선의 기능입니다. $$\gamma$$'s 끝점 **독립**입니다. 이 사실은 개발 맵이 루프를 보존한다는 것을 의미합니다.
+
+$$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ 열 커널의 추적입니다.
+
+마지막으로 Radon-Nicodym 파생 상품에서 다음을 정의하십시오.
+
+```math
+\begin{aligned}
+DM_*\mu(\Omega_t) &:= \int_M DM_*\mu(\Omega_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega^0_t) &:= \int_M DM_*\mu(\Omega^0_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega_t[\gamma]) &:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx) \\
+\end{aligned}
+```
+
+## 확률적 추적 공식
+
+```math
+\begin{aligned}
+Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t) &= DM_*\mu(\Omega^0_t) + \sum_{\set{\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
+
+DM_*\mu(\Omega_t^0) &\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\space \small\text{by McKean-Singer}\\
+
+DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
+
+&= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
+\end{aligned}
+```
+```math
+\begin{aligned}
+\text{Horocyclic coordinates}: \\
+
+h&= h(y) \implies \\
+&=\frac{\ell(\gamma_0)}{2\pi t}\int_{\Reals}\frac{e^{- (1+h^2(y))\ell(\gamma)^2/2t}}{2\sinh \sqrt{-K(y)}\ell(\gamma)/2}\ell(\gamma) dy\ ,\\
+
+h(y) = y \implies \\
+&= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh \sqrt {-K}\ell(\gamma)/2}\int_{\Reals}e^{-y^2\ell(\gamma)^2/2t}{\frac{\ell(\gamma)dy}{\sqrt{2\pi t}}}
+\end{aligned}
+```
+## 셀버그 추적 공식 Selberg Trace Formula
+
+다음에서 $$\dim = 2$$ 상수 곡률 $$K = -\kappa^2$$ 케이스,
+
+```math
+\begin{aligned}
+
+\det |I-J_\gamma| &= (e^{\kappa\ell(\gamma)} - 1)(1 - e^{-\kappa\ell(\gamma)}) = 2 \sinh \kappa\ell(\gamma)/2\\
+
+\gamma(t) = \gamma_0(kt)\implies \\
+
+DM_*\mu(\Omega_t[\gamma])&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+\end{aligned}
+```
+
+다음에서 $$\dim=3$$ 쌍곡선 다기관 케이스, 우리는 복잡한 좌표를 사용합니다 $$(z,\bar{z})$$ 일반 번들에서 쓰기
+
+```math
+\begin{aligned}
+J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1)} &=
+\begin{pmatrix}
+e^{\kappa\ell(\gamma)} && 0 && 0\\
+0 && e^{-\kappa\ell(\gamma)+i\theta(\gamma)} && 0 \\
+0 && 0 && e^{-\kappa\ell(\gamma)-i\theta(\gamma)} \\
+\end{pmatrix}\\
+
+\implies& \\
+\det I-{\perp_{\gamma_0}}^k &= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
+\end{aligned}
+```
+및 이후 $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$에서는 방정식(2)의 근사값이 다시 정확해집니다.
+
+```math
+\begin{aligned}
+\kappa &= 1 \implies \\
+
+DM_*\mu(\Omega_t[\gamma])
+&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (1-e^{-k\ell(\gamma_0)})}|e^{k\ell(\gamma_0)/2}-e^{-k(\ell(\gamma_0)/2-i\theta(\gamma_0))}|}\\
+
+\end{aligned}
+```
+
+<!-- $Date: 2025-03-30 15:41:48 -0700 (Sun, 30 Mar 2025) $ $Author: joe $ $Revision: 26414 $ -->

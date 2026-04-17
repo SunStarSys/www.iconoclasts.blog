@@ -1,0 +1,52 @@
+---
+archived: ~
+categories: TI, Perl, Correio, Ferramentas
+dependencies: '*.md.pt-BR'
+keywords: ezmlm-idx, BATV, DMARC, SRS
+published: ~
+status: arquivado
+title: Listas de emails
+---
+
+## ezmlm-idx
+
+Minha experiência com software de lista de emails gira em torno de [qmail](http://cr.yp.to/qmail.html) e [ezmlm-idx](http://untroubled.org/ezmlm/). Com alguns scripts pequenos, pude suportar uma ampla variedade de novos casos de uso que não são inerentemente suportados pelo `ezmlm-idx` o próprio.  Os recursos que são genericamente úteis fora do [A Fundação Apache Software](http://www.apache.org) são apresentados abaixo.  Para utilizar estes ficheiros siga este [layout](ezmlm/) a menos que você se sinta confortável em ajustar os caminhos nos scripts.
+
+### BATV e SRS
+
+[compartimento/remetente-remessa](ezmlm/bin/sender-demunger.pl) é um pequeno script wrapper que permite `BATV` e `SRS` `REMETENTE` demungindo para `ezmlm-idx`. Para usá-lo, basta adicioná-lo como prefixo a todas as linhas do seu `</editor />` e `</manager />` blocos dentro `Português (Brasil)` e executar `ezmlm-make -+` em suas listas, ou em uma pitada supondo que você não vai correr `ezmlm-feito` novamente em suas listas, edite o `editor` e `gerente` arquivos em seus diretórios de lista.
+
+[BATV](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) e [SRS](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme) apresentam problemas únicos para `ezmlm-idx` porque ao contrário de outros softwares de lista de emails, ele opera no `E-MAIL DE` parte do `SMTP` envelope, não o "De" endereço nos cabeçalhos da mensagem.
+
+Ambas as especificações giram em torno de fornecer endereços temporários para o `E-MAIL DE` porção do envelope, que incorpora o endereço original de uma forma facilmente decifrável.  Mas {# lede #}estes endereços temporários são anátema para `ezmlm-idx`'sistemas de subscrição e moderação{# lede #}, e o `remetente-demunger.pl` o script mencionado acima corrigirá isso uma vez implantado.
+
+<div class="alert alert-info">
+   <div class="alert-header">OBSERVAÇÃO</div>
+   <div class="alert-body">
+De acordo com as notas de lançamento, desde a versão 7.0.0, o ezmlm-idx deve ter suporte para BATV e SRS embutido. Em qualquer caso, o remetente-demunger realmente ganhou'Dói apenas no caso :-).
+   </div>
+</div>
+
+### DMARC
+
+Consulte [bin/ezmlm-dmarc-filter.pl](ezmlm/bin/ezmlm-dmarc-filter.pl) e [bin/ezmlm-seekable-stdin.pl](ezmlm/bin/ezmlm-seekable-stdin.pl) e [lib/pull_header.pm](ezmlm/lib/pull_header.pm). Para usar esses scripts, altere as linhas no `</editor />` seção de `Português (Brasil)` essa chamada `ezmlm-gate`, `loja virtual`, ou `ezmlm-enviar`, para se parecer com o seguinte:
+
+```shell
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/ezmlm-seekable-stdin.pl /path/to/bin/sender-demunger.pl <#B#>/ezmlm-gate -rY '<#D#>' '<#D#>' '<#D#>/digest' '<#D#>/allow' '<#D#>/mod'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/sender-demunger.pl <#B#>/ezmlm-store '<#D#>'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | <#B#>/ezmlm-send -r '<#D#>'
+```
+
+Isso pressupõe que você tocará em um arquivo chamado `dmarc` em qualquer diretório de lista em que você deseja ativar o filtro.  Você pode configurar `Português (Brasil)` para fazer isso adicionando o seguinte bloco a esse arquivo:
+
+```shell
+	</-dmarc#FXT/>
+	</dmarc#f/>
+	</dmarc#t/>
+	</dmarc#x/>
+```
+As únicas configurações de lista que são executadas em conflito com `DMARC` são aqueles com `-f`, `-t` ou `-x` definir. A configuração acima será ajustada para isso.
+
+Caso você tenha't mantido com os tempos, há um movimento recente em andamento para introduzir forte [DMARC](http://en.wikipedia.org/wiki/DMARC) políticas que rejeitam mensagens que falham [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) testes de assinatura. Facebook, Twitter, LinkedIn, Yahoo! e agora AOL têm liderado essa cobrança em um novo território, forçando os operadores de listas de discussão a lidar com a situação. O que `ezmlm-dmarc-filter.pl` faz, e isso é't a única solução possível para o problema, é eliminar o `Assinatura DKIM` para qualquer domínio desse tipo e adicionar um `. INVÁLIDO` sufixo para o remetente's `De` endereço do cabeçalho.  Tem a vantagem de ser uma das soluções mais simples que funciona, por isso'Estou oferecendo aqui.  Até o momento, os domínios que implementam `DMARC` todas as políticas fornecem `Responder para` cabeçalhos, portanto, essas alterações feitas por `ezmlm-dmarc-filter.pl` não afetará a operação de qualquer resposta de e-mail compatível com RFC a tais mensagens.
+
+$Data: 2023-01-19 15:58:40 -0700 (quinta, 19 de janeiro de 2023) $
