@@ -306,26 +306,17 @@ Tabellen nedan kartlägger varje vanlig R-typ till sina närmaste Perl- och PDL-
 | `logisk` (längd-1) | `$flag = 1` / `$flag = 0` | `byte(1)` Perl använder sanningsenlighet; PDL använder 0/1 byte |
 | `fördubbla` vektor | `@arr = (1.1, 2.2, 3.3)` | `dubbel (1.1, 2.2, 3.3)` | PDL: sammanhängande; `@arr`: pekaruppställning |
 | `heltal` vektor | `@arr = (1, 2, 3)` | `lång(1, 2, 3)` | |
-
-| R typ | Perl ekvivalent | PDL ekvivalent | Anmärkningar |
-|---|---|---|---|
 | `logisk` vektor | `@flags = (1, 0, 1)` | `byte(1, 0, 1)` | |
 | `komplex` vektor | — (ingen inbyggd) | `dubbel(...)` Perl behov `Matematik::Komplex`PDL har inbyggt stöd.
 | `skrivtecken` vektor | `@strs = ('år','b)')` | — (inte numeriskt) | PDL används endast på nummer |
 | `rå` vektor | `pack('C*', @bytes)` | `byte(...)` | |
 | `Ej tillämpligt` | `ofördelaktig` | Dåligt värde i ndarray | PDL dåliga värden sprids som R's `Ej tillämpligt` |
-
-| R typ | Perl ekvivalent | PDL ekvivalent | Anmärkningar |
-|---|---|---|---|
 | `NULL` | `ofördelaktig` i förteckningssammanhang | — | |
 | `lista` | `@array` eller referens `\@array` | — | |
 | namngiven `lista` | `% hash` eller `\%hash` | — | |
 | `matris` (2-D) | array-of-arrays `@aoa` | 2D ndarray `pdl([[...],[...]])` | PDL: kolumnhuvudämne; R: kolumnhuvudämne |
 | `uppställning` (N-D) | kapslade referenser | N-D ndarray `$x->reshape(...)` | |
 | `data.frame` | `% hash` av `@arrays` | 2-D ndarray (numeriska kolon) + Perl hash (blandad) | Inga enskilda PDL-typkartor exakt |
-
-| R typ | Perl ekvivalent | PDL ekvivalent | Anmärkningar |
-|---|---|---|---|
 | `faktor` | hash söktabell + `@indices` | `hög` ndarray + perl `@levels` uppställning | |
 | `miljö` | `% hash` eller paketnamnrymd | — | |
 | `funktion` / stängning | `nedsänkt { ... }` / stängning | — | PDL PP definierar sammanställda kärnor |

@@ -306,26 +306,17 @@ A tabela abaixo mapeia cada tipo R comumente usado para suas contrapartes Perl e
 | `lógica` (comprimento-1) | `$flag = 1` / `$flag = 0` | `byte(1)` | Perl usa a veracidade; PDL usa 0/1 byte |
 | `dupla` vetor | `@arr = (1,1, 2,2, 3,3)` | `duplo(1,1, 2,2, 3,3)` | PDL: contíguo; `@arr`: matriz do ponteiro |
 | `inteiro` vetor | `@arr = (1, 2, 3)` | `longo(1, 2, 3)` | |
-
-| Tipo R | Equivalente Perl | Equivalente PDL | Notas |
-|---|---|---|---|
 | `lógica` vetor | `@flags = (1, 0, 1)` | `byte(1, 0, 1)` | |
 | `complexo` vetor | — (sem incorporação) | `cdouble(...)` | Necessidades Perl `Math::Complexo`; PDL tem suporte nativo |
 | `caractere` vetor | `@strs = ('a','b')` | — (não numérico) | O PDL opera apenas em números |
 | `bruto` vetor | `pacote'C*', @bytes)` | `byte(...)` | |
 | `N/A` | `undef` | Bad-value em ndarray | PDL bad-values propagam como R's `N/A` |
-
-| Tipo R | Equivalente Perl | Equivalente PDL | Notas |
-|---|---|---|---|
 | `NULO` | `undef` no contexto da lista | — | |
 | `lista` | `@array` ou referência `\@array` | — | |
 | nomeado `lista` | `%hash` ou `\%hash` | — | |
 | `matriz` (2-D) | matriz de matrizes `@aoa` | Ndarray 2D `pdl([[...],[...]])` | PDL: principal da coluna; R: principal da coluna |
 | `matriz` (N-D) | referências aninhadas | N-D ndarray `$x->reshape(...)` | |
 | `data.frame` | `%hash` de `@arrays` | ndarray 2D (cols numéricos) + hash Perl (misto) | Nenhum tipo de PDL mapeia exatamente |
-
-| Tipo R | Equivalente Perl | Equivalente PDL | Notas |
-|---|---|---|---|
 | `fator` | tabela de pesquisa de hash + `@indices` | `longo` ndarray + Perl `@levels` matriz |
 | `ambiente` | `%hash` ou namespace de pacote | — | |
 | `função` / encerramento | `sub { ... }` / encerramento | — | PDL PP define núcleos compilados |

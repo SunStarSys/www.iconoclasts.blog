@@ -306,26 +306,17 @@ In der folgenden Tabelle werden alle gängigen R-Typen den nächstgelegenen Perl
 | `logisch` (Länge-1) | `$Flag = 1` / `$Flag = 0` | `Byte(1)` | Perl nutzt Wahrheit; PDL verwendet 0/1 Byte |
 | `doppelt` Vektor | `@arr = (1,1, 2,2, 3,3)` | `doppelt (1,1, 2,2, 3,3)` | PDL: zusammenhängend; `@arr`: Zeiger-Array |
 | `Ganzzahl` Vektor | `@arr = (1, 2, 3)` | `lang(1, 2, 3)` | |
-
-| R-Typ | Perl-Äquivalent | PDL-Äquivalent | Hinweise |
-|---|---|---|---|
 | `logisch` Vektor | `@flags = (1, 0, 1)` | `Byte(1, 0, 1)` | |
 | `Komplex` Vektor | — (kein eingebaut) | `cdouble(...)` | Perlbedarf `Mathematik::Komplex`; PDL hat native Unterstützung |
 | `Zeichen` Vektor | `@strs = ('ein','B')` | — (nicht numerisch) | PDL funktioniert nur auf Zahlen |
 | `Rohdaten` Vektor | `pack('K*', @bytes)` | `Byte(...)` | |
 | `NA` | `undef` | Falscher Wert in ndarray | PDL-Fehlerwerte verbreiten sich wie R's `NA` |
-
-| R-Typ | Perl-Äquivalent | PDL-Äquivalent | Hinweise |
-|---|---|---|---|
 | `NULL` | `undef` im Listenkontext | — |
 | `Liste` | `@array` oder Referenz `\@array` | — | |
 | benannt `Liste` | `%Hash` oder `\%Hash` | — | |
 | `Matrix` (2-D) | Array-of-Arrays `@aoa` | 2-D-Darray `pdl([[...],[...]])` | PDL: Spalte-Major; R: Spalte-Major |
 | `Array` (N-D) | verschachtelte Referenzen | N-D ndarray `$x->Umformung(...)` | |
 | `data.frame` | `%Hash` von `@arrays` | 2-D ndarray (numerische Cols) + Perl-Hash (gemischt) | Keine einzelnen PDL-Typ-Karten genau |
-
-| R-Typ | Perl-Äquivalent | PDL-Äquivalent | Hinweise |
-|---|---|---|---|
 | `Faktor` | Hash Lookup-Tabelle + `@indices` | `lang` Ndarray + Perl `@levels` Array | |
 | `Umgebung` | `%Hash` oder Package-Namespace | — | |
 | `Funktion` / Verschluss | `Untergeordnet { ... }` / Verschluss | — | PDL PP definiert kompilierte Kerne |

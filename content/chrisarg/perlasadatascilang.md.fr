@@ -306,26 +306,17 @@ Le tableau ci-dessous mappe chaque type R couramment utilisé avec ses homologue
 | `logique` (longueur-1) | `Indicateur $ = 1` / `Indicateur $ = 0` | `octet(1)` | Perl utilise la véracité ;  PDL utilise 0/1 octet |
 | `double` vecteur | `@arr = (1.1, 2.2, 3.3)` | `double(1.1, 2.2, 3.3)` | PDL : contiguë ; `@arr` : tableau de pointeurs |
 | `entier` vecteur | `@arr = (1, 2, 3)` | `long(1, 2, 3)` | |
-
-| Type R | Équivalent en perles | Équivalent en PDL | Notes |
-|---|---|---|---|
 | `logique` vecteur | `@flags = (1, 0, 1)` | `byte(1, 0, 1)` | |
 | `complexe` vecteur | — (non intégré) | `cdouble(...)` | Besoins de Perl `Math : :Complexe` ; PDL a un support natif |
 | `caractère` vecteur | `@strs = ('a','b')` | — (non numériques) | Le PDL fonctionne uniquement sur des nombres |
 | `brut` vecteur | `emballage(s)'C*', @bytes)` | `byte(...)` | |
 | `S/O` | `défaire` | Mauvaise valeur dans ndarray | Les mauvaises valeurs PDL se propagent comme R's `S/O` |
-
-| Type R | Équivalent en perles | Équivalent en PDL | Notes |
-|---|---|---|---|
 | `NULL` | `défaire` dans le contexte de la liste | — | |
 | `liste` | `@array` ou référence `\@array` | — | |
 | nommé `liste` | `%hachage` ou `\%hachage` | — | |
 | `matrice` (2-D) | baie de disques `@aoa` | 2-D ndarray `pdl([[...],[...]])` | PDL : colonne-major ; R : colonne-major |
 | `tableau` (N-D) | références imbriquées | N-D ndarray `$x->reshape(...)` | |
 | `data.frame` | `%hachage` sur `@arrays` | 2-D ndarray (cols numériques) + Perl hash (mélangé) | Aucune correspondance de type PDL exacte |
-
-| Type R | Équivalent en perles | Équivalent en PDL | Notes |
-|---|---|---|---|
 | `facteur` | table de recherche de hachage + `@indices` | `long` ndarray + Perl `@levels` tableau |
 | `environnement` | `%hachage` ou espace de noms de package | — | |
 | `fonction` / fermeture | `sous { ... }` / fermeture | — | PDL PP définit les noyaux compilés |

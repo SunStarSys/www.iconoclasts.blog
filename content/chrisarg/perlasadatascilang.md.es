@@ -306,26 +306,17 @@ La siguiente tabla asigna cada tipo R de uso común a sus homólogos más cercan
 | `lógico` (longitud-1) | `$flag = 1` / `Indicador de $ = 0` | `byte(1)` | Perl utiliza la veracidad; PDL utiliza 0/1 byte |
 | `doble` vector | `@arr = (1.1, 2.2, 3.3)` | `doble(1.1, 2.2, 3.3)` | PDL: contiguo; `@arr`: matriz de punteros |
 | `entero` vector | `@arr = (1, 2, 3)` | `largo(1, 2, 3)` | |
-
-| Tipo R | Equivalente en perl | Equivalente en PDL | Notas |
-|---|---|---|---|
 | `lógico` vector | `@flags = (1, 0, 1)` | `byte(1, 0, 1)` | |
 | `complejo` vector | — (no incorporado) | `cdouble(...)` | Necesidades de perl `Matemáticas::Complejo`; PDL tiene soporte nativo |
 | `carácter` vector | `@strs = ('a','b')` | — (no numérico) | La PDL sólo funciona en números |
 | `crudo` vector | `paquete('C*', @bytes)` | `byte(...)` | |
 | `N/D` | `sin definir` | Valor negativo en ndarray | Los valores negativos de PDL se propagan como R's `N/D` |
-
-| Tipo R | Equivalente en perl | Equivalente en PDL | Notas |
-|---|---|---|---|
 | `NULL` | `sin definir` en el contexto de la lista | — | |
 | `lista` | `@array` o referencia `\@array` | — | |
 | nombrado `lista` | `%hash` o `\%hash` | — | |
 | `matriz` (2-D) | matriz de relatos `@aoa` | 2-D ndarray `pdl([[...],[...]])` | PDL: columna mayor; R: columna mayor |
 | `matriz` (N-D) | referencias anidadas | N-D ndarray `$x->reforma(...)` | |
 | `data.frame` | `%hash` de `@arrays` | 2-D ndarray (cols numéricos) + hash perl (mezclado) | No hay mapas de tipo PDL exactamente |
-
-| Tipo R | Equivalente en perl | Equivalente en PDL | Notas |
-|---|---|---|---|
 | `factor` | tabla de búsqueda hash + `@indices` | `largo` ndarray + perl `@levels` matriz | |
 | `entorno` | `%hash` o espacio de nombres de paquete | — | |
 | `función` / cierre | `sub { ... }` / cierre | — | PDL PP define los granos compilados |
