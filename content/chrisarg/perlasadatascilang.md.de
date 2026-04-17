@@ -424,4 +424,4 @@ Der letzte Beitrag in der Foundation-Serie schließt die Schleife zwischen Perl 
 
 Wenn eine Berechnung Speicher in einem vorhersehbaren, zusammenhängenden Muster berührt, kann die Hardware *prefetcher* bevorstehende Daten in L1/L2 laden, bevor sie benötigt wird. Dadurch wird ein nahezu hoher Durchsatz erreicht.  Verstreutes Pointer-Chasing (z. B. das Durchlaufen eines Perl-Arrays von Heap-zugewiesenen Skalaren) schlägt Prefetching aus und stoppt die CPU, während sie wartet, bis jeder Cache-Fehlschlag aus dem RAM aufgelöst wird.
 
-<!-- $Date: 2026-04-16 16:45:10 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31803 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

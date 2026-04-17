@@ -29,4 +29,4 @@ Unikheten resulterar i Anshuls papper är starkt beroende av de tekniker som omf
 
 #### Omarbetad och skickad till SSRN den 20 oktober 2025
 
-<!-- $Date: 2025-10-19 19:08:09 -0700 (Sun, 19 Oct 2025) $ $Author: joe $ $Revision: 27113 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

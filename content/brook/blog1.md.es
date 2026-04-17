@@ -14,4 +14,4 @@ Una nueva página creada para la diversión
 
 {# lede #} Este es el teaser; lede {# lede #}
 
-<!-- $Date: 2024-04-24 02:26:45 +0000 (Wed, 24 Apr 2024) $ $Author: joe $ $Revision: 23823 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

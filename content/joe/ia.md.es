@@ -110,4 +110,4 @@ El estilo de ##### es controlado semánticamente por la instalación del cliente
 2. Backend
 
 
-<!-- $Date: 2024-03-11 03:02:57 +0000 (Mon, 11 Mar 2024) $ $Author: joe $ $Revision: 19680 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

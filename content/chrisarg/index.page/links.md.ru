@@ -9,4 +9,4 @@ title: ~
 ---
 
 - [Сообщество Reddit Perl](https://www.reddit.com/r/perlcommunity/)
-<!-- $Date: 2026-03-22 08:14:26 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29724 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

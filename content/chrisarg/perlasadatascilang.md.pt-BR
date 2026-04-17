@@ -424,4 +424,4 @@ O post final da série de fundação fecha o loop entre Perl e R:
 
 Quando um cálculo toca a memória em um padrão previsível e contíguo, o hardware *prefetcher* pode carregar dados futuros em L1/L2 antes de ser necessário, alcançando um throughput de quase pico.  A busca dispersa de ponteiros (como percorrer uma matriz Perl de escalares alocados por heap) derrota a pré-busca, interrompendo a CPU enquanto espera que cada falha de cache seja resolvida da RAM.
 
-<!-- $Date: 2026-04-16 16:45:10 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31803 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

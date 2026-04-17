@@ -68,4 +68,4 @@ QED.
 
 Esperemos que la rendición de cuentas interna llegue al FBI, CDC, NIH, DoD, DARPA, CIA y la NSF antes de que todo se vaporice en disgusto.
 
-<!-- $Date: 2025-03-06 15:19:50 -0700 (Thu, 06 Mar 2025) $ $Author: joe $ $Revision: 25605 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

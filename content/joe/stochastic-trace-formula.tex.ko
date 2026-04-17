@@ -1,0 +1,176 @@
+\documentclass{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage[유형={CC},수정자={by-nc-nd},버전={4.0}]{doclicense}
+\usepackage[margin=1in]{geometry}
+
+\newenvironment{subproof}[1][\proofname]{%
+  \renewcommand{\qedsymbol}{$\blacksquare$}%
+    \시작{proof}[#1]%
+    }{%
+    \end{proof}%
+}
+
+AMS 패키지 비율(%).
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+% 현대, utf8 친화적 인 옵션 (전체 amscd와 호환되지 않음):
+\PassOptionsToPackage{partial=upright}{unicode-math}
+\usepackage{fontsetup}
+한국어 (Korean).
+
+\usepackage[style=alphabetic]{biblatex}
+\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
+유용한 수학-물리학 매크로 %
+\usepackage{braket}
+\usepackage{physics}
+% 유니코드
+\usepackage[utf8]{inputenc}
+
+% 메타데이터
+\title{닫힌, 부정적으로 곡선된 매니폴드에 대한 확률적 추적 공식}
+\date{2024\\May}
+\author{Joe Schaefer\\\href{mailto://Joe\%20Schaefer\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
+
+% 정리, 렘마 등
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+한국어 _ 한국어 _ 한국어 _ 한국어
+\newtheorem{lemma}[정리]{Lemma}
+\newtheorem{claim}{Claim}[정리]
+\newtheorem{axiom}[정리]{Axiom}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{criterion}[theorem]{Criterion}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{principle}[theorem]{Principle}
+
+\시작{document}
+제조사
+
+\t내용 테이블
+
+내 \textit{1997 Ph.D. thesis} 블로그 항목으로.
+
+\section{NDimensional Wiener Measure가 하나만 있음}
+
+\section{Brownian Motion에 대한 조각 방향 선형 근사치}
+
+\section{개발 맵 DM}
+
+카메론 마틴 공식(Cameron-Martin Formula).
+
+\section{Weiner Measure의 Radon-Nicodym Derivatives로 사용되는 히트 커널
+
+\s섹션{Notation}
+
+$M$은(는) $\dim=n$ 메트릭 $g$, 메트릭 연결 $\nabla$ 및 (음수 아님) Laplace-Beltrami 연산자 $\Delta_M$를 사용하여 부정적으로 곡선된 $\dim=n$ 닫힌 리만 매니폴드입니다.  $k_{-t\Delta/2}(x,y)$가 $M$의 히트 커널을 나타내도록 합니다.
+
+따라서 $k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$은(는) n차원 Wiener 측정 $\mu$의 Radon-Nicodym 파생상품으로, Weiner 측정 보존 개발 맵 $DM$의 역을 통해 연속 루프 공간 $\Omega_t(M)\vert_x$의 풀백으로 제한됩니다. *참고:* $DM^{-1}\Omega_t\vert_x$은(는) 루프 공간이 아닙니다.
+
+$\Omega_t^0$은(는) $M$의 연속 계약 가능 루프 공간입니다.
+
+$\Omega_t[\gamma]$는 닫힌 geodesic $\gamma$에 $M$ homotopic에 연속 루프의 공간입니다. $\gamma_0$가 기본 데이터 유형 루프일 수 있습니다.
+
+$DM^{-1}\Omega_t^0[\gamma]$은(는) $\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$(으)로 동종 오프셋으로 작성된 $M$에 대한 연속 계약 가능 루프의 이미지입니다. Horocyclic 좌표를 생각하십시오 -- 각 섬유는 주기적인 geodesic 구체 $S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$의 기하학적 한계로, $\gamma_0$ 이상의 일반 번들에서 벡터화됩니다. 우리의 곡률 제약은 모든 $\gamma_0$에 대한 Horocyclic 좌표가 $\Omega_t^0[\gamma]$에 대한 부드러운 $DM$ 호환 좌표 맵으로 존재한다는 것을 의미합니다.
+
+이제 $\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$은(는) $\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$에 대한 "offset" \textit{kinked geodesic} homotopic의 \textit{undeveloped} 끝점입니다. 곡선은 주기적으로 $\ell(\gamma_0)$ 기간이며 $t$ 시간에 꼬인 시작점 $DM(\vec{x}(\tau))$을(를) 다시 방문하여 순방향 파생 $J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$의 선형 자동형으로 추적할 수 있도록 $T_{DM(\vec{x}(\tau))}M$를 계산합니다. 중요한 것은 $J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$이(가) \textbf{Jacobi Fields}를 사용하여 구성될 수 있습니다. $DM$ \textbf{is}는 $\mathbb{R}^n$의 일련의 연결된 직선과 함께 (반복된) 지수 맵이기 때문입니다. 솔루션으로 $ 1/2 \int_0^t \bra{dX}\ket{dX}_s$를 연구 할 것입니다.
+
+\시작{equation}
+\시작{aligned}
+X_t &amp;= X_0 + \int_0^t \sqrt{J}_{X_t} dB_t  \\
+\end{aligned}
+\end{equation}
+
+$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$은(는) 히트 커널의 흔적입니다.
+
+마지막으로 Radon-Nicodym 파생 상품에서 다음을 정의하십시오.
+
+\시작{equation}
+\시작{aligned}
+DM_*\mu(\Omega_t) &amp;:= \int_M DM_*\mu(\Omega_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega^0_t) &amp;:= \int_M DM_*\mu(\Omega^0_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega_t[\gamma]) &amp;:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx) \\
+\end{aligned}
+\end{equation}
+
+\section{Stochastic 추적 공식}
+
+\시작{equation}
+\시작{aligned}
+Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t) &amp;= DM_*\mu(\Omega^0_t) + \sum_{\set{\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
+DM_*\mu(\Omega_t^0) &amp;\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\space \small\text{by McKean-Singer}\\
+DM_*\mu(\Omega_t[\gamma]) &amp;= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
+&amp;= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
+\frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}}&amp;\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau),\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\small \text{ semi-classical limit}\\
+\text{Horocyclic coordinates}: z(\tau) - x(\tau) &amp;= x + \ell(\gamma)\vec{e}^1\implies\\
+\int_{M/S^1\oplus S^1}k_t(x,z) dx &amp;=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\bra{J_{X^j_t}\vec{x}}\ket{\vec{x}}})\\
+\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_{M^j/S^1\oplus S^1}\frac{1}{\sqrt{2\pi t}^{jn}\det|I-J_{X^j}|}e^{-\ell(X^j)^2/2t}X^{j}\\
+\end{aligned}
+\end{equation}
+
+\section{Approximation and the Selberg Trace Formula}
+
+$\dim = 2$ 상수 곡률 $-\kappa^2$ 표면 케이스에서,
+
+\시작{equation}
+\시작{aligned}
+\sqrt{J_{\vec{x}, \vec{y}}}dRB(&amp;=)
+\시작{pmatrix}
+e^{\kappa d(\vec{x},\vec{y})/2} 및&amp; 0\\
+0 &amp;&amp; e^{-\kappa d(\vec{x},\vec{y})/2}\\
+\end{pmatrix}
+\implies&amp;\\
+\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} &amp;= e^{\kappa \ell(B)}dRB_1^2 - e^{-\kappa \ell(B)}dRB_2^2\\
+\int_0^t \bra{\sqrt{ J}dB}\ket{\sqrt{ J}dB} &amp;= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
+\det I-J_{\gamma} &amp;= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
+\end{aligned}
+\end{equation}
+
+$(\vec{x},\tau)$보다 일정하므로 방정식 (2)의 대략 $\approx_{t\rightarrow 0}$ 행이 \textit{exact}가 됩니다.
+
+\시작{equation}
+\시작{aligned}
+DM_*\mu(\Omega_t[\gamma]) &amp;= \frac{e^{-\ell(\감마)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\감마)/2} -e^{-\kappa\ell(\감마)/2})}\\
+\gamma(t) = \gamma_0(kt)\implies \\
+&amp;=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+\end{aligned}
+\end{equation}
+
+$\dim=3$ 쌍곡선 매니폴드 사례에서는 일반 번들에 복합 좌표 $(z,\bar{z})$를 사용하여 기록합니다.
+
+\시작{equation}
+\시작{aligned}
+J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1)} &amp;=
+\시작{pmatrix}
+e^{\kappa\ell(\gamma)} &amp;&amp; 0 &amp;&amp; 0\\
+0 &amp;&amp; e^{-\kappa\ell(\gamma)+i\theta(\gamma)} &amp;&amp; 0 \\
+0 &amp;&amp; 0 &amp;&amp; e^{-\kappa\ell(\gamma)-i\theta(\gamma)} \\
+\end{pmatrix}\\
+\implies 및 \\
+\det I{\perp_{\gamma_0}}^k &amp;= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
+\end{aligned}
+\end{equation}
+그리고 $z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$ 이후 방정식 (2)의 근사값이 다시 정확해집니다.
+
+\시작{equation}
+\시작{aligned}
+\kappa &amp;= 1 \implies \\
+DM_*\mu(\Omega_t[\gamma)
+&amp;=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (1-e^{-k\ell(\gamma_0)})}|e^{k\ell(\gamma_0)/2}-e^{-k(\ell(\gamma_0)/2-i\theta(\gamma_0))}|}\\
+\end{aligned}
+\end{equation}
+
+\doclicenseThis
+\페이지 브레이크
+지문서
+
+\end{document}

@@ -19,4 +19,4 @@ title: Bitar och bitar
 Känns konstigt att jag börjar blogga igen, men i chattrobotarnas era är det dags för människor att göra det igen!
 Så ska prata om #Perl5, amatörkodning och random stuff
 
-<!-- $Date: 2026-03-27 10:40:04 -0700 (Fri, 27 Mar 2026) $ $Author: joe $ $Revision: 30437 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

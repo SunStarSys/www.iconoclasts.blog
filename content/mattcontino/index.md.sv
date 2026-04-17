@@ -13,4 +13,4 @@ title: Min blogg
 
 Kommer snart!
 
-<!-- $Date: 2026-03-01 08:09:05 -0700 (Sun, 01 Mar 2026) $ $Author: joe $ $Revision: 27941 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

@@ -1,0 +1,65 @@
+文件類別{% templatetag openbrace %}文章
+繁體中文 (香港){% templatetag openbrace %}超參照
+\usepackage[type=]{% templatetag openbrace %}CC，修正因子 ={% templatetag openbrace %}{{license}}}，版本 ={% templatetag openbrace %}4.0}]{% templatetag openbrace %}文件授權 }
+\usepackage[margin=1in]{% templatetag openbrace %}幾何
+
+\ 新環境{% templatetag openbrace %}防水 }[1][\ 防水名稱 ]{% templatetag openbrace %}%
+  \renew 指令{% templatetag openbrace %}繁體中文{% templatetag openbrace %}$\blackquare$}%
+    \ 開始{% templatetag openbrace %}證明 }[#1]%
+    }{% templatetag openbrace %}%
+    \end{% templatetag openbrace %}證明 }%
+}
+
+AMS 套件百分比
+
+\ 套件{% templatetag openbrace %}繁體中文
+\ 套件{% templatetag openbrace %}繁體中文
+\ 套件{% templatetag openbrace %}阿拉伯的
+% 現代化的 utf8 易記選項 (完全與 amscd 不相容)：
+\PassOptionsToPackage{% templatetag openbrace %}部分 = 右側{% templatetag openbrace %}unicode 數學
+\ 套件{% templatetag openbrace %}繁體中文
+\ 套件{% templatetag openbrace %}Tikz-cd 的
+
+\usepackage[style=alphabetic]{% templatetag openbrace %}新浪微博
+\addbibresource{% templatetag openbrace %}{{path|dirname}}/{{path|basename:0}}.bib.{{lang}}}
+% 有用的數學物理巨集
+\ 套件{% templatetag openbrace %}胸部
+\ 套件{% templatetag openbrace %}物理學
+萬國碼百分比
+\usepackage[utf8]{% templatetag openbrace %}輸入器
+
+中繼資料百分比
+標題{% templatetag openbrace %}{{headers.title|lower|capfirst}}}
+\ 日期{% templatetag openbrace %}{{time|date:"Y"}}\\{{time|date:"F"}}}
+作者{% templatetag openbrace %}{{author}}\\\ 參考{% templatetag openbrace %}郵箱：//{{author|urlencode|md2tex}}% 20<{{email}}>}{% templatetag openbrace %}{{email}}}}
+
+定理 %、Lemma 等
+定理風格{% templatetag openbrace %}平原
+新定理{% templatetag openbrace %}定理{% templatetag openbrace %}定理
+新定理{% templatetag openbrace %}角膜 [ 定理 ]{% templatetag openbrace %}科羅拉里
+新定理{% templatetag openbrace %}lemma} 定理{% templatetag openbrace %}Lemma}
+新定理{% templatetag openbrace %}索賠{% templatetag openbrace %}索賠 }[ 定理 ]
+新定理{% templatetag openbrace %}新浪微博{% templatetag openbrace %}官方微信
+新定理{% templatetag openbrace %}形容詞 }[ 定理 ]{% templatetag openbrace %}形容詞 }
+新定理{% templatetag openbrace %}事實 }[ 定理 ]{% templatetag openbrace %}事實資料
+新定理{% templatetag openbrace %}假設 } 定理{% templatetag openbrace %}假設 }
+新定理{% templatetag openbrace %}假設 }[ 定理 ]{% templatetag openbrace %}假設 }
+新定理{% templatetag openbrace %}提案 }[ 定理 ]{% templatetag openbrace %}提議 }
+新定理{% templatetag openbrace %}標準 }[ 定理 ]{% templatetag openbrace %}條件 }
+定理風格{% templatetag openbrace %}定義
+新定理{% templatetag openbrace %}定義 [ 定理 ]{% templatetag openbrace %}定義
+新定理{% templatetag openbrace %}範例 }[theorem]{% templatetag openbrace %}範例
+新定理{% templatetag openbrace %}註記 }[ 定理 ]{% templatetag openbrace %}備註
+新定理{% templatetag openbrace %}問題 }[ 定理 ]{% templatetag openbrace %}問題 }
+新定理{% templatetag openbrace %}原理 }[ 定理 ]{% templatetag openbrace %}原則
+
+\ 開始{% templatetag openbrace %}文件
+繁體中文
+
+{{content|md2tex}}
+
+\doclicenseThis
+頁分隔
+繁體中文
+
+\end{% templatetag openbrace %}文件

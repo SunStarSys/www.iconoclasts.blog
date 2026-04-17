@@ -29,4 +29,4 @@ Detta fortsatte till den grad att vi nu befinner oss på det stadium då de fles
 Förändringen i dynamiken är häpnadsväckande. Nuförtiden sponsrar företag helt enkelt Open Source-projekt och stiftelser så att dessa projekt och stiftelser kan skapa lösningar som de nu måste köpa. De betalar i princip för privilegiet att behöva köpa programvara och lösningar. I stället för öppen källkod tillåter företag att hantera sitt eget öde, är det utnyttjas för att göra dessa företag mer skåda till leverantörer och leverantörer.
 
 Och allt detta beror på att vi glömde hur viktigt sant samhälle var, som exemplifieras av den frivilliga bidragsgivaren.
-<!-- $Date: 2024-11-26 08:19:37 -0700 (Tue, 26 Nov 2024) $ $Author: jimjag $ $Revision: 25444 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

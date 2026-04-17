@@ -59,4 +59,4 @@ Por suerte, finalmente pude poner en mis manos el nombre de dominio historic.ly,
 También espero terminar mi libro en el que he estado trabajando durante los últimos años: "Una historia del pueblo de la Unión Soviética".
 
 Lo más importante es que deseo a todos un feliz año nuevo.
-<!-- $Date: 2026-03-22 12:56:17 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29899 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

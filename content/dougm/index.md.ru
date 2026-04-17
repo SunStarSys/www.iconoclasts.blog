@@ -12,4 +12,4 @@ title: Мой блог
 
 Скоро!
 
-<!-- $Date: 2024-02-21 04:10:42 +0000 (Wed, 21 Feb 2024) $ $Author: joe $ $Revision: 17513 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

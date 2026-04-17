@@ -55,4 +55,4 @@ Conjunto de funciones totalmente operativo.
 	- PID de dos niveles + LWPID
 
 
-<!-- $Date: 2023-01-19 22:58:40 +0000 (Thu, 19 Jan 2023) $ $Author: joe $ -->
+<!-- $Date$ $Author$ -->

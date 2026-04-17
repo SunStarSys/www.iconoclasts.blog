@@ -180,4 +180,4 @@ DM_*\mu(\Omega_t[\gamma])
 \end{aligned}
 ```
 
-<!-- $Date: 2024-04-12 16:58:35 +0000 (Fri, 12 Apr 2024) $ $Author: joe $ $Revision: 22121 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

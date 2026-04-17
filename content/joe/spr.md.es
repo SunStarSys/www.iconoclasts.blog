@@ -34,4 +34,4 @@ También hay una especialización considerable en términos de herramientas de o
 
 Un software sólido, seguro, escalable, rentable y de buen rendimiento está al alcance de cualquier equipo de ingeniería pequeño o mediano con las inversiones adecuadas en **SPR**. [Ponte en contacto](/contact).
 
-<!-- $Date: 2024-05-09 16:45:20 -0400 (Thu, 09 May 2024) $ $Author: joe $ $Revision: 24957 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

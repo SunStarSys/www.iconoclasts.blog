@@ -508,4 +508,4 @@ que explota en $$0$$, como se esperaba, si también tomamos $$\kappa(0) = 0$$. A
 Esto significa que los operadores de evolución son'Solo importa la ecuación estacionaria de Schrodinger.
 - el camino de la formulación integral explota debido a la `-1` firma de la métrica lorenziana en la intrínseca `hora` dirección. $$\det{g}$$ es negativo, y la transformación de Fourier  en cada grupo cotangente'La fibra s también es infinita en esa dirección, a menos que utilicemos la continuación analítica (también conocida como rotación de mecha en la intrínseca). `hora`).
 
-<!-- $Date: 2026-03-14 15:24:59 -0700 (Sat, 14 Mar 2026) $ $Author: joe $ $Revision: 29029 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

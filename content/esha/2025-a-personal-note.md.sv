@@ -59,4 +59,4 @@ Lyckligtvis kunde jag äntligen få tag på domännamnet historic.ly, och jag ko
 Jag hoppas också att avsluta min bok som jag har arbetat med under de senaste åren: "Ett folks historia i Sovjetunionen."
 
 Och framför allt önskar jag alla ett gott nytt år.
-<!-- $Date: 2026-03-22 12:56:17 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29899 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

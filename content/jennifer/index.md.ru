@@ -14,4 +14,4 @@ title: Блог Дженнифер (частный)
 
 Теперь!
 
-<!-- $Date: 2026-03-10 16:34:18 -0700 (Tue, 10 Mar 2026) $ $Author: joe $ $Revision: 28478 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

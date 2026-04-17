@@ -12,4 +12,4 @@ title: Mi blog
 
 ¡Resolví el mayor misterio de todos los tiempos!
 
-<!-- $Date: 2026-03-19 15:28:42 -0700 (Thu, 19 Mar 2026) $ $Author: jhas5 $ $Revision: 29286 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

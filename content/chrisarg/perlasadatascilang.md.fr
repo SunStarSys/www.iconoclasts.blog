@@ -424,4 +424,4 @@ Le dernier article de la série Foundation ferme la boucle entre Perl et R :
 
 Lorsqu'un calcul touche à la mémoire selon un modèle prévisible et contigu, le *prefetcher* matériel peut charger les données à venir dans L1/L2 avant qu'elles ne soient nécessaires, ce qui permet d'atteindre un débit quasi maximal.  La recherche de pointeurs dispersés (par exemple, la traversée d'un tableau Perl de scalaires alloués par portion de mémoire) bat la pré-extraction, bloquant la CPU pendant qu'elle attend que chaque échec de cache soit résolu à partir de la RAM.
 
-<!-- $Date: 2026-04-16 16:45:10 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31803 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

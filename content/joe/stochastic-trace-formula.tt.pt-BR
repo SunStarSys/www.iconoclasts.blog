@@ -1,0 +1,65 @@
+\classe de documentos{% templatetag openbrace %}artigo}
+\usepackage[hidelinks]{% templatetag openbrace %}hiperref}
+\uspacote[type={% templatetag openbrace %}CC},modificador={% templatetag openbrace %}{{license}}},versão={% templatetag openbrace %}4.0}]{% templatetag openbrace %}doclicense
+\uspacote[margin=1in]{% templatetag openbrace %}geométrico
+
+\novo ambiente{% templatetag openbrace %}subproof}[1][\proofname]{% templatetag openbrace %}%
+  \comando de renovação{% templatetag openbrace %}\qedsymbol}{% templatetag openbrace %}$\blacksquare$}%
+    \início{% templatetag openbrace %}prova}[#1]%
+    }{% templatetag openbrace %}%
+    \end{% templatetag openbrace %}% de prova
+}
+
+% de Pacotes AMS
+
+\usempacotamento{% templatetag openbrace %}amsmath}
+\usempacotamento{% templatetag openbrace %}amsthm
+\usempacotamento{% templatetag openbrace %}amssymb}
+% de opções modernas e amigáveis com utf8 (totalmente incompatíveis com amscd):
+\PassOptionsToPackage{% templatetag openbrace %}parcial=upright}{% templatetag openbrace %}unicode-math}
+\usempacotamento{% templatetag openbrace %}fontsetup}
+\usempacotamento{% templatetag openbrace %}tikz-cd}
+
+\usepackage[style=alphabetic]{% templatetag openbrace %}biblatex}
+\addbibresource{% templatetag openbrace %}{{path|dirname}}/{{path|basename:0}}.bib.{{lang}}}
+% de macros de matemática e física úteis
+\usempacotamento{% templatetag openbrace %}braquete
+\usempacotamento{% templatetag openbrace %}física}
+% Unicode
+\uspacote[utf8]{% templatetag openbrace %}entrada
+
+% de Metadados
+\título{% templatetag openbrace %}{{headers.title|lower|capfirst}}}
+\data{% templatetag openbrace %}{{time|date:"Y"}}\\{{time|date:"F"}}}
+\autor{% templatetag openbrace %}{{author}}\\\href{% templatetag openbrace %}mailto://{{author|urlencode|md2tex}}\%20<{{email}}>}{% templatetag openbrace %}{{email}}}}
+
+% Teorema, Lemma, etc.
+\estilo de teoria{% templatetag openbrace %}sem formatação
+\newteorem{% templatetag openbrace %}teorema{% templatetag openbrace %}Teorema
+\newteorem{% templatetag openbrace %}corolário[teorema]{% templatetag openbrace %}Corolário
+\newteorem{% templatetag openbrace %}lemma}[teorema]{% templatetag openbrace %}Lemma}
+\newteorem{% templatetag openbrace %}retirada{% templatetag openbrace %}Claim}[teorema]
+\newteorem{% templatetag openbrace %}axiom}[teorema]{% templatetag openbrace %}Axioma
+\newteorem{% templatetag openbrace %}conjecture}[teorema]{% templatetag openbrace %}Conjecturas
+\newteorem{% templatetag openbrace %}fatos[teorema]{% templatetag openbrace %}Fato
+\newteorem{% templatetag openbrace %}hipótese}[teorema]{% templatetag openbrace %}Hipótese
+\newteorem{% templatetag openbrace %}suposição[teorema]{% templatetag openbrace %}Suposição}
+\newteorem{% templatetag openbrace %}proposição}[teorema]{% templatetag openbrace %}Proposição
+\newteorem{% templatetag openbrace %}critério}[teorema]{% templatetag openbrace %}Critério}
+\estilo de teoria{% templatetag openbrace %}definição
+\newteorem{% templatetag openbrace %}definição}[teorema]{% templatetag openbrace %}Definição}
+\newteorem{% templatetag openbrace %}exemplo}[teorema]{% templatetag openbrace %}Exemplo
+\newteorem{% templatetag openbrace %}nota}[teorema]{% templatetag openbrace %}Observação
+\newteorem{% templatetag openbrace %}problema}[teorema]{% templatetag openbrace %}Problema
+\newteorem{% templatetag openbrace %}principio}[teorema]{% templatetag openbrace %}Princípio
+
+\início{% templatetag openbrace %}documento}
+\mketitle
+
+{{content|md2tex}}
+
+\doclicenseThis
+\quebra de página
+\bibliografia de impressão
+
+\end{% templatetag openbrace %}documento}

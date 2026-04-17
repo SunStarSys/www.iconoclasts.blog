@@ -16,6 +16,6 @@ Como escribí sobre [otro lugar](/clients/apache), una de las mejores herramient
 
 Hay enfoques más sofisticados para estar seguro, como solo retrasar los mensajes de remitentes "no confiables", pero puedes ir mucho más lejos que eso si tu servidor tiene ese tipo de conocimiento disponible.  Pero en términos de golpe por el dinero, corriendo `maduro`
 
-<!-- $Date: 2023-01-29 20:02:19 +0000 (Sun, 29 Jan 2023) $ $Author: joe $ $Revision: 12483 $ -->
+<!-- $Date$ $Author$ $Revision$ -->
 
 @joe=

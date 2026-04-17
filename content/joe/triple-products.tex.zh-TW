@@ -1,0 +1,352 @@
+\ 文件類別 {article}
+\usepackage[hidelinks]{hyperref}
+\usepackage[type={CC},modifier={by-nc-nd},version={4.0}]{doclicense}
+中文 (繁體)
+\usepackage[scr=rsfs]{mathalpha}
+
+\usepackage[margin=1in]{geometry}
+
+\newenvironment{subproof}[1][\proofname]{%
+  \renewcommand{\qedsymbol}{$\blacksquare$}%
+  \ 開始 { 校樣 }[#1]%
+}{%
+  \end{proof}%
+}
+
+AMS 套件百分比
+中文 (繁體)
+中文 (繁體)
+繁體中文 (香港).
+
+% 現代化，utf8 友善
+PassOptionsToPackage{partial=upright}{unicode-math}
+繁體中文 (香港)
+繁體中文 (香港).
+
+\usepackage[style=alphabetic]{biblatex}
+\addbibresource{content/joe/triple-products.bib.en}
+
+% 有用的數學物理巨集
+繁體中文 (香港)
+中文 (繁體).
+
+中繼資料百分比
+\t 標題 { 特徵函數與光譜幾何圖形的三重產品 }
+\date{2026\\February}
+\author{Joe Schaefer\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
+
+定理 %、Lemma 等
+定理樣式 {plain}
+\ 新定理 { 定理 }{ 定理
+新定理 {corollary}[theorem]{Corollary}
+新定理 {lemma}[ 定理 ]{Lemma}
+\newtheorem{claim}{Claim}[theorem]
+新定理 {axiom}[ 定理 ]{Axiom}
+\newtheorem{conjecture}[theorem]{Conjecture}
+新定理 {fact}[ 定理 ]{Fact}
+新定理 {hypothesis}[theorem]{Hypothesis}
+新定理 {assumption}[ 定理 ]{ 假定 }
+\newtheorem{proposition}[theorem]{Proposition}
+新定理 { 準則 }[ 定理 ]{ 準則 }
+理論樣式 { 定義 }
+新定理 { 定義 }[ 定理 ]{ 定義 }
+新定理 {example}[theorem]{Example}
+新定理 {remark}[ 定理 ]{Remark}
+新定理 { 問題 }[ 定理 ]{ 問題 }
+新定理 { 原則 }[ 定理 ]{ 原則 }
+
+\ 開始 { 文件 }
+
+繁體中文
+
+\ 開始 {abstract}
+利用幾何分析、部分差分方程式和 Abelian $C^*$ Algebras 的基本技術，我們發現一個小說，但熟悉的全球幾何不變 -- 即 Laplace-Beltrami 運算子的特徵性三項產品組合的索引集，以精確地描述哪些空間封閉的 Riemannian 手法是幾何的。
+
+\noindent\textbf{Keywords：} 頻譜，傅立葉，調和，三重產品，拉普拉克語，特徵，功能，逆問題，表示理論
+\end{abstract}
+
+\ 目錄
+
+小節介紹
+\label{sec:intro}
+
+對於封閉的 Riemannian manifold $ (M，g) $，將其類別描述為非幾何，isospectral manifolds 是 Spectral Geometry 中的一種反向問題 \cite{DH11}。Naïvely 可能指定此類別永遠為空白。不過，學術文宣具有數十年歷史的計數器範例配對結構：從 1964 年開始，John Milnor 的 16 維度配對非幾何，isospectral Flat tori \cite{JM64}，並繼續 \cite{CS92} 至 Alexander Schiemann 的 1993 年博士論文 \cite{AS94} -- 完成電腦輔助搜尋關鍵的 $\dim = 3$ 案例。\cite{NRR22} 中會顯示完整平整 Tori 歷史記錄的現代化調查。
+
+在這種方式中，可以深入了解更複雜、非歐氏對稱的覆蓋空間；建構此類等同空間、非幾何「導管」，涉及非傳統曲率張量 (以及其在維度 2 \cite{MS67} 中決定的頻譜尤拉特徵)。此工作的主要範例為 Toshikazu Sunada 1985 \cite{TS85} 發明一般用途的涵蓋空間架構，然後部署在相同的工作中，以在維度 2 和 3 中建構雙曲管。
+
+對於不均勻的 Riemannian 度量，Carolyn Gordon 發現即使在當地也不是幾何 \cite{CG93} 的 duets。
+
+在許多相關區域 \cite{DH11} 中繼續工作，例如決定一般 isospectral、非幾何 manifold 類別 (空白 \cite{ST80}、有限 \cite{AS94}、剛性 \cite{GK80}} 及精簡 \cite{GZ97}) 的拓樸特性，作為 Riemannian 度量中不同 moduli 空間的子集。
+
+本文提供的內容是熟悉工具的新觀點：將特徵函數的配對產品索引為離散的「代數 / 主題不變量」，以補充現有、離散的「分析不變量」-- Laplace-Beltrami 運算子的非負數頻譜 (此處稱為 $\mathscr H = L^2 (M，g) $ 上的 (非負數) \textit{Laplacian})。結合後，我們觀察這兩對提供了一種「離散的全球幾何表現法」(isometry class of isospectral，close Riemannian manifolds)。
+
+\s 子區段 { 結果 }
+\label{subsec:res}
+
+開始 {theorem}
+標籤 {thm}
+
+由於 (非負數) 拉普拉西亞人 $\Delta_M$ 的特徵函數 $\set{e^i}_{i=0}^{\infty}$ (非負數) 正規基準與已結的里曼尼亞人手 $ (M，g) $ 相關聯，請定義
+
+\begin{equation}
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
+\end{equation}
+
+若要幾何為 $ (M，g) $，則另一個 isospectral close Riemannian manifold 是必要且足夠的條件，可保留相關特徵並擁有不變的 $\set{M^{i，j，k}}$。
+人才招聘
+
+\textit{Symmetry} 在可計算的案例 \cite{TF17} \cite{LS18} \cite{PS94} 中扮演重要角色，其在下方的 Flat tori Example~\ref{sec:ex} 中已詳細說明。不過，在少數里曼尼對稱的情況下，我們的方法實力可能最為明顯，這兩種情況通常與特徵相符 (例如，沒有非基本的多重性)。在此情況下，我們提供以下服務：
+
+\ 開始 {conjecture}
+標籤 {conj}
+如果每個特徵值都具有多重性 $1$，假設有一對特徵值保留理論假設中所述的正規基準，則只有當 $\set{M^{i，j，k}}$ 同意一個基準時，且個別條款中最多為絕對值時，該特徵值才會是幾何。
+繁體中文
+
+在 Vertex Operator Algebra \cite{FBZ04} 與「正式」欄位理論相關聯的定義中，研究 $\set{M^{i，j，k}}$ 的動機大致上是從研究雙線性乘法運算子 $Y:V\otimes V\rightarrow V ( (z)) $ 的角色所衍生。$V$ 是美國的向量空間，而 $V ( (z)) $ 是 $z$ 的正式 Laurent 系列空間，係數為 $V$。由於 $V$ 通常是採用傳統 Fourier 系列正規基準的 Hilbert Space，因此使用 $V$ 的 Fourier 基礎要素來編製 $Y$ 的索引，僅比此處所研究的 $M^{i，j，k}$ 個案稍微增加，但精神上相當類似。不過，詳細比較超出了本文的範圍。
+
+如果我們考慮地圖
+\begin{equation}
+(M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
+\end{equation}
+
+本白皮書為封閉的里曼尼亞人機組 (最多只能在其域內使用里曼尼亞人) 建立此地圖的注射性。在測量結果的精選模數空間內，套用這些技術來描述其影像 (和反向) 的進一步結果剛剛開始使用 \cite{AA25。Anshul Adve 嚴謹地利用「Conformal Field Theory」中的相同 \textit{structure constants} 來處理精簡、雙曲折疊的單位正切空間。
+
+這些結果是在 1997 年 \textbf{MSRI} 的作者進行類似標題的談話期間首次進行示範，但首次以已發布的形式出現在這裡。
+
+小節 {Preliminaries}
+標籤 {sec:pre}
+
+現在以 $M，g，e^i，M^{i，j，k}$ 作為 Theorem~\ref{thm} 的假設，$f \in C^\infty (M) $ 與 $i \geq 0$ 請注意，\textit{Fourier coefficients}
+
+\begin{equation}
+\label{eqn:Fourier}
+\ 開始 {aligned}
+\hat{f} (i) &amp;:= \int_M f (x) \bar{e^i} (x) \sqrt{g (x) }dx \\
+\implies \\
+f (x)          &amp;= \sum_{i=0}^{\infty}\hat{f} (i) e^i (x) \,
+\end{aligned}
+\end{equation}
+
+由於 $f$ 的快速轉換是 \textit{Fourier Series} ($\Delta_M$ 特定的 Sobolev Embeddings 金紗夢婚禮 \cite{MT13} \cite{RS75}，連同 Weyl 的 Asymptotic Law \cite{HW11}，這表示其總和中的字詞為 $o (i^{-n}) $，並以 $x$ \cite{LH68}}，$\forall n\in\mathb{N}$ 統一表示)。然後我們看到，對於 $f_1，f_2 \in C^\infty (M) $，Pointwise 產品的傅立葉係數 $f_1 f_2 \in C^\infty (M) $ 為
+
+\begin{equation}
+\ 開始 {aligned}
+\widehat{f_1 f_2} (k) &amp;= \sum_{i,j}^\infty\hat{f_1} (i) \hat{f_2} (j) M^{i,j,k} \\
+\implies \\
+f_1f_2 (x) &amp;= \sum_{i,j,k}\hat{f_1} (i) \hat{f_2} (j) M^{i,j,k}e^k (x) \\
+f_1 &amp;= f^p_2,\, p > 2 \implies \\
+\sum_{k}\hat{f_1} (k) e^k (x) &amp;= \sum_{i_1,i_2,\ldots,i_{2p-1}}\hat{f_2} (i_1) \hat{f_2} (i_2) \hat{f_2} (i_4) \hat {f_2} (i_6) \ldots\hat{f_2} (i_{2p-2}) M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}\ldots M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}} (x)
+\end{aligned}
+\end{equation}
+
+因此，在批評上，任何多變量多項式 $\wp \in \mathbb{C}[z_1，\ldots，z_l]$ (在平滑函數上) 會與任何保留 $\Delta$-eigenfunction 正規基礎對應 $\vec{F}$ (保留 $\set{M^{i，j，k}}$)：
+
+\begin{equation}
+標籤 {fig}
+開始 {tikzcd}
+  經常 ^\infty (M，\space\mathbb{C}^l) \arrow[swap]{d}{\underbrace{\vec{F}\oplus\dots\oplus \vec{F}}_{l\，\text{times}}} \arrow{r}{\wp} &amp; C^\infty (M) \arrow{d}{\vec{F}}\\%
+  C^\infty (N,\space\mathbb{C}^l) \arrow{r}{\wp} &amp; C^\infty (N)
+繁體中文 (香港)
+\end{equation}
+
+此外，如果 $A\subset M$ 為 Borel-measurable，則除了 $A$ 的界限以外，每個地方 $A$ 特性函數的上述保留點結果：如果 $f = f^2$ 且 $A：=\set{x\in M|f (x) =1}$，
+
+\begin{equation}
+\sum_{i}\hat{f} (i) e^i (x) = \sum_{i,j,k}\hat{f} (i) \hat{f} (j) M^{i,j,k}e^k (x) = \begin{cases}
+1 &amp; x \in \mathring{A} \\
+\mathring{A^\complement}\end{cases}\ 中的 0 和 x \，
+\end{equation}
+
+本公司擁有以下身份及唯一性：
+
+\begin{equation}
+\ 開始 {aligned}
+\hat{f} (k) &amp;= \sum_{i,j}\hat{f} (i) \hat{f} (j) M^{i,j,k}\,\, \forall k\geq 0 \\
+\iff f&amp;=f^2 \，即
+\end{aligned}
+\end{equation}
+
+這意謂著上述任何基準圖都會將特性函數 (以 $L^2 (M，g) \ 子集 L^1 (M，g) $ 的成員形式) 帶入測量保留的特性函數。
+
+這些計算的重點是強調 $\set{M^{i，j，k}}$ 在 $C^\infty (M) $ 上對點乘法運算子的調和分析，$ 是由 Stone-Weierstrass 定理所組成的 Abelian $C^*$ algebra $C (M) $ 密集代數。
+
+為了快速融合上述金額與 $M^{i，j，k}$ 有關，請注意特徵功能的產品很平滑，因此這些傅立葉係數會如上所示 (在每個索引中)。如需詳細資訊，請參閱 Emmett Wyman 在 2022 年與這些係數相關，因為它與特徵值上的三角形不等式 \cite{EW22}。
+
+注意：我們可能總是假設
+
+\begin{equation}
+\ 開始 {aligned}
+e^0 &amp;= M^{0,0,0} = 1/\sqrt{vol (M) } \\
+\implies \\
+M^{0,j,k} &amp;= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol (M) }\,
+\end{aligned}
+\end{equation}
+
+其中 $\delta_i$ 是 Kronecker 差異。由於 $vol (M) $ 是光譜不變量 \cite{HW11}，因此 isospectrality 考量已經提供這項資訊。
+
+\section{Proof of Theorem~\ref{thm}}
+標籤 {sec:proof}
+
+\begin{proof}
+若有必要，請讓 $F：(N，h) \rightarrow (M，g) $ 變成封閉式里曼尼亞摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊式摺疊開始日期
+
+\begin{equation}
+\ 開始 {aligned}
+M^{i,j,k} &amp;= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
+          &amp;= \int_N e^i (F (x)) e^j (F (x)) \bar{e^k} (F (x)) \sqrt{h}dx\,
+\end{aligned}
+\end{equation}
+
+因為 $\Delta_N (f\circ F) = (\Delta_M f) \circ F，\ \\ forall f\in C^\infty (M) $，所以完成了必要的引數。
+
+為了提高效率，我們現在考慮了線性、生物目標正交函數基準圖 $\vec{F}$ 從 $C^\infty (M) $ 到 $C^\infty (N) $，並請注意，從上面的 Section~\ref{sec:pre} 計算，$\vec{F}$ 會保留順暢功能的點狀產品 (且在 $L^2 (M，g) $) 時保留特性函數，$\set{M^{i，j，k}}$ 在此對應下不變。
+
+\ 開始 {lemma}
+\label{lma}
+$\vec{F}：^\infty (M) \rightarrow C^\infty (N) $ 會保留統一的標準。
+繁體中文
+
+開始 {subproof}[Lemma~\ref{lma}] 的證明
+讓 $\set{a_i}$ 成為 $M$ 上的單位平滑分割。
+
+\begin{equation}
+\ 開始 {aligned}
+1 &amp;= \sum_i a_i (x) \\
+       &amp;= \sum_{i,j} \hat{a_i} (j) e^j (x) \\
+	   &amp;= \sum_j e^j (x) \sum_i \hat{a_i} (j)
+\end{aligned}
+\end{equation}
+
+因此 $\sum_i\hat{a_i} (j) = \delta_j\sqrt{vol (M) }$ (Kronecker delta)。
+
+由主導的收斂定理，
+\begin{equation}
+\lim_{p\rightarrow\infty}
+\sum_j\hat{a^p_j} (k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k} (x) \sqrt{g}dx\,
+\end{equation}
+
+這是每個不合一子集 $\set{x\in M | a_j (x) = 1}$ 之正計量的特性函數。這表示每個 $a_j$ 都會證明 Lemma，因為系統會保留具有正計量之集合的限制特性函數，因此其標準均為 1，如所有 $a_j^p，\，\vec{F} (a_j^p) =\vec{F} (a_j) ^p，\，p\in\mathbb{N}$，依 Diagram~\ref{fig}。
+
+若未遺失一般性，我們可能會套用單位 $\lbrace|f|/\lVert f \rVert_\infty，1 - |f|/\lVert f\rVert_\infty\rbrace$ 的平滑分割區所顯示的特殊案例結果，其中 $ \set{x\in M|\space|f (x) | = \lVert f \rVert_\infty}$ 有正數的計量，且已完全證明 Lemma。
+
+\end{subproof}
+
+由於 $\set {\bar e^i}$ 也是 $L^2 (M，g) $ 的傅立葉基準，因此從 Equation~\ref{eqn:Fourier} 清除，$\vec F (\bar f) = \bar{\vec F} (f) $。這表示在密集的一組 $C (M) $ (和 $C (N) $) 上，我們已建立 $\vec{F}$ 作為 Abelian $C^*$ 代數的同形，因此可以延伸至相同類別中的 $C (M) $ 與 $C (N) $ 同形。
+
+現在，我們應用 Gelfand-Naimark 代表定理 (相反的監護人形式) 來代表單元 Abelian $C^*$ algebras \cite{JC19}，以 $N$ 與 $M$ 之間的同型 $F$ 來代表此同型 $\vec{F}$。由於 $\vec{F}$ 對平滑功能有偏差，$F$ 也必須平滑。
+
+由於現在不同型會保留特徵值和特徵值 (透過對 $\vec{F} (f) = f \circ F$ 的假設)，因此必須將 Laplacian 保留在平滑函數上。因此，$F$ 也必須保留這些相同橢圓運算子 \cite{MT13} 的主要符號。拉普拉克人的主要標誌只是對有問題的人物展現出里曼尼亞人標準的另一種方式。
+
+這完成了理論的證明。
+
+\end{proof}
+
+\subsection{Discussion of Conjecture~\ref{conj}}
+\label{subsec:conj}
+
+$\set{M_0^{i，j，k}}$ 與 $\set{M_1^{i，j，k}}$ 代表基準 $\set{e_0^i}$ 與 $\set{e_1^i}$ 的兩個三重產品集 {e_1^i}$，讓 $z_i \in \set{-1,1}$ 成為 $\mathbb{Z}_2^\infty$ 動作，此 $\mathbb{R}$ 值的正規基準 $\set{e_1^i}$。因此，我們需要選擇 $z_i$，才能讓 $\set{z_ie_1^i}$ 良品率 $\set{M_1^{i，j，k}} = \set{z_i z_j z_kM_0^{i，j，k}}$。
+
+為什麼要這樣做？一般而言，對稱群組是以可能之特徵函數正規基礎的空間為單位運算子 $U 的空間：\mathscr H\rightarrow\mathscr H$，與投影 $P_{\mathcal V_\lambda}$ 往有限維度 eigenspaces $\mathcal V_{\lambda}$ 與 Laplacian 的每個個別特徵值 $\lambda$ 相關聯。因此
+
+\begin{equation}
+\ 開始 {aligned}
+P_{\mathcal V_{\lambda}}U (e^i) = UP_{\mathcal V_{\lambda}} (e^i) ,\ \therefore U (e^i) &amp;= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implings \\
+M_U^{i,j,k} := \int_M U (e^i) U (e^j) \bar U (\bar e^k) \sqrt g dx &amp;= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
+\end{aligned}
+\end{equation}
+
+是 $M^{i，j，k}$ 在 $U$ 的基礎動作 $e^i \mapsto U (e^i) $ 下的影像。
+
+在形容詞的條件下，每個 $\mathcal V_\lambda$ 都是一個維度向量空間，超過 $\mathbb{C}$，但這也表示它們是超過 $\mathbb{R}$ 的一個維度向量空間，因此整個乘法對稱群組是 $O (1，\mathbb{R}) ^\infty=\mathbb{Z}_2^\infty$。
+
+如果沒有多重性限制條件，形容詞的相關先決條件「以絕對值監理協議」，因此當被視為從 $\mathcal V_{\lambda_i} \rightarrow Hom (\mathcal V_{\lambda_j}，\mathcal V_{\lambda_k}^*) $ 中，當被視為從 $\mathcal V_{\lambda_i} \rightarrow Hom (\mathcal V_{\lambda_j}，\mathcal V_{\lambda_k}^*) $ 集合時，會變成「保留順序的單一值集 {M^{，j，k}}$」。它指出，這是一套合理健全的「單身不變量」。我們對這種廣義的形容詞有極大的信心，因為可能可以通過明確的 Sunada 建築來產生一個反範例。
+
+回到原始的形容詞，我們觀察到證明涉及建立此意涵：
+
+\begin{equation}
+標籤 {fml}
+z_k = M_0^{i，i，k} / M_1^{i，i，k} \，\，\forall i，k\in\mathbb{N}，\，   ⁇   M_0^{i，i，k} \ne 0 \，\implies
+\mathbb{N}\   ⁇   \frac{M_0^{i，j，k}}{M_1^{i，j，k}} = \frac{M_0^{r，r，i}M_0^{s，s，j}M_0^{t，t，k}}{M_1^{r，r，i}M_1^{s，s，j}M_1^{t，k}}\，存在於 \mathbb{N}\。
+\end{equation}
+
+我們可能會希望對於任何指定的 $k$，對於所有 $i$，$M_0^{i，i，k}$ 不能是 $0$。如果 $M$ 有 "even/odd" 對稱群組，且 $e^k$ 為奇數，則這似乎不可能，但對於下方的均一案例 (不符合統一的特徵值多重性 = 1 條件)，則希望保留真。此外，$z_k$ 的 Formula~\ref{fml} 需要 $i$-independence 和 sufficiency 兩者，才能建立基礎對應 $e_0^i \mapsto z_i e_1^i$ 會保留 $\set{M_0^{i，j，k}}$。這些方面都保持不明。
+
+然而，讓我們計算一些相關的身分，讓未來一些研究者可以挖掘到這個形容詞：
+
+\begin{equation}
+\ 開始 {aligned}
+\Delta fg &amp;= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
+M^{i,j,k} &amp;= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
+\ 文本 { 現在由極化 }\\
+M^{i,j,k} &amp;= \frac{\bra{ (e^i+e^j) ^2 - (e^i - e^j) ^2}\ket{e^k}}{4} = \frac{M^{i,i,k} + M^{j,j,k} - \bra{ (e^i-e^j) ^2}\ket{e^k}}{2},\\
+\text {and so quadratic form} \\
+Q_k (f,g) :&amp;= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f} (i) \hat{g} (j) \bra{de^i\cdot de^j}\ket{e^k} \\
+&amp;= \frac{1}{2}\sum_{i，j}hat{f} (i) \hat{g} (j)  (\lambda_i + \lambda_j - \lambda_k) M^{i，j，k}。\\
+\text{Now with}\, J\, \text{real-analytic}\\
+Q^J_k (f,g) :&amp;= -\frac{1}{2}\bra{ (J (\sqrt{\Delta}) fg - fJ (\sqrt{\Delta}) g - gJ (\sqrt{\Delta}) f}\ket{e^k} \\
+&amp;= -\frac{1}{2} (\bra{fg}\ket{J (\sqrt{\Delta}) e^k} - \bra{fJ (\sqrt{\Delta}) g + gJ (\sqrt{\Delta}) f}\ket{e^k}) \\
+&amp;= \frac{1}{2}\sum_{i,j}hat{f} (i) \hat{g} (j)  (J (\sqrt{\lambda_i}) + J (\sqrt{\lambda_j}) - J (\sqrt{\lambda_k}) M^{i,j,k}\\
+波狀符號 {Q}_k (f，g)：&amp;= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
+&amp;= \frac{1}{2}\sum_{i,j} \hat{f} (i) \hat{g} (j)  (\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k}) M^{i,j,k}\\
+df \c 點 dg &amp;= \sum_k Q_k (f，g) e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
+Q_0 (f,f) &amp;= \frac{1}{\sqrt{vol (M) }}\sum_i \hat{f} (i) ^2 \lambda_i\\
+df\c 點 df = \sum_kQ_k (f，f) e^k &amp;= \frac{1}{2}\sum_{i，j，k}\hat{f} (i) \hat{f} (j)  (\lambda_i + \lambda_j -\lambda_k) M^{i，j，k}e^k\\
+&amp;= \frac{1}{4}\sum_{i,j,k}hat{f} (i) \hat{f} (j)  (\lambda_i + \lambda_j -\lambda_k)  (M^{i,i,k} + M^{j,j,k} - \bra{ (e^i-e^j) ^2}\ket{e^k}) e^k\\\
+ = g^2 &amp;= \sum_{i,j,k}\hat{g} (i) \hat{g} (j) M^{i,j,k}e^k \implies\\
+ \frac{1}{2}\sum_{i,j}hat{f} (i) \hat{f} (j)  (\lambda_i + \lambda_j - \lambda_k) M^{i,j,k} &amp;= \sum_{i,j}hat{g} (i) \hat{g} (j) M^{i,j,k} \\
+&amp;= \widehat{g^2} (k) . \\
+\end{aligned}
+\end{equation}
+
+注意：對於下方的一維純文森案例，$\tilde{Q}_k (e^i，e^j) = 0$，因為 $\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$ 為真衍生。
+
+\ 區段 { 範例 }
+標籤 {sec:ex}
+
+讓 $\set{\lambda_i} \ 子集 \mathbb{R}^n$ 成為索引，以 $\mathfrak{g}=\mathbb{R}^n$ 的商數空間表示的 Lie Algebra 加權等級 $n$ 晶格作為其本身的轉譯不變量 (亦即常數) 向量欄位，當 $\mathbb{R}^n$ 也被視為 $\mathfrak{g}$ 的相關 Lie Group，其範圍由 $\mathbb{R}^n/A\mathbb{Z}^n 所定義，\in GL (n，\mathbb{R}) $。這些權重定義了與線性函數 $\bra{x} \lambda_i\rangle，\，x\in\mathbb{R}^n$ 整合的 torus 上可整合的 1 式舉升 (涵蓋 torus)。接著，這些線性函數可以統一重新調整 (以 $2\pi \sqrt{-1}$) 並指數，以形成一個非正常基準為 $L^2 (\mathbb{R}^n/A\mathbb{Z}^n，dx) $ 的倍數字元，並採用 Lebesgue (Haar) 計量 $dx$。
+
+此外，此基準會同時對角線的拉普拉西亞語，因為拉普拉西亞語是對稱、負明確二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次三次二次二次二次二次二次二次二次二次二次二次二次三次二次二次二次二次二次三次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次三次二次二次二次二次二次二次二次二次二次二次二次二次二次二次三次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次三次二次二次二次二次二次三次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次三次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次三次二次二次三次二次二次二次三次二次二次二次二次三次三次三次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次三次三次三次三次二次二次二次三次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次三次二次二次二次二次二次二次二次二次二次二次三次三次三次三次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次三次二次二次三次二次二次二次二次二次二次二次三次二次二次二次二次二次二次二次三次三次三次三次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次二次三次三次二次二次三次二次二次二次二次二次二次二次二次二次二次二因此，其特徵值與晶格中每個字元權重的 Casimir-element-determined-length-squared 比例 ($4\pi^2$) 相同。
+
+我們目前檢視上述基準
+
+\begin{equation}
+\{e^{2\pi\sqrt{-1}\bra{x}\lambda_i\rangle}/\sqrt{|\det A|}\}_{i=0}^\infty
+\end{equation}
+
+直接對應至 $\set{\lambda_i}$ 的正規 (複數字元) 特徵 (此為負數表示法) 的理論適用傅立葉基準。根據我們的理論假設，我們必須要有 $i < j \implies \lVert\lambda_i\rVert\leq \lVert\lambda_j\rVert$ (with the Euclidean norm on the weights).
+
+現在我們可以運算
+
+\begin{equation}
+\label{eqn:a}
+M^{i,j,k} = \begin{cases}
+1/\sqrt{|\det A|} &amp; \lambda_i + \lambda_j - \lambda_k = 0 \\
+0 &amp; \text{otherwise}
+繁體中文
+\end{equation}
+
+由於此 Equation~\ref{eqn:a} 僅在加權格子 $ (A^{-1}) 的線性轉換下不變 ^t\mathbb{Z}^n = \set{\lambda_i}$，只有 $L^2$ 正規特徵基準圖，從保留在兩個索引的可逆線性圖中引發，等級 $n$ 加權格子會保留 "algebraic/topological" 索引資料集 $\set{M^{i，j，k}}$ 不變。
+
+不過，為了套用 Theorem~\ref{thm}，在加權格上如此基本的線性對映 $B$\in SO (n，\mathbb{R}) $ 為 $B，因為引發的 $L^2$ 特徵基準對映
+
+\begin{equation}
+\{e^{2\pi\sqrt{-1}\bra{x}B\lambda_i\rangle}/\sqrt{|\det A|}\}_{i=0}^\infty
+\end{equation}
+
+也必須保留「分析」不變量 -- Casimir-element 為每個索引加權產生的數字 $4\pi^2\lVert\lambda_i\rVert^2$，亦即，Flat-tori 的 Laplacian 的個別特徵值。
+
+此表示法 - 理論帳戶 \cite{AK01} 完全等同於先前的 \textit{lattice congruence} \cite{NRR22} 傳統上用於劃分扁平 Tori 的幾何類別。事實上，這類線性對映 $B 的矩陣 \in SO (n，\mathbb{R}) $，如前段所述，\textbf{is} tori 之間有不變的 Riemannian 幾何，由
+\textit{Gelfand-Naimark Representation Theorem} 在 Theorem~\ref{thm} 證明期間的應用。
+
+\ 第 {Acknowledgements} 段
+最初的研究是由 1995-1996 年的傑出詹姆斯·西蒙斯研究獎以及阿爾弗雷德·普爾的支持所資助。Sloan Dissertation Fellowship 1996-1997 在 Stony Brook 的大學。
+
+作者也要感謝 Tanya Christiansen、Carolyn Gordon、Hamid Hezari、Harish Seshadri，特別是 Leon Takhtajan 以尋求技術協助，並檢閱本手稿的準備以進行出版。
+
+\doclicenseThis
+
+頁分隔
+
+繁體中文
+
+\end{ 文件 }

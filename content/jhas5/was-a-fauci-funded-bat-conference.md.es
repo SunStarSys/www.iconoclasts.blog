@@ -27,4 +27,4 @@ La investigación de la ganancia de función (GoF) nunca se detuvo, como un func
 
 Los NIH de Fauci levantaron la pausa de GoF la semana anterior a la Navidad de 2017, cuando todos salían de Washington DC. El burócrata de 50 años sabía cómo explotar un cambio en la administración presidencial. Este fue un período sin líderes en el que el secretario del HHS (jefe de NIH, FDA, CDC) renunció en septiembre de 2017, pero antes de que su reemplazo fuera confirmado y jurado en enero de 2018. Fauci incluso discutió las sillas musicales de HHS (2:00). Esto ocurrió durante un período de dos años sin un director de la Casa Blanca OSTP.
 
-<!-- $Date: 2026-03-26 08:32:09 -0700 (Thu, 26 Mar 2026) $ $Author: joe $ $Revision: 30227 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

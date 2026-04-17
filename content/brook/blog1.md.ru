@@ -14,4 +14,4 @@ title: Прошло время ходить в магазин
 
 {# lede #} Это тизер; {# lede #}
 
-<!-- $Date: 2024-04-24 02:26:45 +0000 (Wed, 24 Apr 2024) $ $Author: joe $ $Revision: 23823 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

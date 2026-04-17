@@ -29,4 +29,4 @@ La singularidad da como resultado que el artículo de Anshul dependa en gran med
 
 #### Reproducido y reenviado a SSRN el 20 de octubre de 2025
 
-<!-- $Date: 2025-10-19 19:08:09 -0700 (Sun, 19 Oct 2025) $ $Author: joe $ $Revision: 27113 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

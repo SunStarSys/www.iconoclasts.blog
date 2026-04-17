@@ -31,4 +31,4 @@ Cada `$vdt` class-method-call a continuaci√≥n se realiza en tiempo de compilaci√
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
 
 
-<!-- $Date: 2024-04-17 15:47:19 +0000 (Wed, 17 Apr 2024) $ $Author: joe $ $Revision: 22360 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

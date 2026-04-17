@@ -49,4 +49,4 @@ title: メーリングリスト
 
 IfYouHave'時代に遅れず、最近の動きがあり、強く紹介します[DMARC](http://en.wikipedia.org/wiki/DMARC) 失敗するメッセージを拒否するポリシー[DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) 署名テストFacebook、Twitter、LinkedIn、Yahoo!、そして現在、AOLは、この料金を新しい領域に導いており、メーリングリストのオペレータがこの状況に対処することを余儀なくされている。内容`ezmlm-dmarc-filter.pl` やる、これは'問題の唯一の可能な解決策は、`DKIM署名` そのようなドメインのヘッダーを追加し、`。無効` 送信者への接尾辞's `開始` ヘッダー・アドレス。それは最もシンプルなソリューションの一つであることの利点を持っているので、私は'ここで提供します。これまでのところ、strictをデプロイするドメイン`DMARC` ポリシーはすべて適切`返信先` これらの変更を加えたヘッダー`ezmlm-dmarc-filter.pl` このようなメッセージに対するRFC準拠の電子メール・レスポンスの操作には影響しません。
 
-$Date: 2023-01-19 15:58:40 -0700 (木、2023年1月19日) $
+$Date$

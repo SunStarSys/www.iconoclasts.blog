@@ -27,4 +27,4 @@ Gain-of-Function (GoF) forskning slutade aldrig, som en anonym långvarig NIH-tj
 
 Fauci's NIH lyfte pausen på GoF veckan före jul 2017, då alla lämnade Washington DC. Den 50-åriga byråkraten visste hur man skulle utnyttja en presidentadministrationsförändring. Detta var en ledarfri tidsperiod när HHS-sekreteraren (chef för NIH, FDA, CDC) avgick i september 2017, men innan hans ersättare bekräftades och svor i januari 2018. Fauci diskuterade även de musikaliska stolarna i HHS (2:00). Detta skedde under en tvåårsperiod utan en Vita husets OSTP-direktör.
 
-<!-- $Date: 2026-03-26 08:32:09 -0700 (Thu, 26 Mar 2026) $ $Author: joe $ $Revision: 30227 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

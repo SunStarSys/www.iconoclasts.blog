@@ -424,4 +424,4 @@ El último post de la serie de fundación cierra el bucle entre Perl y R:
 
 Cuando un cálculo toca la memoria en un patrón predecible y contiguo, el hardware *prefetcher* puede cargar los próximos datos en L1/L2 antes de que sea necesario, logrando un rendimiento casi máximo.  La búsqueda de punteros dispersos (como recorrer una matriz Perl de escalares asignados a pilas) derrota la recuperación previa, deteniendo la CPU mientras espera a que cada falta de caché se resuelva desde RAM.
 
-<!-- $Date: 2026-04-16 16:45:10 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31803 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

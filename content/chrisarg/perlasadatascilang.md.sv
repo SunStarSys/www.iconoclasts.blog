@@ -424,4 +424,4 @@ Det sista inlägget i grundserien stänger slingan mellan Perl och R:
 
 När en beräkning berör minnet i ett förutsägbart, sammanhängande mönster kan maskinvaran *prefetcher* ladda kommande data till L1/L2 innan det behövs, vilket ger ett nästan högt dataflöde.  Spridd pekarsökning (t.ex. genom att korsa en Perl-matris med heap-allokerade skalärer) besegrar förhämtning, stoppar processorn medan den väntar på att varje cache-miss ska lösas från RAM.
 
-<!-- $Date: 2026-04-16 16:45:10 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31803 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

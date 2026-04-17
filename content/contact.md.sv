@@ -21,6 +21,6 @@ title: Kontakta oss
 
 - [+1 âª(305) 859-1630â¬](tel://1.305.859.1630/).
 
-<!-- $Date: 2024-04-26 17:40:11 -0400 (Fri, 26 Apr 2024) $ $Author: joe $ $Revision: 24320 $ -->
+<!-- $Date$ $Author$ $Revision$ -->
 
 <div style="height:800px">&nbsp;</div>

@@ -13,4 +13,4 @@ Vad det gör är att aktivera meddelanden på din bärbara dator som berättar n
 
 Du kan visa din lista över tillgängliga meddelanden genom att skriva "meddela=" i sökfältet längst upp till höger i navigeringsfältet.
 
-<!-- $Date: 2026-03-20 07:55:03 -0700 (Fri, 20 Mar 2026) $ $Author: joe $ -->
+<!-- $Date$ $Author$ -->

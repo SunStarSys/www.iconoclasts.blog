@@ -1,0 +1,12 @@
+---
+archived: ~
+categories: Apache, Orion, Prestanda, Perl
+dependencies: '*.md.sv'
+keywords: skärm,htop,solaris,oci, observerbarhet
+published: ~
+status: skiss
+title: Glädjen i htop
+---
+
+
+{% ssi `/joe/joy-of-htop.md.en` %}

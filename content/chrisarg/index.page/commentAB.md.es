@@ -13,4 +13,4 @@ Lo que hace es activar las notificaciones en su computadora portátil que le ind
 
 Puede ver la lista de notificaciones disponibles escribiendo "notificar=" en la barra de búsqueda en la parte superior derecha de la barra de navegación.
 
-<!-- $Date: 2026-03-20 07:55:03 -0700 (Fri, 20 Mar 2026) $ $Author: joe $ -->
+<!-- $Date$ $Author$ -->

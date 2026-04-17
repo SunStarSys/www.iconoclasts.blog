@@ -13,4 +13,4 @@ title: Главная Декор Блог Запись
 
 {# lede #}Люби это!{# lede #}
 
-<!-- $Date: 2026-03-10 17:06:11 -0700 (Tue, 10 Mar 2026) $ $Author: joe $ $Revision: 28485 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

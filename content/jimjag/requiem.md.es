@@ -29,4 +29,4 @@ Esto continuó hasta el punto de que ahora estamos en la etapa en que la mayorí
 El cambio en la dinámica es increíble. Hoy en día, las empresas simplemente patrocinan proyectos y fundaciones de código abierto para que estos proyectos y fundaciones puedan crear soluciones que ahora tienen que comprar. Básicamente están pagando por el privilegio de tener que comprar software y soluciones. En lugar de que el código abierto permita a las empresas gestionar su propio destino, se está usurpando para hacer que esas empresas estén más atentas a los proveedores.
 
 Y todo esto se debe a que olvidamos lo importante que era la verdadera comunidad, como lo ejemplifica el colaborador voluntario.
-<!-- $Date: 2024-11-26 08:19:37 -0700 (Tue, 26 Nov 2024) $ $Author: jimjag $ $Revision: 25444 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

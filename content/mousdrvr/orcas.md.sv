@@ -18,4 +18,4 @@ title: Korkar
 
 Saker går här...
 
-<!-- $Date: 2025-09-02 17:57:41 -0700 (Tue, 02 Sep 2025) $ $Author: joe $ $Revision: 26750 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

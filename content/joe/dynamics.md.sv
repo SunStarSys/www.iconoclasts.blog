@@ -508,4 +508,4 @@ som blåser upp vid $$0$$Som förväntat, om vi också $$\kappa(0) = 0$$. och so
 Det innebär att utvecklingsaktörer'Det är bara den stationära Schrodinger-ekvationen som spelar roll.
 - vägen integrerad formulering blåser upp på grund av `-1` Signatur av Lorenzian metriska i den inneboende `tid` riktning. $$\det{g}$$ är negativ, och Fourier Transform på varje cotangent-bundle'fiber är också oändlig i den riktningen, om vi inte använder analytisk fortsättning (aka Wick Rotation på den inneboende `tid`).
 
-<!-- $Date: 2026-03-14 15:24:59 -0700 (Sat, 14 Mar 2026) $ $Author: joe $ $Revision: 29029 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

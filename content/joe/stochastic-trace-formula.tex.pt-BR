@@ -1,0 +1,176 @@
+\documentclass{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage[type={CC},modifier={by-nc-nd},version={4.0}]{doclicense}
+\usepackage[margin=1in]{geometry}
+
+\newenvironment{subproof}[1][\proofname]{%
+  \renewcommand{\qedsymbol}{$\blacksquare$}%
+    \início{prova}[#1]%
+    }{%
+    \end{proof}%
+}
+
+% de Pacotes AMS
+
+\uspacote{amsmath}
+\usempacotamento{amsthm}
+\uspacote{amssymb}
+% de opções modernas e amigáveis com utf8 (totalmente incompatíveis com amscd):
+\PassOptionsToPackage{partial=upright}{unicode-math}
+\uspacote{fontsetup}
+\uspacote{tikz-cd}
+
+\usepackage[style=alphabetic]{biblatex}
+\addbibresource{/content/joe/stochastic-trace-formula.bib.en}
+% de macros de matemática e física úteis
+\uspacote{braket}
+\usepackage{physics}
+% Unicode
+\usepackage[utf8]{inputenc}
+
+% de Metadados
+\título{Fórmula de rastreamento estocástico para manifolds fechados e curvos negativamente}
+\date{2024\\May}
+\autor{Joe Schaefer\\\href{mailto://Joe\%20Schaefer\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
+
+% Teorema, Lemma, etc.
+\theoremstyle{plain}
+\novo teorema{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}{Claim}[theorem]
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{criterion}[theorem]{Criterion}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{principle}[theorem]{Principle}
+
+\início{document}
+\mketitle
+
+\tabela de conteúdos
+
+Minha \textit{1997 Ph.D. tese} como entrada de blog.
+
+\section{Existe apenas uma medida Wiener n-Dimensional}
+
+\secção{Piecewise Linear Approximations to Brownian Motion}
+
+\secção{The Development Map DM}
+
+\secção{A Fórmula Cameron-Martin}
+
+\section{Heat Kernels as Radon-Nicodym Derivatives of Weiner Measure}
+
+\secção{Notation}
+
+$M$ é um manifold Riemannian fechado com a métrica $g$, a conexão métrica $\nabla$ e o operador Laplace-Beltrami $\Delta_M$ (não negativo) com curva negativa $\dim=n$.  Deixe $k_{-t\Delta/2}(x,y)$ representar o kernel de calor em $M$.
+
+Daí $k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$ é a derivada Radon-Nicodym da Medida de Wiener n-dimensional $\mu$, restrita ao pull-back do espaço de loop contínuo $\Omega_t(M)\vert_x$, através do inverso do mapa de desenvolvimento de preservação de medida Weiner $DM$. *Observação:* $DM^{-1}\Omega_t\vert_x$ não é um espaço de loop.
+
+$\Omega_t^0$ é o espaço de loops contratáveis contínuos em $M$.
+
+$\Omega_t[\gamma]$ é o espaço de loops contínuos em $M$ homotópico para a geodésica fechada $\gamma$. Deixe $\gamma_0$ ser seu loop primitivo.
+
+$DM^{-1}\Omega_t^0[\gamma]$ é a pré-imagem de loops contratáveis contínuos em $M$ gravados como deslocamentos homotópicos para $\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$. Pense em coordenadas horocíclicas -- cada fibra como o limite geométrico de esferas geodésicas periódicas $S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$, vetorizadas no pacote normal acima de $\gamma_0$. Nossas restrições de curvatura implicam que as Coordenadas Horocíclicas para cada $\gamma_0$ existem como um mapa de coordenadas suave e compatível com $DM$ para $\Omega_t^0[\gamma]$.
+
+Agora $\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$ é o ponto final \textit{undeveloped} do "offset" \textit{kinked geodesic} homotópico para $\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$. A curva é periódica com o período $\ell(\gamma_0)$, e revisita seu ponto de partida torcido $DM(\vec{x}(\tau))$ no momento $t$, tornando o cálculo de sua derivada a termo $J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$ tratável como um automorfismo linear de $T_{DM(\vec{x}(\tau))}M$. É importante ressaltar que $J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$ pode ser construído usando \textbf{Jacobi Fields}, já que $DM$ \textbf{is} o mapa exponencial (iterado) ao longo de qualquer série de linhas retas conectadas em $\mathbb{R}^n$. Estudaremos $ 1/2 \int_0^t \bra{dX}\ket{dX}_s$, com a solução
+
+\início{equation}
+\início{alinhado}
+X_t &amp;= X_0 + \int_0^t \sqrt{J}_{X_t} dB_t  \\
+\end{aligned}
+\end{equation}
+
+$Z_{-\Delta/2}(t):= \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$ é o traço do kernel de calor.
+
+Finalmente, vamos definir o seguinte a partir de seus derivados Radon-Nicodym:
+
+\início{equation}
+\início{alinhado}
+DM_*\mu(\Omega_t) &amp;:= \int_M DM_*\mu(\Omega_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega^0_t) &amp;:= \int_M DM_*\mu(\Omega^0_t\vert_x \sqrt{g}dx)\\
+DM_*\mu(\Omega_t[\gamma]) &amp;:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx) \\
+\end{aligned}
+\end{equation}
+
+\secção{Fórmula de Rastreamento Estocástico}
+
+\início{equation}
+\início{alinhado}
+Z_{-\Delta/2}(t) = DM_*\mu(\Omega_t) &amp;= DM_*\mu(\Omega^0_t) + \sum_{\set{\gamma}} DM_*\mu(\Omega_t[\gamma]) \\
+DM_*\mu(\Omega_t^0) &amp;\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M K(x)\sqrt{g} dx + O(t^2))\espaço \small\text{by McKean-Singer}\\
+DM_*\mu(\Omega_t[\gamma]) &amp;= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
+&amp;= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
+\frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}}&amp;\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau),\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\small \text{ limite semi-clássico}\\
+\text{Coordenadas horizontocíclicas}: z(\tau) - x(\tau) &amp;= x + \ell(\gamma)\vec{e}^1\implies\\
+\int_{M/S^1\oplus S^1}k_t(x,z) dx &amp;=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\bra{J_{X^j_t}\vec{x}}\ket{\vec{x}}})\\
+&amp;=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_{M^j/S^1\oplus S^1}\frac{1}{\sqrt{2\pi t}^{jn}\det|I-J_{X^j}|}e^{-\ell(X^j)^2/2t}X^{j}\\
+\end{aligned}
+\end{equation}
+
+\secção{Approximation and the Selberg Trace Formula}
+
+Na caixa de superfície $\dim = 2$ curvatura constante $-\kappa^2$,
+
+\início{equation}
+\início{alinhado}
+\sqrt{J_{\vec{x}, \vec{y}}}dRB&amp;=
+\início{pmatrix}
+e^{\kappa d(\vec{x},\vec{y})/2} &amp;&amp; 0\\
+0 &amp;&amp; e^{-\kappa d(\vec{x},\vec{y})/2}\\
+\end{pmatrix}
+\implica&amp;\\
+\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} &amp;= e^{\kappa \ell(B)}dRB_1^2 - e^{-\kappa \ell(B)}dRB_2^2\\
+\int_0^t \bra{\sqrt{ J}dB}\ket{\sqrt{ J}dB} &amp;= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
+\det I-J_{\gamma} &amp;= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
+\end{aligned}
+\end{equation}
+
+que é constante sobre $(\vec{x},\tau)$, de modo que a linha de $\approx_{t\rightarrow 0}$ aproximada em Equação (2) se torna \textit{exact}:
+
+\início{equation}
+\início{alinhado}
+DM_*\mu(\Omega_t[\gamma]) &amp;= \frac{e^{-\ell(\gama)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gama)/2} -e^{-\kappa\ell(\gamma)/2})}\\\
+\gamma(t) = \gamma_0(kt)\implica \\
+&amp;=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+\end{aligned}
+\end{equation}
+
+No caso de manifold hiperbólico $\dim=3$, usamos coordenadas complexas $(z,\bar{z})$ no bundle normal para gravação
+
+\início{equation}
+\início{alinhado}
+J_{DM(\vec{x}+(\tau+\ell(\gamma))\vec{e}^1)} &amp;=
+\início{pmatrix}
+e^{\kappa\ell(\gamma)} &amp;&amp; 0 &amp;&amp; 0\\
+0 &amp;&amp; e^{-\kappa\ell(\gamma)+i\theta(\gamma)} &amp;&amp; 0 \\
+0 &amp;&amp; 0 &amp;&amp; e^{-\kappa\ell(\gamma)-i\theta(\gamma)} \\
+\end{pmatrix}\\
+\implica&amp; \\
+\det I-{\perp_{\gamma_0}}^k &amp;= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
+\end{aligned}
+\end{equation}
+e uma vez que $z=x^2+ix^3 \implica d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$, a aproximação em Equação (2) torna-se novamente exata:
+
+\início{equation}
+\início{alinhado}
+\kappa &amp;= 1 \implica \\
+DM_*\mu(\Omega_t[\gamma])
+&amp;=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t (1-e^{-k\ell(\gamma_0)})}|e^{k\ell(\gamma_0)/2}-e^{-k(\ell(\gamma_0)/2-i\theta(\gamma_0))}|}\\
+\end{aligned}
+\end{equation}
+
+\doclicenseThis
+\quebra de página
+\bibliografia de impressão
+
+\end{document}
