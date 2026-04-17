@@ -1,34 +1,35 @@
-<h3>Anmelden für kostenlosen Blog</h3>
+<div style="text-align:{% ifequal lang ".he" %}right{% else %}{% ifequal lang ".ar" %}right{% else %}left{% endifequal %}{% endifequal%}">
+<h3>Registrieren Sie sich für einen kostenlosen Blog</h3>
 <br>
-<form action="/dynamic/enquiry" class="form" method="POST">
+<form method="POST" action="/dynamic/enquiry" class="form">
 
 <label for="name">Ihr Name</label>
-  <input class="form-control" id="name" name="name" required />
+  <input name="name" id="name" class="form-control" required />
 
-<label for="email">E-Mail-Adresse</label>
-  <input class="form-control" id="email" name="email" required type="email" />
+<label for="email">Ihre E-Mail Adresse</label>
+  <input type="email" name="email" id="email" class="form-control" required />
 
-<label for="username">Bevorzugter Benutzername</label>
-  <input class="form-control" id="username" name="username" pattern="^\w+$" required />
+<label for="username">Name des bevorzugten Benutzers</label>
+  <input pattern="^\w+$" name="username" id="username" class="form-control" required />
 
-<label>Bevorzugter Organisationsplan</label>
-  <input checked id="planFB" name="plan" type="radio" value="Free Blog" /> &nbsp; <label for="planFB">Kostenloser Blog</label>
+<label>Bevorzugter Orion-Plan</label>
+  <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Freier Blog</label>
 
 <label for="subject">Betreff</label>
-  <input class="form-control" id="subject" name="subject" pattern="Orion.*" required value="Orion Blog" />
+  <input name="subject" id="subject" class="form-control" value="Orion Blog" pattern="Orion.*" required />
 
-<input name="lang" type="hidden" value="{{ lang }}" />
-  <button class="btn btn-outline-success" name="submit" value="1">Weiterleiten</button>
+<input type="hidden" name="lang" value="{{ lang }}" />
+  <button name="submit" class="btn btn-outline-success" value=1 >Weiterleiten</button>
 
 <br><br>
 
 <label for="editor">Nachricht für Onboarding</label>
 
-<div id="editor-content">
+<div id="editor-content" class="{% ifequal lang ".he" %}rtl{% else %}{% ifequal lang ".ar" %}rtl{% else %}ltr{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>
-
+</div>
 <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
 
 <script type="text/javascript">

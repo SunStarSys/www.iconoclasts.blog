@@ -1,34 +1,35 @@
-<h3>Regístrese en el blog gratuito</h3>
+<div style="text-align:{% ifequal lang ".he" %}right{% else %}{% ifequal lang ".ar" %}right{% else %}left{% endifequal %}{% endifequal%}">
+<h3>Suscríbete al blog gratis</h3>
 <br>
-<form action="/dynamic/enquiry" class="form" method="POST">
+<form method="POST" action="/dynamic/enquiry" class="form">
 
 <label for="name">Su nombre</label>
-  <input class="form-control" id="name" name="name" required />
+  <input name="name" id="name" class="form-control" required />
 
 <label for="email">Su dirección de correo electrónico</label>
-  <input class="form-control" id="email" name="email" required type="email" />
+  <input type="email" name="email" id="email" class="form-control" required />
 
 <label for="username">Nombre de usuario preferido</label>
-  <input class="form-control" id="username" name="username" pattern="^\w+$" required />
+  <input pattern="^\w+$" name="username" id="username" class="form-control" required />
 
-<label>Plan de Orión preferido</label>
-  <input checked id="planFB" name="plan" type="radio" value="Free Blog" /> &nbsp; <label for="planFB">Blog gratuito</label>
+<label>Plan de organización preferido</label>
+  <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Blog gratuito</label>
 
 <label for="subject">Asunto</label>
-  <input class="form-control" id="subject" name="subject" pattern="Orion.*" required value="Orion Blog" />
+  <input name="subject" id="subject" class="form-control" value="Orion Blog" pattern="Orion.*" required />
 
-<input name="lang" type="hidden" value="{{ lang }}" />
-  <button class="btn btn-outline-success" name="submit" value="1">Enviar</button>
+<input type="hidden" name="lang" value="{{ lang }}" />
+  <button name="submit" class="btn btn-outline-success" value=1 >Enviar</button>
 
 <br><br>
 
 <label for="editor">Mensaje para vinculación</label>
 
-<div id="editor-content">
+<div id="editor-content" class="{% ifequal lang ".he" %}rtl{% else %}{% ifequal lang ".ar" %}rtl{% else %}ltr{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>
-
+</div>
 <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
 
 <script type="text/javascript">

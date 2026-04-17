@@ -1,3 +1,4 @@
+<div style="text-align:{% ifequal lang ".he" %}right{% else %}{% ifequal lang ".ar" %}right{% else %}left{% endifequal %}{% endifequal%}">
 <h3>無料ブログに登録する</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -24,11 +25,11 @@
 
 <label for="editor">オンボーディングのメッセージ</label>
 
-<div id="editor-content">
+<div id="editor-content" class="{% ifequal lang ".he" %}rtl{% else %}{% ifequal lang ".ar" %}rtl{% else %}ltr{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>
-
+</div>
 <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
 
 <script type="text/javascript">

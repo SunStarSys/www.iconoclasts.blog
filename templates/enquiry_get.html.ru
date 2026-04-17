@@ -1,34 +1,35 @@
-<h3>Зарегистрируйтесь в бесплатном блоге</h3>
+<div style="text-align:{% ifequal lang ".he" %}right{% else %}{% ifequal lang ".ar" %}right{% else %}left{% endifequal %}{% endifequal%}">
+<h3>Подписаться на бесплатный блог</h3>
 <br>
-<form action="/dynamic/enquiry" class="form" method="POST">
+<form method="POST" action="/dynamic/enquiry" class="form">
 
 <label for="name">Ваше имя</label>
-  <input class="form-control" id="name" name="name" required />
+  <input name="name" id="name" class="form-control" required />
 
 <label for="email">Ваш адрес электронной почты</label>
-  <input class="form-control" id="email" name="email" required type="email" />
+  <input type="email" name="email" id="email" class="form-control" required />
 
-<label for="username">Предпочтительное имя пользователя</label>
-  <input class="form-control" id="username" name="username" pattern="^\w+$" required />
+<label for="username">Имя предпочтительного пользователя</label>
+  <input pattern="^\w+$" name="username" id="username" class="form-control" required />
 
-<label>Предпочтительный план ориона</label>
-  <input checked id="planFB" name="plan" type="radio" value="Free Blog" /> &nbsp; <label for="planFB">Бесплатный блог</label>
+<label>Предпочтительный план ориентации</label>
+  <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Бесплатный блог</label>
 
 <label for="subject">Тема</label>
-  <input class="form-control" id="subject" name="subject" pattern="Orion.*" required value="Orion Blog" />
+  <input name="subject" id="subject" class="form-control" value="Orion Blog" pattern="Orion.*" required />
 
-<input name="lang" type="hidden" value="{{ lang }}" />
-  <button class="btn btn-outline-success" name="submit" value="1">Отправить</button>
+<input type="hidden" name="lang" value="{{ lang }}" />
+  <button name="submit" class="btn btn-outline-success" value=1 >Отправить</button>
 
 <br><br>
 
-<label for="editor">Сообщение для адаптации</label>
+<label for="editor">Сообщение для приема и адаптации</label>
 
-<div id="editor-content">
+<div id="editor-content" class="{% ifequal lang ".he" %}rtl{% else %}{% ifequal lang ".ar" %}rtl{% else %}ltr{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>
-
+</div>
 <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
 
 <script type="text/javascript">
