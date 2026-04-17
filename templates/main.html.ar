@@ -58,7 +58,7 @@
 
 <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">المزيد... <span class="caret"></span></a>
-            <ul class="dropdown-menu me-auto mb-2 mb-lg-0" aria-labelledby="more">
+            <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu" aria-labelledby="more">
               <li class="dropdown-item">
                 <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/{{website}}/trunk/">مصدر الموقع</a>
               </li>
@@ -108,7 +108,7 @@
 {% endblock %}
 
 <style type="text/css">
-{% ifequal lang ".he" %} .right {float:left}{% endifequal %}{% ifequal lang ".ar" %}.right {float:left}{% endifequal %}
+{% ifequal lang ".he" %} .right {float:left !important; text-align: right !important}{% endifequal %}{% ifequal lang ".ar" %}.right {float:left !important; text-align: right !important}{% endifequal %}
 {% ifequal lang ".he" %} div.breadcrumbs {float:left}{% endifequal %}{% ifequal lang ".ar" %}div.breadcrumbs {float:left}{% endifequal %}
 </style>
 
