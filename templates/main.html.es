@@ -70,7 +70,8 @@
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Francés</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Ruso</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Chino</a></li>
-          <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">Coreano</a></li>
+            <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">Coreano</a></li>
+             <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja">Japonés</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebreo</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">Árabe</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Sueco</a></li>

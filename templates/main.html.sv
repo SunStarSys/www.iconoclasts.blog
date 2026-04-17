@@ -70,7 +70,8 @@
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Franska</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Ryska</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">kinesiska</a></li>
-          <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">Koreanska</a></li>
+            <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">Koreanska</a></li>
+             <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja">Japanska</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebreiska</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">arabiska</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Svenska</a></li>
