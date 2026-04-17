@@ -1,0 +1,11 @@
+---
+categories: Apache, Perl
+dependencies: '*.md.en'
+important: commentAA
+keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
+status: verified=29072
+title: Apache HTTPd Devs Considered Harmful
+
+---
+
+{% ssi `/joe/apache-considered-harmful.md.en` %}
