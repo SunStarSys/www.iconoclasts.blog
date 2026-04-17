@@ -100,6 +100,7 @@ Denna webbplats är värd på Orion. Checka ut  [Orion](https://www.sunstarsys.c
 - [Ryska](sitemap.html.ru)
 - [kinesiska](sitemap.html.zh-TW)
 - [Koreanska](sitemap.html.ko)
+- [Japanska](sitemap.html.ja)
 - [Hebreiska](sitemap.html.he)
 - [arabiska](sitemap.html.ar)
 - [Svenska](sitemap.html.sv)

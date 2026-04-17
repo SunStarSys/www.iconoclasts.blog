@@ -100,6 +100,7 @@ title: Для иконоборцев,
 - [Русский](sitemap.html.ru)
 - [Китайский](sitemap.html.zh-TW)
 - [Корейский](sitemap.html.ko)
+- [Японский](sitemap.html.ja)
 - [Иврит](sitemap.html.he)
 - [Арабский](sitemap.html.ar)
 - [шведский](sitemap.html.sv)

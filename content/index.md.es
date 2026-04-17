@@ -100,6 +100,7 @@ Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com
 - [Ruso](sitemap.html.ru)
 - [Chino](sitemap.html.zh-TW)
 - [Coreano](sitemap.html.ko)
+- [Japonés](sitemap.html.ja)
 - [Hebreo](sitemap.html.he)
 - [Árabe](sitemap.html.ar)
 - [Sueco](sitemap.html.sv)
