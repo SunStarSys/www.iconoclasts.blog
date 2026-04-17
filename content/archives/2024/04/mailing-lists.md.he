@@ -1,0 +1,9 @@
+---
+archived: ~
+dependencies: '*.md.he'
+keywords: ezmlm-idx,BATV,DMARC,SRS
+published: ~
+title: רשימות דיוור
+
+---
+{% ssi `/joe/mailing-lists.md.he` %}

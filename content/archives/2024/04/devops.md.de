@@ -1,0 +1,9 @@
+---
+archived: ~
+dependencies: '*.md.de'
+keywords: Devops
+published: ~
+title: Die Bewegung DevOps
+
+---
+{% ssi `/joe/devops.md.de` %}

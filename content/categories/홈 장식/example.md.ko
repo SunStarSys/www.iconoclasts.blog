@@ -1,0 +1,13 @@
+---
+acl: jennifer=rw, *=
+archived: ~
+categories: 홈 장식
+dependencies: '*.md.ko'
+keywords: ~
+published: ~
+status: 초안
+title: 홈 장식 블로그 항목
+
+---
+
+{% ssi `/jennifer/example.md.ko` %}

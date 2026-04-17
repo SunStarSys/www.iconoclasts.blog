@@ -1,0 +1,9 @@
+---
+archived: ~
+dependencies: '*.md.fr'
+keywords: ~
+published: ~
+title: Performances des applications
+
+---
+{% ssi `/joe/performance.md.fr` %}

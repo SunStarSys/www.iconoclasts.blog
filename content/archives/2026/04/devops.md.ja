@@ -1,0 +1,9 @@
+---
+archived: ~
+dependencies: '*.md.ja'
+keywords: デモ
+published: ~
+title: DevOps移動
+
+---
+{% ssi `/joe/devops.md.ja` %}

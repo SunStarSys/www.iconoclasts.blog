@@ -1,0 +1,9 @@
+---
+archived: ~
+dependencies: '*.md.ko'
+keywords: 개발자
+published: ~
+title: DevOps 이동
+
+---
+{% ssi `/joe/devops.md.ko` %}

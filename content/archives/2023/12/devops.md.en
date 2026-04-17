@@ -1,0 +1,7 @@
+---
+dependencies: '*.md.en'
+keywords: devops
+title: The DevOps Movement
+
+---
+{% ssi `/joe/devops.md.en` %}

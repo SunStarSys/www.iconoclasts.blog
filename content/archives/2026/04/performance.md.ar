@@ -1,0 +1,9 @@
+---
+archived: ~
+dependencies: '*.md.ar'
+keywords: ~
+published: ~
+title: أداء التطبيق
+
+---
+{% ssi `/joe/performance.md.ar` %}

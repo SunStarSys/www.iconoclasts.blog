@@ -1,0 +1,9 @@
+---
+archived: ~
+dependencies: '*.md.ko'
+keywords: ezmlm-idx, BATV, DMARC, SRS
+published: ~
+title: 메일링 리스트
+
+---
+{% ssi `/joe/mailing-lists.md.ko` %}
