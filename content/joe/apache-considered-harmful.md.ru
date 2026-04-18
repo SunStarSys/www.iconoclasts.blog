@@ -52,7 +52,7 @@ title: Apache HTTPd Devs Считается Вредным
 
 <div class="right">
 
-![Логотип Супермена](apache-considered-harmful.page/superman.jpg).
+![Логотип Супермена](apache-considered-harmful.page/superman.jpg)
 
 </div>
 

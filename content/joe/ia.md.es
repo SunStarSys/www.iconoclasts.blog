@@ -10,7 +10,7 @@ title: Arquitectura de la Información
 
 <div class="right">
 
-![Arquitectura de la Información](ia.page/ia.jpg).
+![Arquitectura de la Información](ia.page/ia.jpg)
 
 </div>
 

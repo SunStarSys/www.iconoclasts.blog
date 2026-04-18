@@ -52,7 +52,7 @@ Cuento largo, [comentaron la prueba](https://github.com/apache/apreq/commit/ee43
 
 <div class="right">
 
-![Logotipo de Superman](apache-considered-harmful.page/superman.jpg).
+![Logotipo de Superman](apache-considered-harmful.page/superman.jpg)
 
 </div>
 

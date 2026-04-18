@@ -10,7 +10,7 @@ title: Informationsarkitektur
 
 <div class="right">
 
-![Informationsarkitektur](ia.page/ia.jpg).
+![Informationsarkitektur](ia.page/ia.jpg)
 
 </div>
 

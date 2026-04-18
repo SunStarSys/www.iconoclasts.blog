@@ -52,7 +52,7 @@ Lång historia kort, [De kommenterade provet](https://github.com/apache/apreq/co
 
 <div class="right">
 
-![Superman logotyp](apache-considered-harmful.page/superman.jpg).
+![Superman logotyp](apache-considered-harmful.page/superman.jpg)
 
 </div>
 
