@@ -10,7 +10,7 @@ title: Perl5 데이터 과학 언어
 
 <div class="right">
 
-![데이터 과학](perlasadatascilang.page/datasci).
+![데이터 과학](perlasadatascilang.page/datasci)
 
 </div>
 
@@ -157,7 +157,7 @@ class Vector2D {
   }
   ```
 
-(`시험::작은` / `특징::Compat::시도` 5.34보다 오래된 펄을 타겟팅할 때만 필요합니다.).
+(`시험::작은` / `특징::Compat::시도` 5.34보다 오래된 펄을 타겟팅할 때만 필요합니다.)
 
 - **다중 값 `대상` loops** *(stable since 5.40)* — 위의 5.36 엔트리를 참조하십시오; 그들은이 릴리스에서 실험에서 안정적으로 졸업했습니다.
 
@@ -167,7 +167,7 @@ class Vector2D {
 
 - **`v5.40 사용` 내장 함수 임포트** — 기능 번들을 사용으로 설정하는 것 이상으로, `v5.40 사용` 또한 해당 `내장` 버전 번들, 모두 안정화 `기능::` 별도의 이름 없이 짧은 이름으로 사용할 수 있는 함수 `내장 사용` 명령문
 
-#### 오랜 기능(5.36 이전).
+#### 오랜 기능(5.36 이전)
 
 - **`말하다` 및 `상태`** *(5.10 이후)* — `말하다` 다음과 같음 `인쇄` 암시적 줄바꿈으로; `상태` 닫는 하위의 호출에 걸쳐 지속되는 렉시칼을 선언합니다(경량 메모화 기본 데이터).
 
@@ -332,7 +332,7 @@ PDL에는 *잘못된 값*(`PDL::나쁜`), R에 직접 유사'초 `해당 사항 
 
 따라서 Perl+PDL 조합은 R이 통계 언어로 제공하는 것과 Perl이 시스템 언어로 제공하는 것의 *union*을 제공합니다 - 더 가파른 학습 곡선의 비용과 덜 즉시 사용 가능한 통계적 툴링.
 
-그러나 Perl+PDL+R의 조합(후자는 구성요소로 사용됨) [도구화됨](https://chrisarg.github.io/Killing-It-with-PERL/2025/01/18/Timing-Peak-DRAM-Use-In-R-With-Perl-Part-1.html) Perl을 통해).
+그러나 Perl+PDL+R의 조합(후자는 구성요소로 사용됨) [도구화됨](https://chrisarg.github.io/Killing-It-with-PERL/2025/01/18/Timing-Peak-DRAM-Use-In-R-With-Perl-Part-1.html) Perl을 통해)
 
 ---
 

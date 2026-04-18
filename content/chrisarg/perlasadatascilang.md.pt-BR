@@ -10,7 +10,7 @@ title: Perl5 como uma Linguagem do Serviço Data Science
 
 <div class="right">
 
-![Ciência de Dados](perlasadatascilang.page/datasci).
+![Ciência de Dados](perlasadatascilang.page/datasci)
 
 </div>
 
@@ -157,7 +157,7 @@ class Vector2D {
   }
   ```
 
-(`Experimente::Tiny` / `Característica::Compat::Try` são necessários apenas quando a segmentação perls for superior a 5,34.).
+(`Experimente::Tiny` / `Característica::Compat::Try` são necessários apenas quando a segmentação perls for superior a 5,34.)
 
 - **Vários valores `para` loops** *(estável desde 5.40)* — ver 5.36 entrada acima; eles se graduaram de experimental para estável nesta versão.
 
@@ -167,7 +167,7 @@ class Vector2D {
 
 - **`usar v5.40` importa funções incorporadas** — além de habilitar o pacote de recursos, `usar v5.40` também importa o correspondente `incorporado` pacote de versão, tornando tudo estável `Construído::` funções disponíveis como nomes curtos sem `usar incorporado` instrução.
 
-#### Características de longa data (pré-5.36).
+#### Características de longa data (pré-5.36)
 
 - **`dizer` e `estado`**(desde 5.10)* — `dizer` é `marca` com uma nova linha implícita; `estado` declara um lexical que persiste através de invocações de seu sub delimitador (um primitivo de memorização leve).
 
@@ -332,7 +332,7 @@ A tabela abaixo mapeia cada tipo R comumente usado para suas contrapartes Perl e
 
 - A combinação Perl+PDL, portanto, fornece a *união* do que R oferece como uma linguagem estatística e o que Perl oferece como uma linguagem de sistemas - ao custo de uma curva de aprendizagem mais íngreme e ferramentas estatísticas menos prontas para uso.
 
-No entanto, a combinação de Perl+PDL+R (com o último usado como um componente, ou [instrumentalizado](https://chrisarg.github.io/Killing-It-with-PERL/2025/01/18/Timing-Peak-DRAM-Use-In-R-With-Perl-Part-1.html) via Perl).
+No entanto, a combinação de Perl+PDL+R (com o último usado como um componente, ou [instrumentalizado](https://chrisarg.github.io/Killing-It-with-PERL/2025/01/18/Timing-Peak-DRAM-Use-In-R-With-Perl-Part-1.html) via Perl)
 
 ---
 
@@ -391,7 +391,7 @@ O k-means completo requer todos os dados na memória para cada iteração.  Mini
 - Quantificação da deriva do centroide entre as variantes full e mini-batch.
 - Saída lado a lado com R's `MiniBatchKmeans` do `ClusterR` pacote.
 
-### Post 6 — Pesquisa de Índice de Arquivo Invertido (IVF).
+### Post 6 — Pesquisa de Índice de Arquivo Invertido (IVF)
 
 *Arquivo: `compare_ivf_search.pl`*
 

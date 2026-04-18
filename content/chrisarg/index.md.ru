@@ -10,7 +10,7 @@ title: Биты и кусочки
 
 <div class="right">
 
-![Верблюжья носка](index.page/camel).
+![Верблюжья носка](index.page/camel)
 
 </div>
 

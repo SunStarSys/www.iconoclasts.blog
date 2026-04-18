@@ -10,7 +10,7 @@ title: Perl5 som datavetenskapsspråk
 
 <div class="right">
 
-![Datavetenskap](perlasadatascilang.page/datasci).
+![Datavetenskap](perlasadatascilang.page/datasci)
 
 </div>
 
@@ -157,7 +157,7 @@ class Vector2D {
   }
   ```
 
-(`Försök::Tiny` / `Funktion::Compat::Försök` behövs endast vid målinriktning av perls äldre än 5,34.).
+(`Försök::Tiny` / `Funktion::Compat::Försök` behövs endast vid målinriktning av perls äldre än 5,34.)
 
 - **Multivärde `för` loopar** *(stabil sedan 5.40)* — se 5.36 posten ovan; de tog examen från experimentell till stabil i denna utgåva.
 
@@ -167,7 +167,7 @@ class Vector2D {
 
 - **`Använd v5.40` importerar inbyggda funktioner** – utöver att aktivera funktionspaketet `Använd v5.40` importerar även motsvarande `inbyggd` versionspaket, vilket gör alla stabila `inbyggd:` Funktioner tillgängliga som kortnamn utan separat `använd inbyggd` sats.
 
-#### Långvariga funktioner (före 5.36).
+#### Långvariga funktioner (före 5.36)
 
 - **`säga` och `delstat`** *(sedan 5.10)* — `säga` är `trycka` med en implicit ny linje; `delstat` förklarar en lexikal som kvarstår över anrop av dess omslutande sub (en lätt primitiv memoar).
 
@@ -332,7 +332,7 @@ Tabellen nedan kartlägger varje vanlig R-typ till sina närmaste Perl- och PDL-
 
 - Kombinationen av Perl+PDL ger därför *union* av vad R erbjuder som ett statistiskt språk och vad Perl erbjuder som ett systemspråk - på bekostnad av en brantare inlärningskurva och mindre out-of-the-box och uppriktigt sagt begränsad statistisk verktyg.
 
-Kombinationen av Perl+PDL+R (med den senare som komponent, eller [instrumentaliserad](https://chrisarg.github.io/Killing-It-with-PERL/2025/01/18/Timing-Peak-DRAM-Use-In-R-With-Perl-Part-1.html) via Perl).
+Kombinationen av Perl+PDL+R (med den senare som komponent, eller [instrumentaliserad](https://chrisarg.github.io/Killing-It-with-PERL/2025/01/18/Timing-Peak-DRAM-Use-In-R-With-Perl-Part-1.html) via Perl)
 
 ---
 
@@ -391,7 +391,7 @@ Full k-means kräver alla data i minnet för varje iteration.  Mini-batch k-mede
 - Kvantifiera centroid drift mellan full och mini-batch varianter.
 - Utgång sida vid sida med R's `MiniBatchKmeans` från `ClusterR` paket.
 
-### Inlägg 6 — Sökning efter index för inverterad fil (IVF).
+### Inlägg 6 — Sökning efter index för inverterad fil (IVF)
 
 *Fil: `compare_ivf_search.pl`*
 
