@@ -4,66 +4,32 @@ categories: Orión
 dependencies: '*.md.es'
 keywords: wiki, conocimiento, kms, orion, subversión
 published: ~
-status: verificado=30121
+status: verificado=30911
 title: Wikis en Sistemas de Gestión del Conocimiento
 ---
 
-<div class="right">
-<a href="https://www.sunstarsys.com/orion/features">
+<div class="right">&mdash;<a href="https://www.sunstarsys.com/orion/features">
 
 ![Orión](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
 
-</a>
-</div>
-
+</a></div>
 ```mermaid
-mindmap
-  root((KMS))
-    (Wiki Platforms)
-      ((Orion))
-	  [Confluence]
-	  [Notion]
-    (Version Control)
-	  [Uses]
-        Content Curation
-        Access Controls
-        Immutable History
-      [Tools]
-	    Git
-		Subversion
-    (Jamstack)
-      [CMS]
-        Authors
-		Researchers
-		Curators
-      [Site Builds]
-	    Developers
-		Architects
-	  [Security]
-    (AI)
-     RAG
-     CLI
-```
+mapa mental  raíz((KMS))    (Plataformas Wiki)      ((Orión))      [Confluencia]      [Noción]    (Control de versiones)      [Usos]        Curación de contenido        Controles de acceso        Historial inmutable      [Herramientas]        Git        Subversión    (Jamstack)      [CMS]        Autores        Investigadores        Curadores      [Compilaciones del sitio]        Desarrolladores        Arquitectos      [Seguridad]    (AI)     RAG     CLI```
 
 [TOC]
 
------
-## Sistemas de gestión del conocimiento
+-----## Sistemas de gestión del conocimiento
 
 Imagina si cada brillante visión, solución alternativa al cliente, lección aprendida e idea a medio terminar que tu equipo haya tenido… no desapareciera en hilos Slack, buzones de correo electrónico u páginas olvidadas de Notion.
 
 Un sistema de gestión del conocimiento es el único cerebro de su empresa:
 
-- Captura el conocimiento automáticamente mientras las personas trabajan (sin trabajo extra ocupado)
-- Entiende el contexto y conecta las ideas relacionadas a través de documentos, chats, entradas, reuniones
-- Muestra exactamente la información correcta en el momento en que alguien la necesita, incluso antes de terminar de escribir la pregunta
+- Captura el conocimiento automáticamente mientras las personas trabajan (sin trabajo extra ocupado)- Entiende el contexto y conecta las ideas relacionadas a través de documentos, chats, entradas, reuniones- Muestra exactamente la información correcta en el momento en que alguien la necesita, incluso antes de terminar de escribir la pregunta
 
 Y cada día se vuelve más inteligente a medida que su equipo lo usa.
-
 Result: Las personas nuevas aumentan 2-3 veces más rápido, las personas mayores dejan de responder las mismas preguntas repetidamente, las decisiones mejoran porque el conocimiento tribal deja de ser tribal, y la memoria institucional realmente sobrevive a la rotación. Convierte la experiencia colectiva de su organización de una responsabilidad que se filtra en su ventaja competitiva más duradera.
 
------
-## Wikis
+-----## Wikis
 
 Wikis sigue siendo una pieza fundamental en muchas configuraciones de gestión del conocimiento, pero en 2026'Por lo general, ya no toda la historia, especialmente para los equipos que quieren dejar de filtrar conocimiento y comenzar a convertirlo en una ventaja real.
 
@@ -71,24 +37,17 @@ Wikis sigue siendo una pieza fundamental en muchas configuraciones de gestión d
 
 Pero los wikis puros luchan a escala con:
 
-- Consumo pasivo (la gente odia buscar páginas interminables)
-Descubrimiento (todavía tienes que saber qué buscar)
-- Captura automática (requieren esfuerzo manual para contribuir)
-- Frescura y decadencia (páginas obsoletas se acumulan sin una gobernanza fuerte)
-- Superficie contextual (ellos no'empujar de forma proactiva las respuestas a Slack, tickets, IDE o durante las reuniones).
+- Consumo pasivo (la gente odia buscar páginas interminables)Descubrimiento (todavía tienes que saber qué buscar)- Captura automática (requieren esfuerzo manual para contribuir)- Frescura y decadencia (páginas obsoletas se acumulan sin una gobernanza fuerte)- Superficie contextual (ellos no'empujar de forma proactiva las respuestas a Slack, tickets, IDE o durante las reuniones)
 
 Los sistemas modernos de gestión del conocimiento se basan en (o alrededor de) wikis en lugar de reemplazarlos directamente:
 
 La wiki (o páginas estructuradas como wiki) se convierte en la capa de conocimiento autorizada de forma larga: la "fuente de la verdad" para contenido perenne y profundamente vinculado que los humanos escriben y mantienen.
 
-El KMS añade capas inteligentes en la parte superior: ingestión automática de chats/correos electrónicos/reuniones/tickets, comprensión semántica, clasificación de relevancia en tiempo real, superficie proactiva ("antes de terminar de escribir"), resumen de IA/marcado de frescura, e integraciones que incorporan el contenido wiki en los flujos de trabajo diarios sin obligar a las personas a regresar al wiki en sí.
-Result: El wiki deja de ser un silo o una tarea: se convierte en la columna vertebral de alta calidad, curada por humanos, que alimenta (y es alimentado por) el sistema más inteligente y siempre activo.
+El KMS añade capas inteligentes en la parte superior: ingestión automática de chats/correos electrónicos/reuniones/tickets, comprensión semántica, clasificación de relevancia en tiempo real, superficie proactiva ("antes de terminar de escribir"), resumen de IA/marcado de frescura, e integraciones que incorporan el contenido wiki en los flujos de trabajo diarios sin obligar a las personas a regresar al wiki en sí.Result: El wiki deja de ser un silo o una tarea: se convierte en la columna vertebral de alta calidad, curada por humanos, que alimenta (y es alimentado por) el sistema más inteligente y siempre activo.
 
-Los wikis siguen siendo la mejor herramienta que la humanidad ha inventado para el conocimiento colaborativo, interconectado y editable de forma larga.
-Los KMS modernos los tratan como repositorios de contenido críticos, pero los envuelven en automatización, conocimiento del contexto de IA, captura pasiva y capacidad de búsqueda instantánea para que el conocimiento realmente se utilice en lugar de simplemente almacenarse.
+Los wikis siguen siendo la mejor herramienta que la humanidad ha inventado para el conocimiento colaborativo, interconectado y editable de forma larga.Los KMS modernos los tratan como repositorios de contenido críticos, pero los envuelven en automatización, conocimiento del contexto de IA, captura pasiva y capacidad de búsqueda instantánea para que el conocimiento realmente se utilice en lugar de simplemente almacenarse.
 
------
-## Control de versiones
+-----## Control de versiones
 
 El control de versiones en una wiki es una de las características más críticas para convertir un espacio de colaboración simple en una parte confiable y confiable de su sistema de gestión del conocimiento, especialmente cuando se inicia de nuevo.
 
@@ -112,28 +71,27 @@ Los equipos editan más libremente cuando saben que los cambios son't permanente
 
 Al ver los patrones de edición a lo largo del tiempo, se detectan páginas estancadas (sin cambios en meses/años = conocimiento obsoleto potencial). Algunos sistemas marcan el contenido de baja actividad para su revisión. El historial también ayuda a las funciones de IA (resumen, preguntas y respuestas) a comprender la evolución y priorizar las versiones actuales.
 
-#### Trabajo de bifurcación/paralelo (avanzado).
+#### Trabajo de bifurcación/paralelo (avanzado)
 
 En los verdaderos wikis respaldados por VCS, puede ramificarse, fusionarse o experimentar sin afectar al documento principal, ideal para reescrituras importantes o pruebas de políticas A/B.
 
-### Cómo se ve en las herramientas de inicio fresco (paisaje 2026).
+### Cómo se ve en las herramientas de inicio fresco (paisaje 2026)
 
-0. [Orión](https://sunstarsys.com/orion/) &mdash; Todo está respaldado por [Subversión](https://subversion.apache.org/); todos los clientes tienen acceso directo al servicio de control de versiones de Subversion.  Registros con versiones secuenciales inmutables ilimitadas con funcionalidad fácil de copiar / bifurcar / fusionar / revertir / revertir.
+1. [Orión](https://sunstarsys.com/orion/)  Todo está respaldado por [Subversión](https://subversion.apache.org/); todos los clientes tienen acceso directo al servicio de control de versiones de Subversion.  Registros con versiones secuenciales inmutables ilimitadas con funcionalidad fácil de copiar / bifurcar / fusionar / revertir / revertir.
 
-1. Noción: historial de versiones de página sólido con líneas de tiempo, diffs en paralelo y opciones de restauración. La retención varía según el plan (7 días gratis → 30/90 días pagados → indefinido en niveles más altos). Ideal para la mayoría de los equipos, pero no infinito por defecto.
+2. Noción: historial de versiones de página sólido con líneas de tiempo, diffs en paralelo y opciones de restauración. La retención varía según el plan (7 días gratis → 30/90 días pagados → indefinido en niveles más altos). Ideal para la mayoría de los equipos, pero no infinito por defecto.
 
-2. Slite: historial de versiones limpio y fiable con un fácil rollback y vistas previas de cambios. Un fuerte énfasis en mantener las cosas simples y confiables: la historia ayuda a verificar las ediciones sin desorden.
+3. Slite: historial de versiones limpio y fiable con un fácil rollback y vistas previas de cambios. Un fuerte énfasis en mantener las cosas simples y confiables: la historia ayuda a verificar las ediciones sin desorden.
 
-3. Confluencia (si te inclinas por la empresa) – Uno de los más fuertes: historial de versiones indefinidas en la mayoría de los planes, diffs detallados, etiquetas en versiones y restauración sin perder las más nuevas. Excelente para cumplimiento/escala.
+4. Confluencia (si te inclinas por la empresa) – Uno de los más fuertes: historial de versiones indefinidas en la mayoría de los planes, diffs detallados, etiquetas en versiones y restauración sin perder las más nuevas. Excelente para cumplimiento/escala.
 
-4. Tettra / Guru — Historial de versiones ilimitado en todos los planes, a menudo con flujos de trabajo de verificación vinculados a versiones (por ejemplo, "verificado en esta fecha/versión"). Las tarjetas Guru rastrean los cambios firmemente para mantener la precisión.
+5. Tettra / Guru — Historial de versiones ilimitado en todos los planes, a menudo con flujos de trabajo de verificación vinculados a versiones (por ejemplo, "verificado en esta fecha/versión"). Las tarjetas Guru rastrean los cambios firmemente para mantener la precisión.
 
-5. Bloomfire / otros: Control de versiones robusto con insights de interacción (quién vio / editó cuándo), ayudando a detectar la deriva.
+6. Bloomfire / otros: Control de versiones robusto con insights de interacción (quién vio / editó cuándo), ayudando a detectar la deriva.
 
 En un KMS moderno que comienza de nuevo, el control de versiones es'una mera "función de wiki agradable de tener" —lo'Fundamental para un conocimiento confiable y evolutivo. Sin ella, la colaboración se convierte en caos; con ella, tu wiki se convierte en un repositorio duradero y autorreparable que admite capas de IA (por ejemplo, la búsqueda semántica que extrae del contexto histórico correcto) y sobrevive a los cambios del equipo.
 
------
-## El Jamstack (SSG) Wiki Espacio
+-----## El Jamstack (SSG) Wiki Espacio
 
 Varios wikis habilitados para el control de versiones (especialmente aquellos con verdadera edición wiki, pero impulsados por Git o similares para el control de versiones) se construyen en torno a los principios de generación de sitios estáticos (SSG). Estos almacenan el contenido como archivos de texto sin formato (generalmente Markdown) en un repositorio de Git, utilizan Git como el propio backend de control de versiones y generan sitios HTML estáticos a partir de esos archivos, ya sea sobre la marcha (a través de un servidor ligero) o prediseñados para su despliegue (por ejemplo, a GitHub Pages, Netlify, etc.).
 
@@ -145,10 +103,9 @@ Además, no existe una forma significativa de controlar el **acceso** al conteni
 
 En general, solo los Sistemas Centralizados de Control de Versiones como Subversion son plataformas adecuadas para Wikis respaldados por VC en un marco del Sistema de Gestión del Conocimiento, porque tales [Arquitecturas de información](ia) debe contextualizarse siempre por usuario.
 
------
-## Tecnología de LLM (IA).
+-----## Tecnología de LLM (IA)
 
-La tecnología LLM (grandes modelos de lenguaje como la serie GPT, Claude, Gemini, variantes Llama, etc.) se ha convertido en la capa de inteligencia central en las wikis modernas de gestión del conocimiento para 2026, cambiándolas de repositorios estáticos, de solo búsqueda a dinámicos y proactivos. "segundo cerebro" para los equipos. En lugar de que los usuarios busquen manualmente páginas o sepan exactamente qué buscar, los LLM permiten la comprensión, la generación y el razonamiento del lenguaje natural en el wiki.'s contenido. Aquí'cómo encajan y ofrecen un valor real, especialmente cuando se inicia fresco:
+La tecnología LLM (grandes modelos de lenguaje como la serie GPT, Claude, Gemini, variantes Llama, etc.) se ha convertido en la capa de inteligencia central en las wikis modernas de gestión del conocimiento para 2026, cambiándolas de repositorios estáticos, de solo búsqueda a dinámicos y proactivos. "segundo cerebro" para los equipos. En lugar de que los usuarios busquen manualmente páginas o sepan exactamente qué buscar, los LLM permiten la comprensión, la generación y el razonamiento del lenguaje natural en el wiki.'s contenido. Aquí'Cómo encajan y ofrecen un valor real, especialmente cuando se inicia fresco:
 
 ### Generación Aumentada por Recuperación (RAG) — El Patrón Dominante
 
@@ -184,17 +141,13 @@ Preguntas como "¿Cómo se produjo la evolución conceptual y la adopción de OK
 
 ¿Cómo abordaría esto con su KMS actual?
 
-Además, imagine este flujo de trabajo con Orion:
+Además, imagina este flujo de trabajo con Orion:
 
-1. Usas Claude para escribir código.
-2. Usted mantiene un clon de git-svn de sus fuentes wiki de Orion en `/foo`.
-3. Mostrar `/foo` a Claude y hacer que git-commit varios markdown/yaml archivos que documentan su código'API s.
-4. Se ejecuta `git svn dcommit` para impulsar esos cambios a Orion para su publicación en su wiki corporativo!
+1. Usas Claude para escribir código.2. Usted mantiene un clon de git-svn de sus fuentes wiki de Orion en `/foo`.3. Mostrar `/foo` a Claude y hacer que git-commit varios markdown/yaml archivos que documentan su código'API s.4. Se ejecuta `git svn dcommit` para impulsar esos cambios a Orion para su publicación en su wiki corporativo!
 
 <span class="text-success">¿Cómo podría el proceso ser más efectivo (y menos indoloro) para su empresa?</span>
 
 ### Creación y enriquecimiento de contenido inteligente
-
 - Auto-summarization: LLM lee páginas/docs wiki largos y genera resúmenes ejecutivos, TL;DR o versiones específicas del público (por ejemplo, "Explicar esta arquitectura a un nuevo representante de ventas").
 
 - Asistencia de redacción: Mientras edita una página wiki, presiona un botón → LLM sugiere secciones, reescribe para mayor claridad, se traduce a otros idiomas o llena brechas basadas en páginas relacionadas.

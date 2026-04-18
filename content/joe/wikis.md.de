@@ -4,66 +4,32 @@ categories: Orion
 dependencies: '*.md.de'
 keywords: wiki, Knowledge, kms, orion, subversion
 published: ~
-status: überprüft=30121
+status: überprüft=30911
 title: Wikis in Wissensmanagementsysteme
 ---
 
-<div class="right">
-<a href="https://www.sunstarsys.com/orion/features">
+<div class="right">&mdash;<a href="https://www.sunstarsys.com/orion/features">
 
 ![Orion](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
 
-</a>
-</div>
-
+</a></div>
 ```mermaid
-mindmap
-  root((KMS))
-    (Wiki Platforms)
-      ((Orion))
-	  [Confluence]
-	  [Notion]
-    (Version Control)
-	  [Uses]
-        Content Curation
-        Access Controls
-        Immutable History
-      [Tools]
-	    Git
-		Subversion
-    (Jamstack)
-      [CMS]
-        Authors
-		Researchers
-		Curators
-      [Site Builds]
-	    Developers
-		Architects
-	  [Security]
-    (AI)
-     RAG
-     CLI
-```
+Mindmap  Wurzel((KMS))    (Wiki-Plattformen)      ((Orion))      [Konflikt]      [Begriff]    (Versionskontrolle)      [Verwendungen]        Inhaltskuratierung        Zugriffskontrollen        Unveränderliche Geschichte      [Werkzeuge]        Git        Subversion    (Jamstack)      [CMS]        Autoren        Forscher        Verwalter      [Site-Builds]        Entwickler        Architekten      [Sicherheit]    (KI)     RAG     CLI```
 
 [TOC]
 
------
-## Wissensmanagementsysteme
+-----## Wissensmanagementsysteme
 
 Stellen Sie sich vor, dass jede brillante Einsicht, Kunden-Workaround, gelernte Lektion und halbfertige Idee, die Ihr Team jemals hatte, nicht in Slack-Threads, E-Mail-Posteingängen oder vergessenen Notion-Seiten verschwunden ist.
 
 Ein Wissensmanagementsystem ist das einzige Gehirn Ihres Unternehmens:
 
-- Es erfasst Wissen automatisch, während Menschen arbeiten (keine zusätzliche Arbeit)
-- Es versteht den Kontext und verbindet verwandte Ideen über Dokumente, Chats, Tickets, Besprechungen hinweg
-- Es zeigt genau die richtigen Informationen in dem Moment, in dem jemand sie benötigt - bevor sie die Frage überhaupt eingeben
+- Es erfasst Wissen automatisch, während Menschen arbeiten (keine zusätzliche Arbeit)- Es versteht den Kontext und verbindet verwandte Ideen über Dokumente, Chats, Tickets, Besprechungen hinweg- Es zeigt genau die richtigen Informationen in dem Moment, in dem jemand sie benötigt - bevor sie die Frage überhaupt eingeben
 
 Und es wird jeden Tag intelligenter, wenn Ihr Team es verwendet.
-
 Result: Neue Menschen steigen 2-3-mal schneller, Senioren hören auf, dieselben Fragen wiederholt zu beantworten, Entscheidungen verbessern sich, weil Stammeswissen nicht mehr Stammeswissen ist, und das institutionelle Gedächtnis überlebt tatsächlich den Umsatz. Es verwandelt die kollektive Erfahrung Ihres Unternehmens von einer Haftung, die ausläuft, in Ihren dauerhaftesten Wettbewerbsvorteil.
 
------
-## Wikis
+-----## Wikis
 
 Wikis bleiben ein grundlegendes Stück in vielen Wissensmanagement-Setups, aber im Jahr 2026'Re in der Regel nicht mehr die ganze Geschichte - vor allem für Teams, die aufhören wollen, Wissen zu lecken und anfangen, es in einen echten Vorteil zu verwandeln.
 
@@ -71,24 +37,17 @@ Wikis bleiben ein grundlegendes Stück in vielen Wissensmanagement-Setups, aber 
 
 Aber reine Wikis kämpfen in großem Maßstab mit:
 
-- Passiver Konsum (Menschen hassen es, endlose Seiten zu durchsuchen)
-Entdeckung (Sie müssen noch wissen, wonach Sie suchen müssen)
-- Automatische Erfassung (sie erfordern manuellen Aufwand, um beizutragen)
-- Frische &amp; Verfall (veraltete Seiten stapeln sich ohne starke Governance)
-- Kontextuelle Oberflächen (sie don't proaktiv Antworten in Slack, Tickets, IDE oder während Meetings pushen).
+- Passiver Konsum (Menschen hassen es, endlose Seiten zu durchsuchen)Entdeckung (Sie müssen noch wissen, wonach Sie suchen müssen)- Automatische Erfassung (sie erfordern manuellen Aufwand, um beizutragen)- Frische &amp; Verfall (veraltete Seiten stapeln sich ohne starke Governance)- Kontextuelle Oberflächen (sie don't proaktiv Antworten in Slack, Tickets, IDE oder während Meetings pushen)
 
 Moderne Wissensmanagementsysteme bauen auf (oder um) Wikis auf, anstatt sie vollständig zu ersetzen:
 
 Das Wiki (oder wikiähnliche strukturierte Seiten) wird zur autoritativen Langzeit-Wissensschicht – der "Quelle der Wahrheit" für immergrüne, tief vernetzte Inhalte, die Menschen schreiben und pflegen.
 
-Das KMS fügt intelligente Ebenen hinzu: automatische Aufnahme von Chats/E-Mails/Meetings/Tickets, semantisches Verständnis, Relevanz-Ranking in Echtzeit, proaktive Oberflächen ("vor dem Tippen"), KI-Zusammenfassung/Aktualisierungskennzeichnung und Integrationen, die Wiki-Inhalte in tägliche Workflows einbeziehen, ohne die Benutzer zum Wiki selbst zu zwingen.
-Result: Das Wiki hört auf, ein Silo oder eine Aufgabe zu sein - es wird das qualitativ hochwertige, menschlich kuratierte Rückgrat, das das intelligentere, immer verfügbare System füttert (und von ihm gespeist wird).
+Das KMS fügt intelligente Ebenen hinzu: automatische Aufnahme von Chats/E-Mails/Meetings/Tickets, semantisches Verständnis, Relevanz-Ranking in Echtzeit, proaktive Oberflächen ("vor dem Tippen"), KI-Zusammenfassung/Aktualisierungskennzeichnung und Integrationen, die Wiki-Inhalte in tägliche Workflows einbeziehen, ohne die Benutzer zum Wiki selbst zu zwingen.Result: Das Wiki hört auf, ein Silo oder eine Aufgabe zu sein - es wird das qualitativ hochwertige, menschlich kuratierte Rückgrat, das das intelligentere, immer verfügbare System füttert (und von ihm gespeist wird).
 
-Wikis sind immer noch das beste Werkzeug, das die Menschheit für kollaboratives, vernetztes, editierbares Langformwissen erfunden hat.
-Moderne KMS behandeln sie als kritische Inhalts-Repositorys – verpacken sie jedoch in Automatisierung, KI-Kontextbewusstsein, passive Erfassung und sofortige Auffindbarkeit, sodass das Wissen tatsächlich verwendet wird, anstatt nur gespeichert zu werden.
+Wikis sind immer noch das beste Werkzeug, das die Menschheit für kollaboratives, vernetztes, editierbares Langformwissen erfunden hat.Moderne KMS behandeln sie als kritische Inhalts-Repositorys – verpacken sie jedoch in Automatisierung, KI-Kontextbewusstsein, passive Erfassung und sofortige Auffindbarkeit, sodass das Wissen tatsächlich verwendet wird, anstatt nur gespeichert zu werden.
 
------
-## Versionskontrolle
+-----## Versionskontrolle
 
 Die Versionskontrolle in einem Wiki ist eine der wichtigsten Funktionen, um einen einfachen kollaborativen Raum in einen zuverlässigen, vertrauenswürdigen Teil Ihres Wissensmanagementsystems zu verwandeln – besonders wenn Sie neu beginnen.
 
@@ -112,28 +71,27 @@ Teams bearbeiten freier, wenn sie wissen, dass Änderungen'T dauerhaft/destrukti
 
 Wenn Sie Bearbeitungsmuster im Laufe der Zeit sehen, erkennen Sie stagnierende Seiten (keine Änderungen in Monaten/Jahren = potenziell veraltetes Wissen). Einige Systeme kennzeichnen Inhalte mit geringer Aktivität zur Überprüfung. Die Geschichte hilft auch KI-Funktionen (Zusammenfassung, Fragen und Antworten) dabei, die Entwicklung zu verstehen und aktuelle Versionen zu priorisieren.
 
-#### Verzweigung/Parallele Arbeit (erweitert).
+#### Verzweigung/Parallele Arbeit (erweitert)
 
 In echten VCS-unterstützten Wikis können Sie verzweigen, zusammenführen oder experimentieren, ohne das Hauptdokument zu beeinflussen – ideal für größere Umschreibungen oder A/B-Policy-Tests.
 
-### Wie es in Fresh-Start Tools aussieht (2026 Landschaft).
+### Wie es in Fresh-Start Tools aussieht (2026 Landschaft)
 
-0. [Orion](https://sunstarsys.com/orion/) &mdash; Alles wird unterstützt von [Subversion](https://subversion.apache.org/); alle Clients haben direkten Zugriff auf den Subversion-Versionskontrolldienst.  Unbegrenzte, fortlaufend versionierte Datensätze mit einfacher Kopier- / Verzweigungs- / Zusammenführungs- / Wiederherstellungs- / Rollback-Funktion.
+1. [Orion](https://sunstarsys.com/orion/)  Alles wird unterstützt von [Subversion](https://subversion.apache.org/); alle Clients haben direkten Zugriff auf den Subversion-Versionskontrolldienst.  Unbegrenzte, fortlaufend versionierte Datensätze mit einfacher Kopier- / Verzweigungs- / Zusammenführungs- / Wiederherstellungs- / Rollback-Funktion.
 
-1. Begriff – Solid-Page-Versionshistorie mit Zeitleisten, Side-by-Side-Diffs und Wiederherstellungsoptionen. Die Aufbewahrung variiert je nach Plan (7 Tage frei → 30/90 Tage bezahlt → auf höheren Ebenen unbestimmt). Toll für die meisten Teams, aber nicht unendlich standardmäßig.
+2. Begriff – Solid-Page-Versionshistorie mit Zeitleisten, Side-by-Side-Diffs und Wiederherstellungsoptionen. Die Aufbewahrung variiert je nach Plan (7 Tage frei → 30/90 Tage bezahlt → auf höheren Ebenen unbestimmt). Toll für die meisten Teams, aber nicht unendlich standardmäßig.
 
-2. Slite — Sauberer, zuverlässiger Versionsverlauf mit einfachem Rollback und Änderungsvorschau. Starker Schwerpunkt darauf, die Dinge einfach und vertrauenswürdig zu halten – die Geschichte hilft, Bearbeitungen ohne Durcheinander zu überprüfen.
+3. Slite — Sauberer, zuverlässiger Versionsverlauf mit einfachem Rollback und Änderungsvorschau. Starker Schwerpunkt darauf, die Dinge einfach und vertrauenswürdig zu halten – die Geschichte hilft, Bearbeitungen ohne Durcheinander zu überprüfen.
 
-3. Konflikt (wenn Sie Unternehmen lehnen) - Einer der stärksten: unbestimmte Versionsgeschichte auf den meisten Plänen, detaillierte Unterschiede, Etiketten auf Versionen und Wiederherstellung, ohne neuere zu verlieren. Hervorragend für Compliance/Scale.
+4. Konflikt (wenn Sie Unternehmen lehnen) - Einer der stärksten: unbestimmte Versionsgeschichte auf den meisten Plänen, detaillierte Unterschiede, Etiketten auf Versionen und Wiederherstellung, ohne neuere zu verlieren. Hervorragend für Compliance/Scale.
 
-4. Tettra / Guru — Unbegrenzte Versionsgeschichte über Pläne hinweg, oft mit Verifizierungsworkflows, die an Versionen gebunden sind (z. "an diesem Datum/dieser Version verifiziert"). Guru-Karten verfolgen Änderungen eng, um die Genauigkeit zu erhalten.
+5. Tettra / Guru — Unbegrenzte Versionsgeschichte über Pläne hinweg, oft mit Verifizierungsworkflows, die an Versionen gebunden sind (z. "an diesem Datum/dieser Version verifiziert"). Guru-Karten verfolgen Änderungen eng, um die Genauigkeit zu erhalten.
 
-5. Bloomfire / andere – Robuste Versionierung mit Engagement-Erkenntnissen (die wann angesehen/bearbeitet wurden), die helfen, Drift zu erkennen.
+6. Bloomfire / andere – Robuste Versionierung mit Engagement-Erkenntnissen (die wann angesehen/bearbeitet wurden), die helfen, Drift zu erkennen.
 
 In einem modernen KMS, das frisch startet, ist die Versionskontrolle't nur ein "nice-to-have-Wiki-Funktion" — es'Grundlage für vertrauenswürdiges, weiterentwickelbares Wissen. Ohne sie verwandelt sich die Zusammenarbeit in Chaos; damit wird Ihr Wiki zu einem dauerhaften, selbstheilenden Repository, das KI-Ebenen unterstützt (z. B. semantische Suche, die aus dem richtigen historischen Kontext stammt) und Teamänderungen überlebt.
 
------
-## Der Jamstack (SSG) Wiki Raum
+-----## Der Jamstack (SSG) Wiki Raum
 
 Mehrere wikis mit aktivierter versionierung (insbesondere wikis mit echter wiki-ähnlicher bearbeitung, die jedoch von git oder ähnlich zur versionierung angetrieben werden) basieren auf den grundsätzen der statischen site-generierung (SSG). Diese speichern Inhalte als Nur-Text-Dateien (in der Regel Markdown) in einem Git-Repository, verwenden Git selbst als Versionskontroll-Backend und generieren statische HTML-Sites aus diesen Dateien – entweder on-the-fly (über einen Lightweight-Server) oder für das Deployment vordefiniert (z. B. auf GitHub Pages, Netlify usw.).
 
@@ -145,10 +103,9 @@ Darüber hinaus gibt es keine sinnvolle Möglichkeit, **Zugriff** auf eingeschr�
 
 Im Allgemeinen sind nur zentralisierte Versionskontrollsysteme wie Subversion geeignete Plattformen für VC-gestützte Wikis in einem Knowledge Management System-Framework, da solche [Informationsarchitekturen](ia) muss immer pro Benutzer kontextualisiert werden.
 
------
-## LLM-(AI-)Technologie
+-----## LLM-(AI-)Technologie
 
-LLM-Technologie (Große Sprachmodelle wie die GPT-Serie, Claude, Gemini, Llama-Varianten usw.) ist bis 2026 zur Kernintelligenzschicht in modernen Wissensmanagement-Wikis geworden und verlagert sie von statischen, reinen Such-Repositorys in dynamische, proaktive "zweites Gehirn" für Teams. Anstatt Benutzer manuell durch Seiten zu jagen oder genau zu wissen, was zu suchen ist, ermöglichen LLMs das Verständnis, die Generierung und das Argumentieren in natürlicher Sprache über das Wiki.'s Inhalt. Hier's, wie sie passen und echten Wert liefern, besonders wenn sie neu beginnen:
+LLM-Technologie (Große Sprachmodelle wie die GPT-Serie, Claude, Gemini, Llama-Varianten usw.) ist bis 2026 zur Kernintelligenzschicht in modernen Wissensmanagement-Wikis geworden und verlagert sie von statischen, reinen Such-Repositorys in dynamische, proaktive "zweites Gehirn" für Teams. Anstatt Benutzer manuell durch Seiten zu jagen oder genau zu wissen, was zu suchen ist, ermöglichen LLMs das Verständnis, die Generierung und das Argumentieren in natürlicher Sprache über das Wiki.'s Inhalt. Hier's, wie sie passen und echten Wert liefern, insbesondere wenn sie frisch beginnen:
 
 ### Retrieval-Augmented Generation (RAG) – Das dominante Muster
 
@@ -186,15 +143,11 @@ Wie würden Sie dies mit Ihrem aktuellen KMS ansprechen?
 
 Stellen Sie sich diesen Workflow mit Orion vor:
 
-1. Sie verwenden Claude, um Code zu schreiben.
-2. Sie behalten einen git-svn-Klon Ihrer Orion-Wiki-Quellen in `/foo`.
-3. Sie zeigen `/foo` zu Claude und lassen Sie es git-commit mehrere Markdown / YAML-Dateien dokumentieren Ihren Code's API.
-4. Sie führen `git svn dcommit` um diese Änderungen an Orion zur Veröffentlichung auf Ihrem Firmen-Wiki zu verschieben!
+1. Sie verwenden Claude, um Code zu schreiben.2. Sie behalten einen git-svn-Klon Ihrer Orion-Wiki-Quellen in `/foo`.3. Sie zeigen `/foo` zu Claude und lassen Sie es git-commit mehrere Markdown / YAML-Dateien dokumentieren Ihren Code's API.4. Sie führen `git svn dcommit` um diese Änderungen an Orion zur Veröffentlichung auf Ihrem Firmen-Wiki zu verschieben!
 
 <span class="text-success">Wie könnte der Prozess effektiver (und weniger schmerzlos) für Ihr Unternehmen sein?</span>
 
 ### Intelligente Inhaltserstellung und -anreicherung
-
 - Auto-summarization: LLM liest lange Wiki-Seiten/Dokumente und generiert Executive Summarys, TL;DRs oder zielgruppenspezifische Versionen (z. B. "Diese Architektur einem neuen Vertriebsmitarbeiter erläutern").
 
 - Unterstützung beim Zeichnen: Wenn Sie eine Wiki-Seite bearbeiten, klicken Sie auf eine Schaltfläche → LLM schlägt Abschnitte vor, schreibt zur Klarheit um, übersetzt in andere Sprachen oder füllt Lücken basierend auf verwandten Seiten.
