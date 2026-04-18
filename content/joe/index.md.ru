@@ -11,7 +11,7 @@ title: Случайные мысли Джо
 
 <div class="right">
 
-[![Хёка](index.page/heyoka.jpg)](https://en.wikipedia.org/wiki/Heyoka).
+[![Хёка](index.page/heyoka.jpg)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 

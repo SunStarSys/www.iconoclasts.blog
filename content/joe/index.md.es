@@ -11,7 +11,7 @@ title: Los pensamientos aleatorios de Joe
 
 <div class="right">
 
-[![Heyoka](index.page/heyoka.jpg)](https://en.wikipedia.org/wiki/Heyoka).
+[![Heyoka](index.page/heyoka.jpg)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 
