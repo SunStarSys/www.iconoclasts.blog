@@ -10,7 +10,7 @@ title: Apache HTTPd Devs Считается Вредным
 
 <div class="right">
 
-![пернатый](apache-considered-harmful.page/feather2.png).
+![пернатый](apache-considered-harmful.page/feather2.png)
 
 </div>
 

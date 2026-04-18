@@ -10,7 +10,7 @@ title: 'Запрос функции Perl 7: запечатанные под дл
 
 <div class="right">
 
-![солнцезвездатолько](../images/sunstarstaronly.png).
+![солнцезвездатолько](../images/sunstarstaronly.png)
 
 </div>
 

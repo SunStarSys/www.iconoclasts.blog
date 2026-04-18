@@ -11,7 +11,7 @@ title: Википедия:Системы управления знаниями
 <div class="right">
 <a href="https://www.sunstarsys.com/orion/features">
 
-![Орион](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png).
+![Орион](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
 
 </a>
 </div>

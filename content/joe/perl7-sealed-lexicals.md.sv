@@ -10,7 +10,7 @@ title: 'Perl 7 Funktionsbegäran: förseglade subs för typangivna lexikaler'
 
 <div class="right">
 
-![solstjärnaendast](../images/sunstarstaronly.png).
+![solstjärnaendast](../images/sunstarstaronly.png)
 
 </div>
 

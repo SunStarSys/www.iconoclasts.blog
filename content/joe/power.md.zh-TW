@@ -14,7 +14,7 @@ title: 指數成長與新冠肺炎 (COVID-19)
 
 指數函數的值一開始是顯微小的，而且隨著時間的推移幾乎沒有增加 (在`X 軸`
 
-![2020 年 3 月 COVID-19](../images/covid-march-2020-e.png).
+![2020 年 3 月 COVID-19](../images/covid-march-2020-e.png)
 
 用類比來說明這一點：想像一下，如果你的車速一直以比例常數與里程表上的里程相連，你現在要多快。在這個假設下，每段經過固定的時間間隔，您的車速和總行駛距離 * 乘數 * 都是相同的固定量 (大於 1)。事實上，[烏龜全程下降](https://en.wikipedia.org/wiki/Turtles_all_the_way_down)：汽車的加速度，jerk 等 (即全部) [衍生物](https://en.wikipedia.org/wiki/Derivative).
 
@@ -22,15 +22,15 @@ title: 指數成長與新冠肺炎 (COVID-19)
 
 要清楚，差異如下：`bbw，脂肪`- 值更是關於時間差異`X 軸` 相較於`是`-values；就方程式而言：`日誌 y = mx + b = m (x + b/m)` 是該行的隱含翻譯`y = mx`, `bbw，脂肪` 沿著單位`Y 軸`，或同等`公尺` 沿著單位`X 軸` (相反方向) .   ** 就這類時間轉譯而言，可以擷取任何 ** 類型的相對統計資料 (例如「案例死亡率」)，一次`公尺 length unit` 已知 (且非零)。同樣的，* 重要 * 統計資料是`公尺 length unit`
 
-![2020 年 3 月 COVID-19 對數刻度](../images/covid-march-2020.png).
+![2020 年 3 月 COVID-19 對數刻度](../images/covid-march-2020.png)
 
 ### 美國 COVID-19 疫情
 
 關於`5 天期間倍增` 本週紐約總受感染人口數，以及`3 天期間倍增`
 
-![2020 年 3 月 COVID-19 美國對數刻度](../images/covid-us-march-2020.png).
+![2020 年 3 月 COVID-19 美國對數刻度](../images/covid-us-march-2020.png)
 
-![2020 年 3 月 COVID-19 美國 死亡對數比例](../images/covid-us-march-2020-deaths.png).
+![2020 年 3 月 COVID-19 美國 死亡對數比例](../images/covid-us-march-2020-deaths.png)
 
 * 好消息：* 疫情只會在疫情爆發的初始部分跟隨指數函數。最終變更比率會扁平化並變為負值，表示目前病的人口總數下降。
 

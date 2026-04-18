@@ -11,7 +11,7 @@ title: Wikis en Sistemas de Gestión del Conocimiento
 <div class="right">
 <a href="https://www.sunstarsys.com/orion/features">
 
-![Orión](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png).
+![Orión](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
 
 </a>
 </div>

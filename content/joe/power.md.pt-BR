@@ -14,7 +14,7 @@ Deixe-me tentar dar-lhe uma análise qualitativa do que um gráfico de função 
 
 No início, os valores da função exponencial são microscopicamente pequenos, e mal aumentam ao longo do tempo (no `eixo x`). Mas a questão fundamental é que **sua taxa de mudança está sempre em proporção fixa ao seu valor atual<sup>1</sup>**, o que significa que, eventualmente, atingirá um ponto em que os aumentos são astronômicos.  Os gráficos a seguir retratam esse fenômeno de forma bastante sucinta, pois representam totais *mundial* para covid-19 no final de março de 2020.
 
-![Março de 2020 COVID-19](../images/covid-march-2020-e.png).
+![Março de 2020 COVID-19](../images/covid-march-2020-e.png)
 
 Para ilustrar isso por analogia: imagine o quão rápido você estaria indo agora se a velocidade do seu carro estivesse sempre ligada, por uma constante de proporcionalidade, à quilometragem em seu odômetro. Sob esta hipótese, para cada intervalo de tempo fixo que passa, tanto a velocidade do seu carro quanto a distância total percorrida *multiplica* pela mesma quantidade fixa (maior que um). Na verdade, é [tartarugas todo o caminho para baixo](https://en.wikipedia.org/wiki/Turtles_all_the_way_down): aceleração do seu carro, empurrão, etc. (ou seja, todos [derivados](https://en.wikipedia.org/wiki/Derivative)) todos teriam esse mesmo *multiplicador* (sobre esses mesmos intervalos).
 
@@ -22,15 +22,15 @@ Em um [escala logarítmica](https://en.wikipedia.org/wiki/Logarithmic_scale) par
 
 Para ser claro, a diferença em `b`-valores é mais sobre as diferenças de tempo no `eixo x` do que as diferenças em `sim`-valores; em termos de equações: `log y = mx + b = m(x + b/m)` é uma tradução implícita da linha `y = mx`, `b` unidades ao longo do `eixo y`, ou de forma equivalente `b/m` unidades ao longo do `eixo x` (na direção oposta).   **Qualquer tipo de estatística relativa ****(como Taxa de Fatalidade do Caso) pode ser capturado em termos de traduções de tempo, uma vez `m` é conhecido (e não-zero).  Novamente, a estatística *crítica* é `m`!
 
-![Escala logarítmica de COVID-19 de março de 2020](../images/covid-march-2020.png).
+![Escala logarítmica de COVID-19 de março de 2020](../images/covid-march-2020.png)
 
 ### A pandemia de COVID-19 nos Estados Unidos
 
 O `Duplicação do período de 5 dias` do total da população infectada em NY esta semana, bem como a `Duplicação do período de 3 dias` para os EUA, são lembretes gritantes deste efeito (o *multiplicador* acima para ambos os casos é 2).  Os valores de **10 dias** dos EUA são ainda mais preocupantes: **tudo aumenta 10 vezes**, assim como indicado pelas linhas paralelas pretas que adicionei aos seguintes gráficos de worldômetros. Projetar isso para um mês inteiro nos deixa com um *multiplicador* em algum lugar em torno de **1000x** para os números dos EUA, o que é **grotesco**, dados os atrasos de um mês em ver uma resposta substancial do governo à pandemia.
 
-![Março de 2020 COVID-19 Escala logarítmica dos EUA](../images/covid-us-march-2020.png).
+![Março de 2020 COVID-19 Escala logarítmica dos EUA](../images/covid-us-march-2020.png)
 
-![Março de 2020 COVID-19 EUA Escala logarítmica de mortes](../images/covid-us-march-2020-deaths.png).
+![Março de 2020 COVID-19 EUA Escala logarítmica de mortes](../images/covid-us-march-2020-deaths.png)
 
 Aqui está a *boa notícia:* as epidemias seguem apenas funções exponenciais para a parte inicial do surto. Eventualmente, a taxa de mudança se achatará e ficará negativa, indicativo de uma queda do nível total da população que está atualmente doente.
 

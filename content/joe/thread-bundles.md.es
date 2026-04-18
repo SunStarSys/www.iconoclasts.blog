@@ -12,7 +12,7 @@ title: Paquetes de subprocesos
 
 <div class="right">
 
-![Paquete de subprocesos generado por IA](thread-bundles.page/thread-bundle).
+![Paquete de subprocesos generado por IA](thread-bundles.page/thread-bundle)
 
 </div>
 

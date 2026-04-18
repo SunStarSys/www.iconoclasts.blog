@@ -10,7 +10,7 @@ title: Desarrolladores de Apache HTTPd considerados perjudiciales
 
 <div class="right">
 
-![tarrado y emplumado](apache-considered-harmful.page/feather2.png).
+![tarrado y emplumado](apache-considered-harmful.page/feather2.png)
 
 </div>
 

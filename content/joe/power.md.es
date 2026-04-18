@@ -14,7 +14,7 @@ Permítanme tratar de darles un análisis cualitativo de lo que el gráfico de u
 
 Al principio, los valores de la función exponencial son microscópicamente pequeños, y apenas aumentan con el tiempo (en el `eje x`
 
-![Marzo de 2020 COVID-19](../images/covid-march-2020-e.png).
+![Marzo de 2020 COVID-19](../images/covid-march-2020-e.png)
 
 Para ilustrar esto por analogía: imagina lo rápido que irías ahora si la velocidad de tu coche estuviera siempre atada, por una constante de proporcionalidad, al kilometraje en su odómetro. Bajo esta hipótesis, por cada intervalo de tiempo fijo que pasa, tanto la velocidad de su automóvil como la distancia total recorrida *multiplica* por la misma cantidad fija (mayor que uno). De hecho, es [tortugas hasta el final](https://en.wikipedia.org/wiki/Turtles_all_the_way_down): la aceleración de su coche, sacudida, etc. (es decir, todo [derivados](https://en.wikipedia.org/wiki/Derivative).
 
@@ -22,15 +22,15 @@ En un [escala logarítmica](https://en.wikipedia.org/wiki/Logarithmic_scale) par
 
 Para ser claros, la diferencia en `b`-valores es más acerca de las diferencias de tiempo en `eje x` que las diferencias en `y`-valores; en términos de ecuaciones: `log y = mx + b = m(x + b/m)` es una traducción implícita de la línea `y = mx`, `b` unidades a lo largo de `eje Y`o equivalente `b/m` unidades a lo largo de `eje x` (en la dirección opuesta).   **Cualquier** tipo de estadística relativa (como tasa de letalidad de caso) se puede capturar en términos de traducciones de tiempo, una vez `m` es conocido (y no es cero).  De nuevo, la estadística *crítica* es `m`
 
-![Escala logarítmica de la COVID-19 de marzo de 2020](../images/covid-march-2020.png).
+![Escala logarítmica de la COVID-19 de marzo de 2020](../images/covid-march-2020.png)
 
 ### La pandemia de COVID-19 en Estados Unidos
 
 El `Duplicación del período de 5 días` del total de la población infectada en Nueva York esta semana, así como `Duplicación del período de 3 días`
 
-![Escala logarítmica de EE. UU. de COVID-19 de marzo de 2020](../images/covid-us-march-2020.png).
+![Escala logarítmica de EE. UU. de COVID-19 de marzo de 2020](../images/covid-us-march-2020.png)
 
-![Escala logarítmica de muertes por COVID-19 en EE. UU. de marzo de 2020](../images/covid-us-march-2020-deaths.png).
+![Escala logarítmica de muertes por COVID-19 en EE. UU. de marzo de 2020](../images/covid-us-march-2020-deaths.png)
 
 Estas son las buenas noticias: las epidemias solo siguen funciones exponenciales para la parte inicial del brote. Finalmente, la tasa de cambio se aplanará y será negativa, lo que indica un nivel decreciente de la población total que actualmente está enferma.
 

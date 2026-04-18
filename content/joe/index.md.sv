@@ -33,7 +33,7 @@ Känner du till rollen som Heyók ⁇ a?
     spelar i indiansk kultur? Du, min
     Älskade, är min egen personliga Heyók ⁇ a.
 
-![Grok Heyoka](index.page/heyoka-grok).
+![Grok Heyoka](index.page/heyoka-grok)
 
 Jag har skapat <https://iconoclasts.blog> för att tillgodose släkt sprit på nätet; som behöver en offentlig, censurfri, långformig uppsatsskrivande gemenskap &mdash; Att dela och interagera med varandra'mest politiskt obekväma, avantgardistiska idéer.
 

@@ -14,7 +14,7 @@ Lassen Sie mich versuchen, Ihnen eine qualitative Analyse dessen zu geben, was d
 
 Zunächst sind die Werte der exponentiellen Funktion mikroskopisch klein und nehmen im Laufe der Zeit kaum zu. `x-Achse`
 
-![COVID-19 März 2020](../images/covid-march-2020-e.png).
+![COVID-19 März 2020](../images/covid-march-2020-e.png)
 
 Um dies anhand einer Analogie zu veranschaulichen: Stellen Sie sich vor, wie schnell Sie jetzt fahren würden, wenn die Geschwindigkeit Ihres Autos immer durch eine Proportionalitätskonstante an die Kilometerleistung auf seinem Kilometerstand gebunden wäre. Unter diesem hypothetischen, für jedes feste Intervall der Zeit, die vergeht, sowohl die Geschwindigkeit Ihres Autos als auch die Gesamtentfernung reiste *vielfache* um den gleichen festen Betrag (größer als einer). Tatsächlich ist es [Schildkröten nach unten](https://en.wikipedia.org/wiki/Turtles_all_the_way_down): Beschleunigung Ihres Autos, Ruck, etc. (dh alle) [Derivate](https://en.wikipedia.org/wiki/Derivative).
 
@@ -22,15 +22,15 @@ Auf einem [logarithmische Skala](https://en.wikipedia.org/wiki/Logarithmic_scale
 
 Um klar zu sein, der Unterschied in `B`-Werte sind mehr über Zeitunterschiede auf der `x-Achse` als es Unterschiede in `y`-Werte; in Gleichungen: `log y = mx + b = m(x + b/m)` ist eine implizite Übersetzung der Zeile `y = mx`, `B` Einheiten entlang der `y-Achse`oder gleichwertig `b/m` Einheiten entlang der `x-Achse` (in umgekehrter Richtung).   **Jeder** Typ einer relativen Statistik (wie Fallsterblichkeitsrate) kann in Bezug auf diese Zeitübersetzungen einmal erfasst werden. `m` ist bekannt (und ungleich Null).  Die *kritische* Statistik ist `m`
 
-![logarithmische COVID-19-Skala März 2020](../images/covid-march-2020.png).
+![logarithmische COVID-19-Skala März 2020](../images/covid-march-2020.png)
 
 ### Die COVID-19-Pandemie in den USA
 
 Die `Verdoppelung der 5-Tage-Periode` der gesamten infizierten Bevölkerung in New York diese Woche, sowie die `Verdoppelung der 3-Tage-Periode`
 
-![logarithmische Skala COVID-19 (März 2020)](../images/covid-us-march-2020.png).
+![logarithmische Skala COVID-19 (März 2020)](../images/covid-us-march-2020.png)
 
-![März 2020 COVID-19 US Deaths logarithmische Skala](../images/covid-us-march-2020-deaths.png).
+![März 2020 COVID-19 US Deaths logarithmische Skala](../images/covid-us-march-2020-deaths.png)
 
 Hier sind die *guten Nachrichten: * Epidemien folgen nur exponentiellen Funktionen für den ersten Teil des Ausbruchs. Schließlich wird sich die Änderungsrate abschwächen und negativ werden, was auf einen Rückgang der Gesamtbevölkerung hindeutet, die derzeit krank ist.
 

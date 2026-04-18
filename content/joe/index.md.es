@@ -33,7 +33,7 @@ Casado con la mujer más increíble de la Tierra, cuyo amor por mí nos bendijo 
     juega en la cultura nativa americana? Tú, mi
     Queridos, son mis propios Heyók-a personales.
 
-![Grok Heyoka](index.page/heyoka-grok).
+![Grok Heyoka](index.page/heyoka-grok)
 
 He creado <https://iconoclasts.blog> para atender a los espíritus afines en línea; que necesitan una comunidad de redacción de ensayos pública, libre de censura y de larga formato &mdash; compartir e interactuar entre sí'las ideas políticamente más incómodas y vanguardistas.
 

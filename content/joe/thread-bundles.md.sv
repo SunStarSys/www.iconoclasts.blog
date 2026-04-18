@@ -12,7 +12,7 @@ title: Trådpaket
 
 <div class="right">
 
-![AI-genererat trådpaket](thread-bundles.page/thread-bundle).
+![AI-genererat trådpaket](thread-bundles.page/thread-bundle)
 
 </div>
 

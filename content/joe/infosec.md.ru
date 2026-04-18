@@ -10,7 +10,7 @@ title: Основы информационной безопасности
 
 <div class="right">
 
-![InfoSec](infosec.page/infosec).
+![InfoSec](infosec.page/infosec)
 
 </div>
 

@@ -14,7 +14,7 @@ Laissez-moi essayer de vous donner une analyse qualitative de ce que le graphiqu
 
 Au début, les valeurs de la fonction exponentielle sont microscopiquement petites et à peine croissantes au fil du temps (sur la `Axe des X`
 
-![COVID-19 de mars 2020](../images/covid-march-2020-e.png).
+![COVID-19 de mars 2020](../images/covid-march-2020-e.png)
 
 Pour illustrer cela par analogie : imaginez à quelle vitesse vous iriez maintenant si la vitesse de votre voiture était toujours liée, par une constante de proportionnalité, au kilométrage sur son odomètre. Sous cette hypothèse, pour chaque intervalle de temps fixe qui passe, la vitesse de votre voiture et la distance totale parcourue *multiplies* par la même quantité fixe (plus grande qu'une). En fait, il est [tortues tout le chemin vers le bas](https://en.wikipedia.org/wiki/Turtles_all_the_way_down) : l'accélération de votre voiture, la secousse, etc. [dérivés](https://en.wikipedia.org/wiki/Derivative).
 
@@ -22,15 +22,15 @@ Sur une [échelle logarithmique](https://en.wikipedia.org/wiki/Logarithmic_scale
 
 Pour être clair, la différence dans `b`-valeurs est plus sur les différences de temps sur `Axe des X` que les différences dans `y`-valeurs ; en termes d'équations : `log y = mx + b = m(x + b/m)` est une traduction implicite de la ligne `y = mx`, `b` unités le long de la `Axe des Y`ou équivalent `b/m` unités le long de la `Axe des X` (dans le sens inverse).   **Tout type de statistique relative (comme le taux de mortalité dans les cas) peut être capturé en termes de traductions dans le temps, une fois `m` est connu (et non nul).  Encore une fois, la statistique *critique* est `m`
 
-![Échelle logarithmique COVID-19 de mars 2020](../images/covid-march-2020.png).
+![Échelle logarithmique COVID-19 de mars 2020](../images/covid-march-2020.png)
 
 La pandémie de COVID-19 aux États-Unis
 
 Le `doublement sur 5 jours` de la population infectée totale à New York cette semaine, ainsi que `doublement sur 3 jours`
 
-![Échelle logarithmique américaine de la COVID-19 de mars 2020](../images/covid-us-march-2020.png).
+![Échelle logarithmique américaine de la COVID-19 de mars 2020](../images/covid-us-march-2020.png)
 
-![Échelle logarithmique des décès liés à la COVID-19 aux États-Unis de mars 2020](../images/covid-us-march-2020-deaths.png).
+![Échelle logarithmique des décès liés à la COVID-19 aux États-Unis de mars 2020](../images/covid-us-march-2020-deaths.png)
 
 Voici les *bonnes nouvelles :* les épidémies ne suivent que des fonctions exponentielles pour la partie initiale de l'épidémie. Finalement, le taux de changement s'aplatira et deviendra négatif, ce qui indique une baisse du niveau de la population totale qui est actuellement malade.
 

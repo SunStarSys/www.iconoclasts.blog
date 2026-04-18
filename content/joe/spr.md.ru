@@ -11,7 +11,7 @@ title: Информационная безопасность, производи
 
 <div class="right">
 
-![NonFunctional Тесты](spr.page/nft).
+![NonFunctional Тесты](spr.page/nft)
 
 </div>
 

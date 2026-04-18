@@ -10,7 +10,7 @@ title: Apache HTTPd Devs betraktas som skadliga
 
 <div class="right">
 
-![tjärat och fjädrat](apache-considered-harmful.page/feather2.png).
+![tjärat och fjädrat](apache-considered-harmful.page/feather2.png)
 
 </div>
 

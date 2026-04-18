@@ -10,7 +10,7 @@ title: Seguridad de la información, rendimiento de las aplicaciones y fiabilida
 
 <div class="right">
 
-![NonFunctional Pruebas](spr.page/nft).
+![NonFunctional Pruebas](spr.page/nft)
 
 </div>
 

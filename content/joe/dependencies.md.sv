@@ -10,7 +10,7 @@ title: Vad handlar <em>Smart Content Dependency Management™</em> om?
 
 <div class="right">
 
-![träd](https://www.sunstarsys.com/orion/index.page/lightning).
+![träd](https://www.sunstarsys.com/orion/index.page/lightning)
 
 </div>
 
@@ -57,7 +57,7 @@ Vår webbplats består för närvarande av `240 källfiler` om `innehåll/`. Hä
 
 <div id="deps">
 
-![Beroenden för engelska språk](../images/deps).
+![Beroenden för engelska språk](../images/deps)
 
 </div>
 
@@ -75,7 +75,7 @@ Här's a `240+ hörn x 3859 kanter`, aktuellt diagram med fågelperspektiv i det
 
 <div id="links">
 
-![Engelska språklänkar](../images/links).
+![Engelska språklänkar](../images/links)
 
 </div>
 

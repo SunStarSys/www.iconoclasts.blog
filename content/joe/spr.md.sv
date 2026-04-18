@@ -10,7 +10,7 @@ title: Informationssäkerhet, applikationsprestanda och tillförlitlighet
 
 <div class="right">
 
-![NonFunctional Tester](spr.page/nft).
+![NonFunctional Tester](spr.page/nft)
 
 </div>
 

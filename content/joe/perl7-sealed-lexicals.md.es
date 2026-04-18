@@ -10,7 +10,7 @@ title: 'Perl 7 Solicitud de características: sustitutos sellados para léxicos 
 
 <div class="right">
 
-![solestrella](../images/sunstarstaronly.png).
+![solestrella](../images/sunstarstaronly.png)
 
 </div>
 

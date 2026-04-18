@@ -12,7 +12,7 @@ title: 스레드 번들
 
 <div class="right">
 
-![AI에서 생성된 스레드 번들](thread-bundles.page/thread-bundle).
+![AI에서 생성된 스레드 번들](thread-bundles.page/thread-bundle)
 
 </div>
 
@@ -73,6 +73,6 @@ pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
     ...
 ```
 
-![메모리 레이아웃](thread-bundles.page/memory-layout).
+![메모리 레이아웃](thread-bundles.page/memory-layout)
 
 <!-- $Date$ $Author$ $Revision$ -->

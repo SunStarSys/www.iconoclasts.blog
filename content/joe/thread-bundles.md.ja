@@ -12,7 +12,7 @@ title: スレッド・バンドル
 
 <div class="right">
 
-![AI生成スレッド・バンドル](thread-bundles.page/thread-bundle).
+![AI生成スレッド・バンドル](thread-bundles.page/thread-bundle)
 
 </div>
 
@@ -73,6 +73,6 @@ pthread_create (&ptid, NULL, rsim_mlf_thread, arg);
     ...
 ```
 
-![メモリー・レイアウト](thread-bundles.page/memory-layout).
+![メモリー・レイアウト](thread-bundles.page/memory-layout)
 
 <!-- $Date$ $Author$ $Revision$ -->

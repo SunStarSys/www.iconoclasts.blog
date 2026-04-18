@@ -11,7 +11,7 @@ title: Dinámica, clásica y cuántica
 
 <div class="right">
 
-![QM](dynamics.page/dynamics).
+![QM](dynamics.page/dynamics)
 
 </div>
 

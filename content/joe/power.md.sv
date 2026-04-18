@@ -14,7 +14,7 @@ Låt mig försöka ge dig en kvalitativ analys av vad en exponentiell (aka power
 
 Först exponentiella funktionens värden är mikroskopiskt små, och knappt ökar över tiden (på `x-axel`
 
-![COVID-19 i mars 2020](../images/covid-march-2020-e.png).
+![COVID-19 i mars 2020](../images/covid-march-2020-e.png)
 
 För att illustrera detta analogt: föreställ dig hur snabbt du skulle gå nu om din bils hastighet alltid var bunden, genom en proportionalitetskonstant, till körsträckan på vägmätaren. Under denna hypotetiska, för varje fast tidsintervall som passerar, både bilens hastighet och totala avstånd reste *multiplies * med samma fasta belopp (större än en). Det är faktiskt [sköldpaddor hela vägen ner](https://en.wikipedia.org/wiki/Turtles_all_the_way_down): bilens acceleration, ryck, etc. (dvs alla [derivat](https://en.wikipedia.org/wiki/Derivative).
 
@@ -22,15 +22,15 @@ På en [logaritmisk skala](https://en.wikipedia.org/wiki/Logarithmic_scale) för
 
 För att vara tydlig är skillnaden i `b)`-värden handlar mer om tidsskillnader på `x-axel` än det är skillnader i `y`-värden; i form av ekvationer: `log y = mx + b = m(x + b/m)` är en implicit översättning av raden `y = mx`, `b)` enheter längs `y-axel`eller likvärdigt `per minut` enheter längs `x-axel` (i motsatt riktning). **Valfri** typ av relativ statistik (som falldödlighetsgrad) kan fångas när det gäller sådana tidsöversättningar, en gång `mn` är känd (och icke-noll).  Den *kritiska* statistiken är `mn`
 
-![Logaritmisk skala COVID-19 i mars 2020](../images/covid-march-2020.png).
+![Logaritmisk skala COVID-19 i mars 2020](../images/covid-march-2020.png)
 
 ### COVID-19-pandemin i USA
 
 Den `5-dagarsdubbling` av den totala smittade befolkningen i NY denna vecka, samt `3-dagarsdubbling`
 
-![mars 2020 COVID-19 amerikansk logaritmisk skala](../images/covid-us-march-2020.png).
+![mars 2020 COVID-19 amerikansk logaritmisk skala](../images/covid-us-march-2020.png)
 
-![Mars 2020 COVID-19 US Deaths logaritmisk skala](../images/covid-us-march-2020-deaths.png).
+![Mars 2020 COVID-19 US Deaths logaritmisk skala](../images/covid-us-march-2020-deaths.png)
 
 Här är de *goda nyheterna: * epidemier följer bara exponentiella funktioner för den första delen av utbrottet. Så småningom kommer förändringstakten att plattas ut och bli negativ, vilket tyder på en fallande nivå av den totala befolkningen som för närvarande är sjuk.
 

@@ -10,7 +10,7 @@ title: Fórmula de rastreo estocástico para colectores cerrados y curvados nega
 
 <div class="right">
 
-![Panal hiperbólico](stochastic-trace-formula.page/hyperbolic-honeycomb.png).
+![Panal hiperbólico](stochastic-trace-formula.page/hyperbolic-honeycomb.png)
 
 </div>
 

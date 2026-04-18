@@ -10,7 +10,7 @@ title: Стохастическая формула трассировки для
 
 <div class="right">
 
-![Гиперболический сот](stochastic-trace-formula.page/hyperbolic-honeycomb.png).
+![Гиперболический сот](stochastic-trace-formula.page/hyperbolic-honeycomb.png)
 
 </div>
 

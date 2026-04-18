@@ -10,7 +10,7 @@ title: Stokastisk spårningsformel för stängda, negativt böjda grenrör
 
 <div class="right">
 
-![Hyperbolisk honungskaka](stochastic-trace-formula.page/hyperbolic-honeycomb.png).
+![Hyperbolisk honungskaka](stochastic-trace-formula.page/hyperbolic-honeycomb.png)
 
 </div>
 

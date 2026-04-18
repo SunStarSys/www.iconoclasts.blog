@@ -10,7 +10,7 @@ title: Manual de seguridad de la información
 
 <div class="right">
 
-![InfoSec](infosec.page/infosec).
+![InfoSec](infosec.page/infosec)
 
 </div>
 

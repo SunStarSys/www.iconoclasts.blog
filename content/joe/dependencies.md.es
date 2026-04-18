@@ -10,7 +10,7 @@ title: ¿De qué se trata <em>Smart Content Dependency Management™</em>?
 
 <div class="right">
 
-![árbol](https://www.sunstarsys.com/orion/index.page/lightning).
+![árbol](https://www.sunstarsys.com/orion/index.page/lightning)
 
 </div>
 
@@ -57,7 +57,7 @@ Nuestro sitio actualmente consiste en `240 archivos de origen` en `contenido/`. 
 
 <div id="deps">
 
-![Dependencias del idioma inglés](../images/deps).
+![Dependencias del idioma inglés](../images/deps)
 
 </div>
 
@@ -75,7 +75,7 @@ Aquí's a `Más de 240 vértices x 3859 bordes`, gráfico actual de ojos de páj
 
 <div id="links">
 
-![Enlaces de idioma inglés](../images/links).
+![Enlaces de idioma inglés](../images/links)
 
 </div>
 

@@ -10,7 +10,7 @@ title: Informationssäkerhet, primer
 
 <div class="right">
 
-![InfoSec](infosec.page/infosec).
+![InfoSec](infosec.page/infosec)
 
 </div>
 

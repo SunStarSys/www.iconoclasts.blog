@@ -12,7 +12,7 @@ title: Пакеты потоков
 
 <div class="right">
 
-![Генерируемый ИИ пакет потоков](thread-bundles.page/thread-bundle).
+![Генерируемый ИИ пакет потоков](thread-bundles.page/thread-bundle)
 
 </div>
 

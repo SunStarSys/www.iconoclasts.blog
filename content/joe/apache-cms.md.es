@@ -10,7 +10,7 @@ title: CMS retrospectivo de apache
 
 <div class="right">
 
-![tarrado y emplumado](apache-considered-harmful.page/feather2).
+![tarrado y emplumado](apache-considered-harmful.page/feather2)
 
 </div>
 

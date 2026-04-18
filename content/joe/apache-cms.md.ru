@@ -10,7 +10,7 @@ title: Ретроспекция CMS Apache
 
 <div class="right">
 
-![пернатый](apache-considered-harmful.page/feather2).
+![пернатый](apache-considered-harmful.page/feather2)
 
 </div>
 

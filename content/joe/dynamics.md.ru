@@ -11,7 +11,7 @@ title: Динамика, классика и квант
 
 <div class="right">
 
-![QM –](dynamics.page/dynamics).
+![QM –](dynamics.page/dynamics)
 
 </div>
 

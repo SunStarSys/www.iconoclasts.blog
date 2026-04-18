@@ -10,7 +10,7 @@ title: Apache CMS retrospektiv
 
 <div class="right">
 
-![tjärat och fjädrat](apache-considered-harmful.page/feather2).
+![tjärat och fjädrat](apache-considered-harmful.page/feather2)
 
 </div>
 

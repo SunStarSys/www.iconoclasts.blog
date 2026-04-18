@@ -10,7 +10,7 @@ title: В чем суть <em>Smart Content Dependency Management™</em>?
 
 <div class="right">
 
-![дерево](https://www.sunstarsys.com/orion/index.page/lightning).
+![дерево](https://www.sunstarsys.com/orion/index.page/lightning)
 
 </div>
 
@@ -57,7 +57,7 @@ title: В чем суть <em>Smart Content Dependency Management™</em>?
 
 <div id="deps">
 
-![Зависимости на английском языке](../images/deps).
+![Зависимости на английском языке](../images/deps)
 
 </div>
 
@@ -75,7 +75,7 @@ title: В чем суть <em>Smart Content Dependency Management™</em>?
 
 <div id="links">
 
-![Ссылки на английский язык](../images/links).
+![Ссылки на английский язык](../images/links)
 
 </div>
 
