@@ -4,7 +4,7 @@ categories: 奧里昂
 dependencies: '*.md.zh-TW'
 keywords: wiki、知識、kms、orion、subversion
 published: ~
-status: 驗證 =32868
+status: 驗證 =32882
 title: 知識管理系統中的 Wiki
 ---
 
@@ -14,7 +14,33 @@ title: 知識管理系統中的 Wiki
 
 </a></div>
 ```mermaid
-mindmap```
+mindmap
+  root((KMS))
+    (Wiki Platforms)
+      ((Orion))
+      [Confluence]
+      [Notion]
+    (Version Control)
+      [Uses]
+        Content Curation
+        Access Controls
+        Immutable History
+      [Tools]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        Authors
+        Researchers
+        Curators
+      [Site Builds]
+        Developers
+        Architects
+      [Security]
+    (AI)
+     RAG
+     CLI
+```
 [TOC]
 
 -----## 知識管理系統

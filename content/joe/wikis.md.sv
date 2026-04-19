@@ -4,7 +4,7 @@ categories: Orion
 dependencies: '*.md.sv'
 keywords: wiki, kunskap, kms, orion, subversion
 published: ~
-status: verifierad=32868
+status: verifierad=32882
 title: Wikis i kunskapshanteringssystem
 ---
 
@@ -14,7 +14,33 @@ title: Wikis i kunskapshanteringssystem
 
 </a></div>
 ```mermaid
-mindmap```
+mindmap
+  root((KMS))
+    (Wiki Platforms)
+      ((Orion))
+      [Confluence]
+      [Notion]
+    (Version Control)
+      [Uses]
+        Content Curation
+        Access Controls
+        Immutable History
+      [Tools]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        Authors
+        Researchers
+        Curators
+      [Site Builds]
+        Developers
+        Architects
+      [Security]
+    (AI)
+     RAG
+     kommandoradsgränssnitt
+```
 [TOC]
 
 -----## Kunskapshanteringssystem

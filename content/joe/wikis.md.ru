@@ -4,7 +4,7 @@ categories: Орион
 dependencies: '*.md.ru'
 keywords: wiki, знание, kms, orion, подрыв
 published: ~
-status: проверено=32868
+status: проверено=32882
 title: Википедия:Системы управления знаниями
 ---
 
@@ -14,7 +14,33 @@ title: Википедия:Системы управления знаниями
 
 </a></div>
 ```mermaid
-mindmap```
+mindmap
+  root((KMS))
+    (Wiki Platforms)
+      ((Orion))
+      [Confluence]
+      [Notion]
+    (Version Control)
+      [Uses]
+        Content Curation
+        Access Controls
+        Immutable History
+      [Tools]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        Authors
+        Researchers
+        Curators
+      [Site Builds]
+        Developers
+        Architects
+      [Security]
+    (AI)
+     RAG
+     Клиника
+```
 [TOC]
 
 -----## Системы управления знаниями
