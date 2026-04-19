@@ -4,7 +4,7 @@ categories: 오리온
 dependencies: '*.md.ko'
 keywords: 위키, 지식, 킬로미터, orion, subversion
 published: ~
-status: 확인=30911
+status: 확인=32854
 title: 지식 관리 시스템 위키
 ---
 
@@ -14,7 +14,32 @@ title: 지식 관리 시스템 위키
 
 </a></div>
 ```mermaid
-마음 맵  루트((KMS))    (위키 플랫폼)      ((오리온))      [영향]      [개념]    (버전 제어)      [사용]        콘텐츠 큐레이션        액세스 제어        변경할 수 없는 내역      [도구]        Git        하위 버전    (잠스택)      [CMS]        저자        연구원        큐레이션 그룹      [사이트 빌드]        개발자        아키텍트      [보안]    (AI)     RAG     CLI```
+mindmap마음 맵
+  root((KMS))
+    (Wiki Platforms)
+      ((Orion))
+      [Confluence]
+      [Notion]
+    (Version Control)
+      [Uses]
+        Content Curation
+        Access Controls
+        Immutable History
+      [Tools]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        Authors
+        Researchers
+        Curators
+      [Site Builds]
+        Developers
+        Architects
+      [Security]
+    (AI)
+     RAG
+     CLI
 
 [TOC]
 

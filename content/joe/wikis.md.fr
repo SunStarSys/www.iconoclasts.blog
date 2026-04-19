@@ -4,7 +4,7 @@ categories: Orion
 dependencies: '*.md.fr'
 keywords: wiki, connaissance, kms, orion, subversion
 published: ~
-status: vérifié=30911
+status: vérifié=32854
 title: Wikis dans les systèmes de gestion des connaissances
 ---
 
@@ -14,7 +14,32 @@ title: Wikis dans les systèmes de gestion des connaissances
 
 </a></div>
 ```mermaid
-carte mentale  racine((KMS))    (Plates-formes Wiki)      ((Orion))      [Confluence]      [Notion]    (Contrôle de version)      [Utilisations]        Durée du contenu        Contrôles d'accès        Historique immuable      [Outils]        Git        Subversion    (Jamstack)      [CMS]        Auteurs        Chercheurs        Superviseurs      [Builds de site]        Développeurs        Architectes      [Sécurité]    (IA)     RAG     CLI```
+mindmapcarte mentale
+  root((KMS))
+    (Wiki Platforms)
+      ((Orion))
+      [Confluence]
+      [Notion]
+    (Version Control)
+      [Uses]
+        Content Curation
+        Access Controls
+        Immutable History
+      [Tools]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        Authors
+        Researchers
+        Curators
+      [Site Builds]
+        Developers
+        Architects
+      [Security]
+    (AI)
+     RAG
+     CLI
 
 [TOC]
 

@@ -4,7 +4,7 @@ categories: Orion
 dependencies: '*.md.de'
 keywords: wiki, Knowledge, kms, orion, subversion
 published: ~
-status: überprüft=30911
+status: überprüft=32854
 title: Wikis in Wissensmanagementsysteme
 ---
 
@@ -14,7 +14,32 @@ title: Wikis in Wissensmanagementsysteme
 
 </a></div>
 ```mermaid
-Mindmap  Wurzel((KMS))    (Wiki-Plattformen)      ((Orion))      [Konflikt]      [Begriff]    (Versionskontrolle)      [Verwendungen]        Inhaltskuratierung        Zugriffskontrollen        Unveränderliche Geschichte      [Werkzeuge]        Git        Subversion    (Jamstack)      [CMS]        Autoren        Forscher        Verwalter      [Site-Builds]        Entwickler        Architekten      [Sicherheit]    (KI)     RAG     CLI```
+mindmapMindmap
+  root((KMS))
+    (Wiki Platforms)
+      ((Orion))
+      [Confluence]
+      [Notion]
+    (Version Control)
+      [Uses]
+        Content Curation
+        Access Controls
+        Immutable History
+      [Tools]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        Authors
+        Researchers
+        Curators
+      [Site Builds]
+        Developers
+        Architects
+      [Security]
+    (AI)
+     RAG
+     CLI
 
 [TOC]
 

@@ -4,7 +4,7 @@ categories: Orión
 dependencies: '*.md.es'
 keywords: wiki, conocimiento, kms, orion, subversión
 published: ~
-status: verificado=30911
+status: verificado=32854
 title: Wikis en Sistemas de Gestión del Conocimiento
 ---
 
@@ -14,7 +14,32 @@ title: Wikis en Sistemas de Gestión del Conocimiento
 
 </a></div>
 ```mermaid
-mapa mental  raíz((KMS))    (Plataformas Wiki)      ((Orión))      [Confluencia]      [Noción]    (Control de versiones)      [Usos]        Curación de contenido        Controles de acceso        Historial inmutable      [Herramientas]        Git        Subversión    (Jamstack)      [CMS]        Autores        Investigadores        Curadores      [Compilaciones del sitio]        Desarrolladores        Arquitectos      [Seguridad]    (AI)     RAG     CLI```
+mindmapmapa mental
+  root((KMS))
+    (Wiki Platforms)
+      ((Orion))
+      [Confluence]
+      [Notion]
+    (Version Control)
+      [Uses]
+        Content Curation
+        Access Controls
+        Immutable History
+      [Tools]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        Authors
+        Researchers
+        Curators
+      [Site Builds]
+        Developers
+        Architects
+      [Security]
+    (AI)
+     RAG
+     CLI
 
 [TOC]
 
