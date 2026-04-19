@@ -4,7 +4,7 @@ categories: אוריון
 dependencies: '*.md.he'
 keywords: ויקי, ידע, kms, orion, subversion
 published: ~
-status: אומתה=32854
+status: אומתו 32868
 title: ויקי במערכות ניהול ידע
 ---
 
@@ -14,33 +14,7 @@ title: ויקי במערכות ניהול ידע
 
 </a></div>
 ```mermaid
-mindmapמפת חשיבה
-  root((KMS))
-    (Wiki Platforms)
-      ((Orion))
-      [Confluence]
-      [Notion]
-    (Version Control)
-      [Uses]
-        Content Curation
-        Access Controls
-        Immutable History
-      [Tools]
-        Git
-        Subversion
-    (Jamstack)
-      [CMS]
-        Authors
-        Researchers
-        Curators
-      [Site Builds]
-        Developers
-        Architects
-      [Security]
-    (AI)
-     RAG
-     CLI
-
+mindmap```
 [TOC]
 
 -----## מערכות ניהול ידע

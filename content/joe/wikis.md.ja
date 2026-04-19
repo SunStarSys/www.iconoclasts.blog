@@ -4,7 +4,7 @@ categories: オリオン
 dependencies: '*.md.ja'
 keywords: wiki、kms、orion、subversion
 published: ~
-status: 確認済み=32854
+status: 確認済み=32868
 title: ナレッジマネジメントシステム(Knowledge Management Systems)
 ---
 
@@ -14,33 +14,7 @@ title: ナレッジマネジメントシステム(Knowledge Management Systems)
 
 </a></div>
 ```mermaid
-mindmapマインドマップ
-  root((KMS))
-    (Wiki Platforms)
-      ((Orion))
-      [Confluence]
-      [Notion]
-    (Version Control)
-      [Uses]
-        Content Curation
-        Access Controls
-        Immutable History
-      [Tools]
-        Git
-        Subversion
-    (Jamstack)
-      [CMS]
-        Authors
-        Researchers
-        Curators
-      [Site Builds]
-        Developers
-        Architects
-      [Security]
-    (AI)
-     RAG
-     CLI
-
+mindmap```
 [TOC]
 
 -----## ナレッジマネジメントシステム
