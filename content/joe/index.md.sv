@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-published: ~
 status: skiss
 title: Joes slumpartade tankar
 ---
@@ -17,11 +15,11 @@ title: Joes slumpartade tankar
 
 ## Välkommen!
 
-{# lede #}Vi övar [Öppen vetenskap](triple-products) här{# lede #}.
+{# lede #}Vi övar [Öppen vetenskap](triple-products.html) här{# lede #}.
 
 ## Om mig
 
-Jag'm ett [INTERN-A](https://www.16personalities.com/intj-personality) typ av person som vårdar de eklektiska, onormala, atypiska aspekterna av livet. Jag behärskar [Wing Chun](https://www.youtube.com/watch?v=Qexxe6ANG2o) i högstadiet, [Fysisk matematik](https://www.math.stonybrook.edu/~leontak/#:~:text=joseph%20schaefer) vid universitetet och [Optimeringsteknik](https://www.linkedin.com/in/joesuf4/) i min yrkeskarriär.
+Jag är en [INTERN-A](https://www.16personalities.com/intj-personality) typ av person som vårdar de eklektiska, onormala, atypiska aspekterna av livet. Jag behärskar [Wing Chun](https://www.youtube.com/watch?v=Qexxe6ANG2o) i högstadiet, [Fysisk matematik](https://www.math.stonybrook.edu/~leontak/#:~:text=joseph%20schaefer) vid universitetet och [Optimeringsteknik](https://www.linkedin.com/in/joesuf4/) i min yrkeskarriär.
 
 ### Privatliv
 
@@ -35,7 +33,7 @@ Känner du till rollen som Heyók ⁇ a?
 
 ![Grok Heyoka](index.page/heyoka-grok)
 
-Jag har skapat <https://iconoclasts.blog> för att tillgodose släkt sprit på nätet; som behöver en offentlig, censurfri, långformig uppsatsskrivande gemenskap &mdash; Att dela och interagera med varandra'mest politiskt obekväma, avantgardistiska idéer.
+Jag har skapat <https://iconoclasts.blog> för att tillgodose släkt sprit på nätet; som behöver en offentlig, censurfri, långformig uppsatsskrivande gemenskap &mdash; Att dela och interagera med varandras mest politiskt obekväma, avantgardistiska idéer.
 
 Om det låter som du, [registrera dig](/contact)!
 
