@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: /categories/*/index.html.sv
 keywords: wiki,kunskap
-published: ~
 status: publicerad
 title: Av, Av och För Iconoclasts
 ---
@@ -38,7 +36,7 @@ accepterade övertygelser och traditioner
 
 </div>
 
-![Ikonoklast](images/iconoclast.jpg).
+![Ikonoklast](images/iconoclast.jpg)
 
 <div style="max-width:900px">
 
@@ -104,7 +102,7 @@ Denna webbplats är värd på Orion. Checka ut  [Orion](https://www.sunstarsys.c
 - [Hebreiska](sitemap.html.he)
 - [arabiska](sitemap.html.ar)
 - [Svenska](sitemap.html.sv)
-- [Brasiliansk portugisiska](sitemap.html.pt-BR).
+- [Brasiliansk portugisiska](sitemap.html.pt-BR)
 
 &nbsp;
 

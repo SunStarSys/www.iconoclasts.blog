@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: /categories/*/index.html.ru
 keywords: вики,знание
-published: ~
 status: опубликовано
 title: Для иконоборцев,
 ---
@@ -38,7 +36,7 @@ title: Для иконоборцев,
 
 </div>
 
-![Иконоборчество](images/iconoclast.jpg).
+![Иконоборчество](images/iconoclast.jpg)
 
 <div style="max-width:900px">
 
@@ -60,7 +58,7 @@ title: Для иконоборцев,
 
 &nbsp;
 
-Этот сайт размещен на Orion. Изъять  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's оригинал CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade; &mdash; Orion – единственная корпоративная вики-страница на основе SCM с нативным [русалка](https://www.sunstarsys.com/orion/features) интеграция!
+Этот сайт размещен на Orion. Изъять  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade; &mdash; Orion – единственная корпоративная вики-страница на основе SCM с нативным [русалка](https://www.sunstarsys.com/orion/features) интеграция!
 
 &nbsp;
 
@@ -104,7 +102,7 @@ title: Для иконоборцев,
 - [Иврит](sitemap.html.he)
 - [Арабский](sitemap.html.ar)
 - [шведский](sitemap.html.sv)
-- [Португальский (Бразилия)](sitemap.html.pt-BR).
+- [Португальский (Бразилия)](sitemap.html.pt-BR)
 
 &nbsp;
 

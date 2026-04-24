@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: /categories/*/index.html.es
 keywords: wiki,conocimiento
-published: ~
 status: publicado
 title: De, Por y Para Iconoclastas
 ---
@@ -38,7 +36,7 @@ creencias y tradiciones aceptadas
 
 </div>
 
-![Iconoclast](images/iconoclast.jpg).
+![Iconoclast](images/iconoclast.jpg)
 
 <div style="max-width:900px">
 
@@ -60,7 +58,7 @@ comunidad de blogs! Regístrese hoy en la [Contáctenos](/contact) página!
 
 &nbsp;
 
-Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's CC original BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es la única wiki empresarial basada en SCM con nativo [mapa de mente de sirena](https://www.sunstarsys.com/orion/features) integración!
+Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es la única wiki empresarial basada en SCM con nativo [mapa de mente de sirena](https://www.sunstarsys.com/orion/features) integración!
 
 &nbsp;
 
@@ -104,7 +102,7 @@ Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com
 - [Hebreo](sitemap.html.he)
 - [Árabe](sitemap.html.ar)
 - [Sueco](sitemap.html.sv)
-- [Portugués brasileño](sitemap.html.pt-BR).
+- [Portugués brasileño](sitemap.html.pt-BR)
 
 &nbsp;
 
