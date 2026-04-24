@@ -32,7 +32,9 @@
 <span class="badge bg-success text-white"><a style="color:#fff" href="{{headers.published|safe}}">Publicerad</a></span>&nbsp;
 {% endif %}
 
-{% if archive_path %}{% ifequal headers.status "archived" %}
+{% if archive_path %}{% ifequal headers.status
+"arkiverad"
+%}
 <span class="badge bg-warning">
   <a style="color:#000" href="{{archive_path}}">Arkiverad</a></span>&nbsp;
 {% endifequal %}{% endif %}
