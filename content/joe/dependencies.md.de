@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: Orion, Architektur
 dependencies: '*.md.de'
-keywords: Architektur, inkrementell,Website,Generierung,Builds,Abhängigkeiten,Topologie,Wiki,Graph,Smart
-published: ~
+keywords: Architektur, inkrementell,Website,Generierung,Builds,Abhängigkeiten,Topologie,Wiki,Graph
 status: Whitepaper
 title: Worum geht es bei <em>Smart Content Dependency Management™</em>?
 ---
@@ -17,43 +15,43 @@ title: Worum geht es bei <em>Smart Content Dependency Management™</em>?
 [TOC]
 
 -----
-## Kurzbeschreibung
+## Abstrakt
 
 *Smart Content-Abhängigkeitsmanagement&trade;* geht es um den Kreis der Ideen, die mit der Unterstützung und Moderation von *inkrementellen Builds* zusammenhängen, während sie dem **Inhaltsnormalisierungsprinzip** treu bleiben. &mdash; das [*Pflichtfelder*](https://en.wikipedia.org/wiki/Permalink) sollte die einzige Quelle der Wahrheit sein, unabhängig davon, wie ihr Inhalt im gesamten Quellbaum kuratiert wird und daraus resultierende Build-Artefakte erstellt werden.
 
 Dieser Artikel stellt die <https://sunstarsys.com/> Website als Fallstudie zur Demonstration von Best Practices und Analyse der zugehörigen Diagrammtopologien.
 
 -----
-## Höhlen
+Anzahl Vorbehalte
 
-Dies ist nur wichtig, wenn Sie die Kosten für die Ausführung vollständiger Website-Builds abwägen müssen, jedes Mal, wenn Sie den Inhalt auf einer Webseite optimieren müssen. Wenn Ihre Website weniger als 1K-Quelldateien enthält, **relax**, und lesen Sie Folgendes mit Blick auf Ihre zukünftigen Bedürfnisse. Sie haben sich für unsere Plattform entschieden, dass'mit dir, nicht gegen dich. Bei den meisten Seiten handelt es sich bei diesem Material um *dünne Inhaltsabhängigkeitsdiagramme* für Sites mit mehr als 1K-Seiten.
+Dies ist nur wichtig, wenn Sie die Kosten für die Ausführung vollständiger Website-Builds abwägen müssen, jedes Mal, wenn Sie den Inhalt auf einer Webseite optimieren müssen. Wenn Ihre Website weniger als 1K-Quelldateien enthält, **relax**, und lesen Sie Folgendes mit Blick auf Ihre zukünftigen Bedürfnisse. Sie haben sich entschieden, unsere Plattform zu nutzen, die darauf ausgelegt ist, mit Ihnen zu skalieren, nicht gegen Sie. Bei den meisten Seiten handelt es sich bei diesem Material um *dünne Inhaltsabhängigkeitsdiagramme* für Sites mit mehr als 1K-Seiten.
 
 Zum Beispiel die Apache <https://www.OpenOffice.Org> Die Website konnte ihre 40K+-Dateien mit der ursprünglichen Apache-Version dieses Build-Systems erstellen, mit vollständig integrierter Unterstützung für inkrementelle Builds &mdash; ohne konfigurierte Abhängigkeiten &mdash; durch die intelligente Nutzung der traditionellen SSI-Technologie allein.
 
 Standardmäßig erstellt unser Build-System nur die Dateien, die Sie geändert haben, ohne Bedenken hinsichtlich der Intrafile-Abhängigkeiten (es sei denn, Sie geben sie in `%path::Abhängigkeiten` &mdash; mehr dazu unten). Wenn sich die geänderte Datei in der `Vorlagen/` oder `Bibliothek/` Ein vollständiger Site-Build wird stattdessen ausgelöst.
 
 -----
-## Weben Ihrer Website's *Abhängigkeitsgrafik* zusammen
+## Weben der *Abhängigkeitsgrafik* Ihrer Website zusammen
 
-Mathematisch, eine *Topologie* `$$\tau$$` ist eine vollständige Spezifikation der *open* Teilmengen eines Raumes `$$X$$`, deren Zweck es ist, die Annäherungsbeziehungen zwischen *Punkten* anzugeben `$$x$$` des Raumes `$$X$$`. Wenn `$$X$$` ist eine Grafik, eine *Topologie* `$$\tau$$` für `$$X$$` Gibt an, welche Kanten die Scheitelpunkte des Diagramms miteinander verbinden (hier werden Scheitelpunkte als *Punkte* von `$$X$$`, und die Anschlusskanten bestimmen die Nachbarschaft dieser Punkte als *Basis offene Sätze* für die Topologie).  Eine *gerichtete Diagrammtopologie* ist im Wesentlichen die gleiche Sache, enthält aber einen Verweis auf eine topologische Einbettung von `$$(X,\tau)$$` in einen größeren topologischen Raum `$$(Y,\sigma)$$` , wobei die Einbettung's Kantenanschlüsse werden durch gerichtete, nicht schneidende (Jordan-)Kurven dargestellt.
+Mathematisch, eine *Topologie* `$$\tau$$` ist eine vollständige Spezifikation der *open* Teilmengen eines Raumes `$$X$$`, deren Zweck es ist, die Annäherungsbeziehungen zwischen *Punkten* anzugeben `$$x$$` des Raumes `$$X$$`. Wenn `$$X$$` ist eine Grafik, eine *Topologie* `$$\tau$$` für `$$X$$` Gibt an, welche Kanten die Scheitelpunkte des Diagramms miteinander verbinden (hier werden Scheitelpunkte als *Punkte* von `$$X$$`, und die Anschlusskanten bestimmen die Nachbarschaft dieser Punkte als *Basis offene Sätze* für die Topologie).  Eine *gerichtete Diagrammtopologie* ist im Wesentlichen die gleiche Sache, enthält aber einen Verweis auf eine topologische Einbettung von `$$(X,\tau)$$` in einen größeren topologischen Raum `$$(Y,\sigma)$$` , wobei die Kantenverbindungen der Einbettung durch gerichtete, nicht schneidende (Jordan-)Kurven dargestellt werden.
 
-Das letzte Konzept ist, was wir verwenden werden, wenn wir das *Abhängigkeitsdiagramm diskutieren'S*-Topologie `$$\tau$$` dem Bereich zugeordnet `$$X$$` von Quelldateien unter Ihrer Website's `Inhalt/` Unterverzeichnis (hier `$$(Y,\sigma)$$` ist `$$\mathbb{R}^n$$` mit seiner metrischen Topologie für `$$n \in \{2,3\}$$`und die Kanten der `$$X$$` sind nicht schneidende, gerichtete Jordan-Kurven, die eine Datei verbinden `$$x \in X$$` zu seiner Gruppe von Dateien, auf denen `$$x$$` hängt ab: `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$`).
+Das letzte Konzept ist, was wir verwenden werden, wenn wir die Topologie des *Abhängigkeitsdiagramms* diskutieren `$$\tau$$` dem Bereich zugeordnet `$$X$$` von Quelldateien unterhalb der `Inhalt/` Unterverzeichnis (hier `$$(Y,\sigma)$$` ist `$$\mathbb{R}^n$$` mit seiner metrischen Topologie für `$$n \in \{2,3\}$$`und die Kanten der `$$X$$` sind nicht schneidende, gerichtete Jordan-Kurven, die eine Datei verbinden `$$x \in X$$` zu seiner Gruppe von Dateien, auf denen `$$x$$` hängt ab: `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$`).
 
-Haben {# lede #}ein klares Verständnis Ihrer Website's *Abhängigkeitsgrafik* stellt sicher, dass Sie die Leistung unserer Build-Technologie in großem Maßstab maximieren können{# lede #}. Wir nehmen die Informationen, die Sie zur Verfügung stellen `%path::Abhängigkeiten` während des Builds'Laden Ihrer Website's `lib/path.pm` Datei erstellen, eine umgekehrte Zuordnung abhängiger Dateien erstellen und *diese umgekehrte Zuordnung* verwenden, um das vollständige Korpus von Dateien zu bestimmen, die für eine bestimmte Datei erstellt werden sollen `svn-Commit` Sie machen zu unserem System.
+Haben {# lede #}Ein klares Verständnis des *Abhängigkeitsgraphen* Ihrer Website stellt sicher, dass Sie die Leistung unserer Build-Technologie in großem Maßstab maximieren können{# lede #}. Wir nehmen die Informationen, die Sie zur Verfügung stellen `%path::Abhängigkeiten` während der Build-Last Ihrer Website `lib/path.pm` Datei erstellen, eine umgekehrte Zuordnung abhängiger Dateien erstellen und *diese umgekehrte Zuordnung* verwenden, um das vollständige Korpus von Dateien zu bestimmen, die für eine bestimmte Datei erstellt werden sollen `svn-Commit` Sie machen zu unserem System.
 
-Es's wichtig zu beachten, dass die Abhängigkeitsbeziehungen zwischen Quelldateien vollständig von der `%path::Abhängigkeiten` Hash im Build-System's Startlast von `lib/path.pm` aus Ihrem Quellbaum, wie die in unserer `SunStarSys::Anzeigen` Perl-Paket soll funktionieren. Die `walk_content_tree`, `archiviert`und `seed_file_deps` Utilityfunktionen, aus denen importiert werden kann `SunStarSys: Bis` sind nützliche Hilfsmittel beim Aufbau der `%path::Abhängigkeiten` Hash mit integrierter Unterstützung für die Verwaltung eines Abhängigkeitscaches, um inkrementelle Builds in großem Maßstab zu beschleunigen.
+Es ist wichtig zu beachten, dass die Abhängigkeitsbeziehungen zwischen Quelldateien vollständig von der `%path::Abhängigkeiten` Hash während der Startlast des Build-Systems von `lib/path.pm` aus Ihrem Quellbaum, wie die in unserer `SunStarSys::Anzeigen` Perl-Paket soll funktionieren. Die `walk_content_tree`, `archiviert`und `seed_file_deps` Utilityfunktionen, aus denen importiert werden kann `SunStarSys: Bis` sind nützliche Hilfsmittel beim Aufbau der `%path::Abhängigkeiten` Hash mit integrierter Unterstützung für die Verwaltung eines Abhängigkeitscaches, um inkrementelle Builds in großem Maßstab zu beschleunigen.
 
-Hier'Der Teil unseres Lebens [`lib/path.pm`]({{snippetA.pretty_uri}}):
+Hier ist der Teil unseres Lebens [`lib/path.pm`]({{snippetA.pretty_uri}}):
 
-[snippet:lang=perl:repo=SunStarSys/www:branch=trunk:path=lib/path.pm:token=#snippet]
+[snippet:lang=perl:repo=SunStarSys/www.iconoclasts.blog:branch=trunk:path=lib/path.pm:token=#snippet]
 
-Bitte tue diesen Code für Ideen, wie deine Website funktionieren soll. Ja, es gibt eine vernünftige Komplexität (die beide Perl's reguläre Ausdrücke und Perl's UNIX-C-Shell `glob` Schnittstellen, sehr präzise) wie `%path::Abhängigkeiten` wird in dieser Datei erstellt, aber anstatt dies nur als Optimierungsarbeit anzusehen, betrachten Sie es stattdessen als die grundlegenden Inhaltsstoffe, die für die automatisierte, dynamisch generierte Konstruktion wichtiger Aspekte der *Link-Topologie* erforderlich sind.
+Bitte tue diesen Code für Ideen, wie deine Website funktionieren soll. Ja, es gibt eine gewisse Komplexität (die sowohl die regulären Ausdrücke von Perl als auch die UNIX-C-Shell von Perl umfasst) `glob` Schnittstellen, sehr präzise) wie `%path::Abhängigkeiten` wird in dieser Datei erstellt, aber anstatt dies nur als Optimierungsarbeit anzusehen, betrachten Sie es stattdessen als die grundlegenden Inhaltsstoffe, die für die automatisierte, dynamisch generierte Konstruktion wichtiger Aspekte der *Link-Topologie* erforderlich sind.
 
-Wo sind Einträge in `%path::Abhängigkeiten` Ursprung? Wenn sie nicht aus einem Aufruf von `walk_content_tree { seed_file_deps ... }`, (die im Grunde in Ihre Markdown-Quelldateien eintaucht)' Kopfzeilen und Inhalte), dann sind sie nur hartcodiert in `lib/path.pm` zur Ladezeit.
+Wo sind Einträge in `%path::Abhängigkeiten` Ursprung? Wenn sie nicht aus einem Aufruf von `walk_content_tree { seed_file_deps ... }`, (die im Grunde in die Header und Inhalte Ihrer Markdown-Quelldateien eintaucht), dann sind sie nur hartcodiert in `lib/facts.yml` zur Ladezeit.
 
 ### Zyklische Dependency Graphs sind die Norm
 
-Unsere Website besteht derzeit aus `240 Quelldateien` in `Inhalt/`. Hier'und `85 Scheitel x 465 Kanten`, Bildlauffähige, zweidimensionale, gerichtete Diagrammdarstellung eines aktuellen Snapshots der Seitenabhängigkeiten in englischer Sprache von **unserer Site** ([Verwenden von GraphViz's `Punkt`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl)):
+Unsere Website besteht derzeit aus `240 Quelldateien` in `Inhalt/`. Hier ist ein `85 Scheitel x 465 Kanten`, Bildlauffähige, zweidimensionale, gerichtete Diagrammdarstellung eines aktuellen Snapshots der Seitenabhängigkeiten in englischer Sprache von **unserer Site** ([GraphViz's verwenden `Punkt`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl)):
 
 <div id="deps">
 
@@ -61,17 +59,17 @@ Unsere Website besteht derzeit aus `240 Quelldateien` in `Inhalt/`. Hier'und `85
 
 </div>
 
-Ganz komplex, auch für eine kleine Website wie diese! Viele Kantenschnittmengen bei der Einnahme `$$n=2$$` (vermeidbar in Dimension) `$$n=3$$`). Besonders hervorzuheben ist die Kernmenge von dichten, zyklischen Abhängigkeiten in den nicht archivierten Dateien auf unserer Website.'s `/Termine/` Verzeichnis, in Richtung der unteren Mitte-rechts des Graphen, was eine gute Blogging-Website ist's-Abhängigkeitsdiagramm sollte so aussehen. Diese Abhängigkeiten werden in `rote Kurven` im Bild.
+Ganz komplex, auch für eine kleine Website wie diese! Viele Kantenschnittmengen bei der Einnahme `$$n=2$$` (vermeidbar in Dimension) `$$n=3$$`). Besonders hervorzuheben ist die Kernmenge von dichten, zyklischen Abhängigkeiten in den nicht archivierten Dateien in der `/Termine/` Verzeichnis, in Richtung der unteren Mitte-rechts des Diagramms, wie das Abhängigkeitsdiagramm einer guten Blogging-Site aussehen sollte. Diese Abhängigkeiten werden in `rote Kurven` im Bild.
 
-Beachten Sie auch die interne, im Wesentlichen isolierte Vernetzung der Elemente in `/Kategorien/*/*` und `/archives/2022/11/*`. Die einzigen externen Abhängigkeiten beinhalten nicht archivierte Inhalte in `/Tag/*`. Das ist durch Design &mdash; Die archivierten Essays sollten sich nur *adiabatisch* ändern, vielleicht nur für Anpassungen ihrer `Kategorie` Kopfzeilen Keine dieser Änderungen wirkt sich wesentlich auf den bereits vorhandenen Inhalt aus.'t verfolgen Sie es in `%path::Abhängigkeiten`.
+Beachten Sie auch die interne, im Wesentlichen isolierte Vernetzung der Elemente in `/Kategorien/*/*` und `/archives/2022/11/*`. Die einzigen externen Abhängigkeiten beinhalten nicht archivierte Inhalte in `/Tag/*`. Das ist durch Design &mdash; Die archivierten Essays sollten sich nur *adiabatisch* ändern, vielleicht nur für Anpassungen ihrer `Kategorie` Kopfzeilen Keine dieser Änderungen wirkt sich wesentlich auf den bereits vorhandenen Inhalt aus, daher verfolgen wir ihn nicht in `%path::Abhängigkeiten`.
 
 Natürlich unsere [Orion Enterprise Wiki](https://sunstarsys.com/orion/) Es gab nie Probleme mit zyklischen Abhängigkeiten.
 
-### Isn'Sind das nur Hyperlinks?
+### Geht es nicht nur um Hyperlinks?
 
-**Nein!** In der Tat ist die *Link-Topologie* Ihrer Website eine völlig separate Angelegenheit vom Quellbaum.'s *Abhängigkeitsdiagramm*.  Eine Suchmaschine wird natürlich die *Link-Topologie* entfernen, hat aber keinen Einblick in das *Abhängigkeitsdiagramm*.
+**Nein!** In der Tat ist die *Link-Topologie* Ihrer Website eine völlig separate Angelegenheit vom *Abhängigkeitsdiagramm* des Quellbaums*.  Eine Suchmaschine wird natürlich die *Link-Topologie* entfernen, hat aber keinen Einblick in das *Abhängigkeitsdiagramm*.
 
-Hier'A `240+ Scheitelpunkte x 3859 Kanten`, aktuelles Vogel-Augen-Diagramm der englischen *link topology* Grafik für **unser Standort** ([Verwenden von GraphViz's `Twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl)):
+Hier ist ein `240+ Scheitelpunkte x 3859 Kanten`, aktuelles Vogel-Augen-Diagramm der englischen *link topology* Grafik für **unser Standort** ([GraphViz's verwenden `Twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl)):
 
 <div id="links">
 
@@ -83,11 +81,11 @@ Können Sie die `rote Ränder` Wie im *Abhängigkeitsdiagramm* angegeben? Das Di
 
 ### Wie die SSI-Technologie helfen kann
 
-#### Traditionell [Serverseitig inklusive](https://httpd.apache.org/docs/2.4/howto/ssi.html) (SSI).
+#### Traditionell [Serverseitig inklusive](https://httpd.apache.org/docs/2.4/howto/ssi.html) (SSI)
 
-- **groß** zum Beschneiden Ihrer Website's *Abhängigkeitsdiagramm* auf überschaubare Größe herunter, ohne die Latenz der Seitenbereitstellung zu beeinträchtigen
+- **groß** zum Beschneiden des *Abhängigkeitsdiagramms* Ihrer Website auf eine überschaubare Größe, ohne die Latenz der Seitenbereitstellung zu beeinträchtigen
 - **groß** zur Verringerung der Boilerplate-Abwanderung in großen Commit-Nachrichten für eine bessere Peer-Überprüfung und Kontrolle Ihrer erstellten Änderungssets
-- **lousy** für die Retexualisierung ganzer Webseiten an einem anderen Speicherort in Ihrem Dokumentstamm'Hierarchie
+- **Lousie** für die Retexualisierung ganzer Webseiten an einen anderen Ort in der Hierarchie Ihres Dokumentstammes
 
 #### Vorlagen-APIs
 
@@ -99,7 +97,7 @@ Syntax:
 
 - Wege verwurzelt in `Inhalt` Quellverzeichnis
 - Überspringt den Header-Teil der Quelldatei `Ssi` enthalten
-- schreibt relative URLs in absolute URLs im Zielpfad um's enthaltene Inhalte
+- schreibt relative URLs in absolute URLs im enthaltenen Inhalt des Zielpfads um
 
 ##### SSI-Filter
 
@@ -108,7 +106,7 @@ Syntax:
 &#123;&#123; Inhalt|ssi &#125;&#125;
 
 - Rekursiv bewertet `Ssi` Tags im zu filternden Wert
-- nützlich, um die Verwendung eines großen Wertes (3+) von `quick_deps` in einem `@path::Muster` Eintrag's Argument hashref, was sich auf die Leistung auswirken kann
+- nützlich, um die Verwendung eines großen Wertes (3+) von `quick_deps` in einem `@path::Muster` Eintrag Argument hashref, was die Leistung beeinflussen kann
 
 #### Warum nicht SymLinks?
 
@@ -120,14 +118,14 @@ Syntax:
 
 ##### Dokumentkuratierung
 
-Orion's build system hat integrierte unterstützung für das, was wir *dokument kuration* nennen, was der prozess der rekontextualisierung und reorganisation ihrer inhalte ist, basierend auf der art und weise, wie sie die... `Kategorien` und `Archiv` Header in den Markdown-Quelldateien. Diese Funktionen sind standardmäßig deaktiviert, können aber durch Festlegen eines `category_root` (für Kategorieunterstützung) oder `archive_root` (für Archivierungsunterstützung) im zugehörigen Hashref-Argument zum gewünschten `@path::Muster` Eintrag.
+Das Build-System von Orion bietet integrierte Unterstützung für das, was wir *Document Curation* nennen. Dabei handelt es sich um den Prozess der Rekontextualisierung und Reorganisation Ihrer Inhalte, je nachdem, wie Sie die `Kategorien` und `Archiv` Header in den Markdown-Quelldateien. Diese Funktionen sind standardmäßig deaktiviert, können aber durch Festlegen eines `category_root` (für Kategorieunterstützung) oder `archive_root` (für Archivierungsunterstützung) im zugehörigen Hashref-Argument zum gewünschten `@path::Muster` Eintrag.
 
 ##### Kategorien
 
 - neuer Inhalt mit Vorlage erstellt `Ssi` Tags, die auf den Permalink-Speicherort verweisen, während die `Archiv` Header von der erstellten Quellseite
-- Kategorien sind streng additiv (d.h. das Entfernen einer Kategorie von einer Quellseite)'s Header werden sie nicht aus dieser Kategorie auf der Live-Site entfernen),
+- Kategorien sind streng additiv (d.h. das Entfernen einer Kategorie aus den Headern einer Quellseite entfernt sie nicht aus dieser Kategorie auf der Live-Site),
 - bei Bedarf generiert
-- das Löschen aller Kategorien in einem einzigen Commit ist eine großartige Möglichkeit, sie mit den genauen Spezifikationen auf allen Quellseiten zu synchronisieren' Header, ohne den beibehaltenen Kategorieinhalt auf der Live-Site zu zerstören
+- das Löschen aller Kategorien in einem einzigen Commit ist eine großartige Möglichkeit, sie mit den genauen Spezifikationen in den Headern aller Quellseiten zu synchronisieren, ohne den beibehaltenen Kategorieinhalt auf der Live-Site zu zerstören
 
 ##### Archivierte Seiten
 
@@ -146,14 +144,14 @@ Die Verarbeitung von Löwen erfolgt mit `lede` Vorlagenfilter. Es ist nützlich,
 -----
 ## Schlussfolgerungen
 
-Es gibt noch interessante Datenstrukturen und Beziehungen, die beim Umgang mit einer Website aufgedeckt werden müssen.'s *Abhängigkeitsgrafik* aus Sicht der Build-Performance, was ein viel neueres Interessengebiet ist als die Forschungsliteratur, die sich mit den Datenstrukturen und den damit verbundenen Problemen rund um die *Link-Topologie* befasst<sup>1,2</sup>.
+Es gibt noch interessante Datenstrukturen und Beziehungen, die beim Umgang mit dem *Abhängigkeitsdiagramm* einer Website aus einer Build-Performance-Perspektive aufgedeckt werden müssen, was ein viel neueres Interessengebiet ist als die Forschungsliteratur, die sich mit den Datenstrukturen und den damit verbundenen Problemen rund um die *Link-Topologie* befasst.<sup>1,2</sup>.
 
 Konventionelle inkrementelle Builds für reine Softwareentwicklungsprojekte sind nach wie vor ein heißes Thema. Die Forschung im Bereich <sup>3,4</sup> wurde im Oktober 2022 veröffentlicht, etwa einen Monat bevor dieser Aufsatz voraussichtlich abgeschlossen sein wird. Der *pluto*<sup>5</sup> Build-System verfügt über Funktionen, die unseren sehr ähnlich sind (der Build selbst kann Abhängigkeiten dynamisch neu generieren und neu aufbauen).
 
 Die gute Nachricht ist, dass wir Sie als unseren Kunden abdecken. Wir werden Sie über die Best Practices und den Stand der Technik in diesem Bereich auf dem Laufenden halten, so dass Sie von unseren Lektionen profitieren werden, die in den letzten zehn Jahren und in Zukunft gelernt wurden.
 
 -----
-## Fußnoten
+Anzahl Fußnoten
 
 1. [Identifizierung von Clustern im Webdiagramm basierend auf Linktopologie](https://ieeexplore.ieee.org/abstract/document/1214919) Siebtes Internationales Symposium für Datenbankentwicklung und -anwendungen, 2003. Verfahren.
 
