@@ -1,5 +1,5 @@
 ---
-acl: joe=rw, *=, *chrisarg=r
+acl: joe=rw, *=, chrisarg=r
 archived: ~
 categories: ~
 keywords: ~
