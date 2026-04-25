@@ -118,20 +118,20 @@ Syntax:
 
 ##### Dokumentkuratierung
 
-Das Build-System von Orion bietet integrierte Unterstützung für das, was wir *Document Curation* nennen. Dabei handelt es sich um den Prozess der Rekontextualisierung und Reorganisation Ihrer Inhalte, je nachdem, wie Sie die `Kategorien` und `Archiv` Header in den Markdown-Quelldateien. Diese Funktionen sind standardmäßig deaktiviert, können aber durch Festlegen eines `category_root` (für Kategorieunterstützung) oder `archive_root` (für Archivierungsunterstützung) im zugehörigen Hashref-Argument zum gewünschten `@path::Muster` Eintrag.
+Das Build-System von Orion bietet integrierte Unterstützung für das, was wir *Document Curation* nennen. Dabei handelt es sich um den Prozess der Rekontextualisierung und Reorganisation Ihrer Inhalte, je nachdem, wie Sie die `Kategorien` und `Status` Header in den Markdown-Quelldateien. Diese Funktionen sind standardmäßig deaktiviert, können aber durch Festlegen eines `category_root` (für Kategorieunterstützung) oder `archive_root` (für Archivierungsunterstützung) im zugehörigen Hashref-Argument zum gewünschten `@path::Muster` Eintrag.
 
 ##### Kategorien
 
-- neuer Inhalt mit Vorlage erstellt `Ssi` Tags, die auf den Permalink-Speicherort verweisen, während die `Archiv` Header von der erstellten Quellseite
+- neuer Inhalt mit Vorlage erstellt `Ssi` Tags, die zurück zum Permalink-Speicherort zeigen,
 - Kategorien sind streng additiv (d.h. das Entfernen einer Kategorie aus den Headern einer Quellseite entfernt sie nicht aus dieser Kategorie auf der Live-Site),
-- bei Bedarf generiert
-- das Löschen aller Kategorien in einem einzigen Commit ist eine großartige Möglichkeit, sie mit den genauen Spezifikationen in den Headern aller Quellseiten zu synchronisieren, ohne den beibehaltenen Kategorieinhalt auf der Live-Site zu zerstören
+- bei Bedarf generiert,
+- Das Löschen aller Kategorien in einem einzigen Commit ist eine großartige Möglichkeit, sie mit den genauen Spezifikationen in den Headern aller Quellseiten zu synchronisieren, ohne den beibehaltenen Kategorieinhalt auf der Live-Site zu zerstören.
 
 ##### Archivierte Seiten
 
 Auf unserer Website archivieren wir aggressiv veraltete Essays, um die Erstellungszeiten für neue Essays niedrig zu halten, ohne Permalinks für archivierte Dokumente zu zerstören. Das *Abhängigkeitsdiagramm* relativ zum `/Archive/` Das Verzeichnis (für unsere Website) ist gemäß den folgenden Regeln in sich geschlossen:
 
-- Inhalt mit Vorlage erstellt `Ssi` Tags, die auf den Permalink-Speicherort verweisen, während die `Kategorien` und `Archiv` Header von der erstellten Quellseite
+- Inhalt mit Vorlage erstellt `Ssi` Tags, die auf den Permalink-Speicherort verweisen, während die `Kategorien` Header von der erstellten Quellseite
 - Inhalt in `/(essays|clients)/` sind immer Permalinks, auch nach der Archivierung
 - Die Archivierung entfernt den Permalink-Speicherort effektiv aus dem *Abhängigkeitsdiagramm*, ohne den Permalink selbst von der Website zu entfernen
 

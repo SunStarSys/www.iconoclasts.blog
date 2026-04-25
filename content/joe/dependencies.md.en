@@ -116,20 +116,20 @@ Syntax:
 
 ##### Document Curation
 
-Orion's build system has integrated support for what we call *Document Curation*, which is the process of recontextualizing and reorganizing your content based on how you set the `Categories` and `Archive` headers in your Markdown source files. These features are disabled by default, but can be activated by setting a `category_root` (for Category support) or an `archive_root` (for Archiving support) in the associated hashref argument to the desired `@path::patterns` entry.
+Orion's build system has integrated support for what we call *Document Curation*, which is the process of recontextualizing and reorganizing your content based on how you set the `Categories` and `Status` headers in your Markdown source files. These features are disabled by default, but can be activated by setting a `category_root` (for Category support) or an `archive_root` (for Archiving support) in the associated hashref argument to the desired `@path::patterns` entry.
 
 ##### Categories
 
-- new content is constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Archive` header from the constructed source page
+- new content is constructed using Template `ssi` tags pointing back to the permalink location,
 - categories are strictly additive (i.e., removing a category from a source page's headers will not remove it from that category on the live site),
-- generated on demand
-- deleting all categories in a single commit is a great way to sync them with the exact specifications in all source pages' headers, without destroying the preserved category content on the live site
+- generated on demand,
+- deleting all categories in a single commit is a great way to sync them with the exact specifications in all source pages' headers, without destroying the preserved category content on the live site.
 
 ##### Archived Pages
 
 On our site, we aggresssively archive stale essays to keep build times for new essays low, while not destroying permalinks to archived documents. The *dependency graph* relative to the `/archives/` directory (for our site) is reasonably self-contained as-per the following rules:
 
-- content constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Categories` and `Archive` headers from the constructed source page
+- content constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Categories` header from the constructed source page
 - content in `/(essays|clients)/` are always permalinks, even after archiving
 - archiving effectively removes the permalink location from the *dependency graph*, while not removing the permalink itself from the website
 

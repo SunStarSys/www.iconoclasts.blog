@@ -118,20 +118,20 @@ Syntax:
 
 ##### Curación de documentos
 
-El sistema de compilación de Orion tiene soporte integrado para lo que llamamos *Curación de documentos*, que es el proceso de recontextualización y reorganización de su contenido en función de cómo establezca el `Categorías` y `Archivo` encabezados en los archivos de origen de Markdown. Estas funciones están desactivadas por defecto, pero se pueden activar mediante la configuración de una `category_root` (para soporte de categoría) o `archive_root` (para el soporte de archivado) en el argumento hashref asociado al `@path::patrones` entrada.
+El sistema de compilación de Orion tiene soporte integrado para lo que llamamos *Curación de documentos*, que es el proceso de recontextualización y reorganización de su contenido en función de cómo establezca el `Categorías` y `Estado` encabezados en los archivos de origen de Markdown. Estas funciones están desactivadas por defecto, pero se pueden activar mediante la configuración de una `category_root` (para soporte de categoría) o `archive_root` (para el soporte de archivado) en el argumento hashref asociado al `@path::patrones` entrada.
 
 ##### Categorías
 
-- el nuevo contenido se crea con la plantilla `ssi` etiquetas que apuntan hacia la ubicación de enlace permanente, mientras se quita el `Archivo` encabezado de la página de origen construida
+- el nuevo contenido se crea con la plantilla `ssi` etiquetas que apuntan a la ubicación de enlace permanente,
 - las categorías son estrictamente aditivas (es decir, eliminar una categoría de los encabezados de una página de origen no la eliminará de esa categoría en el sitio activo),
-- generado bajo demanda
-- eliminar todas las categorías en una sola confirmación es una excelente manera de sincronizarlas con las especificaciones exactas en todos los encabezados de las páginas de origen, sin destruir el contenido de categoría conservado en el sitio activo
+- generados bajo demanda,
+- eliminar todas las categorías en una sola confirmación es una gran manera de sincronizarlas con las especificaciones exactas en todos los encabezados de las páginas de origen, sin destruir el contenido de la categoría conservado en el sitio en vivo.
 
 ##### Páginas archivadas
 
 En nuestro sitio, archivamos agresivamente ensayos anticuados para mantener bajos los tiempos de construcción de nuevos ensayos, sin destruir los enlaces permanentes a los documentos archivados. El *gráfico de dependencia* con respecto al `/archivos/` directorio (para nuestro sitio) es razonablemente autónomo según las siguientes reglas:
 
-- contenido construido usando Plantilla `ssi` etiquetas que apuntan hacia la ubicación de enlace permanente, mientras se quita el `Categorías` y `Archivo` cabeceras de la página de origen construida
+- contenido construido usando Plantilla `ssi` etiquetas que apuntan hacia la ubicación de enlace permanente, mientras se quita el `Categorías` encabezado de la página de origen construida
 - contenido en `/(ensayos|clientes)/` siempre son enlaces permanentes, incluso después de archivar
 - el archivado elimina eficazmente la ubicación de enlace permanente del gráfico de dependencia*, sin eliminar el enlace permanente en sí mismo del sitio web
 

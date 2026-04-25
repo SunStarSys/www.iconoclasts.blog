@@ -118,20 +118,20 @@ Syntax:
 
 ##### Curadoria de Documento
 
-O sistema de compilação da Orion tem suporte integrado para o que chamamos de *Document Curation*, que é o processo de recontextualização e reorganização do seu conteúdo com base na forma como você define o `Categorias` e `Arquivar` cabeçalhos em seus arquivos de origem de Markdown. Esses recursos estão desabilitados por padrão, mas podem ser ativados definindo um `category_root` (para suporte de categoria) ou um `archive_root` (para suporte de Arquivamento) no argumento hashref associado ao desejado `@path::padrões` entrada.
+O sistema de compilação da Orion tem suporte integrado para o que chamamos de *Document Curation*, que é o processo de recontextualização e reorganização do seu conteúdo com base na forma como você define o `Categorias` e `Status` cabeçalhos em seus arquivos de origem de Markdown. Esses recursos estão desabilitados por padrão, mas podem ser ativados definindo um `category_root` (para suporte de categoria) ou um `archive_root` (para suporte de Arquivamento) no argumento hashref associado ao desejado `@path::padrões` entrada.
 
 ##### Categorias
 
-- novo conteúdo é construído usando Modelo `ssi` tags que apontam para o local do permalink, ao remover o `Arquivar` cabeçalho da página de origem construída
+- novo conteúdo é construído usando Modelo `ssi` tags que apontam para o local do permalink,
 - as categorias são estritamente aditivas (ou seja, remover uma categoria dos cabeçalhos de uma página de origem não a removerá dessa categoria no site ao vivo),
-- gerado sob demanda
-- excluir todas as categorias em um único commit é uma ótima maneira de sincronizá-las com as especificações exatas em todos os cabeçalhos das páginas de origem, sem destruir o conteúdo de categoria preservado no site ao vivo
+- gerado sob demanda,
+- excluir todas as categorias em um único commit é uma ótima maneira de sincronizá-las com as especificações exatas em todos os cabeçalhos das páginas de origem, sem destruir o conteúdo de categoria preservado no site ao vivo.
 
 ##### Páginas Arquivadas
 
 Em nosso site, arquivamos agressivamente ensaios obsoletos para manter os tempos de construção de novos ensaios baixos, sem destruir os links permanentes para documentos arquivados. O *gráfico de dependência* relativo ao `/arquivos/` diretório (para o nosso site) é razoavelmente autossuficiente conforme as seguintes regras:
 
-- conteúdo construído usando Modelo `ssi` tags que apontam para o local do permalink, ao remover o `Categorias` e `Arquivar` cabeçalhos da página de origem construída
+- conteúdo construído usando Modelo `ssi` tags que apontam para o local do permalink, ao remover o `Categorias` cabeçalho da página de origem construída
 - conteúdo em `/(ensaios|clientes)/` são sempre permalinks, mesmo após o arquivamento
 - o arquivamento remove efetivamente a localização do permalink do gráfico *dependency*, sem remover o permalink do site
 

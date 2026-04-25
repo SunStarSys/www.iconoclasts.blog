@@ -118,20 +118,20 @@ Syntax:
 
 ##### Dokumentkuratering
 
-Orions byggsystem har integrerat stöd för vad vi kallar *Document Curation*, vilket är processen att rekontextualisera och omorganisera ditt innehåll baserat på hur du ställer in `Kategorier` och `Arkiv` huvuden i källfilerna för Markdown. Dessa funktioner är avaktiverade som standard, men kan aktiveras genom att en `category_root` (för kategoristöd) eller en `archive_root` (för arkiveringsstöd) i det associerade hashref-argumentet till önskat `@path::mönster` inträde.
+Orions byggsystem har integrerat stöd för vad vi kallar *Document Curation*, vilket är processen att rekontextualisera och omorganisera ditt innehåll baserat på hur du ställer in `Kategorier` och `Status` huvuden i källfilerna för Markdown. Dessa funktioner är avaktiverade som standard, men kan aktiveras genom att en `category_root` (för kategoristöd) eller en `archive_root` (för arkiveringsstöd) i det associerade hashref-argumentet till önskat `@path::mönster` inträde.
 
 ##### Kategorier
 
-- nytt innehåll konstrueras med hjälp av mall `ssi` taggar som pekar tillbaka till permalänkens plats, medan borttagning av `Arkiv` sidhuvud från den konstruerade källsidan
+- nytt innehåll konstrueras med hjälp av mall `ssi` taggar som pekar tillbaka till permalänkens plats,
 - kategorierna är strikt additiva (dvs. att ta bort en kategori från en källsidas rubriker kommer inte att ta bort den från den kategorin på den aktiva webbplatsen),
-- genereras på begäran
-- Att ta bort alla kategorier i ett enda åtagande är ett bra sätt att synkronisera dem med de exakta specifikationerna i alla källsidans rubriker, utan att förstöra det bevarade kategoriinnehållet på den aktiva webbplatsen
+- genereras på begäran,
+- Att ta bort alla kategorier i ett enda åtagande är ett bra sätt att synkronisera dem med de exakta specifikationerna i alla källsidans rubriker, utan att förstöra det bevarade kategoriinnehållet på den aktiva webbplatsen.
 
 ##### Arkiverade sidor
 
 På vår webbplats arkiverar vi aggressivt inaktuella essäer för att hålla byggtiderna för nya essäer låga, samtidigt som vi inte förstör permalänkar till arkiverade dokument. *beroendegrafen* i förhållande till `/arkiv/` katalogen (för vår webbplats) är rimligt fristående enligt följande regler:
 
-- innehåll konstruerat med hjälp av mall `ssi` taggar som pekar tillbaka till permalänkens plats, medan borttagning av `Kategorier` och `Arkiv` rubriker från den konstruerade källsidan
+- innehåll konstruerat med hjälp av mall `ssi` taggar som pekar tillbaka till permalänkens plats, medan borttagning av `Kategorier` sidhuvud från den konstruerade källsidan
 - innehåll i `/(essays|clients)/` är alltid permalänkar, även efter arkivering
 - arkivering tar effektivt bort permalänkens plats från *beroendegrafen*, utan att ta bort permalänken själv från webbplatsen
 

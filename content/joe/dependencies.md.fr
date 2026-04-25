@@ -118,20 +118,20 @@ Syntax:
 
 ##### Durée du document
 
-Le système de construction d'Orion a intégré la prise en charge de ce que nous appelons *Curation de document*, qui est le processus de recontextualisation et de réorganisation de votre contenu en fonction de la façon dont vous définissez le `Catégories` et `Archiver` en-têtes dans vos fichiers source Markdown. Ces fonctionnalités sont désactivées par défaut, mais peuvent être activées en définissant une `category_root` (pour la prise en charge des catégories) ou `archive_root` (pour la prise en charge de l'archivage) dans l'argument hashref associé au `@path : :modèles` entrée.
+Le système de construction d'Orion a intégré la prise en charge de ce que nous appelons *Curation de document*, qui est le processus de recontextualisation et de réorganisation de votre contenu en fonction de la façon dont vous définissez le `Catégories` et `Statut` en-têtes dans vos fichiers source Markdown. Ces fonctionnalités sont désactivées par défaut, mais peuvent être activées en définissant une `category_root` (pour la prise en charge des catégories) ou `archive_root` (pour la prise en charge de l'archivage) dans l'argument hashref associé au `@path : :modèles` entrée.
 
 ##### Catégories
 
-- nouveau contenu construit à l'aide du modèle `ssi` balises pointant vers l'emplacement du permalien, tout en supprimant le `Archiver` en-tête de la page source construite
+- nouveau contenu construit à l'aide du modèle `ssi` balises pointant vers l'emplacement du permalien,
 - les catégories sont strictement additives (c'est-à-dire que la suppression d'une catégorie des en-têtes d'une page source ne la supprimera pas de cette catégorie sur le site en direct),
-- généré à la demande
-- supprimer toutes les catégories dans un seul commit est un excellent moyen de les synchroniser avec les spécifications exactes dans tous les en-têtes des pages source, sans détruire le contenu de catégorie conservé sur le site en direct
+- généré à la demande,
+- supprimer toutes les catégories dans un seul commit est un excellent moyen de les synchroniser avec les spécifications exactes dans tous les en-têtes des pages source, sans détruire le contenu de catégorie conservé sur le site en direct.
 
 ##### Pages archivées
 
 Sur notre site, nous archivons de manière agressive les essais périmés afin de réduire le temps de construction des nouveaux essais, tout en ne détruisant pas les permaliens vers les documents archivés. Le *graphique de dépendance* par rapport à `/archives/` Le répertoire (pour notre site) est raisonnablement autonome selon les règles suivantes :
 
-- contenu construit à l'aide du modèle `ssi` balises pointant vers l'emplacement du permalien, tout en supprimant le `Catégories` et `Archiver` en-têtes de la page source construite
+- contenu construit à l'aide du modèle `ssi` balises pointant vers l'emplacement du permalien, tout en supprimant le `Catégories` en-tête de la page source construite
 - contenu dans `/(essays|clients)/` sont toujours des permaliens, même après archivage
 - l'archivage supprime efficacement l'emplacement du permalien du graphique *dépendance*, sans supprimer le permalien lui-même du site Web
 
