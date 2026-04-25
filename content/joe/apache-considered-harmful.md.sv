@@ -40,6 +40,14 @@ Under 2020 eller så utnyttjade Googles säkerhetsteam en alfautgåva av httpd 2
 
 I stället för att ha artighet att nå ut till Philip, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann), mig själv (@joesuf4), eller någon annan som är involverad i utvecklingen av `libapreq2`, en junior ingenjör på HTTPd laget gick om verksamheten i "buggfix" Sårbarheterna som Google hittade. Du kan se ett register över hans rättegång och felarbete i varje utgåva sedan dess.
 
+Naturligtvis har CVE-rapporterna skrivits av imbeciles:
+
+1. Det är omöjligt att orsaka ett buffertspill av arkitektonisk design, så sådana påståenden var alltid baloney, vilket framgår av det faktum att ingen exploateringskod någonsin har publicerats.
+
+2. Trots mina bästa ansträngningar var NULL-pekardereferenser möjliga, med vilka juniorutvecklaren gjorde en rejäl rensning för flera år sedan.
+
+3. Jag hade en hjärnfis för tjugo år sedan runt teckenuppsättningskodningar för MIME-huvuden, som alltid är 7-bitars ASCII rena när välformade.  Felheten i den parserlogiken var det enda meningsfulla säkerhetsproblemet i kodbasens hela historia - och som en NPE kunde allt en angripare göra krascha webbservern.
+
 Men statskuppen var 2022 års frigivning av [2.17](https://www.google.com/search?q=libapreq2-2.17), där i rookie utvecklare [avsiktligt introducerade en dödlig bugg i kodbasen](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891), bryta [Ett nittonårigt regressionstest](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
 ## Postkort

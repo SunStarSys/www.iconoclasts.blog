@@ -40,6 +40,14 @@ THEADVENTOF `httpd-2。X`まったく新しい`I/Oフィルタ` アーキテク�
 
 フィリップに手を差し伸べる代わりに、[Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann)、自分自身(@joesuf4)、または開発に関与する他のユーザー`libapreq2`、 HTTPdチームのジュニアエンジニアは、"バグ修正" グーグルが発見した脆弱性それ以降、すべてのリリースで試行錯誤の記録を確認できます。
 
+もちろん、CVEの報告は愚か者によって書かれた:
+
+1. 建築設計によってバッファオーバーフローを引き起こすことは不可能であるため、そのような主張は、エクスプロイトコードが公開されていないという事実によって証明されたように、常にバルニーでした。
+
+2. 私の最善の努力にもかかわらず、NULLポインタ間接参照が可能であり、ジュニア開発者は何年も前に徹底的にクリーンアップしました。
+
+3. 私は20年前、MIMEヘッダーのcharsetエンコーディングの周りに脳が遠かった。これは、整形式の場合、常に7ビットASCIIクリーンです。そのパーサーロジックの誤りは、コードベースの歴史の中で唯一意味のあるセキュリティ上の懸念であり、NPEと同様に、攻撃者が行うことはすべてWebサーバをクラッシュすることでした。
+
 しかし、クーデター・デ・グレースは2022年のリリースでした。[2.17](https://www.google.com/search?q=libapreq2-2.17)ルーキー開発者[意図的にコードベースに致命的なバグを導入](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891)【Breaking】[19歳の回帰テスト](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
 ## ポストモーテム

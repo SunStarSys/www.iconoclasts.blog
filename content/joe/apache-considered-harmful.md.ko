@@ -40,6 +40,14 @@ title: 아파치 HTTPd Devs Considered Harmful
 
 빌립에게 닿는 예의를 갖지 않고, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann), 나 (@joesuf4) 또는 개발과 관련된 다른 사람 `libapreq2`, HTTPd 팀의 주니어 엔지니어가 "버그 수정" 구글이 발견한 취약점 이후 모든 릴리스에서 해당 시도 및 오류 작업에 대한 레코드를 볼 수 있습니다.
 
+물론 CVE의보고는 imbeciles에 의해 작성되었습니다 :
+
+1. 건축 설계에 의한 버퍼 오버플로우를 유발하는 것은 불가능하기 때문에, 그러한 주장은 언제나 풍성한 것이었는데, 이는 어떤 악용 코드도 출판되지 않았다는 사실로 입증되었다.
+
+2. 내 최선의 노력에도 불구하고, NULL 포인터 참조가 가능했다, 주니어 개발자는 몇 년 전에 거칠게 정리했다.
+
+3. 나는 MIME 헤더에 대한 문자 세트 인코딩 주위에 20 년 전에 두뇌 방귀를 가지고 있었는데, 이는 잘 형성되었을 때 항상 7 비트 ASCII 깨끗합니다.  이 구문 분석기 논리의 잘못은 코드베이스의 전체 역사에서 유일하게 의미있는 보안 문제였습니다. NPE와 마찬가지로 공격자가 할 수있는 모든 일은 웹 서버를 충돌시키는 것입니다.
+
 그러나 쿠데타 드 그레이스는 2022 년 출시되었습니다. [2.17](https://www.google.com/search?q=libapreq2-2.17)로키 개발자 The rookie developer [의도적으로 코드베이스에 치명적인 버그를 도입했습니다.](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891), 끊기 [19년 된 회귀 테스트](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
 ## 포스트모템
