@@ -2,7 +2,7 @@
 categories: Apache (Perl)
 dependencies: '*.md.de'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
-status: überprüft=34197
+status: Entwurf
 title: Apache HTTPd als schädlich erachtete Entwickler
 ---
 
@@ -46,7 +46,7 @@ Natürlich wurden die Berichte des CVE von imbeciles geschrieben:
 
 2. Trotz meiner besten Bemühungen waren NULL-Zeiger-Dereferenzen möglich, mit denen der Junior-Entwickler vor Jahren eine schlimme Reinigung durchführte.
 
-3. Ich hatte vor zwanzig Jahren einen Gehirnfurz um Zeichensatz-Codierungen für MIME-Header, die immer 7-Bit-ASCII sauber sind, wenn sie gut geformt sind.  Die Unrichtigkeit dieser Parserlogik war das einzige bedeutsame Sicherheitsrisiko in der gesamten Geschichte der Codebase - und wie ein NPE konnte ein Angreifer nur den Webserver abstürzen. Natürlich ist es in einer Prefork-Einstellung, sich als Hacker in den Fuß zu schießen, aber mit @joesuf4/mod_perl ist es jetzt leicht möglich, es innerhalb von HTTP/2 mit mpm_event auszuführen, so dass die Beseitigung aller Formen von Serverabstürzen von entscheidender und notwendiger Arbeit war, und der Junior-Entwickler verdient viel Anerkennung für diese eventuelle Leistung im Kofferraum von apreq.
+3. Ich hatte vor zwanzig Jahren einen Gehirnfurz um Zeichensatz-Codierungen für MIME-Header, die immer 7-Bit-ASCII sauber sind, wenn sie gut geformt sind.  Die Unrichtigkeit dieser Parserlogik war das einzige bedeutsame Sicherheitsrisiko in der gesamten Geschichte der Codebase - und wie ein NPE konnte ein Angreifer nur den Webserver abstürzen. Natürlich ist es in einer Prefork-Einstellung, sich selbst als Hacker in den Fuß zu schießen, aber mit @joesuf4/mod_perl ist es jetzt leicht möglich, es innerhalb von HTTP/2 mit mpm_event auszuführen, so dass die Beseitigung aller Formen von Serverabstürzen von entscheidender Bedeutung und notwendiger Arbeit war. Der Junior-Entwickler verdient viel Anerkennung für diese eventuelle Leistung im Kofferraum von apreq.
 
 Aber der Putsch der Gnade war die Freilassung von 2022. [2.17](https://www.google.com/search?q=libapreq2-2.17), wobei der Rookie-Entwickler [Absichtlich einen fatalen Bug in die Codebase eingeführt](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891), brechen [ein neunzehnjähriger Regressionstest](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
