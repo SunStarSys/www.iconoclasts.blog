@@ -2,7 +2,7 @@
 categories: Апач (Перл)
 dependencies: '*.md.ru'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
-status: верифицированный
+status: проверено=34115
 title: Apache HTTPd Devs Считается Вредным
 ---
 
