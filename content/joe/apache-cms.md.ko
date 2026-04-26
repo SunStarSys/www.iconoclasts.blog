@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: 펄, 아파치, ZFS, 오리온
 dependencies: '*.md.ko'
 keywords: apache, OpenOffice, cms, 위키
-published: ~
-status: 확인=29803
+status: 확인=34148
 title: 아파치 CMS 소급
 ---
 
@@ -18,63 +16,65 @@ title: 아파치 CMS 소급
 
 명확히 하자면, 다른 사람들이 의존성 관리에 관해 말할 때, 그들은 주로 소프트웨어 의존성에 관여하지 않습니다. [콘텐츠 종속성](dependencies). {# lede #}그것은 모두 잘 규제 된 내용으로 내려갑니다. "포함" templating+build 시스템{# lede #}, 이는 소프트웨어 deps와 전혀 동일한 것은 아닙니다.
 
-이 기능은 아파치를 지원하는데 절대적으로 중요하다.'s 대규모 <https://OpenOffice.org> (OOo) 웹사이트.  원래 OOo에 제공된 RDBMS CMS Sun은 오타를 고치려는 경우에도 넘어지고 죽을 것입니다. 대조적으로, 아파치 CMS는 baldr.apache.org에서 FreeBSD 감옥에서 실행 : 적당히 프로비저닝, [CPU 8개 및 24GB RAM과 96GB 미러링 하드 드라이브 한 쌍으로 실행되는 Dell 1950 박스](https://web.archive.org/web/20120112034217/http://www.apache.org/dev/machines.html#:~:text=baldr) 여러 감옥에 걸쳐, 상대적으로 쉽게 워크플로우를 통해 날아.
+이 기능은 아파치의 대규모 지원에서 절대적으로 중요했다. <https://OpenOffice.org> (OOo) 웹사이트.  원래 OOo에 제공된 RDBMS CMS Sun은 오타를 고치려는 경우에도 넘어지고 죽을 것입니다. 대조적으로, 아파치 CMS는 baldr.apache.org에서 FreeBSD 감옥에서 실행 : 적당히 프로비저닝, [CPU 8개 및 24GB RAM과 96GB 미러링 하드 드라이브 한 쌍으로 실행되는 Dell 1950 박스](https://web.archive.org/web/20120112034217/http://www.apache.org/dev/machines.html#:~:text=baldr) 여러 감옥에 걸쳐, 상대적으로 쉽게 워크플로우를 통해 날아.
 
 하나의 클릭으로 복구하려는 페이지에 대한 편집 세션에 기여자를 얻을 수있는 서비스와 같은 CMS를 접착시키지 않으면인지 에너지는 오늘날 웹 페이지에 오타를 고치기에는 너무 큽니다.
 
-1. github 저장소에서 그 페이지 물고기를 이동,
-2. repo를 포크하십시오,
-3. 페이지를 편집,
-4. 변경 사항을 커밋합니다.
+1. go fish that page out of a github repo (기텁 저장소에서 나오는 물고기)
+2. 리포트를 포크하고,
+3. 페이지를 편집합니다.
+4. 변경 사항을 커밋하고
 5. 그것을 밀어,
 6. PR 만들기,
 7. **대기** 커밋자가 PR을 승인하고 병합할 때까지,
 8. [**대기** 스테이징 빌드가 완료될 때까지 10-15분](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Staging-Site-Build/) 건설 가능한 자산의 모든 40K+를 통과하는 동안(총 4GB)
-9. 커밋자가 게시된 변경된 콘텐츠를 찾고 검토할 때까지 **대기** [스테이징 사이트](https://www.staging.openoffice.org/),
-10. **전체 사이트**를 운용 환경으로 승격하기 위해 해당 통근자에 대해 **대기**,
+9. **대기** - 커밋자가 게시된 변경된 콘텐츠를 찾고 검토할 수 있음 [스테이징 사이트](https://www.staging.openoffice.org/),
+10. **entire site**를 운용 환경으로 승격하기 위해 해당 커밋에 대해 **대기**,
 11. [**대기** 발행 빌드 완료까지 5~10분 남음](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Publish-Site/),
-12. gitpubsub가 새 콘텐츠를 아파치로 푸시할 때까지 **대기**'에지 웹 서버.
+12. **wait** - gitpubsub가 아파치의 에지 웹서버로 새 콘텐츠를 푸시합니다.
 
-아파치 CMS (webgui)와 함께, 커밋 가능한 공유 "패치/차이" over email was a one-click operation for any person on Earth, as well as a one-click operation to commit+build+publish for a committer to apply on the project(커미터가 프로젝트에 적용될 수 있도록 커밋+빌드+게시하는 원클릭 작업) 모든 것은 이중 창 즉석 HTML 미리보기와 라이브 마크 다운 편집기의 맥락에서 기능 URL의 공유를 중심으로 회전. 그들은 프로젝트에 아파치 통근자를 허용 "복제" 기여자의 baldr-jail 호스트된 zfs 파일 시스템's (커밋되지 않은) 체크 아웃; 그리고 나서 아파치 커밋에 의해 복제 된 체크 아웃을 검사, 변경 및 커밋 **기여자가 아닌 커밋자로서**.  해당 커밋이 발생하면 CMS는 *초*로만 빌드할 뿐 아니라'변경된 파일과 소수의 종속 파일만 빌드하지만 프로덕션으로 프로모션하기 전에 검토할 수 있도록 스테이징 사이트의 콘텐츠 빌드 및 실시간 렌더링에 대한 **링크**를 제공했습니다.
+아파치 CMS (webgui)와 함께, 커밋 가능한 공유 "패치/차이" over email was a one-click operation for any person on Earth, as well as a one-click operation to commit+build+publish for a committer to apply on the project(커미터가 프로젝트에 적용될 수 있도록 커밋+빌드+게시하는 원클릭 작업) 모든 것은 이중 창 즉석 HTML 미리보기와 라이브 마크 다운 편집기의 맥락에서 기능 URL의 공유를 중심으로 회전. 그들은 프로젝트에 아파치 통근자를 허용 "복제" 기여자의 (커밋되지 않은) 체크 아웃의 baldr-jail-hosted zfs 파일 시스템; 그리고 나서 아파치 커미터에 의해 복제 된 체크 아웃을 검사, 변경 및 커밋 **기여자가 아닌 커밋으로**.  커밋이 수행되면 CMS는 변경된 파일과 소수의 종속 파일만 빌드하므로 *초*로 빌드할 뿐 아니라 프로덕션으로 프로모션하기 전에 검토할 수 있도록 스테이징 사이트의 콘텐츠를 빌드하고 라이브 렌더링하는 데 **링크**를 제공했습니다.
 
 ** 원클릭** 아마존 특허 전체는 고객 만족에 매우 중요했습니다.  여기도 마찬가지지만 아파치 CMS는 이 공간에 혼자 있었다.
 
 아파치 CMS (webgui)는 슬프게도 조직을 뒤로 떠난 모든 자원 봉사 에너지 사이의 필수적인 조정 스위치 보드였습니다.
 
-Apache에 대한 몇 가지 변명'인프라스트럭처 리더십은 삭제된 이유에 대해 다음과 같이 설명했습니다.
+아파치의 인프라 리더십이 왜 떨어졌는지에 대한 몇 가지 변명이 있습니다 :
 
-1. 1 (나)의 버스 요인,
+1. 버스 팩터 1 (me)
 
-2. 단계 밖으로 FreeBSD ([OpenZFS](https://openzfs.org/wiki/Main_Page) 우분투(Ubuntu).
+2. FreeBSD([OpenZFS](https://openzfs.org/wiki/Main_Page) 우분투(Ubuntu)
 
-3. [mod_perl](https://perl.apache.org/)파이썬(Python)이 아니라 [mod_lua](https://lists.apache.org/) 코셔 (Kosher).
+3. [mod_perl](https://perl.apache.org/)파이썬(Python)이 아니라 [mod_lua](https://lists.apache.org/) 코셔 (Kosher)
 
-4. buggy (작은 FreeBSD 감옥에서 믿을 수없는 zfs 클론),
+4. buggy (작은 FreeBSD 감옥에서 신뢰할 수없는 zfs 클론),
 
-5. 못생긴 (감사합니다, 부자!),
+5. 추악한 (감사합니다, 부자!),
 
-5. git가 더 좋습니다 (그렉 감사합니다!).
+5. Git이 더 좋습니다 (Greg 감사합니다!)
 
-그러나 진짜 동기는 *spite*이었습니다.  2015년 3월에 지원이 중단된 시기와 2022년 1월에 최종 폐기된 시기 사이에, baldr.apache.org의 FreeBSD 감옥에서 거의 7년 동안 자동 조종 장치로 실행되고 있었습니다. 유일한 유지보수는 위의 항목 4로 인해 (분기별로?) 호스트 재부팅과 연간 SSL 인증서 갱신뿐이었습니다. 해당's 입니다.
+그러나 진짜 동기는 *spite*이었습니다.  2015년 3월에 지원이 중단된 시기와 2022년 1월에 최종 폐기된 시기 사이에, baldr.apache.org의 FreeBSD 감옥에서 거의 7년 동안 자동 조종 장치로 실행되고 있었습니다. 유일한 유지보수는 위의 항목 4로 인해 (분기별로?) 호스트 재부팅과 연간 SSL 인증서 갱신뿐이었습니다. 바로 그것입니다.
 
 푸시가 2021 년 말에 흔들렸을 때, 나는 Dave Fisher에게 Orion의 OpenOffice 웹 사이트를 가파른 할인으로 주최하도록 제안했습니다. 처음에는 Dave가 이사회에 청원했고 **비용을 승인했습니다**. Dave는 ASF에게 내가 그에게 지불하기로 동의한 결과 수수료를 포기하고 호스팅 비용에 그 돈을 넣으라고 말했습니다.
 
-다음에 일어난 일은 정말 놀랍습니다 : 아파치 인프라 팀은 몇 주 동안 즉각적이고 지속적으로 Dave를 자신의 독점적 인 충성도를 선언 할 수없는 위치에 놓았습니다.'s **자원봉사자 커뮤니티** 또는 **The ASF**
+다음에 일어난 일은 정말 놀랍습니다 : 아파치 인프라 팀은 몇 주 동안 즉각적이고 지속적으로 Dave를 자신의 독점적 인 충성심을 선언 할 수있는 불가피한 위치에 두었습니다. 나에게 그리고 프로젝트의 자원 봉사 커뮤니티를 확장하여 **ASF**.
 
-Dave는 The Apache CMS의 확장성 성공을 뒷받침하는 핵심 혁신가이자 협업자였습니다.'점진적 빌드 기술  그는 하지 않았다'OpenOffice 웹 사이트에 적용된 아파치 CMS에서 고성능 빌드를 보장하는 데 필요한 확장성 기능을 어떻게 추가했는지에 대해 그는 나와 함께 생산적으로 일했는데, 당시 25M 요청의 북쪽을 제공했다! 함께 우리는 깊은 응용 프로그램의 발견 [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) 그의 노력에서, 나는 오늘 사용중인 JBake 템플렛 시스템에서 여전히 수행되고 있다고 믿습니다.
+Dave는 The Apache CMS의 증분 빌드 기술의 확장성 성공을 뒷받침하는 핵심 혁신가이자 공동 작업자였습니다.  그는 솔루션을 발명하지 않았지만 OpenOffice 웹 사이트에 적용 된 아파치 CMS에서 고성능 빌드를 보장하는 데 필요한 확장성 기능을 어떻게 추가했는지에 대해 생산적으로 작업했습니다. 당시 25M 요청의 북쪽을 제공했다! 함께 우리는 깊은 응용 프로그램의 발견 [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) 그의 노력에서, 나는 오늘 사용중인 JBake 템플렛 시스템에서 여전히 수행되고 있다고 믿습니다.
 
-죄송합니다. OpenOffice로 진행되는 콘텐츠 편집을 살펴보면'최근 GitHub의 웹 사이트는 아파치 인프라 팀이 데이브가 아파치 CMS에서 그들을 이동하도록 강요했을 때 활동의 엄청난 하락을 분명히 볼 수 있으며, 결과적으로 GitHub를 통해서만 모든 기여 활동을 채널화했습니다.
+불행히도, 최근에 OpenOffice의 웹 사이트 GitHub에서 진행되는 콘텐츠 편집을 살펴보면 아파치 인프라 팀이 Dave에게 아파치 CMS에서 이동하도록 강요했을 때 활동에서 엄청난 하락을 분명히 볼 수 있으며, 결과적으로 GitHub만으로 모든 기여 활동을 채널화했습니다.
 
-그렇지 않습니다'그가 강요 당한 추악한 선택이나 미리 정해진 결과에 대해 데이브를 비난하지만, 우리는 그 날 이후로 더 이상 말을하지 않습니다.
+나는 그가 강요 당한 추악한 선택이나 미리 정해진 결과에 대해 데이브를 비난하지 않지만, 우리는 분명히 그 날 이후로 더 이상 말을하지 않습니다.
 
 전체 사건에 대해 충격적인 것은 아파치 인프라 팀의 모든 노력에 대한 절대적인 지성이었다.  나는 개인적으로 우리가 아파치 CMS에 온보딩 한 모든 프로젝트의 손을 잡고; **독재적 법령에 의해 땅에 불어 넣은** 모든 선의가 단순히 조직의 오랜 구성원으로서 나에게 무의식적이었다.
 
 그들이 한 모든 일은 좌초된 아파치 프로젝트들에 호의적인 울티마툼을 주었고, 개인적으로 그들을 **다른 것들**로 오프보딩하는 데 한 시간도 걸리지 않았다. OOo와 다르지 않았다; 그들은 단순히 학대하고, 놀라며, Dave에게 입찰을하도록 강요했다.  그리고 그는 그렇게 했다.
 
-나는 2018년에 사임했다. 가능'T는 그것을 목격하고 있습니다.  2020 년에 내가 한 일은 건설이었습니다. [오리온](https://sunstarsys.com/orion) ashes에서  그러나 그 길조차 아파치 인프라팀에 의해 아파치 프로젝트에 대해 포위되었다.
+나는 2018년에 사임했다. 나는 그것을 목격 할 수 없었다.  2020 년에 내가 한 일은 건설이었습니다. [오리온](https://sunstarsys.com/orion) ashes에서  그러나 그 길조차 아파치 인프라팀에 의해 아파치 프로젝트에 대해 포위되었다.
 
 *spite*에 대한 모든 것
 
 아쉽습니다.
+
+그러나 패배하지는 않았다. 나는 그 모든 에너지를 건물에 쏟아 부었다. [오리온](https://sunstarsys.com/orion/features) 피어리스, 보안 우선, 세계적 수준의 엔지니어링으로 [KMS](wikis). 당신이 당신의 기업 비밀을 스크립트 장난 꾸러기에 의해 도난의 타이어를 체크 아웃; 당신은 그것을 사랑합니다!
 
 <!-- $Date$ $Author$ $Revision$ -->

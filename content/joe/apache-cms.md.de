@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: Perl, Apache, ZFS, Orion
 dependencies: '*.md.de'
 keywords: apache,OpenOffice,cms,wiki
-published: ~
-status: überprüft=29803
+status: überprüft=34148
 title: Apache CMS - Retrospektiv
 ---
 
@@ -18,34 +16,34 @@ Die [Apache-CMS](https://web.archive.org/web/20120112045033/http://www.apache.or
 
 Um klar zu sein: Wenn andere von Abhängigkeitsmanagement sprechen, sind sie überwiegend mit Softwareabhängigkeiten beschäftigt, nicht [Inhaltsabhängigkeiten](dependencies). {# lede #}Alles kocht auf gut regulierten Inhalt "enthält" im templating+build System{# lede #}Das ist nicht das Gleiche wie Software deps.
 
-Diese Funktion war absolut entscheidend für die Unterstützung von Apache's massiv <https://OpenOffice.org> (OOo) Webseite.  Das RDBMS CMS Sun, das ursprünglich OOo zur Verfügung gestellt wurde, würde umfallen und sterben, auch wenn Sie nur einen Tippfehler beheben wollten. Im Gegensatz dazu lief das Apache CMS in einem FreeBSD Gefängnis auf baldr.apache.org: ein mäßig bereitgestelltes, [Dell 1950-Box, die mit 8 CPU und 24 GB RAM mit einem Paar 96 GB gespiegelten Festplatten lief](https://web.archive.org/web/20120112034217/http://www.apache.org/dev/machines.html#:~:text=baldr) über mehrere Gefängnisse und flog relativ einfach durch den Workflow.
+Diese Funktion war absolut entscheidend für die Unterstützung von Apache's massiven <https://OpenOffice.org> (OOo) Webseite.  Das RDBMS CMS Sun, das ursprünglich OOo zur Verfügung gestellt wurde, würde umfallen und sterben, auch wenn Sie nur einen Tippfehler beheben wollten. Im Gegensatz dazu lief das Apache CMS in einem FreeBSD Gefängnis auf baldr.apache.org: ein mäßig bereitgestelltes, [Dell 1950-Box, die mit 8 CPU und 24 GB RAM mit einem Paar 96 GB gespiegelten Festplatten lief](https://web.archive.org/web/20120112034217/http://www.apache.org/dev/machines.html#:~:text=baldr) über mehrere Gefängnisse und flog relativ einfach durch den Workflow.
 
 Ohne einen Klebe-CMS-ähnlichen Service, der einen Mitwirkenden IN eine Bearbeitungssitzung für die Seite bringen kann, die er IN einem einzigen Klick reparieren möchte, ist die kognitive Energie viel zu groß, um einen Tippfehler auf einer Webseite heute zu beheben:
 
-1. gehen Sie Fische, die Seite aus einem github repo,
+1. Gehen Sie Fische, die Seite aus einem Github-Repo,
 2. Gabelung des Repo,
-3. die Seite bearbeiten,
+3. Seite bearbeiten,
 4. die Änderung festschreiben,
-5. drücken Sie es,
+5. drücken,
 6. PR erstellen,
 7. **Warten**, bis ein Committer die PR genehmigt und zusammenführt,
 8. [**Warten** 10-15 Minuten bis zum Abschluss des Staging Builds](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Staging-Site-Build/) während es alle 40K+ von baubaren Assets durchschleift (~4 GB Gesamtgröße),
-9. **Warten** auf einen Committer, um die veröffentlichten geänderten Inhalte irgendwo auf der [Staging Site](https://www.staging.openoffice.org/),
-10. **Warten** auf diesen Committer, um den **gesamten Standort** in die Produktion zu befördern,
+9. **Warten**, bis ein Committer den veröffentlichten geänderten Inhalt irgendwo auf der [Staging Site](https://www.staging.openoffice.org/),
+10. **Warten** auf diesen Committer, um **gesamten Standort** für die Produktion zu bewerben,
 11. [**Warten Sie** weitere 5-10 Minuten, bis der Veröffentlichungsaufbau abgeschlossen ist](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Publish-Site/),
-12. **Warten** auf gitpubsub, um den neuen Inhalt an Apache zu übertragen'S Edge Webserver.
+12. **Warten**, bis gitpubsub den neuen Inhalt an Apache's Edge-Webserver weiterleitet.
 
-Mit dem Apache CMS (Webgui) ein Committable teilen "Patch/Diff" over E-Mail war eine Ein-Klick-Operation für jede Person auf der Erde, sowie eine Ein-Klick-Operation zum Festschreiben + Erstellen + Veröffentlichen für einen Committer, der auf das Projekt angewendet werden soll. Die ganze Sache drehte sich um das Teilen von Funktions-URLs im Kontext eines Live-Markdown-Editors mit sofortigen HTML-Vorschauen mit zwei Fensterbereichen. Sie erlaubten einem Apache-Committer im Projekt, "Klonen" das von kahlr-jail gehostete zfs-Dateisystem eines Mitwirkenden's (nicht festgeschrieben) Checkout; und anschließend prüfen, ändern und festschreiben, dass der geklonte Checkout vom Apache-Committer selbst **als Committer und nicht als Contributor** geklont wurde.  Sobald dieser Commit erfolgt ist, hat das CMS es nicht nur in *Sekunden* erstellt (da es's nur die geänderten Dateien und ihre Handvoll abhängiger Dateien erstellen), aber es stellte auch **Links** zum Build und zum Live-Rendering des Inhalts auf der Staging-Site zur Überprüfung vor der Promotion zur Produktion bereit.
+Mit dem Apache CMS (Webgui) ein Committable teilen "Patch/Diff" over E-Mail war eine Ein-Klick-Operation für jede Person auf der Erde, sowie eine Ein-Klick-Operation zum Festschreiben + Erstellen + Veröffentlichen für einen Committer, der auf das Projekt angewendet werden soll. Die ganze Sache drehte sich um das Teilen von Funktions-URLs im Kontext eines Live-Markdown-Editors mit sofortigen HTML-Vorschauen mit zwei Fensterbereichen. Sie erlaubten einem Apache-Committer im Projekt, "Klonen" das von kahlr-jail gehostete zfs-Dateisystem des (nicht festgeschriebenen) Checkouts eines Mitwirkenden; und anschließend prüfen, ändern und festschreiben, dass der geklonte Checkout vom Apache-Committer selbst **als Committer und nicht als Contributor** geklont wurde.  Sobald dieser Commit erfolgt ist, hat das CMS es nicht nur in *Sekunden* erstellt (da es nur die geänderten Dateien und ihre Handvoll abhängiger Dateien erstellt), sondern auch **Links** zum Build und zum Live-Rendering des Inhalts auf der Staging-Site zur Überprüfung vor der Promotion zur Produktion bereitgestellt.
 
 Das gesamte **One-Click** Amazon Patent war für die Kundenzufriedenheit von entscheidender Bedeutung.  Gleiches hier, aber das apache CMS war ganz allein in diesem raum.
 
 Das Apache CMS (Webgui) war das wesentliche Koordinations-Switchboard zwischen all der freiwilligen Energie, die leider die Org hinter sich gelassen hat.
 
-Es gibt mehrere Ausreden Apache'Die Infrastruktur-Führung hat erklärt, warum sie gestrichen wurde:
+Es gibt mehrere Ausreden für Apache's Infrastructure Leadership, warum es fallen gelassen wurde:
 
 1. ein Busfaktor von 1 (me),
 
-2. Auslaufen von FreeBSD ([OpenZFS](https://openzfs.org/wiki/Main_Page) läuft auf Ubuntu),
+2. Ausstieg aus FreeBSD ([OpenZFS](https://openzfs.org/wiki/Main_Page) läuft auf Ubuntu),
 
 3. [mod_perl](https://perl.apache.org/), nicht python, aber scheinbar [mod_lua](https://lists.apache.org/) ist koscher),
 
@@ -53,28 +51,30 @@ Es gibt mehrere Ausreden Apache'Die Infrastruktur-Führung hat erklärt, warum s
 
 5. hässlich (danke, reich!),
 
-5. git ist besser (danke Greg!).
+5. Git ist besser (Danke Greg!)
 
-Aber das eigentliche Motiv war *spite*.  Zwischen der Zeit, als es im März 2015 eingestellt wurde und der Zeit, als es im Januar 2022 endgültig außer Betrieb genommen wurde, lief es fast 7 Jahre lang auf Autopiloten in einem FreeBSD-Gefängnis auf baldr.apache.org. Die einzige erforderliche Wartung war (vierteljährlich?) ein Hostneustart aufgrund von Punkt 4 oben und jährliche SSL-Zertifikatserneuerungen. Das'IT.
+Aber das eigentliche Motiv war *spite*.  Zwischen der Zeit, als es im März 2015 eingestellt wurde und der Zeit, als es im Januar 2022 endgültig außer Betrieb genommen wurde, lief es fast 7 Jahre lang auf Autopiloten in einem FreeBSD-Gefängnis auf baldr.apache.org. Die einzige erforderliche Wartung war (vierteljährlich?) ein Hostneustart aufgrund von Punkt 4 oben und jährliche SSL-Zertifikatserneuerungen. Das ist es.
 
 Als der Push Ende 2021 kam, bot ich Dave Fisher an, die OpenOffice-Website auf Orion mit einem hohen Rabatt zu veranstalten. Zuerst bat Dave das Board und sie **genehmigten die Kosten**. Dave bot der ASF an, auf die Findungsgebühr zu verzichten, der ich zugestimmt hatte, ihn zu bezahlen, und sagte mir, dass ich das Geld für die Hosting-Kosten verwenden sollte.
 
-Was als nächstes geschah, war wirklich bemerkenswert: Das Apache Infrastructure Team, sofort und beharrlich über einen Zeitraum von Wochen, brachte Dave in die unbestreitbare Position, seine jetzt exklusiven Loyalitäten zu erklären, nach ihnen: für mich und durch Erweiterung das Projekt's **Freiwilligengemeinschaft** oder an **ASF**.
+Was als nächstes geschah, war wirklich bemerkenswert: Das Apache Infrastructure Team, sofort und beharrlich über einen Zeitraum von Wochen, brachte Dave in die unbestreitbare Position, seine jetzt exklusiven Loyalitäten zu erklären, nach ihnen: für mich und durch die Erweiterung die **Freiwilligen-Gemeinschaft** des Projekts oder zu **The ASF**.
 
-Dave war der Schlüsselinnovator und Mitarbeiter hinter den Skalierbarkeitserfolgen von The Apache CMS's inkrementelle Build-Technologie.  Er tat't erfinden die Lösungen; aber er arbeitete produktiv mit mir daran, wie ich die Skalierbarkeitsfunktionen hinzugefügt habe, die er brauchte, um High-Performance-Builds von The Apache CMS zu gewährleisten, wie sie auf der Website OpenOffice angewendet wurden - die zu der Zeit nördlich von 25M anfordert einen Tag! Gemeinsam haben wir eine tiefgreifende Anwendung von [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) in seinen Bemühungen, die meines Erachtens auch heute noch im JBake-Templating-System durchgeführt werden.
+Dave war der wichtigste Innovator und Mitarbeiter hinter den Skalierbarkeitserfolgen der inkrementellen Build-Technologie von The Apache CMS.  Er hat die Lösungen nicht erfunden; aber er hat produktiv mit mir zusammengearbeitet, wie ich die Skalierbarkeitsfunktionen hinzugefügt habe, die er brauchte, um High-Performance-Builds von The Apache CMS zu gewährleisten, wie sie auf der OpenOffice-Website angewendet wurden - die damals nördlich von 25M-Anfragen pro Tag lieferte! Gemeinsam haben wir eine tiefgreifende Anwendung von [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) in seinen Bemühungen, die meines Erachtens auch heute noch im JBake-Templating-System durchgeführt werden.
 
-Leider, wenn Sie sich die Contentbearbeitung mit OpenOffice ansehen'Auf der Website von GitHub in letzter Zeit können Sie deutlich einen massiven Rückgang der Aktivität sehen, als das Apache-Infrastrukturteam Dave gezwungen hat, sie vom Apache-CMS zu entfernen, und als Ergebnis alle Beitragsaktivitäten allein über GitHub kanalisiert hat.
+Wenn Sie sich die Content-Bearbeitung ansehen, die in letzter Zeit auf der Website von OpenOffice auf GitHub stattfindet, können Sie eindeutig einen massiven Rückgang der Aktivität sehen, als das Apache-Infrastrukturteam Dave gezwungen hat, sie vom Apache-CMS zu entfernen, und als Ergebnis alle Beitragsaktivitäten allein über GitHub kanalisiert hat.
 
-Ich spende'T Schuld Dave für die hässliche Wahl, die er gezwungen war, zu machen, noch für das vorbestimmte Ergebnis, aber wir sind offensichtlich nicht mehr auf Begriffe seit diesem Tag zu sprechen.
+Ich beschuldige Dave nicht für die hässliche Entscheidung, die er treffen musste, noch für das vorbestimmte Ergebnis, aber wir sind offensichtlich seit diesem Tag nicht mehr auf Begriffe.
 
 Was an der ganzen Sache schockierend ist, war die absolute Kriegslust des Apache Infrastructure Teams über die gesamte Anstrengung.  Ich persönlich hielt die Hand jedes Projekts, das wir an Bord des Apache CMS hatten; zu sehen, dass der gesamte Wohlwollen, der **durch autokratisches Dekret zu Boden gebracht wurde**, für mich als langjähriges Mitglied der Organisation einfach unergründlich war.
 
 Alles, was sie jemals taten, war, den gestrandeten Apache-Projekten kallige Ultimaten zu stellen, und nie eine einzige Stunde der Anstrengung, die sich dafür einsetzt, sie persönlich für **alles andere** zu offboardingieren. Es war nicht anders mit OOo; sie missbrauchten einfach, hazed und zwangen Dave, ihr Angebot zu machen.  Und so tat er es.
 
-Ich bin 2018 zurückgetreten. Konnte nicht'Sie werden es weiter beobachten.  Was ich 2020 gemacht habe, war gebaut [Orion](https://sunstarsys.com/orion) aus der Asche.  Aber selbst dieser Weg wurde für Apache-Projekte vom Apache-Infrastrukturteam ausgeschlossen.
+Ich bin 2018 zurückgetreten. Es konnte nicht weiter beobachtet werden.  Was ich 2020 gemacht habe, war gebaut [Orion](https://sunstarsys.com/orion) aus der Asche.  Aber selbst dieser Weg wurde für Apache-Projekte vom Apache-Infrastrukturteam ausgeschlossen.
 
 Alles für *spite*.
 
 Traurig.
+
+Aber nicht besiegt. Ich habe all diese Energie in das Gebäude gegossen [Orion](https://sunstarsys.com/orion/features) in eine einzigartige, sicherheitsorientierte, von Weltklasse entwickelte [KMS](wikis). Schauen Sie sich an, wenn Sie müde sind, Ihre Geschäftsgeheimnisse von Drehbuch-Kiddies gestohlen zu haben; Sie werden es lieben!
 
 <!-- $Date$ $Author$ $Revision$ -->

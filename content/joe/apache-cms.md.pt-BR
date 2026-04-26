@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: Perl, Apache, ZFS, Orion
 dependencies: '*.md.pt-BR'
 keywords: apache,OpenOffice,cms,wiki
-published: ~
-status: rascunho
+status: verificado=34148
 title: Apache CMS - Retrospectivo
 ---
 
@@ -18,30 +16,30 @@ O [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/
 
 Para ser claro: quando outros falam de gerenciamento de dependência, eles estão predominantemente preocupados com dependências de software, não [dependências de conteúdo](dependencies). {# lede #}Tudo se resume a conteúdo bem regulamentado "inclui" no sistema templating+build{# lede #}, que não é a mesma coisa que deps de software.
 
-Este recurso foi absolutamente crítico no suporte ao Apache'maciço <https://OpenOffice.org> (OOo) site.  O RDBMS CMS Sun originalmente fornecido para OOo cairia e morreria mesmo que você quisesse corrigir um erro de digitação. Em contraste, o Apache CMS foi executado em uma prisão FreeBSD no baldr.apache.org: um moderadamente provisionado, [Caixa Dell 1950 que funcionava com 8 CPUs e 24 GB de RAM com um par de discos rígidos espelhados de 96 GB](https://web.archive.org/web/20120112034217/http://www.apache.org/dev/machines.html#:~:text=baldr) em várias prisões, e voou através do fluxo de trabalho com relativa facilidade.
+Este recurso foi absolutamente crítico em apoiar o enorme Apache <https://OpenOffice.org> (OOo) site.  O RDBMS CMS Sun originalmente fornecido para OOo cairia e morreria mesmo que você quisesse corrigir um erro de digitação. Em contraste, o Apache CMS foi executado em uma prisão FreeBSD no baldr.apache.org: um moderadamente provisionado, [Caixa Dell 1950 que funcionava com 8 CPUs e 24 GB de RAM com um par de discos rígidos espelhados de 96 GB](https://web.archive.org/web/20120112034217/http://www.apache.org/dev/machines.html#:~:text=baldr) em várias prisões, e voou através do fluxo de trabalho com relativa facilidade.
 
 Sem alguns CMS colagem como serviço que pode obter um colaborador em uma sessão de edição para a página que eles querem reparar em um único clique, a energia cognitiva é muito grande para corrigir um erro de digitação em uma página web hoje:
 
-1. vá pescar essa página de um repositório de github,
+1. Vá pescar aquela página de um repo de github,
 2. bifurque o repositório,
-3. edite a página,
-4. comprometer a mudança,
+3. editar a página,
+4. confirmar a alteração,
 5. empurrá-lo,
 6. criar um PR,
 7. **esperar** até que um committer aprove e mescle o PR,
 8. [**esperar** de 10 a 15 minutos para que o build de preparação seja concluído](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Staging-Site-Build/) enquanto ele retira todos os mais de 40K ativos construíveis (tamanho total de cerca de 4 GB),
-9. **espere** um committer para encontrar e revisar o conteúdo alterado publicado em algum lugar no [local de teste](https://www.staging.openoffice.org/),
+9. **esperar** que um committer localize e revise o conteúdo alterado publicado em algum lugar do [local de teste](https://www.staging.openoffice.org/),
 10. **espere** esse committer para promover o **site completo** para produção,
 11. [**esperar** mais 5 a 10 minutos para a conclusão do build da publicação](https://ci-builds.apache.org/job/OpenOffice/job/OpenOffice-org-Publish-Site/),
-12. **espere** o gitpubsub para enviar o novo conteúdo para o Apache'servidores web de borda.
+12. **espere** o gitpubsub para enviar o novo conteúdo aos servidores da Web de ponta da Apache.
 
-Com o Apache CMS (webgui), compartilhando um committable "correção/diferença" over email foi uma operação de um clique para qualquer pessoa na Terra, bem como uma operação de um clique para commit+build+publish para um committer para aplicar no projeto. A coisa toda girava em torno do compartilhamento de URLs de capacidade no contexto de um editor de Markdown ao vivo com visualizações HTML instantâneas de dois painéis. Eles permitiram que um committer do Apache no projeto "clonar" o sistema de arquivos zfs hospedado em baldr-jail de um colaborador's (não comprometido) checkout; e, posteriormente, inspecionar, alterar e confirmar esse checkout clonado pelo próprio committer Apache **como o committer e não o colaborador**.  Uma vez que esse commit acontece, o CMS não apenas o criou em *segundos* (já que ele'apenas criando os arquivos alterados e seu punhado de arquivos dependentes), mas também forneceu **links** para o build e para a renderização ao vivo do conteúdo no site de preparação para revisão antes da promoção para produção.
+Com o Apache CMS (webgui), compartilhando um committable "correção/diferença" over email foi uma operação de um clique para qualquer pessoa na Terra, bem como uma operação de um clique para commit+build+publish para um committer para aplicar no projeto. A coisa toda girava em torno do compartilhamento de URLs de capacidade no contexto de um editor de Markdown ao vivo com visualizações HTML instantâneas de dois painéis. Eles permitiram que um committer do Apache no projeto "clonar" o sistema de arquivos zfs hospedado em baldr-jail do check-out de um colaborador (não comprometido); e, posteriormente, inspecionar, alterar e confirmar esse check-out clonado pelo próprio committer Apache **como o committer e não o colaborador**.  Quando esse commit acontece, o CMS não apenas o criou em *segundos* (já que ele está apenas criando os arquivos alterados e seus poucos arquivos dependentes), mas também forneceu **links** para o build e para a renderização ao vivo do conteúdo no site de preparação para revisão antes da promoção para produção.
 
 Toda a patente **One-Click** Amazon foi fundamental para a satisfação do cliente para eles.  A mesma coisa aqui; mas o Apache CMS estava sozinho neste espaço.
 
 O Apache CMS (webgui) foi aquele quadro de coordenação essencial entre toda aquela energia voluntária que infelizmente deixou a organização para trás.
 
-Existem várias desculpas Apache'Liderança de Infraestrutura feita sobre por que ela foi abandonada:
+Existem várias desculpas para a Liderança de Infraestrutura da Apache sobre por que ela foi descartada:
 
 1. um fator de ônibus de 1 (me),
 
@@ -49,32 +47,34 @@ Existem várias desculpas Apache'Liderança de Infraestrutura feita sobre por qu
 
 3. [mod_perl](https://perl.apache.org/), não python (mas aparentemente [mod_lua](https://lists.apache.org/) é kosher),
 
-4. buggy (clones zfs não confiáveis   de uma pequena prisão FreeBSD),
+4. buggy (clones zfs não confiáveis de uma pequena prisão FreeBSD),
 
 5. feio (obrigado, rico!),
 
-5. git é melhor (obrigado Greg!).
+5. Git é melhor (obrigado Greg!)
 
-Mas o verdadeiro motivo foi *spite*.  Entre o momento em que foi descontinuado em março de 2015 e o momento em que foi finalmente descontinuado em janeiro de 2022, ele estava sendo executado no piloto automático em uma prisão FreeBSD no baldr.apache.org por quase 7 anos. A única manutenção necessária foi (trimestralmente?) reinicializações de host devido ao item 4 acima e renovações anuais de certificados SSL. Que's TI.
+Mas o verdadeiro motivo foi *spite*.  Entre o momento em que foi descontinuado em março de 2015 e o momento em que foi finalmente descontinuado em janeiro de 2022, ele estava sendo executado no piloto automático em uma prisão FreeBSD no baldr.apache.org por quase 7 anos. A única manutenção necessária foi (trimestralmente?) reinicializações de host devido ao item 4 acima e renovações anuais de certificados SSL. É isso aí.
 
 Quando o impulso veio para empurrar no final de 2021, eu ofereci a Dave Fisher para hospedar o site OpenOffice no Orion com um desconto íngreme. No início, Dave pediu ao conselho e eles **aprovaram a despesa**. Dave ofereceu o ASF para renunciar a taxa de descoberta que eu concordei em pagar a ele e me disse para colocar esse dinheiro para os custos de hospedagem.
 
-O que aconteceu a seguir foi verdadeiramente notável: a Equipe de Infraestrutura Apache, imediata e persistentemente ao longo de um período de semanas, colocou Dave na posição invejável de declarar suas lealdades agora exclusivas, de acordo com eles: para mim e por extensão o projeto's **comunidade de voluntários**, ou **A ASF**.
+O que aconteceu a seguir foi verdadeiramente notável: a Equipe de Infraestrutura da Apache, imediata e persistentemente ao longo de um período de semanas, colocou Dave na posição invejável de declarar suas lealdades agora exclusivas, de acordo com eles: para mim e por extensão a **comunidade voluntária** do projeto, ou para **The ASF**.
 
-Dave foi o principal inovador e colaborador por trás dos sucessos de escalabilidade do Apache CMS'tecnologia de construção incremental.  Ele não't inventar as soluções; mas ele trabalhou produtivamente comigo sobre como eu adicionei os recursos de escalabilidade que ele precisava para garantir compilações de alto desempenho do The Apache CMS, conforme aplicado ao site OpenOffice - que na época estava entregando ao norte de solicitações 25M por dia! Juntos, descobrimos uma profunda aplicação de [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) em seus esforços, que eu acredito que ainda são realizados no sistema de modelos JBake em uso hoje.
+Dave foi o principal inovador e colaborador por trás dos sucessos de escalabilidade da tecnologia de compilação incremental do Apache CMS.  Ele não inventou as soluções; mas ele trabalhou produtivamente comigo sobre como eu adicionei os recursos de escalabilidade que ele precisava para garantir compilações de alto desempenho do The Apache CMS, conforme aplicado ao site OpenOffice - que na época estava entregando solicitações ao norte de 25M por dia! Juntos, descobrimos uma profunda aplicação de [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) em seus esforços, que eu acredito que ainda são realizados no sistema de modelos JBake em uso hoje.
 
-Infelizmente, se você olhar para a edição de conteúdo em andamento com OpenOffice'no site GitHub ultimamente, você pode ver claramente uma enorme queda na atividade quando a equipe de infraestrutura Apache forçou Dave a movê-los para fora do Apache CMS, e como resultado canalizou toda a atividade de contribuição através de GitHub sozinho.
+Infelizmente, se você olhar para a edição de conteúdo acontecendo com o site do OpenOffice em GitHub ultimamente, você pode ver claramente uma enorme queda na atividade quando a equipe de infraestrutura Apache forçou Dave a movê-los para fora do CMS Apache, e como resultado canalizou toda a atividade de contribuição através de GitHub sozinho.
 
-Sim'Não culpamos Dave pela escolha feia que ele foi forçado a fazer, nem pelo resultado predeterminado, mas obviamente não estamos mais falando desde aquele dia.
+Não culpo Dave pela escolha feia que ele foi forçado a fazer, nem pelo resultado predeterminado, mas obviamente não estamos mais falando desde aquele dia.
 
 O que é chocante sobre todo o caso foi a beligerância absoluta da Equipe de Infraestrutura Apache sobre todo o esforço.  Eu pessoalmente segurei a mão de cada projeto que embarcamos no Apache CMS; ver toda a boa vontade que criou **queimada no chão por decreto autocrático** era simplesmente insondável para mim como um membro de longa data da organização.
 
 Tudo o que eles fizeram foi dar aos projetos encalhados da Apache ultimatos, e nunca uma única hora de esforço dedicado a demiti-los pessoalmente para **qualquer outra coisa**. Não foi diferente com o OOo; eles simplesmente abusaram, tropeçaram e coagiram Dave a fazer seus lances.  E assim ele fez.
 
-Eu renunciei em 2018. Não foi possível'Continuem a testemunhá-lo.  O que eu fiz em 2020 foi construir [Orion](https://sunstarsys.com/orion) das cinzas.  Mas mesmo essa avenida foi encerrada para projetos da Apache pela equipe de infraestrutura da Apache.
+Eu renunciei em 2018. Não podia continuar testemunhando.  O que eu fiz em 2020 foi construir [Orion](https://sunstarsys.com/orion) das cinzas.  Mas mesmo essa avenida foi encerrada para projetos da Apache pela equipe de infraestrutura da Apache.
 
 Tudo para *spite*.
 
 Triste.
+
+Mas não derrotado. Eu despejei toda essa energia na construção [Orion](https://sunstarsys.com/orion/features) em uma engenharia de classe mundial, inigualável e que prioriza a segurança [KMS](wikis). Confira se você se cansar de ter seus segredos corporativos roubados por script-kiddies; você vai adorar!
 
 <!-- $Date$ $Author$ $Revision$ -->
