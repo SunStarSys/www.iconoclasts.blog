@@ -1,4 +1,4 @@
-status: verified=34115
+status: draft
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -45,7 +45,7 @@ Of course the CVE's reported were written by imbeciles:
 
 2. despite my best efforts, NULL pointer dereferences were possible, with which the junior developer did a throrough cleanup years ago.
 
-3. I had a brain fart twenty years ago around charset encodings for MIME headers, which are always 7-bit ASCII clean when well-formed.  The wrongness of that parser logic was the only meaningful security concern in the codebase's entire history- and like a NPE, all an attacker could do was crash the webserver.
+3. I had a brain fart twenty years ago around charset encodings for MIME headers, which are always 7-bit ASCII clean when well-formed.  The wrongness of that parser logic was the only meaningful security concern in the codebase's entire history- and like a NPE, all an attacker could do was crash the webserver. Of course, in a prefork setting this is shooting yourself in the foot as a hacker, but with @joesuf4/mod_perl, running it inside HTTP/2 with mpm_event is now readily achievable, so the elimimination of all forms of server crashes was vital and necessary work, and the junior developer deserves a lot of credit for that eventual achievement in apreq's trunk.
 
 But the coup de grace was the 2022 release of [2.17](https://www.google.com/search?q=libapreq2-2.17), wherein the rookie developer [purposely introduced a fatal bug into the codebase](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891), breaking [a nineteen year old regression test](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
