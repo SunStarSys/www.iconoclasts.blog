@@ -2,7 +2,7 @@
 categories: Apache, Perl
 dependencies: '*.md.es'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
-status: verificado=34115
+status: verificado=34197
 title: Desarrolladores de Apache HTTPd considerados perjudiciales
 ---
 
@@ -46,7 +46,7 @@ Por supuesto, los CVE reportados fueron escritos por imbéciles:
 
 2. A pesar de mis mejores esfuerzos, las des referencias de punteros NULL fueron posibles, con lo que el desarrollador junior hizo una limpieza de errores hace años.
 
-3. Hace veinte años tuve un pedo en el cerebro alrededor de codificaciones de charset para encabezados MIME, que siempre están limpios ASCII de 7 bits cuando están bien formados.  La equivocación de esa lógica de analizador era la única preocupación de seguridad significativa en toda la historia de la base de código, y como un NPE, todo lo que un atacante podía hacer era bloquear el servidor web.
+3. Hace veinte años tuve un pedo en el cerebro alrededor de codificaciones de charset para encabezados MIME, que siempre están limpios ASCII de 7 bits cuando están bien formados.  La equivocación de esa lógica de analizador era la única preocupación de seguridad significativa en toda la historia de la base de código, y como un NPE, todo lo que un atacante podía hacer era bloquear el servidor web. Por supuesto, en un entorno de prefork esto se está disparando a ti mismo en el pie como un hacker, pero con @joesuf4/mod_perl, ejecutarlo dentro de HTTP/2 con mpm_event ahora es fácilmente alcanzable, por lo que la eliminación de todas las formas de bloqueos del servidor fue un trabajo vital y necesario, y el desarrollador junior merece mucho crédito por ese logro eventual en el maletero de apreq.
 
 Pero el golpe de gracia fue la liberación de 2022 de [2.17](https://www.google.com/search?q=libapreq2-2.17), en donde el desarrollador novato [Introdujo deliberadamente un bug fatal en la base de código](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891), romper [una prueba de regresión de diecinueve años](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 

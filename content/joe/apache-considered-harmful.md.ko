@@ -2,7 +2,7 @@
 categories: 아파치, 펄
 dependencies: '*.md.ko'
 keywords: 아파치, httpd,mod_apreq2,libapreq2,mod_perl
-status: 확인=34115
+status: 확인=34197
 title: 아파치 HTTPd Devs Considered Harmful
 ---
 
@@ -46,7 +46,7 @@ title: 아파치 HTTPd Devs Considered Harmful
 
 2. 내 최선의 노력에도 불구하고, NULL 포인터 참조가 가능했다, 주니어 개발자는 몇 년 전에 거칠게 정리했다.
 
-3. 나는 MIME 헤더에 대한 문자 세트 인코딩 주위에 20 년 전에 두뇌 방귀를 가지고 있었는데, 이는 잘 형성되었을 때 항상 7 비트 ASCII 깨끗합니다.  이 구문 분석기 논리의 잘못은 코드베이스의 전체 역사에서 유일하게 의미있는 보안 문제였습니다. NPE와 마찬가지로 공격자가 할 수있는 모든 일은 웹 서버를 충돌시키는 것입니다.
+3. 나는 MIME 헤더에 대한 문자 세트 인코딩 주위에 20 년 전에 두뇌 방귀를 가지고 있었는데, 이는 잘 형성되었을 때 항상 7 비트 ASCII 깨끗합니다.  이 구문 분석기 논리의 잘못은 코드베이스의 전체 역사에서 유일하게 의미있는 보안 문제였습니다. NPE와 마찬가지로 공격자가 할 수있는 모든 일은 웹 서버를 충돌시키는 것입니다. 물론, prefork 설정에서 이것은 해커로 발에 자신을 촬영, 하지만 @joesuf4/mod_perl, mpm_event와 HTTP / 2 내부에서 실행 하는 지금 쉽게 달성할 수 있습니다, 그래서 서버 충돌의 모든 형태의 제거 중요 하 고 필요한 작업, 그리고 주니어 개발자는 apreq의 트렁크에서 그 궁극적인 업적에 대 한 많은 크레딧을 받을 자격이.
 
 그러나 쿠데타 드 그레이스는 2022 년 출시되었습니다. [2.17](https://www.google.com/search?q=libapreq2-2.17)로키 개발자 The rookie developer [의도적으로 코드베이스에 치명적인 버그를 도입했습니다.](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891), 끊기 [19년 된 회귀 테스트](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 

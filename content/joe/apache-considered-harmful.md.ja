@@ -2,7 +2,7 @@
 categories: Apache, Perl
 dependencies: '*.md.ja'
 keywords: apache、httpd、mod_apreq2、libapreq2、mod_perl
-status: 確認済み=34115
+status: 確認済み=34197
 title: Apache HTTPd Devs Considered Harmful
 ---
 
@@ -46,7 +46,7 @@ THEADVENTOF `httpd-2。X`まったく新しい`I/Oフィルタ` アーキテク�
 
 2. 私の最善の努力にもかかわらず、NULLポインタ間接参照が可能であり、ジュニア開発者は何年も前に徹底的にクリーンアップしました。
 
-3. 私は20年前、MIMEヘッダーのcharsetエンコーディングの周りに脳が遠かった。これは、整形式の場合、常に7ビットASCIIクリーンです。そのパーサーロジックの誤りは、コードベースの歴史の中で唯一意味のあるセキュリティ上の懸念であり、NPEと同様に、攻撃者が行うことはすべてWebサーバをクラッシュすることでした。
+3. 私は20年前、MIMEヘッダーのcharsetエンコーディングの周りに脳が遠かった。これは、整形式の場合、常に7ビットASCIIクリーンです。そのパーサーロジックの誤りは、コードベースの歴史の中で唯一意味のあるセキュリティ上の懸念であり、NPEと同様に、攻撃者が行うことはすべてWebサーバをクラッシュすることでした。もちろん、事前フォーク設定では、これはハッカーとして足で自分自身を撃つことですが、@joesuf4/mod_perlでは、mpm_eventでHTTP/2内で実行することはすぐに達成できるので、あらゆる形態のサーバクラッシュの排除は不可欠で必要な作業であり、ジュニア開発者はapreqのトランクでその最終的な達成のために多くの信用に値する。
 
 しかし、クーデター・デ・グレースは2022年のリリースでした。[2.17](https://www.google.com/search?q=libapreq2-2.17)ルーキー開発者[意図的にコードベースに致命的なバグを導入](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891)【Breaking】[19歳の回帰テスト](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
