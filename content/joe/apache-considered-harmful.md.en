@@ -1,4 +1,4 @@
-status: verified=34242
+status: verified=34245
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -41,9 +41,9 @@ Instead of having the courtesy of reaching out to  Philip, [Issac Goldstand](htt
 
 Of course the CVE's reported were written by imbeciles:
 
-1. it is impossible to cause a buffer overflow by architectural design, so such claims were always baloney, as evidenced by the fact that no exploit code has ever been published.
+1. it is impossible to cause a buffer overflow by architectural design, so such claims were always baloney; as evidenced by the fact that no exploit code has ever been published.
 
-2. despite my best efforts, NULL pointer dereferences were possible, with which the junior developer did a thorough cleanup years ago.
+2. despite my best efforts, NULL pointer dereferences were possible; with which the junior developer did a thorough cleanup years ago.
 
 3. I had a brain fart twenty years ago around charset encodings for MIME headers, which are always 7-bit ASCII clean when well-formed.  The wrongness of that parser logic was the only meaningful security concern in the codebase's entire history- and like an NPE, all an attacker could do was crash the webserver. Of course, in a prefork setting this is shooting yourself in the foot as a hacker; but with @joesuf4/mod_perl, running it inside HTTP/2 with mpm_event is now readily achievable. So the elimination of all forms of server crashes was vital and necessary work. The junior developer deserves a lot of credit for that eventual achievement in @apache/apreq's trunk. Kudos.
 
@@ -51,7 +51,7 @@ But the coup de grace was the 2022 release of [2.17](https://www.google.com/sear
 
 ## Postmortem
 
-If you are wondering how something with a broken regression test winds up on [CPAN](https://metacpan.org/dist/libapreq2), you'll have to look into how [RELENG](https://httpd.apache.org/dev/release.html) is done in the server project.
+If you are wondering how something with a broken regression test / outstanding CVE winds up on [CPAN](https://metacpan.org/dist/libapreq2) as a permanent fixture, you'll have to look into how [RELENG](https://httpd.apache.org/dev/release.html) is done in the server project.
 
 Long story short, [they commented out the test](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) and shipped it anyway, and called it a Security Release that [fixed a vulnerability every prior release was susceptible to](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 

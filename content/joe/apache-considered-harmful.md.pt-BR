@@ -2,7 +2,7 @@
 categories: Apache, Perl
 dependencies: '*.md.pt-BR'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
-status: verificado=34228
+status: verificado=34245
 title: Apache HTTPd Devs Considerados Prejudiciais
 ---
 
@@ -42,17 +42,17 @@ Em vez de ter a cortesia de chegar a Filipe, [Issac Goldstand](https://projects.
 
 É claro que os relatos da CVE foram escritos por imbecis:
 
-1. é impossível causar um estouro de buffer por projeto arquitetônico, de modo que tais afirmações foram sempre desleixadas, como evidenciado pelo fato de que nenhum código de exploit jamais foi publicado.
+1. é impossível causar um estouro de buffer por projeto arquitetônico, de modo que tais reivindicações foram sempre desleixadas; como evidenciado pelo fato de que nenhum código de exploração foi publicado.
 
-2. apesar dos meus melhores esforços, foram possíveis desreferências de ponteiro NULL, com as quais o desenvolvedor júnior fez uma limpeza completa anos atrás.
+2. apesar dos meus melhores esforços, foram possíveis desreferências de ponteiro nulo; com o qual o desenvolvedor júnior fez uma limpeza completa anos atrás.
 
-3. Eu tive um peido cerebral há vinte anos atrás em torno de encodings de charset para cabeçalhos MIME, que são sempre 7-bit ASCII limpo quando bem formado.  O erro dessa lógica de analisador era a única preocupação de segurança significativa em toda a história da base de código – e, como um NPE, tudo o que um invasor poderia fazer era travar o servidor web. É claro que, em uma configuração de prefork, isso está se atirando no pé como um hacker; mas com @joesuf4/mod_perl, executá-lo dentro de HTTP/2 com mpm_event agora é facilmente viável. Portanto, a eliminação de todas as formas de falhas do servidor era um trabalho vital e necessário. O desenvolvedor júnior merece muito crédito por essa eventual conquista no porta-malas da apreq. Felicitações.
+3. Eu tive um peido cerebral há vinte anos atrás em torno de encodings de charset para cabeçalhos MIME, que são sempre 7-bit ASCII limpo quando bem formado.  O erro dessa lógica de analisador era a única preocupação de segurança significativa em toda a história da base de código – e, como um NPE, tudo o que um invasor poderia fazer era travar o servidor web. É claro que, em uma configuração de prefork, isso está se atirando no pé como um hacker; mas com @joesuf4/mod_perl, executá-lo dentro de HTTP/2 com mpm_event agora é facilmente viável. Portanto, a eliminação de todas as formas de falhas do servidor era um trabalho vital e necessário. O desenvolvedor júnior merece muito crédito por essa eventual conquista no tronco de @apache/apreq. Felicitações.
 
 Mas o golpe de graça foi o lançamento de 2022 da [2.17](https://www.google.com/search?q=libapreq2-2.17)onde o desenvolvedor novato [Introduziu propositalmente um bug fatal na base de código](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891)quebrando [um teste de regressão de dezenove anos](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
 ## Postmortem
 
-Se você está se perguntando como algo com um teste de regressão quebrado acaba [CPAN](https://metacpan.org/dist/libapreq2), você terá que olhar para como [REENVIAR](https://httpd.apache.org/dev/release.html) é feito no projeto do servidor.
+Se você está se perguntando como algo com um teste de regressão quebrado / excelente CVE acaba [CPAN](https://metacpan.org/dist/libapreq2) como um acessório permanente, você terá que olhar para como [REENVIAR](https://httpd.apache.org/dev/release.html) é feito no projeto do servidor.
 
 Longa história curta, [Eles comentaram o teste](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) e o enviou de qualquer maneira, e o chamou de Security Release que [corrigiu uma vulnerabilidade a cada versão anterior era suscetível a](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 

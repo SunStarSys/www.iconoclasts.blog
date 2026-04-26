@@ -2,7 +2,7 @@
 categories: Apache, Perl
 dependencies: '*.md.es'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
-status: verificado=34228
+status: verificado=34245
 title: Desarrolladores de Apache HTTPd considerados perjudiciales
 ---
 
@@ -42,17 +42,17 @@ En lugar de tener la cortesía de llegar a Felipe, [Issac Goldstand](https://pro
 
 Por supuesto, los CVE reportados fueron escritos por imbéciles:
 
-1. Es imposible causar un desbordamiento de amortiguador por el diseño arquitectónico, por lo que tales afirmaciones siempre fueron tontas, como lo demuestra el hecho de que nunca se ha publicado ningún código de explotación.
+1. Es imposible causar un desbordamiento de amortiguador por el diseño arquitectónico, por lo que tales afirmaciones siempre fueron tontas; como lo demuestra el hecho de que nunca se ha publicado ningún código de explotación.
 
-2. A pesar de mis mejores esfuerzos, las des referencias de punteros NULL fueron posibles, con lo que el desarrollador junior hizo una limpieza exhaustiva hace años.
+2. A pesar de mis mejores esfuerzos, las des referencias del puntero NULL fueron posibles; con lo cual el desarrollador menor hizo una limpieza exhaustiva hace años.
 
-3. Hace veinte años tuve un pedo en el cerebro alrededor de codificaciones de charset para encabezados MIME, que siempre están limpios ASCII de 7 bits cuando están bien formados.  La equivocación de esa lógica de analizador era la única preocupación de seguridad significativa en toda la historia de la base de código, y como un NPE, todo lo que un atacante podía hacer era bloquear el servidor web. Por supuesto, en un entorno de prefork esto es dispararse en el pie como un hacker; pero con @joesuf4/mod_perl, ejecutarlo dentro de HTTP/2 con mpm_event ahora es fácilmente alcanzable. Por lo tanto, la eliminación de todas las formas de bloqueos del servidor fue un trabajo vital y necesario. El desarrollador junior merece mucho crédito por ese logro eventual en el maletero de apreq. Reconocimiento.
+3. Hace veinte años tuve un pedo en el cerebro alrededor de codificaciones de charset para encabezados MIME, que siempre están limpios ASCII de 7 bits cuando están bien formados.  La equivocación de esa lógica de analizador era la única preocupación de seguridad significativa en toda la historia de la base de código, y como un NPE, todo lo que un atacante podía hacer era bloquear el servidor web. Por supuesto, en un entorno de prefork esto es dispararse en el pie como un hacker; pero con @joesuf4/mod_perl, ejecutarlo dentro de HTTP/2 con mpm_event ahora es fácilmente alcanzable. Por lo tanto, la eliminación de todas las formas de bloqueos del servidor fue un trabajo vital y necesario. El desarrollador junior merece mucho crédito por ese logro eventual en el baúl de @apache/apreq. Reconocimiento.
 
 Pero el golpe de gracia fue la liberación de 2022 de [2.17](https://www.google.com/search?q=libapreq2-2.17), en donde el desarrollador novato [Introdujo deliberadamente un bug fatal en la base de código](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891), romper [una prueba de regresión de diecinueve años](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
 ## Postmortem
 
-Si te preguntas cómo termina algo con una prueba de regresión rota [CPAN](https://metacpan.org/dist/libapreq2), tendrás que investigar cómo [RELENG](https://httpd.apache.org/dev/release.html) se realiza en el proyecto del servidor.
+Si te estás preguntando cómo termina algo con una prueba de regresión rota / CVE excepcional [CPAN](https://metacpan.org/dist/libapreq2) como un accesorio permanente, tendrás que ver cómo [RELENG](https://httpd.apache.org/dev/release.html) se realiza en el proyecto del servidor.
 
 Cuento largo, [comentaron la prueba](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) y lo envió de todos modos, y lo llamó una liberación de seguridad que [Se solucionó una vulnerabilidad a la que cada versión anterior era susceptible de](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 

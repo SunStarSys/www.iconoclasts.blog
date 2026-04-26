@@ -2,7 +2,7 @@
 categories: Apache, Perl
 dependencies: '*.md.zh-TW'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
-status: 驗證 =34228
+status: 驗證 =34245
 title: Apache HTTPd 認為有害裝置
 ---
 
@@ -42,17 +42,17 @@ title: Apache HTTPd 認為有害裝置
 
 當然 CVE 的報告是由 Imbeciles 撰寫的：
 
-1. 架構設計不可能造成緩衝區溢位，因此這類主張一律是蜂蜜，如從未發布任何漏洞程式碼的事實證明。
+1. 架構設計不可能造成緩衝區溢位，因此這類主張永遠是蜂蜜；正如從未發布任何漏洞程式碼的事實所證明。
 
-2. 儘管我竭盡所能，但初級開發人員在幾年前進行徹底清理時，仍可進行 NULL 指標去除。
+2. 儘管我有最好的努力，但可以進行 NULL 指標去除；初級開發人員在幾年前進行徹底清除。
 
-3. 我在二十年前和 MIME 標頭的字集編碼有關，這在格式良好時總是 7 位 ASCII 清潔。剖析器邏輯的錯誤是程式碼庫整個歷史記錄中唯一有意義的安全性考量，而且就像 NPE 一樣，所有攻擊者都可能會當機 Web 伺服器。當然，在前叉設定中，這將自己以駭客身分射擊；但使用 @joesuf4/mod_perl 時，現在可以在 HTTP/2 內以 mpm_event 執行。因此，消除所有形式的伺服器當機是非常重要和必要的工作。初級開發人員希望獲得許多積分，以達成前所未有的行李箱。讚賞。
+3. 我在二十年前和 MIME 標頭的字集編碼有關，這在格式良好時總是 7 位 ASCII 清潔。剖析器邏輯的錯誤是程式碼庫整個歷史記錄中唯一有意義的安全性考量，而且就像 NPE 一樣，所有攻擊者都可能會當機 Web 伺服器。當然，在前叉設定中，這將自己以駭客身分射擊；但使用 @joesuf4/mod_perl 時，現在可以在 HTTP/2 內以 mpm_event 執行。因此，消除所有形式的伺服器當機是非常重要和必要的工作。初級開發人員希望在 @apache/apreq 的主幹中取得該項最終成就，獲得許多肯定。讚賞。
 
 但優待券是 2022 年發行的[2.17](https://www.google.com/search?q=libapreq2-2.17)，其中 rookie 開發人員[純粹引入 codebase 中的嚴重錯誤](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891)，斷裂[19 歲的迴歸測試](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
 ## 後期攤銷
 
-假如你想知道有什麼問題，有破損的迴歸測試會發生[CPAN](https://metacpan.org/dist/libapreq2)，你必須了解如何[重連](https://httpd.apache.org/dev/release.html) 在伺服器專案中完成。
+假如你想知道有什麼問題，有了破損的迴歸測試 / 出色的 CVE 倒退[CPAN](https://metacpan.org/dist/libapreq2) 作為一個永久夾具，你必須了解如何[重連](https://httpd.apache.org/dev/release.html) 在伺服器專案中完成。
 
 長篇短篇，[他們對這項測驗發表了評論](https://github.com/apache/apreq/commit/ee43f996710aad757b783ee77382ac4a78169602) 並將它寄出，並稱之為「安全發行版本」，[修正每個先前版本容易遭受的漏洞](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1018191).
 
