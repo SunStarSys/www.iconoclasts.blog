@@ -46,7 +46,7 @@ title: Apache HTTPd 認為有害裝置
 
 2. 儘管我有最好的努力，但可以進行 NULL 指標去除；初級開發人員在幾年前進行徹底清除。
 
-3. 我在二十年前和 MIME 標頭的字集編碼有關，這在格式良好時總是 7 位 ASCII 清潔。剖析器邏輯的錯誤是程式碼庫整個歷史記錄中唯一有意義的安全性考量&mdash; 與 NPE 一樣，所有的攻擊者都可能當機 Web 伺服器。當然，在前叉設定中，這將自己以駭客身分射擊；但使用 @joesuf4/mod_perl 時，現在可以在 HTTP/2 內以 mpm_event 執行。因此，消除所有形式的伺服器當機是非常重要和必要的工作。初級開發人員希望在 @apache/apreq 的主幹中取得該項最終成就，獲得許多肯定。讚賞。
+3. 我在二十年前和 MIME 標頭的字集編碼有關，這在格式良好時總是 7 位 ASCII 清潔。那是錯誤的[剖析器邏輯](https://github.com/joesuf4/apreq/blob/trunk/library/util.c#L846) 是程式碼庫整個歷史記錄中唯一有意義的安全性考量&mdash; 與 NPE 一樣，所有的攻擊者都可能當機 Web 伺服器。當然，在前叉設定中，這將自己以駭客身分射擊；但使用 @joesuf4/mod_perl 時，現在可以在 HTTP/2 內以 mpm_event 執行。因此，消除所有形式的伺服器當機是非常重要和必要的工作。初級開發人員希望在 @apache/apreq 的主幹中取得該項最終成就，獲得許多肯定。讚賞。
 
 但優待券是 2022 年發行的[2.17](https://www.google.com/search?q=libapreq2-2.17)，其中 rookie 開發人員[純粹引入 codebase 中的嚴重錯誤](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891)，斷裂[19 歲的迴歸測試](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
