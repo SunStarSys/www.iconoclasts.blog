@@ -2,7 +2,7 @@
 categories: Apache, Perl
 dependencies: '*.md.es'
 keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
-status: verificado=34245
+status: borrador
 title: Desarrolladores de Apache HTTPd considerados perjudiciales
 ---
 
@@ -40,13 +40,13 @@ En 2020, aproximadamente, el equipo de seguridad de Google aprovechó una versi�
 
 En lugar de tener la cortesía de llegar a Felipe, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann), yo mismo (@joesuf4), o cualquier otra persona involucrada en el desarrollo de `libapreq2`, un ingeniero junior en el equipo HTTPd pasó por el negocio de "corrección de bugs" las vulnerabilidades encontradas por Google. Puede ver un registro de su trabajo de prueba y error en cada versión desde entonces.
 
-Por supuesto, los CVE reportados fueron escritos por imbéciles:
+Por supuesto, los CVE reportados fueron escritos por aficionados:
 
-1. Es imposible causar un desbordamiento de amortiguador por el diseño arquitectónico, por lo que tales afirmaciones siempre fueron tontas; como lo demuestra el hecho de que nunca se ha publicado ningún código de explotación.
+1. Es imposible causar un desbordamiento de amortiguador (por diseño arquitectónico), por lo que tales afirmaciones siempre fueron tontas; como lo demuestra el hecho de que nunca se ha publicado ningún código de explotación.
 
 2. A pesar de mis mejores esfuerzos, las des referencias del puntero NULL fueron posibles; con lo cual el desarrollador menor hizo una limpieza exhaustiva hace años.
 
-3. Hace veinte años tuve un pedo en el cerebro alrededor de codificaciones de charset para encabezados MIME, que siempre están limpios ASCII de 7 bits cuando están bien formados.  La equivocación de esa lógica de analizador era la única preocupación de seguridad significativa en toda la historia de la base de código, y como un NPE, todo lo que un atacante podía hacer era bloquear el servidor web. Por supuesto, en un entorno de prefork esto es dispararse en el pie como un hacker; pero con @joesuf4/mod_perl, ejecutarlo dentro de HTTP/2 con mpm_event ahora es fácilmente alcanzable. Por lo tanto, la eliminación de todas las formas de bloqueos del servidor fue un trabajo vital y necesario. El desarrollador junior merece mucho crédito por ese logro eventual en el baúl de @apache/apreq. Reconocimiento.
+3. Hace veinte años tuve un pedo en el cerebro alrededor de codificaciones de charset para encabezados MIME, que siempre están limpios ASCII de 7 bits cuando están bien formados.  La equivocación de esa lógica de analizador fue el único problema de seguridad significativo en todo el historial de la base de código &mdash; Y como un NPE, todo lo que un atacante podía hacer era bloquear el servidor web. Por supuesto, en un entorno de prefork esto es dispararse en el pie como un hacker; pero con @joesuf4/mod_perl, ejecutarlo dentro de HTTP/2 con mpm_event ahora es fácilmente alcanzable. Por lo tanto, la eliminación de todas las formas de bloqueos del servidor fue un trabajo vital y necesario. El desarrollador junior merece mucho crédito por ese logro eventual en el baúl de @apache/apreq. Reconocimiento.
 
 Pero el golpe de gracia fue la liberación de 2022 de [2.17](https://www.google.com/search?q=libapreq2-2.17), en donde el desarrollador novato [Introdujo deliberadamente un bug fatal en la base de código](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891), romper [una prueba de regresión de diecinueve años](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 

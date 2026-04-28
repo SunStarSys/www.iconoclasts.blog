@@ -1,4 +1,4 @@
-status: verified=34245
+status: draft
 Title: Apache HTTPd Devs Considered Harmful
 Dependencies: *.md.en
 Categories: Apache, Perl
@@ -39,13 +39,13 @@ In 2020 or so, Google's Security Team took advantage of an alpha release of http
 
 Instead of having the courtesy of reaching out to  Philip, [Issac Goldstand](https://projects.apache.org/committee.html?httpd#:~:text=Issac%20Goldstand), [Max Kellermann](https://projects.apache.org/committee.html?httpd#:~:text=Max%20Kellermann) (@MaxKellermann), myself (@joesuf4), or anyone else involved in the development of `libapreq2`, a junior engineer on the HTTPd team went about the business of "bug fixing" the vulnerabilities Google found. You can see a record of his trial and error work in every release since then.
 
-Of course the CVE's reported were written by imbeciles:
+Of course the CVE's reported were written by amateurs:
 
-1. it is impossible to cause a buffer overflow by architectural design, so such claims were always baloney; as evidenced by the fact that no exploit code has ever been published.
+1. it is impossible to cause a buffer overflow (by architectural design), so such claims were always baloney; as evidenced by the fact that no exploit code has ever been published.
 
 2. despite my best efforts, NULL pointer dereferences were possible; with which the junior developer did a thorough cleanup years ago.
 
-3. I had a brain fart twenty years ago around charset encodings for MIME headers, which are always 7-bit ASCII clean when well-formed.  The wrongness of that parser logic was the only meaningful security concern in the codebase's entire history- and like an NPE, all an attacker could do was crash the webserver. Of course, in a prefork setting this is shooting yourself in the foot as a hacker; but with @joesuf4/mod_perl, running it inside HTTP/2 with mpm_event is now readily achievable. So the elimination of all forms of server crashes was vital and necessary work. The junior developer deserves a lot of credit for that eventual achievement in @apache/apreq's trunk. Kudos.
+3. I had a brain fart twenty years ago around charset encodings for MIME headers, which are always 7-bit ASCII clean when well-formed.  The wrongness of that parser logic was the only meaningful security concern in the codebase's entire history &mdash; and like an NPE, all an attacker could do was crash the webserver. Of course, in a prefork setting this is shooting yourself in the foot as a hacker; but with @joesuf4/mod_perl, running it inside HTTP/2 with mpm_event is now readily achievable. So the elimination of all forms of server crashes was vital and necessary work. The junior developer deserves a lot of credit for that eventual achievement in @apache/apreq's trunk. Kudos.
 
 But the coup de grace was the 2022 release of [2.17](https://www.google.com/search?q=libapreq2-2.17), wherein the rookie developer [purposely introduced a fatal bug into the codebase](https://github.com/apache/apreq/commit/de127ca503ad1d74bcfd8e066cf1eb3882d31891), breaking [a nineteen year old regression test](http://svn.apache.org/viewvc/httpd/apreq/trunk/library/t/parsers.c?r1=161816&r2=164254&pathrev=1895107).
 
