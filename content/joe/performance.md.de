@@ -1,32 +1,32 @@
 ---
-archived: ~
 categories: Leistung, Tools
 dependencies: '*.md.de'
 keywords: ~
-published: ~
 status: archiviert
 title: Anwendungsperformance
 ---
 
-{# lede #}Viele Entwickler fallen in die Falle des Denkens, dass es bei der Leistungsoptimierung darum geht, jede Codezeile so effizient wie möglich zu machen.{# lede #}
+{# lede #}Viele Entwickler fallen in die Falle des Denkens, dass die Leistungsoptimierung darin besteht, jede Codezeile so effizient wie möglich zu machen{# lede #}oder ihre gesamte App in der schnellsten Programmiersprache zu schreiben, die sie finden können.
 
-Es ist eigentlich das Gegenteil. Sie beginnen mit den architektonischen Einschränkungen der Anwendung und verwenden sie, um einen Drilldown zum beobachteten "langsamsten" Teil des Programms durchzuführen. Die **Implementierung** dieses Teils führt alle anderen Performanceoptionen an, die Sie treffen müssen. Alles, was nicht so langsam ist wie dieser Teil, muss nicht weiter optimiert werden. Konzentrieren Sie sich stattdessen auf den menschlichen Ausdruck und die Einfachheit und Klarheit der Umsetzung, um nicht-expert Leser über die `SSDLC`
+Es ist eigentlich das Gegenteil. Sie beginnen mit den architektonischen Einschränkungen der Anwendung und verwenden sie, um einen Drilldown zu den beobachteten "langsam" Teil des Programms. Die **Implementierung** dieses Teils führt alle anderen Performanceoptionen an, die Sie treffen müssen. Alles, was nicht so langsam ist wie dieser Teil, muss nicht weiter optimiert werden. Konzentrieren Sie sich stattdessen auf den menschlichen Ausdruck und die Einfachheit und Klarheit der Implementierung, um nicht erfahrene Leser über die `Warenkorb` der Software, für den Rest des Programmcodes.
 
-Sie können auf diesem Spielbuch iterieren, aber ich habe nie über 3 Iterationen in meiner beruflichen Karriere gehen müssen.
+Sie können auf diesem Playbook iterieren, aber ich musste nie über 3 Iterationen in meiner beruflichen Karriere hinausgehen.
 
-So gehen Sie voran und verwenden Sie eine elegante Programmiersprache wie `Python3` oder `Javascript`/`Skript`, und lassen Sie sich von den Subject Matter Experts (**SME**) in der Open-Source-Welt mächtig machen `C`/`C++`
+Also gehen Sie voran und verwenden Sie eine elegante Programmiersprache wie `Python3` oder `Javascript`/`Typ-Skript`, und lassen Sie sich von den Subject Matter Experts (**SME**) in der Open-Source-Welt mächtig machen `C`/`C++` native Bindungen für Ihre speziellen Bedürfnisse. Nichts, was Sie für die Geschäftslogik tun, benötigt mehr Geschwindigkeit als **jede** dynamische Programmiersprache, die Ihnen **out-of-the-box** geben kann.
 
-Selbst ein abhängigkeitsfreies Bash-Skript ist eine praktikable Lösung für viele grundlegende Aufgaben. Hier ist einer, den ich für Augmented Reality geschrieben habe [Magischer Sprung](https://magicleap.com) Vor Jahren, um ein ungeschicktes [OpenGrok](https://oracle.github.io/opengrok/) Service mit etwas, das Multiprozessor-Parallelisierung nutzt mit `xargs -P`und Support [PCRE](https://www.pcre.org/) Suche mit einfachen `Emacs`/`Vim`
+Selbst ein abhängigkeitsfreies Bashskript ist eine praktikable Lösung für viele grundlegende Aufgaben. Hier ist eine, die ich für Augmented Reality geschrieben habe [Magischer Sprung](https://magicleap.com) Vor Jahren, um eine ungeschickte [OpenGrok](https://oracle.github.io/opengrok/) Service mit etwas, das Multiprozessor-Parallelisierung mit `xargs -P`, und unterstützt [PCRE](https://www.pcre.org/) Einfache Suche `Emacs`/`Vim` Bindungen.
 
 https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
 
-Dieses Skript ist eine Größenordnung schneller als die üblichen Verdächtigen auf GitHub, die alle in statischen, kompilierten Programmiersprachen geschrieben wurden. Aber durch die Identifizierung des genauen Engpasses in `Basch` (Schleifen mit hohem Volumen) `fork+exec` Aufrufe in der Mitte) und `xargs` Stattdessen erhalten Sie ein Skript, das viel wie dieses aussieht, wobei der Kernalgorithmus in 10 Zeilen von `Shell`
+Dieses Skript ist um eine Größenordnung schneller als die üblichen Verdächtigen auf GitHub, die alle in statisch typisierten, kompilierten Programmiersprachen geschrieben wurden. Aber indem Sie den genauen Engpass in `Busch` (Schleifen mit hohem Volumen `Gabel+Ausführung` Aufrufe in der Mitte), und `xargs` Stattdessen erhalten Sie ein Skript, das ähnlich wie dieses aussieht, wobei der Kernalgorithmus in 10 Zeilen implementiert ist. `Schale`.
 
-Es verwendet auch die Open-Source-Community von **SME** auf intelligente Weise, anstatt wie die anderen "gefilterten rekursiven Grep"-Implementierungen auf GitHub. Anstatt meine eigene (Threaded) Implementierung intern zu übernehmen und zu pflegen `suchen`, `xargs`und `Grep`, verwende ich nur die vorinstallierten ausführbaren Dateien, die andere **SME**s über Jahrzehnte perfektioniert haben **as-is**. Ich muss ihre Implementierungen nicht beherrschen, sondern einfach wiederverwenden `CLI`
+Es nutzt auch die Open-Source-Community von **SME** auf intelligente Weise, anstatt wie die andere "gefiltertes rekursives Grep" Implementierungen auf GitHub. Anstatt intern meine eigene (Thread-) Umsetzung zu übernehmen und zu pflegen `suchen`, `xargs`und `Grep`, ich verwende nur die vorinstallierten ausführbaren Dateien wieder, die andere **SME**s über Jahrzehnte **wie besehen** perfektioniert haben, und verwende für den Rest hauptsächlich Shell *Builtins*. Ich muss ihre Implementierungen nicht beherrschen, sondern nur ihre `CLI`s. Ich will sie nicht einmal beherrschen, das ist **ihre** Kaution. Leistungsdeltas sind nur dann wichtig, wenn sie mehrere Sekunden oder länger sind, angesichts der erwarteten (menschlichen) Anwendungsfälle der Anwendung.
 
-Um den gegenteiligen Tack zu sehen, bei dem alles intern durchgeführt wird, vollständig mikrooptimiert ist und dieses Skript immer noch nicht mit den Standardsuchoptionen übertroffen werden kann und kein Caching-System verfügbar ist, finden Sie hier ein schönes Beispiel <https://github.com/BurntSushi/ripgrep>
+Der Rest des Skripts nutzt in erster Linie bash shell Builtins, die in reinem `C` von bash-Entwicklern.
 
-Nur um die erste #performance #benchmark von dieser Seite zu ziehen und sie von einer Spielzeugbeispielbaumgröße (Linux-Kernelquellen) auf einen heterogenen Baum zu skalieren, der `23GB`: (beste Ausführung nach 3 Iterationen; `SPRACHE=en_US.UTF-8`
+Um den gegenteiligen Tack zu sehen, bei dem alles intern, vollständig mikrooptimiert und mit den Standardsuchoptionen immer noch nicht übertroffen wird und kein Caching-System verfügbar ist, hier ein schönes Beispiel <https://github.com/BurntSushi/ripgrep>
+
+Nur um die erste #performance #benchmark von dieser Seite zu ziehen und sie von einer Spielzeugmusterbaumgröße (linux-Kernelquellen) zu einem heterogenen Baum zu skalieren, der `23GB`: (beste Läufe nach 3 Iterationen; `SPRACHE=en_US.UTF-8`)
 
 ```shell
     % du -sh .
@@ -41,11 +41,11 @@ Nur um die erste #performance #benchmark von dieser Seite zu ziehen und sie von 
     wc -l 0.00s user 0.00s system 0% cpu 4.501 total
 ```
 
-Es ist ziemlich albern, etwas zu mikrooptimieren, das eng mit dem Status des Dateisystemcaches des Kernels für Ihre Suche verbunden ist. Die Variation der Performance-Timings wird von der Zugriffsgeschwindigkeit auf den Inhalt der Dateien dominiert, und es ist eine Größenordnung relevanter als jeder andere Faktor für die Endergebnisse. Auf einem `NVMe` hilft, aber nichts in diesem Raum schlägt `RAM`
+Es ist ziemlich albern, etwas zu mikrooptimieren, das tief mit dem Zustand des Dateisystemcaches des Kernels für Ihre Suche verbunden ist. Die Variation der Performance-Timings wird von der Zugriffsgeschwindigkeit auf das Korpus der Dateiinhalte dominiert, und es ist eine Größenordnung, die relevanter ist als jeder andere Faktor für die Endergebnisse. Auf einem `NVMe` hilft, aber nichts in diesem Raum schlägt `RAM` selbst.
 
-Aus diesem Grund stabilisiert ein im Arbeitsspeicher komprimierter Cache für ein großes Korpus von Dateien die Performance-Timings. Es ist überraschend, dass niemand sonst dachte, dies sei wichtig genug, um zu unterstützen.
+Aus diesem Grund stabilisiert ein In-Memory-komprimierter Cache für ein großes Korpus von Dateien die Performance-Timings. Es ist überraschend, dass niemand anders dachte, dass dies wichtig genug war, um zu unterstützen.
 
-Nehmen Sie die zweite #performance #benchmark von dieser Seite, und skalieren Sie sie wie zuvor (gleich). `23GB`
+Nehmen Sie die zweite #performance #benchmark-Datei von dieser Seite, und skalieren Sie sie wie zuvor (gleich `23GB` Baum:
 
 ```shell
 	% time rg -tc -uuuiwn '[A-Z]+_SUSPEND' | wc -l
@@ -58,28 +58,28 @@ Nehmen Sie die zweite #performance #benchmark von dieser Seite, und skalieren Si
     wc -l 0.00s user 0.00s system 0% cpu 0.381 total
 ```
 
-Abgestimmt `pffxg.sh` ist immer noch schneller, trotz aller Arbeiten, die in die mikrooptimierende Ripgrep für diese `C`
+Ein gestimmt `pffxg.sh` ist immer noch schneller, trotz aller Arbeit, die in mikrooptimierende Ripgrep für diese `C`-Datei-Suche.
 
-Wie ich dieses Skript verwendet habe mit [AOSP](https://source.android.com) sollte eine `Repository` Synchronisierung und eine nachfolgende `pffxg.sh` **`ZOP`-compressed-cache Seed-to-Seed`Tmpfs`** jeden Morgen vor der Arbeit laufen (via `Crontab`), mit `PFFXG_CACHE=...` Set in meinem `~/.pffxg.conf` Datei. So `pffxg.sh` Aufrufe, die ich während des Arbeitstages ausgeführt habe, verwenden den komprimierten Cache in `Tmpfs`
+Wie ich dieses Skript verwendet habe mit [AOSP](https://source.android.com) sollte eine `Repo` Synchronisierung und eine nachfolgende `pffxg.sh` **`lz4`-komprimiert-Cache Seed-to-`tmpfs`** jeden Morgen vor der Arbeit laufen (über `crontab`), mit `PFFXG_CACHE=...` Set in meiner `~/.pffxg.conf` Datei. So ein `pffxg.sh` Aufrufe, die ich während des gesamten Arbeitstages ausgeführt habe, würden den komprimierten Cache in `tmpfs`, unabhängig davon, welchen Status der Dateisystemcache des Kernels zu diesem Zeitpunkt hatte.
 
-.25M LOC zwischen `Ripgrep` und [ugrep](https://github.com/Genivia/ugrep). 632 LOC für `pffxg.sh`
+.25M LOC zwischen `Ripgrep` und [ugrep](https://github.com/Genivia/ugrep). 632 LOC für `pffxg.sh`. Dumm.
 
-Weil es so ein kleines Shell-Programm ist, `pffxg.sh` können Sie leistungsstarke Haken in seine Innenräume mit fast null Aufwand geben. Sogar `Grep` Befehl selbst ist anpassbar: Jeder Befehl, den Sie auf einem ausgewählten Korpus von Dateien ausführen müssen, der eine Liste von Dateinamen akzeptieren kann, die an das Ende seiner Argumente angehängt sind, ist ein faires Spiel. Hier ist eine "Gesamtpositionsanzahl in `MiLOC`
+Weil es so ein kleines Shell-Programm ist, `pffxg.sh` können Sie kraftvolle Haken in seine Innenräume mit fast null Aufwand geben. Auch die `Grep` Befehl selbst ist anpassbar: Jeder Befehl, den Sie auf einem ausgewählten Korpus von Dateien ausführen müssen, der eine Liste von Dateinamen akzeptieren kann, die an das Ende seiner Argumente angehängt sind, ist ein faires Spiel. Hier ist ein "Gesamtanzahl Positionen in `MiLOC`" Übung auf dem linux kernel git repo:
 
 ```shell
-	% time find * -type f | xargs wc -l | awk '{ $2 == "total" {a+=$1} END {print a/1024**2}'
+	% time find *-type f | xargs wc -l | awk '{ $2 == "total" {a+=$1} END {print a/1024**2}'
     28.451
-    find * -type f 0.00s user 0.06s system 2% cpu 2.733 total
+    find *-type f 0.00s user 0.06s system 2% cpu 2.733 total
     xargs wc -l 0.53s user 1.02s system 54% cpu 2.853 total
     awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.23s user 0.59s system 28% cpu 2.853 total
 
-    % time pffxg.sh --workers 8 --cmd wc --all -- -l | awk '{$2 == "total" {a+=$1} END {print a/1024**2}'
+% time pffxg.sh --workers 8 --cmd wc --all -- -l | awk '{$2 == "total" {a+=$1} END {print a/1024**2}'
     28.4506
     pffxg.sh --workers 8 --cmd wc --all -- -l 0.92s user 0.66s system 826% cpu 0.192 total
     awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 11% cpu 0.192 total
 ```
 
-`Ripgrep`
+`Ripgrep` Version:
 
 ```shell
 	% time rg -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
@@ -88,7 +88,7 @@ Weil es so ein kleines Shell-Programm ist, `pffxg.sh` können Sie leistungsstark
     awk -F : '{a+=$2} END {print a/1024**2}' 0.58s user 0.45s system 66% cpu 1.564 total
 ```
 
-Hier ist es beschränkt auf `C`
+Hier ist es beschränkt auf `C`-files (gleicher Linuxbaum):
 
 ```shell
 	% time pffxg.sh --workers 8 --cc --cmd wc -- -l | awk '$2 == "total" {a+=$1} END {print a/1024**2}'
@@ -97,7 +97,7 @@ Hier ist es beschränkt auf `C`
     awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 9% cpu 0.177 total
 ```
 
-und die `Ripgrep`
+und die `Ripgrep` Version:
 
 ```shell
 	% time rg -tc -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
@@ -106,10 +106,10 @@ und die `Ripgrep`
     awk -F : '{a+=$2} END {print a/1024**2}' 0.38s user 0.38s system 66% cpu 1.140 total
 ```
 
-Die tatsächliche **Anwendungsleistung** kommt von Balance, Flexibilität und funktionalen Programmierungstechniken; sie kommt nicht von der Fixierung auf zwingende Mikrooptimierungstaktiken in statischen, kompilierten Programmiersprachen, die aus der Balance- und Flexibilitätsperspektive ein Bär sind. Solche überholten, zwingenden Sprachen sind großartige Ziele für sehr spezifische Problemdomänen, sind aber für die systemweite Anwendungsleistung schrecklich.
+Echte **Anwendungsleistung** ergibt sich aus Balance, Flexibilität und funktionalen Programmierungstechniken; sie kommt nicht aus der Fixierung auf zwingende Mikrooptimierungstaktiken in statischen, kompilierten Programmiersprachen, mit denen man aus der Balance- und Flexibilitätsperspektive arbeiten kann. Solche überhypten, zwingenden Sprachen sind große Ziele für sehr spezifische Problemdomänen, aber schrecklich für die systemweite Anwendungsleistung.
 
-`pffxg.sh` ist kein Produkt, und das ist kein Verkaufsargument dafür. Es ist ein **Beispiel**, um meinen Punkt auf eine sehr dramatische Weise zu veranschaulichen. Wenn Sie mit der langen Geschichte der gefilterten-rekursiven-grep-Lösungen auf GitHub vertraut sind, sind sie alle auf der Vorstellung, dass das Problem mit Andy Lesters Original `Perl` Implementierung [Bestätigen](https://beyondgrep.com/)war, dass es in `Perl`. Das einzige wirkliche Problem aus Performance-Sicht war, dass die `Perl` wurde von Andy geschrieben, der anscheinend keine Ahnung von Systemleistungskonzepten hatte (wie z.B. `suchen` Parallelisierungsarbeit zu einem speziell entwickelten `C` Binär), sondern zielte auf faule Portabilität ab, indem er versuchte, den gesamten Code als Single-Thread-Pure zu erfassen `Perl`
+`pffxg.sh` ist kein Produkt, und das ist kein Verkaufsgespräch dafür. Es ist ein **Beispiel**, um meinen Punkt auf eine sehr dramatische Weise zu veranschaulichen. Wenn Sie mit der langen Geschichte von gefilterten rekursiven Grep-Lösungen auf GitHub vertraut sind, basieren sie alle auf der Vorstellung, dass das Problem mit Andy Lesters Original `Perl` Implementierung [Bestätigung](https://beyondgrep.com/)war, dass es geschrieben wurde in `Perl`. Das einzige wirkliche Problem aus Performance-Sicht war, dass die `Perl` wurde von Andy geschrieben, der anscheinend keine Ahnung von Systemleistungskonzepten hatte (wie z.B. `suchen` Parallelisierungsarbeit zu einem speziell entwickelten `C` binär), aber stattdessen auf faule Portabilität ausgerichtet, indem versucht wird, den gesamten Code als Single-Thread-Pure zu erfassen `Perl` Seltsamkeit.
 
-Mögen tausend Blumen blühen, egal wie dumm sie scheinen!
+Möge tausend Blumen blühen, egal albern sie scheinen!
 
 <!-- $Date$ $Author$ $Revision$ -->
