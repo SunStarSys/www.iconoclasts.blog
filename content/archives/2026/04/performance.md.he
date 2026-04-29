@@ -1,9 +1,7 @@
 ---
-archived: ~
 dependencies: '*.md.he'
 keywords: ~
-published: ~
-title: ביצועי יישומים
+title: ביצועי יישום
 
 ---
 {% ssi `/joe/performance.md.he` %}
