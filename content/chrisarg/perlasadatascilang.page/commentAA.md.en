@@ -1,5 +1,8 @@
 Title: Great Article
+ACL: chrisarg=r, joe=rw, *=
 
 keep in mind that GFM paragraphs must have no line breaks in the middle. That's why your rendered paragraphs have jagged line beaks in the middle.
 
 <!-- $Date$ $Author$ -->
+
+<!-- $Date$ $Author$ $Revision$ -->

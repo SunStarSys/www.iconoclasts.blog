@@ -1,12 +1,13 @@
 ---
-archived: ~
+acl: chrisarg=r, joe=rw, *=
 categories: ~
 keywords: ~
-published: ~
 status: ~
 title: 素晴らしい記事
 ---
 
-GFMの段落は、中央に改行がない必要があることに注意してください。内容'レンダリングされた段落が中央に折れ線ビークを発生させた理由
+GFMの段落は、中央に改行がない必要があることに注意してください。そのため、レンダリングされた段落の途中で折れ線が折れています。
 
-<!-- $Date$ $Author$ -->
+<!-- $Date$Author: joe $ -->
+
+<!-- $Date$ $Author$ $Revision$ -->

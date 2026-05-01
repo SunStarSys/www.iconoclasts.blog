@@ -1,12 +1,13 @@
 ---
-archived: ~
+acl: chrisarg=r, joe=rw, *=
 categories: ~
 keywords: ~
-published: ~
 status: ~
 title: 好文章
 ---
 
-請記住，GFM 段落的中間不能有分行符號。那個's 為何彩現的段落在中間出現跳動的線條。
+請記住，GFM 段落的中間不能有分行符號。這就是為什麼彩現的段落在中間會跳動線條。
 
-<!-- $Date$ $Author$ -->
+<!-- $Date$ $ 作者：joe $ -->
+
+<!-- $Date$ $Author$ $Revision$ -->

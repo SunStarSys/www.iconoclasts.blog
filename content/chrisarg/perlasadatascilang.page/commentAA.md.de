@@ -1,12 +1,13 @@
 ---
-archived: ~
+acl: chrisarg=r, joe=rw, *=
 categories: ~
 keywords: ~
-published: ~
 status: ~
 title: Großer Artikel
 ---
 
-Denken Sie daran, dass GFM-Absätze keine Zeilenumbrüche in der Mitte haben dürfen. Das'Warum Ihre gerenderten Absätze gezackte Schnäbel in der Mitte haben.
+Denken Sie daran, dass GFM-Absätze keine Zeilenumbrüche in der Mitte haben dürfen. Deshalb haben Ihre gerenderten Absätze gezackte Schnäbel in der Mitte.
 
-<!-- $Date$ $Author$ -->
+<!-- $Date$ $Autor: joe $ -->
+
+<!-- $Date$ $Author$ $Revision$ -->

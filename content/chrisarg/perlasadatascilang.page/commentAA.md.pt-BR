@@ -1,12 +1,13 @@
 ---
-archived: ~
+acl: chrisarg=r, joe=rw, *=
 categories: ~
 keywords: ~
-published: ~
 status: ~
 title: Ótimo artigo
 ---
 
-Tenha em mente que os parágrafos do GFM não devem ter quebras de linha no meio. Que's por que seus parágrafos renderizados têm bicos de linha irregulares no meio.
+Tenha em mente que os parágrafos do GFM não devem ter quebras de linha no meio. É por isso que seus parágrafos renderizados têm bicos de linha irregulares no meio.
 
-<!-- $Date$ $Author$ -->
+<!-- $Date$Autor: joe $ -->
+
+<!-- $Date$ $Author$ $Revision$ -->

@@ -1,12 +1,13 @@
 ---
-archived: ~
+acl: chrisarg=r, joe=rw, *=
 categories: ~
 keywords: ~
-published: ~
 status: ~
 title: Bra artikel
 ---
 
-Tänk på att GFM-avsnitt inte får ha några radbrytningar i mitten. Detta'varför dina renderade stycken har ojämna linjer näbbar i mitten.
+Tänk på att GFM-avsnitt inte får ha några radbrytningar i mitten. Det är därför dina renderade stycken har ojämna linje näbbar i mitten.
 
-<!-- $Date$ $Author$ -->
+<!-- $Date$ $Författare: joe $ -->
+
+<!-- $Date$ $Author$ $Revision$ -->

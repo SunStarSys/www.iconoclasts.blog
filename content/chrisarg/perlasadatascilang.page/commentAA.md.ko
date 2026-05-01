@@ -1,12 +1,13 @@
 ---
-archived: ~
+acl: chrisarg=r, joe=rw, *=
 categories: ~
 keywords: ~
-published: ~
 status: ~
 title: 위대한 기사
 ---
 
-GFM 단락은 중간에 줄 바꿈이 없어야 합니다. 해당'렌더링된 단락의 중간에 선 부리가 있는 이유입니다.
+GFM 단락은 중간에 줄 바꿈이 없어야 합니다. 따라서 렌더링된 단락의 가운데에 선이 고정되어 있습니다.
 
-<!-- $Date$ $Author$ -->
+<!-- $Date$ 저자 : 조 $ -->
+
+<!-- $Date$ $Author$ $Revision$ -->
