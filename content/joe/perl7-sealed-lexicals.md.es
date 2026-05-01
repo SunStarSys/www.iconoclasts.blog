@@ -136,7 +136,7 @@ Las instrucciones de compilación para perl 5.30+ están disponibles en `sealed.
 
 Por diversión, prueba esto [parche de mono]({{snippetB.pretty_uri}}) a `ModPerl::RegistryCooker`:
 
-[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=87-92]
 
 Permite los efectos de `submanejador: {script go here} sellado` en todas sus `ModPerl::Registro` guiones, algo así como [éste](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 

@@ -136,7 +136,7 @@ sub handler :Sealed (Apache2::RequestRec $r) {
 
 為了有趣，請試試看[猴修補]({{snippetB.pretty_uri}}) 至`ModPerl::RegistryCooker`:
 
-[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=87-92]
 
 它會啟用下列項目的效果：`子處理程式 ：密封的 {script go here}` 在您所有的`ModPerl：：登錄` 文稿，類似的東西[這一個](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 

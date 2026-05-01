@@ -136,7 +136,7 @@ sub handler :Sealed (Apache2::RequestRec $r) {
 
 Для удовольствия попробуйте это [патч для обезьяны]({{snippetB.pretty_uri}}) по `ModPerl::RegistryCooker`:
 
-[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=87-92]
 
 Это позволяет воздействовать на `обработчик под:запечатанный {script go here}` на всех ваших `ModPerl::Реестр` Сценарии, что-то вроде [этот](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 

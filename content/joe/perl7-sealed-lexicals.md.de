@@ -136,7 +136,7 @@ Kompilierungsanweisungen für perl 5.30+ sind in der `sealed.pm` pod, wenn Sie m
 
 Zum Spaß, probieren Sie das [Affe Patch]({{snippetB.pretty_uri}}) bis `ModPerl::RegistryCooker`:
 
-[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=87-92]
 
 Es ermöglicht die Wirkung von `Unter-Handler: Verschlüsselte {script goes here}` auf alle Ihre `ModPerl::Registry` Skripte, etwas wie [diese](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 

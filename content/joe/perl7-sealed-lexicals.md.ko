@@ -136,7 +136,7 @@ perl 5.30+에 대한 컴파일 지침은 `sealed.pm` Pod는 mod_perl2(ithreads �
 
 재미를 위해, 이것을 시도하십시오 [원숭이 패치]({{snippetB.pretty_uri}}) 종료 `ModPerl::RegistryCooker`:
 
-[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=87-92]
 
 이를 통해 `하위 처리기: 봉인됨 {스크립트 위치}` 당신의 모든 `ModPerl::등록` 스크립트, 유사 [이 하나](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 

@@ -136,7 +136,7 @@ perl 5.30+のコンパイル手順については、`sealed.pm` podは、mod_per
 
 楽しくやってみる[ジャケット]({{snippetB.pretty_uri}}) から`ModPerl::RegistryCooker`:
 
-[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=87-92]
 
 これにより、`サブハンドラ: シール済み{スクリプトはここにあります}` すべて`ModPerl:: レジストリ` スクリプト、Something Like [こちら](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 

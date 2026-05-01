@@ -136,7 +136,7 @@ Les instructions de compilation pour perl 5.30+ sont disponibles dans `sealed.pm
 
 Pour le plaisir, essayez ceci [patch de singe]({{snippetB.pretty_uri}}) au `ModPerl::RegistryCooker`:
 
-[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=87-92]
 
 Il permet les effets de `sous-gestionnaire : le script scellé {script va ici}` sur toutes vos `ModPerl : :Registre` scripts, quelque chose comme [celui-ci](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 

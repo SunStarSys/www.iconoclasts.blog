@@ -136,7 +136,7 @@ Kompileringsinstruktioner för perl 5.30+ finns i `sealed.pm` podden ska du kör
 
 För skojs skull, prova detta [apa]({{snippetB.pretty_uri}}) till `ModPerl::RegistryCooker`:
 
-[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=87-92]
 
 Det möjliggör effekterna av `underhanterare: förseglad {script go here}` på alla dina `ModPerl::Register` Skript, ungefär som [denna](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 

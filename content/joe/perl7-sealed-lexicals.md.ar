@@ -137,7 +137,7 @@ sub handler :Sealed (Apache2::RequestRec $r) {
 
 للمتعة، جرب هذا [تصحيح القرد]({{snippetB.pretty_uri}}) لكي `ModPerl::RegistryCooker`:
 
-[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=87-92]
 
 أنها تمكن من آثار `المعالج الفرعي: مختوم {البرنامج النصي هنا}` على الإطلاق `ModPerl::سجل` سيناريوهات، شيء مثل [هذا واحد](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 

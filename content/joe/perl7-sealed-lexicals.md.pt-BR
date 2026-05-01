@@ -136,7 +136,7 @@ Instruções de compilação para perl 5.30+ estão disponíveis no `sealed.pm` 
 
 Para se divertir, tente isso [patch de macaco]({{snippetB.pretty_uri}}) para `ModPerl::RegistryCooker`:
 
-[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=86-92]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=87-92]
 
 Permite os efeitos de `sub handler : Lacrado {o script vai aqui}` em todos os seus `ModPerl::Registro` scripts, algo como [este](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
