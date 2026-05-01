@@ -136,20 +136,17 @@ For fun, try this [monkey patch]({{snippetB.pretty_uri}}) to `ModPerl::RegistryC
 
 It enables the effects of `sub handler :Sealed {script goes here}` on all of your `ModPerl::Registry` scripts, something like [this one](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
+
+Here is a live benchmark against a production server with a normal daily traffic tune. Unbeatable `HTTP/2` performance with `mod_perl`, `libapreq2` and `sealed.pm`:
+
 ```shell
-~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
+% h2load -n 100000 -m 100 -c 100 -H 'Accept-Encoding: br' 'https://www.sunstarsys.com/dynamic/enquiry?lang=.en'
 starting benchmark...
-spawning thread #0: 100 total client(s). 10000 total requests
-spawning thread #1: 100 total client(s). 10000 total requests
-spawning thread #2: 100 total client(s). 10000 total requests
-spawning thread #3: 100 total client(s). 10000 total requests
-spawning thread #4: 100 total client(s). 10000 total requests
-spawning thread #5: 100 total client(s). 10000 total requests
-spawning thread #6: 100 total client(s). 10000 total requests
-spawning thread #7: 100 total client(s). 10000 total requests
-spawning thread #8: 100 total client(s). 10000 total requests
-spawning thread #9: 100 total client(s). 10000 total requests
-Application protocol: h2c
+spawning thread #0: 100 total client(s). 100000 total requests
+TLS Protocol: TLSv1.3
+Cipher: TLS_AES_256_GCM_SHA384
+Server Temp Key: X25519 253 bits
+Application protocol: h2
 progress: 10% done
 progress: 20% done
 progress: 30% done
@@ -161,15 +158,15 @@ progress: 80% done
 progress: 90% done
 progress: 100% done
 
-finished in 13.07s, 7652.14 req/s, 11.83MB/s
+finished in 114.30s, 874.88 req/s, 1.15MB/s
 requests: 100000 total, 100000 started, 100000 done, 100000 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 100000 2xx, 0 3xx, 0 4xx, 0 5xx
-traffic: 154.61MB (162119955) total, 566.39KB (579980) headers (space savings 95.47%), 152.30MB (159700000) data
-                       min         max         mean         sd        +/- sd
-time for request:     5.74ms      12.77s       6.39s       3.61s    58.14%
-time for connect:      304us    293.01ms     70.17ms     76.83ms    74.80%
-time to 1st byte:     7.86ms       7.87s       3.33s       1.82s    50.40%
-req/s           :       7.71      248.17       19.60       28.07    92.70%
+traffic: 131.03MB (137391089) total, 2.29MB (2398165) headers (space savings 97.88%), 127.02MB (133189224) data
+                     min         max         mean         sd        +/- sd
+time for request:    87.93ms      36.90s       9.29s       6.61s    61.44%
+time for connect:   435.07ms       2.05s       1.19s    444.88ms    59.00%
+time to 1st byte:      2.05s       5.28s       2.79s    627.57ms    83.00%
+req/s           :       8.75       46.43       15.17       13.68    82.00%
 ```
 
 See <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Look for `t/bench.pl` in the parent directory.
