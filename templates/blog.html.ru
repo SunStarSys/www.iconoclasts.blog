@@ -6,7 +6,7 @@
      <div class="essay col-lg-12 container">
        <div style="color:#aaa">
          <small>
-           [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"0-9="}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"0-9="}}</span></a>]
+           [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"0-9= "}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"0-9= "}}</span></a>]
            <em>
 			   <a href="/dynamic/search{{path}}?regex=diff=r{{content|vcs_revision}};lang={{lang}};markdown_search=1">Последнее обновление</a> по <b>{{ content|ssi|vcs_author:lang }}</b> в <b>{{ content|ssi|vcs_date:lang }}</b>
 {% ifequal repos "public" %}
