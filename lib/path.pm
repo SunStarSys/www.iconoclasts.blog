@@ -1,8 +1,7 @@
 package path;
 
 use SunStarSys::Util qw/walk_content_tree seed_file_deps seed_file_acl archived Load/;
-use strict;
-use warnings;
+use v5.38;
 
 open my $fh, "<:raw", "lib/facts.yml" or die "Can't locate facts.yml data: $!";
 my $facts = Load join "", <$fh>;
@@ -110,10 +109,11 @@ walk_content_tree {
 
   my $path = $_;
   utf8::is_utf8 $path or utf8::decode $path;
-
+  state $count = 0;
   for my $lang (qw/en es de fr ru sv he zh-TW ar ko ja pt-BR/) {
 
-    if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/!) {
+    if (/\.md\.$lang$/ or m!/index\.html\.$lang$!) {
+      delete $dependencies{"/sitemap.html.$lang"} if ++$count <= 12;
       push @{$dependencies{"/sitemap.html.$lang"}}, $path if !archived;
     }
 
@@ -132,12 +132,13 @@ walk_content_tree {
 }
   and do {
     while  (my ($k, $v) = each %{$facts->{dependencies}}) {
-      push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
+      $dependencies{$k} = [grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v];
     }
 
     open my $fh, "<:raw", "lib/acl.yml" or die "Can't open acl.yml: $!";
-    push @acl, @{Load join "", <$fh>};
+    unshift @acl, @{Load join "", <$fh>};
     my %cache;
+	@acl = grep !$cache{$_->{path}}++, @acl;
     for (glob("content/*/index.md.*")) {
         next if /archives|categories/;
         s!/index\.md\.[^/]+$!!;
