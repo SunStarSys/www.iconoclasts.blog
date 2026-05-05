@@ -49,7 +49,7 @@ our @patterns = (
 
   [qr!^/[^/]+/([^/]+)\.md[^/]*$!, snippet => {
     template        => "blog.html",
-    view            => [qw/asymptote langify_template single_narrative/],
+    view            => [qw/asymptote langify_template titleize_links single_narrative/],
     preprocess      => 1,
     facts           => $facts,
     archive_root    => "/archives",
