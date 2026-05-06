@@ -141,6 +141,8 @@ div.breadcrumbs {
 a {text-decoration:none}
 a:hover {text-decoration: underline}
 
+.tooltip {background-color: #8f99fb}
+
 @media only screen and (max-width: 1000px) {
     #meta, #filter { display: none; }
 }
