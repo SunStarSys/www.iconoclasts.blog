@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}"{% ifequal lang ".ar" %} dir="rtl"{% endifequal %}>
+<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}{% ifequal lang ".ar" %} dir="rtl"{% endifequal %}>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,7 +78,7 @@
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebräisch</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">Arabisch</a></li>
               <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Schwedisch</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">Portugiesisch</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">Deutsch</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">Taxonomien</li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Kategorien</a></li>
@@ -88,7 +88,7 @@
 
 <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             aktiv
-            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">Ausgestattet mit...</a>
+            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">Bereitgestellt von...</a>
           </li>
         </ul>
 		</div>
@@ -126,7 +126,7 @@
   <div class="jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-<footer>{% block footer %}{% endblock footer %}</footer><!--
+<footer>{% block footer %}{{footer|safe}}{% endblock footer %}</footer><!--
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
@@ -186,7 +186,12 @@ else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
     }
   </script>
   <script async type="module">
-    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {

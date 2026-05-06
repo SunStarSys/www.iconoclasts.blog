@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}"{% ifequal lang ".ar" %} dir="rtl"{% endifequal %}>
+<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}{% ifequal lang ".ar" %} dir="rtl"{% endifequal %}>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,7 +48,7 @@
              作用中
              {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">聯絡人</a></li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">產品 ... <span class="caret"></span></a>
+            <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">產品介紹... <span class="caret"></span></a>
 
 <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
 			aria-labelledby="產品介紹">
@@ -59,7 +59,7 @@
           </li>
 
 <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">更多 ... <span class="caret"></span></a>
+            <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">更多... <span class="caret"></span></a>
             <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
 			aria-labelledby="更多 >>">
               <li class="dropdown-item">
@@ -88,7 +88,7 @@
 
 <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             作用中
-            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">技術支持</a>
+            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">技術支持...</a>
           </li>
         </ul>
 		</div>
@@ -126,7 +126,7 @@
   <div class="jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-<footer>{% block footer %}{% endblock footer %}</footer><!--
+<footer>{% block footer %}{{footer|safe}}{% endblock footer %}</footer><!--
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
@@ -186,7 +186,12 @@ else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
     }
   </script>
   <script async type="module">
-    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {

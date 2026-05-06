@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}"{% ifequal lang ".ar" %} dir="rtl"{% endifequal %}>
+<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}{% ifequal lang ".ar" %} dir="rtl"{% endifequal %}>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -88,7 +88,7 @@
 
 <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
             deltagande
-            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">Drivs av...</a>
+            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">Tillhandahålls av...</a>
           </li>
         </ul>
 		</div>
@@ -126,7 +126,7 @@
   <div class="jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-<footer>{% block footer %}{% endblock footer %}</footer><!--
+<footer>{% block footer %}{{footer|safe}}{% endblock footer %}</footer><!--
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
@@ -186,7 +186,12 @@ else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
     }
   </script>
   <script async type="module">
-    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {
