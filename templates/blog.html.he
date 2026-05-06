@@ -36,6 +36,7 @@
 {% block footer %}
 <div class="container">
 {% include "index.html"|append:lang %}
+{{footer|safe}}
 </div>
 
 <style type="text/css">
@@ -76,8 +77,8 @@
               $("#watch").css("display", "inline");
       }
       catch (e) {
-
-}
+          alert(e);
+      }
   }
 </script>
 {% endblock %}
