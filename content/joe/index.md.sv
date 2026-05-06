@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: skiss
+status: verifierad=36494
 title: Joes slumpartade tankar
 ---
 
@@ -15,11 +15,11 @@ title: Joes slumpartade tankar
 
 ## Välkommen!
 
-{# lede #}Vi övar [Öppen vetenskap](triple-products.html) här{# lede #}.
+{# lede #}Vi övar [Öppen vetenskap](triple-products) här{# lede #}.
 
 ## Om mig
 
-Jag är en [INTERN-A](https://www.16personalities.com/intj-personality) typ av person som vårdar de eklektiska, onormala, atypiska aspekterna av livet. Jag behärskar [Wing Chun](https://www.youtube.com/watch?v=Qexxe6ANG2o) i högstadiet, [Fysisk matematik](https://www.math.stonybrook.edu/~leontak/#:~:text=joseph%20schaefer) vid universitetet och [Optimeringsteknik](https://www.linkedin.com/in/joesuf4/) i min yrkeskarriär.
+Jag är en [INTERN-A](https://www.16personalities.com/intj-personality) typ av person som vårdar de eklektiska, onormala, atypiska aspekterna av livet. Jag behärskar [Wing Chun](https://www.youtube.com/watch?v=Qexxe6ANG2o) i högstadiet, [Fysisk matematik](https://www.math.stonybrook.edu/~leontak/#:~:text=joseph%20schaefer) vid universitetet och [Optimeringsteknik](https://www.linkedin.com/in/joesuf4) i min yrkeskarriär.
 
 ### Privatliv
 
@@ -37,4 +37,4 @@ Jag har skapat <https://iconoclasts.blog> för att tillgodose släkt sprit på n
 
 Om det låter som du, [registrera dig](/contact)!
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ $Författare: joe $ $Revision$ -->

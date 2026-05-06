@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: heyoka, иконоборчество
-status: черновик
+status: проверено=36494
 title: Случайные мысли Джо
 ---
 
@@ -15,11 +15,11 @@ title: Случайные мысли Джо
 
 ## Добро пожаловать!
 
-{# lede #}Мы практикуем [Открытая наука](triple-products.html) здесь{# lede #}.
+{# lede #}Мы практикуем [Открытая наука](triple-products) здесь{# lede #}.
 
 ## Обо мне
 
-Я [ИНТДЖ-А](https://www.16personalities.com/intj-personality) тип человека, который ценит эклектичные, ненормальные, нетипичные аспекты жизни. Я освоил [Вин Чунь](https://www.youtube.com/watch?v=Qexxe6ANG2o) в средней школе, [Физическая математика](https://www.math.stonybrook.edu/~leontak/#:~:text=joseph%20schaefer) в университете, и [Проектирование оптимизации](https://www.linkedin.com/in/joesuf4/) в моей профессиональной карьере.
+Я [ИНТДЖ-А](https://www.16personalities.com/intj-personality) тип человека, который ценит эклектичные, ненормальные, нетипичные аспекты жизни. Я освоил [Вин Чунь](https://www.youtube.com/watch?v=Qexxe6ANG2o) в средней школе, [Физическая математика](https://www.math.stonybrook.edu/~leontak/#:~:text=joseph%20schaefer) в университете, и [Проектирование оптимизации](https://www.linkedin.com/in/joesuf4) в моей профессиональной карьере.
 
 ### Личная жизнь
 
@@ -37,4 +37,4 @@ title: Случайные мысли Джо
 
 Если это звучит как ты, [пожалуйста, зарегистрируйтесь](/contact)!
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$Автор: Джо $Пересмотр: 36494 $ -->

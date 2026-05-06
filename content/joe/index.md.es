@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: heyoka, iconoclasta
-status: borrador
+status: verificado=36494
 title: Los pensamientos aleatorios de Joe
 ---
 
@@ -15,11 +15,11 @@ title: Los pensamientos aleatorios de Joe
 
 ## Bienvenido
 
-{# lede #}Practicamos [Ciencia abierta](triple-products.html) aquí{# lede #}.
+{# lede #}Practicamos [Ciencia abierta](triple-products) aquí{# lede #}.
 
 ## Acerca de mí
 
-Soy un [INTJ-A](https://www.16personalities.com/intj-personality) tipo de persona que aprecia los aspectos eclécticos, anormales y atípicos de la vida. He dominado [Wing Chun](https://www.youtube.com/watch?v=Qexxe6ANG2o) en la escuela secundaria, [Matemáticas físicas](https://www.math.stonybrook.edu/~leontak/#:~:text=joseph%20schaefer) en la Universidad, y [Ingeniería de optimización](https://www.linkedin.com/in/joesuf4/) en mi carrera profesional.
+Soy un [INTJ-A](https://www.16personalities.com/intj-personality) tipo de persona que aprecia los aspectos eclécticos, anormales y atípicos de la vida. He dominado [Wing Chun](https://www.youtube.com/watch?v=Qexxe6ANG2o) en la escuela secundaria, [Matemáticas físicas](https://www.math.stonybrook.edu/~leontak/#:~:text=joseph%20schaefer) en la Universidad, y [Ingeniería de optimización](https://www.linkedin.com/in/joesuf4) en mi carrera profesional.
 
 ### Vida personal
 
@@ -37,4 +37,4 @@ He creado <https://iconoclasts.blog> para atender a los espíritus afines en lí
 
 Si eso suena como tú, [por favor regístrese](/contact)!
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 36494 $ -->
