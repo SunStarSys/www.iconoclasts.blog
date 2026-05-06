@@ -49,7 +49,7 @@ our @patterns = (
 
   [qr!^/[^/]+/([^/]+)\.md[^/]*$!, snippet => {
     template        => "blog.html",
-    view            => [qw/asymptote langify_template offline titleize_links single_narrative/],
+    view            => [qw/asymptote langify_template titleize_links single_narrative/],
     preprocess      => 1,
     facts           => $facts,
     archive_root    => "/archives",
@@ -85,7 +85,7 @@ our @patterns = (
   [qr!\.ya?ml\b[^/]*$!, yml2ext => { }],
 
   [qr!\.md[^/]*$!, langify_template => {
-    view            => [qw/offline titleize_links single_narrative/],
+    view            => [qw/titleize_links single_narrative/],
     template        => "main.html",
     preprocess      => 1,
     facts           => $facts,
