@@ -141,20 +141,20 @@ div.breadcrumbs {
 a {text-decoration:none}
 a:hover {text-decoration: underline}
 
+.custom-tooltip {opacity: 1 !important}
 .custom-tooltip .tooltip-inner {
     background-color: #8f99fb; /* Periwinkle background */
 	color: #fff;
-	opacity: 1 !important;
 }
 
 /* Change tooltip arrow color */
-/*.tooltip-arrow::after, .tooltip-arrow::before {
-    border-color: #8f99fb !important;
+.tooltip-arrow::before {
+    border-bottom-color: #8f99fb !important;
 }
-*/
+/*
 .bs-tooltip-bottom .tooltip-arrow::before {
     border-top-color: #8f99fb !important;
-/*    border-bottom-color: #8f99fb !important; */
+    border-bottom-color: #8f99fb !important; 
 }
 .bs-tooltip-start .tooltip-arrow::after {
     border-left-color: #8f99fb !important;
@@ -164,7 +164,7 @@ a:hover {text-decoration: underline}
     border-left-color: #8f99fb !important;
     border-right-color: #8f99fb !important;
 }
-
+*/
 @media only screen and (max-width: 1000px) {
     #meta, #filter { display: none; }
 }
