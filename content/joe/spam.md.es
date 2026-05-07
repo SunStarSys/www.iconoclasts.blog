@@ -8,7 +8,7 @@ status: archivado
 title: Sobre el problema del spam...
 ---
 
-Como escribí sobre [otro lugar](/clients/apache), una de las mejores herramientas de código abierto disponibles para el arsenal de herramientas anti-spam de un administrador de correo es [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), que es simplemente un servidor de correo entrante frontend que necesita un servidor de correo totalmente funcional como `qmail`, `correo`, `eximir`, o `prefijo` para la entrega saliente.  Qué `qpsmtpd` es muy similar a lo que `httpd` para los servidores web: introduce ganchos personalizables en cada fase del `SMTP`
+Como escribí sobre [otro lugar](https://sunstarsys.com/clients/apache), una de las mejores herramientas de código abierto disponibles para el arsenal de herramientas anti-spam de un administrador de correo es [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), que es simplemente un servidor de correo entrante frontend que necesita un servidor de correo totalmente funcional como `qmail`, `correo`, `eximir`, o `prefijo` para la entrega saliente.  Qué `qpsmtpd` es muy similar a lo que `httpd` para los servidores web: introduce ganchos personalizables en cada fase del `SMTP`
 
 {# lede #}El mejor plugin para `qpsmtpd`aunque es difícil entender por qué{# lede #}, es el `maduro` plugin.  Qué `maduro` se pone `qpsmtpd` para dormir durante un tiempo configurable, escuchando en el zócalo (a través de `seleccionar(2)`) para comunicaciones "tempranas" no conformes con RFC procedentes del otro extremo del socket (`qpsmtpd` normalmente bifurca un servidor para cada conexión entrante, por lo que es solo ese proceso de niño durmiendo en `seleccionar(2)`
 

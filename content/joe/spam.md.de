@@ -8,7 +8,7 @@ status: archiviert
 title: Über das Spam-Problem...
 ---
 
-Wie ich schrieb über [anderswo](/clients/apache), eines der besten Open-Source-Tools, das dem Arsenal von Anti-Spam-Tools eines Mail-Administrators zur Verfügung steht, ist [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), der lediglich ein Frontend-Eingangsmailserver ist, der einen voll funktionsfähigen Mailserver wie `qmail`, `senden`, `Exim`oder `Postleitzahl` für ausgehende Lieferung.  Was `qpsmtpd` ist sehr ähnlich zu dem was `HTTPD` tat für Webserver: Es führt anpassbare Haken in jede Phase der `SMTP`
+Wie ich schrieb über [anderswo](https://sunstarsys.com/clients/apache), eines der besten Open-Source-Tools, das dem Arsenal von Anti-Spam-Tools eines Mail-Administrators zur Verfügung steht, ist [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), der lediglich ein Frontend-Eingangsmailserver ist, der einen voll funktionsfähigen Mailserver wie `qmail`, `senden`, `Exim`oder `Postleitzahl` für ausgehende Lieferung.  Was `qpsmtpd` ist sehr ähnlich zu dem was `HTTPD` tat für Webserver: Es führt anpassbare Haken in jede Phase der `SMTP`
 
 {# lede #}Das beste Plugin für `qpsmtpd`Obwohl es schwierig ist zu verstehen, warum{# lede #}, ist die `Earlytalker` Plugin.  Was `Earlytalker` setzt `qpsmtpd` um für eine konfigurierbare Zeit zu schlafen, hören Sie auf der Steckdose (über `auswählen(2)`) für nicht-RFC-konforme "frühen" Kommunikationen, die vom anderen Ende des Sockels kommen (`qpsmtpd` gibt normalerweise einen server für jede eingehende verbindung ab, so dass nur der kind-prozess schläft. `auswählen(2)`
 

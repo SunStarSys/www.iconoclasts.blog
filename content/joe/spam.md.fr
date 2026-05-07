@@ -8,7 +8,7 @@ status: archivé
 title: Sur le problème du spam...
 ---
 
-Comme j'ai écrit sur [ailleurs](/clients/apache), l'un des meilleurs outils open source disponibles pour l'arsenal d'outils anti-spam d'un administrateur de messagerie est [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), qui est simplement un serveur de courrier entrant frontal qui a besoin d'un serveur de courrier entièrement fonctionnel comme `courriel`, `envoyer un message`, `exim`, ou `préfixe` pour la livraison sortante.  Quoi `qpsmtpd` est très similaire à ce que `httpd` fait pour les webservers : il introduit des crochets personnalisables dans chaque phase de la `SMTP`
+Comme j'ai écrit sur [ailleurs](https://sunstarsys.com/clients/apache), l'un des meilleurs outils open source disponibles pour l'arsenal d'outils anti-spam d'un administrateur de messagerie est [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), qui est simplement un serveur de courrier entrant frontal qui a besoin d'un serveur de courrier entièrement fonctionnel comme `courriel`, `envoyer un message`, `exim`, ou `préfixe` pour la livraison sortante.  Quoi `qpsmtpd` est très similaire à ce que `httpd` fait pour les webservers : il introduit des crochets personnalisables dans chaque phase de la `SMTP`
 
 {# lede #}Le meilleur plugin pour `qpsmtpd`, bien qu'il soit difficile de comprendre pourquoi{# lede #}, est le `débutant` plugin.  Quoi `débutant` est mis `qpsmtpd` pour dormir pendant une durée configurable, en écoutant sur le socket (via `sélectionner(2)`) pour les communications "précoces" non conformes à la norme RFC provenant de l'autre extrémité du socket (`qpsmtpd` fourche généralement un serveur pour chaque connexion entrante, de sorte que seul le processus enfant dort dans `sélectionner(2)`
 

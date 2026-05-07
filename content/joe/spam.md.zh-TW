@@ -8,7 +8,7 @@ status: 已封存
 title: 垃圾信問題 ...
 ---
 
-我寫過關於[其他地方](/clients/apache)，郵件管理員反垃圾郵件工具的常用開源工具之一是[qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd)，這只是前端入埠郵件伺服器，需要如功能完整的郵件伺服器`QQ 客服`, `電子郵件`, `審查`，或`後置` 出貨交貨。什麼`qpsmtpd` 這與什麼情況非常相似`HTTPD` 為 Web 伺服器進行：它會在每個階段引進可自訂的鉤點`SMTP`
+我寫過關於[其他地方](https://sunstarsys.com/clients/apache)，郵件管理員反垃圾郵件工具的常用開源工具之一是[qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd)，這只是前端入埠郵件伺服器，需要如功能完整的郵件伺服器`QQ 客服`, `電子郵件`, `審查`，或`後置` 出貨交貨。什麼`qpsmtpd` 這與什麼情況非常相似`HTTPD` 為 Web 伺服器進行：它會在每個階段引進可自訂的鉤點`SMTP`
 
 {# lede #}單一最佳外掛程式`qpsmtpd`，雖然很難理解原因{# lede #}，是`初期人` 外掛程式。什麼`初期人` 已放置`qpsmtpd` 睡眠時間可設定，聆聽插槽 (透過`選擇 (2)`) 用於來自插槽另一端的不符合 RFC 規範的「提前」通訊 (`qpsmtpd` 通常為每個內送連線安裝伺服器，因此它只會讓子處理作業休眠`選擇 (2)`
 
