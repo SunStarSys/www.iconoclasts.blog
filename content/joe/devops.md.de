@@ -1,26 +1,24 @@
 ---
-archived: ~
 categories: IT
 dependencies: '*.md.de'
-keywords: Devops
-published: ~
+keywords: Dämonen
 status: archiviert
 title: Die Bewegung DevOps
 ---
 
 [TOC]
 
-## Mehr als nur den Entwicklern Root-Zugriff zu geben!
+## Mehr als nur dem Entwickler Root Access zu geben!
 
-Oder auch nicht. {# lede #}Die große Idee hinter der "Bewegung" ist nicht nur, den Entwicklern mehr Seil zu geben{# lede #}
+Oder nicht einmal das. {# lede #}Die große Idee hinter dem "Bewegung" gibt Entwicklern nicht einfach mehr Seil{# lede #}; es geht darum, bessere Kommunikationswege zwischen den *Entwicklern* und den *Operationen* Teams im Unternehmen zu gewährleisten.  Vieles davon ist nicht neu, in der Tat ist es ein Rehash der *kaizen *    Bewegung innerhalb der traditionellen industriellen (insb. Automobil) Lieferketten im vorigen Jahrhundert.  Kanban-Boards sind nur das neueste Rehash von Bird-Eye-Dashboards (doppelt sich als Workflow-Inventarmanager), die den kollektiven täglichen Aufwand abdecken, Qualitätsprodukte zu versenden, die Kunden und Geschäftspartner gleichermaßen begeistern.
 
-Constraint-Management ist der Schlüssel zum Prozess.  Indem Sie zunächst alle Engpässe im System identifizieren, können Sie Ihre Bemühungen auf die Optimierung dieser Ressourcen konzentrieren, um eine maximale Leistung zu erzielen.  Optimierungen jenseits dieser Bereiche sind fast immer nicht die Mühe wert &mdash;
+Constraint-Management ist der Schlüssel zum Prozess.  Indem Sie zunächst alle Engpässe im System identifizieren, können Sie Ihre Bemühungen auf die Optimierung dieser Ressourcen konzentrieren, um maximale Wirkung zu erzielen.  Optimierungen jenseits dieser Bereiche sind fast immer nicht die Mühe wert &mdash; Der Workflow wird weiterhin durch diese Ressourcen eingeschränkt.
 
 ## Trunk-basierte Entwicklung
 
-Die Förderung inkrementeller Änderungen mit automatisierten Test-, Promotion- und Freigabeprozessen in einem geplanten Intervall ist eine großartige Möglichkeit, den Ball ins Rollen zu bringen, aber ein großer Teil der Qualitätskontrolle in SaaS/PaaS-Bereitstellungen umfasst die Einführung von *[Trunk-basierte Entwicklung](https://trunkbaseddevelopment.com).
+Die Förderung inkrementeller Änderungen durch automatisierte Test-, Promotion- und Freigabeprozesse in einem geplanten Intervall ist eine großartige Möglichkeit, den Ball ins Rollen zu bringen, aber ein großer Teil der Qualitätskontrolle in SaaS/PaaS-Bereitstellungen umfasst die Einführung von *[Stammbasierte Entwicklung](https://trunkbaseddevelopment.com)* und seine *Zweig durch Abstraktion* Konzepte.  (Bitte besuchen Sie den Link für eine gründliche Diskussion der Merkmale und Nachteile).
 
-Im Wesentlichen das Multiversum der langfristigen `Git`
+Im Wesentlichen das Multiversum der langfristigen `git` Zweige schaffen die psychologische Fiktion, dass die kombinierte Verschmelzung all dieser lokalen Entwicklungsarbeit (und Tests!) zu einem Ganzen führen wird, das mindestens so groß ist wie die Summe seiner Teile.  Erfahrung ist der bessere Richter, was darauf hindeutet, dass umfangreiche neue Features auf dem vorhandenen Quellcode der Produktions-/Releasefiliale *inkrementell *in-situ* entwickelt werden sollten.  Grundsätzlich entwickeln Sie Ihre Entwicklungsstrategien innerhalb der Grenzen der Physik der biologischen Welt, die sagt:
 
 ```text
         Surgery on a patient must result
@@ -31,43 +29,44 @@ Im Wesentlichen das Multiversum der langfristigen `Git`
 
 ### CI/CD-Pipelines
 
-Trunk Based Development ist die Basis für alle konsequent automatisierten Change Control Pipelines, die in den letzten zwei Jahrzehnten gewachsen sind.
+Trunk Based Development ist die Basis für alle in den letzten zwei Jahrzehnten gewachsenen automatisierten Change Control Pipelines.
 
-## Code ist Gesetz (Entwicklung + Infrastruktur + Konfiguration).
+## Code ist Gesetz (Entwicklung + Infrastruktur + Konfiguration)
 
 Ein bisschen historische Perspektive zuerst; die Pointe folgt diesen vier Absätzen.  Der gemeinsame Thread hier ist, dass Apache seiner Zeit fast immer voraus war.
 
-Zurück in die Pre-[CFEngine](https://cfengine.com).
+Zurück in der Vor-[CFEngine](https://cfengine.com) Die Apache Software Foundation hat alle ihre IT-Konfigurationsdateien und Support-Skripte in CVS und anschließend in Subversion aufbewahrt.  Darüber hinaus hatte jeder von uns ausgeführte Dienst einen "Runbook" um Administratoren mit ihren praktischen Wartungsarbeiten zu unterstützen.
 
-Der Workflow war weniger als ideal: Neben dem Aufbau unserer eigenen lokal gepatchten FreeBSD-Ports-Bäume in bereitstellbare (binäre) Pakete von Grund auf mussten die Mitarbeiter bei der Bereitstellung von Änderungen an der Produktion schwer durchsetzbare *disziplin* üben, indem sie sich zunächst zur Versionskontrolle verpflichten, sich beim Zielserver anmelden, den Checkout aktualisieren und den Service möglicherweise neu starten. &mdash;
+Der Workflow war weniger als ideal: Neben dem Aufbau eigener lokal gepatchter FreeBSD-Portsbäume in bereitstellbaren (binären) Paketen von Grund auf mussten die Mitarbeiter bei der Bereitstellung von Änderungen an der Produktion hart durchsetzbare Disziplin üben, indem sie sich zuerst für die Versionskontrolle einsetzen, sich beim Zielserver anmelden, seinen Checkout aktualisieren und den Service möglicherweise neu starten &mdash; All diese sich wiederholende Arbeit, die von Hand ausgeführt wird. In der Realität haben Systemadministratoren die meiste Zeit direkt auf dem Zielserver gehackt und vom Checkout dieses Servers aus festgeschrieben, wodurch viele Zusammenführungskonflikte auf dem Weg riskiert wurden, während der Baum neu aktualisiert wurde (entweder dann oder irgendwann auf dem Weg durch zukünftige Aktionen, die von einem anderen Mitarbeiter ausgeführt wurden). Ein eher weniger als transparenter Workflow mit zweifelhafter Sicherheit bei der Passwortverwaltung für ein kollaboratives Ops-Team.
 
-Heutzutage halten sie alles in einem `Git`-unterstützter Marionettenquellbaum und Bereitstellung/Bereitstellung/Konfiguration direkt in der Cloud mit generischen Upstream-Ubuntu-Paketen, was ein etwas moderner Ansatz für ihre IT-Betrieb ist, da geplant `Git`
+Heutzutage halten sie alles in einem `git`-gestützter Marionetten-Quellbaum und Bereitstellung/Bereitstellung/Konfiguration direkt in der Cloud mit generischen vorgelagerten Ubuntu-Paketen, was ein etwas moderner Ansatz für ihre IT-Ops-Arbeit ist, seit geplant `git` Pulls vom Marionettenmaster werden schließlich Updates bereitstellen, wenn die Marionetten-Agents einchecken.  Aber CI/CD ist ein Work-in-Progress, auch bis heute.
 
-Auf der anderen Seite war eine frühe, bahnbrechende CI-ähnliche Initiative bei The ASF (für tatsächliche Apache-Software-TLP-Projekte) [Apache Gump](https://gump.apache.org/).
+Auf der anderen Seite war eine frühe, bahnbrechende CI-ähnliche Initiative bei The ASF (für tatsächliche Apache Software TLP-Projekte) [Apache Gump](https://gump.apache.org/)Das war die Idee von brillanten Kollegen wie Sam Ruby und Company.  Was gump tat, war periodisch checkout, build und test HEAD (einschließlich HEAD aller deps) des Rumpfes jeder Codebasis im Subversion-Repository (aber stammt aus CVS) für jedes Projekt, das es erfolgreich herausfinden konnte, wie man baut (was im Großen und Ganzen auf Java-Projekte ursprünglich beschränkt war). Berichte wurden automatisch an jede Entwicklungscommunity gesendet und zur Nachwelt archiviert.  Diese aufschlussreiche **toil automation**-Aktivität geht bis heute (mit git) weiter!  **Jede Entwicklungscommunity für Unternehmen, die ihren eigenen Gump-Server nicht ausführt, befindet sich 20y hinter dem Stand der Technik bei The ASF (IMO. Beginnen Sie nicht mit den von der Open-Source-Version gepinnten Softwaremodulabhängigkeiten in /trunk|master/ ...).**
 
-Hier ist *der Punkt in Kürze*: Alle Ihre Quellen (Entwicklung, Infrastruktur und Konfiguration) gehören zur Versionskontrolle (nicht unbedingt das gleiche Repository), das von allen Devops-Mitarbeitern überprüft werden kann, und sind Teil Ihrer vollständigen Testautomatisierungspipelines zwischen Patchrevisionen und Produktionsbereitstellungen.  Eine Umfrage zum Stand der Technik, bei der Änderungen auf Anfrage in den Einstellungen von IaC/CaC getestet/bereitgestellt/bereitgestellt werden, ist auf der Website meines Freundes und Visionärs Paul Hammant [hier](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
+Hier ist *der Punkt auf den Punkt gebracht*: Alle Ihre Quellen (Entwicklung, Infrastruktur und Konfiguration) gehören zur Versionskontrolle (nicht unbedingt zum selben Repository), die von allen Devops-Mitarbeitern überprüft werden kann, und sind Teil Ihrer gesamten Testautomatisierungspipelines zwischen Patchrevisionen und Produktionsbereitstellungen.  Ein Überblick über den Stand der Technik, bei dem Änderungen auf Anfrage in IaC/CaC-Einstellungen getestet/bereitgestellt/bereitgestellt werden, ist auf der Website meines Freundes und Visionärs Paul Hammant [hier](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/). Schauen Sie doch mal rein!
 
-## Virtualisierung vs. Containerisierung: a [Haustiere vs. Rinder](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/).
+## Virtualisierung vs. Containerisierung
 
-Containersysteme wie Docker sind anpassbare, erneut bereitstellbare Virtualisierungstechnologien, die in der Regel zur Unterstützung eines Anwendungscluster-Frameworks der MicroService-Architektur (MSA) wie Kubernetes verwendet werden. Sie greifen dort auf, wo Virtualisierungssysteme aufgehört haben, und handeln mit unbegrenzter Unterstützung von (vollständig) isolierten pro-VM-Betriebssystemen für Linux-Kernel-basierte VMs, die wesentlich programmierbarere Anpassungen und Integration mit dem übergeordneten Linux-Host haben, auf dem sie ausgeführt werden.  Darüber hinaus können sie wieder aufgebaut und in einen zentralen Distributionsservice (wie Artifactory) hochgeladen werden, um sie in großem Maßstab über mehrere Abhängigkeitsketten und ausführbare Raw-Serverbereitstellungen hinweg wiederzuverwenden.
+A [Haustiere gegen Rinder](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) Redux.
+
+Containersysteme wie Docker sind anpassbare, erneut bereitstellbare Virtualisierungstechnologien, die in der Regel zur Unterstützung eines MicroService Architecture-(MSA-)Anwendungscluster-Frameworks wie Kubernetes verwendet werden. Sie greifen dort auf, wo Virtualisierungssysteme aufgehört haben, und handeln mit unbegrenzter Unterstützung von (vollständig) isolierten pro-VM-Betriebssystemen für Linux-Kernel-basierte VMs, die deutlich programmierbarer sind Anpassung und Integration mit dem übergeordneten Linux-Host, auf dem sie ausgeführt werden.  Darüber hinaus können sie neu erstellt und in einen zentralen Verteilungsdienst (wie Artifactory) hochgeladen werden, um sie in großem Umfang über mehrere Abhängigkeitsketten und ausführbare Server-Deployments im Raw-Modus wiederzuverwenden.
 
 ### Vertikale vs. horizontale Skalierung
 
-Rekonfigurierbare Container, die von einem zentralen Server heruntergeladen werden können, ermöglichen mit der grundlegenden Virtualisierungstechnologie nur schwer realisierbare Möglichkeiten. Sie sind nicht an die Hardwarelimits eines einzelnen Servers gebunden, um Ihre Services nach Bedarf zu skalieren.  Mit anderen Worten: Die horizontale Skalierung durch die Bereitstellung desselben Containers über mehrere Hostsammlungen hinweg, **auf Anforderung**, ist ein sofort erreichbares erstklassiges Feature von MSA-Frameworks auf Basis von Docker.  Ebenso wie die Bereitstellung von Dutzenden mehr Containern als CPU-Cores auf dem * gleichen* Host.
+Umkonfigurierbare Container, die von einem zentralen Server heruntergeladen werden können, ermöglichen Möglichkeiten, die mit der grundlegenden Virtualisierungstechnologie nur schwer zu realisieren sind. Sie sind nicht an die Hardwarelimits eines einzelnen Servers gebunden, um Ihre Services entsprechend der Nachfrage zu skalieren.  Mit anderen Worten: Die horizontale Skalierung durch das Deployment desselben Containers über Host-Collections hinweg, **on demand**, ist ein sofort erreichbares erstklassiges Feature von MSA-Frameworks, die auf Docker basieren.  Es werden Dutzende mehr Container als CPU-Cores auf dem *same*-Host bereitgestellt.
 
-## Messung, Eindämmung und Kontrolle Brandbekämpfung Bemühungen, sowohl real und praktiziert
+## Messung, Eindämmung und Kontrolle der Brandbekämpfung, real und praktisch
 
-Eines der anderen wichtigen Dinge, die Sie erkennen müssen, ist die Unterscheidung zwischen *geplanter* und * ungeplanter* Arbeit in einer Ihrer Produktivitätsverfolgungsmetriken und der Zuweisung von Ressourcen zu diesen Aufgaben.  Ungeplante Arbeit bedeutet **Feuerbekämpfung**, und wenn zu viel Zeit (mehr als ~20%) für diese Aufgaben aufgewendet wird, wird die geplante Arbeit, die der eigentliche Geschäftsbedarf für das Unternehmen ist, zurückgebucht.
+Eines der anderen wichtigen Dinge, die Sie erkennen müssen, ist die Unterscheidung zwischen *geplanter* und *ungeplanter* Arbeit in einer Ihrer Produktivitätsverfolgungsmetriken und die Art und Weise, wie Ressourcen diesen Aufgaben zugewiesen werden.  Ungeplante Arbeit bedeutet **Feuerbekämpfung**, und wenn zu viel Zeit (mehr als ~20%) für diese Aufgaben aufgewendet wird, wird die geplante Arbeit, die der eigentliche Geschäftsbedarf für das Unternehmen ist, rückgeholt.
 
-Die Engpässe im System können nur selten ungeplante Arbeiten bewältigen, daher ist es wichtig, über genügend zusätzliche Ressourcen zu verfügen, um die erhöhte Belastung und den daraus resultierenden Rückstand zu bewältigen.
+Die Engpässe im System können selten ungeplante Arbeiten bewältigen, daher ist es wichtig, über genügend zusätzliche Ressourcen zu verfügen, um die erhöhte Belastung und den daraus resultierenden Rückstand zu bewältigen.
 
-Eine der wichtigsten Rückwurflektionen von COVID-19 Anfang 2020, als Krankenhauskapazität in Bezug auf die IT, ist, dass es so etwas wie "zu schlank" gibt, zumindest wenn es um das Personal von Devops geht (Hardware ist eine andere Geschichte).  Die Notfallplanung für einen regnerischen Tag, entweder mit "redundantem" Personal oder Cross-Training-Initiativen, kombiniert mit regelmäßigen vorbereitenden Übungen, hält den Arzt nicht nur fern, sondern ist tatsächlich **missionskritisch**.
+Eine der wichtigsten Rückwürfe von COVID-19 Anfang 2020, da Krankenhauskapazität in Bezug auf die IT, ist, dass es so etwas wie *zu schlank *gibt, zumindest wenn es um Devops Personal geht (Hardware ist eine andere Geschichte).  Eventualplanung für einen regnerischen Tag, entweder mit "redundant" Personal oder Cross-Training-Initiativen, kombiniert mit regelmäßigen Vorbereitungsübungen, hält nicht nur den Arzt fern, sondern ist tatsächlich **mission-kritisch**.
 
-## Anreise mit dem Programm
+## Mit dem Programm
 
-Auf Managementebene ist eine globale Change Management-Perspektive zwischen Entwicklungs- und Operations-Änderungen von entscheidender Bedeutung. Beide Teams müssen sich der Veränderungen des jeweils anderen bewusst sein. Idealerweise mit Planungsdetails, die auf dem Weg zur Verfügung gestellt werden. **Große Dinge können passieren**, wenn die Teams eine gesunde Mischung aus Entwicklungs- und Betriebsmitarbeitern in einer datengesteuerten, transparenten Kultur der Zusammenarbeit sind.
+Auf Managementebene ist eine globale Change-Management-Perspektive zwischen Entwicklern und Operations-Änderungen von entscheidender Bedeutung. Beide Teams müssen sich der Veränderungen des jeweils anderen bewusst sein. Idealerweise mit Planungsdetails, die unterwegs zur Verfügung gestellt werden. **Großartige Dinge können passieren**, wenn die Teams eine gesunde Mischung aus Entwicklern und Operations-Personal sind, in einer datengesteuerten, transparenten Kultur der Zusammenarbeit.
 
-Die Philosophie der Einbeziehung vielfältiger Stakeholder in die Erstellung und **Evolution** eines konkreten Arbeitsprodukts hat Auswirkungen weit über die reine *dev*- und *ops*-Teams hinaus, die Kontrolle und Verantwortung für einen Server-Engineering-Aufwand teilen. Diese Lektion wiederholt sich in der modernen Unternehmenswelt, da neue Bereiche für kreativen menschlichen Ausdruck im Geschäftsbereich entstehen und alte Geschäftsweisen neu erfinden.
+Die Philosophie der Einbeziehung vielfältiger Stakeholder in die Erstellung und **Evolution** eines greifbaren Arbeitsprodukts hat weit über *dev*- und *ops*-Teams hinaus Auswirkungen, die Kontrolle und Verantwortung für einen Server-Engineering-Aufwand teilen. Diese Lektion wird in der gesamten modernen Unternehmenswelt wiederholt, da neue Bereiche für den kreativen menschlichen Ausdruck im Geschäftsbereich entstehen und alte Geschäftsformen neu erfinden.
 
-
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ $Autor: joe $ $Revision$ -->
