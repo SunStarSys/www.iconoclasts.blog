@@ -1,0 +1,7 @@
+---
+dependencies: '*.md.fr'
+keywords: devoirs
+title: Mouvement DevOps
+
+---
+{% ssi `/joe/devops.md.fr` %}
