@@ -146,10 +146,10 @@ a:hover {text-decoration: underline}
     background-color: #8f99fb; /* Periwinkle background */
 	color: #fff;
 }
-.custom-tooltip .tooltip-arrow::before {
+.custom-tooltip .bs-tooltip-bottom .tooltip-arrow::before {
     border-bottom-color: #8f99fb !important;
 }
-.custom-tooltip .tooltip-arrow::after {
+.custom-tooltip .bs-tooltip-top .tooltip-arrow::before {
     border-top-color: #8f99fb !important;
 }
 
