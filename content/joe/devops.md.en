@@ -43,7 +43,9 @@ On the other hand, an early, groundbreaking CI-like initiative at The ASF (for a
 
 Here's *the point in a nutshell*: all of your sources (development, infrastructure, and configuration) belong in version control (not necessarily sharing the same repository) that is reviewable by all devops personnel, and is part of your full set of test-automation pipelines between patch revisions and production deployments.  A survey of the state of the art, where changes are tested/provisioned/deployed on demand in IaC/CaC settings, is on my friend and visionary Paul Hammant's website [here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/). Please have a look!
 
-## Virtualization vs. Containerization: a [Pets vs. Cattle](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) Redux
+## Virtualization vs. Containerization
+
+A [Pets vs. Cattle](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) Redux.
 
 Container systems like Docker are customizable, redeployable virtualization technologies that are typically used to support a MicroService Architecture (MSA) application cluster framework like Kubernetes. They pick up where virtualization systems left off, trading unlimited support of (fully) isolated per-VM operating systems for Linux-kernel based VM's that have considerably more programmable customization and integration with the parent Linux host on which they run.  In addition, they can be rebuilt and *uploaded* to a central distribution service (like artifactory) for wide-scale reuse across multiple dependency chains and raw executable server deployments.
 
