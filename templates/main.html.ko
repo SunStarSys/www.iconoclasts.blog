@@ -8,7 +8,7 @@
     <meta name="author" content="Joe Schaefer">
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
     <meta name="theme-color" content="black">
-    <meta property="og:image" content="{{content|img|markdown|selectattr:"src"|default("/images/iconoclast.jpg)}}">
+    <meta property="og:image" content="{{content|img|markdown|selectattr:"src"|default("/images/iconoclast.jpg")}}">
     <meta property="og:title" content="{{ headers.title|safe }} - {{ facts.title|safe }}">
     <meta property="og:description" content="{{lede|markdown|striptags}}"|content="{{lede|markdown|striptags}}">
     <title>{% block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
