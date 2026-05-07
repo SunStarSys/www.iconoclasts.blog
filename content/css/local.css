@@ -141,8 +141,11 @@ div.breadcrumbs {
 a {text-decoration:none}
 a:hover {text-decoration: underline}
 
-.tooltip {background-color: #8f99fb}
-
+.tooltip-inner {background-color: #8f99fb !important}
+.bs-tooltip-bottom .arrow::before,
+.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+    border-bottom-color: #8f99fb !important;
+}
 @media only screen and (max-width: 1000px) {
     #meta, #filter { display: none; }
 }
