@@ -148,12 +148,13 @@ a:hover {text-decoration: underline}
 }
 
 /* Change tooltip arrow color */
-.tooltip-arrow::after, .tooltip-arrow::before {
+/*.tooltip-arrow::after, .tooltip-arrow::before {
     border-color: #8f99fb !important;
 }
+*/
 .bs-tooltip-bottom .tooltip-arrow::after {
     border-top-color: #8f99fb !important;
-    border-bottom-color: #8f99fb !important;
+/*    border-bottom-color: #8f99fb !important; */
 }
 .bs-tooltip-start .tooltip-arrow::after {
     border-left-color: #8f99fb !important;
