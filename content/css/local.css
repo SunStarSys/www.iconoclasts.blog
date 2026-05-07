@@ -147,12 +147,7 @@ a:hover {text-decoration: underline}
 	color: #fff;
 }
 .custom-tooltip .tooltip-arrow::before {
-    border-bottom-color: #8f99fb !important;
-    border-top-color: blue !important;
-}
-.custom-tooltip.bs-tooltip-top .tooltip-arrow::before {
-    border-top-color: green !important;
-    border-bottom-color: yellow !important;
+    border-color: #8f99fb !important;
 }
 
 @media only screen and (max-width: 1000px) {
