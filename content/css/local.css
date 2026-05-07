@@ -148,16 +148,14 @@ a:hover {text-decoration: underline}
 }
 
 /* Change tooltip arrow color */
-.bs-tooltip-top .tooltip-arrow::before {
-    color: #8f99fb !important;
-    border-top-color: #8f99fb !important;
+.tooltip-arrow::after, .tooltip-arrow::before {
+    border-color: #8f99fb !important;
 }
-.bs-tooltip-bottom .tooltip-arrow::before {
-    color: #8f99fb !important;
+.bs-tooltip-bottom .tooltip-arrow::after {
     border-top-color: #8f99fb !important;
     border-bottom-color: #8f99fb !important;
 }
-.bs-tooltip-start .tooltip-arrow::before {
+.bs-tooltip-start .tooltip-arrow::after {
     border-left-color: #8f99fb !important;
     border-right-color: #8f99fb !important;
 }
