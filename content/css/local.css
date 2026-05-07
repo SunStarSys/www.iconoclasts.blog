@@ -144,7 +144,7 @@ a:hover {text-decoration: underline}
 .custom-tooltip .tooltip-inner {
     background-color: #8f99fb; /* Periwinkle background */
 	color: #fff;
-	opacity 1; !important;
+	opacity: 1 !important;
 }
 
 /* Change tooltip arrow color */
@@ -155,6 +155,7 @@ a:hover {text-decoration: underline}
 .bs-tooltip-bottom .tooltip-arrow::before {
     color: #8f99fb !important;
     border-top-color: #8f99fb !important;
+    border-bottom-color: #8f99fb !important;
 }
 .bs-tooltip-start .tooltip-arrow::before {
     border-left-color: #8f99fb !important;
