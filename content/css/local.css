@@ -148,24 +148,22 @@ a:hover {text-decoration: underline}
 }
 
 /* Change tooltip arrow color */
-.custom-tooltip.bs-tooltip-top .tooltip-arrow::before {
+.bs-tooltip-top .tooltip-arrow::before {
+    color: #8f99fb !important;
     border-top-color: #8f99fb !important;
-    border-bottom-color: #8f99fb !important;
 }
-.custom-tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+.bs-tooltip-bottom .tooltip-arrow::before {
+    color: #8f99fb !important;
     border-top-color: #8f99fb !important;
-    border-bottom-color: #8f99fb !important;
 }
-.custom-tooltip.bs-tooltip-start .tooltip-arrow::before {
+.bs-tooltip-start .tooltip-arrow::before {
     border-left-color: #8f99fb !important;
     border-right-color: #8f99fb !important;
 }
-.custom-tooltip.bs-tooltip-end .tooltip-arrow::before {
+.bs-tooltip-end .tooltip-arrow::before {
     border-left-color: #8f99fb !important;
     border-right-color: #8f99fb !important;
 }
-
-
 
 @media only screen and (max-width: 1000px) {
     #meta, #filter { display: none; }
