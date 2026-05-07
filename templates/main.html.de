@@ -9,6 +9,8 @@
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
     <meta name="theme-color" content="black">
     <meta property="og:image" content="/images/iconoclast.jpg">
+    <meta property="og:title" content="{{ headers.title|safe }} - {{ facts.title|safe }}">
+    <meta property="og:description" content="{{lede|markdown}}">
     <title>{% block title %}{{ headers.title|safe }} - {{ facts.title|safe }}{% endblock %}</title>
     {% if permalink %}
     <link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
