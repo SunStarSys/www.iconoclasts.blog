@@ -146,25 +146,10 @@ a:hover {text-decoration: underline}
     background-color: #8f99fb; /* Periwinkle background */
 	color: #fff;
 }
-
-/* Change tooltip arrow color */
-.tooltip-arrow::before {
+.custom-tooltip .tooltip-arrow::before {
     border-bottom-color: #8f99fb !important;
 }
-/*
-.bs-tooltip-bottom .tooltip-arrow::before {
-    border-top-color: #8f99fb !important;
-    border-bottom-color: #8f99fb !important; 
-}
-.bs-tooltip-start .tooltip-arrow::after {
-    border-left-color: #8f99fb !important;
-    border-right-color: #8f99fb !important;
-}
-.bs-tooltip-end .tooltip-arrow::before {
-    border-left-color: #8f99fb !important;
-    border-right-color: #8f99fb !important;
-}
-*/
+
 @media only screen and (max-width: 1000px) {
     #meta, #filter { display: none; }
 }
