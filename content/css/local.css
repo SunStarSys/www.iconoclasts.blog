@@ -149,6 +149,9 @@ a:hover {text-decoration: underline}
 .custom-tooltip .tooltip-arrow::before {
     border-bottom-color: #8f99fb !important;
 }
+.custom-tooltip .tooltip-arrow::after {
+    border-top-color: #8f99fb !important;
+}
 
 @media only screen and (max-width: 1000px) {
     #meta, #filter { display: none; }
