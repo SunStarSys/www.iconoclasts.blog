@@ -141,11 +141,27 @@ div.breadcrumbs {
 a {text-decoration:none}
 a:hover {text-decoration: underline}
 
-.tooltip-inner {background-color: #8f99fb !important}
-.bs-tooltip-bottom .tooltip-arrow::before,
-.bs-tooltip-auto[x-placement="bottom"] .tooltip-arrow::before {
-    border-color: #8f99fb !important;
+.custom-tooltip .tooltip-inner {
+    background-color: #8f99fb; /* Periwinkle background */
+	color: #fff;
 }
+
+/* Change tooltip arrow color */
+.custom-tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #8f99fb;
+}
+.custom-tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #8f99fb;
+}
+.custom-tooltip.bs-tooltip-start .tooltip-arrow::before {
+    border-left-color: #8f99fb;
+}
+.custom-tooltip.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: #8f99fb;
+}
+
+
+
 @media only screen and (max-width: 1000px) {
     #meta, #filter { display: none; }
 }
