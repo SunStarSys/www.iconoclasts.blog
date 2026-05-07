@@ -152,7 +152,7 @@ a:hover {text-decoration: underline}
     border-color: #8f99fb !important;
 }
 */
-.bs-tooltip-bottom .tooltip-arrow::after {
+.bs-tooltip-bottom .tooltip-arrow::before {
     border-top-color: #8f99fb !important;
 /*    border-bottom-color: #8f99fb !important; */
 }
