@@ -38,7 +38,7 @@ our @patterns = (
 
   [qr!\.page/comment\w+\.md[^/]*$!, snippet => {
     template      => "comment.html.en",
-    view          => [qw/comment/],
+    view          => [qw/titleize_links comment/],
     archive_root  => "/archives",
     category_root => "/categories",
     facts         => $facts,
@@ -67,7 +67,7 @@ our @patterns = (
   }],
 
   [qr!^/(categories|archives)/.*\.md[^/]*!, set_template_from_capture => {
-    view          => [qw/ssi snippet offline titleize_links single_narrative/],
+    view          => [qw/ssi snippet single_narrative/],
     category_root => "/categories",
     facts         => $facts,
   }],
