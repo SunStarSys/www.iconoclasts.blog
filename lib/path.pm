@@ -67,8 +67,9 @@ our @patterns = (
   }],
 
   [qr!^/(categories|archives)/.*\.md[^/]*!, set_template_from_capture => {
-    view       => [qw/ssi snippet offline titleize_links single_narrative/],
-    facts      => $facts,
+    view          => [qw/ssi snippet offline titleize_links single_narrative/],
+    category_root => "/categories",
+    facts         => $facts,
   }],
 
   # run latexmk on .tex... files
