@@ -2,7 +2,7 @@
 categories: ~
 dependencies: /categories/*/index.html.ru
 keywords: вики,знание
-status: опубликовано
+status: черновик
 title: Для иконоборцев,
 ---
 
@@ -48,9 +48,9 @@ title: Для иконоборцев,
 
 </center>
 
-Сообщество блогов! Зарегистрируйтесь сегодня в [Контакты](/contact) страница!
+Сообщество блогов! Зарегистрируйтесь сегодня в [Контакты](/contact) страница.
 
-## Предварительные категории письма на 2026 год Q2
+## Написание категорий за 2026 год Q2
 
 - April: Война
 - May: ИИ
@@ -76,6 +76,8 @@ title: Для иконоборцев,
 &nbsp;
 
 - <span class="badge bg-success">Новый</span> [Перл как язык науки о данных](chrisarg/perlasadatascilang) по @chrisarg=,
+
+- [Личная заметка](esha/2025-a-personal-note) из @esha=,
 
 - [Википедия:Системы управления знаниями](/joe/wikis) по @joe=,
 
@@ -103,6 +105,14 @@ title: Для иконоборцев,
 - [Арабский](sitemap.html.ar)
 - [шведский](sitemap.html.sv)
 - [Португальский (Бразилия)](sitemap.html.pt-BR)
+
+&nbsp;
+
+## [Архивы](archives)
+
+&nbsp;
+
+-----
 
 &nbsp;
 
@@ -157,4 +167,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$Автор: Джо $Пересмотр: 36885 $ -->

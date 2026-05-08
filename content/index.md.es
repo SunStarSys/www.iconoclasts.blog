@@ -2,7 +2,7 @@
 categories: ~
 dependencies: /categories/*/index.html.es
 keywords: wiki,conocimiento
-status: publicado
+status: borrador
 title: De, Por y Para Iconoclastas
 ---
 
@@ -48,9 +48,9 @@ Bienvenido a nuestro
 
 </center>
 
-comunidad de blogs! Regístrese hoy en la [Contáctenos](/contact) página!
+comunidad de blogs! Regístrese hoy en la [Contáctenos](/contact) página.
 
-## Categorías provisionales de escritura para 2026 Q2
+## Categorías de redacción para 2026 Q2
 
 - April: Guerra
 - May: IA
@@ -76,6 +76,8 @@ Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com
 &nbsp;
 
 - <span class="badge bg-success">Nuevo</span> [Perl como lenguaje de ciencia de datos](chrisarg/perlasadatascilang) por @chrisarg=,
+
+- [Una nota personal](esha/2025-a-personal-note) desde @esha=,
 
 - [Wikis en Sistemas de Gestión del Conocimiento](/joe/wikis) por @joe=,
 
@@ -103,6 +105,14 @@ Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com
 - [Árabe](sitemap.html.ar)
 - [Sueco](sitemap.html.sv)
 - [Portugués brasileño](sitemap.html.pt-BR)
+
+&nbsp;
+
+## [Archivos](archives)
+
+&nbsp;
+
+-----
 
 &nbsp;
 
@@ -157,4 +167,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 36885 $ -->

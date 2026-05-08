@@ -2,7 +2,7 @@
 categories: ~
 dependencies: /categories/*/index.html.sv
 keywords: wiki,kunskap
-status: publicerad
+status: skiss
 title: Av, Av och För Iconoclasts
 ---
 
@@ -48,9 +48,9 @@ Välkommen till vår
 
 </center>
 
-Bloggvärlden! Anmäl dig idag på [Kontakta oss](/contact) sida!
+Bloggvärlden! Anmäl dig idag på [Kontakta oss](/contact) sida.
 
-## Preliminära skrivkategorier för 2026 Q2
+## Skriva kategorier för 2026 Q2
 
 - April: Krig
 - May: AI
@@ -76,6 +76,8 @@ Denna webbplats är värd på Orion. Checka ut  [Orion](https://www.sunstarsys.c
 &nbsp;
 
 - <span class="badge bg-success">Nytt</span> [Perl som datavetenskapsspråk](chrisarg/perlasadatascilang) av @chrisarg=,
+
+- [En personlig anteckning](esha/2025-a-personal-note) från @esha=,
 
 - [Wikis i kunskapshanteringssystem](/joe/wikis) av @joe=,
 
@@ -103,6 +105,14 @@ Denna webbplats är värd på Orion. Checka ut  [Orion](https://www.sunstarsys.c
 - [arabiska](sitemap.html.ar)
 - [Svenska](sitemap.html.sv)
 - [Brasiliansk portugisiska](sitemap.html.pt-BR)
+
+&nbsp;
+
+## [Arkiv](archives)
+
+&nbsp;
+
+-----
 
 &nbsp;
 
@@ -157,4 +167,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ $Författare: joe $ $Revision$ -->
