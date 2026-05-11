@@ -1,0 +1,12 @@
+---
+archived: ~
+categories: Sjukvård, matematik, dynamik
+dependencies: '*.md.sv'
+keywords: exponentiell, kraft, covid-19, epidemi, pandemi, SARS
+published: ~
+status: arkiverad
+title: Exponentiell tillväxt och COVID-19
+
+---
+
+{% ssi `/categories/Matematik/power.md.sv` %}
