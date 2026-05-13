@@ -18,7 +18,7 @@ Au cours des 25 dernières années, j'ai été le développeur principal de `apr
 
 C'était ma vision à l'époque de transformer la bibliothèque en une bibliothèque générique, non liée à Perl. `C` bibliothèque qui prendrait en charge les liaisons linguistiques à partir d'autres langages de programmation, c'est pourquoi j'ai poussé pour que le projet soit [à domicile](https://httpd.apache.org/apreq) sous le parapluie HTTPd au lieu de [Apache-Perl](https://perl.apache.org/) projet.
 
-Avec l'avènement de `httpd-2. X`, entièrement nouveau `Filtre d'E/S` L'architecture a émergé de `httpd` ainsi que la séparation complète des `Taux d'intérêt annuel` du noyau lui-même en tant qu'exécution de portabilité POSIX à usage plus général pour `C` projets comme `Subversion`. En fait, `libapreq2` est plus proche de la `APR d'Apache` projet dans cet esprit, et son API Perl reflète cela dans son `APR : :Demande` buildout.  Il dispose d'un mode *CGI* intégré pour un fonctionnement autonome, en dehors de `httpd` l'exécution, ce qui rend les tests unitaires un jeu d'enfant.
+Avec l'avènement de `httpd-2.X`, entièrement nouveau `I/O Filter` L'architecture a émergé de `httpd` ainsi que la séparation complète des `APR` du noyau lui-même en tant qu'exécution de portabilité POSIX à usage plus général pour `C` projets comme `Subversion`. En fait, `libapreq2` est plus proche de la `Apache APR` projet dans cet esprit, et son API Perl reflète cela dans son `APR::Request` buildout.  Il dispose d'un mode *CGI* intégré pour un fonctionnement autonome, en dehors de `httpd` l'exécution, ce qui rend les tests unitaires un jeu d'enfant.
 
 Pourtant, l'élément clé de `apreq2` a toujours été le `mod_apreq2` Module Apache, conçu pour la première fois par `Bill Wrowe` au début 2000s.  Ce qu'il a conçu, lors d'une séance de brainstorming avec moi (en personne), était une seule bibliothèque d'analyseurs interne à `httpd`, qui **partage** le *corps* de la demande soumise avec chaque module de parties prenantes clé dans l'exécution.  Cela signifiait fournir des données analysées aux modules connectés au moteur de traitement des demandes *avant*, *pendant* et *après* l'exécution du gestionnaire de contenu. Il devait également fonctionner pour les sous-demandes, que le gestionnaire de contenu ait consommé ou non les données analysées, ou qu'il ait consommé et analysé le corps de la demande brute lui-même.
 
@@ -64,12 +64,14 @@ Longue histoire courte, [Ils ont commenté le test](https://github.com/apache/ap
 
 Pourquoi je m'en soucie maintenant ? Parce que je suis le suceur [les utilisateurs contactent pour obtenir des réponses](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) en tant qu'expert connu.
 
-Cela craint, mais je suis désolé de vous dire que mes jours de port de la cape Superman à Apache se sont terminés il y a environ une décennie.
+Cette suce<sup>2</sup>, mais je suis désolé de vous dire que mes jours de port de la cape Superman à Apache se sont terminés il y a environ une décennie.
 
 Dans tous les cas, le mieux que je puisse faire à ce stade est de vous montrer mon arbre source de production pour libapreq2 &mdash; @joesuf4/apreq (et @joesuf4/mod_perl).
 
 ## Notes de bas de page
 
 1. L'un ne se contente pas "démission de l'ASF". Pour faire une pause propre, il faut démissionner non seulement de l'adhésion à l'ASF, mais de chaque projet / comité dont un est membre.  Sinon, on finit par se noyer dans le spam e-mail d'Apache sans fin.
+
+2. Les mâles bêta ont appelé le projet @apache/apreq et passent à @apache/mod_perl, car les mâles bêta n'ont rien de mieux à voir avec leur temps. Yann Ylavic, le "développeur rookie" au-dessus qui a effectivement travaillé sur apreq alors que ses coéquipiers l'ont échoué, n'a pas voté pour retirer le projet. Sans surprise, parce qu'il est un résolveur de problèmes, pas un mâle bêta.
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -14,11 +14,11 @@ title: Apache HTTPd als schädlich erachtete Entwickler
 
 ## Hintergrund
 
-In den letzten 25 Jahren war ich der führende Entwickler der `Apreq` Unterprojekt innerhalb der [Apache HTTPd-Server](https://httpd.apache.org) Übergeordnetes Projekt. Die ursprüngliche Idee von `libapreq`, als sicher/performant [HTML-Formularweiterleitung](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) und [Cookie-Einstellungen](https://datatracker.ietf.org/doc/html/rfc6265) Parsing-Bibliothek, kam aus einer Zusammenarbeit zwischen Lincoln Stein und Doug MacEachern in der späten 90s.
+In den letzten 25 Jahren war ich der führende Entwickler der `apreq` Unterprojekt innerhalb der [Apache HTTPd-Server](https://httpd.apache.org) Übergeordnetes Projekt. Die ursprüngliche Idee von `libapreq`, als sicher/performant [HTML-Formularweiterleitung](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) und [Cookie-Einstellungen](https://datatracker.ietf.org/doc/html/rfc6265) Parsing-Bibliothek, kam aus einer Zusammenarbeit zwischen Lincoln Stein und Doug MacEachern in der späten 90s.
 
 Damals war es meine Vision, die Bibliothek in eine generische, nicht perlbezogene Bibliothek zu verwandeln. `C` Bibliothek, die Sprachbindungen aus anderen Programmiersprachen unterstützt, weshalb ich für das Projekt [homosexuell](https://httpd.apache.org/apreq) unter dem Dach HTTPd statt der [Apache-Perl](https://perl.apache.org/) Projekt.
 
-Mit dem Aufkommen von `httpd-2. X`eine völlig neue `I/O-Filter` Architektur entstand aus `httpd` Kern, sowie die vollständige Trennung von `Jährlich` aus dem Kern selbst als allgemeinere POSIX-ähnliche Portabilitätslaufzeit für `C` Projekte wie `Subversion`. Tatsächlich `libapreq2` ist enger mit der `APR Apache` Projekt in diesem Sinne, und seine Perl API spiegelt dies als Teil seiner `APR::Anforderung` Aufbau.  Es verfügt über einen integrierten *CGI*-Modus für Standalone-Betrieb, außerhalb der `httpd` Laufzeit, die das Testen von Einheiten zum Kinderspiel macht.
+Mit dem Aufkommen von `httpd-2.X`eine völlig neue `I/O Filter` Architektur entstand aus `httpd` Kern, sowie die vollständige Trennung von `APR` aus dem Kern selbst als allgemeinere POSIX-ähnliche Portabilitätslaufzeit für `C` Projekte wie `Subversion`. Tatsächlich `libapreq2` ist enger mit der `Apache APR` Projekt in diesem Sinne, und seine Perl API spiegelt dies als Teil seiner `APR::Request` Aufbau.  Es verfügt über einen integrierten *CGI*-Modus für Standalone-Betrieb, außerhalb der `httpd` Laufzeit, die das Testen von Einheiten zum Kinderspiel macht.
 
 Die Schlüsselkomponente von `apreq2` war schon immer der `mod_apreq2` Apache-Modul, das zuerst von `Bill Wrowe` Anfang 2000s.  Was er während einer Brainstorming-Sitzung mit mir (persönlich) entwarf, war eine einzige Parser-Bibliothek. `httpd`, dass **die weitergeleitete Anforderung *body* mit jedem wichtigen Stakeholdermodul in der Laufzeit geteilt wird.  Das bedeutete, dass geparste Daten an Module bereitgestellt wurden, die mit der Anforderungsverarbeitungs-Engine *vor*, *während* und *nach* der Ausführung des Content Handlers verbunden sind. Und es musste auch für Unteranforderungen arbeiten, unabhängig davon, ob der Content Handler die geparsten Daten konsumiert oder den Raw Request Body selbst konsumiert und repariert hat.
 
@@ -64,12 +64,14 @@ Lange Geschichte kurz, [Sie kommentierten den Test](https://github.com/apache/ap
 
 Warum kümmere ich mich jetzt? Weil ich der Sauger bin [Benutzer greifen auf Antworten zu](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) als bekannter Sachverständiger.
 
-Das ist scheiße, aber es tut mir leid, Ihnen zu sagen, dass meine Tage mit dem Superman-Umhang in Apache vor etwa einem Jahrzehnt endete.
+Das ist scheiße<sup>2</sup>, aber es tut mir leid, Ihnen zu sagen, dass meine Tage mit dem Superman-Umhang in Apache vor etwa einem Jahrzehnt endete.
 
 In jedem Fall kann ich an dieser Stelle am besten meinen Produktionsquellenbaum für libapreq2 zeigen. &mdash; @joesuf4/apreq (und @joesuf4/mod_perl).
 
 ## Fußnoten
 
 1. Einer nicht einfach "Rücktritt von der ASF". Um eine saubere Pause zu machen, muss man nicht nur von der ASF-Mitgliedschaft zurücktreten, sondern von jedem Projekt / Ausschuss, in dem man Mitglied ist.  Ansonsten ertrinkt man in nie endender höllischer Apache-E-Mail-Spam.
+
+2. Die Beta-Männer haben das @apache/apreq-Projekt gemottet und gehen zu @apache/mod_perl über, da Beta-Männer nichts Besseres mit ihrer Zeit zu tun haben. Yann Ylavic, der "Rookie-Entwickler" Oben, der tatsächlich an apreq arbeitete, während seine Teamkollegen ihn versagten, gab keine Abstimmung ab, um das Projekt zurückzuziehen. Nicht überraschend, weil er ein Problemlöser ist, kein Beta-Mann.
 
 <!-- $Date$ $Author$ $Revision$ -->

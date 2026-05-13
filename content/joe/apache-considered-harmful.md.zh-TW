@@ -14,11 +14,11 @@ title: Apache HTTPd 認為有害裝置
 
 ## 背景
 
-過去 25 年來，我一直是`前置字元` 子專案在[Apache HTTPd 伺服器](https://httpd.apache.org) 上階專案。原來的想法`繁體中文`，作為安全 / 效能[HTML 表單提交](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) 與[Cookie 通知](https://datatracker.ietf.org/doc/html/rfc6265) 剖析程式庫，來自 Lincoln Stein 與 Doug MacEachern 在 90s 末期的合作。
+過去 25 年來，我一直是`apreq` 子專案在[Apache HTTPd 伺服器](https://httpd.apache.org) 上階專案。原來的想法`libapreq`，作為安全 / 效能[HTML 表單提交](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) 與[Cookie 通知](https://datatracker.ietf.org/doc/html/rfc6265) 剖析程式庫，來自 Lincoln Stein 與 Doug MacEachern 在 90s 末期的合作。
 
 我之後的願景是將圖書館轉變為一般、非 Perl 相關`C` 支援其他程式設計語言之語言連結的程式庫，這就是為什麼我要推送專案[同居](https://httpd.apache.org/apreq) 在 HTTPd 傘形下，而不是[Apache-Perl](https://perl.apache.org/) 專案。
 
-迎合的な RoHS `httpd-2。X 軸`，全新`I/O 篩選` 架構從`httpd` 核心，以及完整的分離`年利率` 從核心本身，成為更一般用途的 POSIX 式可攜性程式實際執行`C` 專案類似`子版本`。事實上，`libapreq2` 更緊密配合`Apache APR` 該精神中的專案，而其 Perl API 反映出作為其一部分`APR：：請求` 建置。它具有內建的 *CGI* 模式，適用於獨立作業，不在`httpd` 執行階段，讓單元測試變得輕而易舉。
+迎合的な RoHS `httpd-2.X`，全新`I/O Filter` 架構從`httpd` 核心，以及完整的分離`APR` 從核心本身，成為更一般用途的 POSIX 式可攜性程式實際執行`C` 專案類似`Subversion`。事實上，`libapreq2` 更緊密配合`Apache APR` 該精神中的專案，而其 Perl API 反映出作為其一部分`APR::Request` 建置。它具有內建的 *CGI* 模式，適用於獨立作業，不在`httpd` 執行階段，讓單元測試變得輕而易舉。
 
 然而，主要部分為`apreq2` 一直以來都是`mod_apreq2` Apache 模組，由`Bill Wrowe` 在早期的 2000s。他與我 (親自) 進行腦力激盪會談時所設計的是內部的單一剖析器程式庫`httpd`，** 共用 **已提交要求 *body* 與執行階段中的每個主要利害關係人模組共用。這代表將剖析資料提供給連結至要求處理引擎的模組 (* 之前 *、* 期間 *以及內容處理程式執行之後 *)。不論內容處理程式是否使用已剖析的資料，還是使用並重新剖析原始要求主體本身，也需要對子要求執行工作。
 
@@ -26,7 +26,7 @@ title: Apache HTTPd 認為有害裝置
 
 ## Storm Clouds 聚會
 
-雖然此願景大致成功，但語言組合適用於多種語言，例如[`佩爾`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c), [`TCL`](https://tcl.apache.org/), [`零售`](https://github.com/jeffreyhorner/rapache)自 2010 年以來，它已經證明了悲劇[現有使用者社群](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">包含所有</a>，不只是成員`佩爾` 社群。
+雖然此願景大致成功，但語言組合適用於多種語言，例如[`Perl`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c), [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache)自 2010 年以來，它已經證明了悲劇[現有使用者社群](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">包含所有</a>，不只是成員`Perl` 社群。
 
 發生了什麼事？[Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci)當時，Perl/FreeBSD 的礦場同事開始認同我們推廣該項目從 HTTPd 伺服器本身內部發行。什麼{# lede #}菲利普的背面不太清楚，那就是說的。[貧困、快速和領土](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) 該團隊已經成為{# lede #}，這意味著必須直接與他們合作[使用者面向決策](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) 關於程式碼庫。
 
@@ -64,12 +64,14 @@ title: Apache HTTPd 認為有害裝置
 
 我為什麼要關心？因為我是吸吮者[使用者已聯絡尋求答案](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) 作為已知的主題專家。
 
-這件事情很抱歉，我很抱歉告訴你，我在阿帕奇穿著超級人帽的日子約 10 年前結束。
+此吸管<sup>2 個</sup>，但我很抱歉告訴你，我穿著阿帕奇超級人帽的日子大約十年前結束。
 
 在任何情況下，我現在可以做到最好是顯示 libapreq2 的生產來源樹狀結構。&mdash; @joesuf4/apreq (和 @joesuf4/mod_perl)。
 
 ## 註腳
 
 1. 不只是一個人"辭職於 ASF"。若要清理休息，必須從不只是「ASF」會員資格辭職，但從每個專案 / 委員會中，一個是其成員。否則，一陣子在永不停滯的 Apache 電子郵件垃圾郵件中溺斃。
+
+2. Beta 男性母親投注 @apache/apreq 專案，並繼續前往 @apache/mod_perl，因為 Beta 男性與時間無關。Yann Ylavic, the "搖桿顯像劑" 上述當他的隊友使他失敗時，實際工作的人，並沒有投下投票來撤回這項計畫。令人驚訝的是，因為他是個問題解決者，而不是一個 Beta 男性。
 
 <!-- $Date$ $Author$ $Revision$ -->

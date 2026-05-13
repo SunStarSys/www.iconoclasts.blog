@@ -14,19 +14,19 @@ title: 아파치 HTTPd Devs Considered Harmful
 
 ## 배경
 
-지난 25 년 동안, 나는의 리드 개발자였습니다 `apreq` 하위 프로젝트 [아파치 HTTPd 서버](https://httpd.apache.org) 상위 프로젝트. 원래 아이디어 `라이브러리`안전/수행자로 [HTML 폼 제출](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) 및 [쿠키](https://datatracker.ietf.org/doc/html/rfc6265) parsing library는 90s 후반에 Lincoln Stein과 Doug MacEachern 간의 공동 작업에서 나왔습니다.
+지난 25 년 동안, 나는의 리드 개발자였습니다 `apreq` 하위 프로젝트 [아파치 HTTPd 서버](https://httpd.apache.org) 상위 프로젝트. 원래 아이디어 `libapreq`안전/수행자로 [HTML 폼 제출](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) 및 [쿠키](https://datatracker.ietf.org/doc/html/rfc6265) parsing library는 90s 후반에 Lincoln Stein과 Doug MacEachern 간의 공동 작업에서 나왔습니다.
 
 그때부터 도서관을 일반적이고 Perl이 아닌 관련 도서관으로 바꾸는 것은 나의 비전이었습니다. `C` 다른 프로그래밍 언어의 언어 바인딩을 지원하는 라이브러리, 그래서 나는 프로젝트를 밀어 [홈](https://httpd.apache.org/apreq) HTTPd 우산 대신 [아파치펄](https://perl.apache.org/) 프로젝트
 
-[중고] [중고]의 출현 `httpd-2입니다. X`완전히 새로운 `I/O 필터` 아키텍처는 `httpd` 핵심 및 전체 분리 `APR` 보다 일반적인 용도의 POSIX와 유사한 이식성 런타임으로 코어 자체에서 `C` 프로젝트 유사 `하위 버전`. 사실, `libapreq2` 보다 긴밀하게 조율된 `아파치 APR` 그 정신에 있는 프로젝트 및 그것의 Perl API는 그것의 한 부분으로 그것을 반영합니다 `APR::요청` 빌드아웃.  독립형 작업을 위한 *CGI* 모드가 내장되어 있습니다. `httpd` runtime(런타임) - 장치 테스트가 번거로워집니다.
+[중고] [중고]의 출현 `httpd-2.X`완전히 새로운 `I/O Filter` 아키텍처는 `httpd` 핵심 및 전체 분리 `APR` 보다 일반적인 용도의 POSIX와 유사한 이식성 런타임으로 코어 자체에서 `C` 프로젝트 유사 `Subversion`. 사실, `libapreq2` 보다 긴밀하게 조율된 `Apache APR` 그 정신에 있는 프로젝트 및 그것의 Perl API는 그것의 한 부분으로 그것을 반영합니다 `APR::Request` 빌드아웃.  독립형 작업을 위한 *CGI* 모드가 내장되어 있습니다. `httpd` runtime(런타임) - 장치 테스트가 번거로워집니다.
 
-핵심 구성 요소 `apreq2` 은 항상 `mod_apreq2` 아파치 모듈(Apache module)은 `빌 브로` 초기 2000s.  그가 설계 한 것은 (대면) 나와 브레인 스토밍 세션 중에 내부의 단일 파서 라이브러리였습니다. `httpd`즉, 제출된 요청 *body*를 런타임에 모든 주요 이해 관계자 모듈과 공유했습니다.  즉, 콘텐츠 처리기가 실행되기 전에 *before*, *during* 및 *after* 요청 처리 엔진에 연결된 모듈에 구문 분석된 데이터를 제공합니다. 또한 콘텐츠 처리기가 구문 분석된 데이터를 소비했는지 또는 원시 요청 본문 자체를 소비하고 구문 재분석했는지 여부에 관계없이 하위 요청에 대해서도 작업해야 했습니다.
+핵심 구성 요소 `apreq2` 은 항상 `mod_apreq2` 아파치 모듈(Apache module)은 `Bill Wrowe` 초기 2000s.  그가 설계 한 것은 (대면) 나와 브레인 스토밍 세션 중에 내부의 단일 파서 라이브러리였습니다. `httpd`즉, 제출된 요청 *body*를 런타임에 모든 주요 이해 관계자 모듈과 공유했습니다.  즉, 콘텐츠 처리기가 실행되기 전에 *before*, *during* 및 *after* 요청 처리 엔진에 연결된 모듈에 구문 분석된 데이터를 제공합니다. 또한 콘텐츠 처리기가 구문 분석된 데이터를 소비했는지 또는 원시 요청 본문 자체를 소비하고 구문 재분석했는지 여부에 관계없이 하위 요청에 대해서도 작업해야 했습니다.
 
 나는 몇 년 동안 디자인 목표를 여러 번 설명, 심지어 2012에서 [개발@httpd](https://lists.apache.org/list.html?dev@httpd.apache.org:2012-04). 그러나 그것은 항상이 사람들과 바람과 이야기하는 것과 같았고, 그들은 결코 신경 쓰지 않았습니다.
 
 ## Storm Clouds 수집
 
-이 비전은 매우 성공적이었지만 언어 바인딩은 다음과 같은 여러 언어에서 사용할 수 있습니다. [`펄`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache), etc., 2010 년경부터 지금까지 그것은 비극적 인 것으로 입증되었습니다. [기존 사용자 커뮤니티](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">그들 모두로 구성된</a>의 구성원뿐만 아니라 `펄` 커뮤니티
+이 비전은 매우 성공적이었지만 언어 바인딩은 다음과 같은 여러 언어에서 사용할 수 있습니다. [`Perl`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache), etc., 2010 년경부터 지금까지 그것은 비극적 인 것으로 입증되었습니다. [기존 사용자 커뮤니티](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">그들 모두로 구성된</a>의 구성원뿐만 아니라 `Perl` 커뮤니티
 
 어떤 결과가 발생했습니까? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci)당시 내 Perl / FreeBSD 동료가 HTTPd 서버 내부에서 프로젝트를 출시 할 것을 촉구하기 시작했습니다. 대상 {# lede #}필립은 그때 얼마나 완전히 잘 몰랐을까. [피비시, 바피드, 영토](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) 이 팀은{# lede #}즉, 직접 협력해야 한다는 의미입니다. [사용자 대면 의사 결정](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) 코드 베이스에 대해
 
@@ -64,12 +64,14 @@ title: 아파치 HTTPd Devs Considered Harmful
 
 나는 왜 지금 신경 쓰는가? I'm the sucker 내가 빨래 [사용자에게 답변 요청](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) 알려진 주제 전문가로서.
 
-이것은 짜증이 났지만 아파치에서 슈퍼맨 케이프를 입은 날이 약 십 년 전에 끝났다고 말하게되어 유감입니다.
+이 sucks<sup>2</sup>그러나 아파치에서 슈퍼맨 케이프를 입은 날이 약 십 년 전에 끝났다는 것을 알려드립니다.
 
 어쨌든이 시점에서 할 수있는 최선의 방법은 libapreq2에 대한 내 생산 소스 트리를 보여줍니다. &mdash; @joesuf4/apreq(및 @joesuf4/mod_perl).
 
 ## 각주
 
 1. 하나는 단순히 "ASF에서 사직". 깨끗한 휴식을 취하려면 ASF 회원뿐만 아니라 모든 프로젝트 / 위원회에서 사임해야합니다.  그렇지 않으면 결코 지옥의 아파치 이메일 스팸에 익사 바람.
+
+2. 베타 남성은 @apache/apreq 프로젝트를 mothballed하고, 베타 남성은 그들의 시간과 아무 상관이 없기 때문에, @apache/mod_perl에 움직이고 있습니다. Yann Ylavic, "로키 개발자" 그의 팀 동료가 그를 실패하는 동안 실제로 apreq에 근무하는 위의, 프로젝트를 은퇴하는 투표를 던지지 않았다. 놀랍지 않게, 그는 베타 남성이 아니라 문제 해결자입니다.
 
 <!-- $Date$ $Author$ $Revision$ -->

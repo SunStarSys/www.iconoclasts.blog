@@ -18,7 +18,7 @@ Under de senaste 25 åren har jag varit ledande utvecklare av `apreq` delprojekt
 
 Det var min vision då att omvandla biblioteket till en generisk, icke-Perl-relaterad `C` bibliotek som skulle stödja språkbindningar från andra programmeringsspråk, varför jag pressade för projektet att vara [hemlagad](https://httpd.apache.org/apreq) under paraplyet HTTPd i stället för [Apache-Perl](https://perl.apache.org/) projekt.
 
-Med tillkomsten av `httpd-2. X`Ett helt nytt `I/O-filter` arkitektur uppstod från `httpd` såväl som den fullständiga separationen av `Effektiv ränta` från själva kärnan som en mer allmän POSIX-liknande portabilitetsexekvering för `C` projekt som `Subversion`. Faktiskt, `libapreq2` är närmare förbunden med `Apache APR` projektet i den andan, och dess Perl API återspeglar att som en del av dess `APR::Begäran` bygga ut.  Den har ett inbyggt *CGI*-läge för fristående drift, utanför `httpd` körtid, vilket gör enhetstestning en bris.
+Med tillkomsten av `httpd-2.X`Ett helt nytt `I/O Filter` arkitektur uppstod från `httpd` såväl som den fullständiga separationen av `APR` från själva kärnan som en mer allmän POSIX-liknande portabilitetsexekvering för `C` projekt som `Subversion`. Faktiskt, `libapreq2` är närmare förbunden med `Apache APR` projektet i den andan, och dess Perl API återspeglar att som en del av dess `APR::Request` bygga ut.  Den har ett inbyggt *CGI*-läge för fristående drift, utanför `httpd` körtid, vilket gör enhetstestning en bris.
 
 Den viktigaste komponenten i `apreq2` har alltid varit den `mod_apreq2` Apache-modulen, som först utformades av `Bill Wrowe` I början av 2000s.  Vad han designade, under en brainstorming-session med mig (personligen), var ett enda parserbibliotek internt för `httpd`, som **delade** den skickade begäran *text* med varje nyckelintressentmodul i exekveringen.  Det innebar att tillhandahålla parsade data till moduler som är anslutna till bearbetningsmotorn för begäran *före*, *under* och *efter* att innehållshanteraren körs. Och det behövde också fungera för delbegäranden, oavsett om innehållshanteraren konsumerade parsade data eller konsumerade och reparerade själva råbegärans textdel.
 
@@ -26,7 +26,7 @@ Jag förklarade designmålen flera gånger under åren, även under 2012 på [de
 
 ## Stormmoln samlas
 
-Även om denna vision var väldigt framgångsrik, med språkbindningar tillgängliga för flera språk som [`Perl`](https://perl.apache.org/), [`Sjukpenning`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache)Sedan 2010 har det varit tragiskt för [befintligt användarforum](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">som består av alla</a>Inte bara medlemmarna i `Perl` samhälle.
+Även om denna vision var väldigt framgångsrik, med språkbindningar tillgängliga för flera språk som [`Perl`](https://perl.apache.org/), [`PHP`](https://github.com/php/php-src/blob/master/main/rfc1867.c),  [`TCL`](https://tcl.apache.org/), [`R`](https://github.com/jeffreyhorner/rapache)Sedan 2010 har det varit tragiskt för [befintligt användarforum](https://webtechsurvey.com/technology/mod_apreq2) <a href="#commentAA" class="border border-warning text-muted reference-link" id="commentAA-link" title="{{commentAA.headers.title}}">som består av alla</a>Inte bara medlemmarna i `Perl` samhälle.
 
 Vad hände? [Philip Gollucci](https://projects.apache.org/committee.html?httpd#:~:text=Philip%20M.%20Gollucci), en Perl/FreeBSD kollega till mig vid den tiden, började agitera att vi främjar projektet som ska släppas inifrån HTTPd servern själv. Vad {# lede #}Filip visste inte mycket väl då var hur fullständigt [peevish, vapid och territorialvatten](https://www.mail-archive.com/dev@httpd.apache.org/msg77781.html) Det laget hade blivit{# lede #}Det hade varit nödvändigt att samarbeta med dem direkt. [användarstyrda beslut](https://www.mail-archive.com/dev@httpd.apache.org/msg77806.html) om kodbasen.
 
@@ -64,12 +64,14 @@ Lång historia kort, [De kommenterade provet](https://github.com/apache/apreq/co
 
 Varför bryr jag mig nu? För jag är sucker [användare når ut till för svar](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) som känd ämnesexpert.
 
-Detta suger, men jag är ledsen att berätta att mina dagar med Superman cape i Apache slutade ungefär ett decennium sedan.
+Detta suger<sup>2</sup>, men jag är ledsen att berätta att mina dagar med Superman cape i Apache slutade ungefär ett decennium sedan.
 
 Hur som helst, det bästa jag kan göra just nu är att visa er mitt produktionskällträd för libapreq2 &mdash; @joesuf4/apreq (och @joesuf4/mod_perl).
 
 ## Fotnoter
 
 1. En är inte bara "avgå från ASF". För att göra en ren paus måste man avgå från inte bara ASF-medlemskapet, men från varje projekt / kommitté är man medlem i.  Annars hamnar man drunkna i oändliga helvetiska Apache e-post spam.
+
+2. Beta män malballed @apache/apreq projektet, och går vidare till @apache/mod_perl, eftersom beta män har inget bättre att göra med sin tid. Yann Ylavic, the "rookie-utvecklare" Ovanför vem som faktiskt arbetade på apreq medan hans lagkamrater misslyckades honom, inte kasta en omröstning för att gå i pension projektet. Inte överraskande, för att han är en problemlösare, inte en beta-man.
 
 <!-- $Date$ $Author$ $Revision$ -->

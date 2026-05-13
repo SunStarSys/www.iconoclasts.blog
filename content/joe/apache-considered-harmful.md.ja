@@ -14,11 +14,11 @@ title: Apache HTTPd Devs Considered Harmful
 
 ## 背景
 
-過去25年間、私は`アプレック` 内のサブプロジェクト[Apache HTTPdサーバー](https://httpd.apache.org) 親プロジェクト。オリジナルアイデア`ライブラリ`、安全/性能として[HTMLフォーム提出](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) および[クッキー](https://datatracker.ietf.org/doc/html/rfc6265) 解析ライブラリは、Lincoln SteinとDoug MacEachernの間のコラボレーションにより、後期90sに登場しました。
+過去25年間、私は`apreq` 内のサブプロジェクト[Apache HTTPdサーバー](https://httpd.apache.org) 親プロジェクト。オリジナルアイデア`libapreq`、安全/性能として[HTMLフォーム提出](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html) および[クッキー](https://datatracker.ietf.org/doc/html/rfc6265) 解析ライブラリは、Lincoln SteinとDoug MacEachernの間のコラボレーションにより、後期90sに登場しました。
 
 当時の私のビジョンは、ライブラリを一般的な非Perl関連に変換することでした`C` 他のプログラミング言語からの言語バインディングをサポートするライブラリ。そのため、プロジェクトをプッシュしました[ホームページ](https://httpd.apache.org/apreq) の代わりに HTTPd傘の下[Apache-Perl](https://perl.apache.org/) プロジェクト
 
-THEADVENTOF `httpd-2。X`まったく新しい`I/Oフィルタ` アーキテクチャの出現元`httpd` コア、および完全な分離`買掛金` より汎用的なPOSIXのような移植性ランタイムとしてコア自体から`C` プロジェクト`Subversion`。実際、`libapreq2` より密接に連携している`Apache APR` その精神のプロジェクトとそのPerl APIは、その一部としてそれを反映しています`APR:: 要求` ビルドアウトスタンドアロン操作用の*CGI*モードが内蔵されており、`httpd` ランタイム。ユニット・テストが簡単になります。
+THEADVENTOF `httpd-2.X`まったく新しい`I/O Filter` アーキテクチャの出現元`httpd` コア、および完全な分離`APR` より汎用的なPOSIXのような移植性ランタイムとしてコア自体から`C` プロジェクト`Subversion`。実際、`libapreq2` より密接に連携している`Apache APR` その精神のプロジェクトとそのPerl APIは、その一部としてそれを反映しています`APR::Request` ビルドアウトスタンドアロン操作用の*CGI*モードが内蔵されており、`httpd` ランタイム。ユニット・テストが簡単になります。
 
 しかし、主なコンポーネント`apreq2` 常に`mod_apreq2` Apacheモジュール(最初に考案したモジュール) `Bill Wrowe` 初期の2000s 彼が設計したのは、私とのブレーンストーミングセッション中(個人的には)は、内部にある単一のパーサーライブラリでした`httpd`発行したリクエスト*body*を、実行時にすべての主要な利害関係者モジュールと共有します。つまり、コンテンツ・ハンドラが実行される前に*、*during*および*after*リクエスト処理エンジンに接続されたモジュールに解析済データを提供することでした。また、コンテンツ・ハンドラが解析されたデータを消費したか、RAWリクエスト本文自体を消費して再解析したかに関係なく、サブリクエストに対しても機能する必要がありました。
 
@@ -64,12 +64,14 @@ THEADVENTOF `httpd-2。X`まったく新しい`I/Oフィルタ` アーキテク�
 
 なぜ今気になるのか。I'm the suckerシングル[ユーザーがアンサーにリーチ](https://www.mail-archive.com/dev@httpd.apache.org/msg77426.html) 既知の問題の専門家です。
 
-アパチェでスーパーマンの帽子をかぶった私の日々は、十年ほど前に終わったと言って申し訳ありません。
+最低<sup>2</sup>アパチェでスーパーマンの帽子をかぶった私の日々は、十年ほど前に終わったと言って申し訳ありません。
 
 いずれにせよ、この時点でできる最善のことは、libapreq2の本番ソース・ツリーを表示することです&mdash; @joesuf4/apreq (および@joesuf4/mod_perl)。
 
 ## 脚注
 
 1. 1つだけではない"ASFからの辞任"。クリーンな休憩をするには、ASFのメンバーシップだけでなく、すべてのプロジェクト/委員会のメンバーから辞任する必要があります。そうでなければ、一人は地獄のApacheメールスパムに溺れてしまう。
+
+2. ベータの男性は、@apache/apreqプロジェクトを混同し、@apache/mod_perlに進んでいます。これは、ベータの男性は、その時間とは関係がないためです。Yann Ylavic、"ルーキー開発者" チームメイトが失敗した間、実際にapreqで働いていた上では、プロジェクトを辞めるための投票をしなかった。驚いたことに、彼は問題解決者であり、ベータ男性ではないからです。
 
 <!-- $Date$ $Author$ $Revision$ -->
