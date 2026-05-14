@@ -12,6 +12,7 @@ div.jumbotron img {
 div.right img {
 	width: 200px;
 }
+img { max-width: 100% }
 
 .accordion {overflow-x: hidden; background-color: #073642 }
 div.essay div.right {
