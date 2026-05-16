@@ -65,7 +65,7 @@
             <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
 			aria-labelledby="mer">
               <li class="dropdown-item">
-                <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/repos/svn/public/cms-sites/{{website}}/trunk/">Platskälla</a>
+                <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/repos/svn/public/cms-sites/{{website}}/trunk/content{{path}}">Platskälla</a>
               </li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-dark">i18n</li>
