@@ -18,7 +18,7 @@ title: Git 與非否認，已修訂
 
 取代為[Apache 軟體基金會](https://www.apache.org/).
 
-這有什麼重要？入門者好讓我對 Apache 承諾者對於提供者授權協議 (ICLA) 的需求有共同的誤解。許多人似乎不瞭解到，在委員會的個人著作中，適用語言之間沒有差異[公司簡介](http://www.apache.org/licenses/icla.txt) 以及[Apache 授權 2.0](http://www.apache.org/licenses/license-2.0).
+這有什麼重要？入門者好讓我對 Apache 承諾者對於提供者授權協議 (ICLA) 的需求有共同的誤解。許多人似乎不瞭解到，在委員會的個人著作中，適用語言之間沒有差異[公司簡介](http://www.apache.org/licenses/icla.txt) 以及[Apache 授權 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 接著提供哪些推送記錄是回溯追蹤的方式，對版本中的每一行程式碼，負責將該程式碼推送至 ASF 的 git 儲存區域的個別確認者。這在確定 Git 第三方貢獻的來源時非常重要，因為 DVCS 確認日誌的分散式本質，讓這類貢獻者不幸地「離開」對 Git 專案的貢獻。接著，根據 ICLA 的責任方會成為推送代碼的承諾者。
 

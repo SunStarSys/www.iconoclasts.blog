@@ -18,7 +18,7 @@ mit git oder verteilter Versionskontrolle im Allgemeinen, {# lede #}Es gibt eine
 
 Mit [Die Apache Software Foundation](https://www.apache.org/).
 
-Warum ist das wichtig?  Nun, für Anfänger, lassen Sie mich ein häufiges Missverständnis über die Notwendigkeit von Contributor License Agreements (ICLAs) für Apache-Committers ansprechen.  Viele Menschen scheinen nicht zu verstehen, dass es in Bezug auf die einzelnen Werke der Autorschaft eines Committer keinen Unterschied zwischen der anwendbaren Sprache in der [ICLA](http://www.apache.org/licenses/icla.txt) und die [Apache-Lizenz 2.0](http://www.apache.org/licenses/license-2.0).
+Warum ist das wichtig?  Nun, für Anfänger, lassen Sie mich ein häufiges Missverständnis über die Notwendigkeit von Contributor License Agreements (ICLAs) für Apache-Committers ansprechen.  Viele Menschen scheinen nicht zu verstehen, dass es in Bezug auf die einzelnen Werke der Autorschaft eines Committer keinen Unterschied zwischen der anwendbaren Sprache in der [ICLA](http://www.apache.org/licenses/icla.txt) und die [Apache-Lizenz 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 Was Push-Datensätze dann bieten, ist eine Möglichkeit, zu jeder Codezeile in einem Release zurückzuverfolgen, der einzelne Committer, der dafür verantwortlich ist, diesen Code an das Git-Repository des ASF zu übertragen. Dies ist von entscheidender Bedeutung, um die Herkunft eines Drittbeitrags mit git zu bestimmen, da es für einen solchen Mitwirkenden leider möglich ist, wegen der verteilten Natur von DVCS-Commit-Logs von seinem Beitrag zu einem Git-Projekt "abzugehen".  Die verantwortliche Partei wird dann laut ICLA der Committer, der den Code gepusht hat.
 

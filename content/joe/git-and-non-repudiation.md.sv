@@ -18,7 +18,7 @@ Med git, eller distribuerad versionskontroll i allmänhet, {# lede #}Det finns e
 
 Med [Apache Software Foundation](https://www.apache.org/).
 
-Varför är detta viktigt?  Tja till att börja med låt mig ta itu med en vanlig missuppfattning om behovet av bidragsgivare licensavtal (ICLA) för Apache-företag.  Många verkar inte förstå att det inte finns någon skillnad mellan det tillämpliga språket i de enskilda författarverken. [ICLA](http://www.apache.org/licenses/icla.txt) och [Apache-licens 2.0](http://www.apache.org/licenses/license-2.0).
+Varför är detta viktigt?  Tja till att börja med låt mig ta itu med en vanlig missuppfattning om behovet av bidragsgivare licensavtal (ICLA) för Apache-företag.  Många verkar inte förstå att det inte finns någon skillnad mellan det tillämpliga språket i de enskilda författarverken. [ICLA](http://www.apache.org/licenses/icla.txt) och [Apache-licens 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 Vad push-poster ger då är ett sätt att spåra tillbaka, till varje rad av kod i en release, den enskilda committer som ansvarar för att driva den koden till ASF: s git-datalager. Detta är kritiskt viktigt för att bestämma härkomst av ett bidrag från tredje part med git, eftersom det tyvärr är möjligt för en sådan bidragsgivare att "gå bort" från sitt bidrag till ett git-projekt på grund av den distribuerade typen av DVCS-loggar.  Den ansvariga parten blir då, enligt ICLA, den beställare som drev koden.
 
