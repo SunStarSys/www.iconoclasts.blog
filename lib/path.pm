@@ -83,7 +83,10 @@ our @patterns = (
   [qr!\.(?:bib|tt)\b[^/]*$!, skip => {}],
 
   # transform yml to json
-  [qr!\.ya?ml\b[^/]*$!, yml2ext => { }],
+  [qr!\.ya?ml\b[^/]*$!, yml2ext => { preprocess => 1 }],
+
+# transform csv to json
+  [qr!\.csv\b[^/]*$!,   csv2ext => { preprocess => 1 }],
 
   [qr!\.md[^/]*$!, langify_template => {
     view            => [qw/titleize_links single_narrative/],
