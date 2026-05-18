@@ -109,7 +109,7 @@ walk_content_tree {
 
   return if -d "content/$_";
 
-  seed_file_deps, seed_file_acl if /\.(?:md|ya?ml)\b[^\/]*$/;
+  seed_file_deps, seed_file_acl if /\.(?:md|ya?ml|csv)\b[^\/]*$/;
 
   my $path = $_;
   utf8::is_utf8 $path or utf8::decode $path;
