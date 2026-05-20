@@ -37,7 +37,7 @@ If that sounds like you, [please sign up](/contact)!
 gantt
     title Quarterly Grind
     dateFormat YYYY-MM-DD
-{% for k, v in projects %}
+{% for k,v in projects %}
     section {{k}}
 {% for line in v %}
     {{line}}
