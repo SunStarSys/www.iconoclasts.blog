@@ -3,24 +3,24 @@ Status: draft
 Headers: 1
 
 
-| R type | Perl equivalent | PDL equivalent | Notes |
-| `double` (length-1) | `$x = 3.14` (scalar) | `double(3.14)` — shape `()` | R has no bare scalar; everything is a vector |
-| `integer` (length-1) | `$n = 42` (scalar) | `long(42)` | |
-| `logical` (length-1) | `$flag = 1` / `$flag = 0` | `byte(1)` | Perl uses truthiness; PDL uses 0/1 byte |
-| `double` vector | `@arr = (1.1, 2.2, 3.3)` | `double(1.1, 2.2, 3.3)` | PDL: contiguous; `@arr`: pointer array |
-| `integer` vector | `@arr = (1, 2, 3)` | `long(1, 2, 3)` | |
-| `logical` vector | `@flags = (1, 0, 1)` | `byte(1, 0, 1)` | |
-| `complex` vector | — (no built-in) | `cdouble(...)` | Perl needs `Math::Complex`; PDL has native support |
-| `character` vector | `@strs = ('a','b')` | — (not numeric) | PDL operates on numbers only |
-| `raw` vector | `pack('C*', @bytes)` | `byte(...)` | |
-| `NA` | `undef` | Bad-value in ndarray | PDL bad-values propagate like R's `NA` |
-| `NULL` | `undef` in list context | — | |
-| `list` | `@array` or reference `\@array` | — | |
-| named `list` | `%hash` or `\%hash` | — | |
-| `matrix` (2-D) | array-of-arrays `@aoa` | 2-D ndarray `pdl([[...],[...]])` | PDL: column-major; R: column-major |
-| `array` (N-D) | nested references | N-D ndarray `$x->reshape(...)` | |
-| `data.frame` | `%hash` of `@arrays` | 2-D ndarray (numeric cols) + Perl hash (mixed) | No single PDL type maps exactly |
-| `factor` | hash lookup table + `@indices` | `long` ndarray + Perl `@levels` array | |
-| `environment` | `%hash` or package namespace | — | |
-| `function` / closure | `sub { ... }` / closure | — | PDL PP defines compiled kernels |
-| `S3 / S4 object` | blessed reference + method dispatch | PDL object (blessed ndarray) | PDL objects are first-class Perl objects |
+R type, Perl equivalent, PDL equivalent, Notes
+`double` (length-1),`$x = 3.14` (scalar),`double(3.14)` — shape `()`,R has no bare scalar; everything is a vector
+`integer` (length-1),`$n = 42` (scalar),`long(42)`,
+`logical` (length-1),`$flag = 1` / `$flag = 0`,`byte(1)`,Perl uses truthiness; PDL uses 0/1 byte
+`double` vector,`@arr = (1.1, 2.2, 3.3)`,`double(1.1, 2.2, 3.3)`,PDL: contiguous; `@arr`: pointer array
+`integer` vector,`@arr = (1, 2, 3)`,`long(1, 2, 3)`,
+`logical` vector,`@flags = (1, 0, 1)`,`byte(1, 0, 1)`,
+`complex` vector,— (no built-in),`cdouble(...)`,Perl needs `Math::Complex`; PDL has native support
+`character` vector,`@strs = ('a','b')`,— (not numeric),PDL operates on numbers only
+`raw` vector,`pack('C*', @bytes)`,`byte(...)`,
+`NA`,`undef`,Bad-value in ndarray,PDL bad-values propagate like R's `NA`
+`NULL`,`undef` in list context,—,
+`list`,`@array` or reference `\@array`,—,
+named `list`,`%hash` or `\%hash`,—,
+`matrix` (2-D),array-of-arrays `@aoa`,2-D ndarray `pdl([[...],[...]])`,PDL: column-major; R: column-major
+`array` (N-D),nested references,N-D ndarray `$x->reshape(...)`,
+`data.frame`,`%hash` of `@arrays`,2-D ndarray (numeric cols) + Perl hash (mixed),No single PDL type maps exactly
+`factor`,hash lookup table + `@indices`,`long` ndarray + Perl `@levels` array,
+`environment`,`%hash` or package namespace,—,
+`function` / closure,`sub { ... }` / closure,—,PDL PP defines compiled kernels
+`S3 / S4 object`,blessed reference + method dispatch,PDL object (blessed ndarray),PDL objects are first-class Perl objects
