@@ -1,0 +1,9 @@
+Title: Quarterly Projects for Gantt Chart
+Status: draft
+
+Security Work:
+  - dependency controls: ":a1, 2026-05-01, 10d"
+  - ssi controls: ":after a1, 10d"
+Feature Development:
+  - csv support: ":b1, 2026-05-14, 5d"
+  - pdl support: ":b2, 2026-05-19, 10d"
