@@ -2,14 +2,14 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=36494
+status: verifierad=38438
 title: Joes slumpartade tankar
 ---
 
 
 <div class="right">
 
-[![Heyoka](index.page/me.jpg)](https://en.wikipedia.org/wiki/Heyoka)
+[![Heyoka](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 
@@ -27,9 +27,7 @@ Gift med den mest fantastiska kvinnan på jorden, vars kärlek till mig välsign
 
 ### Delia Frees, för mig
 
-Känner du till rollen som Heyók ⁇ a?
-    spelar i indiansk kultur? Du, min
-    Älskade, är min egen personliga Heyók ⁇ a.
+Är du bekant med den roll som Heyók ⁇ a spelar i indiansk kultur? Du, min kära, är min egen personliga Heyók ⁇ a.
 
 ![Grok Heyoka](index.page/heyoka-grok)
 
@@ -37,4 +35,23 @@ Jag har skapat <https://iconoclasts.blog> för att tillgodose släkt sprit på n
 
 Om det låter som du, [registrera dig](/contact)!
 
-<!-- $Date$ $Författare: joe $ $Revision$ -->
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat ÅÅÅ-MM-DD
+{% för p,q i projects.content %}
+    section {{p}}
+{% för k,v i q %}
+    "{{k|kondom}}" {{v|kondom}}
+{% endera %}
+{% endera %}
+```
+
+### TEST: SSI-genererad tabell &mdash; {{table.headers.title}}
+
+| {{table.csv_headers|join:" | "}} |
+|---|---|---|---|
+{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% endfor %}| extra | roligt | nedan | linje |
+
+<!-- $Date$ $Author$ $Revision$ -->

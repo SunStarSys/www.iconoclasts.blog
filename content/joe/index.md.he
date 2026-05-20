@@ -2,14 +2,14 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: הייוקה, איקונוקלסט
-status: אומתו = 36494
+status: אומתו = 38438
 title: מחשבות אקראיות של ג'ו
 ---
 
 
 <div class="right">
 
-[![היוקה](index.page/me.jpg)](https://en.wikipedia.org/wiki/Heyoka)
+[![היוקה](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 
@@ -27,9 +27,7 @@ title: מחשבות אקראיות של ג'ו
 
 ### דיליה פריס - To Me
 
-האם אתה מכיר את התפקיד Heyókapa
-    משחק בתרבות האינדיאנית? אתה, שלי
-    יקירתי, אני אישית.
+האם אתה מכיר את התפקיד של הייקורה בתרבות האינדיאנית? אתה, יקירתי, הייקורה האישי שלי.
 
 ![גרוק היוקה](index.page/heyoka-grok)
 
@@ -37,4 +35,23 @@ title: מחשבות אקראיות של ג'ו
 
 אם זה נשמע כמוך, [נא להירשם](/contact)!
 
-<!-- $Date$מחבר: ג'ו $ $ מהדורה: 36494 $ -->
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat יי-מ-ד'
+{% עבור p,q ב-projects.content %}
+    section {{עמ'}}
+{% עבור k,v ב-q %}
+    "{{k|בטוח}}" {{v|בטוח}}
+{% סוף %}
+{% סוף %}
+```
+
+### בדיקה: טבלה שהופקה על-ידי SSI &mdash; {{table.headers.title}}
+
+| {{table.csv_headers|join:" | "}} |
+|---|---|---|---|
+{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% endfor %}עוד | כיף | למטה | קו |
+
+<!-- $Date$ $Author$ $Revision$ -->

@@ -2,14 +2,14 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
-status: 確認済み=36494
+status: 確認済み=38438
 title: Joe's Random Thoughtsたった今
 ---
 
 
 <div class="right">
 
-[![Heyoka](index.page/me.jpg)](https://en.wikipedia.org/wiki/Heyoka)
+[![Heyoka](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 
@@ -27,9 +27,7 @@ title: Joe's Random Thoughtsたった今
 
 ### デリア・フリーズ『To Me』
 
-Heyókの役割をよく知っていますか?
-    ネイティブアメリカンの文化あなた、私の
-    私の個人的なHeyókaです。
+Heyókがネイティブアメリカンの文化で果たす役割を知っていますか? You、 my dear、 are my own personalheyók.あなたは私の個人的なHeyókです。
 
 ![Grok Heyoka](index.page/heyoka-grok)
 
@@ -37,4 +35,23 @@ Heyókの役割をよく知っていますか?
 
 もし、あなたのように聞こえたら、[登録してください](/contact)!
 
-<!-- $Date$Author: joe $$Revision$ -->
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat YYYY-MM-DD
+{% P,projects.contentのq %}
+    section {{ちんぽ}}
+{% K用,qのv %}
+    "{{k|コンドーム}}" {{v|コンドーム}}
+{% 終わり%}
+{% 終わり%}
+```
+
+### テスト: SSIで生成された表&mdash; {{table.headers.title}}
+
+| {{table.csv_headers|join:" | "}} |
+|---|---|---|---|
+{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% endfor %}面白くて下がるライン
+
+<!-- $Date$ $Author$ $Revision$ -->

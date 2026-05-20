@@ -2,14 +2,14 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: 헤이오카, iconoclast
-status: 확인=36494
+status: 확인=38438
 title: 조의 무작위 생각
 ---
 
 
 <div class="right">
 
-[![헤요카](index.page/me.jpg)](https://en.wikipedia.org/wiki/Heyoka)
+[![헤요카](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 
@@ -27,9 +27,7 @@ title: 조의 무작위 생각
 
 ### 델리아 프리스 To Me
 
-당신은 Heyók의 역할에 익숙합니까?
-    아메리카 원주민 문화에서 연주? 너, 나의
-    친애하는, 내 자신의 개인 Heyók
+> 미국 원주민 문화에서 Heyók가 수행하는 역할에 대해 잘 알고 있습니까? You, my dear, are my own개인적인 Heyók입니다.
 
 ![Grok Heyoka](index.page/heyoka-grok)
 
@@ -37,4 +35,23 @@ title: 조의 무작위 생각
 
 그것이 당신처럼 들리면, [가입하기](/contact)!
 
-<!-- $Date$ 저자 : 조 $ 개정 : 36494 $ -->
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat YYYY-MM-DD
+{% 대상 p,projects.content의 q %}
+    section {{p}}
+{% k의 경우,Q에 있는 v %}
+    "{{k|안전}}" {{v|안전}}
+{% 끝 %}
+{% 끝 %}
+```
+
+### TEST: SSI 생성 테이블 &mdash; {{table.headers.title}}
+
+| {{table.csv_headers|join:" | "}} |
+|---|---|---|---|
+{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% endfor %}| 추가 | 재미 | 아래 | 줄
+
+<!-- $Date$ $Author$ $Revision$ -->

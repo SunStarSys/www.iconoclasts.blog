@@ -2,14 +2,14 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: heyoka, иконоборчество
-status: проверено=36494
+status: проверено=38438
 title: Случайные мысли Джо
 ---
 
 
 <div class="right">
 
-[![Хёка](index.page/me.jpg)](https://en.wikipedia.org/wiki/Heyoka)
+[![Хёка](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 
@@ -27,9 +27,7 @@ title: Случайные мысли Джо
 
 ### Делия Фриз, ко мне
 
-Вы знакомы с ролью Heyók ⁇ a
-    Играть в индейской культуре? Ты, мой
-    Дорогая, это мой личный Heyók ⁇ a.
+Вы знакомы с той ролью, которую Хейокя играет в культуре коренных американцев? Ты, моя дорогая, моя личная Хейокя.
 
 ![Грок Хейока](index.page/heyoka-grok)
 
@@ -37,4 +35,23 @@ title: Случайные мысли Джо
 
 Если это звучит как ты, [пожалуйста, зарегистрируйтесь](/contact)!
 
-<!-- $Date$Автор: Джо $Пересмотр: 36494 $ -->
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat ГГГГ-ММ-ДД
+{% для п,q в projects.content %}
+    section {{pусский}}
+{% для k,v в q %}
+    "{{k|гондон}}" {{в|гондон}}
+{% конец для %}
+{% конец для %}
+```
+
+### TEST: таблица, созданная SSI &mdash; {{table.headers.title}}
+
+| {{table.csv_headers|join:" | "}} |
+|---|---|---|---|
+{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% endfor %}| дополнительное | удовольствие | ниже | линия |
+
+<!-- $Date$ $Author$ $Revision$ -->

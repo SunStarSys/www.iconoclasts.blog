@@ -2,14 +2,14 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: هيوكا، ايكونوكلاست
-status: التحقق = 36494
+status: التحقق = 38438
 title: أفكار جو العشوائية
 ---
 
 
 <div class="right">
 
-[![هيوكا](index.page/me.jpg)](https://en.wikipedia.org/wiki/Heyoka)
+[![هيوكا](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 
@@ -27,9 +27,7 @@ title: أفكار جو العشوائية
 
 ### ديليا فريس، إليّ
 
-هل أنت على دراية بالدور الذي يلعبه هيوكانا؟
-    هل تلعب في الثقافة الأمريكية الأصلية؟ أنت، يا
-    عزيزي، هي هويوكانا الشخصية الخاصة بي.
+> هل أنت على دراية بالدور الذي تلعبه هيوكانا في الثقافة الأمريكية الأصلية؟ أنت، عزيزي، هي هيوكانا الشخصية الخاصة بي.
 
 ![غروك هيوكا](index.page/heyoka-grok)
 
@@ -37,4 +35,23 @@ title: أفكار جو العشوائية
 
 إذا كان هذا يبدو مثلك، [الرجاء التسجيل](/contact)!
 
-<!-- $Date$ $المؤلف: جو $المراجعة: 36494 $ -->
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat يي-MM-DD
+{% لـ p,ف في projects.content %}
+    section {{صَفَّارَة}}
+{% لـ k,v في q %}
+    "{{k|قِراب الذك}}" {{v|قِراب الذك}}
+{% ينتهي %}
+{% ينتهي %}
+```
+
+### TEST: الجدول المكون بواسطة SSI &mdash; {{table.headers.title}}
+
+| {{table.csv_headers|join:" | "}} |
+|---|---|---|---|
+{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% endfor %}| إضافة | متعة | أسفل | خط |
+
+<!-- $Date$ $Author$ $Revision$ -->

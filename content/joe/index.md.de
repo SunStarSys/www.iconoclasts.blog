@@ -2,14 +2,14 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: heyoka, iconoclast
-status: überprüft=36494
+status: überprüft=38438
 title: Joe's Random Thoughts
 ---
 
 
 <div class="right">
 
-[![Heyoka](index.page/me.jpg)](https://en.wikipedia.org/wiki/Heyoka)
+[![Heyoka](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 
@@ -27,9 +27,7 @@ Verheiratet mit der erstaunlichsten Frau der Welt, deren Liebe zu mir uns beide 
 
 ### Delia Frees, für mich
 
-Kennen Sie die Rolle der Heyókotaa?
-    Spielt in der indianischen Kultur? Du, mein
-    Lieber, ich bin mein persönlicher Heyoka.
+> Kennen Sie die Rolle der Heyókotaa in der indianischen Kultur? Du, meine Liebe, bist mein persönlicher Heyókotaa.
 
 ![Grok Heyoka](index.page/heyoka-grok)
 
@@ -37,4 +35,23 @@ Ich habe erstellt <https://iconoclasts.blog> um verwandten Geistern online gerec
 
 Wenn das nach dir klingt, [Bitte melden Sie sich an](/contact)!
 
-<!-- $Date$ $Autor: joe $ $Revision$ -->
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat YYYY-MM-DD
+{% für p,q in projects.content %}
+    section {{P}}
+{% für k,v in q %}
+    "{{k|sicher}}" {{v|sicher}}
+{% Endfor %}
+{% Endfor %}
+```
+
+### TEST: Von SSI generierte Tabelle &mdash; {{table.headers.title}}
+
+| {{table.csv_headers|join:" | "}} |
+|---|---|---|---|
+{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% endfor %}| zusätzlich | Spaß | unten | Linie |
+
+<!-- $Date$ $Author$ $Revision$ -->

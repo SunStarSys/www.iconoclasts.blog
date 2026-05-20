@@ -2,14 +2,14 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 東京都，東京都
-status: 驗證 =36494
+status: 驗證 =38438
 title: Joe 的隨機思維
 ---
 
 
 <div class="right">
 
-[![賀岡](index.page/me.jpg)](https://en.wikipedia.org/wiki/Heyoka)
+[![賀岡](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 
@@ -27,9 +27,7 @@ title: Joe 的隨機思維
 
 ### Delia Frees，到我
 
-您是否熟悉 Heyók (簡) 的角色？
-    在美國原住民文化中扮演？你，我的
-    聽說，我自己的個人 Heyók Ca。
+> 你是否熟悉 Heyók (譯音) 在美國原住民文化中扮演的角色？你，我說的，是我自己的個人 Heyók Ca。
 
 ![Grok Heyoka](index.page/heyoka-grok)
 
@@ -37,4 +35,23 @@ title: Joe 的隨機思維
 
 如果聽起來像你一樣，[請註冊](/contact)!
 
-<!-- $Date$ $ 作者：joe $ $ 版次：36494 $ -->
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat YYYY-MM-DD
+{% 針對 p,projects.content 中的 q %}
+    section {{頁}}
+{% 針對 k,v 在 q %}
+    "{{k|安全}}" {{垂直|安全}}
+{% 端子%}
+{% 端子%}
+```
+
+### TEST：SSI 產生的表格&mdash; {{table.headers.title}}
+
+| {{table.csv_headers|join:" | "}} |
+|---|---|---|---|
+{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% endfor %}| 其他 | 有趣 | 下方 | 明細行 |
+
+<!-- $Date$ $Author$ $Revision$ -->

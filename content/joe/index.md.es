@@ -2,14 +2,14 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: heyoka, iconoclasta
-status: verificado=36494
+status: verificado=38438
 title: Los pensamientos aleatorios de Joe
 ---
 
 
 <div class="right">
 
-[![Heyoka](index.page/me.jpg)](https://en.wikipedia.org/wiki/Heyoka)
+[![Heyoka](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 
@@ -27,9 +27,7 @@ Casado con la mujer más increíble de la Tierra, cuyo amor por mí nos bendijo 
 
 ### Delia Frees, para mí
 
-¿Conoces el papel del Heyók?
-    juega en la cultura nativa americana? Tú, mi
-    Queridos, son mis propios Heyók-a personales.
+> ¿Conoces el papel que juega el Heyók en la cultura nativa americana? Tú, querida mía, eres mi propio Heyók-a personal.
 
 ![Grok Heyoka](index.page/heyoka-grok)
 
@@ -37,4 +35,23 @@ He creado <https://iconoclasts.blog> para atender a los espíritus afines en lí
 
 Si eso suena como tú, [por favor regístrese](/contact)!
 
-<!-- $Date$ Autor: joe $ $ Revisión: 36494 $ -->
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat YYYY-MM-DD
+{% para p,q en projects.content %}
+    section {{p}}
+{% para k,v en q %}
+    "{{k|seguro}}" {{v|seguro}}
+{% final %}
+{% final %}
+```
+
+### PRUEBA: Tabla generada por SSI &mdash; {{table.headers.title}}
+
+| {{table.csv_headers|join:" | "}} |
+|---|---|---|---|
+{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% endfor %}| adicional | diversión | infra | línea |
+
+<!-- $Date$ $Author$ $Revision$ -->

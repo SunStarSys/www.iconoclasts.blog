@@ -2,14 +2,14 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: heyoka, iconoclaste
-status: vérifié=36494
+status: vérifié=38438
 title: Les pensées aléatoires de Joe
 ---
 
 
 <div class="right">
 
-[![Heyoka](index.page/me.jpg)](https://en.wikipedia.org/wiki/Heyoka)
+[![Heyoka](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
 
 </div>
 
@@ -27,9 +27,7 @@ Mariée à la femme la plus étonnante sur terre, dont l'amour pour moi nous a b
 
 ### Delia Frees, pour moi
 
-Connaissez-vous le rôle de la Heyókġa
-    jouer dans la culture amérindienne ? Toi, mon
-    Je suis mon propre Heyók Tara.
+> Connaissez-vous le rôle du Heyókhara dans la culture amérindienne ? Vous, ma chérie, êtes mon propre Heyók Gara.
 
 ![Grok Heyoka](index.page/heyoka-grok)
 
@@ -37,4 +35,23 @@ J'ai créé <https://iconoclasts.blog> pour répondre aux esprits apparentés en
 
 Si cela vous ressemble, [s'inscrire](/contact)!
 
-<!-- $Date$Auteur : joe $Révision : 36494 $ -->
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat AAAA-MM-JJ
+{% pour p,q dans projects.content %}
+    section {{p}}
+{% pour k,v dans q %}
+    "{{k|sécurité}}" {{v|sécurité}}
+{% pour %}
+{% pour %}
+```
+
+### TEST : Table générée par SSI &mdash; {{table.headers.title}}
+
+| {{table.csv_headers|join:" | "}} |
+|---|---|---|---|
+{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% endfor %}| additionnel | amusement | inférieur | ligne |
+
+<!-- $Date$ $Author$ $Revision$ -->
