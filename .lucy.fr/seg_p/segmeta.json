@@ -3,7 +3,7 @@
     "files": {
       "seg_n": {
         "count": "1",
-        "filename": "seg_o/deletions-seg_n.bv"
+        "filename": "seg_p/deletions-seg_n.bv"
       }
     },
     "format": "1"
@@ -48,14 +48,16 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_o"
+    "name": "seg_p"
   },
   "sort": {
     "counts": {
-      "path": "1"
+      "path": "2"
     },
     "format": "3",
-    "null_ords": {},
+    "null_ords": {
+      "path": "1"
+    },
     "ord_widths": {
       "path": "1"
     }
