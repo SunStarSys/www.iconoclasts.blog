@@ -297,7 +297,7 @@ PDL has a built-in concept of *bad values* (`PDL::Bad`), directly analogous to R
 The table below maps every commonly used R type to its closest Perl and PDL counterparts, highlighting where the three languages agree, differ, or complement each other.
 
 
-| {{table.csv.column_names|join:" | "}} |
+| R Type | Perl Equivalent | PDL Equivalent | Notes |
 |---|---|---|---|
 {% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
 {% endfor %}
