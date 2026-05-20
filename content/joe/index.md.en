@@ -40,7 +40,7 @@ gantt
 {% for p,q in projects.content %}
     section {{p}}
 {% for line in q %}
-    {{q|safe}}
+    {{line|safe}}
 {% endfor %}
 {% endfor %}
 ```
