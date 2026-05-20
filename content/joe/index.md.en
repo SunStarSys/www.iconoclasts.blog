@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: draft
+status: verified=38426
 keywords: heyoka, iconoclast
 ---
 
@@ -39,8 +39,8 @@ gantt
     dateFormat YYYY-MM-DD
 {% for p,q in projects.content %}
     section {{p}}
-{% for line in q %}
-    {{line|safe}}
+{% for k,v in q %}
+    {{k|safe}} {{v|safe}}
 {% endfor %}
 {% endfor %}
 ```
