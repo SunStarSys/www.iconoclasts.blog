@@ -2,7 +2,7 @@ Title: Table
 Status: draft
 Headers: yes
 
-R type, Perl equivalent, PDL equivalent, Notes
+R type,Perl equivalent,PDL equivalent,Notes
 `double` (length-1),`$x = 3.14` (scalar),`double(3.14)` — shape `()`,R has no bare scalar; everything is a vector
 `integer` (length-1),`$n = 42` (scalar),`long(42)`,
 `logical` (length-1),`$flag = 1` / `$flag = 0`,`byte(1)`,Perl uses truthiness; PDL uses 0/1 byte
