@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: 헤이오카, iconoclast
-status: 확인=38438
+status: 확인=38502
 title: 조의 무작위 생각
 ---
 
@@ -37,14 +37,14 @@ title: 조의 무작위 생각
 
 ```mermaid
 gantt
-    title {{projects.headers.title|safe}}
+    제목 {{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
-{% 대상 p,projects.content의 q %}
-    section {{p}}
-{% k의 경우,Q에 있는 v %}
-    "{{k|안전}}" {{v|안전}}
-{% 끝 %}
-{% 끝 %}
+{% for p,q in projects.content %}
+    섹션 {{p}}
+{% for k,v in q %}
+    "{{k|safe}}" {{v|safe}}
+{% endfor %}
+{% endfor %}
 ```
 
 ### TEST: SSI 생성 테이블 &mdash; {{table.headers.title}}

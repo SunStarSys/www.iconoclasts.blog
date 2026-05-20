@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: هيوكا، ايكونوكلاست
-status: التحقق = 38438
+status: التحقق = 38502
 title: أفكار جو العشوائية
 ---
 
@@ -37,14 +37,14 @@ title: أفكار جو العشوائية
 
 ```mermaid
 gantt
-    title {{projects.headers.title|safe}}
-    dateFormat يي-MM-DD
-{% لـ p,ف في projects.content %}
-    section {{صَفَّارَة}}
-{% لـ k,v في q %}
-    "{{k|قِراب الذك}}" {{v|قِراب الذك}}
-{% ينتهي %}
-{% ينتهي %}
+    عنوان {{projects.headers.title|safe}}
+    dateFormat YYYY-MM-DD
+{% for p,q in projects.content %}
+    قسم {{p}}
+{% for k,v in q %}
+    "{{k|safe}}" {{v|safe}}
+{% endfor %}
+{% endfor %}
 ```
 
 ### TEST: الجدول المكون بواسطة SSI &mdash; {{table.headers.title}}

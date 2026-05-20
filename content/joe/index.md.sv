@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=38438
+status: verifierad=38502
 title: Joes slumpartade tankar
 ---
 
@@ -37,14 +37,14 @@ Om det låter som du, [registrera dig](/contact)!
 
 ```mermaid
 gantt
-    title {{projects.headers.title|safe}}
-    dateFormat ÅÅÅ-MM-DD
-{% för p,q i projects.content %}
-    section {{p}}
-{% för k,v i q %}
-    "{{k|kondom}}" {{v|kondom}}
-{% endera %}
-{% endera %}
+    rubrik {{projects.headers.title|safe}}
+    dateFormat YYYY-MM-DD
+{% for p,q in projects.content %}
+    sektion {{p}}
+{% for k,v in q %}
+    "{{k|safe}}" {{v|safe}}
+{% endfor %}
+{% endfor %}
 ```
 
 ### TEST: SSI-genererad tabell &mdash; {{table.headers.title}}

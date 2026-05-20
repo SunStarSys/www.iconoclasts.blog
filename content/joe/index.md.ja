@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
-status: 確認済み=38438
+status: 確認済み=38502
 title: Joe's Random Thoughtsたった今
 ---
 
@@ -37,14 +37,14 @@ Heyókがネイティブアメリカンの文化で果たす役割を知って�
 
 ```mermaid
 gantt
-    title {{projects.headers.title|safe}}
+    タイトル{{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
-{% P,projects.contentのq %}
-    section {{ちんぽ}}
-{% K用,qのv %}
-    "{{k|コンドーム}}" {{v|コンドーム}}
-{% 終わり%}
-{% 終わり%}
+{% for p,q in projects.content %}
+    セクション{{p}}
+{% for k,v in q %}
+    "{{k|safe}}" {{v|safe}}
+{% endfor %}
+{% endfor %}
 ```
 
 ### テスト: SSIで生成された表&mdash; {{table.headers.title}}

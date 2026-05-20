@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: heyoka, iconoclasta
-status: verificado=38438
+status: verificado=38502
 title: Los pensamientos aleatorios de Joe
 ---
 
@@ -37,14 +37,14 @@ Si eso suena como tú, [por favor regístrese](/contact)!
 
 ```mermaid
 gantt
-    title {{projects.headers.title|safe}}
+    título {{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
-{% para p,q en projects.content %}
-    section {{p}}
-{% para k,v en q %}
-    "{{k|seguro}}" {{v|seguro}}
-{% final %}
-{% final %}
+{% for p,q in projects.content %}
+    sección {{p}}
+{% for k,v in q %}
+    "{{k|safe}}" {{v|safe}}
+{% endfor %}
+{% endfor %}
 ```
 
 ### PRUEBA: Tabla generada por SSI &mdash; {{table.headers.title}}

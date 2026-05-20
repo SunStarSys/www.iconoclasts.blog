@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: heyoka, иконоборчество
-status: проверено=38438
+status: проверено=38502
 title: Случайные мысли Джо
 ---
 
@@ -37,14 +37,14 @@ title: Случайные мысли Джо
 
 ```mermaid
 gantt
-    title {{projects.headers.title|safe}}
-    dateFormat ГГГГ-ММ-ДД
-{% для п,q в projects.content %}
-    section {{pусский}}
-{% для k,v в q %}
-    "{{k|гондон}}" {{в|гондон}}
-{% конец для %}
-{% конец для %}
+    заголовок {{projects.headers.title|safe}}
+    dateFormat YYYY-MM-DD
+{% for p,q in projects.content %}
+    расщепление {{p}}
+{% for k,v in q %}
+    "{{k|safe}}" {{v|safe}}
+{% endfor %}
+{% endfor %}
 ```
 
 ### TEST: таблица, созданная SSI &mdash; {{table.headers.title}}

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: heyoka, iconoclast
-status: überprüft=38438
+status: überprüft=38502
 title: Joe's Random Thoughts
 ---
 
@@ -37,14 +37,14 @@ Wenn das nach dir klingt, [Bitte melden Sie sich an](/contact)!
 
 ```mermaid
 gantt
-    title {{projects.headers.title|safe}}
+    Titel {{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
-{% für p,q in projects.content %}
-    section {{P}}
-{% für k,v in q %}
-    "{{k|sicher}}" {{v|sicher}}
-{% Endfor %}
-{% Endfor %}
+{% for p,q in projects.content %}
+    Abschnitt {{p}}
+{% for k,v in q %}
+    "{{k|safe}}" {{v|safe}}
+{% endfor %}
+{% endfor %}
 ```
 
 ### TEST: Von SSI generierte Tabelle &mdash; {{table.headers.title}}

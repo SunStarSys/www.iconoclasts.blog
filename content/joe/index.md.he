@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: הייוקה, איקונוקלסט
-status: אומתו = 38438
+status: אומתה=38502
 title: מחשבות אקראיות של ג'ו
 ---
 
@@ -37,14 +37,14 @@ title: מחשבות אקראיות של ג'ו
 
 ```mermaid
 gantt
-    title {{projects.headers.title|safe}}
-    dateFormat יי-מ-ד'
-{% עבור p,q ב-projects.content %}
-    section {{עמ'}}
-{% עבור k,v ב-q %}
-    "{{k|בטוח}}" {{v|בטוח}}
-{% סוף %}
-{% סוף %}
+    כותרת {{projects.headers.title|safe}}
+    dateFormat YYYY-MM-DD
+{% for p,q in projects.content %}
+    מקטע {{p}}
+{% for k,v in q %}
+    "{{k|safe}}" {{v|safe}}
+{% endfor %}
+{% endfor %}
 ```
 
 ### בדיקה: טבלה שהופקה על-ידי SSI &mdash; {{table.headers.title}}
