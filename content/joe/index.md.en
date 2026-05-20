@@ -33,16 +33,17 @@ I created <https://iconoclasts.blog> to cater to kindred spirits online; who nee
 
 If that sounds like you, [please sign up](/contact)!
 
+```
 gantt
     title Quarterly Grind
     dateFormat YYYY-MM-DD
-{% for k,v in projects %}
-    section {{k}}
-{% for line in v %}
-    {{line}}
+{% for p,q in projects %}
+    section {{p}}
+{% for line in q %}
+    {{q|safe}}
 {% endfor %}
 {% endfor %}
-
+```
 
 ### TEST: SSI generated Table &mdash; {{table.headers.title}}
 
