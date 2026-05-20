@@ -7,11 +7,11 @@ R type,Perl equivalent,PDL equivalent,Notes
 `integer` (length-1),`$n = 42` (scalar),`long(42)`,
 `logical` (length-1),`$flag = 1` / `$flag = 0`,`byte(1)`,Perl uses truthiness; PDL uses 0/1 byte
 `double` vector,"`@arr = (1.1, 2.2, 3.3)`","`double(1.1, 2.2, 3.3)`",PDL: contiguous; `@arr`: pointer array
-`integer` vector,`@arr = (1, 2, 3)`,`long(1, 2, 3)`,
-`logical` vector,`@flags = (1, 0, 1)`,`byte(1, 0, 1)`,
+`integer` vector,"`@arr = (1, 2, 3)`","`long(1, 2, 3)`",
+`logical` vector,"`@flags = (1, 0, 1)`","`byte(1, 0, 1)`",
 `complex` vector,— (no built-in),`cdouble(...)`,Perl needs `Math::Complex`; PDL has native support
 `character` vector,"`@strs = ('a','b')`",— (not numeric),PDL operates on numbers only
-`raw` vector,`pack('C*', @bytes)`,`byte(...)`,
+`raw` vector,"`pack('C*', @bytes)`",`byte(...)`,
 `NA`,`undef`,Bad-value in ndarray,PDL bad-values propagate like R's `NA`
 `NULL`,`undef` in list context,—,
 `list`,`@array` or reference `\@array`,—,
