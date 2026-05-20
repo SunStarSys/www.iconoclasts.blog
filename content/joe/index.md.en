@@ -33,7 +33,6 @@ I created <https://iconoclasts.blog> to cater to kindred spirits online; who nee
 
 If that sounds like you, [please sign up](/contact)!
 
-```mermaid
 gantt
     title Quarterly Grind
     dateFormat YYYY-MM-DD
@@ -44,7 +43,6 @@ gantt
 {% endfor %}
 {% endfor %}
 
-```
 
 ### TEST: SSI generated Table &mdash; {{table.headers.title}}
 
