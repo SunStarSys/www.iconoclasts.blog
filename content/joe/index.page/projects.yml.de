@@ -1,0 +1,14 @@
+---
+acl: joe=rw, *=r
+categories: ~
+keywords: ~
+status: Entwurf
+title: Vierteljährliche Projekte für Gantt-Diagramm
+---
+
+Sicherheitsarbeit:
+  Abhängigkeitssteuerungen: :a1, 2026-05-01, 10d
+  ssi-Steuerelemente: :nach a1, 10d
+Featureentwicklung:
+  csv: :b1, 2026-05-14, 5d
+  pdl: :b2, 2026-05-19, 10d

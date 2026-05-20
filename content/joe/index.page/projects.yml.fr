@@ -1,0 +1,14 @@
+---
+acl: joe=rw, *=r
+categories: ~
+keywords: ~
+status: projet
+title: Projets trimestriels pour le diagramme de Gantt
+---
+
+Travail de sécurité :
+  contrôles de dépendance : :a1, 2026-05-01, 10d
+  contrôles ssi : après a1, 10d
+Développement de fonctionnalités :
+  csv: :b1, 2026-05-14, 5d
+  pdl: :b2, 2026-05-19, 10d
