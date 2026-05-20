@@ -1,6 +1,7 @@
 Title: Table
 Status: draft
-Headers: yes
+Headers: 1
+
 
 R type, Perl equivalent, PDL equivalent, Notes
 `double` (length-1),`$x = 3.14` (scalar),`double(3.14)` — shape `()`,R has no bare scalar; everything is a vector
