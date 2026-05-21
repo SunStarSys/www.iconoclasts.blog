@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: heyoka, iconoclasta
-status: verificado=38578
+status: verificado=38633
 title: Los pensamientos aleatorios de Joe
 ---
 

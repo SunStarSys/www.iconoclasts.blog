@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: heyoka, иконоборчество
-status: проверено=38578
+status: проверено=38633
 title: Случайные мысли Джо
 ---
 
