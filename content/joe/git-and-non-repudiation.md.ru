@@ -4,7 +4,7 @@ categories: Управление версиями, Apache
 dependencies: '*.md.ru'
 keywords: безопасность,отказ от ответственности,DVCS,управление версиями,icla
 published: ~
-status: архивировано
+status: archived
 title: Git and Non Repudiation, повторный просмотр
 ---
 
