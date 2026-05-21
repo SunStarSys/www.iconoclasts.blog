@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: 헤이오카, iconoclast
-status: 확인=38648
+status: 확인=38667
 title: 조의 무작위 생각
 ---
 
@@ -37,7 +37,7 @@ title: 조의 무작위 생각
 
 ```mermaid
 gantt
-    제목 {{projects.headers.title|safe}}
+    title {{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
 {% for p,q in projects.content %}
     섹션 {{p}}

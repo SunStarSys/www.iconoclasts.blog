@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: heyoka, iconoclasta
-status: verificado=38648
+status: verificado=38667
 title: Pensamentos Aleatórios de Joe
 ---
 
@@ -37,7 +37,7 @@ Se isso soa como você, [por favor inscreva-se](/contact)!
 
 ```mermaid
 gantt
-    título {{projects.headers.title|safe}}
+    title {{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
 {% for p,q in projects.content %}
     seção {{p}}

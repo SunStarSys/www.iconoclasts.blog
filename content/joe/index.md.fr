@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: heyoka, iconoclaste
-status: vérifié=38648
+status: vérifié=38667
 title: Les pensées aléatoires de Joe
 ---
 
@@ -37,7 +37,7 @@ Si cela vous ressemble, [s'inscrire](/contact)!
 
 ```mermaid
 gantt
-    titre {{projects.headers.title|safe}}
+    title {{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
 {% for p,q in projects.content %}
     section {{p}}

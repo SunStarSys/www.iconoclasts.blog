@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: heyoka, iconoclast
-status: überprüft=38648
+status: überprüft=38667
 title: Joe's Random Thoughts
 ---
 
@@ -37,7 +37,7 @@ Wenn das nach dir klingt, [Bitte melden Sie sich an](/contact)!
 
 ```mermaid
 gantt
-    Titel {{projects.headers.title|safe}}
+    title {{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
 {% for p,q in projects.content %}
     Abschnitt {{p}}
