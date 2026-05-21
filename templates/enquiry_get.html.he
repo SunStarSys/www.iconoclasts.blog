@@ -1,4 +1,4 @@
-<div style="text-align:{% ifequal lang ".he" %}right{% else %}{% ifequal lang ".ar" %}right{% else %}left{% endifequal %}{% endifequal%}">
+<div style="text-align:{% ifequal lang ".he" %}ימין{% else %}{% ifequal lang ".ar" %}ימין{% else %}שמאל{% endifequal %}{% endifequal%}">
 <h3>הרשמה לבלוג בחינם</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -11,6 +11,8 @@
 
 <label for="username">שם משתמש מועדף</label>
   <input pattern="^\w+$" name="username" id="username" class="form-control" required />
+
+<input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">בקשו הדגמה</label>
 
 <label>תוכנית אוריון מועדפת</label>
   <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">בלוג חינם</label>
@@ -25,7 +27,7 @@
 
 <label for="editor">הודעה על הצטרפות</label>
 
-<div id="editor-content" class="{% ifequal lang ".he" %}rtl{% else %}{% ifequal lang ".ar" %}rtl{% else %}ltr{% endifequal %}{% endifequal%}">
+<div id="editor-content" class="{% ifequal lang ".he" %}rtl{% else %}{% ifequal lang ".ar" %}rtl{% else %}ליטר{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>

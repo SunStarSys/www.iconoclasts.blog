@@ -1,4 +1,4 @@
-<div style="text-align:{% ifequal lang ".he" %}right{% else %}{% ifequal lang ".ar" %}right{% else %}left{% endifequal %}{% endifequal%}">
+<div style="text-align:{% ifequal lang ".he" %}derecha{% else %}{% ifequal lang ".ar" %}derecha{% else %}izquierda{% endifequal %}{% endifequal%}">
 <h3>Suscríbete al blog gratis</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -11,6 +11,8 @@
 
 <label for="username">Nombre de usuario preferido</label>
   <input pattern="^\w+$" name="username" id="username" class="form-control" required />
+
+<input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">Solicitar una demo</label>
 
 <label>Plan de organización preferido</label>
   <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Blog gratuito</label>

@@ -1,4 +1,4 @@
-<div style="text-align:{% ifequal lang ".he" %}right{% else %}{% ifequal lang ".ar" %}right{% else %}left{% endifequal %}{% endifequal%}">
+<div style="text-align:{% ifequal lang ".he" %}правый{% else %}{% ifequal lang ".ar" %}правый{% else %}левый{% endifequal %}{% endifequal%}">
 <h3>Подписаться на бесплатный блог</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -11,6 +11,8 @@
 
 <label for="username">Имя предпочтительного пользователя</label>
   <input pattern="^\w+$" name="username" id="username" class="form-control" required />
+
+<input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">Запросить демо</label>
 
 <label>Предпочтительный план ориентации</label>
   <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Бесплатный блог</label>
@@ -25,7 +27,7 @@
 
 <label for="editor">Сообщение для приема и адаптации</label>
 
-<div id="editor-content" class="{% ifequal lang ".he" %}rtl{% else %}{% ifequal lang ".ar" %}rtl{% else %}ltr{% endifequal %}{% endifequal%}">
+<div id="editor-content" class="{% ifequal lang ".he" %}РТЛ{% else %}{% ifequal lang ".ar" %}РТЛ{% else %}лт{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>

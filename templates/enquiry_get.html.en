@@ -12,6 +12,8 @@
   <label for="username">Preferred User Name</label>
   <input pattern="^\w+$" name="username" id="username" class="form-control" required />
 
+  <input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">Request a Demo</label>
+
   <label>Preferred Orion Plan</label>
   <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Free Blog</label>
 

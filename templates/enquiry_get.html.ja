@@ -1,4 +1,4 @@
-<div style="text-align:{% ifequal lang ".he" %}right{% else %}{% ifequal lang ".ar" %}right{% else %}left{% endifequal %}{% endifequal%}">
+<div style="text-align:{% ifequal lang ".he" %}右側線{% else %}{% ifequal lang ".ar" %}右側線{% else %}左側線{% endifequal %}{% endifequal%}">
 <h3>無料ブログに登録する</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -11,6 +11,8 @@
 
 <label for="username">優先ユーザー名</label>
   <input pattern="^\w+$" name="username" id="username" class="form-control" required />
+
+<input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">デモをリクエストする</label>
 
 <label>優先オリオンプラン</label>
   <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">無料ブログ</label>

@@ -1,4 +1,4 @@
-<div style="text-align:{% ifequal lang ".he" %}right{% else %}{% ifequal lang ".ar" %}right{% else %}left{% endifequal %}{% endifequal%}">
+<div style="text-align:{% ifequal lang ".he" %}يمين{% else %}{% ifequal lang ".ar" %}يمين{% else %}يسار{% endifequal %}{% endifequal%}">
 <h3>الاشتراك في مدونة مجانية</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -11,6 +11,8 @@
 
 <label for="username">اسم المستخدم المفضل</label>
   <input pattern="^\w+$" name="username" id="username" class="form-control" required />
+
+<input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">طلب عرض توضيحي</label>
 
 <label>خطة أوريون المفضلة</label>
   <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">مدونة مجانية</label>
@@ -25,7 +27,7 @@
 
 <label for="editor">رسالة التسجيل</label>
 
-<div id="editor-content" class="{% ifequal lang ".he" %}rtl{% else %}{% ifequal lang ".ar" %}rtl{% else %}ltr{% endifequal %}{% endifequal%}">
+<div id="editor-content" class="{% ifequal lang ".he" %}إجمالي{% else %}{% ifequal lang ".ar" %}إجمالي{% else %}ltr{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>
