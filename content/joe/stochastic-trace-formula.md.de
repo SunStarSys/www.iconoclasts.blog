@@ -1,16 +1,14 @@
 ---
-archived: ~
-categories: Mathematisch
+categories: Mathematik
 dependencies: '*.md.de'
-keywords: weiner messen,riemann Oberflächen, Wahrscheinlichkeit, Geometrie
-published: ~
-status: Entwurf
-title: Stochastische Spurformel für geschlossene, negativ gekrümmte Verteiler
+keywords: Adermaß,riemann Oberflächen,Wahrscheinlichkeit,Geometrie
+status: archiviert
+title: Stochastische Trace-Formel für geschlossene, negativ gebogene Verteiler
 ---
 
 <div class="right">
 
-![Hyperbolische Wabe](stochastic-trace-formula.page/hyperbolic-honeycomb.png)
+![Hyperbolische Honigwabe](stochastic-trace-formula.page/hyperbolic-honeycomb.png)
 
 </div>
 
@@ -28,7 +26,7 @@ currentlight=White;
 real redPortion = 143 / 256;
 real greenPortion = 153 / 256;
 real bluePortion = 251 / 156;
-pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
 // currentlight.background = periwinklePen;
 currentprojection=perspective(1,1,1,up=-Y);
 
@@ -56,38 +54,72 @@ draw(tube(p,colorsec),render(merge=true));
 
 ## Es gibt nur eine n-dimensionale Wiener Kennzahl $$\mu$$
 
-## Stückweise lineare Annäherungen an die Brownsche Bewegung
+## Piecewise lineare Annäherungen an Brownian Motion
 
-## Die Entwicklungskarte DM
+## Entwicklungskarte DM
 
 ## Die Cameron-Martin Formel
 
-## Heizkerne als Radon-Nicodym-Derivate von Weiner Measure
+## Wärmekerne als Radon-Nikodym-Derivate von Weiner Measure
 
 ## Notation
 
-$$M$$ ist negativ gekrümmt $$\dim=n$$ geschlossen Riemannsche Verteiler mit metrischer $$g$$, metrische Verbindung $$\nabla$$, und (nonnegative) Laplace-Beltrami Operator $$\Delta_M$$. Lassen Sie $$k_{-t\Delta/2}(x,y)$$ stellen den Heizkern dar auf $$M$$
+$$M$$ negativ gekrümmt ist $$\dim=n$$ geschlossen Riemannsche Verteiler mit metrischen $$g$$, metrische Verbindung $$\nabla$$, und (nonnegativ) Laplace-Beltrami-Operator $$\Delta_M$$. Lassen $$k_{-t\Delta/2}(x,y)$$ repräsentieren den Wärmekern auf $$M$$.
 
-Daher $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ ist das Radon-Nicodym-Derivat der n-dimensionalen Wiener Measure $$\mu$$, beschränkt auf das Zurückziehen von durchgehendem Schlaufenraum $$\Omega_t(M)\vert_x$$, über die Umkehrung der Weiner maßhaltigen Entwicklungskarte $$DM$$. *Hinweis:* $$DM^{-1}\Omega_t\vert_x$$
+Daher $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ ist das Radon-Nikodym-Derivat des n-dimensionalen Wiener Measure $$\mu$$, beschränkt auf das Zurückziehen des Endlosschleifenraums $$\Omega_t(M)\vert_x$$, über die Umkehrung der Weiner-Maßerhaltenden Entwicklungskarte $$DM$$. *Hinweis:* $$DM^{-1}\Omega_t\vert_x$$ ist im Allgemeinen kein Schleifenraum.
 
-$$\Omega_t^0$$ ist der Raum der kontinuierlichen vertraglichen Schleifen auf $$M$$
+$$\Omega_t^0$$ ist der Raum der kontinuierlichen vertraglichen Schleifen auf $$M$$.
 
-$$\Omega_t[\gamma]$$ ist der Raum der kontinuierlichen Schleifen auf $$M$$ Homotopie zum geschlossenen geodätischen $$\gamma$$. Lassen Sie $$\gamma_0$$
+$$\Omega_t[\gamma]$$ ist der Raum der kontinuierlichen Schleifen an $$M$$ homotopisch zur geschlossenen geodätischen $$\gamma$$. Lassen $$\gamma_0$$ Sein primitiver Loop.
 
-$$DM^{-1}\Omega_t^0[\gamma]$$ ist das Vorbild kontinuierlicher vertraglicher Schleifen auf $$M$$ als Offsets homotopic auf $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Horozyklische Koordinaten &mdash; jede Faser als geometrische Grenze periodischer geodätischer Kugeln $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$, vektorisiert im Normal Bundle über $$\gamma_0$$. Unsere Krümmungsbeschränkungen implizieren Horozyklische Koordinaten für jeden $$\gamma_0$$ als glatt, $$DM$$-kompatible Koordinatenkarte für $$\Omega_t^0[\gamma]$$
-
-Jetzt $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ ist der *unentwickelte* Endpunkt des "Offset" *knickten geodätischen* Homotopen zu $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Die Kurve ist periodisch mit Periode $$\ell(\gamma_0)$$, und es besichtigt seinen geknickten Ausgangspunkt $$DM(\vec{x}(\tau))$$ Uhrzeit $$t$$, die Berechnung des Forward-Derivats $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ Traktierbar als linearer Automorphismus $$T_{DM(\vec{x}(\tau))}M$$. Wichtig: $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ kann mit **Jacobi-Feldern** erstellt werden, da $$DM$$ **ist** die (iterierte) exponentielle Karte entlang einer beliebigen Reihe verbundener Geraden in $$\Reals^n$$. Wir werden studieren $$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$$
+$$DM^{-1}\Omega_t^0[\gamma]$$ ist das Vorbild kontinuierlicher vertraglicher Schleifen auf $$M$$ geschrieben als Versatz homotopisch zu $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Horocyclische Koordinaten denken &mdash; jede Faser als geometrische Grenze periodischer geodätischer Kugeln $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$, vektorisiert im Normal Bundle over $$\gamma_0$$. Unsere Krümmungsbeschränkungen implizieren Horocyclische Koordinaten für alle $$\gamma_0$$ als glatt, $$DM$$-kompatible Koordinatenzuordnung für $$\Omega_t^0[\gamma]$$.
+in horocyclischen Koordinaten, $$\det{g(\vec{x})} = 1$$:
 
 ```math
 \begin{aligned}
-X_t &= X_0 + \int_0^t \sqrt{J}_{X_t} dB_t  \\
+ds^2 &= dx\odot dx + h(x,y) dx\odot dy +  (1+h^2(x,y)) dy\odot dy \\
+g(x,0) &= 0,\\
+\sigma_1 &= dx + h(x,y)dy \\
+\sigma_2 &= h(x,y)dx + (1+h^2(x,y))dy \\
+\sigma_1 \wedge \sigma_2 &= dx \wedge dy\\
+d\sigma_1 &= \frac{\partial h}{\partial x}dx\wedge dy \\
+d\sigma_2 &= (-\frac{\partial h}{\partial y}+2h\frac{\partial h}{\partial x}) dx\wedge dy \\
 
 \end{aligned}
 ```
+So die Verbindung 1-Form $$\alpha := Adx + Bdy$$ erfüllt
+```math
+\begin{aligned}
+d\sigma_1 &= \alpha \wedge \sigma_1 \\
+d\sigma_2 &= \sigma_2 \wedge \alpha \\
+\implies \\
+A &= \frac{\partial h}{\partial y} - 3h\frac{\partial h}{\partial x} \\
+B &= h\frac{\partial h}{\partial y} - (1+3h^2)\frac{\partial h}{\partial x} \\
+ \\
+K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
+ &= \frac{\partial h}{\partial x}\frac{\partial h}{\partial y} - 6h\frac{\partial h}{\partial x}^2 - (1+3h^2)\frac{\partial^2 h}{\partial x \partial x}
+ - \frac{\partial^2 h}{\partial y \partial y} + 2h \frac{\partial^2 h}{\partial x \partial y} ,\\
+h &= h(y) \implies \\
 
-$$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ ist die Spur des Heat Kernels.
+\alpha &= \frac{\partial }{\partial y} (hdx +\frac{h^2}{2} dy)\\
 
-Lassen Sie uns abschließend Folgendes aus ihren Radon-Nicodym-Derivaten definieren:
+K(y) &= -\frac{\partial^2 h}{\partial y \partial y}\ \\
+ \text{has Galilean Symmetry:} \\
+ h \mapsto h(y,\beta) &= h(y) + \beta y \ .\\
+\end{aligned}
+```
+
+**WICHTIG** Daher, wenn $$h=h(y)$$, reduziert sich die parallele Transportgleichung auf $$\dot{\vec{c}}(t) = -\alpha(\dot{\gamma}(t))\vec{c}(t) = -\partial_y(h\ dx/dt + h^2/2\ dy/dt)\vec{c}(t)$$. Das hat natürlich eine geschlossene Lösung.
+
+```math
+\vec{c}(t) = exp(-((h+\beta y)\ dx/dt + (h^2/2 + (\beta y)^2/2 + \beta y h) \ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
+```
+
+was eine Funktion der Transportkurve ist $$\gamma$$'s Endpunkte **alone**. Diese Tatsache impliziert, dass die Entwicklungskarte Schleifen behält.
+
+$$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ ist die Spur des Wärmekerns.
+
+Finally let us define the following from their Radon-Nicodym derivatives:
 
 ```math
 \begin{aligned}
@@ -108,52 +140,35 @@ DM_*\mu(\Omega_t^0) &\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M
 DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
 
 &= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
-
-\frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}}&\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau),\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\small \text{ semi-classical limit}\\
-
-\text{Horocyclic coordinates}: z(\tau) - x(\tau) &= x + \ell(\gamma)\vec{e}^1\implies\\
-
-\int_{M/S^1\oplus S^1}k_t(x,z) dx &=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\bra{J_{X^j_t}\vec{x}}\ket{\vec{x}}})\\
-
-&=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_{M^j/S^1\oplus S^1}\frac{1}{\sqrt{2\pi t}^{jn}\det|I-J_{X^j}|}e^{-\ell(X^j)^2/2t}X^{j}\\
-
 \end{aligned}
 ```
-
-## Approximation und die Selberg Trace Formel
-
-In der $$\dim = 2$$ konstante Krümmung $$-\kappa^2$$
-
 ```math
 \begin{aligned}
-\sqrt{J_{\vec{x}, \vec{y}}}dRB&=
-\begin{pmatrix}
-e^{\kappa d(\vec{x},\vec{y})/2} && 0\\
-0 && e^{-\kappa d(\vec{x},\vec{y})/2}\\
-\end{pmatrix}
-\implies&\\
-\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} &= e^{\kappa \ell(B)}dRB_1^2 - e^{-\kappa \ell(B)}dRB_2^2\\
+\text{Horocyclic coordinates}: \\
 
-\int_0^t \bra{\sqrt{ J}dB}\ket{\sqrt{ J}dB} &= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
+h&= h(y) \implies \\
+&=\frac{\ell(\gamma_0)}{2\pi t}\int_{\Reals}\frac{e^{- (1+h^2(y))\ell(\gamma)^2/2t}}{2\sinh \sqrt{-K(y)}\ell(\gamma)/2}\ell(\gamma) dy\ ,\\
 
-\det I-J_{\gamma} &= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
+h(y) = y \implies \\
+&= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh \sqrt {-K}\ell(\gamma)/2}\int_{\Reals}e^{-y^2\ell(\gamma)^2/2t}{\frac{\ell(\gamma)dy}{\sqrt{2\pi t}}}
 \end{aligned}
 ```
+## Approximation und die Selberg Trace Formula
 
-die konstant über $$(\vec{x},\tau)$$, so die Annäherung $$\approx_{t\rightarrow 0}$$
+In der $$\dim = 2$$ konstante Krümmung $$K = -\kappa^2$$ Fall,
 
 ```math
 \begin{aligned}
 
-DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gamma)/2} -e^{-\kappa\ell(\gamma)/2})}\\
+\det |I-J_\gamma| &= (e^{\kappa\ell(\gamma)} - 1)(1 - e^{-\kappa\ell(\gamma)}) = 2 \sinh \kappa\ell(\gamma)/2\\
 
 \gamma(t) = \gamma_0(kt)\implies \\
 
-&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+DM_*\mu(\Omega_t[\gamma])&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
 \end{aligned}
 ```
 
-In der $$\dim=3$$ hyperbolische Verteilergehäuse, wir verwenden komplexe Koordinaten $$(z,\bar{z})$$
+In der $$\dim=3$$ Hyperbolischer Verteilerkasten, wir verwenden komplexe Koordinaten $$(z,\bar{z})$$ auf dem normalen Bundle zum Schreiben
 
 ```math
 \begin{aligned}
@@ -168,7 +183,7 @@ e^{\kappa\ell(\gamma)} && 0 && 0\\
 \det I-{\perp_{\gamma_0}}^k &= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
 \end{aligned}
 ```
-und seit $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$
+und seit $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$, wird die Näherung in Gleichung (2) wieder genau:
 
 ```math
 \begin{aligned}

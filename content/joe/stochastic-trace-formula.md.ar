@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: الرياضيات
 dependencies: '*.md.ar'
 keywords: قياس الوينر، أسطح الريمان، الاحتمالات، الهندسة
-published: ~
-status: مُسَوَّدَة
+status: مؤرشف
 title: معادلة تتبع مؤشر ستوكاستيك للمجموعات المنحنية المغلقة والسلبية
 ---
 
@@ -117,11 +115,11 @@ K(y) &= -\frac{\partial^2 h}{\partial y \partial y}\ \\
 \vec{c}(t) = exp(-((h+\beta y)\ dx/dt + (h^2/2 + (\beta y)^2/2 + \beta y h) \ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
 ```
 
-التي هي وظيفة منحنى النقل $$\gamma$$'نقاط انتهاء s **منفردة**. تشير هذه الحقيقة إلى أن خريطة التطوير تحافظ على الحلقات.
+التي هي وظيفة منحنى النقل $$\gamma$$نقاط النهاية **منفردة**. تشير هذه الحقيقة إلى أن خريطة التطوير تحافظ على الحلقات.
 
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ هو أثر نواة الحرارة.
 
-وأخيرا دعونا نحدد ما يلي من مشتقات رادون نيكوديم:
+Finally let us define the following from their Radon-Nicodym derivatives:
 
 ```math
 \begin{aligned}
@@ -155,7 +153,7 @@ h(y) = y \implies \\
 &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh \sqrt {-K}\ell(\gamma)/2}\int_{\Reals}e^{-y^2\ell(\gamma)^2/2t}{\frac{\ell(\gamma)dy}{\sqrt{2\pi t}}}
 \end{aligned}
 ```
-## التقريب وصيغة تتبع Selberg
+## التقريب وصيغة Selberg Trace
 
 في $$\dim = 2$$ انحناء مستمر $$K = -\kappa^2$$ حالة،
 
@@ -197,4 +195,4 @@ DM_*\mu(\Omega_t[\gamma])
 \end{aligned}
 ```
 
-<!-- $Date: 2025-03-30 15:41:48 -0700 (Sun, 30 Mar 2025) $ $Author: joe $ $Revision: 26414 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

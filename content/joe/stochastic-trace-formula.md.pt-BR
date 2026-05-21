@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: Matemática
 dependencies: '*.md.pt-BR'
 keywords: medida do weiner, superfícies do riemann, probabilidade, geometria
-published: ~
-status: rascunho
+status: arquivado
 title: Fórmula de Rastreamento Estocástico para Manifolds Fechados e Negativamente
   Curvos
 ---
@@ -112,17 +110,17 @@ K(y) &= -\frac{\partial^2 h}{\partial y \partial y}\ \\
 \end{aligned}
 ```
 
-**Importante** Portanto, quando $$h=h(y)$$, a equação de transporte paralelo reduz a $$\dot{\vec{c}}(t) = -\alpha(\dot{\gamma}(t))\vec{c}(t) = -\partial_y(h\ dx/dt + h^2/2\ dy/dt)\vec{c}(t)$$. É claro que isso tem solução fechada
+**IMPORTANTE** Portanto, quando $$h=h(y)$$, a equação de transporte paralelo reduz a $$\dot{\vec{c}}(t) = -\alpha(\dot{\gamma}(t))\vec{c}(t) = -\partial_y(h\ dx/dt + h^2/2\ dy/dt)\vec{c}(t)$$. É claro que isso tem solução fechada
 
 ```math
 \vec{c}(t) = exp(-((h+\beta y)\ dx/dt + (h^2/2 + (\beta y)^2/2 + \beta y h) \ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
 ```
 
-que é função da curva de transporte $$\gamma$$'pontos finais **sozinhos**. Este fato implica que o Mapa de Desenvolvimento preserva loops.
+que é função da curva de transporte $$\gamma$$pontos finais **sozinhos**. Este fato implica que o Mapa de Desenvolvimento preserva loops.
 
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ é o traço do núcleo de calor.
 
-Finalmente, vamos definir o seguinte a partir de seus derivados Radon-Nicodym:
+Finally let us define the following from their Radon-Nicodym derivatives:
 
 ```math
 \begin{aligned}
@@ -132,7 +130,7 @@ DM_*\mu(\Omega_t[\gamma]) &:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx)
 \end{aligned}
 ```
 
-## Fórmula de rastreamento estocástico
+## Fórmula de Rastreamento Estocástico
 
 ```math
 \begin{aligned}
@@ -156,7 +154,7 @@ h(y) = y \implies \\
 &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh \sqrt {-K}\ell(\gamma)/2}\int_{\Reals}e^{-y^2\ell(\gamma)^2/2t}{\frac{\ell(\gamma)dy}{\sqrt{2\pi t}}}
 \end{aligned}
 ```
-## Aproximação e a Fórmula Selberg Trace
+## Aproximação e a Fórmula de Rastreamento Selberg
 
 No $$\dim = 2$$ curvatura constante $$K = -\kappa^2$$ caso,
 

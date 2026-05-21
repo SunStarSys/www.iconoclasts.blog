@@ -1,16 +1,14 @@
 ---
-archived: ~
 categories: Matematik
 dependencies: '*.md.sv'
-keywords: weinermått, rannytor, sannolikhet, geometri
-published: ~
-status: skiss
+keywords: weiner-mått,riemann-ytor, sannolikhet, geometri
+status: arkiverad
 title: Stokastisk spårningsformel för stängda, negativt böjda grenrör
 ---
 
 <div class="right">
 
-![Hyperbolisk honungskaka](stochastic-trace-formula.page/hyperbolic-honeycomb.png)
+![Hyperbolisk bikake](stochastic-trace-formula.page/hyperbolic-honeycomb.png)
 
 </div>
 
@@ -28,7 +26,7 @@ currentlight=White;
 real redPortion = 143 / 256;
 real greenPortion = 153 / 256;
 real bluePortion = 251 / 156;
-pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
 // currentlight.background = periwinklePen;
 currentprojection=perspective(1,1,1,up=-Y);
 
@@ -49,44 +47,79 @@ path sec=scale(0.25)*texpath("$\pi$")[0];
 coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
 
 draw(tube(p,colorsec),render(merge=true));
+
 ```
 
-{# lede #}Min * 1997 Ph.D. avhandling* som ett blogginlägg.{# lede #}
+{# lede #}Min *1997 Ph.D. avhandling* som blogginlägg.{# lede #}
 
 ## Det finns bara ett n-dimensionellt Wiener-mått $$\mu$$
 
-## Piecewise Linjära approximationer till Brownian Motion
+## Piecewise linjära approximationer till Brownian Motion
 
-## Utvecklingskartan DM
+## Utvecklingsöversikt DM
 
-## Cameron-Martin Formeln
+## Cameron-Martin-formeln
 
-## Heat Kernels som Radon-Nicodym Derivatives of Weiner Measure
+## Värmekärnor som Radon-Nicodym Derivat av Weiner Measure
 
 ## Notation
 
-$$M$$ är negativt böjd $$\dim=n$$ stängt Riemannmångfald med metrisk $$g$$, mätetalanslutning $$\nabla$$och (icke-negativ) Laplace-Beltrami-operatör $$\Delta_M$$. Låt $$k_{-t\Delta/2}(x,y)$$ representerar värmekärnan på $$M$$
+$$M$$ är en negativt böjd $$\dim=n$$ stängd Riemannian grenrör med metrisk $$g$$, mätetalsanslutning $$\nabla$$och (icke-negativ) Laplace-Beltrami-operatör $$\Delta_M$$. Låt $$k_{-t\Delta/2}(x,y)$$ representerar värmekärnan på $$M$$.
 
-Därför $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ Radon-Nicodym derivatet av n-dimensionella Wiener Mått $$\mu$$, begränsat till tillbakadragande av kontinuerligt looputrymme $$\Omega_t(M)\vert_x$$, via inversen av Weiners måttbevarande utvecklingskarta $$DM$$. *Obs!* $$DM^{-1}\Omega_t\vert_x$$
+därför $$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ är Radon-Nicodym-derivatet av n-dimensionell Wiener Measure $$\mu$$, begränsad till utdragning av kontinuerligt looputrymme $$\Omega_t(M)\vert_x$$, via inversen av Weiner-måttbevarande utvecklingskarta $$DM$$. *Obs!* $$DM^{-1}\Omega_t\vert_x$$ Det är inte ett loop space i allmänhet.
 
-$$\Omega_t^0$$ är utrymmet för kontinuerliga kontraktibla slingor på $$M$$
+$$\Omega_t^0$$ är utrymmet för kontinuerliga kontraktibla slingor på $$M$$.
 
-$$\Omega_t[\gamma]$$ är utrymmet för kontinuerliga slingor på $$M$$ homotopisk till sluten geodesisk $$\gamma$$. Låt $$\gamma_0$$
+$$\Omega_t[\gamma]$$ är utrymmet för kontinuerliga loopar på $$M$$ Homotopisk mot den slutna geodetiska $$\gamma$$. Låt $$\gamma_0$$ vara dess primitiva kretslopp.
 
-$$DM^{-1}\Omega_t^0[\gamma]$$ är preimage av kontinuerliga kontraktibla slingor på $$M$$ skrivs som förskjutningar homotopic till $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Tänk Horocykliska Koordinater &mdash; varje fiber som den geometriska gränsen för periodiska geodetiska sfärer $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$, vektoriserad i Normal Bundle över $$\gamma_0$$. Våra kurvaturbegränsningar innebär Horocykliska koordinater för varje $$\gamma_0$$ som en jämn, $$DM$$-kompatibel koordinatmappning för $$\Omega_t^0[\gamma]$$
-
-Nu $$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ är slutpunkten *outvecklad* för "offset" *kinked geodesic* homotopic till $$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Kurvan är periodisk med period $$\ell(\gamma_0)$$, och den återgår till sin kinkade utgångspunkt $$DM(\vec{x}(\tau))$$ då $$t$$, göra beräkningen av dess derivat framåt $$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ som en linjär automorfism av $$T_{DM(\vec{x}(\tau))}M$$. Viktigt, $$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ kan konstrueras med **Jacobi Fields**, eftersom $$DM$$ ** är ** den (itererade) exponentiella kartan längs någon serie av anslutna raka linjer i $$\Reals^n$$. Vi kommer att studera $$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$$
+$$DM^{-1}\Omega_t^0[\gamma]$$ är förebilden för kontinuerliga sammandragbara slingor på $$M$$ Skrivet som förskjutningar homotopic till $$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$. Tänk horocykliska koordinater &mdash; varje fiber som den geometriska gränsen för periodiska geodetiska sfärer $$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$, vektoriserad i det normala paketet över $$\gamma_0$$. Våra krökningsbegränsningar innebär Horocykliska koordinater för varje $$\gamma_0$$ existerar som en slät, $$DM$$-kompatibel koordinatkarta för $$\Omega_t^0[\gamma]$$.
+I horocykliska koordinater, $$\det{g(\vec{x})} = 1$$:
 
 ```math
 \begin{aligned}
-X_t &= X_0 + \int_0^t \sqrt{J}_{X_t} dB_t  \\
+ds^2 &= dx\odot dx + h(x,y) dx\odot dy +  (1+h^2(x,y)) dy\odot dy \\
+g(x,0) &= 0,\\
+\sigma_1 &= dx + h(x,y)dy \\
+\sigma_2 &= h(x,y)dx + (1+h^2(x,y))dy \\
+\sigma_1 \wedge \sigma_2 &= dx \wedge dy\\
+d\sigma_1 &= \frac{\partial h}{\partial x}dx\wedge dy \\
+d\sigma_2 &= (-\frac{\partial h}{\partial y}+2h\frac{\partial h}{\partial x}) dx\wedge dy \\
 
 \end{aligned}
 ```
+Så anslutningen 1-form $$\alpha := Adx + Bdy$$ uppfyller
+```math
+\begin{aligned}
+d\sigma_1 &= \alpha \wedge \sigma_1 \\
+d\sigma_2 &= \sigma_2 \wedge \alpha \\
+\implies \\
+A &= \frac{\partial h}{\partial y} - 3h\frac{\partial h}{\partial x} \\
+B &= h\frac{\partial h}{\partial y} - (1+3h^2)\frac{\partial h}{\partial x} \\
+ \\
+K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
+ &= \frac{\partial h}{\partial x}\frac{\partial h}{\partial y} - 6h\frac{\partial h}{\partial x}^2 - (1+3h^2)\frac{\partial^2 h}{\partial x \partial x}
+ - \frac{\partial^2 h}{\partial y \partial y} + 2h \frac{\partial^2 h}{\partial x \partial y} ,\\
+h &= h(y) \implies \\
 
-$$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ är ett spår av värmekärnan.
+\alpha &= \frac{\partial }{\partial y} (hdx +\frac{h^2}{2} dy)\\
 
-Låt oss slutligen definiera följande från deras Radon-Nicodym derivat:
+K(y) &= -\frac{\partial^2 h}{\partial y \partial y}\ \\
+ \text{has Galilean Symmetry:} \\
+ h \mapsto h(y,\beta) &= h(y) + \beta y \ .\\
+\end{aligned}
+```
+
+**VIKTIGT** Därför när $$h=h(y)$$Den parallella transportekvationen minskar till $$\dot{\vec{c}}(t) = -\alpha(\dot{\gamma}(t))\vec{c}(t) = -\partial_y(h\ dx/dt + h^2/2\ dy/dt)\vec{c}(t)$$. Detta har naturligtvis stängt lösningen
+
+```math
+\vec{c}(t) = exp(-((h+\beta y)\ dx/dt + (h^2/2 + (\beta y)^2/2 + \beta y h) \ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
+```
+
+som är en funktion av transportkurvan $$\gamma$$'s slutpunkter **ensam**. Detta innebär att utvecklingskartan bevarar slingor.
+
+$$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ är spåren av värmekärnan.
+
+Finally let us define the following from their Radon-Nicodym derivatives:
 
 ```math
 \begin{aligned}
@@ -96,7 +129,7 @@ DM_*\mu(\Omega_t[\gamma]) &:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx)
 \end{aligned}
 ```
 
-## Stokastisk spårningsformel
+## Formel för stokastisk spårning
 
 ```math
 \begin{aligned}
@@ -107,52 +140,35 @@ DM_*\mu(\Omega_t^0) &\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M
 DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
 
 &= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
-
-\frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}}&\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau),\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\small \text{ semi-classical limit}\\
-
-\text{Horocyclic coordinates}: z(\tau) - x(\tau) &= x + \ell(\gamma)\vec{e}^1\implies\\
-
-\int_{M/S^1\oplus S^1}k_t(x,z) dx &=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\bra{J_{X^j_t}\vec{x}}\ket{\vec{x}}})\\
-
-&=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_{M^j/S^1\oplus S^1}\frac{1}{\sqrt{2\pi t}^{jn}\det|I-J_{X^j}|}e^{-\ell(X^j)^2/2t}X^{j}\\
-
 \end{aligned}
 ```
-
-## Approximation och Selberg Trace Formula
-
-I $$\dim = 2$$ konstant krökning $$-\kappa^2$$
-
 ```math
 \begin{aligned}
-\sqrt{J_{\vec{x}, \vec{y}}}dRB&=
-\begin{pmatrix}
-e^{\kappa d(\vec{x},\vec{y})/2} && 0\\
-0 && e^{-\kappa d(\vec{x},\vec{y})/2}\\
-\end{pmatrix}
-\implies&\\
-\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} &= e^{\kappa \ell(B)}dRB_1^2 - e^{-\kappa \ell(B)}dRB_2^2\\
+\text{Horocyclic coordinates}: \\
 
-\int_0^t \bra{\sqrt{ J}dB}\ket{\sqrt{ J}dB} &= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
+h&= h(y) \implies \\
+&=\frac{\ell(\gamma_0)}{2\pi t}\int_{\Reals}\frac{e^{- (1+h^2(y))\ell(\gamma)^2/2t}}{2\sinh \sqrt{-K(y)}\ell(\gamma)/2}\ell(\gamma) dy\ ,\\
 
-\det I-J_{\gamma} &= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
+h(y) = y \implies \\
+&= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh \sqrt {-K}\ell(\gamma)/2}\int_{\Reals}e^{-y^2\ell(\gamma)^2/2t}{\frac{\ell(\gamma)dy}{\sqrt{2\pi t}}}
 \end{aligned}
 ```
+## Approximation och Selbergs spårningsformel
 
-som är konstant över $$(\vec{x},\tau)$$Så approximationen $$\approx_{t\rightarrow 0}$$
+I $$\dim = 2$$ konstant krökning $$K = -\kappa^2$$ ärende
 
 ```math
 \begin{aligned}
 
-DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gamma)/2} -e^{-\kappa\ell(\gamma)/2})}\\
+\det |I-J_\gamma| &= (e^{\kappa\ell(\gamma)} - 1)(1 - e^{-\kappa\ell(\gamma)}) = 2 \sinh \kappa\ell(\gamma)/2\\
 
 \gamma(t) = \gamma_0(kt)\implies \\
 
-&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+DM_*\mu(\Omega_t[\gamma])&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
 \end{aligned}
 ```
 
-I $$\dim=3$$ hyperboliskt manifold case, vi använder komplexa koordinater $$(z,\bar{z})$$
+I $$\dim=3$$ hyperboliskt manifold fall, vi använder komplexa koordinater $$(z,\bar{z})$$ på det vanliga paketet att skriva
 
 ```math
 \begin{aligned}
@@ -167,7 +183,7 @@ e^{\kappa\ell(\gamma)} && 0 && 0\\
 \det I-{\perp_{\gamma_0}}^k &= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
 \end{aligned}
 ```
-och sedan $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$
+och sedan $$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$, blir approximationen i ekvation (2) igen exakt:
 
 ```math
 \begin{aligned}

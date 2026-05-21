@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: 수학
 dependencies: '*.md.ko'
 keywords: weiner 측정,riemann 표면, 확률, 기하학
-published: ~
-status: 초안
+status: 아카이브됨
 title: 마감, 음수 곡선 매니폴드에 대한 확률적 추적 공식
 ---
 
@@ -117,11 +115,11 @@ K(y) &= -\frac{\partial^2 h}{\partial y \partial y}\ \\
 \vec{c}(t) = exp(-((h+\beta y)\ dx/dt + (h^2/2 + (\beta y)^2/2 + \beta y h) \ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
 ```
 
-전송 곡선의 기능입니다. $$\gamma$$'s 끝점 **독립**입니다. 이 사실은 개발 맵이 루프를 보존한다는 것을 의미합니다.
+전송 곡선의 기능입니다. $$\gamma$$의 끝점 **독립**입니다. 이 사실은 개발 맵이 루프를 보존한다는 것을 의미합니다.
 
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ 열 커널의 추적입니다.
 
-마지막으로 Radon-Nicodym 파생 상품에서 다음을 정의하십시오.
+Finally let us define the following from their Radon-Nicodym derivatives:
 
 ```math
 \begin{aligned}
@@ -155,7 +153,7 @@ h(y) = y \implies \\
 &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh \sqrt {-K}\ell(\gamma)/2}\int_{\Reals}e^{-y^2\ell(\gamma)^2/2t}{\frac{\ell(\gamma)dy}{\sqrt{2\pi t}}}
 \end{aligned}
 ```
-## 셀버그 추적 공식 Selberg Trace Formula
+## 근사치 및 셀버그 추적 공식
 
 다음에서 $$\dim = 2$$ 상수 곡률 $$K = -\kappa^2$$ 케이스,
 

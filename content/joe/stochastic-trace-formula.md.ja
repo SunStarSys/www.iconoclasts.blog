@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: 数学
 dependencies: '*.md.ja'
 keywords: ワイナー測定、リーマン表面、確率、ジオメトリ
-published: ~
-status: 下書き
+status: アーカイブ済
 title: クローズ済、マイナスの曲線マニホールドの確率トレース式
 ---
 
@@ -62,7 +60,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 ## キャメロン- マーティン式
 
-## Radon-Nicodym Derivatives of Weiner Measure(ラドンニコジム誘導体).
+## Radon-Nicodym Derivatives of Weiner Measure(ラドンニコジム誘導体)
 
 ## 表記法
 
@@ -117,11 +115,11 @@ K(y) &= -\frac{\partial^2 h}{\partial y \partial y}\ \\
 \vec{c}(t) = exp(-((h+\beta y)\ dx/dt + (h^2/2 + (\beta y)^2/2 + \beta y h) \ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
 ```
 
-トランスポートカーブの機能$$\gamma$$'Sエンドポイント**スタンドアロン**。これは、開発マップがループを保持することを意味します。
+トランスポートカーブの機能$$\gamma$$のエンドポイント**スタンドアロン**。これは、開発マップがループを保持することを意味します。
 
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ 熱カーネルの痕跡です。
 
-最後に、Radon-Nicodym誘導体から以下を定義しましょう。
+Finally let us define the following from their Radon-Nicodym derivatives:
 
 ```math
 \begin{aligned}
@@ -131,7 +129,7 @@ DM_*\mu(\Omega_t[\gamma]) &:= \int_M DM_*\mu(\Omega_t[\gamma]\vert_x \sqrt{g}dx)
 \end{aligned}
 ```
 
-## 確率トレース式
+##確率トレース式
 
 ```math
 \begin{aligned}
@@ -155,7 +153,7 @@ h(y) = y \implies \\
 &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh \sqrt {-K}\ell(\gamma)/2}\int_{\Reals}e^{-y^2\ell(\gamma)^2/2t}{\frac{\ell(\gamma)dy}{\sqrt{2\pi t}}}
 \end{aligned}
 ```
-## 近似とSelbergトレース式
+##近似とSelbergトレース式
 
 次に含まれる$$\dim = 2$$ 定数曲率$$K = -\kappa^2$$ ケース、
 

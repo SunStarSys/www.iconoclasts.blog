@@ -1,11 +1,9 @@
 ---
-archived: ~
 categories: 數學
 dependencies: '*.md.zh-TW'
-keywords: 行程測量，里曼表面，機率，幾何
-published: ~
-status: 草稿
-title: 已結、負曲線的隨機追蹤公式
+keywords: 韋納測量，里曼表面，機率，幾何
+status: 已封存
+title: 已結、負曲線動軸的隨機追蹤公式
 ---
 
 <div class="right">
@@ -28,7 +26,7 @@ currentlight=White;
 real redPortion = 143 / 256;
 real greenPortion = 153 / 256;
 real bluePortion = 251 / 156;
-pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
 // currentlight.background = periwinklePen;
 currentprojection=perspective(1,1,1,up=-Y);
 
@@ -52,42 +50,76 @@ draw(tube(p,colorsec),render(merge=true));
 
 ```
 
-{# lede #}我的 *1997 Ph.D. 論文 * 作為部落格項目。{# lede #}
+{# lede #}我的 *1997 Ph.D. thesis* 做為部落格項目。{# lede #}
 
-## 僅有一個 n 維度 Wiener 測量$$\mu$$
+## 只有一個 n 維度 Wiener 測量$$\mu$$
 
-## 布朗運動的順時針線性近似值
+## 順時針線性近似布朗運動
 
 ## 開發地圖 DM
 
-## Cameron-Martin 公式
+## Cameron-Martin 配方
 
-## 熱力核心為水線測量的放射性二極體衍生物
+## 熱核心作為韋納測量的放射 - 尼古道衍生物
 
 ## 表示法
 
-$$M$$ 是負面曲線$$\dim=n$$ 已關閉 Riemannian 手持裝置與度量$$g$$，度量連線$$\nabla$$，與 (非負數) 拉普拉斯 - 貝特拉米運算子$$\Delta_M$$繁體中文字母$$k_{-t\Delta/2}(x,y)$$ 代表熱核心開啟$$M$$
+$$M$$ 是負曲線$$\dim=n$$ 封閉式里曼尼亞人體與公制$$g$$，度量連線$$\nabla$$，與 (非負數) Laplace-Beltrami 運算子$$\Delta_M$$。開始$$k_{-t\Delta/2}(x,y)$$ 代表開啟的熱核心$$M$$.
 
-因此$$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ 是 N 維能測量的 Radon-Nicodym 衍生物$$\mu$$，僅限於拉回連續迴圈空間$$\Omega_t(M)\vert_x$$，通過韋納測量的逆向 - 保存開發地圖$$DM$$。* 備註：* $$DM^{-1}\Omega_t\vert_x$$
+因斯$$k_{-t\Delta/2}(x,x) = dDM_*\mu/\sqrt{g}dx$$ 是 N 維 Wiener 測量的 Radon-Nicodym 衍生物$$\mu$$，限制為連續迴圈空間的倒回$$\Omega_t(M)\vert_x$$，通過 Weiner 測量保存開發地圖的反面$$DM$$。* 備註：* $$DM^{-1}\Omega_t\vert_x$$ 一般而言並非迴圈空間。
 
-$$\Omega_t^0$$ 是連續可約迴圈所在的空間$$M$$
+$$\Omega_t^0$$ 是連續可承包迴路的空間$$M$$.
 
-$$\Omega_t[\gamma]$$ 是連續迴圈所開啟的空間$$M$$ 閉合大地同位素$$\gamma$$繁體中文字母$$\gamma_0$$
+$$\Omega_t[\gamma]$$ 是連續迴圈開啟的空間$$M$$ 對封閉式地形同位素$$\gamma$$。開始$$\gamma_0$$ 是其原始迴圈。
 
-$$DM^{-1}\Omega_t^0[\gamma]$$ 是連續可承包迴路的優先要點$$M$$ 寫成偏移同位素$$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$繁體中文思考 Horocyclic 座標&mdash; 每一個光纖做為週期性幾何球體的幾何限制$$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$，向量化為一般組合$$\gamma_0$$繁體中文我們的曲率約束會影響每個曲率循環座標$$\gamma_0$$ 存在為平滑，$$DM$$- 相容的座標映射$$\Omega_t^0[\gamma]$$
-
-現在$$\vec{x}(\tau)+\ell(\gamma)\vec{e}^1$$ 是「偏移」的 * 未開發 * 端點 * 閃爍的地理 * 同位素$$\gamma: DM(\vec{x}(\tau) + \frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$繁體中文曲線是週期性的期間$$\ell(\gamma_0)$$，然後重新審視其沉沒的起點$$DM(\vec{x}(\tau))$$ 時間$$t$$，計算其正向導數$$J=\lim_{s\uparrow t}DM^\prime\vert_{DM(\vec{x}(\tau) + \frac{\ell(\gamma)s}{t}\vec{e}^1)}$$ 牽引為線性自動型態$$T_{DM(\vec{x}(\tau))}M$$繁體中文重要的是，$$J_{DM(\vec{x}(\tau)+\ell(\gamma)\vec{e}^1)}$$ 可以使用 **Jacobi Fields** 建構，自$$DM$$ ** 是 ** 中任何連接直線系列的 (重複) 指數映射$$\Reals^n$$繁體中文我們將學習$$ 1/2 \int_0^t \bra{dX}\ket{dX}_s$$
+$$DM^{-1}\Omega_t^0[\gamma]$$ 是連續可承包迴路的預製$$M$$ 以抵銷同位素寫成$$\gamma(s) = DM(\frac{s\ell(\gamma)}{t}\vec{e}^1), 0\leq s \leq t$$。思考週期座標&mdash; 每個光纖做為週期性幾何球體的幾何限制$$S_{\gamma_0(s)}^{n-1}(k\ell(\gamma_0)), 0\leq s \leq t, k\rightarrow\infty$$，向量化為一般搭售品$$\gamma_0$$。我們的曲率約束代表每一個環形座標$$\gamma_0$$ 存在平順，$$DM$$- 相容的座標對應$$\Omega_t^0[\gamma]$$.
+在循環座標中，$$\det{g(\vec{x})} = 1$$:
 
 ```math
 \begin{aligned}
-X_t &= X_0 + \int_0^t \sqrt{J}_{X_t} dB_t  \\
+ds^2 &= dx\odot dx + h(x,y) dx\odot dy +  (1+h^2(x,y)) dy\odot dy \\
+g(x,0) &= 0,\\
+\sigma_1 &= dx + h(x,y)dy \\
+\sigma_2 &= h(x,y)dx + (1+h^2(x,y))dy \\
+\sigma_1 \wedge \sigma_2 &= dx \wedge dy\\
+d\sigma_1 &= \frac{\partial h}{\partial x}dx\wedge dy \\
+d\sigma_2 &= (-\frac{\partial h}{\partial y}+2h\frac{\partial h}{\partial x}) dx\wedge dy \\
 
 \end{aligned}
 ```
+因此連線 1-form $$\alpha := Adx + Bdy$$ 滿足
+```math
+\begin{aligned}
+d\sigma_1 &= \alpha \wedge \sigma_1 \\
+d\sigma_2 &= \sigma_2 \wedge \alpha \\
+\implies \\
+A &= \frac{\partial h}{\partial y} - 3h\frac{\partial h}{\partial x} \\
+B &= h\frac{\partial h}{\partial y} - (1+3h^2)\frac{\partial h}{\partial x} \\
+ \\
+K &= \frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \\
+ &= \frac{\partial h}{\partial x}\frac{\partial h}{\partial y} - 6h\frac{\partial h}{\partial x}^2 - (1+3h^2)\frac{\partial^2 h}{\partial x \partial x}
+ - \frac{\partial^2 h}{\partial y \partial y} + 2h \frac{\partial^2 h}{\partial x \partial y} ,\\
+h &= h(y) \implies \\
+
+\alpha &= \frac{\partial }{\partial y} (hdx +\frac{h^2}{2} dy)\\
+
+K(y) &= -\frac{\partial^2 h}{\partial y \partial y}\ \\
+ \text{has Galilean Symmetry:} \\
+ h \mapsto h(y,\beta) &= h(y) + \beta y \ .\\
+\end{aligned}
+```
+
+** 重要 **因此，當$$h=h(y)$$，平行傳送方程式減少至$$\dot{\vec{c}}(t) = -\alpha(\dot{\gamma}(t))\vec{c}(t) = -\partial_y(h\ dx/dt + h^2/2\ dy/dt)\vec{c}(t)$$。當然，這已結案解決方式
+
+```math
+\vec{c}(t) = exp(-((h+\beta y)\ dx/dt + (h^2/2 + (\beta y)^2/2 + \beta y h) \ dy/dt)|_{x_0,y_0}^{x_t,y_t})\vec{c}(0)
+```
+
+它是運輸曲線的函數$$\gamma$$的端點** 獨立 **。此事實表示「開發對應」會保留迴圈。
 
 $$Z_{-\Delta/2}(t) := \int_M k_{-t\Delta/2}(x,x) \sqrt{g}dx = \sum_{j=0}^\infty e^{-\lambda_i t/2}$$ 是熱核心的追蹤。
 
-最後讓我們從 Radon-Nicodym 衍生工具中定義下列項目：
+Finally let us define the following from their Radon-Nicodym derivatives:
 
 ```math
 \begin{aligned}
@@ -108,52 +140,35 @@ DM_*\mu(\Omega_t^0) &\approx_{t\rightarrow 0} (2\pi t)^{-n/2}(vol(M) + t/6\int_M
 DM_*\mu(\Omega_t[\gamma]) &= e^{-\ell(\gamma)^2/2t}\int_M DM_*\mu(e^{\bra{J_BB_t}\ket{B_t}} _t \Omega_t^0[\gamma]\vert_x\sqrt{g}dx)\space\small \text{ by Cameron-Martin}\\
 
 &= e^{-\ell(\gamma)^2/2t}\int_{T_{\gamma_0}M} E(e^{J_B}_{t} | \Omega_t^0[\gamma]\vert_{x(\tau)})dx^1(\tau)\dots dx^n(\tau) d\tau\\
-
-\frac{dDM_*\mu(e^{-\ell(\gamma)x^1(t)}\Omega^0_t[\gamma])}{dx^1(\tau)\dots dx^n(\tau)d\tau}\vert_{\vec{y(\tau)}}&\approx_{t\rightarrow 0} \frac{e^{-\bra{|I-J_{DM(\vec{x}(\tau),\vec{y}(\tau))}\vec{x}(\tau)}\ket{\vec{x}(\tau)}/2t}}{(2 \pi t)^{(n+1)/2}}(1+O(t^2))\small \text{ semi-classical limit}\\
-
-\text{Horocyclic coordinates}: z(\tau) - x(\tau) &= x + \ell(\gamma)\vec{e}^1\implies\\
-
-\int_{M/S^1\oplus S^1}k_t(x,z) dx &=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}E(e^{\bra{J_{X^j_t}\vec{x}}\ket{\vec{x}}})\\
-
-&=\lim_{j\rightarrow\infty}\frac{e^{-\ell(\gamma)^2/2t}}{\sqrt{2\pi t}}\int_{M^j/S^1\oplus S^1}\frac{1}{\sqrt{2\pi t}^{jn}\det|I-J_{X^j}|}e^{-\ell(X^j)^2/2t}X^{j}\\
-
 \end{aligned}
 ```
-
-## 近似與塞爾伯格追蹤公式
-
-於$$\dim = 2$$ 恒曲率$$-\kappa^2$$
-
 ```math
 \begin{aligned}
-\sqrt{J_{\vec{x}, \vec{y}}}dRB&=
-\begin{pmatrix}
-e^{\kappa d(\vec{x},\vec{y})/2} && 0\\
-0 && e^{-\kappa d(\vec{x},\vec{y})/2}\\
-\end{pmatrix}
-\implies&\\
-\bra{\sqrt{J}dRB}\ket{\sqrt{J}dRB} &= e^{\kappa \ell(B)}dRB_1^2 - e^{-\kappa \ell(B)}dRB_2^2\\
+\text{Horocyclic coordinates}: \\
 
-\int_0^t \bra{\sqrt{ J}dB}\ket{\sqrt{ J}dB} &= e^{\kappa\ell(\gamma)} - e^{-\kappa\ell(\gamma)}\\
+h&= h(y) \implies \\
+&=\frac{\ell(\gamma_0)}{2\pi t}\int_{\Reals}\frac{e^{- (1+h^2(y))\ell(\gamma)^2/2t}}{2\sinh \sqrt{-K(y)}\ell(\gamma)/2}\ell(\gamma) dy\ ,\\
 
-\det I-J_{\gamma} &= (e^{\kappa\ell(\gamma)/2}- e^{-\kappa\ell(\gamma)/2})^2
+h(y) = y \implies \\
+&= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh \sqrt {-K}\ell(\gamma)/2}\int_{\Reals}e^{-y^2\ell(\gamma)^2/2t}{\frac{\ell(\gamma)dy}{\sqrt{2\pi t}}}
 \end{aligned}
 ```
+## 近似值和 Selberg 追蹤公式
 
-常數超過$$(\vec{x},\tau)$$，因此接近$$\approx_{t\rightarrow 0}$$
+在$$\dim = 2$$ 常數曲率$$K = -\kappa^2$$ 個案，
 
 ```math
 \begin{aligned}
 
-DM_*\mu(\Omega_t[\gamma]) &= \frac{e^{-\ell(\gamma)^2/2t}\ell(\gamma_0)}{\sqrt{2 \pi t}(e^{\kappa\ell(\gamma)/2} -e^{-\kappa\ell(\gamma)/2})}\\
+\det |I-J_\gamma| &= (e^{\kappa\ell(\gamma)} - 1)(1 - e^{-\kappa\ell(\gamma)}) = 2 \sinh \kappa\ell(\gamma)/2\\
 
 \gamma(t) = \gamma_0(kt)\implies \\
 
-&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
+DM_*\mu(\Omega_t[\gamma])&=\frac{e^{-k^2\ell(\gamma_0)^2/2t}\ell(\gamma_0)}{2\sqrt{2\pi t}\sinh k\kappa\ell(\gamma_0)/2}\\
 \end{aligned}
 ```
 
-於$$\dim=3$$ 雙曲操作案例，我們使用複雜座標$$(z,\bar{z})$$
+在$$\dim=3$$ 雙曲歧管外殼，我們採用複雜座標$$(z,\bar{z})$$ 在要寫入的一般組合銷售
 
 ```math
 \begin{aligned}
@@ -168,7 +183,7 @@ e^{\kappa\ell(\gamma)} && 0 && 0\\
 \det I-{\perp_{\gamma_0}}^k &= |1-e^{-k(\kappa\ell(\gamma_0)-i\theta(\gamma_0))}|^2
 \end{aligned}
 ```
-以及自$$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$
+與自$$z=x^2+ix^3 \implies d\bar{z}\wedge dz= (dx^2-idx^3)\wedge(dx^2+idx^3) = 2idx^2\wedge dx^3$$，「方程式」(2) 中的近似值再次變成精確值：
 
 ```math
 \begin{aligned}
