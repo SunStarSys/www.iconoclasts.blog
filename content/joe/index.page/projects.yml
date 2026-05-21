@@ -1,5 +1,6 @@
 Title: Quarterly Projects for Gantt Chart
-Status: draft
+status: draft
+raft
 DateFormat: YYYY-MM-DD
 ACL: joe=rw, *=r
 
@@ -13,3 +14,6 @@ Feature Development:
 Integrations:
   Zoom: after b2, 10d
   X: c1, 2026-06-01, 10d
+Advertising:
+  LinkedIn: m1, 2026-04-01, 90d
+  X: m2, 2026-06-01, 90d
