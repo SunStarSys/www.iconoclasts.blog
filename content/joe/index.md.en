@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=38925
+status: verified=38929
 keywords: heyoka, iconoclast
 ---
 
@@ -57,6 +57,14 @@ pie title 2026 Q2 Budget Priorities
     "Development" : 20
     "Operations" : 20
 ```
+
+-----
+
+### Sandbox: SSI Mindmap
+
+{% filter code:"mermaid"|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
 
 ### Sandbox: SSI generated Table &mdash; {{table.headers.title}}
 
