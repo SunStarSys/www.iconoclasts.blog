@@ -1,0 +1,7 @@
+---
+dependencies: '*.md.he'
+keywords: dtrace,solaris,bpftrace,modperl
+title: השמחה של DTrace
+
+---
+{% ssi `/joe/joy-of-dtrace.md.he` %}

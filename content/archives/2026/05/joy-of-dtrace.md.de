@@ -1,0 +1,7 @@
+---
+dependencies: '*.md.de'
+keywords: dtrace,solaris,bpftrace,modperl
+title: Die Freude von DTrace
+
+---
+{% ssi `/joe/joy-of-dtrace.md.de` %}

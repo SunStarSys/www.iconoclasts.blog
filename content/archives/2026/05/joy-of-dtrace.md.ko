@@ -1,0 +1,7 @@
+---
+dependencies: '*.md.ko'
+keywords: dtrace, solaris, bpftrace, modperl
+title: 기쁨의 DTrace
+
+---
+{% ssi `/joe/joy-of-dtrace.md.ko` %}
