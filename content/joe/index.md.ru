@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: heyoka, иконоборчество
-status: проверено=39016
+status: проверено=39031
 title: Случайные мысли Джо
 ---
 
@@ -66,7 +66,7 @@ pie
 ### Песочница: мысленная карта SSI
 
 {% filter code:"mermaid"|slice:0|safe %}
-{% ssi `/joe/wikis.md.en` %}
+{% ssi `/joe/wikis.md.ru` %}
 {% endfilter %}
 
 -----

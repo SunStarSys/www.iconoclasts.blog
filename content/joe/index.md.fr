@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: heyoka, iconoclaste
-status: vérifié=39016
+status: vérifié=39031
 title: Les pensées aléatoires de Joe
 ---
 
@@ -66,7 +66,7 @@ pie
 ### Modèle d'environnement restreint : Mindmap SSI
 
 {% filter code:"mermaid"|slice:0|safe %}
-{% ssi `/joe/wikis.md.en` %}
+{% ssi `/joe/wikis.md..fr` %}
 {% endfilter %}
 
 -----

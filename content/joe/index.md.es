@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: heyoka, iconoclasta
-status: verificado=39016
+status: verificado=39031
 title: Los pensamientos aleatorios de Joe
 ---
 
@@ -66,7 +66,7 @@ pie
 ### Sandbox: mapa mental de SSI
 
 {% filter code:"mermaid"|slice:0|safe %}
-{% ssi `/joe/wikis.md.en` %}
+{% ssi `/joe/wikis.md..es` %}
 {% endfilter %}
 
 -----

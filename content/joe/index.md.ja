@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
-status: 確認済み=39016
+status: 確認済み=39031
 title: Joe's Random Thoughtsたった今
 ---
 
@@ -66,7 +66,7 @@ pie
 ### サンドボックス: SSIマインドマップ
 
 {% filter code:"mermaid"|slice:0|safe %}
-{% ssi `/joe/wikis.md.en` %}
+{% ssi `/joe/wikis.md.ja` %}
 {% endfilter %}
 
 -----

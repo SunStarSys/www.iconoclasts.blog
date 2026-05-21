@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: هيوكا، ايكونوكلاست
-status: التحقق = 39016
+status: التحقق = 39031
 title: أفكار جو العشوائية
 ---
 
@@ -66,7 +66,7 @@ pie
 ### صندوق الحماية: خريطة تفكير SSI
 
 {% filter code:"mermaid"|slice:0|safe %}
-{% ssi `/joe/wikis.md.en` %}
+{% ssi `/joe/wikis.md..ar` %}
 {% endfilter %}
 
 -----

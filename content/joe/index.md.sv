@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=39016
+status: verifierad=39031
 title: Joes slumpartade tankar
 ---
 
@@ -66,7 +66,7 @@ pie
 ### Sandlåda: SSI Mindmap
 
 {% filter code:"mermaid"|slice:0|safe %}
-{% ssi `/joe/wikis.md.en` %}
+{% ssi `/joe/wikis.md.sv` %}
 {% endfilter %}
 
 -----
