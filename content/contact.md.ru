@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: Южная Флорида, системное администрирование, DevOps, DevSecOps, SRE, GitOps
-published: ~
 status: черновик
 title: Контакты
 ---
@@ -11,7 +9,7 @@ title: Контакты
 {% include "enquiry_get.html"|append:lang %}
 </div>
 
-![SunStar Системы](images/sunstarlogowhole.png).
+![SunStar Системы](images/sunstarlogowhole.png)
 
 ### Эл. почта:
 
@@ -19,7 +17,7 @@ title: Контакты
 
 ### Телефон:
 
-- [+1 ‪(305) 859-1630‬](tel://1.305.859.1630/).
+- [+1 ‪(305) 859-1630‬](tel://1.305.859.1630/)
 
 <!-- $Date$ $Author$ $Revision$ -->
 

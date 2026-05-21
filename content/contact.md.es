@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: South Florida, System Administration, DevOps, DevSecOps, SRE, GitOps
-published: ~
 status: borrador
 title: Contáctenos
 ---
@@ -11,7 +9,7 @@ title: Contáctenos
 {% include "enquiry_get.html"|append:lang %}
 </div>
 
-![Sistemas SunStar](images/sunstarlogowhole.png).
+![Sistemas SunStar](images/sunstarlogowhole.png)
 
 ### Correo electrónico:
 
@@ -19,7 +17,7 @@ title: Contáctenos
 
 ### Teléfono:
 
-- [+1 ‪(305) 859-1630‬](tel://1.305.859.1630/).
+- [+1 ‪(305) 859-1630‬](tel://1.305.859.1630/)
 
 <!-- $Date$ $Author$ $Revision$ -->
 
