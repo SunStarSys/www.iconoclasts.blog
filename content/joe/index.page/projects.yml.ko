@@ -8,7 +8,7 @@ title: 간트 차트의 분기별 프로젝트
 
 Security Work:
   종속성 제어: a1, 2026-05-01, 10d
-  ssi controls: :a1 이후, 10d
+  ssi controls: :after a1, 10d
 Feature Development:
-  csv: b1, 2026-05-14, 5d
+  csv: :b1, 2026-05-14, 5d
   pdl: :b2, 2026-05-19, 10d
