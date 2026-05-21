@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=38667
+status: verifierad=38686
 title: Joes slumpartade tankar
 ---
 
@@ -40,7 +40,7 @@ gantt
     title {{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
 {% for p,q in projects.content %}
-    sektion {{p}}
+    section {{p}}
 {% for k,v in q %}
     "{{k|safe}}" {{v|safe}}
 {% endfor %}

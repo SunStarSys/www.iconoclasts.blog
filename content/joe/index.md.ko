@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: 헤이오카, iconoclast
-status: 확인=38667
+status: 확인=38686
 title: 조의 무작위 생각
 ---
 
@@ -40,7 +40,7 @@ gantt
     title {{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
 {% for p,q in projects.content %}
-    섹션 {{p}}
+    section {{p}}
 {% for k,v in q %}
     "{{k|safe}}" {{v|safe}}
 {% endfor %}

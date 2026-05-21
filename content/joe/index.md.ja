@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
-status: 確認済み=38667
+status: 確認済み=38686
 title: Joe's Random Thoughtsたった今
 ---
 
@@ -40,7 +40,7 @@ gantt
     title {{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
 {% for p,q in projects.content %}
-    セクション{{p}}
+    section {{p}}
 {% for k,v in q %}
     "{{k|safe}}" {{v|safe}}
 {% endfor %}

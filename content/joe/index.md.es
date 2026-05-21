@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: heyoka, iconoclasta
-status: verificado=38667
+status: verificado=38686
 title: Los pensamientos aleatorios de Joe
 ---
 
@@ -40,7 +40,7 @@ gantt
     title {{projects.headers.title|safe}}
     dateFormat YYYY-MM-DD
 {% for p,q in projects.content %}
-    sección {{p}}
+    section {{p}}
 {% for k,v in q %}
     "{{k|safe}}" {{v|safe}}
 {% endfor %}
