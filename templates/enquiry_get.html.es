@@ -1,31 +1,31 @@
-<div style="text-align:{% ifequal lang '.he' %}derecha{% else %}{% ifequal lang '.ar' %}derecha{% else %}izquierda{% endifequal %}{% endifequal%}">
-<h3>Sign Up for Free Blog</h3>
+<div style="text-align:{% ifequal lang '.he' %}right{% else %}{% ifequal lang '.ar' %}right{% else %}left{% endifequal %}{% endifequal%}">
+<h3>Suscríbete al blog gratis</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
 
-<label for="name">Your Name</label>
+<label for="name">Su nombre</label>
   <input name="name" id="name" class="form-control" required />
 
-<label for="email">Your Email Address</label>
+<label for="email">Su dirección de correo electrónico</label>
   <input type="email" name="email" id="email" class="form-control" required />
 
-<label for="username">Preferred User Name</label>
+<label for="username">Nombre de usuario preferido</label>
   <input pattern="^\w+$" name="username" id="username" class="form-control" required />
 
-<input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">Request a Demo</label>
+<input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">Solicitar una demo</label>
 
-<label>Preferred Orion Plan</label>
-  <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Free Blog</label>
+<label>Plan de organización preferido</label>
+  <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Blog gratuito</label>
 
-<label for="subject">Subject</label>
+<label for="subject">Asunto</label>
   <input name="subject" id="subject" class="form-control" value="Orion Blog" pattern="Orion.*" required />
 
 <input type="hidden" name="lang" value="{{ lang }}" />
-  <button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
+  <button name="submit" class="btn btn-outline-success" value=1 >Enviar</button>
 
 <br><br>
 
-<label for="editor">Message for Onboarding</label>
+<label for="editor">Mensaje para vinculación</label>
 
 <div id="editor-content" class="{% ifequal lang '.he' %}rtl{% else %}{% ifequal lang '.ar' %}rtl{% else %}ltr{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>

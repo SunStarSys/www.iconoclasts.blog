@@ -1,33 +1,33 @@
-<div style="text-align:{% ifequal lang '.he' %}korrekt{% else %}{% ifequal lang '.ar' %}korrekt{% else %}vänster{% endifequal %}{% endifequal%}">
-<h3>Sign Up for Free Blog</h3>
+<div style="text-align:{% ifequal lang '.he' %}right{% else %}{% ifequal lang '.ar' %}right{% else %}left{% endifequal %}{% endifequal%}">
+<h3>Registrera dig för gratis blogg</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
 
-<label for="name">Your Name</label>
+<label for="name">Ditt namn</label>
   <input name="name" id="name" class="form-control" required />
 
-<label for="email">Your Email Address</label>
+<label for="email">Din e-postadress</label>
   <input type="email" name="email" id="email" class="form-control" required />
 
-<label for="username">Preferred User Name</label>
+<label for="username">Tilltalsnamn</label>
   <input pattern="^\w+$" name="username" id="username" class="form-control" required />
 
-<input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">Request a Demo</label>
+<input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">Be om en demonstration</label>
 
-<label>Preferred Orion Plan</label>
-  <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Free Blog</label>
+<label>Önskad Orion-plan</label>
+  <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Gratis blogg</label>
 
-<label for="subject">Subject</label>
+<label for="subject">Ämne</label>
   <input name="subject" id="subject" class="form-control" value="Orion Blog" pattern="Orion.*" required />
 
 <input type="hidden" name="lang" value="{{ lang }}" />
-  <button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
+  <button name="submit" class="btn btn-outline-success" value=1 >Skicka</button>
 
 <br><br>
 
-<label for="editor">Message for Onboarding</label>
+<label for="editor">Meddelande för personalintroduktion</label>
 
-<div id="editor-content" class="{% ifequal lang '.he' %}kr{% else %}{% ifequal lang '.ar' %}kr{% else %}vänster{% endifequal %}{% endifequal%}">
+<div id="editor-content" class="{% ifequal lang '.he' %}rtl{% else %}{% ifequal lang '.ar' %}rtl{% else %}ltr{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>
