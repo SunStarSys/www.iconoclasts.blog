@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=39046
+status: verified=39061
 keywords: heyoka, iconoclast
 ---
 
@@ -63,7 +63,7 @@ pie
 
 ### Sandbox: SSI Mindmap
 
-{% filter code:"mermaid"|slice:0|safe %}
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.en` %}
 {% endfilter %}
 
