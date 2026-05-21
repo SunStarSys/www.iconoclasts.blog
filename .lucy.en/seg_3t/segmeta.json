@@ -3,7 +3,11 @@
     "files": {
       "seg_3n": {
         "count": "1",
-        "filename": "seg_3s/deletions-seg_3n.bv"
+        "filename": "seg_3t/deletions-seg_3n.bv"
+      },
+      "seg_3s": {
+        "count": "1",
+        "filename": "seg_3t/deletions-seg_3s.bv"
       }
     },
     "format": "1"
@@ -48,16 +52,14 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_3s"
+    "name": "seg_3t"
   },
   "sort": {
     "counts": {
-      "path": "2"
-    },
-    "format": "3",
-    "null_ords": {
       "path": "1"
     },
+    "format": "3",
+    "null_ords": {},
     "ord_widths": {
       "path": "1"
     }
