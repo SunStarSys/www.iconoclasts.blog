@@ -1,5 +1,4 @@
 ---
-categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 東京都，東京都
 status: 驗證 =39046
@@ -65,9 +64,11 @@ pie
 
 ### 封閉測試環境：SSI Mindmap
 
-{% filter code:"mermaid"|slice:0|safe %}
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.zh-TW` %}
 {% endfilter %}
+```
 
 -----
 

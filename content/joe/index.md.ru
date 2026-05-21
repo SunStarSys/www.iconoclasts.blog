@@ -65,7 +65,8 @@ pie
 
 ### Песочница: мысленная карта SSI
 
-{% filter code:"mermaid"|slice:0|safe %}
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ru` %}
 {% endfilter %}
 

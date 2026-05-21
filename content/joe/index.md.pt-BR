@@ -1,5 +1,4 @@
 ---
-categories: ~
 dependencies: '*.md.pt-BR'
 keywords: heyoka, iconoclasta
 status: verificado=39046
@@ -65,9 +64,11 @@ pie
 
 ### Sandbox: Mindmap do SSI
 
-{% filter code:"mermaid"|slice:0|safe %}
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.pt-BR` %}
 {% endfilter %}
+```
 
 -----
 

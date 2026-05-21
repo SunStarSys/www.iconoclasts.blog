@@ -1,5 +1,4 @@
 ---
-categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
 status: verifierad=39046
@@ -65,9 +64,11 @@ pie
 
 ### Sandlåda: SSI Mindmap
 
-{% filter code:"mermaid"|slice:0|safe %}
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.sv` %}
 {% endfilter %}
+```
 
 -----
 

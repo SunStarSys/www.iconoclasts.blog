@@ -1,5 +1,4 @@
 ---
-categories: ~
 dependencies: '*.md.ko'
 keywords: 헤이오카, iconoclast
 status: 확인=39046
@@ -65,9 +64,11 @@ pie
 
 ### 샌드박스: SSI Mindmap
 
-{% filter code:"mermaid"|slice:0|safe %}
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ko` %}
 {% endfilter %}
+```
 
 -----
 

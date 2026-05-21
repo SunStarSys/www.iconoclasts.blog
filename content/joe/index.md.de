@@ -1,5 +1,4 @@
 ---
-categories: ~
 dependencies: '*.md.de'
 keywords: heyoka, iconoclast
 status: überprüft=39046
@@ -65,9 +64,11 @@ pie
 
 ### Sandbox: SSI-Mindmap
 
-{% filter code:"mermaid"|slice:0|safe %}
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.de` %}
 {% endfilter %}
+```
 
 -----
 

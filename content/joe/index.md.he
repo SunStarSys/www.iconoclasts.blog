@@ -1,5 +1,4 @@
 ---
-categories: ~
 dependencies: '*.md.he'
 keywords: הייוקה, איקונוקלסט
 status: אומתו 39046
@@ -65,9 +64,11 @@ pie
 
 ### שולחן חול: מפת חשיבה של SSI
 
-{% filter code:"mermaid"|slice:0|safe %}
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.he` %}
 {% endfilter %}
+```
 
 -----
 

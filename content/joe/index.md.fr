@@ -1,5 +1,4 @@
 ---
-categories: ~
 dependencies: '*.md.fr'
 keywords: heyoka, iconoclaste
 status: vérifié=39046
@@ -65,9 +64,11 @@ pie
 
 ### Modèle d'environnement restreint : Mindmap SSI
 
-{% filter code:"mermaid"|slice:0|safe %}
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.fr` %}
 {% endfilter %}
+```
 
 -----
 

@@ -1,5 +1,4 @@
 ---
-categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
 status: 確認済み=39046
@@ -65,9 +64,11 @@ pie
 
 ### サンドボックス: SSIマインドマップ
 
-{% filter code:"mermaid"|slice:0|safe %}
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ja` %}
 {% endfilter %}
+```
 
 -----
 

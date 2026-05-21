@@ -1,5 +1,4 @@
 ---
-categories: ~
 dependencies: '*.md.ar'
 keywords: هيوكا، ايكونوكلاست
 status: التحقق = 39046
@@ -65,10 +64,11 @@ pie
 
 ### صندوق الحماية: خريطة تفكير SSI
 
-{% filter code:"mermaid"|slice:0|safe %}
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ar` %}
 {% endfilter %}
-
+```
 -----
 
 ### صندوق الحماية: جدول SSI الذي تم إنشاؤه &mdash; {{table.headers.title}}
