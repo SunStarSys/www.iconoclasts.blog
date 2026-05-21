@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=38921
+status: verified=38925
 keywords: heyoka, iconoclast
 ---
 
@@ -47,6 +47,15 @@ gantt
     {{k|safe}} :{{v|safe}}
 {% endfor %}
 {% endfor %}
+```
+
+-----
+
+```mermaid
+pie title 2026 Q2 Budget Priorities
+	"Marketing and Advertising" : 60
+    "Development" : 20
+    "Operations" : 20
 ```
 
 ### Sandbox: SSI generated Table &mdash; {{table.headers.title}}
