@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: הייוקה, איקונוקלסט
-status: אומתו 38997
+status: אומתו 39016
 title: מחשבות אקראיות של ג'ו
 ---
 
@@ -54,7 +54,8 @@ gantt
 -----
 
 ```mermaid
-pie title 2026 Q2 Budget Priorities
+pie
+     title 2026 Q2 Budget Priorities
 	"שיווק ופרסום" : 60
     "פיתוח" : 20
     "פעולות" : 20

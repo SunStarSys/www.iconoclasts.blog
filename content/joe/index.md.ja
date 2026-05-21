@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
-status: 確認済み=38997
+status: 確認済み=39016
 title: Joe's Random Thoughtsたった今
 ---
 
@@ -54,7 +54,8 @@ gantt
 -----
 
 ```mermaid
-pie title 2026 Q2 Budget Priorities
+pie
+     title 2026 Q2 Budget Priorities
 	"マーケティングおよび広告" : 60
     "開発" : 20
     "操作" : 20

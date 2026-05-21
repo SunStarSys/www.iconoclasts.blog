@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: heyoka, iconoclaste
-status: vérifié=38997
+status: vérifié=39016
 title: Les pensées aléatoires de Joe
 ---
 
@@ -54,7 +54,8 @@ gantt
 -----
 
 ```mermaid
-pie title 2026 Q2 Budget Priorities
+pie
+     title 2026 Q2 Budget Priorities
 	"Marketing et publicité" : 60
     "Développement" : 20
     "Opérations" : 20

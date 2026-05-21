@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: heyoka, iconoclast
-status: überprüft=38997
+status: überprüft=39016
 title: Joe's Random Thoughts
 ---
 
@@ -54,7 +54,8 @@ gantt
 -----
 
 ```mermaid
-pie title 2026 Q2 Budget Priorities
+pie
+     title 2026 Q2 Budget Priorities
 	"Marketing und Werbung" : 60
     "Entwicklung" : 20
     "Vorgänge" : 20

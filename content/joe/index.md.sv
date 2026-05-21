@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=38997
+status: verifierad=39016
 title: Joes slumpartade tankar
 ---
 
@@ -54,7 +54,8 @@ gantt
 -----
 
 ```mermaid
-pie title 2026 Q2 Budget Priorities
+pie
+     title 2026 Q2 Budget Priorities
 	"Marknadsföring och reklam" : 60
     "Utveckling" : 20
     "Åtgärder" : 20
