@@ -4,7 +4,7 @@ categories: Производительность, инструменты
 dependencies: '*.md.ru'
 keywords: ~
 published: ~
-status: архивировано
+status: archived
 title: Производительность приложений
 ---
 
