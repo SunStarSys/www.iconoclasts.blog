@@ -1,4 +1,4 @@
-<div style="text-align:{% ifequal lang ".he" %}오른쪽{% else %}{% ifequal lang ".ar" %}오른쪽{% else %}왼쪽{% endifequal %}{% endifequal%}">
+<div style="text-align:{% ifequal lang '.he' %}오른쪽{% else %}{% ifequal lang '.ar' %}오른쪽{% else %}왼쪽{% endifequal %}{% endifequal%}">
 <h3>무료 블로그 가입하기</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -27,7 +27,7 @@
 
 <label for="editor">온보딩 메시지</label>
 
-<div id="editor-content" class="{% ifequal lang ".he" %}소매{% else %}{% ifequal lang ".ar" %}소매{% else %}리터{% endifequal %}{% endifequal%}">
+<div id="editor-content" class="{% ifequal lang '.he' %}소매{% else %}{% ifequal lang '.ar' %}소매{% else %}리터{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>

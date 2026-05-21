@@ -1,4 +1,4 @@
-<div style="text-align:{% ifequal lang ".he" %}右側線{% else %}{% ifequal lang ".ar" %}右側線{% else %}左側線{% endifequal %}{% endifequal%}">
+<div style="text-align:{% ifequal lang '.he' %}右側線{% else %}{% ifequal lang '.ar' %}右側線{% else %}左側線{% endifequal %}{% endifequal%}">
 <h3>無料ブログに登録する</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -27,7 +27,7 @@
 
 <label for="editor">オンボーディングのメッセージ</label>
 
-<div id="editor-content" class="{% ifequal lang ".he" %}rtl{% else %}{% ifequal lang ".ar" %}rtl{% else %}ltr{% endifequal %}{% endifequal%}">
+<div id="editor-content" class="{% ifequal lang '.he' %}rtl{% else %}{% ifequal lang '.ar' %}rtl{% else %}ltr{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>

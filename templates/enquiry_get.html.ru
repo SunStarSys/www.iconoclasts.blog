@@ -1,4 +1,4 @@
-<div style="text-align:{% ifequal lang ".he" %}правый{% else %}{% ifequal lang ".ar" %}правый{% else %}левый{% endifequal %}{% endifequal%}">
+<div style="text-align:{% ifequal lang '.he' %}правый{% else %}{% ifequal lang '.ar' %}правый{% else %}левый{% endifequal %}{% endifequal%}">
 <h3>Подписаться на бесплатный блог</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -27,7 +27,7 @@
 
 <label for="editor">Сообщение для приема и адаптации</label>
 
-<div id="editor-content" class="{% ifequal lang ".he" %}РТЛ{% else %}{% ifequal lang ".ar" %}РТЛ{% else %}лт{% endifequal %}{% endifequal%}">
+<div id="editor-content" class="{% ifequal lang '.he' %}РТЛ{% else %}{% ifequal lang '.ar' %}РТЛ{% else %}лт{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>

@@ -1,4 +1,4 @@
-<div style="text-align:{% ifequal lang ".he" %}rechts{% else %}{% ifequal lang ".ar" %}rechts{% else %}links{% endifequal %}{% endifequal%}">
+<div style="text-align:{% ifequal lang '.he' %}rechts{% else %}{% ifequal lang '.ar' %}rechts{% else %}links{% endifequal %}{% endifequal%}">
 <h3>Registrieren Sie sich für einen kostenlosen Blog</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -27,7 +27,7 @@
 
 <label for="editor">Nachricht für Onboarding</label>
 
-<div id="editor-content" class="{% ifequal lang ".he" %}RTL{% else %}{% ifequal lang ".ar" %}RTL{% else %}LTR{% endifequal %}{% endifequal%}">
+<div id="editor-content" class="{% ifequal lang '.he' %}RTL{% else %}{% ifequal lang '.ar' %}RTL{% else %}LTR{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>

@@ -1,4 +1,4 @@
-<div style="text-align:{% ifequal lang ".he" %}右側{% else %}{% ifequal lang ".ar" %}右側{% else %}左{% endifequal %}{% endifequal%}">
+<div style="text-align:{% ifequal lang '.he' %}右側{% else %}{% ifequal lang '.ar' %}右側{% else %}左{% endifequal %}{% endifequal%}">
 <h3>註冊免費部落格</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -27,7 +27,7 @@
 
 <label for="editor">入職訊息</label>
 
-<div id="editor-content" class="{% ifequal lang ".he" %}零售商{% else %}{% ifequal lang ".ar" %}零售商{% else %}公升{% endifequal %}{% endifequal%}">
+<div id="editor-content" class="{% ifequal lang '.he' %}零售商{% else %}{% ifequal lang '.ar' %}零售商{% else %}公升{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>

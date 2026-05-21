@@ -1,4 +1,4 @@
-<div style="text-align:{% ifequal lang ".he" %}ימין{% else %}{% ifequal lang ".ar" %}ימין{% else %}שמאל{% endifequal %}{% endifequal%}">
+<div style="text-align:{% ifequal lang '.he' %}ימין{% else %}{% ifequal lang '.ar' %}ימין{% else %}שמאל{% endifequal %}{% endifequal%}">
 <h3>הרשמה לבלוג בחינם</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
@@ -27,7 +27,7 @@
 
 <label for="editor">הודעה על הצטרפות</label>
 
-<div id="editor-content" class="{% ifequal lang ".he" %}rtl{% else %}{% ifequal lang ".ar" %}rtl{% else %}ליטר{% endifequal %}{% endifequal%}">
+<div id="editor-content" class="{% ifequal lang '.he' %}rtl{% else %}{% ifequal lang '.ar' %}rtl{% else %}ליטר{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
   </div>
 </form>
