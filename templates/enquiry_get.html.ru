@@ -1,31 +1,31 @@
 <div style="text-align:{% ifequal lang '.he' %}правый{% else %}{% ifequal lang '.ar' %}правый{% else %}левый{% endifequal %}{% endifequal%}">
-<h3>Подписаться на бесплатный блог</h3>
+<h3>Sign Up for Free Blog</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
 
-<label for="name">Ваше имя</label>
+<label for="name">Your Name</label>
   <input name="name" id="name" class="form-control" required />
 
-<label for="email">Ваш адрес электронной почты</label>
+<label for="email">Your Email Address</label>
   <input type="email" name="email" id="email" class="form-control" required />
 
-<label for="username">Имя предпочтительного пользователя</label>
+<label for="username">Preferred User Name</label>
   <input pattern="^\w+$" name="username" id="username" class="form-control" required />
 
-<input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">Запросить демо</label>
+<input type="checkbox" id="demo" name="demo"> &nbsp; <label for="demo">Request a Demo</label>
 
-<label>Предпочтительный план ориентации</label>
-  <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Бесплатный блог</label>
+<label>Preferred Orion Plan</label>
+  <input type="radio" id="planFB" name="plan" value="Free Blog" checked /> &nbsp; <label for="planFB">Free Blog</label>
 
-<label for="subject">Тема</label>
+<label for="subject">Subject</label>
   <input name="subject" id="subject" class="form-control" value="Orion Blog" pattern="Orion.*" required />
 
 <input type="hidden" name="lang" value="{{ lang }}" />
-  <button name="submit" class="btn btn-outline-success" value=1 >Отправить</button>
+  <button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
 
 <br><br>
 
-<label for="editor">Сообщение для приема и адаптации</label>
+<label for="editor">Message for Onboarding</label>
 
 <div id="editor-content" class="{% ifequal lang '.he' %}РТЛ{% else %}{% ifequal lang '.ar' %}РТЛ{% else %}лт{% endifequal %}{% endifequal%}">
     <textarea id="editor"></textarea>
