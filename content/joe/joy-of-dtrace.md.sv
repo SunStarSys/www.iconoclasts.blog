@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.sv'
 keywords: dtrace,solaris,bpftrace,modperl
-published: ~
-status: skiss
+status: arkiverad
 title: Glädjen i DTrace
 ---
 
@@ -16,19 +14,18 @@ title: Glädjen i DTrace
 
 [TOC]
 
-## {# lede #}Mät två gånger, skära en gång innan du påbörjar ett arbete med kodoptimering{# lede #}
+## {# lede #}Mät två gånger, skär en gång innan du påbörjar en kodoptimeringsinsats{# lede #}.
 
-Inget gör mätningen enklare än DTrace.
+Ingenting gör det enklare att mäta produkt än DTrace.
 
-## [Videokällor]({{snippetA.pretty_uri}}).
+## [Videokällor]({{snippetA.pretty_uri}})
 
-[snippet:repo=joesuf4/home:path=.zshrc:lines=L253-L255:lang=shell:branch=wsl]
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
 
-## [Målinriktad optimering]({{snippetB.pretty_uri}}).
+## [Riktad optimering]({{snippetB.pretty_uri}})
 
-Varje `$dtlv` klassmetodanropet nedan görs vid kompileringstid `:Förseglad`
+Varje `$dtlv` klass-metod-samtal nedan görs vid kompileringstid av `:Sealed`:
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
-
 
 <!-- $Date$ $Author$ $Revision$ -->

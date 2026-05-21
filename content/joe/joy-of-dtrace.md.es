@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.es'
 keywords: dtrace,solaris,bpftrace,modperl
-published: ~
-status: borrador
+status: archivado
 title: La alegría de DTrace
 ---
 
@@ -16,19 +14,18 @@ title: La alegría de DTrace
 
 [TOC]
 
-## {# lede #}Medir dos veces, cortar una vez, antes de embarcarse en un esfuerzo de optimización de código{# lede #}
+## {# lede #}Medir dos veces, cortar una vez, antes de embarcarse en un esfuerzo de optimización de código{# lede #}.
 
 Nada facilita la medición del producto que DTrace.
 
-## [Fuentes de vídeo]({{snippetA.pretty_uri}}).
+## [Fuentes de vídeo]({{snippetA.pretty_uri}})
 
-[snippet:repo=joesuf4/home:path=.zshrc:lines=L253-L255:lang=shell:branch=wsl]
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
 
-## [Optimización dirigida]({{snippetB.pretty_uri}}).
+## [Optimización dirigida]({{snippetB.pretty_uri}})
 
-Cada `$vdt` class-method-call a continuación se realiza en tiempo de compilación `:Sellado`
+Cada `$dtlv` class-method-call a continuación se realiza en tiempo de compilación por `:Sealed`:
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
-
 
 <!-- $Date$ $Author$ $Revision$ -->

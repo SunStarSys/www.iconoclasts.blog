@@ -1,11 +1,9 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.de'
-keywords: dtrace,solaris, bpftrace, modperl
-published: ~
-status: Entwurf
-title: Die Freude der DTrace
+keywords: dtrace,solaris,bpftrace,modperl
+status: archiviert
+title: Die Freude von DTrace
 ---
 
 <div style="float:right" class="col-lg-5">
@@ -16,19 +14,18 @@ title: Die Freude der DTrace
 
 [TOC]
 
-## {# lede #}Messen Sie zweimal, schneiden Sie einmal, bevor Sie mit einer Codeoptimierung beginnen{# lede #}
+## {# lede #}Zweimal messen, einmal schneiden, bevor Sie einen Codeoptimierungsaufwand beginnen{# lede #}.
 
 Nichts macht das Messen von Produkten einfacher als DTrace.
 
-## [Videoquellen]({{snippetA.pretty_uri}}).
+## [Videoquellen]({{snippetA.pretty_uri}})
 
-[snippet:repo=joesuf4/home:path=.zshrc:lines=L253-L255:lang=shell:branch=wsl]
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
 
-## [Gezielte Optimierung]({{snippetB.pretty_uri}}).
+## [Gezielte Optimierung]({{snippetB.pretty_uri}})
 
-Alle `DTLV` class-method-call wird zur Kompilierungszeit ausgeführt durch `: Versiegelt`
+Alle `$dtlv` Der nachfolgende class-method-call erfolgt zur Kompilierungszeit durch `:Sealed`:
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
-
 
 <!-- $Date$ $Author$ $Revision$ -->

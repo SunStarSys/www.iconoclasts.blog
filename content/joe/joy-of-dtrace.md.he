@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.he'
-keywords: dtrace ,solaris ,bpftrace ,modperl
-published: ~
-status: טיוטה
+keywords: dtrace,solaris,bpftrace,modperl
+status: הועבר לארכיב
 title: השמחה של DTrace
 ---
 
@@ -16,19 +14,18 @@ title: השמחה של DTrace
 
 [TOC]
 
-## {# lede #}למדוד פעמיים, לחתוך פעם אחת, לפני תחילת מאמץ אופטימיזציה קוד{# lede #}
+## {# lede #}מדדו פעמיים, חתכו פעם אחת, לפני שתתחילו במאמץ לאופטימיזציה של קוד{# lede #}.
 
-שום דבר לא הופך את מדידת הייצור לקלה יותר מאשר DTrace.
+אין דבר שהופך את מדידת המוצר לקלה יותר מ-DTrace.
 
-## [מקורות וידאו]({{snippetA.pretty_uri}}).
+## [מקורות וידאו]({{snippetA.pretty_uri}})
 
-[snippet:repo=joesuf4/home:path=.zshrc:lines=L253-L255:lang=shell:branch=wsl]
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
 
-## [אופטימיזציה מכוונת]({{snippetB.pretty_uri}}).
+## [אופטימיזציה ממוקדת]({{snippetB.pretty_uri}})
 
-כל `$dtlv` שיעור-שיטת-שיחה למטה נעשה בזמן הידור על-ידי `:חתום`
+בכל `$dtlv` Class-method-call להלן מתבצע בזמן ההידור על-ידי `:Sealed`:
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
-
 
 <!-- $Date$ $Author$ $Revision$ -->

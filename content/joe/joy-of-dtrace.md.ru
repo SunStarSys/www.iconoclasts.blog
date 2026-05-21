@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.ru'
-keywords: dtrace,solaris,bpftrace,modperl
-published: ~
-status: черновик
+keywords: dtrace,olaris,bpftrace,modperl
+status: архивированный
 title: Радость DTrace
 ---
 
@@ -16,19 +14,18 @@ title: Радость DTrace
 
 [TOC]
 
-## {# lede #}Измеряйте дважды, сокращайте один раз, прежде чем приступить к оптимизации кода{# lede #}
+## {# lede #}Измеряйте дважды, вырезайте один раз, прежде чем приступить к оптимизации кода{# lede #}.
 
-Ничто не облегчает измерение продукта, чем DTrace.
+Ничто не упрощает измерение продукта, чем DTrace.
 
-## [Источники видео]({{snippetA.pretty_uri}}).
+## [Источники видео]({{snippetA.pretty_uri}})
 
-[snippet:repo=joesuf4/home:path=.zshrc:lines=L253-L255:lang=shell:branch=wsl]
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
 
-## [Целевая оптимизация]({{snippetB.pretty_uri}}).
+## [Целевая оптимизация]({{snippetB.pretty_uri}})
 
-Каждый `$dtlv` class-method-call ниже выполняется во время компиляции `:запечатано`
+Каждый `$dtlv` class-method-call ниже выполняется во время компиляции по `:Sealed`:
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
-
 
 <!-- $Date$ $Author$ $Revision$ -->

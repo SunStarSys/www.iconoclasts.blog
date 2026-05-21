@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.ar'
 keywords: dtrace,solaris,bpftrace,modperl
-published: ~
-status: مُسَوَّدَة
+status: مؤرشف
 title: الفرح من DTrace
 ---
 
@@ -20,14 +18,14 @@ title: الفرح من DTrace
 
 لا شيء يجعل قياس المنتج أسهل من DTrace.
 
-## [مصادر الفيديو]({{snippetA.pretty_uri}}).
+## [مصادر الفيديو]({{snippetA.pretty_uri}})
 
 [snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
 
-## [التحسين المستهدف]({{snippetB.pretty_uri}}).
+## [التحسين المستهدف]({{snippetB.pretty_uri}})
 
-كلّ `$dtlv` يتم استدعاء أسلوب الكلاس أدناه في وقت التجميع حسب `:مختومة`:
+كلّ `$dtlv` يتم استدعاء أسلوب الكلاس أدناه في وقت التجميع حسب `:Sealed`:
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
 
-<!-- $Date: 2026-03-16 08:35:13 -0700 (Mon, 16 Mar 2026) $ $Author: joe $ $Revision: 29049 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

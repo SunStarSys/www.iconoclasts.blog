@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.fr'
-keywords: dtrace,solaris,bpftrace,modperl
-published: ~
-status: projet
+keywords: dtrace, solaris, bpftrace, modperl
+status: archivé
 title: La joie de DTrace
 ---
 
@@ -16,19 +14,18 @@ title: La joie de DTrace
 
 [TOC]
 
-## {# lede #}Mesurez deux fois, coupez une fois, avant de vous lancer dans un effort d'optimisation de code{# lede #}
+## {# lede #}Mesurez deux fois, coupez une fois, avant de vous lancer dans un effort d'optimisation du code{# lede #}.
 
-Rien ne rend la mesure plus facile que DTrace.
+Rien ne facilite la mesure du produit que DTrace.
 
-## [Sources vidéo]({{snippetA.pretty_uri}}).
+## [Sources vidéo]({{snippetA.pretty_uri}})
 
-[snippet:repo=joesuf4/home:path=.zshrc:lines=L253-L255:lang=shell:branch=wsl]
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
 
-## [Optimisation ciblée]({{snippetB.pretty_uri}}).
+## [Optimisation ciblée]({{snippetB.pretty_uri}})
 
-Chaque `Niveau de détail` l'appel de méthode de classe ci-dessous est effectué au moment de la compilation par ` :Scellé`
+Chaque `$dtlv` class-method-call ci-dessous est effectué lors de la compilation par `:Sealed`:
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
-
 
 <!-- $Date$ $Author$ $Revision$ -->

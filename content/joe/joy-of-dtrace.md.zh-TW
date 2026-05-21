@@ -1,11 +1,9 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.zh-TW'
-keywords: dtrace，solaris，bpftrace，modperl，追蹤，追蹤
-published: ~
-status: 草稿
-title: The Joy of DTrace
+keywords: dtrace、solaris、bpftrace、modperl
+status: 已封存
+title: DTrace 的喜樂
 ---
 
 <div style="float:right" class="col-lg-5">
@@ -16,19 +14,18 @@ title: The Joy of DTrace
 
 [TOC]
 
-## {# lede #}測量兩次，切掉一次，再投入程式碼最佳化工作{# lede #}
+## {# lede #}在進行程式碼最佳化工作之前，測量兩次，剪下一次{# lede #}.
 
-沒有任何東西使測量產品比 DTrace 更容易。
+測量產品不會比 DTrace 更容易。
 
-## [影片來源]({{snippetA.pretty_uri}}).
+## [視訊來源]({{snippetA.pretty_uri}})
 
-[snippet:repo=joesuf4/home:path=.zshrc:lines=L253-L255:lang=shell:branch=wsl]
+[snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
 
-## [目標最佳化]({{snippetB.pretty_uri}}).
+## [目標最佳化]({{snippetB.pretty_uri}})
 
-每個`$dtlv` 下面的類別方法呼叫會在編譯階段完成，由`：密封`
+每個`$dtlv` 以下的 class-method-call 是在編譯階段完成，由`:Sealed`:
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
-
 
 <!-- $Date$ $Author$ $Revision$ -->

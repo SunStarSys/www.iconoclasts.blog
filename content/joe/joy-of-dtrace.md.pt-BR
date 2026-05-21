@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: dtrace,solaris,bpftrace,modperl
-published: ~
-status: rascunho
+status: arquivado
 title: A Alegria do DTrace
 ---
 
@@ -20,13 +18,13 @@ title: A Alegria do DTrace
 
 Nada torna o produto de medição mais fácil do que DTrace.
 
-## [Fontes de vídeo]({{snippetA.pretty_uri}}).
+## [Fontes de vídeo]({{snippetA.pretty_uri}})
 
 [snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
 
-## [Otimização direcionada]({{snippetB.pretty_uri}}).
+## [Otimização direcionada]({{snippetB.pretty_uri}})
 
-A cada `$dtlv` class-method-call abaixo é feito no tempo de compilação por `: Lacrado`:
+A cada `$dtlv` class-method-call abaixo é feito no tempo de compilação por `:Sealed`:
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
 

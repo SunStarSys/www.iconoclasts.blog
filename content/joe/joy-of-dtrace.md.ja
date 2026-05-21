@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.ja'
 keywords: dtrace、solaris、bpftrace、modperl
-published: ~
-status: 下書き
+status: アーカイブ済
 title: DTraceの喜び
 ---
 
@@ -20,13 +18,13 @@ title: DTraceの喜び
 
 prodの測定がDTraceより簡単になるものはありません。
 
-## [動画ソース]({{snippetA.pretty_uri}}).
+## [動画ソース]({{snippetA.pretty_uri}})
 
 [snippet:repo=joesuf4/home:path=.zshrc:lines=L298-L300:lang=shell:branch=wsl]
 
-## [ターゲット設定の最適化]({{snippetB.pretty_uri}}).
+## [ターゲット設定の最適化]({{snippetB.pretty_uri}})
 
-すべて`ドルフ` 次のclass-method-callはコンパイル時に次のように実行されます。`: シール済み`:
+すべて`$dtlv` 次のclass-method-callはコンパイル時に次のように実行されます。`:Sealed`:
 
 [snippet:repo=SunStarSys/orion:path=lib/Dotiac/DTL/Core.pm:lines=417-503:lang=perl]
 
