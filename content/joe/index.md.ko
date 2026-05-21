@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: 헤이오카, iconoclast
-status: 확인=38810
+status: 확인=38997
 title: 조의 무작위 생각
 ---
 
@@ -33,23 +33,44 @@ title: 조의 무작위 생각
 
 생성됨 <https://iconoclasts.blog> to cater to kindred spirits online; who need a public, censorship-free, long-form essay writing community (온라인에서 친절한 영혼을 모으기 위해; 대중적이고 검열이 없는 긴 형태의 에세이 작문 커뮤니티를 필요로 하는 사람) &mdash; 서로의 가장 정치적으로 불편하고 아방가르드적 인 아이디어를 공유하고 상호 작용합니다.
 
-그것이 당신처럼 들리면, [가입하기](/contact)!
+그게 당신처럼 들리면 제발 [지금 데모 요청하기](/contact)!
 
 -----
+
+### 계획
 
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
-    dateFormat YYYY-MM-DD
+    dateFormat {{projects.headers.dateformat|safe}}
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" :{{v|safe}}
+    {{k|safe}} :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```
 
-### TEST: SSI 생성 테이블 &mdash; {{table.headers.title}}
+-----
+
+```mermaid
+pie title 2026 Q2 Budget Priorities
+	"마케팅 및 광고" : 60
+    "개발" : 20
+    "작업" : 20
+```
+
+-----
+
+### 샌드박스: SSI Mindmap
+
+{% filter code:"mermaid"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+
+-----
+
+### 샌드박스: SSI 생성 테이블 &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|

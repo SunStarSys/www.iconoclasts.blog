@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: heyoka, iconoclaste
-status: vérifié=38810
+status: vérifié=38997
 title: Les pensées aléatoires de Joe
 ---
 
@@ -33,23 +33,44 @@ Mariée à la femme la plus étonnante sur terre, dont l'amour pour moi nous a b
 
 J'ai créé <https://iconoclasts.blog> pour répondre aux esprits apparentés en ligne ; qui ont besoin d'une communauté d'écriture d'essai publique, sans censure et de forme longue &mdash; de partager et d'interagir avec les idées d'avant-garde les plus gênantes sur le plan politique.
 
-Si cela vous ressemble, [s'inscrire](/contact)!
+Si cela vous ressemble, s'il vous plaît [Demandez une démo aujourd'hui](/contact)!
 
 -----
+
+### Plan du site
 
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
-    dateFormat YYYY-MM-DD
+    dateFormat {{projects.headers.dateformat|safe}}
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" :{{v|safe}}
+    {{k|safe}} :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```
 
-### TEST : Table générée par SSI &mdash; {{table.headers.title}}
+-----
+
+```mermaid
+pie title 2026 Q2 Budget Priorities
+	"Marketing et publicité" : 60
+    "Développement" : 20
+    "Opérations" : 20
+```
+
+-----
+
+### Modèle d'environnement restreint : Mindmap SSI
+
+{% filter code:"mermaid"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+
+-----
+
+### Modèle d'environnement restreint : Table générée par SSI &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|

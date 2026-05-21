@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: هيوكا، ايكونوكلاست
-status: التحقق = 38810
+status: التحقق = 38997
 title: أفكار جو العشوائية
 ---
 
@@ -33,23 +33,44 @@ title: أفكار جو العشوائية
 
 أنا خلقت <https://iconoclasts.blog> لتلبية الأرواح الكريمة عبر الإنترنت ؛ الذين يحتاجون إلى مجتمع كتابة مقال عام خالٍ من الرقابة &mdash; لمشاركة والتفاعل مع أفكار بعضهم البعض الأكثر إزعاجًا من الناحية السياسية، والأفكار الطليعية.
 
-إذا كان هذا يبدو مثلك، [الرجاء التسجيل](/contact)!
+إذا كان هذا يبدو مثلك، من فضلك [طلب عرض توضيحي اليوم](/contact)!
 
 -----
+
+### الخطة
 
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
-    dateFormat YYYY-MM-DD
+    dateFormat {{projects.headers.dateformat|safe}}
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" :{{v|safe}}
+    {{k|safe}} :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```
 
-### TEST: الجدول المكون بواسطة SSI &mdash; {{table.headers.title}}
+-----
+
+```mermaid
+pie title 2026 Q2 Budget Priorities
+	"التسويق والإعلان" : 60
+    "التطوير" : 20
+    "العمليات" : 20
+```
+
+-----
+
+### صندوق الحماية: خريطة تفكير SSI
+
+{% filter code:"mermaid"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+
+-----
+
+### صندوق الحماية: جدول SSI الذي تم إنشاؤه &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|

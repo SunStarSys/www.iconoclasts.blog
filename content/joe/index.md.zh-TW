@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 東京都，東京都
-status: 驗證 =38810
+status: 驗證 =38997
 title: Joe 的隨機思維
 ---
 
@@ -33,23 +33,44 @@ title: Joe 的隨機思維
 
 我已建立<https://iconoclasts.blog> 在網上迎合不同類型的烈酒；需要公眾人士、無審查、長篇短篇短文寫作社群&mdash; 與彼此分享和互動最不便、最關心的想法。
 
-如果聽起來像你一樣，[請註冊](/contact)!
+如果聽起來像您一樣，請[立即申請示範](/contact)!
 
 -----
+
+### 計畫
 
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
-    dateFormat YYYY-MM-DD
+    dateFormat {{projects.headers.dateformat|safe}}
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" :{{v|safe}}
+    {{k|safe}} :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```
 
-### TEST：SSI 產生的表格&mdash; {{table.headers.title}}
+-----
+
+```mermaid
+pie title 2026 Q2 Budget Priorities
+	"行銷與廣告" : 60 歲
+    "開發" : 20
+    "作業" : 20
+```
+
+-----
+
+### 封閉測試環境：SSI Mindmap
+
+{% filter code:"mermaid"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+
+-----
+
+### 封閉測試環境：SSI 產生的表格&mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|

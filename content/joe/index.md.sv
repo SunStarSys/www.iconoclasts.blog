@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=38810
+status: verifierad=38997
 title: Joes slumpartade tankar
 ---
 
@@ -33,23 +33,44 @@ Gift med den mest fantastiska kvinnan på jorden, vars kärlek till mig välsign
 
 Jag har skapat <https://iconoclasts.blog> för att tillgodose släkt sprit på nätet; som behöver en offentlig, censurfri, långformig uppsatsskrivande gemenskap &mdash; Att dela och interagera med varandras mest politiskt obekväma, avantgardistiska idéer.
 
-Om det låter som du, [registrera dig](/contact)!
+Om det låter som du, snälla [beställ en demonstration i dag](/contact)!
 
 -----
+
+### Planera
 
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
-    dateFormat YYYY-MM-DD
+    dateFormat {{projects.headers.dateformat|safe}}
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" :{{v|safe}}
+    {{k|safe}} :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```
 
-### TEST: SSI-genererad tabell &mdash; {{table.headers.title}}
+-----
+
+```mermaid
+pie title 2026 Q2 Budget Priorities
+	"Marknadsföring och reklam" : 60
+    "Utveckling" : 20
+    "Åtgärder" : 20
+```
+
+-----
+
+### Sandlåda: SSI Mindmap
+
+{% filter code:"mermaid"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+
+-----
+
+### Sandlåda: SSI-genererad tabell &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|

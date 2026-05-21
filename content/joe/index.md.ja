@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
-status: 確認済み=38810
+status: 確認済み=38997
 title: Joe's Random Thoughtsたった今
 ---
 
@@ -33,23 +33,44 @@ Heyókがネイティブアメリカンの文化で果たす役割を知って�
 
 作成済<https://iconoclasts.blog> オンラインで親切なスピリッツに対応するために; 誰が公衆を必要とする、検閲フリー、長い形式のエッセイライティングコミュニティ&mdash; お互いの最も政治的に不便で前向きなアイデアを共有し、対話すること。
 
-もし、あなたのように聞こえたら、[登録してください](/contact)!
+もし、あなたのように聞こえたら、[今すぐデモをリクエスト](/contact)!
 
 -----
+
+### プラン
 
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
-    dateFormat YYYY-MM-DD
+    dateFormat {{projects.headers.dateformat|safe}}
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" :{{v|safe}}
+    {{k|safe}} :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```
 
-### テスト: SSIで生成された表&mdash; {{table.headers.title}}
+-----
+
+```mermaid
+pie title 2026 Q2 Budget Priorities
+	"マーケティングおよび広告" : 60
+    "開発" : 20
+    "操作" : 20
+```
+
+-----
+
+### サンドボックス: SSIマインドマップ
+
+{% filter code:"mermaid"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+
+-----
+
+### サンドボックス: SSIで生成された表&mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|

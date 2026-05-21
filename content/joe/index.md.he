@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: הייוקה, איקונוקלסט
-status: אומתה=38810
+status: אומתו 38997
 title: מחשבות אקראיות של ג'ו
 ---
 
@@ -33,23 +33,44 @@ title: מחשבות אקראיות של ג'ו
 
 יצרתי <https://iconoclasts.blog> כדי לספק רוחות אדיבות באינטרנט; מי צריך קהילה ציבורית, ללא צנזורה, כתיבה ארוכת צורה &mdash; לשתף וליצור אינטראקציה עם הרעיונות הכי לא נוחים מבחינה פוליטית, אוונגרד.
 
-אם זה נשמע כמוך, [נא להירשם](/contact)!
+אם זה נשמע כמוך, בבקשה. [בקשו הדגמה היום](/contact)!
 
 -----
+
+### תוכנית
 
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
-    dateFormat YYYY-MM-DD
+    dateFormat {{projects.headers.dateformat|safe}}
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" :{{v|safe}}
+    {{k|safe}} :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```
 
-### בדיקה: טבלה שהופקה על-ידי SSI &mdash; {{table.headers.title}}
+-----
+
+```mermaid
+pie title 2026 Q2 Budget Priorities
+	"שיווק ופרסום" : 60
+    "פיתוח" : 20
+    "פעולות" : 20
+```
+
+-----
+
+### שולחן חול: מפת חשיבה של SSI
+
+{% filter code:"mermaid"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+
+-----
+
+### שולחן חול: טבלה שהופקה על ידי SSI &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|

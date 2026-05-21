@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: heyoka, иконоборчество
-status: проверено=38810
+status: проверено=38997
 title: Случайные мысли Джо
 ---
 
@@ -33,23 +33,44 @@ title: Случайные мысли Джо
 
 Я создал <https://iconoclasts.blog> для удовлетворения родственных духов онлайн; кто нуждается в общественном, без цензуры, длинная форма эссе сообщество &mdash; делиться и взаимодействовать с наиболее политически неудобными, авангардными идеями друг друга.
 
-Если это звучит как ты, [пожалуйста, зарегистрируйтесь](/contact)!
+Если это звучит как вы, пожалуйста [запросить демо сегодня](/contact)!
 
 -----
+
+### План
 
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
-    dateFormat YYYY-MM-DD
+    dateFormat {{projects.headers.dateformat|safe}}
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" :{{v|safe}}
+    {{k|safe}} :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```
 
-### TEST: таблица, созданная SSI &mdash; {{table.headers.title}}
+-----
+
+```mermaid
+pie title 2026 Q2 Budget Priorities
+	"Маркетинг и реклама" : 60
+    "Разработка" : 20
+    "Операции" : 20
+```
+
+-----
+
+### Песочница: мысленная карта SSI
+
+{% filter code:"mermaid"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+
+-----
+
+### Песочница: таблица, созданная SSI &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|

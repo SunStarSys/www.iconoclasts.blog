@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: heyoka, iconoclast
-status: überprüft=38810
+status: überprüft=38997
 title: Joe's Random Thoughts
 ---
 
@@ -33,23 +33,44 @@ Verheiratet mit der erstaunlichsten Frau der Welt, deren Liebe zu mir uns beide 
 
 Ich habe erstellt <https://iconoclasts.blog> um verwandten Geistern online gerecht zu werden; die eine öffentliche, zensurfreie, langfristige Essay-Schreibgemeinschaft benötigen &mdash; die politisch unangenehmsten, avantgardistischen Ideen des anderen zu teilen und mit ihnen zu interagieren.
 
-Wenn das nach dir klingt, [Bitte melden Sie sich an](/contact)!
+Wenn das nach dir klingt, bitte [Demo noch heute anfordern](/contact)!
 
 -----
+
+### Plan
 
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
-    dateFormat YYYY-MM-DD
+    dateFormat {{projects.headers.dateformat|safe}}
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" :{{v|safe}}
+    {{k|safe}} :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```
 
-### TEST: Von SSI generierte Tabelle &mdash; {{table.headers.title}}
+-----
+
+```mermaid
+pie title 2026 Q2 Budget Priorities
+	"Marketing und Werbung" : 60
+    "Entwicklung" : 20
+    "Vorgänge" : 20
+```
+
+-----
+
+### Sandbox: SSI-Mindmap
+
+{% filter code:"mermaid"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+
+-----
+
+### Sandbox: Von SSI generierte Tabelle &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
