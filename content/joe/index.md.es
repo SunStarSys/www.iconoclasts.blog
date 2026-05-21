@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: heyoka, iconoclasta
-status: verificado=38686
+status: verificado=38810
 title: Los pensamientos aleatorios de Joe
 ---
 
@@ -35,6 +35,8 @@ He creado <https://iconoclasts.blog> para atender a los espíritus afines en lí
 
 Si eso suena como tú, [por favor regístrese](/contact)!
 
+-----
+
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
@@ -42,7 +44,7 @@ gantt
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" {{v|safe}}
+    "{{k|safe}}" :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```

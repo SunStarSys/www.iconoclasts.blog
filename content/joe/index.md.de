@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: heyoka, iconoclast
-status: überprüft=38686
+status: überprüft=38810
 title: Joe's Random Thoughts
 ---
 
@@ -35,6 +35,8 @@ Ich habe erstellt <https://iconoclasts.blog> um verwandten Geistern online gerec
 
 Wenn das nach dir klingt, [Bitte melden Sie sich an](/contact)!
 
+-----
+
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
@@ -42,7 +44,7 @@ gantt
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" {{v|safe}}
+    "{{k|safe}}" :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```

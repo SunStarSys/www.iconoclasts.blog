@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: هيوكا، ايكونوكلاست
-status: التحقق = 38686
+status: التحقق = 38810
 title: أفكار جو العشوائية
 ---
 
@@ -35,6 +35,8 @@ title: أفكار جو العشوائية
 
 إذا كان هذا يبدو مثلك، [الرجاء التسجيل](/contact)!
 
+-----
+
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
@@ -42,7 +44,7 @@ gantt
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" {{v|safe}}
+    "{{k|safe}}" :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```

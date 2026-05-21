@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: הייוקה, איקונוקלסט
-status: אומתו 38686
+status: אומתה=38810
 title: מחשבות אקראיות של ג'ו
 ---
 
@@ -35,6 +35,8 @@ title: מחשבות אקראיות של ג'ו
 
 אם זה נשמע כמוך, [נא להירשם](/contact)!
 
+-----
+
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
@@ -42,7 +44,7 @@ gantt
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" {{v|safe}}
+    "{{k|safe}}" :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```

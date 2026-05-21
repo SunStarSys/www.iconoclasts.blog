@@ -3,12 +3,12 @@ Status: draft
 ACL: joe=rw, *=r
 
 Security Work:
-  dependency controls: :a1, 2026-05-01, 10d
-  ssi controls: :after a1, 10d
+  dependency controls: a1, 2026-05-01, 10d
+  ssi controls: after a1, 10d
 Feature Development:
-  csv: :b1, 2026-05-14, 10d
-  pdl: :b2, 2026-05-19, 10d
-  ical: :after b1, 10d
+  csv: b1, 2026-05-14, 10d
+  pdl: b2, 2026-05-19, 10d
+  ical: after b1, 10d
 Integrations:
-  Zoom: :after b2, 10d
-  X: :c1, 2026-06-01, 5d
+  Zoom: after b2, 10d
+  X: c1, 2026-06-01, 10d

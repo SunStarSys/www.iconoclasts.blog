@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 東京都，東京都
-status: 驗證 =38686
+status: 驗證 =38810
 title: Joe 的隨機思維
 ---
 
@@ -35,6 +35,8 @@ title: Joe 的隨機思維
 
 如果聽起來像你一樣，[請註冊](/contact)!
 
+-----
+
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
@@ -42,7 +44,7 @@ gantt
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" {{v|safe}}
+    "{{k|safe}}" :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
-status: 確認済み=38686
+status: 確認済み=38810
 title: Joe's Random Thoughtsたった今
 ---
 
@@ -35,6 +35,8 @@ Heyókがネイティブアメリカンの文化で果たす役割を知って�
 
 もし、あなたのように聞こえたら、[登録してください](/contact)!
 
+-----
+
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
@@ -42,7 +44,7 @@ gantt
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" {{v|safe}}
+    "{{k|safe}}" :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```

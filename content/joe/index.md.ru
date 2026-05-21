@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: heyoka, иконоборчество
-status: проверено=38686
+status: проверено=38810
 title: Случайные мысли Джо
 ---
 
@@ -35,6 +35,8 @@ title: Случайные мысли Джо
 
 Если это звучит как ты, [пожалуйста, зарегистрируйтесь](/contact)!
 
+-----
+
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
@@ -42,7 +44,7 @@ gantt
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" {{v|safe}}
+    "{{k|safe}}" :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```

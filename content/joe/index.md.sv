@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=38686
+status: verifierad=38810
 title: Joes slumpartade tankar
 ---
 
@@ -35,6 +35,8 @@ Jag har skapat <https://iconoclasts.blog> för att tillgodose släkt sprit på n
 
 Om det låter som du, [registrera dig](/contact)!
 
+-----
+
 ```mermaid
 gantt
     title {{projects.headers.title|safe}}
@@ -42,7 +44,7 @@ gantt
 {% for p,q in projects.content %}
     section {{p}}
 {% for k,v in q %}
-    "{{k|safe}}" {{v|safe}}
+    "{{k|safe}}" :{{v|safe}}
 {% endfor %}
 {% endfor %}
 ```
