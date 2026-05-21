@@ -4,7 +4,7 @@ categories: ИТ, Perl, почта, инструменты
 dependencies: '*.md.ru'
 keywords: ezmlm-idx, BATV, DMARC, SRS
 published: ~
-status: архивировано
+status: archived
 title: Списки рассылки
 ---
 
