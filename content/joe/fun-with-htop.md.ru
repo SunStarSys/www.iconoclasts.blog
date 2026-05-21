@@ -4,7 +4,7 @@ categories: Инструменты
 dependencies: '*.md.ru'
 keywords: ~
 published: ~
-status: архивировано
+status: archived
 title: Развлечения с htop
 ---
 
@@ -56,3 +56,5 @@ title: Развлечения с htop
 
 
 <!-- $Date$ $Author$ -->
+
+<!-- $Date$ $Author$ $Revision$ -->
