@@ -1,11 +1,9 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.es'
 keywords: pantalla,top,solaris,oci,observabilidad
-published: ~
-status: borrador
-title: La alegría de htop
+status: archivado
+title: La alegría del htop
 ---
 
 <div style="float:right" class="col-lg-5">
@@ -16,12 +14,10 @@ title: La alegría de htop
 
 [TOC]
 
-## {# lede #}htop en Solaris 11{# lede #}
+## {# lede #}htop en Solaris 11{# lede #}.
 
-### [Fuentes de vídeo]({{snippetA.pretty_uri}}).
+### [Fuentes de vídeo]({{snippetA.pretty_uri}})
 
 [snippet:repo=joesuf4/home:path=.ocirc:lines=417-425:lang=shell:branch=wsl]
-
-
 
 <!-- $Date$ $Author$ $Revision$ -->

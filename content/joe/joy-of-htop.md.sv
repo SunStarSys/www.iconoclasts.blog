@@ -1,10 +1,8 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.sv'
-keywords: screen,htop,solaris,oci,observabilitet
-published: ~
-status: skiss
+keywords: skärm,htop,solaris,oci, observerbarhet
+status: arkiverad
 title: Glädjen i htop
 ---
 
@@ -16,12 +14,10 @@ title: Glädjen i htop
 
 [TOC]
 
-## {# lede #}Hotell nära Solaris 11{# lede #}
+## {# lede #}Bilder från Solaris 11{# lede #}.
 
-### [Videokällor]({{snippetA.pretty_uri}}).
+### [Videokällor]({{snippetA.pretty_uri}})
 
 [snippet:repo=joesuf4/home:path=.ocirc:lines=417-425:lang=shell:branch=wsl]
-
-
 
 <!-- $Date$ $Author$ $Revision$ -->

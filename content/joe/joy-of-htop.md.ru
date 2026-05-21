@@ -1,11 +1,9 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.ru'
-keywords: экран,htop,солярис,общество,наблюдение
-published: ~
-status: черновик
-title: Радость вершины
+keywords: экран,верхняя часть,солярис,объединения,наблюдение
+status: архивированный
+title: Радость сверху
 ---
 
 <div style="float:right" class="col-lg-5">
@@ -16,12 +14,10 @@ title: Радость вершины
 
 [TOC]
 
-## {# lede #}htop на Solaris 11{# lede #}
+## {# lede #}htop на Solaris 11{# lede #}.
 
-### [Источники видео]({{snippetA.pretty_uri}}).
+### [Источники видео]({{snippetA.pretty_uri}})
 
 [snippet:repo=joesuf4/home:path=.ocirc:lines=417-425:lang=shell:branch=wsl]
-
-
 
 <!-- $Date$ $Author$ $Revision$ -->
