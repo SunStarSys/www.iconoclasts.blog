@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=39180
+status: draft
 keywords: heyoka, iconoclast
 ---
 
@@ -85,7 +85,7 @@ pie
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
-{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}| additional | fun | below | line |
 
 <!-- $Date$ $Author$ $Revision$ -->
