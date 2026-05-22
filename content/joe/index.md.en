@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=39084
+status: verified=39088
 keywords: heyoka, iconoclast
 ---
 
@@ -70,6 +70,14 @@ pie
 ```
 
 -----
+
+### Sandbox: SSI Asymptote Vector Graphics
+
+```asy
+{% filter code:"asy"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+```
 
 ### Sandbox: SSI generated Table &mdash; {{table.headers.title}}
 
