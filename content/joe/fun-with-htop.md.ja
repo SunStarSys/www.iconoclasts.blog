@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ツール
 dependencies: '*.md.ja'
 keywords: ~
-published: ~
 status: アーカイブ済
 title: htopの楽しみ
 ---
@@ -16,7 +14,7 @@ title: htopの楽しみ
 
 ## {# lede #}人気のUnixプラットフォーム上の高度なhtop機能{# lede #}
 
-- デルタ`独楽`
+- デルタ`top`
 
 - 高度な対話型動作
 	- テーマ、**セマンティック**色スキーム
@@ -26,12 +24,12 @@ title: htopの楽しみ
 
 - 表示をカスタマイズします`C`
 	- 検索`/` またはフィルタ`\` 名前による軽量プロセス(LWP、別名pthreads)
-	- ユーザー名でLWPをフィルタ`あなた`
+	- ユーザー名でLWPをフィルタ`u`
 	- トグル`t` ツリービュー
 	- LWPごとのコマンド
 		- `s` システム・トレース
-		- `ll` オープン・ファイル記述子のリスト
-		- `Eメール` 環境変数
+		- `l` オープン・ファイル記述子のリスト
+		- `e` 環境変数
 		- `k` killでシグナルを送信する
 
 ### ログイン
@@ -41,7 +39,7 @@ OOTBの完全動作機能セット。
 ### OSXポート
 
 - DTraceを有効にします(必須) [リカバリ・モードで起動してSIPを無効にする](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
-- コピー[dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) から`~/bin` そして作成するために実行`売春婦` リンク集
+- コピー[dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) から`~/bin` そして作成するために実行`strace` リンク集
 - 起動`htop` ルートとして
 
 ### [Solaris 11](https://github.com/joesuf4/htop/tree/solaris-stable) / FreeBSDポート
@@ -53,3 +51,5 @@ OOTBの完全動作機能セット。
 	- 完全なコマンド引数を指定せず、コマンド名のみを指定
 
 <!-- $Date$ $Author$ -->
+
+<!-- $Date$ $Author$ $Revision$ -->

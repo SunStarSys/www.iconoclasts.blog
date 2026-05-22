@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: Herramientas
 dependencies: '*.md.es'
 keywords: ~
-published: ~
 status: archivado
 title: Diversión con htop
 ---
@@ -14,45 +12,44 @@ title: Diversión con htop
 	</div>
 </div>
 
-
 ## {# lede #}Funciones avanzadas de htop en plataformas populares de Unix{# lede #}
 
+- Deltas de `top`
 
-- Deltas de `superior`
-
-	- comportamientos interactivos sofisticados
+- comportamientos interactivos sofisticados
 	- esquemas de color temáticos **semánticos**
-
-
+	- opera a nivel de thread POSIX, no solo procesos completos
 
 - Características
 
-	- personalizar la pantalla `C`
-	- búsqueda `/` o filtrar `\` procesos ligeros (LWP, también conocidos como pthreads) por nombre
+- personalizar visualización `C`
+	- buscar `/` o filtrar `\` procesos ligeros (LWP, también conocidos como pthreads) por nombre
 	- filtrar LWP por nombre de usuario `u`
-	- alternancia `t` vista de árbol
+	- alternar `t` vista de árbol
 	- comandos por LWP
-		- `s` rastreo de sistema
+		- `s` rastreo del sistema
 		- `l` lista de descriptores de archivos abiertos
 		- `e` variables de entorno
-		- `k`
+		- `k` enviar una señal con matar
 
-### Linux
+### Código
 
-Conjunto de funciones totalmente operativo.
+Juego de funciones totalmente operativo OOTB.
 
 ### Puerto OSX
 
 - Activar DTrace (requiere [iniciar en modo de recuperación para desactivar SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
-- copiar [htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) a `~/bin` y ejecutar para crear `strapón` enlace simbólico
-- lanzamiento `htop`
+- copiar [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) a `~/bin` y ejecutar para crear `strace` enlace simbólico
+- lanzamiento `htop` como raíz
 
-### [Solaris 11](https://github.com/joesuf4/htop/tree/solaris-stable).
+### [Solaris 11](https://github.com/joesuf4/htop/tree/solaris-stable) / FreeBSD Puertos
 
-- Estadísticas de ZFS ARC
-- Nombre de zona/columnas de ID
-- Deltas contables de LWP de Solaris
+- Estadísticas de ARC de ZFS
+- Columnas de nombre/ID de zona
+- Solaris LWP - Deltas de contabilidad
 	- PID de dos niveles + LWPID
-
+	- no proporciona argumentos de comando completos, solo nombre de comando
 
 <!-- $Date$ $Author$ -->
+
+<!-- $Date$ $Author$ $Revision$ -->

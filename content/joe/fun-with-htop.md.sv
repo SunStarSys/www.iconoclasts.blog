@@ -1,11 +1,9 @@
 ---
-archived: ~
 categories: Verktyg
 dependencies: '*.md.sv'
 keywords: ~
-published: ~
 status: arkiverad
-title: Roligt med htop
+title: Kul med htop
 ---
 
 <div style="float:right" class="col-lg-5">
@@ -14,45 +12,44 @@ title: Roligt med htop
 	</div>
 </div>
 
+## {# lede #}Avancerade toppfunktioner på populära Unix-plattformar{# lede #}
 
-## {# lede #}Avancerade funktioner på populära Unix-plattformar{# lede #}
+- Deltas från `top`
 
-
-- Deltavärden från `överst`
-
-	- sofistikerade interaktiva beteenden
-	- tematiska, ** semantiska** färgscheman
-
-
+- sofistikerade interaktiva beteenden
+	- tematiska, **semantiska** färgscheman
+	- fungerar på POSIX-trådnivå, inte bara fullständiga processer
 
 - Funktioner
 
-	- anpassa display `C`
-	- sök `/` eller filtrera `\` lätta processer (LWP, även kallade pthreads) efter namn
-	- filtrera LWP efter användarnamn `du`
-	- växla `tt` trädvy
-	- per LWP-kommandon
-		- `ss` systemspårning
+- anpassa displayen `C`
+	- sök `/` eller filtrera `\` lättviktsprocesser (LWP, även kallad pthreads) efter namn
+	- filtrera LWP efter användarnamn `u`
+	- växla `t` trädvy
+	- kommandon per LWP
+		- `s` systemspårning
 		- `l` lista över öppna fildeskriptorer
 		- `e` miljövariabler
-		- `kull`
+		- `k` Skicka en signal med kill
 
 ### Linux
 
-OOTB:s fullt fungerande funktionsuppsättning.
+Fullständig funktionsuppsättning för OOTB.
 
 ### OSX-port
 
 - Aktivera DTrace (kräver [starta i återställningsläge för att inaktivera SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
-- kopia [dtruss](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) till `~/bin` och kör för att skapa `stjärt` symbolisk länk
-- lansering `htop`
+- kopiera [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) till `~/bin` och kör för att skapa `strace` symbolisk länk
+- lansering `htop` som rot
 
-### [Solis 11](https://github.com/joesuf4/htop/tree/solaris-stable).
+### [Solglasögon 11](https://github.com/joesuf4/htop/tree/solaris-stable) / FreeBSD Portar
 
-- ZFS ARC-statistik
-- Kolumner för zonnamn/ID
-Solaris LWP Bokföring Deltas
-	- två nivåer PID + LWPID
-
+- Statistik för ZFS ARC
+- Zonnamn/ID-kolumner
+- Solaris LWP Redovisningsdeltaganden
+	- PID på två nivåer + LWPID
+	- ger inte fullständiga kommandoargument, bara kommandonamn
 
 <!-- $Date$ $Author$ -->
+
+<!-- $Date$ $Author$ $Revision$ -->

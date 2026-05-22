@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: Ferramentas
 dependencies: '*.md.pt-BR'
 keywords: ~
-published: ~
 status: arquivado
 title: Diversão com htop
 ---
@@ -16,7 +14,7 @@ title: Diversão com htop
 
 ## {# lede #}Recursos avançados do htop em plataformas populares do Unix{# lede #}
 
-- Deltas de `topo`
+- Deltas de `top`
 
 - comportamentos interativos sofisticados
 	- esquemas de cores temáticos, **semânticos**
@@ -26,7 +24,7 @@ title: Diversão com htop
 
 - personalizar exibição `C`
 	- pesquisa `/` ou filtrar `\` processos leves (LWP, aka pthreads) por nome
-	- filtrar LWP por nome de usuário `você`
+	- filtrar LWP por nome de usuário `u`
 	- alternar `t` exibição em árvore
 	- comandos por LWP
 		- `s` rastreamento do sistema
@@ -41,8 +39,8 @@ Conjunto de recursos totalmente operacional OOTB.
 ### Porta OSX
 
 - Ativar DTrace (requer [inicializar no Modo de Recuperação para desativar SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
-- copiar [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) para `~/compartimento` e executar para criar `coçar` linksimples
-- lançamento `topo` como raiz
+- copiar [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) para `~/bin` e executar para criar `strace` linksimples
+- lançamento `htop` como raiz
 
 ### [Solaris 11](https://github.com/joesuf4/htop/tree/solaris-stable) / Portas FreeBSD
 
@@ -53,3 +51,5 @@ Conjunto de recursos totalmente operacional OOTB.
 	- não fornece argumentos de comando completos, apenas o nome do comando
 
 <!-- $Date$ $Author$ -->
+
+<!-- $Date$ $Author$ $Revision$ -->

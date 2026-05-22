@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: Werkzeuge
 dependencies: '*.md.de'
 keywords: ~
-published: ~
 status: archiviert
 title: Spaß mit htop
 ---
@@ -14,45 +12,44 @@ title: Spaß mit htop
 	</div>
 </div>
 
+## {# lede #}Erweiterte Htop-Funktionen auf beliebten Unix-Plattformen{# lede #}
 
-## {# lede #}Erweiterte htop-Funktionen auf beliebten Unix-Plattformen{# lede #}
+- Deltas von `top`
 
-
-- Deltas von `oben`
-
-	- anspruchsvolle interaktive Verhaltensweisen
+- ausgeklügelte interaktive Verhaltensweisen
 	- thematische, **semantische** Farbschemata
-
-
+	- arbeitet auf POSIX-Thread-Ebene, nicht nur auf vollständigen Prozessen
 
 - Funktionen
 
-	- Anzeige anpassen `C`
-	- Suche `/` oder filtern `\` Lightweight-Prozesse (LWP, auch bekannt als Pthreads) nach Namen
+- Anzeige anpassen `C`
+	- Suche `/` oder filtern `\` Lightweight-Prozesse (LWP, alias pthreads) nach Namen
 	- LWP nach Benutzername filtern `u`
-	- Umschalter `T` Baumansicht
-	- pro LWP-Befehle
+	- Umschalten `t` Baumansicht
+	- Pro-LWP-Befehle
 		- `s` Systemverfolgung
-		- `L` Liste offener Dateideskriptoren
-		- `E` Umgebungsvariablen
-		- `K`
+		- `l` Liste der geöffneten Dateideskriptoren
+		- `e` Umgebungsvariablen
+		- `k` ein Signal mit Kill senden
 
-### Linux
+### Deutsch
 
 OOTB voll funktionsfähig.
 
 ### OSX-Port
 
-- DTrace aktivieren (erfordert) [in den Wiederherstellungsmodus starten, um SIP zu deaktivieren](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
-- Kopie [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) bis `~/Bin` und ausführen, um `straße` symbolischer Link
-- starten `Top`
+- DTrace aktivieren (erfordert) [im Wiederherstellungsmodus starten, um SIP zu deaktivieren](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
+- kopieren [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) bis `~/bin` und ausführen, um zu erstellen `strace` Symlink
+- Start `htop` als Root
 
-### [Solaris 11](https://github.com/joesuf4/htop/tree/solaris-stable).
+### [Solaris 11](https://github.com/joesuf4/htop/tree/solaris-stable) / FreeBSD Ports
 
-- ZFS ARC-Statistiken
-- Spalten für Zonenname/ID
-- Solaris LWP Buchungsdeltas
+- ZFS-ARC-Statistiken
+- Spalten "Zonenname/ID"
+- Solaris LWP Buchhaltungsdeltas
 	- Bi-Level-PID + LWPID
-
+	- liefert keine vollständigen Befehlsargumente, nur Befehlsname
 
 <!-- $Date$ $Author$ -->
+
+<!-- $Date$ $Author$ $Revision$ -->
