@@ -299,7 +299,6 @@ The table below maps every commonly used R type to its closest Perl and PDL coun
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
-
 {% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}
 
