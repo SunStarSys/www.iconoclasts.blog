@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant
-status: verified=39607
+status: verified=39611
 Dependencies: *.md.en
 
 <div class="right">
@@ -15,7 +15,7 @@ Dependencies: *.md.en
 
 ## :fa-github: GitHub Flavored Markdown (GFM)
 
-GFM stayed true to that design goal right up until [Microsoft bastardized the isolated dollar sign to convert it into a $$\LaTeX$$ sigil](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions) because of some antiquated, ugly crapware called MathJax that had nothing to do with Markdown, and the fact that these assholes don't want to promote $$\KaTeX$$ without a bribe from the Khan Academy.
+GFM stayed true to that design goal right up until [Microsoft bastardized the isolated dollar sign to convert it into a $$\LaTeX$$ sigil](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) because of some antiquated, ugly crapware called MathJax that had nothing to do with Markdown, and the fact that these assholes don't want to promote $$\KaTeX$$ without a bribe from the Khan Academy.
 
 ## Embrace and Extend Redux
 
