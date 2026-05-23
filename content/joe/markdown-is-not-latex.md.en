@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant
-status: draft
+status: verified=39599
 Dependencies: *.md.en
 
 <div class="right">
@@ -24,6 +24,13 @@ Of course this was entirely intentional, because real engineering teams had sett
 It is now an ambiguous disaster of engineering regex defects every time an author/implementer has to guess what the parser is supposed to do with sequences of isolated dollar signs occurring within a single paragraph of markdown prose.
 
 Most disgustingly, the embrace and extend evil empire has an army of F/OSS free labor slaves to serve as syncophantic thought police about their efforts to pilfer the labor of others for their own market gains via AI.
+
+## Fuck Microsoft
+
+[Orion](https://www.sunstarsys.com/orion/features) **does not, and will never, use newer GFM parsers that pretend to track this dirty misfeature**.
+
+Instead, we rely on an internal fork of @markedjs/marked and will continue to do so for the foreseeable future.
+
 
 
 <!-- $Date$ $Author$ $Revision$ -->
