@@ -1,0 +1,17 @@
+Title: Markdown is not LaTeX
+Keywords: Microsoft,Github,corrupt,embrace,extend,sycophant
+Status: draft
+Dependencies: *.md.en
+
+The point of John Gruber’s Markdown syntax was that it was easy to work with; not just from an authoring standpoint, but from an implementer’s perspective as well.  HTML5 is not that.
+
+GFM stayed true to that design goal right up until Microsoft bastardized the isolated dollar sign to convert it into a LaTeX sigil because of some antiquated crapware called MathJax that had nothing to do with Markdown.
+
+Of course this was entirely intentional, because real engineering teams had settled on KaTeX with double-dollar token boundaries for inline math, and fenced math blocks for block KaTeX processing.
+
+It is now an ambiguous disaster of engineering regex defects every time a “implementer has to guess what to do with sequences of isolated dollar signs occurring within a single paragraph of markdown prose.
+
+Most disgustingly, the embrace and extend evil empire has an army of F/OSS free labor slaves to serve as syncophantic thought police about their efforts to pilfer the labor of others for their own market gains via AI.
+
+
+<!-- $Date$ $Author$ $Revision$ -->
