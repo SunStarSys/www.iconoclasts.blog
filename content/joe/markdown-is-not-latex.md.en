@@ -1,5 +1,5 @@
 Title: Microsoft Considered Harmful
-Keywords: Microsoft,Github,corrupt,embrace,extend,sycophant
+Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant
 Status: draft
 Dependencies: *.md.en
 
@@ -9,13 +9,13 @@ Dependencies: *.md.en
 
 </div>
 
-## Markdown
+## Markdown's Origins
 
-{# lede #}The point of John Gruber’s Markdown syntax was that it was easy to work with{# lede #}; not just from an authoring standpoint, but from an implementer’s perspective as well.  HTML5 is not that.
+{# lede #}The point of John Gruber’s Markdown syntax was that it was easy to work with{# lede #}; not just from an authoring standpoint, but from an implementer’s perspective as well.  $$\LaTeX$$, `MathML`, and `HTML5` are not that.
 
-## GitHub Flavored Markdown
+## :fa-github: GitHub Flavored Markdown (GFM)
 
-:fa-github: GFM stayed true to that design goal right up until Microsoft bastardized the isolated dollar sign to convert it into a LaTeX sigil because of some antiquated crapware called MathJax that had nothing to do with Markdown.
+GFM stayed true to that design goal right up until Microsoft bastardized the isolated dollar sign to convert it into a LaTeX sigil because of some antiquated crapware called MathJax that had nothing to do with Markdown.
 
 ## Embrace and Extend Redux
 
