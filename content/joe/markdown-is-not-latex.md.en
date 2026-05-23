@@ -11,11 +11,11 @@ Dependencies: *.md.en
 
 ## Markdown's Origins
 
-{# lede #}The point of John Gruber’s Markdown syntax was that it was easy to work with{# lede #}; not just from an authoring standpoint, but from an implementer’s perspective as well.  $$\LaTeX$$, `MathML`, and `HTML5` are not that.
+{# lede #}The point of [John Gruber’s Markdown syntax](https://daringfireball.net/projects/markdown/syntax) was that it was easy to work with{# lede #}; not just from an authoring standpoint, but from an implementer’s perspective as well.  $$\LaTeX$$, `MathML`, and `HTML5` are not that.
 
 ## :fa-github: GitHub Flavored Markdown (GFM)
 
-GFM stayed true to that design goal right up until Microsoft bastardized the isolated dollar sign to convert it into a LaTeX sigil because of some antiquated crapware called MathJax that had nothing to do with Markdown.
+GFM stayed true to that design goal right up until [Microsoft bastardized the isolated dollar sign to convert it into a LaTeX sigil](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions) because of some antiquated crapware called MathJax that had nothing to do with Markdown, and the fact that these assholes don't want to promote $$\KaTeX$$ without a bribe from the Khan Academy.
 
 ## Embrace and Extend Redux
 
