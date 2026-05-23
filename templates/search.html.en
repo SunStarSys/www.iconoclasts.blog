@@ -268,9 +268,10 @@ Bandwidth (KB): Total = {{ tbw }}, Mean = {{meanbw}}, StdDev = {{stdbw}}, Median
   const data = {{duration|json|safe}};
   const values = data.map(x => x[1]);
   var total = 0;
+  var count = 0;
   for (var i=0; i < values.length; ++i)
     if (+values[i] <= 300)
-      total += +values[i];
+      total += +values[i], count++;
 
   const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" +
   x[4]);
@@ -292,7 +293,7 @@ Bandwidth (KB): Total = {{ tbw }}, Mean = {{meanbw}}, StdDev = {{stdbw}}, Median
               plugins: {
                   title: {
                       display: true,
-                      text: (total / 60).toFixed(0) + " build minutes this month (average build duration is " + (total / values.length).toFixed(0) + " s)",
+                      text: (total / 60).toFixed(0) + " build minutes this month / " + count + " total builds (average build duration is " + (total /count).toFixed(0) + " s)",
                   }
               },
               onClick: (e, elts, chart) => {
