@@ -1,0 +1,43 @@
+---
+categories: 奧里昂
+dependencies: '*.md.zh-TW'
+keywords: markdown，Microsoft，Github，corrupt，embace，extend，sy-ophant - 降價，微軟，巨石，貪腐，寬限，擴展
+status: 驗證 =39687
+title: Microsoft 認為有害
+---
+
+<div class="right">
+
+![擁抱和擴大邪惡帝國](markdown-is-not-latex.page/microsoft)
+
+</div>
+
+## 減價來源
+
+{# lede #}此點[John Gruber 的 Markdown 語法規格](https://daringfireball.net/projects/markdown/syntax) 是，它很容易使用{# lede #}不只是從撰寫觀點來看，也從導入者的觀點來看。$$\LaTeX$$, `MathML`，和`HTML5` 不是。
+
+## :fa-github: GitHub 調味料減價 (GFM)
+
+GFM 對該規格的設計目標保持真，直到[微軟使隔離的錢幣符號有條件地將其轉換為$$\LaTeX$$ 符記](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) 因為一些名為 MathJax 的古怪軟體，與 Markdown 無關，而且這些助理不想要促銷的事實$$\KaTeX$$ 沒有來自漢學院的賄賂。
+
+## 擁抱並擴充 Redux
+
+當然這完全是刻意的，因為[:editormd-logo: 世界一流的工程團隊](http://editor.md.ipandao.com) 已結算於$$\KaTeX$$ 包含內嵌數學的雙元權杖界限，以及區塊的圍欄數學區塊$$\KaTeX$$ 處理 **在 2020 之前 **。
+
+此處的點是一般程序中很少出現的 2 個字元分隔符號，是一般情況的理想選擇。[如果 Microsoft 停滯僅支援 \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 我不會在 2026 年撰寫這篇文章，因為該選擇符合 Markdown 規格中引入內嵌數學表示式的正常理想條件。
+
+如今，每當作者 / 實作者必須猜測剖析器應如何處理一段降價程序中出現的一連串隔離貨幣符號時，工程正規表示式瑕疵就會發生不明確的災難，就像討論兩筆價格一樣。`$`1.50 和`$`2.00. 祝你好運 (這是) `$` 一個$$\LaTeX$$ 如果您將舊有文件格式的大量 GFM 轉換成非 GitHub 平台，記號或它是幣別字首？)。只會"工作" 在 Visual Studio 中呈現時。
+
+不同於標準的出現[JCP](https://jcp.org/en/home/index)，此訊息永遠不會有規範認證測試套件，因為這是[在 GitHub 上不斷演變的現場情況](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8)。再次強調，故意偏離 Gruber 的目標。
+
+大部分令人難以置信的是，擁抱和擴大邪惡帝國擁有一支 F/OSS 自由勞動奴隸，作為同義式的思想警方，他們努力透過 AI 推動他人的勞動力，以獲得自己的市場收益。
+
+## Fuck Microsoft
+
+簡而言之，GFM 不再是產業規格，但專有廠商格式與所複製的維基媒體資源庫不同。
+
+[奧里昂](https://www.sunstarsys.com/orion/features) **不要，也永遠不會使用較新的 GFM 剖析器來預先追蹤此已變更的功能 **。
+
+相反地，我們依賴 @markedjs 的內部分叉，並將繼續在可預見的未來執行。
+
+<!-- $Date$ $Author$ $Revision$ -->

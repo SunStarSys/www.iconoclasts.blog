@@ -1,0 +1,43 @@
+---
+categories: Orion
+dependencies: '*.md.fr'
+keywords: markdown,Microsoft,Github,corrompu,étreinte,extension,sycophant
+status: vérifié=39687
+title: Microsoft considéré comme nuisible
+---
+
+<div class="right">
+
+![Embrasser et étendre l'Empire du Mal](markdown-is-not-latex.page/microsoft)
+
+</div>
+
+## Origines de démarque
+
+{# lede #}Le point de [Spécification de syntaxe Markdown de John Gruber](https://daringfireball.net/projects/markdown/syntax) C'était facile de travailler avec{# lede #} ; non seulement du point de vue de la rédaction, mais aussi du point de vue de l'implémenteur.  $$\LaTeX$$, `MathML`, et `HTML5` ne sont pas cela.
+
+## :fa-github: GitHub Démarque aromatisée (GFM)
+
+GFM est resté fidèle aux objectifs de conception de cette spécification jusqu'à [Microsoft a bastardé le signe du dollar isolé pour le convertir conditionnellement en un $$\LaTeX$$ jeton](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) à cause d'un logiciel antiquité et laid appelé MathJax qui n'avait rien à voir avec Markdown, et le fait que ces connards ne veulent pas promouvoir $$\KaTeX$$ Sans un pot-de-vin de l'Académie Khan.
+
+## Adopter et étendre Redux
+
+Bien sûr, c'était tout à fait intentionnel, car [:editormd-logo: équipes d'ingénierie de classe mondiale](http://editor.md.ipandao.com) avait réglé sur $$\KaTeX$$ avec des limites de jeton en double dollar pour les mathématiques en ligne et des blocs mathématiques clôturés pour les blocs $$\KaTeX$$ traitement **avant 2020**.
+
+Le point ici est qu'un délimiteur de 2 caractères qui se produit rarement dans une prose typique est l'idéal normal pour des situations comme celle-ci. [Microsoft n'a pris en charge que \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Je n'écrirais pas cet article en 2026, car ce choix répond aux conditions idéales normales pour l'introduction fidèle d'expressions mathématiques en ligne dans une spécification Markdown.
+
+C'est maintenant un désastre ambigu des défauts d'expression régulière d'ingénierie chaque fois qu'un auteur/implémenteur doit deviner ce que l'analyseur est censé faire avec des séquences de signes isolés du dollar se produisant dans un seul paragraphe de la prose de démarque, comme lors de la discussion de deux prix, disons `$`1.50, et `$`2.00.  Bonne chance avec ça (c'est le `$` a $$\LaTeX$$ s'agit-il d'un préfixe de devise ?) si vous effectuez une conversion GFM en masse de formats de document hérités vers une plate-forme non GitHub. Ce sera seulement "travail" rendu dans Visual Studio.
+
+Contrairement aux normes issues de [JCP](https://jcp.org/en/home/index), il n'y aura jamais de suite de tests de conformité pour ce gâchis, parce que [évolution de la situation sur le terrain à l'adresse GitHub](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8). Encore une fois, déviance intentionnelle des objectifs de Gruber.
+
+Le plus dégoûtant, l'embrasser et étendre l'empire maléfique a une armée d'esclaves de travail libres F/OSS pour servir de police de pensée syncophane sur leurs efforts pour pilonner le travail des autres pour leurs propres gains sur le marché via l'IA.
+
+## Fuck Microsoft
+
+Longue histoire courte, GFM n'est plus une spécification de l'industrie, mais un format de fournisseur propriétaire pas différent des déchets de Wikimedia dont ils l'ont copié.
+
+[Orion](https://www.sunstarsys.com/orion/features) **n'utilise pas et n'utilisera jamais de nouveaux analyseurs GFM qui prétendent suivre cette erreur sale**.
+
+Au lieu de cela, nous comptons sur une fourchette interne de @markedjs/marqué et nous continuerons à le faire dans un avenir prévisible.
+
+<!-- $Date$ $Author$ $Revision$ -->

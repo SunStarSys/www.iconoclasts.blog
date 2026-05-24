@@ -1,0 +1,43 @@
+---
+categories: オリオン
+dependencies: '*.md.ja'
+keywords: Markdown、Microsoft、Github、腐敗、抱擁、拡張、サイコファント
+status: 確認済み=39687
+title: マイクロソフトは有害と考えました
+---
+
+<div class="right">
+
+![邪悪な帝国を抱きしめ、拡張する](markdown-is-not-latex.page/microsoft)
+
+</div>
+
+## Markdownの起源
+
+{# lede #}ポイント[John GruberのMarkdown構文仕様](https://daringfireball.net/projects/markdown/syntax) 使いやすかったです。{# lede #}執筆の観点からだけでなく、実装者の観点からも。$$\LaTeX$$, `MathML`および`HTML5` そうではありません。
+
+## :fa-github: GitHubフレーバー値下げ(GFM)
+
+GFMはその仕様の設計目標に忠実であり続けた。[Microsoftは、条件付きでそれをaに変換するために孤立したドル記号をbastardized $$\LaTeX$$ トークン](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) Markdownとは関係のないMathJaxと呼ばれる古くて醜いクラップウェアのため、これらのアホが宣伝したくないという事実$$\KaTeX$$ カーン・アカデミー(Khan Academy)
+
+## Reduxの活用と拡張
+
+もちろん、これは完全に意図的なものだったので、[:editormd-logo: 世界クラスのエンジニアリングチーム](http://editor.md.ipandao.com) 定着しました$$\KaTeX$$ インライン数学の二重ドルトークン境界とブロックのフェンス数学ブロック$$\KaTeX$$ 処理中**2020年以前**。
+
+ここでのポイントは、典型的な散文ではめったに起こらない2文字のデリミタが、このような状況にとって通常の理想であることです。[マイクロソフトが\$\をサポートするだけ` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 私は2026年にこの記事を書くつもりはありません。なぜなら、その選択はMarkdown仕様にインライン数学式を忠実に導入するための通常の理想的な条件を満たしているからです。
+
+二つの価格を議論するときのように、作者/実装者がマークダウン・プロースの単一の段落内で発生する孤立したドル記号のシーケンスとパーサーが何をすべきかを推測しなければならないたびに、エンジニアリング・レジェックスの欠陥のあいまいな災害になりました。`$`1.50、そして`$`2.00 GOOD LUCK WITH THAT(これでよかった) `$` A $$\LaTeX$$ トークン、または通貨プリフィクスですか?)レガシー・ドキュメント・フォーマットをGitHub以外のプラットフォームに一括GFM変換する場合。のみ"勉強する" Visual Studioでレンダリングされたとき。
+
+標準とは違って、[JCP](https://jcp.org/en/home/index)、この混乱のためのコンプライアンス証明のテスト スイートは決してありません、なぜなら[地上の状況の進化 GitHub](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8)。また、グルーバーの目的からの意図的な逸脱。
+
+最も不愉快なことに、邪悪な帝国を受け入れることと拡張することには、F/OSS自由労働奴隷の軍隊があり、AIを介して自分の市場利益のために他人の労働を操縦する努力について、同性愛思想警察として機能する。
+
+## Fuck Microsoft
+
+要するに、GFMはもはや業界のスペックではなく、独自のベンダーフォーマットは、彼らがそれをコピーしたウィキメディアのゴミとは違う。
+
+[オリオン](https://www.sunstarsys.com/orion/features) **この汚れた不具合を追跡するふりをする新しいGFMパーサーは使用せず、決して使用しません**。
+
+代わりに、私たちは @markedjs/markedの内部フォークに依存しており、予見可能な将来のために引き続きそうします。
+
+<!-- $Date$ $Author$ $Revision$ -->

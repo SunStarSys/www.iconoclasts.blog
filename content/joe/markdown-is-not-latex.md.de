@@ -1,0 +1,43 @@
+---
+categories: Orion
+dependencies: '*.md.de'
+keywords: Markdown,Microsoft,Github,korrupt,embrace,extend,sycophant
+status: überprüft=39687
+title: Microsoft als schädlich betrachtet
+---
+
+<div class="right">
+
+![Böses Imperium umarmen und erweitern](markdown-is-not-latex.page/microsoft)
+
+</div>
+
+## Ursprünge der Preisabschrift
+
+{# lede #}Der Punkt von [Markdown-Syntaxspezifikation von John Gruber](https://daringfireball.net/projects/markdown/syntax) Es war einfach, mit{# lede #}; nicht nur aus Sicht des Autors, sondern auch aus Sicht des Implementers.  $$\LaTeX$$, `MathML`und `HTML5` Das ist nicht so.
+
+## :fa-github: GitHub Aromatisierte Preisabschrift (GFM)
+
+GFM blieb den Designzielen dieser Spezifikation bis zu [Microsoft bastardierte das isolierte Dollarzeichen, um es bedingt in ein $$\LaTeX$$ Token](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) wegen einer veralteten, hässlichen crapware namens MathJax, die nichts mit markdown zu tun hatte, und der tatsache, dass diese arschlöcher nicht fördern wollen. $$\KaTeX$$ ohne Bestechung der Khan Academy.
+
+## Umsetzen und Erweitern von Redux
+
+Das war natürlich ganz bewusst, denn [:editormd-logo: Weltklasse-Technikteams](http://editor.md.ipandao.com) hatte sich $$\KaTeX$$ mit Doppel-Dollar-Token-Grenzen für Inline-Mathematik und eingezäunten Matheblöcken für Block $$\KaTeX$$ Verarbeitung **vor 2020**.
+
+Der Punkt hier ist, dass ein 2-Zeichen-Trennzeichen, das selten in typischen Prosa auftritt, das normale Ideal für solche Situationen ist. [Hatte Microsoft nur \$\ unterstützt` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Ich würde diesen Artikel im Jahr 2026 nicht schreiben, da diese Wahl die normalen idealen Bedingungen für die treue Einführung von Inline-Matheausdrücken in einer Markdown-Spezifikation erfüllt.
+
+Es ist jetzt eine zweideutige Katastrophe von technischen Regex-Defekten jedes Mal, wenn ein Autor / Implementierer erraten muss, was der Parser mit Sequenzen von isolierten Dollarzeichen tun soll, die innerhalb eines einzigen Absatzes von Preisabschriftprosa auftreten, wie wenn zwei Preise diskutiert werden, sagen `$`1.50 und `$`2.00 Uhr.  Viel Glück dabei (ist die `$` ein $$\LaTeX$$ Token, oder ist es ein Währungspräfix?) wenn Sie eine Massen-GFM-Umrechnung von Legacy-Dokumentformaten in eine Nicht-GitHub-Plattform durchführen. Es wird nur "Arbeit" bei der Wiedergabe in Visual Studio.
+
+Im Gegensatz zu den Standards, die aus [JCP](https://jcp.org/en/home/index)Es wird nie eine Compliance-zertifizierende Testsuite für dieses Chaos geben, weil es [Entwicklung der Lage vor Ort unter GitHub](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8). Wieder absichtliche Abweichung von Grubers Zielen.
+
+Am ekligsten ist, dass das Umarmen und Ausdehnen des bösen Imperiums eine Armee von F/OSS-freien Arbeitssklaven hat, die als synchronophantische Gedankenpolizei über ihre Bemühungen dienen, die Arbeit anderer für ihre eigenen Marktgewinne über KI zu steuern.
+
+## Fick Microsoft
+
+Kurz gesagt, GFM ist keine Branchenspezifikation mehr, sondern ein proprietäres Anbieterformat, das sich nicht von dem Wikimedia-Müll unterscheidet, aus dem sie es kopiert haben.
+
+[Orion](https://www.sunstarsys.com/orion/features) **verwendet und wird niemals neuere GFM-Parser verwenden, die vorgeben, diese schmutzige Fehlfunktion zu verfolgen**.
+
+Stattdessen setzen wir auf einen internen Fork von @markedjs/markiert und werden dies auf absehbare Zeit auch weiterhin tun.
+
+<!-- $Date$ $Author$ $Revision$ -->
