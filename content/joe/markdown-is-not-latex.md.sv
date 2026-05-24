@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna,förlänga,sykofant
-status: verifierad=39687
+status: verifierad=39738
 title: Microsoft anses vara skadligt
 ---
 
@@ -28,7 +28,11 @@ Poängen här är att en 2-teckenavgränsare som sällan förekommer i typisk pr
 
 Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern är tänkt att göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa, som när man diskuterar två priser, säger `$`1.50 och `$`2.00.  Lycka till med det (är `$` år $$\LaTeX$$ token, eller är det ett valutaprefix?) om du gör en mass-GFM-konvertering av äldre dokumentformat till en plattform som inte är GitHub. Det kommer bara "studera" när den återges i Visual Studio.
 
-Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/index), det kommer aldrig att finnas en överensstämmelsecertifierande testsvit för denna röra, eftersom det är en [Utvecklingen av situationen på fältet på GitHub](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8). Återigen, avsiktlig avvikelse från Grubers mål.
+Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/index), det kommer aldrig att finnas en överensstämmelse-certifierande testsvit för denna röra, eftersom det är en [utvecklas](https://github.com/github/markup?tab=readme-ov-file#github-markup) [plats](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) på [marken](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) vid [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser):
+
+> GitHub har inte offentliggjort sin aktuella nedsättningsparser med öppen källkod. Det är dock känt att GitHub använder en anpassad implementering av Markdown för sin plattform, som baseras på specifikationen GitHub Smaksatt nedsättning (GFM). Den här implementeringen har stöd för olika tillägg och funktioner som förbättrar den nedsättningssyntax som används av GitHub.
+
+Återigen, avsiktlig avvikelse från Grubers mål.
 
 Mest äckligt, omfamna och utvidga onda imperiet har en armé av F / OSS fria arbetskraft slavar att fungera som synkofantisk tanke polisen om deras ansträngningar att pilfer arbetskraft andra för sina egna marknadsvinster via AI.
 

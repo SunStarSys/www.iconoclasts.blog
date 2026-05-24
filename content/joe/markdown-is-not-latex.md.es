@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante
-status: verificado=39687
+status: verificado=39738
 title: Microsoft considerado dañino
 ---
 
@@ -28,7 +28,11 @@ El punto aquí es que un delimitador de 2 caracteres que rara vez ocurre en la p
 
 Ahora es un desastre ambiguo de defectos de la regex de ingeniería cada vez que un autor / implementador tiene que adivinar lo que se supone que el analizador tiene que ver con secuencias de signos de dólar aislados que ocurren dentro de un solo párrafo de la prosa de rebaja, como cuando se discuten dos precios, dicen. `$`1.50, y `$`2.00.  Buena suerte con eso (es el `$` a $$\LaTeX$$ token, o ¿es un prefijo de moneda?) si está realizando una conversión masiva de GFM de formatos de documentos heredados a una plataforma que no sea GitHub. Sólo "trabajo" cuando se presenta en Visual Studio.
 
-A diferencia de los estándares que surgen de la [JCP](https://jcp.org/en/home/index), nunca habrá un conjunto de pruebas de certificación de cumplimiento para este desastre, porque es un [evolución de la situación sobre el terreno en GitHub](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8). Una vez más, desviación intencional de los objetivos de Gruber.
+A diferencia de los estándares que surgen de la [JCP](https://jcp.org/en/home/index), nunca habrá un conjunto de pruebas de certificación de cumplimiento para este desastre, porque es un [evolución](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situación](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) activado [el terreno](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) a las [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser):
+
+> GitHub no ha revelado públicamente su analizador de rebajas de código abierto actual. Sin embargo, se sabe que GitHub utiliza una implementación personalizada de Markdown para su plataforma, que se basa en la especificación GitHub Flavored Markdown (GFM). Esta implantación incluye soporte para varias extensiones y funciones que mejoran la sintaxis de Markdown utilizada por GitHub.
+
+Una vez más, desviación intencional de los objetivos de Gruber.
 
 Lo más repugnante es que el abrazo y la extensión del imperio maligno tiene un ejército de esclavos de trabajo libres de F / OSS para servir como policía de pensamiento sincofántico sobre sus esfuerzos para acumular el trabajo de otros para sus propias ganancias de mercado a través de la IA.
 
