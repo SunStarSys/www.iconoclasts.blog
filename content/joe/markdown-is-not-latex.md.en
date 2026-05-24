@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant
-status: verified=39623
+status: verified=39627
 Dependencies: *.md.en
 
 <div class="right">
@@ -21,7 +21,8 @@ GFM stayed true to that specification's design goals right up until [Microsoft b
 
 Of course this was entirely intentional, because [:editormd-logo: world-class engineering teams](http://editor.md.ipandao.com) had settled on $$\KaTeX$$ with double-dollar token boundaries for inline math, and fenced math blocks for block $$\KaTeX$$ processing **before 2020**.
 
-It is now an ambiguous disaster of engineering regex defects every time an author/implementer has to guess what the parser is supposed to do with sequences of isolated dollar signs occurring within a single paragraph of markdown prose.
+It is now an ambiguous disaster of engineering regex defects every time an author/implementer has to guess what the parser is supposed to do with sequences of isolated dollar signs occurring within a single paragraph of markdown prose, like comparing two prices, say $1.50, and $2.00.  Good luck with that if you are doing a bulk GFM conversion of legacy document formats to a non-GitHub platform. It will only "work" when rendered in Visual Studio.
+
 
 Most disgustingly, the embrace and extend evil empire has an army of F/OSS free labor slaves to serve as syncophantic thought police about their efforts to pilfer the labor of others for their own market gains via AI.
 
