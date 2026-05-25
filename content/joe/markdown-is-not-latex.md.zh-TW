@@ -1,8 +1,8 @@
 ---
 categories: 奧里昂
 dependencies: '*.md.zh-TW'
-keywords: markdown，Microsoft，Github，corrupt，embace，extend，sy-ophant - 降價，微軟，巨石，貪腐，寬限，擴展
-status: 驗證 =39961
+keywords: markdown，Microsoft，Github，corrupt，embace，extend，sycophant，AI - 減價，Microsoft，巨集，貪腐，寬限，擴展，智能化，AI
+status: 驗證 =40060
 title: Microsoft 認為有害
 ---
 
@@ -24,11 +24,13 @@ title: Microsoft 認為有害
 
 當然這完全是刻意的，因為[:editormd-logo: 世界一流的工程團隊](http://editor.md.ipandao.com) 已結算於$$\KaTeX$$ 包含內嵌數學的雙元權杖界限，以及區塊的圍欄數學區塊$$\KaTeX$$ 處理 **在 2020 之前 **。
 
-此處的點是一般程序中很少出現的 2 個字元分隔符號，是一般情況的理想選擇。[如果 Microsoft 停滯僅支援 \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 我不會在 2026 年撰寫這篇文章，因為該選擇符合 Markdown 規格中引入內嵌數學表示式的正常理想條件。
+此處的點是一般程序中很少出現的 2 個字元分隔符號，是一般情況的理想選擇。[如果 Microsoft 停滯僅支援 \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 我不會在 2026 年撰寫這篇文章，因為該選擇符合 Markdown 規格中引入內嵌數學表示式的正常理想條件。這也有利於專業數學打字機的腕隧道症候群，因此除了邊界口語的獨特性之外，還有其他需要考慮的事項。
 
-如果我必須猜測他們的動機，以考慮該部落格文章的建議語法不足以滿足他們目前的需求，我懷疑這些動機更關乎貪婪和市場控制。"客戶不滿意" 優越的 F/OSS 管理。YMMV。
+如果我必須猜測他們的動機，以考慮該部落格文章的建議語法不足以滿足他們目前的需求，我懷疑他們更關心貪婪和市場控制。"客戶不滿意" 優越的 F/OSS 管理。
 
-現在，當作者 / 實作者每次必須猜測剖析器應如何處理一段降價程序中出現的隔離貨幣符號時，工程正規表示式瑕疵是不明確的災難。例如，假設法國加拿大財務數學家以兩種不同貨幣來討論兩個價格的情況，美國表示`$`1.50 和 2,00`$` CA (經許可相反，但說明了複雜性)。您如何撰寫`i18n` 符合規範的 GFM 剖析器，瞭解此處的錢幣符號之間的東西不會以內嵌方式處理$$\LaTeX$$，即使其語法有效$$\LaTeX$$?
+或只是[懶惰、不耐心和危機](http://www.parrot.org/)但這不足以說服這篇文章。YMMV。
+
+現在，當作者 / 實作者每次必須猜測剖析器應如何處理一段降價程序中出現的隔離貨幣符號時，工程正規表示式瑕疵是不明確的災難。例如，假設情況為：[法文](markdown-is-not-latex.html.fr) 加拿大金融數學家討論兩種不同貨幣的價格，美國`$`1.50 和 2,00`$` CA (經許可相反，但說明了複雜性)。您如何撰寫`i18n` 合規[GFM 剖析器](https://pandoc.org/) 明白這裏的錢幣符號之間的東西是 *不能以內置方式處理$$\LaTeX$$* 即使其語法有效$$\TeX$$ 並符合此條件[naïve 規格](https://pandoc.org/demo/example33/8.13-math.html)?
 
 祝好運，如果您要大量將國際舊有文件格式轉換為非 GitHub 平台的 GFM 轉換。只會"工作" 在 Visual Studio 中彩現時 (如果甚至完全有效)。
 
@@ -40,11 +42,11 @@ title: Microsoft 認為有害
 
 再次強調，故意偏離 Gruber 的目標。
 
-大部分令人難以置信的是，擁抱和擴大邪惡帝國擁有一支 F/OSS 自由勞動奴隸，作為同義式的思想警方，他們努力透過 AI 推動他人的勞動力，以獲得自己的市場收益。
+最令人難以置信的是，擁抱和擴大邪惡帝國擁有一支 F/OSS 自由勞動奴役軍人，作為同義的思想警察，他們努力透過人工智慧推動他人的市場收益。<sup>1 個</sup>。只要在下方的「連結」區段中，查看對此頁面標示之 HackerNews 張貼項目的回應，以符合其中一些回應。
 
 ## Fuck Microsoft
 
-簡而言之，GFM 不再是產業規格，但專有廠商格式與所複製的維基媒體資源庫不同。
+簡而言之，GFM 已不再是國際產業規格，但美國專有廠商格式與[Wikimedia 資源回收](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) 他們複製來源。
 
 [奧里昂](https://www.sunstarsys.com/orion/features) **不要，也永遠不會使用較新的 GFM 剖析器來預先追蹤此已變更的功能 **。
 

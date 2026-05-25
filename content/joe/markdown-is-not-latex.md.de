@@ -1,8 +1,8 @@
 ---
 categories: Orion
 dependencies: '*.md.de'
-keywords: Markdown,Microsoft,Github,korrupt,embrace,extend,sycophant
-status: überprüft=39961
+keywords: Markdown,Microsoft,Github,korrupt,Umarmung,extend,sycophant,AI
+status: überprüft=40060
 title: Microsoft als schädlich betrachtet
 ---
 
@@ -24,11 +24,13 @@ title: Microsoft als schädlich betrachtet
 
 Das war natürlich ganz bewusst, denn [:editormd-logo: Weltklasse-Technikteams](http://editor.md.ipandao.com) hatte sich $$\KaTeX$$ mit Doppel-Dollar-Token-Grenzen für Inline-Mathematik und eingezäunten Matheblöcken für Block $$\KaTeX$$ Verarbeitung **vor 2020**.
 
-Der Punkt hier ist, dass ein 2-Zeichen-Trennzeichen, das selten in typischen Prosa auftritt, das normale Ideal für solche Situationen ist. [Hatte Microsoft nur \$\ unterstützt` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Ich würde diesen Artikel im Jahr 2026 nicht schreiben, da diese Wahl die normalen idealen Bedingungen für die treue Einführung von Inline-Matheausdrücken in einer Markdown-Spezifikation erfüllt.
+Der Punkt hier ist, dass ein 2-Zeichen-Trennzeichen, das selten in typischen Prosa auftritt, das normale Ideal für solche Situationen ist. [Hatte Microsoft nur \$\ unterstützt` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Ich würde diesen Artikel im Jahr 2026 nicht schreiben, da diese Wahl die normalen idealen Bedingungen für die treue Einführung von Inline-Matheausdrücken in einer Markdown-Spezifikation erfüllt. Es ist auch förderlich für Karpaltunnelsyndrom für professionelle Mathe-Typen, so gibt es etwas anderes zu berücksichtigen neben Grenze-token Einzigartigkeit.
 
-Wenn ich ihre Motive für die Betrachtung der vorgeschlagenen Syntax des Blogartikels erraten musste, die für ihre aktuellen Bedürfnisse unzureichend ist, vermute ich, dass es bei den Motiven mehr um Gier und Marktkontrolle ging und "Kundenunzufriedenheit" als gute F/OSS-Verwaltung. JMMV
+Wenn ich ihre Motive für die Betrachtung der vorgeschlagenen Syntax des Blogartikels erraten musste, die für ihre aktuellen Bedürfnisse unzureichend ist, vermute ich, dass es mehr um Gier und Marktkontrolle ging und "Kundenunzufriedenheit" als gute F/OSS-Verwaltung.
 
-Es ist jetzt eine zweideutige Katastrophe von technischen Regex-Defekten, jedes Mal, wenn ein Autor / Implementierer erraten muss, was der Parser mit Sequenzen isolierter Dollarzeichen tun soll, die innerhalb eines einzigen Absatzes von Preisabschriftprosa auftreten. Denken Sie beispielsweise an eine Situation, in der französische kanadische Finanzmathematiker zwei Preise in zwei verschiedenen Währungen diskutieren, sagen die USA. `$`1,50 und 2,00`$` CA (zugegebenermaßen konstruiert, aber es veranschaulicht die Komplexität). Wie würden Sie eine `i18n` konformer GFM-Parser, der versteht, dass das Zeug zwischen den Dollarzeichen hier nicht als Inline verarbeitet werden soll $$\LaTeX$$, obwohl es syntaktisch gültig ist $$\LaTeX$$?
+Oder einfach [Faulheit, Ungeduld und Hubris](http://www.parrot.org/); aber das ist nicht konspiratorisch genug für diesen Artikel. JMMV
+
+Es ist jetzt eine zweideutige Katastrophe von technischen Regex-Defekten, jedes Mal, wenn ein Autor / Implementierer erraten muss, was der Parser mit Sequenzen isolierter Dollarzeichen tun soll, die innerhalb eines einzigen Absatzes von Preisabschriftprosa auftreten. Betrachten Sie zum Beispiel eine Situation, in der [Französisch](markdown-is-not-latex.html.fr) Kanadische Finanzmathematiker diskutieren zwei Preise in zwei verschiedenen Währungen, sagen US `$`1,50 und 2,00`$` CA (zugegebenermaßen konstruiert, aber es veranschaulicht die Komplexität). Wie würden Sie eine `i18n` konform [GFM-Parser](https://pandoc.org/) das versteht, dass das Zeug zwischen den Dollarzeichen hier *nicht als Inline verarbeitet werden darf $$\LaTeX$$* obwohl es syntaktisch gültig ist $$\TeX$$ und entspricht diesem [naive spezifikation](https://pandoc.org/demo/example33/8.13-math.html)?
 
 Viel Glück damit, wenn Sie eine Massen-GFM-Konvertierung von internationalen Legacy-Dokumentformaten auf eine Nicht-GitHub-Plattform durchführen. Es wird nur "Arbeit" wenn es in Visual Studio gerendert wird, wenn es überhaupt funktioniert.
 
@@ -40,11 +42,11 @@ Im Gegensatz zu den Standards, die aus [JCP](https://jcp.org/en/home/index), wir
 
 Wieder absichtliche Abweichung von Grubers Zielen.
 
-Am ekligsten ist, dass das Umarmen und Ausdehnen des bösen Imperiums eine Armee von F/OSS-freien Arbeitssklaven hat, die als synchronophantische Gedankenpolizei über ihre Bemühungen dienen, die Arbeit anderer für ihre eigenen Marktgewinne über KI zu steuern.
+Am ekelhaftesten hat die Umarmung und Ausweitung des bösen Imperiums eine Armee von F/OSS-freien Arbeitssklaven, die als synchronophantische Gedankenpolizei über ihre Bemühungen dienen, die Arbeit anderer für ihre eigenen Marktgewinne über KI zu steuern.<sup>1</sup>. Schauen Sie sich einfach die Antworten auf den markierten HackerNews-Beitrag dieser Seite im Abschnitt "Links" unten an, um einige davon zu treffen.
 
 ## Fick Microsoft
 
-Kurz gesagt, GFM ist keine Branchenspezifikation mehr, sondern ein proprietäres Anbieterformat, das sich nicht von dem Wikimedia-Müll unterscheidet, aus dem sie es kopiert haben.
+Kurz gesagt, GFM ist nicht mehr eine internationale Branchenspezifikation, sondern ein proprietäres Anbieterformat, das sich nur in den USA unterscheidet. [Wikimedia-Müll](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) Sie kopierten es aus.
 
 [Orion](https://www.sunstarsys.com/orion/features) **verwendet und wird niemals neuere GFM-Parser verwenden, die vorgeben, diese schmutzige Fehlfunktion zu verfolgen**.
 

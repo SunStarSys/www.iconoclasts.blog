@@ -1,8 +1,8 @@
 ---
 categories: Orion
 dependencies: '*.md.sv'
-keywords: nedsättning,Microsoft,Github,korrupt,omfamna,förlänga,sykofant
-status: verifierad=39961
+keywords: nedsättning,Microsoft,Github,korrupt,omfamna, utöka,sykofant,AI
+status: verifierad=40060
 title: Microsoft anses vara skadligt
 ---
 
@@ -24,11 +24,13 @@ title: Microsoft anses vara skadligt
 
 Naturligtvis var detta helt avsiktligt, eftersom [:editormd-logo: ingenjörsteam i världsklass](http://editor.md.ipandao.com) hade bestämt sig för $$\KaTeX$$ med dubbla dollar token gränser för infogad matematik, och inhägnad matematik block för block $$\KaTeX$$ bearbetning **före 2020**.
 
-Poängen här är att en 2-teckenavgränsare som sällan förekommer i typisk prosa är det normala idealet för situationer som denna. [Hade Microsoft fastnat för att bara stödja \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Jag skulle inte skriva den här artikeln 2026, eftersom det valet uppfyller de normala idealiska förutsättningarna för trogen introduktion av inline matematiska uttryck i en Markdown spec.
+Poängen här är att en 2-teckenavgränsare som sällan förekommer i typisk prosa är det normala idealet för situationer som denna. [Hade Microsoft fastnat för att bara stödja \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Jag skulle inte skriva den här artikeln 2026, eftersom det valet uppfyller de normala idealiska förutsättningarna för trogen introduktion av inline matematiska uttryck i en Markdown spec. Det bidrar också till karpaltunnelsyndrom för professionella matematiktypister, så det finns något annat att tänka på förutom gränstoken unikhet.
 
-Om jag var tvungen att gissa deras motiv för att överväga att bloggartikelns föreslagna syntax otillräcklig för deras nuvarande behov, misstänker jag att motiven handlade mer om girighet och marknadskontroll och "kundmissnöje" Bra F/OSS förvaltning. ÅMMV
+Om jag var tvungen att gissa deras motiv för att överväga att bloggartikelns föreslagna syntax otillräcklig för deras nuvarande behov, misstänker jag att de var mer om girighet och marknadskontroll och "kundmissnöje" Bra F/OSS förvaltning.
 
-Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk till exempel på en situation där franska kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1,50 och 2 00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel GFM-parser som förstår att grejerna mellan dollartecknen här inte ska bearbetas som inline $$\LaTeX$$, även om det är syntaktiskt giltigt $$\LaTeX$$?
+Eller bara [Lättja, otålighet och Hubris](http://www.parrot.org/)Men det är inte konspiratoriskt nog för den här artikeln. ÅMMV
+
+Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk dig en situation där [Franska](markdown-is-not-latex.html.fr) Kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1,50 och 2 00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel [GFM-parser](https://pandoc.org/) som förstår att grejerna mellan dollartecknen här är *inte att behandlas som inline $$\LaTeX$$*, även om det är syntaktiskt giltigt $$\TeX$$ och överensstämmer med detta [naiv spec](https://pandoc.org/demo/example33/8.13-math.html)?
 
 Lycka till med det om du gör en bulk GFM-konvertering av internationella äldre dokumentformat till en icke-GitHub plattform. Det kommer bara "studera" när det renderas i Visual Studio, om det ens fungerar alls.
 
@@ -40,11 +42,11 @@ Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/in
 
 Återigen, avsiktlig avvikelse från Grubers mål.
 
-Mest äckligt, omfamna och utvidga onda imperiet har en armé av F / OSS fria arbetskraft slavar att fungera som synkofantisk tanke polisen om deras ansträngningar att pilfer arbetskraft andra för sina egna marknadsvinster via AI.
+Mest äckligt, omfamna och utvidga onda imperiet har en armé av F / OSS fria arbetskraft slavar för att fungera som synkofantisk tanke polisen om deras ansträngningar att pilfer arbetskraft andra för sina egna marknadsvinster via AI<sup>1</sup>. Kolla bara in svaren på det flaggade HackerNews-inlägget på den här sidan i avsnittet Länkar nedan för att träffa några av dem.
 
 ## Fuck Microsoft
 
-Lång historia kort, GFM är inte längre en branschspecifikation, men ett proprietärt leverantörsformat som inte skiljer sig från Wikimedias skräp de kopierade det från.
+Lång historia kort, GFM är inte längre en internationell industrispecifikation, men ett amerikanskt proprietärt leverantörsformat skiljer sig inte från [Wikimediaskräp](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) De kopierade den från.
 
 [Orion](https://www.sunstarsys.com/orion/features) **använder inte och kommer aldrig att använda nyare GFM-parsrar som låtsas spåra denna smutsiga felfunktion**.
 
