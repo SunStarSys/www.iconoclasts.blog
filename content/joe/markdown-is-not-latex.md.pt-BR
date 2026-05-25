@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.pt-BR'
 keywords: markdown,Microsoft, Github, corrupto, abraçar, estender, sycophant
-status: rascunho
+status: verificado=39938
 title: Microsoft considerada prejudicial
 ---
 
@@ -32,7 +32,7 @@ Se eu tivesse que adivinhar seus motivos para considerar que a sintaxe proposta 
 
 Boa sorte com isso se você estiver fazendo uma conversão GFM em massa de formatos de documentos legados internacionais para uma plataforma não-GitHub. Somente será "trabalho" quando renderizado no Visual Studio, se mesmo funciona.
 
-Uma coisa é dizer que você não vai escrever coisas hoje que confundem o analisador agora; outra é dizer que as coisas escritas no passado não confundirão o analisador: hoje, ou no futuro.
+Uma coisa é dizer que você não escreverá coisas **hoje** que confundam o analisador **agora**; outra é dizer que as coisas escritas no **passado** não confundirão o analisador: hoje ou nas releases do analisador **futuro**.
 
 Ao contrário dos padrões emergentes do [JCP](https://jcp.org/en/home/index), nunca haverá um conjunto de testes de certificação de conformidade para essa bagunça, porque é um [evolução](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situação](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) em [o chão](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) em [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 

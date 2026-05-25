@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna,förlänga,sykofant
-status: skiss
+status: verifierad=39938
 title: Microsoft anses vara skadligt
 ---
 
@@ -32,7 +32,7 @@ Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en förf
 
 Lycka till med det om du gör en bulk GFM-konvertering av internationella äldre dokumentformat till en icke-GitHub plattform. Det kommer bara "studera" när det renderas i Visual Studio, om det ens fungerar alls.
 
-Det är en sak att säga att du inte kommer att skriva saker idag som förvirrar parsern nu; det är en helt annan sak att säga att de saker som skrivits tidigare inte kommer att förvirra parsern: idag eller i framtiden.
+Det är en sak att säga att du inte kommer att skriva saker **idag** som förvirrar parser **nu**; Det är en helt annan att säga att de saker som skrivs i **tidigare** inte kommer att förvirra parser: idag, eller i **framtida** parserutgåvor.
 
 Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/index), det kommer aldrig att finnas en överensstämmelse-certifierande testsvit för denna röra, eftersom det är en [utvecklas](https://github.com/github/markup?tab=readme-ov-file#github-markup) [plats](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) på [marken](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) vid [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 

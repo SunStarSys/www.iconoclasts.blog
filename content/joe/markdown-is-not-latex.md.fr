@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.fr'
 keywords: markdown,Microsoft,Github,corrompu,étreinte,extension,sycophant
-status: projet
+status: vérifié=39938
 title: Microsoft considéré comme nuisible
 ---
 
@@ -32,7 +32,7 @@ C'est maintenant un désastre ambigu des défauts d'expression régulière d'ing
 
 Bonne chance avec cela si vous effectuez une conversion GFM en masse de formats de documents existants internationaux vers une plate-forme non-GitHub. Ce sera seulement "travail" lorsqu'elle est rendue dans Visual Studio, si elle fonctionne même du tout.
 
-C'est une chose de dire que vous n'écrirez pas des choses aujourd'hui qui confondent l'analyseur maintenant ; c'est une autre chose de dire que les choses écrites dans le passé ne confondront pas l'analyseur : aujourd'hui ou à l'avenir.
+C'est une chose de dire que vous n'écrirez pas les éléments **aujourd'hui** qui confondent l'analyseur **maintenant** ; c'est une autre chose de dire que les éléments écrits dans le **passé** ne confondront pas l'analyseur : aujourd'hui ou dans les versions **futures** de l'analyseur.
 
 Contrairement aux normes issues de [JCP](https://jcp.org/en/home/index), il n'y aura jamais de suite de tests de conformité pour ce gâchis, car c'est un [évolution](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situation](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) le [le sol](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) à [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 

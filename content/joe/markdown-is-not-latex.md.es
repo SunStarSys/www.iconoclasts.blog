@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante
-status: borrador
+status: verificado=39938
 title: Microsoft considerado dañino
 ---
 
@@ -32,7 +32,7 @@ Ahora es un desastre ambiguo de defectos de la regex de ingeniería cada vez que
 
 Buena suerte con eso si estás haciendo una conversión masiva de GFM de formatos de documentos heredados internacionales a una plataforma que no sea GitHub. Sólo "trabajo" cuando se presenta en Visual Studio, si incluso funciona en absoluto.
 
-Una cosa es decir que no escribirás cosas hoy que confundan al analizador ahora; es otra muy distinta decir que las cosas escritas en el pasado no confundirán al analizador: hoy o en el futuro.
+Una cosa es decir que no escribirá cosas **hoy** que confundan al analizador **ahora**; otra cosa es decir que las cosas escritas en el **pasado** no confundirán al analizador: hoy o en los lanzamientos del analizador **futuros**.
 
 A diferencia de los estándares que surgen de la [JCP](https://jcp.org/en/home/index), nunca habrá un conjunto de pruebas de certificación de cumplimiento para este desastre, porque es un [evolución](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situación](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) activado [el terreno](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) a las [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 
