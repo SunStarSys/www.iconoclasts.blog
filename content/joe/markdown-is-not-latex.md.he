@@ -2,7 +2,7 @@
 categories: אוריון
 dependencies: '*.md.he'
 keywords: markdown,מיקרוסופט,Github,corrupt,embrace,הרחבה,sycophant
-status: אומתו 39738
+status: אומתו 39793
 title: מיקרוסופט נחשבת מזיקה
 ---
 
@@ -18,7 +18,7 @@ title: מיקרוסופט נחשבת מזיקה
 
 ## :fa-github: GitHub סימון בטעם (GFM)
 
-GFM נשאר נאמן ליעדי העיצוב של מפרט זה עד [מיקרוסופט הממזרה את סימן הדולר המבודד כדי להמיר אותו באופן מותנה $$\LaTeX$$ אסימון](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) בגלל קצת מיושן, מכוער crapware שנקרא MathJax כי לא היה שום קשר עם Markdown, ואת העובדה כי אלה assholes לא רוצה לקדם $$\KaTeX$$ ללא שוחד מאקדמיית חאן.
+[מנהל מימוש שירות](https://github.github.com/gfm/) נשאר נאמן למטרות העיצוב של מפרט זה עד [מיקרוסופט הממזרה את סימן הדולר המבודד כדי להמיר אותו באופן מותנה $$\LaTeX$$ אסימון](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) בגלל כמה crapware מוסדי מיושן, מכוער ואיטי שנקרא [MathJax](https://www.mathjax.org/) זה לא היה קשור למרקדאון, והעובדה שהמטומטמים האלה לא רוצים לקדם. [$$\KaTeX$$](https://katex.org/) ללא שוחד מאקדמיית חאן.
 
 ## אמצו והרחיבו את Redux
 
@@ -26,9 +26,11 @@ GFM נשאר נאמן ליעדי העיצוב של מפרט זה עד [מיקר�
 
 הנקודה כאן היא שתוחם בן 2 תווים המתרחש לעיתים נדירות בפרוזה טיפוסית הוא האידיאל הרגיל למצבים כאלה. [אם מיקרוסופט הייתה תומכת רק ב-$` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) לא הייתי כותב מאמר זה בשנת 2026, כי בחירה זו עונה על התנאים האידיאליים הרגילים להקדמה נאמנה של ביטויי מתמטיקה מוטבעים במפרט Markdown.
 
+אם הייתי צריך לנחש את המניעים שלהם לשקול את התחביר המוצע של מאמר הבלוג לא מספיק עבור הצרכים הנוכחיים שלהם, אני חושד המניעים היו יותר על תאוות בצע ובקרה בשוק ו "אי שביעות רצון הלקוח" טוב יותר מ-F/OSS. שנה מול שנה
+
 זה עכשיו אסון דו-משמעי של פגמים regex הנדסה בכל פעם מחבר / מיישם צריך לנחש מה המנתח אמור לעשות עם רצפים של סימני דולר מבודדים המתרחשים בתוך פסקה אחת של פרוזה markdown, כמו כאשר דנים בשני מחירים, אומר `$`1.50, ו `$`2.00.  בהצלחה עם זה (הוא) `$` א $$\LaTeX$$ אסימון, או האם זו תחילית מטבע?) אם אתה מבצע המרת GFM בצובר של תבניות מסמכים מירושה לפלטפורמה שאינה-GitHub. זה יהיה רק "עבודה" כשהופנה מהדף Visual Studio
 
-בניגוד לתקנים המתעוררים [JCP](https://jcp.org/en/home/index), לעולם לא תהיה חבילת בדיקות המספקת אישור תאימות עבור הבלגן הזה, מכיוון שהוא [מתפתח](https://github.com/github/markup?tab=readme-ov-file#github-markup) [מצב](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) פעיל [האדמה](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) בשעה [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser):
+בניגוד לתקנים המתעוררים [JCP](https://jcp.org/en/home/index), לעולם לא תהיה חבילת בדיקות המספקת אישור תאימות עבור הבלגן הזה, מכיוון שהוא [מתפתח](https://github.com/github/markup?tab=readme-ov-file#github-markup) [מצב](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) פעיל [האדמה](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) בשעה [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 
 > GitHub לא חשף בפומבי את ה-markdown parser הנוכחי שלו בקוד פתוח. עם זאת, ידוע כי GitHub משתמש במימוש מותאם אישית של Markdown עבור הפלטפורמה שלו, המבוססת על מפרט GitHub Flavored Markdown (GFM). מימוש זה כולל תמיכה להרחבות ותכונות שונות שמשפרות את התחביר Markdown המשמש את GitHub.
 
@@ -43,5 +45,9 @@ GFM נשאר נאמן ליעדי העיצוב של מפרט זה עד [מיקר�
 [אוריון](https://www.sunstarsys.com/orion/features) **לא, ולעולם לא, ישתמשו במנתחי GFM חדשים יותר שמעמידים פנים שהם עוקבים אחר התכונה המלוכלכת הזו**.
 
 במקום זאת, אנו מסתמכים על מזלג פנימי של @markedjs/מסומן ונמשיך לעשות זאת בעתיד הנראה לעין.
+
+## הערות שוליים
+
+1. הפרוזה המצוטטת הייתה תגובת הבינה המלאכותית המקורית של בינג במשך 24 השעות האחרונות, עד שהוספתי את קישורי הרקע הנוספים למאמר זה, שממנו היא "למד" איך לומר משהו פחות מטומטם בתגובה לשאילתה "מהו מנתח markdown הנוכחי של ה-github בקוד פתוח". זו הבינה המלאכותית שמבצעת **לוקחת את העבודה שלנו**, חברים.
 
 <!-- $Date$ $Author$ $Revision$ -->

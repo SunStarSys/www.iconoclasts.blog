@@ -2,7 +2,7 @@
 categories: オリオン
 dependencies: '*.md.ja'
 keywords: Markdown、Microsoft、Github、腐敗、抱擁、拡張、サイコファント
-status: 確認済み=39738
+status: 確認済み=39793
 title: マイクロソフトは有害と考えました
 ---
 
@@ -18,7 +18,7 @@ title: マイクロソフトは有害と考えました
 
 ## :fa-github: GitHubフレーバー値下げ(GFM)
 
-GFMはその仕様の設計目標に忠実であり続けた。[Microsoftは、条件付きでそれをaに変換するために孤立したドル記号をbastardized $$\LaTeX$$ トークン](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) Markdownとは関係のないMathJaxと呼ばれる古くて醜いクラップウェアのため、これらのアホが宣伝したくないという事実$$\KaTeX$$ カーン・アカデミー(Khan Academy)
+[GFM](https://github.github.com/gfm/) その仕様の設計目標に忠実であり続けた[Microsoftは、条件付きでそれをaに変換するために孤立したドル記号をbastardized $$\LaTeX$$ トークン](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) いくつかの古く、醜く、ゆっくりした制度的なクラップウェアのために呼ばれる[MathJax](https://www.mathjax.org/) マークダウンとは関係なく、これらのアホが宣伝したくないという事実[$$\KaTeX$$](https://katex.org/) カーン・アカデミー(Khan Academy)
 
 ## Reduxの活用と拡張
 
@@ -26,9 +26,11 @@ GFMはその仕様の設計目標に忠実であり続けた。[Microsoftは、�
 
 ここでのポイントは、典型的な散文ではめったに起こらない2文字のデリミタが、このような状況にとって通常の理想であることです。[マイクロソフトが\$\をサポートするだけ` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 私は2026年にこの記事を書くつもりはありません。なぜなら、その選択はMarkdown仕様にインライン数学式を忠実に導入するための通常の理想的な条件を満たしているからです。
 
+ブログ記事の提案された構文が現在のニーズには不十分であると考える動機を推測する必要があった場合、動機は貪欲と市場管理についてより多く、"顧客の不満" 優れたF/OSSスチュワードシップYMMV。
+
 二つの価格を議論するときのように、作者/実装者がマークダウン・プロースの単一の段落内で発生する孤立したドル記号のシーケンスとパーサーが何をすべきかを推測しなければならないたびに、エンジニアリング・レジェックスの欠陥のあいまいな災害になりました。`$`1.50、そして`$`2.00 GOOD LUCK WITH THAT(これでよかった) `$` A $$\LaTeX$$ トークン、または通貨プリフィクスですか?)レガシー・ドキュメント・フォーマットをGitHub以外のプラットフォームに一括GFM変換する場合。のみ"勉強する" Visual Studioでレンダリングされたとき。
 
-標準とは違って、[JCP](https://jcp.org/en/home/index)、この混乱のためのコンプライアンス証明のテスト スイートは決してありません、それは[進化する](https://github.com/github/markup?tab=readme-ov-file#github-markup) [場所](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 日付[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 場所[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser):
+標準とは違って、[JCP](https://jcp.org/en/home/index)、この混乱のためのコンプライアンス証明のテスト スイートは決してありません、それは[進化する](https://github.com/github/markup?tab=readme-ov-file#github-markup) [場所](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 日付[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 場所[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 
 > GitHubは、現在のオープンソース・マークダウン・パーサーを公開していません。ただし、GitHubは、GitHub Flavored Markdown (GFM)仕様に基づく、そのプラットフォームにMarkdownのカスタム実装を使用することが知られています。この実装には、GitHubで使用されるMarkdown構文を拡張する様々な拡張機能および機能のサポートが含まれます。
 
@@ -43,5 +45,9 @@ GFMはその仕様の設計目標に忠実であり続けた。[Microsoftは、�
 [オリオン](https://www.sunstarsys.com/orion/features) **この汚れた不具合を追跡するふりをする新しいGFMパーサーは使用せず、決して使用しません**。
 
 代わりに、私たちは @markedjs/markedの内部フォークに依存しており、予見可能な将来のために引き続きそうします。
+
+## 脚注
+
+1. 引用されたproseは、この記事に追加の背景リンクを追加するまで、過去24時間の元のAI応答でした。"習った" クエリに応答して、より愚かなことを言う方法"githubの現在のオープンソース・マークダウン・パーサーとは"。これは、私たちの仕事を引き受けているAIです。
 
 <!-- $Date$ $Author$ $Revision$ -->

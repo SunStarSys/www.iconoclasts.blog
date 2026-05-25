@@ -2,7 +2,7 @@
 categories: 奧里昂
 dependencies: '*.md.zh-TW'
 keywords: markdown，Microsoft，Github，corrupt，embace，extend，sy-ophant - 降價，微軟，巨石，貪腐，寬限，擴展
-status: 驗證 =39738
+status: 驗證 =39793
 title: Microsoft 認為有害
 ---
 
@@ -18,7 +18,7 @@ title: Microsoft 認為有害
 
 ## :fa-github: GitHub 調味料減價 (GFM)
 
-GFM 對該規格的設計目標保持真，直到[微軟使隔離的錢幣符號有條件地將其轉換為$$\LaTeX$$ 符記](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) 因為一些名為 MathJax 的古怪軟體，與 Markdown 無關，而且這些助理不想要促銷的事實$$\KaTeX$$ 沒有來自漢學院的賄賂。
+[GFM](https://github.github.com/gfm/) 確保符合該規格的設計目標，直到[微軟使隔離的錢幣符號有條件地將其轉換為$$\LaTeX$$ 符記](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) 因為一些古怪、醜陋又慢慢的機構破碎軟體所呼叫[MathJax](https://www.mathjax.org/) 與 Markdown 無關，而且這些 Assholes 不想升級的事實[$$\KaTeX$$](https://katex.org/) 沒有來自漢學院的賄賂。
 
 ## 擁抱並擴充 Redux
 
@@ -26,9 +26,11 @@ GFM 對該規格的設計目標保持真，直到[微軟使隔離的錢幣符號
 
 此處的點是一般程序中很少出現的 2 個字元分隔符號，是一般情況的理想選擇。[如果 Microsoft 停滯僅支援 \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 我不會在 2026 年撰寫這篇文章，因為該選擇符合 Markdown 規格中引入內嵌數學表示式的正常理想條件。
 
+如果我必須猜測他們的動機，以考慮該部落格文章的建議語法不足以滿足他們目前的需求，我懷疑這些動機更關乎貪婪和市場控制。"客戶不滿意" 優越的 F/OSS 管理。YMMV。
+
 如今，每當作者 / 實作者必須猜測剖析器應如何處理一段降價程序中出現的一連串隔離貨幣符號時，工程正規表示式瑕疵就會發生不明確的災難，就像討論兩筆價格一樣。`$`1.50 和`$`2.00. 祝你好運 (這是) `$` 一個$$\LaTeX$$ 如果您將舊有文件格式的大量 GFM 轉換成非 GitHub 平台，記號或它是幣別字首？)。只會"工作" 在 Visual Studio 中呈現時。
 
-不同於標準的出現[JCP](https://jcp.org/en/home/index)，此訊息永遠不會有合規性認證測試套件，因為這是[演進](https://github.com/github/markup?tab=readme-ov-file#github-markup) [情境](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 開啟[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 於[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser):
+不同於標準的出現[JCP](https://jcp.org/en/home/index)，此訊息永遠不會有合規性認證測試套件，因為這是[演進](https://github.com/github/markup?tab=readme-ov-file#github-markup) [情境](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 開啟[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 於[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1 個</sup>:
 
 > GitHub 尚未公開揭露其目前的開放原始碼減價剖析器。不過，GitHub 會根據 GitHub Flavored Markdown (GFM) 規格，使用 Markdown 平台的自訂實作。此實作支援各種擴充功能和增強 GitHub 使用之 Markdown 語法的功能。
 
@@ -43,5 +45,9 @@ GFM 對該規格的設計目標保持真，直到[微軟使隔離的錢幣符號
 [奧里昂](https://www.sunstarsys.com/orion/features) **不要，也永遠不會使用較新的 GFM 剖析器來預先追蹤此已變更的功能 **。
 
 相反地，我們依賴 @markedjs 的內部分叉，並將繼續在可預見的未來執行。
+
+## 註腳
+
+1. 這篇引述的篇章在過去 24 小時內發表了原本的 AI 回應，直到我為這篇文章新增了其他背景連結為止。"已學習" 如何說出回應查詢較少的偶發性"github 目前的開放原始碼 markdown 剖析器"。這是 **我們工作** 的人工智慧。
 
 <!-- $Date$ $Author$ $Revision$ -->

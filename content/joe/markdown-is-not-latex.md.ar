@@ -2,7 +2,7 @@
 categories: أوريون
 dependencies: '*.md.ar'
 keywords: تخفيض السعر، مايكروسوفت، غيثوب، فاسد، احتضان، تمديد، سيكوفانت
-status: التحقق = 39738
+status: التحقق = 39793
 title: مايكروسوفت تعتبر ضارة
 ---
 
@@ -18,7 +18,7 @@ title: مايكروسوفت تعتبر ضارة
 
 ## :fa-github: GitHub تخفيض السعر بالنكهة (GFM)
 
-حافظت GFM على توافقها مع أهداف تصميم المواصفات حتى [قامت مايكروسوفت بتحويل علامة الدولار المعزولة إلى تحويل مشروط لها إلى $$\LaTeX$$ رمز مميز](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) بسبب بعض البرامج الضارة القديمة القبيحة التي تسمى MathJax والتي لا علاقة لها بـ Markdown، وحقيقة أن هؤلاء الحمار لا يريدون الترويج لها $$\KaTeX$$ دون رشوة من أكاديمية خان.
+[إدارة القوى العاملة](https://github.github.com/gfm/) حافظ على صحته وفقًا لأهداف تصميم هذه المواصفات حتى [قامت مايكروسوفت بتحويل علامة الدولار المعزولة إلى تحويل مشروط لها إلى $$\LaTeX$$ رمز مميز](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) بسبب بعض crapware المؤسسية القديمة والقبيحة والبطيئة تسمى [MathJax](https://www.mathjax.org/) التي لا علاقة لها مع Markdown، وحقيقة أن هؤلاء الحمار لا يريدون تعزيز [$$\KaTeX$$](https://katex.org/) دون رشوة من أكاديمية خان.
 
 ## احتضان Redux وتوسيعه
 
@@ -26,9 +26,11 @@ title: مايكروسوفت تعتبر ضارة
 
 النقطة هنا هي أن محدد مكون من حرفين نادرًا ما يحدث في النثر النموذجي هو المثالي الطبيعي لمواقف مثل هذه. [كانت مايكروسوفت عالقة في دعم \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) لن أكتب هذه المقالة في عام 2026، لأن هذا الخيار يفي بالظروف المثالية العادية لإدخال تعبيرات الرياضيات المضمنة بأمانة في مواصفات Markdown.
 
+إذا اضطررت إلى تخمين دوافعهم للنظر في أن بناء الجملة المقترح لمقال المدونة غير كافٍ لاحتياجاتهم الحالية، فإنني أشك في أن الدوافع كانت أكثر حول الجشع ومراقبة السوق و "عدم رضا العميل" من الإشراف الجيد على F/OSS. YMMV.
+
 إنها الآن كارثة غامضة لعيوب regex الهندسية في كل مرة يتعين على المؤلف / المنفذ تخمين ما يفترض أن يفعله المحلل مع تسلسلات من علامات الدولار المعزولة التي تحدث في فقرة واحدة من نثر تخفيض السعر، كما هو الحال عند مناقشة سعرين، على سبيل المثال `$`1.50، و `$`2.00.  حظا سعيدا مع ذلك (هو `$` عام $$\LaTeX$$ الرمز المميز، أم أنه بادئة عملة؟) إذا كنت تقوم بتحويل GFM مجمع لتنسيقات المستندات القديمة إلى نظام أساسي غير GitHub. سوف فقط "دراسة" عند عرضها في Visual Studio.
 
-على عكس المعايير الناشئة عن [JCP](https://jcp.org/en/home/index)، لن تكون هناك مجموعة اختبار معتمدة للامتثال لهذه الفوضى، لأنها [يتطور](https://github.com/github/markup?tab=readme-ov-file#github-markup) [مكان](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) يعمل [الأرض](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) في [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser):
+على عكس المعايير الناشئة عن [JCP](https://jcp.org/en/home/index)، لن تكون هناك مجموعة اختبار معتمدة للامتثال لهذه الفوضى، لأنها [يتطور](https://github.com/github/markup?tab=readme-ov-file#github-markup) [مكان](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) يعمل [الأرض](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) في [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 
 > GitHub لم يكشف علنًا عن محلل تخفيض السعر الحالي مفتوح المصدر. ومع ذلك، من المعروف أن GitHub تستخدم تنفيذًا مخصصًا لـ Markdown لمنصتها، والذي يستند إلى مواصفات GitHub Flavored Markdown (GFM). يتضمن هذا التنفيذ دعمًا لمختلف الامتدادات والميزات التي تحسن صياغة تخفيض السعر المستخدمة بواسطة GitHub.
 
@@ -43,5 +45,9 @@ title: مايكروسوفت تعتبر ضارة
 [أوريون](https://www.sunstarsys.com/orion/features) **لا تستخدم، ولن تستخدمها أبدًا، محللو GFM الأحدث الذين يتظاهرون بتتبع هذه الميزة القذرة**.
 
 وبدلا من ذلك، نعتمد على شوكة داخلية من @markedjs/marked وسنواصل القيام بذلك في المستقبل المنظور.
+
+## الحواشي السفلية
+
+1. كان النثر المقتبس هو استجابة الذكاء الاصطناعي الأصلية لبينج خلال الـ 24 ساعة الماضية، حتى أضفت روابط الخلفية الإضافية إلى هذه المقالة، والتي "تعلم" كيفية قول شيء أقل غبية ردا على الاستعلام "ما هو محلل تخفيض السعر الحالي مفتوح المصدر في github". هذا هو الذكاء الاصطناعي الذي يأخذ وظائفنا**، أيها الناس.
 
 <!-- $Date$ $Author$ $Revision$ -->
