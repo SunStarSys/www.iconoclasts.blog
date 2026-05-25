@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant
-status: verified=39773
+status: verified
 Dependencies: *.md.en
 Categories: Orion
 
@@ -26,7 +26,7 @@ The point here is that a 2-character delimiter that rarely occurs in typical pro
 
 It is now an ambiguous disaster of engineering regex defects every time an author/implementer has to guess what the parser is supposed to do with sequences of isolated dollar signs occurring within a single paragraph of markdown prose, as when discussing two prices, say `$`1.50, and `$`2.00.  Good luck with that (is the `$` a $$\LaTeX$$ token, or is it a currency prefix?) if you are doing a bulk GFM conversion of legacy document formats to a non-GitHub platform. It will only "work" when rendered in Visual Studio.
 
-Unlike standards emerging from the [JCP](https://jcp.org/en/home/index), there will never be a compliance-certifying test suite for this mess, because it's an [evolving](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situation](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) on [the ground](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) at [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser):
+Unlike standards emerging from the [JCP](https://jcp.org/en/home/index), there will never be a compliance-certifying test suite for this mess, because it's an [evolving](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situation](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) on [the ground](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) at [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 
 > GitHub has not publicly disclosed its current open-source markdown parser. However, it is known that GitHub uses a custom implementation of Markdown for its platform, which is based on the GitHub Flavored Markdown (GFM) specification. This implementation includes support for various extensions and features that enhance the Markdown syntax used by GitHub.
 
@@ -41,5 +41,10 @@ Long story short, GFM is no longer an industry spec, but a proprietary vendor fo
 [Orion](https://www.sunstarsys.com/orion/features) **does not, and will never, use newer GFM parsers that pretend to track this dirty misfeature**.
 
 Instead, we rely on an internal fork of @markedjs/marked and will continue to do so for the foreseeable future.
+
+
+## Footnotes
+
+1. The quoted prose was bing's original AI response for the past 24 hours, until I added the additional background links to this article, from which it "learned" how to say something less idiotic in response to the query "what is github's current open source markdown parser".  This is the AI that's **taking our jobs**, folks.
 
 <!-- $Date$ $Author$ $Revision$ -->
