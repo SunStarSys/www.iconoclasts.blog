@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna,förlänga,sykofant
-status: verifierad=39938
+status: verifierad=39961
 title: Microsoft anses vara skadligt
 ---
 
@@ -18,7 +18,7 @@ title: Microsoft anses vara skadligt
 
 ## :fa-github: GitHub Smaksatt nedsättning (GFM)
 
-[Personalhantering](https://github.github.com/gfm/) höll fast vid specifikationens designmål ända fram till [Microsoft bastardized den isolerade dollartecknet för att villkorligt konvertera det till en $$\LaTeX$$ tecken](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) På grund av några föråldrade, fula och långsamma institutionella crapware kallas [MathJax](https://www.mathjax.org/) Det hade ingenting att göra med Markdown, och det faktum att dessa rövhål inte vill främja [$$\KaTeX$$](https://katex.org/) Utan en muta från Khan Academy.
+[Personalhantering](https://github.github.com/gfm/) höll fast vid specifikationens designmål ända fram till [Microsoft bastardized den isolerade dollartecknet för att villkorligt konvertera det till en $$\LaTeX$$ tecken](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) på grund av några cloistered, föråldrade, fula och långsamma institutionella crapware kallas [MathJax](https://www.mathjax.org/) Det hade ingenting att göra med Markdown, och det faktum att dessa rövhål inte vill främja [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-kompatibel [$$\KaTeX$$](https://katex.org/) Utan en muta från Khan Academy.
 
 ## Omfamna och utöka Redux
 

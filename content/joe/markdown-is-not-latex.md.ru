@@ -2,7 +2,7 @@
 categories: Орион
 dependencies: '*.md.ru'
 keywords: разметка, Майкрософт, Гитуб, коррумпированный, обнимает, продлевает, подхалим
-status: проверено=39938
+status: проверено=39961
 title: Майкрософт считает вредным
 ---
 
@@ -18,7 +18,7 @@ title: Майкрософт считает вредным
 
 ## :fa-github: GitHub Ароматизированное снижение цен (GFM)
 
-[ГФМ](https://github.github.com/gfm/) остается верным целям разработки этой спецификации вплоть до [Майкрософт ублюдил изолированный знак доллара, чтобы условно преобразовать его в $$\LaTeX$$ токен](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) из-за некоторых устаревших, уродливых и медленных институциональных Crapware называется [MathJax](https://www.mathjax.org/) Это не имело никакого отношения к Markdown, и тот факт, что эти мудаки не хотят продвигать [$$\KaTeX$$](https://katex.org/) без взятки из Академии Хана.
+[ГФМ](https://github.github.com/gfm/) остается верным целям разработки этой спецификации вплоть до [Майкрософт ублюдил изолированный знак доллара, чтобы условно преобразовать его в $$\LaTeX$$ токен](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) из-за некоторых закрытых, устаревших, уродливых и медленных институциональных Crapware называется [MathJax](https://www.mathjax.org/) Это не имело никакого отношения к Markdown, и тот факт, что эти мудаки не хотят продвигать [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-совместимый [$$\KaTeX$$](https://katex.org/) без взятки из Академии Хана.
 
 ## Используйте и расширяйте Redux
 

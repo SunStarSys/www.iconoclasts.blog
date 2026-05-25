@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante
-status: verificado=39938
+status: verificado=39961
 title: Microsoft considerado dañino
 ---
 
@@ -18,7 +18,7 @@ title: Microsoft considerado dañino
 
 ## :fa-github: GitHub Rebaja con sabor (GFM)
 
-[GFM](https://github.github.com/gfm/) se mantuvo fiel a los objetivos de diseño de esa especificación hasta [Microsoft bastardizó el signo de dólar aislado para convertirlo condicionalmente en un $$\LaTeX$$ token](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) debido a un anticuado, feo y lento crapware institucional llamado [MathJax](https://www.mathjax.org/) que no tenía nada que ver con Markdown, y el hecho de que estos imbéciles no quieren promover [$$\KaTeX$$](https://katex.org/) Sin un soborno de la Academia Khan.
+[GFM](https://github.github.com/gfm/) se mantuvo fiel a los objetivos de diseño de esa especificación hasta [Microsoft bastardizó el signo de dólar aislado para convertirlo condicionalmente en un $$\LaTeX$$ token](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) debido a algunos crapware institucionales clausurados, anticuados, feos y lentos llamados [MathJax](https://www.mathjax.org/) que no tenía nada que ver con Markdown, y el hecho de que estos imbéciles no quieren promover [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-compatible [$$\KaTeX$$](https://katex.org/) Sin un soborno de la Academia Khan.
 
 ## Abrazar y ampliar Redux
 
