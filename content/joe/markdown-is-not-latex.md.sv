@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna,förlänga,sykofant
-status: verifierad=39812
+status: verifierad=39827
 title: Microsoft anses vara skadligt
 ---
 
@@ -28,7 +28,7 @@ Poängen här är att en 2-teckenavgränsare som sällan förekommer i typisk pr
 
 Om jag var tvungen att gissa deras motiv för att överväga att bloggartikelns föreslagna syntax otillräcklig för deras nuvarande behov, misstänker jag att motiven handlade mer om girighet och marknadskontroll och "kundmissnöje" Bra F/OSS förvaltning. ÅMMV
 
-Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa, som när man diskuterar två priser i två olika valutor, säger `$`1.50 och 2.00`$`Det senare är franska kanadensare. Lycka till med det (är `$` år $$\LaTeX$$ token, eller är det ett valutaprefix?) om du gör en mass-GFM-konvertering av äldre dokumentformat till en plattform som inte är GitHub. Det kommer bara "studera" när det renderas i Visual Studio, om det ens fungerar alls.
+Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa, som när man diskuterar två priser i två olika valutor, säger `$`1,50 och 2 00`$` Den senare är den franska kanadensiska dollarn. Lycka till med det (är `$` år $$\LaTeX$$ token, eller är det ett valutaprefix?) om du gör en mass-GFM-konvertering av äldre dokumentformat till en plattform som inte är GitHub. Det kommer bara "studera" när det renderas i Visual Studio, om det ens fungerar alls.
 
 Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/index), det kommer aldrig att finnas en överensstämmelse-certifierande testsvit för denna röra, eftersom det är en [utvecklas](https://github.com/github/markup?tab=readme-ov-file#github-markup) [plats](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) på [marken](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) vid [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 

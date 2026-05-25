@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.pt-BR'
 keywords: markdown,Microsoft, Github, corrupto, abraçar, estender, sycophant
-status: verificado=39812
+status: verificado=39827
 title: Microsoft considerada prejudicial
 ---
 
@@ -28,7 +28,7 @@ O ponto aqui é que um delimitador de 2 caracteres que raramente ocorre em prosa
 
 Se eu tivesse que adivinhar seus motivos para considerar que a sintaxe proposta do artigo do blog é insuficiente para suas necessidades atuais, eu suspeito que os motivos eram mais sobre ganância e controle de mercado e "insatisfação do cliente" Muito bom F/OSS. AMMV.
 
-É agora um desastre ambíguo de defeitos regex de engenharia cada vez que um autor / implementador tem que adivinhar o que o analisador deve fazer com sequências de cifrões isolados ocorrendo dentro de um único parágrafo de prosa de markdown, como ao discutir dois preços em duas moedas diferentes, dizem `$`1,50 e 2,00`$`sendo o último canadense francês. Boa sorte com isso (é o `$` a $$\LaTeX$$ token, ou é um prefixo de moeda?) se você estiver fazendo uma conversão GFM em massa de formatos de documentos legados para uma plataforma não GitHub. Somente será "trabalho" quando renderizado no Visual Studio, se mesmo funciona.
+É agora um desastre ambíguo de defeitos regex de engenharia cada vez que um autor / implementador tem que adivinhar o que o analisador deve fazer com sequências de cifrões isolados ocorrendo dentro de um único parágrafo de prosa de markdown, como ao discutir dois preços em duas moedas diferentes, dizem `$`1,50 e 2.00`$` CA, sendo este último o Dólar Canadense Francês. Boa sorte com isso (é o `$` a $$\LaTeX$$ token, ou é um prefixo de moeda?) se você estiver fazendo uma conversão GFM em massa de formatos de documentos legados para uma plataforma não GitHub. Somente será "trabalho" quando renderizado no Visual Studio, se mesmo funciona.
 
 Ao contrário dos padrões emergentes do [JCP](https://jcp.org/en/home/index), nunca haverá um conjunto de testes de certificação de conformidade para essa bagunça, porque é um [evolução](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situação](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) em [o chão](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) em [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 

@@ -2,7 +2,7 @@
 categories: オリオン
 dependencies: '*.md.ja'
 keywords: Markdown、Microsoft、Github、腐敗、抱擁、拡張、サイコファント
-status: 確認済み=39812
+status: 確認済み=39827
 title: マイクロソフトは有害と考えました
 ---
 
@@ -28,7 +28,7 @@ title: マイクロソフトは有害と考えました
 
 ブログ記事の提案された構文が現在のニーズには不十分であると考える動機を推測する必要があった場合、動機は貪欲と市場管理についてより多く、"顧客の不満" 優れたF/OSSスチュワードシップYMMV。
 
-それは今、作者/実装者が、マークダウン・プロースの単一の段落内で発生する孤立したドル記号のシーケンスとパーサーが何をすべきかを推測しなければならないたびに、エンジニアリング・レジェックスの欠陥のあいまいな災害です、例えば、2つの異なる通貨で2つの価格について議論するとき、`$`1.50および2.00`$`後者はフランス系カナダ人。GOOD LUCK WITH THAT(これでよかった) `$` A $$\LaTeX$$ トークン、または通貨プリフィクスですか?)レガシー・ドキュメント・フォーマットをGitHub以外のプラットフォームに一括GFM変換する場合。のみ"勉強する" Visual Studioでレンダリングされた場合は、まったく動作します。
+それは今、作者/実装者が、マークダウン・プロースの単一の段落内で発生する孤立したドル記号のシーケンスとパーサーが何をすべきかを推測しなければならないたびに、エンジニアリング・レジェックスの欠陥のあいまいな災害です、例えば、2つの異なる通貨で2つの価格について議論するとき、`$`1.50および2,00`$` 後者はフランス・カナダ・ドル。GOOD LUCK WITH THAT(これでよかった) `$` A $$\LaTeX$$ トークン、または通貨プリフィクスですか?)レガシー・ドキュメント・フォーマットをGitHub以外のプラットフォームに一括GFM変換する場合。のみ"勉強する" Visual Studioでレンダリングされた場合は、まったく動作します。
 
 標準とは違って、[JCP](https://jcp.org/en/home/index)、この混乱のためのコンプライアンス証明のテスト スイートは決してありません、それは[進化する](https://github.com/github/markup?tab=readme-ov-file#github-markup) [場所](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 日付[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 場所[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 

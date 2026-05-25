@@ -2,7 +2,7 @@
 categories: 오리온
 dependencies: '*.md.ko'
 keywords: 마크 다운, 마이크로 소프트, Github, 손상, 멤브레이스, 확장, 식도
-status: 확인=39812
+status: 확인=39827
 title: 마이크로소프트는 유해하다고 생각했다.
 ---
 
@@ -28,7 +28,7 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 그 블로그 기사의 제안 된 구문을 현재의 요구에 충분하지 않다고 생각하기 위해 동기를 추측해야하는 경우, 나는 동기가 탐욕과 시장 통제에 대해 더 많은 것 같다고 생각합니다. "고객 불만족" 좋은 F / OSS 관리. YMMV
 
-이제 작성자/구현자가 매가인하 절차의 단일 단락 내에서 발생하는 격리된 달러 기호 시퀀스와 구문 분석기가 어떤 관련이 있는지 추측해야 할 때마다 엔지니어링 정규 표현식 결함의 모호한 재해입니다. 두 가지 다른 통화로 두 가격을 논의할 때처럼 다음과 같이 말합니다. `$`1.50 및 2.00`$`후자는 프랑스 캐나다인이다. 행운을 빈다(Good 행운을 빈다) `$` a $$\LaTeX$$ 토큰입니까, 아니면 통화 접두어입니까?) 레거시 문서 형식을 비GitHub 플랫폼으로 대량 GFM 변환을 수행하는 경우. 그것은 단지 "작업" Visual Studio에서 렌더링할 때도 작동합니다.
+이제 작성자/구현자가 매가인하 절차의 단일 단락 내에서 발생하는 격리된 달러 기호 시퀀스와 구문 분석기가 어떤 관련이 있는지 추측해야 할 때마다 엔지니어링 정규 표현식 결함의 모호한 재해입니다. 두 가지 다른 통화로 두 가격을 논의할 때처럼 다음과 같이 말합니다. `$`1.50 및 2,00`$` 미국은 프랑스 캐나다 달러(French Canadian Dollar)다. 행운을 빈다(Good 행운을 빈다) `$` a $$\LaTeX$$ 토큰입니까, 아니면 통화 접두어입니까?) 레거시 문서 형식을 비GitHub 플랫폼으로 대량 GFM 변환을 수행하는 경우. 그것은 단지 "작업" Visual Studio에서 렌더링할 때도 작동합니다.
 
 표준과 달리 [JCP](https://jcp.org/en/home/index), 이 혼란에 대한 규정 준수 인증 테스트 제품군은 없습니다. [진화 중](https://github.com/github/markup?tab=readme-ov-file#github-markup) [상황](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 켜기 [지상](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 시간 [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 
