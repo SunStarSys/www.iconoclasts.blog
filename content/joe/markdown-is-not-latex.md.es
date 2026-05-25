@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante
-status: verificado=39858
+status: verificado=39877
 title: Microsoft considerado dañino
 ---
 
@@ -28,7 +28,7 @@ El punto aquí es que un delimitador de 2 caracteres que rara vez ocurre en la p
 
 Si tuviera que adivinar sus motivos para considerar que la sintaxis propuesta de ese artículo de blog es insuficiente para sus necesidades actuales, sospecho que los motivos eran más sobre la codicia y el control del mercado y "insatisfacción del cliente" que una buena administración de F/OSS. AMMV.
 
-Ahora es un desastre ambiguo de defectos de la regex de ingeniería cada vez que un autor / implementador tiene que adivinar lo que se supone que el analizador tiene que ver con secuencias de signos de dólar aislados que ocurren dentro de un solo párrafo de la prosa de rebaja, como cuando los matemáticos financieros canadienses franceses discuten dos precios en dos monedas diferentes, dicen. `$`1.50 y 2,00`$` CA, este último es el dólar canadiense francés (ciertamente artificial, pero ilustra la complejidad). Buena suerte con eso (es el `$` a $$\LaTeX$$ token, o es algo completamente diferente) si está realizando una conversión masiva de GFM de formatos de documentos heredados a una plataforma que no sea GitHub. Sólo "trabajo" cuando se presenta en Visual Studio, si incluso funciona en absoluto.
+Ahora es un desastre ambiguo de defectos de la regex de ingeniería cada vez que un autor / implementador tiene que adivinar lo que se supone que el analizador tiene que ver con secuencias de signos de dólar aislados que ocurren dentro de un solo párrafo de la prosa de rebaja, como cuando los matemáticos financieros canadienses franceses discuten dos precios en dos monedas diferentes, dicen. `$`1.50 EE.UU., y 2,00`$` CA (posiblemente artificial, pero ilustra la complejidad). Buena suerte con eso (es el `$` a $$\LaTeX$$ token, o es algo completamente diferente) si está realizando una conversión masiva de GFM de formatos de documentos heredados a una plataforma que no sea GitHub. Sólo "trabajo" cuando se presenta en Visual Studio, si incluso funciona en absoluto.
 
 A diferencia de los estándares que surgen de la [JCP](https://jcp.org/en/home/index), nunca habrá un conjunto de pruebas de certificación de cumplimiento para este desastre, porque es un [evolución](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situación](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) activado [el terreno](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) a las [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 
