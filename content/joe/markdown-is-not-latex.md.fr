@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.fr'
 keywords: markdown,Microsoft,Github,corrompu,étreinte,extension,sycophant
-status: vérifié=39961
+status: vérifié
 title: Microsoft considéré comme nuisible
 ---
 
@@ -28,7 +28,7 @@ Le point ici est qu'un délimiteur de 2 caractères qui se produit rarement dans
 
 Si je devais deviner leurs motifs pour considérer la syntaxe proposée de cet article de blog insuffisante pour leurs besoins actuels, je soupçonne que les motifs étaient plus sur la cupidité et le contrôle du marché et "insatisfaction du client" une bonne gestion F/OSS. YMMV.
 
-C'est maintenant un désastre ambigu des défauts d'expression régulière d'ingénierie chaque fois qu'un auteur/implémenteur doit deviner ce que l'analyseur est censé faire avec des séquences de signes isolés du dollar se produisant dans un seul paragraphe de la prose de démarque. Par exemple, considérons une situation où les mathématiciens financiers canadiens-français discutent de deux prix dans deux devises différentes, disent les États-Unis. `$`1,50 et 2 00`$` CA (avoué, mais il illustre la complexité). Comment écririez-vous un `i18n` analyseur GFM conforme qui comprend que les éléments entre les signes dollar ici ne doivent pas être traités comme en ligne $$\LaTeX$$, même si sa syntaxe est valide $$\LaTeX$$?
+C'est maintenant un désastre ambigu des défauts d'expression régulière d'ingénierie chaque fois qu'un auteur/implémenteur doit deviner ce que l'analyseur est censé faire avec des séquences de signes isolés du dollar se produisant dans un seul paragraphe de la prose de démarque. Par exemple, considérons une situation où les mathématiciens financiers canadiens-français discutent de deux prix dans deux devises différentes, disent les US `$`1.50 et 2,00`$` CA (avoué, mais il illustre la complexité). Comment écririez-vous un `i18n` analyseur GFM conforme qui comprend que les éléments entre les signes dollar ici ne doivent pas être traités comme en ligne $$\LaTeX$$, même si sa syntaxe est valide $$\LaTeX$$?
 
 Bonne chance avec cela si vous effectuez une conversion GFM en masse de formats de documents existants internationaux vers une plate-forme non-GitHub. Ce sera seulement "travail" lorsqu'elle est rendue dans Visual Studio, si elle fonctionne même du tout.
 
