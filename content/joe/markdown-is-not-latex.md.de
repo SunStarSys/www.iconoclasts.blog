@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.de'
 keywords: Markdown,Microsoft,Github,korrupt,embrace,extend,sycophant
-status: überprüft=39793
+status: überprüft=39812
 title: Microsoft als schädlich betrachtet
 ---
 
@@ -28,7 +28,7 @@ Der Punkt hier ist, dass ein 2-Zeichen-Trennzeichen, das selten in typischen Pro
 
 Wenn ich ihre Motive für die Betrachtung der vorgeschlagenen Syntax des Blogartikels erraten musste, die für ihre aktuellen Bedürfnisse unzureichend ist, vermute ich, dass es bei den Motiven mehr um Gier und Marktkontrolle ging und "Kundenunzufriedenheit" als gute F/OSS-Verwaltung. JMMV
 
-Es ist jetzt eine zweideutige Katastrophe von technischen Regex-Defekten jedes Mal, wenn ein Autor / Implementierer erraten muss, was der Parser mit Sequenzen von isolierten Dollarzeichen tun soll, die innerhalb eines einzigen Absatzes von Preisabschriftprosa auftreten, wie wenn zwei Preise diskutiert werden, sagen `$`1.50 und `$`2.00 Uhr.  Viel Glück dabei (ist die `$` ein $$\LaTeX$$ Token, oder ist es ein Währungspräfix?) wenn Sie eine Massen-GFM-Umrechnung von Legacy-Dokumentformaten in eine Nicht-GitHub-Plattform durchführen. Es wird nur "Arbeit" bei der Wiedergabe in Visual Studio.
+Es ist jetzt eine zweideutige Katastrophe von technischen Regex-Defekten jedes Mal, wenn ein Autor / Implementierer erraten muss, was der Parser mit Sequenzen isolierter Dollarzeichen tun soll, die innerhalb eines einzigen Absatzes von Preisabschriftprosa auftreten, wie wenn zwei Preise in zwei verschiedenen Währungen diskutiert werden, sagen `$`1.50 und 2.00`$`Letzterer ist französischer Kanadier. Viel Glück dabei (ist die `$` ein $$\LaTeX$$ Token, oder ist es ein Währungspräfix?) wenn Sie eine Massen-GFM-Umrechnung von Legacy-Dokumentformaten in eine Nicht-GitHub-Plattform durchführen. Es wird nur "Arbeit" wenn es in Visual Studio gerendert wird, wenn es überhaupt funktioniert.
 
 Im Gegensatz zu den Standards, die aus [JCP](https://jcp.org/en/home/index), wird es nie eine Compliance-zertifizierende Testsuite für dieses Chaos geben, weil es eine [Entwicklung](https://github.com/github/markup?tab=readme-ov-file#github-markup) [Situation](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) am [Der Boden](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) um [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 
