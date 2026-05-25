@@ -2,7 +2,7 @@
 categories: 奧里昂
 dependencies: '*.md.zh-TW'
 keywords: markdown，Microsoft，Github，corrupt，embace，extend，sy-ophant - 降價，微軟，巨石，貪腐，寬限，擴展
-status: 驗證 =39827
+status: 驗證 =39858
 title: Microsoft 認為有害
 ---
 
@@ -28,7 +28,7 @@ title: Microsoft 認為有害
 
 如果我必須猜測他們的動機，以考慮該部落格文章的建議語法不足以滿足他們目前的需求，我懷疑這些動機更關乎貪婪和市場控制。"客戶不滿意" 優越的 F/OSS 管理。YMMV。
 
-如今，每當作者 / 實作者必須猜測剖析器應如何處理一段降價程序中出現的一連串隔離貨幣符號時，工程正規表示式瑕疵就會發生不明確的災難，就像以兩種不同貨幣討論兩個價格時一樣。`$`1.50 和 2,00`$` CA，後者為「法國加拿大元」。祝你好運 (這是) `$` 一個$$\LaTeX$$ 如果您將舊有文件格式的大量 GFM 轉換成非 GitHub 平台，記號或它是幣別字首？)。只會"工作" 在 Visual Studio 中彩現時 (如果甚至完全有效)。
+現在，每當作者 / 實作者必須猜測剖析器應該如何處理一段降價程序中出現的一連串隔離貨幣符號，就像法國加拿大金融數學家以兩種不同貨幣討論兩筆價格一樣，工程正規表示式瑕疵是不明確的災難。`$`1.50 和 2,00`$` 加州，後者為法屬加拿大元 (經許可相反，但這說明了複雜性)。祝你好運 (這是) `$` 一個$$\LaTeX$$ 如果您將舊有文件格式的大量 GFM 轉換成非 GitHub 平台，記號或為其他所有項目。只會"工作" 在 Visual Studio 中彩現時 (如果甚至完全有效)。
 
 不同於標準的出現[JCP](https://jcp.org/en/home/index)，此訊息永遠不會有合規性認證測試套件，因為這是[演進](https://github.com/github/markup?tab=readme-ov-file#github-markup) [情境](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 開啟[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 於[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1 個</sup>:
 
