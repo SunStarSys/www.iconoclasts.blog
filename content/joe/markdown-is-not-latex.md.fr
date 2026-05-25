@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.fr'
 keywords: markdown,Microsoft,Github,corrompu,étreinte,extension,sycophant
-status: vérifié=39877
+status: vérifié=39896
 title: Microsoft considéré comme nuisible
 ---
 
@@ -28,7 +28,9 @@ Le point ici est qu'un délimiteur de 2 caractères qui se produit rarement dans
 
 Si je devais deviner leurs motifs pour considérer la syntaxe proposée de cet article de blog insuffisante pour leurs besoins actuels, je soupçonne que les motifs étaient plus sur la cupidité et le contrôle du marché et "insatisfaction du client" une bonne gestion F/OSS. YMMV.
 
-C'est maintenant un désastre ambigu des défauts d'expression régulière d'ingénierie chaque fois qu'un auteur/implémenteur doit deviner ce que l'analyseur est censé faire avec des séquences de signes isolés du dollar se produisant dans un seul paragraphe de la prose de démarque, comme lorsque les mathématiciens financiers canadiens-français discutent de deux prix dans deux devises différentes, disent `$`1,50 US et 2 00`$` CA (avoué, mais il illustre la complexité). Bonne chance avec ça (c'est le `$` a $$\LaTeX$$ jeton, ou est-ce quelque chose d'autre entièrement) si vous effectuez une conversion GFM en masse de formats de documents hérités vers une plate-forme non-GitHub. Ce sera seulement "travail" lorsqu'elle est rendue dans Visual Studio, si elle fonctionne même du tout.
+C'est maintenant un désastre ambigu des défauts d'expression régulière d'ingénierie chaque fois qu'un auteur/implémenteur doit deviner ce que l'analyseur est censé faire avec des séquences de signes isolés du dollar se produisant dans un seul paragraphe de la prose de démarque. Par exemple, considérons une situation où les mathématiciens financiers canadiens-français discutent de deux prix dans deux devises différentes, disent les États-Unis. `$`1,50 et 2 00`$` CA (avoué, mais il illustre la complexité). Comment écririez-vous un `i18n` analyseur GFM conforme qui comprend que les éléments entre les signes dollar ici ne doivent pas être traités comme en ligne $$\LaTeX$$, même si elle est sytactiquement valide $$\LaTeX$$?
+
+Bonne chance avec cela si vous effectuez une conversion GFM en masse de formats de documents existants internationaux vers une plate-forme non-GitHub. Ce sera seulement "travail" lorsqu'elle est rendue dans Visual Studio, si elle fonctionne même du tout.
 
 Contrairement aux normes issues de [JCP](https://jcp.org/en/home/index), il n'y aura jamais de suite de tests de conformité pour ce gâchis, car c'est un [évolution](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situation](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) le [le sol](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) à [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 
