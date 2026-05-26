@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante,AI
-status: verificado=40181
+status: verificado=40196
 title: Microsoft considerado dañino
 ---
 
@@ -30,7 +30,9 @@ Si tuviera que adivinar sus motivos para considerar que la sintaxis propuesta de
 
 O simplemente [La pereza, la impaciencia y Hubris](http://www.parrot.org/)Pero eso no es lo suficientemente conspirativo para este artículo. AMMV.
 
-Ahora es un desastre ambiguo de defectos de la regex de ingeniería cada vez que un autor / implementador tiene que adivinar lo que se supone que el analizador tiene que ver con secuencias de signos de dólar aislados que ocurren dentro de un solo párrafo de la prosa de rebaja. Por ejemplo, considere una situación en la que [Francés](markdown-is-not-latex.html.fr) Matemáticos financieros canadienses discuten dos precios en dos monedas diferentes `$`1.50 y 2,00`$` CA (posiblemente artificial, pero ilustra la complejidad). ¿Cómo escribiría un `i18n` conforme [Analizador de GFM](https://pandoc.org/) que entiende que la materia entre los signos de dólar aquí es *no ser procesado como en línea $$\LaTeX$$*, aunque sea sintácticamente válido $$\TeX$$ y se ajusta a esta [especificaciones ingenuas](https://pandoc.org/demo/example33/8.13-math.html)? ¿Lo analizó Claude?
+Ahora es un desastre ambiguo de defectos de la regex de ingeniería cada vez que un autor / implementador tiene que adivinar lo que se supone que el analizador tiene que ver con secuencias de signos de dólar aislados que ocurren dentro de un solo párrafo de la prosa de rebaja. Por ejemplo, considere una situación en la que [Francés](markdown-is-not-latex.html.fr) Matemáticos financieros canadienses discuten dos precios en dos monedas diferentes `$`1.50 y 2,00`$` CA (posiblemente artificial, pero ilustra la complejidad). ¿Cómo escribiría un `i18n` conforme [Analizador de GFM](https://pandoc.org/) que entiende que la materia entre los signos de dólar aquí es *no ser procesado como en línea $$\LaTeX$$*, aunque sea sintácticamente válido $$\TeX$$ y se ajusta a esta [especificaciones ingenuas](https://pandoc.org/demo/example33/8.13-math.html)?
+
+¿Qué pasa con un par de variables Ruby / Perl? `$`v y `$`¿w? El mismo problema con la ingenua especulación. ¿Claude lo analizó todo?
 
 Buena suerte con eso si estás haciendo una conversión masiva de GFM de formatos de documentos heredados internacionales a una plataforma que no sea GitHub. Sólo "trabajo" cuando se presenta en Visual Studio, si incluso funciona en absoluto.
 

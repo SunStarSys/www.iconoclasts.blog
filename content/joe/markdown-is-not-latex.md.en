@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant,AI
-status: verified=40181
+status: verified=40196
 Dependencies: *.md.en
 Categories: Orion
 
@@ -28,7 +28,9 @@ If I had to guess their motives for considering that blog article's proposed syn
 
 Or just [Laziness, Impatience, and Hubris](http://www.parrot.org/); but that's not conspiratorial enough for this article. YMMV.
 
-It is now an ambiguous disaster of engineering regex defects every time an author/implementer has to guess what the parser is supposed to do with sequences of isolated dollar signs occurring within a single paragraph of markdown prose. For example, consider a situation where [French](markdown-is-not-latex.html.fr) Canadian financial mathematicians discuss two prices in two different currencies, say US `$`1.50, and 2,00`$` CA (admittedly contrived, but it illustrates the complexity). How would you write an `i18n` compliant [GFM parser](https://pandoc.org/) that understands that the stuff between the dollar signs here is *not to be processed as inline $$\LaTeX$$*, even though it's syntactically valid $$\TeX$$ and conforms to this [naïve spec](https://pandoc.org/demo/example33/8.13-math.html)? Have Claude parse it?
+It is now an ambiguous disaster of engineering regex defects every time an author/implementer has to guess what the parser is supposed to do with sequences of isolated dollar signs occurring within a single paragraph of markdown prose. For example, consider a situation where [French](markdown-is-not-latex.html.fr) Canadian financial mathematicians discuss two prices in two different currencies, say US `$`1.50, and 2,00`$` CA (admittedly contrived, but it illustrates the complexity). How would you write an `i18n` compliant [GFM parser](https://pandoc.org/) that understands that the stuff between the dollar signs here is *not to be processed as inline $$\LaTeX$$*, even though it's syntactically valid $$\TeX$$ and conforms to this [naïve spec](https://pandoc.org/demo/example33/8.13-math.html)?
+
+What about a pair of Ruby/Perl variables `$`v and `$`w? Same problem with the naïve spec. Have Claude parse it all?
 
 Good luck with that if you are doing a bulk GFM conversion of international legacy document formats to a non-GitHub platform. It will only "work" when rendered in Visual Studio, if it even works at all.
 

@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.pt-BR'
 keywords: markdown,Microsoft, Github, corrupto, abraçar, estender, sycophant, AI
-status: verificado=40181
+status: verificado=40196
 title: Microsoft considerada prejudicial
 ---
 
@@ -30,7 +30,9 @@ Se eu tivesse que adivinhar seus motivos para considerar que a sintaxe proposta 
 
 Ou apenas [Preguiça, impaciência e Hubris](http://www.parrot.org/)Mas isso não é conspiratório o suficiente para este artigo. AMMV.
 
-É agora um desastre ambíguo de defeitos regex de engenharia cada vez que um autor / implementador tem que adivinhar o que o analisador deve fazer com sequências de cifrões isolados ocorrendo dentro de um único parágrafo de prosa de markdown. Por exemplo, considere uma situação em que [Francês](markdown-is-not-latex.html.fr) Matemáticos financeiros canadenses discutem dois preços em duas moedas diferentes, dizem EUA `$`1,50 e 2.00`$` CA (admitidamente inventado, mas ilustra a complexidade). Como você escreveria um `i18n` em conformidade [Analisador GFM](https://pandoc.org/) que entende que o material entre os cifrões aqui é *não deve ser processado como inline $$\LaTeX$$*, embora seja sintaticamente válido $$\TeX$$ e está em conformidade com isso [especificação ingênua](https://pandoc.org/demo/example33/8.13-math.html)? Claude analisou isso?
+É agora um desastre ambíguo de defeitos regex de engenharia cada vez que um autor / implementador tem que adivinhar o que o analisador deve fazer com sequências de cifrões isolados ocorrendo dentro de um único parágrafo de prosa de markdown. Por exemplo, considere uma situação em que [Francês](markdown-is-not-latex.html.fr) Matemáticos financeiros canadenses discutem dois preços em duas moedas diferentes, dizem EUA `$`1,50 e 2.00`$` CA (admitidamente inventado, mas ilustra a complexidade). Como você escreveria um `i18n` em conformidade [Analisador GFM](https://pandoc.org/) que entende que o material entre os cifrões aqui é *não deve ser processado como inline $$\LaTeX$$*, embora seja sintaticamente válido $$\TeX$$ e está em conformidade com isso [especificação ingênua](https://pandoc.org/demo/example33/8.13-math.html)?
+
+Que tal um par de variáveis Ruby/Perl? `$`v e `$`w? O mesmo problema com a ingenuidade. Claude analisou tudo?
 
 Boa sorte com isso se você estiver fazendo uma conversão GFM em massa de formatos de documentos legados internacionais para uma plataforma não-GitHub. Somente será "trabalho" quando renderizado no Visual Studio, se mesmo funciona.
 

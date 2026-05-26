@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna, utöka,sykofant,AI
-status: verifierad=40181
+status: verifierad=40196
 title: Microsoft anses vara skadligt
 ---
 
@@ -30,7 +30,9 @@ Om jag var tvungen att gissa deras motiv för att överväga att bloggartikelns 
 
 Eller bara [Lättja, otålighet och Hubris](http://www.parrot.org/)Men det är inte konspiratoriskt nog för den här artikeln. ÅMMV
 
-Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk dig en situation där [Franska](markdown-is-not-latex.html.fr) Kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1,50 och 2 00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel [GFM-parser](https://pandoc.org/) som förstår att grejerna mellan dollartecknen här är *inte att behandlas som inline $$\LaTeX$$*, även om det är syntaktiskt giltigt $$\TeX$$ och överensstämmer med detta [naiv spec](https://pandoc.org/demo/example33/8.13-math.html)? Har Claude läst den?
+Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk dig en situation där [Franska](markdown-is-not-latex.html.fr) Kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1,50 och 2 00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel [GFM-parser](https://pandoc.org/) som förstår att grejerna mellan dollartecknen här är *inte att behandlas som inline $$\LaTeX$$*, även om det är syntaktiskt giltigt $$\TeX$$ och överensstämmer med detta [naiv spec](https://pandoc.org/demo/example33/8.13-math.html)?
+
+Vad sägs om ett par Ruby / Perl variabler `$`v och `$`w? Samma problem med den naiva spec. Har Claude tolkat allt?
 
 Lycka till med det om du gör en bulk GFM-konvertering av internationella äldre dokumentformat till en icke-GitHub plattform. Det kommer bara "studera" när det renderas i Visual Studio, om det ens fungerar alls.
 
