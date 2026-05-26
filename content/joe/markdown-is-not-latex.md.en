@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant,AI
-status: verified=40215
+status: verified=40219
 Dependencies: *.md.en
 Categories: Orion
 
@@ -32,7 +32,7 @@ It is now an ambiguous disaster of engineering regex defects every time an autho
 
 What about a pair of Ruby/Perl variables `$v` and `$w`? Same problem with the naïve spec. Have Claude parse it all?
 
-Good luck with that if you are doing a bulk GFM conversion of international legacy document formats to a non-GitHub platform. It will only "work" when rendered in Visual Studio, if it even works at all.
+Good luck with that if you are doing a bulk GFM conversion of international legacy document formats to a non-GitHub platform. Not only will it be incredibly slow and expensive, but it will only "work" when rendered in Visual Studio, if it even works at all.
 
 It's one thing to say you will not write stuff **today** that confuses the parser **now**; it's quite another to say the stuff written in the **past** will not confuse the parser: today, or in **future** parser releases.
 
