@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante,AI
-status: verificado=40142
+status: verificado=40181
 title: Microsoft considerado dañino
 ---
 
@@ -14,7 +14,7 @@ title: Microsoft considerado dañino
 
 ## Orígenes de rebaja
 
-{# lede #}El punto de [Especificación de sintaxis de Markdown de John Gruber](https://daringfireball.net/projects/markdown/syntax) era que era fácil trabajar con{# lede #}; no solo desde el punto de vista de la creación, sino también desde la perspectiva de un implementador.  $$\LaTeX$$, `MathML`y `HTML5` no son eso.
+{# lede #}El punto de [Especificación de sintaxis de Markdown de John Gruber](https://daringfireball.net/projects/markdown/syntax) era que su "Rebaja" tenía la intención de ser fácil trabajar con{# lede #}; no solo desde el punto de vista de la creación, sino también desde la perspectiva de un implementador.  $$\LaTeX$$, `MathML`y `HTML5` no son eso.
 
 ## :fa-github: GitHub Rebaja con sabor (GFM)
 
@@ -22,7 +22,7 @@ title: Microsoft considerado dañino
 
 ## Abrazar y ampliar Redux
 
-Por supuesto, esto fue totalmente intencional, porque [:editormd-logo: equipos de ingeniería de clase mundial](http://editor.md.ipandao.com) habían resuelto $$\KaTeX$$ con [límites de token de doble dólar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) para matemáticas en línea, y bloques de matemáticas vallados o pares de párrafos circundantes de doble dólar para bloques $$\KaTeX$$ procesamiento **en 2015**.
+Por supuesto, esto fue totalmente intencional, porque [galardonado](https://itsfoss.com/online-markdown-editors/), [:editormd-logo: equipos de ingeniería de clase mundial](http://editor.md.ipandao.com) habían resuelto $$\KaTeX$$ con [límites de token de doble dólar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) para matemáticas en línea, y bloques de matemáticas vallados o pares de párrafos circundantes de doble dólar para bloques $$\KaTeX$$ proceso [**en 2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0).
 
 El punto aquí es que un delimitador de 2 caracteres que rara vez ocurre en la prosa típica es el ideal normal para situaciones como esta. [Se ha bloqueado Microsoft solo para admitir \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) No escribiría este artículo en 2026, porque esa elección cumple con las condiciones ideales normales para la introducción fiel de expresiones matemáticas en línea en una especificación de Markdown. También es propicio para el síndrome del túnel carpiano para los mecanógrafos profesionales de matemáticas, por lo que hay algo más que considerar además de la singularidad de los límites.
 
@@ -30,7 +30,7 @@ Si tuviera que adivinar sus motivos para considerar que la sintaxis propuesta de
 
 O simplemente [La pereza, la impaciencia y Hubris](http://www.parrot.org/)Pero eso no es lo suficientemente conspirativo para este artículo. AMMV.
 
-Ahora es un desastre ambiguo de defectos de la regex de ingeniería cada vez que un autor / implementador tiene que adivinar lo que se supone que el analizador tiene que ver con secuencias de signos de dólar aislados que ocurren dentro de un solo párrafo de la prosa de rebaja. Por ejemplo, considere una situación en la que [Francés](markdown-is-not-latex.html.fr) Matemáticos financieros canadienses discuten dos precios en dos monedas diferentes `$`1.50 y 2,00`$` CA (posiblemente artificial, pero ilustra la complejidad). ¿Cómo escribiría un `i18n` conforme [Analizador de GFM](https://pandoc.org/) que entiende que la materia entre los signos de dólar aquí es *no ser procesado como en línea $$\LaTeX$$*, aunque sea sintácticamente válido $$\TeX$$ y se ajusta a esta [especificaciones ingenuas](https://pandoc.org/demo/example33/8.13-math.html)?
+Ahora es un desastre ambiguo de defectos de la regex de ingeniería cada vez que un autor / implementador tiene que adivinar lo que se supone que el analizador tiene que ver con secuencias de signos de dólar aislados que ocurren dentro de un solo párrafo de la prosa de rebaja. Por ejemplo, considere una situación en la que [Francés](markdown-is-not-latex.html.fr) Matemáticos financieros canadienses discuten dos precios en dos monedas diferentes `$`1.50 y 2,00`$` CA (posiblemente artificial, pero ilustra la complejidad). ¿Cómo escribiría un `i18n` conforme [Analizador de GFM](https://pandoc.org/) que entiende que la materia entre los signos de dólar aquí es *no ser procesado como en línea $$\LaTeX$$*, aunque sea sintácticamente válido $$\TeX$$ y se ajusta a esta [especificaciones ingenuas](https://pandoc.org/demo/example33/8.13-math.html)? ¿Lo analizó Claude?
 
 Buena suerte con eso si estás haciendo una conversión masiva de GFM de formatos de documentos heredados internacionales a una plataforma que no sea GitHub. Sólo "trabajo" cuando se presenta en Visual Studio, si incluso funciona en absoluto.
 

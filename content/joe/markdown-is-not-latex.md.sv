@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna, utöka,sykofant,AI
-status: verifierad=40142
+status: verifierad=40181
 title: Microsoft anses vara skadligt
 ---
 
@@ -14,7 +14,7 @@ title: Microsoft anses vara skadligt
 
 ## Ursprung för nedsättning
 
-{# lede #}Poängen med [Syntaxspecifikation för John Grubers Markdown](https://daringfireball.net/projects/markdown/syntax) var att det var lätt att arbeta med{# lede #}Inte bara ur författarsynpunkt, utan också ur en implementerares perspektiv.  $$\LaTeX$$, `MathML`och `HTML5` är inte det.
+{# lede #}Poängen med [Syntaxspecifikation för John Grubers Markdown](https://daringfireball.net/projects/markdown/syntax) var att hans "Nedsättning" var tänkt att vara lätt att arbeta med{# lede #}Inte bara ur författarsynpunkt, utan också ur en implementerares perspektiv.  $$\LaTeX$$, `MathML`och `HTML5` är inte det.
 
 ## :fa-github: GitHub Smaksatt nedsättning (GFM)
 
@@ -22,7 +22,7 @@ title: Microsoft anses vara skadligt
 
 ## Omfamna och utöka Redux
 
-Naturligtvis var detta helt avsiktligt, eftersom [:editormd-logo: ingenjörsteam i världsklass](http://editor.md.ipandao.com) hade bestämt sig för $$\KaTeX$$ med [Tokengränser för dubbla dollar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) för infogad matematik, och inhägnade matematiska block eller par av dubbeldollar-bara omgivande stycken för block $$\KaTeX$$ bearbetning **i 2015**.
+Naturligtvis var detta helt avsiktligt, eftersom [prisbelönt](https://itsfoss.com/online-markdown-editors/), [:editormd-logo: ingenjörsteam i världsklass](http://editor.md.ipandao.com) hade bestämt sig för $$\KaTeX$$ med [Tokengränser för dubbla dollar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) för infogad matematik, och inhägnade matematiska block eller par av dubbeldollar-bara omgivande stycken för block $$\KaTeX$$ bearbetning [**2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0).
 
 Poängen här är att en 2-teckenavgränsare som sällan förekommer i typisk prosa är det normala idealet för situationer som denna. [Hade Microsoft fastnat för att bara stödja \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Jag skulle inte skriva den här artikeln 2026, eftersom det valet uppfyller de normala idealiska förutsättningarna för trogen introduktion av inline matematiska uttryck i en Markdown spec. Det bidrar också till karpaltunnelsyndrom för professionella matematiktypister, så det finns något annat att tänka på förutom gränstoken unikhet.
 
@@ -30,7 +30,7 @@ Om jag var tvungen att gissa deras motiv för att överväga att bloggartikelns 
 
 Eller bara [Lättja, otålighet och Hubris](http://www.parrot.org/)Men det är inte konspiratoriskt nog för den här artikeln. ÅMMV
 
-Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk dig en situation där [Franska](markdown-is-not-latex.html.fr) Kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1,50 och 2 00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel [GFM-parser](https://pandoc.org/) som förstår att grejerna mellan dollartecknen här är *inte att behandlas som inline $$\LaTeX$$*, även om det är syntaktiskt giltigt $$\TeX$$ och överensstämmer med detta [naiv spec](https://pandoc.org/demo/example33/8.13-math.html)?
+Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk dig en situation där [Franska](markdown-is-not-latex.html.fr) Kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1,50 och 2 00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel [GFM-parser](https://pandoc.org/) som förstår att grejerna mellan dollartecknen här är *inte att behandlas som inline $$\LaTeX$$*, även om det är syntaktiskt giltigt $$\TeX$$ och överensstämmer med detta [naiv spec](https://pandoc.org/demo/example33/8.13-math.html)? Har Claude läst den?
 
 Lycka till med det om du gör en bulk GFM-konvertering av internationella äldre dokumentformat till en icke-GitHub plattform. Det kommer bara "studera" när det renderas i Visual Studio, om det ens fungerar alls.
 

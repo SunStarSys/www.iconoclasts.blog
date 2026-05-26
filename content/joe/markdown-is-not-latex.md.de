@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.de'
 keywords: Markdown,Microsoft,Github,korrupt,Umarmung,extend,sycophant,AI
-status: überprüft=40142
+status: überprüft=40181
 title: Microsoft als schädlich betrachtet
 ---
 
@@ -14,7 +14,7 @@ title: Microsoft als schädlich betrachtet
 
 ## Ursprünge der Preisabschrift
 
-{# lede #}Der Punkt von [Markdown-Syntaxspezifikation von John Gruber](https://daringfireball.net/projects/markdown/syntax) Es war einfach, mit{# lede #}; nicht nur aus Sicht des Autors, sondern auch aus Sicht des Implementers.  $$\LaTeX$$, `MathML`und `HTML5` Das ist nicht so.
+{# lede #}Der Punkt von [Markdown-Syntaxspezifikation von John Gruber](https://daringfireball.net/projects/markdown/syntax) war, dass sein "Preisabschrift" war beabsichtigt, einfach zu arbeiten{# lede #}; nicht nur aus Sicht des Autors, sondern auch aus Sicht des Implementers.  $$\LaTeX$$, `MathML`und `HTML5` Das ist nicht so.
 
 ## :fa-github: GitHub Aromatisierte Preisabschrift (GFM)
 
@@ -22,7 +22,7 @@ title: Microsoft als schädlich betrachtet
 
 ## Umsetzen und Erweitern von Redux
 
-Das war natürlich ganz bewusst, denn [:editormd-logo: Weltklasse-Technikteams](http://editor.md.ipandao.com) hatte sich $$\KaTeX$$ mit [Doppel-Dollar-Token-Grenzen](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) für Inline-Mathematik und umzäunte Matheblöcke oder Paare von nur doppelten Dollars umgebenden Abschnitten für Block $$\KaTeX$$ Verarbeitung **im Jahr 2015**.
+Das war natürlich ganz bewusst, denn [preisgekrönt](https://itsfoss.com/online-markdown-editors/), [:editormd-logo: Weltklasse-Technikteams](http://editor.md.ipandao.com) hatte sich $$\KaTeX$$ mit [Doppel-Dollar-Token-Grenzen](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) für Inline-Mathematik und umzäunte Matheblöcke oder Paare von nur doppelten Dollars umgebenden Abschnitten für Block $$\KaTeX$$ Verarbeitung [**im Jahr 2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0).
 
 Der Punkt hier ist, dass ein 2-Zeichen-Trennzeichen, das selten in typischen Prosa auftritt, das normale Ideal für solche Situationen ist. [Hatte Microsoft nur \$\ unterstützt` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Ich würde diesen Artikel im Jahr 2026 nicht schreiben, da diese Wahl die normalen idealen Bedingungen für die treue Einführung von Inline-Matheausdrücken in einer Markdown-Spezifikation erfüllt. Es ist auch förderlich für Karpaltunnelsyndrom für professionelle Mathe-Typen, so gibt es etwas anderes zu berücksichtigen neben Grenze-token Einzigartigkeit.
 
@@ -30,7 +30,7 @@ Wenn ich ihre Motive für die Betrachtung der vorgeschlagenen Syntax des Blogart
 
 Oder einfach [Faulheit, Ungeduld und Hubris](http://www.parrot.org/); aber das ist nicht konspiratorisch genug für diesen Artikel. JMMV
 
-Es ist jetzt eine zweideutige Katastrophe von technischen Regex-Defekten, jedes Mal, wenn ein Autor / Implementierer erraten muss, was der Parser mit Sequenzen isolierter Dollarzeichen tun soll, die innerhalb eines einzigen Absatzes von Preisabschriftprosa auftreten. Betrachten Sie zum Beispiel eine Situation, in der [Französisch](markdown-is-not-latex.html.fr) Kanadische Finanzmathematiker diskutieren zwei Preise in zwei verschiedenen Währungen, sagen US `$`1,50 und 2,00`$` CA (zugegebenermaßen konstruiert, aber es veranschaulicht die Komplexität). Wie würden Sie eine `i18n` konform [GFM-Parser](https://pandoc.org/) das versteht, dass das Zeug zwischen den Dollarzeichen hier *nicht als Inline verarbeitet werden darf $$\LaTeX$$* obwohl es syntaktisch gültig ist $$\TeX$$ und entspricht diesem [naive spezifikation](https://pandoc.org/demo/example33/8.13-math.html)?
+Es ist jetzt eine zweideutige Katastrophe von technischen Regex-Defekten, jedes Mal, wenn ein Autor / Implementierer erraten muss, was der Parser mit Sequenzen isolierter Dollarzeichen tun soll, die innerhalb eines einzigen Absatzes von Preisabschriftprosa auftreten. Betrachten Sie zum Beispiel eine Situation, in der [Französisch](markdown-is-not-latex.html.fr) Kanadische Finanzmathematiker diskutieren zwei Preise in zwei verschiedenen Währungen, sagen US `$`1,50 und 2,00`$` CA (zugegebenermaßen konstruiert, aber es veranschaulicht die Komplexität). Wie würden Sie eine `i18n` konform [GFM-Parser](https://pandoc.org/) das versteht, dass das Zeug zwischen den Dollarzeichen hier *nicht als Inline verarbeitet werden darf $$\LaTeX$$* obwohl es syntaktisch gültig ist $$\TeX$$ und entspricht diesem [naive spezifikation](https://pandoc.org/demo/example33/8.13-math.html)? Hat Claude es geparst?
 
 Viel Glück damit, wenn Sie eine Massen-GFM-Konvertierung von internationalen Legacy-Dokumentformaten auf eine Nicht-GitHub-Plattform durchführen. Es wird nur "Arbeit" wenn es in Visual Studio gerendert wird, wenn es überhaupt funktioniert.
 

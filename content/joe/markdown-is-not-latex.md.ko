@@ -2,7 +2,7 @@
 categories: 오리온
 dependencies: '*.md.ko'
 keywords: 마크 다운, 마이크로 소프트, Github, 손상, 멤브레이스, 확장, 식도, AI
-status: 확인=40142
+status: 확인=40181
 title: 마이크로소프트는 유해하다고 생각했다.
 ---
 
@@ -14,7 +14,7 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 ## 마크다운의 기원
 
-{# lede #}의 점 The point of [John Gruber의 Markdown 구문 사양](https://daringfireball.net/projects/markdown/syntax) 작업하기가 쉬웠다는 점{# lede #}작성 관점에서뿐만 아니라 구현자의 관점에서도 마찬가지입니다.  $$\LaTeX$$, `MathML`및 `HTML5` 그렇지 않습니다.
+{# lede #}의 점 The point of [John Gruber의 Markdown 구문 사양](https://daringfireball.net/projects/markdown/syntax) 그것은 그의 "매가인하" 쉽게 작업할 수 있도록 설계되었습니다.{# lede #}작성 관점에서뿐만 아니라 구현자의 관점에서도 마찬가지입니다.  $$\LaTeX$$, `MathML`및 `HTML5` 그렇지 않습니다.
 
 ## :fa-github: GitHub 맛 있는 매가인하(GFM)
 
@@ -22,7 +22,7 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 ## Redux 수용 및 확장
 
-물론 이것은 완전히 의도적이었기 때문에 [:editormd-logo: 세계적 수준의 엔지니어링 팀](http://editor.md.ipandao.com) 결제 완료 $$\KaTeX$$ 포함 [이중 달러 토큰 경계](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) 인라인 수학 및 펜스 수학 블록 또는 블록에 대한 이중 달러 전용 주변 단락 쌍 $$\KaTeX$$ 처리 **에서 2015**.
+물론 이것은 완전히 의도적이었기 때문에 [수상 경력](https://itsfoss.com/online-markdown-editors/), [:editormd-logo: 세계적 수준의 엔지니어링 팀](http://editor.md.ipandao.com) 결제 완료 $$\KaTeX$$ 포함 [이중 달러 토큰 경계](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) 인라인 수학 및 펜스 수학 블록 또는 블록에 대한 이중 달러 전용 주변 단락 쌍 $$\KaTeX$$ 처리 중 [**2015년**](https://github.com/pandao/editor.md/releases/tag/v1.5.0).
 
 여기서 중요한 점은 일반적인 prose에서 거의 발생하지 않는 2자 구분자가 이와 같은 상황에 대한 정상적인 이상이라는 것입니다. [마이크로소프트가 \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 나는 2026 년에이 기사를 쓰지 않을 것입니다, 그 선택은 마크 다운 사양 인라인 수학 표현의 충실한 도입을위한 정상적인 이상적인 조건을 충족하기 때문입니다. 또한 전문 수학 타이피스트를위한 손목 터널 증후군에 도움이되므로 경계 토큰 고유성 외에 고려해야 할 다른 것이 있습니다.
 
@@ -30,7 +30,7 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 또는 just [게으름, 불순종, 허브리스](http://www.parrot.org/)그러나 그것은이 기사에 대한 충분한 음모가 아닙니다. YMMV
 
-이제 작성자/구현자가 매가인하 절차의 단일 단락 내에서 발생하는 격리된 달러 기호 시퀀스로 구문 분석기가 무엇을 해야 하는지 추측해야 할 때마다 엔지니어링 정규 표현식 결함의 모호한 재해입니다. 예를 들어, [프랑스어](markdown-is-not-latex.html.fr) 캐나다의 금융 수학자들은 두 가지 다른 통화로 두 가지 가격을 논의합니다. `$`1.50 및 2,00`$` CA (실제로 경쟁했지만 복잡성을 보여줍니다). 어떻게 하면 `i18n` 준수 [GFM 구문 분석기](https://pandoc.org/) 달러 표지판 사이의 물건이 인라인으로 처리되지 않는다는 것을 이해합니다. $$\LaTeX$$*, 비록 그것이 구문적으로 유효하더라도 $$\TeX$$ 그리고 이것에 따릅니다 [나이브 스펙](https://pandoc.org/demo/example33/8.13-math.html)?
+이제 작성자/구현자가 매가인하 절차의 단일 단락 내에서 발생하는 격리된 달러 기호 시퀀스로 구문 분석기가 무엇을 해야 하는지 추측해야 할 때마다 엔지니어링 정규 표현식 결함의 모호한 재해입니다. 예를 들어, [프랑스어](markdown-is-not-latex.html.fr) 캐나다의 금융 수학자들은 두 가지 다른 통화로 두 가지 가격을 논의합니다. `$`1.50 및 2,00`$` CA (실제로 경쟁했지만 복잡성을 보여줍니다). 어떻게 하면 `i18n` 준수 [GFM 구문 분석기](https://pandoc.org/) 달러 표지판 사이의 물건이 인라인으로 처리되지 않는다는 것을 이해합니다. $$\LaTeX$$*, 비록 그것이 구문적으로 유효하더라도 $$\TeX$$ 그리고 이것에 따릅니다 [나이브 스펙](https://pandoc.org/demo/example33/8.13-math.html)? 클로드가 그것을 파싱 했습니까?
 
 국제 레거시 문서 형식을 비 GitHub 플랫폼으로 대량 GFM 변환을 수행하는 경우 행운을 빕니다. 그것은 단지 "작업" Visual Studio에서 렌더링할 때도 작동합니다.
 
