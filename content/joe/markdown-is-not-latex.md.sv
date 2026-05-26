@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna, utöka,sykofant,AI
-status: verifierad=40060
+status: verifierad=40142
 title: Microsoft anses vara skadligt
 ---
 
@@ -18,11 +18,11 @@ title: Microsoft anses vara skadligt
 
 ## :fa-github: GitHub Smaksatt nedsättning (GFM)
 
-[Personalhantering](https://github.github.com/gfm/) höll fast vid specifikationens designmål ända fram till [Microsoft bastardized den isolerade dollartecknet för att villkorligt konvertera det till en $$\LaTeX$$ tecken](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) på grund av några cloistered, föråldrade, fula och långsamma institutionella crapware kallas [MathJax](https://www.mathjax.org/) Det hade ingenting att göra med Markdown, och det faktum att dessa rövhål inte vill främja [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-kompatibel [$$\KaTeX$$](https://katex.org/) Utan en muta från Khan Academy.
+[Personalhantering](https://github.github.com/gfm/) höll fast vid specifikationens designmål ända fram till [Microsoft bastardized den isolerade dollartecknet för att villkorligt konvertera det till en $$\LaTeX$$ tecken](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) på grund av några cloistered, föråldrade, fula och långsamma institutionella crapware kallas [MathJax](https://www.mathjax.org/) som inte hade något att göra med Markdown, och det faktum att dessa rövhål inte vill främja performant, [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-kompatibel [$$\KaTeX$$](https://katex.org/) Utan en muta från Khan Academy.
 
 ## Omfamna och utöka Redux
 
-Naturligtvis var detta helt avsiktligt, eftersom [:editormd-logo: ingenjörsteam i världsklass](http://editor.md.ipandao.com) hade bestämt sig för $$\KaTeX$$ med dubbla dollar token gränser för infogad matematik, och inhägnad matematik block för block $$\KaTeX$$ bearbetning **före 2020**.
+Naturligtvis var detta helt avsiktligt, eftersom [:editormd-logo: ingenjörsteam i världsklass](http://editor.md.ipandao.com) hade bestämt sig för $$\KaTeX$$ med [Tokengränser för dubbla dollar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) för infogad matematik, och inhägnade matematiska block eller par av dubbeldollar-bara omgivande stycken för block $$\KaTeX$$ bearbetning **i 2015**.
 
 Poängen här är att en 2-teckenavgränsare som sällan förekommer i typisk prosa är det normala idealet för situationer som denna. [Hade Microsoft fastnat för att bara stödja \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Jag skulle inte skriva den här artikeln 2026, eftersom det valet uppfyller de normala idealiska förutsättningarna för trogen introduktion av inline matematiska uttryck i en Markdown spec. Det bidrar också till karpaltunnelsyndrom för professionella matematiktypister, så det finns något annat att tänka på förutom gränstoken unikhet.
 
@@ -42,11 +42,11 @@ Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/in
 
 Återigen, avsiktlig avvikelse från Grubers mål.
 
-Mest äckligt, omfamna och utvidga onda imperiet har en armé av F / OSS fria arbetskraft slavar för att fungera som synkofantisk tanke polisen om deras ansträngningar att pilfer arbetskraft andra för sina egna marknadsvinster via AI<sup>1</sup>. Kolla bara in svaren på det flaggade HackerNews-inlägget på den här sidan i avsnittet Länkar nedan för att träffa några av dem.
+Mest äckligt, omfamna och utvidga onda imperiet har en armé av F / OSS fria arbetskraft slavar att fungera som sykofantisk tanke polisen om deras ansträngningar att pilfer arbetskraft andra för sina egna marknadsvinster via AI<sup>1</sup>. Kolla bara in svaren på det flaggade HackerNews-inlägget på den här sidan i avsnittet Länkar nedan för att träffa några av dem.
 
 ## Fuck Microsoft
 
-Lång historia kort, GFM är inte längre en internationell industrispecifikation, men ett amerikanskt proprietärt leverantörsformat skiljer sig inte från [Wikimediaskräp](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) De kopierade den från.
+Lång historia kort, GFM är inte längre en internationell industrispecifikation, men en ful-amerikansk-endast proprietär leverantörsformat som inte skiljer sig från den [Wikimediaskräp](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) De kopierade den från.
 
 [Orion](https://www.sunstarsys.com/orion/features) **använder inte och kommer aldrig att använda nyare GFM-parsrar som låtsas spåra denna smutsiga felfunktion**.
 

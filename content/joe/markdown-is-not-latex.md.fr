@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.fr'
 keywords: démarque,Microsoft,Github,corrompu,étreinte,extension,sycophant,AI
-status: vérifié
+status: vérifié=40142
 title: Microsoft considéré comme nuisible
 ---
 
@@ -18,11 +18,11 @@ title: Microsoft considéré comme nuisible
 
 ## :fa-github: GitHub Démarque aromatisée (GFM)
 
-[GFM](https://github.github.com/gfm/) est resté fidèle aux objectifs de conception de cette spécification jusqu'à [Microsoft a bastardé le signe du dollar isolé pour le convertir conditionnellement en un $$\LaTeX$$ jeton](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) à cause d'un crapware institutionnel cloîtré, ancien, laid et lent appelé [MathJax](https://www.mathjax.org/) Cela n'avait rien à voir avec Markdown, et le fait que ces connards ne veulent pas promouvoir [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-compatible [$$\KaTeX$$](https://katex.org/) Sans un pot-de-vin de l'Académie Khan.
+[GFM](https://github.github.com/gfm/) est resté fidèle aux objectifs de conception de cette spécification jusqu'à [Microsoft a bastardé le signe du dollar isolé pour le convertir conditionnellement en un $$\LaTeX$$ jeton](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) à cause d'un crapware institutionnel cloîtré, ancien, laid et lent appelé [MathJax](https://www.mathjax.org/) Cela n'avait rien à voir avec Markdown, et le fait que ces connards ne veulent pas promouvoir performant, [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-compatible [$$\KaTeX$$](https://katex.org/) Sans un pot-de-vin de l'Académie Khan.
 
 ## Adopter et étendre Redux
 
-Bien sûr, c'était tout à fait intentionnel, car [:editormd-logo: équipes d'ingénierie de classe mondiale](http://editor.md.ipandao.com) avait réglé sur $$\KaTeX$$ avec des limites de jeton en double dollar pour les mathématiques en ligne et des blocs mathématiques clôturés pour les blocs $$\KaTeX$$ traitement **avant 2020**.
+Bien sûr, c'était tout à fait intentionnel, car [:editormd-logo: équipes d'ingénierie de classe mondiale](http://editor.md.ipandao.com) avait réglé sur $$\KaTeX$$ avec [Limites des jetons en double dollar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) pour les mathématiques en ligne, et des blocs mathématiques clôturés ou des paires de paragraphes entourant le bloc de deux dollars seulement $$\KaTeX$$ traitement **en 2015**.
 
 Le point ici est qu'un délimiteur de 2 caractères qui se produit rarement dans une prose typique est l'idéal normal pour des situations comme celle-ci. [Microsoft n'a pris en charge que \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Je n'écrirais pas cet article en 2026, car ce choix répond aux conditions idéales normales pour l'introduction fidèle d'expressions mathématiques en ligne dans une spécification Markdown. Il est également propice au syndrome du canal carpien pour les dactylographes professionnels en mathématiques, il y a donc autre chose à considérer en plus de l'unicité des limites.
 
@@ -30,7 +30,7 @@ Si je devais deviner leurs motifs pour considérer la syntaxe proposée de cet a
 
 Ou simplement [La paresse, l'impatience et Hubris](http://www.parrot.org/)Mais ce n'est pas assez conspirateur pour cet article. YMMV.
 
-C'est maintenant un désastre ambigu des défauts d'expression régulière d'ingénierie chaque fois qu'un auteur/implémenteur doit deviner ce que l'analyseur est censé faire avec des séquences de signes isolés du dollar se produisant dans un seul paragraphe de la prose de démarque. Considérons par exemple une situation où [Français](markdown-is-not-latex.html.fr) Les mathématiciens financiers canadiens discutent de deux prix dans deux devises différentes, selon les US `$`1.50 et 2,00`$` CA (avoué, mais il illustre la complexité). Comment écririez-vous un `i18n` conforme [Analyseur GFM](https://pandoc.org/) qui comprend que le truc entre les signes du dollar ici est *ne pas être traité comme en ligne $$\LaTeX$$*, même si sa syntaxe est valide $$\TeX$$ et se conforme à cela [spéc. naïve](https://pandoc.org/demo/example33/8.13-math.html)?
+C'est maintenant un désastre ambigu des défauts d'expression régulière d'ingénierie chaque fois qu'un auteur/implémenteur doit deviner ce que l'analyseur est censé faire avec des séquences de signes isolés du dollar se produisant dans un seul paragraphe de la prose de démarque. Considérons par exemple une situation où [Français](markdown-is-not-latex.html.fr) Les mathématiciens financiers canadiens discutent de deux prix dans deux devises différentes, selon les États-Unis `$`1,50 et 2 00`$` CA (avoué, mais il illustre la complexité). Comment écririez-vous un `i18n` conforme [Analyseur GFM](https://pandoc.org/) qui comprend que le truc entre les signes du dollar ici est *ne pas être traité comme en ligne $$\LaTeX$$*, même si sa syntaxe est valide $$\TeX$$ et se conforme à cela [spéc. naïve](https://pandoc.org/demo/example33/8.13-math.html)?
 
 Bonne chance avec cela si vous effectuez une conversion GFM en masse de formats de documents existants internationaux vers une plate-forme non-GitHub. Ce sera seulement "travail" lorsqu'elle est rendue dans Visual Studio, si elle fonctionne même du tout.
 
@@ -42,15 +42,15 @@ Contrairement aux normes issues de [JCP](https://jcp.org/en/home/index), il n'y 
 
 Encore une fois, déviance intentionnelle des objectifs de Gruber.
 
-Le plus dégoûtant, l'embrasser et étendre l'empire maléfique a une armée d'esclaves de travail libres F/OSS pour servir de police de pensée syncophane sur leurs efforts pour pilonner le travail des autres pour leurs propres gains sur le marché via l'IA<sup>1</sup>. Il suffit de consulter les réponses à l'article HackerNews marqué de cette page dans la section Liens ci-dessous pour en rencontrer quelques-uns.
+Plus dégoûtant, l'embrasser et étendre l'empire maléfique a une armée d'esclaves de travail libres F/OSS pour servir de police de pensée sycophane sur leurs efforts pour pilonner le travail des autres pour leurs propres gains sur le marché via l'IA<sup>1</sup>. Il suffit de consulter les réponses à l'article HackerNews marqué de cette page dans la section Liens ci-dessous pour en rencontrer quelques-uns.
 
 ## Fuck Microsoft
 
-Longue histoire courte, GFM n'est plus une spécification de l'industrie internationale, mais un format de fournisseur exclusif américain pas différent de [Déchets de Wikimedia](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) Ils l'ont copié.
+Longue histoire courte, GFM n'est plus une spécification de l'industrie internationale, mais un format de vendeur propriétaire laide-américain-seulement pas différent de [Déchets de Wikimedia](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) Ils l'ont copié.
 
 [Orion](https://www.sunstarsys.com/orion/features) **n'utilise pas et n'utilisera jamais de nouveaux analyseurs GFM qui prétendent suivre cette erreur sale**.
 
-Au lieu de cela, nous comptons sur une fourchette interne de @markedjs/marked et nous continuerons à le faire dans un avenir prévisible.
+Au lieu de cela, nous comptons sur une fourchette interne de @markedjs/marqué et nous continuerons à le faire dans un avenir prévisible.
 
 ## Notes de bas de page
 

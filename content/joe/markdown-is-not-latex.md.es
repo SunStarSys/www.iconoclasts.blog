@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante,AI
-status: verificado=40060
+status: verificado=40142
 title: Microsoft considerado dañino
 ---
 
@@ -18,11 +18,11 @@ title: Microsoft considerado dañino
 
 ## :fa-github: GitHub Rebaja con sabor (GFM)
 
-[GFM](https://github.github.com/gfm/) se mantuvo fiel a los objetivos de diseño de esa especificación hasta [Microsoft bastardizó el signo de dólar aislado para convertirlo condicionalmente en un $$\LaTeX$$ token](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) debido a algunos crapware institucionales clausurados, anticuados, feos y lentos llamados [MathJax](https://www.mathjax.org/) que no tenía nada que ver con Markdown, y el hecho de que estos imbéciles no quieren promover [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-compatible [$$\KaTeX$$](https://katex.org/) Sin un soborno de la Academia Khan.
+[GFM](https://github.github.com/gfm/) se mantuvo fiel a los objetivos de diseño de esa especificación hasta [Microsoft bastardizó el signo de dólar aislado para convertirlo condicionalmente en un $$\LaTeX$$ token](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) debido a algunos crapware institucionales clausurados, anticuados, feos y lentos llamados [MathJax](https://www.mathjax.org/) que no tenía nada que ver con Markdown, y el hecho de que estos imbéciles no quieren promover el rendimiento, [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-compatible [$$\KaTeX$$](https://katex.org/) Sin un soborno de la Academia Khan.
 
 ## Abrazar y ampliar Redux
 
-Por supuesto, esto fue totalmente intencional, porque [:editormd-logo: equipos de ingeniería de clase mundial](http://editor.md.ipandao.com) habían resuelto $$\KaTeX$$ con límites de token de doble dólar para matemáticas en línea y bloques de matemáticas vallados para bloques $$\KaTeX$$ procesamiento **antes de 2020**.
+Por supuesto, esto fue totalmente intencional, porque [:editormd-logo: equipos de ingeniería de clase mundial](http://editor.md.ipandao.com) habían resuelto $$\KaTeX$$ con [límites de token de doble dólar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) para matemáticas en línea, y bloques de matemáticas vallados o pares de párrafos circundantes de doble dólar para bloques $$\KaTeX$$ procesamiento **en 2015**.
 
 El punto aquí es que un delimitador de 2 caracteres que rara vez ocurre en la prosa típica es el ideal normal para situaciones como esta. [Se ha bloqueado Microsoft solo para admitir \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) No escribiría este artículo en 2026, porque esa elección cumple con las condiciones ideales normales para la introducción fiel de expresiones matemáticas en línea en una especificación de Markdown. También es propicio para el síndrome del túnel carpiano para los mecanógrafos profesionales de matemáticas, por lo que hay algo más que considerar además de la singularidad de los límites.
 
@@ -42,11 +42,11 @@ A diferencia de los estándares que surgen de la [JCP](https://jcp.org/en/home/i
 
 Una vez más, desviación intencional de los objetivos de Gruber.
 
-Lo más repugnante es que el abrazo y la extensión del imperio maligno tiene un ejército de esclavos de trabajo libre F / OSS para servir como policía de pensamiento sincofántico sobre sus esfuerzos para impulsar el trabajo de otros para sus propias ganancias de mercado a través de la IA.<sup>1</sup>. Solo echa un vistazo a las respuestas a la publicación HackerNews marcada de esta página en la sección Enlaces a continuación para conocer algunos de ellos.
+Lo más repugnante es que el abrazo y la extensión del imperio maligno tiene un ejército de esclavos de trabajo libre F / OSS para servir como policía de pensamiento sicofántico sobre sus esfuerzos para impulsar el trabajo de otros para sus propias ganancias de mercado a través de la IA.<sup>1</sup>. Solo echa un vistazo a las respuestas a la publicación HackerNews marcada de esta página en la sección Enlaces a continuación para conocer algunos de ellos.
 
 ## Mierda Microsoft
 
-En pocas palabras, GFM ya no es una especificación de la industria internacional, sino un formato de proveedor exclusivo estadounidense que no es diferente del [Basura de Wikimedia](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) de donde lo copiaron.
+En pocas palabras, GFM ya no es una especificación de la industria internacional, sino un feo formato de proveedor exclusivo estadounidense que no es diferente del [Basura de Wikimedia](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) de donde lo copiaron.
 
 [Orión](https://www.sunstarsys.com/orion/features) **no utiliza, y nunca utilizará, analizadores de GFM más nuevos que pretendan realizar un seguimiento de esta disfunción sucia**.
 

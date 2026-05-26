@@ -2,7 +2,7 @@
 categories: 오리온
 dependencies: '*.md.ko'
 keywords: 마크 다운, 마이크로 소프트, Github, 손상, 멤브레이스, 확장, 식도, AI
-status: 확인=40060
+status: 확인=40142
 title: 마이크로소프트는 유해하다고 생각했다.
 ---
 
@@ -18,11 +18,11 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 ## :fa-github: GitHub 맛 있는 매가인하(GFM)
 
-[GFM](https://github.github.com/gfm/) 해당 사양의 설계 목표에 맞춰 [마이크로 소프트는 조건부로 변환하기 위해 고립 된 달러 기호를 bastardized $$\LaTeX$$ 토큰](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) 일부 피복, 구식, 추악하고 느린 기관용 crapware 때문에 [MathJax](https://www.mathjax.org/) 그것은 마크 다운과 아무런 관련이 없었고,이 개새끼들이 홍보하고 싶지 않다는 사실입니다. [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-호환 [$$\KaTeX$$](https://katex.org/) 칸 아카데미에서 뇌물을받지 않고.
+[GFM](https://github.github.com/gfm/) 해당 사양의 설계 목표에 맞춰 [마이크로 소프트는 조건부로 변환하기 위해 고립 된 달러 기호를 bastardized $$\LaTeX$$ 토큰](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) 일부 피복, 구식, 추악하고 느린 기관용 crapware 때문에 [MathJax](https://www.mathjax.org/) 그것은 매가인하와 아무런 관련이 없었고,이 개새끼들이 수행자를 홍보하고 싶지 않다는 사실, [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-호환 [$$\KaTeX$$](https://katex.org/) 칸 아카데미에서 뇌물을받지 않고.
 
 ## Redux 수용 및 확장
 
-물론 이것은 완전히 의도적이었기 때문에 [:editormd-logo: 세계적 수준의 엔지니어링 팀](http://editor.md.ipandao.com) 결제 완료 $$\KaTeX$$ 인라인 수학에 대한 이중 달러 토큰 경계 및 블록에 대한 보호된 수학 블록 포함 $$\KaTeX$$ 처리 **2020년 이전**
+물론 이것은 완전히 의도적이었기 때문에 [:editormd-logo: 세계적 수준의 엔지니어링 팀](http://editor.md.ipandao.com) 결제 완료 $$\KaTeX$$ 포함 [이중 달러 토큰 경계](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) 인라인 수학 및 펜스 수학 블록 또는 블록에 대한 이중 달러 전용 주변 단락 쌍 $$\KaTeX$$ 처리 **에서 2015**.
 
 여기서 중요한 점은 일반적인 prose에서 거의 발생하지 않는 2자 구분자가 이와 같은 상황에 대한 정상적인 이상이라는 것입니다. [마이크로소프트가 \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 나는 2026 년에이 기사를 쓰지 않을 것입니다, 그 선택은 마크 다운 사양 인라인 수학 표현의 충실한 도입을위한 정상적인 이상적인 조건을 충족하기 때문입니다. 또한 전문 수학 타이피스트를위한 손목 터널 증후군에 도움이되므로 경계 토큰 고유성 외에 고려해야 할 다른 것이 있습니다.
 
@@ -42,11 +42,11 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 다시 말하지만, Gruber의 목표에서 의도적 인 편차.
 
-가장 역겨운 것은, 사악한 제국을 포옹하고 확장하는 것은 F/OSS 자유노동노예의 군대를 가지고 있으며, AI를 통해 자신의 시장 이익을 위해 다른 사람들의 노동을 더럽히려는 노력에 대해 동기주의적 사고 경찰 역할을 한다.<sup>1</sup>. 아래 링크 섹션에서 이 페이지의 플래그가 지정된 HackerNews 게시물에 대한 응답을 확인하여 그 중 일부를 충족하십시오.
+가장 역겨운 것은, 사악한 제국을 포옹하고 확장하는 것은 AI를 통해 자신의 시장 이익을 위해 다른 사람들의 노동을 더럽히려는 노력에 대해 정신적 사고 경찰 역할을하는 F / OSS 자유 노동 노예의 군대를 가지고 있습니다.<sup>1</sup>. 아래 링크 섹션에서 이 페이지의 플래그가 지정된 HackerNews 게시물에 대한 응답을 확인하여 그 중 일부를 충족하십시오.
 
 ## 씨발 마이크로소프트
 
-긴 이야기 짧은, GFM은 더 이상 국제 산업 사양이 아니지만, 미국 전용 독점 업체 형식과 다르지 않습니다 [위키미디어 쓰레기](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) 그들은 그것을 복사했다.
+긴 이야기 짧은, GFM은 더 이상 국제 산업 사양이 아니지만 추악한 미국 소유의 벤더 형식과 다르지 않습니다 [위키미디어 쓰레기](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) 그들은 그것을 복사했다.
 
 [오리온](https://www.sunstarsys.com/orion/features) **이 더러운 오작동을 추적하는 척하는 최신 GFM 구문 분석기를 사용하지 않으며 결코 사용하지 않습니다**.
 

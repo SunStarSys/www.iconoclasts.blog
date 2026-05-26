@@ -2,7 +2,7 @@
 categories: אוריון
 dependencies: '*.md.he'
 keywords: markdown,מיקרוסופט,Github,corrupt,embrace,הרחבה,sycophant,AI
-status: אומתו 40060
+status: אומתו = 40142
 title: מיקרוסופט נחשבת מזיקה
 ---
 
@@ -18,11 +18,11 @@ title: מיקרוסופט נחשבת מזיקה
 
 ## :fa-github: GitHub סימון בטעם (GFM)
 
-[מנהל מימוש שירות](https://github.github.com/gfm/) נשאר נאמן למטרות העיצוב של מפרט זה עד [מיקרוסופט הממזרה את סימן הדולר המבודד כדי להמיר אותו באופן מותנה $$\LaTeX$$ אסימון](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) בגלל כמה crapware מוסדי cloistered, מיושן, מכוער ואיטי שנקרא [MathJax](https://www.mathjax.org/) זה לא היה קשור למרקדאון, והעובדה שהמטומטמים האלה לא רוצים לקדם. [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-תואם [$$\KaTeX$$](https://katex.org/) ללא שוחד מאקדמיית חאן.
+[מנהל מימוש שירות](https://github.github.com/gfm/) נשאר נאמן למטרות העיצוב של מפרט זה עד [מיקרוסופט הממזרה את סימן הדולר המבודד כדי להמיר אותו באופן מותנה $$\LaTeX$$ אסימון](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) בגלל כמה crapware מוסדי cloistered, מיושן, מכוער ואיטי שנקרא [MathJax](https://www.mathjax.org/) זה לא היה קשור למרקדאון, והעובדה שהמטומטמים האלה לא רוצים לקדם ביצועים, [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-תואם [$$\KaTeX$$](https://katex.org/) ללא שוחד מאקדמיית חאן.
 
 ## אמצו והרחיבו את Redux
 
-כמובן שזה היה בכוונה, כי [:editormd-logo: צוותי הנדסה ברמה עולמית](http://editor.md.ipandao.com) הסתדר על $$\KaTeX$$ עם גבולות אסימון דו-דולרים למתמטיקה כלולה ובלוקים מתמטיים מגודרים לבלוק $$\KaTeX$$ עיבוד **לפני 2020**.
+כמובן שזה היה בכוונה, כי [:editormd-logo: צוותי הנדסה ברמה עולמית](http://editor.md.ipandao.com) הסתדר על $$\KaTeX$$ עם [גבולות אסימון דו-דולר](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) למתמטיקה מוטבעת, וגושי מתמטיקה מגודרים או זוגות של פסקאות המקיפות דו-דולר בלבד לגוש $$\KaTeX$$ עיבוד **בשנת 2015**.
 
 הנקודה כאן היא שתוחם בן 2 תווים המתרחש לעיתים נדירות בפרוזה טיפוסית הוא האידיאל הרגיל למצבים כאלה. [אם מיקרוסופט הייתה תומכת רק ב-$` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) לא הייתי כותב מאמר זה בשנת 2026, כי בחירה זו עונה על התנאים האידיאליים הרגילים להקדמה נאמנה של ביטויי מתמטיקה מוטבעים במפרט Markdown. זה גם תורם לתסמונת המנהרה הקרפלית עבור טיפסטים מתמטיים מקצועיים, ולכן יש משהו אחר שיש לקחת בחשבון מלבד ייחודיות מדוברת גבולות.
 
@@ -42,11 +42,11 @@ title: מיקרוסופט נחשבת מזיקה
 
 שוב, סטייה מכוונת ממטרותיו של גרובר.
 
-באופן מגעיל ביותר, לחיבוק ולהרחיב את האימפריה המרושעת יש צבא של עבדי עבודה חופשיים F / OSS כדי לשמש כמשטרת מחשבה סינקופנטית על מאמציהם לצלוח את העבודה של אחרים עבור רווחי השוק שלהם באמצעות AI<sup>1</sup>. פשוט בדוק את התשובות לפוסט HackerNews המסומן בדף זה במקטע קישורים למטה כדי לפגוש כמה מהם.
+באופן מגעיל ביותר, לחיבוק ולהרחיב את האימפריה המרושעת יש צבא של עבדי עבודה חופשיים F / OSS כדי לשמש כמשטרת מחשבה סיקופנטית על מאמציהם לצלוח את העבודה של אחרים עבור רווחי השוק שלהם באמצעות AI<sup>1</sup>. פשוט בדוק את התשובות לפוסט HackerNews המסומן בדף זה במקטע קישורים למטה כדי לפגוש כמה מהם.
 
 ## Fuck מיקרוסופט
 
-סיפור ארוך קצר, GFM הוא כבר לא מפרט בינלאומי בתעשייה, אבל פורמט ספק קנייני אמריקאי בלבד לא שונה מ [זבל ויקימדיה](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) הם העתיקו את זה.
+סיפור ארוך קצר, GFM הוא כבר לא מפרט תעשייתי בינלאומי, אבל פורמט ספק קנייני מכוער-אמריקאי בלבד לא שונה מזה של החברה. [זבל ויקימדיה](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) הם העתיקו את זה.
 
 [אוריון](https://www.sunstarsys.com/orion/features) **לא, ולעולם לא, ישתמשו במנתחי GFM חדשים יותר שמעמידים פנים שהם עוקבים אחר התכונה המלוכלכת הזו**.
 
