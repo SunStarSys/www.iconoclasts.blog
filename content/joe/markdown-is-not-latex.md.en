@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant,AI
-status: verified=40122
+status: verified=40126
 Dependencies: *.md.en
 Categories: Orion
 
@@ -20,7 +20,7 @@ Categories: Orion
 
 ## Embrace and Extend Redux
 
-Of course this was entirely intentional, because [:editormd-logo: world-class engineering teams](http://editor.md.ipandao.com) had settled on $$\KaTeX$$ with [double-dollar token boundaries](https://github.com/pandao/editor.md/blob/master/examples/katex.html) for inline math, and fenced math blocks or pairs of double-dollar-only surrounding paragraphs for block $$\KaTeX$$ processing **before 2020**.
+Of course this was entirely intentional, because [:editormd-logo: world-class engineering teams](http://editor.md.ipandao.com) had settled on $$\KaTeX$$ with [double-dollar token boundaries](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) for inline math, and fenced math blocks or pairs of double-dollar-only surrounding paragraphs for block $$\KaTeX$$ processing **before 2020**.
 
 The point here is that a 2-character delimiter that rarely occurs in typical prose is the normal ideal for situations like this. [Had Microsoft stuck to only supporting \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) I would not be writing this article in 2026, because that choice meets the normal ideal conditions for faithful introduction of inline math expressions in a Markdown spec. It is also conducive to carpal tunnel syndrome for professional math typists, so there's something else to consider besides boundary-token uniqueness.
 
