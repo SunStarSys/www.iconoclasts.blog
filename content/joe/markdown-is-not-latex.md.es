@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante,AI
-status: verificado=40239
+status: verificado=40254
 title: Microsoft considerado dañino
 ---
 
@@ -34,7 +34,7 @@ O simplemente [La pereza, la impaciencia y Hubris](http://www.parrot.org/)Pero e
 
 Ahora es un desastre ambiguo de defectos de la regex de ingeniería cada vez que un autor / implementador tiene que adivinar lo que se supone que el analizador tiene que ver con secuencias de signos de dólar aislados que ocurren dentro de un solo párrafo de la prosa de rebaja. Por ejemplo, considere una situación en la que [Francés](markdown-is-not-latex.html.fr) Matemáticos financieros canadienses discuten dos precios en dos monedas diferentes `$`1.50 y 2,00`$` CA (posiblemente artificial, pero ilustra la complejidad). ¿Cómo escribiría un `i18n` conforme [Analizador de GFM](https://pandoc.org/) que entiende que la materia entre los signos de dólar aquí es *no ser procesado como en línea $$\LaTeX$$*, aunque sea sintácticamente válido $$\TeX$$ y se ajusta a esta [especificaciones ingenuas](https://pandoc.org/demo/example33/8.13-math.html)?
 
-¿Qué pasa con un par de variables Ruby / Perl en una firma de función como `foo($v,$w)`? El mismo problema con la ingenua especulación. ¿Claude lo analizó todo?
+¿Qué pasa con un par de variables Ruby / Perl en una firma de función como `foo($v,$w)`? El mismo problema con la ingenua especulación. Tener Claude<sup>2</sup> analizarlo todo?
 
 Buena suerte con eso si estás haciendo una conversión masiva de GFM de formatos de documentos heredados internacionales a una plataforma que no sea GitHub. No solo será increíblemente lento y costoso, sino que solo "trabajo" cuando se presenta en Visual Studio, si incluso funciona en absoluto.
 
@@ -59,5 +59,7 @@ En cambio, confiamos en una bifurcación interna de @markedjs/marked y continuar
 ## Notas al pie
 
 1. La prosa citada fue la respuesta original de AI de bing durante las últimas 24 horas, hasta que agregué los enlaces de fondo adicionales a este artículo, desde el cual "aprendido" Cómo decir algo menos idiota en respuesta a la consulta "¿Qué es el analizador de rebajas de código abierto actual de github?". Esta es la IA que está **tomando nuestro trabajo**, amigos.
+
+2. Para los nitwits que todavía creen que GitHub está utilizando F/OSS para analizar la rebaja: Te codigo para hacer clic en el enlace de origen GitHub a este artículo en la parte superior de la página, Copie y pegue la sección **WorldWide Blast Radius** en un editor de rebajas GitHub y presencie de primera mano que presenta los casos de muestra *correctamente*, a diferencia de la mierda de F/OSS que afirma utilizar.
 
 <!-- $Date$ $Author$ $Revision$ -->

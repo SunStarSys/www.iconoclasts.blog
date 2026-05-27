@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant,AI
-status: verified=40239
+status: verified=40254
 Dependencies: *.md.en
 Categories: Orion
 
@@ -32,7 +32,7 @@ Or just [Laziness, Impatience, and Hubris](http://www.parrot.org/); but that's n
 
 It is now an ambiguous disaster of engineering regex defects every time an author/implementer has to guess what the parser is supposed to do with sequences of isolated dollar signs occurring within a single paragraph of markdown prose. For example, consider a situation where [French](markdown-is-not-latex.html.fr) Canadian financial mathematicians discuss two prices in two different currencies, say US `$`1.50, and 2,00`$` CA (admittedly contrived, but it illustrates the complexity). How would you write an `i18n` compliant [GFM parser](https://pandoc.org/) that understands that the stuff between the dollar signs here is *not to be processed as inline $$\LaTeX$$*, even though it's syntactically valid $$\TeX$$ and conforms to this [naïve spec](https://pandoc.org/demo/example33/8.13-math.html)?
 
-What about a pair of Ruby/Perl variables in a function signature like `foo($v,$w)`? Same problem with the naïve spec. Have Claude parse it all?
+What about a pair of Ruby/Perl variables in a function signature like `foo($v,$w)`? Same problem with the naïve spec. Have Claude<sup>2</sup> parse it all?
 
 Good luck with that if you are doing a bulk GFM conversion of international legacy document formats to a non-GitHub platform. Not only will it be incredibly slow and expensive, but it will only "work" when rendered in Visual Studio, if it even works at all.
 
@@ -58,5 +58,7 @@ Instead, we rely on an internal fork of @markedjs/marked and will continue to do
 ## Footnotes
 
 1. The quoted prose was bing's original AI response for the past 24 hours, until I added the additional background links to this article, from which it "learned" how to say something less idiotic in response to the query "what is github's current open source markdown parser".  This is the AI that's **taking our jobs**, folks.
+
+2. For the nitwits who still believe GitHub is using F/OSS to parse markdown: I encouage you to click on the GitHub source link to this article at the top of the page, copy and paste the **WorldWide Blast Radius** section into a GitHub markdown editor, and witness firsthand that it renders the sample cases *correctly*, unlike the F/OSS crap it claims to use.
 
 <!-- $Date$ $Author$ $Revision$ -->

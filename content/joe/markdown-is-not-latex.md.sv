@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna, utöka,sykofant,AI
-status: verifierad=40239
+status: verifierad=40254
 title: Microsoft anses vara skadligt
 ---
 
@@ -34,7 +34,7 @@ Eller bara [Lättja, otålighet och Hubris](http://www.parrot.org/)Men det är i
 
 Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk dig en situation där [Franska](markdown-is-not-latex.html.fr) Kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1,50 och 2 00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel [GFM-parser](https://pandoc.org/) som förstår att grejerna mellan dollartecknen här är *inte att behandlas som inline $$\LaTeX$$*, även om det är syntaktiskt giltigt $$\TeX$$ och överensstämmer med detta [naiv spec](https://pandoc.org/demo/example33/8.13-math.html)?
 
-Vad sägs om ett par Ruby / Perl variabler i en funktionssignatur som `foo($v,$w)`? Samma problem med den naiva spec. Har Claude tolkat allt?
+Vad sägs om ett par Ruby / Perl variabler i en funktionssignatur som `foo($v,$w)`? Samma problem med den naiva spec. Har Claude<sup>2</sup> Parsa allt?
 
 Lycka till med det om du gör en bulk GFM-konvertering av internationella äldre dokumentformat till en icke-GitHub plattform. Det kommer inte bara att vara otroligt långsamt och dyrt, men det kommer bara att "studera" när det renderas i Visual Studio, om det ens fungerar alls.
 
@@ -59,5 +59,7 @@ Istället förlitar vi oss på en intern gaffel på @markedjs/marked och kommer 
 ## Fotnoter
 
 1. Den citerade prosaen var bings ursprungliga AI-svar under de senaste 24 timmarna, tills jag lade till ytterligare bakgrundslänkar till den här artikeln, från vilken den "inlärd" Hur man säger något mindre idiotiskt som svar på frågan "vad är githubs aktuella nedsättningsparser med öppen källkod". Det här är AI som **tar våra jobb**, gott folk.
+
+2. För de nitwits som fortfarande tror att GitHub använder F/OSS för att parsa markdown: Jag uppmanar dig att klicka på GitHub källänken till den här artikeln högst upp på sidan, kopiera och klistra in avsnittet **WorldWide Blast Radius** i en GitHub markdown editor, och bevittna första hand att det återger provfall *korrekt *, till skillnad från F / OSS skit det hävdar att använda.
 
 <!-- $Date$ $Author$ $Revision$ -->
