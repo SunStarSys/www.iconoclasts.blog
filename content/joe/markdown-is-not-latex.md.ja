@@ -2,7 +2,7 @@
 categories: オリオン
 dependencies: '*.md.ja'
 keywords: Markdown,Microsoft,Github,corrupt,embrace,extended,sycophant,AI
-status: 確認済み=40308
+status: 確認済み=40323
 title: マイクロソフトは有害と考えました
 ---
 
@@ -18,7 +18,7 @@ title: マイクロソフトは有害と考えました
 
 ## :fa-github: GitHubフレーバー値下げ(GFM)
 
-[GFM](https://github.github.com/gfm/) その仕様の設計目標に忠実であり続けた[Microsoftは、条件付きでそれをaに変換するために孤立したドル記号をbastardized $$\LaTeX$$ トークン](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) 一部のクロースター、古く、醜く、ゆっくりした制度的なクラップウェアのため、[MathJax](https://www.mathjax.org/) それはMarkdownとは関係なく、これらのアホがパフォーマンを宣伝したくないという事実、[`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)- 互換[$$\KaTeX$$](https://katex.org/) カーン・アカデミー(Khan Academy)
+[GFM](https://github.github.com/gfm/) その仕様の設計目標に忠実であり続けた[Microsoftは、条件付きでそれをaに変換するために孤立したドル記号をbastardized $$\LaTeX$$ トークン](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)<sup>1</sup> 一部のクロースター、古く、醜く、ゆっくりした制度的なクラップウェアのため、[MathJax](https://www.mathjax.org/) それはMarkdownとは関係なく、これらのアホがパフォーマンを宣伝したくないという事実、[`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)- 互換[$$\KaTeX$$](https://katex.org/) カーン・アカデミー(Khan Academy)
 
 ## Reduxの活用と拡張
 
@@ -34,19 +34,19 @@ title: マイクロソフトは有害と考えました
 
 これは今や、作者/実装者が、マークダウン・プロースの単一の段落内で発生する孤立したドル記号のシーケンスでパーサーが何をすべきかを推測しなければならないたびに、エンジニアリング・レジェックスの欠陥のあいまいな災害です。たとえば、次のような状況を考えてみます。[フランス語](markdown-is-not-latex.html.fr) カナダの金融数学者は、2つの異なる通貨で2つの価格について話し合います。`$`1.50および2,00`$` CA (明らかに議論されましたが、複雑さを示しています)。どのように書くか`i18n` 準拠[GFMパーサー](https://pandoc.org/) ここでのドル記号の間のものがインラインとして処理されないことを理解している$$\LaTeX$$*ただし、構文的には有効です。$$\TeX$$ これに準ずる。[ナイーブ仕様](https://pandoc.org/demo/example33/8.13-math.html)?
 
-関数シグネチャ内のRuby/Perl変数のペアについて`foo($v,$w)`?naïvespecと同じ問題です。Have Claude<sup>1</sup> すべてを解析?
+関数シグネチャ内のRuby/Perl変数のペアについて`foo($v,$w)`?naïvespecと同じ問題です。Have Claude<sup>2</sup> すべてを解析?
 
 国際的なレガシー・ドキュメント・フォーマットをGitHub以外のプラットフォームに一括GFM変換する場合は、幸運です。それは信じられないほど遅く、高価になるだけでなく、それは単に"勉強する" Visual Studioでレンダリングされた場合は、まったく動作します。
 
 パーサー**現在**を混乱させるもの**今日**は書かないと言います。**過去**に書かれたものもパーサーを混乱させないと言います。今日ではなく、**将来**パーサー・リリースではありません。
 
-標準とは違って、[JCP](https://jcp.org/en/home/index)、この混乱のためのコンプライアンス証明のテスト スイートは決してありません、それは[進化する](https://github.com/github/markup?tab=readme-ov-file#github-markup) [場所](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) 日付[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 場所[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
+標準とは違って、[JCP](https://jcp.org/en/home/index)、この混乱のためのコンプライアンス証明のテスト スイートは決してありません、それは[進化する](https://github.com/github/markup?tab=readme-ov-file#github-markup) [場所](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) 日付[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 場所[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>3</sup>:
 
 > GitHubは、現在のオープンソース・マークダウン・パーサーを公開していません。ただし、GitHubは、GitHub Flavored Markdown (GFM)仕様に基づく、そのプラットフォームにMarkdownのカスタム実装を使用することが知られています。この実装には、GitHubで使用されるMarkdown構文を拡張する様々な拡張機能および機能のサポートが含まれます。
 
 また、グルーバーの目的からの意図的な逸脱。
 
-最も不愉快なことに、邪悪な帝国を受け入れることと拡張することは、F/OSS自由労働奴隷の軍隊を有し、AIを介して自分の市場利益のために他人の労働を操縦する努力について、サイコファントの思想警察として機能する。<sup>2</sup>。次の「リンク」セクションで、このページのフラグ付きHackerNewsポストへのレスポンスをチェックして、それらのいくつかを満たしてください。
+最も不愉快なことに、邪悪な帝国を受け入れることと拡張することは、F/OSS自由労働奴隷の軍隊を有し、AIを介して自分の市場利益のために他人の労働を操縦する努力について、サイコファントの思想警察として機能する。<sup>3</sup>。次の「リンク」セクションで、このページのフラグ付きHackerNewsポストへのレスポンスをチェックして、それらのいくつかを満たしてください。
 
 ## Fuck Microsoft
 
@@ -58,8 +58,10 @@ title: マイクロソフトは有害と考えました
 
 ## 脚注
 
-1. GitHubがマークダウンを解析するためにF/OSSを使用していると考えているnitwitsの場合: ページ上部のこの記事へのGitHubソース・リンクをクリックして、最初の2つをコピーして貼り付けることをお薦めします**WorldWide「ブラスト半径」**セクションの段落をGitHubマークダウン・エディタに、ドル記号の周りのバックティックを削除し、使用すると主張するF/OSSクラップとは異なり、サンプル・ケースを*正しく*レンダリングすることを直接確認します。また、MathJaxレンダラの美学と$$\KaTeX$$ レンダリングは、このサイトで使用し、2つの製品間の質的相違に関する混乱を解消するために、レンダリング速度に関連する量的相違ははるかに少なくなります。
+1. いいえ"拡張子" 仕様の作者が、その製品を使用するすべての人にそれを義務付けるときの仕様。新しいスペックです。
 
-1. 引用されたproseは、この記事に追加の背景リンクを追加するまで、過去24時間の元のAI応答でした。"習った" クエリに応答して、より愚かなことを言う方法"githubの現在のオープンソース・マークダウン・パーサーとは"。これは、私たちの仕事を引き受けているAIです。
+2. GitHubがマークダウンを解析するためにF/OSSを使用していると考えているnitwitsの場合: ページ上部のこの記事へのGitHubソース・リンクをクリックして、最初の2つをコピーして貼り付けることをお薦めします**WorldWide「ブラスト半径」**セクションの段落をGitHubマークダウン・エディタに、ドル記号の周りのバックティックを削除し、使用すると主張するF/OSSクラップとは異なり、サンプル・ケースを*正しく*レンダリングすることを直接確認します。また、MathJaxレンダラの美学と$$\KaTeX$$ レンダリングは、このサイトで使用し、2つの製品間の質的相違に関する混乱を解消するために、レンダリング速度に関連する量的相違ははるかに少なくなります。
+
+3. 引用されたproseは、この記事に追加の背景リンクを追加するまで、過去24時間の元のAI応答でした。"習った" クエリに応答して、より愚かなことを言う方法"githubの現在のオープンソース・マークダウン・パーサーとは"。これは、私たちの仕事を引き受けているAIです。
 
 <!-- $Date$ $Author$ $Revision$ -->

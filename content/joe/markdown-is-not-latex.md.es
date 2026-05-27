@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante,AI
-status: verificado=40308
+status: verificado=40323
 title: Microsoft considerado dañino
 ---
 
@@ -18,7 +18,7 @@ title: Microsoft considerado dañino
 
 ## :fa-github: GitHub Rebaja con sabor (GFM)
 
-[GFM](https://github.github.com/gfm/) se mantuvo fiel a los objetivos de diseño de esa especificación hasta [Microsoft bastardizó el signo de dólar aislado para convertirlo condicionalmente en un $$\LaTeX$$ token](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions) debido a algunos crapware institucionales clausurados, anticuados, feos y lentos llamados [MathJax](https://www.mathjax.org/) que no tenía nada que ver con Markdown, y el hecho de que estos imbéciles no quieren promover el rendimiento, [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-compatible [$$\KaTeX$$](https://katex.org/) Sin un soborno de la Academia Khan.
+[GFM](https://github.github.com/gfm/) se mantuvo fiel a los objetivos de diseño de esa especificación hasta [Microsoft bastardizó el signo de dólar aislado para convertirlo condicionalmente en un $$\LaTeX$$ token](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)<sup>1</sup> debido a algunos crapware institucionales clausurados, anticuados, feos y lentos llamados [MathJax](https://www.mathjax.org/) que no tenía nada que ver con Markdown, y el hecho de que estos imbéciles no quieren promover el rendimiento, [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-compatible [$$\KaTeX$$](https://katex.org/) Sin un soborno de la Academia Khan.
 
 ## Abrazar y ampliar Redux
 
@@ -34,19 +34,19 @@ O simplemente [La pereza, la impaciencia y Hubris](http://www.parrot.org/)Pero e
 
 Ahora es un desastre ambiguo de defectos de la regex de ingeniería cada vez que un autor / implementador tiene que adivinar lo que se supone que el analizador tiene que ver con secuencias de signos de dólar aislados que ocurren dentro de un solo párrafo de la prosa de rebaja. Por ejemplo, considere una situación en la que [Francés](markdown-is-not-latex.html.fr) Matemáticos financieros canadienses discuten dos precios en dos monedas diferentes `$`1.50 y 2,00`$` CA (posiblemente artificial, pero ilustra la complejidad). ¿Cómo escribiría un `i18n` conforme [Analizador de GFM](https://pandoc.org/) que entiende que la materia entre los signos de dólar aquí es *no ser procesado como en línea $$\LaTeX$$*, aunque sea sintácticamente válido $$\TeX$$ y se ajusta a esta [especificaciones ingenuas](https://pandoc.org/demo/example33/8.13-math.html)?
 
-¿Qué pasa con un par de variables Ruby / Perl en una firma de función como `foo($v,$w)`? El mismo problema con la ingenua especulación. Tener Claude<sup>1</sup> analizarlo todo?
+¿Qué pasa con un par de variables Ruby / Perl en una firma de función como `foo($v,$w)`? El mismo problema con la ingenua especulación. Tener Claude<sup>2</sup> analizarlo todo?
 
 Buena suerte con eso si estás haciendo una conversión masiva de GFM de formatos de documentos heredados internacionales a una plataforma que no sea GitHub. No solo será increíblemente lento y costoso, sino que solo "trabajo" cuando se presenta en Visual Studio, si incluso funciona en absoluto.
 
 Una cosa es decir que no escribirá cosas **hoy** que confundan al analizador **ahora**; otra cosa es decir que las cosas escritas en el **pasado** tampoco confundirán al analizador. No hoy y no las versiones del analizador **futuro**.
 
-A diferencia de los estándares que surgen de la [JCP](https://jcp.org/en/home/index), nunca habrá un conjunto de pruebas de certificación de cumplimiento para este desastre, porque es un [evolución](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situación](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) activado [el terreno](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) a las [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
+A diferencia de los estándares que surgen de la [JCP](https://jcp.org/en/home/index), nunca habrá un conjunto de pruebas de certificación de cumplimiento para este desastre, porque es un [evolución](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situación](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) activado [el terreno](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) a las [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>3</sup>:
 
 > GitHub no ha revelado públicamente su analizador de rebajas de código abierto actual. Sin embargo, se sabe que GitHub utiliza una implementación personalizada de Markdown para su plataforma, que se basa en la especificación GitHub Flavored Markdown (GFM). Esta implantación incluye soporte para varias extensiones y funciones que mejoran la sintaxis de Markdown utilizada por GitHub.
 
 Una vez más, desviación intencional de los objetivos de Gruber.
 
-Lo más repugnante es que el abrazo y la extensión del imperio maligno tiene un ejército de esclavos de trabajo libre F / OSS para servir como policía de pensamiento sicofántico sobre sus esfuerzos para impulsar el trabajo de otros para sus propias ganancias de mercado a través de la IA.<sup>2</sup>. Solo echa un vistazo a las respuestas a la publicación HackerNews marcada de esta página en la sección Enlaces a continuación para conocer algunos de ellos.
+Lo más repugnante es que el abrazo y la extensión del imperio maligno tiene un ejército de esclavos de trabajo libre F / OSS para servir como policía de pensamiento sicofántico sobre sus esfuerzos para impulsar el trabajo de otros para sus propias ganancias de mercado a través de la IA.<sup>3</sup>. Solo echa un vistazo a las respuestas a la publicación HackerNews marcada de esta página en la sección Enlaces a continuación para conocer algunos de ellos.
 
 ## Mierda Microsoft
 
@@ -58,8 +58,10 @@ En cambio, confiamos en una bifurcación interna de @markedjs/marked y continuar
 
 ## Notas al pie
 
-1. Para los principiantes que todavía creen que GitHub está utilizando F/OSS para analizar la rebaja: le animo a hacer clic en el enlace de origen de GitHub a este artículo en la parte superior de la página, copiar y pegar los dos primeros párrafos de la sección **WorldWide Radio de explosión** en un editor de rebajas GitHub, elimine los backticks alrededor de los signos de dólar y presencie de primera mano que presenta los casos de muestra *correctamente*, a diferencia de la mierda de F/OSS que afirma usar. También le puede interesar comparar la estética de su renderizador MathJax con la de $$\KaTeX$$ que utilizamos en este sitio, para aclarar cualquier confusión sobre las discrepancias cualitativas entre los dos productos, y mucho menos las cuantitativas, ya que se refieren a la velocidad de renderizado.
+1. No es un "extensión" de la especificación cuando el autor de la especificación lo ordena para todos los que utilizan sus productos. ES LA NUEVA ESPECIFICACIÓN.
 
-1. La prosa citada fue la respuesta original de AI de bing durante las últimas 24 horas, hasta que agregué los enlaces de fondo adicionales a este artículo, desde el cual "aprendido" Cómo decir algo menos idiota en respuesta a la consulta "¿Qué es el analizador de rebajas de código abierto actual de github?". Esta es la IA que está **tomando nuestro trabajo**, amigos.
+2. Para los principiantes que todavía creen que GitHub está utilizando F/OSS para analizar la rebaja: le animo a hacer clic en el enlace de origen de GitHub a este artículo en la parte superior de la página, copiar y pegar los dos primeros párrafos de la sección **WorldWide Radio de explosión** en un editor de rebajas GitHub, elimine los backticks alrededor de los signos de dólar y presencie de primera mano que presenta los casos de muestra *correctamente*, a diferencia de la mierda de F/OSS que afirma usar. También le puede interesar comparar la estética de su renderizador MathJax con la de $$\KaTeX$$ que utilizamos en este sitio, para aclarar cualquier confusión sobre las discrepancias cualitativas entre los dos productos, y mucho menos las cuantitativas, ya que se refieren a la velocidad de renderizado.
+
+3. La prosa citada fue la respuesta original de AI de bing durante las últimas 24 horas, hasta que agregué los enlaces de fondo adicionales a este artículo, desde el cual "aprendido" Cómo decir algo menos idiota en respuesta a la consulta "¿Qué es el analizador de rebajas de código abierto actual de github?". Esta es la IA que está **tomando nuestro trabajo**, amigos.
 
 <!-- $Date$ $Author$ $Revision$ -->
