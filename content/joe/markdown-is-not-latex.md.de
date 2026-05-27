@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.de'
 keywords: Markdown,Microsoft,Github,korrupt,Umarmung,extend,sycophant,AI
-status: überprüft=40196
+status: überprüft=40239
 title: Microsoft als schädlich betrachtet
 ---
 
@@ -30,13 +30,15 @@ Wenn ich ihre Motive für die Betrachtung der vorgeschlagenen Syntax des Blogart
 
 Oder einfach [Faulheit, Ungeduld und Hubris](http://www.parrot.org/); aber das ist nicht konspiratorisch genug für diesen Artikel. JMMV
 
+## WorldWide Strahlungsradius
+
 Es ist jetzt eine zweideutige Katastrophe von technischen Regex-Defekten, jedes Mal, wenn ein Autor / Implementierer erraten muss, was der Parser mit Sequenzen isolierter Dollarzeichen tun soll, die innerhalb eines einzigen Absatzes von Preisabschriftprosa auftreten. Betrachten Sie zum Beispiel eine Situation, in der [Französisch](markdown-is-not-latex.html.fr) Kanadische Finanzmathematiker diskutieren zwei Preise in zwei verschiedenen Währungen, sagen US `$`1,50 und 2,00`$` CA (zugegebenermaßen konstruiert, aber es veranschaulicht die Komplexität). Wie würden Sie eine `i18n` konform [GFM-Parser](https://pandoc.org/) das versteht, dass das Zeug zwischen den Dollarzeichen hier *nicht als Inline verarbeitet werden darf $$\LaTeX$$* obwohl es syntaktisch gültig ist $$\TeX$$ und entspricht diesem [naive spezifikation](https://pandoc.org/demo/example33/8.13-math.html)?
 
-Was ist mit einem Paar Ruby/Perl Variablen? `$`v und `$`W? Das gleiche Problem mit der naiven Spezifikation. Hat Claude alles parse?
+Was ist mit einem Paar Ruby/Perl Variablen in einer Funktionssignatur wie `foo($v,$w)`? Das gleiche Problem mit der naiven Spezifikation. Hat Claude alles parse?
 
-Viel Glück damit, wenn Sie eine Massen-GFM-Konvertierung von internationalen Legacy-Dokumentformaten auf eine Nicht-GitHub-Plattform durchführen. Es wird nur "Arbeit" wenn es in Visual Studio gerendert wird, wenn es überhaupt funktioniert.
+Viel Glück damit, wenn Sie eine Massen-GFM-Konvertierung von internationalen Legacy-Dokumentformaten auf eine Nicht-GitHub-Plattform durchführen. Es wird nicht nur unglaublich langsam und teuer sein, sondern es wird nur "Arbeit" wenn es in Visual Studio gerendert wird, wenn es überhaupt funktioniert.
 
-Es ist eine Sache zu sagen, dass Sie heute nichts schreiben werden, was den Parser **jetzt** verwirrt. Es ist eine andere Sache zu sagen, dass das Zeug, das in **vergangen** geschrieben wurde, den Parser nicht verwirren wird: heute oder in **zukünftigen** Parser-Releases.
+Es ist eine sache zu sagen, dass sie nichts **heute** schreiben werden, was den parser **jetzt** verwirrt; es ist eine andere sache zu sagen, dass das zeug, das im **past** geschrieben wurde, den parser auch nicht verwirren wird. Nicht heute, und nicht **zukünftige** Parserreleases.
 
 Im Gegensatz zu den Standards, die aus [JCP](https://jcp.org/en/home/index), wird es nie eine Compliance-zertifizierende Testsuite für dieses Chaos geben, weil es eine [Entwicklung](https://github.com/github/markup?tab=readme-ov-file#github-markup) [Situation](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) am [Der Boden](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) um [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 

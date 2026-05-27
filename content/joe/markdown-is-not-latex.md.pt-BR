@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.pt-BR'
 keywords: markdown,Microsoft, Github, corrupto, abraçar, estender, sycophant, AI
-status: verificado=40196
+status: verificado=40239
 title: Microsoft considerada prejudicial
 ---
 
@@ -30,13 +30,15 @@ Se eu tivesse que adivinhar seus motivos para considerar que a sintaxe proposta 
 
 Ou apenas [Preguiça, impaciência e Hubris](http://www.parrot.org/)Mas isso não é conspiratório o suficiente para este artigo. AMMV.
 
+## WorldWide Raio de Explosão
+
 É agora um desastre ambíguo de defeitos regex de engenharia cada vez que um autor / implementador tem que adivinhar o que o analisador deve fazer com sequências de cifrões isolados ocorrendo dentro de um único parágrafo de prosa de markdown. Por exemplo, considere uma situação em que [Francês](markdown-is-not-latex.html.fr) Matemáticos financeiros canadenses discutem dois preços em duas moedas diferentes, dizem EUA `$`1,50 e 2.00`$` CA (admitidamente inventado, mas ilustra a complexidade). Como você escreveria um `i18n` em conformidade [Analisador GFM](https://pandoc.org/) que entende que o material entre os cifrões aqui é *não deve ser processado como inline $$\LaTeX$$*, embora seja sintaticamente válido $$\TeX$$ e está em conformidade com isso [especificação ingênua](https://pandoc.org/demo/example33/8.13-math.html)?
 
-Que tal um par de variáveis Ruby/Perl? `$`v e `$`w? O mesmo problema com a ingenuidade. Claude analisou tudo?
+Que tal um par de variáveis Ruby/Perl em uma assinatura de função como `foo($v,$w)`? O mesmo problema com a ingenuidade. Claude analisou tudo?
 
-Boa sorte com isso se você estiver fazendo uma conversão GFM em massa de formatos de documentos legados internacionais para uma plataforma não-GitHub. Somente será "trabalho" quando renderizado no Visual Studio, se mesmo funciona.
+Boa sorte com isso se você estiver fazendo uma conversão GFM em massa de formatos de documentos legados internacionais para uma plataforma não-GitHub. Não só será incrivelmente lento e caro, mas só "trabalho" quando renderizado no Visual Studio, se mesmo funciona.
 
-Uma coisa é dizer que você não escreverá coisas **hoje** que confundam o analisador **agora**; outra é dizer que as coisas escritas no **passado** não confundirão o analisador: hoje ou nas releases do analisador **futuro**.
+Uma coisa é dizer que você não vai escrever coisas **hoje** que confundem o analisador **agora**; é bem diferente dizer que as coisas escritas no **passado** também não confundirão o analisador. Não hoje e não versões do parser **futuro**.
 
 Ao contrário dos padrões emergentes do [JCP](https://jcp.org/en/home/index), nunca haverá um conjunto de testes de certificação de conformidade para essa bagunça, porque é um [evolução](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situação](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) em [o chão](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) em [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 

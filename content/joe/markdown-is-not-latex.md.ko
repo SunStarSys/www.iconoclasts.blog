@@ -2,7 +2,7 @@
 categories: 오리온
 dependencies: '*.md.ko'
 keywords: 마크 다운, 마이크로 소프트, Github, 손상, 멤브레이스, 확장, 식도, AI
-status: 확인=40196
+status: 확인=40239
 title: 마이크로소프트는 유해하다고 생각했다.
 ---
 
@@ -30,13 +30,15 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 또는 just [게으름, 불순종, 허브리스](http://www.parrot.org/)그러나 그것은이 기사에 대한 충분한 음모가 아닙니다. YMMV
 
+## WorldWide 폭발 반경
+
 이제 작성자/구현자가 매가인하 절차의 단일 단락 내에서 발생하는 격리된 달러 기호 시퀀스로 구문 분석기가 무엇을 해야 하는지 추측해야 할 때마다 엔지니어링 정규 표현식 결함의 모호한 재해입니다. 예를 들어, [프랑스어](markdown-is-not-latex.html.fr) 캐나다의 금융 수학자들은 두 가지 다른 통화로 두 가지 가격을 논의합니다. `$`1.50 및 2,00`$` CA (실제로 경쟁했지만 복잡성을 보여줍니다). 어떻게 하면 `i18n` 준수 [GFM 구문 분석기](https://pandoc.org/) 달러 표지판 사이의 물건이 인라인으로 처리되지 않는다는 것을 이해합니다. $$\LaTeX$$*, 비록 그것이 구문적으로 유효하더라도 $$\TeX$$ 그리고 이것에 따릅니다 [나이브 스펙](https://pandoc.org/demo/example33/8.13-math.html)?
 
-Ruby/Perl 변수의 쌍은 어떨까요? `$`v 및 `$`w? 순진한 사양과 동일한 문제입니다. 클로드가 모든 것을 분석 했습니까?
+함수 서명에서 Ruby/Perl 변수 쌍은 어떻습니까? `foo($v,$w)`? 순진한 사양과 동일한 문제입니다. 클로드가 모든 것을 분석 했습니까?
 
-국제 레거시 문서 형식을 비 GitHub 플랫폼으로 대량 GFM 변환을 수행하는 경우 행운을 빕니다. 그것은 단지 "작업" Visual Studio에서 렌더링할 때도 작동합니다.
+국제 레거시 문서 형식을 비 GitHub 플랫폼으로 대량 GFM 변환을 수행하는 경우 행운을 빕니다. 그것은 믿을 수 없을만큼 느리고 비쌀뿐만 아니라, 단지 "작업" Visual Studio에서 렌더링할 때도 작동합니다.
 
-구문분석기 **지금**을 혼동하는 **오늘** 물건을 작성하지 않을 것이라고 말하는 것은 한 가지입니다. **과거**에 작성된 물건이 구문분석기(오늘 또는 **미래** 구문분석기 릴리스)를 혼동하지 않을 것이라고 말하는 것은 상당히 다른 것입니다.
+**오늘** 구문분석기를 혼동하는 물건을 작성하지 않을 것이라고 말하는 것은 한 가지입니다. **과거**에 작성된 물건도 구문분석기를 혼동하지 않을 것이라고 말하는 것은 꽤 다른 것입니다. 지금은 아니며 **미래** 구문분석기 릴리스가 아닙니다.
 
 표준과 달리 [JCP](https://jcp.org/en/home/index), 이 혼란에 대한 규정 준수 인증 테스트 제품군은 없습니다. [진화 중](https://github.com/github/markup?tab=readme-ov-file#github-markup) [상황](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 켜기 [지상](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 시간 [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
 
