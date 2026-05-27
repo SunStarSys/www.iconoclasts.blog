@@ -46,7 +46,7 @@ Oder einfach [Faulheit, Ungeduld und Hubris](http://www.parrot.org/); aber das i
 
 </div>
 
-Es ist jetzt eine zweideutige Katastrophe von technischen Regex-Defekten, jedes Mal, wenn ein Autor / Implementierer erraten muss, was der Parser mit Sequenzen isolierter Dollarzeichen tun soll, die innerhalb eines einzigen Absatzes von Preisabschriftprosa auftreten. Betrachten Sie zum Beispiel eine Situation, in der [Französisch](markdown-is-not-latex.html.fr) Kanadische Finanzmathematiker diskutieren zwei Preise in zwei verschiedenen Währungen, sagen US `$`1,50 und 2,00`$` CA (zugegebenermaßen konstruiert, aber es veranschaulicht die Komplexität). Wie würden Sie eine `i18n` konform [GFM-Parser](https://pandoc.org/) das versteht, dass das Zeug zwischen den Dollarzeichen hier *nicht als Inline verarbeitet werden darf $$\LaTeX$$* obwohl es syntaktisch gültig ist $$\TeX$$ und entspricht diesem [naive spezifikation](https://pandoc.org/demo/example33/8.13-math.html)?
+Es ist jetzt eine zweideutige Katastrophe von technischen Regex-Defekten, jedes Mal, wenn ein Autor / Implementierer erraten muss, was der Parser mit Sequenzen isolierter Dollarzeichen tun soll, die innerhalb eines einzigen Absatzes von Preisabschriftprosa auftreten. Betrachten Sie zum Beispiel eine Situation, in der [Französisch](markdown-is-not-latex.html.fr) Kanadische Finanzmathematiker diskutieren zwei Preise in zwei verschiedenen Währungen, sagen US `$`1.50 und 2,00`$` CA (zugegebenermaßen konstruiert, aber es veranschaulicht die Komplexität). Wie würden Sie eine `i18n` konform [GFM-Parser](https://pandoc.org/) das versteht, dass das Zeug zwischen den Dollarzeichen hier *nicht als Inline verarbeitet werden darf $$\LaTeX$$* obwohl es syntaktisch gültig ist $$\TeX$$ und entspricht diesem [naive spezifikation](https://pandoc.org/demo/example33/8.13-math.html)?
 
 Was ist mit einem Paar Ruby/Perl Variablen in einer Funktionssignatur wie `foo($v,$w)`? Das gleiche Problem mit der naiven Spezifikation. Haben Claude<sup>2</sup> Alles parsen?
 
@@ -74,7 +74,7 @@ Kurz gesagt, GFM ist nicht mehr eine internationale Branchenspezifikation, sonde
 
 [Orion](https://www.sunstarsys.com/orion/features) **verwendet und wird niemals neuere GFM-Parser verwenden, die vorgeben, diese schmutzige Fehlfunktion zu verfolgen**.
 
-Stattdessen setzen wir auf einen internen Fork von @markedjs/markiert und werden dies auf absehbare Zeit auch weiterhin tun.
+Stattdessen setzen wir auf einen internen Fork von @markedjs/marked und werden dies auf absehbare Zeit auch weiterhin tun.
 
 -----
 
