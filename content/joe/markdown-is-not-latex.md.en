@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant,AI
-status: verified=40277
+status: verified=40292
 Dependencies: *.md.en
 Categories: Orion
 
@@ -57,7 +57,7 @@ Instead, we rely on an internal fork of @markedjs/marked and will continue to do
 
 ## Footnotes
 
-1. For the nitwits who still believe GitHub is using F/OSS to parse markdown: I encouage you to click on the GitHub source link to this article at the top of the page, copy and paste the **WorldWide Blast Radius** section into a GitHub markdown editor, and witness firsthand that it renders the sample cases *correctly*, unlike the F/OSS crap it claims to use. It may behoove you to compare the aesthetics of their MathJax renderer to the $$\KaTeX$$ rendering we use on this site, to clear up any confusion about the qualitiative discrepancies between the two products, much less the quantitative ones as they relate to rendering  speed.
+1. For the nitwits who still believe GitHub is using F/OSS to parse markdown: I encouage you to click on the GitHub source link to this article at the top of the page, copy and paste the **WorldWide Blast Radius** section into a GitHub markdown editor, and witness firsthand that it renders the sample cases *correctly*, unlike the F/OSS crap it claims to use. It may behoove you to compare the aesthetics of their MathJax renderer to the $$\KaTeX$$ rendering we use on this site, to clear up any confusion about the qualitative discrepancies between the two products, much less the quantitative ones as they relate to rendering  speed.
 
 1. The quoted prose was bing's original AI response for the past 24 hours, until I added the additional background links to this article, from which it "learned" how to say something less idiotic in response to the query "what is github's current open source markdown parser".  This is the AI that's **taking our jobs**, folks.
 
