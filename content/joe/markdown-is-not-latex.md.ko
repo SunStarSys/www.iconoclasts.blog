@@ -2,7 +2,7 @@
 categories: 오리온
 dependencies: '*.md.ko'
 keywords: 마크 다운, 마이크로 소프트, Github, 손상, 멤브레이스, 확장, 식도, AI
-status: 확인=40323
+status: 확인=40358
 title: 마이크로소프트는 유해하다고 생각했다.
 ---
 
@@ -18,11 +18,11 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 ## :fa-github: GitHub 맛 있는 매가인하(GFM)
 
-[GFM](https://github.github.com/gfm/) 해당 사양의 설계 목표에 맞춰 [마이크로 소프트는 조건부로 변환하기 위해 고립 된 달러 기호를 bastardized $$\LaTeX$$ 토큰](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)<sup>1</sup> 일부 피복, 구식, 추악하고 느린 기관용 crapware 때문에 [MathJax](https://www.mathjax.org/) 그것은 매가인하와 아무런 관련이 없었고,이 개새끼들이 수행자를 홍보하고 싶지 않다는 사실, [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-호환 [$$\KaTeX$$](https://katex.org/) 칸 아카데미에서 뇌물을받지 않고.
+[GFM](https://github.github.com/gfm/) 해당 사양의 설계 목표에 맞춰 [마이크로 소프트는 조건부로 변환하기 위해 고립 된 달러 기호를 bastardized $$\LaTeX$$ 토큰](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)<sup>1</sup> 일부 피복, 구식, 추악하고 느린 기관용 crapware 때문에 [MathJax](https://www.mathjax.org/) 그것은 마크 다운과 아무런 관련이 없었고,이 개새끼들이 공연자를 홍보하고 싶지 않다는 사실, 예쁜, [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-호환 [$$\KaTeX$$](https://katex.org/) 칸 아카데미에서 뇌물을받지 않고.
 
 ## Redux 수용 및 확장
 
-물론 이것은 완전히 의도적이었기 때문에 [수상 경력](https://itsfoss.com/online-markdown-editors/), [:editormd-logo: 세계적 수준의 엔지니어링 팀](http://editor.md.ipandao.com) 결제 완료 $$\KaTeX$$ 포함 [이중 달러 토큰 경계](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) 인라인 수학 및 펜스 수학 블록 또는 블록에 대한 이중 달러 전용 주변 단락 쌍 $$\KaTeX$$ 처리 중 [**2015년**](https://github.com/pandao/editor.md/releases/tag/v1.5.0).
+물론 이것은 완전히 의도적이었기 때문에 [수상 경력](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: 세계적 수준의 엔지니어링 팀](http://editor.md.ipandao.com) 결제 완료 $$\KaTeX$$ 포함 [이중 달러 토큰 경계](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) 인라인 수학 및 펜스 수학 블록 또는 블록에 대한 이중 달러 전용 주변 단락 쌍 $$\KaTeX$$ 처리 중 [**2015년**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **GFM 사양이 게시되기 4년 전**
 
 여기서 중요한 점은 일반적인 prose에서 거의 발생하지 않는 2자 구분자가 이와 같은 상황에 대한 정상적인 이상이라는 것입니다. [마이크로소프트가 \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 나는 2026 년에이 기사를 쓰지 않을 것입니다, 그 선택은 마크 다운 사양 인라인 수학 표현의 충실한 도입을위한 정상적인 이상적인 조건을 충족하기 때문입니다. 또한 전문 수학 타이피스트를위한 손목 터널 증후군에 도움이되므로 경계 토큰 고유성 외에 고려해야 할 다른 것이 있습니다.
 
@@ -58,7 +58,7 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 ## 각주
 
-1. 아니요 "확장 기능" 사양의 작성자가 자신의 제품을 사용하는 모든 사람에게 위임 할 때의 사양. 그것은 새로운 SPEC.
+1. 아니요 "확장 기능" 사양의 작성자가 제품을 사용하는 모든 사람에게 위임 할 때의 사양. 그것은 새로운 SPEC.
 
 2. GitHub가 F/OSS를 사용하여 매가인하를 구문 분석한다고 생각하는 nitwits의 경우: 페이지 상단의 이 문서에 대한 GitHub 소스 링크를 눌러 처음 두 개를 복사하여 붙여넣는 것이 좋습니다. **WorldWide 폭발 반경** 섹션의 단락을 GitHub 마크다운 편집기로 이동하고, 달러 기호 주위의 백틱을 제거하고, 사용한다고 주장하는 F/OSS 크랩과 달리 샘플 케이스를 *올바르게* 렌더링하는 것을 직접 목격합니다. 또한 MathJax 렌더러의 미학을 다음과 비교할 수 있습니다. $$\KaTeX$$ 이 사이트에서 사용하는 렌더링을 통해 두 제품 간의 정성적 불일치에 대한 혼란을 해결하고 렌더링 속도와 관련된 정량적 불일치를 훨씬 줄일 수 있습니다.
 

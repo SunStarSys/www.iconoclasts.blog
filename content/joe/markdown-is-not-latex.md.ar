@@ -2,7 +2,7 @@
 categories: أوريون
 dependencies: '*.md.ar'
 keywords: تخفيض السعر، مايكروسوفت، غيثوب، فاسد، احتضان، تمديد، سيكوفانت، AI
-status: التحقق = 40323
+status: التحقق = 40358
 title: مايكروسوفت تعتبر ضارة
 ---
 
@@ -18,11 +18,11 @@ title: مايكروسوفت تعتبر ضارة
 
 ## :fa-github: GitHub تخفيض السعر بالنكهة (GFM)
 
-[إدارة القوى العاملة](https://github.github.com/gfm/) حافظ على صحته وفقًا لأهداف تصميم هذه المواصفات حتى [قامت مايكروسوفت بتحويل علامة الدولار المعزولة إلى تحويل مشروط لها إلى $$\LaTeX$$ رمز مميز](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)<sup>1</sup> بسبب بعض crapware المؤسسية المغلقة والقبيحة والبطيئة التي تسمى [MathJax](https://www.mathjax.org/) التي لا علاقة لها مع Markdown، وحقيقة أن هؤلاء الحمار لا يريدون تعزيز الأداء، [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-متوافق [$$\KaTeX$$](https://katex.org/) دون رشوة من أكاديمية خان.
+[إدارة القوى العاملة](https://github.github.com/gfm/) حافظ على صحته وفقًا لأهداف تصميم هذه المواصفات حتى [قامت مايكروسوفت بتحويل علامة الدولار المعزولة إلى تحويل مشروط لها إلى $$\LaTeX$$ رمز مميز](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)<sup>1</sup> بسبب بعض crapware المؤسسية المغلقة والقبيحة والبطيئة التي تسمى [MathJax](https://www.mathjax.org/) التي لا علاقة لها مع Markdown، وحقيقة أن هؤلاء الحمار لا يريدون تعزيز الأداء، جميلة، [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-متوافق [$$\KaTeX$$](https://katex.org/) دون رشوة من أكاديمية خان.
 
 ## احتضان Redux وتوسيعه
 
-بالطبع كان هذا متعمدًا تمامًا، لأنه [حائز على جوائز](https://itsfoss.com/online-markdown-editors/), [:editormd-logo: فرق هندسية عالمية المستوى](http://editor.md.ipandao.com) كان قد استقر على $$\KaTeX$$ مع [حدود رمز الدولار المزدوج](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) للرياضيات المضمنة والكتل الرياضية المسيجة أو أزواج من الفقرات المحيطة بالدولار المزدوج فقط للكتلة $$\KaTeX$$ معالجة [**في 2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0).
+بالطبع كان هذا متعمدًا تمامًا، لأنه [حائز على جوائز](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: فرق هندسية عالمية المستوى](http://editor.md.ipandao.com) كان قد استقر على $$\KaTeX$$ مع [حدود رمز الدولار المزدوج](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) للرياضيات المضمنة والكتل الرياضية المسيجة أو أزواج من الفقرات المحيطة بالدولار المزدوج فقط للكتلة $$\KaTeX$$ معالجة [**في 2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **قبل أربع سنوات من نشر مواصفات GFM**.
 
 النقطة هنا هي أن محدد مكون من حرفين نادرًا ما يحدث في النثر النموذجي هو المثالي الطبيعي لمواقف مثل هذه. [كانت مايكروسوفت عالقة في دعم \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) لن أكتب هذه المقالة في عام 2026، لأن هذا الخيار يفي بالظروف المثالية العادية لإدخال تعبيرات الرياضيات المضمنة بأمانة في مواصفات Markdown. كما أنه يفضي إلى متلازمة النفق الرسغي لطباعة الرياضيات المحترفين، لذلك هناك شيء آخر يجب مراعاته إلى جانب تفرد رمز الحدود.
 

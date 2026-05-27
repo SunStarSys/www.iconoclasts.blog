@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna, utöka,sykofant,AI
-status: verifierad=40323
+status: verifierad=40358
 title: Microsoft anses vara skadligt
 ---
 
@@ -18,11 +18,11 @@ title: Microsoft anses vara skadligt
 
 ## :fa-github: GitHub Smaksatt nedsättning (GFM)
 
-[Personalhantering](https://github.github.com/gfm/) höll fast vid specifikationens designmål ända fram till [Microsoft bastardized den isolerade dollartecknet för att villkorligt konvertera det till en $$\LaTeX$$ tecken](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)<sup>1</sup> på grund av några cloistered, föråldrade, fula och långsamma institutionella crapware kallas [MathJax](https://www.mathjax.org/) som inte hade något att göra med Markdown, och det faktum att dessa rövhål inte vill främja performant, [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-kompatibel [$$\KaTeX$$](https://katex.org/) Utan en muta från Khan Academy.
+[Personalhantering](https://github.github.com/gfm/) höll fast vid specifikationens designmål ända fram till [Microsoft bastardized den isolerade dollartecknet för att villkorligt konvertera det till en $$\LaTeX$$ tecken](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)<sup>1</sup> på grund av några cloistered, föråldrade, fula och långsamma institutionella crapware kallas [MathJax](https://www.mathjax.org/) som inte hade något att göra med Markdown, och det faktum att dessa rövhål inte vill främja performant, vacker, [`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)-kompatibel [$$\KaTeX$$](https://katex.org/) Utan en muta från Khan Academy.
 
 ## Omfamna och utöka Redux
 
-Naturligtvis var detta helt avsiktligt, eftersom [prisbelönt](https://itsfoss.com/online-markdown-editors/), [:editormd-logo: ingenjörsteam i världsklass](http://editor.md.ipandao.com) hade bestämt sig för $$\KaTeX$$ med [Tokengränser för dubbla dollar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) för infogad matematik, och inhägnade matematiska block eller par av dubbeldollar-bara omgivande stycken för block $$\KaTeX$$ bearbetning [**2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0).
+Naturligtvis var detta helt avsiktligt, eftersom [prisbelönt](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: ingenjörsteam i världsklass](http://editor.md.ipandao.com) hade bestämt sig för $$\KaTeX$$ med [Tokengränser för dubbla dollar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) för infogad matematik, och inhägnade matematiska block eller par av dubbeldollar-bara omgivande stycken för block $$\KaTeX$$ bearbetning [**2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **fyra år innan GFM-specifikationen publicerades**.
 
 Poängen här är att en 2-teckenavgränsare som sällan förekommer i typisk prosa är det normala idealet för situationer som denna. [Hade Microsoft fastnat för att bara stödja \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Jag skulle inte skriva den här artikeln 2026, eftersom det valet uppfyller de normala idealiska förutsättningarna för trogen introduktion av inline matematiska uttryck i en Markdown spec. Det bidrar också till karpaltunnelsyndrom för professionella matematiktypister, så det finns något annat att tänka på förutom gränstoken unikhet.
 

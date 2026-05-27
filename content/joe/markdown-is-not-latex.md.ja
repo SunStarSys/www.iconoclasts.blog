@@ -2,7 +2,7 @@
 categories: オリオン
 dependencies: '*.md.ja'
 keywords: Markdown,Microsoft,Github,corrupt,embrace,extended,sycophant,AI
-status: 確認済み=40323
+status: 確認済み=40358
 title: マイクロソフトは有害と考えました
 ---
 
@@ -18,11 +18,11 @@ title: マイクロソフトは有害と考えました
 
 ## :fa-github: GitHubフレーバー値下げ(GFM)
 
-[GFM](https://github.github.com/gfm/) その仕様の設計目標に忠実であり続けた[Microsoftは、条件付きでそれをaに変換するために孤立したドル記号をbastardized $$\LaTeX$$ トークン](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)<sup>1</sup> 一部のクロースター、古く、醜く、ゆっくりした制度的なクラップウェアのため、[MathJax](https://www.mathjax.org/) それはMarkdownとは関係なく、これらのアホがパフォーマンを宣伝したくないという事実、[`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)- 互換[$$\KaTeX$$](https://katex.org/) カーン・アカデミー(Khan Academy)
+[GFM](https://github.github.com/gfm/) その仕様の設計目標に忠実であり続けた[Microsoftは、条件付きでそれをaに変換するために孤立したドル記号をbastardized $$\LaTeX$$ トークン](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)<sup>1</sup> 一部のクロースター、古く、醜く、ゆっくりした制度的なクラップウェアのため、[MathJax](https://www.mathjax.org/) それはMarkdownとは何の関係もなかったし、これらのアホがパフォーマンスを促進したくないという事実、かわいい、[`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)- 互換[$$\KaTeX$$](https://katex.org/) カーン・アカデミー(Khan Academy)
 
 ## Reduxの活用と拡張
 
-もちろん、これは完全に意図的なものだったので、[受賞歴](https://itsfoss.com/online-markdown-editors/), [:editormd-logo: 世界クラスのエンジニアリングチーム](http://editor.md.ipandao.com) 定着しました$$\KaTeX$$ 対象[二重ドルトークン境界](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) インライン数学、およびブロックの二重ドルのみの周囲の段落のフェンス数学ブロックまたはペア$$\KaTeX$$ 処理中[**2015年**](https://github.com/pandao/editor.md/releases/tag/v1.5.0).
+もちろん、これは完全に意図的なものだったので、[受賞歴](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: 世界クラスのエンジニアリングチーム](http://editor.md.ipandao.com) 定着しました$$\KaTeX$$ 対象[二重ドルトークン境界](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) インライン数学、およびブロックの二重ドルのみの周囲の段落のフェンス数学ブロックまたはペア$$\KaTeX$$ 処理中[**2015年**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **GFM仕様が発表される4年前**。
 
 ここでのポイントは、典型的な散文ではめったに起こらない2文字のデリミタが、このような状況にとって通常の理想であることです。[マイクロソフトが\$\をサポートするだけ` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 私は2026年にこの記事を書くつもりはありません。なぜなら、その選択はMarkdown仕様にインライン数学式を忠実に導入するための通常の理想的な条件を満たしているからです。それはまた、プロの数学タイピストのための手根トンネル症候群を促すので、境界トークン一意性以外に考慮すべき何かがあります。
 
@@ -58,7 +58,7 @@ title: マイクロソフトは有害と考えました
 
 ## 脚注
 
-1. いいえ"拡張子" 仕様の作者が、その製品を使用するすべての人にそれを義務付けるときの仕様。新しいスペックです。
+1. いいえ"拡張子" 仕様の作者が製品を使用するすべての人にそれを義務付けるときの仕様。新しいスペックです。
 
 2. GitHubがマークダウンを解析するためにF/OSSを使用していると考えているnitwitsの場合: ページ上部のこの記事へのGitHubソース・リンクをクリックして、最初の2つをコピーして貼り付けることをお薦めします**WorldWide「ブラスト半径」**セクションの段落をGitHubマークダウン・エディタに、ドル記号の周りのバックティックを削除し、使用すると主張するF/OSSクラップとは異なり、サンプル・ケースを*正しく*レンダリングすることを直接確認します。また、MathJaxレンダラの美学と$$\KaTeX$$ レンダリングは、このサイトで使用し、2つの製品間の質的相違に関する混乱を解消するために、レンダリング速度に関連する量的相違ははるかに少なくなります。
 
