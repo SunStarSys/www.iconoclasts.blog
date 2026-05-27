@@ -2,7 +2,7 @@
 categories: 奧里昂
 dependencies: '*.md.zh-TW'
 keywords: markdown，Microsoft，Github，corrupt，embace，extend，sycophant，AI - 減價，Microsoft，巨集，貪腐，寬限，擴展，智能化，AI
-status: 驗證 =40389
+status: 驗證 =40461
 title: Microsoft 認為有害
 ---
 
@@ -22,6 +22,12 @@ title: Microsoft 認為有害
 
 ## 擁抱並擴充 Redux
 
+<div class="right">
+
+![Editor.md](markdown-is-not-latex.page/editormd-logo)
+
+</div>
+
 當然這完全是刻意的，因為[獲獎肯定](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: 世界一流的工程團隊](http://editor.md.ipandao.com) 已結算於$$\KaTeX$$ 取代為[雙元記號界限](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) 用於內嵌數學，以及用於區塊的圍欄數學區塊或僅雙元的環繞段落組$$\KaTeX$$ 處理[**2015 年 **](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **GFM 規格發布前的四年 **。
 
 此處的點是一般程序中很少出現的 2 個字元分隔符號，是一般情況的理想選擇。[如果 Microsoft 停滯僅支援 \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 我不會在 2026 年撰寫這篇文章，因為該選擇符合 Markdown 規格中引入內嵌數學表示式的正常理想條件。這個選擇也有助於專業數學打字機的 Carpal 隧道症候群，因此除了邊界記號的唯一性之外，還有其他需要考慮的事項。
@@ -30,13 +36,15 @@ title: Microsoft 認為有害
 
 或只是[懶惰、不耐心和危機](http://www.parrot.org/)但這不足以說服這篇文章。YMMV。
 
+-----
+
+## WorldWide 衝擊半徑
+
 <div class="right">
 
 ![長崎炸彈](markdown-is-not-latex.page/nagasakibomb)
 
 </div>
-
-## WorldWide 衝擊半徑
 
 現在，當作者 / 實作者每次必須猜測剖析器應如何處理一段降價程序中出現的隔離貨幣符號時，工程正規表示式瑕疵是不明確的災難。例如，假設情況為：[法文](markdown-is-not-latex.html.fr) 加拿大金融數學家討論兩種不同貨幣的價格，美國`$`1.50 和 2,00`$` CA (經許可相反，但說明了複雜性)。您如何撰寫`i18n` 合規[GFM 剖析器](https://pandoc.org/) 明白這裏的錢幣符號之間的東西是 *不能以內置方式處理$$\LaTeX$$* 即使其語法有效$$\TeX$$ 並符合此條件[naïve 規格](https://pandoc.org/demo/example33/8.13-math.html)?
 
@@ -58,13 +66,21 @@ title: Microsoft 認為有害
 
 簡而言之，GFM 已不再是國際產業規格，但美國獨有的專利廠商格式與[Wikimedia 資源回收](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) 他們複製來源。
 
+<div class="right">
+
+[![奧里昂](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear)](https://www.sunstarsys.com/orion/)
+
+</div>
+
 [奧里昂](https://www.sunstarsys.com/orion/features) **不要，也永遠不會使用較新的 GFM 剖析器來預先追蹤此已變更的功能 **。
 
 相反地，我們依賴 @markedjs 的內部分叉，並將繼續在可預見的未來執行。
 
+-----
+
 ## 註腳
 
-1. 這不是"延伸" 該規格的作者為使用其產品的所有人授權該規格。這是新規格。
+1. 這不是"延伸" 該規格的作者為使用其產品的所有人授權該規格。這是事實新規格。
 
 2. 對於仍然認為 GitHub 的 nitwits 使用 F/OSS 剖析 Markdown：我建議您按一下頁面頂端文章的 GitHub 來源連結，複製並貼上前兩個段落 **WorldWide Blast Radius** 區段中的 GitHub 減價編輯器，移除錢幣符號周圍的底線，並首先見證範例案例 *正確 *，不同於其宣稱使用的 F/OSS Rust 陷阱。它也可能讓您比較其 MathJax 轉換器的美學與$$\KaTeX$$ 我們在此網站上使用，以消除對這兩種產品之間質性差異的任何混淆，比起與彩現速度相關的數量性差異更少。
 

@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.fr'
 keywords: démarque,Microsoft,Github,corrompu,étreinte,extension,sycophant,AI
-status: vérifié
+status: vérifié=40461
 title: Microsoft considéré comme nuisible
 ---
 
@@ -22,6 +22,12 @@ title: Microsoft considéré comme nuisible
 
 ## Adopter et étendre Redux
 
+<div class="right">
+
+![Editor.md](markdown-is-not-latex.page/editormd-logo)
+
+</div>
+
 Bien sûr, c'était tout à fait intentionnel, car [primé](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: équipes d'ingénierie de classe mondiale](http://editor.md.ipandao.com) avait réglé sur $$\KaTeX$$ avec [Limites des jetons en double dollar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) pour les mathématiques en ligne, et des blocs mathématiques clôturés ou des paires de paragraphes entourant le bloc de deux dollars seulement $$\KaTeX$$ traitement [**en 2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **quatre ans avant la publication de la spécification GFM**.
 
 Le point ici est qu'un délimiteur de 2 caractères qui se produit rarement dans une prose typique est l'idéal normal pour des situations comme celle-ci. [Microsoft n'a pris en charge que \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Je n'écrirais pas cet article en 2026, car ce choix répond aux conditions idéales normales pour l'introduction fidèle d'expressions mathématiques en ligne dans une spécification Markdown. Ce choix est également propice au syndrome du canal carpien pour les dactylographes professionnels en mathématiques, il y a donc autre chose à considérer en plus de l'unicité des limites.
@@ -30,15 +36,17 @@ Si je devais deviner leurs motifs pour considérer la syntaxe proposée de cet a
 
 Ou simplement [La paresse, l'impatience et Hubris](http://www.parrot.org/)Mais ce n'est pas assez conspirateur pour cet article. YMMV.
 
+-----
+
+## WorldWide Rayon d'explosion
+
 <div class="right">
 
 ![Bombe de Nagasaki](markdown-is-not-latex.page/nagasakibomb)
 
 </div>
 
-## WorldWide Rayon d'explosion
-
-C'est maintenant un désastre ambigu des défauts d'expression régulière d'ingénierie chaque fois qu'un auteur/implémenteur doit deviner ce que l'analyseur est censé faire avec des séquences de signes isolés du dollar se produisant dans un seul paragraphe de la prose de démarque. Considérons par exemple une situation où [Français](markdown-is-not-latex.html.fr) Les mathématiciens financiers canadiens discutent de deux prix dans deux devises différentes, selon les US `$`1.50 et 2,00`$` CA (avoué, mais il illustre la complexité). Comment écririez-vous un `i18n` conforme [Analyseur GFM](https://pandoc.org/) qui comprend que le truc entre les signes du dollar ici est *ne pas être traité comme en ligne $$\LaTeX$$*, même si sa syntaxe est valide $$\TeX$$ et se conforme à cela [spéc. naïve](https://pandoc.org/demo/example33/8.13-math.html)?
+C'est maintenant un désastre ambigu des défauts d'expression régulière d'ingénierie chaque fois qu'un auteur/implémenteur doit deviner ce que l'analyseur est censé faire avec des séquences de signes isolés du dollar se produisant dans un seul paragraphe de la prose de démarque. Considérons par exemple une situation où [Français](markdown-is-not-latex.html.fr) Les mathématiciens financiers canadiens discutent de deux prix dans deux devises différentes, selon les États-Unis `$`1,50 et 2 00`$` CA (avoué, mais il illustre la complexité). Comment écririez-vous un `i18n` conforme [Analyseur GFM](https://pandoc.org/) qui comprend que le truc entre les signes du dollar ici est *ne pas être traité comme en ligne $$\LaTeX$$*, même si sa syntaxe est valide $$\TeX$$ et se conforme à cela [spéc. naïve](https://pandoc.org/demo/example33/8.13-math.html)?
 
 Qu'en est-il d'une paire de variables Ruby/Perl dans une signature de fonction comme `foo($v,$w)` ? Le même problème avec les spécifications naïves. Avoir Claude<sup>2</sup> Tout analyser ?
 
@@ -58,13 +66,21 @@ Plus dégoûtant, l'embrasser et étendre l'empire maléfique a une armée d'esc
 
 Longue histoire courte, GFM n'est plus une spécification de l'industrie internationale, mais un format de vendeur propriétaire laide-américain-seulement pas différent de [Déchets de Wikimedia](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) Ils l'ont copié.
 
+<div class="right">
+
+[![Orion](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear)](https://www.sunstarsys.com/orion/)
+
+</div>
+
 [Orion](https://www.sunstarsys.com/orion/features) **n'utilise pas et n'utilisera jamais de nouveaux analyseurs GFM qui prétendent suivre cette erreur sale**.
 
-Au lieu de cela, nous comptons sur une fourchette interne de @markedjs/marked et nous continuerons à le faire dans un avenir prévisible.
+Au lieu de cela, nous comptons sur une fourchette interne de @markedjs/marqué et nous continuerons à le faire dans un avenir prévisible.
+
+-----
 
 ## Notes de bas de page
 
-1. Ce n'est pas un "extension" de la spécification lorsque l'auteur de la spécification l'exige pour tous ceux qui utilisent leurs produits. C'EST LA NOUVELLE SPÉCIFICATION.
+1. Ce n'est pas un "extension" de la spécification lorsque l'auteur de la spécification l'exige pour tous ceux qui utilisent leurs produits. C'EST LA NOUVELLE SPÉCIFICATION DE DE FACTO.
 
 2. Pour les nitwits qui croient encore que GitHub utilise F/OSS pour analyser le balisage : Je vous encourage à cliquer sur le lien source GitHub vers cet article en haut de la page, copiez et collez les deux premiers paragraphes de la section **WorldWide Blast Radius** dans un éditeur de démarque GitHub, retirez les backticks autour des signes dollar et constatez directement qu'il rend les exemples de cas *correct*, contrairement à la rouille F/OSS qu'il prétend utiliser. Il peut également vous incomber de comparer l'esthétique de leur moteur de rendu MathJax à la $$\KaTeX$$ le rendu que nous utilisons sur ce site, pour dissiper toute confusion quant aux écarts qualitatifs entre les deux produits, et encore moins les écarts quantitatifs quant à la vitesse de rendu.
 

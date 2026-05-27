@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna, utöka,sykofant,AI
-status: verifierad=40389
+status: verifierad=40461
 title: Microsoft anses vara skadligt
 ---
 
@@ -22,6 +22,12 @@ title: Microsoft anses vara skadligt
 
 ## Omfamna och utöka Redux
 
+<div class="right">
+
+![Editor.md](markdown-is-not-latex.page/editormd-logo)
+
+</div>
+
 Naturligtvis var detta helt avsiktligt, eftersom [prisbelönt](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: ingenjörsteam i världsklass](http://editor.md.ipandao.com) hade bestämt sig för $$\KaTeX$$ med [Tokengränser för dubbla dollar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) för infogad matematik, och inhägnade matematiska block eller par av dubbeldollar-bara omgivande stycken för block $$\KaTeX$$ bearbetning [**2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **fyra år innan GFM-specifikationen publicerades**.
 
 Poängen här är att en 2-teckenavgränsare som sällan förekommer i typisk prosa är det normala idealet för situationer som denna. [Hade Microsoft fastnat för att bara stödja \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Jag skulle inte skriva den här artikeln 2026, eftersom det valet uppfyller de normala idealiska förutsättningarna för trogen introduktion av inline matematiska uttryck i en Markdown spec. Det valet bidrar också till karpaltunnelsyndrom för professionella matematiktypister, så det finns något annat att tänka på förutom gränstoken unikhet.
@@ -30,15 +36,17 @@ Om jag var tvungen att gissa deras motiv för att överväga att bloggartikelns 
 
 Eller bara [Lättja, otålighet och Hubris](http://www.parrot.org/)Men det är inte konspiratoriskt nog för den här artikeln. ÅMMV
 
+-----
+
+## WorldWide Sprängningsradie
+
 <div class="right">
 
 ![Nagasaki Bomb](markdown-is-not-latex.page/nagasakibomb)
 
 </div>
 
-## WorldWide Sprängningsradie
-
-Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk dig en situation där [Franska](markdown-is-not-latex.html.fr) Kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1.50 och 2,00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel [GFM-parser](https://pandoc.org/) som förstår att grejerna mellan dollartecknen här är *inte att behandlas som inline $$\LaTeX$$*, även om det är syntaktiskt giltigt $$\TeX$$ och överensstämmer med detta [naiv spec](https://pandoc.org/demo/example33/8.13-math.html)?
+Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk dig en situation där [Franska](markdown-is-not-latex.html.fr) Kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1,50 och 2 00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel [GFM-parser](https://pandoc.org/) som förstår att grejerna mellan dollartecknen här är *inte att behandlas som inline $$\LaTeX$$*, även om det är syntaktiskt giltigt $$\TeX$$ och överensstämmer med detta [naiv spec](https://pandoc.org/demo/example33/8.13-math.html)?
 
 Vad sägs om ett par Ruby / Perl variabler i en funktionssignatur som `foo($v,$w)`? Samma problem med den naiva spec. Har Claude<sup>2</sup> Parsa allt?
 
@@ -58,13 +66,21 @@ Mest äckligt, omfamna och utvidga onda imperiet har en armé av F / OSS fria ar
 
 Lång historia kort, GFM är inte längre en internationell industrispecifikation, men en ful-amerikansk-endast proprietär leverantörsformat som inte skiljer sig från den [Wikimediaskräp](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) De kopierade den från.
 
+<div class="right">
+
+[![Orion](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear)](https://www.sunstarsys.com/orion/)
+
+</div>
+
 [Orion](https://www.sunstarsys.com/orion/features) **använder inte och kommer aldrig att använda nyare GFM-parsrar som låtsas spåra denna smutsiga felfunktion**.
 
 Istället förlitar vi oss på en intern gaffel på @markedjs/marked och kommer att fortsätta att göra det under överskådlig framtid.
 
+-----
+
 ## Fotnoter
 
-1. Det är inte ett "tillägg" av specifikationen när specifikationens författare kräver det för alla som använder sina produkter. DET ÄR DEN NYA SPEC.
+1. Det är inte ett "tillägg" av specifikationen när specifikationens författare kräver det för alla som använder sina produkter. DET ÄR DE FACTO NY SPECIFIKATION.
 
 2. För de nitwits som fortfarande tror att GitHub använder F/OSS för att parsa nedsättning: Jag uppmuntrar dig att klicka på källänken GitHub till den här artikeln högst upp på sidan, kopiera och klistra in de två första styckena i avsnittet **WorldWide Blast Radius** i en GitHub-nedsättningsredigerare, ta bort backtickarna runt dollartecknen och bevittna första hand att det gör provfallen *korrekt *, till skillnad från F/OSS Rust-skiten som den påstår sig använda. Det kan också anse att du jämför estetiken hos deras MathJax-renderare med $$\KaTeX$$ rendering vi använder på denna webbplats, för att rensa upp eventuell förvirring om de kvalitativa skillnaderna mellan de två produkterna, mycket mindre de kvantitativa som de avser rendering hastighet.
 

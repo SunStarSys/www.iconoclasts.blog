@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante,AI
-status: verificado=40389
+status: verificado=40461
 title: Microsoft considerado dañino
 ---
 
@@ -22,6 +22,12 @@ title: Microsoft considerado dañino
 
 ## Abrazar y ampliar Redux
 
+<div class="right">
+
+![Editor.md](markdown-is-not-latex.page/editormd-logo)
+
+</div>
+
 Por supuesto, esto fue totalmente intencional, porque [galardonado](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: equipos de ingeniería de clase mundial](http://editor.md.ipandao.com) habían resuelto $$\KaTeX$$ con [límites de token de doble dólar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) para matemáticas en línea, y bloques de matemáticas vallados o pares de párrafos circundantes de doble dólar para bloques $$\KaTeX$$ proceso [**en 2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **cuatro años antes de la publicación de la especificación de GFM**.
 
 El punto aquí es que un delimitador de 2 caracteres que rara vez ocurre en la prosa típica es el ideal normal para situaciones como esta. [Se ha bloqueado Microsoft solo para admitir \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) No escribiría este artículo en 2026, porque esa elección cumple con las condiciones ideales normales para la introducción fiel de expresiones matemáticas en línea en una especificación de Markdown. Esa elección también es propicia para el síndrome del túnel carpiano para los mecanógrafos de matemáticas profesionales, por lo que hay algo más que considerar además de la singularidad de los límites.
@@ -30,13 +36,15 @@ Si tuviera que adivinar sus motivos para considerar que la sintaxis propuesta de
 
 O simplemente [La pereza, la impaciencia y Hubris](http://www.parrot.org/)Pero eso no es lo suficientemente conspirativo para este artículo. AMMV.
 
+-----
+
+## WorldWide Radio de explosión
+
 <div class="right">
 
 ![Bomba Nagasaki](markdown-is-not-latex.page/nagasakibomb)
 
 </div>
-
-## WorldWide Radio de explosión
 
 Ahora es un desastre ambiguo de defectos de la regex de ingeniería cada vez que un autor / implementador tiene que adivinar lo que se supone que el analizador tiene que ver con secuencias de signos de dólar aislados que ocurren dentro de un solo párrafo de la prosa de rebaja. Por ejemplo, considere una situación en la que [Francés](markdown-is-not-latex.html.fr) Matemáticos financieros canadienses discuten dos precios en dos monedas diferentes `$`1.50 y 2,00`$` CA (posiblemente artificial, pero ilustra la complejidad). ¿Cómo escribiría un `i18n` conforme [Analizador de GFM](https://pandoc.org/) que entiende que la materia entre los signos de dólar aquí es *no ser procesado como en línea $$\LaTeX$$*, aunque sea sintácticamente válido $$\TeX$$ y se ajusta a esta [especificaciones ingenuas](https://pandoc.org/demo/example33/8.13-math.html)?
 
@@ -58,13 +66,21 @@ Lo más repugnante es que el abrazo y la extensión del imperio maligno tiene un
 
 En pocas palabras, GFM ya no es una especificación de la industria internacional, sino un feo formato de proveedor exclusivo estadounidense que no es diferente del [Basura de Wikimedia](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) de donde lo copiaron.
 
+<div class="right">
+
+[![Orión](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear)](https://www.sunstarsys.com/orion/)
+
+</div>
+
 [Orión](https://www.sunstarsys.com/orion/features) **no utiliza, y nunca utilizará, analizadores de GFM más nuevos que pretendan realizar un seguimiento de esta disfunción sucia**.
 
 En cambio, confiamos en una bifurcación interna de @markedjs/marked y continuaremos haciéndolo en el futuro previsible.
 
+-----
+
 ## Notas al pie
 
-1. No es un "extensión" de la especificación cuando el autor de la especificación lo ordena para todos los que utilizan sus productos. ES LA NUEVA ESPECIFICACIÓN.
+1. No es un "extensión" de la especificación cuando el autor de la especificación lo ordena para todos los que utilizan sus productos. ES LA NUEVA ESPECIFICACIÓN DE HECHO.
 
 2. Para los principiantes que todavía creen que GitHub está utilizando F/OSS para analizar la rebaja: le animo a hacer clic en el enlace de origen de GitHub a este artículo en la parte superior de la página, copiar y pegar los dos primeros párrafos de la sección **WorldWide Radio de explosión** en un editor de rebajas GitHub, elimine los backticks alrededor de los signos de dólar y presencie de primera mano que presenta los casos de muestra *correctamente*, a diferencia de la mierda de óxido de F/OSS que afirma usar. También le puede interesar comparar la estética de su renderizador MathJax con la de $$\KaTeX$$ que utilizamos en este sitio, para aclarar cualquier confusión sobre las discrepancias cualitativas entre los dos productos, y mucho menos las cuantitativas, ya que se refieren a la velocidad de renderizado.
 

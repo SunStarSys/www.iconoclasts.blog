@@ -2,7 +2,7 @@
 categories: オリオン
 dependencies: '*.md.ja'
 keywords: Markdown,Microsoft,Github,corrupt,embrace,extended,sycophant,AI
-status: 確認済み=40389
+status: 確認済み=40461
 title: マイクロソフトは有害と考えました
 ---
 
@@ -22,6 +22,12 @@ title: マイクロソフトは有害と考えました
 
 ## Reduxの活用と拡張
 
+<div class="right">
+
+![Editor.md](markdown-is-not-latex.page/editormd-logo)
+
+</div>
+
 もちろん、これは完全に意図的なものだったので、[受賞歴](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: 世界クラスのエンジニアリングチーム](http://editor.md.ipandao.com) 定着しました$$\KaTeX$$ 対象[二重ドルトークン境界](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) インライン数学、およびブロックの二重ドルのみの周囲の段落のフェンス数学ブロックまたはペア$$\KaTeX$$ 処理中[**2015年**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **GFM仕様が発表される4年前**。
 
 ここでのポイントは、典型的な散文ではめったに起こらない2文字のデリミタが、このような状況にとって通常の理想であることです。[マイクロソフトが\$\をサポートするだけ` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 私は2026年にこの記事を書くつもりはありません。なぜなら、その選択はMarkdown仕様にインライン数学式を忠実に導入するための通常の理想的な条件を満たしているからです。この選択は、プロの数学タイピストのための手根トンネル症候群にも役立つため、境界トークン一意性以外に考慮すべきことがあります。
@@ -30,13 +36,15 @@ title: マイクロソフトは有害と考えました
 
 または単に[怠惰、忍耐、ハブリス](http://www.parrot.org/)しかし、これはこの記事では十分ではありません。YMMV。
 
+-----
+
+## WorldWideブラスト半径
+
 <div class="right">
 
 ![長崎爆弾](markdown-is-not-latex.page/nagasakibomb)
 
 </div>
-
-## WorldWideブラスト半径
 
 これは今や、作者/実装者が、マークダウン・プロースの単一の段落内で発生する孤立したドル記号のシーケンスでパーサーが何をすべきかを推測しなければならないたびに、エンジニアリング・レジェックスの欠陥のあいまいな災害です。たとえば、次のような状況を考えてみます。[フランス語](markdown-is-not-latex.html.fr) カナダの金融数学者は、2つの異なる通貨で2つの価格について話し合います。`$`1.50および2,00`$` CA (明らかに議論されましたが、複雑さを示しています)。どのように書くか`i18n` 準拠[GFMパーサー](https://pandoc.org/) ここでのドル記号の間のものがインラインとして処理されないことを理解している$$\LaTeX$$*ただし、構文的には有効です。$$\TeX$$ これに準ずる。[ナイーブ仕様](https://pandoc.org/demo/example33/8.13-math.html)?
 
@@ -58,13 +66,21 @@ title: マイクロソフトは有害と考えました
 
 要するに、GFMはもはや国際的な業界仕様ではなく、醜いアメリカのみの独自のベンダーフォーマットは、[ウィキメディアのゴミ](https://www.mediawiki.org/wiki/Extension:SimpleMathJax) をコピーした。
 
+<div class="right">
+
+[![オリオン](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear)](https://www.sunstarsys.com/orion/)
+
+</div>
+
 [オリオン](https://www.sunstarsys.com/orion/features) **この汚れた不具合を追跡するふりをする新しいGFMパーサーは使用せず、決して使用しません**。
 
 代わりに、私たちは @markedjs/markedの内部フォークに依存しており、予見可能な将来のために引き続きそうします。
 
+-----
+
 ## 脚注
 
-1. いいえ"拡張子" 仕様の作者が製品を使用するすべての人にそれを義務付けるときの仕様。新しいスペックです。
+1. いいえ"拡張子" 仕様の作者が製品を使用するすべての人にそれを義務付けるときの仕様。DE FACTO NEW SPECです。
 
 2. まだGitHubがマークダウンを解析するためにF/OSSを使用していると考えているnitwitsの場合: ページ上部のこの記事へのGitHubソース・リンクをクリックして、最初の2つの段落をコピーして貼り付けることをお薦めします**WorldWide Blast Radius**セクションのGitHubマークダウン・エディタに、ドル記号の周りのバックティックを削除し、使用すると主張するF/OSS Rustクラップとは異なり、サンプル・ケースを*正しく*レンダリングすることを直接確認します。また、MathJaxレンダラの美学と$$\KaTeX$$ レンダリングは、このサイトで使用し、2つの製品間の質的相違に関する混乱を解消するために、レンダリング速度に関連する量的相違ははるかに少なくなります。
 
