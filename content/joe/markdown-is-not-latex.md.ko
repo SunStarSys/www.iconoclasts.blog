@@ -2,7 +2,7 @@
 categories: 오리온
 dependencies: '*.md.ko'
 keywords: 마크 다운, 마이크로 소프트, Github, 손상, 멤브레이스, 확장, 식도, AI
-status: 확인=40254
+status: 확인=40277
 title: 마이크로소프트는 유해하다고 생각했다.
 ---
 
@@ -34,19 +34,19 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 이제 작성자/구현자가 매가인하 절차의 단일 단락 내에서 발생하는 격리된 달러 기호 시퀀스로 구문 분석기가 무엇을 해야 하는지 추측해야 할 때마다 엔지니어링 정규 표현식 결함의 모호한 재해입니다. 예를 들어, [프랑스어](markdown-is-not-latex.html.fr) 캐나다의 금융 수학자들은 두 가지 다른 통화로 두 가지 가격을 논의합니다. `$`1.50 및 2,00`$` CA (실제로 경쟁했지만 복잡성을 보여줍니다). 어떻게 하면 `i18n` 준수 [GFM 구문 분석기](https://pandoc.org/) 달러 표지판 사이의 물건이 인라인으로 처리되지 않는다는 것을 이해합니다. $$\LaTeX$$*, 비록 그것이 구문적으로 유효하더라도 $$\TeX$$ 그리고 이것에 따릅니다 [나이브 스펙](https://pandoc.org/demo/example33/8.13-math.html)?
 
-함수 서명에서 Ruby/Perl 변수 쌍은 어떻습니까? `foo($v,$w)`? 순진한 사양과 동일한 문제입니다. Have Claude<sup>2</sup> 모든 것을 파싱?
+함수 서명에서 Ruby/Perl 변수 쌍은 어떻습니까? `foo($v,$w)`? 순진한 사양과 동일한 문제입니다. Have Claude<sup>1</sup> 모든 것을 파싱?
 
 국제 레거시 문서 형식을 비 GitHub 플랫폼으로 대량 GFM 변환을 수행하는 경우 행운을 빕니다. 그것은 믿을 수 없을만큼 느리고 비쌀뿐만 아니라, 단지 "작업" Visual Studio에서 렌더링할 때도 작동합니다.
 
 **오늘** 구문분석기를 혼동하는 물건을 작성하지 않을 것이라고 말하는 것은 한 가지입니다. **과거**에 작성된 물건도 구문분석기를 혼동하지 않을 것이라고 말하는 것은 꽤 다른 것입니다. 지금은 아니며 **미래** 구문분석기 릴리스가 아닙니다.
 
-표준과 달리 [JCP](https://jcp.org/en/home/index), 이 혼란에 대한 규정 준수 인증 테스트 제품군은 없습니다. [진화 중](https://github.com/github/markup?tab=readme-ov-file#github-markup) [상황](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 켜기 [지상](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 시간 [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
+표준과 달리 [JCP](https://jcp.org/en/home/index), 이 혼란에 대한 규정 준수 인증 테스트 제품군은 없습니다. [진화 중](https://github.com/github/markup?tab=readme-ov-file#github-markup) [상황](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 켜기 [지상](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 시간 [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
 
 > GitHub는 현재 오픈 소스 마크다운 파서를 공개하지 않았습니다. 그러나 GitHub는 해당 플랫폼에 대해 GitHub Flavored Markdown(GFM) 사양을 기반으로 하는 Markdown의 사용자정의 구현을 사용하는 것으로 알려져 있습니다. 이 구현에는 GitHub에서 사용되는 마크다운 구문을 향상시키는 다양한 확장 및 기능에 대한 지원이 포함됩니다.
 
 다시 말하지만, Gruber의 목표에서 의도적 인 편차.
 
-가장 역겨운 것은, 사악한 제국을 포옹하고 확장하는 것은 AI를 통해 자신의 시장 이익을 위해 다른 사람들의 노동을 더럽히려는 노력에 대해 정신적 사고 경찰 역할을하는 F / OSS 자유 노동 노예의 군대를 가지고 있습니다.<sup>1</sup>. 아래 링크 섹션에서 이 페이지의 플래그가 지정된 HackerNews 게시물에 대한 응답을 확인하여 그 중 일부를 충족하십시오.
+가장 역겨운 것은, 사악한 제국을 포옹하고 확장하는 것은 AI를 통해 자신의 시장 이익을 위해 다른 사람들의 노동을 더럽히려는 노력에 대해 정신적 사고 경찰 역할을하는 F / OSS 자유 노동 노예의 군대를 가지고 있습니다.<sup>2</sup>. 아래 링크 섹션에서 이 페이지의 플래그가 지정된 HackerNews 게시물에 대한 응답을 확인하여 그 중 일부를 충족하십시오.
 
 ## 씨발 마이크로소프트
 
@@ -58,8 +58,8 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 ## 각주
 
-1. 인용 된 논문은 지난 24 시간 동안 bing의 독창적 인 AI 반응이었습니다.이 기사에 대한 배경 링크를 추가하기 전까지는 "학습" 질의에 대한 응답으로 덜 바보 같은 것을 말하는 방법 "github의 현재 오픈 소스 마크다운 구문 분석기란?". 이것은 우리의 일자리를 창출하는 AI입니다.** 여러분.
+1. GitHub가 F/OSS를 사용하여 매가인하를 구문 분석한다고 믿는 nitwits의 경우: 페이지 상단의 이 문서에 대한 GitHub 소스 링크를 클릭하도록 인코딩합니다. **WorldWide 폭발 반경** 섹션을 복사하여 GitHub 마크다운 편집기에 붙여 넣고 사용하려는 F/OSS 크랩과 달리 샘플 케이스를 *올바르게* 렌더링한다는 사실을 직접 확인합니다. MathJax 렌더러의 미학을 다음과 비교할 수 있습니다. $$\KaTeX$$ 이 사이트에서 사용하는 렌더링을 통해 두 제품 간의 품질 불일치에 대한 혼란을 해결하고, 렌더링 속도와 관련된 정량적 불일치를 훨씬 줄일 수 있습니다.
 
-2. GitHub가 F/OSS를 사용하여 매가인하를 구문 분석한다고 믿는 nitwits의 경우: 페이지 상단의 이 문서에 대한 GitHub 소스 링크를 클릭하도록 인코딩합니다. **WorldWide 폭발 반경** 섹션을 복사하여 GitHub 마크다운 편집기에 붙여 넣고 사용하려는 F/OSS 크랩과 달리 샘플 케이스를 *올바르게* 렌더링한다는 사실을 직접 확인합니다.
+1. 인용 된 논문은 지난 24 시간 동안 bing의 독창적 인 AI 반응이었습니다.이 기사에 대한 배경 링크를 추가하기 전까지는 "학습" 질의에 대한 응답으로 덜 바보 같은 것을 말하는 방법 "github의 현재 오픈 소스 마크다운 구문 분석기란?". 이것은 우리의 일자리를 창출하는 AI입니다.** 여러분.
 
 <!-- $Date$ $Author$ $Revision$ -->

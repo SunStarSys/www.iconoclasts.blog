@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.pt-BR'
 keywords: markdown,Microsoft, Github, corrupto, abraçar, estender, sycophant, AI
-status: verificado=40254
+status: verificado=40277
 title: Microsoft considerada prejudicial
 ---
 
@@ -34,19 +34,19 @@ Ou apenas [Preguiça, impaciência e Hubris](http://www.parrot.org/)Mas isso nã
 
 É agora um desastre ambíguo de defeitos regex de engenharia cada vez que um autor / implementador tem que adivinhar o que o analisador deve fazer com sequências de cifrões isolados ocorrendo dentro de um único parágrafo de prosa de markdown. Por exemplo, considere uma situação em que [Francês](markdown-is-not-latex.html.fr) Matemáticos financeiros canadenses discutem dois preços em duas moedas diferentes, dizem EUA `$`1,50 e 2.00`$` CA (admitidamente inventado, mas ilustra a complexidade). Como você escreveria um `i18n` em conformidade [Analisador GFM](https://pandoc.org/) que entende que o material entre os cifrões aqui é *não deve ser processado como inline $$\LaTeX$$*, embora seja sintaticamente válido $$\TeX$$ e está em conformidade com isso [especificação ingênua](https://pandoc.org/demo/example33/8.13-math.html)?
 
-Que tal um par de variáveis Ruby/Perl em uma assinatura de função como `foo($v,$w)`? O mesmo problema com a ingenuidade. Ter Claude<sup>2</sup> analisar tudo?
+Que tal um par de variáveis Ruby/Perl em uma assinatura de função como `foo($v,$w)`? O mesmo problema com a ingenuidade. Ter Claude<sup>1</sup> analisar tudo?
 
 Boa sorte com isso se você estiver fazendo uma conversão GFM em massa de formatos de documentos legados internacionais para uma plataforma não-GitHub. Não só será incrivelmente lento e caro, mas só "trabalho" quando renderizado no Visual Studio, se mesmo funciona.
 
 Uma coisa é dizer que você não vai escrever coisas **hoje** que confundem o analisador **agora**; é bem diferente dizer que as coisas escritas no **passado** também não confundirão o analisador. Não hoje e não versões do parser **futuro**.
 
-Ao contrário dos padrões emergentes do [JCP](https://jcp.org/en/home/index), nunca haverá um conjunto de testes de certificação de conformidade para essa bagunça, porque é um [evolução](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situação](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) em [o chão](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) em [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
+Ao contrário dos padrões emergentes do [JCP](https://jcp.org/en/home/index), nunca haverá um conjunto de testes de certificação de conformidade para essa bagunça, porque é um [evolução](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situação](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) em [o chão](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) em [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
 
 > GitHub não divulgou publicamente seu atual analisador de markdown de código aberto. No entanto, sabe-se que o GitHub usa uma implementação personalizada de Markdown para sua plataforma, que é baseada na especificação GitHub Flavored Markdown (GFM). Esta implementação inclui suporte para várias extensões e recursos que aprimoram a sintaxe de Markdown usada pelo GitHub.
 
 Novamente, desvio intencional dos objetivos de Gruber.
 
-Mais repugnantemente, o abraço e extensão do império do mal tem um exército de escravos do trabalho livre F / OSS para servir como polícia de pensamento sicofântico sobre seus esforços para roubar o trabalho dos outros para seus próprios ganhos de mercado através da IA<sup>1</sup>. Basta verificar as respostas para o post HackerNews sinalizado desta página na seção Links abaixo para conhecer alguns deles.
+Mais repugnantemente, o abraço e extensão do império do mal tem um exército de escravos do trabalho livre F / OSS para servir como polícia de pensamento sicofântico sobre seus esforços para roubar o trabalho dos outros para seus próprios ganhos de mercado através da IA<sup>2</sup>. Basta verificar as respostas para o post HackerNews sinalizado desta página na seção Links abaixo para conhecer alguns deles.
 
 ## Fuck Microsoft
 
@@ -58,8 +58,8 @@ Em vez disso, contamos com um fork interno de @markedjs/marcado e continuaremos 
 
 ## Rodapés
 
-1. A prosa citada foi a resposta original da IA do bing nas últimas 24 horas, até que eu adicionei os links de fundo adicionais a este artigo, a partir do qual "aprendido" Como dizer algo menos idiota em resposta à consulta "o que é o analisador de markdown de código aberto atual do github". Esta é a IA que está **tomando nossos empregos**, pessoal.
+1. Para os nitwits que ainda acreditam que GitHub está usando F/OSS para analisar markdown: Eu encouage você para clicar no link de origem GitHub para este artigo no topo da página, copie e cole a seção **WorldWide Blast Radius** em um editor de markdown GitHub e testemunhe em primeira mão que ela renderiza os casos de amostra *corretamente*, ao contrário do lixo F/OSS que ela alega usar. Pode ser conveniente comparar a estética do renderizador MathJax com a do $$\KaTeX$$ que usamos neste site, para esclarecer qualquer confusão sobre as discrepâncias de qualificação entre os dois produtos, muito menos os quantitativos como eles se relacionam com a velocidade de renderização.
 
-2. Para os nitwits que ainda acreditam que GitHub está usando F/OSS para analisar markdown: Eu encouage você para clicar no link de origem GitHub para este artigo no topo da página, copie e cole a seção **WorldWide Blast Radius** em um editor de markdown GitHub e testemunhe em primeira mão que ela renderiza os casos de amostra *corretamente*, ao contrário do lixo F/OSS que ela alega usar.
+1. A prosa citada foi a resposta original da IA do bing nas últimas 24 horas, até que eu adicionei os links de fundo adicionais a este artigo, a partir do qual "aprendido" Como dizer algo menos idiota em resposta à consulta "o que é o analisador de markdown de código aberto atual do github". Esta é a IA que está **tomando nossos empregos**, pessoal.
 
 <!-- $Date$ $Author$ $Revision$ -->

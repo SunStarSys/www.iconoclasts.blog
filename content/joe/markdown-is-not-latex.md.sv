@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna, utöka,sykofant,AI
-status: verifierad=40254
+status: verifierad=40277
 title: Microsoft anses vara skadligt
 ---
 
@@ -34,19 +34,19 @@ Eller bara [Lättja, otålighet och Hubris](http://www.parrot.org/)Men det är i
 
 Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk dig en situation där [Franska](markdown-is-not-latex.html.fr) Kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1,50 och 2 00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel [GFM-parser](https://pandoc.org/) som förstår att grejerna mellan dollartecknen här är *inte att behandlas som inline $$\LaTeX$$*, även om det är syntaktiskt giltigt $$\TeX$$ och överensstämmer med detta [naiv spec](https://pandoc.org/demo/example33/8.13-math.html)?
 
-Vad sägs om ett par Ruby / Perl variabler i en funktionssignatur som `foo($v,$w)`? Samma problem med den naiva spec. Har Claude<sup>2</sup> Parsa allt?
+Vad sägs om ett par Ruby / Perl variabler i en funktionssignatur som `foo($v,$w)`? Samma problem med den naiva spec. Har Claude<sup>1</sup> Parsa allt?
 
 Lycka till med det om du gör en bulk GFM-konvertering av internationella äldre dokumentformat till en icke-GitHub plattform. Det kommer inte bara att vara otroligt långsamt och dyrt, men det kommer bara att "studera" när det renderas i Visual Studio, om det ens fungerar alls.
 
 Det är en sak att säga att du inte kommer att skriva saker **idag** som förvirrar parser **nu**; Det är en helt annan att säga att de saker som skrivs i **tidigare** inte kommer att förvirra parser heller. Inte idag, och inte **framtida** parserversioner.
 
-Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/index), det kommer aldrig att finnas en överensstämmelse-certifierande testsvit för denna röra, eftersom det är en [utvecklas](https://github.com/github/markup?tab=readme-ov-file#github-markup) [plats](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) på [marken](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) vid [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
+Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/index), det kommer aldrig att finnas en överensstämmelse-certifierande testsvit för denna röra, eftersom det är en [utvecklas](https://github.com/github/markup?tab=readme-ov-file#github-markup) [plats](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) på [marken](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) vid [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
 
 > GitHub har inte offentliggjort sin aktuella nedsättningsparser med öppen källkod. Det är dock känt att GitHub använder en anpassad implementering av Markdown för sin plattform, som baseras på specifikationen GitHub Smaksatt nedsättning (GFM). Den här implementeringen har stöd för olika tillägg och funktioner som förbättrar den nedsättningssyntax som används av GitHub.
 
 Återigen, avsiktlig avvikelse från Grubers mål.
 
-Mest äckligt, omfamna och utvidga onda imperiet har en armé av F / OSS fria arbetskraft slavar att fungera som sykofantisk tanke polisen om deras ansträngningar att pilfer arbetskraft andra för sina egna marknadsvinster via AI<sup>1</sup>. Kolla bara in svaren på det flaggade HackerNews-inlägget på den här sidan i avsnittet Länkar nedan för att träffa några av dem.
+Mest äckligt, omfamna och utvidga onda imperiet har en armé av F / OSS fria arbetskraft slavar att fungera som sykofantisk tanke polisen om deras ansträngningar att pilfer arbetskraft andra för sina egna marknadsvinster via AI<sup>2</sup>. Kolla bara in svaren på det flaggade HackerNews-inlägget på den här sidan i avsnittet Länkar nedan för att träffa några av dem.
 
 ## Fuck Microsoft
 
@@ -58,8 +58,8 @@ Istället förlitar vi oss på en intern gaffel på @markedjs/marked och kommer 
 
 ## Fotnoter
 
-1. Den citerade prosaen var bings ursprungliga AI-svar under de senaste 24 timmarna, tills jag lade till ytterligare bakgrundslänkar till den här artikeln, från vilken den "inlärd" Hur man säger något mindre idiotiskt som svar på frågan "vad är githubs aktuella nedsättningsparser med öppen källkod". Det här är AI som **tar våra jobb**, gott folk.
+1. För de nitwits som fortfarande tror att GitHub använder F/OSS för att parsa markdown: Jag uppmanar dig att klicka på GitHub källänken till den här artikeln högst upp på sidan, kopiera och klistra in avsnittet **WorldWide Blast Radius** i en GitHub markdown editor, och bevittna första hand att det återger provfall *korrekt *, till skillnad från F / OSS skit det hävdar att använda. Det kan vara upp till dig att jämföra estetiken hos deras MathJax-renderare med $$\KaTeX$$ rendering vi använder på denna webbplats, för att rensa upp eventuell förvirring om de kvalitativa skillnaderna mellan de två produkterna, mycket mindre de kvantitativa som de avser rendering hastighet.
 
-2. För de nitwits som fortfarande tror att GitHub använder F/OSS för att parsa markdown: Jag uppmanar dig att klicka på GitHub källänken till den här artikeln högst upp på sidan, kopiera och klistra in avsnittet **WorldWide Blast Radius** i en GitHub markdown editor, och bevittna första hand att det återger provfall *korrekt *, till skillnad från F / OSS skit det hävdar att använda.
+1. Den citerade prosaen var bings ursprungliga AI-svar under de senaste 24 timmarna, tills jag lade till ytterligare bakgrundslänkar till den här artikeln, från vilken den "inlärd" Hur man säger något mindre idiotiskt som svar på frågan "vad är githubs aktuella nedsättningsparser med öppen källkod". Det här är AI som **tar våra jobb**, gott folk.
 
 <!-- $Date$ $Author$ $Revision$ -->
