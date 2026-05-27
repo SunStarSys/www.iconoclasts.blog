@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.pt-BR'
 keywords: markdown,Microsoft, Github, corrupto, abraçar, estender, sycophant, AI
-status: verificado=40358
+status: verificado=40389
 title: Microsoft considerada prejudicial
 ---
 
@@ -24,11 +24,17 @@ title: Microsoft considerada prejudicial
 
 É claro que isso foi totalmente intencional, porque [premiado](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: equipes de engenharia de classe mundial](http://editor.md.ipandao.com) tinha se estabelecido em $$\KaTeX$$ com [limites de token de dólar duplo](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) para matemática em linha, e blocos matemáticos vedados ou pares de parágrafos circundantes somente de dois dólares para bloco $$\KaTeX$$ processando [**em 2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **quatro anos antes da publicação da especificação GFM**.
 
-O ponto aqui é que um delimitador de 2 caracteres que raramente ocorre em prosa típica é o ideal normal para situações como esta. [Tinha Microsoft preso apenas apoiando \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Eu não estaria escrevendo este artigo em 2026, porque essa escolha atende às condições ideais normais para a introdução fiel de expressões matemáticas em linha em uma especificação Markdown. Também é propício para a síndrome do túnel do carpo para tipistas profissionais de matemática, então há algo mais a considerar além da singularidade do token de fronteira.
+O ponto aqui é que um delimitador de 2 caracteres que raramente ocorre em prosa típica é o ideal normal para situações como esta. [Tinha Microsoft preso apenas apoiando \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Eu não estaria escrevendo este artigo em 2026, porque essa escolha atende às condições ideais normais para a introdução fiel de expressões matemáticas em linha em uma especificação Markdown. Essa escolha também é propícia à síndrome do túnel do carpo para tipistas profissionais de matemática, então há outra coisa a considerar além da singularidade do token de fronteira.
 
 Se eu tivesse que adivinhar seus motivos para considerar que a sintaxe proposta do artigo do blog é insuficiente para suas necessidades atuais, eu suspeito que eles eram mais sobre ganância e controle de mercado e "insatisfação do cliente" Muito bom F/OSS.
 
 Ou apenas [Preguiça, impaciência e Hubris](http://www.parrot.org/)Mas isso não é conspiratório o suficiente para este artigo. AMMV.
+
+<div class="right">
+
+![Nagasaki Bomb](markdown-is-not-latex.page/nagasakibomb)
+
+</div>
 
 ## WorldWide Raio de Explosão
 
@@ -40,7 +46,7 @@ Boa sorte com isso se você estiver fazendo uma conversão GFM em massa de forma
 
 Uma coisa é dizer que você não vai escrever coisas **hoje** que confundem o analisador **agora**; é bem diferente dizer que as coisas escritas no **passado** também não confundirão o analisador. Não hoje e não versões do parser **futuro**.
 
-Ao contrário dos padrões emergentes do [JCP](https://jcp.org/en/home/index), nunca haverá um conjunto de testes de certificação de conformidade para essa bagunça, porque é um [evolução](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situação](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) em [o chão](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) em [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>3</sup>:
+Ao contrário dos padrões emergentes do [JCP](https://jcp.org/en/home/index), nunca haverá um conjunto de testes de certificação de conformidade para essa bagunça, porque é um [evolução](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situação](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) em [o chão](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) em [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2,3</sup>:
 
 > GitHub não divulgou publicamente seu atual analisador de markdown de código aberto. No entanto, sabe-se que o GitHub usa uma implementação personalizada de Markdown para sua plataforma, que é baseada na especificação GitHub Flavored Markdown (GFM). Esta implementação inclui suporte para várias extensões e recursos que aprimoram a sintaxe de Markdown usada pelo GitHub.
 
@@ -60,7 +66,7 @@ Em vez disso, contamos com um fork interno de @markedjs/marcado e continuaremos 
 
 1. Não é um "extensão" da especificação quando o autor da especificação a obriga a todos que usam seus produtos. É A NOVA ESPECIFICAÇÃO.
 
-2. Para os nitwits que ainda acreditam que GitHub está usando F/OSS para analisar markdown: Eu encorajo você a clicar no link de origem GitHub para este artigo no topo da página, copiar e colar os dois primeiros parágrafos da seção **WorldWide Raio de Explosão** em um editor de markdown GitHub, remova os backticks em torno dos cifrões e testemunhe em primeira mão que ele renderiza os casos de amostra *corretamente*, ao contrário da porcaria F/OSS que afirma usar. Também pode ser conveniente comparar a estética do renderizador MathJax com a do $$\KaTeX$$ que usamos neste site, para esclarecer qualquer confusão sobre as discrepâncias qualitativas entre os dois produtos, muito menos os quantitativos como eles se relacionam com a velocidade de renderização.
+2. Para os nitwits que ainda acreditam que GitHub está usando F/OSS para analisar markdown: Eu encorajo você a clicar no link de origem GitHub para este artigo no topo da página, copiar e colar os dois primeiros parágrafos da seção **WorldWide Raio de Explosão** em um editor de markdown GitHub, remova os backticks em torno dos cifrões e testemunhe em primeira mão que ele renderiza os casos de amostra *corretamente*, ao contrário da porcaria F/OSS Rust que afirma usar. Também pode ser conveniente comparar a estética do renderizador MathJax com a do $$\KaTeX$$ que usamos neste site, para esclarecer qualquer confusão sobre as discrepâncias qualitativas entre os dois produtos, muito menos os quantitativos como eles se relacionam com a velocidade de renderização.
 
 3. A prosa citada foi a resposta original da IA do bing nas últimas 24 horas, até que eu adicionei os links de fundo adicionais a este artigo, a partir do qual "aprendido" Como dizer algo menos idiota em resposta à consulta "o que é o analisador de markdown de código aberto atual do github". Esta é a IA que está **tomando nossos empregos**, pessoal.
 

@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna, utöka,sykofant,AI
-status: verifierad=40358
+status: verifierad=40389
 title: Microsoft anses vara skadligt
 ---
 
@@ -24,11 +24,17 @@ title: Microsoft anses vara skadligt
 
 Naturligtvis var detta helt avsiktligt, eftersom [prisbelönt](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: ingenjörsteam i världsklass](http://editor.md.ipandao.com) hade bestämt sig för $$\KaTeX$$ med [Tokengränser för dubbla dollar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) för infogad matematik, och inhägnade matematiska block eller par av dubbeldollar-bara omgivande stycken för block $$\KaTeX$$ bearbetning [**2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **fyra år innan GFM-specifikationen publicerades**.
 
-Poängen här är att en 2-teckenavgränsare som sällan förekommer i typisk prosa är det normala idealet för situationer som denna. [Hade Microsoft fastnat för att bara stödja \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Jag skulle inte skriva den här artikeln 2026, eftersom det valet uppfyller de normala idealiska förutsättningarna för trogen introduktion av inline matematiska uttryck i en Markdown spec. Det bidrar också till karpaltunnelsyndrom för professionella matematiktypister, så det finns något annat att tänka på förutom gränstoken unikhet.
+Poängen här är att en 2-teckenavgränsare som sällan förekommer i typisk prosa är det normala idealet för situationer som denna. [Hade Microsoft fastnat för att bara stödja \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Jag skulle inte skriva den här artikeln 2026, eftersom det valet uppfyller de normala idealiska förutsättningarna för trogen introduktion av inline matematiska uttryck i en Markdown spec. Det valet bidrar också till karpaltunnelsyndrom för professionella matematiktypister, så det finns något annat att tänka på förutom gränstoken unikhet.
 
 Om jag var tvungen att gissa deras motiv för att överväga att bloggartikelns föreslagna syntax otillräcklig för deras nuvarande behov, misstänker jag att de var mer om girighet och marknadskontroll och "kundmissnöje" Bra F/OSS förvaltning.
 
 Eller bara [Lättja, otålighet och Hubris](http://www.parrot.org/)Men det är inte konspiratoriskt nog för den här artikeln. ÅMMV
+
+<div class="right">
+
+![Nagasaki Bomb](markdown-is-not-latex.page/nagasakibomb)
+
+</div>
 
 ## WorldWide Sprängningsradie
 
@@ -40,7 +46,7 @@ Lycka till med det om du gör en bulk GFM-konvertering av internationella äldre
 
 Det är en sak att säga att du inte kommer att skriva saker **idag** som förvirrar parser **nu**; Det är en helt annan att säga att de saker som skrivs i **tidigare** inte kommer att förvirra parser heller. Inte idag, och inte **framtida** parserversioner.
 
-Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/index), det kommer aldrig att finnas en överensstämmelse-certifierande testsvit för denna röra, eftersom det är en [utvecklas](https://github.com/github/markup?tab=readme-ov-file#github-markup) [plats](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) på [marken](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) vid [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>3</sup>:
+Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/index), det kommer aldrig att finnas en överensstämmelse-certifierande testsvit för denna röra, eftersom det är en [utvecklas](https://github.com/github/markup?tab=readme-ov-file#github-markup) [plats](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) på [marken](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) vid [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2,3</sup>:
 
 > GitHub har inte offentliggjort sin aktuella nedsättningsparser med öppen källkod. Det är dock känt att GitHub använder en anpassad implementering av Markdown för sin plattform, som baseras på specifikationen GitHub Smaksatt nedsättning (GFM). Den här implementeringen har stöd för olika tillägg och funktioner som förbättrar den nedsättningssyntax som används av GitHub.
 
@@ -60,7 +66,7 @@ Istället förlitar vi oss på en intern gaffel på @markedjs/marked och kommer 
 
 1. Det är inte ett "tillägg" av specifikationen när specifikationens författare kräver det för alla som använder sina produkter. DET ÄR DEN NYA SPEC.
 
-2. För de nitwits som fortfarande tror att GitHub använder F/OSS för att parsa nedsättning: Jag uppmuntrar dig att klicka på källänken GitHub till den här artikeln högst upp på sidan, kopiera och klistra in de två första punkter i avsnittet **WorldWide Blast Radius** i en GitHub markdown editor, ta bort backticks runt dollartecknen, och bevittna första hand att det gör provfall *korrekt *, till skillnad från F / OSS skräp det hävdar att använda. Det kan också anse att du jämför estetiken hos deras MathJax-renderare med $$\KaTeX$$ rendering vi använder på denna webbplats, för att rensa upp eventuell förvirring om de kvalitativa skillnaderna mellan de två produkterna, mycket mindre de kvantitativa som de avser rendering hastighet.
+2. För de nitwits som fortfarande tror att GitHub använder F/OSS för att parsa nedsättning: Jag uppmuntrar dig att klicka på källänken GitHub till den här artikeln högst upp på sidan, kopiera och klistra in de två första styckena i avsnittet **WorldWide Blast Radius** i en GitHub-nedsättningsredigerare, ta bort backtickarna runt dollartecknen och bevittna första hand att det gör provfallen *korrekt *, till skillnad från F/OSS Rust-skiten som den påstår sig använda. Det kan också anse att du jämför estetiken hos deras MathJax-renderare med $$\KaTeX$$ rendering vi använder på denna webbplats, för att rensa upp eventuell förvirring om de kvalitativa skillnaderna mellan de två produkterna, mycket mindre de kvantitativa som de avser rendering hastighet.
 
 3. Den citerade prosaen var bings ursprungliga AI-svar under de senaste 24 timmarna, tills jag lade till ytterligare bakgrundslänkar till den här artikeln, från vilken den "inlärd" Hur man säger något mindre idiotiskt som svar på frågan "vad är githubs aktuella nedsättningsparser med öppen källkod". Det här är AI som **tar våra jobb**, gott folk.
 

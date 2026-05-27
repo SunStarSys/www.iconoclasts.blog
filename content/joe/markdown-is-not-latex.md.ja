@@ -2,7 +2,7 @@
 categories: オリオン
 dependencies: '*.md.ja'
 keywords: Markdown,Microsoft,Github,corrupt,embrace,extended,sycophant,AI
-status: 確認済み=40358
+status: 確認済み=40389
 title: マイクロソフトは有害と考えました
 ---
 
@@ -24,11 +24,17 @@ title: マイクロソフトは有害と考えました
 
 もちろん、これは完全に意図的なものだったので、[受賞歴](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: 世界クラスのエンジニアリングチーム](http://editor.md.ipandao.com) 定着しました$$\KaTeX$$ 対象[二重ドルトークン境界](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) インライン数学、およびブロックの二重ドルのみの周囲の段落のフェンス数学ブロックまたはペア$$\KaTeX$$ 処理中[**2015年**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **GFM仕様が発表される4年前**。
 
-ここでのポイントは、典型的な散文ではめったに起こらない2文字のデリミタが、このような状況にとって通常の理想であることです。[マイクロソフトが\$\をサポートするだけ` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 私は2026年にこの記事を書くつもりはありません。なぜなら、その選択はMarkdown仕様にインライン数学式を忠実に導入するための通常の理想的な条件を満たしているからです。それはまた、プロの数学タイピストのための手根トンネル症候群を促すので、境界トークン一意性以外に考慮すべき何かがあります。
+ここでのポイントは、典型的な散文ではめったに起こらない2文字のデリミタが、このような状況にとって通常の理想であることです。[マイクロソフトが\$\をサポートするだけ` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 私は2026年にこの記事を書くつもりはありません。なぜなら、その選択はMarkdown仕様にインライン数学式を忠実に導入するための通常の理想的な条件を満たしているからです。この選択は、プロの数学タイピストのための手根トンネル症候群にも役立つため、境界トークン一意性以外に考慮すべきことがあります。
 
 ブログ記事の提案された構文が現在のニーズには不十分であると考える動機を推測する必要があった場合、私は彼らが貪欲で市場管理についてより多くであったと疑います"顧客の不満" 優れたF/OSSスチュワードシップ
 
 または単に[怠惰、忍耐、ハブリス](http://www.parrot.org/)しかし、これはこの記事では十分ではありません。YMMV。
+
+<div class="right">
+
+![長崎爆弾](markdown-is-not-latex.page/nagasakibomb)
+
+</div>
 
 ## WorldWideブラスト半径
 
@@ -40,7 +46,7 @@ title: マイクロソフトは有害と考えました
 
 パーサー**現在**を混乱させるもの**今日**は書かないと言います。**過去**に書かれたものもパーサーを混乱させないと言います。今日ではなく、**将来**パーサー・リリースではありません。
 
-標準とは違って、[JCP](https://jcp.org/en/home/index)、この混乱のためのコンプライアンス証明のテスト スイートは決してありません、それは[進化する](https://github.com/github/markup?tab=readme-ov-file#github-markup) [場所](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) 日付[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 場所[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>3</sup>:
+標準とは違って、[JCP](https://jcp.org/en/home/index)、この混乱のためのコンプライアンス証明のテスト スイートは決してありません、それは[進化する](https://github.com/github/markup?tab=readme-ov-file#github-markup) [場所](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) 日付[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 場所[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2,3</sup>:
 
 > GitHubは、現在のオープンソース・マークダウン・パーサーを公開していません。ただし、GitHubは、GitHub Flavored Markdown (GFM)仕様に基づく、そのプラットフォームにMarkdownのカスタム実装を使用することが知られています。この実装には、GitHubで使用されるMarkdown構文を拡張する様々な拡張機能および機能のサポートが含まれます。
 
@@ -60,7 +66,7 @@ title: マイクロソフトは有害と考えました
 
 1. いいえ"拡張子" 仕様の作者が製品を使用するすべての人にそれを義務付けるときの仕様。新しいスペックです。
 
-2. GitHubがマークダウンを解析するためにF/OSSを使用していると考えているnitwitsの場合: ページ上部のこの記事へのGitHubソース・リンクをクリックして、最初の2つをコピーして貼り付けることをお薦めします**WorldWide「ブラスト半径」**セクションの段落をGitHubマークダウン・エディタに、ドル記号の周りのバックティックを削除し、使用すると主張するF/OSSクラップとは異なり、サンプル・ケースを*正しく*レンダリングすることを直接確認します。また、MathJaxレンダラの美学と$$\KaTeX$$ レンダリングは、このサイトで使用し、2つの製品間の質的相違に関する混乱を解消するために、レンダリング速度に関連する量的相違ははるかに少なくなります。
+2. まだGitHubがマークダウンを解析するためにF/OSSを使用していると考えているnitwitsの場合: ページ上部のこの記事へのGitHubソース・リンクをクリックして、最初の2つの段落をコピーして貼り付けることをお薦めします**WorldWide Blast Radius**セクションのGitHubマークダウン・エディタに、ドル記号の周りのバックティックを削除し、使用すると主張するF/OSS Rustクラップとは異なり、サンプル・ケースを*正しく*レンダリングすることを直接確認します。また、MathJaxレンダラの美学と$$\KaTeX$$ レンダリングは、このサイトで使用し、2つの製品間の質的相違に関する混乱を解消するために、レンダリング速度に関連する量的相違ははるかに少なくなります。
 
 3. 引用されたproseは、この記事に追加の背景リンクを追加するまで、過去24時間の元のAI応答でした。"習った" クエリに応答して、より愚かなことを言う方法"githubの現在のオープンソース・マークダウン・パーサーとは"。これは、私たちの仕事を引き受けているAIです。
 

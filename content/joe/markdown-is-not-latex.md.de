@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.de'
 keywords: Markdown,Microsoft,Github,korrupt,Umarmung,extend,sycophant,AI
-status: überprüft=40358
+status: überprüft=40389
 title: Microsoft als schädlich betrachtet
 ---
 
@@ -24,11 +24,17 @@ title: Microsoft als schädlich betrachtet
 
 Das war natürlich ganz bewusst, denn [preisgekrönt](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: Weltklasse-Technikteams](http://editor.md.ipandao.com) hatte sich $$\KaTeX$$ mit [Doppel-Dollar-Token-Grenzen](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) für Inline-Mathematik und umzäunte Matheblöcke oder Paare von nur doppelten Dollars umgebenden Abschnitten für Block $$\KaTeX$$ Verarbeitung [**im Jahr 2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **vier Jahre vor der Veröffentlichung der GFM-Spezifikation**.
 
-Der Punkt hier ist, dass ein 2-Zeichen-Trennzeichen, das selten in typischen Prosa auftritt, das normale Ideal für solche Situationen ist. [Hatte Microsoft nur \$\ unterstützt` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Ich würde diesen Artikel im Jahr 2026 nicht schreiben, da diese Wahl die normalen idealen Bedingungen für die treue Einführung von Inline-Matheausdrücken in einer Markdown-Spezifikation erfüllt. Es ist auch förderlich für Karpaltunnelsyndrom für professionelle Mathe-Typen, so gibt es etwas anderes zu berücksichtigen neben Grenze-token Einzigartigkeit.
+Der Punkt hier ist, dass ein 2-Zeichen-Trennzeichen, das selten in typischen Prosa auftritt, das normale Ideal für solche Situationen ist. [Hatte Microsoft nur \$\ unterstützt` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) Ich würde diesen Artikel im Jahr 2026 nicht schreiben, da diese Wahl die normalen idealen Bedingungen für die treue Einführung von Inline-Matheausdrücken in einer Markdown-Spezifikation erfüllt. Diese Wahl ist auch förderlich für Karpaltunnelsyndrom für professionelle Mathe-Typen, so gibt es etwas anderes zu berücksichtigen neben Grenze-token Einzigartigkeit.
 
 Wenn ich ihre Motive für die Betrachtung der vorgeschlagenen Syntax des Blogartikels erraten musste, die für ihre aktuellen Bedürfnisse unzureichend ist, vermute ich, dass es mehr um Gier und Marktkontrolle ging und "Kundenunzufriedenheit" als gute F/OSS-Verwaltung.
 
 Oder einfach [Faulheit, Ungeduld und Hubris](http://www.parrot.org/); aber das ist nicht konspiratorisch genug für diesen Artikel. JMMV
+
+<div class="right">
+
+![Nagasaki-Bombe](markdown-is-not-latex.page/nagasakibomb)
+
+</div>
 
 ## WorldWide Strahlungsradius
 
@@ -40,7 +46,7 @@ Viel Glück damit, wenn Sie eine Massen-GFM-Konvertierung von internationalen Le
 
 Es ist eine sache zu sagen, dass sie nichts **heute** schreiben werden, was den parser **jetzt** verwirrt; es ist eine andere sache zu sagen, dass das zeug, das im **past** geschrieben wurde, den parser auch nicht verwirren wird. Nicht heute, und nicht **zukünftige** Parserreleases.
 
-Im Gegensatz zu den Standards, die aus [JCP](https://jcp.org/en/home/index), wird es nie eine Compliance-zertifizierende Testsuite für dieses Chaos geben, weil es eine [Entwicklung](https://github.com/github/markup?tab=readme-ov-file#github-markup) [Situation](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) am [Der Boden](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) um [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>3</sup>:
+Im Gegensatz zu den Standards, die aus [JCP](https://jcp.org/en/home/index), wird es nie eine Compliance-zertifizierende Testsuite für dieses Chaos geben, weil es eine [Entwicklung](https://github.com/github/markup?tab=readme-ov-file#github-markup) [Situation](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) am [Der Boden](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) um [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2,3</sup>:
 
 > GitHub hat seinen aktuellen Open-Source-Markdown-Parser nicht öffentlich bekannt gegeben. Es ist jedoch bekannt, dass GitHub eine benutzerdefinierte Implementierung von Markdown für seine Plattform verwendet, die auf der GFM-Spezifikation (GitHub Flavored Markdown) basiert. Diese Implementierung umfasst Unterstützung für verschiedene Erweiterungen und Features, mit denen die von GitHub verwendete Markdown-Syntax verbessert wird.
 
@@ -60,7 +66,7 @@ Stattdessen setzen wir auf einen internen Fork von @markedjs/markiert und werden
 
 1. Es ist kein "Erweiterung" der Spezifikation, wenn der Autor der Spezifikation sie für alle, die ihre Produkte verwenden, vorschreibt. ES IST DIE NEUE SPEZ.
 
-2. Für die Nitwits, die immer noch glauben, dass GitHub F/OSS verwendet, um Markdown zu parsen: Ich empfehle Ihnen, auf den Quelllink GitHub zu diesem Artikel oben auf der Seite zu klicken, die ersten beiden zu kopieren und einzufügen Absätze des Abschnitts **WorldWide Blast Radius** in einen GitHub-Markdown-Editor, entfernen Sie die Backticks um die Dollarzeichen und sehen Sie aus erster Hand, dass die Beispielfälle *korrekt* dargestellt werden, im Gegensatz zu dem F/OSS-Missbrauch, den es zu verwenden behauptet. Es kann auch sein, dass Sie die Ästhetik ihres MathJax-Renderers mit der $$\KaTeX$$ die wir auf dieser Website verwenden, um jede Verwirrung über die qualitativen Diskrepanzen zwischen den beiden Produkten zu beseitigen, geschweige denn die quantitativen, da sie sich auf die Rendering-Geschwindigkeit beziehen.
+2. Für die Nitwits, die immer noch glauben, dass GitHub F/OSS verwendet, um Markdown zu parsen: Ich empfehle Ihnen, auf den Quelllink GitHub zu diesem Artikel oben auf der Seite zu klicken, die ersten beiden Absätze zu kopieren und einzufügen des Abschnitts **WorldWide Blast Radius** in einen GitHub-Markdown-Editor, entfernen Sie die Backticks um die Dollarzeichen und sehen Sie aus erster Hand, dass die Beispielfälle *korrekt* dargestellt werden, im Gegensatz zu dem F/OSS-Rust-Crap, den es zu verwenden behauptet. Es kann auch sein, dass Sie die Ästhetik ihres MathJax-Renderers mit der $$\KaTeX$$ die wir auf dieser Website verwenden, um jede Verwirrung über die qualitativen Diskrepanzen zwischen den beiden Produkten zu beseitigen, geschweige denn die quantitativen, da sie sich auf die Rendering-Geschwindigkeit beziehen.
 
 3. Die zitierte Prosa war Bings ursprüngliche KI-Antwort für die letzten 24 Stunden, bis ich die zusätzlichen Hintergrundlinks zu diesem Artikel hinzufügte, von denen es "gelernt" Wie man etwas weniger idiotisch als Antwort auf die Anfrage sagt "Was ist der aktuelle Open Source-Markdown-Parser von github?". Das ist die KI, die **unsere Arbeit nimmt**, Leute.
 

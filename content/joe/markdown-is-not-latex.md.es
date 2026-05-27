@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante,AI
-status: verificado=40358
+status: verificado=40389
 title: Microsoft considerado dañino
 ---
 
@@ -24,11 +24,17 @@ title: Microsoft considerado dañino
 
 Por supuesto, esto fue totalmente intencional, porque [galardonado](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: equipos de ingeniería de clase mundial](http://editor.md.ipandao.com) habían resuelto $$\KaTeX$$ con [límites de token de doble dólar](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) para matemáticas en línea, y bloques de matemáticas vallados o pares de párrafos circundantes de doble dólar para bloques $$\KaTeX$$ proceso [**en 2015**](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **cuatro años antes de la publicación de la especificación de GFM**.
 
-El punto aquí es que un delimitador de 2 caracteres que rara vez ocurre en la prosa típica es el ideal normal para situaciones como esta. [Se ha bloqueado Microsoft solo para admitir \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) No escribiría este artículo en 2026, porque esa elección cumple con las condiciones ideales normales para la introducción fiel de expresiones matemáticas en línea en una especificación de Markdown. También es propicio para el síndrome del túnel carpiano para los mecanógrafos profesionales de matemáticas, por lo que hay algo más que considerar además de la singularidad de los límites.
+El punto aquí es que un delimitador de 2 caracteres que rara vez ocurre en la prosa típica es el ideal normal para situaciones como esta. [Se ha bloqueado Microsoft solo para admitir \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) No escribiría este artículo en 2026, porque esa elección cumple con las condiciones ideales normales para la introducción fiel de expresiones matemáticas en línea en una especificación de Markdown. Esa elección también es propicia para el síndrome del túnel carpiano para los mecanógrafos de matemáticas profesionales, por lo que hay algo más que considerar además de la singularidad de los límites.
 
 Si tuviera que adivinar sus motivos para considerar que la sintaxis propuesta de ese artículo de blog es insuficiente para sus necesidades actuales, sospecho que eran más sobre la codicia y el control del mercado y "insatisfacción del cliente" que una buena administración de F/OSS.
 
 O simplemente [La pereza, la impaciencia y Hubris](http://www.parrot.org/)Pero eso no es lo suficientemente conspirativo para este artículo. AMMV.
+
+<div class="right">
+
+![Bomba Nagasaki](markdown-is-not-latex.page/nagasakibomb)
+
+</div>
 
 ## WorldWide Radio de explosión
 
@@ -40,7 +46,7 @@ Buena suerte con eso si estás haciendo una conversión masiva de GFM de formato
 
 Una cosa es decir que no escribirá cosas **hoy** que confundan al analizador **ahora**; otra cosa es decir que las cosas escritas en el **pasado** tampoco confundirán al analizador. No hoy y no las versiones del analizador **futuro**.
 
-A diferencia de los estándares que surgen de la [JCP](https://jcp.org/en/home/index), nunca habrá un conjunto de pruebas de certificación de cumplimiento para este desastre, porque es un [evolución](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situación](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) activado [el terreno](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) a las [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>3</sup>:
+A diferencia de los estándares que surgen de la [JCP](https://jcp.org/en/home/index), nunca habrá un conjunto de pruebas de certificación de cumplimiento para este desastre, porque es un [evolución](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situación](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) activado [el terreno](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) a las [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2,3</sup>:
 
 > GitHub no ha revelado públicamente su analizador de rebajas de código abierto actual. Sin embargo, se sabe que GitHub utiliza una implementación personalizada de Markdown para su plataforma, que se basa en la especificación GitHub Flavored Markdown (GFM). Esta implantación incluye soporte para varias extensiones y funciones que mejoran la sintaxis de Markdown utilizada por GitHub.
 
@@ -60,7 +66,7 @@ En cambio, confiamos en una bifurcación interna de @markedjs/marked y continuar
 
 1. No es un "extensión" de la especificación cuando el autor de la especificación lo ordena para todos los que utilizan sus productos. ES LA NUEVA ESPECIFICACIÓN.
 
-2. Para los principiantes que todavía creen que GitHub está utilizando F/OSS para analizar la rebaja: le animo a hacer clic en el enlace de origen de GitHub a este artículo en la parte superior de la página, copiar y pegar los dos primeros párrafos de la sección **WorldWide Radio de explosión** en un editor de rebajas GitHub, elimine los backticks alrededor de los signos de dólar y presencie de primera mano que presenta los casos de muestra *correctamente*, a diferencia de la mierda de F/OSS que afirma usar. También le puede interesar comparar la estética de su renderizador MathJax con la de $$\KaTeX$$ que utilizamos en este sitio, para aclarar cualquier confusión sobre las discrepancias cualitativas entre los dos productos, y mucho menos las cuantitativas, ya que se refieren a la velocidad de renderizado.
+2. Para los principiantes que todavía creen que GitHub está utilizando F/OSS para analizar la rebaja: le animo a hacer clic en el enlace de origen de GitHub a este artículo en la parte superior de la página, copiar y pegar los dos primeros párrafos de la sección **WorldWide Radio de explosión** en un editor de rebajas GitHub, elimine los backticks alrededor de los signos de dólar y presencie de primera mano que presenta los casos de muestra *correctamente*, a diferencia de la mierda de óxido de F/OSS que afirma usar. También le puede interesar comparar la estética de su renderizador MathJax con la de $$\KaTeX$$ que utilizamos en este sitio, para aclarar cualquier confusión sobre las discrepancias cualitativas entre los dos productos, y mucho menos las cuantitativas, ya que se refieren a la velocidad de renderizado.
 
 3. La prosa citada fue la respuesta original de AI de bing durante las últimas 24 horas, hasta que agregué los enlaces de fondo adicionales a este artículo, desde el cual "aprendido" Cómo decir algo menos idiota en respuesta a la consulta "¿Qué es el analizador de rebajas de código abierto actual de github?". Esta es la IA que está **tomando nuestro trabajo**, amigos.
 
