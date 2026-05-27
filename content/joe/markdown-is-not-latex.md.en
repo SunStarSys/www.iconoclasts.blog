@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant,AI
-status: verified=40254
+status: verified=40273
 Dependencies: *.md.en
 Categories: Orion
 
@@ -32,19 +32,19 @@ Or just [Laziness, Impatience, and Hubris](http://www.parrot.org/); but that's n
 
 It is now an ambiguous disaster of engineering regex defects every time an author/implementer has to guess what the parser is supposed to do with sequences of isolated dollar signs occurring within a single paragraph of markdown prose. For example, consider a situation where [French](markdown-is-not-latex.html.fr) Canadian financial mathematicians discuss two prices in two different currencies, say US `$`1.50, and 2,00`$` CA (admittedly contrived, but it illustrates the complexity). How would you write an `i18n` compliant [GFM parser](https://pandoc.org/) that understands that the stuff between the dollar signs here is *not to be processed as inline $$\LaTeX$$*, even though it's syntactically valid $$\TeX$$ and conforms to this [naïve spec](https://pandoc.org/demo/example33/8.13-math.html)?
 
-What about a pair of Ruby/Perl variables in a function signature like `foo($v,$w)`? Same problem with the naïve spec. Have Claude<sup>2</sup> parse it all?
+What about a pair of Ruby/Perl variables in a function signature like `foo($v,$w)`? Same problem with the naïve spec. Have Claude<sup>1</sup> parse it all?
 
 Good luck with that if you are doing a bulk GFM conversion of international legacy document formats to a non-GitHub platform. Not only will it be incredibly slow and expensive, but it will only "work" when rendered in Visual Studio, if it even works at all.
 
 It's one thing to say you will not write stuff **today** that confuses the parser **now**; it's quite another to say the stuff written in the **past** will not confuse the parser either. Not today, and not **future** parser releases.
 
-Unlike standards emerging from the [JCP](https://jcp.org/en/home/index), there will never be a compliance-certifying test suite for this mess, because it's an [evolving](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situation](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) on [the ground](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) at [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>1</sup>:
+Unlike standards emerging from the [JCP](https://jcp.org/en/home/index), there will never be a compliance-certifying test suite for this mess, because it's an [evolving](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situation](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) on [the ground](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) at [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
 
 > GitHub has not publicly disclosed its current open-source markdown parser. However, it is known that GitHub uses a custom implementation of Markdown for its platform, which is based on the GitHub Flavored Markdown (GFM) specification. This implementation includes support for various extensions and features that enhance the Markdown syntax used by GitHub.
 
 Again, intentional deviance from Gruber's aims.
 
-Most disgustingly, the embrace and extend evil empire has an army of F/OSS free labor slaves to serve as sycophantic thought police about their efforts to pilfer the labor of others for their own market gains via AI<sup>1</sup>. Just check out the responses to the flagged HackerNews post of this page in the Links section below to meet a few of them.
+Most disgustingly, the embrace and extend evil empire has an army of F/OSS free labor slaves to serve as sycophantic thought police about their efforts to pilfer the labor of others for their own market gains via AI<sup>2</sup>. Just check out the responses to the flagged HackerNews post of this page in the Links section below to meet a few of them.
 
 ## Fuck Microsoft
 
@@ -57,8 +57,8 @@ Instead, we rely on an internal fork of @markedjs/marked and will continue to do
 
 ## Footnotes
 
-1. The quoted prose was bing's original AI response for the past 24 hours, until I added the additional background links to this article, from which it "learned" how to say something less idiotic in response to the query "what is github's current open source markdown parser".  This is the AI that's **taking our jobs**, folks.
+1. For the nitwits who still believe GitHub is using F/OSS to parse markdown: I encouage you to click on the GitHub source link to this article at the top of the page, copy and paste the **WorldWide Blast Radius** section into a GitHub markdown editor, and witness firsthand that it renders the sample cases *correctly*, unlike the F/OSS crap it claims to use.
 
-2. For the nitwits who still believe GitHub is using F/OSS to parse markdown: I encouage you to click on the GitHub source link to this article at the top of the page, copy and paste the **WorldWide Blast Radius** section into a GitHub markdown editor, and witness firsthand that it renders the sample cases *correctly*, unlike the F/OSS crap it claims to use.
+1. The quoted prose was bing's original AI response for the past 24 hours, until I added the additional background links to this article, from which it "learned" how to say something less idiotic in response to the query "what is github's current open source markdown parser".  This is the AI that's **taking our jobs**, folks.
 
 <!-- $Date$ $Author$ $Revision$ -->
