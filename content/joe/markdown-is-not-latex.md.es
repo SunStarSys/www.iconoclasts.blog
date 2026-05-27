@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante,AI
-status: verificado=40277
+status: verificado=40308
 title: Microsoft considerado dañino
 ---
 
@@ -40,7 +40,7 @@ Buena suerte con eso si estás haciendo una conversión masiva de GFM de formato
 
 Una cosa es decir que no escribirá cosas **hoy** que confundan al analizador **ahora**; otra cosa es decir que las cosas escritas en el **pasado** tampoco confundirán al analizador. No hoy y no las versiones del analizador **futuro**.
 
-A diferencia de los estándares que surgen de la [JCP](https://jcp.org/en/home/index), nunca habrá un conjunto de pruebas de certificación de cumplimiento para este desastre, porque es un [evolución](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situación](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) activado [el terreno](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) a las [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
+A diferencia de los estándares que surgen de la [JCP](https://jcp.org/en/home/index), nunca habrá un conjunto de pruebas de certificación de cumplimiento para este desastre, porque es un [evolución](https://github.com/github/markup?tab=readme-ov-file#github-markup) [situación](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) activado [el terreno](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) a las [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
 
 > GitHub no ha revelado públicamente su analizador de rebajas de código abierto actual. Sin embargo, se sabe que GitHub utiliza una implementación personalizada de Markdown para su plataforma, que se basa en la especificación GitHub Flavored Markdown (GFM). Esta implantación incluye soporte para varias extensiones y funciones que mejoran la sintaxis de Markdown utilizada por GitHub.
 
@@ -58,7 +58,7 @@ En cambio, confiamos en una bifurcación interna de @markedjs/marked y continuar
 
 ## Notas al pie
 
-1. Para los nitwits que todavía creen que GitHub está utilizando F/OSS para analizar la rebaja: Te codigo para hacer clic en el enlace de origen GitHub a este artículo en la parte superior de la página, Copie y pegue la sección **WorldWide Blast Radius** en un editor de rebajas GitHub y presencie de primera mano que presenta los casos de muestra *correctamente*, a diferencia de la mierda de F/OSS que afirma utilizar. Puede que le interese comparar la estética de su representador MathJax con la de $$\KaTeX$$ que utilizamos en este sitio, para aclarar cualquier confusión sobre las discrepancias cualitativas entre los dos productos, y mucho menos las cuantitativas, ya que se refieren a la velocidad de presentación.
+1. Para los principiantes que todavía creen que GitHub está utilizando F/OSS para analizar la rebaja: le animo a hacer clic en el enlace de origen de GitHub a este artículo en la parte superior de la página, copiar y pegar los dos primeros párrafos de la sección **WorldWide Radio de explosión** en un editor de rebajas GitHub, elimine los backticks alrededor de los signos de dólar y presencie de primera mano que presenta los casos de muestra *correctamente*, a diferencia de la mierda de F/OSS que afirma usar. También le puede interesar comparar la estética de su renderizador MathJax con la de $$\KaTeX$$ que utilizamos en este sitio, para aclarar cualquier confusión sobre las discrepancias cualitativas entre los dos productos, y mucho menos las cuantitativas, ya que se refieren a la velocidad de renderizado.
 
 1. La prosa citada fue la respuesta original de AI de bing durante las últimas 24 horas, hasta que agregué los enlaces de fondo adicionales a este artículo, desde el cual "aprendido" Cómo decir algo menos idiota en respuesta a la consulta "¿Qué es el analizador de rebajas de código abierto actual de github?". Esta es la IA que está **tomando nuestro trabajo**, amigos.
 

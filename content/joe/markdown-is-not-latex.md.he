@@ -2,7 +2,7 @@
 categories: אוריון
 dependencies: '*.md.he'
 keywords: markdown,מיקרוסופט,Github,corrupt,embrace,הרחבה,sycophant,AI
-status: אומתו 40277
+status: אומתו = 40308
 title: מיקרוסופט נחשבת מזיקה
 ---
 
@@ -40,7 +40,7 @@ title: מיקרוסופט נחשבת מזיקה
 
 זה דבר אחד לומר שאתה לא תכתוב דברים **היום** שמבלבל את המנתח **עכשיו**; זה די אחר לומר את הדברים שנכתבו **בעבר** לא יבלבלו גם את המנתח. לא היום, ולא **עתיד** שחרור parser.
 
-בניגוד לתקנים המתעוררים [JCP](https://jcp.org/en/home/index), לעולם לא תהיה חבילת בדיקות המספקת אישור תאימות עבור הבלגן הזה, מכיוון שהוא [מתפתח](https://github.com/github/markup?tab=readme-ov-file#github-markup) [מצב](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) פעיל [האדמה](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) בשעה [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
+בניגוד לתקנים המתעוררים [JCP](https://jcp.org/en/home/index), לעולם לא תהיה חבילת בדיקות המספקת אישור תאימות עבור הבלגן הזה, מכיוון שהוא [מתפתח](https://github.com/github/markup?tab=readme-ov-file#github-markup) [מצב](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) פעיל [האדמה](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) בשעה [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
 
 > GitHub לא חשף בפומבי את ה-markdown parser הנוכחי שלו בקוד פתוח. עם זאת, ידוע כי GitHub משתמש במימוש מותאם אישית של Markdown עבור הפלטפורמה שלו, המבוססת על מפרט GitHub Flavored Markdown (GFM). מימוש זה כולל תמיכה להרחבות ותכונות שונות שמשפרות את התחביר Markdown המשמש את GitHub.
 
@@ -58,7 +58,7 @@ title: מיקרוסופט נחשבת מזיקה
 
 ## הערות שוליים
 
-1. עבור nitwits שעדיין מאמינים GitHub משתמשת F/OSS כדי לפרק את markdown: אני ממליץ לך ללחוץ על קישור המקור GitHub למאמר זה בחלק העליון של הדף, העתק והדבק את המקטע **WorldWide Blast Radius** לתוך עורך סימון GitHub, וראה ממקור ראשון שהוא מציג את מקרי הדגימה *בצדק*, בניגוד לעניבת F/OSS שהיא טוענת לשימוש. ייתכן שיהיה עליך להשוות את האסתטיקה של מעבד MathJax שלהם $$\KaTeX$$ רינדור אנו משתמשים באתר זה, כדי להבהיר כל בלבול לגבי אי ההתאמה האיכותית בין שני המוצרים, הרבה פחות כמותיים כפי שהם מתייחסים מהירות רינדור.
+1. עבור nitwits שעדיין מאמינים GitHub משתמש F/OSS כדי לפרק את markdown: אני ממליץ לך ללחוץ על קישור המקור GitHub למאמר זה בראש הדף, להעתיק ולהדביק את שני הראשונים פסקאות של סעיף **WorldWide רדיוס פיצוץ** לתוך עורך סימון GitHub, להסיר את backticks סביב סימני הדולר, ולראות ממקור ראשון כי זה הופך את המקרים לדוגמה *בצדק*, בניגוד F / OSS crap זה טוען להשתמש. ייתכן גם שיהיה עליך להשוות את האסתטיקה של מעבד MathJax שלהם $$\KaTeX$$ אנו משתמשים באתר זה, כדי להבהיר כל בלבול לגבי הפערים האיכותיים בין שני המוצרים, הרבה פחות הכמותיים כפי שהם מתייחסים מהירות רינדור.
 
 1. הפרוזה המצוטטת הייתה תגובת הבינה המלאכותית המקורית של בינג במשך 24 השעות האחרונות, עד שהוספתי את קישורי הרקע הנוספים למאמר זה, שממנו היא "למד" איך לומר משהו פחות מטומטם בתגובה לשאילתה "מהו מנתח markdown הנוכחי של ה-github בקוד פתוח". זו הבינה המלאכותית שמבצעת **לוקחת את העבודה שלנו**, חברים.
 

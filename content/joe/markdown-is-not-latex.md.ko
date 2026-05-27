@@ -2,7 +2,7 @@
 categories: 오리온
 dependencies: '*.md.ko'
 keywords: 마크 다운, 마이크로 소프트, Github, 손상, 멤브레이스, 확장, 식도, AI
-status: 확인=40277
+status: 확인=40308
 title: 마이크로소프트는 유해하다고 생각했다.
 ---
 
@@ -40,7 +40,7 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 **오늘** 구문분석기를 혼동하는 물건을 작성하지 않을 것이라고 말하는 것은 한 가지입니다. **과거**에 작성된 물건도 구문분석기를 혼동하지 않을 것이라고 말하는 것은 꽤 다른 것입니다. 지금은 아니며 **미래** 구문분석기 릴리스가 아닙니다.
 
-표준과 달리 [JCP](https://jcp.org/en/home/index), 이 혼란에 대한 규정 준수 인증 테스트 제품군은 없습니다. [진화 중](https://github.com/github/markup?tab=readme-ov-file#github-markup) [상황](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 켜기 [지상](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 시간 [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
+표준과 달리 [JCP](https://jcp.org/en/home/index), 이 혼란에 대한 규정 준수 인증 테스트 제품군은 없습니다. [진화 중](https://github.com/github/markup?tab=readme-ov-file#github-markup) [상황](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) 켜기 [지상](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 시간 [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
 
 > GitHub는 현재 오픈 소스 마크다운 파서를 공개하지 않았습니다. 그러나 GitHub는 해당 플랫폼에 대해 GitHub Flavored Markdown(GFM) 사양을 기반으로 하는 Markdown의 사용자정의 구현을 사용하는 것으로 알려져 있습니다. 이 구현에는 GitHub에서 사용되는 마크다운 구문을 향상시키는 다양한 확장 및 기능에 대한 지원이 포함됩니다.
 
@@ -58,7 +58,7 @@ title: 마이크로소프트는 유해하다고 생각했다.
 
 ## 각주
 
-1. GitHub가 F/OSS를 사용하여 매가인하를 구문 분석한다고 믿는 nitwits의 경우: 페이지 상단의 이 문서에 대한 GitHub 소스 링크를 클릭하도록 인코딩합니다. **WorldWide 폭발 반경** 섹션을 복사하여 GitHub 마크다운 편집기에 붙여 넣고 사용하려는 F/OSS 크랩과 달리 샘플 케이스를 *올바르게* 렌더링한다는 사실을 직접 확인합니다. MathJax 렌더러의 미학을 다음과 비교할 수 있습니다. $$\KaTeX$$ 이 사이트에서 사용하는 렌더링을 통해 두 제품 간의 품질 불일치에 대한 혼란을 해결하고, 렌더링 속도와 관련된 정량적 불일치를 훨씬 줄일 수 있습니다.
+1. GitHub가 F/OSS를 사용하여 매가인하를 구문 분석한다고 생각하는 nitwits의 경우: 페이지 상단의 이 문서에 대한 GitHub 소스 링크를 눌러 처음 두 개를 복사하여 붙여넣는 것이 좋습니다. **WorldWide 폭발 반경** 섹션의 단락을 GitHub 마크다운 편집기로 이동하고, 달러 기호 주위의 백틱을 제거하고, 사용한다고 주장하는 F/OSS 크랩과 달리 샘플 케이스를 *올바르게* 렌더링하는 것을 직접 목격합니다. 또한 MathJax 렌더러의 미학을 다음과 비교할 수 있습니다. $$\KaTeX$$ 이 사이트에서 사용하는 렌더링을 통해 두 제품 간의 정성적 불일치에 대한 혼란을 해결하고 렌더링 속도와 관련된 정량적 불일치를 훨씬 줄일 수 있습니다.
 
 1. 인용 된 논문은 지난 24 시간 동안 bing의 독창적 인 AI 반응이었습니다.이 기사에 대한 배경 링크를 추가하기 전까지는 "학습" 질의에 대한 응답으로 덜 바보 같은 것을 말하는 방법 "github의 현재 오픈 소스 마크다운 구문 분석기란?". 이것은 우리의 일자리를 창출하는 AI입니다.** 여러분.
 

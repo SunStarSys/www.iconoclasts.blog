@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna, utöka,sykofant,AI
-status: verifierad=40277
+status: verifierad=40308
 title: Microsoft anses vara skadligt
 ---
 
@@ -40,7 +40,7 @@ Lycka till med det om du gör en bulk GFM-konvertering av internationella äldre
 
 Det är en sak att säga att du inte kommer att skriva saker **idag** som förvirrar parser **nu**; Det är en helt annan att säga att de saker som skrivs i **tidigare** inte kommer att förvirra parser heller. Inte idag, och inte **framtida** parserversioner.
 
-Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/index), det kommer aldrig att finnas en överensstämmelse-certifierande testsvit för denna röra, eftersom det är en [utvecklas](https://github.com/github/markup?tab=readme-ov-file#github-markup) [plats](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) på [marken](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) vid [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
+Till skillnad från standarder som kommer från [JCP](https://jcp.org/en/home/index), det kommer aldrig att finnas en överensstämmelse-certifierande testsvit för denna röra, eftersom det är en [utvecklas](https://github.com/github/markup?tab=readme-ov-file#github-markup) [plats](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) på [marken](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) vid [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
 
 > GitHub har inte offentliggjort sin aktuella nedsättningsparser med öppen källkod. Det är dock känt att GitHub använder en anpassad implementering av Markdown för sin plattform, som baseras på specifikationen GitHub Smaksatt nedsättning (GFM). Den här implementeringen har stöd för olika tillägg och funktioner som förbättrar den nedsättningssyntax som används av GitHub.
 
@@ -58,7 +58,7 @@ Istället förlitar vi oss på en intern gaffel på @markedjs/marked och kommer 
 
 ## Fotnoter
 
-1. För de nitwits som fortfarande tror att GitHub använder F/OSS för att parsa markdown: Jag uppmanar dig att klicka på GitHub källänken till den här artikeln högst upp på sidan, kopiera och klistra in avsnittet **WorldWide Blast Radius** i en GitHub markdown editor, och bevittna första hand att det återger provfall *korrekt *, till skillnad från F / OSS skit det hävdar att använda. Det kan vara upp till dig att jämföra estetiken hos deras MathJax-renderare med $$\KaTeX$$ rendering vi använder på denna webbplats, för att rensa upp eventuell förvirring om de kvalitativa skillnaderna mellan de två produkterna, mycket mindre de kvantitativa som de avser rendering hastighet.
+1. För de nitwits som fortfarande tror att GitHub använder F/OSS för att parsa nedsättning: Jag uppmuntrar dig att klicka på källänken GitHub till den här artikeln högst upp på sidan, kopiera och klistra in de två första punkter i avsnittet **WorldWide Blast Radius** i en GitHub markdown editor, ta bort backticks runt dollartecknen, och bevittna första hand att det gör provfall *korrekt *, till skillnad från F / OSS skräp det hävdar att använda. Det kan också anse att du jämför estetiken hos deras MathJax-renderare med $$\KaTeX$$ rendering vi använder på denna webbplats, för att rensa upp eventuell förvirring om de kvalitativa skillnaderna mellan de två produkterna, mycket mindre de kvantitativa som de avser rendering hastighet.
 
 1. Den citerade prosaen var bings ursprungliga AI-svar under de senaste 24 timmarna, tills jag lade till ytterligare bakgrundslänkar till den här artikeln, från vilken den "inlärd" Hur man säger något mindre idiotiskt som svar på frågan "vad är githubs aktuella nedsättningsparser med öppen källkod". Det här är AI som **tar våra jobb**, gott folk.
 

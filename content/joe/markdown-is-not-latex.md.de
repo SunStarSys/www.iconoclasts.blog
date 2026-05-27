@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.de'
 keywords: Markdown,Microsoft,Github,korrupt,Umarmung,extend,sycophant,AI
-status: überprüft=40277
+status: überprüft=40308
 title: Microsoft als schädlich betrachtet
 ---
 
@@ -40,7 +40,7 @@ Viel Glück damit, wenn Sie eine Massen-GFM-Konvertierung von internationalen Le
 
 Es ist eine sache zu sagen, dass sie nichts **heute** schreiben werden, was den parser **jetzt** verwirrt; es ist eine andere sache zu sagen, dass das zeug, das im **past** geschrieben wurde, den parser auch nicht verwirren wird. Nicht heute, und nicht **zukünftige** Parserreleases.
 
-Im Gegensatz zu den Standards, die aus [JCP](https://jcp.org/en/home/index), wird es nie eine Compliance-zertifizierende Testsuite für dieses Chaos geben, weil es eine [Entwicklung](https://github.com/github/markup?tab=readme-ov-file#github-markup) [Situation](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) am [Der Boden](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) um [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
+Im Gegensatz zu den Standards, die aus [JCP](https://jcp.org/en/home/index), wird es nie eine Compliance-zertifizierende Testsuite für dieses Chaos geben, weil es eine [Entwicklung](https://github.com/github/markup?tab=readme-ov-file#github-markup) [Situation](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) am [Der Boden](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) um [GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2</sup>:
 
 > GitHub hat seinen aktuellen Open-Source-Markdown-Parser nicht öffentlich bekannt gegeben. Es ist jedoch bekannt, dass GitHub eine benutzerdefinierte Implementierung von Markdown für seine Plattform verwendet, die auf der GFM-Spezifikation (GitHub Flavored Markdown) basiert. Diese Implementierung umfasst Unterstützung für verschiedene Erweiterungen und Features, mit denen die von GitHub verwendete Markdown-Syntax verbessert wird.
 
@@ -58,7 +58,7 @@ Stattdessen setzen wir auf einen internen Fork von @markedjs/markiert und werden
 
 ## Fußnoten
 
-1. Für die Nitwits, die immer noch glauben, dass GitHub F/OSS verwendet, um Markdown zu analysieren: Ich fordere Sie dazu auf, auf den Quelllink GitHub zu diesem Artikel oben auf der Seite zu klicken, Kopieren Sie den Abschnitt **WorldWide Blast Radius**, und fügen Sie ihn in einen GitHub-Markdown-Editor ein. Erzeugen Sie aus erster Hand, dass die Beispielfälle *korrekt* dargestellt werden, im Gegensatz zum F/OSS-Crap, den er angeblich verwendet. Es kann sein, dass Sie die Ästhetik ihres MathJax Renderers mit der $$\KaTeX$$ wir auf dieser Website verwenden, um jede Verwirrung über die qualifizierenden Diskrepanzen zwischen den beiden Produkten zu beseitigen, viel weniger die quantitativen, da sie sich auf die Rendering-Geschwindigkeit beziehen.
+1. Für die Nitwits, die immer noch glauben, dass GitHub F/OSS verwendet, um Markdown zu parsen: Ich empfehle Ihnen, auf den Quelllink GitHub zu diesem Artikel oben auf der Seite zu klicken, die ersten beiden zu kopieren und einzufügen Absätze des Abschnitts **WorldWide Blast Radius** in einen GitHub-Markdown-Editor, entfernen Sie die Backticks um die Dollarzeichen und sehen Sie aus erster Hand, dass die Beispielfälle *korrekt* dargestellt werden, im Gegensatz zu dem F/OSS-Missbrauch, den es zu verwenden behauptet. Es kann auch sein, dass Sie die Ästhetik ihres MathJax-Renderers mit der $$\KaTeX$$ die wir auf dieser Website verwenden, um jede Verwirrung über die qualitativen Diskrepanzen zwischen den beiden Produkten zu beseitigen, geschweige denn die quantitativen, da sie sich auf die Rendering-Geschwindigkeit beziehen.
 
 1. Die zitierte Prosa war Bings ursprüngliche KI-Antwort für die letzten 24 Stunden, bis ich die zusätzlichen Hintergrundlinks zu diesem Artikel hinzufügte, von denen es "gelernt" Wie man etwas weniger idiotisch als Antwort auf die Anfrage sagt "Was ist der aktuelle Open Source-Markdown-Parser von github?". Das ist die KI, die **unsere Arbeit nimmt**, Leute.
 

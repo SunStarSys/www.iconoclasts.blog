@@ -2,7 +2,7 @@
 categories: 奧里昂
 dependencies: '*.md.zh-TW'
 keywords: markdown，Microsoft，Github，corrupt，embace，extend，sycophant，AI - 減價，Microsoft，巨集，貪腐，寬限，擴展，智能化，AI
-status: 驗證 =40277
+status: 驗證 =40308
 title: Microsoft 認為有害
 ---
 
@@ -40,7 +40,7 @@ title: Microsoft 認為有害
 
 說，您不會撰寫混淆剖析器 **now** 的 **today** 內容，而是說 **past** 中所寫的內容，也不會混淆剖析器。不是今天，而不是 **未來** 剖析器版本。
 
-不同於標準的出現[JCP](https://jcp.org/en/home/index)，此訊息永遠不會有合規性認證測試套件，因為這是[演進](https://github.com/github/markup?tab=readme-ov-file#github-markup) [情境](https://github.com/kivikakk/comrak/blob/d2da7a055008a8ccde18cc1c88a06a04de69fa99/src/nodes.rs#L200) 開啟[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 於[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2 個</sup>:
+不同於標準的出現[JCP](https://jcp.org/en/home/index)，此訊息永遠不會有合規性認證測試套件，因為這是[演進](https://github.com/github/markup?tab=readme-ov-file#github-markup) [情境](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) 開啟[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 於[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2 個</sup>:
 
 > GitHub 尚未公開揭露其目前的開放原始碼減價剖析器。不過，GitHub 會根據 GitHub Flavored Markdown (GFM) 規格，使用 Markdown 平台的自訂實作。此實作支援各種擴充功能和增強 GitHub 使用之 Markdown 語法的功能。
 
@@ -58,7 +58,7 @@ title: Microsoft 認為有害
 
 ## 註腳
 
-1. 對於仍然認為 GitHub 的 nitwits 使用 F/OSS 來剖析 Markdown：我鼓勵您按一下頁面頂端此文章的 GitHub 來源連結。將 **WorldWide Blast Radius** 區段複製並貼到 GitHub 減價編輯器中，並首先證明它呈現範例案例 *正確 *，與 F/OSS 要求使用的錯誤不同。其行為可能會讓您比較其 MathJax 轉譯器的美學與$$\KaTeX$$ 在本網站上呈現我們所用的產品，以消除對這兩種產品之間的質性差異的任何混淆，比起它們與彩現速度相關的數量性差異更少。
+1. 對於仍然認為 GitHub 的 nitwits 使用 F/OSS 剖析 Markdown：我建議您按一下頁面頂端文章的 GitHub 來源連結，複製並貼上前兩個項目 **WorldWide Blast Radius** 區段的段落進入 GitHub Markdown 編輯器，移除貨幣符號周圍的底線，並首先見證範例案例 *正確 *，與 F/OSS 宣告使用的陷阱不同。它也可能讓您比較其 MathJax 轉換器的美學與$$\KaTeX$$ 我們在此網站上使用，以消除對這兩種產品之間質性差異的任何混淆，比起與彩現速度相關的數量性差異更少。
 
 1. 這篇引述的篇章在過去 24 小時內發表了原本的 AI 回應，直到我為這篇文章新增了其他背景連結為止。"已學習" 如何說出回應查詢較少的偶發性"github 目前的開放原始碼 markdown 剖析器"。這是 **我們工作** 的人工智慧。
 
