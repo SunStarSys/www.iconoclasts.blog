@@ -16,6 +16,11 @@ img { max-width: 100% }
 
 .accordion {overflow-x: hidden; background-color: white }
 
+blockquote {
+  padding: 10px;
+  border-left: solid 5px #8f99fb;
+}
+
 iframe.asymptote {
 	text-align: center;
 	width: 100%;
