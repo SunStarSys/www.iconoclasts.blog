@@ -8,4 +8,8 @@ title: enlaces
 
 - Marcado [HackerNews](https://news.ycombinator.com/item?id=48252007) artículo
 
+- [r/Rebaja](https://www.reddit.com/r/Markdown/comments/1tltk2n/markdown_is_not_latex/)
+
+- [Discusión marcada](https://github.com/markedjs/marked/discussions/3980)
+
 <!-- $Date$ $Author$ $Revision$ -->
