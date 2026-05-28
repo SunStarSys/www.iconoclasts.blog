@@ -89,7 +89,7 @@ Istället förlitar vi oss på en intern gaffel på @markedjs/marked och kommer 
 <style type="text/css">
 
 #screenshot-div {
-  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/cover;
+  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/50%;
 }
 
 #screenshot {
