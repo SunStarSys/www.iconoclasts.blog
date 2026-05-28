@@ -93,7 +93,7 @@ Istället förlitar vi oss på en intern gaffel på @markedjs/marked och kommer 
 }
 
 #screenshot {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 </style>
