@@ -90,7 +90,7 @@ title: Майкрософт считает вредным
 <style type="text/css">
 
 #screenshot-div {
-  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/25%;
+  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/15%;
 }
 
 #screenshot {

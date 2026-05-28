@@ -89,7 +89,7 @@ En cambio, confiamos en una bifurcación interna de @markedjs/marked y continuar
 <style type="text/css">
 
 #screenshot-div {
-  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/25%;
+  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/15%;
 }
 
 #screenshot {
