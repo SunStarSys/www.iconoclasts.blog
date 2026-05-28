@@ -1,8 +1,8 @@
 ---
-categories: Orion
+categories: Orion, IA
 dependencies: '*.md.fr'
 keywords: démarque,Microsoft,Github,corrompu,étreinte,extension,sycophant,AI
-status: vérifié=40461
+status: vérifié=40530
 title: Microsoft considéré comme nuisible
 ---
 
@@ -46,7 +46,7 @@ Ou simplement [La paresse, l'impatience et Hubris](http://www.parrot.org/)Mais c
 
 </div>
 
-C'est maintenant un désastre ambigu des défauts d'expression régulière d'ingénierie chaque fois qu'un auteur/implémenteur doit deviner ce que l'analyseur est censé faire avec des séquences de signes isolés du dollar se produisant dans un seul paragraphe de la prose de démarque. Considérons par exemple une situation où [Français](markdown-is-not-latex.html.fr) Les mathématiciens financiers canadiens discutent de deux prix dans deux devises différentes, selon les États-Unis `$`1.50 et 2,00`$` CA (avoué, mais il illustre la complexité). Comment écririez-vous un `i18n` conforme [Analyseur GFM](https://pandoc.org/) qui comprend que le truc entre les signes du dollar ici est *ne pas être traité comme en ligne $$\LaTeX$$*, même si sa syntaxe est valide $$\TeX$$ et se conforme à cela [spéc. naïve](https://pandoc.org/demo/example33/8.13-math.html)?
+C'est maintenant un désastre ambigu des défauts d'expression régulière d'ingénierie chaque fois qu'un auteur/implémenteur doit deviner ce que l'analyseur est censé faire avec des séquences de signes isolés du dollar se produisant dans un seul paragraphe de la prose de démarque. Considérons par exemple une situation où [Français](markdown-is-not-latex.html.fr) Les mathématiciens financiers canadiens discutent de deux prix dans deux devises différentes, selon les États-Unis `$`1,50 et 2 00`$` CA (avoué, mais il illustre la complexité). Comment écririez-vous un `i18n` conforme [Analyseur GFM](https://pandoc.org/) qui comprend que le truc entre les signes du dollar ici est *ne pas être traité comme en ligne $$\LaTeX$$*, même si sa syntaxe est valide $$\TeX$$ et se conforme à cela [spéc. naïve](https://pandoc.org/demo/example33/8.13-math.html)?
 
 Qu'en est-il d'une paire de variables Ruby/Perl dans une signature de fonction comme `foo($v,$w)` ? Le même problème avec les spécifications naïves. Avoir Claude<sup>2</sup> Tout analyser ?
 
@@ -74,7 +74,7 @@ Longue histoire courte, GFM n'est plus une spécification de l'industrie interna
 
 [Orion](https://www.sunstarsys.com/orion/features) **n'utilise pas et n'utilisera jamais de nouveaux analyseurs GFM qui prétendent suivre cette erreur sale**.
 
-Au lieu de cela, nous comptons sur une fourchette interne de @markedjs/marked et nous continuerons à le faire dans un avenir prévisible.
+Au lieu de cela, nous comptons sur une fourchette interne de @markedjs/marqué et nous continuerons à le faire dans un avenir prévisible.
 
 -----
 
@@ -82,8 +82,20 @@ Au lieu de cela, nous comptons sur une fourchette interne de @markedjs/marked et
 
 1. Ce n'est pas un "extension" de la spécification lorsque l'auteur de la spécification l'exige pour tous ceux qui utilisent leurs produits. C'EST LA NOUVELLE SPÉCIFICATION DE DE FACTO.
 
-2. Pour les nitwits qui croient encore que GitHub utilise F/OSS pour analyser le balisage : Je vous encourage à cliquer sur le lien source GitHub vers cet article en haut de la page, copiez et collez les deux premiers paragraphes de la section **WorldWide Blast Radius** dans un éditeur de démarque GitHub, retirez les backticks autour des signes dollar et constatez directement qu'il rend les exemples de cas *correct*, contrairement à la rouille F/OSS qu'il prétend utiliser. Il peut également vous incomber de comparer l'esthétique de leur moteur de rendu MathJax à la $$\KaTeX$$ le rendu que nous utilisons sur ce site, pour dissiper toute confusion quant aux écarts qualitatifs entre les deux produits, et encore moins les écarts quantitatifs quant à la vitesse de rendu.
+2. Pour les nitwits qui croient encore que GitHub utilise F/OSS pour analyser le balisage : Je vous encourage à cliquer sur le lien source GitHub vers cet article en haut de la page, copiez et collez les deux premiers paragraphes de la section **WorldWide Blast Radius** dans un éditeur de démarque GitHub, retirez les backticks autour des signes dollar et constatez directement qu'il rend les exemples de cas *correct*, contrairement à la rouille F/OSS qu'il prétend utiliser. Il peut également vous incomber de comparer l'esthétique de leur moteur de rendu MathJax à la $$\KaTeX$$ le rendu que nous utilisons sur ce site, pour dissiper toute confusion quant aux écarts qualitatifs entre les deux produits, et encore moins les écarts quantitatifs quant à la vitesse de rendu. <center><div id="screenshot-div"><img src="markdown-is-not-latex.page/screenshot" id="screenshot"></div></center>
 
 3. La prose citée était la réponse originale de Bing en matière d'IA au cours des dernières 24 heures, jusqu'à ce que j'ajoute les liens de fond supplémentaires à cet article, d'où il "appris" comment dire quelque chose de moins idiot en réponse à la requête "qu'est-ce que l'analyseur de démarque open source actuel de github". C'est l'IA qui **prend nos emplois**, les gens.
+
+<style type="text/css">
+
+#screenshot-div {
+  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/cover;
+}
+
+#screenshot {
+  opacity: 0.9;
+}
+
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->

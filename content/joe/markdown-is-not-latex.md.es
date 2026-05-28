@@ -1,8 +1,8 @@
 ---
-categories: Orión
+categories: Orion, IA
 dependencies: '*.md.es'
 keywords: rebaja,Microsoft,Github,corrupta, abraza,ampliar,sicofante,AI
-status: verificado=40461
+status: verificado=40530
 title: Microsoft considerado dañino
 ---
 
@@ -82,8 +82,20 @@ En cambio, confiamos en una bifurcación interna de @markedjs/marked y continuar
 
 1. No es un "extensión" de la especificación cuando el autor de la especificación lo ordena para todos los que utilizan sus productos. ES LA NUEVA ESPECIFICACIÓN DE HECHO.
 
-2. Para los principiantes que todavía creen que GitHub está utilizando F/OSS para analizar la rebaja: le animo a hacer clic en el enlace de origen de GitHub a este artículo en la parte superior de la página, copiar y pegar los dos primeros párrafos de la sección **WorldWide Radio de explosión** en un editor de rebajas GitHub, elimine los backticks alrededor de los signos de dólar y presencie de primera mano que presenta los casos de muestra *correctamente*, a diferencia de la mierda de óxido de F/OSS que afirma usar. También le puede interesar comparar la estética de su renderizador MathJax con la de $$\KaTeX$$ que utilizamos en este sitio, para aclarar cualquier confusión sobre las discrepancias cualitativas entre los dos productos, y mucho menos las cuantitativas, ya que se refieren a la velocidad de renderizado.
+2. Para los principiantes que todavía creen que GitHub está utilizando F/OSS para analizar la rebaja: le animo a hacer clic en el enlace de origen de GitHub a este artículo en la parte superior de la página, copiar y pegar los dos primeros párrafos de la sección **WorldWide Radio de explosión** en un editor de rebajas GitHub, elimine los backticks alrededor de los signos de dólar y presencie de primera mano que presenta los casos de muestra *correctamente*, a diferencia de la mierda de óxido de F/OSS que afirma usar. También le puede interesar comparar la estética de su renderizador MathJax con la de $$\KaTeX$$ que utilizamos en este sitio, para aclarar cualquier confusión sobre las discrepancias cualitativas entre los dos productos, y mucho menos las cuantitativas, ya que se refieren a la velocidad de renderizado. <center><div id="screenshot-div"><img src="markdown-is-not-latex.page/screenshot" id="screenshot"></div></center>
 
 3. La prosa citada fue la respuesta original de AI de bing durante las últimas 24 horas, hasta que agregué los enlaces de fondo adicionales a este artículo, desde el cual "aprendido" Cómo decir algo menos idiota en respuesta a la consulta "¿Qué es el analizador de rebajas de código abierto actual de github?". Esta es la IA que está **tomando nuestro trabajo**, amigos.
+
+<style type="text/css">
+
+#screenshot-div {
+  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/cover;
+}
+
+#screenshot {
+  opacity: 0.9;
+}
+
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant,AI
-status: verified=40522
+status: verified=40530
 Dependencies: *.md.en
 Categories: Orion, AI
 
@@ -81,8 +81,21 @@ Instead, we rely on an internal fork of @markedjs/marked and will continue to do
 
 1. It's not an "extension" of the spec when the spec's author mandates it for everyone who uses their products. IT IS THE DE FACTO NEW SPEC.
 
-2. For the nitwits who still believe GitHub is using F/OSS to parse markdown: I encourage you to click on the GitHub source link to this article at the top of the page, copy and paste the first two paragraphs of the **WorldWide Blast Radius** section into a GitHub markdown editor, remove the backticks around the dollar signs, and witness firsthand that it renders the sample cases *correctly*, unlike the F/OSS Rust crap it claims to use. It may also behoove you to compare the aesthetics of their MathJax renderer to the $$\KaTeX$$ rendering we use on this site, to clear up any confusion about the qualitative discrepancies between the two products, much less the quantitative ones as they relate to rendering  speed. <center>![Screenshot](markdown-is-not-latex.page/screenshot)</center>
+2. For the nitwits who still believe GitHub is using F/OSS to parse markdown: I encourage you to click on the GitHub source link to this article at the top of the page, copy and paste the first two paragraphs of the **WorldWide Blast Radius** section into a GitHub markdown editor, remove the backticks around the dollar signs, and witness firsthand that it renders the sample cases *correctly*, unlike the F/OSS Rust crap it claims to use. It may also behoove you to compare the aesthetics of their MathJax renderer to the $$\KaTeX$$ rendering we use on this site, to clear up any confusion about the qualitative discrepancies between the two products, much less the quantitative ones as they relate to rendering  speed. <center><div id="screenshot-div"><img src="markdown-is-not-latex.page/screenshot" id="screenshot"></div></center>
 
 3. The quoted prose was bing's original AI response for the past 24 hours, until I added the additional background links to this article, from which it "learned" how to say something less idiotic in response to the query "what is github's current open source markdown parser".  This is the AI that's **taking our jobs**, folks.
+
+<style type="text/css">
+
+#screenshot-div {
+  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/cover;
+}
+
+#screenshot {
+  opacity: 0.9;
+}
+
+</style>
+
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -1,8 +1,8 @@
 ---
-categories: オリオン
+categories: Orion、AI
 dependencies: '*.md.ja'
 keywords: Markdown,Microsoft,Github,corrupt,embrace,extended,sycophant,AI
-status: 確認済み=40461
+status: 確認済み=40530
 title: マイクロソフトは有害と考えました
 ---
 
@@ -74,7 +74,7 @@ title: マイクロソフトは有害と考えました
 
 [オリオン](https://www.sunstarsys.com/orion/features) **この汚れた不具合を追跡するふりをする新しいGFMパーサーは使用せず、決して使用しません**。
 
-代わりに、私たちは @markedjs/marked、予見可能な将来のために引き続きそうします。
+代わりに、私たちは @markedjs/markedの内部フォークに依存しており、予見可能な将来のために引き続きそうします。
 
 -----
 
@@ -82,8 +82,20 @@ title: マイクロソフトは有害と考えました
 
 1. いいえ"拡張子" 仕様の作者が製品を使用するすべての人にそれを義務付けるときの仕様。DE FACTO NEW SPECです。
 
-2. まだGitHubがマークダウンを解析するためにF/OSSを使用していると考えているnitwitsの場合: ページ上部のこの記事へのGitHubソース・リンクをクリックして、最初の2つの段落をコピーして貼り付けることをお薦めします**WorldWide Blast Radius**セクションのGitHubマークダウン・エディタに、ドル記号の周りのバックティックを削除し、使用すると主張するF/OSS Rustクラップとは異なり、サンプル・ケースを*正しく*レンダリングすることを直接確認します。また、MathJaxレンダラの美学と$$\KaTeX$$ レンダリングは、このサイトで使用し、2つの製品間の質的相違に関する混乱を解消するために、レンダリング速度に関連する量的相違ははるかに少なくなります。
+2. まだGitHubがマークダウンを解析するためにF/OSSを使用していると考えているnitwitsの場合: ページ上部のこの記事へのGitHubソース・リンクをクリックして、最初の2つの段落をコピーして貼り付けることをお薦めします**WorldWide Blast Radius**セクションのGitHubマークダウン・エディタに、ドル記号の周りのバックティックを削除し、使用すると主張するF/OSS Rustクラップとは異なり、サンプル・ケースを*正しく*レンダリングすることを直接確認します。また、MathJaxレンダラの美学と$$\KaTeX$$ レンダリングは、このサイトで使用し、2つの製品間の質的相違に関する混乱を解消するために、レンダリング速度に関連する量的相違ははるかに少なくなります。<center><div id="screenshot-div"><img src="markdown-is-not-latex.page/screenshot" id="screenshot"></div></center>
 
 3. 引用されたproseは、この記事に追加の背景リンクを追加するまで、過去24時間の元のAI応答でした。"習った" クエリに応答して、より愚かなことを言う方法"githubの現在のオープンソース・マークダウン・パーサーとは"。これは、私たちの仕事を引き受けているAIです。
+
+<style type="text/css">
+
+#screenshot-div {
+  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/cover;
+}
+
+#screenshot {
+  opacity: 0.9;
+}
+
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->

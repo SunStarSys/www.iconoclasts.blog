@@ -1,8 +1,8 @@
 ---
-categories: Orion
+categories: Orion, AI
 dependencies: '*.md.sv'
 keywords: nedsättning,Microsoft,Github,korrupt,omfamna, utöka,sykofant,AI
-status: verifierad=40461
+status: verifierad=40530
 title: Microsoft anses vara skadligt
 ---
 
@@ -46,7 +46,7 @@ Eller bara [Lättja, otålighet och Hubris](http://www.parrot.org/)Men det är i
 
 </div>
 
-Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk dig en situation där [Franska](markdown-is-not-latex.html.fr) Kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1.50 och 2,00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel [GFM-parser](https://pandoc.org/) som förstår att grejerna mellan dollartecknen här är *inte att behandlas som inline $$\LaTeX$$*, även om det är syntaktiskt giltigt $$\TeX$$ och överensstämmer med detta [naiv spec](https://pandoc.org/demo/example33/8.13-math.html)?
+Det är nu en tvetydig katastrof av tekniska regex-defekter varje gång en författare / implementerare måste gissa vad parsern ska göra med sekvenser av isolerade dollartecken som förekommer inom ett enda stycke av nedsättningsprosa. Tänk dig en situation där [Franska](markdown-is-not-latex.html.fr) Kanadensiska finansiella matematiker diskuterar två priser i två olika valutor, säger USA `$`1,50 och 2 00`$` CA (visst framtagen, men det illustrerar komplexiteten). Hur skulle du skriva ett `i18n` kompatibel [GFM-parser](https://pandoc.org/) som förstår att grejerna mellan dollartecknen här är *inte att behandlas som inline $$\LaTeX$$*, även om det är syntaktiskt giltigt $$\TeX$$ och överensstämmer med detta [naiv spec](https://pandoc.org/demo/example33/8.13-math.html)?
 
 Vad sägs om ett par Ruby / Perl variabler i en funktionssignatur som `foo($v,$w)`? Samma problem med den naiva spec. Har Claude<sup>2</sup> Parsa allt?
 
@@ -82,8 +82,20 @@ Istället förlitar vi oss på en intern gaffel på @markedjs/marked och kommer 
 
 1. Det är inte ett "tillägg" av specifikationen när specifikationens författare kräver det för alla som använder sina produkter. DET ÄR DE FACTO NY SPECIFIKATION.
 
-2. För de nitwits som fortfarande tror att GitHub använder F/OSS för att parsa nedsättning: Jag uppmuntrar dig att klicka på källänken GitHub till den här artikeln högst upp på sidan, kopiera och klistra in de två första styckena i avsnittet **WorldWide Blast Radius** i en GitHub-nedsättningsredigerare, ta bort backtickarna runt dollartecknen och bevittna första hand att det gör provfallen *korrekt *, till skillnad från F/OSS Rust-skiten som den påstår sig använda. Det kan också anse att du jämför estetiken hos deras MathJax-renderare med $$\KaTeX$$ rendering vi använder på denna webbplats, för att rensa upp eventuell förvirring om de kvalitativa skillnaderna mellan de två produkterna, mycket mindre de kvantitativa som de avser rendering hastighet.
+2. För de nitwits som fortfarande tror att GitHub använder F/OSS för att parsa nedsättning: Jag uppmuntrar dig att klicka på källänken GitHub till den här artikeln högst upp på sidan, kopiera och klistra in de två första styckena i avsnittet **WorldWide Blast Radius** i en GitHub-nedsättningsredigerare, ta bort backtickarna runt dollartecknen och bevittna första hand att det gör provfallen *korrekt *, till skillnad från F/OSS Rust-skiten som den påstår sig använda. Det kan också anse att du jämför estetiken hos deras MathJax-renderare med $$\KaTeX$$ rendering vi använder på denna webbplats, för att rensa upp eventuell förvirring om de kvalitativa skillnaderna mellan de två produkterna, mycket mindre de kvantitativa som de avser rendering hastighet. <center><div id="screenshot-div"><img src="markdown-is-not-latex.page/screenshot" id="screenshot"></div></center>
 
 3. Den citerade prosaen var bings ursprungliga AI-svar under de senaste 24 timmarna, tills jag lade till ytterligare bakgrundslänkar till den här artikeln, från vilken den "inlärd" Hur man säger något mindre idiotiskt som svar på frågan "vad är githubs aktuella nedsättningsparser med öppen källkod". Det här är AI som **tar våra jobb**, gott folk.
+
+<style type="text/css">
+
+#screenshot-div {
+  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/cover;
+}
+
+#screenshot {
+  opacity: 0.9;
+}
+
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -1,8 +1,8 @@
 ---
-categories: Orion
+categories: Orion, IA
 dependencies: '*.md.pt-BR'
 keywords: markdown,Microsoft, Github, corrupto, abraçar, estender, sycophant, AI
-status: verificado=40461
+status: verificado=40530
 title: Microsoft considerada prejudicial
 ---
 
@@ -46,7 +46,7 @@ Ou apenas [Preguiça, impaciência e Hubris](http://www.parrot.org/)Mas isso nã
 
 </div>
 
-É agora um desastre ambíguo de defeitos regex de engenharia cada vez que um autor / implementador tem que adivinhar o que o analisador deve fazer com sequências de cifrões isolados ocorrendo dentro de um único parágrafo de prosa de markdown. Por exemplo, considere uma situação em que [Francês](markdown-is-not-latex.html.fr) Matemáticos financeiros canadenses discutem dois preços em duas moedas diferentes, dizem EUA `$`1.50 e 2,00`$` CA (admitidamente inventado, mas ilustra a complexidade). Como você escreveria um `i18n` em conformidade [Analisador GFM](https://pandoc.org/) que entende que o material entre os cifrões aqui é *não deve ser processado como inline $$\LaTeX$$*, embora seja sintaticamente válido $$\TeX$$ e está em conformidade com isso [especificação ingênua](https://pandoc.org/demo/example33/8.13-math.html)?
+É agora um desastre ambíguo de defeitos regex de engenharia cada vez que um autor / implementador tem que adivinhar o que o analisador deve fazer com sequências de cifrões isolados ocorrendo dentro de um único parágrafo de prosa de markdown. Por exemplo, considere uma situação em que [Francês](markdown-is-not-latex.html.fr) Matemáticos financeiros canadenses discutem dois preços em duas moedas diferentes, dizem EUA `$`1,50 e 2.00`$` CA (admitidamente inventado, mas ilustra a complexidade). Como você escreveria um `i18n` em conformidade [Analisador GFM](https://pandoc.org/) que entende que o material entre os cifrões aqui é *não deve ser processado como inline $$\LaTeX$$*, embora seja sintaticamente válido $$\TeX$$ e está em conformidade com isso [especificação ingênua](https://pandoc.org/demo/example33/8.13-math.html)?
 
 Que tal um par de variáveis Ruby/Perl em uma assinatura de função como `foo($v,$w)`? O mesmo problema com a ingenuidade. Ter Claude<sup>2</sup> analisar tudo?
 
@@ -74,7 +74,7 @@ Resumindo, a GFM não é mais uma especificação da indústria internacional, m
 
 [Orion](https://www.sunstarsys.com/orion/features) **não usa e nunca usará parsers GFM mais recentes que fingem rastrear esse mal-estar sujo**.
 
-Em vez disso, contamos com um fork interno de @markedjs/marked e continuaremos a fazê-lo no futuro previsível.
+Em vez disso, contamos com um fork interno de @markedjs/marcado e continuaremos a fazê-lo no futuro previsível.
 
 -----
 
@@ -82,8 +82,20 @@ Em vez disso, contamos com um fork interno de @markedjs/marked e continuaremos a
 
 1. Não é um "extensão" da especificação quando o autor da especificação a obriga a todos que usam seus produtos. É A NOVA ESPÉCIE DE FATO.
 
-2. Para os nitwits que ainda acreditam que GitHub está usando F/OSS para analisar markdown: Eu encorajo você a clicar no link de origem GitHub para este artigo no topo da página, copiar e colar os dois primeiros parágrafos da seção **WorldWide Raio de Explosão** em um editor de markdown GitHub, remova os backticks em torno dos cifrões e testemunhe em primeira mão que ele renderiza os casos de amostra *corretamente*, ao contrário da porcaria F/OSS Rust que afirma usar. Também pode ser conveniente comparar a estética do renderizador MathJax com a do $$\KaTeX$$ que usamos neste site, para esclarecer qualquer confusão sobre as discrepâncias qualitativas entre os dois produtos, muito menos os quantitativos como eles se relacionam com a velocidade de renderização.
+2. Para os nitwits que ainda acreditam que GitHub está usando F/OSS para analisar markdown: Eu encorajo você a clicar no link de origem GitHub para este artigo no topo da página, copiar e colar os dois primeiros parágrafos da seção **WorldWide Raio de Explosão** em um editor de markdown GitHub, remova os backticks em torno dos cifrões e testemunhe em primeira mão que ele renderiza os casos de amostra *corretamente*, ao contrário da porcaria F/OSS Rust que afirma usar. Também pode ser conveniente comparar a estética do renderizador MathJax com a do $$\KaTeX$$ que usamos neste site, para esclarecer qualquer confusão sobre as discrepâncias qualitativas entre os dois produtos, muito menos os quantitativos como eles se relacionam com a velocidade de renderização. <center><div id="screenshot-div"><img src="markdown-is-not-latex.page/screenshot" id="screenshot"></div></center>
 
 3. A prosa citada foi a resposta original da IA do bing nas últimas 24 horas, até que eu adicionei os links de fundo adicionais a este artigo, a partir do qual "aprendido" Como dizer algo menos idiota em resposta à consulta "o que é o analisador de markdown de código aberto atual do github". Esta é a IA que está **tomando nossos empregos**, pessoal.
+
+<style type="text/css">
+
+#screenshot-div {
+  background: url("markdown-is-not-latex.page/grade-f") no-repeat center/cover;
+}
+
+#screenshot {
+  opacity: 0.9;
+}
+
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->
