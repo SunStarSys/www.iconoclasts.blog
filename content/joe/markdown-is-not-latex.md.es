@@ -93,7 +93,7 @@ En cambio, confiamos en una bifurcación interna de @markedjs/marked y continuar
 }
 
 #screenshot {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 </style>

@@ -94,7 +94,7 @@ title: Майкрософт считает вредным
 }
 
 #screenshot {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 </style>
