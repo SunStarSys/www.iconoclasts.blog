@@ -12,72 +12,77 @@ title: ¿De qué se trata <em>Smart Content Dependency Management™</em>?
 
 </div>
 
+## Tabla de contenido
+
 [TOC]
 
 -----
+
 ## Resumen
 
 *Gestión de dependencias de contenido inteligente&trade;* trata sobre el círculo de ideas relacionadas con la prestación de apoyo y facilitación para *construcciones incrementales*, al tiempo que se mantiene fiel al **Principio de normalización de contenido** &mdash; que [*permalinks*](https://en.wikipedia.org/wiki/Permalink) debe ser la única fuente de datos, sin importar cómo se cure su contenido en todo el árbol de origen y los artefactos de compilación resultantes.
 
-Este artículo presenta la <https://sunstarsys.com/> sitio web como un estudio de caso para una demostración de las mejores prácticas y análisis de las topologías de gráficos asociadas.
+Este artículo presenta la <https://iconoclasts.blog/> sitio web como un estudio de caso para una demostración de las mejores prácticas y análisis de las topologías de gráficos asociadas.
 
 -----
+
 ## Caveats
 
 Esto solo importa cuando necesitas sopesar el costo de realizar compilaciones completas de sitios cada vez que necesitas ajustar el contenido en una página web. Si su sitio web tiene menos de 1K archivos de origen, **relaje** y lea lo siguiente con vistas a sus necesidades futuras. Usted eligió usar nuestra plataforma, que está diseñada para escalar con usted, no en su contra. Para la mayoría de las páginas, este material a continuación trata sobre *gráficos de dependencia de contenido dispersos* para sitios con más de 1K páginas.
 
 Por ejemplo, el Apache <https://www.OpenOffice.Org> sitio web fue capaz de construir sus archivos 40K+ utilizando la versión original de Apache de este sistema de compilación, con soporte totalmente integrado para las compilaciones incrementales &mdash; sin ninguna dependencia configurada &mdash; Haciendo un uso inteligente de la tecnología tradicional SSI solo.
 
-Por defecto, nuestro sistema de compilación solo creará los archivos que ha cambiado, sin preocuparse por las dependencias entre archivos (a menos que los especifique en `%path::dependencias` &mdash; más abajo). Si el archivo que ha cambiado está en la `plantillas/` o `lib/` directorio, se disparará una compilación de sitio completa en su lugar.
+Por defecto, nuestro sistema de compilación solo creará los archivos que ha cambiado, sin preocuparse por las dependencias entre archivos (a menos que los especifique en `%path::dependencies` &mdash; más abajo). Si el archivo que ha cambiado está en la `templates/` o `lib/` directorio, se disparará una compilación de sitio completa en su lugar.
 
 -----
+
 ## Tejiendo el *gráfico de dependencia* de su sitio web
 
 Matemáticamente, una *Topología* `$$\tau$$` es una especificación completa de los subconjuntos *abiertos* de un espacio `$$X$$`, cuyo objetivo es indicar las relaciones de proximidad entre *puntos* `$$x$$` del espacio `$$X$$`. Cuándo `$$X$$` es un gráfico, una *topología* `$$\tau$$` para `$$X$$` equivale a especificar los bordes que conectan los vértices del gráfico juntos (aquí los vértices se ven como los *puntos* de `$$X$$`, y los bordes de conexión determinan los barrios de esos puntos como *conjuntos abiertos básicos* para la topología).  Una topología de gráficos dirigida es esencialmente lo mismo, pero incorpora una referencia a una incrustación topológica de `$$(X,\tau)$$` en un espacio topológico más amplio `$$(Y,\sigma)$$` , donde las conexiones de borde de la incrustación están representadas por curvas direccionales, sin intersección (Jordania).
 
-Este último concepto es lo que utilizaremos al discutir la topología del *gráfico de dependencia* `$$\tau$$` asociado al espacio `$$X$$` de archivos fuente debajo del sitio `contenido/` subdirectorio (aquí `$$(Y,\sigma)$$` es `$$\mathbb{R}^n$$` con su topología métrica para `$$n \in \{2,3\}$$`y los bordes de `$$X$$` No son intersecciones, curvas dirigidas Jordan que conectan un archivo `$$x \in X$$` a su conjunto de ficheros sobre los que `$$x$$` depende de: `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$`).
+Este último concepto es lo que utilizaremos al discutir la topología del *gráfico de dependencia* `$$\tau$$` asociado al espacio `$$X$$` de archivos fuente debajo del sitio `content/` subdirectorio (aquí `$$(Y,\sigma)$$` es `$$\mathbb{R}^n$$` con su topología métrica para `$$n \in \{2,3\}$$`y los bordes de `$$X$$` No son intersecciones, curvas dirigidas Jordan que conectan un archivo `$$x \in X$$` a su conjunto de ficheros sobre los que `$$x$$` depende de: `$$\set{x^\prime \in X | x \rightarrow x^\prime}$$`).
 
-Que tiene {# lede #}una comprensión clara del *gráfico de dependencia* de su sitio web garantizará que pueda maximizar el rendimiento de nuestra tecnología de creación a escala{# lede #}. Tomamos la información que usted proporciona a `%path::dependencias` durante la carga de creación de su sitio web `lib/path.pm` archivo, construir un mapa inverso de archivos dependientes y utilizar *ese mapa inverso* para determinar el corpus completo de archivos que se van a crear para cualquier `confirmación svn` a nuestro sistema.
+Que tiene {# lede #}una comprensión clara del *gráfico de dependencia* de su sitio web garantizará que pueda maximizar el rendimiento de nuestra tecnología de creación a escala{# lede #}. Tomamos la información que usted proporciona a `%path::dependencies` durante la carga de creación de su sitio web `lib/path.pm` archivo, construir un mapa inverso de archivos dependientes y utilizar *ese mapa inverso* para determinar el corpus completo de archivos que se van a crear para cualquier `svn commit` a nuestro sistema.
 
-Es importante tener en cuenta que las relaciones de dependencia entre los archivos de origen pueden y deben ser capturadas por completo por la `%path::dependencias` hash durante la carga de inicio del sistema de compilación de `lib/path.pm` de su árbol de origen, que es cómo las vistas incorporadas contenidas en nuestro `SunStarSys::Ver` El paquete Perl está destinado a funcionar. El `walk_content_tree`, `archivado`y `seed_file_deps` funciones de utilidad importables de `SunStarSys::Util` son útiles para construir el `%path::dependencias` hash, con soporte integrado para gestionar una caché de dependencias para acelerar las compilaciones incrementales a escala.
+Es importante tener en cuenta que las relaciones de dependencia entre los archivos de origen pueden y deben ser capturadas por completo por la `%path::dependencies` hash durante la carga de inicio del sistema de compilación de `lib/path.pm` de su árbol de origen, que es cómo las vistas incorporadas contenidas en nuestro `SunStarSys::View` El paquete Perl está destinado a funcionar. El `walk_content_tree`, `archived`y `seed_file_deps` funciones de utilidad importables de `SunStarSys::Util` son útiles para construir el `%path::dependencies` hash, con soporte integrado para gestionar una caché de dependencias para acelerar las compilaciones incrementales a escala.
 
 Esta es la parte de nuestra vida [`lib/path.pm`]({{snippetA.pretty_uri}}):
 
 [snippet:lang=perl:repo=SunStarSys/www.iconoclasts.blog:branch=trunk:path=lib/path.pm:token=#snippet]
 
-Por favor, revisa ese código para obtener ideas sobre cómo quieres que funcione tu sitio web. Sí, hay cierta complejidad razonable (que involucra tanto las expresiones regulares de Perl como la cáscara UNIX de Perl) `glob` interfaces, de forma muy precisa) sobre cómo `%path::dependencias` se construye en ese archivo, pero en lugar de simplemente ver esto como un trabajo de optimización, en su lugar, mirarlo como proporcionar los ingredientes básicos necesarios para construir los principales aspectos de la topología *link *de una manera automatizada y generada dinámicamente.
+Por favor, revisa ese código para obtener ideas sobre cómo quieres que funcione tu sitio web. Sí, hay cierta complejidad razonable (que involucra tanto las expresiones regulares de Perl como la cáscara UNIX de Perl) `glob` interfaces, de forma muy precisa) sobre cómo `%path::dependencies` se construye en ese archivo, pero en lugar de simplemente ver esto como un trabajo de optimización, en su lugar, mirarlo como proporcionar los ingredientes básicos necesarios para construir los principales aspectos de la topología *link *de una manera automatizada y generada dinámicamente.
 
-Dónde están las entradas en `%path::dependencias` ¿Origen? Si no nace de una invocación de `walk_content_tree { seed_file_deps ... }`, (que básicamente se sumerge en los encabezados y el contenido de los archivos de origen de Markdown), entonces solo están codificados en `lib/facts.yml` en tiempo de carga.
+Dónde están las entradas en `%path::dependencies` ¿Origen? Si no nace de una invocación de `walk_content_tree { seed_file_deps ... }`, (que básicamente se sumerge en los encabezados y el contenido de los archivos de origen de Markdown), entonces solo están codificados en `lib/facts.yml` en tiempo de carga.
 
 ### Los gráficos de dependencias cíclicas son la norma
 
-Nuestro sitio actualmente consiste en `240 archivos de origen` en `contenido/`. Este es un `85 vértices x 465 bordes`, representación de gráfico dirigida bidimensional desplazable de una instantánea reciente de las dependencias de la página en inglés en **nuestro sitio** ([uso de GraphViz `punto`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl)):
+Nuestro sitio actualmente consiste en `2417 source files` en `content/`. Este es un `100+ vertices x 600+ edges`, representación de gráfico dirigida bidimensional desplazable de una instantánea reciente de las dependencias de la página en inglés en **este sitio** ([uso de GraphViz `dot`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl)):
 
 <div id="deps">
 
-![Dependencias del idioma inglés](../images/deps)
+![Dependencias del idioma inglés](../images/deps.svg{{lang}})
 
 </div>
 
-Muy complejo, incluso para un sitio web pequeño como este! Muchas intersecciones de borde al tomar `$$n=2$$` (evitable en dimensión `$$n=3$$`). De particular importancia es el conjunto principal de dependencias cíclicas densas en los archivos no archivados en nuestro sitio. `/ensayos/` directorio, hacia la parte inferior-centro-derecha del gráfico, que es lo que debe ser el gráfico de dependencia de un buen sitio de blogs. Estas dependencias se trazan en `curvas rojas` en la imagen.
+Muy complejo, incluso para un sitio web pequeño como este! Muchas intersecciones de borde al tomar `$$n=2$$` (evitable en dimensión `$$n=3$$`). De particular importancia es el conjunto principal de dependencias cíclicas densas en los archivos no archivados en nuestro sitio. `/essays/` directorio, hacia la parte inferior-centro-derecha del gráfico, que es lo que debe ser el gráfico de dependencia de un buen sitio de blogs. Estas dependencias se trazan en `red curves` en la imagen.
 
-Observe también la interconexión interna, esencialmente aislada de los elementos en `/categorías/*/*` y `/archives/2022/11/*`. Las únicas dependencias externas implican contenido no archivado en `/ensayos/*`. Esto es por diseño &mdash; los ensayos archivados solo deben cambiar *adiabéticamente*, tal vez solo para ajustes en sus `Categoría` encabezados. Ninguno de esos cambios afecta materialmente el contenido preexistente, por lo que no lo rastreamos. `%path::dependencias`.
+Observe también la interconexión interna, esencialmente aislada de los elementos en `/categories/*/*` y `/archives/2026/05/*`. Las únicas dependencias externas implican contenido no archivado en `/joe/*`. Esto es por diseño &mdash; los ensayos archivados solo deben cambiar *adiabéticamente*, tal vez solo para ajustes en sus `Category` encabezados. Ninguno de esos cambios afecta materialmente el contenido preexistente, por lo que no lo rastreamos. `%path::dependencies`.
 
-Por supuesto, nuestro [Orion Enterprise Wiki](https://sunstarsys.com/orion/) Nunca ha tenido problemas para lidiar con las dependencias cíclicas.
+Por supuesto, nuestro [Orion Enterprise Wiki](https://www.sunstarsys.com/orion/) Nunca ha tenido problemas para lidiar con las dependencias cíclicas.
 
 ### ¿No se trata sólo de hipervínculos?
 
 **¡No!** De hecho, la *topología de enlace* de su sitio web es un asunto completamente separado del *gráfico de dependencia* del árbol de origen.  Un motor de búsqueda buscará naturalmente la topología *link*, pero no tiene información sobre el gráfico *dependent*.
 
-Esta es una `Más de 240 vértices x 3859 bordes`, gráfico actual de ojos de pájaro del gráfico en inglés *link topology* para **nuestro sitio** ([uso de GraphViz `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl)):
+Esta es una `16k+ vertices x 90k+ edges`, actual bird-eye grqaph del gráfico en inglés *link topology* para **nuestro sitio** ([uso de GraphViz `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl)):
 
 <div id="links">
 
-![Enlaces de idioma inglés](../images/links)
+![Enlaces de idioma inglés](../images/links.svg{{lang}})
 
 </div>
 
-¿Puedes detectar `bordes rojos` como se especifica en el *gráfico de dependencia*? El gráfico de *topología de enlace* es cualitativa y cuantitativamente **muy diferente** del gráfico de *dependencia* (dramáticamente más pequeño y menos interconectado) que se muestra anteriormente.
+¿Puedes detectar `red edges` como se especifica en el *gráfico de dependencia*? El gráfico de *topología de enlace* es cualitativa y cuantitativamente **muy diferente** del gráfico de *dependencia* (dramáticamente más pequeño y menos interconectado) que se muestra anteriormente.
 
 ### Cómo puede ayudar la tecnología SSI
 
@@ -95,7 +100,7 @@ Syntax:
 
 &#123;% `ssi` &#96;/content_rooted/path/to/source_file&#96; %&#125;
 
-- rutas enraizadas en `contenido` directorio de origen
+- rutas enraizadas en `content` directorio de origen
 : omite la parte de cabecera del archivo de origen que se va a `ssi` incluido
 - reescribe las URL relativas a las URL absolutas en el contenido incluido de la ruta de destino
 
@@ -106,19 +111,19 @@ Syntax:
 &#123;&#123; contenido|ssi &#125;&#125;
 
 - evaluaciones recursivas `ssi` etiquetas en el valor que se va a filtrar
-- útil para evitar el uso de un gran valor (3+) de `quick_deps` en un `@path::patrones` hashref de argumento de entrada, que puede afectar al rendimiento
+- útil para evitar el uso de un gran valor (3+) de `quick_deps` en un `@path::patterns` hashref de argumento de entrada, que puede afectar al rendimiento
 
 #### ¿Por qué no SymLinks?
 
 - Abstracción del sistema de archivos barebones que es difícil de soportar de forma segura en un `<VirtualHost>` contexto
 - las mismas desventajas con las tradicionales `ssi` en páginas web completas
-- nuestro [Orion Enterprise Wiki](https://sunstarsys.com/orion/) sistema no los apoya
+- nuestro [Orion Enterprise Wiki](https://www.sunstarsys.com/orion/) sistema no los apoya
 
 #### Herramientas de creación para enlaces permanentes
 
 ##### Curación de documentos
 
-El sistema de compilación de Orion tiene soporte integrado para lo que llamamos *Curación de documentos*, que es el proceso de recontextualización y reorganización de su contenido en función de cómo establezca el `Categorías` y `Estado` encabezados en los archivos de origen de Markdown. Estas funciones están desactivadas por defecto, pero se pueden activar mediante la configuración de una `category_root` (para soporte de categoría) o `archive_root` (para el soporte de archivado) en el argumento hashref asociado al `@path::patrones` entrada.
+El sistema de compilación de Orion tiene soporte integrado para lo que llamamos *Curación de documentos*, que es el proceso de recontextualización y reorganización de su contenido en función de cómo establezca el `Categories` y `Status` encabezados en los archivos de origen de Markdown. Estas funciones están desactivadas por defecto, pero se pueden activar mediante la configuración de una `category_root` (para soporte de categoría) o `archive_root` (para el soporte de archivado) en el argumento hashref asociado al `@path::patterns` entrada.
 
 ##### Categorías
 
@@ -129,10 +134,10 @@ El sistema de compilación de Orion tiene soporte integrado para lo que llamamos
 
 ##### Páginas archivadas
 
-En nuestro sitio, archivamos agresivamente ensayos anticuados para mantener bajos los tiempos de construcción de nuevos ensayos, sin destruir los enlaces permanentes a los documentos archivados. El *gráfico de dependencia* con respecto al `/archivos/` directorio (para nuestro sitio) es razonablemente autónomo según las siguientes reglas:
+En nuestro sitio, archivamos agresivamente ensayos anticuados para mantener bajos los tiempos de construcción de nuevos ensayos, sin destruir los enlaces permanentes a los documentos archivados. El *gráfico de dependencia* con respecto al `/archives/` directorio (para nuestro sitio) es razonablemente autónomo según las siguientes reglas:
 
-- contenido construido usando Plantilla `ssi` etiquetas que apuntan hacia la ubicación de enlace permanente, mientras se quita el `Categorías` encabezado de la página de origen construida
-- contenido en `/(ensayos|clientes)/` siempre son enlaces permanentes, incluso después de archivar
+- contenido construido usando Plantilla `ssi` etiquetas que apuntan hacia la ubicación de enlace permanente, mientras se quita el `Categories` encabezado de la página de origen construida
+- contenido en `/(essays|clients)/` siempre son enlaces permanentes, incluso después de archivar
 - el archivado elimina eficazmente la ubicación de enlace permanente del gráfico de dependencia*, sin eliminar el enlace permanente en sí mismo del sitio web
 
 ##### Lede
@@ -142,6 +147,7 @@ Comentarios HTML incrustados en los límites del formulario de prosa de Markdown
 El procesamiento de las hojas se realiza con la `lede` Filtro de plantilla. Es útil combinar esto con la `ssi` filtro para indexar un archivo de categoría con más de una página de categoría dentro de él.
 
 -----
+
 ## Conclusiones
 
 Hay estructuras y relaciones de datos interesantes que aún no se han descubierto al tratar con el *gráfico de dependencia* de un sitio web desde una perspectiva de rendimiento de construcción, que es un área de interés mucho más nueva que la literatura de investigación que profundiza en las estructuras de datos y las emisiones asociadas que rodean la *topología de enlace *<sup>1,2</sup>.
