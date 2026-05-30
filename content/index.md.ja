@@ -2,15 +2,18 @@
 categories: ~
 dependencies: /categories/*/index.html.ja
 keywords: wiki、知識
-status: 下書き
+status: 確認済み=40526
 title: Of、ByおよびFor Iconoclasts
 ---
 
 <div id="news" class=" float-lg right">
-  <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">アイコンクラスト</a></div>
+  <div class="card border-success" style="max-width:25rem;background-color:transparent;text-align:left">
+    <div class="card-header">
 
-<div class="card-body">
+[アイコンクラスト](https://en.wikipedia.org/wiki/Iconoclasm)
+
+</div>
+  <div class="card-body">
 <small>
 <pre class="card-title">
 名詞[ C ]   形式
@@ -58,7 +61,11 @@ title: Of、ByおよびFor Iconoclasts
 
 &nbsp;
 
-このサイトはOrionでホストされています。チェックアウト[オリオン](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wikiプラットフォーム</em></span>&trade; &mdash; Orionは、ネイティブを持つ唯一のSCMベースのエンタープライズWikiです。[マーメイドマインドマップ](https://www.sunstarsys.com/orion/features) 統合!
+[<img src="index.page/ad1" style="width:100%">](https://www.sunstarsys.com/orion/)
+
+&nbsp;
+
+このサイトはOrionでホストされています。チェックアウト[オリオン](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wikiプラットフォーム</em></span>&trade; &mdash; Orionは、ネイティブを持つ唯一のSCMベースのエンタープライズWikiです。[マーメイドワードリーマップ](https://www.sunstarsys.com/orion/features) 統合!
 
 &nbsp;
 
@@ -75,7 +82,9 @@ title: Of、ByおよびFor Iconoclasts
 
 &nbsp;
 
-- <span class="badge bg-success">新規</span> [データサイエンス言語としてのパール](chrisarg/perlasadatascilang) @chrisarg= 、
+- <span class="badge bg-success">新規</span> [値下げなし$$\LaTeX$$](joe/markdown-is-not-latex) &mdash; インライン数学トークンがどのように組み込まれているかに関する重要な技術的議論:fa-github: GitHubフレーバー値下げ(GFM)。
+
+- [データサイエンス言語としてのパール](chrisarg/perlasadatascilang) @chrisarg= 、
 
 - [個人メモ](esha/2025-a-personal-note) @esha= から、
 
@@ -167,4 +176,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$Author: joe $$Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->

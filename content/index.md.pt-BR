@@ -2,15 +2,18 @@
 categories: ~
 dependencies: /categories/*/index.html.pt-BR
 keywords: wiki,conhecimento
-status: rascunho
+status: verificado=40526
 title: De, por e para iconoclastas
 ---
 
 <div id="news" class=" float-lg right">
-  <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclasta</a></div>
+  <div class="card border-success" style="max-width:25rem;background-color:transparent;text-align:left">
+    <div class="card-header">
 
-<div class="card-body">
+[Iconoclasta](https://en.wikipedia.org/wiki/Iconoclasm)
+
+</div>
+  <div class="card-body">
 <small>
 <pre class="card-title">
 substantivo [ C ]   formal
@@ -58,7 +61,11 @@ blogando comunidade! Inscreva-se hoje no [Fale Conosco](/contact) página.
 
 &nbsp;
 
-Este site está hospedado em Orion. Check-out  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>A Plataforma Wiki Jamstack.</em></span>&trade; &mdash; Orion é o único wiki empresarial baseado em SCM com [sereia-mentemap](https://www.sunstarsys.com/orion/features) integração!
+[<img src="index.page/ad1" style="width:100%">](https://www.sunstarsys.com/orion/)
+
+&nbsp;
+
+Este site está hospedado em Orion. Check-out  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>A Plataforma Wiki Jamstack.</em></span>&trade; &mdash; Orion é o único wiki empresarial baseado em SCM com [mapa-sereia-wardley](https://www.sunstarsys.com/orion/features) integração!
 
 &nbsp;
 
@@ -75,7 +82,9 @@ Este site está hospedado em Orion. Check-out  [Orion](https://www.sunstarsys.co
 
 &nbsp;
 
-- <span class="badge bg-success">Novo</span> [Perl como uma Linguagem do Data Science](chrisarg/perlasadatascilang) por @chrisarg=,
+- <span class="badge bg-success">Novo</span> [Markdown Não $$\LaTeX$$](joe/markdown-is-not-latex) &mdash; discussão técnica importante sobre como os tokens de matemática em linha foram incorporados :fa-github: GitHub Markdown com Sabor (GFM).
+
+- [Perl como uma Linguagem do Data Science](chrisarg/perlasadatascilang) por @chrisarg=,
 
 - [Uma Observação Pessoal](esha/2025-a-personal-note) de @esha=,
 
@@ -167,4 +176,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$Autor: joe $Revisão: 36885 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

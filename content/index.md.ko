@@ -2,15 +2,18 @@
 categories: ~
 dependencies: /categories/*/index.html.ko
 keywords: 위키,지식
-status: 초안
+status: 확인=40526
 title: 의,에 의해 및 Iconoclasts
 ---
 
 <div id="news" class=" float-lg right">
-  <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">이코노클라스트</a></div>
+  <div class="card border-success" style="max-width:25rem;background-color:transparent;text-align:left">
+    <div class="card-header">
 
-<div class="card-body">
+[이코노클라스트](https://en.wikipedia.org/wiki/Iconoclasm)
+
+</div>
+  <div class="card-body">
 <small>
 <pre class="card-title">
 명사 [ C ]   형식
@@ -58,7 +61,11 @@ title: 의,에 의해 및 Iconoclasts
 
 &nbsp;
 
-이 사이트는 Orion에서 호스팅됩니다. 체크아웃  [오리온](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade; &mdash; 오리온은 고유의 SCM 기반 엔터프라이즈 위키입니다. [인어-마인드맵](https://www.sunstarsys.com/orion/features) 통합!
+[<img src="index.page/ad1" style="width:100%">](https://www.sunstarsys.com/orion/)
+
+&nbsp;
+
+이 사이트는 Orion에서 호스팅됩니다. 체크아웃  [오리온](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade; &mdash; 오리온은 고유의 SCM 기반 엔터프라이즈 위키입니다. [mermaid-wardley 지도](https://www.sunstarsys.com/orion/features) 통합!
 
 &nbsp;
 
@@ -75,7 +82,9 @@ title: 의,에 의해 및 Iconoclasts
 
 &nbsp;
 
-- <span class="badge bg-success">신규</span> [데이터 과학 언어로서의 펄](chrisarg/perlasadatascilang) @chrisarg=에 의해,
+- <span class="badge bg-success">신규</span> [매가인하가 아님 $$\LaTeX$$](joe/markdown-is-not-latex) &mdash; 인라인 수학 토큰이 어떻게 통합되었는지에 대한 중요한 기술 토론 :fa-github: GitHub 맛 있는 매가인하(GFM).
+
+- [데이터 과학 언어로서의 펄](chrisarg/perlasadatascilang) @chrisarg=에 의해,
 
 - [개인 노트](esha/2025-a-personal-note) @esha=에서,
 
@@ -167,4 +176,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$ 저자 : 조 $ 개정 : 36885 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

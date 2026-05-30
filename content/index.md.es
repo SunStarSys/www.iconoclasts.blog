@@ -2,15 +2,18 @@
 categories: ~
 dependencies: /categories/*/index.html.es
 keywords: wiki,conocimiento
-status: borrador
+status: verificado=40526
 title: De, Por y Para Iconoclastas
 ---
 
 <div id="news" class=" float-lg right">
-  <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclast</a></div>
+  <div class="card border-success" style="max-width:25rem;background-color:transparent;text-align:left">
+    <div class="card-header">
 
-<div class="card-body">
+[Iconoclast](https://en.wikipedia.org/wiki/Iconoclasm)
+
+</div>
+  <div class="card-body">
 <small>
 <pre class="card-title">
 sustantivo [ C ]   formal
@@ -58,7 +61,11 @@ comunidad de blogs! Regístrese hoy en la [Contáctenos](/contact) página.
 
 &nbsp;
 
-Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es la única wiki empresarial basada en SCM con nativo [mapa de mente de sirena](https://www.sunstarsys.com/orion/features) integración!
+[<img src="index.page/ad1" style="width:100%">](https://www.sunstarsys.com/orion/)
+
+&nbsp;
+
+Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es la única wiki empresarial basada en SCM con nativo [mapa de mermaid-wardley](https://www.sunstarsys.com/orion/features) integración!
 
 &nbsp;
 
@@ -75,7 +82,9 @@ Este sitio está alojado en Orion. Bloquear  [Orión](https://www.sunstarsys.com
 
 &nbsp;
 
-- <span class="badge bg-success">Nuevo</span> [Perl como lenguaje de ciencia de datos](chrisarg/perlasadatascilang) por @chrisarg=,
+- <span class="badge bg-success">Nuevo</span> [La rebaja no es $$\LaTeX$$](joe/markdown-is-not-latex) &mdash; importante discusión técnica sobre cómo se han incorporado los tokens matemáticos en línea en :fa-github: GitHub Rebaja con sabor (GFM).
+
+- [Perl como lenguaje de ciencia de datos](chrisarg/perlasadatascilang) por @chrisarg=,
 
 - [Una nota personal](esha/2025-a-personal-note) desde @esha=,
 
@@ -167,4 +176,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$ Autor: joe $ $ Revisión: 36885 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

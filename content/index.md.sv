@@ -2,15 +2,18 @@
 categories: ~
 dependencies: /categories/*/index.html.sv
 keywords: wiki,kunskap
-status: skiss
+status: verifierad=40526
 title: Av, Av och För Iconoclasts
 ---
 
 <div id="news" class=" float-lg right">
-  <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Ikonoklast</a></div>
+  <div class="card border-success" style="max-width:25rem;background-color:transparent;text-align:left">
+    <div class="card-header">
 
-<div class="card-body">
+[Ikonoklast](https://en.wikipedia.org/wiki/Iconoclasm)
+
+</div>
+  <div class="card-body">
 <small>
 <pre class="card-title">
 substantiv [ C ]   formell
@@ -58,7 +61,11 @@ Bloggvärlden! Anmäl dig idag på [Kontakta oss](/contact) sida.
 
 &nbsp;
 
-Denna webbplats är värd på Orion. Checka ut  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagswikin med inbyggd [sjöjungfru-mindmap](https://www.sunstarsys.com/orion/features) integration!
+[<img src="index.page/ad1" style="width:100%">](https://www.sunstarsys.com/orion/)
+
+&nbsp;
+
+Denna webbplats är värd på Orion. Checka ut  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagswikin med inbyggd [sjöjungfru-wardley-karta](https://www.sunstarsys.com/orion/features) integration!
 
 &nbsp;
 
@@ -75,7 +82,9 @@ Denna webbplats är värd på Orion. Checka ut  [Orion](https://www.sunstarsys.c
 
 &nbsp;
 
-- <span class="badge bg-success">Nytt</span> [Perl som datavetenskapsspråk](chrisarg/perlasadatascilang) av @chrisarg=,
+- <span class="badge bg-success">Nytt</span> [Nedsättning är inte $$\LaTeX$$](joe/markdown-is-not-latex) &mdash; viktig teknisk diskussion om hur inline matte tokens har införlivats i :fa-github: GitHub Smaksatt nedsättning (GFM).
+
+- [Perl som datavetenskapsspråk](chrisarg/perlasadatascilang) av @chrisarg=,
 
 - [En personlig anteckning](esha/2025-a-personal-note) från @esha=,
 
@@ -167,4 +176,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$ $Författare: joe $ $Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->

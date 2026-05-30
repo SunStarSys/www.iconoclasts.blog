@@ -2,15 +2,18 @@
 categories: ~
 dependencies: /categories/*/index.html.fr
 keywords: wiki, connaissance
-status: projet
+status: vérifié=40526
 title: De, par et pour les iconoclastes
 ---
 
 <div id="news" class=" float-lg right">
-  <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclaste</a></div>
+  <div class="card border-success" style="max-width:25rem;background-color:transparent;text-align:left">
+    <div class="card-header">
 
-<div class="card-body">
+[Iconoclaste](https://en.wikipedia.org/wiki/Iconoclasm)
+
+</div>
+  <div class="card-body">
 <small>
 <pre class="card-title">
 nom [ C ]   formel
@@ -58,7 +61,11 @@ Bloguer la communauté ! Inscrivez-vous dès aujourd'hui au [Nous contacter](/co
 
 &nbsp;
 
-Ce site est hébergé sur Orion. Départ  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plateforme Wiki de Jamstack.</em></span>&trade; &mdash; Orion est le seul wiki d'entreprise basé sur SCM avec natif [mermaid-mindmap](https://www.sunstarsys.com/orion/features) intégration !
+[<img src="index.page/ad1" style="width:100%">](https://www.sunstarsys.com/orion/)
+
+&nbsp;
+
+Ce site est hébergé sur Orion. Départ  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plateforme Wiki de Jamstack.</em></span>&trade; &mdash; Orion est le seul wiki d'entreprise basé sur SCM avec natif [mermaid-wardley-map](https://www.sunstarsys.com/orion/features) intégration !
 
 &nbsp;
 
@@ -75,7 +82,9 @@ Ce site est hébergé sur Orion. Départ  [Orion](https://www.sunstarsys.com/ori
 
 &nbsp;
 
-- <span class="badge bg-success">Nouveau</span> [Perl en tant que Data Science Language](chrisarg/perlasadatascilang) par @chrisarg=,
+- <span class="badge bg-success">Nouveau</span> [Démarque non $$\LaTeX$$](joe/markdown-is-not-latex) &mdash; discussion technique importante sur la façon dont les jetons mathématiques en ligne ont été incorporés dans :fa-github: GitHub Démarque aromatisée (GFM).
+
+- [Perl en tant que Data Science Language](chrisarg/perlasadatascilang) par @chrisarg=,
 
 - [Une note personnelle](esha/2025-a-personal-note) de @esha=,
 
@@ -167,4 +176,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$Auteur : joe $Révision : 36885 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

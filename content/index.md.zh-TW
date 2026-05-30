@@ -2,15 +2,18 @@
 categories: ~
 dependencies: /categories/*/index.html.zh-TW
 keywords: wiki，知識
-status: 草稿
+status: 驗證 =40526
 title: Of、By 和 For Iconoclasts
 ---
 
 <div id="news" class=" float-lg right">
-  <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">圖示最後一個</a></div>
+  <div class="card border-success" style="max-width:25rem;background-color:transparent;text-align:left">
+    <div class="card-header">
 
-<div class="card-body">
+[圖示最後一個](https://en.wikipedia.org/wiki/Iconoclasm)
+
+</div>
+  <div class="card-body">
 <small>
 <pre class="card-title">
 名詞[ C ]   形式
@@ -58,6 +61,10 @@ title: Of、By 和 For Iconoclasts
 
 &nbsp;
 
+[<img src="index.page/ad1" style="width:100%">](https://www.sunstarsys.com/orion/)
+
+&nbsp;
+
 此網站由 Orion 代管。查看更多[奧里昂](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 平台。</em></span>&trade; &mdash; Orion 是唯一具有原生功能的 SCM 企業 Wiki [美人魚陣圖](https://www.sunstarsys.com/orion/features) 整合！
 
 &nbsp;
@@ -75,7 +82,9 @@ title: Of、By 和 For Iconoclasts
 
 &nbsp;
 
-- <span class="badge bg-success">新建</span> [個人資料科學語言](chrisarg/perlasadatascilang) 由 @chrisarg=，
+- <span class="badge bg-success">新建</span> [減價不是$$\LaTeX$$](joe/markdown-is-not-latex) &mdash; 有關內置數學記號如何被納入的重要技術討論:fa-github: GitHub 調味料減價 (GFM)。
+
+- [個人資料科學語言](chrisarg/perlasadatascilang) 由 @chrisarg=，
 
 - [個人備註](esha/2025-a-personal-note) 從 @esha=，
 
@@ -167,4 +176,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$ $$ 作者：joe $ $ 版次：36885 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

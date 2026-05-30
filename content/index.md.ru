@@ -2,15 +2,18 @@
 categories: ~
 dependencies: /categories/*/index.html.ru
 keywords: вики,знание
-status: черновик
+status: проверено=40526
 title: Для иконоборцев,
 ---
 
 <div id="news" class=" float-lg right">
-  <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Иконоборчество</a></div>
+  <div class="card border-success" style="max-width:25rem;background-color:transparent;text-align:left">
+    <div class="card-header">
 
-<div class="card-body">
+[Иконоборчество](https://en.wikipedia.org/wiki/Iconoclasm)
+
+</div>
+  <div class="card-body">
 <small>
 <pre class="card-title">
 имя существительное [ C ]   форма
@@ -58,7 +61,11 @@ title: Для иконоборцев,
 
 &nbsp;
 
-Этот сайт размещен на Orion. Изъять  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade; &mdash; Orion – единственная корпоративная вики-страница на основе SCM с нативным [русалка](https://www.sunstarsys.com/orion/features) интеграция!
+[<img src="index.page/ad1" style="width:100%">](https://www.sunstarsys.com/orion/)
+
+&nbsp;
+
+Этот сайт размещен на Orion. Изъять  [Орион](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade; &mdash; Orion – единственная корпоративная вики-страница на основе SCM с нативным [русалка-орли-карта](https://www.sunstarsys.com/orion/features) интеграция!
 
 &nbsp;
 
@@ -75,7 +82,9 @@ title: Для иконоборцев,
 
 &nbsp;
 
-- <span class="badge bg-success">Новый</span> [Перл как язык науки о данных](chrisarg/perlasadatascilang) по @chrisarg=,
+- <span class="badge bg-success">Новый</span> [Снижение цен – нет $$\LaTeX$$](joe/markdown-is-not-latex) &mdash; важное техническое обсуждение того, как встроенные математические токены были включены в :fa-github: GitHub Ароматизированное снижение цен (GFM).
+
+- [Перл как язык науки о данных](chrisarg/perlasadatascilang) по @chrisarg=,
 
 - [Личная заметка](esha/2025-a-personal-note) из @esha=,
 
@@ -167,4 +176,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$Автор: Джо $Пересмотр: 36885 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

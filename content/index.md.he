@@ -2,15 +2,18 @@
 categories: ~
 dependencies: /categories/*/index.html.he
 keywords: wiki,ידע
-status: טיוטה
+status: אומתו 40526
 title: של, על ידי ועבור Iconoclasts
 ---
 
 <div id="news" class=" float-lg right">
-  <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">איקונוקלסט</a></div>
+  <div class="card border-success" style="max-width:25rem;background-color:transparent;text-align:left">
+    <div class="card-header">
 
-<div class="card-body">
+[איקונוקלסט](https://en.wikipedia.org/wiki/Iconoclasm)
+
+</div>
+  <div class="card-body">
 <small>
 <pre class="card-title">
 שם עצם [ ג ]   רשמי
@@ -58,7 +61,11 @@ title: של, על ידי ועבור Iconoclasts
 
 &nbsp;
 
-אתר זה מתארח באוריון. הוצאת פריט  [אוריון](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>אתר Jamstack Wiki.</em></span>&trade; &mdash; אוריון הוא הוויקי הארגוני היחיד המבוסס על SCM עם יליד [מפת חשיבה בתולת ים](https://www.sunstarsys.com/orion/features) אינטגרציה!
+[<img src="index.page/ad1" style="width:100%">](https://www.sunstarsys.com/orion/)
+
+&nbsp;
+
+אתר זה מתארח באוריון. הוצאת פריט  [אוריון](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>אתר Jamstack Wiki.</em></span>&trade; &mdash; אוריון הוא הוויקי הארגוני היחיד המבוסס על SCM עם יליד [בתולת ים-וורדלי-מפה](https://www.sunstarsys.com/orion/features) אינטגרציה!
 
 &nbsp;
 
@@ -75,7 +82,9 @@ title: של, על ידי ועבור Iconoclasts
 
 &nbsp;
 
-- <span class="badge bg-success">חדש</span> [פרל כשפת מדעי נתונים](chrisarg/perlasadatascilang) מאת @chrisarg=,
+- <span class="badge bg-success">חדש</span> [Markdown אינו $$\LaTeX$$](joe/markdown-is-not-latex) &mdash; דיון טכני חשוב על איך אסימוני מתמטיקה מוטבעים שולבו :fa-github: GitHub סימון בטעם (GFM).
+
+- [פרל כשפת מדעי נתונים](chrisarg/perlasadatascilang) מאת @chrisarg=,
 
 - [הערה אישית](esha/2025-a-personal-note) מתוך @esha=,
 
@@ -167,4 +176,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$מחבר: ג'ו $ $מהדורה: 36885 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

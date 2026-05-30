@@ -2,15 +2,18 @@
 categories: ~
 dependencies: /categories/*/index.html.de
 keywords: wiki,wissen
-status: Entwurf
+status: überprüft=40526
 title: Von, Von und Für Iconoclasts
 ---
 
 <div id="news" class=" float-lg right">
-  <div class="card border-success" style="max-width:25rem;background-color:transparent">
-    <div class="card-header"><a href="https://en.wikipedia.org/wiki/Iconoclasm">Iconoclast</a></div>
+  <div class="card border-success" style="max-width:25rem;background-color:transparent;text-align:left">
+    <div class="card-header">
 
-<div class="card-body">
+[Iconoclast](https://en.wikipedia.org/wiki/Iconoclasm)
+
+</div>
+  <div class="card-body">
 <small>
 <pre class="card-title">
 Nomen [ C ]   formal
@@ -58,7 +61,11 @@ Bloggen Community! Melden Sie sich noch heute bei der [Kontakt](/contact) Seite.
 
 &nbsp;
 
-Diese Seite wird auf Orion gehostet. Auschecken  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Die Jamstack Wiki Plattform.</em></span>&trade; &mdash; Orion ist das einzige SCM-basierte Enterprise-Wiki mit nativem [Meerjungfrau-Mindmap](https://www.sunstarsys.com/orion/features) Integration!
+[<img src="index.page/ad1" style="width:100%">](https://www.sunstarsys.com/orion/)
+
+&nbsp;
+
+Diese Seite wird auf Orion gehostet. Auschecken  [Orion](https://www.sunstarsys.com/orion/)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Die Jamstack Wiki Plattform.</em></span>&trade; &mdash; Orion ist das einzige SCM-basierte Enterprise-Wiki mit nativem [Meerjungfrau-wardley-map](https://www.sunstarsys.com/orion/features) Integration!
 
 &nbsp;
 
@@ -75,7 +82,9 @@ Diese Seite wird auf Orion gehostet. Auschecken  [Orion](https://www.sunstarsys.
 
 &nbsp;
 
-- <span class="badge bg-success">Neu</span> [Perl als Data Science-Sprache](chrisarg/perlasadatascilang) von @chrisarg=,
+- <span class="badge bg-success">Neu</span> [Preisabschrift ist nicht $$\LaTeX$$](joe/markdown-is-not-latex) &mdash; wichtige technische Diskussion darüber, wie Inline-Mathezeichen in :fa-github: GitHub Aromatisierter Preisabschrift (GFM).
+
+- [Perl als Data Science-Sprache](chrisarg/perlasadatascilang) von @chrisarg=,
 
 - [Eine persönliche Notiz](esha/2025-a-personal-note) von @esha=,
 
@@ -167,4 +176,4 @@ div.jumbotron button.btn {
 }
 </style>
 
-<!-- $Date$ $Autor: joe $ $Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->
