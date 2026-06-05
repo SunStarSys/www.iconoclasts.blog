@@ -33,7 +33,7 @@
     {% endblock %}
 </head>
 
-<body>
+<body role="document" id="top">
   <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
 	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img src="/images/iconoclast" alt="Iconoclast"></a>
@@ -137,7 +137,7 @@
       <input class="form-control me-2" type="email" name="email"
         placeholder="Join Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
-<a id="go-to-top" onClick="$('base').remove()" href="#top">Перейти в начало</a>&nbsp;|&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nsbp;Орион&trade;</a>&nbsp;|&nbsp;<a href="/contact">Контакт</a>&nbsp;|&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-twitter"></i></a>&nbsp;|&nbsp;&copy;2026 год&nbsp;<a href="/"><img src="/images/sunstarlinear.png"></a>&nbsp;Все&nbsp;права&nbsp;Зарезервировано.
+<a id="go-to-top" onClick="$('base').remove()" href="#top">Перейти в начало</a>&nbsp;|&nbsp;<a href="/contact">Контакт</a>&nbsp;|&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nbsp;Орион&trade;</a>&nbsp;|&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-twitter"></i></a>&nbsp;|&nbsp;&copy;2026 год&nbsp;<a href="/"><img src="/images/sunstarlinear.png"></a>&nbsp;Все&nbsp;права&nbsp;Зарезервировано.
 {% block footer %}{{footer|safe}}{% endblock footer %}
 </footer>
   <script src="/editor.md/js/d3.min.js"></script>
