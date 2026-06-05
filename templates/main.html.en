@@ -33,7 +33,7 @@
     {% endblock %}
 </head>
 
-<body>
+<body role="document" id="top">
   <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
 	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img src="/images/iconoclast" alt="Iconoclast"></a>
