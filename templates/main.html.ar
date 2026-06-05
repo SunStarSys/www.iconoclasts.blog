@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SunStar Systems">
-    <meta name="author" content="Joe Schaefer">
+    <meta name="author" content="{{content|vcs_author:lang|striptags}}">
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
     <meta name="theme-color" content="black">
     <meta property="og:description" content="{{description}}">
@@ -44,16 +44,16 @@
 <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
           <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
-            نشط
+            active
             {% endif %}"><a class="nav-link text" href="/bloggers.html{{lang}}">مشابك الأيقونات</a></li>
           <li class="nav-item{% if path|starts_with:"/contact.md" %}
-             نشط
+             active
              {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">الاتصال</a></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">المنتجات... <span class="caret"></span></a>
 
 <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
-			aria-labelledby="المنتجات">
+			aria-labelledby="products">
               <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">أوريون&trade; منصة ويكي جامستاك</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
                 href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">خطط تسعير أوريون</a></li>
@@ -63,7 +63,7 @@
 <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">المزيد... <span class="caret"></span></a>
             <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
-			aria-labelledby="المزيد">
+			aria-labelledby="more">
               <li class="dropdown-item">
                 <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/repos/svn/public/cms-sites/{{website}}/trunk/content{{path|dirname}}">مصدر الموقع</a>
               </li>
@@ -89,7 +89,7 @@
           </li>
 
 <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
-            نشط
+            active
             {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">مدعوم من...</a>
           </li>
         </ul>
@@ -98,7 +98,7 @@
           <input type="hidden" name="lang" value="{{ lang }}" />
           <input type="hidden" name="markdown_search" value="1" />
           <input class="form-control me-2" type="text" name="regex"
-               placeholder="البحث المتكرر في PCRE" القيمة="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
+               placeholder="PCRE Recursive Search" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
 	    </form>
   </div>
 </header>
@@ -128,14 +128,19 @@
   <div class="jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-<footer>{% block footer %}{{footer|safe}}{% endblock footer %}</footer><!--
-  <script src="/editor.md/js/raphael.min.js"></script>
-  <script src="/editor.md/js/underscore.min.js"></script>
-  <script src="/editor.md/js/flowchart.min.js"></script>
-  <script src="/editor.md/js/jquery.flowchart.min.js"></script>
-  <script src="/editor.md/js/sequence-diagram.min.js"></script> -->
-
-<script src="/editor.md/js/d3.min.js"></script>
+<footer>
+<hr>
+<form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Mailing List" />
+      <input class="form-control me-2" type="email" name="email"
+        placeholder="Join Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+<a id="go-to-top" onClick="$('base').remove()" href="#top">الانتقال إلى الأعلى</a>&nbsp;|&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nsbp;أوريون&trade;</a>&nbsp;|&nbsp;<a href="/contact">الاتصال</a>&nbsp;|&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-twitter"></i></a>&nbsp;|&nbsp;&copy;2026&nbsp;<a href="/"><img src="/images/sunstarlinear.png"></a>&nbsp;الكل&nbsp;حقوق&nbsp;محجوز.
+{% block footer %}{{footer|safe}}{% endblock footer %}
+</footer>
+  <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
   <script src="/editor.md/js/d3-graphviz.js"></script>
   <script src="/editor.md/lib/mermaid.min.js"></script>

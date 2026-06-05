@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SunStar Systems">
-    <meta name="author" content="Joe Schaefer">
+    <meta name="author" content="{{content|vcs_author:lang|striptags}}">
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
     <meta name="theme-color" content="black">
     <meta property="og:description" content="{{description}}">
@@ -41,105 +41,105 @@
           <span class="navbar-toggler-icon"></span>
       </button>
 
+
+
 <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-          <li class="nav-item{% if path|starts_with:"/bloggers.md" %}
-            activo
-            {% endif %}"><a class="nav-link text" href="/bloggers.html{{lang}}">Iconoclastos</a></li>
-          <li class="nav-item{% if path|starts_with:"/contact.md" %}
-             activo
-             {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">Contacto</a></li>
+        <ul class="navbar-nav"><li class="nav-item{% if path|starts_with:"/bloggers.md" %}
+            active
+            {% endif %}">Orión&trade; Plataforma Wiki de Jamstack<a class="nav-link text" href="/bloggers.html{{lang}}"></a>
+          </li><li class="nav-item{% if path|starts_with:"/contact.md" %}
+             active
+             {% endif %}">Planes de precios de Orion<a class="nav-link" href="/contact.html{{lang}}"></a>
+          </li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">Productos... <span class="caret"></span></a>
 
-<ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
-			aria-labelledby="productos">
-              <li class="dropdown-item"><a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">Orión&trade; Plataforma Wiki de Jamstack</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark"
-                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}">Planes de precios de pedidos</a></li>
-            </ul>
-          </li>
-
-<li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">Más... <span class="caret"></span></a>
-            <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
-			aria-labelledby="más">
+<a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">
+            <span class="caret">Más... </span></a><ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
+			aria-labelledby="products">
               <li class="dropdown-item">
-                <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/repos/svn/public/cms-sites/{{website}}/trunk/content{{path|dirname}}">Origen de sitio</a>
+              <a class="nav-link text-dark" href="https://www.sunstarsys.com/orion/index.html{{ lang }}">
+            </a>Origen de sitio</li>
+          <li class="dropdown-item">
+            <a class="nav-link text-dark"
+                href="https://www.sunstarsys.com/orion/plans.html{{ lang }}"></a>
+            </li>i18n</ul>
+              </li><li class="nav-item dropdown">Inglés<a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown"><span class="caret">
+                </span></a>Español<ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
+			aria-labelledby="more"><li class="dropdown-item">
+              <a class="nav-link text-dark" href="https://vcs.sunstarsys.com/repos/svn/public/cms-sites/{{website}}/trunk/content{{path|dirname}}"></a>Alemán</li><li class="dropdown-item divider">
+              </li><li class="dropdown-header text-dark">Francés</li><li class="dropdown-item">
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en"></a>Ruso</li><li class="dropdown-item">
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es"></a>Chino</li><li class="dropdown-item">
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de"></a>Coreano</li><li class="dropdown-item">
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr"></a>Japonés</li><li class="dropdown-item">
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru"></a>Hebreo</li><li class="dropdown-item">
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW"></a>Árabe</li><li class="dropdown-item">
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko"></a>Sueco</li><li class="dropdown-item">
+            <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja"></a>Portugués</li><li class="dropdown-item">
+             <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he"></a>
+              </li>Taxonomías<li class="dropdown-item">
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar"></a>Categorías</li><li class="dropdown-item">
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv"></a>Archivos</li><li class="dropdown-item">
+              <a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">
+              </a>
+
+</li><li class="dropdown-item divider">Desarrollado por...</li>
+              <li class="dropdown-header text-dark">
               </li>
-              <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-dark">i18n</li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Inglés</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Español</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">Alemán</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Francés</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Ruso</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Chino</a></li>
-            <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">Coreano</a></li>
-             <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja">Japonés</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebreo</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">Árabe</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Sueco</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">Portugués</a></li>
-              <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-dark">Taxonomías</li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/categories/index.html{{lang}}">Categorías</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="/archives/index.html{{lang}}">Archivos</a></li>
-            </ul>
+              <li class="dropdown-item">
+            <a class="nav-link text-dark" href="/categories/index.html{{lang}}">
+          </a>
           </li>
+        <li class="dropdown-item">&nbsp;<a class="nav-link text-dark" href="/archives/index.html{{lang}}"></a></li></ul>
+		</li>
+        <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
+            active
+            {% endif %}">
+          <a class="nav-link" href="/powered-by.html{{lang}}">
 
-<li class="nav-item{% if path|starts_with:"/powered-by.md" %}
-            activo
-            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">Desarrollado por...</a>
-          </li>
-        </ul>
-		</div>
-        <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right" method="GET">
-          <input type="hidden" name="lang" value="{{ lang }}" />
-          <input type="hidden" name="markdown_search" value="1" />
-          <input class="form-control me-2" type="text" name="regex"
-               placeholder="Búsqueda recursiva PCRE" valor="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
-	    </form>
-  </div>
-</header>
-
-{% block alert %}
-  {% if alert %}
-  <div class="alert alert-dismissible alert-info container">
-    <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal"></button>
-    {{ alert|markdown }}
-  </div>
-  {% endif %}
-{% endblock %}
+{% ifequal path|dirname "/" %}
+          {% else %}
+          </a>
+	    </li></ul>
+  {{ path|dirname }}
+</div>
+  {% endifequal %}
+  {{ lang }}
 
 <style type="text/css">
-{% ifequal lang ".he" %} .right {float:left !important; text-align: right !important}{% endifequal %}{% ifequal lang ".ar" %}.right {float:left !important; text-align: right !important}{% endifequal %}
-{% ifequal lang ".he" %} div.breadcrumbs {float:left}{% endifequal %}{% ifequal lang ".ar" %}div.breadcrumbs {float:left}{% endifequal %}
+{{ regex }} .right {float:left !important; text-align: right !important}{% block alert %}{% if alert %}.right {float:left !important; text-align: right !important}{{ alert|markdown }}
+{% endif %} div.breadcrumbs {float:left}{% endblock %}{% ifequal lang ".he" %}div.breadcrumbs {float:left}{% endifequal %}
 </style>
 
-<div class="container theme-showcase" id="content">
-  {% block content %}
-  <div class="breadcrumbs">
-      {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-        <img src="/images/edit.png" alt="Edit Icon" />
-      </a>
+<form id="search" action="/dynamic/search{% ifequal lang ".ar" %}{% endifequal %}{% ifequal lang ".he" %}{% endifequal %}/" class="d-flex form-inline right" method="GET">
+    {% ifequal lang ".ar" %}
+    <input type="hidden" name="lang" value="{% endifequal %}" />
+  {% block content %}&nbsp;&nbsp;<input type="hidden" name="markdown_search" value="1" />
+  <input class="form-control me-2" type="text" name="regex"
+               placeholder="PCRE Recursive Search" value="{{ breadcrumbs|safe }}" />
+<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
+  <i class="fa fa-search">
+  </i>{{ headers.title|safe }}</button>
+      </form>{{ content|markdown }}</div>
+        {% endblock %}
+
+</header>
+      <div class="alert alert-dismissible alert-info container">
+  <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#date-filter-modal">
+  </button>
   </div>
-  <h1>{{ headers.title|safe }}</h1>
-  <div class="jumbotron">{{ content|markdown }}</div>
-  {% endblock %}
-
-<footer>{% block footer %}{{footer|safe}}{% endblock footer %}</footer><!--
-  <script src="/editor.md/js/raphael.min.js"></script>
-  <script src="/editor.md/js/underscore.min.js"></script>
-  <script src="/editor.md/js/flowchart.min.js"></script>
-  <script src="/editor.md/js/jquery.flowchart.min.js"></script>
-  <script src="/editor.md/js/sequence-diagram.min.js"></script> -->
-
-<script src="/editor.md/js/d3.min.js"></script>
-  <script src="/editor.md/js/wasm/index.min.js"></script>
-  <script src="/editor.md/js/d3-graphviz.js"></script>
-  <script src="/editor.md/lib/mermaid.min.js"></script>
-  <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
+  <div class="container theme-showcase" id="content">
+<div class="breadcrumbs">&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))"><img src="/images/edit.png" alt="Edit Icon" /></a></div>
+<h1>
+      </h1>Ir al principio<div class="jumbotron">&nbsp;|&nbsp;</div><footer>&nsbp;Orión&trade;<hr>&nbsp;|&nbsp;<form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">Contacto<input type="hidden" name="nonce" value="{{ nonce }}" />&nbsp;|&nbsp;<input type="hidden" name="lang" value="{{ lang }}" /><input type="hidden" name="subject" value="Orion Mailing List" /><input class="form-control me-2" type="email" name="email"
+        placeholder="Join Mailing List" /><button type="submit" name="submit" value="1" class="btn btn-outline-danger">&nbsp;|&nbsp;&copy;2026&nbsp;<i class="fa fa-envelope-open"></i></button>&nbsp;Todos&nbsp;derechos&nbsp;reservado.
+      {% block footer %}{{footer|safe}}{% endblock footer %}
+      </form>
+      <script src="/editor.md/js/d3.min.js"></script>
+<script src="/editor.md/js/wasm/index.min.js"></script>
+<script src="/editor.md/js/d3-graphviz.js"></script>
+<script src="/editor.md/lib/mermaid.min.js"></script>
+<script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script src="/editor.md/lib/copy-tex.js"></script>
@@ -234,6 +234,7 @@ if (permission === "granted") {
 	}
   </script>
   {% block javascript %}{% endblock %}
-</div>
-</body>
-</html>
+  <a id="go-to-top" onClick="$('base').remove()" href="#top">
+  </a>
+  <a href="https://sunstarsys.com/orion/">
+  
