@@ -98,17 +98,17 @@ wardley-beta
   anchor Business [0.95, 0.35]
   component Cloud Hosting [0.80, 0.80]
   component Wiki [0.60, 0.65]
-  component Online Editor [0.70, 0.60]
-  component Version Control [0.3, 0.25]
-  component SSG [0.45, 0.30]
+  component Markdown Editor [0.70, 0.60]
+  component Version Control [0.30, 0.25]
+  component SSG [0.40, 0.30]
   Business -> Wiki
   Wiki -> Cloud Hosting
-  Wiki -> Online Editor
+  Wiki -> Markdown Editor
   Version Control -> Wiki
   SSG -> Wiki
   evolve SSG 0.70
   evolve Version Control 0.9
-  note "Distributed Version Control allows SSG to evolve faster" [0.2, 0.49]
+  note Distributed Version Control allows SSG to evolve faster [0.2, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->
