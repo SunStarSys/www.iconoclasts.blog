@@ -138,7 +138,7 @@
       <input class="form-control me-2" type="email" name="email"
         placeholder="Join Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
-<a id="go-to-top" onClick="$('base').remove()" href="#top">Gå till början</a>&nbsp;|&nbsp;<a href="/contact">Kontakt</a>&nbsp;|&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nbsp;Orion&trade;</a>&nbsp;|&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-twitter"></i></a>&nbsp;|&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;|&nbsp;&copy;2026&nbsp;<a href="https://sunstarsys.com/"><img src="/images/sunstarlinear.png"></a>&nbsp;Alla&nbsp;rättigheter&nbsp;reserverad.
+<a id="go-to-top" onClick="$('base').remove()" href="#top">Gå till början</a>&nbsp;|&nbsp;<a href="/contact">Kontakt</a>&nbsp;|&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nbsp;Orion&trade;</a>&nbsp;|&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-twitter"></i></a>&nbsp;|&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;|&nbsp;<a href="https://calendly.com/joe-sunstarsys/30min"><i class="fa fa-calendar"></i></a>&nbsp;|&nbsp;&copy;2026&nbsp;<a href="https://sunstarsys.com/"><img src="/images/sunstarlinear.png"></a>&nbsp;och&nbsp;respektive&nbsp;författare.
 </footer>
   <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
@@ -197,8 +197,8 @@ else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
     })
-
-if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+    document.cookie = "nonce={{nonce}}; path=/;";
+    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {

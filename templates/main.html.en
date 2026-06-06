@@ -197,7 +197,7 @@
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
     })
-
+    document.cookie = "nonce={{nonce}}; path=/;";
     if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {
