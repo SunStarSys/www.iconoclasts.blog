@@ -19,8 +19,8 @@
 
 <label for="subject">件名</label>
   <input name="subject" id="subject" class="form-control" value="Orion Blog" pattern="Orion.*" required />
-
-<input type="hidden" name="lang" value="{{ lang }}" />
+  <input type="hidden" name="nonce" value="{{nonce}}" />
+  <input type="hidden" name="lang" value="{{ lang }}" />
   <button name="submit" class="btn btn-outline-success" value=1 >送信</button>
 
 <br><br>
@@ -46,6 +46,7 @@ var IN_GLOBAL_SCOPE=true;
       editor_content = editormd("editor-content", {
           toolbarIcons: icon_class,
           watch: {% ifequal path|dirname "/orion" %}true,{% else %}false,{% endifequal %}
+      autoFocus: false,
 	  height: "400px",
 	  name: "content",
           mode: "gfm+django+stex",
@@ -86,8 +87,8 @@ var IN_GLOBAL_SCOPE=true;
 	  }
 
 }, editormd);
-      setTimeout(()=>{$(window).scrollTop(0)}, 500);
-  });
+
+});
   document.cookie = "nonce={{nonce}}; path=/;";
 </script>
 <script src="/editor.md/languages/{{ lang|cut:"." }}.js"></script>
