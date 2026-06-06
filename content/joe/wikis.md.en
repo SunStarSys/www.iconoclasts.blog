@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=42618
+status: verified=42622
 Categories: Orion
 Dependencies: *.md.en
 
@@ -132,7 +132,7 @@ In a modern KMS starting fresh, version control isn't just a "nice-to-have wiki 
 ## The Jamstack (SSG) Wiki Space
 
 ```mermaid
-{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter code:"mermaid"|slice:3|safe %}
 {% ssi `/joe/index.md.en` %}
 {% endfilter %}
 ```
