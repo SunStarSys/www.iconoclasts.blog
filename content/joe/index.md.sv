@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=42287
+status: verifierad=42302
 title: Joes slumpartade tankar
 ---
 
@@ -77,7 +77,7 @@ pie
 
 ```asy
 {% filter code:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.sv` %}
 {% endfilter %}
 ```
 
@@ -96,21 +96,21 @@ pie
 
 ```mermaid
 wardley-beta
-title Tea Shop Value Chain
-Ankarverksamhet [0.95, 0,63]
-component "Kopp te" [0,79, 0.61]
-komponent te [0.63, 0,81]
-component "Varmvatten" [0,52, 0.80]
-komponent vattenkokare [0.43, 0,35]
-komponentström [0.10, 0,70]
-Företag -> "Kopp te"
-"Kopp te" -> Te
-"Kopp te" -> "Varmvatten"
-"Varmvatten" -> Vattenkokare
-Vattenkokare -> Kraft
-utveckla vattenkokare 0.62
-utveckla effekt 0.89
-note "Standardiseringseffekt gör att Kettles kan utvecklas snabbare" [0,30, 0.49]
+  title Tea Shop Value Chain
+  Ankarverksamhet [0.95, 0,63]
+  component "Kopp te" [0,79, 0.61]
+  komponent te [0.63, 0,81]
+  component "Varmvatten" [0,52, 0.80]
+  komponent vattenkokare [0.43, 0,35]
+  komponentström [0.10, 0,70]
+  Företag -> "Kopp te"
+  "Kopp te" -> Te
+  "Kopp te" -> "Varmvatten"
+  "Varmvatten" -> Vattenkokare
+  Vattenkokare -> Kraft
+  utveckla vattenkokare 0.62
+  utveckla effekt 0.89
+  note "Standardiseringseffekt gör att Kettles kan utvecklas snabbare" [0,30, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->

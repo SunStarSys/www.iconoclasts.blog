@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
-status: 確認済み=42287
+status: 確認済み=42302
 title: Joe's Random Thoughtsたった今
 ---
 
@@ -77,7 +77,7 @@ pie
 
 ```asy
 {% filter code:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.ja` %}
 {% endfilter %}
 ```
 
@@ -96,21 +96,21 @@ pie
 
 ```mermaid
 wardley-beta
-title Tea Shop Value Chain
-アンカー事業[0.95、0.63]
-component "紅茶カップ" [0.79, 0.61]
-コンポーネントティー[0.63、0.81]
-component "温水" [0.52, 0.80]
-コンポーネントケトル[0.43、0.35]
-コンポーネント 電源[0.10、0.70]
-ビジネス-> "紅茶カップ"
-"紅茶カップ" -> お茶
-"紅茶カップ" -> "温水"
-"温水" -> ケトル
-ケトル->パワー
-進化ケトル0.62
-進化力0.89
-note "電力の標準化により、Kettlesはより迅速に進化" [0.30, 0.49]
+  title Tea Shop Value Chain
+  アンカー事業[0.95、0.63]
+  component "紅茶カップ" [0.79, 0.61]
+  コンポーネントティー[0.63、0.81]
+  component "温水" [0.52, 0.80]
+  コンポーネントケトル[0.43、0.35]
+  コンポーネント 電源[0.10、0.70]
+  ビジネス-> "紅茶カップ"
+  "紅茶カップ" -> お茶
+  "紅茶カップ" -> "温水"
+  "温水" -> ケトル
+  ケトル->パワー
+  進化ケトル0.62
+  進化力0.89
+  note "電力の標準化により、Kettlesはより迅速に進化" [0.30, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->

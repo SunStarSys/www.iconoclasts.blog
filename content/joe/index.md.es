@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: heyoka, iconoclasta
-status: verificado=42287
+status: verificado=42302
 title: Los pensamientos aleatorios de Joe
 ---
 
@@ -77,7 +77,7 @@ pie
 
 ```asy
 {% filter code:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.es` %}
 {% endfilter %}
 ```
 
@@ -96,21 +96,21 @@ pie
 
 ```mermaid
 wardley-beta
-title Tea Shop Value Chain
-ancla Negocio [0.95, 0,63]
-component "Taza de té" [0,79, 0.61]
-componente té [0.63, 0,81]
-component "Agua caliente" [0,52, 0.80]
-Hervidor de componentes [0.43, 0,35]
-Potencia del componente [0.10, 0,70]
-Negocio -> "Taza de té"
-"Taza de té" -> Té
-"Taza de té" -> "Agua caliente"
-"Agua caliente" -> Hervidor
-Caldera -> Potencia
-evolucionar Hervidor 0.62
-evolucionar Poder 0.89
-note "La estandarización de la potencia permite a Kettles evolucionar más rápido" [0,30, 0.49]
+  title Tea Shop Value Chain
+  ancla Negocio [0.95, 0,63]
+  component "Taza de té" [0,79, 0.61]
+  componente té [0.63, 0,81]
+  component "Agua caliente" [0,52, 0.80]
+  Hervidor de componentes [0.43, 0,35]
+  Potencia del componente [0.10, 0,70]
+  Negocio -> "Taza de té"
+  "Taza de té" -> Té
+  "Taza de té" -> "Agua caliente"
+  "Agua caliente" -> Hervidor
+  Caldera -> Potencia
+  evolucionar Hervidor 0.62
+  evolucionar Poder 0.89
+  note "La estandarización de la potencia permite a Kettles evolucionar más rápido" [0,30, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->
