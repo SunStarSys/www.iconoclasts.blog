@@ -77,7 +77,7 @@ pie
 
 ```asy
 {% filter code:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.es` %}
+{% ssi `/joe/stochastic-trace-formula.md.en` %}
 {% endfilter %}
 ```
 
