@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=42268
+status: verifierad=42287
 title: Joes slumpartade tankar
 ---
 
