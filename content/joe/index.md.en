@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=42614
+status: verified=42630
 keywords: heyoka, iconoclast
 ---
 
@@ -93,7 +93,7 @@ pie
 ### Sandbox: Mermaid wardley-beta diagram
 
 ```mermaid
-{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter safe|code:"mermaid"|grep:"wardley"|slice:0|safe %}
 {% ssi `/joe/wikis.md.en` %}
 {% endfilter %}
 ``
