@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: draft
+status: verified=42551
 keywords: heyoka, iconoclast
 ---
 
@@ -37,6 +37,37 @@ If that sounds like you, please [request a demo today](/contact)!
 
 ### Plan
 
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat {{projects.headers.dateformat|safe}}
+{% for p,q in projects.content %}
+    section {{p}}
+{% for k,v in q %}
+    {{k|safe}} :{{v|safe}}
+{% endfor %}
+{% endfor %}
+```
+
+-----
+
+```mermaid
+pie
+     title 2026 Q2 Budget Priorities
+	"Marketing and Advertising" : 60
+    "Development" : 20
+    "Operations" : 20
+```
+
+-----
+
+### Sandbox: SSI Mindmap
+
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+```
 
 -----
 
