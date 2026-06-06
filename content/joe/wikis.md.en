@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=42622
+status: verified=42626
 Categories: Orion
 Dependencies: *.md.en
 
@@ -132,9 +132,24 @@ In a modern KMS starting fresh, version control isn't just a "nice-to-have wiki 
 ## The Jamstack (SSG) Wiki Space
 
 ```mermaid
-{% filter code:"mermaid"|slice:3|safe %}
-{% ssi `/joe/index.md.en` %}
-{% endfilter %}
+wardley-beta
+  title Jamstack Wiki Value Chain
+  anchor Business [0.95, 0.35]
+  component Cloud Hosting [0.80, 0.80]
+  component Agentic AI [0.50, 0.15]
+  component Jamstack Wiki [0.70, 0.55]
+  component Markdown Editor [0.60, 0.40]
+  component Version Control [0.20, 0.65]
+  component SSG [0.35, 0.80]
+  Business -> Jamstack Wiki
+  Agentic AI -> Markdown Editor
+  Jamstack Wiki -> Cloud Hosting
+  Jamstack Wiki -> Markdown Editor
+  Version Control -> SSG
+  SSG -> Jamstack Wiki
+  evolve Version Control 0.80
+  evolve Agentic AI 0.55
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.4, 0.30]
 ```
 
 Several version control-enabled wikis (especially those with true wiki-like editing but powered by Git or similar for versioning) are built around static site generation (SSG) principles. These store content as plain text files (usually Markdown) in a Git repo, use Git itself as the version control backend, and generate static HTML sites from those files — either on-the-fly (via a lightweight server) or pre-built for deployment (e.g., to GitHub Pages, Netlify, etc.).

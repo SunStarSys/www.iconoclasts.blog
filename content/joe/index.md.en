@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=42610
+status: verified=42614
 keywords: heyoka, iconoclast
 ---
 
@@ -93,24 +93,9 @@ pie
 ### Sandbox: Mermaid wardley-beta diagram
 
 ```mermaid
-wardley-beta
-  title Jamstack Wiki Value Chain
-  anchor Business [0.95, 0.35]
-  component Cloud Hosting [0.80, 0.80]
-  component Agentic AI [0.50, 0.15]
-  component Jamstack Wiki [0.70, 0.55]
-  component Markdown Editor [0.60, 0.40]
-  component Version Control [0.20, 0.65]
-  component SSG [0.35, 0.80]
-  Business -> Jamstack Wiki
-  Agentic AI -> Markdown Editor
-  Jamstack Wiki -> Cloud Hosting
-  Jamstack Wiki -> Markdown Editor
-  Version Control -> SSG
-  SSG -> Jamstack Wiki
-  evolve Version Control 0.80
-  evolve Agentic AI 0.55
-  note "Standardized Version Control allows Agentic AI to evolve faster" [0.4, 0.30]
-```
+{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+``
 
 <!-- $Date$ $Author$ $Revision$ -->
