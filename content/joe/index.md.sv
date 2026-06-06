@@ -1,7 +1,8 @@
 ---
+categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=39046
+status: verifierad=42268
 title: Joes slumpartade tankar
 ---
 
@@ -12,7 +13,7 @@ title: Joes slumpartade tankar
 
 </div>
 
-## Välkommen!
+## Välkommen! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
 {# lede #}Vi övar [Öppen vetenskap](triple-products) här{# lede #}.
 
@@ -72,11 +73,44 @@ pie
 
 -----
 
+### Sandlåda: SSI Asymptote vektorgrafik
+
+```asy
+{% filter code:"asy"|slice:0|safe %}
+{% ssi `/joe/stochastic-trace-formula.md.sv` %}
+{% endfilter %}
+```
+
+-----
+
 ### Sandlåda: SSI-genererad tabell &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
-{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}| extra | roligt | nedan | linje |
+
+-----
+
+### Sandlåda: Mermaid wardley-beta diagram
+
+```mermaid
+wardley-beta
+title Tea Shop Value Chain
+Ankarverksamhet [0.95, 0,63]
+component "Kopp te" [0,79, 0.61]
+komponent te [0.63, 0,81]
+component "Varmvatten" [0,52, 0.80]
+komponent vattenkokare [0.43, 0,35]
+komponentström [0.10, 0,70]
+Företag -> "Kopp te"
+"Kopp te" -> Te
+"Kopp te" -> "Varmvatten"
+"Varmvatten" -> Vattenkokare
+Vattenkokare -> Kraft
+utveckla vattenkokare 0.62
+utveckla effekt 0.89
+note "Standardiseringseffekt gör att Kettles kan utvecklas snabbare" [0,30, 0.49]
+```
 
 <!-- $Date$ $Author$ $Revision$ -->

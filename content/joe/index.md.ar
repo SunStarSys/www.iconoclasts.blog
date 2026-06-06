@@ -1,7 +1,8 @@
 ---
+categories: ~
 dependencies: '*.md.ar'
 keywords: هيوكا، ايكونوكلاست
-status: التحقق = 39046
+status: التحقق = 42268
 title: أفكار جو العشوائية
 ---
 
@@ -12,7 +13,7 @@ title: أفكار جو العشوائية
 
 </div>
 
-## مرحبًا!
+## مرحبًا! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
 {# lede #}نحن نمارس [العلوم المفتوحة](triple-products) هنا{# lede #}.
 
@@ -69,13 +70,47 @@ pie
 {% ssi `/joe/wikis.md.ar` %}
 {% endfilter %}
 ```
+
+-----
+
+### صندوق الحماية: SSI Asymptote Vector Graphics
+
+```asy
+{% filter code:"asy"|slice:0|safe %}
+{% ssi `/joe/stochastic-trace-formula.md.ar` %}
+{% endfilter %}
+```
+
 -----
 
 ### صندوق الحماية: جدول SSI الذي تم إنشاؤه &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
-{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}| إضافة | متعة | أسفل | خط |
+
+-----
+
+### Sandbox: حورية البحر واردلي بيتا الرسم البياني
+
+```mermaid
+wardley-beta
+title Tea Shop Value Chain
+أعمال الارتساء [0.95، 0.63]
+component "كأس الشاي" [0.79, 0.61]
+مكون الشاي [0.63، 0.81]
+component "الماء الساخن" [0.52, 0.80]
+عنصر غلاية [0.43، 0.35]
+مكون الطاقة [0.10، 0.70]
+الأعمال -> "كأس الشاي"
+"كأس الشاي" -> شاي
+"كأس الشاي" -> "الماء الساخن"
+"الماء الساخن" -> غلاية
+غلاية -> السلطة
+تطوير غلاية 0.62
+تطوير الطاقة 0.89
+note "قوة التوحيد تسمح للغلايات بالتطور بشكل أسرع" [0.30, 0.49]
+```
 
 <!-- $Date$ $Author$ $Revision$ -->

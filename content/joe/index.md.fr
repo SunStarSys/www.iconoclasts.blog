@@ -1,7 +1,8 @@
 ---
+categories: ~
 dependencies: '*.md.fr'
 keywords: heyoka, iconoclaste
-status: vérifié=39046
+status: vérifié=42268
 title: Les pensées aléatoires de Joe
 ---
 
@@ -12,7 +13,7 @@ title: Les pensées aléatoires de Joe
 
 </div>
 
-## Bienvenue !
+## Bienvenue ! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
 {# lede #}Nous pratiquons [Science ouverte](triple-products) ici{# lede #}.
 
@@ -72,11 +73,44 @@ pie
 
 -----
 
+### Sandbox : graphiques vectoriels SSI Asymptote
+
+```asy
+{% filter code:"asy"|slice:0|safe %}
+{% ssi `/joe/stochastic-trace-formula.md.fr` %}
+{% endfilter %}
+```
+
+-----
+
 ### Modèle d'environnement restreint : Table générée par SSI &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
-{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}| additionnel | amusement | inférieur | ligne |
+
+-----
+
+### Sandbox : Schéma de la version bêta de Mermaid
+
+```mermaid
+wardley-beta
+title Tea Shop Value Chain
+ancre Entreprise [0.95, 0,63]
+component "Tasse de thé" [0,79, 0.61]
+composant Thé [0.63, 0,81]
+component "Eau chaude" [0,52, 0.80]
+composant Bouilloire [0.43, 0,35]
+puissance du composant [0.10, 0,70]
+Entreprise -> "Tasse de thé"
+"Tasse de thé" -> Thé
+"Tasse de thé" -> "Eau chaude"
+"Eau chaude" -> Bouilloire
+Bouilloire -> Puissance
+Bouilloire évolutive 0.62
+Évoluer Puissance 0.89
+note "Standardiser la puissance permet aux bouilloires d'évoluer plus rapidement" [0,30, 0.49]
+```
 
 <!-- $Date$ $Author$ $Revision$ -->

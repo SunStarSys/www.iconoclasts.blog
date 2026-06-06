@@ -1,7 +1,8 @@
 ---
+categories: ~
 dependencies: '*.md.es'
 keywords: heyoka, iconoclasta
-status: draft
+status: verificado=42268
 title: Los pensamientos aleatorios de Joe
 ---
 
@@ -12,7 +13,7 @@ title: Los pensamientos aleatorios de Joe
 
 </div>
 
-## Bienvenido
+## Bienvenido [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
 {# lede #}Practicamos [Ciencia abierta](triple-products) aquí{# lede #}.
 
@@ -72,11 +73,44 @@ pie
 
 -----
 
+### Sandbox: Gráficos vectoriales de asíntota de SSI
+
+```asy
+{% filter code:"asy"|slice:0|safe %}
+{% ssi `/joe/stochastic-trace-formula.md.es` %}
+{% endfilter %}
+```
+
+-----
+
 ### Sandbox: tabla generada por SSI &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
-{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}| adicional | diversión | infra | línea |
+
+-----
+
+### Sandbox: Diagrama de sirena
+
+```mermaid
+wardley-beta
+title Tea Shop Value Chain
+ancla Negocio [0.95, 0,63]
+component "Taza de té" [0,79, 0.61]
+componente té [0.63, 0,81]
+component "Agua caliente" [0,52, 0.80]
+Hervidor de componentes [0.43, 0,35]
+Potencia del componente [0.10, 0,70]
+Negocio -> "Taza de té"
+"Taza de té" -> Té
+"Taza de té" -> "Agua caliente"
+"Agua caliente" -> Hervidor
+Caldera -> Potencia
+evolucionar Hervidor 0.62
+evolucionar Poder 0.89
+note "La estandarización de la potencia permite a Kettles evolucionar más rápido" [0,30, 0.49]
+```
 
 <!-- $Date$ $Author$ $Revision$ -->

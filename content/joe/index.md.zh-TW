@@ -1,7 +1,8 @@
 ---
+categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 東京都，東京都
-status: 驗證 =39046
+status: 驗證 =42268
 title: Joe 的隨機思維
 ---
 
@@ -12,7 +13,7 @@ title: Joe 的隨機思維
 
 </div>
 
-## 歡迎！
+## 歡迎！[:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
 {# lede #}我們實踐[開放科學](triple-products) 這裡{# lede #}.
 
@@ -55,7 +56,7 @@ gantt
 ```mermaid
 pie
      title 2026 Q2 Budget Priorities
-	"行銷與廣告" : 60
+	"行銷與廣告" : 60 歲
     "開發" : 20
     "作業" : 20
 ```
@@ -72,11 +73,44 @@ pie
 
 -----
 
+### 封閉測試環境：SSI Asymptote Vector Graphics
+
+```asy
+{% filter code:"asy"|slice:0|safe %}
+{% ssi `/joe/stochastic-trace-formula.md.zh-TW` %}
+{% endfilter %}
+```
+
+-----
+
 ### 封閉測試環境：SSI 產生的表格&mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
-{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}| 其他 | 有趣 | 下方 | 明細行 |
+
+-----
+
+### 沙箱：Mermaid wardley-beta 圖表
+
+```mermaid
+wardley-beta
+title Tea Shop Value Chain
+錨定業務[0.95、0.63]
+component "茶杯" [0.79, 0.61 歲]
+成分茶[0.63、0.81]
+component "熱水" [0.52, 0.80 歲]
+組件電熱水壺[0.43、0.35]
+組件電源[0.10、0.70]
+業務 -> "茶杯"
+"茶杯" -> 茶
+"茶杯" -> "熱水"
+"熱水" -> 水壺
+電熱水壺 -> 電力
+演化電熱水壺 0.62
+演化力 0.89
+note "標準化能力使熱水壺的發展速度更快" [0.30, 0.49]
+```
 
 <!-- $Date$ $Author$ $Revision$ -->

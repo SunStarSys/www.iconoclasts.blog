@@ -1,7 +1,8 @@
 ---
+categories: ~
 dependencies: '*.md.ko'
 keywords: 헤이오카, iconoclast
-status: 확인=39046
+status: 확인=42268
 title: 조의 무작위 생각
 ---
 
@@ -12,7 +13,7 @@ title: 조의 무작위 생각
 
 </div>
 
-## 환영합니다!
+## 환영합니다! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
 {# lede #}우리는 연습 [과학 열기](triple-products) 여기{# lede #}.
 
@@ -72,11 +73,44 @@ pie
 
 -----
 
+### 샌드박스: SSI Asymptote 벡터 그래픽
+
+```asy
+{% filter code:"asy"|slice:0|safe %}
+{% ssi `/joe/stochastic-trace-formula.md.ko` %}
+{% endfilter %}
+```
+
+-----
+
 ### 샌드박스: SSI 생성 테이블 &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
-{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}| 추가 | 재미 | 아래 | 줄
+
+-----
+
+### 샌드박스: 인어 워들리 베타 다이어그램
+
+```mermaid
+wardley-beta
+title Tea Shop Value Chain
+앵커 비즈니스 [0.95, 0.63]
+component "차 컵" [0.79, 0.61]
+구성요소 차 [0.63, 0.81]
+component "뜨거운 물" [0.52, 0.80]
+구성 요소 주전자 [0.43, 0.35]
+구성요소 전원 [0.10, 0.70]
+비즈니스 -> "차 컵"
+"차 컵" -> 차
+"차 컵" -> "뜨거운 물"
+"뜨거운 물" -> 주전자
+주전자 -> 전원
+전개 주전자 0.62
+진화 힘 0.89
+note "표준화된 파워를 통해 Kettles의 발전 속도 향상" [0.30, 0.49]
+```
 
 <!-- $Date$ $Author$ $Revision$ -->

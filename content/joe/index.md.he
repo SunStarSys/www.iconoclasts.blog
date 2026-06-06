@@ -1,7 +1,8 @@
 ---
+categories: ~
 dependencies: '*.md.he'
 keywords: הייוקה, איקונוקלסט
-status: אומתו 39046
+status: אומתו = 42268
 title: מחשבות אקראיות של ג'ו
 ---
 
@@ -12,7 +13,7 @@ title: מחשבות אקראיות של ג'ו
 
 </div>
 
-## ברוכים הבאים!
+## ברוכים הבאים! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
 {# lede #}אנו מתאמנים [מדע פתוח](triple-products) כאן{# lede #}.
 
@@ -72,11 +73,44 @@ pie
 
 -----
 
+### שולחן חול: גרפיקת וקטור אסימפטוטה של SSI
+
+```asy
+{% filter code:"asy"|slice:0|safe %}
+{% ssi `/joe/stochastic-trace-formula.md.he` %}
+{% endfilter %}
+```
+
+-----
+
 ### שולחן חול: טבלה שהופקה על ידי SSI &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
-{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}עוד | כיף | למטה | קו |
+
+-----
+
+### ארגז חול: דיאגרמת Mermaid wardley-beta
+
+```mermaid
+wardley-beta
+title Tea Shop Value Chain
+עוגן עסקי [0.95, 0.63]
+component "כוס תה" [0.79, 0.61]
+תה רכיב [0.63, 0.81]
+component "מים חמים" [0.52, 0.80]
+קומקום רכיבים [0.43, 0.35]
+רכיב Power [0.10, 0.70]
+עסק -> "כוס תה"
+"כוס תה" -> תה
+"כוס תה" -> "מים חמים"
+"מים חמים" -> קומקום
+קומקום -> כוח
+להתפתח קומקום 0.62
+כוח מתפתח 0.89
+note "כוח התקינה מאפשר לקטלס להתפתח מהר יותר" [0.30, 0.49]
+```
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -1,7 +1,8 @@
 ---
+categories: ~
 dependencies: '*.md.pt-BR'
 keywords: heyoka, iconoclasta
-status: verificado=39046
+status: verificado=42268
 title: Pensamentos Aleatórios de Joe
 ---
 
@@ -12,7 +13,7 @@ title: Pensamentos Aleatórios de Joe
 
 </div>
 
-## Bem-vindo!
+## Bem-vindo! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
 {# lede #}Nós praticamos [Ciência aberta](triple-products) aqui{# lede #}.
 
@@ -72,11 +73,44 @@ pie
 
 -----
 
+### Sandbox: Gráficos vetoriais assintóticos do SSI
+
+```asy
+{% filter code:"asy"|slice:0|safe %}
+{% ssi `/joe/stochastic-trace-formula.md.pt-BR` %}
+{% endfilter %}
+```
+
+-----
+
 ### Sandbox: Tabela gerada pelo SSI &mdash; {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
-{% for row in table.content %}| {{row.r_type}} | {{row.perl_equivalent}} | {{row.pdl_equivalent}} | {{row.notes}} |
+{% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}| adicional | diversão | abaixo | linha |
+
+-----
+
+### Sandbox: Diagrama da sereia wardley-beta
+
+```mermaid
+wardley-beta
+title Tea Shop Value Chain
+âncora Negócios [0.95 de 0,63]
+component "Xícara de chá" [0,79, 0.61]
+chá componente [0.63 de 0,81]
+component "Água quente" [0,52, 0.80]
+Chaleira [0.43 de 0,35]
+Alimentação do componente [0.10, 0,70]
+Negócios -> "Xícara de chá"
+"Xícara de chá" -> Chá
+"Xícara de chá" -> "Água quente"
+"Água quente" -> Chaleira
+Chaleira -> Energia
+evoluir Chaleira 0.62
+evoluir Poder 0.89
+note "Padronizar a potência permite que as chaleiras evoluam mais rapidamente" [0,30, 0.49]
+```
 
 <!-- $Date$ $Author$ $Revision$ -->
