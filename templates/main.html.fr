@@ -134,7 +134,7 @@
 <form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
       <input type="hidden" name="nonce" value="{{ nonce }}" />
       <input type="hidden" name="lang" value="{{ lang }}" />
-      <input type="hidden" name="subject" value="Orion Mailing List" />
+      <input type="hidden" name="subject" value="Orion Blog Mailing List" />
       <input class="form-control me-2" type="email" name="email"
         placeholder="Join Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
