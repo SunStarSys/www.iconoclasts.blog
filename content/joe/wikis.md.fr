@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.fr'
 keywords: wiki, connaissance, kms, orion, subversion
-status: vérifié=32932
+status: vérifié=42630
 title: Wikis dans les systèmes de gestion des connaissances
 ---
 
@@ -50,7 +50,7 @@ mindmap
 
 Imaginez si toutes les idées brillantes, les solutions de contournement des clients, les leçons apprises et les idées à moitié finies que votre équipe a jamais eues… ne disparaissaient pas dans les fils de discussion Slack, les boîtes de réception de courriels ou les pages Notion oubliées.
 
-Un système de gestion des connaissances est le cerveau unique de votre entreprise :
+A knowledge management system is the single brain of your company:
 
 - Il capture automatiquement les connaissances pendant que les gens travaillent (pas de travail supplémentaire occupé)
 - Il comprend le contexte et connecte les idées connexes entre les documents, les chats, les tickets, les réunions
@@ -67,7 +67,7 @@ Les wikis restent un élément fondamental dans de nombreuses configurations de 
 
 {# lede #}Plateformes Wiki similaires [Orion](https://www.sunstarsys.com/orion/) excellent dans la documentation collaborative et vivante. Ils sont parfaits pour les articles profonds et interconnectés{# lede #} où les équipes co-créent des processus, des décisions d'architecture, des spécifications de produit, des recherches ou "comment nous faisons les choses ici." Le style d'édition ascendante, riche en hyperliens, permet aux connaissances de croître organiquement et de rester à jour grâce aux modifications collectives.
 
-Mais les wikis purs luttent à grande échelle avec :
+But pure wikis struggle at scale with:
 
 - Consommation passive (les gens détestent rechercher des pages sans fin)
 Découverte (vous devez toujours savoir quoi rechercher)
@@ -79,7 +79,7 @@ Les systèmes modernes de gestion des connaissances s'appuient sur des wikis (ou
 
 Le wiki (ou pages structurées de type wiki) devient la couche de connaissances faisant autorité – la "source de vérité" pour un contenu persistant et profondément lié que les humains écrivent et maintiennent.
 
-Le KMS ajoute des couches intelligentes sur le dessus : ingestion automatique de chats / e-mails / réunions / billets, compréhension sémantique, classement de la pertinence en temps réel, surface proactive ("avant de terminer la saisie"), le balisage de l'IA et de la fraîcheur, et les intégrations qui tirent le contenu du wiki dans les flux de travail quotidiens sans forcer les gens à revenir au wiki lui-même.
+The KMS adds intelligent layers on top: ingestion automatique des chats/e-mails/réunions/tickets, compréhension sémantique, classement de la pertinence en temps réel, surface proactive ("avant de terminer la saisie"), le balisage de l'IA et de la fraîcheur, et les intégrations qui tirent le contenu du wiki dans les flux de travail quotidiens sans forcer les gens à revenir au wiki lui-même.
 Result: le wiki cesse d'être un silo ou une corvée – il devient l'épine dorsale de haute qualité, gérée par l'homme, qui nourrit (et est alimenté par) le système toujours plus intelligent.
 
 Les wikis sont toujours le meilleur outil que l'humanité ait inventé pour une connaissance collaborative, interconnectée et éditable à long terme.
@@ -132,6 +132,27 @@ Dans un KMS moderne, le contrôle de version n'est pas seulement un "fonctionnal
 
 -----
 ## L'espace Wiki de Jamstack (SSG)
+
+```mermaid
+wardley-beta
+  title Jamstack Wiki Value Chain
+  anchor Business [0.95, 0.35]
+  component Cloud Hosting [0.80, 0.80]
+  component Agentic AI [0.50, 0.15]
+  component Jamstack Wiki [0.70, 0.55]
+  component Markdown Editor [0.60, 0.40]
+  component Version Control [0.20, 0.65]
+  component SSG [0.35, 0.80]
+  Business -> Jamstack Wiki
+  Agentic AI -> Markdown Editor
+  Jamstack Wiki -> Cloud Hosting
+  Jamstack Wiki -> Markdown Editor
+  Version Control -> SSG
+  SSG -> Jamstack Wiki
+  evolve Version Control 0.80
+  evolve Agentic AI 0.55
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.30, 0.20]
+```
 
 Plusieurs wikis compatibles avec le contrôle des versions (en particulier ceux avec un véritable montage wiki mais alimenté par Git ou similaire pour la gestion des versions) sont construits autour des principes de génération de site statique (SSG). Ceux-ci stockent le contenu sous forme de fichiers texte brut (généralement Markdown) dans un référentiel Git, utilisent Git lui-même comme back-end de contrôle de version et génèrent des sites HTML statiques à partir de ces fichiers - soit à la volée (via un serveur léger) ou prédéfinis pour le déploiement (par exemple, vers GitHub Pages, Netlify, etc.).
 
@@ -195,9 +216,9 @@ Imaginez ce flux de travail avec Orion :
 
 - Auto-summarization: Le LLM lit de longues pages wiki/docs et génère des résumés exécutifs, des TL ;DR ou des versions spécifiques à l'audience (p. ex. "Expliquer cette architecture à un nouveau commercial").
 
-- Aide à la rédaction : Lors de l'édition d'une page wiki, appuyez sur un bouton → LLM suggère des sections, réécrit pour plus de clarté, se traduit en d'autres langues, ou comble les lacunes en fonction des pages connexes.
+- Drafting assistance: Lors de l'édition d'une page wiki, appuyez sur un bouton → LLM suggère des sections, réécrit pour plus de clarté, se traduit en d'autres langues, ou comble les lacunes en fonction des pages connexes.
 
-- Détection des lacunes dans les connaissances : le LLM analyse les journaux de requêtes, les modèles de modification ou les pages obsolètes → indicateurs "Ce guide d'intégration n'est plus à jour" ou "On nous interroge beaucoup sur X mais on n'a pas de page."
+- Knowledge gap detection: Le LLM analyse les journaux de requêtes, les modèles de modification ou les pages obsolètes → indicateurs "Ce guide d'intégration n'est plus à jour" ou "On nous interroge beaucoup sur X mais on n'a pas de page."
 
 Avec l'IA, les wikis restent plus frais avec moins d'efforts manuels ; de nouveaux contenus émergent plus rapidement.
 

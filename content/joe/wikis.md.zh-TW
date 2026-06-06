@@ -2,7 +2,7 @@
 categories: 奧里昂
 dependencies: '*.md.zh-TW'
 keywords: wiki、知識、kms、orion、subversion
-status: 驗證 =32932
+status: 驗證 =42630
 title: 知識管理系統中的 Wiki
 ---
 
@@ -50,7 +50,7 @@ mindmap
 
 想像一下，如果您的團隊有過一半的洞察力、客戶解決方法、經驗教訓和半成效的想法 ... 沒有消失在 Slack 執行緒、電子郵件收件匣或忘記的 Notion 頁面中。
 
-知識管理系統是貴公司的單一大腦：
+A knowledge management system is the single brain of your company:
 
 - 可在工作時自動擷取知識 (無需額外工作)
 - 瞭解情境並連結文件、交談、門票、會議等相關想法
@@ -67,7 +67,7 @@ Wikis 在許多知識管理設定中仍是基礎片段，但在 2026 年，他�
 
 {# lede #}Wiki 平台，如[奧里昂](https://www.sunstarsys.com/orion/) 出席合作、生活文件。它們非常適合用於深度、互連的文章{# lede #} 團隊共同作者流程、架構決策、產品規格、研究或"我們如何做事。" 超連結豐富、由下而上的編輯樣式，可讓知識以組織方式成長，並透過集體編輯保持最新狀態。
 
-但純維基的規模較大，因為：
+But pure wikis struggle at scale with:
 
 - 被動消耗量 (人員討厭搜尋無盡頁面)
 尋找 (您仍然必須知道要搜尋的項目)
@@ -79,7 +79,7 @@ Wikis 在許多知識管理設定中仍是基礎片段，但在 2026 年，他�
 
 此 Wiki (或類似 Wiki 的結構化頁面) 成為授權的長格式知識層 —"真值來源" 人類撰寫和維護的綠色、深層連結的內容。
 
-KMS 在頂部添加智能層：自動從聊天 / 電子郵件 / 會議 / 門票、語意理解、即時相關排名、主動瀏覽 ("在您輸入完成之前")、AI 摘要 / 新鮮度標記，以及將 Wiki 內容提取至日常工作流程的整合，而無需強迫人們回到 Wiki 本身。
+The KMS adds intelligent layers on top: 自動擷取聊天 / 電子郵件 / 會議 / 門票、語意理解、即時相關排名、主動瀏覽 ("在您輸入完成之前")、AI 摘要 / 新鮮度標記，以及將 Wiki 內容提取至日常工作流程的整合，而無需強迫人們回到 Wiki 本身。
 Result: 此維基阻止為孤島或徒步—它成為高品質、人為精心策劃的骨幹，以更聰明且永遠開啟的系統餵食 (並餵食)。
 
 Wikis 仍是人類發明合作、互連、可編輯的長格式知識的最佳工具。
@@ -133,6 +133,27 @@ Wiki 中的版本控制功能是將簡單的協作空間變成可靠且值得信
 -----
 ## Jamstack (SSG) Wiki Space
 
+```mermaid
+wardley-beta
+  title Jamstack Wiki Value Chain
+  anchor Business [0.95, 0.35]
+  component Cloud Hosting [0.80, 0.80]
+  component Agentic AI [0.50, 0.15]
+  component Jamstack Wiki [0.70, 0.55]
+  component Markdown Editor [0.60, 0.40]
+  component Version Control [0.20, 0.65]
+  component SSG [0.35, 0.80]
+  Business -> Jamstack Wiki
+  Agentic AI -> Markdown Editor
+  Jamstack Wiki -> Cloud Hosting
+  Jamstack Wiki -> Markdown Editor
+  Version Control -> SSG
+  SSG -> Jamstack Wiki
+  evolve Version Control 0.80
+  evolve Agentic AI 0.55
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.30, 0.20]
+```
+
 數個啟用版本控制功能的 Wiki (特別是那些使用類似 Wiki 的編輯，但使用 Git 或類似版本設計的 Wiki) 都以靜態網站產生 (SSG) 原則為基礎。這些內容會以純文字檔案 (通常是 Markdown) 儲存在 Git 儲存區域中，使用 Git 本身作為版本控制後端，並且從這些檔案產生靜態 HTML 網站 - 即時 (透過輕量型伺服器) 或預先建置以進行建置 (例如 GitHub 頁面、Netlify 等)。
 
 很遺憾的是，這些 Wiki 沒有任何形式的線上 CMS 式編輯器 UI，因為它們主要著重於由小型開發人員團隊管理的 Git 式靜態網站。內容建立會在其他地方 **進行，因此他們都無法順利將開發人員和內容建立者的整合到相同的系統中。
@@ -185,9 +206,9 @@ LLM 技術 (如 GPT 系列、Claude、Gemini、Llama 變體等大型語言模型
 此外，想像 Orion 的這個工作流程：
 
 1. 您可以使用 Claude 來撰寫程式碼。
-2. 您將 Orion wiki 來源的 git-svn 複製項保留在`繁體中文`.
-3. 您顯示`繁體中文` Claude 並提交數個 Markdown/yaml 檔案，記錄您程式碼的 API。
-4. 您執行`git svn 確認` 將這些變更推送至 Orion，以刊登於您的公司 Wiki！
+2. 您將 Orion wiki 來源的 git-svn 複製項保留在`/foo`.
+3. 您顯示`/foo` Claude 並提交數個 Markdown/yaml 檔案，記錄您程式碼的 API。
+4. 您執行`git svn dcommit` 將這些變更推送至 Orion，以刊登於您的公司 Wiki！
 
 <span class="text-success">如何為您的公司提高流程效率 (且減少無痛)？</span>
 
@@ -195,9 +216,9 @@ LLM 技術 (如 GPT 系列、Claude、Gemini、Llama 變體等大型語言模型
 
 - Auto-summarization: LLM 會讀取較長的 Wiki 頁面 / 文件，並產生執行摘要、TL；DR 或受眾特定版本 (例如，"向新銷售代表說明此架構").
 
-- 製圖協助：在編輯 Wiki 頁面時，點選按鈕 → LLM 會建議區段、重寫說明、翻譯其他語言，或根據相關頁面填補缺口。
+- Drafting assistance: 編輯 Wiki 頁面時，按下按鈕 → LLM 會建議區段、重新撰寫以說明性、轉譯為其他語言，或根據相關頁面填入差距。
 
-- 知識差距偵測：LLM 會分析查詢日誌、編輯模式或過時的頁面 → 旗標"此入職指南已過期" 或"我們被問及 X 批，但沒有專頁。"
+- Knowledge gap detection: LLM 會分析查詢日誌、編輯樣式或過時的頁面 → 旗標"此入職指南已過期" 或"我們被問及 X 批，但沒有專頁。"
 
 藉助 AI，Wiki 可減少手動工作，讓新內容更快出現。
 

@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: wiki, kunskap, kms, orion, subversion
-status: verifierad=32932
+status: verifierad=42630
 title: Wikis i kunskapshanteringssystem
 ---
 
@@ -50,7 +50,7 @@ mindmap
 
 Tänk dig om varje lysande insikt, kundlösning, lärdom och halvfärdig idé ditt team någonsin hade ... inte försvann i Slack trådar, e-postinkorgar eller glömda Notion sidor.
 
-Ett kunskapshanteringssystem är företagets enda hjärna:
+A knowledge management system is the single brain of your company:
 
 - Det fångar kunskap automatiskt medan människor arbetar (ingen extra upptagen arbete)
 - Den förstår sammanhang och kopplar samman relaterade idéer över dokument, chattar, biljetter, möten
@@ -67,7 +67,7 @@ Wikis är fortfarande en grundläggande del i många kunskapshanteringsinställn
 
 {# lede #}Wiki-plattformar som [Orion](https://www.sunstarsys.com/orion/) Excel på kollaborativ, levande dokumentation. De är bra för djupa, sammankopplade artiklar{# lede #} där teamen är medförfattare till processer, arkitekturbeslut, produktspecifikationer, forskning eller "Hur vi gör saker här." Den hyperlänksrika, nedifrån-och-upp-redigeringsstilen låter kunskapen växa organiskt och hålla sig uppdaterad genom kollektiva redigeringar.
 
-Men ren wikis kämpar i stor skala med:
+But pure wikis struggle at scale with:
 
 - Passiv konsumtion (människor hatar att söka ändlösa sidor)
 Upptäckt (du måste fortfarande veta vad du ska söka efter)
@@ -79,7 +79,7 @@ Moderna kunskapshanteringssystem bygger vidare på (eller runt) wikier i ställe
 
 Wikin (eller wikiliknande strukturerade sidor) blir det auktoritativa kunskapsskiktet i lång form – den "källa till sanning" för evergreen, djupt länkat innehåll som människor skriver och underhåller.
 
-KMS lägger till intelligenta lager ovanpå: automatiskt intag från chattar / e-postmeddelanden / möten / biljetter, semantisk förståelse, realtidsrankning av relevans, proaktiv ytbehandling ("innan du skriver klart"), AI-sammanfattning/fräschhetsflaggning och integrationer som drar wiki-innehåll till dagliga arbetsflöden utan att tvinga människor tillbaka till wikin själv.
+The KMS adds intelligent layers on top: automatiskt intag från chattar / e-postmeddelanden / möten / biljetter, semantisk förståelse, realtidsrankning av relevans, proaktiv ytbehandling ("innan du skriver klart"), AI-sammanfattning/fräschhetsflaggning och integrationer som drar wiki-innehåll till dagliga arbetsflöden utan att tvinga människor tillbaka till wikin själv.
 Result: wikin slutar vara en silo eller en syssla - det blir den högkvalitativa, mänskliga kuraterade ryggraden som matar (och matas av) det smartare, alltid-på-systemet.
 
 Wikis är fortfarande det bästa verktyget som mänskligheten har uppfunnit för samarbetsinriktad, sammankopplad, redigerbar långformig kunskap.
@@ -132,6 +132,27 @@ I ett modernt KMS som börjar fräscht är versionskontroll inte bara en "nice-t
 
 -----
 ## Wiki Space för Jamstack (SSG)
+
+```mermaid
+wardley-beta
+  title Jamstack Wiki Value Chain
+  anchor Business [0.95, 0.35]
+  component Cloud Hosting [0.80, 0.80]
+  component Agentic AI [0.50, 0.15]
+  component Jamstack Wiki [0.70, 0.55]
+  component Markdown Editor [0.60, 0.40]
+  component Version Control [0.20, 0.65]
+  component SSG [0.35, 0.80]
+  Business -> Jamstack Wiki
+  Agentic AI -> Markdown Editor
+  Jamstack Wiki -> Cloud Hosting
+  Jamstack Wiki -> Markdown Editor
+  Version Control -> SSG
+  SSG -> Jamstack Wiki
+  evolve Version Control 0.80
+  evolve Agentic AI 0.55
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.30, 0.20]
+```
 
 Flera versionskontrollaktiverade wikier (särskilt de med sann wikiliknande redigering men drivs av Git eller liknande för versionshantering) är byggda kring statiska principer för webbplatsgenerering (SSG). Dessa lagrar innehåll som vanliga textfiler (vanligtvis Markdown) i ett Git-datalager, använder Git som versionskontrollserverdel och genererar statiska HTML-webbplatser från dessa filer - antingen on-the-fly (via en lätt server) eller förbyggd för distribution (t.ex. till GitHub-sidor, Netlify etc.).
 
@@ -195,9 +216,9 @@ Tänk dig detta arbetsflöde med Orion:
 
 - Auto-summarization: LLM läser långa wikisidor/dokument och genererar sammanfattningar, TL;DR:er eller målgruppsspecifika versioner (t.ex. "förklara arkitekturen för en ny säljare").
 
-- Utformningshjälp: När du redigerar en wikisida, tryck på en knapp → LLM föreslår sektioner, skriver om för tydlighet, översätter till andra språk eller fyller luckor baserat på relaterade sidor.
+- Drafting assistance: När du redigerar en wikisida klickar du på en knapp → LLM föreslår sektioner, skriver om för tydlighet, översätter till andra språk eller fyller luckor baserat på relaterade sidor.
 
-- Kunskapsgap upptäckt: LLM analyserar frågeloggar, redigera mönster eller inaktuella sidor → flaggor "Den här introduktionsguiden är inaktuell" eller "Vi får frågan om X mycket men har ingen sida."
+- Knowledge gap detection: LLM analyserar frågeloggar, redigerar mönster eller inaktuella sidor → flaggor "Den här introduktionsguiden är inaktuell" eller "Vi får frågan om X mycket men har ingen sida."
 
 Med AI håller wikis sig fräschare med mindre manuellt arbete – nytt innehåll dyker upp snabbare.
 
