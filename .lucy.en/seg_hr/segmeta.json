@@ -41,16 +41,18 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_hq"
+    "name": "seg_hr"
   },
   "sort": {
     "counts": {
-      "path": "2"
+      "path": "3"
     },
     "format": "3",
-    "null_ords": {},
+    "null_ords": {
+      "path": "2"
+    },
     "ord_widths": {
-      "path": "1"
+      "path": "2"
     }
   }
 }
