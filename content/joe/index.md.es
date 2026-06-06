@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: heyoka, iconoclasta
-status: verificado=42302
+status: verificado=42321
 title: Los pensamientos aleatorios de Joe
 ---
 
@@ -97,20 +97,20 @@ pie
 ```mermaid
 wardley-beta
   title Tea Shop Value Chain
-  ancla Negocio [0.95, 0,63]
-  component "Taza de té" [0,79, 0.61]
-  componente té [0.63, 0,81]
-  component "Agua caliente" [0,52, 0.80]
-  Hervidor de componentes [0.43, 0,35]
-  Potencia del componente [0.10, 0,70]
-  Negocio -> "Taza de té"
-  "Taza de té" -> Té
-  "Taza de té" -> "Agua caliente"
-  "Agua caliente" -> Hervidor
-  Caldera -> Potencia
-  evolucionar Hervidor 0.62
-  evolucionar Poder 0.89
-  note "La estandarización de la potencia permite a Kettles evolucionar más rápido" [0,30, 0.49]
+  anchor Business [0.95, 0.63]
+  component "Cup of Tea" [0.79, 0.61]
+  component Tea [0.63, 0.81]
+  component "Hot Water" [0.52, 0.80]
+  component Kettle [0.43, 0.35]
+  component Power [0.10, 0.70]
+  Business -> "Cup of Tea"
+  "Cup of Tea" -> Tea
+  "Cup of Tea" -> "Hot Water"
+  "Hot Water" -> Kettle
+  Kettle -> Power
+  evolve Kettle 0.62
+  evolve Power 0.89
+  note "Standardising power allows Kettles to evolve faster" [0.30, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->

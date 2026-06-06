@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: 헤이오카, iconoclast
-status: 확인=42302
+status: 확인=42321
 title: 조의 무작위 생각
 ---
 
@@ -97,20 +97,20 @@ pie
 ```mermaid
 wardley-beta
   title Tea Shop Value Chain
-  앵커 비즈니스 [0.95, 0.63]
-  component "차 컵" [0.79, 0.61]
-  구성요소 차 [0.63, 0.81]
-  component "뜨거운 물" [0.52, 0.80]
-  구성 요소 주전자 [0.43, 0.35]
-  구성요소 전원 [0.10, 0.70]
-  비즈니스 -> "차 컵"
-  "차 컵" -> 차
-  "차 컵" -> "뜨거운 물"
-  "뜨거운 물" -> 주전자
-  주전자 -> 전원
-  전개 주전자 0.62
-  진화 힘 0.89
-  note "표준화된 파워를 통해 Kettles의 발전 속도 향상" [0.30, 0.49]
+  anchor Business [0.95, 0.63]
+  component "Cup of Tea" [0.79, 0.61]
+  component Tea [0.63, 0.81]
+  component "Hot Water" [0.52, 0.80]
+  component Kettle [0.43, 0.35]
+  component Power [0.10, 0.70]
+  Business -> "Cup of Tea"
+  "Cup of Tea" -> Tea
+  "Cup of Tea" -> "Hot Water"
+  "Hot Water" -> Kettle
+  Kettle -> Power
+  evolve Kettle 0.62
+  evolve Power 0.89
+  note "Standardising power allows Kettles to evolve faster" [0.30, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->

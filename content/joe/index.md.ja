@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
-status: 確認済み=42302
+status: 確認済み=42321
 title: Joe's Random Thoughtsたった今
 ---
 
@@ -97,20 +97,20 @@ pie
 ```mermaid
 wardley-beta
   title Tea Shop Value Chain
-  アンカー事業[0.95、0.63]
-  component "紅茶カップ" [0.79, 0.61]
-  コンポーネントティー[0.63、0.81]
-  component "温水" [0.52, 0.80]
-  コンポーネントケトル[0.43、0.35]
-  コンポーネント 電源[0.10、0.70]
-  ビジネス-> "紅茶カップ"
-  "紅茶カップ" -> お茶
-  "紅茶カップ" -> "温水"
-  "温水" -> ケトル
-  ケトル->パワー
-  進化ケトル0.62
-  進化力0.89
-  note "電力の標準化により、Kettlesはより迅速に進化" [0.30, 0.49]
+  anchor Business [0.95, 0.63]
+  component "Cup of Tea" [0.79, 0.61]
+  component Tea [0.63, 0.81]
+  component "Hot Water" [0.52, 0.80]
+  component Kettle [0.43, 0.35]
+  component Power [0.10, 0.70]
+  Business -> "Cup of Tea"
+  "Cup of Tea" -> Tea
+  "Cup of Tea" -> "Hot Water"
+  "Hot Water" -> Kettle
+  Kettle -> Power
+  evolve Kettle 0.62
+  evolve Power 0.89
+  note "Standardising power allows Kettles to evolve faster" [0.30, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=42302
+status: verifierad=42321
 title: Joes slumpartade tankar
 ---
 
@@ -97,20 +97,20 @@ pie
 ```mermaid
 wardley-beta
   title Tea Shop Value Chain
-  Ankarverksamhet [0.95, 0,63]
-  component "Kopp te" [0,79, 0.61]
-  komponent te [0.63, 0,81]
-  component "Varmvatten" [0,52, 0.80]
-  komponent vattenkokare [0.43, 0,35]
-  komponentström [0.10, 0,70]
-  Företag -> "Kopp te"
-  "Kopp te" -> Te
-  "Kopp te" -> "Varmvatten"
-  "Varmvatten" -> Vattenkokare
-  Vattenkokare -> Kraft
-  utveckla vattenkokare 0.62
-  utveckla effekt 0.89
-  note "Standardiseringseffekt gör att Kettles kan utvecklas snabbare" [0,30, 0.49]
+  anchor Business [0.95, 0.63]
+  component "Cup of Tea" [0.79, 0.61]
+  component Tea [0.63, 0.81]
+  component "Hot Water" [0.52, 0.80]
+  component Kettle [0.43, 0.35]
+  component Power [0.10, 0.70]
+  Business -> "Cup of Tea"
+  "Cup of Tea" -> Tea
+  "Cup of Tea" -> "Hot Water"
+  "Hot Water" -> Kettle
+  Kettle -> Power
+  evolve Kettle 0.62
+  evolve Power 0.89
+  note "Standardising power allows Kettles to evolve faster" [0.30, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->

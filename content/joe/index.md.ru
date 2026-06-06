@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: heyoka, иконоборчество
-status: проверено=42302
+status: проверено=42321
 title: Случайные мысли Джо
 ---
 
@@ -97,20 +97,20 @@ pie
 ```mermaid
 wardley-beta
   title Tea Shop Value Chain
-  Якорный бизнес [0.95, 0,63]
-  component "Чашка чая" [0.79, 0.61]
-  компонент Чай [0.63, 0.81]
-  component "Горячая вода" [0.52, 0.80]
-  компонент Чайник [0.43, 0.35]
-  Компонент питания [0.10, 0.70]
-  Бизнес -> "Чашка чая"
-  "Чашка чая" -> Чай
-  "Чашка чая" -> "Горячая вода"
-  "Горячая вода" -> Чайник
-  Чайник -> Мощность
-  эволюция Чайник 0.62
-  эволюция Мощность 0.89
-  note "Стандартизация мощности позволяет чайникам развиваться быстрее" [0.30, 0.49]
+  anchor Business [0.95, 0.63]
+  component "Cup of Tea" [0.79, 0.61]
+  component Tea [0.63, 0.81]
+  component "Hot Water" [0.52, 0.80]
+  component Kettle [0.43, 0.35]
+  component Power [0.10, 0.70]
+  Business -> "Cup of Tea"
+  "Cup of Tea" -> Tea
+  "Cup of Tea" -> "Hot Water"
+  "Hot Water" -> Kettle
+  Kettle -> Power
+  evolve Kettle 0.62
+  evolve Power 0.89
+  note "Standardising power allows Kettles to evolve faster" [0.30, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->

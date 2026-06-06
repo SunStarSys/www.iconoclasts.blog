@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 東京都，東京都
-status: 驗證 =42302
+status: 驗證 =42321
 title: Joe 的隨機思維
 ---
 
@@ -97,20 +97,20 @@ pie
 ```mermaid
 wardley-beta
   title Tea Shop Value Chain
-  錨定業務[0.95、0.63]
-  component "茶杯" [0.79, 0.61 歲]
-  成分茶[0.63、0.81]
-  component "熱水" [0.52, 0.80 歲]
-  組件電熱水壺[0.43、0.35]
-  組件電源[0.10、0.70]
-  業務 -> "茶杯"
-  "茶杯" -> 茶
-  "茶杯" -> "熱水"
-  "熱水" -> 水壺
-  電熱水壺 -> 電力
-  演化電熱水壺 0.62
-  演化力 0.89
-  note "標準化能力使熱水壺的發展速度更快" [0.30, 0.49]
+  anchor Business [0.95, 0.63]
+  component "Cup of Tea" [0.79, 0.61]
+  component Tea [0.63, 0.81]
+  component "Hot Water" [0.52, 0.80]
+  component Kettle [0.43, 0.35]
+  component Power [0.10, 0.70]
+  Business -> "Cup of Tea"
+  "Cup of Tea" -> Tea
+  "Cup of Tea" -> "Hot Water"
+  "Hot Water" -> Kettle
+  Kettle -> Power
+  evolve Kettle 0.62
+  evolve Power 0.89
+  note "Standardising power allows Kettles to evolve faster" [0.30, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: هيوكا، ايكونوكلاست
-status: التحقق = 42302
+status: التحقق = 42321
 title: أفكار جو العشوائية
 ---
 
@@ -97,20 +97,20 @@ pie
 ```mermaid
 wardley-beta
   title Tea Shop Value Chain
-  أعمال الارتساء [0.95، 0.63]
-  component "كأس الشاي" [0.79, 0.61]
-  مكون الشاي [0.63، 0.81]
-  component "الماء الساخن" [0.52, 0.80]
-  عنصر غلاية [0.43، 0.35]
-  مكون الطاقة [0.10، 0.70]
-  الأعمال -> "كأس الشاي"
-  "كأس الشاي" -> شاي
-  "كأس الشاي" -> "الماء الساخن"
-  "الماء الساخن" -> غلاية
-  غلاية -> السلطة
-  تطوير غلاية 0.62
-  تطوير الطاقة 0.89
-  note "قوة التوحيد تسمح للغلايات بالتطور بشكل أسرع" [0.30, 0.49]
+  anchor Business [0.95, 0.63]
+  component "Cup of Tea" [0.79, 0.61]
+  component Tea [0.63, 0.81]
+  component "Hot Water" [0.52, 0.80]
+  component Kettle [0.43, 0.35]
+  component Power [0.10, 0.70]
+  Business -> "Cup of Tea"
+  "Cup of Tea" -> Tea
+  "Cup of Tea" -> "Hot Water"
+  "Hot Water" -> Kettle
+  Kettle -> Power
+  evolve Kettle 0.62
+  evolve Power 0.89
+  note "Standardising power allows Kettles to evolve faster" [0.30, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->
