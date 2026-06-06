@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: heyoka, iconoclasta
-status: verificado=42321
+status: verificado=42579
 title: Pensamentos Aleatórios de Joe
 ---
 
@@ -77,7 +77,7 @@ pie
 
 ```asy
 {% filter code:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.pt-BR` %}
 {% endfilter %}
 ```
 
@@ -96,21 +96,23 @@ pie
 
 ```mermaid
 wardley-beta
-  title Tea Shop Value Chain
-  anchor Business [0.95, 0.63]
-  component "Cup of Tea" [0.79, 0.61]
-  component Tea [0.63, 0.81]
-  component "Hot Water" [0.52, 0.80]
-  component Kettle [0.43, 0.35]
-  component Power [0.10, 0.70]
-  Business -> "Cup of Tea"
-  "Cup of Tea" -> Tea
-  "Cup of Tea" -> "Hot Water"
-  "Hot Water" -> Kettle
-  Kettle -> Power
-  evolve Kettle 0.62
-  evolve Power 0.89
-  note "Standardising power allows Kettles to evolve faster" [0.30, 0.49]
+  title Jamstack Wiki Value Chain
+  anchor Business [0.95, 0.35]
+  component Cloud Hosting [0.80, 0.80]
+  component Agentic AI [0.50, 0.15]
+  component Jamstack Wiki [0.60, 0.55]
+  component Markdown Editor [0.70, 0.85]
+  component Version Control [0.30, 0.45]
+  component SSG [0.40, 0.80]
+  Business -> Jamstack Wiki
+  Agentic AI -> Jamstack Wiki
+  Jamstack Wiki -> Cloud Hosting
+  Jamstack Wiki -> Markdown Editor
+  Version Control -> Jamstack Wiki
+  SSG -> Jamstack Wiki
+  evolve Version Control 0.80
+  evolve Agentic AI 0.55
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.2, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->
