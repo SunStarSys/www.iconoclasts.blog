@@ -97,18 +97,18 @@ wardley-beta
   title Wiki Value Chain
   anchor Business [0.95, 0.63]
   component "Cloud Hosting" [0.79, 0.61]
-  component SaaS [0.63, 0.81]
+  component Wiki [0.63, 0.81]
   component "Online Editor" [0.52, 0.80]
   component "Version Control" [0.03, 0.35]
   component SSG [0.41, 0.50]
-  Business -> SaaS
-  SaaS -> "Cloud Hosting"
-  SaaS -> "Online Editor"
-  "Version Control" -> SaaS
-  SaaS -> SSG
-  evolve  SSG 0.62
+  Business -> Wiki
+  Wiki -> "Cloud Hosting"
+  "Cloud Hosting" -> "Online Editor"
+  "Version Control" -> Wiki
+  SSG -> Wiki
+  evolve Wiki 0.62
   evolve "Version Control" 0.89
-  note "Distributed Version Control allows SSG to evolve faster" [0.30, 0.49]
+  note "Open Source Version Control allows Wikis to evolve faster" [0.30, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->
