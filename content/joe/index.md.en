@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=42606
+status: verified=42610
 keywords: heyoka, iconoclast
 ---
 
@@ -37,6 +37,58 @@ If that sounds like you, please [request a demo today](/contact)!
 
 ### Plan
 
+```mermaid
+gantt
+    title {{projects.headers.title|safe}}
+    dateFormat {{projects.headers.dateformat|safe}}
+{% for p,q in projects.content %}
+    section {{p}}
+{% for k,v in q %}
+    {{k|safe}} :{{v|safe}}
+{% endfor %}
+{% endfor %}
+```
+
+-----
+
+```mermaid
+pie
+     title 2026 Q2 Budget Priorities
+	"Marketing and Advertising" : 60
+    "Development" : 20
+    "Operations" : 20
+```
+
+-----
+
+### Sandbox: SSI Mindmap
+
+```mermaid
+{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+```
+
+-----
+
+### Sandbox: SSI Asymptote Vector Graphics
+
+```asy
+{% filter code:"asy"|slice:0|safe %}
+{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% endfilter %}
+```
+
+-----
+
+### Sandbox: SSI generated Table &mdash; {{table.headers.title}}
+
+| {{table.csv_headers|join:" | "}} |
+|---|---|---|---|
+{% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
+{% endfor %}| additional | fun | below | line |
+
+-----
 
 ### Sandbox: Mermaid wardley-beta diagram
 
@@ -46,12 +98,12 @@ wardley-beta
   anchor Business [0.95, 0.35]
   component Cloud Hosting [0.80, 0.80]
   component Agentic AI [0.50, 0.15]
-  component Jamstack Wiki [0.60, 0.55]
-  component Markdown Editor [0.70, 0.85]
-  component Version Control [0.20, 0.45]
+  component Jamstack Wiki [0.70, 0.55]
+  component Markdown Editor [0.60, 0.40]
+  component Version Control [0.20, 0.65]
   component SSG [0.35, 0.80]
   Business -> Jamstack Wiki
-  Agentic AI -> Jamstack Wiki
+  Agentic AI -> Markdown Editor
   Jamstack Wiki -> Cloud Hosting
   Jamstack Wiki -> Markdown Editor
   Version Control -> SSG
