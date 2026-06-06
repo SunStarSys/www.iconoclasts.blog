@@ -37,37 +37,6 @@ If that sounds like you, please [request a demo today](/contact)!
 
 ### Plan
 
-```mermaid
-gantt
-    title {{projects.headers.title|safe}}
-    dateFormat {{projects.headers.dateformat|safe}}
-{% for p,q in projects.content %}
-    section {{p}}
-{% for k,v in q %}
-    {{k|safe}} :{{v|safe}}
-{% endfor %}
-{% endfor %}
-```
-
------
-
-```mermaid
-pie
-     title 2026 Q2 Budget Priorities
-	"Marketing and Advertising" : 60
-    "Development" : 20
-    "Operations" : 20
-```
-
------
-
-### Sandbox: SSI Mindmap
-
-```mermaid
-{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
-{% ssi `/joe/wikis.md.en` %}
-{% endfilter %}
-```
 
 -----
 
@@ -95,20 +64,20 @@ pie
 ```mermaid
 wardley-beta
   title Wiki Value Chain
-  anchor Business [0.95, 0.63]
-  component "Cloud Hosting" [0.79, 0.61]
-  component Wiki [0.63, 0.81]
-  component "Online Editor" [0.52, 0.80]
-  component "Version Control" [0.03, 0.35]
+  anchor Business [0.95, 0.40]
+  component "Cloud Hosting" [0.70, 0.80]
+  component Wiki [0.60, 0.65]
+  component "Online Editor" [0.80, 0.55]
+  component "Version Control" [0.3, 0.45]
   component SSG [0.41, 0.50]
   Business -> Wiki
-  Wiki -> "Cloud Hosting"
-  "Cloud Hosting" -> "Online Editor"
-  "Version Control" -> Wiki
+  Business -> Cloud Hosting
+  Business -> Online Editor
+  Version Control -> Wiki
   SSG -> Wiki
-  evolve SSG 0.62
-  evolve "Version Control" 0.89
-  note "Open Source Version Control allows SSG to evolve faster" [0.30, 0.49]
+  evolve SSG 0.8
+  evolve Version Control 0.9
+  note "Distributed Version Control allows SSG to evolve faster" [0.2, 0.49]
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->
