@@ -17,7 +17,7 @@
     {% endif %}
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/css/katex.min.css" rel="stylesheet" media="screen">
-    <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">
+    <!-- -->
     <link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
     <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
     <link href="/editor.md/lib/codemirror/codemirror.min.css" rel="stylesheet" media="screen">
@@ -152,7 +152,7 @@
   <script blocking="render" type="text/javascript">
     if (typeof(editormd) === "undefined") {
         //mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
-        mermaid.initialize({theme: "light", startOnLoad: true, securityLevel: "loose"});
+        mermaid.initialize({theme: "forest", startOnLoad: true, securityLevel: "loose"});
         //$(".flowchart").flowChart();
         //$(".sequence-diagram").sequenceDiagram();
         for (const e of $("body").find(".graphviz").toArray()) {
