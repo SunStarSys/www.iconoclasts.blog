@@ -1,6 +1,6 @@
 Title: Wikis in Knowledge Management Systems
 Keywords: wiki, knowledge, kms, orion, subversion
-status: verified=42630
+status: verified=42653
 Categories: Orion
 Dependencies: *.md.en
 
@@ -229,5 +229,19 @@ LLMs power chatbots/agents embedded in Slack/Teams/IDE/browser that pull from th
 LLMs flag outdated content by comparing edit dates, version history, or semantic drift. Verification workflows: "Verify this page" → LLM cross-checks against sources or recent data. Combined with centralized version control, you get traceable, auditable AI-assisted edits.
 
 Traditional wikis store and link knowledge. LLM-powered wikis understand, generate, retrieve, and evolve it — turning passive docs into an active, always-on assistant that reduces repeated questions, speeds ramp-up, and captures tribal knowledge before it walks out the door.
+
+<style type="text/css">
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->
