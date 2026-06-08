@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=42579
+status: verifierad=42889
 title: Joes slumpartade tankar
 ---
 
@@ -90,29 +90,18 @@ pie
 {% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}| extra | roligt | nedan | linje |
 
------
+&nbsp;
 
-### Sandlåda: Mermaid wardley-beta diagram
+#### {% filter split:"##+"|slice:22|safe %}
+{% ssi `/chrisarg/perlasadatascilang.md.sv` %}
+{% endfilter %}
+
+### Sandlåda: SSI Mermaid wardley-beta diagram
 
 ```mermaid
-wardley-beta
-  title Jamstack Wiki Value Chain
-  anchor Business [0.95, 0.35]
-  component Cloud Hosting [0.80, 0.80]
-  component Agentic AI [0.50, 0.15]
-  component Jamstack Wiki [0.60, 0.55]
-  component Markdown Editor [0.70, 0.85]
-  component Version Control [0.30, 0.45]
-  component SSG [0.40, 0.80]
-  Business -> Jamstack Wiki
-  Agentic AI -> Jamstack Wiki
-  Jamstack Wiki -> Cloud Hosting
-  Jamstack Wiki -> Markdown Editor
-  Version Control -> Jamstack Wiki
-  SSG -> Jamstack Wiki
-  evolve Version Control 0.80
-  evolve Agentic AI 0.55
-  note "Standardized Version Control allows Agentic AI to evolve faster" [0.2, 0.49]
+{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% ssi `/joe/wikis.md.sv` %}
+{% endfilter %}
 ```
 
 <!-- $Date$ $Author$ $Revision$ -->
