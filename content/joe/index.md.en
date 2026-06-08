@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=42638
+status: verified=42657
 keywords: heyoka, iconoclast
 ---
 
@@ -88,7 +88,9 @@ pie
 {% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}| additional | fun | below | line |
 
------
+{% filter split:'\n#+'|slice:21|markdown %}
+{% ssi `/chrisarg/perlasadatascilang.md.en` %}
+{% endfilter %}
 
 ### Sandbox: SSI Mermaid wardley-beta diagram
 
