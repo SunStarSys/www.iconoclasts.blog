@@ -66,7 +66,7 @@ pie
 ### 샌드박스: SSI Mindmap
 
 ```mermaid
-{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ko` %}
 {% endfilter %}
 ```
@@ -76,7 +76,7 @@ pie
 ### 샌드박스: SSI Asymptote 벡터 그래픽
 
 ```asy
-{% filter code:"asy"|slice:0|safe %}
+{% filter fenced:"asy"|slice:0|safe %}
 {% ssi `/joe/stochastic-trace-formula.md.en` %}
 {% endfilter %}
 ```
@@ -99,7 +99,7 @@ pie
 ### 샌드박스: SSI 인어 wardley-beta 도표
 
 ```mermaid
-{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ko` %}
 {% endfilter %}
 ```

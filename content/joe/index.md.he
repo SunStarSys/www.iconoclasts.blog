@@ -66,7 +66,7 @@ pie
 ### שולחן חול: מפת חשיבה של SSI
 
 ```mermaid
-{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.he` %}
 {% endfilter %}
 ```
@@ -76,7 +76,7 @@ pie
 ### שולחן חול: גרפיקת וקטור אסימפטוטה של SSI
 
 ```asy
-{% filter code:"asy"|slice:0|safe %}
+{% filter fenced:"asy"|slice:0|safe %}
 {% ssi `/joe/stochastic-trace-formula.md.en` %}
 {% endfilter %}
 ```
@@ -99,7 +99,7 @@ pie
 ### ארגז חול: דיאגרמת SSI Mermaid wardley-beta
 
 ```mermaid
-{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
 {% ssi `/joe/wikis.md.he` %}
 {% endfilter %}
 ```

@@ -66,7 +66,7 @@ pie
 ### Sandlåda: SSI Mindmap
 
 ```mermaid
-{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.sv` %}
 {% endfilter %}
 ```
@@ -76,7 +76,7 @@ pie
 ### Sandlåda: SSI Asymptote vektorgrafik
 
 ```asy
-{% filter code:"asy"|slice:0|safe %}
+{% filter fenced:"asy"|slice:0|safe %}
 {% ssi `/joe/stochastic-trace-formula.md.en` %}
 {% endfilter %}
 ```
@@ -99,7 +99,7 @@ pie
 ### Sandlåda: SSI Mermaid wardley-beta diagram
 
 ```mermaid
-{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
 {% ssi `/joe/wikis.md.sv` %}
 {% endfilter %}
 ```

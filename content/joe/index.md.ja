@@ -66,7 +66,7 @@ pie
 ### サンドボックス: SSIマインドマップ
 
 ```mermaid
-{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ja` %}
 {% endfilter %}
 ```
@@ -76,7 +76,7 @@ pie
 ### サンドボックス: SSI Asymptote Vector Graphics
 
 ```asy
-{% filter code:"asy"|slice:0|safe %}
+{% filter fenced:"asy"|slice:0|safe %}
 {% ssi `/joe/stochastic-trace-formula.md.en` %}
 {% endfilter %}
 ```
@@ -99,7 +99,7 @@ pie
 ### サンドボックス: SSIマーメイドワードリーベータ図
 
 ```mermaid
-{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ja` %}
 {% endfilter %}
 ```

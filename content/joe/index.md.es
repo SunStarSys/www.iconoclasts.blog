@@ -66,7 +66,7 @@ pie
 ### Sandbox: mapa mental de SSI
 
 ```mermaid
-{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.es` %}
 {% endfilter %}
 ```
@@ -76,7 +76,7 @@ pie
 ### Sandbox: Gráficos vectoriales de asíntota de SSI
 
 ```asy
-{% filter code:"asy"|slice:0|safe %}
+{% filter fenced:"asy"|slice:0|safe %}
 {% ssi `/joe/stochastic-trace-formula.md.en` %}
 {% endfilter %}
 ```
@@ -99,7 +99,7 @@ pie
 ### Sandbox: diagrama de la sirena de SSI
 
 ```mermaid
-{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
 {% ssi `/joe/wikis.md.es` %}
 {% endfilter %}
 ```

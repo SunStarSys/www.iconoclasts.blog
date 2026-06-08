@@ -66,7 +66,7 @@ pie
 ### Песочница: мысленная карта SSI
 
 ```mermaid
-{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ru` %}
 {% endfilter %}
 ```
@@ -76,7 +76,7 @@ pie
 ### Песочница: асимптотная векторная графика SSI
 
 ```asy
-{% filter code:"asy"|slice:0|safe %}
+{% filter fenced:"asy"|slice:0|safe %}
 {% ssi `/joe/stochastic-trace-formula.md.en` %}
 {% endfilter %}
 ```
@@ -99,7 +99,7 @@ pie
 ### Песочница: схема SSI Mermaid wardley-beta
 
 ```mermaid
-{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ru` %}
 {% endfilter %}
 ```

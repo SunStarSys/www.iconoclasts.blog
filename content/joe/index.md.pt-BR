@@ -66,7 +66,7 @@ pie
 ### Sandbox: Mindmap do SSI
 
 ```mermaid
-{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.pt-BR` %}
 {% endfilter %}
 ```
@@ -76,7 +76,7 @@ pie
 ### Sandbox: Gráficos vetoriais assintóticos do SSI
 
 ```asy
-{% filter code:"asy"|slice:0|safe %}
+{% filter fenced:"asy"|slice:0|safe %}
 {% ssi `/joe/stochastic-trace-formula.md.en` %}
 {% endfilter %}
 ```
@@ -99,7 +99,7 @@ pie
 ### Sandbox: diagrama wardley-beta da sereia SSI
 
 ```mermaid
-{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
 {% ssi `/joe/wikis.md.pt-BR` %}
 {% endfilter %}
 ```

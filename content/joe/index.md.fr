@@ -66,7 +66,7 @@ pie
 ### Modèle d'environnement restreint : Mindmap SSI
 
 ```mermaid
-{% filter code:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
 {% ssi `/joe/wikis.md.fr` %}
 {% endfilter %}
 ```
@@ -76,7 +76,7 @@ pie
 ### Sandbox : graphiques vectoriels SSI Asymptote
 
 ```asy
-{% filter code:"asy"|slice:0|safe %}
+{% filter fenced:"asy"|slice:0|safe %}
 {% ssi `/joe/stochastic-trace-formula.md.en` %}
 {% endfilter %}
 ```
@@ -99,7 +99,7 @@ pie
 ### Sandbox : diagramme SSI Mermaid Wardley-beta
 
 ```mermaid
-{% filter code:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
 {% ssi `/joe/wikis.md.fr` %}
 {% endfilter %}
 ```
