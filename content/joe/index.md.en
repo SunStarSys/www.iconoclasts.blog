@@ -88,7 +88,7 @@ pie
 {% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
 {% endfor %}| additional | fun | below | line |
 
-{% filter split:"##+"|slice:21|markdown %}
+{% filter split:"##+"|slice:22|markdown %}
 {% ssi `/chrisarg/perlasadatascilang.md.en` %}
 {% endfilter %}
 
