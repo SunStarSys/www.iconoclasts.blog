@@ -90,8 +90,8 @@ pie
 
 &nbsp;
 
-{% filter split:"##+"|slice:22|safe %}
-####{% ssi `/chrisarg/perlasadatascilang.md.en` %}
+####{% filter split:"##+"|slice:22|safe %}
+{% ssi `/chrisarg/perlasadatascilang.md.en` %}
 {% endfilter %}
 
 ### Sandbox: SSI Mermaid wardley-beta diagram
