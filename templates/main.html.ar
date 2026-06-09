@@ -139,7 +139,7 @@
       <input class="form-control me-2" type="email" name="email" required
         placeholder="Join Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
-<a id="go-to-top" onClick="$('base').remove()" href="#top">الانتقال إلى الأعلى</a>&nbsp;<span class="sep"></span>&nbsp;<a href="/contact">الاتصال</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nbsp;أوريون&trade;</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-twitter"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://calendly.com/joe-sunstarsys/30min"><i class="fa fa-calendar"></i></a>&nbsp;<span class="sep"></span>&nbsp;&copy;2026&nbsp;<a href="https://sunstarsys.com/"><img src="/images/sunstarlinear.png"></a>&nbsp;و&nbsp;كل منها&nbsp;المؤلفون.
+<a id="go-to-top" onClick="$('base').remove()" href="#top">الانتقال إلى الأعلى</a>&nbsp;<span class="sep"></span>&nbsp;<a href="/contact">الاتصال</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nbsp;أوريون&trade;</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-square-x-twitter"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://calendly.com/joe-sunstarsys/30min"><i class="fa fa-calendar"></i></a>&nbsp;<span class="sep"></span>&nbsp;&copy;2026&nbsp;<a href="https://sunstarsys.com/"><img src="/images/sunstarlinear.png"></a>&nbsp;و&nbsp;كل منها&nbsp;المؤلفون.
 </footer>
   <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
@@ -239,6 +239,23 @@ if (permission === "granted") {
         }
 	}
   </script>
+<script async="" type="module">
+  if (document.cookie.indexOf("can_search") >= 0) {
+      const response = await fetch("/dynamic/search/joe/?regex=watch=;lang=.en;markdown_search=1;as_json=1",
+                                   {credentials: 'same-origin'});
+      try {
+          const json = await response.json();
+          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^(?:\/index.md.en|\/)$/)).length;
+          if (is_watching)
+              $("#unwatch").css("display", "inline");
+          else
+              $("#watch").css("display", "inline");
+      }
+      catch (e) {
+          alert(e);
+      }
+  }
+</script>
   {% block javascript %}{% endblock %}
 </div>
 </body>
