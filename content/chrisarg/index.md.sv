@@ -10,7 +10,7 @@ title: Bitar och bitar
 
 <div class="right">
 
-![Camel Toe](index.page/camel)
+![Camel Toe](index.page/joe_camel)
 
 </div>
 

@@ -10,7 +10,7 @@ title: Bits y piezas
 
 <div class="right">
 
-![Punta de camello](index.page/camel)
+![Punta de camello](index.page/joe_camel)
 
 </div>
 
