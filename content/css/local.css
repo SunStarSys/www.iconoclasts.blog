@@ -178,9 +178,11 @@ a:hover {text-decoration: underline}
 }
 
 @media only screen and (max-width: 1000px) {
-    #meta, #filter, #sidebar { display: none; }
+    #meta, #filter, { display: none; }
 }
-
+@media only screen and (max-width: 1600px) {
+	#sidebar {position:relative}
+}
 div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
     color: green;
     padding-top: 0px;
