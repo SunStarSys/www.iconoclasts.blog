@@ -213,7 +213,7 @@ pre {
    color: green;
 }
 
-#sidebar div > ul > li:not(.active) { display: none }
+#sidebar li:not(.active) > ul > li { display: none }
 
 #sidebar li:active {color:green;}
 
