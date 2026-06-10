@@ -181,7 +181,7 @@ a:hover {text-decoration: underline}
     #meta, #filter, { display: none; }
 }
 @media only screen and (max-width: 1600px) {
-	#sidebar {position:relative}
+	#sidebar {position:relative; top:0; left:0; width:100%}
 }
 div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
     color: green;
@@ -203,7 +203,7 @@ pre {
     padding: 10px;
 }
 
-#sidebar {width: 250px; position: fixed; top:200px; left:6px; right: 0px; z-index: 1333}
+#sidebar {width: 200px; position: fixed; top:200px; left:6px; right: 0px; z-index: 1333}
 
 #sidebar a {color: #392806}
 
