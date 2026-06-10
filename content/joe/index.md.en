@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=43241
+status: verified=43249
 keywords: heyoka, iconoclast
 ---
 
@@ -41,7 +41,7 @@ If that sounds like you, please [request a demo today](/contact)!
 
 -----
 
-### Plan
+## Plan
 
 ```mermaid
 gantt
@@ -66,6 +66,8 @@ pie
 ```
 
 -----
+
+## Experiments
 
 ### Sandbox: SSI Mindmap
 
@@ -112,10 +114,13 @@ pie
 #sidebar li a {
    pointer-events: auto;
 }
+#sidebar li:not(.active) {
+   display: none;
+}
 
 #sidebar li.active a,
 #sidebar li:hover a {
-   color: blue;
+   font-weight: bold;
 }
 
 #sidebar li.active::before {
