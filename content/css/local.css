@@ -203,14 +203,12 @@ pre {
 
 #sidebar {width: 250px; position: fixed; top:200px; left:6px; right: 0px; z-index: 1333}
 
-#sidebar a { color: #392806}
+#sidebar a {color: #392806}
 
 #sidebar li.active > a,
 #sidebar li:hover > a {
    color: green;
 }
 
-#sidebar li.active::after {
-   color: green !important;
-  background-color: red !important;
-}
+#sidebar li:active {color:green;}
+
