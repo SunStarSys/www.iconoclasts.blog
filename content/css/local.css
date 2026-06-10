@@ -207,9 +207,10 @@ pre {
 
 #sidebar li.active > a,
 #sidebar li:hover > a {
-   color: inherit;
+   color: green;
 }
 
-#sidebar li.active::before {
+#sidebar li.active::after {
    color: green !important;
+  background-color: red !important;
 }
