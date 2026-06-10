@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=43229
+status: verified=43241
 keywords: heyoka, iconoclast
 ---
 
@@ -109,37 +109,15 @@ pie
 ```
 
 <style type="text/css">
-/* List
-   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-#sidebar {
-   margin: .5vh 0 1.8vh 0;
-   padding: 0;
-}
-
-#sidebar li {
-   font-size: 1.8rem;
-   line-height: 1.2;
-   position: relative;
-   display: block;
-   margin: 0 0 0 17px;
-   padding: 0 0 1.4vh;
-   list-style: none;
-   pointer-events: none;
-}
-
 #sidebar li a {
    pointer-events: auto;
-   color: green;
 }
 
-# li.active a,
+#sidebar li.active a,
 #sidebar li:hover a {
-   color: var(--color-font-one);
+   color: blue;
 }
 
-/* Active dot
-   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sidebar li.active::before {
    position: absolute;
    top: 5px;
