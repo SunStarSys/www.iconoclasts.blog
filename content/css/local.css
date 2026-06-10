@@ -216,5 +216,5 @@ pre {
 
 @media only screen and (max-width: 1600px) {
 	#sidebar {position:relative !important; top:0 !important; left:0 !important; width:100% !important}
-	#sidebar li {display:inline !important}
+	#sidebar li {display:block !important}
 }
