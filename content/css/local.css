@@ -201,4 +201,4 @@ pre {
     padding: 10px;
 }
 
-#sidebar {width: 256px; padding-top:256px }
+#sidebar {width: 256px; padding-top: 150px; position: fixed 0 100; z-index: 1333}
