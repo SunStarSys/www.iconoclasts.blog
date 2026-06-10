@@ -269,8 +269,28 @@ License : MIT
 var sidebar = document.getElementById("sidebar");
 if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
 </script>
+<script type="text/javascript">
+  $(function() {
 
-  {% block javascript %}{% endblock %}
+      $('a').click(function() {
+	  $(this).blur();
+      });
+
+      var goToTop = $("#go-to-top");
+
+      $(window).scroll(function(){
+	  var top = $(this).scrollTop();
+
+	  if (top > 180) {
+	      goToTop.fadeIn();
+	  } else {
+	      goToTop.fadeOut();
+	  }
+      });
+
+  });
+</script>
+{% block javascript %}{% endblock %}
 </div>
 </body>
 </html>
