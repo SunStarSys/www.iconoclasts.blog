@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: heyoka, iconoclast
-status: überprüft=42889
+status: überprüft=43440
 title: Joe's Random Thoughts
 ---
 
@@ -10,6 +10,12 @@ title: Joe's Random Thoughts
 <div class="right">
 
 [![Heyoka](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
+
+</div>
+
+<div id="sidebar">
+
+[TOC]
 
 </div>
 
@@ -37,7 +43,7 @@ Wenn das nach dir klingt, bitte [Demo noch heute anfordern](/contact)!
 
 -----
 
-### Plan
+## Plan
 
 ```mermaid
 gantt
@@ -63,6 +69,8 @@ pie
 
 -----
 
+## Experimente
+
 ### Sandbox: SSI-Mindmap
 
 ```mermaid
@@ -77,13 +85,13 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.de` %}
 {% endfilter %}
 ```
 
 -----
 
-### Sandbox: Von SSI generierte Tabelle &mdash; {{table.headers.title}}
+### Sandbox: Von SSI generierte Tabelle &mdash; :dave_camel: {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
@@ -92,7 +100,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|slice:21|safe %}
+#### {% filter split:"##+"|grep:"Wichtige Erkenntnisse"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.de` %}
 {% endfilter %}
 

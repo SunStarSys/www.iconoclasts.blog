@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: 헤이오카, iconoclast
-status: 확인=42889
+status: 확인=43440
 title: 조의 무작위 생각
 ---
 
@@ -10,6 +10,12 @@ title: 조의 무작위 생각
 <div class="right">
 
 [![헤요카](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
+
+</div>
+
+<div id="sidebar">
+
+[TOC]
 
 </div>
 
@@ -37,7 +43,7 @@ title: 조의 무작위 생각
 
 -----
 
-### 계획
+## 계획
 
 ```mermaid
 gantt
@@ -63,6 +69,8 @@ pie
 
 -----
 
+## 실험
+
 ### 샌드박스: SSI Mindmap
 
 ```mermaid
@@ -77,13 +85,13 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.ko` %}
 {% endfilter %}
 ```
 
 -----
 
-### 샌드박스: SSI 생성 테이블 &mdash; {{table.headers.title}}
+### 샌드박스: SSI 생성 테이블 &mdash; :dave_camel: {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
@@ -92,7 +100,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|slice:21|safe %}
+#### {% filter split:"##+"|grep:"주요 요점"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.ko` %}
 {% endfilter %}
 

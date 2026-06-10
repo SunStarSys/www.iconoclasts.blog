@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: הייוקה, איקונוקלסט
-status: אומתו 42889
+status: אומתו 43440
 title: מחשבות אקראיות של ג'ו
 ---
 
@@ -10,6 +10,12 @@ title: מחשבות אקראיות של ג'ו
 <div class="right">
 
 [![היוקה](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
+
+</div>
+
+<div id="sidebar">
+
+[TOC]
 
 </div>
 
@@ -37,7 +43,7 @@ title: מחשבות אקראיות של ג'ו
 
 -----
 
-### תוכנית
+## תוכנית
 
 ```mermaid
 gantt
@@ -63,6 +69,8 @@ pie
 
 -----
 
+## ניסויים
+
 ### שולחן חול: מפת חשיבה של SSI
 
 ```mermaid
@@ -77,13 +85,13 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.he` %}
 {% endfilter %}
 ```
 
 -----
 
-### שולחן חול: טבלה שהופקה על ידי SSI &mdash; {{table.headers.title}}
+### שולחן חול: טבלה שהופקה על ידי SSI &mdash; :dave_camel: {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
@@ -92,7 +100,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|slice:21|safe %}
+#### {% filter split:"##+"|grep:"טקסי מפתח"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.he` %}
 {% endfilter %}
 

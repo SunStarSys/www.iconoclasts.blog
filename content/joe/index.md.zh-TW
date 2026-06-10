@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 東京都，東京都
-status: 驗證 =42889
+status: 驗證 =43440
 title: Joe 的隨機思維
 ---
 
@@ -10,6 +10,12 @@ title: Joe 的隨機思維
 <div class="right">
 
 [![賀岡](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
+
+</div>
+
+<div id="sidebar">
+
+[TOC]
 
 </div>
 
@@ -37,7 +43,7 @@ title: Joe 的隨機思維
 
 -----
 
-### 計畫
+## 計畫
 
 ```mermaid
 gantt
@@ -63,6 +69,8 @@ pie
 
 -----
 
+## 實驗
+
 ### 封閉測試環境：SSI Mindmap
 
 ```mermaid
@@ -77,13 +85,13 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.zh-TW` %}
 {% endfilter %}
 ```
 
 -----
 
-### 封閉測試環境：SSI 產生的表格&mdash; {{table.headers.title}}
+### 封閉測試環境：SSI 產生的表格&mdash; :dave_camel: {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
@@ -92,7 +100,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|slice:21|safe %}
+#### {% filter split:"##+"|grep:"關鍵概要"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.zh-TW` %}
 {% endfilter %}
 

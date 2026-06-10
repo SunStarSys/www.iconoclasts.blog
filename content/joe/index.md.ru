@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: heyoka, иконоборчество
-status: проверено=42889
+status: проверено=43440
 title: Случайные мысли Джо
 ---
 
@@ -10,6 +10,12 @@ title: Случайные мысли Джо
 <div class="right">
 
 [![Хёка](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
+
+</div>
+
+<div id="sidebar">
+
+[TOC]
 
 </div>
 
@@ -37,7 +43,7 @@ title: Случайные мысли Джо
 
 -----
 
-### План
+## План
 
 ```mermaid
 gantt
@@ -63,6 +69,8 @@ pie
 
 -----
 
+## Эксперименты
+
 ### Песочница: мысленная карта SSI
 
 ```mermaid
@@ -77,13 +85,13 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.ru` %}
 {% endfilter %}
 ```
 
 -----
 
-### Песочница: таблица, созданная SSI &mdash; {{table.headers.title}}
+### Песочница: таблица, созданная SSI &mdash; :dave_camel: {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
@@ -92,7 +100,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|slice:21|safe %}
+#### {% filter split:"##+"|grep:"Основные выводы"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.ru` %}
 {% endfilter %}
 

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=42889
+status: verifierad=43440
 title: Joes slumpartade tankar
 ---
 
@@ -10,6 +10,12 @@ title: Joes slumpartade tankar
 <div class="right">
 
 [![Heyoka](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
+
+</div>
+
+<div id="sidebar">
+
+[TOC]
 
 </div>
 
@@ -37,7 +43,7 @@ Om det låter som du, snälla [beställ en demonstration i dag](/contact)!
 
 -----
 
-### Planera
+## Planera
 
 ```mermaid
 gantt
@@ -63,6 +69,8 @@ pie
 
 -----
 
+## Experiment
+
 ### Sandlåda: SSI Mindmap
 
 ```mermaid
@@ -77,13 +85,13 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.sv` %}
 {% endfilter %}
 ```
 
 -----
 
-### Sandlåda: SSI-genererad tabell &mdash; {{table.headers.title}}
+### Sandlåda: SSI-genererad tabell &mdash; :dave_camel: {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
@@ -92,7 +100,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|slice:21|safe %}
+#### {% filter split:"##+"|grep:"Viktiga insikter"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.sv` %}
 {% endfilter %}
 

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: heyoka, iconoclaste
-status: vérifié=42889
+status: vérifié=43440
 title: Les pensées aléatoires de Joe
 ---
 
@@ -10,6 +10,12 @@ title: Les pensées aléatoires de Joe
 <div class="right">
 
 [![Heyoka](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
+
+</div>
+
+<div id="sidebar">
+
+[TOC]
 
 </div>
 
@@ -37,7 +43,7 @@ Si cela vous ressemble, s'il vous plaît [Demandez une démo aujourd'hui](/conta
 
 -----
 
-### Plan du site
+## Plan du site
 
 ```mermaid
 gantt
@@ -63,6 +69,8 @@ pie
 
 -----
 
+## Expériences
+
 ### Modèle d'environnement restreint : Mindmap SSI
 
 ```mermaid
@@ -77,13 +85,13 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.fr` %}
 {% endfilter %}
 ```
 
 -----
 
-### Modèle d'environnement restreint : Table générée par SSI &mdash; {{table.headers.title}}
+### Modèle d'environnement restreint : Table générée par SSI &mdash; :dave_camel: {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
@@ -92,7 +100,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|slice:21|safe %}
+#### {% filter split:"##+"|grep:"Points clés à retenir"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.fr` %}
 {% endfilter %}
 

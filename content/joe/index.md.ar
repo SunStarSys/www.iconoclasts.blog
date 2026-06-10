@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: هيوكا، ايكونوكلاست
-status: التحقق = 42889
+status: التحقق = 43440
 title: أفكار جو العشوائية
 ---
 
@@ -10,6 +10,12 @@ title: أفكار جو العشوائية
 <div class="right">
 
 [![هيوكا](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
+
+</div>
+
+<div id="sidebar">
+
+[TOC]
 
 </div>
 
@@ -37,7 +43,7 @@ title: أفكار جو العشوائية
 
 -----
 
-### الخطة
+## الخطة
 
 ```mermaid
 gantt
@@ -63,6 +69,8 @@ pie
 
 -----
 
+## التجارب
+
 ### صندوق الحماية: خريطة تفكير SSI
 
 ```mermaid
@@ -77,13 +85,13 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.ar` %}
 {% endfilter %}
 ```
 
 -----
 
-### صندوق الحماية: جدول SSI الذي تم إنشاؤه &mdash; {{table.headers.title}}
+### صندوق الحماية: جدول SSI الذي تم إنشاؤه &mdash; :dave_camel: {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
@@ -92,7 +100,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|slice:21|safe %}
+#### {% filter split:"##+"|grep:"الوجبات الرئيسية"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.ar` %}
 {% endfilter %}
 

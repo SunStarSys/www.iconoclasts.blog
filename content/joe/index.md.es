@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: heyoka, iconoclasta
-status: verificado=42889
+status: verificado=43440
 title: Los pensamientos aleatorios de Joe
 ---
 
@@ -10,6 +10,12 @@ title: Los pensamientos aleatorios de Joe
 <div class="right">
 
 [![Heyoka](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
+
+</div>
+
+<div id="sidebar">
+
+[TOC]
 
 </div>
 
@@ -37,7 +43,7 @@ Si eso suena como tú, por favor [solicitar una demostración hoy](/contact)!
 
 -----
 
-### Planificar
+## Planificar
 
 ```mermaid
 gantt
@@ -63,6 +69,8 @@ pie
 
 -----
 
+## Experimentos
+
 ### Sandbox: mapa mental de SSI
 
 ```mermaid
@@ -77,13 +85,13 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.es` %}
 {% endfilter %}
 ```
 
 -----
 
-### Sandbox: tabla generada por SSI &mdash; {{table.headers.title}}
+### Sandbox: tabla generada por SSI &mdash; :dave_camel: {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
@@ -92,7 +100,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|slice:21|safe %}
+#### {% filter split:"##+"|grep:"Conclusiones clave"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.es` %}
 {% endfilter %}
 

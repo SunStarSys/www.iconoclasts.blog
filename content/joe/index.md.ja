@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
-status: 確認済み=42889
+status: 確認済み=43440
 title: Joe's Random Thoughtsたった今
 ---
 
@@ -10,6 +10,12 @@ title: Joe's Random Thoughtsたった今
 <div class="right">
 
 [![Heyoka](index.page/me)](https://en.wikipedia.org/wiki/Heyoka)
+
+</div>
+
+<div id="sidebar">
+
+[TOC]
 
 </div>
 
@@ -37,7 +43,7 @@ Heyókがネイティブアメリカンの文化で果たす役割を知って�
 
 -----
 
-### プラン
+## プラン
 
 ```mermaid
 gantt
@@ -63,6 +69,8 @@ pie
 
 -----
 
+## 実験的な機能
+
 ### サンドボックス: SSIマインドマップ
 
 ```mermaid
@@ -77,13 +85,13 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.ja` %}
 {% endfilter %}
 ```
 
 -----
 
-### サンドボックス: SSIで生成された表&mdash; {{table.headers.title}}
+### サンドボックス: SSIで生成された表&mdash; :dave_camel: {{table.headers.title}}
 
 | {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
@@ -92,7 +100,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|slice:21|safe %}
+#### {% filter split:"##+"|grep:"主なポイント"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.ja` %}
 {% endfilter %}
 
