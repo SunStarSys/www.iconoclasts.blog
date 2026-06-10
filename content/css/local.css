@@ -202,3 +202,14 @@ pre {
 }
 
 #sidebar {width: 250px; position: fixed; top:200px; left:6px; right: 0px; z-index: 1333}
+
+#sidebar a { color: #392806}
+
+#sidebar li.active > a,
+#sidebar li:hover > a {
+   color: inherit;
+}
+
+#sidebar li.active::before {
+   color: green !important;
+}
