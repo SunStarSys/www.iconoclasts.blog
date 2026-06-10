@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=43359
+status: verified=43436
 keywords: heyoka, iconoclast
 ---
 
@@ -98,7 +98,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|slice:21|safe %}
+#### {% filter split:"##+"|grep:"Key takeaways"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.en` %}
 {% endfilter %}
 
