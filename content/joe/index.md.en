@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=43220
+status: verified=43229
 keywords: heyoka, iconoclast
 ---
 
@@ -107,5 +107,51 @@ pie
 {% ssi `/joe/wikis.md.en` %}
 {% endfilter %}
 ```
+
+<style type="text/css">
+/* List
+   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#sidebar {
+   margin: .5vh 0 1.8vh 0;
+   padding: 0;
+}
+
+#sidebar li {
+   font-size: 1.8rem;
+   line-height: 1.2;
+   position: relative;
+   display: block;
+   margin: 0 0 0 17px;
+   padding: 0 0 1.4vh;
+   list-style: none;
+   pointer-events: none;
+}
+
+#sidebar li a {
+   pointer-events: auto;
+   color: green;
+}
+
+# li.active a,
+#sidebar li:hover a {
+   color: var(--color-font-one);
+}
+
+/* Active dot
+   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#sidebar li.active::before {
+   position: absolute;
+   top: 5px;
+   left: -15px;
+   display: block;
+   width: 8px;
+   height: 8px;
+   content: '';
+   border-radius: 100px;
+   background-color: red;
+}
+
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->
