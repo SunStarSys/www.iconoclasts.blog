@@ -119,8 +119,8 @@ pie
    display: none;
 }
 */
-#sidebar li.active a,
-#sidebar li:hover a {
+#sidebar li.active > a,
+#sidebar li:hover > a {
    font-weight: bold;
 }
 
