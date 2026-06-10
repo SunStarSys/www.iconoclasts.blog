@@ -178,7 +178,7 @@ a:hover {text-decoration: underline}
 }
 
 @media only screen and (max-width: 1000px) {
-    #meta, #filter { display: none; }
+    #meta, #filter, #sidebar { display: none; }
 }
 
 div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
@@ -201,4 +201,4 @@ pre {
     padding: 10px;
 }
 
-#sidebar {position:sticky 0 150px }
+#sidebar {width: 256px; padding-top:256px }
