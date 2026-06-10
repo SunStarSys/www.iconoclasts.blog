@@ -114,14 +114,10 @@ pie
 #sidebar li a {
    pointer-events: auto;
 }
-/*
-#sidebar li:not(.active) {
-   display: none;
-}
-*/
+
 #sidebar li.active > a,
 #sidebar li:hover > a {
-   font-weight: bold;
+   color: green;
 }
 
 #sidebar li.active::before {
