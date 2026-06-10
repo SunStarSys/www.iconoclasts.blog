@@ -1,7 +1,7 @@
 ---
 title: "Joe's Random Thoughts"
 dependencies: "*.md.en"
-status: verified=43347
+status: verified=43359
 keywords: heyoka, iconoclast
 ---
 
@@ -109,21 +109,5 @@ pie
 {% ssi `/joe/wikis.md.en` %}
 {% endfilter %}
 ```
-
-<style type="text/css">
-#sidebar li a {
-   pointer-events: auto;
-}
-
-#sidebar li.active > a,
-#sidebar li:hover > a {
-   color: green;
-}
-
-#sidebar li.active::before {
-   background-color: green !important;
-}
-
-</style>
 
 <!-- $Date$ $Author$ $Revision$ -->
