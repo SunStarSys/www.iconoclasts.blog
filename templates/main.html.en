@@ -100,9 +100,11 @@
           <input class="form-control me-2" type="text" name="regex"
                placeholder="PCRE Recursive Search" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
 	    </form>
-  </div>
-</header>
-<main>
+	  </div>
+    </div>
+  </header>
+
+  <main>
 {% block alert %}
   {% if alert %}
   <div class="alert alert-dismissible alert-info container">
@@ -127,8 +129,10 @@
   <h1>{{ headers.title|safe }}</h1>
   <div class="jumbotron">{{ content|markdown }}</div>
   {% endblock %}
-</main>
-<footer>
+
+    </div>
+  </main>
+  <footer class="container">
 {% block footer %}{{footer|safe}}{% endblock footer %}
 <hr>
 <form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
@@ -140,16 +144,18 @@
         placeholder="Join Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 <a id="go-to-top" onClick="$('base').remove()" href="#top">Go To Top</a>&nbsp;<span class="sep"></span>&nbsp;<a href="/contact">Contact</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nbsp;Orion&trade;</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-square-x-twitter"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://calendly.com/joe-sunstarsys/30min"><i class="fa fa-calendar"></i></a>&nbsp;<span class="sep"></span>&nbsp;&copy;2026&nbsp;<a href="https://sunstarsys.com/"><img src="/images/sunstarlinear.png"></a>&nbsp;and&nbsp;respective&nbsp;authors.
-</footer>
-  <script src="/editor.md/js/d3.min.js"></script>
-  <script src="/editor.md/js/wasm/index.min.js"></script>
-  <script src="/editor.md/js/d3-graphviz.js"></script>
-  <script src="/editor.md/lib/mermaid.min.js"></script>
-  <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
-  <script src="/editor.md/lib/codemirror/addons.min.js"></script>
-  <script src="/editor.md/lib/codemirror/modes.min.js"></script>
-  <script src="/editor.md/lib/copy-tex.js"></script>
-  <script blocking="render" type="text/javascript">
+
+  </footer>
+<script src="/editor.md/js/d3.min.js"></script>
+<script src="/editor.md/js/wasm/index.min.js"></script>
+<script src="/editor.md/js/d3-graphviz.js"></script>
+<script src="/editor.md/lib/mermaid.min.js"></script>
+<script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
+<script src="/editor.md/lib/codemirror/addons.min.js"></script>
+<script src="/editor.md/lib/codemirror/modes.min.js"></script>
+<script src="/editor.md/lib/copy-tex.js"></script>
+
+<script blocking="render" type="text/javascript">
     if (typeof(editormd) === "undefined") {
         //mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
         mermaid.initialize({theme: "forest", startOnLoad: true, securityLevel: "loose"});
@@ -192,8 +198,9 @@
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
-  </script>
-  <script async type="module">
+</script>
+
+<script async type="module">
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
@@ -238,7 +245,8 @@
 		   }
         }
 	}
-  </script>
+</script>
+
 <script async="" type="module">
   if (document.cookie.indexOf("can_search") >= 0) {
       const response = await fetch("/dynamic/search/joe/?regex=watch=;lang=.en;markdown_search=1;as_json=1",
@@ -256,6 +264,7 @@
       }
   }
 </script>
+
 <script type="text/javascript">
 /* gumshoe
 ––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -269,6 +278,7 @@ License : MIT
 var sidebar = document.getElementById("sidebar");
 if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
 </script>
+
 <script type="text/javascript">
   $(function() {
 
@@ -291,6 +301,5 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
   });
 </script>
 {% block javascript %}{% endblock %}
-</div>
 </body>
 </html>

@@ -100,8 +100,10 @@
           <input class="form-control me-2" type="text" name="regex"
                placeholder="PCRE Recursive Search" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
 	    </form>
-  </div>
-</header>
+	  </div>
+    </div>
+  </header>
+
 <main>
 {% block alert %}
   {% if alert %}
@@ -116,3 +118,188 @@
 {% ifequal lang ".he" %} .right {float:left !important; text-align: right !important}{% endifequal %}{% ifequal lang ".ar" %}.right {float:left !important; text-align: right !important}{% endifequal %}
 {% ifequal lang ".he" %} div.breadcrumbs {float:left}{% endifequal %}{% ifequal lang ".ar" %}div.breadcrumbs {float:left}{% endifequal %}
 </style>
+
+<div class="container theme-showcase" id="content">
+  {% block content %}
+  <div class="breadcrumbs">
+      {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
+        <img src="/images/edit.png" alt="Edit Icon" />
+      </a>
+  </div>
+  <h1>{{ headers.title|safe }}</h1>
+  <div class="jumbotron">{{ content|markdown }}</div>
+  {% endblock %}
+
+</div>
+  </main>
+  <footer class="container">
+{% block footer %}{{footer|safe}}{% endblock footer %}
+<hr>
+<form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Blog Mailing List" />
+      <input class="form-control me-2" type="email" name="email" required
+        placeholder="Join Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+<a id="go-to-top" onClick="$('base').remove()" href="#top">עבור לראש הדף</a>&nbsp;<span class="sep"></span>&nbsp;<a href="/contact">איש קשר</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nbsp;אוריון&trade;</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-square-x-twitter"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://calendly.com/joe-sunstarsys/30min"><i class="fa fa-calendar"></i></a>&nbsp;<span class="sep"></span>&nbsp;&copy;2026&nbsp;<a href="https://sunstarsys.com/"><img src="/images/sunstarlinear.png"></a>&nbsp;וגם&nbsp;בהתאמה אישית&nbsp;סופרים.
+
+</footer>
+<script src="/editor.md/js/d3.min.js"></script>
+<script src="/editor.md/js/wasm/index.min.js"></script>
+<script src="/editor.md/js/d3-graphviz.js"></script>
+<script src="/editor.md/lib/mermaid.min.js"></script>
+<script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
+<script src="/editor.md/lib/codemirror/addons.min.js"></script>
+<script src="/editor.md/lib/codemirror/modes.min.js"></script>
+<script src="/editor.md/lib/copy-tex.js"></script>
+
+<script blocking="render" type="text/javascript">
+    if (typeof(editormd) === "undefined") {
+        //mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
+        mermaid.initialize({theme: "forest", startOnLoad: true, securityLevel: "loose"});
+        //$(".flowchart").flowChart();
+        //$(".sequence-diagram").sequenceDiagram();
+        for (const e of $("body").find(".graphviz").toArray()) {
+            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
+            e.innerHTML = ""
+        }
+        $("body").find("pre").parent().addClass("editormd-preview-theme-light");
+        CodeMirror.colorize();
+    }
+
+if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
+    document.cookie.indexOf("gdpr_decline=1") == -1) {
+        for (const h1 of document.getElementsByTagName("h1")) {
+            var html = `<div id="analytics"><br><div class="card border-warning">
+<div class="card-header">
+  <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
+</div>
+<div class="card-body">
+<p class="card-text">
+<small class="text-dark">Please choose your Analytics preference:</small><br>
+  <button type="button" class="btn btn-outline-warning text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
+  onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
+  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
+  <button type="button" class="btn btn-outline-danger text-dark" data-bs-toggle="modal" data-bs-target="#date-filter-modal"
+  onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
+  $('#analytics').css('display', 'none');true">I
+  Decline.</button><br><small class="text-dark">Should you elect to
+  Decline, we will not ask again for the next 10 days.</small>
+</p>
+</div>
+</div>
+</div>`;
+            h1.insertAdjacentHTML('beforeend', html);
+        }
+    }
+
+else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
+        document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
+    }
+</script>
+
+<script async type="module">
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    document.cookie = "nonce={{nonce}}; path=/;";
+    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+		var permission = Notification.permission;
+		if (permission !== "granted") {
+            Notification.requestPermission().then((result) => {
+              permission = result;
+            });
+        }
+
+if (permission === "granted") {
+		   var revision;
+           var m = document.cookie.match(/last=([0-9]+)/);
+           if (m)
+			 revision = m[1];
+           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
+                           {credentials: 'same-origin'});
+           try {
+              const json = await response.json();
+			  if (json.log !== null)
+              for (const e of json.log) {
+                  var msg = e[3] + "\n";
+                  for (const [key, val] of Object.entries(e[1])) {
+                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
+				  }
+				  var n = new Notification(e[2],
+     			    {
+					  body: msg,
+					  tag: e[0],
+					  icon: "/images/favicon",
+					  image: "/images/iconoclast",
+				    }
+			  	  );
+			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
+			  }
+		   }
+           catch (e) {
+              alert(e);
+		   }
+        }
+	}
+</script>
+
+<script async="" type="module">
+  if (document.cookie.indexOf("can_search") >= 0) {
+      const response = await fetch("/dynamic/search/joe/?regex=watch=;lang=.en;markdown_search=1;as_json=1",
+                                   {credentials: 'same-origin'});
+      try {
+          const json = await response.json();
+          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^(?:\/index.md.en|\/)$/)).length;
+          if (is_watching)
+              $("#unwatch").css("display", "inline");
+          else
+              $("#watch").css("display", "inline");
+      }
+      catch (e) {
+          alert(e);
+      }
+  }
+</script>
+
+<script type="text/javascript">
+/* gumshoe
+––––––––––––––––––––––––––––––––––––––––––––––––––––
+Version : 5.1.1
+Repo    : github.com/cferdinandi/gumshoe
+Author  : Chris Ferdinandi
+License : MIT
+–––––––––––––––––––––––––––––––––––––––––––––––––––– */
+!(function(t,e){"function"==typeof define&&define.amd?define([],(function(){return e(t)})):"object"==typeof exports?module.exports=e(t):t.Gumshoe=e(t)})("undefined"!=typeof global?global:"undefined"!=typeof window?window:this,(function(t){"use strict";var e={navClass:"active",contentClass:"active",nested:!1,nestedClass:"active",offset:0,reflow:!1,events:!0},n=function(t,e,n){if(n.settings.events){var o=new CustomEvent(t,{bubbles:!0,cancelable:!0,detail:n});e.dispatchEvent(o)}},o=function(t){var e=0;if(t.offsetParent)for(;t;)e+=t.offsetTop,t=t.offsetParent;return e>=0?e:0},s=function(t){t&&t.sort((function(t,e){return o(t.content)<o(e.content)?-1:1}))},c=function(e,n,o){var s=e.getBoundingClientRect(),c=(function(t){return"function"==typeof t.offset?parseFloat(t.offset()):parseFloat(t.offset)})(n);return o?parseInt(s.bottom,10)<(t.innerHeight||document.documentElement.clientHeight):parseInt(s.top,10)<=c},i=function(){return t.innerHeight+t.pageYOffset>=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight)},r=function(t,e){var n=t[t.length-1];if(function(t,e){return!(!i()||!c(t.content,e,!0))}(n,e))return n;for(var o=t.length-1;o>=0;o--)if(c(t[o].content,e))return t[o]},a=function(t,e){if(e.nested){var n=t.parentNode.closest("li");n&&(n.classList.remove(e.nestedClass),a(n,e))}},l=function(t,e){if(t){var o=t.nav.closest("li");o&&(o.classList.remove(e.navClass),t.content.classList.remove(e.contentClass),a(o,e),n("gumshoeDeactivate",o,{link:t.nav,content:t.content,settings:e}))}},u=function(t,e){if(e.nested){var n=t.parentNode.closest("li");n&&(n.classList.add(e.nestedClass),u(n,e))}};return function(o,c){var i,a,f,d,v,m={};m.setup=function(){i=document.querySelectorAll(o),a=[],Array.prototype.forEach.call(i,(function(t){var e=(document.getElementsByName(decodeURIComponent(t.hash.substr(1))))[0];e&&a.push({nav:t,content:e})})),s(a)},m.detect=function(){var t=r(a,v);t?f&&t.content===f.content||(l(f,v),(function(t,e){if(t){var o=t.nav.closest("li");o&&(o.classList.add(e.navClass),t.content.classList.add(e.contentClass),u(o,e),n("gumshoeActivate",o,{link:t.nav,content:t.content,settings:e}))}})(t,v),f=t):f&&(l(f,v),f=null)};var p=function(e){d&&t.cancelAnimationFrame(d),d=t.requestAnimationFrame(m.detect)},h=function(e){d&&t.cancelAnimationFrame(d),d=t.requestAnimationFrame((function(){s(a),m.detect()}))};m.destroy=function(){f&&l(f,v),t.removeEventListener("scroll",p,!1),v.reflow&&t.removeEventListener("resize",h,!1),a=null,i=null,f=null,d=null,v=null};return v=(function(){var t={};return Array.prototype.forEach.call(arguments,(function(e){for(var n in e){if(!e.hasOwnProperty(n))return;t[n]=e[n]}})),t})(e,c||{}),m.setup(),m.detect(),t.addEventListener("scroll",p,!1),v.reflow&&t.addEventListener("resize",h,!1),m}}));
+/* Custom settings for gumshoe */
+var sidebar = document.getElementById("sidebar");
+if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
+</script>
+
+<script type="text/javascript">
+  $(function() {
+
+$('a').click(function() {
+	  $(this).blur();
+      });
+
+var goToTop = $("#go-to-top");
+
+$(window).scroll(function(){
+	  var top = $(this).scrollTop();
+
+if (top > 180) {
+	      goToTop.fadeIn();
+	  } else {
+	      goToTop.fadeOut();
+	  }
+      });
+
+});
+</script>
+{% block javascript %}{% endblock %}
+</body>
+</html>
