@@ -283,21 +283,17 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
 
 <script type="text/javascript">
   $(function() {
-
       $('a').click(function() {
 	  $(this).blur();
       });
-
   });
-</script>
-<script>
   // Select the target element
   var target = document.querySelector('#footer');
   target.style.opacity = 0.01;
   // Create an IntersectionObserver
   const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && target.style.opacity < 1) {
               target.style.display = "none";
               target.style.opacity = 1;
               $(target).fadeIn(2000); // Visual feedback
@@ -305,11 +301,10 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
              target.style.opacity = 0.01;
 		  }
        });
-  }, {
+    }, {
       root: null, // viewport
       threshold: 0.01 // Trigger when at least 1% is visible
   });
-
   // Start observing
   observer.observe(target);
 </script>
