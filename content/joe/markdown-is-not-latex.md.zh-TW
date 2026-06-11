@@ -2,7 +2,7 @@
 categories: Orion, AI
 dependencies: '*.md.zh-TW'
 keywords: markdown，Microsoft，Github，corrupt，embace，extend，sycophant，AI - 減價，Microsoft，巨集，貪腐，寬限，擴展，智能化，AI
-status: 驗證 =40530
+status: 驗證 =43762
 title: Microsoft 認為有害
 ---
 
@@ -18,7 +18,7 @@ title: Microsoft 認為有害
 
 ## :fa-github: GitHub 調味料減價 (GFM)
 
-[GFM](https://github.github.com/gfm/) 確保符合該規格的設計目標，直到[微軟使隔離的錢幣符號有條件地將其轉換為$$\LaTeX$$ 符記](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)<sup>1 個</sup> 因為有些衣著、古董、醜陋且慢慢的機構破碎軟體所致[MathJax](https://www.mathjax.org/) 與 Markdown 無關，而且這些助理不希望提升表演者、漂亮、[`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)- 相容[$$\KaTeX$$](https://katex.org/) 沒有來自漢學院的賄賂。
+[GFM](https://github.github.com/gfm/) 確保符合該規格的設計目標，直到[微軟使隔離的錢幣符號有條件地將其轉換為$$\LaTeX$$ 符記](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions#writing-inline-expressions)[^1] 因為有些衣著、古董、醜陋且慢慢的機構破碎軟體所致[MathJax](https://www.mathjax.org/) 與 Markdown 無關，而且這些助理不希望提升表演者、漂亮、[`utf8`](https://www.bing.com/search?q=does%20mathjax%20support%20utf%208)- 相容[$$\KaTeX$$](https://katex.org/) 沒有來自漢學院的賄賂。
 
 ## 擁抱並擴充 Redux
 
@@ -28,7 +28,7 @@ title: Microsoft 認為有害
 
 </div>
 
-當然這完全是刻意的，因為[獲獎肯定](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: 世界一流的工程團隊](http://editor.md.ipandao.com) 已結算於$$\KaTeX$$ 取代為[雙元記號界限](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) 用於內嵌數學，以及用於區塊的圍欄數學區塊或僅雙元的環繞段落組$$\KaTeX$$ 處理[**2015 年 **](https://github.com/pandao/editor.md/releases/tag/v1.5.0) &mdash; **GFM 規格發布前的四年 **。
+當然這完全是刻意的，因為[獲獎肯定](https://itsfoss.com/online-markdown-editors/#:~:text=Editor.md), [:editormd-logo: 世界一流的工程團隊](http://editor.md.ipandao.com) 已結算於$$\KaTeX$$ 取代為[雙元記號界限](https://github.com/pandao/editor.md/blob/master/examples/katex.html#L45) (或圍欄) `math` 區塊) 適用於 **任何數學表示式** &mdash; 依據 *段落中雙元的相對定位* 來區分 *內嵌* 與 *區塊* $$\KaTeX$$ 處理&mdash; [**2015 年 **](https://github.com/pandao/editor.md/releases/tag/v1.5.0)；**GFM 規格發布前的四年 **。
 
 此處的點是一般程序中很少出現的 2 個字元分隔符號，是一般情況的理想選擇。[如果 Microsoft 停滯僅支援 \$\` ... \`\$](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) 我不會在 2026 年撰寫這篇文章，因為該選擇符合 Markdown 規格中引入內嵌數學表示式的正常理想條件。這個選擇也有助於專業數學打字機的 Carpal 隧道症候群，因此除了邊界記號的唯一性之外，還有其他需要考慮的事項。
 
@@ -36,7 +36,7 @@ title: Microsoft 認為有害
 
 或只是[懶惰、不耐心和危機](http://www.parrot.org/)但這不足以說服這篇文章。YMMV。
 
------
+[========]
 
 ## WorldWide 衝擊半徑
 
@@ -48,19 +48,19 @@ title: Microsoft 認為有害
 
 現在，當作者 / 實作者每次必須猜測剖析器應如何處理一段降價程序中出現的隔離貨幣符號時，工程正規表示式瑕疵是不明確的災難。例如，假設情況為：[法文](markdown-is-not-latex.html.fr) 加拿大金融數學家討論兩種不同貨幣的價格，美國`$`1.50 和 2,00`$` CA (經許可相反，但說明了複雜性)。您如何撰寫`i18n` 合規[GFM 剖析器](https://pandoc.org/) 明白這裏的錢幣符號之間的東西是 *不能以內置方式處理$$\LaTeX$$* 即使其語法有效$$\TeX$$ 並符合此條件[naïve 規格](https://pandoc.org/demo/example33/8.13-math.html)?
 
-函數簽章中有關一對 Ruby/Perl 變數的作用，例如`foo($v,$w)`？naïve 規格有相同的問題。有克勞德<sup>2 個</sup> 要全部剖析嗎？
+函數簽章中有關一對 Ruby/Perl 變數的作用，例如`foo($v,$w)`？naïve 規格有相同的問題。有克勞德[^2] 要全部剖析嗎？
 
 祝好運，如果您要大量將國際舊有文件格式轉換為非 GitHub 平台的 GFM 轉換。不僅會是非常緩慢且昂貴，但它只會"工作" 在 Visual Studio 中彩現時 (如果甚至完全有效)。
 
 說，您不會撰寫混淆剖析器 **now** 的 **today** 內容，而是說 **past** 中所寫的內容，也不會混淆剖析器。不是今天，而不是 **未來** 剖析器版本。
 
-不同於標準的出現[JCP](https://jcp.org/en/home/index)，此訊息永遠不會有合規性認證測試套件，因為這是[演進](https://github.com/github/markup?tab=readme-ov-file#github-markup) [情境](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) 開啟[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 於[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser)<sup>2、3</sup>:
+不同於標準的出現[JCP](https://jcp.org/en/home/index)，此訊息永遠不會有合規性認證測試套件，因為這是[演進](https://github.com/github/markup?tab=readme-ov-file#github-markup) [情境](https://github.com/kivikakk/comrak/blob/main/src/tests/math.rs) 開啟[地面](https://github.com/gjtorikian/commonmarker/blob/c1ce5afbf36610ae14d91db809f3f0a3bc4386bc/test/math_test.rb#L8) 於[GitHub](https://www.bing.com/search?q=what+is+github%27s+current+open+source+markdown+parser):[^2],[第 3 天]
 
 > GitHub 尚未公開揭露其目前的開放原始碼減價剖析器。不過，GitHub 會根據 GitHub Flavored Markdown (GFM) 規格，使用 Markdown 平台的自訂實作。此實作支援各種擴充功能和增強 GitHub 使用之 Markdown 語法的功能。
 
 再次強調，故意偏離 Gruber 的目標。
 
-最令人難以置信的是，擁抱和擴大邪惡帝國擁有一支 F/OSS 自由勞動奴役軍人，作為綜合性思想警察，他們努力透過人工智慧推動他人自身的市場收益。<sup>3</sup>。只要在下方的「連結」區段中，查看對此頁面標示之 HackerNews 張貼項目的回應，以符合其中一些回應。
+最令人難以置信的是，擁抱和擴大邪惡帝國擁有一支 F/OSS 自由勞動奴役軍人，作為綜合性思想警察，他們努力透過人工智慧推動他人自身的市場收益。[第 3 天]。只要在下方的「連結」區段中，查看對此頁面標示之 HackerNews 張貼項目的回應，以符合其中一些回應。
 
 ## Fuck Microsoft
 
@@ -76,15 +76,15 @@ title: Microsoft 認為有害
 
 相反地，我們依賴 @markedjs 的內部分叉，並將繼續在可預見的未來執行。
 
------
+[========]
 
 ## 註腳
 
-1. 這不是"延伸" 該規格的作者為使用其產品的所有人授權該規格。這是事實新規格。
+[^1]。這不是"延伸" 該規格的作者為使用其產品的所有人授權該規格。這是事實新規格。
 
-2. 對於仍然認為 GitHub 的 nitwits 使用 F/OSS 剖析 Markdown：我建議您按一下頁面頂端文章的 GitHub 來源連結，複製並貼上前兩個段落 **WorldWide Blast Radius** 區段中的 GitHub 減價編輯器，移除錢幣符號周圍的底線，並首先見證範例案例 *正確 *，不同於其宣稱使用的 F/OSS Rust 陷阱。它也可能讓您比較其 MathJax 轉換器的美學與$$\KaTeX$$ 我們在此網站上使用，以消除對這兩種產品之間質性差異的任何混淆，比起與彩現速度相關的數量性差異更少。<center><div id="screenshot-div"><img src="markdown-is-not-latex.page/screenshot" id="screenshot"></div></center>
+[^2]。對於仍然認為 GitHub 的 nitwits 使用 F/OSS 剖析 Markdown：我建議您按一下頁面頂端文章的 GitHub 來源連結，複製並貼上前兩個段落 **WorldWide Blast Radius** 區段中的 GitHub 減價編輯器，移除錢幣符號周圍的底線，並首先見證範例案例 *正確 *，不同於其宣稱使用的 F/OSS Rust 陷阱。它也可能讓您比較其 MathJax 轉換器的美學與$$\KaTeX$$ 我們在此網站上使用，以消除對這兩種產品之間質性差異的任何混淆，比起與彩現速度相關的數量性差異更少。<center><div id="screenshot-div"><img src="markdown-is-not-latex.page/screenshot" id="screenshot"></div></center>
 
-3. 這篇引述的篇章在過去 24 小時內發表了原本的 AI 回應，直到我為這篇文章新增了其他背景連結為止。"已學習" 如何說出回應查詢較少的偶發性"github 目前的開放原始碼 markdown 剖析器"。這是 **我們工作** 的人工智慧。
+[第 3 天]。這篇引述的篇章在過去 24 小時內發表了原本的 AI 回應，直到我為這篇文章新增了其他背景連結為止。"已學習" 如何說出回應查詢較少的偶發性"github 目前的開放原始碼 markdown 剖析器"。這是 **我們工作** 的人工智慧。
 
 <style type="text/css">
 
