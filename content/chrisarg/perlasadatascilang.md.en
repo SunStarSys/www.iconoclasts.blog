@@ -23,8 +23,7 @@ When data scientists discuss language choices the conversation quickly converges
 
 ### Ubiquity and zero-install deployment
 
-Perl5 ships as a default component of virtually every UNIX-like operating system — Linux distributions, macOS, BSDs, and many embedded Linux environments all include a working `perl` binary out of the box.  Python has been making inroads here, but it is still common to find headless servers, network appliances, or HPC login nodes
-where Perl is present and a full Python stack is not.  A data pipeline written in Perl can run on day one without a `conda` environment, a `venv`, or a container.
+Perl5 ships as a default component of virtually every UNIX-like operating system — Linux distributions, macOS, BSDs, and many embedded Linux environments all include a working `perl` binary out of the box.  Python has been making inroads here, but it is still common to find headless servers, network appliances, or HPC login nodes where Perl is present and a full Python stack is not.  A data pipeline written in Perl can run on day one without a `conda` environment, a `venv`, or a container.
 
 ### Portability from the data centre to the edge
 
