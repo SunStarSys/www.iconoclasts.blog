@@ -26,8 +26,8 @@ footer span.sep {opacity: 0.25}
 .breadcrumbs span.sep::before { content: "»" }
 footer span.sep::before {content: "|"}
 
-blockquote > p {
-  padding: 10px;
+blockquote {
+  padding: 2px 10px 2px 10px;
   border-left: solid 5px #8f99fb;
 }
 
