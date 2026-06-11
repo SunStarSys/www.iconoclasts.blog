@@ -132,7 +132,7 @@
 
 </div>
   </main>
-  <footer class="container">
+  <footer id="footer" class="container">
 {% block footer %}{{footer|safe}}{% endblock footer %}
 <hr>
 <form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
@@ -144,7 +144,7 @@
         placeholder="Join Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 
-<div id="footer">
+<div>
 <a id="go-to-top" onClick="$('base').remove()" href="#top"><i class="fa fa-circle-arrow-up"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="/contact"><i class="fa fa-at"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nbsp;オリオン&trade;</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-square-x-twitter"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://calendly.com/joe-sunstarsys/30min"><i class="fa fa-calendar"></i></a>&nbsp;<span class="sep"></span>&nbsp;&copy;2026&nbsp;<a href="https://sunstarsys.com/"><img src="/images/sunstarlinear.png"></a>&nbsp;および&nbsp;それぞれ&nbsp;著者
 </div>
   </footer>
@@ -288,19 +288,28 @@ $('a').click(function() {
 	  $(this).blur();
       });
 
-var footer = $("#footer");
-
-$(window).scroll(function(){
-	  var top = $(this).scrollTop();
-
-if (top > 180) {
-	      footer.fadeIn(1500);
-	  } else {
-	      footer.fadeOut(1500);
-	  }
-      });
-
 });
+</script>
+<script>
+  // Select the target element
+  var target = document.querySelector('#footer');
+  target.style.opacity=0.01;
+  // Create an IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              target.style.display="none";
+              target.style.opacity=1;
+              $(target).fadeIn(2000); // Visual feedback
+          }
+       });
+  }, {
+      root: null, // viewport
+      threshold: 0.01 // Trigger when at least 1% is visible
+  });
+
+// Start observing
+  observer.observe(target);
 </script>
 {% block javascript %}{% endblock %}
 </body>
