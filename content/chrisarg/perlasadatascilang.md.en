@@ -201,7 +201,7 @@ This model is extraordinarily flexible.  A single array can hold integers, float
 
 ### The cache-hierarchy problem
 
-Modern CPUs achieve peak throughput only when data flows through L1/L2/L3 cache<sup><a id="cache-ref" href="#fn-cache">†</a></sup> in large, contiguous blocks — a property called *spatial locality*.  Perl arrays do not provide this.  Under the hood, a Perl array is a C array of *pointers* to heap-allocated scalar (`SV`) structs.  Each scalar carries a reference count, a type tag, and padding — typically 24–56 bytes per scalar on a 64-bit build.  Iterating over a million-element Perl array therefore involves a million pointer dereferences scattered across the heap, producing a cache-miss pattern that completely negates the speed advantage of modern SIMD pipelines.
+Modern CPUs achieve peak throughput only when data flows through L1/L2/L3 cache[^†] in large, contiguous blocks — a property called *spatial locality*.  Perl arrays do not provide this.  Under the hood, a Perl array is a C array of *pointers* to heap-allocated scalar (`SV`) structs.  Each scalar carries a reference count, a type tag, and padding — typically 24–56 bytes per scalar on a 64-bit build.  Iterating over a million-element Perl array therefore involves a million pointer dereferences scattered across the heap, producing a cache-miss pattern that completely negates the speed advantage of modern SIMD pipelines.
 
 A concrete consequence: a dot product of two 1 000-element vectors written in pure Perl is roughly **100–1000× slower** than the equivalent operation on a pair of PDL float ndarrays, which occupy two flat, 4 000-byte memory regions that fit comfortably in L1 cache.
 
@@ -394,9 +394,7 @@ The final post in the foundation series closes the loop between Perl and R:
 
 ---
 
-<a id="fn-cache"></a>
-
-**†** Modern CPUs have multiple levels of fast, on-chip memory called **caches** (L1, L2, L3) that sit between the processor cores and main RAM.  L1 is the smallest (typically 32–64 KB per core) and fastest (1–4 clock cycles latency); L2 is larger (256 KB–1 MB) and slightly slower; L3 is shared across cores (4–64 MB) with higher latency still.  Main RAM sits further away at 60–100 ns latency — roughly 200× slower than L1.
+[^†] Modern CPUs have multiple levels of fast, on-chip memory called **caches** (L1, L2, L3) that sit between the processor cores and main RAM.  L1 is the smallest (typically 32–64 KB per core) and fastest (1–4 clock cycles latency); L2 is larger (256 KB–1 MB) and slightly slower; L3 is shared across cores (4–64 MB) with higher latency still.  Main RAM sits further away at 60–100 ns latency — roughly 200× slower than L1.
 
 When a computation touches memory in a predictable, contiguous pattern the hardware *prefetcher* can load upcoming data into L1/L2 before it is needed, achieving near-peak throughput.  Scattered pointer-chasing (such as traversing a Perl array of heap-allocated scalars) defeats prefetching, stalling the CPU while it waits for each cache miss to be resolved from RAM.
 
