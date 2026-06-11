@@ -293,8 +293,10 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
 	  var top = $(this).scrollTop();
 
 	  if (top > 180) {
+		  alert(footer);
 	      footer.fadeIn(1500);
 	  } else {
+		  alert(footer);
 	      footer.fadeOut(1500);
 	  }
       });
