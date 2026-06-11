@@ -1,6 +1,6 @@
 Title: Microsoft Considered Harmful
 Keywords: markdown,Microsoft,Github,corrupt,embrace,extend,sycophant,AI
-status: verified=43754
+status: verified=43758
 Dependencies: *.md.en
 Categories: Orion, AI
 
@@ -34,8 +34,6 @@ The point here is that a 2-character delimiter that rarely occurs in typical pro
 If I had to guess their motives for considering that blog article's proposed syntax insufficient for their current needs, I suspect they were more about greed and market control and "customer dissatisfaction" than good F/OSS stewardship.
 
 Or just [Laziness, Impatience, and Hubris](http://www.parrot.org/); but that's not conspiratorial enough for this article. YMMV.
-
------
 
 [========]
 
@@ -77,7 +75,7 @@ Long story short, GFM is no longer an international industry spec, but an ugly-A
 
 Instead, we rely on an internal fork of @markedjs/marked and will continue to do so for the foreseeable future.
 
------
+[========]
 
 ## Footnotes
 
