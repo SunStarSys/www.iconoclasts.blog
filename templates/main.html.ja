@@ -33,7 +33,7 @@
     {% endblock %}
 </head>
 
-<body role="document" id="top">
+<body role="document">
   <header style="border-bottom:solid #aaa 1px; background-color: #fff;" class="container-xxl navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
 	  <a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img src="/images/iconoclast" alt="Iconoclast"></a>
@@ -143,9 +143,11 @@
       <input class="form-control me-2" type="email" name="email" required
         placeholder="Join Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
-<a id="go-to-top" onClick="$('base').remove()" href="#top">トップへ</a>&nbsp;<span class="sep"></span>&nbsp;<a href="/contact">連絡先</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nbsp;オリオン&trade;</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-square-x-twitter"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://calendly.com/joe-sunstarsys/30min"><i class="fa fa-calendar"></i></a>&nbsp;<span class="sep"></span>&nbsp;&copy;2026&nbsp;<a href="https://sunstarsys.com/"><img src="/images/sunstarlinear.png"></a>&nbsp;および&nbsp;それぞれ&nbsp;著者
 
-</footer>
+<div id="footer">
+<a id="go-to-top" onClick="$('base').remove()" href="#top"><i class="fa fa-circle-arrow-up"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="/contact"><i class="fa fa-at"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://sunstarsys.com/orion/"><img src="/images/sunstar-orion-symbol-linear">&nbsp;オリオン&trade;</a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-square-x-twitter"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;<span class="sep"></span>&nbsp;<a href="https://calendly.com/joe-sunstarsys/30min"><i class="fa fa-calendar"></i></a>&nbsp;<span class="sep"></span>&nbsp;&copy;2026&nbsp;<a href="https://sunstarsys.com/"><img src="/images/sunstarlinear.png"></a>&nbsp;および&nbsp;それぞれ&nbsp;著者
+</div>
+  </footer>
 <script src="/editor.md/js/d3.min.js"></script>
 <script src="/editor.md/js/wasm/index.min.js"></script>
 <script src="/editor.md/js/d3-graphviz.js"></script>
@@ -286,15 +288,15 @@ $('a').click(function() {
 	  $(this).blur();
       });
 
-var goToTop = $("#go-to-top");
+var footer = $("#footer");
 
 $(window).scroll(function(){
 	  var top = $(this).scrollTop();
 
 if (top > 180) {
-	      goToTop.fadeIn();
+	      footer.fadeIn(1500);
 	  } else {
-	      goToTop.fadeOut();
+	      footer.fadeOut(1500);
 	  }
       });
 
