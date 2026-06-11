@@ -255,7 +255,7 @@
                                    {credentials: 'same-origin'});
       try {
           const json = await response.json();
-          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^\/(?:\Q{{path|basename:0}}.md{{lang}}\E|\/)$/)).length;
+          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^\/(?:{{path|basename:0}}.md{{lang}}|)$/)).length;
           if (is_watching)
               $("#unwatch").css("display", "inline");
           else
