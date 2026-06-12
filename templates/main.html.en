@@ -279,7 +279,7 @@ License : MIT
 
 /* Custom settings for gumshoe */
 var sidebar = document.getElementById("sidebar");
-if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:180})}
+if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
 </script>
 
 <script type="text/javascript">
@@ -290,24 +290,26 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:180})}
   });
   // Select the target element
   var target = document.querySelector('#footer');
-  target.style.opacity = 0.01;
-  // Create an IntersectionObserver
-  const observer = new IntersectionObserver((entries) => {
+  if (target) {
+    target.style.opacity = 0.01;
+    // Create an IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
           if (entry.isIntersecting && target.style.opacity < 1) {
               target.style.display = "none";
               target.style.opacity = 1;
-              $(target).fadeIn(2000); // Visual feedback
+              $(target).fadeIn(1000); // Visual feedback
           } else {
              target.style.opacity = 0.01;
 		  }
        });
-    }, {
-      root: null, // viewport
-      threshold: 0.01 // Trigger when at least 1% is visible
-  });
+      }, {
+        root: null, // viewport
+        threshold: 0.01 // Trigger when at least 1% is visible
+    });
   // Start observing
-  observer.observe(target);
+    observer.observe(target);
+  }
 </script>
 {% block javascript %}{% endblock %}
 </body>

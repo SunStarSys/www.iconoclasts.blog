@@ -251,11 +251,11 @@ if (permission === "granted") {
 
 <script async="" type="module">
   if (document.cookie.indexOf("can_search") >= 0) {
-      const response = await fetch("/dynamic/search/joe/?regex=watch=;lang=.en;markdown_search=1;as_json=1",
+      const response = await fetch("/dynamic/search{{path|dirname}}/?regex=watch=;lang=.en;markdown_search=1;as_json=1",
                                    {credentials: 'same-origin'});
       try {
           const json = await response.json();
-          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^(?:\/index.md.en|\/)$/)).length;
+          const is_watching = json.watch.map(e => e.name).filter((e) => {return /^\/(?:{{path|basename:0}}.md{{lang}}|)$/.test(e)}).length;
           if (is_watching)
               $("#unwatch").css("display", "inline");
           else
@@ -276,6 +276,7 @@ Author  : Chris Ferdinandi
 License : MIT
 –––––––––––––––––––––––––––––––––––––––––––––––––––– */
 !(function(t,e){"function"==typeof define&&define.amd?define([],(function(){return e(t)})):"object"==typeof exports?module.exports=e(t):t.Gumshoe=e(t)})("undefined"!=typeof global?global:"undefined"!=typeof window?window:this,(function(t){"use strict";var e={navClass:"active",contentClass:"active",nested:!1,nestedClass:"active",offset:0,reflow:!1,events:!0},n=function(t,e,n){if(n.settings.events){var o=new CustomEvent(t,{bubbles:!0,cancelable:!0,detail:n});e.dispatchEvent(o)}},o=function(t){var e=0;if(t.offsetParent)for(;t;)e+=t.offsetTop,t=t.offsetParent;return e>=0?e:0},s=function(t){t&&t.sort((function(t,e){return o(t.content)<o(e.content)?-1:1}))},c=function(e,n,o){var s=e.getBoundingClientRect(),c=(function(t){return"function"==typeof t.offset?parseFloat(t.offset()):parseFloat(t.offset)})(n);return o?parseInt(s.bottom,10)<(t.innerHeight||document.documentElement.clientHeight):parseInt(s.top,10)<=c},i=function(){return t.innerHeight+t.pageYOffset>=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight)},r=function(t,e){var n=t[t.length-1];if(function(t,e){return!(!i()||!c(t.content,e,!0))}(n,e))return n;for(var o=t.length-1;o>=0;o--)if(c(t[o].content,e))return t[o]},a=function(t,e){if(e.nested){var n=t.parentNode.closest("li");n&&(n.classList.remove(e.nestedClass),a(n,e))}},l=function(t,e){if(t){var o=t.nav.closest("li");o&&(o.classList.remove(e.navClass),t.content.classList.remove(e.contentClass),a(o,e),n("gumshoeDeactivate",o,{link:t.nav,content:t.content,settings:e}))}},u=function(t,e){if(e.nested){var n=t.parentNode.closest("li");n&&(n.classList.add(e.nestedClass),u(n,e))}};return function(o,c){var i,a,f,d,v,m={};m.setup=function(){i=document.querySelectorAll(o),a=[],Array.prototype.forEach.call(i,(function(t){var e=(document.getElementsByName(decodeURIComponent(t.hash.substr(1))))[0];e&&a.push({nav:t,content:e})})),s(a)},m.detect=function(){var t=r(a,v);t?f&&t.content===f.content||(l(f,v),(function(t,e){if(t){var o=t.nav.closest("li");o&&(o.classList.add(e.navClass),t.content.classList.add(e.contentClass),u(o,e),n("gumshoeActivate",o,{link:t.nav,content:t.content,settings:e}))}})(t,v),f=t):f&&(l(f,v),f=null)};var p=function(e){d&&t.cancelAnimationFrame(d),d=t.requestAnimationFrame(m.detect)},h=function(e){d&&t.cancelAnimationFrame(d),d=t.requestAnimationFrame((function(){s(a),m.detect()}))};m.destroy=function(){f&&l(f,v),t.removeEventListener("scroll",p,!1),v.reflow&&t.removeEventListener("resize",h,!1),a=null,i=null,f=null,d=null,v=null};return v=(function(){var t={};return Array.prototype.forEach.call(arguments,(function(e){for(var n in e){if(!e.hasOwnProperty(n))return;t[n]=e[n]}})),t})(e,c||{}),m.setup(),m.detect(),t.addEventListener("scroll",p,!1),v.reflow&&t.addEventListener("resize",h,!1),m}}));
+
 /* Custom settings for gumshoe */
 var sidebar = document.getElementById("sidebar");
 if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
@@ -283,33 +284,32 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
 
 <script type="text/javascript">
   $(function() {
-
-$('a').click(function() {
+      $('a').click(function() {
 	  $(this).blur();
       });
-
-});
-</script>
-<script>
+  });
   // Select the target element
   var target = document.querySelector('#footer');
-  target.style.opacity=0.01;
-  // Create an IntersectionObserver
-  const observer = new IntersectionObserver((entries) => {
+  if (target) {
+    target.style.opacity = 0.01;
+    // Create an IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              target.style.display="none";
-              target.style.opacity=1;
-              $(target).fadeIn(2000); // Visual feedback
-          }
+          if (entry.isIntersecting && target.style.opacity < 1) {
+              target.style.display = "none";
+              target.style.opacity = 1;
+              $(target).fadeIn(1000); // Visual feedback
+          } else {
+             target.style.opacity = 0.01;
+		  }
        });
-  }, {
-      root: null, // viewport
-      threshold: 0.01 // Trigger when at least 1% is visible
-  });
-
-// Start observing
-  observer.observe(target);
+      }, {
+        root: null, // viewport
+        threshold: 0.01 // Trigger when at least 1% is visible
+    });
+  // Start observing
+    observer.observe(target);
+  }
 </script>
 {% block javascript %}{% endblock %}
 </body>
