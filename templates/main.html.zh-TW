@@ -132,10 +132,10 @@
 
 </div>
   </main>
-  <footer id="footer" class="container">
+  <footer class="container fade">
 {% block footer %}{{footer|safe}}{% endblock footer %}
 <hr>
-<form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
+<form id="join" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
       <input type="hidden" name="lang" value="{{ lang }}" />
@@ -289,8 +289,8 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
       });
   });
   // Select the target element
-  var target = document.querySelector('#footer');
-  if (target) {
+  const targets = document.getElementsByClassName("fade");
+  targets.forEach((target) => {
     target.style.opacity = 0.01;
     // Create an IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
@@ -298,7 +298,7 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
           if (entry.isIntersecting && target.style.opacity < 1) {
               target.style.display = "none";
               target.style.opacity = 1;
-              $(target).fadeIn(1000); // Visual feedback
+              $(target).fadeIn(); // Visual feedback
           } else {
              target.style.opacity = 0.01;
 		  }
@@ -309,7 +309,7 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
     });
   // Start observing
     observer.observe(target);
-  }
+  });
 </script>
 {% block javascript %}{% endblock %}
 </body>
