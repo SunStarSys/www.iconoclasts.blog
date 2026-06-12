@@ -159,8 +159,8 @@
 
 <script blocking="render" type="text/javascript">
     if (typeof(editormd) === "undefined") {
-        //mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
-        mermaid.initialize({theme: "forest", startOnLoad: true, securityLevel: "loose"});
+	    $(".mermaid").addClass("fade");
+		mermaid.initialize({theme: "forest", startOnLoad: true, securityLevel: "loose"});
         //$(".flowchart").flowChart();
         //$(".sequence-diagram").sequenceDiagram();
         for (const e of $("body").find(".graphviz").toArray()) {
