@@ -2,7 +2,7 @@
 categories: אוריון
 dependencies: '*.md.he'
 keywords: ויקי, ידע, kms, orion, subversion
-status: אומתו 42630
+status: אומתו 44010
 title: ויקי במערכות ניהול ידע
 ---
 
@@ -43,7 +43,7 @@ mindmap
      ממשק לקוח
 ```
 
-[TOC]
+[TOC]#sidebar
 
 -----
 ## מערכות ניהול ידע
@@ -138,20 +138,20 @@ wardley-beta
   title Jamstack Wiki Value Chain
   anchor Business [0.95, 0.35]
   component Cloud Hosting [0.80, 0.80]
-  component Agentic AI [0.50, 0.15]
+  component Agentic AI [0.25, 0.35]
   component Jamstack Wiki [0.70, 0.55]
-  component Markdown Editor [0.60, 0.40]
-  component Version Control [0.20, 0.65]
-  component SSG [0.35, 0.80]
+  component Markdown Editor [0.50, 0.60]
+  component Version Control [0.05, 0.65]
+  component SSG [0.60, 0.80]
   Business -> Jamstack Wiki
   Agentic AI -> Markdown Editor
   Jamstack Wiki -> Cloud Hosting
   Jamstack Wiki -> Markdown Editor
-  Version Control -> SSG
+  Agentic AI -> Version Control
   SSG -> Jamstack Wiki
   evolve Version Control 0.80
   evolve Agentic AI 0.55
-  note "Standardized Version Control allows Agentic AI to evolve faster" [0.30, 0.20]
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.15, 0.30]
 ```
 
 מספר אתרי ויקי התומכים בבקרת גרסאות (במיוחד אלה עם עריכה דמוית ויקי אמיתית אבל מופעל על ידי Git או דומה לניהול גרסאות) בנויים סביב עקרונות סטטיים ליצירת אתרים (SSG). אלה מאחסנים תוכן כקובצי טקסט רגיל (בדרך כלל Markdown) ב-Git repo, משתמשים ב-Git עצמו כבקרת הגרסה העורפית, ויוצרים אתרי HTML סטטיים מקבצים אלה - בדרך כלל תוך כדי עבודה (באמצעות שרת קל משקל) או בנויים מראש לפריסה (לדוגמה, ל-GitHub דפים, Netlify וכו').
@@ -231,5 +231,19 @@ wardley-beta
 מודלי שפה גדולים מסמנים תוכן לא עדכני באמצעות השוואת תאריכי עריכה, היסטוריית גרסאות או סחיפה סמנטית. תהליכי עבודה של אימות: "אימות דף זה" → LLM בדיקה צולבת נגד מקורות או נתונים אחרונים. בשילוב עם בקרת גרסאות מרכזית, אתה מקבל עריכות ניתנות למעקב וניתנות לביקורת בסיוע בינה מלאכותית.
 
 אתרי ויקי מסורתיים מאחסנים ומקשרים ידע. אתרי Wiki המופעלים על-ידי LLM מבינים, יוצרים, מאחזרים ומפתחים אותם - הפיכת מסמכים פסיביים לעוזר פעיל ותמיד-על, שמפחית שאלות חוזרות ונשנות, מאיץ את תהליכי ה-Ramp-up ולוכד ידע שבטי לפני שהוא יוצא מהדלת.
+
+<style type="text/css">
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.fr'
 keywords: wiki, connaissance, kms, orion, subversion
-status: vérifié=42630
+status: vérifié=44010
 title: Wikis dans les systèmes de gestion des connaissances
 ---
 
@@ -43,7 +43,7 @@ mindmap
      CLI
 ```
 
-[TOC]
+[TOC]#sidebar
 
 -----
 ## Systèmes de gestion des connaissances
@@ -138,20 +138,20 @@ wardley-beta
   title Jamstack Wiki Value Chain
   anchor Business [0.95, 0.35]
   component Cloud Hosting [0.80, 0.80]
-  component Agentic AI [0.50, 0.15]
+  component Agentic AI [0.25, 0.35]
   component Jamstack Wiki [0.70, 0.55]
-  component Markdown Editor [0.60, 0.40]
-  component Version Control [0.20, 0.65]
-  component SSG [0.35, 0.80]
+  component Markdown Editor [0.50, 0.60]
+  component Version Control [0.05, 0.65]
+  component SSG [0.60, 0.80]
   Business -> Jamstack Wiki
   Agentic AI -> Markdown Editor
   Jamstack Wiki -> Cloud Hosting
   Jamstack Wiki -> Markdown Editor
-  Version Control -> SSG
+  Agentic AI -> Version Control
   SSG -> Jamstack Wiki
   evolve Version Control 0.80
   evolve Agentic AI 0.55
-  note "Standardized Version Control allows Agentic AI to evolve faster" [0.30, 0.20]
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.15, 0.30]
 ```
 
 Plusieurs wikis compatibles avec le contrôle des versions (en particulier ceux avec un véritable montage wiki mais alimenté par Git ou similaire pour la gestion des versions) sont construits autour des principes de génération de site statique (SSG). Ceux-ci stockent le contenu sous forme de fichiers texte brut (généralement Markdown) dans un référentiel Git, utilisent Git lui-même comme back-end de contrôle de version et génèrent des sites HTML statiques à partir de ces fichiers - soit à la volée (via un serveur léger) ou prédéfinis pour le déploiement (par exemple, vers GitHub Pages, Netlify, etc.).
@@ -231,5 +231,19 @@ Les LLM alimentent les chatbots / agents intégrés dans Slack / Team / IDE / na
 Les LLM marquent un contenu obsolète en comparant les dates de modification, l'historique des versions ou la dérive sémantique. Workflows de vérification : "Vérifier cette page" → Le LLM contre-vérifie les sources ou les données récentes. Associé à un contrôle de version centralisé, vous obtenez des modifications traçables et auditables assistées par l'IA.
 
 Stockage de wikis traditionnels et connaissances de liaison. Les wikis alimentés par LLM le comprennent, le génèrent, le récupèrent et le font évoluer – transformant les documents passifs en un assistant actif et toujours actif qui réduit les questions répétées, accélère la montée en puissance et capture les connaissances tribales avant qu'elles ne sortent.
+
+<style type="text/css">
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->

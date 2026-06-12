@@ -2,7 +2,7 @@
 categories: 오리온
 dependencies: '*.md.ko'
 keywords: 위키, 지식, 킬로미터, orion, subversion
-status: 확인=42630
+status: 확인=44010
 title: 지식 관리 시스템 위키
 ---
 
@@ -43,7 +43,7 @@ mindmap
      CLI
 ```
 
-[TOC]
+[TOC]#sidebar
 
 -----
 ## 지식 관리 시스템
@@ -138,20 +138,20 @@ wardley-beta
   title Jamstack Wiki Value Chain
   anchor Business [0.95, 0.35]
   component Cloud Hosting [0.80, 0.80]
-  component Agentic AI [0.50, 0.15]
+  component Agentic AI [0.25, 0.35]
   component Jamstack Wiki [0.70, 0.55]
-  component Markdown Editor [0.60, 0.40]
-  component Version Control [0.20, 0.65]
-  component SSG [0.35, 0.80]
+  component Markdown Editor [0.50, 0.60]
+  component Version Control [0.05, 0.65]
+  component SSG [0.60, 0.80]
   Business -> Jamstack Wiki
   Agentic AI -> Markdown Editor
   Jamstack Wiki -> Cloud Hosting
   Jamstack Wiki -> Markdown Editor
-  Version Control -> SSG
+  Agentic AI -> Version Control
   SSG -> Jamstack Wiki
   evolve Version Control 0.80
   evolve Agentic AI 0.55
-  note "Standardized Version Control allows Agentic AI to evolve faster" [0.30, 0.20]
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.15, 0.30]
 ```
 
 일부 버전 제어 가능 위키(특히 실제 위키와 유사한 편집 기능이 있지만 Git 또는 이와 유사한 버전 지정 기능이 있는 위키)는 정적 사이트 생성(SSG) 원칙을 기반으로 합니다. 이러한 콘텐츠는 Git 저장소에 일반 텍스트 파일(일반적으로 마크다운)로 저장되고, Git 자체를 버전 제어 백엔드로 사용하고, 해당 파일에서 정적 HTML 사이트를 생성합니다. 즉, (경량 서버를 통해) 또는 배포용으로 사전 구축(예: GitHub 페이지, Netlify 등)됩니다.
@@ -231,5 +231,19 @@ LLM은 Wiki에서 실시간으로 가져오는 Slack/Teams/IDE/browser에 내장
 LLM은 편집 날짜, 버전 기록 또는 의미 드리프트를 비교하여 오래된 콘텐츠에 플래그를 지정합니다. 확인 워크플로우: "이 페이지 확인" → LLM은 소스 또는 최근 데이터에 대한 상호 확인을 수행합니다. 중앙 집중식 버전 제어와 결합하여 추적 가능하고 감사 가능한 AI 지원 편집을 얻을 수 있습니다.
 
 전통적인 위키 상점과 연결 지식. LLM 기반 위키의 이해, 생성, 검색 및 진화 - 수동 문서를 적극적이고 상시 가동되는 어시스턴트로 전환하여 반복되는 질문을 줄이고 램프 업 속도를 높이며 문 밖으로 나오기 전에 부족한 지식을 포착합니다.
+
+<style type="text/css">
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->

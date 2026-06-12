@@ -2,7 +2,7 @@
 categories: أوريون
 dependencies: '*.md.ar'
 keywords: wiki، knowledge، kms، orion، subversion
-status: التحقق = 42630
+status: التحقق = 44010
 title: ويكي في أنظمة إدارة المعرفة
 ---
 
@@ -43,7 +43,7 @@ mindmap
      CLI
 ```
 
-[TOC]
+[TOC]#sidebar
 
 -----
 ## أنظمة إدارة المعرفة
@@ -138,20 +138,20 @@ wardley-beta
   title Jamstack Wiki Value Chain
   anchor Business [0.95, 0.35]
   component Cloud Hosting [0.80, 0.80]
-  component Agentic AI [0.50, 0.15]
+  component Agentic AI [0.25, 0.35]
   component Jamstack Wiki [0.70, 0.55]
-  component Markdown Editor [0.60, 0.40]
-  component Version Control [0.20, 0.65]
-  component SSG [0.35, 0.80]
+  component Markdown Editor [0.50, 0.60]
+  component Version Control [0.05, 0.65]
+  component SSG [0.60, 0.80]
   Business -> Jamstack Wiki
   Agentic AI -> Markdown Editor
   Jamstack Wiki -> Cloud Hosting
   Jamstack Wiki -> Markdown Editor
-  Version Control -> SSG
+  Agentic AI -> Version Control
   SSG -> Jamstack Wiki
   evolve Version Control 0.80
   evolve Agentic AI 0.55
-  note "Standardized Version Control allows Agentic AI to evolve faster" [0.30, 0.20]
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.15, 0.30]
 ```
 
 يتم بناء العديد من الويكي التي تدعم التحكم في الإصدار (وخاصة تلك التي تحتوي على تحرير حقيقي يشبه الويكي ولكن مدعوم من Git أو ما شابه ذلك لتعيين الإصدار) حول مبادئ إنشاء الموقع الثابت (SSG). تخزن هذه المحتويات كملفات نصية عادية (عادة Markdown) في مستودع Git، وتستخدم Git نفسها كواجهة خلفية للتحكم في الإصدار، وتقوم بإنشاء مواقع HTML ثابتة من تلك الملفات - إما أثناء التنقل (عبر خادم خفيف الوزن) أو تم إنشاؤها مسبقًا للنشر (على سبيل المثال، إلى صفحات GitHub، Netlify، إلخ).
@@ -231,5 +231,19 @@ LLMs السلطة chatbots / وكلاء جزءا لا يتجزأ من سلاك /
 تشير نماذج اللغات الكبيرة إلى محتوى قديم من خلال مقارنة تواريخ التحرير أو تاريخ الإصدار أو الانحراف الدلالي. عمليات سير عمل التحقق: "أكّد هذه الصفحة" → LLM الفحوصات المتقاطعة مقابل المصادر أو البيانات الحديثة. إلى جانب التحكم المركزي في الإصدار، يمكنك الحصول على عمليات تحرير قابلة للتتبع ومراجعة بمساعدة الذكاء الاصطناعي.
 
 الويكي التقليدية تخزين وربط المعرفة. يفهم wikis الذي يعمل بنظام LLM وينشئه ويسترجعه ويطوره - مما يحول المستندات السلبية إلى مساعد نشط دائمًا يقلل من الأسئلة المتكررة ويسرع من الزيادة ويسجل المعرفة القبلية قبل أن يخرج من الباب.
+
+<style type="text/css">
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->

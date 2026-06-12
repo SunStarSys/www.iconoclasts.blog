@@ -2,7 +2,7 @@
 categories: 奧里昂
 dependencies: '*.md.zh-TW'
 keywords: wiki、知識、kms、orion、subversion
-status: 驗證 =42630
+status: 驗證 =44010
 title: 知識管理系統中的 Wiki
 ---
 
@@ -43,7 +43,7 @@ mindmap
      CLI
 ```
 
-[TOC]
+[TOC]#sidebar
 
 -----
 ## 知識管理系統
@@ -138,20 +138,20 @@ wardley-beta
   title Jamstack Wiki Value Chain
   anchor Business [0.95, 0.35]
   component Cloud Hosting [0.80, 0.80]
-  component Agentic AI [0.50, 0.15]
+  component Agentic AI [0.25, 0.35]
   component Jamstack Wiki [0.70, 0.55]
-  component Markdown Editor [0.60, 0.40]
-  component Version Control [0.20, 0.65]
-  component SSG [0.35, 0.80]
+  component Markdown Editor [0.50, 0.60]
+  component Version Control [0.05, 0.65]
+  component SSG [0.60, 0.80]
   Business -> Jamstack Wiki
   Agentic AI -> Markdown Editor
   Jamstack Wiki -> Cloud Hosting
   Jamstack Wiki -> Markdown Editor
-  Version Control -> SSG
+  Agentic AI -> Version Control
   SSG -> Jamstack Wiki
   evolve Version Control 0.80
   evolve Agentic AI 0.55
-  note "Standardized Version Control allows Agentic AI to evolve faster" [0.30, 0.20]
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.15, 0.30]
 ```
 
 數個啟用版本控制功能的 Wiki (特別是那些使用類似 Wiki 的編輯，但使用 Git 或類似版本設計的 Wiki) 都以靜態網站產生 (SSG) 原則為基礎。這些內容會以純文字檔案 (通常是 Markdown) 儲存在 Git 儲存區域中，使用 Git 本身作為版本控制後端，並且從這些檔案產生靜態 HTML 網站 - 即時 (透過輕量型伺服器) 或預先建置以進行建置 (例如 GitHub 頁面、Netlify 等)。
@@ -231,5 +231,19 @@ LLM 支援即時從 Wiki 提取的 Slack/Teams/IDE/ 瀏覽器中的聊天機器�
 LLM 會透過比較編輯日期、版本歷史記錄或語意漂移來標示過時的內容。驗證工作流程："驗證此頁面" → LLM 會交叉檢查來源或最近的資料。結合集中式版本控制，您將獲得可追蹤、可稽核的 AI 輔助編輯。
 
 傳統維基商店與連結知識。LLM 驅動的 Wiki 可瞭解、產生、擷取及發展，並將被動文件轉化為主動且隨時可用的助理，可減少重複的問題、加快提升速度，並在離開門前擷取部落知識。
+
+<style type="text/css">
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->

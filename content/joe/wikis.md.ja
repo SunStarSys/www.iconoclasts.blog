@@ -2,7 +2,7 @@
 categories: オリオン
 dependencies: '*.md.ja'
 keywords: wiki、kms、orion、subversion
-status: 確認済み=42630
+status: 確認済み=44010
 title: ナレッジマネジメントシステム(Knowledge Management Systems)
 ---
 
@@ -43,7 +43,7 @@ mindmap
      CLI
 ```
 
-[TOC]
+[TOC]#sidebar
 
 -----
 ##ナレッジマネジメントシステム
@@ -138,20 +138,20 @@ wardley-beta
   title Jamstack Wiki Value Chain
   anchor Business [0.95, 0.35]
   component Cloud Hosting [0.80, 0.80]
-  component Agentic AI [0.50, 0.15]
+  component Agentic AI [0.25, 0.35]
   component Jamstack Wiki [0.70, 0.55]
-  component Markdown Editor [0.60, 0.40]
-  component Version Control [0.20, 0.65]
-  component SSG [0.35, 0.80]
+  component Markdown Editor [0.50, 0.60]
+  component Version Control [0.05, 0.65]
+  component SSG [0.60, 0.80]
   Business -> Jamstack Wiki
   Agentic AI -> Markdown Editor
   Jamstack Wiki -> Cloud Hosting
   Jamstack Wiki -> Markdown Editor
-  Version Control -> SSG
+  Agentic AI -> Version Control
   SSG -> Jamstack Wiki
   evolve Version Control 0.80
   evolve Agentic AI 0.55
-  note "Standardized Version Control allows Agentic AI to evolve faster" [0.30, 0.20]
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.15, 0.30]
 ```
 
 いくつかのバージョン制御対応のウィキ(特に、真のウィキのような編集を行うが、Gitまたはバージョニングに類似する)は、静的サイト生成(SSG)の原則に基づいて構築されています。これらのコンテンツは、Gitリポジトリにプレーン・テキスト・ファイル(通常はMarkdown)として格納され、バージョン管理バックエンドとしてGit自体を使用し、(軽量サーバーを介して)オンザフライまたはデプロイメント用に事前構築された(GitHub Pages、Netlifyなど)ファイルから静的HTMLサイトを生成します。
@@ -231,5 +231,19 @@ LLMは、Slack/Teams/IDE/browserに組み込まれたチャットボット/エ�
 LLMは、編集日、バージョン履歴またはセマンティック・ドリフトを比較して、古いコンテンツにフラグを設定します。検証ワークフロー: "このページを検証" →LLMは、ソースまたは最新のデータに対してクロスチェックします。一元化されたバージョン管理と組み合わせることで、追跡可能で監査可能なAI支援の編集が可能になります。
 
 伝統的なwikiストアとリンク知識。LLM搭載のウィキは、それを理解し、生成し、取得し、進化させる — パッシブ・ドキュメントをアクティブで常時オンのアシスタントに変えることで、繰り返し発生する質問を減らし、急増を加速させ、ドアから出る前に部族の知識を取得します。
+
+<style type="text/css">
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->

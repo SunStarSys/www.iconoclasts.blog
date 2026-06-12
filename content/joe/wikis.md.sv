@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: wiki, kunskap, kms, orion, subversion
-status: verifierad=42630
+status: verifierad=44010
 title: Wikis i kunskapshanteringssystem
 ---
 
@@ -43,7 +43,7 @@ mindmap
      kommandoradsgränssnitt
 ```
 
-[TOC]
+[TOC]#sidebar
 
 -----
 ## Kunskapshanteringssystem
@@ -138,20 +138,20 @@ wardley-beta
   title Jamstack Wiki Value Chain
   anchor Business [0.95, 0.35]
   component Cloud Hosting [0.80, 0.80]
-  component Agentic AI [0.50, 0.15]
+  component Agentic AI [0.25, 0.35]
   component Jamstack Wiki [0.70, 0.55]
-  component Markdown Editor [0.60, 0.40]
-  component Version Control [0.20, 0.65]
-  component SSG [0.35, 0.80]
+  component Markdown Editor [0.50, 0.60]
+  component Version Control [0.05, 0.65]
+  component SSG [0.60, 0.80]
   Business -> Jamstack Wiki
   Agentic AI -> Markdown Editor
   Jamstack Wiki -> Cloud Hosting
   Jamstack Wiki -> Markdown Editor
-  Version Control -> SSG
+  Agentic AI -> Version Control
   SSG -> Jamstack Wiki
   evolve Version Control 0.80
   evolve Agentic AI 0.55
-  note "Standardized Version Control allows Agentic AI to evolve faster" [0.30, 0.20]
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.15, 0.30]
 ```
 
 Flera versionskontrollaktiverade wikier (särskilt de med sann wikiliknande redigering men drivs av Git eller liknande för versionshantering) är byggda kring statiska principer för webbplatsgenerering (SSG). Dessa lagrar innehåll som vanliga textfiler (vanligtvis Markdown) i ett Git-datalager, använder Git som versionskontrollserverdel och genererar statiska HTML-webbplatser från dessa filer - antingen on-the-fly (via en lätt server) eller förbyggd för distribution (t.ex. till GitHub-sidor, Netlify etc.).
@@ -231,5 +231,19 @@ LLM:er driver chattrobotar/agenter inbäddade i Slack/Teams/IDE/webbläsare som 
 LLM:er flaggar föråldrat innehåll genom att jämföra redigeringsdatum, versionshistorik och semantisk avvikelse. Verifieringsarbetsflöden: "Verifiera sidan" → LLM-korskontroller mot källor eller senaste data. I kombination med centraliserad versionskontroll får du spårbara, granskningsbara AI-assisterade redigeringar.
 
 Traditionella wikis lagrar och länkar kunskap. LLM-drivna wikier förstår, genererar, hämtar och utvecklar det - förvandlar passiva dokument till en aktiv, ständigt på assistent som minskar upprepade frågor, snabbar upp och fångar stamkunskap innan den går ut genom dörren.
+
+<style type="text/css">
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->

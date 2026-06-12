@@ -2,7 +2,7 @@
 categories: Орион
 dependencies: '*.md.ru'
 keywords: wiki, знание, kms, orion, подрыв
-status: проверено=42630
+status: проверено=44010
 title: Википедия:Системы управления знаниями
 ---
 
@@ -43,7 +43,7 @@ mindmap
      Клиника
 ```
 
-[TOC]
+[TOC]#sidebar
 
 -----
 ## Системы управления знаниями
@@ -138,20 +138,20 @@ wardley-beta
   title Jamstack Wiki Value Chain
   anchor Business [0.95, 0.35]
   component Cloud Hosting [0.80, 0.80]
-  component Agentic AI [0.50, 0.15]
+  component Agentic AI [0.25, 0.35]
   component Jamstack Wiki [0.70, 0.55]
-  component Markdown Editor [0.60, 0.40]
-  component Version Control [0.20, 0.65]
-  component SSG [0.35, 0.80]
+  component Markdown Editor [0.50, 0.60]
+  component Version Control [0.05, 0.65]
+  component SSG [0.60, 0.80]
   Business -> Jamstack Wiki
   Agentic AI -> Markdown Editor
   Jamstack Wiki -> Cloud Hosting
   Jamstack Wiki -> Markdown Editor
-  Version Control -> SSG
+  Agentic AI -> Version Control
   SSG -> Jamstack Wiki
   evolve Version Control 0.80
   evolve Agentic AI 0.55
-  note "Standardized Version Control allows Agentic AI to evolve faster" [0.30, 0.20]
+  note "Standardized Version Control allows Agentic AI to evolve faster" [0.15, 0.30]
 ```
 
 Несколько вики с поддержкой управления версиями (особенно те, которые имеют истинное вики-подобное редактирование, но питаются от Git или аналогичны для создания версий) построены на принципах статического создания сайтов (SSG). Они хранят контент как простые текстовые файлы (обычно Markdown) в репозитории Git, используют сам Git в качестве бэкенда управления версиями и генерируют статические HTML-сайты из этих файлов – либо на лету (через облегченный сервер), либо предварительно встроенные для развертывания (например, на страницах GitHub, Netlify и т. Д.).
@@ -231,5 +231,19 @@ wardley-beta
 LLM помечают устаревший контент путем сравнения дат редактирования, истории версий или семантического отклонения. Потоки операций проверки: "Подтвердить эту страницу" → Перекрестные проверки LLM по источникам или последним данным. В сочетании с централизованным управлением версиями вы получаете отслеживаемые, проверяемые изменения с помощью ИИ.
 
 Традиционные вики-магазины и знания ссылок. Вики на основе LLM понимают, генерируют, извлекают и развивают его – превращая пассивную документацию в активного, всегда включенного помощника, который уменьшает повторяющиеся вопросы, ускоряет рост и захватывает племенные знания, прежде чем он выйдет из двери.
+
+<style type="text/css">
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
 
 <!-- $Date$ $Author$ $Revision$ -->
