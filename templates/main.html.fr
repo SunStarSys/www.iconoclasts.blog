@@ -339,7 +339,7 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
           if (entry.isIntersecting && target.style.opacity < 1) {
               target.style.display = "none";
               target.style.opacity = 1;
-              $(target).fadeIn(1000); // Visual feedback
+              $(target).fadeIn(); // Visual feedback
           } else {
             // target.style.opacity = 0.01;
 		  }
