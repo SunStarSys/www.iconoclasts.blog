@@ -291,11 +291,12 @@
       try {
           const json = await response.json();
           const recent = document.querySelector("#recent ul.nav-link");
+          alert(recent);
           for (const e of json.recent) {
-             const li = document.createElement("LI");
+             const li = document.createElement("li");
              li.innerHTML = "<a class='nav-link' href='" + escape(e.url) + "'>" + e.title + "</a>";
+             alert(li);
              recent.appendChild(li);
-             alert(li.innerHTML);
           }
       }
       catch (e) {
