@@ -290,7 +290,7 @@
                                    {credentials: 'same-origin'});
       try {
           const json = await response.json();
-          const recent = document.querySelector("#recent ul");
+          const recent = document.querySelector("#recent ul.nav-link");
           for (const e of json.recent) {
              const li = document.createElement("LI");
              li.innerHTML = "<a class='nav-link' href='" + escape(e.url) + "'>" + e.title + "</a>";
