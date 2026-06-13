@@ -354,5 +354,5 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
   }
 </script>
 {% block javascript %}{% endblock %}
-</body>
+  </body>
 </html>
