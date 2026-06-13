@@ -14,7 +14,7 @@ Status: draft
 
 ## Introduction
 
-Information Architecture **organizes** and **arranges** {# lede #}the entire gamut of technologies relevant to the design, presentation, relationships, and architectural constraints that cover every URL you serve{# lede #} over HTTP, both publicly and privately.  This essay is a high-level survey of my expertise in these areas; it is far from comprehensive given the vast field it intends to cover.
+Web Information Architecture **organizes**, **contextualizes**, and **arranges** {# lede #}the entire gamut of technologies relevant to the design, presentation, relationships, and architectural constraints that cover every URL you serve{# lede #} over HTTP, both publicly and privately.  This essay is a high-level survey of my expertise in these areas; it is far from comprehensive given the vast field it intends to cover.
 
 ## Usability, Discovery, and Link Topology: the Big Picture
 
@@ -51,8 +51,8 @@ See the section on HATEOAS for an overview.
 
 Options:
 
-- pass "as_json=1" in the query string
-- set "Accept: application/json" in the request headers
+- pass `as_json=1` in the query string
+- set `Accept: application/json` in the request headers
 
 ##### Styling is Semantically Controlled by Customer Installation of the `/content/css/boostrap.min.css` File
 
@@ -89,14 +89,14 @@ Options:
 ## Access Controls on Content, from a Single Source of Truth Perspective
 
 - `walk_content_tree()` in `path.pm`
-  - acls
-  - dependencies
+  - `seed_file_deps`
+  - `seed_file_acl`
 - `acl.yml`
 
 ## SunStar Systems' Orion&trade; for ZFS-backed Platforms
 
-1. zfs clones
-2. zfs send/recv
+1. `zfs` clones
+2. `zfs` send/recv
 
 ## StageMaster: Experimentation with Pure Client-Side State Engine
 
