@@ -105,7 +105,7 @@
   </header>
 
   <main>
-<div id="recent" style="float:right; writing-mode: vertical-rl; position: fixed 100px 0">
+<div  style="float:right; writing-mode: vertical-rl; position: fixed 100px 0">
   <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#recentVisits" role="button" aria-controls="recentVisits">
     Recently Visited
   </a>
@@ -117,7 +117,7 @@
   </div>
   <div class="offcanvas-body">
     <div>
-      <ul class="nav-link">
+      <ul id="recent" class="nav-link">
       </ul>
     </div>
   </div>
@@ -290,12 +290,11 @@
                                    {credentials: 'same-origin'});
       try {
           const json = await response.json();
-          const recent = document.querySelector("#recent ul.nav-link");
-          alert(recent);
+          const recent = document.querySelector("#recent");
+
           for (const e of json.recent) {
              const li = document.createElement("li");
              li.innerHTML = "<a class='nav-link' href='" + escape(e.url) + "'>" + e.title + "</a>";
-             alert(li);
              recent.appendChild(li);
           }
       }
