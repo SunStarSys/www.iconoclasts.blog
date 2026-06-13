@@ -295,7 +295,8 @@
              const li = document.createElement("LI");
              li.innerHTML = "<a class='nav-link' href='" + escape(e.url) + "'>" + e.title + "</a>";
              recent.appendChild(li);
-         }
+             alert(li.innerHTML);
+          }
       }
       catch (e) {
           alert(e);
