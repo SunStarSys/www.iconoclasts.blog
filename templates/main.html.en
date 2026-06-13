@@ -102,6 +102,23 @@
 	    </form>
 	  </div>
     </div>
+<div id="edits" style="float:right; writing-mode: vertical-rl; position: fixed 100px 0">
+  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#recentVisits" role="button" aria-controls="recentVisits">
+    Recently Visited
+  </a>
+</div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="recentVisits" aria-labelledby="recentVisits">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel">Recently Visited</h5>
+    <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <ul class="nav-link">
+      </ul>
+    </div>
+  </div>
+</div>
   </header>
 
   <main>
