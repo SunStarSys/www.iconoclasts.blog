@@ -286,7 +286,7 @@ if (permission === "granted") {
 
 <script async="" type="module">
   if (document.cookie.indexOf("can_search") >= 0) {
-      const response = await fetch("/dynamic/search/?regex=recent={{path|urlencode}};lang=.en;markdown_search=1;as_json=1",
+      const response = await fetch("/dynamic/search/?regex=recent={{path|urlencode}};lang={{lang}};markdown_search=1;as_json=1",
                                    {credentials: 'same-origin'});
       try {
           const json = await response.json();
@@ -295,9 +295,9 @@ if (permission === "granted") {
 for (const e of json.recent) {
              const li = document.createElement("li");
              if (e.new)
-                li.innerHTML = "<span class='badge bg-success'>New</span> <a class='nav-link' href='" + escape(e.url) + "'>" + e.title + "</a>";
+                li.innerHTML = "<a href='" + escape(e.url) + "'>" + e.title + "</a>&nbsp;<a href='/dynamic/search/?regex=diff=" + e.rev + ";lang={{lang}};markdown_search=1;'><small><span class='badge bg-success'>New</span></small></a>"
              else
-                li.innerHTML = "<a class='nav-link' href='" + escape(e.url) + "'>" + e.title + "</a>";
+                li.innerHTML = "<a href='" + escape(e.url) + "'>" + e.title + "</a>";
              recent.appendChild(li);
           }
       }
