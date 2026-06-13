@@ -295,7 +295,7 @@
           for (const e of json.recent) {
              const li = document.createElement("li");
              if (e.new)
-                li.innerHTML = "<span class='badge bg-success'>New</span>&nbsp;<a class='nav-link' href='" + escape(e.url) + "'>" + e.title + "</a>";
+                li.innerHTML = "<span class='badge bg-success'>New</span> <a class='nav-link' href='" + escape(e.url) + "'>" + e.title + "</a>";
              else
                 li.innerHTML = "<a class='nav-link' href='" + escape(e.url) + "'>" + e.title + "</a>";
              recent.appendChild(li);
