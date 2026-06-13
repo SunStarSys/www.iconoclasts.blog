@@ -8,7 +8,7 @@ status: verifierad=26807
 title: Trådpaket
 ---
 
-[TOC]
+[TOC]#sidebar
 
 <div class="right">
 

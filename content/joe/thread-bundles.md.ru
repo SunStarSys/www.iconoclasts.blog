@@ -8,7 +8,7 @@ status: проверено=26807
 title: Пакеты потоков
 ---
 
-[TOC]
+[TOC]#sidebar
 
 <div class="right">
 

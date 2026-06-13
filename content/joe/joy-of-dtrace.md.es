@@ -12,7 +12,7 @@ title: La alegría de DTrace
 	</div>
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ## {# lede #}Medir dos veces, cortar una vez, antes de embarcarse en un esfuerzo de optimización de código{# lede #}.
 

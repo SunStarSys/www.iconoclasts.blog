@@ -12,7 +12,7 @@ title: Стохастическая формула трассировки для
 
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ```asy
 // tubular trefoil knot -*- asy -*-

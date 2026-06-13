@@ -14,7 +14,7 @@ title: Arquitectura de la Información
 
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ## Introducción
 

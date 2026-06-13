@@ -17,7 +17,7 @@ title: Triple producto de autofunciones y geometría espectral
   </p>
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ## Autor
 

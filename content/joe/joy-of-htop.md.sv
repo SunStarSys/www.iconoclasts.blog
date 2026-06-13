@@ -12,7 +12,7 @@ title: Glädjen i htop
 	</div>
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ## {# lede #}Bilder från Solaris 11{# lede #}.
 

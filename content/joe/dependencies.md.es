@@ -14,7 +14,7 @@ title: ¿De qué se trata <em>Smart Content Dependency Management™</em>?
 
 ## Tabla de contenido
 
-[TOC]
+[TOC]#sidebar
 
 -----
 

@@ -12,7 +12,7 @@ title: Glädjen i DTrace
 	</div>
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ## {# lede #}Mät två gånger, skär en gång innan du påbörjar en kodoptimeringsinsats{# lede #}.
 

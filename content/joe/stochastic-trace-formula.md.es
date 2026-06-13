@@ -12,7 +12,7 @@ title: Fórmula de rastreo estocástico para manifolds cerrados y con curva nega
 
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ```asy
 // tubular trefoil knot -*- asy -*-

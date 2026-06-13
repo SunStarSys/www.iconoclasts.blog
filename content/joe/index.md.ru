@@ -14,7 +14,7 @@ title: Случайные мысли Джо
 
 <div id="sidebar">
 
-[TOC]
+[TOC]#sidebar
 
 </div>
 

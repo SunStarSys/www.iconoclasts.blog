@@ -15,7 +15,7 @@ title: Joes slumpartade tankar
 
 <div id="sidebar">
 
-[TOC]
+[TOC]#sidebar
 
 </div>
 

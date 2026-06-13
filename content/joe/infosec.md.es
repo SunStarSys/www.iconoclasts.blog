@@ -14,7 +14,7 @@ title: Manual de seguridad de la información
 
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 #### ¿Cuál es el objetivo principal de InfoSec?
 

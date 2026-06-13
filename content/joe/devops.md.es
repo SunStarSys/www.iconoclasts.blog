@@ -6,7 +6,7 @@ status: archivado
 title: El movimiento DevOps
 ---
 
-[TOC]
+[TOC]#sidebar
 
 ## ¡Más que simplemente dar a los desarrolladores acceso root!
 

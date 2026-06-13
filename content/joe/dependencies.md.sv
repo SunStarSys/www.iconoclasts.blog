@@ -14,7 +14,7 @@ title: Vad handlar <em>Smart Content Dependency Management™</em> om?
 
 ## Innehållsförteckning
 
-[TOC]
+[TOC]#sidebar
 
 -----
 

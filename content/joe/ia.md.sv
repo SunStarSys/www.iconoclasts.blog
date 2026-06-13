@@ -14,7 +14,7 @@ title: Informationsarkitektur
 
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ## Introduktion
 

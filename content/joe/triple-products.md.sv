@@ -16,7 +16,7 @@ title: Trippelprodukter av Eigenfunktioner och spektral geometri
   </p>
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ## Författare
 

@@ -12,7 +12,7 @@ title: Stokastisk spårningsformel för stängda, negativt böjda grenrör
 
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ```asy
 // tubular trefoil knot -*- asy -*-

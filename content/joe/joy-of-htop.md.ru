@@ -12,7 +12,7 @@ title: Радость сверху
 	</div>
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ## {# lede #}htop на Solaris 11{# lede #}.
 

@@ -8,7 +8,7 @@ status: verificado=26807
 title: Paquetes de subprocesos
 ---
 
-[TOC]
+[TOC]#sidebar
 
 <div class="right">
 

@@ -6,7 +6,7 @@ status: arkiverad
 title: DevOps-rörelsen
 ---
 
-[TOC]
+[TOC]#sidebar
 
 ## Mer än att bara ge utvecklare root-åtkomst!
 

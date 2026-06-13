@@ -25,7 +25,7 @@ Prerequisites:
 
 3. Interés en los Sistemas Dinámicos Suaves y Estocásticos, incluyendo Brownian Motion y Martingale Theory.
 
-[TOC]
+[TOC]#sidebar
 
 ## Dinámica clásica
 

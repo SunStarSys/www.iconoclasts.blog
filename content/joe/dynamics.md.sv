@@ -25,7 +25,7 @@ Prerequisites:
 
 3. Intresset för mjuka och stokastiska dynamiska system inklusive Brownian Motion och Martingale teori.
 
-[TOC]
+[TOC]#sidebar
 
 ## Klassisk dynamik
 

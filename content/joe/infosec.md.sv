@@ -14,7 +14,7 @@ title: Informationssäkerhet, primer
 
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 #### Vad är det primära målet med InfoSec?
 

@@ -12,7 +12,7 @@ title: La alegría del htop
 	</div>
 </div>
 
-[TOC]
+[TOC]#sidebar
 
 ## {# lede #}htop en Solaris 11{# lede #}.
 

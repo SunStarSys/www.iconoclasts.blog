@@ -15,7 +15,7 @@ title: Los pensamientos aleatorios de Joe
 
 <div id="sidebar">
 
-[TOC]
+[TOC]#sidebar
 
 </div>
 
