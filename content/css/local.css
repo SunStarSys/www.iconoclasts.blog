@@ -179,7 +179,7 @@ a:hover {text-decoration: underline}
 }
 
 @media only screen and (max-width: 1000px) {
-    #meta, #filter, { display: none; }
+    #meta, #filter, #recent-div { display: none; }
 }
 
 div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
