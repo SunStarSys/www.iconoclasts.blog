@@ -105,7 +105,7 @@
   </header>
 
   <main>
-<div id="edits" style="float:right; writing-mode: vertical-rl; position: fixed 100px 0">
+<div id="recent" style="float:right; writing-mode: vertical-rl; position: fixed 100px 0">
   <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#recentVisits" role="button" aria-controls="recentVisits">
     Recently Visited
   </a>
@@ -238,7 +238,7 @@
            var m = document.cookie.match(/last=([0-9]+)/);
            if (m)
 			 revision = m[1];
-           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
+           var response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
                            {credentials: 'same-origin'});
            try {
               const json = await response.json();
@@ -277,6 +277,25 @@
               $("#unwatch").css("display", "inline");
           else
               $("#watch").css("display", "inline");
+      }
+      catch (e) {
+          alert(e);
+      }
+  }
+</script>
+
+<script async="" type="module">
+  if (document.cookie.indexOf("can_search") >= 0) {
+      const response = await fetch("/dynamic/search{{path|dirname}}/?regex=recent=;lang=.en;markdown_search=1;as_json=1",
+                                   {credentials: 'same-origin'});
+      try {
+          const json = await response.json();
+          const recent = document.selectQuery("#recent ul");
+          for (e in json.recent) {
+             const li = document.createElement("LI");
+             li.innerHTML = "<a class='nav-link' href='" + e.link + "'>" + e.name + "</a>";
+             recent.appendChild(li);
+         }
       }
       catch (e) {
           alert(e);
