@@ -102,6 +102,9 @@
 	    </form>
 	  </div>
     </div>
+  </header>
+
+  <main>
 <div id="edits" style="float:right; writing-mode: vertical-rl; position: fixed 100px 0">
   <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#recentVisits" role="button" aria-controls="recentVisits">
     Recently Visited
@@ -119,9 +122,6 @@
     </div>
   </div>
 </div>
-  </header>
-
-  <main>
 {% block alert %}
   {% if alert %}
   <div class="alert alert-dismissible alert-info container">
