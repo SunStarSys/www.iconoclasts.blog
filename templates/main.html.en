@@ -293,7 +293,7 @@
           const recent = document.querySelector("#recent ul");
           for (e in json.recent) {
              const li = document.createElement("LI");
-             li.innerHTML = "<a class='nav-link' href='" + e.link + "'>" + e.name + "</a>";
+             li.innerHTML = "<a class='nav-link' href='" + escape(e.url) + "'>" + e.title + "</a>";
              recent.appendChild(li);
          }
       }
