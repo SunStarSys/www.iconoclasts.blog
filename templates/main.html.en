@@ -105,7 +105,7 @@
   </header>
 
   <main>
-<div class="end" style="writing-mode: vertical-rl; position: fixed; top: 110px; right:if(direction:ltr 0)">
+<div class="end" style="writing-mode: vertical-rl; position: fixed; top: 110px; right:if(direction:'ltr' 0); left:if(direction:'rtl' 0)">
   <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#recentVisits" role="button" aria-controls="recentVisits">
     Recently Visited
   </a>
