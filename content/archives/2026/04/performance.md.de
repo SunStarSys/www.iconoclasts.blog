@@ -1,0 +1,7 @@
+---
+dependencies: '*.md.de'
+keywords: ~
+title: Anwendungsperformance
+
+---
+{% ssi `/joe/performance.md.de` %}

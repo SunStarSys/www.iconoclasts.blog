@@ -1,0 +1,7 @@
+---
+dependencies: '*.md.ar'
+keywords: ~
+title: متعة مع قمة
+
+---
+{% ssi `/joe/fun-with-htop.md.ar` %}

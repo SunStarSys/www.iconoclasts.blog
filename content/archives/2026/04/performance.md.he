@@ -1,0 +1,7 @@
+---
+dependencies: '*.md.he'
+keywords: ~
+title: ביצועי יישום
+
+---
+{% ssi `/joe/performance.md.he` %}
