@@ -105,7 +105,7 @@
   </header>
 
 <main>
-<div class="position-fixed end-0" style="writing-mode: vertical-rl; top:110px">
+<div id="recent-div" class="position-fixed end-0" style="writing-mode: vertical-rl; top:110px">
   <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#recentVisits" role="button" aria-controls="recentVisits">
     最近訪れたサイト
   </a>
