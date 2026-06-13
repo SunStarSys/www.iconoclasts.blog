@@ -105,14 +105,14 @@
   </header>
 
 <main>
-<div  style="float:right; writing-mode: vertical-rl; position: fixed 100px 0">
+<div  style="writing-mode: vertical-rl; position: fixed; top: 120px; right:0px">
   <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#recentVisits" role="button" aria-controls="recentVisits">
     Недавно посещённые
   </a>
 </div>
 <div class="offcanvas offcanvas-end" tabindex="-1" id="recentVisits" aria-labelledby="recentVisits">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel">Недавно посещённые</h5>
+    <h5 class="offcanvas-title text-white">Недавно посещённые</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
