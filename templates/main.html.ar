@@ -291,11 +291,15 @@ if (permission === "granted") {
       try {
           const json = await response.json();
           const recent = document.querySelector("#recent");
-
-for (const e of json.recent) {
+          const btn = document.querySelector("#recent-div a");
+          for (const e of json.recent) {
              const li = document.createElement("li");
-             if (e.new)
-                li.innerHTML = "<a href='/dynamic/search/?regex=diff=" + e.rev + ";lang={{lang}};markdown_search=1;'><span class='text-success'><i class='fa fa-code-compare'></i></span></a>&nbsp;<a href='" + escape(e.url) + "'>" + e.title + "</a>";
+             if (e.new) {
+                li.innerHTML = "<a href='/dynamic/search/?regex=diff=" + e.rev + ";lang={{lang}};markdown_search=1;'><span class='text-success'><i class='fa fa-code-compare'></i></span></a>&nbsp;<a href='" + escape(e.url) + "'>" + e.title + "</a><br/>";
+                btn.classList.remove("btn-primary");
+				if (!btn.classList.contains("btn-success"))
+		  		  btn.classList.add("btn-success");
+             }
              else
                 li.innerHTML = "<a href='" + escape(e.url) + "'>" + e.title + "</a>";
              recent.appendChild(li);
