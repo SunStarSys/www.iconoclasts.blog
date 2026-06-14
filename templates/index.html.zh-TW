@@ -149,7 +149,7 @@ thread_comments();
 {% for d in deps %}
 <dt>
 
-{{d.1.content|ssi|img||removetags:"script style"|removeattrs:"on\w+ style class"}}
+{{d.1.content|ssi|img|markdown|removetags:"script style"|removeattrs:"on\w+ style class"}}
 
 </dt>
 <dd>
