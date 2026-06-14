@@ -10,8 +10,8 @@
     <meta name="theme-color" content="black">
     <meta property="og:description" content="{{description}}">
 	<meta property="og:image" content="{{content|img|markdown|selectattr:"src"|default:"/images/iconoclast.jpg"}}">
-    <meta property="og:title" content="{{ headers.title|removetags:"script"|removeattrs:"on\w+"|safe }} - {{ facts.title|safe }}">
-    <title>{% block title %}{{ headers.title|removetags:"script"|removeattrs:"on\w+"|safe }} - {{ facts.title|safe }}{% endblock %}</title>
+    <meta property="og:title" content="{{ headers.title|removetags:"script style"|removeattrs:"on\w+ style class">
+    <title>{% block title %}{{ headers.title|removetags:"script style"|removeattrs:"on\w+ style class"|safe }} - {{ facts.title|safe }}{% endblock %}</title>
     {% if permalink %}
     <link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
     {% endif %}
@@ -143,7 +143,7 @@
         <img src="/images/edit.png" alt="Edit Icon" />
       </a>
   </div>
-  <h1>{{ headers.title|removetags:"script"|removeattrs:"on\w+"|safe }}</h1>
+  <h1>{{ headers.title|removetags:"script style"|removeattrs:"on\w+ style class"|safe }}</h1>
   <div class="jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 

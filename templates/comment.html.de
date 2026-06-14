@@ -1,9 +1,9 @@
       <article id="article-{{key}}" {% if muted %}class="text-muted"{% endif %}>
         <header>
           <h6 class="card-title" id="{{key}}">
-            <a href="#{{key}}-link" class="reference-link">{{headers.title}}</a>
-            von {{content|vcs_author:lang}}
-            am <em><time>{{content|vcs_date:lang}}</time></em>
+            <a href="#{{key}}-link" class="reference-link">{{headers.title|removetags:"script style"|removeattrs:"on\w+ style class"}}</a>
+            von {{content|vcs_author:lang|removetags:"script style"|removeattrs:"on\w+ style class"}}
+            am <em><time>{{content|vcs_date:lang|removetags:"script style"|removeattrs:"on\w+ style class"}}</time></em>
             {% if muted %}
             {% else %}
             {% if important %}
@@ -13,7 +13,7 @@
             {% if category_root %}{% if archive_root %}
 			  &nbsp;
             <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
-                    value="HTTPS://{{website}}{{path|dirname}}/{{key}}.md{{lang}}">
+                    value="https://{{website}}{{path|dirname}}/{{key}}.md{{lang}}">
               Antwort
             </button>
 			{% endif %}{% endif %}
@@ -21,7 +21,7 @@
           </h6>
         </header>
         <small>
-          <p class="card-text">{{content|removetags:"script,style"|markdown}}</p>
+          <p class="card-text">{{content|markdown|removetags:"script style"|removeattrs:"on\w+ style class"}}</p>
           <hr>
           <p>&nbsp;</p>
         </small>

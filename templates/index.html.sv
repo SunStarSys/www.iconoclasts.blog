@@ -11,7 +11,7 @@
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. {{b.title|utf8decode|cuts:"\\="|safe}}. {% if b.volume %}Volym {{b.volume}}. {% endif %}{% if b.number %}Nej. {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"|safe}}, {{b.year}}.
 {% endifequal %}
 {% ifequal b.type "online" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`Webbadress`: <{{b.url|utf8decode|cuts:"\\-"}}>{% endif %}{% if b.doi %} `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>,  {% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`URL`: <{{b.url|utf8decode|cuts:"\\-"}}>{% endif %}{% if b.doi %} `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>,  {% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
 {% endifequal %}
 {% ifequal b.type "proceedings" %}
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
@@ -149,12 +149,12 @@ thread_comments();
 {% for d in deps %}
 <dt>
 
-{{d.1.content|ssi|img|removeattrs:"on\w+ style"}}
+{{d.1.content|ssi|img||removetags:"script style"|removeattrs:"on\w+ style class"}}
 
 </dt>
 <dd>
 
-- [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede|removetags:"script"|removeattrs:"on\w+"}} ... <small><em>{{d.1.content|ssi|vcs_date:lang}}</em></small>
+- [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede|removetags:"script style"|removeattrs:"on\w+ style class"}} ... <small><em>{{d.1.content|ssi|vcs_date:lang|striptags}}</em></small>
 
 --------
 

@@ -2,7 +2,7 @@
 {% block content %}
    <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
 
-    <h1>{{ headers.title|removetags:"script"|removeattrs:"on\w+"|safe }}</h1>
+    <h1>{{ headers.title|removetags:"script style"|removeattrs:"on\w+ style class"|safe }}</h1>
      <div class="essay col-lg-12 container">
        <div style="color:#aaa">
          <small>
@@ -30,7 +30,7 @@
          <br>&nbsp;
          <br>
        </div>
-       {{ content|removetags:"script"|removeattrs:"on\w+"|markdown }}
+       {{ content|removetags:"script style"|removeattrs:"on\w+ style class"|markdown }}
      </div>
 {% endblock %}
 {% block footer %}

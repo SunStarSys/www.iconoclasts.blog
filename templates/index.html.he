@@ -5,16 +5,16 @@
 
 {% for b in bibliography.content|dictsort:"author" %}
 {% ifequal b.type "article" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `דוי`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
 {% endifequal %}
 {% ifequal b.type "book" %}
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. {{b.title|utf8decode|cuts:"\\="|safe}}. {% if b.volume %}וול. {{b.volume}}. {% endif %}{% if b.number %}לא. {{b.number}}.{% endif %} {{b.publisher|utf8decode|cuts:"\\-"|safe}}, {{b.year}}.
 {% endifequal %}
 {% ifequal b.type "online" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`כתובת URL`: <{{b.url|utf8decode|cuts:"\\-"}}>{% endif %}{% if b.doi %} `דוי`: <{{b.doi|utf8decode|cuts:"\\-"}}>,  {% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {% if b.url %}`URL`: <{{b.url|utf8decode|cuts:"\\-"}}>{% endif %}{% if b.doi %} `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>,  {% endif %}{% if b.archivePrefix %}`{{b.archivePrefix}}`:{{b.eprint}}.{% endif %}
 {% endifequal %}
 {% ifequal b.type "proceedings" %}
-1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `דוי`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
+1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.journal|utf8decode|cuts:"\\-"|safe}} {{b.volume}}{% if b.number %}.{{b.number}}{% endif %} ({{b.year}}): {{b.pages}}{% if b.doi %}, `DOI`: <{{b.doi|utf8decode|cuts:"\\-"}}>{% endif %}.
 {% endifequal %}
 {% ifequal b.type "phdthesis" %}
 1. <a id="{{b.id|utf8decode}}"> [{{b.id|utf8decode}}] {{b.author|utf8decode|cuts:"\\-"|safe}}</a>. "{{b.title|utf8decode|cuts:"\\-"|safe}}", {{b.school|utf8decode|cuts:"\\-"|safe}} ({{b.year}}).
@@ -32,7 +32,7 @@
 <span class="badge bg-success text-white"><a style="color:#fff" href="{{headers.published|safe}}">פורסם</a></span>&nbsp;
 {% endif %}
 
-{% if archive_path %}{%ifequal headers.status
+{% if archive_path %}{% אם שווה headers.status
 "הועבר לארכיב"
 %}
 <span class="badge bg-warning">
@@ -149,12 +149,12 @@ thread_comments();
 {% for d in deps %}
 <dt>
 
-{{d.1.content|ssi|img|removeattrs:"on\w+ style"}}
+{{d.1.content|ssi|img||removetags:"script style"|removeattrs:"on\w+ style class"}}
 
 </dt>
 <dd>
 
-- [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede|removetags:"script"|removeattrs:"on\w+"}} ... <small><em>{{d.1.content|ssi|vcs_date:lang}}</em></small>
+- [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede|removetags:"script style"|removeattrs:"on\w+ style class"}} ... <small><em>{{d.1.content|ssi|vcs_date:lang|striptags}}</em></small>
 
 --------
 

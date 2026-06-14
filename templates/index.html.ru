@@ -149,12 +149,12 @@ thread_comments();
 {% for d in deps %}
 <dt>
 
-{{d.1.content|ssi|img|removeattrs:"on\w+ style"}}
+{{d.1.content|ssi|img||removetags:"script style"|removeattrs:"on\w+ style class"}}
 
 </dt>
 <dd>
 
-- [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede|removetags:"script"|removeattrs:"on\w+"}} ... <small><em>{{d.1.content|ssi|vcs_date:lang}}</em></small>
+- [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede|removetags:"script style"|removeattrs:"on\w+ style class"}} ... <small><em>{{d.1.content|ssi|vcs_date:lang|striptags}}</em></small>
 
 --------
 

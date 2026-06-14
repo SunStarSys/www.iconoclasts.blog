@@ -1,9 +1,9 @@
       <article id="article-{{key}}" {% if muted %}class="text-muted"{% endif %}>
         <header>
           <h6 class="card-title" id="{{key}}">
-            <a href="#{{key}}-link" class="reference-link">{{headers.title}}</a>
-            作者：{{content|vcs_author:lang}}
-            開啟<em><time>{{content|vcs_date:lang}}</time></em>
+            <a href="#{{key}}-link" class="reference-link">{{headers.title|removetags:"script style"|removeattrs:"on\w+ style class"}}</a>
+            作者：{{content|vcs_author:lang|removetags:"script style"|removeattrs:"on\w+ style class"}}
+            開啟<em><time>{{content|vcs_date:lang|removetags:"script style"|removeattrs:"on\w+ style class"}}</time></em>
             {% if muted %}
             {% else %}
             {% if important %}
@@ -21,7 +21,7 @@
           </h6>
         </header>
         <small>
-          <p class="card-text">{{content|removetags:"script,style"|markdown}}</p>
+          <p class="card-text">{{content|markdown|removetags:"script style"|removeattrs:"on\w+ style class"}}</p>
           <hr>
           <p>&nbsp;</p>
         </small>
