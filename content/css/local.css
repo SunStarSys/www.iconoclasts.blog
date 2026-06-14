@@ -208,7 +208,7 @@ header {z-index:2000}
 
 #sidebar li.active > a,
 #sidebar li:hover > a {
-   color: green;
+   color: color: rgba(var(--bs-color-success), var(--bs-link-opacity, 1));
 }
 
 #sidebar li:not(.active) > ul > li { display: none }
