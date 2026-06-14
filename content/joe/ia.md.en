@@ -20,7 +20,7 @@ This document is **opinionated**, since it covers these topics as currently arch
 
 ## Usability, Discovery, and Link / Dependency Topology: the Big Picture
 
-### {% filter split:"\n##+"|grep:"topology"|slice:0|safe %}
+### {% filter split:"\\n##+"|grep:"topology"|slice:0|safe %}
 {% ssi `/joe/dependencies.md.en` %}
 {% endfilter %}
 
