@@ -9,9 +9,9 @@
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
     <meta name="theme-color" content="black">
     <meta property="og:description" content="{{description}}">
-	<meta property="og:image" content="{{content|img|markdown|selectattr:"src"|default:"/images/iconoclast.jpg"}}">
-    <meta property="og:title" content="{{ headers.title|removetags:"script style"|removeattrs:"on\w+ style class">
-    <title>{% block title %}{{ headers.title|removetags:"script style"|removeattrs:"on\w+ style class"|safe }} - {{ facts.title|safe }}{% endblock %}</title>
+	<meta property="og:image" content="{{content|img|markdown|selectattr:"src"|striptags|default:"/images/iconoclast.jpg"|safe}}">
+    <meta property="og:title" content="{{ headers.title|striptags|safe}}">
+    <title>{% block title %}{{ headers.title|striptags|safe }} - {{ facts.title|safe }}{% endblock %}</title>
     {% if permalink %}
     <link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
     {% endif %}
