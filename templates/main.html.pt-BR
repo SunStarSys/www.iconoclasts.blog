@@ -295,13 +295,13 @@ if (permission === "granted") {
           for (const e of json.recent) {
              const li = document.createElement("li");
              if (e.new) {
-                li.innerHTML = "<a href='/dynamic/search/?regex=diff=" + e.rev + ";lang={{lang}};markdown_search=1;'><span class='text-success'><i class='fa fa-code-compare'></i></span></a>&nbsp;<a href='" + escape(e.url) + "'>" + e.title + "</a><br/>";
+                li.innerHTML = "<a href='/dynamic/search/?regex=diff=" + e.rev + ";lang={{lang}};markdown_search=1;'><span class='text-success'><i class='fa fa-code-compare'></i></span></a>&nbsp;<a href='" + escape(e.url) + "'>" + e.title + "</a><br/>&nbsp;";
                 btn.classList.remove("btn-primary");
 				if (!btn.classList.contains("btn-success"))
 		  		  btn.classList.add("btn-success");
              }
              else
-                li.innerHTML = "<a href='" + escape(e.url) + "'>" + e.title + "</a>";
+                li.innerHTML = "<a href='" + escape(e.url) + "'>" + e.title + "</a><br/>&nbsp;";
              recent.appendChild(li);
           }
       }
