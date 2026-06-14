@@ -1,6 +1,6 @@
 package path;
 
-use SunStarSys::Util qw/walk_content_tree seed_file_deps seed_file_acl archived Load/;
+use SunStarSys::Util qw/walk_content_tree archived Load/;
 use v5.38;
 
 open my $fh, "<:raw", "lib/facts.yml" or die "Can't locate facts.yml data: $!";
