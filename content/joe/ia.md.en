@@ -24,6 +24,7 @@ This document is **opinionated**, since it covers these topics as currently arch
 {% ssi `/joe/dependencies.md.en` %}
 {% endfilter %}
 
+
 ### Isn’t this just about Hyperlinks?
 
 No! In fact, the **link topology** of your website is an entirely separate matter from the source tree’s dependency graph. A search engine will naturally ferret out the link topology, but has no insight into the dependency graph.
