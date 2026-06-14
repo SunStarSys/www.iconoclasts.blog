@@ -30,7 +30,7 @@
          <br>&nbsp;
          <br>
        </div>
-       {{ content|markdown|removetags:"script style"|removeattrs:"on\w+ style class"|safe }}
+       {{ content|markdown|removetags:"script"|removeattrs:"on\w+"|safe }}
      </div>
 {% endblock %}
 {% block footer %}
