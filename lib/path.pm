@@ -98,11 +98,11 @@ our @patterns = (
 
 );
 
-#snippet
 our (%dependencies, @acl);
 
 # entries computed below at build-time, or drawn from the .deps cache file
 
+#snippet
 walk_content_tree {
 
   $File::Find::prune = 1, return if m#^/(images|css|js)\b#;
