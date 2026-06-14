@@ -38,7 +38,7 @@ The latter concept is what we will utilize when discussing the *dependency graph
 
 Having {# lede #}a clear understanding of your website's *dependency graph* will ensure you can maximize the performance of our build technology at scale{# lede #}. We take the information you provide to `%path::dependencies` during the build's load of your website's `lib/path.pm` file, construct a reverse map of dependent files, and use *that reverse map* to determine the full corpus of files to build for any given `svn commit` you make to our system.
 
-It's important to note that the dependency relationships between source files can and should be fully captured by the `%path::dependencies` hash during the build-system's startup load of `lib/path.pm` from your source tree, which is how the built-in views contained in our `SunStarSys::View` Perl package are meant to operate. The `walk_content_tree`, `archived`, and `seed_file_deps` utility functions importable from `SunStarSys::Util` are useful aids in constructing the `%path::dependencies` hash, with built-in support for managing a dependency cache to accelerate incremental builds at scale.
+It's important to note that the dependency relationships between source files can and should be fully captured by the `%path::dependencies` hash during the build-system's startup load of `lib/path.pm` from your source tree, which is how the built-in views contained in our `SunStarSys::View` Perl package are meant to operate. The `walk_content_tree` and `archived` utility functions importable from `SunStarSys::Util` are useful aids in constructing the `%path::dependencies` hash, with built-in support for managing a dependency cache to accelerate incremental builds at scale.
 
 Here's that portion of our live [`lib/path.pm`]({{snippetA.pretty_uri}}):
 
@@ -46,7 +46,7 @@ Here's that portion of our live [`lib/path.pm`]({{snippetA.pretty_uri}}):
 
 Please do mull that code over for ideas on how you want *your website* to work. Yes there is some reasonable complexity (involving both Perl's regular expressions and Perl's UNIX C-shell `glob` interfaces, in a very precise way) around how `%path::dependencies` is constructed in that file, but instead of just viewing this as optimization work, instead look at it as providing the basic ingredients necessary for construcing major aspects of the *deps topology* in an automated, dynamically generated fashion.
 
-Where do entries in `%path::dependencies` originate? If they are not born from an invocation of `walk_content_tree { seed_file_deps ... }`, (which basically dives into your markdown source files' headers and content), then they are just hard-coded into `lib/facts.yml` at load-time.
+Where do entries in `%path::dependencies` originate? If they are not born from an invocation of `walk_content_tree { ... }`, (which basically dives into your markdown source files' headers and content), then they are just hard-coded into `lib/facts.yml` at load-time.
 
 ### Cyclic Dependency Graphs Are the Norm
 
