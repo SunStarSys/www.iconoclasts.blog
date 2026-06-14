@@ -144,24 +144,24 @@ Processing ledes is done with the `lede` Template filter. It is useful to combin
 
 ## Conclusions
 
-There are interesting data structures and relations to yet be uncovered when dealing with a website's *dependency graph* from a build performance perspective, which is a much newer area of interest than the research literature delving into the data structures and associated isssues surrounding *link topology*<sup>1,2</sup>.
+There are interesting data structures and relations to yet be uncovered when dealing with a website's *dependency graph* from a build performance perspective, which is a much newer area of interest than the research literature delving into the data structures and associated isssues surrounding *link topology*[^1],[^2].
 
-Conventional incremental builds for pure software development projects are still a hot topic. The research covered in <sup>3,4</sup> was published in October 2022, about a month before this essay is expected to be complete. The *pluto*<sup>5</sup> build system has features quite similar to ours (the build itself can dynamically regenerate and rebuild dependencies).
+Conventional incremental builds for pure software development projects are still a hot topic. The research covered in  [^3],[^4] was published in October 2022, about a month before this essay is expected to be complete. The *pluto*[^5] build system has features quite similar to ours (the build itself can dynamically regenerate and rebuild dependencies).
 
 The good news is that we have you covered as our customer. We will keep you apprised of the best practices and the state of the art in this space, so you will benefit from our lessons learned over the past decade and into tomorrow.
 
 -----
 ## Footnotes
 
-1. [Identification of clusters in the Web graph based on link topology](https://ieeexplore.ieee.org/abstract/document/1214919) Seventh International Database Engineering and Applications Symposium, 2003. Proceedings.
+[^1]. [Identification of clusters in the Web graph based on link topology](https://ieeexplore.ieee.org/abstract/document/1214919) Seventh International Database Engineering and Applications Symposium, 2003. Proceedings.
 
-2. [Inferring Web Communities from Link Topology](https://dl.acm.org/doi/pdf/10.1145/276627.276652) Proceedings of the ninth ACM conference on Hypertext and hypermedia: links, objects, time and space &mdash; structure in hypermedia systems: links, objects, time and space &mdash; structure in hypermedia systems. 1998.
+[^2]. [Inferring Web Communities from Link Topology](https://dl.acm.org/doi/pdf/10.1145/276627.276652) Proceedings of the ninth ACM conference on Hypertext and hypermedia: links, objects, time and space &mdash; structure in hypermedia systems: links, objects, time and space &mdash; structure in hypermedia systems. 1998.
 
-3. [On the benefits and limits of incremental build software configurations: an exploratory study](https://dl.acm.org/doi/abs/10.1145/3510003.3510190) ICSE '22: Proceedings of the 44th International Conference on Software Engineering, May 2022
+[^3]. [On the benefits and limits of incremental build software configurations: an exploratory study](https://dl.acm.org/doi/abs/10.1145/3510003.3510190) ICSE '22: Proceedings of the 44th International Conference on Software Engineering, May 2022
 
-4. [Towards incremental build of software configurations](https://dl.acm.org/doi/10.1145/3510455.3512792) ICSE-NIER '22: Proceedings of the ACM/IEEE 44th International Conference on Software Engineering: New Ideas and Emerging Results, May 2022
+[^4]. [Towards incremental build of software configurations](https://dl.acm.org/doi/10.1145/3510455.3512792) ICSE-NIER '22: Proceedings of the ACM/IEEE 44th International Conference on Software Engineering: New Ideas and Emerging Results, May 2022
 
-5. [A sound and optimal incremental build system with dynamic dependencies](https://dl.acm.org/doi/10.1145/2814270.2814316) OOPSLA 2015: Proceedings of the 2015 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications October 2015
+[^5]. [A sound and optimal incremental build system with dynamic dependencies](https://dl.acm.org/doi/10.1145/2814270.2814316) OOPSLA 2015: Proceedings of the 2015 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications October 2015
 
 <style type="text/css">
 
