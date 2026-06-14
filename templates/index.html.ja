@@ -32,7 +32,7 @@
 <span class="badge bg-success text-white"><a style="color:#fff" href="{{headers.published|safe}}">公開済</a></span>&nbsp;
 {% endif %}
 
-{% if archive_path %}{headers.statusと等しい割合(%)
+{% if archive_path %}{% ifequal headers.status
 "アーカイブ済"
 %}
 <span class="badge bg-warning">

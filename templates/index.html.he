@@ -32,7 +32,7 @@
 <span class="badge bg-success text-white"><a style="color:#fff" href="{{headers.published|safe}}">פורסם</a></span>&nbsp;
 {% endif %}
 
-{% if archive_path %}{% אם שווה headers.status
+{% if archive_path %}{% ifequal headers.status
 "הועבר לארכיב"
 %}
 <span class="badge bg-warning">
