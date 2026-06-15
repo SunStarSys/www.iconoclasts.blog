@@ -83,6 +83,17 @@ pie
 
 ### Sandbox: SSI Mindmap
 
+```mermaid
+{% filter fenced:"mermaid"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+```
+
+-----
+
+### Sandbox: SSI Asymptote Vector Graphics
+
+
 
 -----
 
@@ -103,7 +114,7 @@ pie
 
 ```mermaid
 {% filter fenced:"mermaid"|slice:1|safe %}
-{% ssi `/joe/wikis.md.en` %}
+{% ssi `/joe/wikis.md.en+skip` %}
 {% endfilter %}
 ```
 
