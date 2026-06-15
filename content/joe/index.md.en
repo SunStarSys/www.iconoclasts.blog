@@ -84,7 +84,7 @@ pie
 ### Sandbox: SSI Mindmap
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:0|safe %}
 {% ssi `/joe/wikis.md.en` %}
 {% endfilter %}
 ```
