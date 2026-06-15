@@ -2,14 +2,14 @@
 
 <!-- Use the following line to embed this file within another web page:
 
-<iframe src="content/joe/stochastic-trace-formula.page/asyA.html" width="222" height="228" frameborder="0"></iframe>
+<iframe src="content/joe/index.page/asyA.html" width="222" height="228" frameborder="0"></iframe>
 
 -->
 
 <html lang="">
 
 <head>
-<title>content/joe/stochastic-trace-formula.page/asyA</title>
+<title>content/joe/index.page/asyA</title>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <meta name="viewport" content="user-scalable=no"/>
