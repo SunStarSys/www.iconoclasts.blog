@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: هيوكا، ايكونوكلاست
-status: التحقق = 43440
+status: التحقق = 45676
 title: أفكار جو العشوائية
 ---
 
@@ -13,11 +13,7 @@ title: أفكار جو العشوائية
 
 </div>
 
-<div id="sidebar">
-
 [TOC]#sidebar
-
-</div>
 
 ## مرحبًا! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
@@ -31,17 +27,33 @@ title: أفكار جو العشوائية
 
 تزوجت المرأة الأكثر روعة على الأرض، التي باركنا حبها بالنسبة لي مع ابنة ثمينة.  نحن نعيش في جنوب فلوريدا، ونشترك في تشغيل S-CORP <https://sunstarsys.com>، الذي يوفر أجهزة وبرامج البنية الأساسية لهذا الموقع.
 
-### ديليا فريس، إليّ
+### صديقي العزيز ديليا يحرر لي
 
 > هل أنت على دراية بالدور الذي تلعبه هيوكانا في الثقافة الأمريكية الأصلية؟ أنت، عزيزي، هي هيوكانا الشخصية الخاصة بي.
 
+<center>
+<div style="max-width:500px" class="fade">
+
 ![غروك هيوكا](index.page/heyoka-grok)
+
+</div>
+</center>
 
 أنا خلقت <https://iconoclasts.blog> لتلبية الأرواح الكريمة عبر الإنترنت ؛ الذين يحتاجون إلى مجتمع كتابة مقال عام خالٍ من الرقابة &mdash; لمشاركة والتفاعل مع أفكار بعضهم البعض الأكثر إزعاجًا من الناحية السياسية، والأفكار الطليعية.
 
 إذا كان هذا يبدو مثلك، من فضلك [طلب عرض توضيحي اليوم](/contact)!
 
------
+```asy
+size(0,25cm);
+guide center=(0,1){W}..tension 0.8..(0,0){(1,-.5)}..tension 0.8..{W}(0,-1);
+
+draw((0,1)..(-1,0)..(0,-1));
+filldraw(center{E}..{N}(1,0)..{W}cycle);
+unfill(circle((0,0.5),0.125));
+fill(circle((0,-0.5),0.125));
+```
+
+[========]
 
 ## الخطة
 
@@ -74,7 +86,7 @@ pie
 ### صندوق الحماية: خريطة تفكير SSI
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ar` %}
 {% endfilter %}
 ```
@@ -85,7 +97,7 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.en+skip` %}
 {% endfilter %}
 ```
 
@@ -100,14 +112,14 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|grep:"الوجبات الرئيسية"|safe %}
+#### {% filter split:"(?m:^##+)"|grep:"الوجبات السريعة"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.ar` %}
 {% endfilter %}
 
 ### صندوق الحماية: مخطط SSI Mermaid wardley-beta
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:1|safe %}
 {% ssi `/joe/wikis.md.ar` %}
 {% endfilter %}
 ```

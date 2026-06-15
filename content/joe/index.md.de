@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: heyoka, iconoclast
-status: überprüft=43440
+status: überprüft=45676
 title: Joe's Random Thoughts
 ---
 
@@ -13,11 +13,7 @@ title: Joe's Random Thoughts
 
 </div>
 
-<div id="sidebar">
-
 [TOC]#sidebar
-
-</div>
 
 ## Willkommen! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
@@ -31,17 +27,33 @@ Ich bin ein [INTJ-A](https://www.16personalities.com/intj-personality) Art von P
 
 Verheiratet mit der erstaunlichsten Frau der Welt, deren Liebe zu mir uns beide mit einer kostbaren Tochter gesegnet hat.  Wir leben in Südflorida und betreiben gemeinsam meine S-CORP <https://sunstarsys.com>, die Infrastrukturhardware und -software für diese Site bereitstellt.
 
-### Delia Frees, für mich
+### Mein lieber Freund Delia Frees, für mich
 
 > Kennen Sie die Rolle der Heyókotaa in der indianischen Kultur? Du, meine Liebe, bist mein persönlicher Heyókotaa.
 
+<center>
+<div style="max-width:500px" class="fade">
+
 ![Grok Heyoka](index.page/heyoka-grok)
+
+</div>
+</center>
 
 Ich habe erstellt <https://iconoclasts.blog> um verwandten Geistern online gerecht zu werden; die eine öffentliche, zensurfreie, langfristige Essay-Schreibgemeinschaft benötigen &mdash; die politisch unangenehmsten, avantgardistischen Ideen des anderen zu teilen und mit ihnen zu interagieren.
 
 Wenn das nach dir klingt, bitte [Demo noch heute anfordern](/contact)!
 
------
+```asy
+size(0,25cm);
+guide center=(0,1){W}..tension 0.8..(0,0){(1,-.5)}..tension 0.8..{W}(0,-1);
+
+draw((0,1)..(-1,0)..(0,-1));
+filldraw(center{E}..{N}(1,0)..{W}cycle);
+unfill(circle((0,0.5),0.125));
+fill(circle((0,-0.5),0.125));
+```
+
+[========]
 
 ## Plan
 
@@ -74,7 +86,7 @@ pie
 ### Sandbox: SSI-Mindmap
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:0|safe %}
 {% ssi `/joe/wikis.md.de` %}
 {% endfilter %}
 ```
@@ -85,7 +97,7 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.en+skip` %}
 {% endfilter %}
 ```
 
@@ -100,14 +112,14 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|grep:"Wichtige Erkenntnisse"|safe %}
+#### {% filter split:"(?m:^##+)"|grep:"Erkenntnisse"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.de` %}
 {% endfilter %}
 
 ### Sandbox: SSI Meerjungfrau Wardley-Beta-Diagramm
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:1|safe %}
 {% ssi `/joe/wikis.md.de` %}
 {% endfilter %}
 ```

@@ -1,7 +1,8 @@
 ---
+categories: ~
 dependencies: '*.md.ru'
 keywords: heyoka, иконоборчество
-status: проверено
+status: проверено=45676
 title: Случайные мысли Джо
 ---
 
@@ -12,11 +13,7 @@ title: Случайные мысли Джо
 
 </div>
 
-<div id="sidebar">
-
 [TOC]#sidebar
-
-</div>
 
 ## Добро пожаловать! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
@@ -30,17 +27,33 @@ title: Случайные мысли Джо
 
 Женат на самой удивительной женщине на Земле, чья любовь ко мне благословила нас обоих с драгоценной дочерью.  Мы живем в Южной Флориде и совместно управляем моим S-CORP <https://sunstarsys.com>, который предоставляет оборудование и программное обеспечение инфраструктуры для этого сайта.
 
-### Делия Фриз, ко мне
+### Мой дорогой друг Делия Фриз, ко мне
 
 Вы знакомы с той ролью, которую Хейокя играет в культуре коренных американцев? Ты, моя дорогая, моя личная Хейокя.
 
+<center>
+<div style="max-width:500px" class="fade">
+
 ![Грок Хейока](index.page/heyoka-grok)
+
+</div>
+</center>
 
 Я создал <https://iconoclasts.blog> для удовлетворения родственных духов онлайн; кто нуждается в общественном, без цензуры, длинная форма эссе сообщество &mdash; делиться и взаимодействовать с наиболее политически неудобными, авангардными идеями друг друга.
 
 Если это звучит как вы, пожалуйста [запросить демо сегодня](/contact)!
 
------
+```asy
+size(0,25cm);
+guide center=(0,1){W}..tension 0.8..(0,0){(1,-.5)}..tension 0.8..{W}(0,-1);
+
+draw((0,1)..(-1,0)..(0,-1));
+filldraw(center{E}..{N}(1,0)..{W}cycle);
+unfill(circle((0,0.5),0.125));
+fill(circle((0,-0.5),0.125));
+```
+
+[========]
 
 ## План
 
@@ -73,7 +86,7 @@ pie
 ### Песочница: мысленная карта SSI
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ru` %}
 {% endfilter %}
 ```
@@ -84,7 +97,7 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.en+skip` %}
 {% endfilter %}
 ```
 
@@ -99,14 +112,14 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|grep:"Основные выводы"|safe %}
+#### {% filter split:"(?m:^##+)"|grep:"извлечение"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.ru` %}
 {% endfilter %}
 
 ### Песочница: схема SSI Mermaid wardley-beta
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:1|safe %}
 {% ssi `/joe/wikis.md.ru` %}
 {% endfilter %}
 ```

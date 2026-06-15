@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: heyoka, ikonoklast
-status: verifierad=43440
+status: verifierad=45676
 title: Joes slumpartade tankar
 ---
 
@@ -13,11 +13,7 @@ title: Joes slumpartade tankar
 
 </div>
 
-<div id="sidebar">
-
 [TOC]#sidebar
-
-</div>
 
 ## Välkommen! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
@@ -31,17 +27,33 @@ Jag är en [INTERN-A](https://www.16personalities.com/intj-personality) typ av p
 
 Gift med den mest fantastiska kvinnan på jorden, vars kärlek till mig välsignade oss båda med en dyrbar dotter.  Vi bor i södra Florida och driver tillsammans min S-CORP <https://sunstarsys.com>, som tillhandahåller infrastrukturmaskinvara och -programvara för den här webbplatsen.
 
-### Delia Frees, för mig
+### Min kära vän Delia Frees, till mig
 
 Är du bekant med den roll som Heyók ⁇ a spelar i indiansk kultur? Du, min kära, är min egen personliga Heyók ⁇ a.
 
+<center>
+<div style="max-width:500px" class="fade">
+
 ![Grok Heyoka](index.page/heyoka-grok)
+
+</div>
+</center>
 
 Jag har skapat <https://iconoclasts.blog> för att tillgodose släkt sprit på nätet; som behöver en offentlig, censurfri, långformig uppsatsskrivande gemenskap &mdash; Att dela och interagera med varandras mest politiskt obekväma, avantgardistiska idéer.
 
 Om det låter som du, snälla [beställ en demonstration i dag](/contact)!
 
------
+```asy
+size(0,25cm);
+guide center=(0,1){W}..tension 0.8..(0,0){(1,-.5)}..tension 0.8..{W}(0,-1);
+
+draw((0,1)..(-1,0)..(0,-1));
+filldraw(center{E}..{N}(1,0)..{W}cycle);
+unfill(circle((0,0.5),0.125));
+fill(circle((0,-0.5),0.125));
+```
+
+[========]
 
 ## Planera
 
@@ -74,7 +86,7 @@ pie
 ### Sandlåda: SSI Mindmap
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:0|safe %}
 {% ssi `/joe/wikis.md.sv` %}
 {% endfilter %}
 ```
@@ -85,7 +97,7 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.en+skip` %}
 {% endfilter %}
 ```
 
@@ -100,14 +112,14 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|grep:"Viktiga insikter"|safe %}
+#### {% filter split:"(?m:^##+)"|grep:"takeaways"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.sv` %}
 {% endfilter %}
 
 ### Sandlåda: SSI Mermaid wardley-beta diagram
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:1|safe %}
 {% ssi `/joe/wikis.md.sv` %}
 {% endfilter %}
 ```

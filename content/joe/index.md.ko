@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: 헤이오카, iconoclast
-status: 확인=43440
+status: 확인=45676
 title: 조의 무작위 생각
 ---
 
@@ -13,11 +13,7 @@ title: 조의 무작위 생각
 
 </div>
 
-<div id="sidebar">
-
 [TOC]#sidebar
-
-</div>
 
 ## 환영합니다! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
@@ -31,17 +27,33 @@ title: 조의 무작위 생각
 
 지구상에서 가장 놀라운 여자와 결혼했는데, 나를 향한 사랑이 소중한 딸과 함께 우리에게 축복을 주었다.  우리는 사우스 플로리다에 살고 있으며 공동으로 S-CORP를 운영하고 있습니다. <https://sunstarsys.com>, 이 사이트에 대한 인프라 하드웨어 및 소프트웨어를 제공합니다.
 
-### 델리아 프리스 To Me
+### 나의 친애하는 친구 Delia Frees, 나에게
 
 > 미국 원주민 문화에서 Heyók가 수행하는 역할에 대해 잘 알고 있습니까? You, my dear, are my own개인적인 Heyók입니다.
 
+<center>
+<div style="max-width:500px" class="fade">
+
 ![Grok Heyoka](index.page/heyoka-grok)
+
+</div>
+</center>
 
 생성됨 <https://iconoclasts.blog> to cater to kindred spirits online; who need a public, censorship-free, long-form essay writing community (온라인에서 친절한 영혼을 모으기 위해; 대중적이고 검열이 없는 긴 형태의 에세이 작문 커뮤니티를 필요로 하는 사람) &mdash; 서로의 가장 정치적으로 불편하고 아방가르드적 인 아이디어를 공유하고 상호 작용합니다.
 
 그게 당신처럼 들리면 제발 [지금 데모 요청하기](/contact)!
 
------
+```asy
+size(0,25cm);
+guide center=(0,1){W}..tension 0.8..(0,0){(1,-.5)}..tension 0.8..{W}(0,-1);
+
+draw((0,1)..(-1,0)..(0,-1));
+filldraw(center{E}..{N}(1,0)..{W}cycle);
+unfill(circle((0,0.5),0.125));
+fill(circle((0,-0.5),0.125));
+```
+
+[========]
 
 ## 계획
 
@@ -74,7 +86,7 @@ pie
 ### 샌드박스: SSI Mindmap
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ko` %}
 {% endfilter %}
 ```
@@ -85,7 +97,7 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.en+skip` %}
 {% endfilter %}
 ```
 
@@ -100,14 +112,14 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|grep:"주요 요점"|safe %}
+#### {% filter split:"(?m:^##+)"|grep:"테이크아웃"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.ko` %}
 {% endfilter %}
 
 ### 샌드박스: SSI 인어 wardley-beta 도표
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:1|safe %}
 {% ssi `/joe/wikis.md.ko` %}
 {% endfilter %}
 ```

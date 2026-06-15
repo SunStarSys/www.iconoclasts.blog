@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 東京都，東京都
-status: 驗證 =43440
+status: 驗證 =45676
 title: Joe 的隨機思維
 ---
 
@@ -13,11 +13,7 @@ title: Joe 的隨機思維
 
 </div>
 
-<div id="sidebar">
-
 [TOC]#sidebar
-
-</div>
 
 ## 歡迎！[:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
@@ -31,17 +27,33 @@ title: Joe 的隨機思維
 
 已婚給地球上最令人讚嘆的女人，她們對我祝福這兩個女兒。我們住在南佛羅里達州，並共同經營我的 S-CORP <https://sunstarsys.com>，提供此網站的基礎架構硬體和軟體。
 
-### Delia Frees，到我
+### 親愛的朋友 Delia Frees 給我
 
 > 你是否熟悉 Heyók (譯音) 在美國原住民文化中扮演的角色？你，我說的，是我自己的個人 Heyók Ca。
 
+<center>
+<div style="max-width:500px" class="fade">
+
 ![Grok Heyoka](index.page/heyoka-grok)
+
+</div>
+</center>
 
 我已建立<https://iconoclasts.blog> 在網上迎合不同類型的烈酒；需要公眾人士、無審查、長篇短篇短文寫作社群&mdash; 與彼此分享和互動最不便、最關心的想法。
 
 如果聽起來像您一樣，請[立即申請示範](/contact)!
 
------
+```asy
+size(0,25cm);
+guide center=(0,1){W}..tension 0.8..(0,0){(1,-.5)}..tension 0.8..{W}(0,-1);
+
+draw((0,1)..(-1,0)..(0,-1));
+filldraw(center{E}..{N}(1,0)..{W}cycle);
+unfill(circle((0,0.5),0.125));
+fill(circle((0,-0.5),0.125));
+```
+
+[========]
 
 ## 計畫
 
@@ -74,7 +86,7 @@ pie
 ### 封閉測試環境：SSI Mindmap
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:0|safe %}
 {% ssi `/joe/wikis.md.zh-TW` %}
 {% endfilter %}
 ```
@@ -85,7 +97,7 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.en+skip` %}
 {% endfilter %}
 ```
 
@@ -100,14 +112,14 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|grep:"關鍵概要"|safe %}
+#### {% filter split:"(?m:^##+)"|grep:"飛輪"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.zh-TW` %}
 {% endfilter %}
 
 ### Sandbox：SSI Mermaid wardley-beta 圖表
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:1|safe %}
 {% ssi `/joe/wikis.md.zh-TW` %}
 {% endfilter %}
 ```

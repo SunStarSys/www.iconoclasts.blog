@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: heyoka、iconoclast
-status: 確認済み=43440
+status: 確認済み=45676
 title: Joe's Random Thoughtsたった今
 ---
 
@@ -13,11 +13,7 @@ title: Joe's Random Thoughtsたった今
 
 </div>
 
-<div id="sidebar">
-
 [TOC]#sidebar
-
-</div>
 
 ## ようこそ! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
@@ -31,17 +27,33 @@ title: Joe's Random Thoughtsたった今
 
 地球上で最も素晴らしい女性と結婚し、私への愛が私たちを大切な娘と祝福してくれました。私たちは南フロリダに住み、S-CORPを共同で運営しています。<https://sunstarsys.com>、このサイトのインフラストラクチャハードウェアとソフトウェアを提供します。
 
-### デリア・フリーズ『To Me』
+### My Dear Friendデリア・フリーズTo Me
 
 Heyókがネイティブアメリカンの文化で果たす役割を知っていますか? You、 my dear、 are my own personalheyók.あなたは私の個人的なHeyókです。
 
+<center>
+<div style="max-width:500px" class="fade">
+
 ![Grok Heyoka](index.page/heyoka-grok)
+
+</div>
+</center>
 
 作成済<https://iconoclasts.blog> オンラインで親切なスピリッツに対応するために; 誰が公衆を必要とする、検閲フリー、長い形式のエッセイライティングコミュニティ&mdash; お互いの最も政治的に不便で前向きなアイデアを共有し、対話すること。
 
 もし、あなたのように聞こえたら、[今すぐデモをリクエスト](/contact)!
 
------
+```asy
+size(0,25cm);
+guide center=(0,1){W}..tension 0.8..(0,0){(1,-.5)}..tension 0.8..{W}(0,-1);
+
+draw((0,1)..(-1,0)..(0,-1));
+filldraw(center{E}..{N}(1,0)..{W}cycle);
+unfill(circle((0,0.5),0.125));
+fill(circle((0,-0.5),0.125));
+```
+
+[========]
 
 ## プラン
 
@@ -74,7 +86,7 @@ pie
 ### サンドボックス: SSIマインドマップ
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:0|safe %}
 {% ssi `/joe/wikis.md.ja` %}
 {% endfilter %}
 ```
@@ -85,7 +97,7 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.en+skip` %}
 {% endfilter %}
 ```
 
@@ -100,14 +112,14 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|grep:"主なポイント"|safe %}
+#### {% filter split:"(?m:^##+)"|grep:"休暇"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.ja` %}
 {% endfilter %}
 
 ### サンドボックス: SSIマーメイドワードリーベータ図
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:1|safe %}
 {% ssi `/joe/wikis.md.ja` %}
 {% endfilter %}
 ```

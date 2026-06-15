@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: הייוקה, איקונוקלסט
-status: אומתו 43440
+status: אומתו 45676
 title: מחשבות אקראיות של ג'ו
 ---
 
@@ -13,11 +13,7 @@ title: מחשבות אקראיות של ג'ו
 
 </div>
 
-<div id="sidebar">
-
 [TOC]#sidebar
-
-</div>
 
 ## ברוכים הבאים! [:fa-calendar:](https://calendly.com/joe-sunstarsys/30min)
 
@@ -31,17 +27,33 @@ title: מחשבות אקראיות של ג'ו
 
 נשואה לאישה המדהימה ביותר על פני כדור הארץ, שאהבתה לי ברכה את שנינו עם בת יקרה.  אנחנו חיים בדרום פלורידה, ומפעילים במשותף את S-CORP שלי <https://sunstarsys.com>, המספקת את החומרה והתוכנה של התשתית לאתר זה.
 
-### דיליה פריס - To Me
+### ידידי היקר דיליה פריס, אלי
 
 האם אתה מכיר את התפקיד של הייקורה בתרבות האינדיאנית? אתה, יקירתי, הייקורה האישי שלי.
 
+<center>
+<div style="max-width:500px" class="fade">
+
 ![גרוק היוקה](index.page/heyoka-grok)
+
+</div>
+</center>
 
 יצרתי <https://iconoclasts.blog> כדי לספק רוחות אדיבות באינטרנט; מי צריך קהילה ציבורית, ללא צנזורה, כתיבה ארוכת צורה &mdash; לשתף וליצור אינטראקציה עם הרעיונות הכי לא נוחים מבחינה פוליטית, אוונגרד.
 
 אם זה נשמע כמוך, בבקשה. [בקשו הדגמה היום](/contact)!
 
------
+```asy
+size(0,25cm);
+guide center=(0,1){W}..tension 0.8..(0,0){(1,-.5)}..tension 0.8..{W}(0,-1);
+
+draw((0,1)..(-1,0)..(0,-1));
+filldraw(center{E}..{N}(1,0)..{W}cycle);
+unfill(circle((0,0.5),0.125));
+fill(circle((0,-0.5),0.125));
+```
+
+[========]
 
 ## תוכנית
 
@@ -74,7 +86,7 @@ pie
 ### שולחן חול: מפת חשיבה של SSI
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"mindmap"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:0|safe %}
 {% ssi `/joe/wikis.md.he` %}
 {% endfilter %}
 ```
@@ -85,7 +97,7 @@ pie
 
 ```asy
 {% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
+{% ssi `/joe/stochastic-trace-formula.md.en+skip` %}
 {% endfilter %}
 ```
 
@@ -100,14 +112,14 @@ pie
 
 &nbsp;
 
-#### {% filter split:"##+"|grep:"טקסי מפתח"|safe %}
+#### {% filter split:"(?m:^##+)"|grep:"מסירות"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.he` %}
 {% endfilter %}
 
 ### ארגז חול: דיאגרמת SSI Mermaid wardley-beta
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:1|safe %}
 {% ssi `/joe/wikis.md.he` %}
 {% endfilter %}
 ```
