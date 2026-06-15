@@ -83,6 +83,11 @@ pie
 
 ### Sandbox: SSI Mindmap
 
+```mermaid
+{% filter fenced:"mermaid"|slice:0|safe %}
+{% ssi `/joe/wikis.md.en` %}
+{% endfilter %}
+```
 
 -----
 
@@ -112,7 +117,7 @@ pie
 ### Sandbox: SSI Mermaid wardley-beta diagram
 
 ```mermaid
-{% filter fenced:"mermaid"|grep:"wardley"|slice:0|safe %}
+{% filter fenced:"mermaid"|slice:1|safe %}
 {% ssi `/joe/wikis.md.en` %}
 {% endfilter %}
 ```
