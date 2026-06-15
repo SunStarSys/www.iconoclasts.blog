@@ -83,21 +83,6 @@ pie
 
 ### Sandbox: SSI Mindmap
 
-```mermaid
-{% filter fenced:"mermaid"|slice:0|safe %}
-{% ssi `/joe/wikis.md.en+skip` %}
-{% endfilter %}
-```
-
------
-
-### Sandbox: SSI Asymptote Vector Graphics
-
-```asy
-{% filter fenced:"asy"|slice:0|safe %}
-{% ssi `/joe/stochastic-trace-formula.md.en` %}
-{% endfilter %}
-```
 
 -----
 
@@ -118,7 +103,7 @@ pie
 
 ```mermaid
 {% filter fenced:"mermaid"|slice:1|safe %}
-{% ssi `/joe/wikis.md.en+skip` %}
+{% ssi `/joe/wikis.md.en` %}
 {% endfilter %}
 ```
 
