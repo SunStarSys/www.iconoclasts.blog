@@ -1,9 +1,7 @@
 ---
-archived: ~
-categories: Perl
+categories: Perl, PDL
 dependencies: '*.md.fr'
 keywords: pdl,perl5
-published: ~
 status: terminé
 title: Perl5 en tant que langage Data Science
 ---
@@ -19,24 +17,19 @@ title: Perl5 en tant que langage Data Science
 
 ---
 
-## Table des matières
-
-[TOC]
-
----
+[TOC]#sidebar
 
 ## 1. Pourquoi utiliser Perl5 pour la data science ? <a id="why-perl5-for-data-science"></a>
 
-Lorsque les data scientists discutent des choix de langue, la conversation converge rapidement sur Python, R ou Julia.  Perl5 a rarement une place à la table – mais il porte un ensemble convaincant de traits qui méritent un deuxième regard. Ces traits n'ont pas changé matériellement au fil des ans (Perl5 a toujours été ainsi !), mais à moins que {# lede #}vous avez été exposé à la langue et appris à apprécier sa terreur, sa rationalité, sa flexibilité, son expressibilité et vous l'avez utilisé pour faire avancer votre travail{# lede #}, vous ne savez pas que ces fonctionnalités sont non seulement gratuites avec Perl5, mais peuvent vous aider à faire avancer vos projets.
+Lorsque les data scientists discutent des choix de langue, la conversation converge rapidement sur Python, R ou Julia.  Perl5 a rarement une place à la table – mais il porte un ensemble convaincant de traits qui méritent un deuxième regard. Ces traits n'ont pas changé matériellement au fil des ans (Perl5 a toujours été ainsi !), mais {# lede #}sauf si vous avez été exposé à la langue et appris à apprécier sa tercité, sa rationalité, sa flexibilité, son expressibilité et l'avez réellement utilisé pour faire avancer votre travail, vous ne sauriez pas que ces fonctionnalités sont non seulement gratuites avec Perl5, mais peuvent vous aider à faire avancer vos projets.{# lede #}.
 
 ### Ubiquité et déploiement sans installation
 
-Perl5 est fourni en tant que composant par défaut de pratiquement tous les systèmes d'exploitation de type UNIX : les distributions Linux, macOS, BSD et de nombreux environnements Linux intégrés incluent tous un fonctionnement `perl` binaire hors de la boîte.  Python a fait des percées ici, mais il est toujours courant de trouver des serveurs sans tête, des appliances réseau ou des noeuds de connexion HPC
-où Perl est présent et une pile Python complète ne l'est pas.  Un pipeline de données écrit dans Perl peut être exécuté dès le premier jour sans `conda` environnement, a `veine`ou un conteneur.
+Perl5 est fourni en tant que composant par défaut de pratiquement tous les systèmes d'exploitation de type UNIX : les distributions Linux, macOS, BSD et de nombreux environnements Linux intégrés incluent tous un fonctionnement `perl` binaire hors de la boîte.  Python a fait des percées ici, mais il est toujours courant de trouver des serveurs sans tête, des appliances réseau ou des noeuds de connexion HPC où Perl est présent et où une pile Python complète ne l'est pas.  Un pipeline de données écrit dans Perl peut être exécuté dès le premier jour sans `conda` environnement, a `venv`ou un conteneur.
 
 ### Portabilité du centre de données à la périphérie
 
-Le même script qui analyse un ensemble de données de téraoctets sur un noeud HPC à 256 coeurs peut, avec des modifications mineures de configuration, s'exécuter sur un Raspberry Pi, une passerelle IoT ou un contrôleur intégré.  Perl's modèle de déploiement binaire unique et faible surcharge d'exécution en font un véritable "écrire une fois, exécuter n'importe où" langage dans les environnements où Python'interprète au-dessus ou Julia'Le temps d'échauffement du JIT serait inacceptable.
+Le même script qui analyse un ensemble de données de téraoctets sur un noeud HPC à 256 coeurs peut, avec des modifications mineures de configuration, s'exécuter sur un Raspberry Pi, une passerelle IoT ou un contrôleur intégré.  Le modèle de déploiement binaire unique de Perl et la faible surcharge d'exécution en font un véritable "écrire une fois, exécuter n'importe où" langage dans des environnements où l'interprète de Python ou le temps d'échauffement JIT de Julia serait inacceptable.
 
 Si vous envisagez de déployer n'importe où et _everywhere_ Perl5 est votre choix évident.
 
@@ -44,15 +37,15 @@ Si vous envisagez de déployer n'importe où et _everywhere_ Perl5 est votre cho
 
 Perl a été conçu à partir de zéro pour le traitement de texte, les expressions régulières et "colle" travail entre les composants système.  Dans la pratique, les pipelines de données scientifiques ne sont pas dominés par le calcul numérique, mais par le "data wrangling" : lecture de formats de fichiers hétérogènes, nettoyage d'enregistrements en désordre, jonction d'ensembles de données provenant de différentes sources et routage des résultats vers les composants de consommation en aval.
 
-Perl's moteur d'expression régulière reste parmi les plus puissants disponibles, et les one-liners peuvent accomplir des tâches de nettoyage de données qui nécessiteraient des bibliothèques d'aide dans d'autres langages.
+Le moteur d'expression régulière de Perl reste parmi les plus puissants disponibles, et les one-liners peuvent effectuer des tâches de nettoyage de données qui nécessiteraient des bibliothèques d'aide dans d'autres langages.
 
 Si vous êtes dans le domaine de l'informatique scientifique, vous avez peut-être rencontré la notion de *systèmes de gestion du flux de travail* et de *reproductible research*. Ils s'appuient tous deux sur l'exécution de transformations et de workflows de données de bout en bout pour éliminer les activités manuelles, sujettes aux erreurs et fastidieuses de point et de clic que les analystes et les scientifiques doivent faire pour transformer leurs données en informations et en inférences, respectivement.
 
-Dans ce nouveau monde, Perl5's riche histoire lui permet de briller à la fois comme un composant de workflows, ou comme un langage d'application qui implémente ces workflows.
+Dans ce nouveau monde courageux, la riche histoire de Perl5 lui permet de briller à la fois en tant que composant des workflows ou en tant que langage d'application qui implémente ces workflows.
 
 ### CPAN : un écosystème de modules éprouvé
 
-Le réseau complet d'archives Perl (CPAN) héberge plus de 200 000 modules sur tous les domaines imaginables.  Alors que les offres de data science ne sont pas aussi étendues que Python, les composants de base pour les constructeurs dédiés sont là.:
+Le réseau complet d'archives Perl (CPAN) héberge plus de 200 000 modules sur tous les domaines imaginables.  Alors que les offres de data science ne sont pas aussi étendues que Python, les composants de base pour les constructeurs dédiés sont là :
 
 - **PDL** (Perl Data Language) — calcul numérique vectorisé avec des tableaux N-dimensionnels fortement typés (couverts en profondeur ci-dessous).
 
@@ -72,15 +65,15 @@ Le réseau complet d'archives Perl (CPAN) héberge plus de 200 000 modules sur t
 
 - **FFI : :Platypus** — fonctions d'appel dans toute bibliothèque partagée (`.so` / `.dylib` / `.dll`) de Perl sans écrire une seule ligne de code de colle XS ou C.  Platypus prend en charge tous les types, structures, rappels et fermetures équivalents en C. Il s'agit du moyen moderne de lier Perl à BLAS, LAPACK, HDF5 ou toute autre bibliothèque native.
 
-### Le Perl moderne n'est pas votre grand-père's Perl
+### Le Perl moderne n'est pas le Perl de votre grand-père
 
 Les fonctionnalités ci-dessous sont tirées directement des notes de version officielles (`perl5360delta`, `perl5380delta`, `perl5400delta`) et organisées par la version dans laquelle elles ont atteint le statut **stable** ou ont été introduites pour la première fois. Seules les fonctionnalités pertinentes pour les charges de travail de science des données et de calcul scientifique sont mises en évidence.
 
 #### Perl 5.36 — Mai 2022
 
-- **`utiliser v5.36`** — le bundle de fonctionnalités s'active désormais automatiquement `utiliser des avertissements` en plus de `utilisation stricte`. Il désactive également la `indirect` syntaxe method-call et `multidimensionnel` Simulation de hash-key, éliminant deux sources communes de bugs subtils.
+- **`use v5.36`** — le bundle de fonctionnalités s'active désormais automatiquement `use warnings` en plus de `use strict`. Il désactive également la `indirect` syntaxe method-call et `multidimensional` Simulation de hash-key, éliminant deux sources communes de bugs subtils.
 
-- **Signatures de sous-routine nommées** *(stable depuis 5.36 ; expérimental depuis 5.20)* — les paramètres de la fonction sont maintenant déclarés par leur nom, avec des valeurs par défaut facultatives. Le `//=` et `||=` Les opérateurs default-value ont été ajoutés aux signatures dans la version 5.38, ce qui permet aux valeurs par défaut qui se déclenchent sur `défaire` ou fausseté respectivement:
+- **Signatures de sous-routine nommées** *(stable depuis 5.36 ; expérimental depuis 5.20)* — les paramètres de la fonction sont maintenant déclarés par leur nom, avec des valeurs par défaut facultatives. Le `//=` et `||=` Les opérateurs default-value ont été ajoutés aux signatures dans la version 5.38, ce qui permet aux valeurs par défaut qui se déclenchent sur `undef` ou de fausseté respectivement :
 
 ```perl
   use v5.36;
@@ -89,20 +82,20 @@ Les fonctionnalités ci-dessous sont tirées directement des notes de version of
   }
   ```
 
-- **`isa` opérateur classe-instance** *(stable depuis 5.36 ; introduit dans 5.32)* — `$obj isa "ClassName"` renvoie une valeur booléenne ; plus propre que `eq réf($obj) "ClassName"`.
+- **`isa` opérateur classe-instance** *(stable depuis 5.36 ; introduit dans 5.32)* — `$obj isa "ClassName"` renvoie une valeur booléenne ; plus propre que `ref($obj) eq "ClassName"`.
 
-- **`intégré` module** *(stable depuis 5.40 ; expérimental depuis 5.36)* — fonctions lexiquement importables intégrées directement dans l'interpréteur.  Le faisceau stable 5.40 comprend, entre autres:
+- **`builtin` module** *(stable depuis 5.40 ; expérimental depuis 5.36)* — fonctions lexiquement importables intégrées directement dans l'interpréteur.  Le faisceau stable 5.40 comprend, entre autres :
 
-- `plafond`, `étage` — arrondi entier sans `utiliser POSIX`.
-  - `taille` — supprimer les espaces de début et de fin d'une chaîne.
-  - `indexé` — associe chaque élément à son index ; le compagnon idiomatique à la valeur multiple `pour` boucles (voir ci-dessous).
-  - `vrai`, `faux`, `is_bool` — sentinelles booléennes dactylographiées ; les sérialiseurs peuvent maintenant émettre JSON `vrai`/`faux` plutôt que `1`/`0`.
-  - `affaiblir`, `non affaibli`, `is_weak` — contrôle du nombre de références pour la création de structures de données bidirectionnelles sans fuites de mémoire.
-  - `béni`, `reftype`, `Adresse de référence` — l'introspection de référence.
+- `ceil`, `floor` — arrondi entier sans `use POSIX`.
+  - `trim` — supprimer les espaces de début et de fin d'une chaîne.
+  - `indexed` — associe chaque élément à son index ; le compagnon idiomatique à la valeur multiple `for` boucles (voir ci-dessous).
+  - `true`, `false`, `is_bool` — sentinelles booléennes dactylographiées ; les sérialiseurs peuvent maintenant émettre JSON `true`/`false` plutôt que `1`/`0`.
+  - `weaken`, `unweaken`, `is_weak` — contrôle du nombre de références pour la création de structures de données bidirectionnelles sans fuites de mémoire.
+  - `blessed`, `reftype`, `refaddr` — l'introspection de référence.
 
-- **Suivi booléen stable** *(5.36)* — scalaires créés en tant que booléens (p. ex. ` ! !1`) conserve désormais leur caractère booléen par l'affectation, permettant une sérialisation fiable tenant compte du type vers JSON et MessagePack.
+- **Suivi booléen stable** *(5.36)* — scalaires créés en tant que booléens (p. ex. `!!1`) conserve désormais leur caractère booléen par l'affectation, permettant une sérialisation fiable tenant compte du type vers JSON et MessagePack.
 
-- **Plusieurs valeurs `pour` boucles** *(stable depuis 5.40 ; expérimental depuis 5.36)* Itération sur paires ou N-tuples sans arithmétique d'index manuel:
+- **Plusieurs valeurs `for` boucles** *(stable depuis 5.40 ; expérimental depuis 5.36)* Itération sur paires ou N-tuples sans arithmétique d'index manuel :
 
 ```perl
   use v5.40;
@@ -119,13 +112,13 @@ ou saisir plusieurs valeurs en même temps
 for my ($val1, $val2, $val3) (@scores)  { ... }
   ```
 
-- **`différer` blocs** *(expérimentale depuis 5.36)* — une protection de sortie de portée qui exécute le code de nettoyage sans condition lorsqu'un bloc se ferme, normalement ou par exception — un remplacement naturel pour les objets de protection de portée basés sur des destructeurs et un modèle important pour la gestion des ressources dans les pipelines de données.
+- **`defer` blocs** *(expérimentale depuis 5.36)* — une protection de sortie de portée qui exécute le code de nettoyage sans condition lorsqu'un bloc se ferme, normalement ou par exception — un remplacement naturel pour les objets de protection de portée basés sur des destructeurs et un modèle important pour la gestion des ressources dans les pipelines de données.
 
 #### Perl 5.38 — Juillet 2023
 
-- **`PERL_RAND_SEED` variable d'environnement** *(5.38)* — définition de cette variable avant qu'une exécution ne `Randonnée` Appel (sans explicite) `marque`) produire la même séquence, permettant des algorithmes stochastiques **reproductibles** - simulations, échantillonnage aléatoire, méthodes Monte Carlo - sans modifier le code source.
+- **`PERL_RAND_SEED` variable d'environnement** *(5.38)* — définition de cette variable avant qu'une exécution ne `rand` Appel (sans explicite) `srand`) produire la même séquence, permettant des algorithmes stochastiques **reproductibles** - simulations, échantillonnage aléatoire, méthodes Monte Carlo - sans modifier le code source.
 
-- **`classe` / `champ` / `méthode` syntaxe** *(expérimentale depuis 5.38)* — un système objet spécialement conçu et de portée lexique ne nécessitant ni `bénédiction` ni `@ISA` ni aucun module CPAN.  Utile pour définir des objets de valeur typée tels que des lignes d'ensemble de données, des paramètres de modèle ou des étapes de pipeline:
+- **`class` / `field` / `method` syntaxe** *(expérimentale depuis 5.38)* — un système objet spécialement conçu et de portée lexique ne nécessitant ni `bless` ni `@ISA` ni aucun module CPAN.  Utile pour définir des objets de valeur typée tels que des lignes d'ensemble de données, des paramètres de modèle ou des étapes de pipeline :
 
 ```perl
   use feature 'class';
@@ -142,7 +135,7 @@ class Vector2D {
 
 #### Perl 5.40 — juin 2024
 
-- **`essayer` / `détection` traitement des exceptions** *(stable depuis 5.40 ; expérimental depuis 5.34 ; `enfin` bloc ajouté en 5.36)* — la gestion structurée des exceptions est désormais une fonctionnalité de langage de base ; aucun module CPAN n'est requis:
+- **`try` / `catch` traitement des exceptions** *(stable depuis 5.40 ; expérimental depuis 5.34 ; `finally` bloc ajouté en 5.36)* — la gestion structurée des exceptions est désormais une fonctionnalité de langage de base ; aucun module CPAN n'est requis :
 
 ```perl
   use v5.40;
@@ -157,37 +150,37 @@ class Vector2D {
   }
   ```
 
-(`Essayez : :Tiny` / `Caractéristique : :Compat : :Essayer` ne sont nécessaires que pour cibler des perles de plus de 5,34 ans.)
+(`Try::Tiny` / `Feature::Compat::Try` ne sont nécessaires que pour cibler des perles de plus de 5,34 ans.)
 
-- **Plusieurs valeurs `pour` boucles** *(stable depuis 5.40)* — voir entrée 5.36 ci-dessus ; ils sont passés de expérimental à stable dans cette version.
+- **Plusieurs valeurs `for` boucles** *(stable depuis 5.40)* — voir entrée 5.36 ci-dessus ; ils sont passés de expérimental à stable dans cette version.
 
-- **`butivtin : :inf` et `builtin : :nan`** *(expérimental depuis 5.40)* — constantes d'infini à virgule flottante et de non-nombre typées, éliminant `9**9**9` ou POSIX hacks en code numérique.
+- **`builtin::inf` et `builtin::nan`** *(expérimental depuis 5.40)* — constantes d'infini à virgule flottante et de non-nombre typées, éliminant `9**9**9` ou POSIX hacks en code numérique.
 
 - **`^^` opérateur logique XOR** *(5.40)* — termine l'ensemble d'opérateurs logiques de priorité moyenne (`&&`, `||`, `^^`) ; pratique pour les opérations de masque booléen.
 
-- **`utiliser v5.40` importe les fonctions intégrées** — au-delà de l'activation du bundle de fonctionnalités, `utiliser v5.40` importe également le correspondant `intégré` version bundle, rendant tout stable `intégré : :` fonctions disponibles sous forme de noms abrégés sans séparation `utiliser le produit intégré` déclaration.
+- **`use v5.40` importe les fonctions intégrées** — au-delà de l'activation du bundle de fonctionnalités, `use v5.40` importe également le correspondant `builtin` version bundle, rendant tout stable `builtin::` fonctions disponibles sous forme de noms abrégés sans séparation `use builtin` déclaration.
 
 #### Caractéristiques de longue date (pré-5.36)
 
-- **`dire` et `état`** *(depuis 5.10)* — `dire` est `imprimer` avec une nouvelle ligne implicite ; `état` déclare un lexical qui persiste à travers les appels de son sous-entourage (une primitive de mémorisation légère).
+- **`say` et `state`** *(depuis 5.10)* — `say` est `print` avec une nouvelle ligne implicite ; `state` déclare un lexical qui persiste à travers les appels de son sous-entourage (une primitive de mémorisation légère).
 
 - **Références et fermetures de première classe** — les sous-marins anonymes, les fermetures et la construction de référence sont fondamentaux et sont stables depuis Perl 5.
 
-- **`utiliser une constante`** ou le CPAN `Lecture seule` module pour constantes nommées ; `Lecture seule` assure une immuabilité profonde qui `utiliser une constante` ne le fait pas.
+- **`use constant`** ou le CPAN `Readonly` module pour constantes nommées ; `Readonly` assure une immuabilité profonde qui `use constant` ne le fait pas.
 
 Combiné avec [`perlbrew`](https://perlbrew.pl/) ou [`plenv`](https://github.com/tokuhirom/plenv) pour la gestion des versions et [`carton`](https://metacpan.org/pod/Carton) pour les instantanés de dépendance reproductibles, un projet Perl moderne ressemble et se sent comme un effort d'ingénierie logicielle de première classe.
 
 ### Limites honnêtes
 
-Aucun cas pour Perl n'est complet sans honnêteté quant à l'endroit où il tombe:
+No case for Perl is complete without honesty about where it falls short:
 
-- **Visualisation** — Perl n'a pas d'équivalent `ggplot2` ou `mégapole`. Les parcelles nécessitent généralement un appel externe à R, gnuplot ou une bibliothèque Web. Parfois, cette faiblesse peut devenir une force réelle, permettant d'utiliser Perl5 comme langage d'application qui orchestre et améliore les autres acteurs.
+- **Visualisation** — Perl n'a pas d'équivalent `ggplot2` ou `matplotlib`. Les parcelles nécessitent généralement un appel externe à R, gnuplot ou une bibliothèque Web. Parfois, cette faiblesse peut devenir une force réelle, permettant d'utiliser Perl5 comme langage d'application qui orchestre et améliore les autres acteurs.
 
 - **L'élan communautaire** — la communauté data-science a convergé sur Python et R. Trouver des tutoriels prêts à l'emploi, des réponses Stack Overflow et des co-auteurs est plus difficile.
 
-- **Orientation d'objet** — sans Moose/Moo, le modèle OOP est détaillé ; avec eux, il ajoute une dépendance. Le nouveau `classe` La fonctionnalité peut résoudre certains de ces problèmes
+- **Orientation d'objet** — sans Moose/Moo, le modèle OOP est détaillé ; avec eux, il ajoute une dépendance. Le nouveau `class` La fonctionnalité peut résoudre certains de ces problèmes
 
-- **Entrez la sécurité à l'échelle** — le langage de base'Les scalaires dynamiques rendent les bases de code numériques collaboratives plus difficiles à raisonner (voir la section suivante).
+- **Tapez la sécurité à l'échelle** — les scalaires dynamiques du langage principal rendent les bases de code numériques collaboratives volumineuses plus difficiles à raisonner (voir la section suivante).
 
 ---
 
@@ -195,59 +188,59 @@ Aucun cas pour Perl n'est complet sans honnêteté quant à l'endroit où il tom
 
 ### Types Core Perl
 
-Perl'Le modèle de données fondamental repose sur trois structures:
+Le modèle de données fondamental de Perl repose sur trois structures :
 
 | Construction | Sigil | Ce qu'il contient |
 |-----------|-------|---------------|
-| **Scalaire** | `$` | Une seule valeur : nombre, chaîne, référence ou `défaire` |
+| **Scalaire** | `$` | Une seule valeur : nombre, chaîne, référence ou `undef` |
 | **Tableau** | `@` | Liste ordonnée des scalaires, indexée par nombre entier |
-| **Hachage** | `%` | Ensemble non ordonné de valeurs scalaires saisies par chaîne |
+| **Hachage** | `%` | Ensemble non ordonné de valeurs scalaires définies par une chaîne |
 
-Tout le reste - objets, fermetures, structures de données complexes - est construit à partir de ces trois primitives via *références* (`\@array`, `\%hachage`, `sous { ... }`).
+Tout le reste - objets, fermetures, structures de données complexes - est construit à partir de ces trois primitives via *références* (`\@array`, `\%hash`, `sub { ... }`).
 
 Ce modèle est extrêmement flexible.  Un tableau unique peut contenir simultanément des entiers, des nombres à virgule flottante, des chaînes et des références imbriquées.  Cette flexibilité est exactement ce qui a fait de Perl le langage dominant d'administration du système et de script web pendant deux décennies.
 
 ### Problème de hiérarchie du cache
 
-Les processeurs modernes atteignent un débit maximal uniquement lorsque les données passent par le cache L1/L2/L3<sup><a id="cache-ref" href="#fn-cache">†</a></sup> dans de grands blocs contigus — une propriété appelée *localité spatiale*.  Les tableaux Perl ne le fournissent pas.  Sous le capot, un tableau Perl est un tableau C de *points* vers le scalaire alloué à la portion de mémoire (`SV`) structures.  Chaque scalaire porte un nombre de références, une balise de type et un remplissage - généralement 24 à 56 octets par scalaire sur une construction 64 bits.  L'itération sur un réseau Perl d'un million d'éléments implique donc un million de déréférences de pointeurs dispersées dans la portion de mémoire, produisant un motif d'échec de cache qui annule complètement l'avantage de vitesse des pipelines SIMD modernes.
+Les processeurs modernes atteignent un débit maximal uniquement lorsque les données passent par le cache L1/L2/L3[^†] dans de grands blocs contigus — une propriété appelée *localité spatiale*.  Les tableaux Perl ne le fournissent pas.  Sous le capot, un tableau Perl est un tableau C de *points* vers le scalaire alloué à la portion de mémoire (`SV`) structures.  Chaque scalaire porte un nombre de références, une balise de type et un remplissage - généralement 24 à 56 octets par scalaire sur une construction 64 bits.  L'itération sur un réseau Perl d'un million d'éléments implique donc un million de déréférences de pointeurs dispersées dans la portion de mémoire, produisant un motif d'échec de cache qui annule complètement l'avantage de vitesse des pipelines SIMD modernes.
 
-Une conséquence concrète : un produit point de deux vecteurs à 1 000 éléments écrits en Perl pur est environ **100-1000x plus lent** que l'opération équivalente sur une paire de réseaux flottants PDL, qui occupent deux régions de mémoire plates de 4 000 octets qui s'intègrent confortablement dans le cache L1.
+A concrete consequence: un produit point de deux vecteurs de 1 000 éléments écrits en Perl pur est environ **100-1000× plus lent** que lʼopération équivalente sur une paire de tableaux flottants PDL, qui occupent deux régions de mémoire plates de 4 000 octets qui sʼintègrent confortablement dans le cache L1.
 
 ### Contraste avec R
 
-R occupe un milieu curieux.  Comme Perl, c'est un langage dynamique et interprété – les variables sont des conteneurs non typés, les fonctions sont des valeurs de première classe et le REPL interactif est l'environnement de développement principal.  R a même des analogues directs à Perl'trois types de noyau:
+R occupe un milieu curieux.  Comme Perl, c'est un langage dynamique et interprété – les variables sont des conteneurs non typés, les fonctions sont des valeurs de première classe et le REPL interactif est l'environnement de développement principal.  R a même des analogues directs aux trois types de base de Perl :
 
 | Perl concept | R analogique |
 |---|---|
-| `$scalaire` | longueur-1 vecteur atomique ou scalaire dans la liste |
+| `$scalar` | longueur-1 vecteur atomique ou scalaire sur liste |
 | `@array` | `list()` |
-| `%hachage` | nommé `list()` |
-| Référence (`\@arr`) | R n'utilise pas de références explicites ; copier sur modifier la sémantique à la place |
+| `%hash` | nommé `list()` |
+| Référence (`\@arr`) | R n'utilise pas de références explicites ; la sémantique de copie sur modification est utilisée à la place |
 
-Mais R'type *cheval de travail*, c'est-à-dire que le **vecteur atomique** n'a pas d'équivalent Perl simple. Un vecteur atomique R est un bloc de mémoire de type homogène et contigu, exactement la disposition qu'un cache CPU récompense.  Chaque scalaire intégré dans R est en fait un vecteur atomique de longueur-1 ; il n'y a pas de "scalaire nu" hors des vecteurs atomiques.
+Mais le type *workhorse* de R, c'est-à-dire le **vecteur atomique**, n'a pas d'équivalent Perl simple. Un vecteur atomique R est un bloc de mémoire de type homogène et contigu, exactement la disposition qu'un cache CPU récompense.  Chaque scalaire intégré dans R est en fait un vecteur atomique de longueur-1 ; il n'y a pas de "scalaire nu" hors des vecteurs atomiques.
 
 Ce choix de conception signifie que le code R fonctionne naturellement sur des vecteurs de millions de doubles avec un débit de niveau BLAS, sans que l'utilisateur n'écrive une seule boucle ou n'alloue une boucle spéciale. "tableau" objet.
 
-R'Les types atomiques sont:
+Les types atomiques de R sont :
 
-| Type atomique R | Stockage | Equivalent en C |
+| R de type atomique | Stockage | C équivalent |
 |---|---|---|
-| `logique` | 4 octets/élément | `int` (avec NA sentinel) |
-| `entier` | 4 octets/élément | `int32_t` |
+| `logical` | 4 octets/élément | `int` (avec NA sentinel) |
+| `integer` | 4 octets/élément | `int32_t` |
 | `double` | 8 octets/élément | `double` |
-| `complexe` | 16 octets/élément | `_Double complexe` |
-| `caractère` | pointeur vers CHARSXP | `caractère *` (interne) |
-| `brut` | 1 octet/élément | `uint8_t` |
+| `complex` | 16 octets/élément | `_Complex double` |
+| `character` | pointeur vers CHARSXP | `char *` (interne) |
+| `raw` | 1 octet/élément | `uint8_t` |
 
-R définit également des structures de niveau supérieur construites sur des vecteurs atomiques:
+R also defines higher-level structures built on atomic vectors:
 
 - **matrice** — un vecteur atomique 2D avec un `dim` attribut.
 - **array** — un vecteur atomique N-D avec un `dim` attribut.
 - **data.frame** — liste nommée des vecteurs atomiques de longueur égale ; la lingua franca de
   données tabulaires dans R.
-- **facteur** — un vecteur entier avec un `niveaux` attribut ; encode les données catégoriques.
+- **facteur** — un vecteur entier avec un `levels` attribut ; encode les données catégoriques.
 
-La leçon : R's les performances de calcul lorsquʼelles sont utilisées dans des applications statistiques et de science des données proviennent directement de ses vecteurs atomiques contigus. Perl's chemin équivalent à la performance est une extension (qui est également `matelot` comme l'environnement), le langage de données Perl [`PDL`](https://pdl.perl.org/).
+The lesson: Les performances de calcul de R lorsqu'elles sont utilisées dans des applications statistiques et de science des données proviennent directement de ses vecteurs atomiques contigus. Le chemin équivalent de Perl vers la performance est une extension (qui est également un `matlab` comme l'environnement), le langage de données Perl [`PDL`](https://pdl.perl.org/).
 
 ---
 
@@ -268,30 +261,30 @@ my $db = random( 128, 1000 );   # double by default
 my $scores = $db x $query->transpose;
 ```
 
-### Types primitifs PDL
+### types primitifs PDL
 
-PDL expose la palette complète des types numériques C en tant que constructeurs de première classe:
+PDL exposes the full palette of C numeric types as first-class constructors:
 
 | Type de PDL | Octets | Type de C | Constructeur |
 |---|---|---|---|
-| `octet` | 1 | `uint8_t` | `byte(...)` |
-| `court` | 2 | `int16_t` | `short(...)` |
-| `ushort` | 2 | `uint16_t` | `groupe(...)` |
+| `byte` | 1 | `uint8_t` | `byte(...)` |
+| `short` | 2 | `int16_t` | `short(...)` |
+| `ushort` | 2 | `uint16_t` | `ushort(...)` |
 | `long` | 4 | `int32_t` | `long(...)` |
 | `indx` | 4 ou 8 | `ssize_t` | `indx(...)` |
-| `long` | 8 | `int64_t` | `long(...)` |
-| `flottant` | 4 | `flottant` | `flottant(...)` |
+| `longlong` | 8 | `int64_t` | `longlong(...)` |
+| `float` | 4 | `float` | `float(...)` |
 | `double` | 8 | `double` | `double(...)` |
-| `flottement` | 8 | `_Flux complexe` | `cfloat(...)` |
-| `double` | 16 | `_Double complexe` | `cdouble(...)` |
+| `cfloat` | 8 | `_Complex float` | `cfloat(...)` |
+| `cdouble` | 16 | `_Complex double` | `cdouble(...)` |
 
 ### Threading et SIMD
 
-L'un des PDL's la plupart des caractéristiques distinctives est *threading implicite* : les opérations diffusent automatiquement sur des dimensions supplémentaires, éliminant les boucles explicites dans le code utilisateur et déléguant les boucles internes aux noyaux C ou Fortran optimisés.  Combiné avec `set_autopthread_targ(N)`, PDL parallélisera automatiquement les tranches indépendantes entre `N` Threads du système d'exploitation — sans que l'utilisateur n'écrive un seul `fourchette` ou `File d'attente` appel.
+L'une des caractéristiques les plus distinctives de PDL est le threading *implicite : les opérations diffusent automatiquement sur des dimensions supplémentaires, éliminant les boucles explicites dans le code utilisateur et déléguant les boucles internes aux noyaux C ou Fortran optimisés.  Combiné avec `set_autopthread_targ(N)`, PDL parallélisera automatiquement les tranches indépendantes entre `N` Threads du système d'exploitation — sans que l'utilisateur n'écrive un seul `fork` ou `Thread::Queue` appel.
 
 ### Valeurs incorrectes
 
-PDL a un concept intégré de *mauvaises valeurs* (`PDL : :Mauvais`), directement analogue à R's `S/O`. Un ndarray peut être marqué comme "valeur erronée"et les opérations PDL propagent correctement les erreurs par le biais de l'arithmétique, des statistiques et des E/S.
+PDL a un concept intégré de *mauvaises valeurs* (`PDL::Bad`), directement analogue à R's `NA`. Un ndarray peut être marqué comme "valeur erronée"et les opérations PDL propagent correctement les erreurs par le biais de l'arithmétique, des statistiques et des E/S.
 
 ---
 
@@ -299,36 +292,18 @@ PDL a un concept intégré de *mauvaises valeurs* (`PDL : :Mauvais`), directemen
 
 Le tableau ci-dessous mappe chaque type R couramment utilisé avec ses homologues Perl et PDL les plus proches, en soulignant où les trois langues sont d'accord, diffèrent ou se complètent.
 
-| Type R | Équivalent en perles | Équivalent en PDL | Notes |
+| {{table.csv_headers|join:" | "}} |
 |---|---|---|---|
-| `double` (longueur-1) | `$x = 3,14` (scalaire) | `double(3.14)` — forme `()` | R n'a pas de scalaire nu ; tout est un vecteur |
-| `entier` (longueur-1) | `$n = 42` (scalaire) | `long(42)` | |
-| `logique` (longueur-1) | `Indicateur $ = 1` / `Indicateur $ = 0` | `octet(1)` | Perl utilise la véracité ; PDL utilise 0/1 octet |
-| `double` vecteur | `@arr = (1.1, 2.2, 3.3)` | `double(1.1, 2.2, 3.3)` | PDL : contiguë ; `@arr` : tableau de pointeurs |
-| `entier` vecteur | `@arr = (1, 2, 3)` | `long(1, 2, 3)` | |
-| `logique` vecteur | `@flags = (1, 0, 1)` | `byte(1, 0, 1)` | |
-| `complexe` vecteur | — (non intégré) | `cdouble(...)` | Besoins de Perl `Math : :Complexe` ; PDL a un support natif |
-| `caractère` vecteur | `@strs = ('a','b')` | — (non numériques) | Le PDL fonctionne uniquement sur des nombres |
-| `brut` vecteur | `emballage(s)'C*', @bytes)` | `byte(...)` | |
-| `S/O` | `défaire` | Mauvaise valeur dans ndarray | Les mauvaises valeurs PDL se propagent comme R's `S/O` |
-| `NULL` | `défaire` dans le contexte de la liste | — | |
-| `liste` | `@array` ou référence `\@array` | — | |
-| nommé `liste` | `%hachage` ou `\%hachage` | — | |
-| `matrice` (2-D) | baie de disques `@aoa` | 2-D ndarray `pdl([[...],[...]])` | PDL : colonne-major ; R : colonne-major |
-| `tableau` (N-D) | références imbriquées | N-D ndarray `$x->reshape(...)` | |
-| `data.frame` | `%hachage` sur `@arrays` | 2-D ndarray (cols numériques) + hachage Perl (mélangé) | Aucune correspondance de type PDL unique |
-| `facteur` | table de recherche de hachage + `@indices` | `long` ndarray + Perl `@levels` tableau | |
-| `environnement` | `%hachage` ou espace de noms de package | — | |
-| `fonction` / fermeture | `sous { ... }` / fermeture | — | PDL PP définit les noyaux compilés |
-| `Objet S3 / S4` | référence bénie + répartition des méthodes | objet PDL (blessed ndarray) | Les objets PDL sont des objets Perl de première classe |
+{% for row in table.content %}| {{row.r_type|safe}} | {{row.perl_equivalent|safe}} | {{row.pdl_equivalent|safe}} | {{row.notes|safe}} |
+{% endfor %}
 
 ### Points clés à retenir
 
 - Pour les **données numériques pures et homogènes** (vecteurs, matrices, tenseurs), les ndarrays PDL et les vecteurs atomiques R sont fonctionnellement équivalents et comparables.
 
-- Pour les **données tabulaires hétérogènes** (types mixtes, colonnes de chaîne, facteurs), R's `data.frame` est plus ergonomique ; Perl utilise généralement un hachage de baies ou un module dédié tel que `Données : :Cadre` ou `PDL : :IO : :CSV`.
+- Pour les **données tabulaires hétérogènes** (types mixtes, colonnes de chaîne, facteurs), R's `data.frame` est plus ergonomique ; Perl utilise généralement un hachage de baies ou un module dédié tel que `Data::Frame` ou `PDL::IO::CSV`.
 
-- Pour **texte, structures irrégulières et colle système**, Perl'Les types natifs sont supérieurs à R et Python.
+- Pour **texte, structures irrégulières et colle système**, les types natifs de Perl sont supérieurs à R et Python.
 
 - La combinaison Perl+PDL fournit donc l'union de ce que R offre en tant que langage statistique et de ce que Perl offre en tant que langage système – au prix d'une courbe d'apprentissage plus raide et d'un outil statistique moins prêt à l'emploi et franchement limité.
 
@@ -338,7 +313,7 @@ Cependant, la combinaison de Perl+PDL+R (avec ce dernier utilisé comme composan
 
 ## 5. Feuille de route : ce que le reste de cette série couvre <a id="road-map"></a>
 
-Cette série documente la construction d'un **moteur de base de données vectorielle** intégré à Perl5 + PDL à partir de zéro.  Les bases de données vectorielles sous-tendent les pipelines de génération augmentée de récupération (RAG) modernes, la recherche sémantique et les systèmes de recommandation des voisins les plus proches.  La mise en œuvre d'un des premiers principes est un excellent moyen de démontrer le PDL's capacités numériques avec Perl'les forces de programmation des systèmes.
+Cette série documente la construction d'un **moteur de base de données vectorielle** intégré à Perl5 + PDL à partir de zéro.  Les bases de données vectorielles sous-tendent les pipelines de génération augmentée de récupération (RAG) modernes, la recherche sémantique et les systèmes de recommandation des voisins les plus proches.  La mise en œuvre d'un des premiers principes est un excellent véhicule pour démontrer les capacités numériques de PDL aux côtés des forces de programmation des systèmes de Perl.
 
 Le répertoire co-développé avec ces publications contient les composants suivants, qui feront chacun l'objet d'une ou plusieurs publications dédiées qui référenceront des fichiers dans un référentiel dédié.
 
@@ -346,46 +321,46 @@ Le répertoire co-développé avec ces publications contient les composants suiv
 
 *Fichier : `VectorIO.pm`*
 
-Le moteur stocke les vecteurs sous forme de blobs binaires emballés à l'intérieur [MessagePack](https://msgpack.org/) charges utiles.  Ce post couvre:
+Le moteur stocke les vecteurs sous forme de blobs binaires emballés à l'intérieur [MessagePack](https://msgpack.org/) charges utiles.  Ce post couvre :
 
-- Concevoir un module avec un nettoyage `Exportateur`API publique basée sur `utiliser v5.40`.
+- Concevoir un module avec un nettoyage `Exporter`API publique basée sur `use v5.40`.
 - Les aides à la validation qui appliquent l'exactitude des schémas aux limites du système.
 
 ### Post 2 — Simulation d'une base de données vectorielle
 
 *Fichier : `simulate_vectorDB.pl`*
 
-Pour pouvoir rechercher une base de données, il en faut une.  Ce post montre:
+Pour pouvoir rechercher une base de données, il en faut une.  Cet article montre :
 
-- Générer des vecteurs de flotteurs aléatoires reproductibles avec `PDL : :aléatoire`.
-- Utilisation `GetOpt : :Long` pour une analyse ergonomique des options de la CLI.
-- Écrire un `--saisie`- simulation contrôlée qui produit des bases de données identiques sur toutes les exécutions - essentielle pour l'analyse comparative.
+- Générer des vecteurs de flotteurs aléatoires reproductibles avec `PDL::random`.
+- Utilisation `GetOpt::Long` pour une analyse ergonomique des options de la CLI.
+- Écrire un `--seed`- simulation contrôlée qui produit des bases de données identiques sur toutes les exécutions - essentielle pour l'analyse comparative.
 
 ### Post 3 — Analyse comparative : le `timing_DB` Module
 
 *Fichier : `timing_DB.pm`*
 
-Les déclarations de rendement nécessitent une mesure.  Ce post présente:
+Les déclarations de rendement nécessitent une mesure.  Ce post présente :
 
-- Un harnais de benchmarking Perl réutilisable construit sur `Temps : :HiRes`.
+- Un harnais de benchmarking Perl réutilisable construit sur `Time::HiRes`.
 - Méthodologie pour des comparaisons justes entre les implémentations Perl/PDL et R.
 - Interprétation du débit (vecteurs/seconde) par rapport à la latence (ms/interrogation) pour différentes tailles de charge globale.
 
-### Post 4 — K-Means Clustering avec `PDL : :Stats : :Kmees`
+### Post 4 — K-Means Clustering avec `PDL::Stats::Kmeans`
 
 *Fichier : `kmeans.pl`*
 
-Le regroupement de K-moyens est l'épine dorsale de l'approche de l'index de fichier inversé (IVF) pour approximer la recherche du voisin le plus proche.  Ce post couvre:
+Le regroupement de K-moyens est l'épine dorsale de l'approche de l'index de fichier inversé (IVF) pour approximer la recherche du voisin le plus proche.  Ce post couvre :
 
-- Le `PDL : :Stats : :Kmees` interface et son contrat de retour (`centroïde`, `cluster`, `n`, `R2`, `ss`).
+- Le `PDL::Stats::Kmeans` interface et son contrat de retour (`centroid`, `cluster`, `n`, `R2`, `ss`).
 - Interpréter le `[obs × clusters]` masque d'adhésion renvoyé par `run_kmeans`.
-- Comparer Perl/PDL k-moyens centroïdes contre R's `kmeans()` et `ClusterR::MiniBatchKmeans()` pour valider l'exactitude numérique.
+- Comparaison des centroïdes k-moyens Perl/PDL avec les R `kmeans()` et `ClusterR::MiniBatchKmeans()` pour valider l'exactitude numérique.
 
 ### Post 5 — Mini-Batch K-Means : Mise à l'échelle à de grands jeux de données
 
 *Fichier : `compare_kmeans_centroids.pl`*
 
-Les k-moyens complets nécessitent toutes les données en mémoire pour chaque itération.  Les k-moyens mini-batch négocient une petite quantité de précision centroïde pour une grande réduction de la mémoire et du calcul.  Ce post explore:
+Les k-moyens complets nécessitent toutes les données en mémoire pour chaque itération.  Les k-moyens mini-batch négocient une petite quantité de précision centroïde pour une grande réduction de la mémoire et du calcul.  Ce post explore :
 
 - Implémentation d'une véritable boucle mini-batch rééchantillonnée dans PDL.
 - Quantification de la dérive centroïde entre les variantes pleine et mini-batch.
@@ -395,9 +370,9 @@ Les k-moyens complets nécessitent toutes les données en mémoire pour chaque i
 
 *Fichier : `compare_ivf_search.pl`*
 
-Avec les centroïdes en main, nous pouvons partitionner la base de données et effectuer une recherche sous-linéaire approximative du voisin le plus proche.  Ce post couvre:
+Avec les centroïdes en main, nous pouvons partitionner la base de données et effectuer une recherche sous-linéaire approximative du voisin le plus proche.  Ce post couvre :
 
-- Construire les listes inversées : cartographier chaque vecteur de base de données à son centroïde le plus proche.
+- Building the inverted lists: mappage de chaque vecteur de base de données à son centroïde le plus proche.
 - Le `unpack_inverted_lists` aide dans `VectorIO`.
 - Querying: trouver les centroïdes les plus proches, puis rechercher uniquement ces listes.
 - Précision par rapport aux compromis de vitesse, car le nombre de listes sondées varie.
@@ -406,7 +381,7 @@ Avec les centroïdes en main, nous pouvons partitionner la base de données et e
 
 *Fichiers : `compare_kmeans_centroids.R`, `compare_kmeans_centroids_pure.R`, `plot_centroid_coordinates.R`*
 
-Le dernier article de la série Foundation ferme la boucle entre Perl et R:
+The final post in the foundation series closes the loop between Perl and R:
 
 - Exporter les résultats PDL au format CSV et les lire en R pour validation indépendante.
 - Utiliser ggplot2 pour visualiser simultanément les coordonnées centroïdes des deux langues.
@@ -418,9 +393,7 @@ Le dernier article de la série Foundation ferme la boucle entre Perl et R:
 
 ---
 
-<a id="fn-cache"></a>
-
-**†** Les CPU modernes disposent de plusieurs niveaux de mémoire rapide sur puce appelés **caches** (L1, L2, L3) qui se trouvent entre les cœurs du processeur et la RAM principale.  L1 est la plus petite (généralement de 32 à 64 ko par coeur) et la plus rapide (latence des cycles d'horloge de 1 à 4) ; L2 est plus grand (256 ko à 1 Mo) et légèrement plus lent ; L3 est partagé entre les coeurs (4 à 64 Mo) avec une latence encore plus élevée.  La RAM principale est plus éloignée de la latence de 60 à 100 ns, soit environ 200 x plus lentement que L1.
+[^†] Les CPU modernes disposent de plusieurs niveaux de mémoire rapide sur puce appelés **caches** (L1, L2, L3) qui se trouvent entre les coeurs de processeur et la RAM principale.  L1 est la plus petite (généralement de 32 à 64 ko par coeur) et la plus rapide (latence des cycles d'horloge de 1 à 4) ; L2 est plus grand (256 ko à 1 Mo) et légèrement plus lent ; L3 est partagé entre les coeurs (4 à 64 Mo) avec une latence encore plus élevée.  La RAM principale est plus éloignée de la latence de 60 à 100 ns, soit environ 200 x plus lentement que L1.
 
 Lorsqu'un calcul touche à la mémoire selon un modèle prévisible et contigu, le *prefetcher* matériel peut charger les données à venir dans L1/L2 avant qu'elles ne soient nécessaires, ce qui permet d'atteindre un débit quasi maximal.  La recherche de pointeurs dispersés (par exemple, la traversée d'un tableau Perl de scalaires alloués par portion de mémoire) bat la pré-extraction, bloquant la CPU pendant qu'elle attend que chaque échec de cache soit résolu à partir de la RAM.
 
