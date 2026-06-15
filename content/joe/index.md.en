@@ -110,7 +110,7 @@ pie
 
 &nbsp;
 
-#### {% filter split:"(?m:##+)"|grep:"takeaways"|safe %}
+#### {% filter split:"(?m:^##+)"|grep:"takeaways"|safe %}
 {% ssi `/chrisarg/perlasadatascilang.md.en` %}
 {% endfilter %}
 
