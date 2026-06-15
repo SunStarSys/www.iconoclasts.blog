@@ -93,8 +93,8 @@ pie
 
 ### Sandbox: SSI Asymptote Vector Graphics
 
-```math
-{% filter fenced:"math"|slice:0|safe %}
+```asy
+{% filter fenced:"asy"|slice:0|safe %}
 {% ssi `/joe/stochastic-trace-formula.md.en` %}
 {% endfilter %}
 ```
