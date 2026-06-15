@@ -85,7 +85,7 @@ pie
 
 ```mermaid
 {% filter fenced:"mermaid"|slice:0|safe %}
-{% ssi `/joe/wikis.md.en` %}
+{% ssi `/joe/wikis.md.en+skip` %}
 {% endfilter %}
 ```
 
@@ -118,7 +118,7 @@ pie
 
 ```mermaid
 {% filter fenced:"mermaid"|slice:1|safe %}
-{% ssi `/joe/wikis.md.en` %}
+{% ssi `/joe/wikis.md.en+skip` %}
 {% endfilter %}
 ```
 
