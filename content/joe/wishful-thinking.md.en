@@ -1,6 +1,6 @@
 Title: Atlassian Considered Harmful
 Keywords: confluence,jira,atlassian,security
-Status: verified=46042
+Status: verified=46046
 Dependencies: *.md.en
 Categories: Apache, Security
 
@@ -49,7 +49,7 @@ You certainly don't want them to reassure you that they are safe when the hacker
 
 And even so, they should recommend you change them, because it is the responsible thing to do.
 
-It is absurd to read their drivel sent to customers about the safety of their SHA-\* hashes of customer passwords stolen by the hackers if you can bother to understand the bullet points of the Apache postmortem on Password Security.
+It is absurd to read Mike Cannon's drivel sent to customers about the safety of their SHA-\* hashes of customer passwords stolen by the hackers if you can bother to understand the bullet points of the Apache postmortem on Password Security.
 
 Moreover, every day their Incident Response Team slept over the weekend, another F/OSS org got hacked by that SliceHost box.
 
