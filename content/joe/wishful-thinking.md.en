@@ -1,0 +1,29 @@
+Title: Atlassian Considered Harmful
+Keywords: confluence,jira
+Status: draft
+Dependencies: *.md.en
+Categories: Apache
+
+![Tarred and Featured](apache-considered-harmful.page/feather2)
+
+There are two viewpoints on stuff like this page of the [last 10 years of disclosed vulnerabilities in Atlassian software](https://atlassian.com/trust/security/advisories):
+
+1. that it demonstrates responsible open disclosure and is good marketing material for sales,
+
+2. that is a lengthy record of abject architectural failure at scale.
+
+I am in the latter camp[^1].
+
+-----
+
+## Footnotes
+
+[^1]. In the last sentence of our team's famous 2010 postmortem
+
+https://infra.apache.org/blog/apache_org_04_09_2010
+
+we state "we hope other people will learn from our mistakes". Clearly our hope was misplaced:
+
+https://cybersecuritynews.com/atlassians-model-context-protocol/
+
+<!-- $Date$ $Author$ $Revision$ -->
