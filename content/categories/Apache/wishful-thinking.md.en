@@ -1,0 +1,10 @@
+---
+categories: Apache
+dependencies: '*.md.en'
+keywords: confluence,jira
+status: draft
+title: Atlassian Considered Harmful
+
+---
+
+{% ssi `/joe/wishful-thinking.md.en` %}
