@@ -1,6 +1,6 @@
 Title: Atlassian Considered Harmful
 Keywords: confluence,jira,atlassian,security
-Status: verified=46014
+Status: verified=46018
 Dependencies: *.md.en
 Categories: Apache, Security
 
@@ -43,7 +43,9 @@ https://www.atlassian.com/blog/news/2010/04/oh_man_what_a_day_an_update_on_our_s
 
 So much for permalink priorities for megacorporations that view security incidents as PR advancement opportunities.
 
-For the record, SHA-\* is a *hashing algorithm*, not an *encrytion algorithm*, much less a **crytograhpically secure hashing algorithm** (like say `bcrypt` or `crypt-md5`). You do not want to be told by your SaaS vendor that your passwords are *encrypted* because a hacker may gain the decryption key and read them in plain text.  You certainly don't want then to reassure you that they are safe when the hacker has the SHA-\* hashes of them. You want you vendoer to tell you your passwords are in `bcrypt` with at least 5 rounds in its configuration.
+For the record, SHA-\* is a *hashing algorithm*, not an *encrytion algorithm*, much less a **crytographically secure hashing algorithm** (like say `bcrypt` or `crypt-md5`). You do not want to be told by your SaaS vendor that your passwords are *encrypted* because a hacker may gain the decryption key and read them in plain text.
+
+You certainly don't want them to reassure you that they are safe when the hacker has the SHA-\* hashes of them. You want you vendor to tell you your passwords are hashed via `bcrypt` with at least 5 rounds in its configuration. And even so, they should recommend you change them, because it is the responsible thing to do.
 
 It is absurd to read their drivel sent to customers about the safety of their SHA-\* hashes of customer passwords stolen by the hackers if you can bother to understand the bullet points of the Apache postmortem on Password Security.
 
