@@ -1,6 +1,6 @@
 Title: Atlassian Considered Harmful
 Keywords: confluence,jira,atlassian,security
-Status: verified=46078
+Status: verified=46082
 Dependencies: *.md.en
 Categories: Apache, Security
 
@@ -51,8 +51,8 @@ And even so, they should recommend you change them, because it is the responsibl
 
 It is absurd to read Mike Cannon-Brooke's drivel sent to customers about the safety of their SHA-\* hashes of customer passwords stolen by the hackers if you can bother to understand the bullet points of the Apache postmortem on Password Security.
 
-Moreover, every day their Incident Response Team slept over the weekend, another F/OSS org got hacked by that SliceHost box.
+Moreover, every day their Incident Response Team slept over the weekend, another F/OSS org got hacked by that SliceHost box. We notified their team on Friday of our findings after business hours in Sydney, and instead of telling their customers they read security email off-hours and therefore did not get hacked on Sunday PST time, they fibbed and said they discovered the hack themselves caught completely unawares.
 
-RedHat, CodeHaus and JBoss were three of them, but there were several others.
+RedHat, CodeHaus and JBoss were three of the incidental victims hacked while the Atlassian IR team slept, but there were several others.
 
 <!-- $Date$ $Author$ $Revision$ -->
