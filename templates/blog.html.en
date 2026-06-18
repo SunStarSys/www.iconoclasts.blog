@@ -1,6 +1,6 @@
 {% extends "main.html"|append:lang %}
 {% block content %}
-   <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
+   <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><i class="fa fa-file-pen text-danger"></i></a></div>
 
     <h1>{{ headers.title|removetags:"script style"|removeattrs:"on\w+ style class"|safe }}</h1>
      <div class="essay col-lg-12 container">
