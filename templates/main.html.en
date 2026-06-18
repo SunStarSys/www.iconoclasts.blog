@@ -144,7 +144,7 @@
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-        <img src="/images/edit.png" alt="Edit Icon" />
+        <i class="fa-pen-to-square text-danger"></i>
       </a>
   </div>
   <h1>{{ headers.title|removetags:"script style"|removeattrs:"on\w+ style class"|safe }}</h1>
