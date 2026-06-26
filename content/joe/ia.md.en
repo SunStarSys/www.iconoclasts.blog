@@ -48,16 +48,27 @@ But it critically hinges on that tradeoff being viable to the editor experience.
 
 ### Radically Rearchitecting Wiki Search
 
+
+
 #### Human Interface Goals
+
+Contextualized by directories. Expansive to parent directories.
 
 ##### Powerful Syntax
 
+PCRE.
 
 ##### Hashtagged Seaches are Keyword Specific Instead of Generic Word Searches
 
+Tagged Metadata Keywords.
+
 ##### Easy Scope Expansion
 
+Expand scope to parent directory search.
+
 ##### Interactive Results Filtration Engine
+
+Subsearches within existing matches.
 
 See the section on HATEOAS for an overview.
 
@@ -65,11 +76,19 @@ See the section on HATEOAS for an overview.
 
 ##### Comprehensible Result Ordering / Prioritization
 
+Hits ordered by frequency + Lucence match score.
+
 ##### Per-User Security (ACL) Contextualized Results
+
+Matches filtered by per-user document ACLs.
 
 ##### Hits Linked Directly to Target-Specific Document Locations
 
+Jump directly to the matched content.
+
 ##### Live, RealTime Results (aka No Stale Indexed Corpus)
+
+Lucene indexes tied to build-system, including incremental builds.
 
 #### Customer Adoption Goals
 
