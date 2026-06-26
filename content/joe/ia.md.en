@@ -48,15 +48,13 @@ But it critically hinges on that tradeoff being viable to the editor experience.
 
 ### Radically Rearchitecting Wiki Search
 
-
-
 #### Human Interface Goals
 
 Contextualized by directories. Expansive to parent directories.
 
 ##### Powerful Syntax
 
-PCRE.
+PCRE/Lucene query.
 
 ##### Hashtagged Seaches are Keyword Specific Instead of Generic Word Searches
 
