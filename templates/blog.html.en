@@ -30,7 +30,7 @@
          <br>&nbsp;
          <br>
        </div>
-       {{ content|markdown|safe }}
+       {{ content|markdown|removetags:"script"|removeattrs:"on\w+"|safe }}
      </div>
 {% endblock %}
 {% block footer %}
@@ -81,4 +81,5 @@
       }
   }
 </script>
+<script async="" src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 {% endblock %}
