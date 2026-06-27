@@ -78,7 +78,7 @@ trunk/
    templates/
 ```
 
-Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenver `fileA.md.en` is altered.
+Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenever `fileA.md.en` is altered.
 
 ## Security
 
