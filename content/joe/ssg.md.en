@@ -27,7 +27,28 @@ Dependencies: *.md.en
 
 #### Dependency Cache
 
+https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
+
 ##### Hugo `readFile`
+
+```mermaid
+treeView-beta
+---
+config:
+  treeView:
+    showIcons: true
+---
+  .
+    content/
+      includes/
+        dummy.md
+      posts/
+        2025-01-01-post1.md
+        2025-01-02-post2.md
+    layouts/
+      shortcodes/
+        include.html
+```
 
 ## Security
 
