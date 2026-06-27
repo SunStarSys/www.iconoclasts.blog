@@ -46,16 +46,39 @@ https://mbuege.com/2025/09/04/hugo-include-shortcode/
 
 ```mermaid
 treeView-beta
+    archetypes/
+    assets/
     content/
       includes/
         dummy.md :::highlight ## untracked dependency in Hugo
       posts/
         2025-01-01-post1.md  ## may use "include" shortcodes
         2025-01-02-post2.md  ## ...
+    data/
+    i18n/
     layouts/
       shortcodes/
         include.html  ## uses readFile() on a passed argument
+    static/
+    themes/
 ```
+
+##### Orion's fully tracked `ssi` calls
+
+```mermaid
+treeView-beta
+trunk/
+   content/
+     foo/
+	   fileA.md.en :::highlight ## target include file
+	 bar/
+	   fileB.md.en ## `ssi` includes select portions of fileA.md.en
+   cgi-bin/
+   lib/
+   templates/
+```
+
+Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenver `fileA.md.en` is altered.
 
 ## Security
 
