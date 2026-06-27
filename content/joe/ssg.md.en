@@ -35,13 +35,13 @@ https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
 treeView-beta
     content/
       includes/
-        dummy.md
+        dummy.md :::highlight ## untracked dependency
       posts/
-        2025-01-01-post1.md
-        2025-01-02-post2.md
+        2025-01-01-post1.md  ## may use "include" shortcodes
+        2025-01-02-post2.md  ## ...
     layouts/
       shortcodes/
-        include.html
+        include.html  ## uses readFile() on a passed argument
 ```
 
 ## Security
