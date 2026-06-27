@@ -32,11 +32,11 @@ Dependencies: *.md.en
 
 ### Incremental Builds
 
-#### Dependency Cache
+#### Hugo's Dependency Cache (aka Gilding the Lilly)
 
 https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
 
-##### Hugo `readFile`
+##### Hugo's untracked `readFile` calls
 
 https://mbuege.com/2025/09/04/hugo-include-shortcode/
 
