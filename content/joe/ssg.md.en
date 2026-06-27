@@ -37,7 +37,7 @@ https://mbuege.com/2025/09/04/hugo-include-shortcode/
 treeView-beta
     content/
       includes/
-        dummy.md :::highlight ## untracked dependency
+        dummy.md :::highlight ## untracked dependency in Hugo
       posts/
         2025-01-01-post1.md  ## may use "include" shortcodes
         2025-01-02-post2.md  ## ...
