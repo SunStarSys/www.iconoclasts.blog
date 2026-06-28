@@ -85,7 +85,11 @@ Which means you want Orion!
 
 #### Hugo's Primitive Dependency Cache (i.e., Gilding the Lilly)
 
-https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
+Comically absurd levels of meaningless puffery in very detailed architectural diagrams which deftly avoid stating the elepants in the room...
+
+> https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
+
+Here's what that page doesn't say about Hugo dependency management:
 
 - inflexible, internally generated [**DAG**](https://en.wikipedia.org/wiki/Directed_acyclic_graph) based on node/leaf/bundle tree layouts
 
