@@ -62,7 +62,7 @@ Dependencies: *.md.en
 
 https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
 
-- hardcoded internal DAG based on node/leaf/bundle `content/` tree layouts
+- hardcoded internal **DAG** based on node/leaf/bundle tree layouts
 - never written to disk
 
 ##### Hugo's untracked `readFile` calls break incremental build support
