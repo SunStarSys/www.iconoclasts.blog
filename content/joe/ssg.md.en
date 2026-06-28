@@ -162,6 +162,21 @@ Trivial **per-user integration** with git/GitHub via `git-svn` bridge.
 {\{- end }\}
 
 ```
-It took 8-12 seconds (sometimes up to 30s) to process 10K such files.  Then I compared it to @SunStarSys/orion build `./test.sh ooo` which [consistently builds over 20K such files in roughly 2-3x the time](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556).
+
+And here is the `hugo.toml` file:
+```text
+baseURL = 'https://openoffice.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hyde"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+```
+
+It typically took 8-12 seconds (sometimes up to 30s) to process 10K such files.  When compared to @SunStarSys/orion build `./test.sh ooo` which [consistently builds over 20K such files in roughly 2-3x the time](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), it seems there is performance parity between them on least complex, yet very large, sites like <https://www.OpenOffice.org>.
+
+However, Orion is capable of so much more if you need true flexibility and correct incremental build support, because **we think you know what works best for your site, unlike the rest of the overhyped SSG community around Hugo.**
 
 <!-- $Date$ $Author$ $Revision$ -->
