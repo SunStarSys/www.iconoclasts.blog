@@ -1,0 +1,10 @@
+---
+categories: Orion
+dependencies: '*.md.fr'
+keywords: Orion, Hugo, SSG
+status: vérifié=46702
+title: Orion contre Hugo
+
+---
+
+{% ssi `/joe/ssg.md.fr` %}

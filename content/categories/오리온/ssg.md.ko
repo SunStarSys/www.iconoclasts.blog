@@ -1,0 +1,10 @@
+---
+categories: 오리온
+dependencies: '*.md.ko'
+keywords: 오리온, 휴고, SSG
+status: 확인=46702
+title: 오리온 vs. 휴고
+
+---
+
+{% ssi `/joe/ssg.md.ko` %}

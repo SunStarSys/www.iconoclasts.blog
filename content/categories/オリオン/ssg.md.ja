@@ -1,0 +1,10 @@
+---
+categories: オリオン
+dependencies: '*.md.ja'
+keywords: Orion、Hugo、SSG
+status: 確認済み=46702
+title: オリオンvsフーゴ
+
+---
+
+{% ssi `/joe/ssg.md.ja` %}
