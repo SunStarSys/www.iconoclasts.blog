@@ -26,7 +26,7 @@ Dependencies: *.md.en
 ## Common Feature Sets
 
 - Apache Licensed
-- High Performance (max document processing speed at ~1K documents per second)
+- High Performance (max document processing speed at ~1K documents per second)[^1]
 - Cached Dependency Management
 - Sophisticated Security Model
 
@@ -141,5 +141,10 @@ Impossible in any DVCS &mdash; read access to the repository implies access to i
 #### Subversion
 
 Trivial **per-user integration** with git/GitHub via `git-svn` bridge.
+
+
+## Footnotes
+
+[^1]. For an apples-to-apples comparison I ported the <https://www.openoffice.org> JBake source tree to Hugo and benchmarked it against a simple theme that just culled the `body` innerHTML out of the html sources (that were mapped to markdown).  It took 8-10 seconds to process 10K such files.  Then I compared it to @SunStarSys/orion build `./test.sh ooo` which builds 20K such files in roughly 2x the time.
 
 <!-- $Date$ $Author$ $Revision$ -->
