@@ -1,0 +1,215 @@
+---
+categories: 奧里昂
+dependencies: '*.md.zh-TW'
+keywords: Orion、Hugo、SSG
+status: 驗證 =46702
+title: Orion vs. Hugo
+---
+
+<div class="right">
+
+![Hugo SSG](ssg.page/hugo-logo-wide)
+
+</div>
+
+[TOC]#sidebar
+
+@sunstarsys/status/2070917650042040818
+
+## 前言
+
+我瞭解技術比較是許多環節中的宗教禁忌。我嘗試傳達的主要點是，當時[奧里昂](https://www.sunstarsys.com/orion/) 是以 Enterprise Jamstack Wiki 計費，但在特定問題領域之外，有許多可行的使用案例。
+
+不過，這篇文章的存在是將 Orion 的 Apache-Licensed SSG 呈現為 *SSG 比 Hugo 更適合您和您的軟體工程團隊 *。它具有更多的電源、更多效能、更多核心功能，以及更多易於自訂的功能。它是[良好記錄](https://www.sunstarsys.com/orion/api/) 而且有無限的潛力，讓真正的超級用戶，就像你一樣！
+
+## @SunStarSys/orion
+
+- NKOTB
+
+- 具有漸進式學習曲線的意見
+
+## @GoHugoIo/ 休哥
+
+- 熱門
+
+- 健全的第三方佈景主題與擴充功能
+
+- 具有陡峭學習曲線的意見
+
+## 一般功能集
+
+- Apache 已授權
+
+- 高效能 (文件處理速度上限，每秒 ~1K 份文件)[^1]
+
+- 快取的相依性管理
+
+- 精密安全模型
+
+## Orion 為 Hugo++
+
+1. {# lede #}(可設定) Markdown 來源內 Django 樣板的完整功能{# lede #}
+
+2. 健全的控制流程、迴圈建構及 Django 篩選
+
+3. 完整存取 YAML/CSV 附加文件作為資料結構
+
+4. 啟用 WebGL 的向量圖形[^2]
+
+5. 表格資料上的向量作業聚總方式`PDL`
+
+6. `ssi` 略過檔案標頭
+
+7. [內容談判 / MultiViews](https://httpd.apache.org/docs/current/content-negotiation.html)
+
+8. 容易使用
+
+9. 靈活、真實的增量建置
+
+10. 每個檔案 / 目錄 (又稱為微點) ACL，包括組建軟體堆疊和組態本身的控制項
+
+11. :editormd-logo: 強大[$$\KaTeX$$](markdown-is-not-latex#h2-embrace-and-extend-redux) 支援
+
+12. 整合式 PCRE 搜尋
+
+### Orion CMS 編輯器使用案例
+
+<center>
+
+![編輯器 X](ssg.page/screenshot)
+
+</center>
+
+1. 以 MIME 類型為基礎的文件上傳列印 (Markdown、Perl、YAML、CSV、$$\LaTeX$$)
+
+2. 自動連結驗證 / 標題
+
+3. 即時預覽轉譯`@`- 簡短連結 (例如:fa-x-twitter: 推文)
+
+4. 電子 HTML/ 頁標完成
+
+5. 多語言與 AI 翻譯功能 OOTB &mdash; 包括中文、希伯來文和阿拉伯文
+
+6. $$\text{Markdown }\rightarrow\LaTeX$$ 樣板物件轉換器
+
+### Orion 增量建置版本
+
+#### O (N) vs. O (1)
+
+如果您希望 Wiki 的作者和編輯對您的組建系統感到滿意，它必須支援增量組建作為第一個訂單功能，而且 *不是一個行銷 gimmick 作為後果 *。
+
+這代表您想要 Orion！
+
+#### Hugo 的原始相依性快取 (即 Gilding the Lilly)
+
+在非常詳細的建築圖中，舒適地吸收無意義的自助餐，避免在房間裡陳述大象...
+
+> https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
+
+以下為 Hugo 相依性管理頁面的內容：
+
+- 不靈活，內部產生[**DAG**](https://en.wikipedia.org/wiki/Directed_acyclic_graph) 以節點 / 分葉 / 組合樹狀結構版面配置為基礎
+
+- 從未寫入磁碟
+
+##### 休哥未追蹤`readFile` 呼叫中斷增量建置支援
+
+讓我們看看這篇文章的房間裡的大象：
+
+> https://mbuege.com/2025/09/04/hugo-include-shortcode/
+
+```mermaid
+treeView-beta
+    弧形 /
+    資產 /
+    內容 /
+      包含 /
+        dummy.md ：：：highlight ## Hugo 中未追蹤的相依性
+      文章 /
+        2025-01-01-post1.md  ## 可以使用"包含" 簡碼
+        2025-01-02-post2.md  ## ...
+    資料 /
+    i18n/
+    版面配置 /
+      簡碼 /
+        include.html  ## 使用 readFile() 在通過的引數上
+    靜態 /
+    主題 /
+```
+
+*Hugo 不會追蹤因簡短代碼而產生的內容相依性，並對追蹤的內容相依性做出嚴格的 DAG 假設。*
+
+##### Orion 完全追蹤`ssi` 呼叫
+
+```mermaid
+treeView-beta
+中繼器 /
+   內容 /
+     粉紅 /
+	   fileA.md.en ：：：highlight ## 目標包含檔
+	 桿
+	   fileB.md.en ## `ssi` 包含選取部分的 fileA.md.en
+   cgi-bin/
+   程式庫 /
+   範本 /
+```
+
+*原生 Orion 軌跡`fileB.md.en`的相依性`fileA.md.en` 並會隨時重建`fileA.md.en` 已變更；且每個文件的相依性可補充設定，而不只是假設階層結構。*
+
+Orion 的「相依性」圖表 **幾乎不是 DAG**。此外，這是 **建置** 的基本元件，不只是以半功倍的最佳化方式與 Hugo 搭配使用。
+
+例如，此網頁的 Markdown 來源本身具有一個`Dependencies: *.md{{lang}}` 表頭 (您可以在上方的「編輯器」螢幕擷取畫面中看到，或按一下[:fa-github: 來源](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) Orion 用來產生下列項目之標題和作者資訊的連結"索引" 頁面頁尾中的頁首。
+此目錄中的所有檔案都類似設定成交互參照！
+
+<span class="text-success">在實際使用案例中，DAG 是內容相依性需求的總監督。</span>
+
+[![不是 DAG](../images/deps.svg{{lang}})](dependencies)
+
+### 版本控制
+
+#### Git 和微點 ACL
+
+**不可能 **在任何 DVCS 中`git` &mdash; 儲存庫的讀取存取意味著完整存取，包括完整歷史記錄。推送存取的 Ditto：這是「全部或無」，這是 Wiki 相關資訊環境 (不同儲存區域使用者需要精細的檔案 / 目錄寫入授權 / 存取控制) 中斷的作業。
+
+#### 子版本
+
+透過 git/GitHub 進行真實** 每位使用者整合 **`git-svn` 橋接器被每一套作為附加元件擴充套件`git` 分配。
+
+## 註腳
+
+[^1]。對於蘋果與蘋果的比較，我移植了一個子集<https://www.openoffice.org> `JBake` 來源樹狀結構 @apache/openoffice-org 至 Hugo 並針對簡單進行基準測試`hyde` 剛整理的主題`body` innerHTML，共`.html` 來源 (重新命名為`.md` 含內嵌 HTML 的檔案 a'la
+
+```html
+{%templatetag openvariable %} define "main" -{% templatetag closevariable %}
+<div class="post">
+  <h1>{% templatetag openvariable %} .Title {% templatetag closevariable %}</h1>
+  <time datetime={% templatetag openvariable %} .Date.Format "2006-01-02T15:04:05Z0700" {% templatetag closevariable %} class="post-date">{% templatetag openvariable %} .Date.Format "Mon, Jan 2, 2006" {% templatetag closevariable %}</time>
+  {% templatetag openvariable %} $matches := findRESubmatch `(?s)<body[^>]*>(.*?)</body>` .Content {% templatetag closevariable %}
+  {% templatetag openvariable %} range $matches {% templatetag closevariable %}{% templatetag openvariable %} index . 1 | safeHTML {% templatetag closevariable %}{% templatetag openvariable %} end {% templatetag closevariable %}
+</div>
+{% templatetag openvariable %} if .Site.Config.Services.Disqus.Shortname -{% templatetag closevariable %}
+<h2>Comments</h2>
+{% templatetag openvariable %} template "_internal/disqus.html" . {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+```
+
+而這裡是`hugo.toml` 檔案：
+```text
+baseURL = 'https://openoffice.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hyde"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+```
+
+通常需要 8-12 秒 (有時最多 30s) 來處理 10K 這類檔案。與 @SunStarSys/orion 組建比較時`./test.sh ooo` 其中[在大約 2-3x 的時間內，一致地建立超過 20K 個此類檔案](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556)，它們在最複雜但非常大的網站上似乎有 **效能同位 **。<https://www.OpenOffice.org>.
+
+然而，[奧里昂](https://www.sunstarsys.com/orion/) 如果您需要真正的彈性和正確的增量建置支援，可以有更多的功能，因為 **我們認為您知道最適合您的網站，與 Hugo 周圍的超高類型 SSG 社群不同。**
+
+[^2]。全面支持圍欄`asy` 來源編碼為 @vectorgraphics/asymptote 的 Markdown 區塊。
+
+<!-- $Date$ $Author$ $Revision$ -->

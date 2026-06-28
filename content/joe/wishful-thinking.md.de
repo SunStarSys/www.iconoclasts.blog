@@ -1,0 +1,59 @@
+---
+categories: Apache, Sicherheit
+dependencies: '*.md.de'
+keywords: Zusammenfluss,Jira,Atlassian,Sicherheit
+status: überprüft=46122
+title: Atlassian als schädlich angesehen
+---
+
+<div class="right">
+
+![Tarred und Featured](wishful-thinking.page/confluence)
+
+</div>
+
+Es gibt zwei Sichtweisen auf Dinge wie diese Seite der [Letzte 10 Jahre offengelegte Schwachstellen in Atlassian Software](https://atlassian.com/trust/security/advisories):
+
+1. dass es eine verantwortungsvolle offene Offenlegung zeigt und gutes Marketingmaterial für den Vertrieb ist,
+
+2. {# lede #}Dies ist eine lange Aufzeichnung über einen erbärmlichen Architekturfehler in großem Maßstab.{# lede #}.
+
+Ich bin im letzten Lager.[1]
+
+-----
+
+## Fußnoten
+
+[1]. Im letzten Satz der berühmten Postmortem 2010 unseres Teams
+
+https://infra.apache.org/blog/apache_org_04_09_2010 [2]
+
+Wir sagen (paraphrasiert)
+
+> Wir hoffen, dass andere Menschen aus unseren Fehlern lernen.
+
+Im Nachhinein war unsere Hoffnung eindeutig falsch:
+
+https://cybersecuritynews.com/atlassians-model-context-protocol/
+
+Jedoch [Orion](https://sunstarsys.com/orion)Der Vorläufer, das Apache CMS, wurde sechs Monate nach der Veröffentlichung der Postmortem geboren.  In diesem Fall informierten diese Lektionen das Design aus dem Schmerz der gelebten Erfahrung.
+
+[2]. Der Blogeintrag zu Atlassians ungeschickter Postmortem über diesen Vorfall wurde aus dem Internet redigiert. Grundsätzlich haben sie es einfach nicht geschafft, die 301 nach ein paar Jahren aufrechtzuerhalten, also hier ist, wo sie sich aufgelöst hat:
+
+https://www.atlassian.com/blog/news/2010/04/oh_man_what_a_day_an_update_on_our_security_breach
+
+Soviel zu den Permalink-Prioritäten für Megacorporations, die Sicherheitsvorfälle als PR-Fördermöglichkeiten ansehen.
+
+Für den Datensatz ist SHA-\* ein *Hashing-Algorithmus*, kein *Verschlüsselungsalgorithmus*, geschweige denn ein **kryptografisch sicherer Hashing-Algorithmus** (z.B. `bcrypt` oder `crypt-md5`). Sie möchten nicht von Ihrem SaaS-Anbieter informiert werden, dass Ihre Passwörter *verschlüsselt* sind, da ein Hacker möglicherweise den Entschlüsselungsschlüssel erhält und diese im Klartext liest.
+
+Sie wollen sicherlich nicht, dass sie Ihnen versichern, dass sie sicher sind, wenn der Hacker die SHA-\* Hashes von ihnen hat, denn SHA-\* ist so konzipiert, dass sie leistungsfähig genug ist, um Ihre Passwörter einem rechnerisch verfolgbaren Brute-Force-Such-/Ratenalgorithmus gegen den Hash selbst zu unterwerfen. Sie möchten, dass Ihr Anbieter Ihnen mitteilt, dass Ihre Passwörter per Hash gesendet werden `bcrypt` mit mindestens 5 Runden in seiner Konfiguration - entwickelt, um Brute-Force-Raten zu besiegen und auf die Hardware-Spezifikationen der Zeit aktualisierbar.
+
+Und trotzdem sollten sie empfehlen, sie zu ändern, weil es die verantwortliche Sache ist.
+
+Es ist absurd, Mike Cannon-Brooke's Drivel an Kunden über die Sicherheit ihrer SHA-\* Hashes von Kundenpasswörtern zu lesen, die von den Hackern gestohlen wurden, wenn Sie sich die Mühe machen können, die Aufzählungspunkte der Apache-Postmortem auf Password Security zu verstehen.
+
+Darüber hinaus wurde jeden Tag, an dem ihr Incident Response Team über das Wochenende geschlafen hat, eine andere F/OSS-Organisation von dieser SliceHost-Box gehackt. Wir haben ihr Team am Freitag nach den Geschäftszeiten in Sydney über unsere Ergebnisse informiert, und anstatt ihren Kunden zu sagen, dass sie außerhalb der Geschäftszeiten Sicherheits-E-Mails gelesen haben und daher nicht in der PST-Zeit am Sonntag gehackt wurden, haben sie den Hack selbst entdeckt &mdash; völlig unbewusst gefangen.
+
+RedHat, CodeHaus und JBoss waren drei der zufälligen Opfer, die gehackt wurden, während das Atlassian IR-Team schlief, aber es gab mehrere andere.
+
+<!-- $Date$ $Author$ $Revision$ -->

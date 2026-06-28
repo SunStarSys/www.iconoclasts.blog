@@ -1,0 +1,215 @@
+---
+categories: Orion
+dependencies: '*.md.pt-BR'
+keywords: Orion, Hugo, SSG
+status: verificado=46702
+title: Orion vs. Hugo
+---
+
+<div class="right">
+
+![Hugo SSG](ssg.page/hugo-logo-wide)
+
+</div>
+
+[TOC]#sidebar
+
+@sunstarsys/status/2070917650042040818
+
+## Prefácio
+
+Eu entendo que as comparações tecnológicas são um tabu religioso em muitos círculos.  O ponto principal que eu estou tentando transmitir é que enquanto [Orion](https://www.sunstarsys.com/orion/) é anunciado como um Enterprise Jamstack Wiki, ele tem muitos casos de uso viáveis fora desse domínio de problema específico.
+
+No entanto, a essência deste artigo é representar o SSG licenciado pela Apache da Orion como *um SSG melhor do que o Hugo para você e suas equipes de engenharia de software*.  Tem mais potência, mais desempenho, mais recursos principais e muito mais fácil de personalizar. Além disso, é [bem documentado](https://www.sunstarsys.com/orion/api/) e tem potencial ilimitado para verdadeiros usuários de poder lá fora, assim como você!
+
+## @SunStarSys/orion
+
+- NKOTB
+
+- Opinião com Curva de Aprendizagem Gradual
+
+## @GoHugoIo/hugo
+
+- Popular
+
+- Temas e extensões de terceiros robustos
+
+- Opinião c/ Curva de Aprendizagem Profunda
+
+## Conjuntos de Recursos Comuns
+
+- Apache Licenciado
+
+- Alto Desempenho (velocidade máxima de processamento de documentos em ~1K documentos por segundo)[^1]
+
+- Gerenciamento de Dependência em Cache
+
+- Modelo de segurança sofisticado
+
+## Orion como Hugo++
+
+1. {# lede #}(Configurável) Poder total de Django Templates dentro de fontes Markdown{# lede #}
+
+2. Fluxo de Controle Robusto, Construções For-Loop e Filtros Django
+
+3. Acesso Total a documentos anexados YAML/CSV como estruturas de dados
+
+4. Gráficos de Vetor ativados para WebGL[^2]
+
+5. Agregar Operações de Vetor em Dados de Tabela por meio de `PDL`
+
+6. `ssi` ignora cabeçalhos de arquivo
+
+7. [Negociação de Conteúdo / MultiViews](https://httpd.apache.org/docs/current/content-negotiation.html)
+
+8. Fácil de usar
+
+9. Builds Incrementais Flexíveis e Verdadeiros
+
+10. ACL por arquivo/diretório (também conhecida como refinada), incluindo controles na pilha de software do build e na própria configuração
+
+11. :editormd-logo: Robusto [$$\KaTeX$$](markdown-is-not-latex#h2-embrace-and-extend-redux) Suporte
+
+12. Pesquisa de PCRE integrada
+
+### Casos de Uso do Editor de CMS do Orion
+
+<center>
+
+![Editor X](ssg.page/screenshot)
+
+</center>
+
+1. Linting de Upload de Documento com base no tipo MIME (Markdown, Perl, YAML, CSV, $$\LaTeX$$)
+
+2. Validação/Título de Link Automático
+
+3. Renderização de Visualização em Tempo Real para `@`-shortlinks (ex. :fa-x-twitter: tweets)
+
+4. Conclusão de Guia/HTML Elétrica
+
+5. Multilíngue com funcionalidade de tradução de IA OOTB &mdash; incluindo chinês, hebraico e árabe
+
+6. $$\text{Markdown }\rightarrow\LaTeX$$ conversor de artigo modelo
+
+### Builds Incrementais do Orion
+
+#### O(N) vs. O(1)
+
+Se você quiser que os autores e editores da sua wiki fiquem felizes com o seu sistema de compilação, ele tem que suportar builds incrementais como um recurso de primeira ordem, e *não um truque de marketing abordado como uma reflexão tardia*.
+
+O que significa que você quer Orion!
+
+#### Hugo's Primitive Dependency Cache (ou seja, Gilding the Lilly)
+
+Níveis comicamente absurdos de sofrimento sem sentido em diagramas arquitetônicos muito detalhados que habilmente evitam declarar os elepantes na sala...
+
+> https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
+
+Aqui está o que essa página não diz sobre o gerenciamento de dependência Hugo:
+
+- inflexível, gerado internamente [**DAG**](https://en.wikipedia.org/wiki/Directed_acyclic_graph) com base nos layouts de árvore de nó/folha/pacote
+
+- nunca gravado em disco
+
+##### Hugo não é rastreado `readFile` suporte a criação incremental de interrupção de chamadas
+
+Vamos examinar o elefante na sala neste artigo:
+
+> https://mbuege.com/2025/09/04/hugo-include-shortcode/
+
+```mermaid
+treeView-beta
+    arquétipos/
+    ativos/
+    conteúdo/
+      inclui/
+        dummy.md :::highlight ## dependência não rastreada em Hugo
+      postagens/
+        2025-01-01-post1.md  ## pode usar "incluir" códigos curtos
+        2025-01-02-post2.md  ## ...
+    dados/
+    i18n/
+    layouts/
+      códigos curtos/
+        include.html  ## usa readFile() em um argumento aprovado
+    estático/
+    temas/
+```
+
+*A Hugo não rastreia dependências de conteúdo que surgem de códigos curtos e faz suposições rígidas de DAG sobre as dependências de conteúdo que rastreia.*
+
+##### Orion é totalmente rastreado `ssi` chamadas
+
+```mermaid
+treeView-beta
+tronco/
+   conteúdo/
+     foo/
+	   fileA.md.en :::highlight ## target include file
+	 barra/
+	   fileB.md.en ## `ssi` inclui partes selecionadas de fileA.md.en
+   cgi-bin/
+   lib/
+   modelos/
+```
+
+*Orion nativamente rastreia `fileB.md.en`Dependência de `fileA.md.en` e irá reconstruí-lo sempre que `fileA.md.en` é alterado; e as dependências são suplementarmente configuráveis por documento, não simplesmente assumidas pela estrutura heirárquica.*
+
+O gráfico de Dependência de Orion é **quase nunca um DAG**. E é **um componente essencial da construção**, não apenas uma otimização semi-apoiada da maneira que é com Hugo.
+
+Por exemplo, a própria origem de markdown desta página tem um `Dependencies: *.md{{lang}}` cabeçalho (você pode vê-lo na captura de tela acima Editor dele, ou clicando no [:fa-github: origem](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) link onde as informações do título e do autor são exibidas) que é usado pelo Orion para gerar os itens sob o "Índice" cabeçalho no rodapé da página.
+Todos os arquivos neste diretório são igualmente configurados para referência cruzada entre si!
+
+<span class="text-success">DAG é uma simplificação excessiva dos requisitos de dependência de conteúdo em casos de uso do mundo real.</span>
+
+[![não é um DAG](../images/deps.svg{{lang}})](dependencies)
+
+### Controle de Versão
+
+#### ACLs Git e Detalhadas
+
+**Impossível** em qualquer DVCS como `git` &mdash; o acesso de leitura ao repositório implica o acesso à sua totalidade, incluindo o histórico completo.  Para acesso por push: é tudo ou nada, que é um deal-breaker em um contexto wiki em que diferentes usuários do repositório exigem controles granulares de acesso/autorização de gravação de arquivo/diretório.
+
+#### Subversão
+
+**Integração por usuário** trivial com git/GitHub por meio do `git-svn` ponte empacotada como uma extensão de complemento por cada `git` distribuição.
+
+## Rodapés
+
+[^1]. Para uma comparação de maçãs para maçãs, eu portei um subconjunto do <https://www.openoffice.org> `JBake` árvore de origem @apache/openoffice-org para Hugo e comparou-o com um simples `hyde` baseado no tema que acabou de abater o `body` innerHTML fora do `.html` origens (renomeado como `.md` arquivos com html incorporado) a'la
+
+```html
+{%templatetag openvariable %} define "main" -{% templatetag closevariable %}
+<div class="post">
+  <h1>{% templatetag openvariable %} .Title {% templatetag closevariable %}</h1>
+  <time datetime={% templatetag openvariable %} .Date.Format "2006-01-02T15:04:05Z0700" {% templatetag closevariable %} class="post-date">{% templatetag openvariable %} .Date.Format "Mon, Jan 2, 2006" {% templatetag closevariable %}</time>
+  {% templatetag openvariable %} $matches := findRESubmatch `(?s)<body[^>]*>(.*?)</body>` .Content {% templatetag closevariable %}
+  {% templatetag openvariable %} range $matches {% templatetag closevariable %}{% templatetag openvariable %} index . 1 | safeHTML {% templatetag closevariable %}{% templatetag openvariable %} end {% templatetag closevariable %}
+</div>
+{% templatetag openvariable %} if .Site.Config.Services.Disqus.Shortname -{% templatetag closevariable %}
+<h2>Comments</h2>
+{% templatetag openvariable %} template "_internal/disqus.html" . {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+```
+
+E aqui está o `hugo.toml` arquivo:
+```text
+baseURL = 'https://openoffice.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hyde"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+```
+
+Normalmente, levou de 8 a 12 segundos (às vezes até 30s) para processar 10K tais arquivos.  Quando comparado ao build @SunStarSys/orion `./test.sh ooo` qual [constrói consistentemente sobre 20K tais arquivos em aproximadamente 2-3x o tempo](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), parece que existe **paridade de desempenho** entre eles em sites menos complexos, mas muito grandes como <https://www.OpenOffice.org>.
+
+No entanto, [Orion](https://www.sunstarsys.com/orion/) é capaz de muito mais se você precisar de verdadeira flexibilidade e corrigir o suporte incremental de construção, porque **nós pensamos que você sabe o que funciona melhor para o seu site, ao contrário do resto da comunidade SSG exagerada em torno de Hugo.**
+
+[^2]. Suporte total para cercado `asy` blocos de markdown com origens codificadas em @vectorgraphics/asymptote .
+
+<!-- $Date$ $Author$ $Revision$ -->

@@ -1,0 +1,59 @@
+---
+categories: Apache、安全性
+dependencies: '*.md.zh-TW'
+keywords: confluence, jira,atlassian,security
+status: 驗證 =46122
+title: 亞特拉西人認為有害
+---
+
+<div class="right">
+
+![Tarred 和 精選](wishful-thinking.page/confluence)
+
+</div>
+
+此頁面的內容有兩個視點[過去 10 年發現 Atlassian 軟體漏洞](https://atlassian.com/trust/security/advisories):
+
+1. 它展現了負責任的公開揭露，對銷售而言是良好的行銷素材，
+
+2. {# lede #}這是大規模退出架構失敗的冗長記錄{# lede #}.
+
+我在後者的營地。[^1]
+
+-----
+
+## 註腳
+
+[^1]。在我們團隊 2010 年名後期最後一句
+
+https://infra.apache.org/blog/apache_org_04_09_2010 [^2]
+
+我們狀態 (已複製)
+
+> 我們希望其他人能從我們的錯誤中學習。
+
+在後視中，清楚地說，我們的希望是錯落的：
+
+https://cybersecuritynews.com/atlassians-model-context-protocol/
+
+然而，[奧里昂](https://sunstarsys.com/orion)Apache CMS 的生長，在發布後六個月出生。在這種情況下，這些課程會從生活經驗的痛苦中告知設計。
+
+[^2]。阿特拉西安人對這起事件感到厭惡的部落格項目，已從網路上隱匿。基本上，他們只是在幾年後才未能維持 301，所以這裡是傷口的地方：
+
+https://www.atlassian.com/blog/news/2010/04/oh_man_what_a_day_an_update_on_our_security_breach
+
+對於將安全事件視作公關提敘薪級機會的大型企業來說，永久連結優先順序非常多。
+
+對於記錄而言，SHA-\* 是 *雜湊演算法 *，不是 *加密演算法 *，而是 **以加密方式保護雜湊演算法** (例如說`bcrypt` 或`crypt-md5`). 您的 SaaS 供應商不想告知您的密碼是 *encrypted*，因為駭客可能會使用解密金鑰，並以純文字格式讀取。
+
+當駭客有 SHA-\* 雜湊時，您一定不希望他們再保證安全，因為 SHA-\* 的設計效能足以讓您的密碼受限於可計算的可追蹤暴力搜尋 / 猜測演算法，而該雜湊本身就是如此。您希望供應商告知您的密碼已透過下列方式進行雜湊：`bcrypt` 在組態中至少包含 5 場合 - 旨在擊敗暴動力猜測，並可更新至硬體規格的時間。
+
+即使如此，他們也應該建議您變更它們，因為這是負責的做法。
+
+如果要瞭解 Apache Postmortem on Password Security 的項目符號點，您不必閱讀 Mike Cannon-Brooke 的傳達給客戶有關其 SHA-\* 雜湊客戶密碼遭駭客竊的安全資訊。
+
+此外，他們的「事件回應小組」每天都睡在週末，另一個 F/OSS 組織被該 SliceHost 方塊駭客入侵。星期五，我們在悉尼工作時間後發現我們的團隊，而不是告訴客戶他們，他們沒有在星期日的 PST 時間閱讀安全電子郵件，因此沒有被綁架，他們反而表示他們發現黑客本身。&mdash; 完全發現。
+
+RedHat、CodeHaus 和 JBoss 是其中三名隨行受害者被劫持，而亞特拉西安 IR 團隊則被解僱，但還有一些其他受害者。
+
+<!-- $Date$ $Author$ $Revision$ -->

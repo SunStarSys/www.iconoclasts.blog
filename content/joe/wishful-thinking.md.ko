@@ -1,0 +1,59 @@
+---
+categories: 아파치, 보안
+dependencies: '*.md.ko'
+keywords: confluence, 지라, 아라시안, 안전
+status: 확인=46122
+title: 아틀라시안은 유해하다고 생각했다.
+---
+
+<div class="right">
+
+![타르드와 특집](wishful-thinking.page/confluence)
+
+</div>
+
+이 페이지와 같은 두 가지 관점이 있습니다. [지난 10년간 Atlassian 소프트웨어에서 공개된 취약점](https://atlassian.com/trust/security/advisories):
+
+1. 그것은 책임있는 공개를 보여주고 판매를 위한 좋은 마케팅 자료,
+
+2. {# lede #}그것은 대규모의 abject 아키텍처 실패의 긴 기록입니다{# lede #}.
+
+나는 마지막 캠프에 있습니다.[^1]
+
+-----
+
+## 각주
+
+[^1]. 우리 팀의 유명한 2010 포스트 모템의 마지막 문장에서
+
+https://infra.apache.org/blog/apache_org_04_09_2010 [^2]
+
+우리 주 (paraphrased)
+
+우리는 다른 사람들이 우리의 실수로부터 배우기를 바랍니다.
+
+분명히, 우리의 희망은 잘못 배치되었습니다 :
+
+https://cybersecuritynews.com/atlassians-model-context-protocol/
+
+그러나 [오리온](https://sunstarsys.com/orion)'s progenitor, 아파치 CMS, 그 postmortem이 출판 된 후 여섯 달 태어났다.  이 경우, 그 교훈은 살아있는 경험의 고통에서 디자인을 알렸다.
+
+[^2]. 이 사건에 대한 Atlassian의 무능한 포스트 모템에 대한 블로그 항목은 인터넷에서 개정되었습니다. 기본적으로 그들은 단지 몇 년 후 301을 유지하지 못했기 때문에 여기에 상처가 있습니다 :
+
+https://www.atlassian.com/blog/news/2010/04/oh_man_what_a_day_an_update_on_our_security_breach
+
+보안 사고를 PR 발전 기회로 보는 megacorporations의 permalink 우선순위에 대한 많은 것.
+
+레코드의 경우 SHA-\*는 *암호화 알고리즘*이 아니라 *해싱 알고리즘*으로, **암호화 보안 해싱 알고리즘**보다 훨씬 적습니다(예: `bcrypt` 또는 `crypt-md5`). 해커가 해독 키를 얻고 일반 텍스트로 읽을 수 있기 때문에 SaaS 공급업체에서 비밀번호가 *암호화됨*이라고 알리고 싶지 않습니다.
+
+SHA-\*는 해시 자체에 대해 계산적으로 추적 가능한 무차별 무차별 검색/추측 알고리즘에 암호를 적용할 수 있을 만큼 충분히 실행 가능하도록 설계되었기 때문에 해커가 SHA-\* 해시를 가질 때 안전하다는 것을 확실히 안심하고 싶지 않습니다. 공급자가 비밀번호를 해시했는지 알려 주기를 원합니다. `bcrypt` 그 구성에서 적어도 5 라운드 - 무차별한 힘 추측을 물리 치고, 시간의 하드웨어 사양으로 업데이트 할 수 있도록 설계되었습니다.
+
+그리고 심지어 그렇게, 그들은 당신이 할 책임이 있기 때문에 그들을 변경하는 것이 좋습니다.
+
+암호 보안에 아파치 postmortem의 총알 포인트를 이해 귀찮게 할 수 있다면 해커에 의해 도난 고객 암호의 SHA-\* 해시 안전에 대해 고객에게 보낸 마이크 캐논-브룩의 드라이브를 읽는 것은 어리석은 일입니다.
+
+또한, 매일 그들의 사고 대응 팀은 주말에 잤고, 또 다른 F/OSS 조직은 그 SliceHost 상자에 의해 해킹 당했습니다. 우리는 시드니에서 근무 시간 후 우리의 발견의 금요일에 자신의 팀에 통보, 대신 그들의 고객에게 그들은 시간을 떨어져 보안 이메일을 읽고 따라서 일요일 PST 시간에 해킹되지 않았다, 그들은 섬유와 그들이 해킹을 발견했다고 말했다 &mdash; 완전히 모르는 채로 잡혔다.
+
+RedHat, CodeHaus 및 JBoss는 Atlassian IR 팀이 잤을 때 해킹 한 부수적 인 희생자 중 세 명이었지만 다른 여러 명이있었습니다.
+
+<!-- $Date$ $Author$ $Revision$ -->

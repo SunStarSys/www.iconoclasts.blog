@@ -1,0 +1,59 @@
+---
+categories: Apache, Segurança
+dependencies: '*.md.pt-BR'
+keywords: confluência,jira,atlassian,segurança
+status: verificado=46122
+title: Atlassian considerado prejudicial
+---
+
+<div class="right">
+
+![Tarred e Destaque](wishful-thinking.page/confluence)
+
+</div>
+
+Há dois pontos de vista sobre coisas como esta página do [últimos 10 anos de vulnerabilidades reveladas no software Atlassian](https://atlassian.com/trust/security/advisories):
+
+1. que demonstra divulgação aberta responsável e é bom material de marketing para vendas,
+
+2. {# lede #}que é um longo registro de falha arquitetônica abjeta em escala{# lede #}.
+
+Estou no último campo.[^1]
+
+-----
+
+## Rodapés
+
+[^1]. Na última frase do famoso postmortem de 2010 da nossa equipe
+
+https://infra.apache.org/blog/apache_org_04_09_2010 [^2]
+
+estado (parafraseado)
+
+"Esperamos que outras pessoas aprendam com nossos erros.
+
+Em retrospectiva, claramente nossa esperança estava equivocada:
+
+https://cybersecuritynews.com/atlassians-model-context-protocol/
+
+No entanto, [Orion](https://sunstarsys.com/orion)O progenitor do Apache, o CMS, nasceu seis meses após a publicação do postmortem.  Nesse caso, essas lições informaram o design da dor da experiência vivida.
+
+[^2]. A entrada no blog para o postmortem inepto da Atlassian sobre este incidente foi redigida pela internet. Basicamente, eles simplesmente não conseguiram manter o 301 depois de alguns anos, então aqui é onde ele acabou:
+
+https://www.atlassian.com/blog/news/2010/04/oh_man_what_a_day_an_update_on_our_security_breach
+
+Tanto para prioridades de permalink para megacorporações que veem incidentes de segurança como oportunidades de avanço de relações públicas.
+
+Para registro, SHA-\* é um algoritmo *hashing*, não um algoritmo *encryption*, muito menos um **algoritmo de hash criptograficamente seguro** (como dizer `bcrypt` ou `crypt-md5`). Você não quer ser informado pelo seu fornecedor SaaS que suas senhas são *criptografadas* porque um hacker pode obter a chave de descriptografia e lê-las em texto sem formatação.
+
+Você certamente não quer que eles assegurem que eles estão seguros quando o hacker tem os hashes SHA-\* deles, porque o SHA-\* foi projetado para ser eficiente o suficiente para sujeitar suas senhas a um algoritmo de busca/adivinhação de força bruta computacionalmente tratável contra o próprio hash. Você quer que seu fornecedor informe que suas senhas têm hash `bcrypt` com pelo menos 5 rodadas em sua configuração - projetado para derrotar a adivinhação de força bruta e atualizável para as especificações de hardware dos tempos.
+
+E mesmo assim, eles devem recomendar que você os mude, porque é a coisa responsável a fazer.
+
+É absurdo ler a gota d'água de Mike Cannon-Brooke enviada aos clientes sobre a segurança de seus hashes SHA-\* de senhas de clientes roubadas pelos hackers se você puder se preocupar em entender os pontos-chave do postmortem Apache sobre Segurança de Senhas.
+
+Além disso, todos os dias sua equipe de resposta a incidentes dormiu durante o fim de semana, outra organização F/OSS foi hackeada por essa caixa SliceHost. Notificamos sua equipe na sexta-feira de nossas descobertas após o horário comercial em Sydney, e em vez de dizer a seus clientes que leram emails de segurança fora do horário comercial e, portanto, não foram hackeados no horário PST de domingo, eles disseram que descobriram o hack em si &mdash; apanhados completamente desprevenidos.
+
+RedHat, CodeHaus e JBoss foram três das vítimas incidentais hackeadas enquanto a equipe de RI da Atlassian dormia, mas havia várias outras.
+
+<!-- $Date$ $Author$ $Revision$ -->

@@ -1,0 +1,59 @@
+---
+categories: Apache, Sécurité
+dependencies: '*.md.fr'
+keywords: confluence, jira, atlassien, sécurité
+status: vérifié=46122
+title: Atlassian considéré comme dangereux
+---
+
+<div class="right">
+
+![Tarred et Featured](wishful-thinking.page/confluence)
+
+</div>
+
+Il y a deux points de vue sur des choses comme cette page de [10 dernières années de vulnérabilités divulguées dans le logiciel Atlassian](https://atlassian.com/trust/security/advisories):
+
+1. qu'il démontre une divulgation ouverte responsable et qu'il s'agit d'un bon matériel marketing pour les ventes,
+
+2. {# lede #}qui est un long enregistrement de défaillance architecturale abjecte à l'échelle{# lede #}.
+
+Je suis dans ce dernier camp.[^1]
+
+-----
+
+## Notes de bas de page
+
+[^1]. Dans la dernière phrase du célèbre post-mortem 2010 de notre équipe
+
+https://infra.apache.org/blog/apache_org_04_09_2010 [^2]
+
+Nous déclarons (paraphrasé)
+
+> Nous espérons que les autres apprendront de nos erreurs.
+
+Avec le recul, notre espoir était clairement déplacé :
+
+https://cybersecuritynews.com/atlassians-model-context-protocol/
+
+Cependant, [Orion](https://sunstarsys.com/orion)L'ancêtre d'Apache, le CMS, est né six mois après la publication de cet autopsie.  Dans ce cas, ces leçons ont éclairé la conception de la douleur de l'expérience vécue.
+
+[^2]. L'article de blog de l'autopsie inepte d'Atlassian sur cet incident a été expurgé d'Internet. Fondamentalement, ils n'ont pas réussi à maintenir le 301 après quelques années, alors voici où il a fini :
+
+https://www.atlassian.com/blog/news/2010/04/oh_man_what_a_day_an_update_on_our_security_breach
+
+Autant pour les priorités de permalien pour les mégacorations qui considèrent les incidents de sécurité comme des opportunités d'avancement des relations publiques.
+
+Pour l'enregistrement, SHA-\* est un *algorithme de hachage*, pas un *algorithme de chiffrement*, et encore moins un **algorithme de hachage sécurisé sur le plan cryptographique** (comme par exemple) `bcrypt` ou `crypt-md5`). Vous ne voulez pas être informé par votre fournisseur SaaS que vos mots de passe sont *chiffrés* car un pirate peut gagner la clé de déchiffrement et les lire en texte brut.
+
+Vous ne voulez certainement pas qu'ils vous rassurent qu'ils sont en sécurité lorsque le pirate a les hachages SHA-\* d'eux, parce que SHA-\* est conçu pour être assez performant pour soumettre vos mots de passe à un algorithme de recherche / d'évaluation de force brute traçable par calcul contre le hachage lui-même. Vous voulez que votre fournisseur vous dise que vos mots de passe sont hachés `bcrypt` avec au moins 5 tours dans sa configuration - conçu pour vaincre la supposition de force brute, et pouvant être mis à jour aux spécifications matérielles des temps.
+
+Et même ainsi, ils devraient vous recommander de les changer, car c'est la chose responsable à faire.
+
+Il est absurde de lire la dérive de Mike Cannon-Brooke envoyée aux clients sur la sécurité de leurs hachages SHA-\* des mots de passe des clients volés par les pirates si vous pouvez vous soucier de comprendre les points de balle de l'autopsie Apache sur la sécurité des mots de passe.
+
+De plus, chaque jour, leur équipe de réponse aux incidents dormait au cours du week-end, une autre organisation F/OSS a été piratée par cette boîte SliceHost. Nous avons informé leur équipe vendredi de nos résultats après les heures d'ouverture à Sydney, et au lieu de dire à leurs clients qu'ils lisent les courriels de sécurité en dehors des heures d'ouverture et qu'ils n'ont donc pas été piratés le dimanche PST, ils ont fibbed et ont dit qu'ils avaient découvert le piratage eux-mêmes &mdash; pris complètement inouï.
+
+RedHat, CodeHaus et JBoss étaient trois des victimes accidentelles piratées alors que l'équipe des IR d'Atlassian dormait, mais il y en avait plusieurs autres.
+
+<!-- $Date$ $Author$ $Revision$ -->

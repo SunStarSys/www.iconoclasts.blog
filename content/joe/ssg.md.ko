@@ -1,0 +1,215 @@
+---
+categories: 오리온
+dependencies: '*.md.ko'
+keywords: 오리온, 휴고, SSG
+status: 확인=46702
+title: 오리온 vs. 휴고
+---
+
+<div class="right">
+
+![Hugo SSG](ssg.page/hugo-logo-wide)
+
+</div>
+
+[TOC]#sidebar
+
+@sunstarsys/status/2070917650042040818
+
+## 머리말
+
+나는 기술 비교가 많은 서클에서 종교적인 금기라는 것을 이해한다.  내가 전달하려는 주요 요점은 그 동안 [오리온](https://www.sunstarsys.com/orion/) Enterprise Jamstack Wiki로 청구되며, 특정 문제 도메인 외부에서 실행 가능한 많은 사용 사례가 있습니다.
+
+그러나이 기사의 핵심은 오리온의 아파치 라이센스 SSG를 당신과 당신의 소프트웨어 엔지니어링 팀을위한 휴고보다 더 나은 SSG로 나타내는 것입니다 *.  그것은 더 많은 힘, 더 많은 성능, 더 많은 핵심 기능을 가지고 있으며 사용자 정의하기가 훨씬 쉽습니다. 게다가 그것은 [잘 문서화됨](https://www.sunstarsys.com/orion/api/) 그리고 당신처럼 진정한 파워 사용자를위한 무한한 잠재력을 가지고 있습니다!
+
+## @SunStarSys/이온
+
+- NKOTB
+
+- 점진적 학습 곡선 포함 의견
+
+## @GoHugoIo/후고
+
+인기
+
+- 강력한 타사 테마 및 확장
+
+- 가파른 학습 곡선 포함 의견
+
+## 공통 기능 세트
+
+- 아파치 라이선스
+
+- 고성능(초당 최대 1K 문서의 문서 처리 속도)[^1]
+
+- 캐시된 종속성 관리
+
+- 정교한 보안 모델
+
+## 오리온 Hugo++
+
+1. {# lede #}(구성 가능) 마크다운 소스 내에서 장고 템플릿의 전체 성능{# lede #}
+
+2. 강력한 제어 흐름, For-Loop 구성 및 Django 필터
+
+3. 데이터 구조로 YAML/CSV 첨부 문서에 대한 전체 접근
+
+4. WebGL 지원 벡터 그래픽[^2]
+
+5. 다음을 통해 테이블 데이터에 대한 벡터 작업 집계 `PDL`
+
+6. `ssi` 파일 헤더 건너뛰기
+
+7. [콘텐츠 협상 / MultiViews](https://httpd.apache.org/docs/current/content-negotiation.html)
+
+8. 사용 편의성
+
+9. 유연하고 진정한 증분 빌드
+
+10. 파일별/디렉토리(일명 세분화된) ACL(빌드의 소프트웨어 스택 및 구성 자체에 대한 제어 포함)
+
+11. :editormd-logo: 강력함 [$$\KaTeX$$](markdown-is-not-latex#h2-embrace-and-extend-redux) 지원
+
+12. 통합 PCRE 검색
+
+### 오리온 CMS 편집기 사용 사례
+
+<center>
+
+![편집기 X](ssg.page/screenshot)
+
+</center>
+
+1. MIME 유형(Markdown, Perl, YAML, CSV, $$\LaTeX$$)
+
+2. 자동 링크 검증/제목 지정
+
+3. 실시간 미리보기 렌더링 대상 `@`-shortlink(예: :fa-x-twitter: 트윗)
+
+4. 전기 HTML/탭 완료
+
+5. AI 변환 기능 포함 다국어 OOTB &mdash; 중국어, 히브리어 및 아랍어 포함
+
+6. $$\text{Markdown }\rightarrow\LaTeX$$ 템플 기사 변환기
+
+### 오리온 증분 빌드
+
+#### O(N) 대 O(1)
+
+위키의 저자와 편집자가 빌드 시스템에 만족하기를 원한다면, 그것은 첫 번째 주문 기능으로 증분 빌드를 지원해야하며, *사후 생각으로 해결 된 마케팅 기믹이 아닙니다 *.
+
+그래서, 당신은 Orion을 원합니다!
+
+#### Hugo의 원시 종속성 캐시(Gilding the Lilly)
+
+매우 상세한 건축 다이어그램에서 의미없는 퍼퍼리의 코믹하게 터무니없는 수준은 종종 방에 코끼리를 말하지 않습니다....
+
+> https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
+
+다음은 Hugo 종속성 관리에 대해 언급하지 않는 페이지입니다.
+
+- 유연하지 않고 내부적으로 생성됨 [**대기**](https://en.wikipedia.org/wiki/Directed_acyclic_graph) 노드/리프/번들 트리 레이아웃 기반
+
+- 디스크에 기록되지 않음
+
+##### 휴고의 untracked `readFile` break 증분 빌드 지원 호출
+
+이 기사에서 방에있는 코끼리를 살펴 보겠습니다 :
+
+> https://mbuege.com/2025/09/04/hugo-include-shortcode/
+
+```mermaid
+treeView-beta
+    archetypes/
+    자산/
+    콘텐츠/
+      포함/
+        dummy.md :::Hugo에서 추적되지 않은 ## 종속성 강조 표시
+      게시물/
+        2025-01-01-post1.md  ##은(는) "포함" 단축 코드
+        2025-01-02-post2.md  ## ...
+    데이터/
+    i18n/
+    레이아웃/
+      단축 코드/
+        include.html  ##은 readFile를 사용합니다.() 전달된 인수에
+    정적/
+    테마/
+```
+
+*Hugo는 단축 코드에서 발생하는 콘텐츠 종속성을 추적하지 않으며 추적하는 콘텐츠 종속성에 대해 엄격한 DAG를 가정합니다.*
+
+##### Orion의 완전 추적 `ssi` 호출
+
+```mermaid
+treeView-beta
+트렁크/
+   콘텐츠/
+     푸/
+	   fileA.md.en :::highlight ## 타겟 포함 파일
+	 막대/
+	   fileB.md.en ## `ssi` fileA.md.en의 일부 선택 포함
+   cgi-bin/
+   라이브러리/
+   템플리트/
+```
+
+*Orion 기본적으로 트랙 `fileB.md.en`의 Dependency on `fileA.md.en` 재구축할 때마다 `fileA.md.en` 변경됩니다. 종속성은 단순히 계층 구조로 가정하는 것이 아니라 문서별로 추가로 구성할 수 있습니다.*
+
+Orion의 종속성 그래프는 **거의 DAG**입니다. 그리고 그것은 **빌드의 필수 구성 요소입니다**, 단지 Hugo와 함께하는 방식의 반 뒷받침 최적화가 아닙니다.
+
+예를 들어, 이 웹 페이지의 마크다운 소스 자체에는 `Dependencies: *.md{{lang}}` 헤더(위의 Editor 스크린샷에서 보거나 [:fa-github: 소스](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) 제목 및 작성자 정보가 표시되는 링크) Orion이 아래 항목을 생성하는 데 사용하는 링크 "인덱스" 머리글은 페이지 바닥글에 있습니다.
+이 디렉토리의 모든 파일은 서로 상호 참조하도록 유사하게 구성되어 있습니다!
+
+<span class="text-success">DAG는 실제 사용 사례에서 콘텐츠 종속성 요구 사항을 크게 간소화합니다.</span>
+
+[![DAG 아님](../images/deps.svg{{lang}})](dependencies)
+
+### 버전 관리
+
+#### Git 및 Fine-Grained ACL
+
+**모든 DVCS에서 불가능함** `git` &mdash; 저장소에 대한 읽기 액세스는 전체 기록을 포함하여 전체 저장소에 대한 액세스를 의미합니다.  푸시 액세스를 위한 Ditto: all-or-nothing이며, 이는 여러 저장소 사용자가 세분화된 파일/디렉토리 쓰기 권한 부여/액세스 제어를 필요로 하는 위키 컨텍스트의 딜레이커입니다.
+
+#### 하위 버전
+
+다음을 통해 git/GitHub와 단순 **사용자별 통합** `git-svn` 모든 항목에 의해 애드온 확장으로 번들된 브리지 `git` 배포합니다.
+
+## 각주
+
+[^1]. apples-to-apples 비교를 위해 나는의 부분 집합을 ported <https://www.openoffice.org> `JBake` 소스 트리 @apache/openoffice-org to Hugo and benchmarked it against a simple `hyde` 원제 : Just Culled The Theme `body` innerHTML `.html` 소스(이름이 `.md` html 포함 파일) a'la
+
+```html
+{%templatetag openvariable %} define "main" -{% templatetag closevariable %}
+<div class="post">
+  <h1>{% templatetag openvariable %} .Title {% templatetag closevariable %}</h1>
+  <time datetime={% templatetag openvariable %} .Date.Format "2006-01-02T15:04:05Z0700" {% templatetag closevariable %} class="post-date">{% templatetag openvariable %} .Date.Format "Mon, Jan 2, 2006" {% templatetag closevariable %}</time>
+  {% templatetag openvariable %} $matches := findRESubmatch `(?s)<body[^>]*>(.*?)</body>` .Content {% templatetag closevariable %}
+  {% templatetag openvariable %} range $matches {% templatetag closevariable %}{% templatetag openvariable %} index . 1 | safeHTML {% templatetag closevariable %}{% templatetag openvariable %} end {% templatetag closevariable %}
+</div>
+{% templatetag openvariable %} if .Site.Config.Services.Disqus.Shortname -{% templatetag closevariable %}
+<h2>Comments</h2>
+{% templatetag openvariable %} template "_internal/disqus.html" . {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+```
+
+그리고 여기는 `hugo.toml` 파일:
+```text
+baseURL = 'https://openoffice.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hyde"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+```
+
+일반적으로 10K 파일을 처리하는 데 8-12초(때로는 최대 30s)가 걸렸습니다.  @SunStarSys/orion 빌드와 비교될 때 `./test.sh ooo` 대상 [대략 2-3x 시간에 20K 이상 그런 파일을 일관되게 건설하십시오](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), 그것은 가장 복잡하지만 매우 큰 웹 사이트에서 그들 사이에 **성능 패리티**가있는 것 같습니다 <https://www.OpenOffice.org>.
+
+그러나 [오리온](https://www.sunstarsys.com/orion/) 진정한 유연성과 올바른 증분 빌드 지원이 필요한 경우 훨씬 더 많은 기능을 할 수 있습니다. **우리는 Hugo 주변의 다른 최우선 SSG 커뮤니티와 달리 귀하의 사이트에 가장 적합한 것을 알고 있다고 생각합니다.**
+
+[^2]. Fence에 대한 완전한 지원 `asy` @vectorgraphics/asymptote 에 코딩된 소스가 있는 마크다운 블록입니다.
+
+<!-- $Date$ $Author$ $Revision$ -->

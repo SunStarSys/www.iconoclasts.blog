@@ -1,0 +1,215 @@
+---
+categories: オリオン
+dependencies: '*.md.ja'
+keywords: Orion、Hugo、SSG
+status: 確認済み=46702
+title: オリオンvsフーゴ
+---
+
+<div class="right">
+
+![Hugo SSG](ssg.page/hugo-logo-wide)
+
+</div>
+
+[TOC]#sidebar
+
+@sunstarsys/status/2070917650042040818
+
+## はじめに
+
+テクノロジーの比較は、多くのサークルで宗教的なタブーであることを理解しています。私が伝えようとしている主なポイントは、[オリオン](https://www.sunstarsys.com/orion/) Enterprise Jamstack Wikiとして請求され、その特定の問題ドメインの外に多くの実用的なユースケースがあります。
+
+しかし、この記事の要点は、OrionのApache-Licensed SSGを、あなたとソフトウェアエンジニアリングチームにとってHugoよりも優れたSSGとして表すことです*。より多くのパワー、より多くのパフォーマンス、より多くのコア機能があり、カスタマイズが非常に簡単です。さらに、[よくドキュメント化](https://www.sunstarsys.com/orion/api/) そして、あなたと同じように、真のパワーユーザーのための無制限の可能性を持っています!
+
+## @SunStarSys/orion
+
+- NKOTB
+
+- 段階的学習曲線による意見
+
+## @GoHugoIo/ヒューゴ
+
+- 人気
+
+- 強力なサードパーティのテーマと拡張機能
+
+- 急な学習曲線による意見
+
+## 共通機能セット
+
+- Apacheライセンス
+
+- 高パフォーマンス(最大ドキュメント処理速度(毎秒~1Kドキュメント)[^1]
+
+- キャッシュされた依存関係管理
+
+- 高度なセキュリティモデル
+
+## オリオンHugo++
+
+1. {# lede #}(設定可能)マークダウンソース内のDjangoテンプレートのフルパワー{# lede #}
+
+2. 堅牢な制御フロー、For-Loopコンストラクト、Djangoフィルタ
+
+3. データ構造としてのYAML/CSV添付文書へのフル・アクセス
+
+4. WebGL対応のベクトル・グラフィックス[^2]
+
+5. 表データに対するベクトル操作の集計方法`PDL`
+
+6. `ssi` ファイルヘッダーをスキップ
+
+7. [コンテンツ・ネゴシエーション/ MultiViews](https://httpd.apache.org/docs/current/content-negotiation.html)
+
+8. 使いやすい
+
+9. 柔軟で真の増分構築
+
+10. ビルド・ソフトウェア・スタックおよび構成自体の制御を含むファイル/ディレクトリ(ファイングレイン)ACL
+
+11. :editormd-logo: 堅牢[$$\KaTeX$$](markdown-is-not-latex#h2-embrace-and-extend-redux) サポート
+
+12. 統合PCRE検索
+
+### Orion CMSエディタのユースケース
+
+<center>
+
+![エディタX](ssg.page/screenshot)
+
+</center>
+
+1. MIMEタイプ(Markdown、Perl、YAML、CSV)に基づくドキュメント・アップロード・リンティング$$\LaTeX$$)
+
+2. 自動リンク検証/タイトル設定
+
+3. リアルタイムプレビューレンダリング`@`-shortlinks (例: :fa-x-twitter: ツイート)
+
+4. 電気HTML/タブ補完
+
+5. AIによる多言語翻訳機能OOTB &mdash; 中国語、ヘブライ語、アラビア語を含む
+
+6. $$\text{Markdown }\rightarrow\LaTeX$$ テンプレート記事コンバータ
+
+### Orion増分ビルド
+
+#### O(N) vs. O(1)
+
+ウィキの作者や編集者がビルド・システムに満足できるようにするには、インクリメンタル・ビルドを最初のオーダー機能としてサポートする必要があり、*アフター思考として取り組むマーケティング・ギミックではありません*。
+
+つまり、オリオンが欲しい。
+
+#### Hugo's Primitive Dependency Cache (Gilding the Lilly) (ヒューゴのプリミティブ依存キャッシュ)
+
+非常に詳細な建築図における無意味な苦しみのComically absurd level of meaningless puffery which deftly avoid stating the elepants in the room...
+
+> https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
+
+ここでは、Hugo依存関係管理について言及していない内容を示します。
+
+- 柔軟性がなく、内部的に生成される[**ダグ**](https://en.wikipedia.org/wiki/Directed_acyclic_graph) ノード/リーフ/バンドル・ツリー・レイアウトに基づく
+
+- ディスクに書き込まれない
+
+##### フーゴの追跡なし`readFile` コールブレーク増分ビルドサポート
+
+この記事の部屋の象を見てみましょう:
+
+> https://mbuege.com/2025/09/04/hugo-include-shortcode/
+
+```mermaid
+treeView-beta
+    アーキタイプ/
+    アセット/
+    コンテンツ/
+      含む/
+        dummy.md ::: ハイライト## Hugoのトラッキングされていない依存関係
+      投稿/
+        2025-01-01-post1.md  ##が使用できます"含む" 短縮コード
+        2025-01-02-post2.md  ## ...
+    データ/
+    i18n/
+    レイアウト/
+      ショートコード/
+        include.html  ##はreadFileを使用します() 渡された引数
+    静的/
+    テーマ/
+```
+
+*Hugoは、ショートコードから生じるコンテンツの依存関係を追跡せず、追跡するコンテンツの依存関係について厳格なDAG仮定を行います。*
+
+##### オリオンの完全追跡`ssi` コール
+
+```mermaid
+treeView-beta
+トランク/
+   コンテンツ/
+     フー/
+	   fileA.md.en:::highlight ##ターゲット・インクルード・ファイル
+	 バー/
+	   fileB.md.en ## `ssi` fileA.md.enの選択部分を含む
+   cgi-bin/
+   ライブラリ/
+   テンプレート/
+```
+
+*オリオン ネイティブ トラック`fileB.md.en`次に対する依存関係`fileA.md.en` いつでも再構築します。`fileA.md.en` は変更され、依存関係は、単に階層構造によって想定されるのではなく、ドキュメントごとに補足的に構成可能です。*
+
+OrionのDependencyグラフは**ほとんどDAGではありません**。また、**ビルドに不可欠な要素**であり、Hugoの場合と同様に、単にハーフバックされた最適化ではありません。
+
+たとえば、このWebページのマークダウン・ソース自体には、`Dependencies: *.md{{lang}}` ヘッダー(上記エディタのスクリーンショットまたはクリックで確認できます) [:fa-github: ソース](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) タイトルと作者の情報が表示されるリンク)は、Orionによって次の項目を生成するために使用されます。"インデックス" ページのフッターのヘッダー。
+このディレクトリ内のすべてのファイルは、相互に相互参照するように同様に構成されています。
+
+<span class="text-success">DAGは、実際のユース・ケースにおけるコンテンツ依存性の要件を大幅に単純化することです。</span>
+
+[![DAGではない](../images/deps.svg{{lang}})](dependencies)
+
+### バージョン管理
+
+#### GitおよびファイングレインACL
+
+**次のようなDVCSでは不可能です** `git` &mdash; リポジトリへの読取りアクセスは、完全な履歴を含む、リポジトリ全体へのアクセスを意味します。プッシュ・アクセス用のDitto: all-or-nothingです。これは、様々なリポジトリ・ユーザーがきめ細かいファイル/ディレクトリ書込み認可/アクセス制御を必要とするwikiコンテキストのディール・ブレイカーです。
+
+#### Subversion
+
+ユーザーごとの**git/GitHubによる簡単な統合** `git-svn` アドオンの拡張機能としてバンドルされたブリッジ`git` 配布。
+
+## 脚注
+
+[^1]。りんごとりんごの比較のために、私は、<https://www.openoffice.org> `JBake` ソースツリー @apache/openoffice-orgからHugoへ、シンプルなものに対してベンチマーク`hyde` テーマは、単に、`body` innerHTML `.html` source (名前変更) `.md` htmlが埋め込まれたファイル) a'la
+
+```html
+{%templatetag openvariable %} define "main" -{% templatetag closevariable %}
+<div class="post">
+  <h1>{% templatetag openvariable %} .Title {% templatetag closevariable %}</h1>
+  <time datetime={% templatetag openvariable %} .Date.Format "2006-01-02T15:04:05Z0700" {% templatetag closevariable %} class="post-date">{% templatetag openvariable %} .Date.Format "Mon, Jan 2, 2006" {% templatetag closevariable %}</time>
+  {% templatetag openvariable %} $matches := findRESubmatch `(?s)<body[^>]*>(.*?)</body>` .Content {% templatetag closevariable %}
+  {% templatetag openvariable %} range $matches {% templatetag closevariable %}{% templatetag openvariable %} index . 1 | safeHTML {% templatetag closevariable %}{% templatetag openvariable %} end {% templatetag closevariable %}
+</div>
+{% templatetag openvariable %} if .Site.Config.Services.Disqus.Shortname -{% templatetag closevariable %}
+<h2>Comments</h2>
+{% templatetag openvariable %} template "_internal/disqus.html" . {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+```
+
+こちらが`hugo.toml` ファイル:
+```text
+baseURL = 'https://openoffice.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hyde"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+```
+
+通常、このようなファイルの10Kを処理するのに8秒から12秒(30sまで)かかりました。@SunStarSys/orionビルドと比較した場合`./test.sh ooo` 対象[一貫して20K以上のファイルを約2-3xで構築します。](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556)のように、最も複雑で非常に大きなウェブサイトでは、それらの間に**パフォーマンスパリティ**があるようです。<https://www.OpenOffice.org>.
+
+ただし、[オリオン](https://www.sunstarsys.com/orion/) 本当の柔軟性と正しいインクリメンタル・ビルド・サポートが必要な場合、さらに多くのことが可能です。**Hugo周辺の過剰なSSGコミュニティとは異なり、お客様のサイトに最適なものがわかっていると思います。**
+
+[^2]。フェンシングの完全なサポート`asy` @vectorgraphics/asymptoteでコード化されたソースを含むマークダウンブロック。
+
+<!-- $Date$ $Author$ $Revision$ -->
