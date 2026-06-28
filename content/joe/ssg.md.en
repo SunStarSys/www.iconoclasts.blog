@@ -1,6 +1,6 @@
 Title: Orion vs. Hugo
 Keywords: Orion, Hugo, SSG
-Status: draft
+Status: verified=46674
 Dependencies: *.md.en
 
 <div class="right">
@@ -164,7 +164,7 @@ All of the files in this directory are similarly configured to cross-reference e
 
 #### Git and Fine-Grained ACLs
 
-Impossible in any DVCS like `git` &mdash; read access to the repository implies access to its entirety, including full history.  Ditto for push access: it is all-or-nothing, which is a deal-breaker in a wiki context where different repository users require granular file/directory write authorization/access controls.
+**Impossible** in any DVCS like `git` &mdash; read access to the repository implies access to its entirety, including full history.  Ditto for push access: it is all-or-nothing, which is a deal-breaker in a wiki context where different repository users require granular file/directory write authorization/access controls.
 
 #### Subversion
 
@@ -172,7 +172,7 @@ Trivial **per-user integration** with git/GitHub via the `git-svn` bridge bundle
 
 ## Footnotes
 
-[^1]. For an apples-to-apples comparison I ported a subset of the <https://www.openoffice.org> `JBake` source tree @apache/openoffice-org to Hugo and benchmarked it against a simple `hyde` based theme that just culled the `body` innerHTML out of the `.html` sources (renamed as `.md` files with embedded html) a'la (Orion Django Snytax evaded via `\` escape in this markdown source file)
+[^1]. For an apples-to-apples comparison I ported a subset of the <https://www.openoffice.org> `JBake` source tree @apache/openoffice-org to Hugo and benchmarked it against a simple `hyde` based theme that just culled the `body` innerHTML out of the `.html` sources (renamed as `.md` files with embedded html) a'la
 
 ```html
 {%templatetag openvariable %} define "main" -{% templatetag closevariable %}
