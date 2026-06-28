@@ -37,7 +37,7 @@ Dependencies: *.md.en
 
 - Sophisticated Security Model
 
-## Orion Advantages
+## Orion as Hugo++
 
 1. {# lede #}(Configurable) Full power of Django Templates within Markdown sources{# lede #}
 
@@ -61,7 +61,7 @@ Dependencies: *.md.en
 
 11. :editormd-logo: Robust [$$\KaTeX$$](markdown-is-not-latex#h2-embrace-and-extend-redux) Support
 
-### CMS Editor
+### Orion CMS Editor Use Cases
 
 <center>
 
@@ -81,7 +81,7 @@ Dependencies: *.md.en
 
 6. $$\text{Markdown }\rightarrow\LaTeX$$ templated article converter
 
-### Incremental Builds
+### Orion Incremental Builds
 
 #### O(N) vs. O(1)
 
@@ -145,7 +145,7 @@ trunk/
 
 *Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenever `fileA.md.en` is altered; and dependencies are supplementally configurable per document, not simply assumed by heirarchical structure.*
 
-Orion's Dependency graph is **almost never a DAG**:
+Orion's Dependency graph is **almost never a DAG**. And it is **an essential component of the build**, not merely a half-backed optimization the way it is with Hugo.
 
 [![not a DAG](../images/deps.svg{{lang}})](dependencies)
 
