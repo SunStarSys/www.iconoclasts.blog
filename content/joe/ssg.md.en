@@ -79,6 +79,10 @@ Dependencies: *.md.en
 
 #### O(N) vs. O(1)
 
+If you want wiki authors to be happy with your build system, it has to support incremental builds as a first order feature, and not a marketing gimmick tacked on as an afterthought.
+
+Which means you want Orion!
+
 #### Hugo's Primitive Dependency Cache (i.e., Gilding the Lilly)
 
 https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
