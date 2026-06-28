@@ -1,6 +1,6 @@
 {% extends "main.html"|append:lang %}
 {% block content %}
-   <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
+   <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><i class="fa fa-file-pen text-danger"></i></a></div>
 
 <h1>{{ headers.title|removetags:"script style"|removeattrs:"on\w+ style class"|safe }}</h1>
      <div class="essay col-lg-12 container">
@@ -61,24 +61,6 @@
   }
 
 </style>
-{% endblock %}
 
-{% block javascript %}
-<script async="" type="module">
-  if (document.cookie.indexOf("can_search") >= 0) {
-      const response = await fetch("/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1;as_json=1",
-                                   {credentials: 'same-origin'});
-      try {
-          const json = await response.json();
-          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^(?:\/{{path|parse_filename:"1.."}}|\/)$/)).length;
-          if (is_watching)
-              $("#unwatch").css("display", "inline");
-          else
-              $("#watch").css("display", "inline");
-      }
-      catch (e) {
-          alert(e);
-      }
-  }
-</script>
+<script async="" src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 {% endblock %}
