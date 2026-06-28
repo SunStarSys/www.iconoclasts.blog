@@ -175,18 +175,18 @@ Trivial **per-user integration** with git/GitHub via the `git-svn` bridge bundle
 [^1]. For an apples-to-apples comparison I ported a subset of the <https://www.openoffice.org> `JBake` source tree @apache/openoffice-org to Hugo and benchmarked it against a simple `hyde` based theme that just culled the `body` innerHTML out of the `.html` sources (renamed as `.md` files with embedded html) a'la (Orion Django Snytax evaded via `\` escape in this markdown source file)
 
 ```html
-{%templatetag openvariable %}{ define "main" -}{% templatetag closevariable %}
+{%templatetag openvariable %} define "main" -{% templatetag closevariable %}
 <div class="post">
-  <h1>{% templatetag openvariable %}{ .Title }{% templatetag closevariable %}</h1>
-  <time datetime={% templatetag openvariable %}{ .Date.Format "2006-01-02T15:04:05Z0700" }{% templatetag closevariable %}} class="post-date">{% templatetag openvariable %}{ .Date.Format "Mon, Jan 2, 2006" }{% templatetag closevariable %}}</time>
-  {% templatetag openvariable %}{ $matches := findRESubmatch `(?s)<body[^>]*>(.*?)</body>` .Content }{% templatetag closevariable %}
-  {% templatetag openvariable %}{ range $matches }{% templatetag closevariable %}}{% templatetag openvariable %}{ index . 1 | safeHTML }{% templatetag closevariable %}{% templatetag openvariable %}{ end }{% templatetag closevariable %}
+  <h1>{% templatetag openvariable %} .Title {% templatetag closevariable %}</h1>
+  <time datetime={% templatetag openvariable %} .Date.Format "2006-01-02T15:04:05Z0700" {% templatetag closevariable %} class="post-date">{% templatetag openvariable %} .Date.Format "Mon, Jan 2, 2006" {% templatetag closevariable %}</time>
+  {% templatetag openvariable %} $matches := findRESubmatch `(?s)<body[^>]*>(.*?)</body>` .Content {% templatetag closevariable %}
+  {% templatetag openvariable %} range $matches {% templatetag closevariable %}{% templatetag openvariable %} index . 1 | safeHTML {% templatetag closevariable %}{% templatetag openvariable %} end {% templatetag closevariable %}
 </div>
-{% templatetag openvariable %}{ if .Site.Config.Services.Disqus.Shortname -}{% templatetag closevariable %}
+{% templatetag openvariable %} if .Site.Config.Services.Disqus.Shortname -{% templatetag closevariable %}
 <h2>Comments</h2>
-{% templatetag openvariable %}{ template "_internal/disqus.html" . }{% templatetag closevariable %}
-{% templatetag openvariable %}{- end }{% templatetag closevariable %}
-{% templatetag openvariable %}{- end }{% templatetag closevariable %}
+{% templatetag openvariable %} template "_internal/disqus.html" . {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
 ```
 
 And here is the `hugo.toml` file:
