@@ -64,7 +64,7 @@ https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
 - hardcoded, based on node/leaf/bundle `content/` tree layouts
 - never written to disk
 
-##### Hugo's untracked `readFile` calls
+##### Hugo's untracked `readFile` calls break incremental build support
 
 https://mbuege.com/2025/09/04/hugo-include-shortcode/
 
@@ -87,7 +87,7 @@ treeView-beta
     themes/
 ```
 
-**Hugo does not track content dependencies that arise from shortcodes**.
+**Hugo does not track content dependencies that arise from shortcodes, and makes rigid assumptions about the content dependencies it does track**.
 
 ##### Orion's fully tracked `ssi` calls
 
@@ -104,7 +104,7 @@ trunk/
    templates/
 ```
 
-**Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenever `fileA.md.en` is altered.**
+**Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenever `fileA.md.en` is altered; and dependencies are configurable per document, not assumed by heirarchical structure.**
 
 ## Security
 
