@@ -145,6 +145,23 @@ Trivial **per-user integration** with git/GitHub via `git-svn` bridge.
 
 ## Footnotes
 
-[^1]. For an apples-to-apples comparison I ported the <https://www.openoffice.org> JBake source tree to Hugo and benchmarked it against a simple theme that just culled the `body` innerHTML out of the html sources (that were mapped to markdown).  It took 8-10 seconds to process 10K such files.  Then I compared it to @SunStarSys/orion build `./test.sh ooo` which builds 20K such files in roughly 2x the time.
+[^1]. For an apples-to-apples comparison I ported a subset of the <https://www.openoffice.org> `JBake` source tree @apache/openoffice-org to Hugo and benchmarked it against a simple `hyde` based theme that just culled the `body` innerHTML out of the html sources a'la (Orion Django Snytax evaded via '\' escape)
+
+```html
+{\{ define "main" -}\}
+<div class="post">
+  <h1>{{ .Title }}</h1>
+  <time datetime={\{ .Date.Format "2006-01-02T15:04:05Z0700" }\} class="post-date">{\{ .Date.Format "Mon, Jan 2, 2006" }\}</time>
+  {\{ $matches := findRESubmatch `(?s)<body[^>]*>(.*?)</body>` .Content }}
+  {\{ range $matches }\}{\{ index . 1 | safeHTML }\}{\{ end }\}
+</div>
+{\{ if .Site.Config.Services.Disqus.Shortname -}\}
+<h2>Comments</h2>
+{\{ template "_internal/disqus.html" . }\}
+{\{- end }\}
+{\{- end }\}
+
+```
+It took 8-12 seconds (sometimes up to 30s) to process 10K such files.  Then I compared it to @SunStarSys/orion build `./test.sh ooo` which consistently builds over 20K such files in roughly 2x the time.
 
 <!-- $Date$ $Author$ $Revision$ -->
