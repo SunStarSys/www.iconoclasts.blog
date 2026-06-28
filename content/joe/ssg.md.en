@@ -153,31 +153,18 @@ trunk/
 
 Orion's Dependency graph is **almost never a DAG**. And it is **an essential component of the build**, not merely a half-backed optimization the way it is with Hugo.
 
+For example, this webpage's markdown source itself has a `Dependencies: *.md{{lang}}` header (you can see it in the above Editor screenshot of it, or by clicking on the [:fa-github: source](#top) link where the title and author information is displayed) which is used by Orion to generate the items under the "Index" header in the footer of the page.
+All of the files in this directory are similarly configured to cross-reference each other!
+
+<span class="text-success">DAG is a gross oversimplification of the content dependency requirements in real-world use cases.</span>
+
 [![not a DAG](../images/deps.svg{{lang}})](dependencies)
-
-## Security
-
-### Identity Management
-
-#### (Google) OpenID Provider
-
-### Groups and Roles
-
-#### Administrators
-
-#### Authors
-
-#### Engineers
-
-##### UI
-
-##### Software
 
 ### Version Control
 
 #### Git and Fine-Grained ACLs
 
-Impossible in any DVCS &mdash; read access to the repository implies access to its entirety, including history.  Ditto for push access: it is all-or-nothing, which is a deal-breaker in a wiki context where different repository users require granular file/directory write authorization/access controls.
+Impossible in any DVCS like `git` &mdash; read access to the repository implies access to its entirety, including full history.  Ditto for push access: it is all-or-nothing, which is a deal-breaker in a wiki context where different repository users require granular file/directory write authorization/access controls.
 
 #### Subversion
 
