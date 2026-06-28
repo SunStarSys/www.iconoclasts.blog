@@ -20,27 +20,41 @@ Dependencies: *.md.en
 ## @GoHugoIo/hugo
 
 - Popular
+
 - Robust Third-Party Themes and Extensions
+
 - Opinionated w/ Steep Learning Curve
 
 ## Common Feature Sets
 
 - Apache Licensed
+
 - High Performance (max document processing speed at ~1K documents per second)[^1]
+
 - Cached Dependency Management
+
 - Sophisticated Security Model
 
 ## Orion Advantages
 
 1. {# lede #}(Configurable) Full power of Django Templates within Markdown sources{# lede #}
+
 2. Robust Control Flow, For-Loop Constructs, and Django Filters
+
 3. Full Access To YAML/CSV attached documents as data structures
+
 4. Vector Graphics
+
 5. Vector Operations on CSV Table Data via `PDL`
+
 6. `ssi` skips file headers
+
 7. MultiViews
+
 8. Easy to Use
+
 9. Flexible, True Incremental Builds
+
 10. Per-file/directory (aka fine-grained) ACL, including controls on the build's software stack and configuration itself
 
 ### CMS Editor
@@ -52,20 +66,25 @@ Dependencies: *.md.en
 </center>
 
 1. Document Upload Linting based on MIME-type (Markdown, Perl, YAML, CSV, $$\LaTeX$$)
+
 2. Automatic Link Validation / Titleization
+
 3. Real Time Preview Rendering for `@`-shortlinks (eg :fa-x-twitter: tweets)
+
 4. Electric HTML/Tab Completion
-5. Multilingual w/ AI translation capabilities &mdash; including Chinese, Hebrew and Arabic
+
+5. Multilingual w/ AI translation functionality OOTB &mdash; including Chinese, Hebrew and Arabic
 
 ### Incremental Builds
 
 #### O(N) vs. O(1)
 
-#### Hugo's Primitive Dependency Cache (aka Gilding the Lilly)
+#### Hugo's Primitive Dependency Cache (i.e., Gilding the Lilly)
 
 https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
 
 - inflexible, internally generated [**DAG**](https://en.wikipedia.org/wiki/Directed_acyclic_graph) based on node/leaf/bundle tree layouts
+
 - never written to disk
 
 ##### Hugo's untracked `readFile` calls break incremental build support
