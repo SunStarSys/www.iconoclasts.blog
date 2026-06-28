@@ -164,7 +164,7 @@ Trivial **per-user integration** with git/GitHub via `git-svn` bridge.
 
 ## Footnotes
 
-[^1]. For an apples-to-apples comparison I ported a subset of the <https://www.openoffice.org> `JBake` source tree @apache/openoffice-org to Hugo and benchmarked it against a simple `hyde` based theme that just culled the `body` innerHTML out of the html sources a'la (Orion Django Snytax evaded via `\` escape)
+[^1]. For an apples-to-apples comparison I ported a subset of the <https://www.openoffice.org> `JBake` source tree @apache/openoffice-org to Hugo and benchmarked it against a simple `hyde` based theme that just culled the `body` innerHTML out of the `.html` sources (renamed as `.md` files with embedded html) a'la (Orion Django Snytax evaded via `\` escape in this markdown source file)
 
 ```html
 {\{ define "main" -}\}
@@ -194,8 +194,8 @@ theme = "hyde"
       unsafe = true
 ```
 
-It typically took 8-12 seconds (sometimes up to 30s) to process 10K such files.  When compared to @SunStarSys/orion build `./test.sh ooo` which [consistently builds over 20K such files in roughly 2-3x the time](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), it seems there is performance parity between them on least complex, yet very large, sites like <https://www.OpenOffice.org>.
+It typically took 8-12 seconds (sometimes up to 30s) to process 10K such files.  When compared to @SunStarSys/orion build `./test.sh ooo` which [consistently builds over 20K such files in roughly 2-3x the time](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), it seems there is **performance parity** between them on the least complex yet very large websites like <https://www.OpenOffice.org>.
 
-However, Orion is capable of so much more if you need true flexibility and correct incremental build support, because **we think you know what works best for your site, unlike the rest of the overhyped SSG community around Hugo.**
+However, [Orion](https://www.sunstarsys.com/orion/) is capable of so much more if you need true flexibility and correct incremental build support, because **we think you know what works best for your site, unlike the rest of the overhyped SSG community around Hugo.**
 
 <!-- $Date$ $Author$ $Revision$ -->
