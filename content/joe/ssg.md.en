@@ -45,7 +45,7 @@ Dependencies: *.md.en
 
 3. Full Access To YAML/CSV attached documents as data structures
 
-4. Vector Graphics w/ Asymptote
+4. WebGL-enabled Vector Graphics[^2]
 
 5. Aggregate Vector Operations on Table Data via `PDL`
 
@@ -207,5 +207,7 @@ theme = "hyde"
 It typically took 8-12 seconds (sometimes up to 30s) to process 10K such files.  When compared to @SunStarSys/orion build `./test.sh ooo` which [consistently builds over 20K such files in roughly 2-3x the time](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), it seems there is **performance parity** between them on the least complex yet very large websites like <https://www.OpenOffice.org>.
 
 However, [Orion](https://www.sunstarsys.com/orion/) is capable of so much more if you need true flexibility and correct incremental build support, because **we think you know what works best for your site, unlike the rest of the overhyped SSG community around Hugo.**
+
+[^2]. Full support for fenced `asy` markdown blocks with sources coded in @vectorgraphics/asymptote.
 
 <!-- $Date$ $Author$ $Revision$ -->
