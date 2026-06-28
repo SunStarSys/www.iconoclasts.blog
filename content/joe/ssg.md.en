@@ -175,7 +175,6 @@ Impossible in any DVCS &mdash; read access to the repository implies access to i
 
 Trivial **per-user integration** with git/GitHub via `git-svn` bridge.
 
-
 ## Footnotes
 
 [^1]. For an apples-to-apples comparison I ported a subset of the <https://www.openoffice.org> `JBake` source tree @apache/openoffice-org to Hugo and benchmarked it against a simple `hyde` based theme that just culled the `body` innerHTML out of the `.html` sources (renamed as `.md` files with embedded html) a'la (Orion Django Snytax evaded via `\` escape in this markdown source file)
