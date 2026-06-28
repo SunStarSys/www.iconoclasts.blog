@@ -58,6 +58,8 @@ Dependencies: *.md.en
 
 ### Incremental Builds
 
+#### O(N) vs. O(1)
+
 #### Hugo's Primitive Dependency Cache (aka Gilding the Lilly)
 
 https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
