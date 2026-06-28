@@ -15,25 +15,26 @@ Dependencies: *.md.en
 
 ## Orion
 
-1. NKOTB
+- NKOTB
 
 ## Hugo
 
-1. Popular
-2. Robust Third-Party Themes and Extensions
+- Popular
+- Robust Third-Party Themes and Extensions
 
 ## Common Feature Sets
 
-1. High Performance
-2. Cached Dependency Management
-3. Easy to Use
+- High Performance
+- Cached Dependency Management
+- Easy to Use
+- Sophisticated Security Model
 
 ### Templating within Markdown
 
 #### Orion
 
-1. {# lede #}(Configurable) Full power of Django Templates {# lede #}
-2. Robust Control Flow and For-Loop Constructs
+1. {# lede #}(Configurable) Full power of Django Templates{# lede #}
+2. Robust Control Flow, For-Loop Constructs, and Django Filters
 3. Full Access To YAML/CSV data structures
 4. Vector Graphics
 5. Vector Operations on CSV Table Data via `PDL`
@@ -58,8 +59,8 @@ Dependencies: *.md.en
 
 https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
 
-1. hardcoded, based on node/leaf/bundle `content/` tree layouts
-2. never written to disk
+- hardcoded, based on node/leaf/bundle `content/` tree layouts
+- never written to disk
 
 ##### Hugo's untracked `readFile` calls
 
