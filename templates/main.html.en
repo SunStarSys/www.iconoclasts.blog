@@ -176,7 +176,7 @@
 <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
 <script src="/editor.md/lib/codemirror/addons.min.js"></script>
 <script src="/editor.md/lib/codemirror/modes.min.js"></script>
-<script src="/editor.md/lib/copy-tex.js"></script>
+<script src="/editor.md/lib/copy-tex.min.js"></script>
 
 <script blocking="render" type="text/javascript">
     if (typeof(editormd) === "undefined") {
