@@ -1,6 +1,6 @@
 Title: Orion vs. Hugo
 Keywords: Orion, Hugo, SSG
-Status: verified=46678
+Status: verified=46682
 Dependencies: *.md.en
 Categories: Orion
 
@@ -67,6 +67,8 @@ However, the gist of this article is to represent Orion's Apache-Licensed SSG as
 10. Per-file/directory (aka fine-grained) ACL, including controls on the build's software stack and configuration itself
 
 11. :editormd-logo: Robust [$$\KaTeX$$](markdown-is-not-latex#h2-embrace-and-extend-redux) Support
+
+12. Integrated PCRE Search
 
 ### Orion CMS Editor Use Cases
 
