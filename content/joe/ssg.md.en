@@ -140,10 +140,10 @@ Orion's Dependency graph is **almost never a DAG**:
 
 #### Git and Fine-Grained ACLs
 
-Impossible in any DVCS.
+Impossible in any DVCS &mdash; read access to the repository implies access to its entirety, including history.  Ditto for push access: it is all-or-nothing, which is a deal-breaker in a wiki context where different repository users require granular file/directory write authorization/access controls.
 
 #### Subversion
 
-Easy **per-user integration** with git/GitHub via `git-svn` bridge.
+Trivial **per-user integration** with git/GitHub via `git-svn` bridge.
 
 <!-- $Date$ $Author$ $Revision$ -->
