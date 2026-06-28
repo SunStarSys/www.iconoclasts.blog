@@ -62,7 +62,7 @@ Dependencies: *.md.en
 
 https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
 
-- hardcoded, based on node/leaf/bundle `content/` tree layouts
+- hardcoded internal DAG based on node/leaf/bundle `content/` tree layouts
 - never written to disk
 
 ##### Hugo's untracked `readFile` calls break incremental build support
@@ -106,6 +106,10 @@ trunk/
 ```
 
 **Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenever `fileA.md.en` is altered; and dependencies are configurable per document, not assumed by heirarchical structure.**
+
+Orion's Dependency graph is almost never **a DAG**:
+
+![not a DAG](../images/deps.svg{{lang}})
 
 ## Security
 
