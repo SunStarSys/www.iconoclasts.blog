@@ -26,7 +26,7 @@ Dependencies: *.md.en
 ## Common Feature Sets
 
 - Apache Licensed
-- High Performance
+- High Performance (max document processing speed at ~1K documents per second)
 - Cached Dependency Management
 - Sophisticated Security Model
 
@@ -41,7 +41,7 @@ Dependencies: *.md.en
 7. MultiViews
 8. Easy to Use
 9. Flexible, True Incremental Builds
-10. Per-document (aka fine-grained) ACLs
+10. Per-document/directory (aka fine-grained) ACLs
 
 ### CMS Editor Integrations
 
@@ -89,7 +89,7 @@ treeView-beta
     themes/
 ```
 
-**Hugo does not track content dependencies that arise from shortcodes, and makes rigid DAG assumptions about the content dependencies it does track**.
+*Hugo does not track content dependencies that arise from shortcodes, and makes rigid DAG assumptions about the content dependencies it does track.*
 
 ##### Orion's fully tracked `ssi` calls
 
@@ -106,7 +106,7 @@ trunk/
    templates/
 ```
 
-**Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenever `fileA.md.en` is altered; and dependencies are configurable per document, not assumed by heirarchical structure.**
+*Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenever `fileA.md.en` is altered; and dependencies are configurable per document, not assumed by heirarchical structure.*
 
 Orion's Dependency graph is **almost never a DAG**:
 
