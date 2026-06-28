@@ -1,0 +1,215 @@
+---
+categories: אוריון
+dependencies: '*.md.he'
+keywords: אוריון, הוגו, SSG
+status: אומתו 46702
+title: אוריון נגד הוגו
+---
+
+<div class="right">
+
+![הוגו SSG](ssg.page/hugo-logo-wide)
+
+</div>
+
+[TOC]#sidebar
+
+@sunstarsys/status/2070917650042040818
+
+## הקדמה
+
+אני מבין שההשוואות הטכניות הן טאבו דתי בחוגים רבים.  הנקודה העיקרית שאני מנסה להעביר היא כי [אוריון](https://www.sunstarsys.com/orion/) הוא מחויב כמו Enterprise Jamstack Wiki, יש לו הרבה מקרי שימוש קיימא מחוץ לתחום הבעיה הספציפי הזה.
+
+עם זאת, תמצית מאמר זה היא לייצג את ה- SSG של אוריון כמו SSG טוב יותר מאשר הוגו בשבילך ואת צוותי הנדסת התוכנה שלך*.  יש לו יותר עוצמה, יותר ביצועים, יותר תכונות ליבה, והרבה יותר קל להתאים אישית. בנוסף, [מתועד היטב](https://www.sunstarsys.com/orion/api/) ויש לו פוטנציאל בלתי מוגבל למשתמשי כוח אמיתיים שם בחוץ, בדיוק כמוך!
+
+## @SunStarSys/אזור
+
+- נקוטב
+
+- בעל דעה עם עקומת למידה הדרגתית
+
+## @GoHugoIo/הוגו
+
+- פופולרי
+
+- ערכות נושא והרחבות חזקות של צד שלישי
+
+- חוות דעת עם עקומת למידה תלולה
+
+## סלי מאפיינים משותפים
+
+אפאצ'י מורשה
+
+- ביצועים גבוהים (מהירות עיבוד מרבית של מסמכים בכ- ~1K מסמכים לשנייה)[^1]
+
+- ניהול תלות במטמון
+
+- מודל אבטחה מתוחכם
+
+## אוריון - הוגו++
+
+1. {# lede #}(ניתן להגדרה) עוצמה מלאה של תבניות Django בתוך מקורות Markdown{# lede #}
+
+2. זרימת בקרה חזקה, מבני For-Loop ומסנני Django
+
+3. גישה מלאה למסמכים מצורפים של YAML/CSV כמבני נתונים
+
+4. WebGL - גרפיקה וקטורית מאופשרת[^2]
+
+5. סכימת פעולות וקטוריות בנתוני טבלה באמצעות `PDL`
+
+6. `ssi` מדלג על כותרות קבצים
+
+7. [מכרז תוכן / MultiViews](https://httpd.apache.org/docs/current/content-negotiation.html)
+
+8. קל לשימוש
+
+9. בניות גידול גמישות ואמיתיות
+
+10. ACL לכל קובץ/ספרייה, כולל פקדים על מחסנית התוכנה והגדרת התצורה עצמה של הבנייה
+
+11. :editormd-logo: חזק [$$\KaTeX$$](markdown-is-not-latex#h2-embrace-and-extend-redux) תמיכה
+
+12. חיפוש משולב ב־PCRE
+
+### מקרי שימוש של עורך CMS של אוריון
+
+<center>
+
+![עורך X](ssg.page/screenshot)
+
+</center>
+
+1. סימון טעינת מסמך מבוסס על סוג MIME (סימון מטה, פרל, YAML, CSV, $$\LaTeX$$)
+
+2. אימות/כותרת של קישור אוטומטי
+
+3. הצגה לתצוגה מקדימה בזמן אמת של `@`-קישורים קצרים (לדוגמה) :fa-x-twitter: ציוצים
+
+4. השלמת HTML/לשונית חשמלית
+
+5. OOTB: פונקציונליות תרגום רב-לשונית עם בינה מלאכותית &mdash; כולל סינית, עברית וערבית
+
+6. $$\text{Markdown }\rightarrow\LaTeX$$ ממיר מאמר זמני
+
+### בניות תוספתיות של אוריון
+
+#### O(N) לעומת O(1)
+
+אם אתה רוצה שהסופרים והעורכים של הוויקי שלך יהיו מרוצים ממערכת הבנייה שלך, הוא צריך לתמוך בבניות תוספתיות כתכונת הזמנה ראשונה, ו *לא גימיק שיווקי המתמודד כמחשבה מאוחרת*.
+
+מה שאומר שאתה רוצה אוריון!
+
+#### מטמון התלות הפרימיטיבי של הוגו (כלומר, גילדינג לילי)
+
+רמות אבסורדיות של נפיחות חסרת משמעות בדיאגרמות אדריכליות מפורטות מאוד, אשר נמנעות בכובד ראש מלציין את הפילים בחדר...
+
+> https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
+
+הנה מה שהדף הזה לא אומר על ניהול התלות של הוגו:
+
+- לא גמיש, שנוצר באופן פנימי [**דאג**](https://en.wikipedia.org/wiki/Directed_acyclic_graph) מבוסס על מתווי עץ של צומת/עלה/חבילה
+
+מעולם לא נכתב בדיסק
+
+##### של הוגו `readFile` קריאות להפסקת תמיכה בבנייה תוספתית
+
+הבה נבחן את הפיל שבחדר במאמר זה:
+
+> https://mbuege.com/2025/09/04/hugo-include-shortcode/
+
+```mermaid
+treeView-beta
+    ארכיטיפים/
+    נכסים/
+    תוכן/
+      כולל/
+        dummy.md :::הדגשת ## תלות לא במעקב ב-Hugo
+      הודעות
+        2025-01-01-post1.md  ## עשוי להשתמש "כלול" קודי קיצור
+        2025-01-02-post2.md  ## ...
+    נתונים/
+    i18n/
+    פריסות/
+      קודי קיצור/
+        include.html  ## משתמש ב-readFile() על ארגומנט שהועבר
+    סטטי/
+    ערכות נושא
+```
+
+*הוגו אינו עוקב אחר יחסי תלות של תוכן הנובעים מקודים קצרים, ומבצעת הנחות קשות על DAG לגבי יחסי התלות בין התוכן שעוקבים אחריהם.*
+
+##### המעקב המלא של אוריון `ssi` שיחות
+
+```mermaid
+treeView-beta
+תא מטען/
+   תוכן/
+     פו/
+	   fileA.md.en :::highlight ## היעד כולל קובץ
+	 עמודה/
+	   fileB.md.en ## `ssi` כולל חלקים נבחרים של fileA.md.en
+   cgi-bin/
+   lib/ 
+   תבניות/
+```
+
+*אוריון עקבות `fileB.md.en`התלות ב- `fileA.md.en` הוא יבנה אותה מחדש בכל פעם `fileA.md.en` הוא משתנה; ויחסי התלות ניתנים להגדרה נוספת לכל מסמך, והם לא נלקחים בחשבון רק באמצעות מבנה היררכי.*
+
+גרף התלות של אוריון הוא **כמעט אף פעם לא DAG**. וזה **מרכיב חיוני של הבנייה**, לא רק אופטימיזציה חצי מגובה כפי שהוא עם הוגו.
+
+לדוגמה, למקור markdown של דף אינטרנט זה עצמו יש `Dependencies: *.md{{lang}}` כותרת עליונה (ניתן לראות אותה בצילום המסך של העורך לעיל, או על-ידי לחיצה על [:fa-github: מקור](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) קישור שבו מוצגים פרטי הכותרת והמחבר) המשמשים את אוריון ליצירת הפריטים תחת "אינדקס" כותרת עליונה בכותרת התחתונה של הדף.
+כל הקבצים בספרייה זו מוגדרים באופן דומה להפניה מקושרת זה לזה!
+
+<span class="text-success">DAG הוא פשט יתר ברוטו של דרישות תלות התוכן בתרחישי שימוש בעולם האמיתי.</span>
+
+[![לא DAG](../images/deps.svg{{lang}})](dependencies)
+
+### בקרת גרסאות
+
+#### רשימות בקרת גישה של Git ו-Fine-Grained
+
+**בלתי אפשרי** בכל DVCS כמו `git` &mdash; גישת הקריאה למאגר מרמזת על גישה בשלמותה, כולל היסטוריה מלאה.  Ditto עבור גישת דחיפה: זה הכל או כלום, שהוא שובר עסקה בהקשר wiki שבו משתמשים שונים במאגר דורשים אישור/בקרות גישה מפורטות לכתיבת קובץ/ספרייה.
+
+#### תת-גרסה
+
+שילוב טריוויאלי **למשתמש** עם git/GitHub דרך `git-svn` גשר ארוז כתוספת הרחבה על־ידי כל `git` הפצה.
+
+## הערות שוליים
+
+[^1]. לשם השוואה בין תפוחים לתפוחים הנחתי תת-קבוצה של <https://www.openoffice.org> `JBake` עץ מקור @apache/openoffice-org ל-Hugo ובחן אותו כנגד עץ פשוט `hyde` נושא שפשוט עורר את `body` innerHTML מתוך `.html` מקור (שמו שונה) `.md` קבצים עם html משובץ) a'la
+
+```html
+{%templatetag openvariable %} define "main" -{% templatetag closevariable %}
+<div class="post">
+  <h1>{% templatetag openvariable %} .Title {% templatetag closevariable %}</h1>
+  <time datetime={% templatetag openvariable %} .Date.Format "2006-01-02T15:04:05Z0700" {% templatetag closevariable %} class="post-date">{% templatetag openvariable %} .Date.Format "Mon, Jan 2, 2006" {% templatetag closevariable %}</time>
+  {% templatetag openvariable %} $matches := findRESubmatch `(?s)<body[^>]*>(.*?)</body>` .Content {% templatetag closevariable %}
+  {% templatetag openvariable %} range $matches {% templatetag closevariable %}{% templatetag openvariable %} index . 1 | safeHTML {% templatetag closevariable %}{% templatetag openvariable %} end {% templatetag closevariable %}
+</div>
+{% templatetag openvariable %} if .Site.Config.Services.Disqus.Shortname -{% templatetag closevariable %}
+<h2>Comments</h2>
+{% templatetag openvariable %} template "_internal/disqus.html" . {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+```
+
+והנה הוא `hugo.toml` קובץ:
+```text
+baseURL = 'https://openoffice.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hyde"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+```
+
+בדרך כלל נדרשו 8-12 שניות (לפעמים עד 30s) כדי לעבד 10K קבצים כאלה.  בהשוואה ל-@SunStarSys/orion build `./test.sh ooo` אשר [בונה באופן עקבי מעל 20K קבצים כאלה בערך 2-3x הזמן](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556)נראה שיש **זוגיות ביצועים** ביניהם באתרים הפחות מורכבים אך גדולים כמו <https://www.OpenOffice.org>.
+
+עם זאת, [אוריון](https://www.sunstarsys.com/orion/) הוא מסוגל להרבה יותר אם אתה זקוק לגמישות אמיתית ולתמיכה בבנייה תוספתית נכונה, כי **אנחנו חושבים שאתה יודע מה עובד הכי טוב עבור האתר שלך, בניגוד לשאר קהילת SSG שהשתרעה סביב הוגו.**
+
+[^2]. תמיכה מלאה בגדר `asy` בלוקי markdown עם מקורות מקודדים ב-@vectorgraphics/asymptote .
+
+<!-- $Date$ $Author$ $Revision$ -->

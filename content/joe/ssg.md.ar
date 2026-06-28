@@ -1,0 +1,215 @@
+---
+categories: أوريون
+dependencies: '*.md.ar'
+keywords: أوريون، هوغو، SSG
+status: التحقق = 46702
+title: أوريون ضد هوغو
+---
+
+<div class="right">
+
+![هوغو SSG](ssg.page/hugo-logo-wide)
+
+</div>
+
+[TOC]#sidebar
+
+@sunstarsys/status/2070917650042040818
+
+## مقدمة
+
+أفهم أن المقارنات التقنية هي من المحرمات الدينية في العديد من الدوائر.  النقطة الرئيسية التي أحاول نقلها هي أنه بينما [أوريون](https://www.sunstarsys.com/orion/) يوصف بأنه Enterprise Jamstack Wiki، ولديه العديد من حالات الاستخدام القابلة للتطبيق خارج نطاق المشكلة المحدد.
+
+ومع ذلك، فإن جوهر هذه المقالة هو تمثيل SSG المرخص لـ Orion's Apache-Licensed كـ *SSG أفضل من Hugo بالنسبة لك وللفرق الهندسية البرمجية*.  فهو يتمتع بمزيد من الإمكانات والأداء الفائق والمزيد من الميزات الأساسية، فضلاً عن سهولة التخصيص. بالإضافة إلى ذلك، [موثقة جيدا](https://www.sunstarsys.com/orion/api/) ولديه إمكانات غير محدودة لمستخدمي الطاقة الحقيقيين هناك، مثلك تمامًا!
+
+## @SunStarSys/أو أيون
+
+- نكوتب
+
+- الرأي مع منحنى التعلم التدريجي
+
+## @GoHugoIo/هوغو
+
+- شعبية
+
+- سمات وامتدادات قوية من طرف ثالث
+
+- الرأي مع منحنى التعلم الحاد
+
+## مجموعات الميزات العامة
+
+- أباتشي مرخصة
+
+- عالية الأداء (أقصى سرعة معالجة المستندات في ~1K المستندات في الثانية الواحدة)[^1]
+
+- إدارة التبعية المخزنة مؤقتًا
+
+- نموذج أمان متطور
+
+## أوريون هوغو++
+
+1. {# lede #}(قابل للتكوين) قوة كاملة من قوالب Django داخل مصادر Markdown{# lede #}
+
+2. تدفق التحكم القوي والبنيات من أجل الحلقات ومرشحات Django
+
+3. الوصول الكامل إلى المستندات المرفقة بـ YAML/CSV كبُنى بيانات
+
+4. WebGL رسومات متجهات ممكنة[^2]
+
+5. تجميع عمليات الموجه في بيانات الجدول عبر `PDL`
+
+6. `ssi` يتخطى ترويسات الملفات
+
+7. [التفاوض على المحتوى / MultiViews](https://httpd.apache.org/docs/current/content-negotiation.html)
+
+8. سهل الاستخدام
+
+9. عمليات إنشاء تزايدية مرنة وحقيقية
+
+10. قائمة التحكم بالوصول (ACL) لكل ملف/دليل (المعروفة أيضًا باسم الدقيق)، بما في ذلك عناصر التحكم في مجموعة برامج الإصدار والتكوين نفسه
+
+11. :editormd-logo: قوي [$$\KaTeX$$](markdown-is-not-latex#h2-embrace-and-extend-redux) الدعم
+
+12. البحث المتكامل عن PCRE
+
+### حالات استخدام محرر Orion CMS
+
+<center>
+
+![المحرر X](ssg.page/screenshot)
+
+</center>
+
+1. ربط تحميل المستند على أساس نوع MIME (Markdown، Perl، YAML، CSV، $$\LaTeX$$)
+
+2. التحقق التلقائي من الرابط / العنوان
+
+3. عرض معاينة الوقت الفعلي لـ `@`-shortlinks (مثل :fa-x-twitter: تغريدات)
+
+4. إتمام HTML/علامة التبويب الكهربائية
+
+5. متعددة اللغات مع وظيفة ترجمة الذكاء الاصطناعي OOTB &mdash; بما في ذلك الصينية والعبرية والعربية
+
+6. $$\text{Markdown }\rightarrow\LaTeX$$ محول المادة المغلفة
+
+### الإنشاءات التزايدية لأوريون
+
+#### O(N) مقابل O(1)
+
+إذا كنت تريد أن يكون مؤلفو ومحررو الويكي سعداء بنظام البناء الخاص بك، فيجب أن يدعم البناءات التزايدية كميزة طلبية أولى، و *ليس حيلة تسويقية يتم التعامل معها كفكرة لاحقة *.
+
+هذا يعني أنك تريد أوريون!
+
+#### ذاكرة التخزين المؤقت للتبعية البدائية لهوجو (أي Gilding the Lilly)
+
+مستويات سخيفة كوميديا من الانتفاخ لا معنى لها في مخططات معمارية مفصلة للغاية والتي تتجنب بشدة ذكر الفيلة في الغرفة...
+
+> https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
+
+إليك ما لا تقوله هذه الصفحة عن إدارة التبعية في Hugo:
+
+- غير مرنة، ولدت داخليا [**العلامة**](https://en.wikipedia.org/wiki/Directed_acyclic_graph) استنادًا إلى نُسق شبكة نقطة التوصيل/الورقة/الحزمة
+
+- لم تتم الكتابة على القرص مطلقًا
+
+##### هوغو غير متتبع `readFile` دعم الإنشاء التزايدي لكسر المكالمات
+
+دعونا ننظر إلى الفيل في الغرفة في هذه المقالة:
+
+> https://mbuege.com/2025/09/04/hugo-include-shortcode/
+
+```mermaid
+treeView-beta
+    الأنواع الرئيسية/
+    الأصول/
+    المحتوى/
+      يتضمن/
+        dummy.md :::تمييز ## تبعية غير متتبعة في Hugo
+      الوظائف/
+        2025-01-01-post1.md  قد يستخدم ## "يتضمن" رموز قصيرة
+        2025-01-02-post2.md  ## ...
+    البيانات/
+    i18n/
+    التخطيطات/
+      الرموز القصيرة/
+        include.html  ## يستخدم readFile() على حجة مرت
+    ثابت/
+    الموضوعات/
+```
+
+*لا يتتبع هوغو تبعيات المحتوى التي تنشأ عن الرموز القصيرة، ويضع افتراضات DAG جامدة حول تبعيات المحتوى التي يتتبعها.*
+
+##### تتبع أوريون بالكامل `ssi` مكالمات
+
+```mermaid
+treeView-beta
+الجذع/
+   المحتوى/
+     foo/
+	   fileA.md.en :::تمييز ## الهدف يتضمن الملف
+	 بار/
+	   fileB.md.en ## `ssi` يشتمل على أجزاء محددة من fileA.md.en
+   cgi-bin/
+   مكتبة
+   قوالب/
+```
+
+*مسارات أوريون الأصلية `fileB.md.en`تبعية 's على `fileA.md.en` وسوف يعيد بنائه كلما `fileA.md.en` يتم تغييره ؛ والتبعيات قابلة للتكوين بشكل تكميلي لكل مستند، وليس فقط مفترضة من قبل الهيكل الهرمي. *
+
+الرسم البياني لتبعية Orion هو **لا يمثل أبدًا DAG**. وهو **عنصر أساسي في البناء**، وليس مجرد تحسين نصف مدعوم بالطريقة التي هو بها مع هوغو.
+
+على سبيل المثال، يحتوي مصدر تخفيض السعر لصفحة الويب هذه على `Dependencies: *.md{{lang}}` رأس (يمكنك رؤيته في لقطة شاشة المحرر أعلاه، أو بالنقر على [:fa-github: مصدر](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) رابط حيث يتم عرض معلومات العنوان والمؤلف) الذي يستخدمه Orion لإنشاء العناصر ضمن "الفهرس" رأس في تذييل الصفحة.
+يتم تكوين جميع الملفات في هذا الدليل بشكل مماثل لإحالة بعضها إلى بعض!
+
+<span class="text-success">DAG هو تبسيط إجمالي لمتطلبات تبعية المحتوى في حالات الاستخدام في العالم الحقيقي.</span>
+
+[![ليس DAG](../images/deps.svg{{lang}})](dependencies)
+
+### التحكم في الإصدار
+
+#### قوائم التحكم بالوصول Git و Fine-Grained
+
+**مستحيل** في أي DVCS مثل `git` &mdash; يعني الوصول للقراءة إلى المستودع الوصول إلى كامله، بما في ذلك التاريخ الكامل.  Ditto للدفع إلى الوصول: إنه الكل أو لا شيء، وهو كسر صفقة في سياق wiki حيث يحتاج مستخدمو المستودع المختلفون إلى عناصر تحكم دقيقة في اعتماد / وصول كتابة الملف / الدليل.
+
+#### الإصدار الفرعي
+
+تكامل ثلاثي **لكل مستخدم** مع git/GitHub عبر `git-svn` جسر معبأ كامتداد إضافي من قبل كل `git` التوزيع.
+
+## الحواشي السفلية
+
+[^1]. لمقارنة التفاح إلى التفاح، قمت بنقل مجموعة فرعية من <https://www.openoffice.org> `JBake` شجرة المصدر @apache/openoffice-org إلى Hugo وقياسها مقابل بسيط `hyde` الموضوع القائم الذي انتقد للتو `body` innerHTML من `.html` مصادر (تتم إعادة تسميتها كـ `.md` ملفات مع html المضمنة) a'la
+
+```html
+{%templatetag openvariable %} define "main" -{% templatetag closevariable %}
+<div class="post">
+  <h1>{% templatetag openvariable %} .Title {% templatetag closevariable %}</h1>
+  <time datetime={% templatetag openvariable %} .Date.Format "2006-01-02T15:04:05Z0700" {% templatetag closevariable %} class="post-date">{% templatetag openvariable %} .Date.Format "Mon, Jan 2, 2006" {% templatetag closevariable %}</time>
+  {% templatetag openvariable %} $matches := findRESubmatch `(?s)<body[^>]*>(.*?)</body>` .Content {% templatetag closevariable %}
+  {% templatetag openvariable %} range $matches {% templatetag closevariable %}{% templatetag openvariable %} index . 1 | safeHTML {% templatetag closevariable %}{% templatetag openvariable %} end {% templatetag closevariable %}
+</div>
+{% templatetag openvariable %} if .Site.Config.Services.Disqus.Shortname -{% templatetag closevariable %}
+<h2>Comments</h2>
+{% templatetag openvariable %} template "_internal/disqus.html" . {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+{% templatetag openvariable %}- end {% templatetag closevariable %}
+```
+
+وهنا هو `hugo.toml` الملف:
+```text
+baseURL = 'https://openoffice.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hyde"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+```
+
+عادة ما يستغرق الأمر من 8 إلى 12 ثانية (أحيانًا ما يصل إلى 30s) لمعالجة 10K مثل هذه الملفات.  عند مقارنتها بإصدار @SunStarSys/orion `./test.sh ooo` أي [يبني باستمرار أكثر من 20K مثل هذه الملفات في ما يقرب من 2-3x الوقت](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556)، يبدو أن هناك **تكافؤ الأداء** بينهما على مواقع الويب الأقل تعقيدًا ولكنها كبيرة جدًا مثل <https://www.OpenOffice.org>.
+
+ومع ذلك، [أوريون](https://www.sunstarsys.com/orion/) قادر على أكثر من ذلك بكثير إذا كنت بحاجة إلى مرونة حقيقية وتصحيح دعم البناء التدريجي، لأننا نعتقد أنك تعرف ما هو الأفضل لموقعك، على عكس بقية مجتمع SSG المبالغة حول Hugo.**
+
+[^2]. دعم كامل للمسيجة `asy` قطع تخفيض السعر ذات المصادر المشفرة في @vectorgraphics/asymptote .
+
+<!-- $Date$ $Author$ $Revision$ -->
