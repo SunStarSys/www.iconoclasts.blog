@@ -53,7 +53,6 @@ Dependencies: *.md.en
 
 ### Full Site Build Parity
 
-
 ### Incremental Builds
 
 #### Hugo's Primitive Dependency Cache (aka Gilding the Lilly)
@@ -61,7 +60,7 @@ Dependencies: *.md.en
 https://deepwiki.com/gohugoio/hugo/3.6-dependency-tracking-and-caching
 
 1. hardcoded, based on node/leaf/bundle `content/` tree layouts
-2. never written to disk
+2. never written to disk!
 
 ##### Hugo's untracked `readFile` calls
 
