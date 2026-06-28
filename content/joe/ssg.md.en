@@ -162,6 +162,6 @@ Trivial **per-user integration** with git/GitHub via `git-svn` bridge.
 {\{- end }\}
 
 ```
-It took 8-12 seconds (sometimes up to 30s) to process 10K such files.  Then I compared it to @SunStarSys/orion build `./test.sh ooo` which consistently builds over 20K such files in roughly 2x the time.
+It took 8-12 seconds (sometimes up to 30s) to process 10K such files.  Then I compared it to @SunStarSys/orion build `./test.sh ooo` which [consistently builds over 20K such files in roughly 2-3x the time](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556).
 
 <!-- $Date$ $Author$ $Revision$ -->
