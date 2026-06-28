@@ -138,4 +138,12 @@ Orion's Dependency graph is **almost never a DAG**:
 
 ### Version Control
 
+#### Git and Fine-Grained ACLs
+
+Impossible in any DVCS.
+
+#### Subversion
+
+Easy **per-user integration** with git/GitHub via `git-svn` bridge.
+
 <!-- $Date$ $Author$ $Revision$ -->
