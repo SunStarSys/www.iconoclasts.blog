@@ -143,7 +143,7 @@ trunk/
    templates/
 ```
 
-*Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenever `fileA.md.en` is altered; and dependencies are configurable per document, not assumed by heirarchical structure.*
+*Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenever `fileA.md.en` is altered; and dependencies are supplementally configurable per document, not simply assumed by heirarchical structure.*
 
 Orion's Dependency graph is **almost never a DAG**:
 
