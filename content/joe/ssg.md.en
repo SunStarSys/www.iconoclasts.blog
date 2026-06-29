@@ -1,6 +1,6 @@
 Title: Orion vs. Hugo
 Keywords: Orion, Hugo, SSG
-status: verified=46777
+status: verified=46781
 Dependencies: *.md.en
 Categories: Orion
 
@@ -204,7 +204,7 @@ theme = "hyde"
       unsafe = true
 ```
 
-It typically took 18-25 seconds (sometimes up to 40s) to process 10K such files and a sizable corpus of static assets, even on rebuild.
+It typically took 10-25 seconds (sometimes up to 40s) to process 10K such files and a sizable corpus of static assets, even on rebuild with fully populated filesystem cache.
 
 ```shell
 /src/hugo-test/myblog(1)% hugo                                                                                                  74GB💾 1:04PM master✔✗
