@@ -1,6 +1,6 @@
 Title: Orion vs. Hugo
 Keywords: Orion, Hugo, SSG
-status: verified=46789
+status: draft
 Dependencies: *.md.en
 Categories: Orion
 
@@ -242,7 +242,7 @@ Total in 24974 ms
 
 ```
 
-When compared to @SunStarSys/orion build `./test.sh ooo` which [consistently builds over 20K such files, with the same corpus of static assets (that Orion gzip compresses automatically, unlike Hugo), in roughly the same time](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), it seems there is **performance parity** between them on the least complex yet very large websites like <https://www.OpenOffice.org>.
+When compared to @SunStarSys/orion build `./test.sh ooo` which [consistently builds over 20K such files, with the same corpus of static assets (that Orion gzip compresses automatically, unlike Hugo), in roughly the same time](https://github.com/SunStarSys/orion/actions/runs/28391229484/job/84118579251#:~:text=44556), it seems there is **performance parity** between them on the least complex yet very large websites like <https://www.OpenOffice.org>.
 
 However, [Orion](https://www.sunstarsys.com/orion/) is capable of so much more if you need true flexibility and correct incremental build support, because **we think you know what works best for your site, unlike the rest of the overhyped SSG community around Hugo.**
 
