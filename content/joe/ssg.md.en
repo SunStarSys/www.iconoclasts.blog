@@ -1,6 +1,6 @@
 Title: Orion vs. Hugo
 Keywords: Orion, Hugo, SSG
-status: verified=46706
+status: verified=46773
 Dependencies: *.md.en
 Categories: Orion
 
@@ -204,7 +204,45 @@ theme = "hyde"
       unsafe = true
 ```
 
-It typically took 18-25 seconds (sometimes up to 40s) to process 10K such files and a sizable corpus of static assets, even on rebuild.  When compared to @SunStarSys/orion build `./test.sh ooo` which [consistently builds over 20K such files, with the same corpus of static assets, in roughly the same time](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), it seems there is **performance parity** between them on the least complex yet very large websites like <https://www.OpenOffice.org>.
+It typically took 18-25 seconds (sometimes up to 40s) to process 10K such files and a sizable corpus of static assets, even on rebuild.
+
+```shell
+/src/hugo-test/myblog(1)% hugo                                                                                                  74GB💾 1:04PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+
+                  │  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 18730 ms
+19s ~/src/hugo-test/myblog% hugo                                                                                                     72GB💾 1:05PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+
+                  │  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 24974 ms
+
+```
+
+When compared to @SunStarSys/orion build `./test.sh ooo` which [consistently builds over 20K such files, with the same corpus of static assets, in roughly the same time](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), it seems there is **performance parity** between them on the least complex yet very large websites like <https://www.OpenOffice.org>.
 
 However, [Orion](https://www.sunstarsys.com/orion/) is capable of so much more if you need true flexibility and correct incremental build support, because **we think you know what works best for your site, unlike the rest of the overhyped SSG community around Hugo.**
 
