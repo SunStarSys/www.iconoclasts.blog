@@ -1,6 +1,6 @@
 Title: Orion vs. Hugo
 Keywords: Orion, Hugo, SSG
-status: verified=46773
+status: verified=46777
 Dependencies: *.md.en
 Categories: Orion
 
@@ -156,7 +156,7 @@ trunk/
 
 Orion's Dependency graph is **almost never a DAG**. And it is **an essential component of the build**, not merely a half-backed optimization the way it is with Hugo.
 
-For example, this webpage's markdown source itself has a `Dependencies: *.md{{lang}}` header (you can see it in the above Editor screenshot of it, or by clicking on the [:fa-github: source](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) link where the title and author information is displayed) which is used by Orion to generate the items under the "Index" header in the footer of the page.
+For example, this webpage's markdown source itself has a `Dependencies: *.md{{lang}}` header (you can see it in the above Editor screenshot of it, or by clicking on the [:fa-github: source](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}#L4) link where the title and author information is displayed) which is used by Orion to generate the items under the "Index" header in the footer of the page.
 All of the files in this directory are similarly configured to cross-reference each other!
 
 <span class="text-success">DAG is a gross oversimplification of the content dependency requirements in real-world use cases.</span>
