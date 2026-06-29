@@ -2,7 +2,7 @@
 categories: オリオン
 dependencies: '*.md.ja'
 keywords: Orion、Hugo、SSG
-status: 確認済み=46702
+status: 確認済み=46797
 title: オリオンvsフーゴ
 ---
 
@@ -158,7 +158,7 @@ treeView-beta
 
 OrionのDependencyグラフは**ほとんどDAGではありません**。また、**ビルドに不可欠な要素**であり、Hugoの場合と同様に、単にハーフバックされた最適化ではありません。
 
-たとえば、このWebページのマークダウン・ソース自体には、`Dependencies: *.md{{lang}}` ヘッダー(上記エディタのスクリーンショットまたはクリックで確認できます) [:fa-github: ソース](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) タイトルと作者の情報が表示されるリンク)は、Orionによって次の項目を生成するために使用されます。"インデックス" ページのフッターのヘッダー。
+たとえば、このWebページのマークダウン・ソース自体には、`Dependencies: *.md{{lang}}` ヘッダー(上記エディタのスクリーンショットまたはクリックで確認できます) [:fa-github: ソース](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}#L4) タイトルと作者の情報が表示されるリンク)は、Orionによって次の項目を生成するために使用されます。"インデックス" ページのフッターのヘッダー。
 このディレクトリ内のすべてのファイルは、相互に相互参照するように同様に構成されています。
 
 <span class="text-success">DAGは、実際のユース・ケースにおけるコンテンツ依存性の要件を大幅に単純化することです。</span>
@@ -206,7 +206,43 @@ theme = "hyde"
       unsafe = true
 ```
 
-通常、このようなファイルの10Kを処理するのに8秒から12秒(30sまで)かかりました。@SunStarSys/orionビルドと比較した場合`./test.sh ooo` 対象[一貫して20K以上のファイルを約2-3xで構築します。](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556)のように、最も複雑で非常に大きなウェブサイトでは、それらの間に**パフォーマンスパリティ**があるようです。<https://www.OpenOffice.org>.
+通常、11Kファイル、および完全に移入されたファイル・システム・キャッシュを使用して再構築する場合でも、静的アセットの大きさのコーパスを処理するには、10-25秒(40sまで)かかりました。
+
+```shell
+/src/hugo-test/myblog(1)% hugo                                                                                                  74GB💾 1:04PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 18730 ms
+19s ~/src/hugo-test/myblog% hugo                                                                                                     72GB💾 1:05PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 24974 ms
+
+```
+
+@SunStarSys/orionビルドと比較した場合`./test.sh ooo` 対象[静的アセットの同じコーパス(Hugoとは異なり、Orion gzipは自動的に圧縮する)を使用して、20K以上のファイルをほぼ同時に構築します。](https://github.com/SunStarSys/orion/actions/runs/28391229484/job/84118579251#:~:text=44556)のように、最も複雑で非常に大きなウェブサイトでは、それらの間に**パフォーマンスパリティ**があるようです。<https://www.OpenOffice.org>.
 
 ただし、[オリオン](https://www.sunstarsys.com/orion/) 本当の柔軟性と正しいインクリメンタル・ビルド・サポートが必要な場合、さらに多くのことが可能です。**Hugo周辺の過剰なSSGコミュニティとは異なり、お客様のサイトに最適なものがわかっていると思います。**
 

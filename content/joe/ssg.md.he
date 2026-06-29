@@ -2,7 +2,7 @@
 categories: אוריון
 dependencies: '*.md.he'
 keywords: אוריון, הוגו, SSG
-status: אומתו 46702
+status: אומתו 46797
 title: אוריון נגד הוגו
 ---
 
@@ -158,7 +158,7 @@ treeView-beta
 
 גרף התלות של אוריון הוא **כמעט אף פעם לא DAG**. וזה **מרכיב חיוני של הבנייה**, לא רק אופטימיזציה חצי מגובה כפי שהוא עם הוגו.
 
-לדוגמה, למקור markdown של דף אינטרנט זה עצמו יש `Dependencies: *.md{{lang}}` כותרת עליונה (ניתן לראות אותה בצילום המסך של העורך לעיל, או על-ידי לחיצה על [:fa-github: מקור](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) קישור שבו מוצגים פרטי הכותרת והמחבר) המשמשים את אוריון ליצירת הפריטים תחת "אינדקס" כותרת עליונה בכותרת התחתונה של הדף.
+לדוגמה, למקור markdown של דף אינטרנט זה עצמו יש `Dependencies: *.md{{lang}}` כותרת עליונה (ניתן לראות אותה בצילום המסך של העורך לעיל, או על-ידי לחיצה על [:fa-github: מקור](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}#L4) קישור שבו מוצגים פרטי הכותרת והמחבר) המשמשים את אוריון ליצירת הפריטים תחת "אינדקס" כותרת עליונה בכותרת התחתונה של הדף.
 כל הקבצים בספרייה זו מוגדרים באופן דומה להפניה מקושרת זה לזה!
 
 <span class="text-success">DAG הוא פשט יתר ברוטו של דרישות תלות התוכן בתרחישי שימוש בעולם האמיתי.</span>
@@ -206,7 +206,43 @@ theme = "hyde"
       unsafe = true
 ```
 
-בדרך כלל נדרשו 8-12 שניות (לפעמים עד 30s) כדי לעבד 10K קבצים כאלה.  בהשוואה ל-@SunStarSys/orion build `./test.sh ooo` אשר [בונה באופן עקבי מעל 20K קבצים כאלה בערך 2-3x הזמן](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556)נראה שיש **זוגיות ביצועים** ביניהם באתרים הפחות מורכבים אך גדולים כמו <https://www.OpenOffice.org>.
+בדרך כלל נדרשו 10-25 שניות (לפעמים עד 40s) כדי לעבד 11K קבצים כאלה ומאגר גדול של נכסים סטטיים, אפילו בבנייה מחדש עם מטמון מערכת קבצים מאוכלס במלואו.
+
+```shell
+/src/hugo-test/myblog(1)% hugo                                                                                                  74GB💾 1:04PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 18730 ms
+19s ~/src/hugo-test/myblog% hugo                                                                                                     72GB💾 1:05PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 24974 ms
+
+```
+
+בהשוואה ל-@SunStarSys/orion build `./test.sh ooo` אשר [בונה בעקביות מעל 20K קבצים כאלה, עם אותו מאגר של נכסים סטטיים (שאוריון gzip דוחס באופן אוטומטי, בניגוד הוגו), בערך באותו זמן](https://github.com/SunStarSys/orion/actions/runs/28391229484/job/84118579251#:~:text=44556)נראה שיש **זוגיות ביצועים** ביניהם באתרים הפחות מורכבים אך גדולים כמו <https://www.OpenOffice.org>.
 
 עם זאת, [אוריון](https://www.sunstarsys.com/orion/) הוא מסוגל להרבה יותר אם אתה זקוק לגמישות אמיתית ולתמיכה בבנייה תוספתית נכונה, כי **אנחנו חושבים שאתה יודע מה עובד הכי טוב עבור האתר שלך, בניגוד לשאר קהילת SSG שהשתרעה סביב הוגו.**
 

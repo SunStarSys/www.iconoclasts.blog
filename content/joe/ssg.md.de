@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.de'
 keywords: Orion, Hugo, SSG
-status: überprüft=46702
+status: überprüft=46797
 title: Orion gegen Hugo
 ---
 
@@ -158,7 +158,7 @@ Stamm/
 
 Orions Dependency Graph ist **fast nie eine DAG**. Und es ist **eine wesentliche Komponente des Builds**, nicht nur eine halb unterstützte Optimierung, wie es bei Hugo ist.
 
-Zum Beispiel hat die Markdown-Quelle dieser Webseite selbst eine `Dependencies: *.md{{lang}}` Header (Sie können es im obigen Editor-Screenshot sehen, oder indem Sie auf die [:fa-github: Quelle](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) Link, wo der Titel und die Autoreninformationen angezeigt werden), der von Orion verwendet wird, um die Elemente unter dem "Index" Header in der Fußzeile der Seite.
+Zum Beispiel hat die Markdown-Quelle dieser Webseite selbst eine `Dependencies: *.md{{lang}}` Header (Sie können es im obigen Editor-Screenshot sehen, oder indem Sie auf die [:fa-github: Quelle](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}#L4) Link, wo der Titel und die Autoreninformationen angezeigt werden), der von Orion verwendet wird, um die Elemente unter dem "Index" Header in der Fußzeile der Seite.
 Alle Dateien in diesem Verzeichnis sind ähnlich konfiguriert, um sich gegenseitig zu referenzieren!
 
 <span class="text-success">Die DAG ist eine grobe Übersimplifizierung der Anforderungen an die Inhaltsabhängigkeit in realen Anwendungsfällen.</span>
@@ -206,7 +206,43 @@ theme = "hyde"
       unsafe = true
 ```
 
-Normalerweise dauerte es 8-12 Sekunden (manchmal bis zu 30s), um 10K-Dateien zu verarbeiten.  Im Vergleich zu @SunStarSys/orion build `./test.sh ooo` die [erstellt konsistent über 20K solche Dateien in etwa 2-3x der Zeit](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556)Es scheint, dass es **Performanceparität** zwischen ihnen auf den am wenigsten komplexen, aber sehr großen Websites wie <https://www.OpenOffice.org>.
+In der Regel dauerte es 10-25 Sekunden (manchmal bis zu 40s), um 11K solche Dateien und ein beträchtliches Korpus statischer Assets zu verarbeiten, selbst bei der Neuerstellung mit vollständig aufgefülltem Dateisystemcache.
+
+```shell
+/src/hugo-test/myblog(1)% hugo                                                                                                  74GB💾 1:04PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 18730 ms
+19s ~/src/hugo-test/myblog% hugo                                                                                                     72GB💾 1:05PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 24974 ms
+
+```
+
+Im Vergleich zu @SunStarSys/orion build `./test.sh ooo` die [erstellt konsistent über 20K solche Dateien mit demselben Korpus statischer Assets (die Orion gzip im Gegensatz zu Hugo automatisch komprimiert), in etwa zur gleichen Zeit](https://github.com/SunStarSys/orion/actions/runs/28391229484/job/84118579251#:~:text=44556)Es scheint, dass es **Performanceparität** zwischen ihnen auf den am wenigsten komplexen, aber sehr großen Websites wie <https://www.OpenOffice.org>.
 
 Jedoch [Orion](https://www.sunstarsys.com/orion/) ist in der Lage, so viel mehr, wenn Sie echte Flexibilität und korrekte inkrementelle Build-Unterstützung benötigen, denn **wir glauben, dass Sie wissen, was am besten für Ihre Website funktioniert, im Gegensatz zum Rest der überhypten SSG-Community um Hugo.**
 

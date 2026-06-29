@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.fr'
 keywords: Orion, Hugo, SSG
-status: vérifié=46702
+status: vérifié=46797
 title: Orion contre Hugo
 ---
 
@@ -158,7 +158,7 @@ tronc/
 
 Le graphique de dépendance d'Orion est **presque jamais un DAG**. Et c'est **un élément essentiel de la construction**, pas seulement une optimisation à moitié soutenue comme c'est le cas avec Hugo.
 
-Par exemple, la source de démarque de cette page Web a elle-même une `Dependencies: *.md{{lang}}` en-tête (vous pouvez le voir dans la capture d'écran ci-dessus de l'éditeur, ou en cliquant sur le [:fa-github: source](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) lien où les informations sur le titre et l'auteur sont affichées) qui est utilisé par Orion pour générer les éléments sous "Index" en-tête dans le pied de page de la page.
+Par exemple, la source de démarque de cette page Web a elle-même une `Dependencies: *.md{{lang}}` en-tête (vous pouvez le voir dans la capture d'écran ci-dessus de l'éditeur, ou en cliquant sur le [:fa-github: source](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}#L4) lien où les informations sur le titre et l'auteur sont affichées) qui est utilisé par Orion pour générer les éléments sous "Index" en-tête dans le pied de page de la page.
 Tous les fichiers de ce répertoire sont configurés de la même manière pour faire référence les uns aux autres !
 
 <span class="text-success">Le DAG est une simplification excessive des exigences de dépendance de contenu dans les cas d'utilisation réels.</span>
@@ -206,7 +206,43 @@ theme = "hyde"
       unsafe = true
 ```
 
-En général, le traitement de ces fichiers par 10K a pris entre 8 et 12 secondes (parfois jusqu'à 30s).  Comparé au build @SunStarSys/orion `./test.sh ooo` qui [construit systématiquement sur 20K ces fichiers dans environ 2-3x le temps](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), il semble qu'il y ait **parité de performances** entre eux sur les sites Web les moins complexes mais très volumineux comme <https://www.OpenOffice.org>.
+Il a généralement fallu 10 à 25 secondes (parfois jusqu'à 40s) pour traiter 11K de tels fichiers et un corpus important de ressources statiques, même lors de la reconstruction avec un cache de système de fichiers entièrement rempli.
+
+```shell
+/src/hugo-test/myblog(1)% hugo                                                                                                  74GB💾 1:04PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 18730 ms
+19s ~/src/hugo-test/myblog% hugo                                                                                                     72GB💾 1:05PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 24974 ms
+
+```
+
+Comparé au build @SunStarSys/orion `./test.sh ooo` qui [construit systématiquement sur 20K de tels fichiers, avec le même corpus d'actifs statiques (que Orion gzip compresse automatiquement, contrairement à Hugo), à peu près en même temps](https://github.com/SunStarSys/orion/actions/runs/28391229484/job/84118579251#:~:text=44556), il semble qu'il y ait **parité de performances** entre eux sur les sites Web les moins complexes mais très volumineux comme <https://www.OpenOffice.org>.
 
 Cependant, [Orion](https://www.sunstarsys.com/orion/) est capable de bien plus si vous avez besoin d'une véritable flexibilité et d'un support de construction incrémentiel correct, car **nous pensons que vous savez ce qui fonctionne le mieux pour votre site, contrairement au reste de la communauté SSG surestimée autour d'Hugo.**
 

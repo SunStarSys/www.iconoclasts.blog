@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.pt-BR'
 keywords: Orion, Hugo, SSG
-status: verificado=46702
+status: verificado=46797
 title: Orion vs. Hugo
 ---
 
@@ -158,7 +158,7 @@ tronco/
 
 O gráfico de Dependência de Orion é **quase nunca um DAG**. E é **um componente essencial da construção**, não apenas uma otimização semi-apoiada da maneira que é com Hugo.
 
-Por exemplo, a própria origem de markdown desta página tem um `Dependencies: *.md{{lang}}` cabeçalho (você pode vê-lo na captura de tela acima Editor dele, ou clicando no [:fa-github: origem](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) link onde as informações do título e do autor são exibidas) que é usado pelo Orion para gerar os itens sob o "Índice" cabeçalho no rodapé da página.
+Por exemplo, a própria origem de markdown desta página tem um `Dependencies: *.md{{lang}}` cabeçalho (você pode vê-lo na captura de tela acima Editor dele, ou clicando no [:fa-github: origem](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}#L4) link onde as informações do título e do autor são exibidas) que é usado pelo Orion para gerar os itens sob o "Índice" cabeçalho no rodapé da página.
 Todos os arquivos neste diretório são igualmente configurados para referência cruzada entre si!
 
 <span class="text-success">DAG é uma simplificação excessiva dos requisitos de dependência de conteúdo em casos de uso do mundo real.</span>
@@ -206,7 +206,43 @@ theme = "hyde"
       unsafe = true
 ```
 
-Normalmente, levou de 8 a 12 segundos (às vezes até 30s) para processar 10K tais arquivos.  Quando comparado ao build @SunStarSys/orion `./test.sh ooo` qual [constrói consistentemente sobre 20K tais arquivos em aproximadamente 2-3x o tempo](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), parece que existe **paridade de desempenho** entre eles em sites menos complexos, mas muito grandes como <https://www.OpenOffice.org>.
+Normalmente, levava de 10 a 25 segundos (às vezes até 40s) para processar 11K tais arquivos e um corpus considerável de ativos estáticos, mesmo na reconstrução com cache de sistema de arquivos totalmente preenchido.
+
+```shell
+/src/hugo-test/myblog(1)% hugo                                                                                                  74GB💾 1:04PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 18730 ms
+19s ~/src/hugo-test/myblog% hugo                                                                                                     72GB💾 1:05PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 24974 ms
+
+```
+
+Quando comparado ao build @SunStarSys/orion `./test.sh ooo` qual [constrói consistentemente sobre 20K tais arquivos, com o mesmo corpus de ativos estáticos (que Orion gzip comprime automaticamente, ao contrário de Hugo), em aproximadamente o mesmo tempo](https://github.com/SunStarSys/orion/actions/runs/28391229484/job/84118579251#:~:text=44556), parece que existe **paridade de desempenho** entre eles em sites menos complexos, mas muito grandes como <https://www.OpenOffice.org>.
 
 No entanto, [Orion](https://www.sunstarsys.com/orion/) é capaz de muito mais se você precisar de verdadeira flexibilidade e corrigir o suporte incremental de construção, porque **nós pensamos que você sabe o que funciona melhor para o seu site, ao contrário do resto da comunidade SSG exagerada em torno de Hugo.**
 

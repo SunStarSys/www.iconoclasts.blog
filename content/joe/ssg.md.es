@@ -2,7 +2,7 @@
 categories: Orión
 dependencies: '*.md.es'
 keywords: Orión, Hugo, SSG
-status: verificado=46702
+status: verificado=46797
 title: Orión vs. Hugo
 ---
 
@@ -158,7 +158,7 @@ tronco/
 
 El gráfico de dependencias de Orion es **casi nunca un DAG**. Y es **un componente esencial de la construcción**, no solo una optimización a medio respaldo de la forma en que lo es con Hugo.
 
-Por ejemplo, el origen de Markdown de esta página web tiene un `Dependencies: *.md{{lang}}` encabezado (puede verlo en la captura de pantalla anterior del Editor, o haciendo clic en la [:fa-github: origen](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) enlace donde se muestra el título y la información del autor) que utiliza Orion para generar los elementos bajo el "Índice" encabezado en el pie de página de la página.
+Por ejemplo, el origen de Markdown de esta página web tiene un `Dependencies: *.md{{lang}}` encabezado (puede verlo en la captura de pantalla anterior del Editor, o haciendo clic en la [:fa-github: origen](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}#L4) enlace donde se muestra el título y la información del autor) que utiliza Orion para generar los elementos bajo el "Índice" encabezado en el pie de página de la página.
 Todos los archivos de este directorio están configurados de manera similar para hacer referencias cruzadas entre sí.
 
 <span class="text-success">DAG es una simplificación excesiva de los requisitos de dependencia de contenido en casos de uso reales.</span>
@@ -206,7 +206,43 @@ theme = "hyde"
       unsafe = true
 ```
 
-Normalmente, se tarda entre 8 y 12 segundos (a veces hasta 30s) en procesar 10K dichos archivos.  En comparación con la creación de @SunStarSys/orion `./test.sh ooo` que [Construye consistentemente sobre 20K tales archivos en aproximadamente 2-3x el tiempo](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), parece que hay una **paridad de rendimiento** entre ellos en sitios web menos complejos pero muy grandes como <https://www.OpenOffice.org>.
+Normalmente, se tarda entre 10 y 25 segundos (a veces hasta 40s) en procesar 11K dichos archivos y un corpus considerable de activos estáticos, incluso al volver a crearlos con la caché del sistema de archivos totalmente completa.
+
+```shell
+/src/hugo-test/myblog(1)% hugo                                                                                                  74GB💾 1:04PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 18730 ms
+19s ~/src/hugo-test/myblog% hugo                                                                                                     72GB💾 1:05PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 24974 ms
+
+```
+
+En comparación con la creación de @SunStarSys/orion `./test.sh ooo` que [Construye consistentemente sobre 20K tales archivos, con el mismo corpus de activos estáticos (que Orion gzip comprime automáticamente, a diferencia de Hugo), aproximadamente al mismo tiempo.](https://github.com/SunStarSys/orion/actions/runs/28391229484/job/84118579251#:~:text=44556), parece que hay una **paridad de rendimiento** entre ellos en sitios web menos complejos pero muy grandes como <https://www.OpenOffice.org>.
 
 Sin embargo, [Orión](https://www.sunstarsys.com/orion/) es capaz de mucho más si necesita una verdadera flexibilidad y un soporte de compilación incremental correcto, porque **creemos que sabe lo que funciona mejor para su sitio, a diferencia del resto de la comunidad de SSG sobrecargada alrededor de Hugo.**
 

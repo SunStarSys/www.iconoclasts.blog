@@ -2,7 +2,7 @@
 categories: Orion
 dependencies: '*.md.sv'
 keywords: Orion, Hugo, SSG
-status: verifierad=46702
+status: verifierad=46797
 title: Orion vs. Hugo
 ---
 
@@ -158,7 +158,7 @@ bål/
 
 Orions beroendediagram är **nästan aldrig en DAG**. Och det är **en viktig del av byggandet**, inte bara en halvbackad optimering som det är med Hugo.
 
-Till exempel har den här webbplatsens nedsättningskälla själv en `Dependencies: *.md{{lang}}` sidhuvud (du kan se det i ovanstående Editor skärmdump av det, eller genom att klicka på [:fa-github: källa](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) länk där titel- och författarinformation visas) som används av Orion för att generera objekten under "Index" sidhuvud i sidans sidfot.
+Till exempel har den här webbplatsens nedsättningskälla själv en `Dependencies: *.md{{lang}}` sidhuvud (du kan se det i ovanstående Editor skärmdump av det, eller genom att klicka på [:fa-github: källa](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}#L4) länk där titel- och författarinformation visas) som används av Orion för att generera objekten under "Index" sidhuvud i sidans sidfot.
 Alla filer i den här katalogen är på samma sätt konfigurerade att korsreferera varandra!
 
 <span class="text-success">DAG är en bruttoförenkling av kraven på innehållsberoende i verkliga användningsfall.</span>
@@ -206,7 +206,43 @@ theme = "hyde"
       unsafe = true
 ```
 
-Det tog vanligtvis 8-12 sekunder (ibland upp till 30s) att bearbeta 10K sådana filer.  Jämfört med @SunStarSys/orion build `./test.sh ooo` vilket [konsekvent bygger över 20K sådana filer i ungefär 2-3x tiden](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), det verkar som om det finns **prestanda paritet** mellan dem på de minst komplexa men mycket stora webbplatser som <https://www.OpenOffice.org>.
+Det tog vanligtvis 10-25 sekunder (ibland upp till 40s) att bearbeta 11K sådana filer och en betydande korpus av statiska tillgångar, även vid ombyggnad med fullt ifyllt filsystemcache.
+
+```shell
+/src/hugo-test/myblog(1)% hugo                                                                                                  74GB💾 1:04PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 18730 ms
+19s ~/src/hugo-test/myblog% hugo                                                                                                     72GB💾 1:05PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 24974 ms
+
+```
+
+Jämfört med @SunStarSys/orion build `./test.sh ooo` vilket [konsekvent bygger över 20K sådana filer, med samma korpus av statiska tillgångar (som Orion gzip komprimerar automatiskt, till skillnad från Hugo), på ungefär samma gång](https://github.com/SunStarSys/orion/actions/runs/28391229484/job/84118579251#:~:text=44556), det verkar som om det finns **prestanda paritet** mellan dem på de minst komplexa men mycket stora webbplatser som <https://www.OpenOffice.org>.
 
 Men, [Orion](https://www.sunstarsys.com/orion/) är kapabel till så mycket mer om du behöver sann flexibilitet och korrekt inkrementell byggstöd, eftersom **vi tror att du vet vad som fungerar bäst för din webbplats, till skillnad från resten av den överhypade SSG-gemenskapen runt Hugo.**
 

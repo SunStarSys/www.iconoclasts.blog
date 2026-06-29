@@ -2,7 +2,7 @@
 categories: 오리온
 dependencies: '*.md.ko'
 keywords: 오리온, 휴고, SSG
-status: 확인=46702
+status: 확인=46797
 title: 오리온 vs. 휴고
 ---
 
@@ -158,7 +158,7 @@ treeView-beta
 
 Orion의 종속성 그래프는 **거의 DAG**입니다. 그리고 그것은 **빌드의 필수 구성 요소입니다**, 단지 Hugo와 함께하는 방식의 반 뒷받침 최적화가 아닙니다.
 
-예를 들어, 이 웹 페이지의 마크다운 소스 자체에는 `Dependencies: *.md{{lang}}` 헤더(위의 Editor 스크린샷에서 보거나 [:fa-github: 소스](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) 제목 및 작성자 정보가 표시되는 링크) Orion이 아래 항목을 생성하는 데 사용하는 링크 "인덱스" 머리글은 페이지 바닥글에 있습니다.
+예를 들어, 이 웹 페이지의 마크다운 소스 자체에는 `Dependencies: *.md{{lang}}` 헤더(위의 Editor 스크린샷에서 보거나 [:fa-github: 소스](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}#L4) 제목 및 작성자 정보가 표시되는 링크) Orion이 아래 항목을 생성하는 데 사용하는 링크 "인덱스" 머리글은 페이지 바닥글에 있습니다.
 이 디렉토리의 모든 파일은 서로 상호 참조하도록 유사하게 구성되어 있습니다!
 
 <span class="text-success">DAG는 실제 사용 사례에서 콘텐츠 종속성 요구 사항을 크게 간소화합니다.</span>
@@ -206,7 +206,43 @@ theme = "hyde"
       unsafe = true
 ```
 
-일반적으로 10K 파일을 처리하는 데 8-12초(때로는 최대 30s)가 걸렸습니다.  @SunStarSys/orion 빌드와 비교될 때 `./test.sh ooo` 대상 [대략 2-3x 시간에 20K 이상 그런 파일을 일관되게 건설하십시오](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556), 그것은 가장 복잡하지만 매우 큰 웹 사이트에서 그들 사이에 **성능 패리티**가있는 것 같습니다 <https://www.OpenOffice.org>.
+완전히 채워진 파일 시스템 캐시로 재구축하는 경우에도 일반적으로 10-25초(때로는 40s까지)가 11K 파일과 정적 자산의 큰 코퍼스를 처리하는 데 걸렸습니다.
+
+```shell
+/src/hugo-test/myblog(1)% hugo                                                                                                  74GB💾 1:04PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 18730 ms
+19s ~/src/hugo-test/myblog% hugo                                                                                                     72GB💾 1:05PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 24974 ms
+
+```
+
+@SunStarSys/orion 빌드와 비교될 때 `./test.sh ooo` 대상 [정적 자산(Hugo와 달리 Orion gzip이 자동으로 압축됨)의 동일한 코퍼스로 20K 이상의 파일을 일관되게 만듭니다.](https://github.com/SunStarSys/orion/actions/runs/28391229484/job/84118579251#:~:text=44556), 그것은 가장 복잡하지만 매우 큰 웹 사이트에서 그들 사이에 **성능 패리티**가있는 것 같습니다 <https://www.OpenOffice.org>.
 
 그러나 [오리온](https://www.sunstarsys.com/orion/) 진정한 유연성과 올바른 증분 빌드 지원이 필요한 경우 훨씬 더 많은 기능을 할 수 있습니다. **우리는 Hugo 주변의 다른 최우선 SSG 커뮤니티와 달리 귀하의 사이트에 가장 적합한 것을 알고 있다고 생각합니다.**
 

@@ -2,7 +2,7 @@
 categories: 奧里昂
 dependencies: '*.md.zh-TW'
 keywords: Orion、Hugo、SSG
-status: 驗證 =46702
+status: 驗證 =46797
 title: Orion vs. Hugo
 ---
 
@@ -158,7 +158,7 @@ treeView-beta
 
 Orion 的「相依性」圖表 **幾乎不是 DAG**。此外，這是 **建置** 的基本元件，不只是以半功倍的最佳化方式與 Hugo 搭配使用。
 
-例如，此網頁的 Markdown 來源本身具有一個`Dependencies: *.md{{lang}}` 表頭 (您可以在上方的「編輯器」螢幕擷取畫面中看到，或按一下[:fa-github: 來源](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}) Orion 用來產生下列項目之標題和作者資訊的連結"索引" 頁面頁尾中的頁首。
+例如，此網頁的 Markdown 來源本身具有一個`Dependencies: *.md{{lang}}` 表頭 (您可以在上方的「編輯器」螢幕擷取畫面中看到，或按一下[:fa-github: 來源](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}#L4) Orion 用來產生下列項目之標題和作者資訊的連結"索引" 頁面頁尾中的頁首。
 此目錄中的所有檔案都類似設定成交互參照！
 
 <span class="text-success">在實際使用案例中，DAG 是內容相依性需求的總監督。</span>
@@ -206,7 +206,43 @@ theme = "hyde"
       unsafe = true
 ```
 
-通常需要 8-12 秒 (有時最多 30s) 來處理 10K 這類檔案。與 @SunStarSys/orion 組建比較時`./test.sh ooo` 其中[在大約 2-3x 的時間內，一致地建立超過 20K 個此類檔案](https://github.com/SunStarSys/orion/actions/runs/28297700630/job/83840391681#:~:text=44556)，它們在最複雜但非常大的網站上似乎有 **效能同位 **。<https://www.OpenOffice.org>.
+通常需要 10-25 秒 (有時最多 40s) 來處理 11K 這類檔案和大量的靜態資產語料庫，即使是在完全填入的檔案系統快取重建時也是如此。
+
+```shell
+/src/hugo-test/myblog(1)% hugo                                                                                                  74GB💾 1:04PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 18730 ms
+19s ~/src/hugo-test/myblog% hugo                                                                                                     72GB💾 1:05PM master✔✗
+Start building sites …
+hugo v0.154.5+extended linux/amd64 BuildDate=2026-01-13T19:59:22Z VendorInfo=ubuntu:0.154.5-1
+
+│  EN
+──────────────────┼───────
+ Pages            │ 11020
+ Paginator pages  │     0
+ Non-page files   │     2
+ Static files     │ 15979
+ Processed images │     0
+ Aliases          │     0
+ Cleaned          │     0
+
+Total in 24974 ms
+
+```
+
+與 @SunStarSys/orion 組建比較時`./test.sh ooo` 其中[持續建立超過 20K 這類檔案，其靜態資產的核心 (Orion gzip 會自動壓縮，與 Hugo 不同) 大致相同的時間](https://github.com/SunStarSys/orion/actions/runs/28391229484/job/84118579251#:~:text=44556)，它們在最複雜但非常大的網站上似乎有 **效能同位 **。<https://www.OpenOffice.org>.
 
 然而，[奧里昂](https://www.sunstarsys.com/orion/) 如果您需要真正的彈性和正確的增量建置支援，可以有更多的功能，因為 **我們認為您知道最適合您的網站，與 Hugo 周圍的超高類型 SSG 社群不同。**
 
