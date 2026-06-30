@@ -1,6 +1,6 @@
 Title: Orion vs. Hugo
 Keywords: Orion, Hugo, SSG
-status: verified=46812
+status: verified=46867
 Dependencies: *.md.en
 Categories: Orion
 
@@ -18,7 +18,7 @@ Categories: Orion
 
 I understand that tech comparisons are a religious taboo in many circles.  The main point I'm trying to convey is that while [Orion](https://www.sunstarsys.com/orion/) is billed as an Enterprise Jamstack Wiki, it has many viable use-cases outside of that specific problem domain.
 
-However, the gist of this article is to represent Orion's Apache-Licensed SSG as *a better SSG than Hugo for you and your software engineering teams*.  It has more power, more performance, more core features, and a lot easier to customize. Plus it is [well-documented](https://www.sunstarsys.com/orion/api/) and has unlimited potential for true power users out there, just like you!
+However, the gist of this article is to represent Orion's Apache-Licensed SSG as *a better SSG than Hugo for you and your software engineering teams*.  It has more power, more performance, more core features, and is a lot easier to customize. Plus it is [well-documented](https://www.sunstarsys.com/orion/api/) and has unlimited potential for true power users out there, just like you!
 
 ## @SunStarSys/orion
 
@@ -154,7 +154,7 @@ trunk/
 
 *Orion natively tracks `fileB.md.en`'s dependency on `fileA.md.en` and will rebuild it whenever `fileA.md.en` is altered; and dependencies are supplementally configurable per document, not simply assumed by heirarchical structure.*
 
-Orion's Dependency graph is **almost never a DAG**. And it is **an essential component of the build**, not merely a half-backed optimization the way it is with Hugo.
+Orion's Dependency graph is **almost never a DAG**. And it is **an essential component of the build**, not merely a half-baked optimization the way it is with Hugo.
 
 For example, this webpage's markdown source itself has a `Dependencies: *.md{{lang}}` header (you can see it in the above Editor screenshot of it, or by clicking on the [:fa-github: source](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/ssg.md{{lang}}#L4) link where the title and author information is displayed) which is used by Orion to generate the items under the "Index" header in the footer of the page.
 All of the files in this directory are similarly configured to cross-reference each other!
