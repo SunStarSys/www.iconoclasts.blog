@@ -1,6 +1,6 @@
 Title: Orion vs. Hugo
 Keywords: Orion, Hugo, SSG
-status: verified=46867
+status: verified=46871
 Dependencies: *.md.en
 Categories: Orion
 
@@ -19,6 +19,10 @@ Categories: Orion
 I understand that tech comparisons are a religious taboo in many circles.  The main point I'm trying to convey is that while [Orion](https://www.sunstarsys.com/orion/) is billed as an Enterprise Jamstack Wiki, it has many viable use-cases outside of that specific problem domain.
 
 However, the gist of this article is to represent Orion's Apache-Licensed SSG as *a better SSG than Hugo for you and your software engineering teams*.  It has more power, more performance, more core features, and is a lot easier to customize. Plus it is [well-documented](https://www.sunstarsys.com/orion/api/) and has unlimited potential for true power users out there, just like you!
+
+Yes, *speed* matters!  But so does *flexibility, balance,* and *power*.  Unlike Hugo, Orion is capable of handling all four corners of your site's needs.  Not just one.
+
+With Orion's [IoC build API](https://www.sunstarsys.com/orion/api/build), you can tune sections of your site's build to prioritize any aspect it needs, and still enjoy the efficiency of true incremental builds for the bulk of your team's work.
 
 ## @SunStarSys/orion
 
