@@ -1,6 +1,6 @@
 Title: Apache CMS Retrospective
 Keywords: apache,OpenOffice,cms,wiki
-status: verified=39529
+status: verified=39663
 Dependencies: *.md.en
 Categories: Perl, Apache, ZFS, Orion
 
@@ -10,7 +10,7 @@ Categories: Perl, Apache, ZFS, Orion
 
 </div>
 
-The [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; invented in October 2010 by select members of The Apache Infrastructure Team ([Paul Querna (VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), and myself), [formally deprecated in June 2015](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb), and finally [decommissioned in January 2022](https://apache.org/dev/cms) &mdash; was always ahead of its time.  At its peak, over 100 Apache Top-Level Projects and over 4K users relied on it, but none more than Apache OpenOffice. Never was its prescient performance technology more clearly evidenced than in its content dependency management functionality in the early years of the Oracle donation of OpenOffice to Apache in June 2011.
+The [Bricolage-inspired](https://bricolagecms.org) [Apache CMS](https://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) &mdash; invented in October 2010 by select members of The Apache Infrastructure Team ([Paul Querna (VP)](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Ph.D. (SVN dev), and myself), [formally deprecated in June 2015](https://lists.apache.org/thread/zdv943hwmj7r4wms1pr1s4f72kvxd8gb), and finally [decommissioned in January 2022](https://apache.org/dev/cms) &mdash; was always ahead of its time.  At its peak, over 100 Apache Top-Level Projects and over 4K users relied on it, but none more than Apache OpenOffice. Never was its prescient performance technology more clearly evidenced than in its content dependency management functionality in the early years of the Oracle donation of OpenOffice to Apache in June 2011.
 
 To be clear: when others speak of dependency management, they are predominately concerned with software dependencies, not [content dependencies](dependencies). {# lede #}It all boils down to well-regulated content "includes" in the templating+build system{# lede #}, which is not at all the same thing as software deps.
 
