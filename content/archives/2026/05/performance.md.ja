@@ -1,0 +1,7 @@
+---
+dependencies: '*.md.ja'
+keywords: ~
+title: アプリケーション・パフォーマンス
+
+---
+{% ssi `/joe/performance.md.ja` %}
