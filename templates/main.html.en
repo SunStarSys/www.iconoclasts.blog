@@ -271,7 +271,7 @@
 			  }
 		   }
            catch (e) {
-              alert(e);
+              //alert(e);
 		   }
         }
 	}
@@ -290,7 +290,7 @@
               $("#watch").css("display", "inline");
       }
       catch (e) {
-          alert(e);
+          //alert(e);
       }
   }
 </script>
@@ -317,7 +317,7 @@
           }
       }
       catch (e) {
-          alert(e);
+          //alert(e);
       }
   }
 </script>

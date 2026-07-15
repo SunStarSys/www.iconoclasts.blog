@@ -144,7 +144,7 @@
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-        <img src="/images/edit.png" alt="Edit Icon" />
+        <i class="fa fa-file-pen text-danger"></i>
       </a>
   </div>
   <h1>{{ headers.title|removetags:"script style"|removeattrs:"on\w+ style class"|safe }}</h1>
@@ -176,7 +176,7 @@
 <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
 <script src="/editor.md/lib/codemirror/addons.min.js"></script>
 <script src="/editor.md/lib/codemirror/modes.min.js"></script>
-<script src="/editor.md/lib/copy-tex.js"></script>
+<script src="/editor.md/lib/copy-tex.min.js"></script>
 
 <script blocking="render" type="text/javascript">
     if (typeof(editormd) === "undefined") {
@@ -271,7 +271,7 @@ if (permission === "granted") {
 			  }
 		   }
            catch (e) {
-              alert(e);
+              //alert(e);
 		   }
         }
 	}
@@ -290,7 +290,7 @@ if (permission === "granted") {
               $("#watch").css("display", "inline");
       }
       catch (e) {
-          alert(e);
+          //alert(e);
       }
   }
 </script>
@@ -317,7 +317,7 @@ if (permission === "granted") {
           }
       }
       catch (e) {
-          alert(e);
+          //alert(e);
       }
   }
 </script>
