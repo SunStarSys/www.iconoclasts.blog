@@ -236,7 +236,7 @@ else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
     })
     document.cookie = "nonce={{nonce}}; path=/;";
-    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+    if (document.cookie.indexOf("creds") >= 0 && Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {
@@ -278,7 +278,7 @@ if (permission === "granted") {
 </script>
 
 <script async="" type="module">
-  if (document.cookie.indexOf("can_search") >= 0) {
+  if (document.cookie.indexOf("creds") >= 0) {
       const response = await fetch("/dynamic/search{{path|dirname}}/?regex=watch=;lang=.en;markdown_search=1;as_json=1",
                                    {credentials: 'same-origin'});
       try {
@@ -296,7 +296,7 @@ if (permission === "granted") {
 </script>
 
 <script async="" type="module">
-  if (document.cookie.indexOf("can_search") >= 0) {
+  if (document.cookie.indexOf("creds") >= 0) {
       const response = await fetch("/dynamic/search/?regex=recent={{path|urlencode}};lang={{lang}};markdown_search=1;as_json=1",
                                    {credentials: 'same-origin'});
       try {
