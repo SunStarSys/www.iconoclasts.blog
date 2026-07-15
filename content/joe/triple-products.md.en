@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=43557
+status: verified=46875
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -250,7 +250,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-We may hope that for any given $$k$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. Furthermore, the Formula <span class="eqno"></span> for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$. All of these aspects remain unknown.
+We may hope that for any given $$k>0$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. Furthermore, the Formula <span class="eqno"></span> for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$.
+
+It turns out that the above "hope" follows from the density of the squares of Laplace eigenfunctions in the positive cone of $$L^2(M)$$ (any eigenfunction $$e^k$$ can be written as the difference of two such elements, which establishes the hope by contradiction). However, the veracity of Formula <span class="eqno"></span> is unknown to the author.
 
 Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into this conjecture:
 
@@ -258,10 +260,9 @@ Nevertheless, let us compute some relevant identities so some intrepid future re
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
-\frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\ 
+\frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\
 \inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
-
-\text {and so the quadratic form} \\
+\text {So the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
 \text{Now with }J \text{ real-analytic}\\
@@ -281,6 +282,16 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 ```
 
 Note: for the one-dimensional flat-tori case below, $$\tilde{Q}_k(e^i,e^j) = 0$$ since $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ is a true derivation.
+
+```math
+
+\sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}M^{j,k,r}e^\ell\\
+
+\sum_r M^{i,i,r}M^{k,k,r} = \sum_r |M^{i,k,r}|^2
+
+
+```
+
 
 ## Example
 
