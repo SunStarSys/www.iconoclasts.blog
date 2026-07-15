@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=46875
+status: draft
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -289,9 +289,8 @@ Note: for the one-dimensional flat-tori case below, $$\tilde{Q}_k(e^i,e^j) = 0$$
 
 \sum_r M^{i,i,r}M^{k,k,r} = \sum_r |M^{i,k,r}|^2
 
-
 ```
-
+The RHS of <span class="eqno"></span> is an invariant, and the LHS depends on the manifold and its eigenbasis. There's probably an inductive proof of the $$i$$-invariance of the "hope" through this equation, since the sum is concentrated on the terms near $$i$$ and $$k$$, but I haven't fleshed it out yet.
 
 ## Example
 
