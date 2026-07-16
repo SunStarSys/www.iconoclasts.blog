@@ -337,9 +337,10 @@ A proof of the $i$-invariance of the "hope" follows through this equation, since
 
 \subsection{Lemma}
 
-
 \begin{equation}
-|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \mathbb{C}\setminus \set{0} \ , \set{\sum_{k\leq K} (1 - \theta_k) A_k\ , \sum _{k\leq K}(1-\bar\theta_k) A_k} \subset \mathbb{R} \implies \theta_k = \pm 1 \  \forall k
+|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \mathbb{C}\setminus \set{0} \\
+\set{\sum_{k\leq K} (1 - \theta_k) A_k\ , \sum _{k\leq K}(1-\bar\theta_k) A_k} \subset \mathbb{R}\\
+\implies \theta_k = \pm 1 \  \forall k
 \end{equation}
 
 \subsection{Proof of Lemma}
@@ -363,7 +364,7 @@ We can therefore reduce both sides of every line in Equation~\ref{eqn-16} to $0$
 \sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
 \end{equation}
 
-
+has LHS and RHS both termwise independent of $*\in\set{0,1}^\mathbb{N}$.
 
 Corollary~\ref{coro-1} follows from this and the prior observation that the algebraic multiplication operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree on squares of eigenfunctions, the span of which is also dense in $L^2(M,g)$, so they agree everywhere.
 
