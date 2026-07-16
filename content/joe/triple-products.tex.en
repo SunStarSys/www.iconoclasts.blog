@@ -321,7 +321,7 @@ We can therefore reduce both sides of every line in Equation~\ref{eqn-16} to $0$
 \sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
 \end{equation}
 
-has LHS and RHS both termwise independent of $*\in\set{0,1}^\mathbb{N}$.
+has LHS and RHS both termwise independent of $\*\in\set{0,1}^\mathbb{N}$.
 
 Corollary~\ref{coro-1} follows from this and the prior observation that the algebraic multiplication operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree on squares of eigenfunctions, the span of which is also dense in $L^2(M,g)$, so they agree everywhere.
 
