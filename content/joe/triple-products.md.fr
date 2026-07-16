@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=49163
+status: vérifié=49229
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -71,12 +71,27 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 <div class="card border-dark">
   <div class="card-header">
 
-#### Conjecture
+#### Corollaire 1
 
 </div>
   <div class="card-body">
 
-Si chaque valeur propre a une multiplicité $$1$$, étant donné une paire de valeurs propres préservant les bases orthonormes telles que décrites dans l'hypothèse du théorème, les collecteurs sont isométriques si et seulement si $$\set{M^{i,j,k}}$$ pour une base convient, jusqu'à la valeur absolue dans les termes individuels, avec l'autre base.
+Étant donné une paire de valeurs propres préservant les bases orthonormes telles que décrites dans l'hypothèse du théorème, les collecteurs sont isométriques si $$\set{M^{i,i,k}}$$ pour une base convient, jusqu'à la valeur absolue dans les termes individuels, avec l'autre base.
+
+</div>
+</div>
+
+&nbsp;
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### Corollaire 2
+
+</div>
+  <div class="card-body">
+
+Étant donné une paire de multiplicité-1 valeur propre préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si et seulement si $$\set{M^{i,i,k}}$$ pour une base convient, jusqu'à la valeur absolue dans les termes individuels, avec l'autre base.
 
 </div>
 </div>
@@ -92,6 +107,8 @@ Si nous considérons la carte
 ```
 
 cet article établit l'injectivité de cette carte pour les collecteurs riemanniens fermés (jusqu'à l'isométrie riemannienne dans son domaine). D'autres résultats qui appliquent ces techniques pour décrire son image (et inversement), dans certains espaces de modules de mesures, ne font que commencer [[AA25]](#AA25). Là, Anshul Adve s'attaque rigoureusement aux espaces tangents unitaires des 2-orbifolds compacts et hyperboliques en utilisant ces mêmes **constantes de structure** de la théorie du champ conforme.
+
+Dans le cas générique couvert par les hypothèses de  [Corollaire 2](#h4-corollary-2), chaque collecteur isospectral est en fait **isométrique**.
 
 Ces résultats ont été démontrés pour la première fois lors d'un discours intitulé de la même manière par l'auteur à l' **IRSM** en 1997, mais ils apparaissent ici sous forme publiée pour la première fois.
 
@@ -227,9 +244,9 @@ Comme maintenant le difféomorphisme $$F$$ préserve les valeurs propres et les 
 
 Cela complète la preuve du théorème.
 
-### Discussion sur la conjecture
+### Discussion des corollaires
 
-Avec $$\set{M_0^{i,j,k}}$$ et $$\set{M_1^{i,j,k}}$$ représentant les deux ensembles à trois produits pour les bases $$\set{e_0^i}$$ et $$\set{e_1^i}$$, laissez $$z_i \in \set{-1,1}$$ être le $$\Z_2^\infty$$ action sur une telle $$\R$$-base orthonormée évaluée $$\set{e_1^i}$$. Il faut donc choisir $$z_i$$ afin que $$\set{z_ie_1^i}$$ rendements $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+Avec $$\set{M_0^{i,j,k}}$$ et $$\set{M_1^{i,j,k}}$$ représentant les deux ensembles à trois produits pour les bases $$\set{e_0^i}$$ et $$\set{e_1^i}$$, laissez $$z_i \in U_1$$ être le $$U_1^\infty$$ action sur une telle base orthonormée $$\set{e_1^i}$$. Il faut donc choisir $$z_i$$ afin que $$\set{z_ie_1^i}$$ rendements $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
 Pourquoi est-ce le cas ? En général, le groupe de symétrie agissant sur l'espace des bases orthonormes possibles des fonctions propres est l'espace des opérateurs unitaires $$U: \mathscr H\rightarrow\mathscr H$$ ce trajet avec des projections $$P_{\mathcal V_\lambda}$$ sur les espaces propres de dimension finie $$\mathcal V_{\lambda}$$ associé à chaque valeur propre individuelle $$\lambda$$ du Laplacien. Par conséquent
 
@@ -242,11 +259,11 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 est l'image de $$M^{i,j,k}$$ sous $$U$$Action de base $$e^i \mapsto U(e^i)$$.
 
-Or, dans les conditions de la conjecture, chacun des $$\mathcal V_\lambda$$ sont des espaces vectoriels unidimensionnels sur $$\Complex$$, mais cela signifie également qu'ils sont des espaces vectoriels unidimensionnels sur $$\Reals$$et donc le groupe de symétrie multiplicative complet est $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+Maintenant, dans les conditions du Corollaire 2, chacun des $$\mathcal V_\lambda$$ sont des espaces vectoriels unidimensionnels sur $$\Complex$$, mais cela signifie également qu'ils sont des espaces vectoriels unidimensionnels sur $$\Reals$$et donc le groupe de symétrie multiplicative complet est $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Sans la contrainte de multiplicité, le prérequis associé à la conjecture "concernant l'accord sur les valeurs absolues" serait simplement devenu "conservation de l'ensemble ordonné de valeurs singulières $$\set{M^{i,j,k}}$$ (compté avec multiplicité), lorsqu'il est considéré comme un ensemble de cartes $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", qui sont un ensemble robuste d'invariants unitaires.  Nous sommes beaucoup moins convaincus que cette conjecture généralisée est vraie, car il peut être possible de produire un contre-exemple via une construction Sunada explicite.
+Plus généralement, le prérequis associé "concernant l'accord sur les valeurs absolues" serait simplement devenu "conservation de l'ensemble ordonné de valeurs singulières $$\set{M^{i,j,k}}$$ (compté avec multiplicité), lorsqu'il est considéré comme un ensemble de cartes $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", qui sont un ensemble robuste d'invariants unitaires.  Nous sommes beaucoup moins convaincus que cette conjecture généralisée est vraie, car il peut être possible de produire un contre-exemple via une construction Sunada explicite.
 
-En revenant à la conjecture originale, nous observons que la preuve implique d'établir cette implication :
+En revenant au Corollaire 1, nous observons que la preuve implique d'établir cette implication :
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
@@ -255,9 +272,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 Nous espérons que pour tout $$k>0$$, $$M_0^{i,i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$. En outre, la formule <span class="eqno"></span> pour $$z_k$$ nécessite les deux $$i$$- indépendance et suffisance, pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conservateurs $$\set{M_0^{i,j,k}}$$.
 
-Il s'avère que ce qui précède "espérance" suit de la densité de la travée convexe des carrés des rayons de Laplace eigenfunctions dans le cône positif de $$L^2(M,g)$$ (toute fonction propre) $$e^k$$ peut être écrit comme la différence de deux éléments de ce genre, qui établit l'espoir par contradiction). Nous esquissons une preuve de la conjecture en dessous de la prochaine série de formules.
+Il s'avère que ce qui précède "espérance" résulte de la densité de sommes positives de carrés de fonctions propres de Laplace dans le cône positif de $$L^2(M,g)$$ (la composante réelle et imaginaire de toute fonction propre) $$e^k$$ peut être écrit comme la différence de deux éléments de ce genre, qui établit l'espoir par contradiction). Nous esquissons une preuve du Corollaire 1 en dessous de la prochaine série de formules.
 
-Néanmoins, calculons quelques identités pertinentes afin que certains futurs chercheurs intrépides puissent creuser dans cette conjecture :
+Néanmoins, calculons quelques identités pertinentes afin que certains futurs chercheurs intrépides puissent creuser dans la conjecture généralisée :
 
 ```math
 \begin{aligned}
@@ -286,16 +303,24 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 Remarque : pour le cas de tori plat unidimensionnel ci-dessous, $$\tilde{Q}_k(e^i,e^j) = 0$$ depuis $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ est une véritable dérivation.
 
+### Preuve de corollaires
+
+Now consider the famous associativity relations from Conformal Field Theory:
+
 ```math
 
-\sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}M^{j,k,r}e^\ell\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
 
-\sum_r M^{i,i,r}M^{k,k,r} = \sum_r |M^{i,k,r}|^2
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-Le RHS de <span class="eqno"></span> est un invariant, et le LHS dépend du collecteur et de sa base propre. Une preuve inductive de $$i$$- l'invariance de "espérance" suit cette équation, puisque la somme est concentrée sur les termes proches $$i$$ et $$k$$et une contradiction résulterait d'un changement de signe en termes de LHS.
+Une preuve de $$i$$- l'invariance de "espérance" suit cette équation, puisque la somme est concentrée sur les termes proches $$i$$ et $$j$$et une contradiction résulterait d'un changement de termes sur le LHS comme $$M_0 \rightarrow M_1$$.
 
-La conjecture découle de l'observation précédente que les opérateurs de multiplication algébrique définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ d'accord sur le cône positif de $$L^2(M,g)$$Ils sont donc d'accord partout.
+Le corollaire 1 résulte de l'observation précédente que les opérateurs de multiplication algébrique définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ d'accord sur les carrés des fonctions propres, dont l'envergure est également dense en $$L^2(M,g)$$Ils sont donc d'accord partout.
+
+Le corollaire 2 suit en notant que la condition de multiplicité-1 sur le spectre oblige l'inverse du corollaire 1 à tenir par $$\Z_2^\infty$$ symétrie.
+
+Cela complète la preuve des corollaires.
 
 ## Exemple
 

@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=49163
+status: überprüft=49229
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -70,12 +70,27 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 <div class="card border-dark">
   <div class="card-header">
 
-#### Vermutung
+#### Folge 1
 
 </div>
   <div class="card-body">
 
-Wenn jeder Eigenwert eine Multiplikation hat $$1$$, bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn und nur, wenn die $$\set{M^{i,j,k}}$$ für eine Basis bis zum absoluten Wert in den einzelnen Begriffen mit der anderen Basis übereinstimmt.
+Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn die $$\set{M^{i,i,k}}$$ für eine Basis bis zum absoluten Wert in den einzelnen Begriffen mit der anderen Basis übereinstimmt.
+
+</div>
+</div>
+
+&nbsp;
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### Folge 2
+
+</div>
+  <div class="card-body">
+
+Bei einem Paar von Multiplizitäts-1-Eigenwert, der orthonormale Basen wie in der Hypothese des Satzes beschrieben erhält, sind die Mannigfaltigkeiten isometrisch, wenn und nur, wenn die $$\set{M^{i,i,k}}$$ für eine Basis bis zum absoluten Wert in den einzelnen Begriffen mit der anderen Basis übereinstimmt.
 
 </div>
 </div>
@@ -91,6 +106,8 @@ Wenn wir die Karte betrachten
 ```
 
 Diese Arbeit legt die Injektivität dieser Karte für geschlossene Riemannsche Mannigfaltigkeiten (bis zur Riemannschen Isometrie in ihrer Domäne) fest. Weitere Ergebnisse, die diese Techniken anwenden, um ihr Bild (und umgekehrt) innerhalb ausgewählter Modulräume von Metriken zu beschreiben, beginnen gerade erst. [[AA25]](#AA25). Dort greift Anshul Adve mit denselben **Strukturkonstanten** aus der Conformal Field Theory Tangent Spaces von kompakten, hyperbolischen 2-orbifolds streng an.
+
+Im allgemeinen Fall, der von den Hypothesen der  [Folge 2](#h4-corollary-2)Jede solche isospektrale Mannigfaltigkeit ist in der Tat **isometrisch**.
 
 Diese Ergebnisse wurden erstmals 1997 in einem ähnlich betitelten Vortrag des Autors bei **MSRI** gezeigt, erscheinen hier aber erstmals in veröffentlichter Form.
 
@@ -226,9 +243,9 @@ Wie jetzt Diffeomorphismus $$F$$ Eigenwerte und Eigenfunktionen (nach Hypothese 
 
 Damit ist der Beweis des Theorems abgeschlossen.
 
-### Diskussion der Vermutung
+### Diskussion von Corollaries
 
-Mit $$\set{M_0^{i,j,k}}$$ und $$\set{M_1^{i,j,k}}$$ Darstellung der beiden Dreifach-Produkt-Sets für die Basen $$\set{e_0^i}$$ und $$\set{e_1^i}$$, lassen $$z_i \in \set{-1,1}$$ sind die $$\Z_2^\infty$$ Aktion auf einer solchen $$\R$$-bewertete orthonormale Basis $$\set{e_1^i}$$. Daher müssen wir wählen $$z_i$$ so dass $$\set{z_ie_1^i}$$ Erträge $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+Mit $$\set{M_0^{i,j,k}}$$ und $$\set{M_1^{i,j,k}}$$ Darstellung der beiden Dreifach-Produkt-Sets für die Basen $$\set{e_0^i}$$ und $$\set{e_1^i}$$, lassen $$z_i \in U_1$$ sind die $$U_1^\infty$$ Aktion auf einer solchen orthonormalen Basis $$\set{e_1^i}$$. Daher müssen wir wählen $$z_i$$ so dass $$\set{z_ie_1^i}$$ Erträge $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
 Warum ist das der Fall? Im Allgemeinen ist die Symmetriegruppe, die auf den Raum möglicher orthonormaler Grundlagen von Eigenfunktionen wirkt, der Raum von Unitary Operators. $$U: \mathscr H\rightarrow\mathscr H$$ die mit Projektionen pendeln $$P_{\mathcal V_\lambda}$$ auf die endlichen Eigenräume $$\mathcal V_{\lambda}$$ für jeden einzelnen Eigenwert $$\lambda$$ Der Laplacian. Daher
 
@@ -241,11 +258,11 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 ist das Bild von $$M^{i,j,k}$$ unter $$U$$'s Basismaßnahme $$e^i \mapsto U(e^i)$$.
 
-Nun, unter den Bedingungen der Vermutung, jeder der $$\mathcal V_\lambda$$ sind eindimensionale Vektorräume über $$\Complex$$, aber das bedeutet auch, dass sie eindimensionale Vektorräume über $$\Reals$$und so ist die vollständige multiplikative Symmetriegruppe $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+Jetzt unter den Bedingungen von Corollary 2, jeder der $$\mathcal V_\lambda$$ sind eindimensionale Vektorräume über $$\Complex$$, aber das bedeutet auch, dass sie eindimensionale Vektorräume über $$\Reals$$und so ist die vollständige multiplikative Symmetriegruppe $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Ohne die Multiplizitäts-Constraint, die damit verbundene Voraussetzung der Vermutung "hinsichtlich der Übereinstimmung in absoluten Werten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten $$\set{M^{i,j,k}}$$ (mit Multiplizität gezählt), wenn als eine Sammlung von Karten aus $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", die ein robuster Satz von Unitary Invariants sind.  Wir sind deutlich weniger zuversichtlich, dass diese verallgemeinerte Vermutung zutrifft, da es möglich sein könnte, ein Gegenbeispiel über explizite Sunada-Konstruktion zu erstellen.
+Allgemeiner die damit verbundene Voraussetzung "hinsichtlich der Übereinstimmung in absoluten Werten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten $$\set{M^{i,j,k}}$$ (mit Multiplizität gezählt), wenn als eine Sammlung von Karten aus $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", die ein robuster Satz von Unitary Invariants sind.  Wir sind deutlich weniger zuversichtlich, dass diese verallgemeinerte Vermutung zutrifft, da es möglich sein könnte, ein Gegenbeispiel über explizite Sunada-Konstruktion zu erstellen.
 
-Wenn wir zur ursprünglichen Vermutung zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
+Wenn wir zu Korrespondenz 1 zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
@@ -254,9 +271,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 Wir hoffen, dass $$k>0$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$.
 
-Es stellt sich heraus, dass die oben "Hoffnung" folgt aus der Dichte der konvexen Spanne von Quadraten von Strahlen von Laplace Eigenfunktionen im positiven Kegel von $$L^2(M,g)$$ (alle Eigenfunktionen) $$e^k$$ kann als Differenz zweier solcher Elemente geschrieben werden, was die Hoffnung durch Widerspruch begründet). Wir skizzieren einen Beweis der Vermutung unter dem nächsten Satz von Formeln.
+Es stellt sich heraus, dass die oben "Hoffnung" folgt aus der Dichte positiver Summen von Quadraten von Laplace-Eigenfunktionen im positiven Kegel von $$L^2(M,g)$$ (die reale und imaginäre Komponente jeder Eigenfunktion) $$e^k$$ kann als Differenz zweier solcher Elemente geschrieben werden, was die Hoffnung durch Widerspruch begründet). Wir skizzieren einen Nachweis von Corollary 1 unter dem nächsten Satz von Formeln.
 
-Lassen Sie uns jedoch einige relevante Identitäten berechnen, damit einige unerschrockene zukünftige Forscher in diese Vermutung eintauchen können:
+Lassen Sie uns jedoch einige relevante Identitäten berechnen, damit einige unerschrockene zukünftige Forscher in die generalisierte Vermutung eintauchen können:
 
 ```math
 \begin{aligned}
@@ -285,16 +302,24 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 Hinweis: für das eindimensionale Flat-Tori-Gehäuse unten, $$\tilde{Q}_k(e^i,e^j) = 0$$ seit $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ ist eine wahre Ableitung.
 
+### Beweis der Korollarien
+
+Now consider the famous associativity relations from Conformal Field Theory:
+
 ```math
 
-\sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}M^{j,k,r}e^\ell\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
 
-\sum_r M^{i,i,r}M^{k,k,r} = \sum_r |M^{i,k,r}|^2
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-Die rechte Seite von <span class="eqno"></span> ist ein Invariant, und die LHS hängt von der Mannigfaltigkeit und ihrer Eigenbasis ab. Ein induktiver Beweis der $$i$$-Unvarianz der "Hoffnung" folgt durch diese Gleichung, da die Summe auf die Begriffe in der Nähe konzentriert ist $$i$$ und $$k$$, und ein Widerspruch würde aus einer Zeichenänderung in Bezug auf die LHS resultieren.
+Ein Beweis der $$i$$-Unvarianz der "Hoffnung" folgt durch diese Gleichung, da die Summe auf die Begriffe in der Nähe konzentriert ist $$i$$ und $$j$$, und ein Widerspruch würde aus einer Änderung in Bezug auf die LHS als $$M_0 \rightarrow M_1$$.
 
-Die Vermutung folgt aus der vorherigen Beobachtung, dass die algbraunen Multiplikationsoperatoren definiert durch $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ Zustimmung zum positiven Kegel von $$L^2(M,g)$$Und so sind sie überall einverstanden.
+Die Folge 1 folgt aus der vorherigen Beobachtung, dass die algebraischen Multiplikationsoperatoren definiert durch $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ vereinbaren Sie Quadrate von Eigenfunktionen, deren Spannweite auch dicht ist $$L^2(M,g)$$Sie sind sich überall einig.
+
+Folge 2 folgt, indem darauf hingewiesen wird, dass die Multiplizitäts-1-Bedingung auf das Spektrum die Umkehrung der Folge 1 zwingt, sich an $$\Z_2^\infty$$ Symmetrie.
+
+Dies vervollständigt den Beweis der Corollaries.
 
 ## Beispiel
 

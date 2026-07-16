@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=49163
+status: 確認済み=49229
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -69,12 +69,27 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 <div class="card border-dark">
   <div class="card-header">
 
-#### 予想
+#### コロラリー1
 
 </div>
   <div class="card-body">
 
-すべての固有値に多重度がある場合$$1$$定理の仮説で説明されているように、正統基を保持する固有値のペアを考えると、マニホールドは、$$\set{M^{i,j,k}}$$ For one basis agree、 up to absolute value in the individual terms、 with the other basis.一方の基準は、個々の用語で絶対値まで、他方の基準に同意する。
+定理の仮説で説明されているように、正準基を保持する固有値のペアを考えると、マニホールドは、$$\set{M^{i,i,k}}$$ For one basis agree、 up to absolute value in the individual terms、 with the other basis.一方の基準は、個々の用語で絶対値まで、他方の基準に同意する。
+
+</div>
+</div>
+
+&nbsp;
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### コロラリー2
+
+</div>
+  <div class="card-body">
+
+定理の仮説で説明されているように、多重度1固有値保存直交基のペアを考えると、マニホールドは、$$\set{M^{i,i,k}}$$ For one basis agree、 up to absolute value in the individual terms、 with the other basis.一方の基準は、個々の用語で絶対値まで、他方の基準に同意する。
 
 </div>
 </div>
@@ -90,6 +105,8 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 ```
 
 閉じたRiemannianマニホールド(その領域ではRiemannian isometryまで)に対するこのマップの注入性を確立した。これらの手法を適用して、そのイメージ(および逆)を説明するさらなる結果は、メトリックの選択モジュリ領域内で開始されます。[[AA25]](#AA25)。Anshul Adveは、Conformal Field Theoryと同じ**構造定数**を使用して、コンパクトで双曲型の2-orbifoldsのユニット接線スペースに厳密に取り組んでいます。
+
+仮説の対象となる一般的なケース[コロラリー2](#h4-corollary-2)、そのような等分性多岐管はすべて実際には**isometric**です。
 
 これらの結果は、1997年に**MSRI**の著者が同様のタイトルの講演で最初に実証されましたが、それらは初めて公開された形式でここに表示されます。
 
@@ -225,9 +242,9 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 均一な基準を維持しま�
 
 これで定理の証明は完了です。
 
-### 予想の議論
+### Corollariesについて
 
-次を含む$$\set{M_0^{i,j,k}}$$ および$$\set{M_1^{i,j,k}}$$ 基底の2つの三重プロダクトセットを表す$$\set{e_0^i}$$ および$$\set{e_1^i}$$Let $$z_i \in \set{-1,1}$$ である$$\Z_2^\infty$$ そのような行為$$\R$$- 正統基準の評価$$\set{e_1^i}$$。したがって、私たちは選択する必要があります$$z_i$$ したがって$$\set{z_ie_1^i}$$ 降伏$$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+次を含む$$\set{M_0^{i,j,k}}$$ および$$\set{M_1^{i,j,k}}$$ 基底の2つの三重プロダクトセットを表す$$\set{e_0^i}$$ および$$\set{e_1^i}$$Let $$z_i \in U_1$$ である$$U_1^\infty$$ このような正統性に基づく行動$$\set{e_1^i}$$。したがって、私たちは選択する必要があります$$z_i$$ したがって$$\set{z_ie_1^i}$$ 降伏$$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
 このケースはなぜですか。一般に、固有関数の正準基底の空間に作用する対称群は、単項演算子の空間である。$$U: \mathscr H\rightarrow\mathscr H$$ プロジェクションと合致する$$P_{\mathcal V_\lambda}$$ 有限次元異次元空間$$\mathcal V_{\lambda}$$ 個々の固有値に関連付けられる$$\lambda$$ Laplacianです。したがって、
 
@@ -240,11 +257,11 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 次のイメージです$$M^{i,j,k}$$ 真下付き$$U$$基準処理$$e^i \mapsto U(e^i)$$.
 
-今、予想の条件の下で、それぞれの$$\mathcal V_\lambda$$ 1次元ベクトル空間$$\Complex$$しかし、それはまた、それらが一次元ベクトル空間であることを意味する。$$\Reals$$のように、完全な多重対称グループは$$O(1,\Reals)^\infty=\Z_2^\infty$$.
+現在、コロラリー2の条件下では、$$\mathcal V_\lambda$$ 1次元ベクトル空間$$\Complex$$しかし、それはまた、それらが一次元ベクトル空間であることを意味する。$$\Reals$$のように、完全な多重対称グループは$$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-多重度制約がないと、予想に関連する前提条件"絶対値に関する合意" 単に"単数値の順序付きセットの保存$$\set{M^{i,j,k}}$$ (多重度でカウント)マップの集合として表示する場合$$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"これは、Unitary Invariantsの堅牢なセットです。我々は、この一般化された予想が、明示的なSunada建設を介して反例を作り出すことが可能である可能性があるので、真であることは、あまり確信がない。
+より一般的には、関連する前提条件"絶対値に関する合意" 単に"単数値の順序付きセットの保存$$\set{M^{i,j,k}}$$ (多重度でカウント)マップの集合として表示する場合$$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"これは、Unitary Invariantsの堅牢なセットです。我々は、この一般化された予想が、明示的なSunada建設を介して反例を作り出すことが可能である可能性があるので、真であることは、あまり確信がない。
 
-元の予想に戻ると、この証明には次のような意味があることがわかります。
+Corollary 1に戻ると、この証明には次のような意味があることがわかります。
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
@@ -253,9 +270,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 ご希望の方へ$$k>0$$, $$M_0^{i,i,k}$$ 同じにはできません$$0$$ すべて$$i$$。さらに、Formula <span class="eqno"></span> 対象$$z_k$$ 両方が必要$$i$$ベースマップを確立するための独立性と効率性$$e_0^i \mapsto z_i e_1^i$$ 保存$$\set{M_0^{i,j,k}}$$.
 
-以上が判明しました。"望む" の正の円錐のLaplace固有関数の正方形の凸の間隔の密度から続きます$$L^2(M,g)$$ (eigenfunction) $$e^k$$ そのような二つの要素の違いとして書くことができ、それは矛盾によって希望を確立する。次の式セットの下に、予想の証明をスケッチします。
+以上が判明しました。"望む" 正の円錐のLaplace固有関数の正方形の正の和の密度から続く$$L^2(M,g)$$ (あらゆる固有機能の実質および想像上の構成要素) $$e^k$$ そのような二つの要素の違いとして書くことができ、それは矛盾によって希望を確立する。次の数式セットの下にコロラリー1の証明をスケッチします。
 
-それにもかかわらず、いくつかの関連するアイデンティティを計算して、いくつかの困難な将来の研究者がこの予想を掘り下げることができます。
+それにもかかわらず、いくつかの関連するアイデンティティを計算して、いくつかの困難な将来の研究者が一般化された予想を掘り下げることができます。
 
 ```math
 \begin{aligned}
@@ -284,16 +301,24 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 注: 次の一次元の平坦な場合のために、$$\tilde{Q}_k(e^i,e^j) = 0$$ 以降$$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ 真の派生である。
 
+### コロラリの証明
+
+Now consider the famous associativity relations from Conformal Field Theory:
+
 ```math
 
-\sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}M^{j,k,r}e^\ell\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
 
-\sum_r M^{i,i,r}M^{k,k,r} = \sum_r |M^{i,k,r}|^2
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-RHSの<span class="eqno"></span> は不変であり、LHSはマニホールドとその固有基質に依存します。の誘導証明$$i$$のinvariance "望む" この方程式に従って、和は近い項に集中する。$$i$$ および$$k$$そして、矛盾は、LHSの点で符号の変更から生じる。
+の証拠$$i$$のinvariance "望む" この方程式に従って、和は近い項に集中する。$$i$$ および$$j$$そして、矛盾はLHSの点での変化から生じる。$$M_0 \rightarrow M_1$$.
 
-予想は、前回の観測から、次によって定義された二乗乗演算子が$$z_iz_jz_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ >「positive cone」の意味$$L^2(M,g)$$そして、あちこちで同意する。
+Corollary 1は、前の観察から、次によって定義された代数乗算演算子が$$z_iz_jz_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ 固有関数の正方形に同意します。そのスパンも密です$$L^2(M,g)$$だから、あちこちで同意する。
+
+Corollary 2は、スペクトルのmultiplicity-1条件がCorollary 1の収束を$$\Z_2^\infty$$ シンメトリー
+
+これでコロラの証明は完了です。
 
 ## 例
 

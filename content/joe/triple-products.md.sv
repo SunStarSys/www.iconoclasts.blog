@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=49163
+status: verifierad=49229
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -70,12 +70,27 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 <div class="card border-dark">
   <div class="card-header">
 
-#### Förmodan
+#### Korollarium 1
 
 </div>
   <div class="card-body">
 
-Om varje egenvärde har mångfald $$1$$Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om och endast om $$\set{M^{i,j,k}}$$ för den ena grunden överensstämmer, upp till absolutvärdet i de enskilda termerna, med den andra grunden.
+Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om $$\set{M^{i,i,k}}$$ för den ena grunden överensstämmer, upp till absolutvärdet i de enskilda termerna, med den andra grunden.
+
+</div>
+</div>
+
+&nbsp;
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### Korollarium 2
+
+</div>
+  <div class="card-body">
+
+Med tanke på ett par multiplikations-1-egensvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes, är grenrör isometriska om och endast om $$\set{M^{i,i,k}}$$ för den ena grunden överensstämmer, upp till absolutvärdet i de enskilda termerna, med den andra grunden.
 
 </div>
 </div>
@@ -91,6 +106,8 @@ Om vi tänker på kartan
 ```
 
 Detta papper fastställer injicerbarhet av denna karta för slutna Riemannian grenrör (upp till Riemannian isometry i dess domän). Ytterligare resultat som tillämpar dessa tekniker för att beskriva sin bild (och invers), inom vissa moduli utrymmen av mätvärden, är bara att komma igång [[AA25]](#AA25). Där tacklar Anshul Adve rigoröst enhetstangensutrymmen av kompakta, hyperboliska 2-omkretsar med samma **strukturkonstanter** från Conformal Field Theory.
+
+I det generiska fallet som omfattas av hypoteserna om  [Korollarium 2](#h4-corollary-2)Varje sådan isospektral mångfald är i själva verket **isometrisk**.
 
 Dessa resultat visades först under ett liknande tal av författaren vid **MSRI **1997, men de visas här i publicerad form för första gången.
 
@@ -226,9 +243,9 @@ Som det är nu diffeomorfism $$F$$ bevarar egenvärden och egenfunktioner (genom
 
 Detta kompletterar teoremens bevis.
 
-### Diskussion om förmodan
+### Diskussion om korollarier
 
-Med $$\set{M_0^{i,j,k}}$$ och $$\set{M_1^{i,j,k}}$$ representerar de två trippelproduktseten för baserna $$\set{e_0^i}$$ och $$\set{e_1^i}$$, låt $$z_i \in \set{-1,1}$$ vara $$\Z_2^\infty$$ åtgärder mot en sådan $$\R$$-värderad ortonormal grund $$\set{e_1^i}$$. Därför måste vi välja $$z_i$$ så att $$\set{z_ie_1^i}$$ avkastning $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+Med $$\set{M_0^{i,j,k}}$$ och $$\set{M_1^{i,j,k}}$$ representerar de två trippelproduktseten för baserna $$\set{e_0^i}$$ och $$\set{e_1^i}$$, låt $$z_i \in U_1$$ vara $$U_1^\infty$$ åtgärder på en sådan ortonormal grund $$\set{e_1^i}$$. Därför måste vi välja $$z_i$$ så att $$\set{z_ie_1^i}$$ avkastning $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
 Varför är detta fallet? I allmänhet är den symmetrigrupp som verkar på utrymmet för möjliga ortonormala baser av egenfunktioner utrymmet för enhetsoperatorer. $$U: \mathscr H\rightarrow\mathscr H$$ som pendlar med prognoser $$P_{\mathcal V_\lambda}$$ på de finita dimensionella åttondelar $$\mathcal V_{\lambda}$$ för varje enskilt egenvärde $$\lambda$$ från Lappland. Därför
 
@@ -241,11 +258,11 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 är bilden av $$M^{i,j,k}$$ under $$U$$'s basåtgärd $$e^i \mapsto U(e^i)$$.
 
-Nu under förutsättningarna för gissningen, var och en av $$\mathcal V_\lambda$$ är ett dimensionellt vektorrum över $$\Complex$$, men det betyder också att de är endimensionella vektorrum över $$\Reals$$och så är hela den multiplikativa symmetrigruppen $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+Nu under villkoren i Corollary 2, var och en av de $$\mathcal V_\lambda$$ är ett dimensionellt vektorrum över $$\Complex$$, men det betyder också att de är endimensionella vektorrum över $$\Reals$$och så är hela den multiplikativa symmetrigruppen $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Utan multiplikationsbegränsningen är den associerade förutsättningen för hypotesen "om överenskommelse i absoluta värden" skulle helt enkelt bli "bevarandet av den ordinerade uppsättningen singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsvarianter.  Vi är betydligt mindre övertygade om att denna generaliserade gissning är sann, eftersom det kan vara möjligt att producera ett motexempel via explicit Sunada-konstruktion.
+Mer allmänt, de associerade förutsättningarna "om överenskommelse i absoluta värden" skulle helt enkelt bli "bevarandet av den ordinerade uppsättningen singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsvarianter.  Vi är betydligt mindre övertygade om att denna generaliserade gissning är sann, eftersom det kan vara möjligt att producera ett motexempel via explicit Sunada-konstruktion.
 
-Att komma tillbaka till den ursprungliga gissningen, observerar vi att beviset innebär att fastställa denna implikation:
+Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
@@ -254,9 +271,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 Vi hoppas att för varje given $$k>0$$, $$M_0^{i,i,k}$$ Kan inte vara identisk $$0$$ för alla $$i$$. Dessutom är formeln <span class="eqno"></span> för $$z_k$$ kräver båda $$i$$-oberoende och tillräcklighet, för att fastställa grundkartan $$e_0^i \mapsto z_i e_1^i$$ bevarar $$\set{M_0^{i,j,k}}$$.
 
-Det visar sig att ovanstående "hopp" följer från tätheten av konvex spännvidd av rutor av strålar av Laplace egenfunktioner i den positiva konen av $$L^2(M,g)$$ (Egenfunktion) $$e^k$$ kan skrivas som skillnaden mellan två sådana element, vilket fastställer hoppet genom motsägelse). Vi skissar ett bevis på gissningen under nästa uppsättning formler.
+Det visar sig att ovanstående "hopp" följer av densiteten av positiva summor av kvadrater av Laplace egenfunktioner i den positiva konen av $$L^2(M,g)$$ (den verkliga och inbillade komponenten av någon egenfunktion) $$e^k$$ kan skrivas som skillnaden mellan två sådana element, vilket fastställer hoppet genom motsägelse). Vi skissar ett bevis på Corollary 1 under nästa uppsättning formler.
 
-Låt oss dock beräkna några relevanta identiteter så att några orädda framtida forskare kan gräva i denna gissning:
+Låt oss dock beräkna några relevanta identiteter så att några orädda framtida forskare kan gräva i den generaliserade gissningen:
 
 ```math
 \begin{aligned}
@@ -285,16 +302,24 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 Anmärkning: för det endimensionella flat-tori fallet nedan, $$\tilde{Q}_k(e^i,e^j) = 0$$ sedan $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ Det är en sann härledning.
 
+### Bevis för korollarier
+
+Now consider the famous associativity relations from Conformal Field Theory:
+
 ```math
 
-\sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}M^{j,k,r}e^\ell\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
 
-\sum_r M^{i,i,r}M^{k,k,r} = \sum_r |M^{i,k,r}|^2
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-RHS för <span class="eqno"></span> är en oföränderlig, och LHS beror på grenröret och dess egenbas. Ett induktivt bevis för $$i$$-invarians mellan "hopp" följer genom denna ekvation, eftersom summan är koncentrerad på termer nära $$i$$ och $$k$$, och en motsägelse skulle bero på en teckenändring i termer på LHS.
+Ett bevis på $$i$$-invarians mellan "hopp" följer genom denna ekvation, eftersom summan är koncentrerad på termer nära $$i$$ och $$j$$och en motsägelse skulle bero på en förändring i termer av LHS som $$M_0 \rightarrow M_1$$.
 
-Antagandet följer av föregående observation att de algbraiska multiplikationsoperatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ överens om den positiva konen av $$L^2(M,g)$$Och så är de överens överallt.
+Korollarium 1 följer av föregående observation att de algebraiska multiplikationsoperatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ överens om rutor av egenfunktioner, vars spännvidd också är tät i $$L^2(M,g)$$De är överens överallt.
+
+Corollary 2 följer genom att notera att multiplicity-1-villkoret på spektrumet tvingar konversen av Corollary 1 att hålla av $$\Z_2^\infty$$ symmetri.
+
+Detta kompletterar beviset för korollarierna.
 
 ## Exempel
 

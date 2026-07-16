@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49227
+status: verified=49229
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -269,7 +269,7 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 We may hope that for any given $$k>0$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. Furthermore, the Formula <span class="eqno"></span> for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$.
 
-It turns out that the above "hope" follows from the density of positive sums of squares of Laplace eigenfunctions in the positive cone of $$L^2(M,g)$$ (any eigenfunction $$e^k$$ can be written as the difference of two such elements, which establishes the hope by contradiction). We sketch a proof of Corollary 1 below the next set of formulae.
+It turns out that the above "hope" follows from the density of positive sums of squares of Laplace eigenfunctions in the positive cone of $$L^2(M,g)$$ (the real and imaginary componentd of any eigenfunction $$e^k$$ can be written as the difference of two such elements, which establishes the hope by contradiction). We sketch a proof of Corollary 1 below the next set of formulae.
 
 Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into the generalized conjecture:
 
@@ -313,7 +313,7 @@ e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{
 ```
 A proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a change in terms on the LHS as $$M_0 \rightarrow M_1$$.
 
-Corollary 1 follows from the prior observation that the algebraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on squares of eigenfunctions, the algebraic span of which is also dense in $$L^2(M,g)$$ by Stone-Weierstrass, so they agree everywhere.
+Corollary 1 follows from the prior observation that the algebraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on squares of eigenfunctions, the span of which is also dense in $$L^2(M,g)$$, so they agree everywhere.
 
 Corollary 2 follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold by $$\Z_2^\infty$$ symmetry.
 

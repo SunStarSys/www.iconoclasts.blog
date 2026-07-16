@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=49163
+status: verificado=49229
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -71,12 +71,27 @@ Para ser isométrico $$(M,g)$$, é uma condição *necessária e suficiente* par
 <div class="card border-dark">
   <div class="card-header">
 
-#### Conjectura
+#### Corolário 1
 
 </div>
   <div class="card-body">
 
-Se cada valor próprio tem multiplicidade $$1$$, dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se e somente se $$\set{M^{i,j,k}}$$ para uma base concorda, até o valor absoluto em termos individuais, com a outra base.
+Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se o $$\set{M^{i,i,k}}$$ para uma base concorda, até o valor absoluto em termos individuais, com a outra base.
+
+</div>
+</div>
+
+&nbsp;
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### Corolário 2
+
+</div>
+  <div class="card-body">
+
+Dado um par de multiplicidade-1 autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se e somente se o $$\set{M^{i,i,k}}$$ para uma base concorda, até o valor absoluto em termos individuais, com a outra base.
 
 </div>
 </div>
@@ -92,6 +107,8 @@ Se considerarmos o mapa
 ```
 
 este trabalho estabelece a injetividade deste mapa para variedades Riemannianas fechadas (até a isometria Riemanniana em seu domínio). Outros resultados que aplicam essas técnicas para descrever sua imagem (e inversa), dentro de espaços de métricas de módulos selecionados, estão apenas começando [[AA25]](#AA25). Lá, Anshul Adve aborda rigorosamente os espaços tangentes da unidade de 2 orbifolds compactos e hiperbólicos usando essas mesmas **constantes de estrutura** da Teoria do Campo Conformal.
+
+No caso genérico coberto pelas hipóteses de  [Corolário 2](#h4-corollary-2), toda tal variedade isospectral é de fato **isométrica**.
 
 Estes resultados foram demonstrados pela primeira vez durante uma palestra similarmente intitulada pelo autor em **MSRI** em 1997, mas eles aparecem aqui em forma publicada pela primeira vez.
 
@@ -227,9 +244,9 @@ Como este agora diffeomorfismo $$F$$ preserva autovalores e autofunções (por h
 
 Isso completa a prova do Teorema.
 
-### Discussão da Conjectura
+### Discussão dos Corolários
 
-Com $$\set{M_0^{i,j,k}}$$ e $$\set{M_1^{i,j,k}}$$ representando os dois conjuntos de triplo produto para as bases $$\set{e_0^i}$$ e $$\set{e_1^i}$$, deixe $$z_i \in \set{-1,1}$$ seja o $$\Z_2^\infty$$ ação em tal $$\R$$-base ortonormal valorizada $$\set{e_1^i}$$. Assim, precisamos escolher $$z_i$$ para que $$\set{z_ie_1^i}$$ rendimentos $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+Com $$\set{M_0^{i,j,k}}$$ e $$\set{M_1^{i,j,k}}$$ representando os dois conjuntos de triplo produto para as bases $$\set{e_0^i}$$ e $$\set{e_1^i}$$, deixe $$z_i \in U_1$$ seja o $$U_1^\infty$$ ação em tal base ortonormal $$\set{e_1^i}$$. Assim, precisamos escolher $$z_i$$ para que $$\set{z_ie_1^i}$$ rendimentos $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
 Por que é esse o caso? Em geral, o grupo de simetria que atua no espaço de possíveis bases ortonormais de autofunções é o espaço de Operadores Unitários $$U: \mathscr H\rightarrow\mathscr H$$ que se deslocam com projeções $$P_{\mathcal V_\lambda}$$ para os eigenspaces de dimensão finita $$\mathcal V_{\lambda}$$ associado a cada autovalor individual $$\lambda$$ do Laplaciano. Portanto
 
@@ -242,11 +259,11 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 é a imagem de $$M^{i,j,k}$$ sob $$U$$ação base $$e^i \mapsto U(e^i)$$.
 
-Agora, sob as condições da conjectura, cada um dos $$\mathcal V_\lambda$$ são espaços vetoriais unidimensionais sobre $$\Complex$$, mas isso também significa que eles são espaços vetoriais unidimensionais $$\Reals$$, e assim o grupo multiplicativo completo da simetria é $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+Agora, nas condições do Corolário 2, cada um dos $$\mathcal V_\lambda$$ são espaços vetoriais unidimensionais sobre $$\Complex$$, mas isso também significa que eles são espaços vetoriais unidimensionais $$\Reals$$, e assim o grupo multiplicativo completo da simetria é $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Sem a restrição de multiplicidade, o prerrequisito associado da conjectura "acordo em valores absolutos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado com multiplicidade), quando visto como uma coleção de mapas de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", que são um conjunto robusto de invariantes unitários.  Estamos significativamente menos confiantes de que esta conjectura generalizada é verdadeira, uma vez que pode ser possível produzir um contra-exemplo através de construção Sunada explícita.
+Mais geralmente, o prerrequisito associado "acordo em valores absolutos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado com multiplicidade), quando visto como uma coleção de mapas de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", que são um conjunto robusto de invariantes unitários.  Estamos significativamente menos confiantes de que esta conjectura generalizada é verdadeira, uma vez que pode ser possível produzir um contra-exemplo através de construção Sunada explícita.
 
-Voltando à conjectura original, observamos que a prova envolve estabelecer esta implicação:
+Voltando ao Corolário 1, observamos que a prova envolve estabelecer essa implicação:
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
@@ -255,9 +272,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 Podemos esperar que, para qualquer $$k>0$$, $$M_0^{i,i,k}$$ não pode ser idêntico $$0$$ para todos $$i$$. Além disso, a fórmula <span class="eqno"></span> para $$z_k$$ requer ambos $$i$$-independência, e suficiência, para estabelecer o mapa base $$e_0^i \mapsto z_i e_1^i$$ preservas $$\set{M_0^{i,j,k}}$$.
 
-Acontece que o acima "esperança" segue da densidade da extensão convexa de quadrados de raios de Laplace autofunções no cone positivo de $$L^2(M,g)$$ (qualquer autofunção) $$e^k$$ pode ser escrita como a diferença de dois tais elementos, que estabelece a esperança por contradição). Esboçamos uma prova da conjectura abaixo do próximo conjunto de fórmulas.
+Acontece que o acima "esperança" segue da densidade de somas positivas de quadrados de autofunções de Laplace no cone positivo de $$L^2(M,g)$$ (o componente real e imaginário de qualquer autofunção) $$e^k$$ pode ser escrita como a diferença de dois tais elementos, que estabelece a esperança por contradição). Esboçamos uma prova de Corolário 1 abaixo do próximo conjunto de fórmulas.
 
-No entanto, vamos calcular algumas identidades relevantes para que algum futuro pesquisador intrépido possa se aprofundar nessa conjectura:
+No entanto, vamos calcular algumas identidades relevantes para que algum pesquisador futuro intrépido possa cavar a conjectura generalizada:
 
 ```math
 \begin{aligned}
@@ -286,16 +303,24 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 Nota: para o caso unidimensional do flat-tori abaixo, $$\tilde{Q}_k(e^i,e^j) = 0$$ desde $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ É uma verdadeira derivação.
 
+### Prova de Corolários
+
+Now consider the famous associativity relations from Conformal Field Theory:
+
 ```math
 
-\sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}M^{j,k,r}e^\ell\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
 
-\sum_r M^{i,i,r}M^{k,k,r} = \sum_r |M^{i,k,r}|^2
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-O RHS de <span class="eqno"></span> é um invariante, e o LHS depende da variedade e de sua autobase. Uma prova indutiva do $$i$$-invariância do "esperança" segue através desta equação, uma vez que a soma está concentrada nos termos próximos $$i$$ e $$k$$, e uma contradição resultaria de uma mudança de sinal em termos do LHS.
+Uma prova do $$i$$-invariância do "esperança" segue através desta equação, uma vez que a soma está concentrada nos termos próximos $$i$$ e $$j$$e uma contradição resultaria de uma mudança nos termos do LHS como $$M_0 \rightarrow M_1$$.
 
-A conjectura segue da observação prévia de que os operadores de multiplicação algbrica definidos por $$z_iz_jz_kM_0^{i,j,k}$$ e $$M_1^{i,j,k}$$ concordam com o cone positivo de $$L^2(M,g)$$e por isso concordam em todos os lugares.
+O Corolário 1 segue a observação prévia de que os operadores de multiplicação algébrica definidos por $$z_iz_jz_kM_0^{i,j,k}$$ e $$M_1^{i,j,k}$$ concordam em quadrados de autofunções, cuja extensão também é densa em $$L^2(M,g)$$Então eles concordam em todos os lugares.
+
+O Corolário 2 segue observando que a condição de multiplicidade-1 no espectro força o inverso do Corolário 1 a se manter por $$\Z_2^\infty$$ simetria.
+
+Isso completa a prova dos Corolários.
 
 ## Exemplo
 

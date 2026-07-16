@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=49163
+status: 확인=49229
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -70,12 +70,27 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 <div class="card border-dark">
   <div class="card-header">
 
-#### 추측
+#### 부관 1
 
 </div>
   <div class="card-body">
 
-모든 고유 값에 다중성이 있는 경우 $$1$$, 정리의 가설에 기술된 대로 정형외과 기지를 보존하는 eigenvalue의 한 쌍을 주어, 매니폴드는 다음과 같은 경우에만 등각이다 $$\set{M^{i,j,k}}$$ 한 가지 기준은 개별 용어의 절대값까지 다른 기준과 함께 동의한다.
+정리의 가설에 설명된 대로 정형 기지를 보존하는 고유값 쌍을 감안할 때, 매니폴드는 $$\set{M^{i,i,k}}$$ 한 가지 기준은 개별 용어의 절대값까지 다른 기준과 함께 동의한다.
+
+</div>
+</div>
+
+&nbsp;
+
+<div class="card border-dark">
+  <div class="card-header">
+
+#### 부관 2
+
+</div>
+  <div class="card-body">
+
+정리의 가설에 설명된 대로 정형 기지를 보존하는 multiplicity-1 eigenvalue 쌍을 감안할 때, 매니폴드는 다음과 같은 경우에만 아이소메트릭입니다. $$\set{M^{i,i,k}}$$ 한 가지 기준은 개별 용어의 절대값까지 다른 기준과 함께 동의한다.
 
 </div>
 </div>
@@ -91,6 +106,8 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 ```
 
 이 논문은 닫힌 Riemannian 매니폴드 (도메인에 Riemannian isometry까지)에 대한이지도의 주사를 설정합니다. 메트릭의 일부 모듈 공간 내에서 해당 이미지(및 역)를 설명하기 위해 이러한 기술을 적용하는 추가 결과가 이제 막 시작되었습니다. [[AA25]](#AA25). 그곳에서 Anshul Adve는 Conformal Field Theory의 동일한 **구조 상수**를 사용하여 컴팩트하고 쌍곡선 2-orbifolds의 단위 접선 공간을 엄격하게 해결합니다.
+
+의 가설에 의해 덮여있는 일반적인 경우  [부관 2](#h4-corollary-2), 이러한 모든 isospectral 매니폴드는 사실 **isometric**입니다.
 
 이러한 결과는 1997년 **MSRI**의 저자가 비슷한 제목으로 이야기하는 동안 처음 입증되었지만 처음 게시된 형식으로 여기에 나타납니다.
 
@@ -226,9 +243,9 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 유니폼 규범을 유지합니
 
 이것은 정리의 증거를 완성합니다.
 
-### 추측 토론
+### 코롤러 토론
 
-대상 $$\set{M_0^{i,j,k}}$$ 및 $$\set{M_1^{i,j,k}}$$ 기본에 대한 두 개의 삼중 제품 세트를 나타냅니다. $$\set{e_0^i}$$ 및 $$\set{e_1^i}$$의 Let $$z_i \in \set{-1,1}$$ 다음과 같이 하십시오. $$\Z_2^\infty$$ 해당 작업 $$\R$$- 평가된 직교 기준 $$\set{e_1^i}$$. 그래서 우리는 선택해야합니다. $$z_i$$ 이렇게 $$\set{z_ie_1^i}$$ 수율 $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+대상 $$\set{M_0^{i,j,k}}$$ 및 $$\set{M_1^{i,j,k}}$$ 기본에 대한 두 개의 삼중 제품 세트를 나타냅니다. $$\set{e_0^i}$$ 및 $$\set{e_1^i}$$의 Let $$z_i \in U_1$$ 다음과 같이 하십시오. $$U_1^\infty$$ 이러한 orthonormal 기초에 행동 $$\set{e_1^i}$$. 그래서 우리는 선택해야합니다. $$z_i$$ 이렇게 $$\set{z_ie_1^i}$$ 수율 $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
 이게 왜 케이스인가요? 일반적으로, eigenfunctions의 가능한 직교 기지의 공간에 작용하는 대칭 그룹은 단일 연산자의 공간입니다 $$U: \mathscr H\rightarrow\mathscr H$$ 프로젝션과 함께 $$P_{\mathcal V_\lambda}$$ 유한 차원의 eigenspaces $$\mathcal V_{\lambda}$$ 각 개별 고유 값과 연관됨 $$\lambda$$ 라플라시안 The Laplacian 따라서
 
@@ -241,11 +258,11 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 의 이미지입니다. $$M^{i,j,k}$$ 아래 $$U$$기준 작업 $$e^i \mapsto U(e^i)$$.
 
-이제 추측의 조건 하에서, 각각의 $$\mathcal V_\lambda$$ 1차원 벡터 공간 $$\Complex$$그러나 그것은 또한 그들이 하나의 차원 벡터 공간을 의미 $$\Reals$$, 따라서 전체 다중 대칭 그룹은 $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+이제 Corollary 2의 조건 하에서, 각각의 $$\mathcal V_\lambda$$ 1차원 벡터 공간 $$\Complex$$그러나 그것은 또한 그들이 하나의 차원 벡터 공간을 의미 $$\Reals$$, 따라서 전체 다중 대칭 그룹은 $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-다중성 구속조건이 없으면 추측의 연관된 전제 조건 "절대값의 계약 관련" 그저 그렇게 될 뿐 "정렬된 단수 값 집합 보존 $$\set{M^{i,j,k}}$$ (다중성으로 계산됨), 에서 맵 모음으로 표시되는 경우 $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"의 강력한 단일 불변 집합입니다.  우리는이 일반화 된 추측이 사실임을 확신하지 못하는데, 이는 명백한 Sunada 건설을 통해 반예제를 생산할 수 있기 때문입니다.
+일반적으로 연관된 필요 조건 "절대값의 계약 관련" 그저 그렇게 될 뿐 "정렬된 단수 값 집합 보존 $$\set{M^{i,j,k}}$$ (다중성으로 계산됨), 에서 맵 모음으로 표시되는 경우 $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"의 강력한 단일 불변 집합입니다.  우리는이 일반화 된 추측이 사실임을 확신하지 못하는데, 이는 명백한 Sunada 건설을 통해 반예제를 생산할 수 있기 때문입니다.
 
-원래 추측으로 돌아가면 증거가이 의미를 확립하는 것을 관찰합니다.
+Corollary 1로 돌아가면, 우리는 증거가이 의미를 확립하는 것을 포함합니다 :
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
@@ -254,9 +271,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 우리는 어떤 주어진 것을 기대할 수 있습니다. $$k>0$$, $$M_0^{i,i,k}$$ 동일할 수 없습니다. $$0$$ 모두 $$i$$. 또한, Formula <span class="eqno"></span> 대상 $$z_k$$ 둘 다 필요 $$i$$- 독립성 및 충분성, 기본 맵 설정 $$e_0^i \mapsto z_i e_1^i$$ 보존 $$\set{M_0^{i,j,k}}$$.
 
-상기 The above is "희망" 의 긍정적인 콘에 있는 Laplace eigenfunctions의 광선의 사각의 볼록한 경간의 조밀도에서 따르십시오 $$L^2(M,g)$$ (모든 고유기능) $$e^k$$ 모순에 의해 희망을 확립하는 두 가지 요소의 차이로 작성 될 수 있습니다). 다음 수식 세트 아래에 추측의 증거를 스케치합니다.
+상기 The above is "희망" 긍정적인 원뿔에 있는 Laplace eigenfunctions의 사각형의 긍정적인 합계의 조밀도에서 따르십시오 $$L^2(M,g)$$ (모든 고유 기능의 실제 및 가상 구성 요소) $$e^k$$ 모순에 의해 희망을 확립하는 두 가지 요소의 차이로 작성 될 수 있습니다). 우리는 다음 수식 세트 아래에 Corollary 1의 증거를 스케치합니다.
 
-그럼에도 불구하고, 우리는 몇 가지 관련 ID를 계산 하자 그래서 일부 전염성 미래 연구자가이 추측에 파고 수 있습니다:
+그럼에도 불구하고, 우리는 몇 가지 관련 ID를 계산 하자 그래서 일부 간헐적 인 미래 연구자는 일반화 된 추측에 파고 수:
 
 ```math
 \begin{aligned}
@@ -285,16 +302,24 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 참고: 아래 1차원 플랫 토리 케이스의 경우, $$\tilde{Q}_k(e^i,e^j) = 0$$ 이후 $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ 이것은 진정한 파생입니다.
 
+### 코롤러 증거
+
+Now consider the famous associativity relations from Conformal Field Theory:
+
 ```math
 
-\sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}M^{j,k,r}e^\ell\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
 
-\sum_r M^{i,i,r}M^{k,k,r} = \sum_r |M^{i,k,r}|^2
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-의 RHS <span class="eqno"></span> 는 불변성이며, LHS는 매니폴드와 그 고유성에 의존한다. 귀납적 증거 (Inductive Proof of the $$i$$-의 차이 "희망" 이 방정식을 통해, 합계가 가까운 용어에 집중되기 때문에 $$i$$ 및 $$k$$그리고 모순은 LHS의 측면에서 기호 변경으로 인한 것입니다.
+의 증거 A Proof of the $$i$$-의 차이 "희망" 이 방정식을 통해, 합계가 가까운 용어에 집중되기 때문에 $$i$$ 및 $$j$$, 그리고 모순은 다음과 같이 LHS에 대한 용어의 변경으로 인해 발생합니다. $$M_0 \rightarrow M_1$$.
 
-상기 추측은, 상기 algbraic multiplication operators는, The conjecture follows the prior observation, the algbraic multiplication operators, $$z_iz_jz_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ 긍정적 인 콘에 대한 동의 $$L^2(M,g)$$그리고 그들은 모든 곳에서 동의한다.
+Corollary 1은 대수 곱하기 연산자가 정의한 이전 관찰에서 다음과 같습니다. $$z_iz_jz_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ eigenfunctions의 사각형에 동의, 그 범위는 또한 조밀하다 $$L^2(M,g)$$그래서 그들은 모든 곳에서 동의합니다.
+
+Corollary 2는 스펙트럼의 multiplicity-1 조건이 Corollary 1의 반전을 유지하도록 함으로써 다음과 같습니다. $$\Z_2^\infty$$ 대칭.
+
+이것은 Corollaries의 증거를 완성합니다.
 
 ## 예제
 
