@@ -249,7 +249,7 @@ This completes the proof of the Theorem.
 \end{proof}
 
 \subsection{Discussion of Corollaries}
-\label{subsec:conj}
+\label{subsec:coros}
 
 With $\set{M_0^{i,j,k}}$ and $\set{M_1^{i,j,k}}$ representing the two triple-product sets for the bases $\set{e_0^i}$ and $\set{e_1^i}$, let $z_i \in U_1$ be the $U_1^\infty$ action on such an orthonormal basis $\set{e_1^i}$. Thus, we need to choose $z_i$ so that $\set{z_ie_1^i}$ yields $\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$.
 
@@ -268,7 +268,7 @@ Now under the conditions of Corollary~\ref{coro-2}, each of the $\mathcal V_\lam
 
 Without the multiplicity constraint, the Corollary~\ref{coro-2}'s associated prerequisite "regarding agreement in absolute values" would hence become "preservation of the ordered set of singular values of $\set{M^{i,j,k}}$, counted with multiplicity, when viewed as a collection of maps from $\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$". It turns out this is a reasonably robust set of Unitary Invariants. We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
 
-Getting back to the original conjecture, we observe that the proof involves establishing this implication:
+Getting back to the Corollary~\ref{coro-1}, we observe that the proof involves establishing this implication:
 
 \begin{equation}
 \label{fml}
@@ -276,8 +276,11 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\mathbb{N},\, ⋺ M_0^{i,i,k}
 \exists r,s,t \in \mathbb{N}\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\,.
 \end{equation}
 
+We may hope that for any given $k$, $M_0^{i,i,k}$ cannot be identically $0$ for all $i$. At first blush, this doesn't seem impossible if $M$ has an "even/odd" symmetry group, and $e^k$ is odd, but the hope holds true for the flat-tori case below (which does not satisfy the uniform eigenvalue multiplicity = 1 condition). Furthermore, the Formula~\ref{fml} for $z_k$ requires both $i$-independence, and sufficiency, to establish the basis map $e_0^i \mapsto z_i e_1^i$ preserves $\set{M_0^{i,j,k}}$.
 
-Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into this conjecture:
+It turns out that the above "hope" follows from the density of positive sums of squares of Laplace eigenfunctions in the positive cone of $L^2(M,g)$ (the real and imaginary parts of any eigenfunction $e^k$ can be written as the difference of two such elements, which establishes the hope by contradiction). We develop a proof of Corollary~\ref{coro-1} below the next set of formulae.
+
+Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into this generalized conjecture:
 
 \begin{equation}
 \begin{aligned}
@@ -359,7 +362,7 @@ We can therefore reduce both sides of every line in Equation~\ref{eqn-16} to $0$
 \sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
 \end{equation}
 
-has LHS and RHS both termwise independent of $*\in\set{0,1}^\N$.
+has LHS and RHS both termwise independent of $*\in\set{0,1}^\mathbb{N}$.
 
 Corollary~\ref{coro-1} follows from this and the prior observation that the algebraic multiplication operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree on squares of eigenfunctions, the span of which is also dense in $L^2(M,g)$, so they agree everywhere.
 
