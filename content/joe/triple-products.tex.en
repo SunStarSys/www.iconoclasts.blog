@@ -314,26 +314,6 @@ Note: for the one-dimensional flat-tori case below, $\tilde{Q}_k(e^i,e^j) = 0$ s
 \label{subsec:proof-of-coros}
 \begin{proof}
 
-Now consider the famous associativity relations from Conformal Field Theory:
-
-\begin{equation}
-\begin{aligned}
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell &= \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell\\
-& = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
-i = j, \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r}\bar M^{j,j,r} &= \sum_r |M^{i,j,r}|^2
-\end{aligned}
-\end{equation}
-
-A proof of the $i$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $i$ and $j$, and a contradiction would result from a change in terms on the LHS as $M_0 \rightarrow M_1$:
-
-\begin{equation}
-\label{eqn-16}
-\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
-\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
-
-\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
-\end{equation}
 
 \begin{lemma}
 \label{lma-coro-1}
