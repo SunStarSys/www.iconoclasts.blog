@@ -349,9 +349,11 @@ A proof of the $i$-invariance of the "hope" follows through this equation, since
 Induction on $K$ ($K=1$ follows by inspection of the imaginary components of the products):
 
 \begin{equation}
-\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
-B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
-B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
+\begin{aligned}
+\sum_{k\leq K} (\theta_k - 1)A_k &= \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
+B_{K-1} &= \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}\\
+B_{K-1} = 0 \iff (\theta_K - 1)A_K &=( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
+\end{aligned}
 \end{equation}
 
 Carrying out the same calculations for $\bar\theta_k$, we see that $B_{K-1} \ne 0$ is also covered by the $K-1$ induction, which implies $\theta_K = \pm 1$ which completes the proof of the Lemma~\ref{lma-coro-1}.
