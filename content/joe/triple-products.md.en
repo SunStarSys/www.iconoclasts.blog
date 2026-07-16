@@ -73,7 +73,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   </div>
   <div class="card-body">
 
-Given a pair of eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if the $$\set{M^{i,i,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+Given a pair of eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if the $$\set{M^{i,i,k}}$$ for one real-valued basis agrees, up to absolute value in the individual terms, with the other basis.
 
   </div>
 </div>
@@ -303,12 +303,12 @@ Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}M^{j,k,r}e^\ell \implies \\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
 
-\sum_r M^{i,i,r}M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-An inductive proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a sign change in terms on the LHS as $$M_0 \rightarrow M_1$$.
+An inductive proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a change in terms on the LHS as $$M_0 \rightarrow M_1$$.
 
 Corollary 1 follows from the prior observation that the algbraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on the positive cone of $$L^2(M,g)$$, and so they agree with pointwise multiplication everywhere by polarization.
 
