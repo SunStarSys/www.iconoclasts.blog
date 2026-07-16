@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49205
+status: draft
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -68,12 +68,24 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 <div class="card border-dark">
   <div class="card-header">
 
-#### Conjecture
+#### Corollary 1
 
   </div>
   <div class="card-body">
 
-If every eigenvalue has multiplicity $$1$$, given a pair of eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $$\set{M^{i,j,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+Given a pair of eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if the $$\set{M^{i,i,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+
+  </div>
+</div>
+<div class="card border-dark">
+  <div class="card-header">
+
+#### Corollary 2
+
+  </div>
+  <div class="card-body">
+
+Given a pair of multiplicity-1 eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $$\set{M^{i,i,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
 
   </div>
 </div>
@@ -90,7 +102,7 @@ If we consider the map
 
 this paper establishes the injectivity of this map for closed Riemannian manifolds (up to Riemannian isometry in its domain). Further results which apply these techniques to describe its image (and inverse), within select moduli spaces of metrics, are just getting started [[AA25]](#AA25).  There, Anshul Adve rigorously tackles unit tangent spaces of compact, hyperbolic 2-orbifolds using these same **structure constants** from Conformal Field Theory.
 
-In the generic case covered by the hypotheses of the [Conjecture](#h4- conjecture), every such isospectral manifold is in fact **isometric**.
+In the generic case covered by the hypotheses of the [Corollary](#h4- corollary), every such isospectral manifold is in fact **isometric**.
 
 These results were first demonstrated during a similarly titled talk by the author at **MSRI** in 1997, but they appear here in published form for the first time.
 
@@ -226,7 +238,7 @@ As this now diffeomorphism $$F$$ preserves eigenvalues and eigenfunctions (by hy
 
 This completes the proof of the Theorem.
 
-### Discussion of Conjecture
+### Discussion of Corollaries
 
 With $$\set{M_0^{i,j,k}}$$ and $$\set{M_1^{i,j,k}}$$ representing the two triple-product sets for the bases $$\set{e_0^i}$$ and $$\set{e_1^i}$$, let $$z_i \in \set{-1,1}$$ be the $$\Z_2^\infty$$ action on such an $$\R$$-valued orthonormal basis $$\set{e_1^i}$$. Thus, we need to choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
@@ -241,11 +253,11 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 is the image of $$M^{i,j,k}$$ under $$U$$'s basis action $$e^i \mapsto U(e^i)$$.
 
-Now under the conditions of the conjecture, each of the $$\mathcal V_\lambda$$ are one dimensional vector spaces over $$\Complex$$, but that also means they are one dimensional vector spaces over $$\Reals$$, and so the full multiplicative symmetry group is $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+Now under the conditions of Corollary 2, each of the $$\mathcal V_\lambda$$ are one dimensional vector spaces over $$\Complex$$, but that also means they are one dimensional vector spaces over $$\Reals$$, and so the full multiplicative symmetry group is $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Without the multiplicity constraint, the conjecture's associated prerequisite "regarding agreement in absolute values" would simply become "preservation of the ordered set of singular values of $$\set{M^{i,j,k}}$$ (counted with multiplicity), when viewed as a collection of maps from $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", which are a robust set of Unitary Invariants.  We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
+Without the multiplicity constraint, Corollary 2's associated prerequisite "regarding agreement in absolute values" would simply become "preservation of the ordered set of singular values of $$\set{M^{i,j,k}}$$ (counted with multiplicity), when viewed as a collection of maps from $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", which are a robust set of Unitary Invariants.  We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
 
-Getting back to the original conjecture, we observe that the proof involves establishing this implication:
+Getting back to Corollary 1, we observe that the proof involves establishing this implication:
 
 ```math
 z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
@@ -254,9 +266,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 We may hope that for any given $$k>0$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. Furthermore, the Formula <span class="eqno"></span> for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$.
 
-It turns out that the above "hope" follows from the density of the convex span of squares of rays of Laplace eigenfunctions in the positive cone of $$L^2(M,g)$$ (any eigenfunction $$e^k$$ can be written as the difference of two such elements, which establishes the hope by contradiction). We sketch a proof of the conjecture below the next set of formulae.
+It turns out that the above "hope" follows from the density of positive sums of squares of Laplace eigenfunctions in the positive cone of $$L^2(M,g)$$ (any eigenfunction $$e^k$$ can be written as the difference of two such elements, which establishes the hope by contradiction). We sketch a proof of Corollary 1 below the next set of formulae.
 
-Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into this conjecture:
+Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into these notions:
 
 ```math
 \begin{aligned}
@@ -285,6 +297,8 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 Note: for the one-dimensional flat-tori case below, $$\tilde{Q}_k(e^i,e^j) = 0$$ since $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ is a true derivation.
 
+### Proof of Corollaries
+
 Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
@@ -294,10 +308,13 @@ e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}
 \sum_r M^{i,i,r}M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-The RHS of <span class="eqno"></span> is an invariant, and the LHS depends on the manifold and its eigenbasis. A inductive proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a sign change in terms on the LHS.
+An inductive proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a sign change in terms on the LHS as $$M_0 \rightarrow M_1$$.
 
-The conjecture follows from the prior observation that the algbraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on the positive cone of $$L^2(M,g)$$, and so they agree everywhere.
+Corollary 1 follows from the prior observation that the algbraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on the positive cone of $$L^2(M,g)$$, and so they agree with pointwise multiplication everywhere by polarization.
 
+Corollary 2 follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold.
+
+This completes the proof of the Corollaries.
 
 ## Example
 
