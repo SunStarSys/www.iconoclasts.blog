@@ -32,7 +32,7 @@
 
 % Metadata
 \title{Triple Products of Eigenfunctions and Spectral Geometry}
-\date{2026\\February}
+\date{2026\\July}
 \author{Joe Schaefer\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}}
 
 % Theorem, Lemma, etc
@@ -97,10 +97,15 @@ To be isometric to $(M,g)$, it is a necessary and sufficient condition for anoth
 
 \textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this instance, we offer the following
 
-\begin{conjecture}
-\label{conj}
-If every eigenvalue has multiplicity $1$, given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $\set{M^{i,j,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
-\end{conjecture}
+\begin{corollary}
+\label{coro-1}
+Given a pair of eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem~\ref{thm}, the manifolds are isometric if the $\set{M^{i,i,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+\end{corollary}
+
+\begin{corollary}
+\label{coro-2}
+Given a pair of multiplicity-1 eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem~\ref{thm}, the manifolds are isometric if and only if the $\set{M^{i,i,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+\end{corollary}
 
 The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the bilinear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
@@ -110,6 +115,8 @@ If we consider the map
 \end{equation}
 
 this paper establishes the injectivity of this map for closed Riemannian manifolds (up to Riemannian isometry in its domain). Further results which apply these techniques to describe its image (and inverse), within select moduli spaces of metrics, are just getting started \cite{AA25}.  There, Anshul Adve rigorously tackles unit tangent spaces of compact, hyperbolic 2-orbifolds, using these same \textit{structure constants} from Conformal Field Theory.
+
+Ihe generic Riemannian metric case is covered by diagonal litmus test described the hypotheses of Corollary~\ref{coro-2}. The converse holds there as well.
 
 These results were first demonstrated during a similarly titled talk by the author at \textbf{MSRI} in 1997, but they appear here in published form for the first time.
 
@@ -241,10 +248,10 @@ This completes the proof of the Theorem.
 
 \end{proof}
 
-\subsection{Discussion of Conjecture~\ref{conj}}
+\subsection{Discussion of Corollaries}
 \label{subsec:conj}
 
-With $\set{M_0^{i,j,k}}$ and $\set{M_1^{i,j,k}}$ representing the two triple-product sets for the bases $\set{e_0^i}$ and $\set{e_1^i}$, let $z_i \in \set{-1,1}$ be the $\mathbb{Z}_2^\infty$ action on such an $\mathbb{R}$-valued orthonormal basis $\set{e_1^i}$. Thus, we need to choose $z_i$ so that $\set{z_ie_1^i}$ yields $\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$.
+With $\set{M_0^{i,j,k}}$ and $\set{M_1^{i,j,k}}$ representing the two triple-product sets for the bases $\set{e_0^i}$ and $\set{e_1^i}$, let $z_i \in U_1$ be the $U_1^\infty$ action on such an orthonormal basis $\set{e_1^i}$. Thus, we need to choose $z_i$ so that $\set{z_ie_1^i}$ yields $\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$.
 
 Why is this the case? In general, the symmetry group acting on the space of possible orthonormal bases of eigenfunctions is the space of Unitary Operators $U: \mathscr H\rightarrow\mathscr H$ that commute with projections $P_{\mathcal V_\lambda}$ onto the finite-dimensional eigenspaces $\mathcal V_{\lambda}$ associated with each individual eigenvalue $\lambda$ of the Laplacian. Therefore
 
@@ -257,9 +264,11 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 is the image of $M^{i,j,k}$ under $U$’s basis action $e^i \mapsto U(e^i)$.
 
-Now under the conditions of the conjecture, each of the $\mathcal V_\lambda$ are one dimensional vector spaces over $\mathbb{C}$, but that also means they are one dimensional vector spaces over $\mathbb{R}$, and so the full multiplicative symmetry group is $O(1,\mathbb{R})^\infty=\mathbb{Z}_2^\infty$.
+Now under the conditions of Corollary~\ref{coro-2}, each of the $\mathcal V_\lambda$ are one dimensional vector spaces over $\mathbb{C}$, but that also means they are one dimensional vector spaces over $\mathbb{R}$, and so the full multiplicative symmetry group is $O(1,\mathbb{R})^\infty=\mathbb{Z}_2^\infty$.
 
-Without the multiplicity constraint, the conjecture’s associated prerequisite “regarding agreement in absolute values” would hence become “preservation of the ordered set of singular values of $\set{M^{i,j,k}}$, counted with multiplicity, when viewed as a collection of maps from $\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$”. It turns out this is a reasonably robust set of Unitary Invariants. We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
+
+
+Without the multiplicity constraint, the Corollary~\ref{coro-2}'s associated prerequisite “regarding agreement in absolute values” would hence become “preservation of the ordered set of singular values of $\set{M^{i,j,k}}$, counted with multiplicity, when viewed as a collection of maps from $\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$”. It turns out this is a reasonably robust set of Unitary Invariants. We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
 
 Getting back to the original conjecture, we observe that the proof involves establishing this implication:
 
@@ -269,7 +278,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\mathbb{N},\, ⋺ M_0^{i,i,k}
 \exists r,s,t \in \mathbb{N}\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\,.
 \end{equation}
 
-We may hope that for any given $k$, $M_0^{i,i,k}$ cannot be identically $0$ for all $i$. At first blush, this doesn't seem impossible if $M$ has an "even/odd" symmetry group, and $e^k$ is odd, but the hope holds true for the flat-tori case below (which does not satisfy the uniform eigenvalue multiplicity = 1 condition). Furthermore, the Formula~\ref{fml} for $z_k$ requires both $i$-independence, and sufficiency, to establish the basis map $e_0^i \mapsto z_i e_1^i$ preserves $\set{M_0^{i,j,k}}$. All of these aspects remain unknown.
+We may hope that for any given $k$, $M_0^{i,i,k}$ cannot be identically $0$ for all $i$. At first blush, this doesn't seem impossible if $M$ has an "even/odd" symmetry group, and $e^k$ is odd, but the hope holds true for the flat-tori case below (which does not satisfy the uniform eigenvalue multiplicity = 1 condition). Furthermore, the Formula~\ref{fml} for $z_k$ requires both $i$-independence, and sufficiency, to establish the basis map $e_0^i \mapsto z_i e_1^i$ preserves $\set{M_0^{i,j,k}}$.
+
+It turns out that the above "hope" follows from the density of positive sums of squares of Laplace eigenfunctions in the positive cone of $$L^2(M,g)$$ (the real and imaginary parts of any eigenfunction $e^k$ can be written as the difference of two such elements, which establishes the hope by contradiction). We develop a proof of Corollary~\ref{coro-1} below the next set of formulae.
 
 Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into this conjecture:
 
@@ -299,6 +310,66 @@ df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\l
 \end{equation}
 
 Note: for the one-dimensional flat-tori case below, $\tilde{Q}_k(e^i,e^j) = 0$ since $\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$ is a true derivation.
+
+\section{Proof of Corollaries}
+\label{sec:proof-of-coros}
+\begin{proof}
+
+Now consider the famous associativity relations from Conformal Field Theory:
+
+\begin{equation}
+
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+i = j, \ell = k\text{ and relabeling } \implies \\
+
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+
+\end{equation}
+
+A proof of the $i$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $i$ and $j$, and a contradiction would result from a change in terms on the LHS as $M_0 \rightarrow M_1$\dots
+
+\begin{equation}
+\label{eqn-16}
+\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
+\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
+
+\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+\end{equation}
+
+\subsection{Lemma}
+
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \mathbb{C}\setminus \set{0} \ , \set{\sum_{k\leq K} (1 - \theta_k) A_k\ , \sum _{k\leq K}(1-\bar\theta_k) A_k} \subset \mathbb{R} \implies \theta_k = \pm 1 \  \forall k$$
+
+\subsection{Proof of Lemma}
+\begin{subproof}
+
+Induction on $K$ ($K=1$ follows by inspection of the imaginary components of the products):
+
+\begin{equation}
+\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
+B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
+B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
+\end{equation}
+
+Carrying out the same calculations for $\bar\theta_k$, we see that
+$B_{K-1} \ne 0$ is also covered by the $K-1$ induction, which implies $\theta_K = \pm 1$ which completes the proof of the Lemma.
+\end{subproof}
+
+We can therefore reduce both sides of every line in Equation~\ref{eqn-16} to $0$ by induction on the number of elements in $\set{\theta_k = -1}$. So we have now proven that the equation
+
+\begin{equation}
+\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
+\end{equation}
+
+has LHS and RHS both termwise independent of $*\in\set{0,1}^\N$.
+
+Corollary~\ref{coro-1} follows from this and the prior observation that the algebraic multiplication operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree on squares of eigenfunctions, the span of which is also dense in $L^2(M,g)$, so they agree everywhere.
+
+Corollary~\ref{coro-2} follows by noting that the multiplicity-1 condition on the spectrum forces the converse portion of Corollary\ref{coro-2} to hold by $\Z_2^\infty$ symmetry.
+
+This completes the proof of the Corollaries.
+
+\end{proof}
 
 \section{Example}
 \label{sec:ex}
