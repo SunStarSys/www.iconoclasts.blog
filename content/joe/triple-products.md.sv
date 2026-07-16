@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=49251
+status: verifierad=49401
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -107,7 +107,7 @@ Om vi tänker på kartan
 
 Detta papper fastställer injicerbarhet av denna karta för slutna Riemannian grenrör (upp till Riemannian isometry i dess domän). Ytterligare resultat som tillämpar dessa tekniker för att beskriva sin bild (och invers), inom vissa moduli utrymmen av mätvärden, är bara att komma igång [[AA25]](#AA25). Där tacklar Anshul Adve rigoröst enhetstangensutrymmen av kompakta, hyperboliska 2-omkretsar med samma **strukturkonstanter** från Conformal Field Theory.
 
-I det generiska fallet som omfattas av hypoteserna om  [Korollarium 2](#h4-corollary-2)Varje sådan isospektral mångfald är i själva verket **isometrisk**.
+Ihe generiska Riemannian metriska fallet omfattas av diagonal litmus test beskrev hypoteserna för [Korollarium 2](#h4-corollary-2). Konversationen finns där också.
 
 Dessa resultat visades först under ett liknande tal av författaren vid **MSRI **1997, men de visas här i publicerad form för första gången.
 
@@ -308,7 +308,8 @@ Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+i = j\ , \ell = k\text{ and relabeling } \implies \\
 
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
@@ -324,19 +325,19 @@ Ett bevis på $$i$$-invarians mellan "hopp" följer genom denna ekvation, efters
 
 #### Lemma
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
 
 #### Bevis för Lemma
 
-Induktion på $$K$$:
+Induktion på $$K$$ ($$K=1$$ följer genom inspektion av produkternas imaginära komponenter:
 ```math
 \sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
 B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
 B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
 ```
-Men $$B_{K-1} \ne 0$$ omfattas även av $$K-1$$ induktion, vilket innebär $$\theta_K = \pm 1$$ som kompletterar beviset för Lemma.
+Vi ser att $$B_{K-1} \ne 0$$ omfattas även av $$K-1$$ induktion, vilket innebär $$\theta_K = \pm 1$$ som kompletterar beviset för Lemma.
 
-Vi kan därför minska båda sidor ekvation (15) till $$0$$ genom induktion av antalet element i $$\set{\theta_k = -1}$$. Så vi har nu bevisat att ekvationen
+Vi kan därför minska båda sidor av varje linje i Ekvation (16) först till verkligt värde. $$M^{i,i,k}$$ via $$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$och sedan till $$0$$ genom induktion av antalet element i $$\set{\theta_k = -1}$$. Så vi har nu bevisat att ekvationen
 
 ```math
 \sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2

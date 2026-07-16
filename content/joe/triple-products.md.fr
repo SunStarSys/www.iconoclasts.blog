@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=49251
+status: vérifié=49401
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -108,7 +108,7 @@ Si nous considérons la carte
 
 cet article établit l'injectivité de cette carte pour les collecteurs riemanniens fermés (jusqu'à l'isométrie riemannienne dans son domaine). D'autres résultats qui appliquent ces techniques pour décrire son image (et inversement), dans certains espaces de modules de mesures, ne font que commencer [[AA25]](#AA25). Là, Anshul Adve s'attaque rigoureusement aux espaces tangents unitaires des 2-orbifolds compacts et hyperboliques en utilisant ces mêmes **constantes de structure** de la théorie du champ conforme.
 
-Dans le cas générique couvert par les hypothèses de  [Corollaire 2](#h4-corollary-2), chaque collecteur isospectral est en fait **isométrique**.
+Le cas métrique générique de Riemannien est couvert par un test diagonal de la muscade décrit les hypothèses de [Corollaire 2](#h4-corollary-2). L'inverse tient là aussi.
 
 Ces résultats ont été démontrés pour la première fois lors d'un discours intitulé de la même manière par l'auteur à l' **IRSM** en 1997, mais ils apparaissent ici sous forme publiée pour la première fois.
 
@@ -309,7 +309,8 @@ Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+i = j\ , \ell = k\text{ and relabeling } \implies \\
 
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
@@ -325,19 +326,19 @@ Une preuve de $$i$$- l'invariance de "espérance" suit cette équation, puisque 
 
 #### Lemme
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
 
 #### Preuve de Lemma
 
-Induction sur $$K$$:
+Induction sur $$K$$ ($$K=1$$ suit par inspection des composants imaginaires des produits :
 ```math
 \sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
 B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
 B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
 ```
-Mais $$B_{K-1} \ne 0$$ est également couvert par le $$K-1$$ induction, ce qui implique $$\theta_K = \pm 1$$ qui complète la preuve du lemme.
+Nous voyons que $$B_{K-1} \ne 0$$ est également couvert par le $$K-1$$ induction, ce qui implique $$\theta_K = \pm 1$$ qui complète la preuve du lemme.
 
-Nous pouvons donc réduire l'équation des deux côtés (15) à $$0$$ par induction sur le nombre d'éléments dans $$\set{\theta_k = -1}$$. Nous avons maintenant prouvé que l'équation
+Nous pouvons donc réduire les deux côtés de chaque ligne dans l'équation (16) d'abord à la valeur réelle. $$M^{i,i,k}$$ via $$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$, puis à $$0$$ par induction sur le nombre d'éléments dans $$\set{\theta_k = -1}$$. Nous avons maintenant prouvé que l'équation
 
 ```math
 \sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2

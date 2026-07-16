@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =49251
+status: 驗證 =49401
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -106,7 +106,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 本白皮書為封閉的里曼尼亞人機組 (最多只能在其域內使用里曼尼亞人) 建立此地圖的注射性。套用這些技術來描述其影像 (和反向) 的進一步結果，就在測量結果的精選模數空間內開始使用[[AA25]](#AA25)。Anshul Adve 在 Conformal Field Theory 中使用這些相同的 **結構常數** 來處理緊密、雙曲雙曲兩曲的單位正切空間。
 
-在假說所涵蓋的一般個案中[核數 2](#h4-corollary-2)，這類的等光譜歧管實際上都是 **幾何 **。
+Ihe Generic Riemannian 公制案例由對角線 litmus 測試所涵蓋，描述了以下假設：[核數 2](#h4-corollary-2)。反之亦會保留在那裡。
 
 這些結果最初是在 1997 年 **MSRI** 的作者在類似標題的談話期間進行示範，但初次以公開的形式出現在這裡。
 
@@ -307,7 +307,8 @@ Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+i = j\ , \ell = k\text{ and relabeling } \implies \\
 
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
@@ -323,19 +324,19 @@ e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{
 
 #### Lemma
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
 
 #### Lemma 證明
 
-歸納$$K$$:
+歸納$$K$$ ($$K=1$$ 依照產品虛構成分的檢驗進行：
 ```math
 \sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
 B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
 B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
 ```
-但$$B_{K-1} \ne 0$$ 也由下列項目涵蓋：$$K-1$$ 感應，隱含$$\theta_K = \pm 1$$ 完成 Lemma 的證明。
+我們看到：$$B_{K-1} \ne 0$$ 也由下列項目涵蓋：$$K-1$$ 感應，隱含$$\theta_K = \pm 1$$ 完成 Lemma 的證明。
 
-因此，我們將方程式 (15) 縮減為$$0$$ 依傳入中的元素數$$\set{\theta_k = -1}$$。因此，我們已證明方程式
+因此，我們將方程式 (16) 中每條線的兩側縮減為重估$$M^{i,i,k}$$ 透過$$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$，然後至$$0$$ 依傳入中的元素數$$\set{\theta_k = -1}$$。因此，我們已證明方程式
 
 ```math
 \sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2

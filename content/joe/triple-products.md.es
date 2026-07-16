@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=49251
+status: verificado=49401
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -108,7 +108,7 @@ Si consideramos el mapa
 
 Este artículo establece la inyectividad de este mapa para los colectores de Riemann cerrados (hasta la isometría de Riemann en su dominio). Otros resultados que aplican estas técnicas para describir su imagen (e inversa), dentro de espacios selectos de módulos de métricas, apenas están comenzando [[AA25]](#AA25). Allí, Anshul Adve aborda rigurosamente los espacios tangentes unitarios de 2-orbifolds compactos e hiperbólicos utilizando estas mismas **constantes de estructura** de la Teoría de Campo Conformal.
 
-En el caso genérico cubierto por las hipótesis de  [Corolario 2](#h4-corollary-2), cada uno de estos colectores isospectrales es de hecho **isométrico**.
+El caso métrico genérico de Riemann está cubierto por la prueba de fuego diagonal que describe las hipótesis de [Corolario 2](#h4-corollary-2). Lo contrario también se mantiene ahí.
 
 Estos resultados se demostraron por primera vez durante una charla titulada de manera similar por el autor en **MSRI** en 1997, pero aparecen aquí en forma publicada por primera vez.
 
@@ -309,7 +309,8 @@ Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+i = j\ , \ell = k\text{ and relabeling } \implies \\
 
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
@@ -325,19 +326,19 @@ Una prueba del $$i$$-invarianza del "esperanza" a través de esta ecuación, ya 
 
 #### Lema
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
 
 #### Prueba de Lemma
 
-Inducción en $$K$$:
+Inducción en $$K$$ ($$K=1$$ a continuación, mediante inspección de los componentes imaginarios de los productos:
 ```math
 \sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
 B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
 B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
 ```
-Pero $$B_{K-1} \ne 0$$ también está cubierto por el $$K-1$$ inducción, lo que implica $$\theta_K = \pm 1$$ que completa la prueba de la Lemma.
+Vemos que $$B_{K-1} \ne 0$$ también está cubierto por el $$K-1$$ inducción, lo que implica $$\theta_K = \pm 1$$ que completa la prueba de la Lemma.
 
-Por lo tanto, podemos reducir ambos lados Ecuación (15) a $$0$$ por inducción sobre el número de elementos en $$\set{\theta_k = -1}$$. Así que ahora hemos demostrado que la ecuación
+Por lo tanto, podemos reducir ambos lados de cada línea en la ecuación (16) primero a valor real. $$M^{i,i,k}$$ vía $$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$y luego a $$0$$ por inducción sobre el número de elementos en $$\set{\theta_k = -1}$$. Así que ahora hemos demostrado que la ecuación
 
 ```math
 \sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2

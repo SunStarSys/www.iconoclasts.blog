@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=49251
+status: überprüft=49401
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -107,7 +107,7 @@ Wenn wir die Karte betrachten
 
 Diese Arbeit legt die Injektivität dieser Karte für geschlossene Riemannsche Mannigfaltigkeiten (bis zur Riemannschen Isometrie in ihrer Domäne) fest. Weitere Ergebnisse, die diese Techniken anwenden, um ihr Bild (und umgekehrt) innerhalb ausgewählter Modulräume von Metriken zu beschreiben, beginnen gerade erst. [[AA25]](#AA25). Dort greift Anshul Adve mit denselben **Strukturkonstanten** aus der Conformal Field Theory Tangent Spaces von kompakten, hyperbolischen 2-orbifolds streng an.
 
-Im allgemeinen Fall, der von den Hypothesen der  [Folge 2](#h4-corollary-2)Jede solche isospektrale Mannigfaltigkeit ist in der Tat **isometrisch**.
+Der generische Riemannsche metrische Fall wird durch den diagonalen Litmustest abgedeckt, der die Hypothesen von [Folge 2](#h4-corollary-2). Die Konversation hält auch dort.
 
 Diese Ergebnisse wurden erstmals 1997 in einem ähnlich betitelten Vortrag des Autors bei **MSRI** gezeigt, erscheinen hier aber erstmals in veröffentlichter Form.
 
@@ -308,7 +308,8 @@ Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+i = j\ , \ell = k\text{ and relabeling } \implies \\
 
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
@@ -324,19 +325,19 @@ Ein Beweis der $$i$$-Unvarianz der "Hoffnung" folgt durch diese Gleichung, da di
 
 #### Lemma
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
 
 #### Nachweis von Lemma
 
-Induktion an $$K$$:
+Induktion an $$K$$ ($$K=1$$ folgt durch Inspektion der imaginären Bestandteile der Produkte):
 ```math
 \sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
 B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
 B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
 ```
-Aber $$B_{K-1} \ne 0$$ wird auch durch die $$K-1$$ Induktion, die impliziert $$\theta_K = \pm 1$$ die den Nachweis der Lemma vervollständigt.
+Wir sehen das $$B_{K-1} \ne 0$$ wird auch durch die $$K-1$$ Induktion, die impliziert $$\theta_K = \pm 1$$ die den Nachweis der Lemma vervollständigt.
 
-Wir können daher die beidseitige Gleichung (15) auf $$0$$ durch Induktion über die Anzahl der Elemente in $$\set{\theta_k = -1}$$. Wir haben nun bewiesen, dass die Gleichung
+Wir können daher beide Seiten jeder Linie in Gleichung (16) zuerst auf realwertig reduzieren. $$M^{i,i,k}$$ über $$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$und dann zu $$0$$ durch Induktion über die Anzahl der Elemente in $$\set{\theta_k = -1}$$. Wir haben nun bewiesen, dass die Gleichung
 
 ```math
 \sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2

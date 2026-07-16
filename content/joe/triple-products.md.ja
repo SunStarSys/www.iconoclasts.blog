@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=49251
+status: 確認済み=49401
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -106,7 +106,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 閉じたRiemannianマニホールド(その領域ではRiemannian isometryまで)に対するこのマップの注入性を確立した。これらの手法を適用して、そのイメージ(および逆)を説明するさらなる結果は、メトリックの選択モジュリ領域内で開始されます。[[AA25]](#AA25)。Anshul Adveは、Conformal Field Theoryと同じ**構造定数**を使用して、コンパクトで双曲型の2-orbifoldsのユニット接線スペースに厳密に取り組んでいます。
 
-仮説の対象となる一般的なケース[コロラリー2](#h4-corollary-2)、そのような等分性多岐管はすべて実際には**isometric**です。
+IheジェネリックRiemannianメトリックケースは、対角リトマステストでカバーされています。[コロラリー2](#h4-corollary-2)。逆もそこにある。
 
 これらの結果は、1997年に**MSRI**の著者が同様のタイトルの講演で最初に実証されましたが、それらは初めて公開された形式でここに表示されます。
 
@@ -307,7 +307,8 @@ Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell \implies \\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+i = j\ , \ell = k\text{ and relabeling } \implies \\
 
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
@@ -323,19 +324,19 @@ e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{
 
 ####レマ
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
 
 #### レマの証明
 
-導入$$K$$:
+導入$$K$$ ($$K=1$$ プロダクトの架空の部品の点検によって続きます:
 ```math
 \sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
 B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
 B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
 ```
-ただし、$$B_{K-1} \ne 0$$ また、$$K-1$$ 暗示する誘導$$\theta_K = \pm 1$$ レマの証拠を完成させる。
+次のことがわかります。$$B_{K-1} \ne 0$$ また、$$K-1$$ 暗示する誘導$$\theta_K = \pm 1$$ レマの証拠を完成させる。
 
-したがって、両側の方程式(15)を$$0$$ 要素の数の誘導によって$$\set{\theta_k = -1}$$。そこで、方程式を証明しました。
+したがって、方程式(16)のすべての線の両側を最初に実値に減らすことができます$$M^{i,i,k}$$ 経由$$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$次に、$$0$$ 要素の数の誘導によって$$\set{\theta_k = -1}$$。そこで、方程式を証明しました。
 
 ```math
 \sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
