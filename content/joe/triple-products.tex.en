@@ -360,7 +360,7 @@ We see that $B_{K-1} \ne 0$ is also covered by the $K-1$ induction, which implie
 
 \end{subproof}
 
-We can therefore reduce both sides of every line in Equation (16) first to real-valued $M^{i,i,k}$ via $z_k = M^{i,i,k}/|M^{i,i,k}|$, and then to $0$ by induction on the number of elements in $\set{\theta_k = -1}$. So we have now proven that the equation
+We can therefore reduce both sides of every line in Equation (16) first to real-valued $M^{i,i,k}$ via $z_k = \bar M^{i,i,k}/|M^{i,i,k}|$, and then to $0$ by induction on the number of elements in $\set{\theta_k = -1}$. So we have now proven that the equation
 
 \begin{equation}
 \sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
