@@ -335,17 +335,16 @@ A proof of the $i$-invariance of the "hope" follows through this equation, since
 \sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
 \end{equation}
 
-\subsection{Lemma}
-
+\begin{lemma}
+\label{lma-coro}
 \begin{equation}
 |\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \mathbb{C}\setminus \set{0} \\
 \set{\sum_{k\leq K} (1 - \theta_k) A_k\ , \sum _{k\leq K}(1-\bar\theta_k) A_k} \subset \mathbb{R}\\
 \implies \theta_k = \pm 1 \  \forall k
 \end{equation}
+\end{lemma}
 
-\subsection{Proof of Lemma}
-\begin{subproof}
-
+\begin{subproof}[Proof of Lemma~\ref{lma-coro}]
 Induction on $K$ ($K=1$ follows by inspection of the imaginary components of the products):
 
 \begin{equation}
