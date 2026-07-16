@@ -310,8 +310,8 @@ df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\l
 
 Note: for the one-dimensional flat-tori case below, $\tilde{Q}_k(e^i,e^j) = 0$ since $\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$ is a true derivation.
 
-\section{Proof of Corollaries}
-\label{sec:proof-of-coros}
+\subsection{Proof of Corollaries}
+\label{subsec:proof-of-coros}
 \begin{proof}
 
 Now consider the famous associativity relations from Conformal Field Theory:
@@ -336,7 +336,7 @@ A proof of the $i$-invariance of the "hope" follows through this equation, since
 \end{equation}
 
 \begin{lemma}
-\label{lma-coro}
+\label{lma-coro-1}
 \begin{equation}
 |\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \mathbb{C}\setminus \set{0} \\
 \set{\sum_{k\leq K} (1 - \theta_k) A_k\ , \sum _{k\leq K}(1-\bar\theta_k) A_k} \subset \mathbb{R}\\
@@ -344,7 +344,7 @@ A proof of the $i$-invariance of the "hope" follows through this equation, since
 \end{equation}
 \end{lemma}
 
-\begin{subproof}[Proof of Lemma~\ref{lma-coro}]
+\begin{subproof}[Proof of Lemma~\ref{lma-coro-1}]
 Induction on $K$ ($K=1$ follows by inspection of the imaginary components of the products):
 
 \begin{equation}
@@ -353,7 +353,7 @@ B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
 B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
 \end{equation}
 
-Carrying out the same calculations for $\bar\theta_k$, we see that $B_{K-1} \ne 0$ is also covered by the $K-1$ induction, which implies $\theta_K = \pm 1$ which completes the proof of the Lemma.
+Carrying out the same calculations for $\bar\theta_k$, we see that $B_{K-1} \ne 0$ is also covered by the $K-1$ induction, which implies $\theta_K = \pm 1$ which completes the proof of the Lemma~\ref{lma-coro-1}.
 
 \end{subproof}
 
