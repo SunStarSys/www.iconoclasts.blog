@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49246
+status: verified=49247
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -311,9 +311,39 @@ e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-A proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a change in terms on the LHS as $$M_0 \rightarrow M_1$$.
+A proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a change in terms on the LHS as $$M_0 \rightarrow M_1$$:
 
-Corollary 1 follows from the prior observation that the algebraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on squares of eigenfunctions, the span of which is also dense in $$L^2(M,g)$$, so they agree everywhere.
+```math
+\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
+\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
+
+\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+```
+
+#### Lemma
+
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+
+#### Proof of Lemma
+
+Induction on $$K$$:
+```math
+\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
+B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
+B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
+```
+But $$B_{K-1} \ne 0$$ is also covered by the $$K-1$$ induction, which implies $$\theta_K = \pm 1$$ which completes the proof of the Lemma.
+
+We can therefore reduce both sides Equation (15) to 0 by induction on the number of elements in $$\set{\theta_k = -1}$$. So we have now proven
+the equation
+
+```math
+\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
+```
+
+has LHS and RHS **termwise independent** of $$*\in\set{0,1}$$.
+
+Corollary 1 follows from this and the prior observation that the algebraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on squares of eigenfunctions, the span of which is also dense in $$L^2(M,g)$$, so they agree everywhere.
 
 Corollary 2 follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold by $$\Z_2^\infty$$ symmetry.
 
