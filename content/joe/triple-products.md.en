@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49225
+status: verified=49227
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -243,7 +243,7 @@ This completes the proof of the Theorem.
 
 ### Discussion of Corollaries
 
-With $$\set{M_0^{i,j,k}}$$ and $$\set{M_1^{i,j,k}}$$ representing the two triple-product sets for the bases $$\set{e_0^i}$$ and $$\set{e_1^i}$$, let $$z_i \in U_1$$ be the $$U_1^\nfty$$ action on such an orthonormal basis $$\set{e_1^i}$$. Thus, we need to choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+With $$\set{M_0^{i,j,k}}$$ and $$\set{M_1^{i,j,k}}$$ representing the two triple-product sets for the bases $$\set{e_0^i}$$ and $$\set{e_1^i}$$, let $$z_i \in U_1$$ be the $$U_1^\infty$$ action on such an orthonormal basis $$\set{e_1^i}$$. Thus, we need to choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
 
 Why is this the case? In general, the symmetry group acting on the space of possible orthonormal bases of eigenfunctions is the space of Unitary Operators $$U: \mathscr H\rightarrow\mathscr H$$ that commute with projections $$P_{\mathcal V_\lambda}$$ onto the finite-dimensional eigenspaces $$\mathcal V_{\lambda}$$ associated with each individual eigenvalue $$\lambda$$ of the Laplacian. Therefore
 
@@ -258,7 +258,7 @@ is the image of $$M^{i,j,k}$$ under $$U$$'s basis action $$e^i \mapsto U(e^i)$$.
 
 Now under the conditions of Corollary 2, each of the $$\mathcal V_\lambda$$ are one dimensional vector spaces over $$\Complex$$, but that also means they are one dimensional vector spaces over $$\Reals$$, and so the full multiplicative symmetry group is $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Without the multiplicity constraint, Corollary 2's associated prerequisite "regarding agreement in absolute values" would simply become "preservation of the ordered set of singular values of $$\set{M^{i,j,k}}$$ (counted with multiplicity), when viewed as a collection of maps from $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", which are a robust set of Unitary Invariants.  We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
+More generally, the associated prerequisite "regarding agreement in absolute values" would simply become "preservation of the ordered set of singular values of $$\set{M^{i,j,k}}$$ (counted with multiplicity), when viewed as a collection of maps from $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", which are a robust set of Unitary Invariants.  We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
 
 Getting back to Corollary 1, we observe that the proof involves establishing this implication:
 
@@ -311,11 +311,11 @@ e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-An inductive proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a change in terms on the LHS as $$M_0 \rightarrow M_1$$.
+A proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a change in terms on the LHS as $$M_0 \rightarrow M_1$$.
 
-Corollary 1 follows from the prior observation that the algebraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on the positive cone of $$L^2(M,g)$$, and so they agree with pointwise multiplication everywhere by polarization.
+Corollary 1 follows from the prior observation that the algebraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on squares of eigenfunctions, the algebraic span of which is also dense in $$L^2(M,g)$$ by Stone-Weierstrass, so they agree everywhere.
 
-Corollary 2 follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold.
+Corollary 2 follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold by $$\Z_2^\infty$$ symmetry.
 
 This completes the proof of the Corollaries.
 
