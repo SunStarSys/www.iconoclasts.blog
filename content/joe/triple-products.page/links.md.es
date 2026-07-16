@@ -31,4 +31,6 @@ La singularidad de los resultados en el papel de Anshul se basa en gran medida e
 
 #### Bosquejo de la Prueba de Conjetura esbozada el 15 de julio de 2026
 
+#### Conjetura refactorizada en un par de corolarios el 16 de julio de 2026
+
 <!-- $Date$ $Author$ $Revision$ -->

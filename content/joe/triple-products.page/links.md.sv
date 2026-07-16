@@ -31,4 +31,6 @@ Unikheten resulterar i Anshuls papper är starkt beroende av de tekniker som omf
 
 #### Skiss av förmodade bevis som beskrivs den 15 juli 2026
 
+#### Förmodan refaktoriserad till ett par korollarier den 16 juli 2026
+
 <!-- $Date$ $Author$ $Revision$ -->
