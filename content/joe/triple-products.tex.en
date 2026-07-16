@@ -339,7 +339,7 @@ A proof of the $i$-invariance of the "hope" follows through this equation, since
 \begin{lemma}
 \label{lma-coro-1}
 \begin{equation}
-|\theta_k| = 1, A_k \in \mathbb{R}\setminus \set{0} \\
+|\theta_k| = 1, A_k > 0 \\
 \sum_{k\leq K} (1 - \theta_k) A_k\ \in \mathbb{R}\\
 \implies \theta_k = \pm 1 \  \forall k
 \end{equation}
@@ -360,7 +360,7 @@ We see that $B_{K-1} \ne 0$ is also covered by the $K-1$ induction, which implie
 
 \end{subproof}
 
-We can therefore reduce both sides of every line in Equation (16) first to real-valued $M^{i,i,k}$ via $z_k = \bar M^{i,i,k}/|M^{i,i,k}|$, and then to $0$ by induction on the number of elements in $\set{\theta_k = -1}$. So we have now proven that the equation
+We can therefore reduce both sides of every line in Equation (16) first to positive-valued $M^{i,i,k}$ via $z_k = \bar M^{i,i,k}/|M^{i,i,k}|$, and then to $$0$$ by using the lemma and induction on the number of elements in $\set{\theta_k = -1}$. So we have now proven that the equation
 
 \begin{equation}
 \sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
