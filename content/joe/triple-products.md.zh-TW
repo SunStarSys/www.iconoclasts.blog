@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =49229
+status: 驗證 =49251
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -312,9 +312,38 @@ e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-證明文件$$i$$- 不變量"希望" 遵循此方程式，因為總和集中於接近的學期$$i$$ 與$$j$$，且違禁將導致 LHS 的條款發生變更$$M_0 \rightarrow M_1$$.
+證明文件$$i$$- 不變量"希望" 遵循此方程式，因為總和集中於接近的學期$$i$$ 與$$j$$，且違禁將導致 LHS 的條款發生變更$$M_0 \rightarrow M_1$$:
 
-Corollary 1 遵循先前觀察，由其定義的代數乘法運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同意特徵函數的方形，其跨度亦密集於$$L^2(M,g)$$，所以他們在任何地方都同意。
+```math
+\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
+\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
+
+\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+```
+
+#### Lemma
+
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+
+#### Lemma 證明
+
+歸納$$K$$:
+```math
+\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
+B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
+B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
+```
+但$$B_{K-1} \ne 0$$ 也由下列項目涵蓋：$$K-1$$ 感應，隱含$$\theta_K = \pm 1$$ 完成 Lemma 的證明。
+
+因此，我們將方程式 (15) 縮減為$$0$$ 依傳入中的元素數$$\set{\theta_k = -1}$$。因此，我們已證明方程式
+
+```math
+\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
+```
+
+具有左側與右側 **順勢獨立** $$*\in\set{0,1}^\N$$.
+
+Corollary 1 遵循此和先前的觀察，由此定義代數乘法運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同意特徵函數的方形，其跨度亦密集於$$L^2(M,g)$$，所以他們在任何地方都同意。
 
 Corollary 2 遵循指出頻譜上的 multiplicity-1 條件會強制 Corollary 1 的逆向以$$\Z_2^\infty$$ 對稱。
 

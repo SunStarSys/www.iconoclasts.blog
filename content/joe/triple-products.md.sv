@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=49229
+status: verifierad=49251
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -313,9 +313,38 @@ e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-Ett bevis på $$i$$-invarians mellan "hopp" följer genom denna ekvation, eftersom summan är koncentrerad på termer nära $$i$$ och $$j$$och en motsägelse skulle bero på en förändring i termer av LHS som $$M_0 \rightarrow M_1$$.
+Ett bevis på $$i$$-invarians mellan "hopp" följer genom denna ekvation, eftersom summan är koncentrerad på termer nära $$i$$ och $$j$$och en motsägelse skulle bero på en förändring i termer av LHS som $$M_0 \rightarrow M_1$$:
 
-Korollarium 1 följer av föregående observation att de algebraiska multiplikationsoperatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ överens om rutor av egenfunktioner, vars spännvidd också är tät i $$L^2(M,g)$$De är överens överallt.
+```math
+\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
+\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
+
+\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+```
+
+#### Lemma
+
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+
+#### Bevis för Lemma
+
+Induktion på $$K$$:
+```math
+\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
+B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
+B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
+```
+Men $$B_{K-1} \ne 0$$ omfattas även av $$K-1$$ induktion, vilket innebär $$\theta_K = \pm 1$$ som kompletterar beviset för Lemma.
+
+Vi kan därför minska båda sidor ekvation (15) till $$0$$ genom induktion av antalet element i $$\set{\theta_k = -1}$$. Så vi har nu bevisat att ekvationen
+
+```math
+\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
+```
+
+har LHS och RHS **termvis oberoende** av $$*\in\set{0,1}^\N$$.
+
+Corollary 1 följer av detta och den föregående iakttagelsen att de algebraiska multiplikationsoperatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ överens om rutor av egenfunktioner, vars spännvidd också är tät i $$L^2(M,g)$$De är överens överallt.
 
 Corollary 2 följer genom att notera att multiplicity-1-villkoret på spektrumet tvingar konversen av Corollary 1 att hålla av $$\Z_2^\infty$$ symmetri.
 

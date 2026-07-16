@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=49229
+status: 확인=49251
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -313,9 +313,38 @@ e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-의 증거 A Proof of the $$i$$-의 차이 "희망" 이 방정식을 통해, 합계가 가까운 용어에 집중되기 때문에 $$i$$ 및 $$j$$, 그리고 모순은 다음과 같이 LHS에 대한 용어의 변경으로 인해 발생합니다. $$M_0 \rightarrow M_1$$.
+의 증거 A Proof of the $$i$$-의 차이 "희망" 이 방정식을 통해, 합계가 가까운 용어에 집중되기 때문에 $$i$$ 및 $$j$$, 그리고 모순은 다음과 같이 LHS에 대한 용어의 변경으로 인해 발생합니다. $$M_0 \rightarrow M_1$$:
 
-Corollary 1은 대수 곱하기 연산자가 정의한 이전 관찰에서 다음과 같습니다. $$z_iz_jz_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ eigenfunctions의 사각형에 동의, 그 범위는 또한 조밀하다 $$L^2(M,g)$$그래서 그들은 모든 곳에서 동의합니다.
+```math
+\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
+\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
+
+\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+```
+
+#### 렘마
+
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+
+#### 렘마 증명
+
+유도 켜짐 $$K$$:
+```math
+\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
+B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
+B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
+```
+그러나 $$B_{K-1} \ne 0$$ 또한 $$K-1$$ 인덕션, 의미 $$\theta_K = \pm 1$$ 이것은 Lemma의 증거를 완성합니다.
+
+따라서 양측 방정식(15)을 $$0$$ in에 있는 요소의 수에 유도 $$\set{\theta_k = -1}$$. 그래서 우리는 이제 방정식을 입증했습니다.
+
+```math
+\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
+```
+
+LHS 및 RHS **termwise independent** $$*\in\set{0,1}^\N$$.
+
+Corollary 1은 대수 곱셈 연산자가 정의한 이 관찰과 이전 관찰에서 다음과 같습니다. $$z_iz_jz_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ eigenfunctions의 사각형에 동의, 그 범위는 또한 조밀하다 $$L^2(M,g)$$그래서 그들은 모든 곳에서 동의합니다.
 
 Corollary 2는 스펙트럼의 multiplicity-1 조건이 Corollary 1의 반전을 유지하도록 함으로써 다음과 같습니다. $$\Z_2^\infty$$ 대칭.
 

@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=49229
+status: verificado=49251
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -314,9 +314,38 @@ e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-Una prueba del $$i$$-invarianza del "esperanza" a través de esta ecuación, ya que la suma se concentra en los términos cercanos $$i$$ y $$j$$, y una contradicción resultaría de un cambio en los términos del LHS como $$M_0 \rightarrow M_1$$.
+Una prueba del $$i$$-invarianza del "esperanza" a través de esta ecuación, ya que la suma se concentra en los términos cercanos $$i$$ y $$j$$, y una contradicción resultaría de un cambio en los términos del LHS como $$M_0 \rightarrow M_1$$:
 
-Corolario 1 se desprende de la observación previa de que los operadores de multiplicación algebraica definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ de acuerdo en cuadrados de funciones propias, cuyo lapso también es denso en $$L^2(M,g)$$Así que están de acuerdo en todas partes.
+```math
+\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
+\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
+
+\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+```
+
+#### Lema
+
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+
+#### Prueba de Lemma
+
+Inducción en $$K$$:
+```math
+\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
+B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
+B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
+```
+Pero $$B_{K-1} \ne 0$$ también está cubierto por el $$K-1$$ inducción, lo que implica $$\theta_K = \pm 1$$ que completa la prueba de la Lemma.
+
+Por lo tanto, podemos reducir ambos lados Ecuación (15) a $$0$$ por inducción sobre el número de elementos en $$\set{\theta_k = -1}$$. Así que ahora hemos demostrado que la ecuación
+
+```math
+\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
+```
+
+tiene LHS y RHS **termwise independiente** de $$*\in\set{0,1}^\N$$.
+
+Corolario 1 se desprende de esta y la observación previa de que los operadores de multiplicación algebraica definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ de acuerdo en cuadrados de funciones propias, cuyo lapso también es denso en $$L^2(M,g)$$Así que están de acuerdo en todas partes.
 
 El Corolario 2 sigue observando que la condición de multiplicidad 1 en el espectro obliga al contrario del Corolario 1 a mantenerse por $$\Z_2^\infty$$ simetría.
 

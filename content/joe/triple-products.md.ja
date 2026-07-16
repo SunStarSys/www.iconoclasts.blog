@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=49229
+status: 確認済み=49251
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -312,9 +312,38 @@ e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{
 \sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 
 ```
-の証拠$$i$$のinvariance "望む" この方程式に従って、和は近い項に集中する。$$i$$ および$$j$$そして、矛盾はLHSの点での変化から生じる。$$M_0 \rightarrow M_1$$.
+の証拠$$i$$のinvariance "望む" この方程式に従って、和は近い項に集中する。$$i$$ および$$j$$そして、矛盾はLHSの点での変化から生じる。$$M_0 \rightarrow M_1$$:
 
-Corollary 1は、前の観察から、次によって定義された代数乗算演算子が$$z_iz_jz_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ 固有関数の正方形に同意します。そのスパンも密です$$L^2(M,g)$$だから、あちこちで同意する。
+```math
+\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
+\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
+
+\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+```
+
+####レマ
+
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+
+#### レマの証明
+
+導入$$K$$:
+```math
+\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
+B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
+B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
+```
+ただし、$$B_{K-1} \ne 0$$ また、$$K-1$$ 暗示する誘導$$\theta_K = \pm 1$$ レマの証拠を完成させる。
+
+したがって、両側の方程式(15)を$$0$$ 要素の数の誘導によって$$\set{\theta_k = -1}$$。そこで、方程式を証明しました。
+
+```math
+\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
+```
+
+LHSおよびRHS **期間別独立** $$*\in\set{0,1}^\N$$.
+
+Corollary 1はこれと前回の観察から、代数乗算演算子の定義$$z_iz_jz_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ 固有関数の正方形に同意します。そのスパンも密です$$L^2(M,g)$$だから、あちこちで同意する。
 
 Corollary 2は、スペクトルのmultiplicity-1条件がCorollary 1の収束を$$\Z_2^\infty$$ シンメトリー
 
