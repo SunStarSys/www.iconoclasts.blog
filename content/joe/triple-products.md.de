@@ -1,18 +1,16 @@
 ---
-archived: ~
 categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-published: https://dx.doi.org/10.2139/ssrn.4793533
-status: überprüft=27570
+status: überprüft=49163
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
 <div class="right">
   <img src="../images/lawson6-pod.png" style="width:200px">
   <p style="width:200px;text-align:center;line-height:20px">
-  Lawsons minimale Oberfläche <sub>6,1</sub> stereographisch von S<sup>3</sup> nach R<sup>3</sup> projiziert
+  Lawsons minimale Oberfläche<sub>6,1</sub> stereographisch projiziert von S<sup>3</sup> bis R<sup>3</sup>
   </p>
 </div>
 
@@ -22,7 +20,7 @@ title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 
 Joe Schaefer
 
-## Abstrakt
+## Kurzbeschreibung
 
 Verwendung elementarer Techniken aus der Geometrischen Analyse, partiellen Differentialgleichungen und Abelian $$C^*$$ Algebras, {# lede #}Wir entdecken einen neuartigen, aber bekannten, globalen geometrischen Invarianten{# lede #} &mdash; namentlich **der indexierte Satz von Integralen von dreifachen Produkten von Eigenfunktionen des Laplace-Beltrami-Operators**, um genau zu charakterisieren, welche ispektralen geschlossenen Riemannschen Mannigfaltigkeiten isometrisch sind.
 
@@ -30,13 +28,13 @@ Verwendung elementarer Techniken aus der Geometrischen Analyse, partiellen Diffe
 
 Für eine geschlossene Riemannsche Mannigfaltigkeit $$(M,g)$$, die ihre **Klasse** von nicht-isometrischen, isospektralen Mannigfaltigkeiten charakterisiert, ist eine Art inverses Problem [[DH11]](#DH11) Spektrale Geometrie. Naïvely könnte man spekulieren, dass diese Klasse immer *leer* wäre. Die akademische Literatur ist jedoch reich an jahrzehntelangen Konstruktionen spezifischer Gegenbeispiele: ab 1964 mit John Milnors 16-dimensionalen Paar nicht-isometrischer, isospektraler flacher Tori [[JM64]](#JM64)und weiter [[CS92]](#CS92) zur generischen dimensionalen Charakterisierung flacher Tori in Alexander Schiemanns Doktorarbeit von 1993 [[AS94]](#AS94) &mdash; mit einer computergestützten Suche nach dem kritischen $$\dim = 3$$ Fall.  Eine moderne Vermessung der gesamten flachen Tori-Geschichte erscheint in [[NRR22]](#NRR22).
 
-Auf dem Weg waren aufschlussreiche Abschiebungen in raffiniertere, nicht-euklidische symmetrische Abdeckräume; der Aufbau solcher isospektraler, nicht-isometrischer "Düsen" mit nichttrivialen Krümmungstensoren (und deren spektralbestimmte Euler-Eigenschaften in Dimension 2) [[MS67]](#MS67).) Ein Paradebeispiel für diese Bemühungen war Toshikazu Sunadas 1985. [[TS85]](#TS85) Erfindung eines allgemeinen Abdeckraumgerüsts, das er dann in derselben Arbeit zum Aufbau hyperbolischer Duette in den Dimensionen 2 und 3 einsetzte.
+Auf dem Weg waren aufschlussreiche Abschiebungen in raffiniertere, nicht-euklidische symmetrische Abdeckräume; der Aufbau solcher isospektraler, nicht-isometrischer Abdeckräume "Duelle" mit nicht-trivialen Krümmungs-Tensoren (und deren spektral-bestimmten Euler-Eigenschaften in Dimension 2) [[MS67]](#MS67).) Ein Paradebeispiel für diese Bemühungen war Toshikazu Sunadas 1985. [[TS85]](#TS85) Erfindung eines allgemeinen Abdeckraumgerüsts, das er dann in derselben Arbeit zum Aufbau hyperbolischer Duette in den Dimensionen 2 und 3 einsetzte.
 
 Für inhomogene Riemannsche Metriken entdeckte Carolyn Gordon Duette, die nicht einmal lokal isometrisch sind. [[CG93]](#CG93).
 
 Die Arbeit geht in vielen verwandten Bereichen weiter [[DH11]](#DH11), wie die Bestimmung der topologischen Eigenschaften der Klasse der isospektralen, nicht-isometrischen Mannigfaltigkeiten im Allgemeinen (leer [[ST80]](#ST80), endlich [[AS94]](#AS94), starr [[GK80]](#GK80)und kompakt [[GZ97]](#GZ97)) als Teilmenge verschiedener Modulräume von Riemannschen Metriken.
 
-Was wir in diesem Artikel bieten, ist eine neue Perspektive auf ein vertrautes Werkzeug: indizierte Fourier-Koeffizienten von paarweisen Produkten von Eigenfunktionen als diskreter "algebraischer/topologischer Invariant" zur Ergänzung der bestehenden, diskreten "analytischen Invariant". &mdash; das nicht-negative Spektrum des Betreibers *Laplace-Beltrami* (im Folgenden als **Laplacian** bezeichnet) am $$ℋ = L^2(M,g)$$. In Kombination sehen wir, dass das Paar eine "diskrete globale geometrische Darstellung" der Isometrieklassen isospektraler, geschlossener Riemannschen Mannigfaltigkeiten liefert.
+What we offer in this article is a new perspective on a familiar tool: Indizierte Fourier-Koeffizienten von paarweisen Produkten von Eigenfunktionen als diskrete "Algebraisch/topologisch invariant" zur Ergänzung der bestehenden, diskreten "analytisch invariant" &mdash; das nicht-negative Spektrum des Betreibers *Laplace-Beltrami* (im Folgenden als **Laplacian** bezeichnet) am $$ℋ = L^2(M,g)$$. Zusammen sehen wir, dass das Paar eine "Diskrete globale geometrische Darstellung" der isometrischen Klassen der isospektralen, geschlossenen Riemannschen Mannigfaltigkeiten.
 
 ### Ergebnisse
 
@@ -77,7 +75,7 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 </div>
   <div class="card-body">
 
-Wenn jeder Eigenwert eine Multiplikation hat $$1$$, bei einem Paar von Eigenwerten, die orthormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn und nur, wenn die $$\set{M^{i,j,k}}$$ für eine Basis bis zum absoluten Wert in den einzelnen Begriffen mit der anderen Basis übereinstimmt.
+Wenn jeder Eigenwert eine Multiplikation hat $$1$$, bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn und nur, wenn die $$\set{M^{i,j,k}}$$ für eine Basis bis zum absoluten Wert in den einzelnen Begriffen mit der anderen Basis übereinstimmt.
 
 </div>
 </div>
@@ -107,13 +105,13 @@ Jetzt mit $$M,g,e^i,M^{i,j,k}$$ wie oben, für $$f \in C^\infty(M)$$ und $$i \ge
 
 \implies \\
 
-f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
+f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 \end{aligned}
 
 ```
 
-seit $$f$$ ist einzigartig als seine schnell konvergierende **Fourier-Serie** ($$\Delta_M$$-spezifische Sobolev-Einbettungen [[MT13]](#MT13) [[RS75]](#RS75)Zusammen mit Weyls asymptotischem Gesetz [[HW11]](#HW11)bedeutet, dass die Begriffe in der Summe $$o(i^{-n})$$ * einheitlich in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$Dann sehen wir das für $$f_1, f_2 \in C^\infty(M)$$, die Fourier-Koeffizienten des Spitzenprodukts $$f_1 f_2 \in C^\infty(M)$$ sind
+seit $$f$$ ist einzigartig als seine schnell konvergierende **Fourier-Serie** ($$\Delta_M$$-spezifische Sobolev-Einbettungen [[MT13]](#MT13) [[RS75]](#RS75)Zusammen mit Weyls asymptotischem Gesetz [[HW11]](#HW11)bedeutet, dass die Begriffe in der Summe $$o(i^{-n})$$ *einheitlich in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$Dann sehen wir das für $$f_1, f_2 \in C^\infty(M)$$, die Fourier-Koeffizienten des Spitzenprodukts $$f_1 f_2 \in C^\infty(M)$$ sind
 
 ```math
 \begin{aligned}
@@ -126,7 +124,7 @@ f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
 
 f_1 = f^p_2,\space p > 2 \implies \\
 
-\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)...\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x).
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)...\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x)
 
 \end{aligned}
 ```
@@ -164,7 +162,7 @@ Der Zweck dieser Berechnungen ist es, die Tatsache zu betonen, dass $$\set{M^{i,
 
 Für die rasche Konvergenz dieser vorgenannten Beträge $$M^{i,j,k}$$, beachten Sie, dass Produkte von Eigenfunktionen glatt sind, so dass diese Fourier-Koeffizienten wie oben (in jedem Index) zerfallen. Weitere Informationen finden Sie in Emmett Wymans Arbeit im Jahr 2022 mit diesen Koeffizienten, da sie sich auf die Dreieckungleichheit auf den Eigenwerten bezieht. [[EW22]](#EW22).
 
-Hinweis: Wir können immer davon ausgehen,
+Note: Wir können immer annehmen,
 ```math
 \begin{aligned}
 e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
@@ -245,7 +243,7 @@ ist das Bild von $$M^{i,j,k}$$ unter $$U$$'s Basismaßnahme $$e^i \mapsto U(e^i)
 
 Nun, unter den Bedingungen der Vermutung, jeder der $$\mathcal V_\lambda$$ sind eindimensionale Vektorräume über $$\Complex$$, aber das bedeutet auch, dass sie eindimensionale Vektorräume über $$\Reals$$und so ist die vollständige multiplikative Symmetriegruppe $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Ohne die Multiplizitätsbeschränkung würde die damit verbundene Voraussetzung der Vermutung "Übereinstimmung in absoluten Werten" einfach zur "Beibehaltung der geordneten Menge von Singularwerten von $$\set{M^{i,j,k}}$$ (mit Multiplizität gezählt), wenn als eine Sammlung von Karten aus $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"ein robuster Satz von Unitary Invariants.  Wir sind deutlich weniger zuversichtlich, dass diese verallgemeinerte Vermutung zutrifft, da es möglich sein könnte, ein Gegenbeispiel über explizite Sunada-Konstruktion zu erstellen.
+Ohne die Multiplizitäts-Constraint, die damit verbundene Voraussetzung der Vermutung "hinsichtlich der Übereinstimmung in absoluten Werten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten $$\set{M^{i,j,k}}$$ (mit Multiplizität gezählt), wenn als eine Sammlung von Karten aus $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", die ein robuster Satz von Unitary Invariants sind.  Wir sind deutlich weniger zuversichtlich, dass diese verallgemeinerte Vermutung zutrifft, da es möglich sein könnte, ein Gegenbeispiel über explizite Sunada-Konstruktion zu erstellen.
 
 Wenn wir zur ursprünglichen Vermutung zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
 
@@ -254,7 +252,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-Wir hoffen, dass $$k$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$. All diese Aspekte bleiben unbekannt.
+Wir hoffen, dass $$k>0$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$.
+
+Es stellt sich heraus, dass die oben "Hoffnung" folgt aus der Dichte der konvexen Spanne von Quadraten von Strahlen von Laplace Eigenfunktionen im positiven Kegel von $$L^2(M,g)$$ (alle Eigenfunktionen) $$e^k$$ kann als Differenz zweier solcher Elemente geschrieben werden, was die Hoffnung durch Widerspruch begründet). Wir skizzieren einen Beweis der Vermutung unter dem nächsten Satz von Formeln.
 
 Lassen Sie uns jedoch einige relevante Identitäten berechnen, damit einige unerschrockene zukünftige Forscher in diese Vermutung eintauchen können:
 
@@ -262,10 +262,9 @@ Lassen Sie uns jedoch einige relevante Identitäten berechnen, damit einige uner
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
-\frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\ 
+\frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\
 \inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
-
-\text {and so the quadratic form} \\
+\text {So the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
 \text{Now with }J \text{ real-analytic}\\
@@ -285,6 +284,17 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 ```
 
 Hinweis: für das eindimensionale Flat-Tori-Gehäuse unten, $$\tilde{Q}_k(e^i,e^j) = 0$$ seit $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ ist eine wahre Ableitung.
+
+```math
+
+\sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}M^{j,k,r}e^\ell\\
+
+\sum_r M^{i,i,r}M^{k,k,r} = \sum_r |M^{i,k,r}|^2
+
+```
+Die rechte Seite von <span class="eqno"></span> ist ein Invariant, und die LHS hängt von der Mannigfaltigkeit und ihrer Eigenbasis ab. Ein induktiver Beweis der $$i$$-Unvarianz der "Hoffnung" folgt durch diese Gleichung, da die Summe auf die Begriffe in der Nähe konzentriert ist $$i$$ und $$k$$, und ein Widerspruch würde aus einer Zeichenänderung in Bezug auf die LHS resultieren.
+
+Die Vermutung folgt aus der vorherigen Beobachtung, dass die algbraunen Multiplikationsoperatoren definiert durch $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ Zustimmung zum positiven Kegel von $$L^2(M,g)$$Und so sind sie überall einverstanden.
 
 ## Beispiel
 
@@ -308,7 +318,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 ```
 
-Da diese Gleichung <span class="eqno"></span> *nur* invariant unter linearen Transformationen auf dem Gewichtsgitter ist $$(A^{-1})^t\Z^n = \set{\lambda_i}$$nur eine $$L^2$$ orthonormale Eigenfunktion Basiskarte **, die aus einer volumenerhaltenden invertierbaren linearen Karte zwischen zwei solchen indizierten, Rang induziert wird $$n$$ Gewichtsgitter** halten den "algebraischen/topologischen" indizierten Datensatz $$\set{M^{i,j,k}}$$ invariant.
+Wie diese Gleichung <span class="eqno"></span> ist *nur* invariant unter linearen Transformationen auf dem Gewichtsgitter $$(A^{-1})^t\Z^n = \set{\lambda_i}$$nur eine $$L^2$$ orthonormale Eigenfunktion Basiskarte **, die aus einer volumenerhaltenden invertierbaren linearen Karte zwischen zwei solchen indizierten, Rang induziert wird $$n$$ Gewichtsgitter** halten die "Algebraisch/topologisch" Indexiertes Dataset $$\set{M^{i,j,k}}$$ invariant.
 
 Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ sein $$B\in SO(n,\Reals)$$ auf dem Gewichtsgitter, weil die induzierte $$L^2$$ Eigenfunktion Basiskarte
 
@@ -316,11 +326,11 @@ Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ s
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
-müssen auch die "analytischen" Invarianten &mdash; Die Casimir-Element induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Flat-Tori-Laplacian.
+muss auch die "Analytisch" Invarianten &mdash; Die Casimir-Element induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Flat-Tori-Laplacian.
 
 Dieses repräsentationstheoretische Konto [[AK01]](#AK01) entspricht genau der vorherigen Entwicklung von *Gitterkongruenz* [[NRR22]](#NRR22) Traditionell verwendet, um Isometrieklassen von flachen Tori zu beschreiben. Tatsächlich ist die Matrix-Transpose einer solchen linearen Karte $$B\in SO(n,\Reals)$$, wie im vorstehenden Absatz beschrieben, **ist** die kontravariante Riemannsche Isometrie zwischen den Tori, wie sie durch die Anwendung des *Gelfand-Naimark Repräsentationstheorem* während der [Nachweis](#proof-of-theorem) von unseren [Satz](#theorem).
 
-Anzahl Bestätigungen
+## Bestätigungen
 
 Die ursprüngliche Forschung wurde 1995-1996 teilweise durch einen freundlichen James Simons Research Award und die großzügige Unterstützung eines Alfred P. finanziert. Sloan Dissertation Fellowship 1996-1997 an der Universität in Stony Brook.
 

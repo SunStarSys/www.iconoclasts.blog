@@ -1,19 +1,17 @@
 ---
-archived: ~
 categories: Matemática
 dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-published: https://dx.doi.org/10.2139/ssrn.4793533
-status: verificado=27570
+status: verificado=49163
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
 <div class="right">
   <img src="../images/lawson6-pod.png" style="width:200px">
   <p style="width:200px;text-align:center;line-height:20px">
-  Lawson's superfície mínima ξ<sub>6,1</sub> Estereograficamente projetado a partir de S<sup>3</sup> para R<sup>3</sup>
+  A superfície mínima de Lawson<sub>6,1</sub> Estereograficamente projetado a partir de S<sup>3</sup> para R<sup>3</sup>
   </p>
 </div>
 
@@ -29,15 +27,15 @@ Usando técnicas elementares de Análise Geométrica, Equações Diferenciais Pa
 
 ## Introdução
 
-Para uma variedade Riemanniana fechada $$(M,g)$$, caracterizando sua **classe** de manifolds não isométricos, isospectrais é um tipo de Problema Inverso [[DH11]](#DH11) em geometria espectral. Naïvely alguém pode especular que esta classe seria sempre *vazio*. No entanto, a literatura acadêmica é rica em construções de décadas de pares específicos de contra-exemplos: começando em 1964 com John Milnor.'s 16-dimensional par de não-isométrico, tori plana isospectral [[JM64]](#JM64), e continua [[CS92]](#CS92) para a caracterização dimensional genérica do tori plano em Alexander Schiemann's tese de doutorado de 1993 [[AS94]](#AS94) &mdash; repleto de uma busca auxiliada por computador para o crítico $$\dim = 3$$ caso.  Uma pesquisa moderna da história completa do tori plano aparece em [[NRR22]](#NRR22).
+Para uma variedade Riemanniana fechada $$(M,g)$$, caracterizando sua **classe** de manifolds não isométricos, isospectrais é um tipo de Problema Inverso [[DH11]](#DH11) em geometria espectral. Naïvely alguém pode especular que esta classe seria sempre *vazio*. No entanto, a literatura acadêmica é rica em construções de décadas de idade de emparelhamentos específicos de contra-exemplos: começando em 1964 com o par de 16 dimensões de John Milnor não-isométrico, tori plana isospectral [[JM64]](#JM64), e continua [[CS92]](#CS92) para a caracterização dimensional genérica do tori plano na tese de doutorado de Alexander Schiemann em 1993 [[AS94]](#AS94) &mdash; repleto de uma busca auxiliada por computador para o crítico $$\dim = 3$$ caso.  Uma pesquisa moderna da história completa do tori plano aparece em [[NRR22]](#NRR22).
 
-Ao longo do caminho foram ramificações perspicazes em espaços de cobertura simétricos não-euclidianos mais sofisticados; construindo tal isospectral, não isométrico "duplas" envolvendo tensores de curvatura não triviais (e suas características de Euler determinadas pelo espectro na dimensão 2) [[MS67]](#MS67)Um exemplo desse esforço foi Toshikazu Sunada.'s 1985 [[TS85]](#TS85) invenção de uma estrutura espacial de propósito geral, que ele então implantou no mesmo trabalho para construir duetos hiperbólicos nas dimensões 2 e 3.
+Ao longo do caminho foram ramificações perspicazes em espaços de cobertura simétricos não-euclidianos mais sofisticados; construindo tal isospectral, não isométrico "duplas" envolvendo tensores de curvatura não triviais (e suas características de Euler determinadas pelo espectro na dimensão 2) [[MS67]](#MS67)Um excelente exemplo deste esforço foi Toshikazu Sunada's 1985 [[TS85]](#TS85) invenção de uma estrutura espacial de propósito geral, que ele então implantou no mesmo trabalho para construir duetos hiperbólicos nas dimensões 2 e 3.
 
 Para métricas Riemannianas não homogêneas, Carolyn Gordon descobriu duetos que nem sequer são isométricos localmente. [[CG93]](#CG93).
 
 O trabalho continua em muitas áreas relacionadas [[DH11]](#DH11), como determinar as características topológicas da classe de variedades isospectrais, não isométricas em geral (vazio [[ST80]](#ST80), finito [[AS94]](#AS94), rígido [[GK80]](#GK80), e compacto [[GZ97]](#GZ97)) como um subconjunto de diferentes espaços de módulos das métricas Riemannianas.
 
-O que oferecemos neste artigo é uma nova perspectiva sobre uma ferramenta familiar: coeficientes Fourier indexados de produtos em pares de autofunções como um discreto "invariante algébrico/topológico" para complementar o existente, discreto "invariante analítico" &mdash; o espectro não negativo do operador *Laplace-Beltrami* (aqui referido como o **Laplacian**) em $$ℋ = L^2(M,g)$$. Combinados, observamos que o par fornece um "representação geométrica global discreta" das classes de isometria de variedades isospectrais, Riemannianas fechadas.
+What we offer in this article is a new perspective on a familiar tool: coeficientes de Fourier indexados de produtos em pares de autofunções como um "invariante algébrico/topológico" para complementar o existente, discreto "invariante analítico" &mdash; o espectro não negativo do operador *Laplace-Beltrami* (aqui referido como o **Laplacian**) em $$ℋ = L^2(M,g)$$. Combinados, observamos que o par fornece um "representação geométrica global discreta" das classes de isometria de variedades isospectrais, Riemannianas fechadas.
 
 ### Resultados
 
@@ -78,7 +76,7 @@ Para ser isométrico $$(M,g)$$, é uma condição *necessária e suficiente* par
 </div>
   <div class="card-body">
 
-Se cada valor próprio tem multiplicidade $$1$$, dado um par de autovalor preservando bases ortormicas como descrito na hipótese do Teorema, as variedades são isométricas se e somente se $$\set{M^{i,j,k}}$$ para uma base concorda, até o valor absoluto em termos individuais, com a outra base.
+Se cada valor próprio tem multiplicidade $$1$$, dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se e somente se $$\set{M^{i,j,k}}$$ para uma base concorda, até o valor absoluto em termos individuais, com a outra base.
 
 </div>
 </div>
@@ -108,13 +106,13 @@ Agora com $$M,g,e^i,M^{i,j,k}$$ como acima, para $$f \in C^\infty(M)$$ e $$i \ge
 
 \implies \\
 
-f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
+f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 \end{aligned}
 
 ```
 
-desde $$f$$ é representável exclusivamente como sua convergência rápida **Fourier Series** ($$\Delta_M$$-específicos Sobolev Incorporações [[MT13]](#MT13) [[RS75]](#RS75)em conjunto com Weyl'Lei assintótica [[HW11]](#HW11), implica que os termos na soma são $$o(i^{-n})$$ *uniformemente em $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$Então vemos que para $$f_1, f_2 \in C^\infty(M)$$, os coeficientes de Fourier do produto pointwise $$f_1 f_2 \in C^\infty(M)$$ estão
+desde $$f$$ é representável exclusivamente como sua convergência rápida **Fourier Series** ($$\Delta_M$$-específicos Sobolev Incorporações [[MT13]](#MT13) [[RS75]](#RS75), juntamente com a Lei Assintótica de Weyl [[HW11]](#HW11), implica que os termos na soma são $$o(i^{-n})$$ *uniformemente em $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$Então vemos que para $$f_1, f_2 \in C^\infty(M)$$, os coeficientes de Fourier do produto pointwise $$f_1 f_2 \in C^\infty(M)$$ estão
 
 ```math
 \begin{aligned}
@@ -127,7 +125,7 @@ f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
 
 f_1 = f^p_2,\space p > 2 \implies \\
 
-\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)...\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x).
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)...\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x)
 
 \end{aligned}
 ```
@@ -163,7 +161,7 @@ Isto implica qualquer mapa de base como acima carrega funções características
 
 O objetivo desses cálculos é enfatizar o fato de que $$\set{M^{i,j,k}}$$ **caracteriza** a Análise Harmônica do operador de multiplicação pontual em $$C^\infty(M)$$, que é uma subálgebra densa do Abelian $$C^*$$ álgebra $$C(M)$$pelo teorema de Stone-Weierstrass.
 
-Para a rápida convergência dessas somas acima envolvendo $$M^{i,j,k}$$, note que os produtos de autofunções são lisos, de modo que estes coeficientes de Fourier decaem como acima (em cada índice). Para mais detalhes, veja Emmett Wyman'trabalho em 2022 com esses coeficientes no que se refere à desigualdade do triângulo nos autovalores [[EW22]](#EW22).
+Para a rápida convergência dessas somas acima envolvendo $$M^{i,j,k}$$, note que os produtos de autofunções são lisos, de modo que estes coeficientes de Fourier decaem como acima (em cada índice). Para mais detalhes, veja o trabalho de Emmett Wyman em 2022 com esses coeficientes no que se refere à desigualdade do triângulo nos autovalores [[EW22]](#EW22).
 
 Note: Podemos sempre assumir
 ```math
@@ -242,11 +240,11 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 \end{aligned}
 ```
 
-é a imagem de $$M^{i,j,k}$$ sob $$U$$'ação base s $$e^i \mapsto U(e^i)$$.
+é a imagem de $$M^{i,j,k}$$ sob $$U$$ação base $$e^i \mapsto U(e^i)$$.
 
 Agora, sob as condições da conjectura, cada um dos $$\mathcal V_\lambda$$ são espaços vetoriais unidimensionais sobre $$\Complex$$, mas isso também significa que eles são espaços vetoriais unidimensionais $$\Reals$$, e assim o grupo multiplicativo completo da simetria é $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Sem a restrição de multiplicidade, a conjectura's pré-requisito associado "acordo em valores absolutos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado com multiplicidade), quando visto como uma coleção de mapas de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", que são um conjunto robusto de invariantes unitários.  Estamos significativamente menos confiantes de que esta conjectura generalizada é verdadeira, uma vez que pode ser possível produzir um contra-exemplo através de construção Sunada explícita.
+Sem a restrição de multiplicidade, o prerrequisito associado da conjectura "acordo em valores absolutos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado com multiplicidade), quando visto como uma coleção de mapas de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", que são um conjunto robusto de invariantes unitários.  Estamos significativamente menos confiantes de que esta conjectura generalizada é verdadeira, uma vez que pode ser possível produzir um contra-exemplo através de construção Sunada explícita.
 
 Voltando à conjectura original, observamos que a prova envolve estabelecer esta implicação:
 
@@ -255,7 +253,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-Podemos esperar que, para qualquer $$k$$, $$M_0^{i,i,k}$$ não pode ser idêntico $$0$$ para todos $$i$$. Além disso, a fórmula <span class="eqno"></span> para $$z_k$$ requer ambos $$i$$-independência, e suficiência, para estabelecer o mapa base $$e_0^i \mapsto z_i e_1^i$$ preservas $$\set{M_0^{i,j,k}}$$. Todos esses aspectos permanecem desconhecidos.
+Podemos esperar que, para qualquer $$k>0$$, $$M_0^{i,i,k}$$ não pode ser idêntico $$0$$ para todos $$i$$. Além disso, a fórmula <span class="eqno"></span> para $$z_k$$ requer ambos $$i$$-independência, e suficiência, para estabelecer o mapa base $$e_0^i \mapsto z_i e_1^i$$ preservas $$\set{M_0^{i,j,k}}$$.
+
+Acontece que o acima "esperança" segue da densidade da extensão convexa de quadrados de raios de Laplace autofunções no cone positivo de $$L^2(M,g)$$ (qualquer autofunção) $$e^k$$ pode ser escrita como a diferença de dois tais elementos, que estabelece a esperança por contradição). Esboçamos uma prova da conjectura abaixo do próximo conjunto de fórmulas.
 
 No entanto, vamos calcular algumas identidades relevantes para que algum futuro pesquisador intrépido possa se aprofundar nessa conjectura:
 
@@ -263,10 +263,9 @@ No entanto, vamos calcular algumas identidades relevantes para que algum futuro 
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
-\frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\ 
+\frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\
 \inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
-
-\text {and so the quadratic form} \\
+\text {So the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
 \text{Now with }J \text{ real-analytic}\\
@@ -285,20 +284,31 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 \end{aligned}
 ```
 
-Note: para o caso unidimensional do flat-tori abaixo, $$\tilde{Q}_k(e^i,e^j) = 0$$ desde $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ É uma verdadeira derivação.
+Nota: para o caso unidimensional do flat-tori abaixo, $$\tilde{Q}_k(e^i,e^j) = 0$$ desde $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ É uma verdadeira derivação.
+
+```math
+
+\sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}M^{j,k,r}e^\ell\\
+
+\sum_r M^{i,i,r}M^{k,k,r} = \sum_r |M^{i,k,r}|^2
+
+```
+O RHS de <span class="eqno"></span> é um invariante, e o LHS depende da variedade e de sua autobase. Uma prova indutiva do $$i$$-invariância do "esperança" segue através desta equação, uma vez que a soma está concentrada nos termos próximos $$i$$ e $$k$$, e uma contradição resultaria de uma mudança de sinal em termos do LHS.
+
+A conjectura segue da observação prévia de que os operadores de multiplicação algbrica definidos por $$z_iz_jz_kM_0^{i,j,k}$$ e $$M_1^{i,j,k}$$ concordam com o cone positivo de $$L^2(M,g)$$e por isso concordam em todos os lugares.
 
 ## Exemplo
 
-Deixar $$\set{\lambda_i} \subset \R^n$$ ser indexado, classificação $$n$$ treliça de Lie Algebra pesos para a representação do espaço quociente de $$\frak{g}=\Reals^n$$ como campos vetoriais invariantes (i.e., constantes) de tradução em si mesmos, quando $$\R^n$$ também é visto como $$\frak{g}$$'s associado Grupo Lie sobre um toro definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Esses pesos definem elevadores integráveis de 1 formas sobre o toro que se integram a funções lineares $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ como seu grupo Lie (cobrindo o torus). Estes funcionais lineares podem então ser uniformemente redimensionados (por $$2\pi \sqrt{-1}$$) e exponenciado para formar caracteres multiplicativos que descem para formar uma base ortonormal de $$L^2(\Reals^n/A\Z^n,dx)$$, com medida Lebesgue (Haar) $$dx$$.
+Deixar $$\set{\lambda_i} \subset \R^n$$ ser indexado, classificação $$n$$ treliça de Lie Algebra pesos para a representação do espaço quociente de $$\frak{g}=\Reals^n$$ como campos vetoriais invariantes (i.e., constantes) de tradução em si mesmos, quando $$\R^n$$ também é visto como $$\frak{g}$$Grupo Lie associado a um toro definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Esses pesos definem elevadores integráveis de 1 formas sobre o toro que se integram a funções lineares $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ como seu grupo Lie (cobrindo o torus). Estes funcionais lineares podem então ser uniformemente redimensionados (por $$2\pi \sqrt{-1}$$) e exponenciado para formar caracteres multiplicativos que descem para formar uma base ortonormal de $$L^2(\Reals^n/A\Z^n,dx)$$, com medida Lebesgue (Haar) $$dx$$.
 
-Além disso, esta base diagonaliza simultaneamente o toro plano'Laplaciano **porque** o Laplaciano é a imagem de um elemento quadrático simétrico, negativo-definido de Casimir sob esta (operador diferencial linear coeficiente constante) representação quociente do espaço da álgebra envolvente universal. Assim, seus autovalores estão em proporção constante (de $$4\pi^2$$) ao Casimir-elemento-determinado-comprimento-quadrado de cada caractere'peso na rede.
+Além disso, essa base diagonaliza simultaneamente o Laplaciano do toro plano **porque** o Laplaciano é a imagem de um elemento quadrático simétrico e negativo-definido de Casimir sob esta (operador diferencial linear coeficiente constante) representação quociente do espaço da álgebra envolvente universal. Assim, seus autovalores estão em proporção constante (de $$4\pi^2$$) ao casimir-elemento-determinado-comprimento-quadrado do peso de cada personagem na estrutura.
 
 Nós atualmente vemos a base acima
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-ser nossa base de Fourier aplicável em Teorema de autofunções ortonormais (caracteres multiplicativos) (desta representação quociente do elemento Euclidiano Casimir (negativo) diretamente correspondente a $$\set{\lambda_i}$$. Por nosso Teorema'hipóteses, devemos ter $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (com a norma euclidiana sobre os pesos).
+ser nossa base de Fourier aplicável em Teorema de autofunções ortonormais (caracteres multiplicativos) (desta representação quociente do elemento Euclidiano Casimir (negativo) diretamente correspondente a $$\set{\lambda_i}$$. Pelas hipóteses do nosso Teorema, devemos ter $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (com a norma euclidiana sobre os pesos).
 
 Agora podemos computar
 
@@ -317,7 +327,7 @@ No entanto, para aplicar o nosso [Teorema](#theorem)É essencial que um mapa lin
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
-deve também preservar o "analítico" invariáveis &mdash; a figura induzida pelo elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, ou seja, os autovalores individuais do'Laplaciano.
+deve também preservar o "analítico" invariáveis &mdash; a figura induzida pelo elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, ou seja, os autovalores individuais do Laplaciano do tori plano.
 
 Esta conta de representação-teórica [[AK01]](#AK01) é exatamente equivalente ao desenvolvimento anterior da congruência *lattice *[[NRR22]](#NRR22) tradicionalmente utilizado para delinear classes de isometria de toros planos. Na verdade, a matriz transpõe tal mapa linear $$B\in SO(n,\Reals)$$, conforme descrito no parágrafo anterior, **é** a contravariante isometria Riemanniana entre o tori, conforme previsto pela aplicação do *Gelfand-Naimark Representation Theorem* durante o [Prova](#proof-of-theorem) do nosso [Teorema](#theorem).
 

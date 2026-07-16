@@ -1,19 +1,17 @@
 ---
-archived: ~
 categories: Mathématiques
 dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-published: https://dx.doi.org/10.2139/ssrn.4793533
-status: vérifié=27570
+status: vérifié=49163
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
 <div class="right">
   <img src="../images/lawson6-pod.png" style="width:200px">
   <p style="width:200px;text-align:center;line-height:20px">
-  La surface minimale de Lawson ξ<sub>6,1</sub> projetée stéréographiquement de S<sup>3</sup> à R<sup>3</sup>
+  La surface minimale de Lawson ξ<sub>6,1</sub> stéréographiquement projeté à partir de S<sup>3</sup> à R<sup>3</sup>
   </p>
 </div>
 
@@ -31,15 +29,15 @@ Utilisation des techniques élémentaires de l'analyse géométrique, des équat
 
 Pour un collecteur Riemannien fermé $$(M,g)$$, caractérisant sa **classe** de collecteurs isospectraux non isométriques est un type de problème inverse [[DH11]](#DH11) en géométrie spectrale. Naïvement, on pourrait supposer que cette classe serait toujours *vide*. Cependant, la littérature académique est riche avec des constructions datant de plusieurs décennies d'appariements spécifiques de contre-exemples : à partir de 1964 avec la paire 16-dimensionnelle de John Milnor non isométrique, isospectral plat tori [[JM64]](#JM64), et continue [[CS92]](#CS92) vers la caractérisation dimensionnelle générique des tori plats dans la thèse de doctorat d'Alexander Schiemann en 1993 [[AS94]](#AS94) &mdash; rempli avec une recherche assistée par ordinateur pour le critique $$\dim = 3$$ case.  Une étude moderne de l'histoire complète des tori plats apparaît dans [[NRR22]](#NRR22).
 
-En cours de route ont été des ramifications perspicaces dans des espaces de couverture symétriques plus sophistiqués et non euclidiens ; la construction de tels "duets" isospectraux et non isométriques impliquant des tenseurs de courbure non banaux (et leurs caractéristiques Euler déterminées par le spectre dans la dimension 2 [[MS67]](#MS67)Un excellent exemple de cet effort a été Toshikazu Sunada 1985 [[TS85]](#TS85) l'invention d'un cadre spatial de couverture à usage général, qu'il a ensuite déployé dans le même travail pour construire des duos hyperboliques dans les dimensions 2 et 3.
+En cours de route ont été des ramifications perspicaces dans des espaces de couverture symétriques non euclidiens plus sophistiqués ; la construction de tels espaces isospectraux, non isométriques "duets" impliquant des tenseurs de courbure non triviaux (et leurs caractéristiques Euler déterminées par le spectre dans la dimension 2) [[MS67]](#MS67)Un excellent exemple de cet effort a été Toshikazu Sunada 1985 [[TS85]](#TS85) l'invention d'un cadre spatial de couverture à usage général, qu'il a ensuite déployé dans le même travail pour construire des duos hyperboliques dans les dimensions 2 et 3.
 
 Pour des métriques Riemanniennes inhomogènes, Carolyn Gordon a découvert des duos qui ne sont même pas isométriques localement. [[CG93]](#CG93).
 
 Le travail se poursuit dans de nombreux domaines connexes [[DH11]](#DH11), comme la détermination des caractéristiques topologiques de la classe des collecteurs isospectraux, non isométriques en général (vide) [[ST80]](#ST80), fini [[AS94]](#AS94), rigide [[GK80]](#GK80), et compact [[GZ97]](#GZ97)) en tant que sous-ensemble de différents espaces de modules de métriques riemanniennes.
 
-Ce que nous proposons dans cet article est une nouvelle perspective sur un outil familier : les coefficients de Fourier indexés des produits par paire des fonctions propres comme un "invariant algébrique / topologique" discret pour compléter l'existant, discret "invariant analytique" &mdash; le spectre non négatif de l'opérateur *Laplace-Beltrami* (ci-après dénommé le **Laplacien**) sur $$ℋ = L^2(M,g)$$. Combinés, nous observons que la paire fournit une "représentation géométrique globale discrète" des classes d'isométrie des collecteurs riemanniens fermés isospectraux.
+What we offer in this article is a new perspective on a familiar tool: coefficients de Fourier indexés des produits par paires des fonctions propres en tant que discret "invariant algébrique/topologique" pour compléter l'existant, discret "invariant analytique" &mdash; le spectre non négatif de l'opérateur *Laplace-Beltrami* (ci-après dénommé le **Laplacien**) sur $$ℋ = L^2(M,g)$$. Combiné, nous observons que la paire fournit un "représentation géométrique globale discrète" des classes d'isométrie des collecteurs riemanniens fermés isospectraux.
 
-### résultats
+### Résultats
 
 <br>
 
@@ -78,7 +76,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 </div>
   <div class="card-body">
 
-Si chaque valeur propre a une multiplicité $$1$$, étant donné une paire de valeurs propres préservant les bases orthormales telles que décrites dans l'hypothèse du théorème, les collecteurs sont isométriques si et seulement si $$\set{M^{i,j,k}}$$ pour une base convient, jusqu'à la valeur absolue dans les termes individuels, avec l'autre base.
+Si chaque valeur propre a une multiplicité $$1$$, étant donné une paire de valeurs propres préservant les bases orthonormes telles que décrites dans l'hypothèse du théorème, les collecteurs sont isométriques si et seulement si $$\set{M^{i,j,k}}$$ pour une base convient, jusqu'à la valeur absolue dans les termes individuels, avec l'autre base.
 
 </div>
 </div>
@@ -93,11 +91,11 @@ Si nous considérons la carte
 (M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
 ```
 
-cet article établit l'injectivité de cette carte pour les collecteurs riemanniens fermés (jusqu'à l'isométrie riemannienne dans son domaine). D'autres résultats qui appliquent ces techniques pour décrire son image (et inversement), dans certains espaces de modules de mesures, ne font que commencer [[AA25]](#AA25). Là, Anshul Adve s'attaque rigoureusement aux espaces tangents unitaires des 2-orbifolds compacts et hyperboliques en utilisant ces mêmes ** constantes de structure** de la théorie du champ conforme.
+cet article établit l'injectivité de cette carte pour les collecteurs riemanniens fermés (jusqu'à l'isométrie riemannienne dans son domaine). D'autres résultats qui appliquent ces techniques pour décrire son image (et inversement), dans certains espaces de modules de mesures, ne font que commencer [[AA25]](#AA25). Là, Anshul Adve s'attaque rigoureusement aux espaces tangents unitaires des 2-orbifolds compacts et hyperboliques en utilisant ces mêmes **constantes de structure** de la théorie du champ conforme.
 
 Ces résultats ont été démontrés pour la première fois lors d'un discours intitulé de la même manière par l'auteur à l' **IRSM** en 1997, mais ils apparaissent ici sous forme publiée pour la première fois.
 
-## préliminaires
+## Préliminaires
 
 Maintenant avec $$M,g,e^i,M^{i,j,k}$$ comme ci-dessus, pour $$f \in C^\infty(M)$$ et $$i \geq 0$$ Notez que les **coefficients de Fourier**
 
@@ -108,7 +106,7 @@ Maintenant avec $$M,g,e^i,M^{i,j,k}$$ comme ci-dessus, pour $$f \in C^\infty(M)$
 
 \implies \\
 
-f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x).
+f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 \end{aligned}
 
@@ -127,7 +125,7 @@ f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
 
 f_1 = f^p_2,\space p > 2 \implies \\
 
-\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)...\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x).
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,...,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)...\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}...M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x)
 
 \end{aligned}
 ```
@@ -165,7 +163,7 @@ Le but de ces calculs est de souligner que $$\set{M^{i,j,k}}$$ **caractérise** 
 
 Pour la convergence rapide de ces sommes $$M^{i,j,k}$$, notez que les produits des fonctions propres sont lisses, de sorte que ces coefficients de Fourier se décomposent comme ci-dessus (dans chaque indice). Pour plus de détails, voir le travail d'Emmett Wyman en 2022 avec ces coefficients en ce qui concerne l'inégalité triangulaire sur les valeurs propres. [[EW22]](#EW22).
 
-Remarque : nous pouvons toujours supposer
+Note: Nous pouvons toujours supposer
 ```math
 \begin{aligned}
 e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
@@ -196,7 +194,7 @@ Pour la suffisance, nous considérons maintenant la carte linéaire, bijective o
 
 $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ préserve la norme uniforme.
 
-### Preuve de Lemme
+### Preuve de Lemma
 
 Laissez $$\set{a_i}$$ être une partition lisse de l'unité sur $$M$$.
 
@@ -246,7 +244,7 @@ est l'image de $$M^{i,j,k}$$ sous $$U$$Action de base $$e^i \mapsto U(e^i)$$.
 
 Or, dans les conditions de la conjecture, chacun des $$\mathcal V_\lambda$$ sont des espaces vectoriels unidimensionnels sur $$\Complex$$, mais cela signifie également qu'ils sont des espaces vectoriels unidimensionnels sur $$\Reals$$et donc le groupe de symétrie multiplicative complet est $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Sans la contrainte de multiplicité, le prérequis associé de la conjecture "concernant l'accord en valeurs absolues" deviendrait simplement " la préservation de l'ensemble ordonné de valeurs singulières de $$\set{M^{i,j,k}}$$ (compté avec multiplicité), lorsqu'il est considéré comme un ensemble de cartes $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", qui sont un ensemble robuste d'invariants unitaires.  Nous sommes beaucoup moins convaincus que cette conjecture généralisée est vraie, car il peut être possible de produire un contre-exemple via une construction Sunada explicite.
+Sans la contrainte de multiplicité, le prérequis associé à la conjecture "concernant l'accord sur les valeurs absolues" serait simplement devenu "conservation de l'ensemble ordonné de valeurs singulières $$\set{M^{i,j,k}}$$ (compté avec multiplicité), lorsqu'il est considéré comme un ensemble de cartes $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", qui sont un ensemble robuste d'invariants unitaires.  Nous sommes beaucoup moins convaincus que cette conjecture généralisée est vraie, car il peut être possible de produire un contre-exemple via une construction Sunada explicite.
 
 En revenant à la conjecture originale, nous observons que la preuve implique d'établir cette implication :
 
@@ -255,7 +253,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-Nous espérons que pour tout $$k$$, $$M_0^{i,i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$. En outre, la formule <span class="eqno"></span> pour $$z_k$$ nécessite les deux $$i$$- indépendance et suffisance, pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conservateurs $$\set{M_0^{i,j,k}}$$. Tous ces aspects restent inconnus.
+Nous espérons que pour tout $$k>0$$, $$M_0^{i,i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$. En outre, la formule <span class="eqno"></span> pour $$z_k$$ nécessite les deux $$i$$- indépendance et suffisance, pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conservateurs $$\set{M_0^{i,j,k}}$$.
+
+Il s'avère que ce qui précède "espérance" suit de la densité de la travée convexe des carrés des rayons de Laplace eigenfunctions dans le cône positif de $$L^2(M,g)$$ (toute fonction propre) $$e^k$$ peut être écrit comme la différence de deux éléments de ce genre, qui établit l'espoir par contradiction). Nous esquissons une preuve de la conjecture en dessous de la prochaine série de formules.
 
 Néanmoins, calculons quelques identités pertinentes afin que certains futurs chercheurs intrépides puissent creuser dans cette conjecture :
 
@@ -263,10 +263,9 @@ Néanmoins, calculons quelques identités pertinentes afin que certains futurs c
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
-\frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\ 
+\frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\
 \inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
-
-\text {and so the quadratic form} \\
+\text {So the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
 \text{Now with }J \text{ real-analytic}\\
@@ -286,6 +285,17 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 ```
 
 Remarque : pour le cas de tori plat unidimensionnel ci-dessous, $$\tilde{Q}_k(e^i,e^j) = 0$$ depuis $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ est une véritable dérivation.
+
+```math
+
+\sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}M^{j,k,r}e^\ell\\
+
+\sum_r M^{i,i,r}M^{k,k,r} = \sum_r |M^{i,k,r}|^2
+
+```
+Le RHS de <span class="eqno"></span> est un invariant, et le LHS dépend du collecteur et de sa base propre. Une preuve inductive de $$i$$- l'invariance de "espérance" suit cette équation, puisque la somme est concentrée sur les termes proches $$i$$ et $$k$$et une contradiction résulterait d'un changement de signe en termes de LHS.
+
+La conjecture découle de l'observation précédente que les opérateurs de multiplication algébrique définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ d'accord sur le cône positif de $$L^2(M,g)$$Ils sont donc d'accord partout.
 
 ## Exemple
 
@@ -309,7 +319,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 ```
 
-Comme cette équation <span class="eqno"></span> est *seulement* invariante sous des transformations linéaires sur le réseau de poids $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, uniquement un $$L^2$$ Carte de base de fonction propre orthonormée ** qui est induite d'une carte linéaire invertible préservant le volume entre deux de ces index, rang $$n$$ les réseaux de pondération** conservent le jeu de données indexé "algébrique/topologique" $$\set{M^{i,j,k}}$$ invariante.
+Comme cette équation <span class="eqno"></span> est *seulement* invariant sous des transformations linéaires sur le treillis de poids $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, uniquement un $$L^2$$ Carte de base de fonction propre orthonormée **qui est induite d'une carte linéaire invertible préservant le volume entre deux de ces index, rang $$n$$ les treillis de poids** conserveront "algébrique/topologique" jeu de données indexé $$\set{M^{i,j,k}}$$ invariante.
 
 Cependant, afin d'appliquer notre [Théorème](#theorem), il est essentiel qu'une telle carte linéaire $$B$$ être $$B\in SO(n,\Reals)$$ sur le treillis de poids, parce que $$L^2$$ Carte de base de fonction propre
 
@@ -317,7 +327,7 @@ Cependant, afin d'appliquer notre [Théorème](#theorem), il est essentiel qu'un
 \set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
-doit également préserver les invariants "analytiques" &mdash; la figure induite par l'élément Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ pour chaque poids indexé, c'est-à-dire les valeurs propres individuelles du laplacien du tori plat.
+doit également préserver "analyse" invariants &mdash; la figure induite par l'élément Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ pour chaque poids indexé, c'est-à-dire les valeurs propres individuelles du laplacien du tori plat.
 
 Ce compte représentation-théorique [[AK01]](#AK01) est exactement équivalent au développement antérieur de *congruence de réseau* [[NRR22]](#NRR22) traditionnellement utilisé pour délimiter les classes d'isométrie des tori plats. En effet, la matrice transpose une telle carte linéaire $$B\in SO(n,\Reals)$$, tel que décrit dans le paragraphe précédent, **est** l'isométrie Riemannienne contravariante entre les tori, telle que fournie par l'application du *théorème de représentation de Gelfand-Naimark* pendant la [Preuve](#proof-of-theorem) de notre [Théorème](#theorem).
 

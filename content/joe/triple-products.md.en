@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49159
+status: verified=49163
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -292,7 +292,7 @@ Note: for the one-dimensional flat-tori case below, $$\tilde{Q}_k(e^i,e^j) = 0$$
 ```
 The RHS of <span class="eqno"></span> is an invariant, and the LHS depends on the manifold and its eigenbasis. A inductive proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$k$$, and a contradiction would result from a sign change in terms on the LHS.
 
-The general case follows from the prior observation that the algbraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on the positive cone of $$L^2(M,g)$$, and so they agree everywhere.
+The conjecture follows from the prior observation that the algbraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on the positive cone of $$L^2(M,g)$$, and so they agree everywhere.
 
 
 ## Example
