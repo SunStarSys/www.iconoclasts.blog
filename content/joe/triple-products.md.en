@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49293
+status: verified=49297
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -323,17 +323,18 @@ A proof of the $$i$$-invariance of the "hope" follows through this equation, sin
 
 #### Lemma
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals^+ \implies \theta_k = \pm 1 \  \forall k$$
+$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Complex\setminus \set{0} \ , \set{\sum_{k\leq K} (1 - \theta_k) A_k\ , \sum _{k\leq K}(1-\bar\theta_k) A_k} \subset \Reals \implies \theta_k = \pm 1 \  \forall k$$
 
 #### Proof of Lemma
 
-Induction on $$K$$:
+Induction on $$K$$ ($$K=1$$ follows by inspection of the imaginary components of the products):
 ```math
 \sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
 B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
 B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
 ```
-But $$B_{K-1} \ne 0$$ is also covered by the $$K-1$$ induction, which implies $$\theta_K = \pm 1$$ which completes the proof of the Lemma.
+Carrying out the same calculations for $$\bar\theta_k$$, we see that
+$$B_{K-1} \ne 0$$ is also covered by the $$K-1$$ induction, which implies $$\theta_K = \pm 1$$ which completes the proof of the Lemma.
 
 We can therefore reduce both sides of every line in Equation (16) to $$0$$ by induction on the number of elements in $$\set{\theta_k = -1}$$. So we have now proven that the equation
 
