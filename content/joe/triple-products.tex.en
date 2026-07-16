@@ -310,6 +310,26 @@ df\cdot df = \sum_kQ_k(f,f)e^k &= \frac{1}{2}\sum_{i,j,k}\hat{f}(i)\hat{f}(j)(\l
 
 Note: for the one-dimensional flat-tori case below, $\tilde{Q}_k(e^i,e^j) = 0$ since $\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$ is a true derivation.
 
+\section{Proof of Corollaries}
+\label{sec:proof-of-coros}
+\begin{proof}
+
+
+We can therefore reduce both sides of every line in Equation~\ref{eqn-16} to $0$ by induction on the number of elements in $\set{\theta_k = -1}$. So we have now proven that the equation
+
+\begin{equation}
+\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
+\end{equation}
+
+has LHS and RHS both termwise independent of $*\in\set{0,1}^\mathbb{N}$.
+
+Corollary~\ref{coro-1} follows from this and the prior observation that the algebraic multiplication operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree on squares of eigenfunctions, the span of which is also dense in $L^2(M,g)$, so they agree everywhere.
+
+Corollary~\ref{coro-2} follows by noting that the multiplicity-$1$ condition on the spectrum forces the converse portion of Corollary\ref{coro-2} to hold by $\mathbb{Z}_2^\infty$ symmetry.
+
+This completes the proof of the Corollaries.
+
+\end{proof}
 
 \section{Example}
 \label{sec:ex}
