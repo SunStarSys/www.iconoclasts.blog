@@ -340,23 +340,14 @@ A proof of the $i$-invariance of the "hope" follows through this equation, since
 \label{lma-coro-1}
 \begin{equation}
 |\theta_k| = 1, A_k > 0 \\
-\sum_{k\leq K} (1 - \theta_k) A_k\ \in \mathbb{R}\\
-\implies \theta_k = \pm 1 \  \forall k
+\sum_{k\leq K} (\theta_k - 1) A_k\ \in \mathbb{R}^+ \union \set{0}\\
+\implies \theta_k = 1 \  \forall k
 \end{equation}
 \end{lemma}
 
 \begin{subproof}[Proof of Lemma~\ref{lma-coro-1}]
-Induction on $K$ ($K=1$ follows by inspection of the imaginary components of the products):
 
-\begin{equation}
-\begin{aligned}
-\sum_{k\leq K} (\theta_k - 1)A_k &= \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
-B_{K-1} &= \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}\\
-B_{K-1} = 0 \iff (\theta_K - 1)A_K &=( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
-\end{aligned}
-\end{equation}
-
-We see that $B_{K-1} \ne 0$ is also covered by the $K-1$ induction, which implies $\theta_K = \pm 1$ which completes the proof of the Lemma~\ref{lma-coro-1}.
+$(\theta_k - 1)A_k$ is in the left half-plane if it is non-zero; summing these terms cannot yield a non-negative result unless they are all zero.
 
 \end{subproof}
 
