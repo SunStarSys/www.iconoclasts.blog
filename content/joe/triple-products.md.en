@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49510
+status: verified=49514
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -267,9 +267,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-We may hope that for any given $$k>0$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$. Furthermore, the Formula <span class="eqno"></span> for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$.
+We may hope that for any given $$k>0$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$, since it is a generically true condition, but false for specific cases like the flat tori case covered in the Example below. Furthermore, the Formula <span class="eqno"></span> for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$.
 
-We sketch a proof of Corollary 1 below the next set of formulae, which first establishes he $$i$$ independence by assuming the hope is true.
+We sketch a proof of Corollary 1 below the next set of formulae, which first establishes the $$i$$ independence by assuming the "hope" is true.
 
 Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into the generalized conjecture:
 
