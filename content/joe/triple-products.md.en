@@ -73,7 +73,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   </div>
   <div class="card-body">
 
-(Litmus Test) Given a pair of eigenvalue preserving orthonormal real-valued bases as described in the hypothesis of the Theorem, the manifolds are isometric if the $$\set{M^{i,j,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+(Litmus Test) Given a pair of eigenvalue preserving orthonormal real-valued bases as described in the hypothesis of the Theorem, the manifolds are isometric if the $$\set{M^{i,j,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis, and for each $k$, every nonzero diagonal ratio's sign $M_0^{i,i,k}/M_1^{i,i,k}$ does not depend on $i$.
 
   </div>
 </div>
@@ -302,21 +302,20 @@ Note: for the one-dimensional flat-tori case below, $$\tilde{Q}_k(e^i,e^j) = 0$$
 
 ### Proof of Corollaries
 
-Now consider the famous associativity relations from Conformal Field Theory:
+Now consider the famous associativity relations from Conformal Field Theory (in a real basis):
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
-i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
-
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
-
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
+i = j\ , \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
-A proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a change in terms on the LHS as $$M_0 \rightarrow M_1$$:
+
+A proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a change in terms on the LHS as $$M_0 \rightarrow M_1$$ since $$M_0^{i,i,k}M_0{j,j,k} = M_1^{i,i,k}M_1^{j,j,k}$$ by the hypothesis of Corollary 1:
 
 ```math
-\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
-\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
+\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (\theta_{i,j,k} - 1)M_0^{i,i,k} M_0^{j,j,k}\ ,\text{ but} \\
+\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (\bar\theta_{i,j,k} - 1)M_1^{i,i,k} M_1^{j,j,k}\ ,\text {and summing}\\
 
 \sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
 ```
@@ -329,7 +328,11 @@ $$|\theta_k| = 1, A_k \in \Reals^+ \ , \sum_{k\leq K} (\theta_k - 1) A_k \in \Re
 
 $$(\theta_k - 1)A_k$$ is in the left half-plane, and thus the summand is as well, unless $$ \theta_k = 1\ \forall k$$.
 
-We can therefore reduce both sides of every line to $$0$$ in Equation (16) by splitting the RHS sum in the first two lines into positive and negative terms. Since we are using a real basis, we may assume $$\theta_k = - 1$$, which leads to a contradiction by application of the lemma to each set of terms.
+We can therefore reduce both sides of every line to $$0$$ in Equation (16) by splitting the RHS sum in the first two lines into positive and negative terms:
+
+```math
+\sum_{\theta_k = -1, >0} M^{i,i,k}M^{j,j,k} = -\sum_{\theta_k = -1,<0} M^{i,i,k}M^{j,j,k}
+```
 
 So we have now proven that the equation
 
