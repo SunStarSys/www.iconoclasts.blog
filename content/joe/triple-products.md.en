@@ -88,7 +88,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Given a pair of multiplicity-1 eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $$\set{M^{i,i,k}}$$ for one real-valued basis agrees, up to absolute value in the individual terms, with the other basis.
+Given a pair of multiplicity-1 eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $$\set{M^{i,j,k}}$$ for one real-valued basis agrees, up to absolute value in the individual terms, with the other basis.
 
   </div>
 </div>
@@ -334,12 +334,12 @@ We can therefore reduce both sides of every line to $$0$$ in Equation (16) by sp
 So we have now proven that the equation
 
 ```math
-\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
+\sum_r M_*^{i,i,r} M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
 ```
 
 has LHS and RHS **termwise independent** of $$*\in\set{0,1}^\N$$.
 
-Corollary 1 follows from this and the prior observation that the algebraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on squares of eigenfunctions, the span of which is also dense in $$L^2(M,g)$$, so they agree everywhere.
+Corollary 1 follows from this and the prior observation that the algebraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on squares of eigenfunctions, the algebraic span of which is also dense in $$L^2(M,g)$$, so they agree everywhere.
 
 Corollary 2 follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold by $$\Z_2^\infty$$ symmetry.
 
