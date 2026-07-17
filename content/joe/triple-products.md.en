@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: draft
+status: verified=49494
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -350,7 +350,7 @@ has LHS and RHS **termwise independent** of $$*\in\set{0,1}^\N$$.
 
 Corollary 1 follows from this and the prior observation that the algebraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on squares of eigenfunctions, the algebraic span of which is also dense in $$L^2(M,g)$$, so they agree everywhere.
 
-Corollary 2 follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold by $$\Z_2^\infty$$ symmetry.
+Corollary 2 follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold by $$\Z_2^\infty$$ symmetry. We can always reduce a complex multiplicity-1 eigenbasis to a real basis within its generic $$U_1^\infty$$ symmetry group.
 
 This completes the proof of the Corollaries.
 
