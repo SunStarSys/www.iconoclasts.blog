@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=49626
+status: verificado=49645
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -303,7 +303,7 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 Nota: para el estuche de torsión plana unidimensional a continuación, $$\tilde{Q}_k(e^i,e^j) = 0$$ desde $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ es una verdadera derivación.
 
-### Prueba de corolarios
+## Prueba de corolarios
 
 Ahora considere las famosas relaciones de asociatividad de la Teoría del Campo Conformal (en una base real):
 

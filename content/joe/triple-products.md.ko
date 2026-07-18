@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=49626
+status: 확인=49645
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -302,7 +302,7 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 참고: 아래 1차원 플랫 토리 케이스의 경우, $$\tilde{Q}_k(e^i,e^j) = 0$$ 이후 $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ 이것은 진정한 파생입니다.
 
-### 코롤러 증거
+## 코롤러 증거
 
 이제 Conformal Field Theory의 유명한 연관성 관계를 고려하십시오 (실제로).
 

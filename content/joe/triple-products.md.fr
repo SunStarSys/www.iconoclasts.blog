@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=49626
+status: vérifié=49645
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -303,7 +303,7 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 Remarque : pour le cas de tori plat unidimensionnel ci-dessous, $$\tilde{Q}_k(e^i,e^j) = 0$$ depuis $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ est une véritable dérivation.
 
-### Preuve de corollaires
+## Preuve de corollaires
 
 Considérez maintenant les célèbres relations associatives de la théorie du champ conforme (sur une base réelle) :
 

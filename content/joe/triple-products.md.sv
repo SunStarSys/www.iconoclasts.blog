@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=49626
+status: verifierad=49645
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -302,7 +302,7 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 Anmärkning: för det endimensionella flat-tori fallet nedan, $$\tilde{Q}_k(e^i,e^j) = 0$$ sedan $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ Det är en sann härledning.
 
-### Bevis för korollarier
+## Bevis för korollarier
 
 Tänk nu på de berömda associativitetsrelationerna från Conformal Field Theory (på en verklig grund):
 

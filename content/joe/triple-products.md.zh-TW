@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =49626
+status: 驗證 =49645
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -301,7 +301,7 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 注意：對於下面的一維均一案例，$$\tilde{Q}_k(e^i,e^j) = 0$$ 起自$$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ 是真正的衍生。
 
-### 核數證明
+## 核數證明
 
 現在考慮來自共形場理論的著名關聯性關係 (實質基礎)：
 

@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=49626
+status: überprüft=49645
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -302,7 +302,7 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 Hinweis: für das eindimensionale Flat-Tori-Gehäuse unten, $$\tilde{Q}_k(e^i,e^j) = 0$$ seit $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ ist eine wahre Ableitung.
 
-### Beweis der Korollarien
+## Beweis der Korollarien
 
 Betrachten Sie nun die berühmten Assoziativitätsbeziehungen aus der konformen Feldtheorie (in einer realen Grundlage):
 

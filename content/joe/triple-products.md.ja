@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=49626
+status: 確認済み=49645
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -301,7 +301,7 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 注: 次の一次元の平坦な場合のために、$$\tilde{Q}_k(e^i,e^j) = 0$$ 以降$$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ 真の派生である。
 
-### コロラリの証明
+## コロラリの証明
 
 コンフォーマル・フィールド理論(Conformal Field Theory)の有名な連想関係を考えてみましょう。
 
