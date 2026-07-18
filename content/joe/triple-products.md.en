@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49580
+status: verified=49591
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -61,7 +61,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 <br>
 
-*Symmetry* plays an important role in computationally tractable cases [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity.) In this instance, we offer the following
+*Symmetry* plays an important role in computationally tractable cases [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case. In this instance, we offer the following
 
 <br>
 
@@ -73,7 +73,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal real-valued bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,i,k} \neq 0$$ in both bases; and if for every choice of $$i,j,k$$, the product $$M^{i,i,k}M^{j,j,k}$$ agrees in both bases.
+(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal  bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,i,k} \neq 0$$ in both bases; and if for every choice of $$i,j,k$$, the product $$M^{i,i,k}M^{j,j,k}$$ agrees in both bases.
 
   </div>
 </div>
@@ -88,7 +88,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   </div>
   <div class="card-body">
 
-Given a pair of multiplicity-1 eigenvalue preserving orthonormal bases as described in the Theorem, the manifolds are isometric if the hypotheses of the Diagonal Litmus Test hold, even if the bases are complex.
+Given a pair of eigenvalue preserving orthonormal bases as described in the Theorem between generic manifolds, the manifolds are isometric if and only if for every choice of $$i,j,k$$ the product $$M^{i,k,k}M^{j,j,k}$$ agrees in both bases.
 
   </div>
 </div>
@@ -313,7 +313,7 @@ i = j\ , \ell = k\text{ and relabeling } \implies \\
 
 Corollary 1 follows from the fact that $$z_k$$ is well-defined, and the prior observation that the algebraic operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree with pointwise function multiplication by squares of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ (again by Stone-Weirstrass.) So they agree everywhere by commutativity and associativity.
 
-Corollary 2 follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold by $$\Z_2^\infty$$ symmetry. We can always reduce a complex multiplicity-1 eigenbasis to a real basis within its generic $$U_1^\infty$$ symmetry group.
+Corollary 2 follows by noting that the condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ is generically true.
 
 This completes the proof of the Corollaries.
 
