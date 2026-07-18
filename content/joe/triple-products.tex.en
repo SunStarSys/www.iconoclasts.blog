@@ -325,7 +325,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 \end{equation}
 
-Corollary~\ref{coro-1} follows from the fact that $z_k$ is well-defined under its presumed hypotheses, and the prior observation that the algebraic operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree with pointwise function multiplication by squares of eigenfunctions (the generated algebra from which is also dense in $L^2(M,g)$ again by Stone-Weierstrass.) So they agree everywhere.
+Corollary~\ref{coro-1} follows from the fact that $z_k\in U_1$ is well-defined under its presumed hypotheses, and the prior observation that the algebraic operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree with pointwise function multiplication by squares of eigenfunctions (the generated algebra from which is also dense in $L^2(M,g)$ again by Stone-Weierstrass.) So they agree everywhere.
 
 Corollary~\ref{coro-2} follows by noting that the condition $\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$ is generically true.
 
