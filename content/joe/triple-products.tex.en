@@ -100,12 +100,12 @@ To be isometric to $(M,g)$, it is a necessary and sufficient condition for anoth
 
 \begin{corollary}
 \label{coro-1}
-(Diagonal Litmus Test). Let $M^{i,\bar i,k} := \bra{|e^i|^2}\ket{e^k}$. Given a pair of eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem~\ref{thm}, the manifolds are isometric if the $\set{M^{i,\bar i,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal real-valued bases as described in the hypothesis of the Theorem, the manifolds are isometric if the $\set{M^{i,i,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis; and for every $k>0$, there is at least one value of $i>0$ for which $M^{i,i,k} \neq 0$ in both bases.
 \end{corollary}
 
 \begin{corollary}
 \label{coro-2}
-Given a pair of multiplicity-1 eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem~\ref{thm}, the manifolds are isometric if and only if the $\set{M^{i,\bar i,k}}$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+Given a pair of multiplicity-1 eigenvalue preserving orthonormal bases as described in the Theorem, the manifolds are isometric if the hypotheses of the Diagonal Litmus Test hold, even if the bases are complex.
 \end{corollary}
 
 The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the bilinear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
@@ -117,7 +117,7 @@ If we consider the map
 
 this paper establishes the injectivity of this map for closed Riemannian manifolds (up to Riemannian isometry in its domain). Further results which apply these techniques to describe its image (and inverse), within select moduli spaces of metrics, are just getting started \cite{AA25}.  There, Anshul Adve rigorously tackles unit tangent spaces of compact, hyperbolic 2-orbifolds, using these same \textit{structure constants} from Conformal Field Theory.
 
-Ihe generic Riemannian metric case is covered by diagonal litmus test described the hypotheses of Corollary~\ref{coro-2}. The converse holds there as well.
+Ihe generic Riemannian metric case is completely characterized by the study of $\set{\lambda_i, |M^{i,i,k}|}$ in the Corollaries.
 
 These results were first demonstrated during a similarly titled talk by the author at \textbf{MSRI} in 1997, but they appear here in published form for the first time.
 
@@ -277,9 +277,9 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\mathbb{N},\, ⋺ M
 \exists r,s,t \in \mathbb{N}\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\,.
 \end{equation}
 
-We may hope that for any given $k$, $M_0^{i,\bar i,k}$ cannot be identically $0$ for all $i$. At first blush, this doesn't seem impossible if $M$ has an "even/odd" symmetry group, and $e^k$ is odd, but the hope holds true for the flat-tori case below (which does not satisfy the uniform eigenvalue multiplicity = 1 condition). Furthermore, the Formula~\ref{fml} for $z_k$ requires both $i$-independence, and sufficiency, to establish the basis map $e_0^i \mapsto z_i e_1^i$ preserves $\set{M_0^{i,j,k}}$.
+We may hope that for any given $k>0$, $M_0^{i,i,k}$ cannot be identically $0$ for all $i$, since it is a generically true condition, but false for specific cases like the flat tori case covered in the Example below. Furthermore, the Formula~\ref{fml} for $z_k$ requires both $i$-independence, and sufficiency, to establish the basis map $e_0^i \mapsto z_i e_1^i$ preserves $\set{M_0^{i,j,k}}$.
 
-It turns out that the above "hope" follows from the density of positive sums of squares of absolute values of Laplace eigenfunctions in the positive cone of $L^2(M,g)$ (the real and imaginary parts of any eigenfunction $e^k$ can be written as the difference of two such elements, which establishes the hope by contradiction). We develop a proof of Corollary~\ref{coro-1} below the next set of formulae.
+We sketch a proof of Corollary~\ref{coro-1} below the next set of formulae, which first establishes the $i$ independence by assuming the "hope" is true.
 
 Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into this generalized conjecture:
 
@@ -339,9 +339,7 @@ A proof of the $i$-invariance of the "hope" follows through this equation, since
 \begin{lemma}
 \label{lma-coro-1}
 \begin{equation}
-|\theta_k| = 1, A_k > 0 \\
-\sum_{k\leq K} (\theta_k - 1) A_k\ \in \mathbb{R}^+ \union \set{0}\\
-\implies \theta_k = 1 \  \forall k
+|\theta_k| = 1, A_k \in \mathbb{R}^+ \ , \Re(\sum_{k\leq K} (\theta_k - 1) A_k) \in \mathbb{R}^+ \cup \set{0} \implies \theta_k = 1 \  \forall k.
 \end{equation}
 \end{lemma}
 
@@ -350,8 +348,25 @@ A proof of the $i$-invariance of the "hope" follows through this equation, since
 $(\theta_k - 1)A_k$ is in the left half-plane if it is non-zero; summing these terms cannot yield a non-negative result unless they are all zero.
 
 \end{subproof}
+We can therefore reduce both sides of every line to $0$ in Equation~\ref{eqn-16} by splitting the RHS sum in the first two lines into positive and negative terms as in the following lemma:
 
-We can therefore reduce both sides of every line in Equation (16) first to positive-valued $M^{i,\bar i,k}$ via $z_k = \bar M^{i,\bar i,k}/|M^{i,\bar i,k}|$, and then to $$0$$ by using the lemma and induction on the number of elements in $\set{\theta_k = -1}$. So we have now proven that the equation
+\begin{lemma}
+\label{lma-coro-2}
+\begin{equation}
+\text{Given } \epsilon \geq 0,\text{ and}\\
+\sum_{\theta_k = -1, >0} M^{i,i,k}M^{j,j,k} + \sum_{\theta_k = -1,<0} M^{i,i,k}M^{j,j,k} \geq \epsilon \\
+\implies
+\set{\theta_k = -1, <0} = \emptyset
+\end{equation}
+\end{lemma}
+
+\begin{subproof}[Proof of Lemma~\ref{lma-coro-2}]
+
+By induction on the number of terms $K$ with $\theta_k = -1$, we can set $-\epsilon_{K-1}$ to be the sum of the smallest positive term and enough negative terms to make the sum negative, and subtract from both sides to complete the induction with $\epsilon \mapsto \epsilon + \epsilon_{K-1} > 0$. Combined with the conclusions of the prior Lemma~\ref{lma-coro-1}, we have establieshed that $\theta_k = 1\ \forall k$.
+
+\end{subproof}
+
+So we have now proven that the equation
 
 \begin{equation}
 \sum_r M_*^{i,\bar i,r}\bar M_*^{j,\bar j,r} = \sum_r |M_*^{i,j,r}|^2
@@ -359,9 +374,9 @@ We can therefore reduce both sides of every line in Equation (16) first to posit
 
 has LHS and RHS both termwise independent of $*\in\set{0,1}^{\mathbb{N}}$.
 
-Corollary~\ref{coro-1} follows from this and the prior observation that the algebraic multiplication operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree on squares of absolute values of eigenfunctions, the span of which is also dense in $L^2(M,g)$, so they agree everywhere.
+Corollary~\ref{coro-1} follows from this and the prior observation that the algebraic multiplication operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree on squares of eigenfunctions, the algebraic span of which is also dense in $L^2(M,g)$, so they agree everywhere by associativity.
 
-Corollary~\ref{coro-2} follows by noting that the multiplicity-$1$ condition on the spectrum forces the converse portion of Corollary\ref{coro-2} to hold by $\mathbb{Z}_2^\infty$ symmetry.
+Corollary~\ref{coro-2} follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold by $\Z_2^\infty$ symmetry. We can always reduce a complex multiplicity-1 eigenbasis to a real basis within its generic $U_1^\infty$ symmetry group.
 
 This completes the proof of the Corollaries.
 
