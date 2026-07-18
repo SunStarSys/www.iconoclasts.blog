@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49518
+status: verified=49522
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -73,7 +73,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal real-valued bases as described in the hypothesis of the Theorem, the manifolds are isometric if the $$\set{M^{i,i,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis, and for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,i,k} \neq 0$$ in both bases.
+(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal real-valued bases as described in the hypothesis of the Theorem, the manifolds are isometric if the $$\set{M^{i,i,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis; and if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,i,k} \neq 0$$ in both bases; and if for every choice of $$i,j$$, $$\sum_k M^{i,i,k}M^{j,j,k}$$ agree in both bases.
 
   </div>
 </div>
@@ -332,13 +332,13 @@ $$A_k > 0 \implies (\theta_k - 1)A_k$$ is in the left half-plane, and thus the s
 We can therefore reduce both sides of every line to $$0$$ in Equation (16) by splitting the RHS sum in the first two lines into positive and negative terms as in the following lemma:
 
 ```math
-\text{Given } \epsilon \geq 0,\text{ and}\\
-\sum_{\theta_k = -1, >0} M^{i,i,k}M^{j,j,k} + \sum_{\theta_k = -1,<0} M^{i,i,k}M^{j,j,k} \geq \epsilon \\
+
+\sum_{\theta_k = -1, >0} M^{i,i,k}M^{j,j,k} + \sum_{\theta_k = -1,<0} M^{i,i,k}M^{j,j,k} \geq 0 \\
 \implies
 \set{\theta_k = -1, <0} = \emptyset
 ```
 
-By induction on the number of terms $$K$$ with $$\theta_k = -1$$, we can set $$-\epsilon_{K-1}$$ to be the sum of the smallest positive term and enough negative terms to make the sum negative, and subtract from both sides to complete the induction with $$\epsilon \mapsto \epsilon + \epsilon_{K-1} > 0$$. Combined with the conclusions of the prior lemma, we have establieshed that $$\theta_k = 1\ \forall k$$.
+By induction on the number of terms $$K$$ with $$\theta_k = -1$$, we can set $$-\epsilon_{K-1}$$ to be the sum with the smallest  negative term subtracted from both sides to complete the induction. Combined with the conclusions of the prior lemma, we have establieshed that $$\theta_k = 1\ \forall k$$.
 
 So we have now proven that the equation
 
