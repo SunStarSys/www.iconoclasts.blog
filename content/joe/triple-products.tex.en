@@ -325,7 +325,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 \end{equation}
 
-Corollary~\ref{coro-1} follows from the fact that $z_k$ is well-defined, and the prior observation that the algebraic operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree with pointwise function multiplication by squares of eigenfunctions, the generated algebra from which is also dense in $L^2(M,g)$ again by Stone-Weirstrass, so they agree everywhere by commutativity and associativity.
+Corollary~\ref{coro-1} follows from the fact that $z_k$ is well-defined under its presumed hypotheses, and the prior observation that the algebraic operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree with pointwise function multiplication by squares of eigenfunctions (the generated algebra from which is also dense in $L^2(M,g)$ again by Stone-Weirstrass.) So they agree everywhere by commutativity and associativity.
 
 Corollary~\ref{coro-2} follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary~\ref{coro-1} to hold by $\mathbb{Z}_2^\infty$ symmetry. We can always reduce a complex multiplicity-1 eigenbasis to a real basis within its generic $U_1^\infty$ symmetry group.
 
