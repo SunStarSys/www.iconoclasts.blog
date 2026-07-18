@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=49595
+status: verificado=49626
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -76,7 +76,7 @@ Para ser isométrico $$(M,g)$$, é uma condição *necessária e suficiente* par
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada $$k>0$$, há pelo menos um valor de $$i>0$$ para o qual $$M^{i,i,k} \neq 0$$ em ambas as bases, e se para cada escolha de $$i,j,k$$, o produto $$M^{i,i,k}M^{j,j,k}$$ concordam em ambas as bases.
+(Diagonal Litmus Test) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada $$k>0$$, há pelo menos um valor de $$i>0$$ para o qual $$M^{i,i,k} \neq 0$$ em ambas as bases, e se para cada escolha de $$i,j,k$$, o produto $$M^{i,i,k}\bar M^{j,j,k}$$ concordam em ambas as bases.
 
 </div>
 </div>
@@ -91,7 +91,7 @@ Para ser isométrico $$(M,g)$$, é uma condição *necessária e suficiente* par
 </div>
   <div class="card-body">
 
-Dado um par de autovalor preservando bases ortonormais como descrito no Teorema entre variedades genéricas, as variedades são isométricas se e somente se para cada escolha de $$i,j,k$$ o produto $$M^{i,k,k}M^{j,j,k}$$ concordam em ambas as bases.
+Dado um par de autovalor preservando bases ortonormais como descrito no Teorema entre variedades genéricas, as variedades são isométricas se e somente se para cada escolha de $$i,j,k$$ o produto $$M^{i,k,k}\bar M^{j,j,k}$$ concordam em ambas as bases.
 
 </div>
 </div>
@@ -308,15 +308,14 @@ Nota: para o caso unidimensional do flat-tori abaixo, $$\tilde{Q}_k(e^i,e^j) = 0
 Agora considere as famosas relações de associatividade da Teoria do Campo Conformal (em uma base real):
 
 ```math
-
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
-i = j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
+i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-O Corolário 1 vem do fato de que $$z_k$$ é bem definida, e a observação prévia que os operadores algébricos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ e $$M_1^{i,j,k}$$ concordam com a multiplicação de função pontual por quadrados de autofunções, cuja álgebra gerada também é densa em $$L^2(M,g)$$ (Mais uma vez por Stone-Weierstrass.) Assim, eles concordam em todos os lugares por comutatividade e associatividade.
+O Corolário 1 vem do fato de que $$z_k\in U_1$$ é bem definida, e a observação prévia que os operadores algébricos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ e $$M_1^{i,j,k}$$ concordam com a multiplicação de função pontual por quadrados de autofunções, cuja álgebra gerada também é densa em $$L^2(M,g)$$ (Mais uma vez por Stone-Weierstrass.) Então eles concordam em todos os lugares.
 
-Corolário 2 segue observando que a condição $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ genericamente verdade.
+Corolário 2 segue observando que a condição $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ genericamente verdade. E se para alguma escolha de $$i,j,k$$, o produto $$M^{i,i,k}\bar M^{j,j,k}$$ diferem em alguns pares de bases, diferem em cada par de bases, uma vez que as variedades genéricas possuem espectros de multiplicidade-1. Isso estabelece a necessidade da hipótese e completa a prova.
 
 Isso completa a prova dos Corolários.
 

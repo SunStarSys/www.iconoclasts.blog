@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =49595
+status: 驗證 =49626
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -74,7 +74,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每一個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,i,k} \neq 0$$ 在兩個基礎中；如果是每個選擇$$i,j,k$$，產品$$M^{i,i,k}M^{j,j,k}$$ 兩地皆同意。
+(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每一個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,i,k} \neq 0$$ 在兩個基礎中；如果是每個選擇$$i,j,k$$，產品$$M^{i,i,k}\bar M^{j,j,k}$$ 兩地皆同意。
 
 </div>
 </div>
@@ -89,7 +89,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-鑑於一對特徵值保留了一般人體的定理中描述的正規基底，這兩人只在每一個選擇的時候才是幾何的。$$i,j,k$$ 產品$$M^{i,k,k}M^{j,j,k}$$ 兩地皆同意。
+鑑於一對特徵值保留了一般人體的定理中描述的正規基底，這兩人只在每一個選擇的時候才是幾何的。$$i,j,k$$ 產品$$M^{i,k,k}\bar M^{j,j,k}$$ 兩地皆同意。
 
 </div>
 </div>
@@ -306,15 +306,14 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 現在考慮來自共形場理論的著名關聯性關係 (實質基礎)：
 
 ```math
-
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
-i = j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
+i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Corollary 1 遵循的事實$$z_k$$ 是定義完善的，且先前觀察的是由其定義的代數運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同意將點函數乘以特徵方形，產生的代數亦密集於$$L^2(M,g)$$ (再加上 Stone-Weierstrass) 因此，他們在任何地方都同意通勤和關聯性。
+Corollary 1 遵循的事實$$z_k\in U_1$$ 是定義完善的，且先前觀察的是由其定義的代數運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同意將點函數乘以特徵方形，產生的代數亦密集於$$L^2(M,g)$$ (再加上 Stone-Weierstrass) 因此，他們在任何地方都同意。
 
-Corollary 2 遵循指出條件$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 通常為真。
+Corollary 2 遵循指出條件$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 通常為真。如果選擇了$$i,j,k$$，產品$$M^{i,i,k}\bar M^{j,j,k}$$ 一些基底不同，它們在每一對基底會有所不同，因為一般的機體具有多性 -1 頻譜。這會建立假設的必要性，並完成證明。
 
 這樣就完成了 Corollaries 的證明。
 

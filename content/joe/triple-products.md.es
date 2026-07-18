@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=49595
+status: verificado=49626
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -76,7 +76,7 @@ Ser isométrico para $$(M,g)$$, es una condición *necesaria y suficiente* para 
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Dados un par de valores propios que preservan las bases ortonormales como se describe en la hipótesis del Teorema, los colectores son isométricos si por cada $$k>0$$, hay al menos un valor de $$i>0$$ cuyo $$M^{i,i,k} \neq 0$$ en ambas bases, y si por cada elección de $$i,j,k$$, el producto $$M^{i,i,k}M^{j,j,k}$$ de acuerdo en ambas bases.
+(Diagonal Litmus Test) Dados un par de valores propios que preservan las bases ortonormales como se describe en la hipótesis del Teorema, los colectores son isométricos si por cada $$k>0$$, hay al menos un valor de $$i>0$$ cuyo $$M^{i,i,k} \neq 0$$ en ambas bases, y si por cada elección de $$i,j,k$$, el producto $$M^{i,i,k}\bar M^{j,j,k}$$ de acuerdo en ambas bases.
 
 </div>
 </div>
@@ -91,7 +91,7 @@ Ser isométrico para $$(M,g)$$, es una condición *necesaria y suficiente* para 
 </div>
   <div class="card-body">
 
-Teniendo en cuenta un par de valores propios que preserva las bases ortonormales como se describe en el Teorema entre los manifolds genéricos, los manifolds son isométricos si y solo si para cada elección de $$i,j,k$$ el producto $$M^{i,k,k}M^{j,j,k}$$ de acuerdo en ambas bases.
+Teniendo en cuenta un par de valores propios que preserva las bases ortonormales como se describe en el Teorema entre los manifolds genéricos, los manifolds son isométricos si y solo si para cada elección de $$i,j,k$$ el producto $$M^{i,k,k}\bar M^{j,j,k}$$ de acuerdo en ambas bases.
 
 </div>
 </div>
@@ -308,15 +308,14 @@ Nota: para el estuche de torsión plana unidimensional a continuación, $$\tilde
 Ahora considere las famosas relaciones de asociatividad de la Teoría del Campo Conformal (en una base real):
 
 ```math
-
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
-i = j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
+i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Corolario 1 se deriva del hecho de que $$z_k$$ está bien definido, y la observación previa de que los operadores algebraicos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ están de acuerdo con la multiplicación de funciones por cuadrados de funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ (de nuevo por Stone-Weierstrass). Así que están de acuerdo en todas partes por conmutatividad y asociatividad.
+Corolario 1 se deriva del hecho de que $$z_k\in U_1$$ está bien definido, y la observación previa de que los operadores algebraicos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ están de acuerdo con la multiplicación de funciones por cuadrados de funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ (de nuevo por Stone-Weierstrass). Así que están de acuerdo en todas partes.
 
-Corolario 2 sigue observando que la condición $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ es genéricamente cierto.
+Corolario 2 sigue observando que la condición $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ es genéricamente cierto. Y si por alguna elección de $$i,j,k$$, el producto $$M^{i,i,k}\bar M^{j,j,k}$$ diferirían en algún par de bases, diferirían en cada par de bases, ya que los colectores genéricos tienen espectros de multiplicidad 1. Esto establece la necesidad de la hipótesis, y completa la prueba.
 
 Esto completa la prueba de los Corolarios.
 

@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=49595
+status: verifierad=49626
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -75,7 +75,7 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om för varje $$k>0$$Det finns minst ett värde av $$i>0$$ för vilken $$M^{i,i,k} \neq 0$$ i båda baserna, och om för varje val av $$i,j,k$$, produkten $$M^{i,i,k}M^{j,j,k}$$ Instämmer i båda baserna.
+(Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om för varje $$k>0$$Det finns minst ett värde av $$i>0$$ för vilken $$M^{i,i,k} \neq 0$$ i båda baserna, och om för varje val av $$i,j,k$$, produkten $$M^{i,i,k}\bar M^{j,j,k}$$ Instämmer i båda baserna.
 
 </div>
 </div>
@@ -90,7 +90,7 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 </div>
   <div class="card-body">
 
-Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremen mellan generiska grenrör, är grenrör isometriska om och endast om för varje val av $$i,j,k$$ produkten $$M^{i,k,k}M^{j,j,k}$$ Instämmer i båda baserna.
+Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremen mellan generiska grenrör, är grenrör isometriska om och endast om för varje val av $$i,j,k$$ produkten $$M^{i,k,k}\bar M^{j,j,k}$$ Instämmer i båda baserna.
 
 </div>
 </div>
@@ -307,15 +307,14 @@ Anmärkning: för det endimensionella flat-tori fallet nedan, $$\tilde{Q}_k(e^i,
 Tänk nu på de berömda associativitetsrelationerna från Conformal Field Theory (på en verklig grund):
 
 ```math
-
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
-i = j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
+i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Corollary 1 följer av det faktum att $$z_k$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ överensstämmer med punktvis funktion multiplikation av rutor av egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Omdirigerad från Stone-Weierstrass) Så de är överens överallt genom kommutativitet och associativitet.
+Corollary 1 följer av det faktum att $$z_k\in U_1$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ överensstämmer med punktvis funktion multiplikation av rutor av egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Omdirigerad från Stone-Weierstrass) De är överens överallt.
 
-Corollary 2 följer genom att notera att villkoret $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ Det är generellt sant.
+Corollary 2 följer genom att notera att villkoret $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ Det är generellt sant. Om för något val av $$i,j,k$$, produkten $$M^{i,i,k}\bar M^{j,j,k}$$ De skulle skilja sig åt i ett par baser, de skulle skilja sig åt i varje par baser, eftersom generiska grenrör har multiplikations-1 spektra. Detta fastställer hypotesens nödvändighet och kompletterar beviset.
 
 Detta kompletterar beviset för korollarierna.
 

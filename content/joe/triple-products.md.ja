@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=49595
+status: 確認済み=49626
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -74,7 +74,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(対角リトマス試験)定理の仮説で説明されているように、正統な基質を保持する固有値のペアを考えると、マニホールドはすべての場合にアイソメです$$k>0$$の値が1つ以上あります$$i>0$$ 対象$$M^{i,i,k} \neq 0$$ 両方のベースで、そしてすべての選択のために$$i,j,k$$製品について$$M^{i,i,k}M^{j,j,k}$$ 両基地とも一致。
+(対角リトマス試験)定理の仮説で説明されているように、正統な基質を保持する固有値のペアを考えると、マニホールドはすべての場合にアイソメです$$k>0$$の値が1つ以上あります$$i>0$$ 対象$$M^{i,i,k} \neq 0$$ 両方のベースで、そしてすべての選択のために$$i,j,k$$製品について$$M^{i,i,k}\bar M^{j,j,k}$$ 両基地とも一致。
 
 </div>
 </div>
@@ -89,7 +89,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-汎用マニホールド間の定理で説明されているように、正準基を保持する固有値のペアを考えると、マニホールドは、すべての選択のためにのみアイソメです$$i,j,k$$ 製品$$M^{i,k,k}M^{j,j,k}$$ 両基地とも一致。
+汎用マニホールド間の定理で説明されているように、正準基を保持する固有値のペアを考えると、マニホールドは、すべての選択のためにのみアイソメです$$i,j,k$$ 製品$$M^{i,k,k}\bar M^{j,j,k}$$ 両基地とも一致。
 
 </div>
 </div>
@@ -306,15 +306,14 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 コンフォーマル・フィールド理論(Conformal Field Theory)の有名な連想関係を考えてみましょう。
 
 ```math
-
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
-i = j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
+i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Corollary 1は、$$z_k$$ は明確に定義され、前回の観測では、代数演算子の定義$$z_iz_jz_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ 固有関数の二乗によるポイントワイズ関数の乗算に同意します。生成された代数も密です$$L^2(M,g)$$ (Stone-Weierstrassより) あらゆるところで通勤と連想に賛同しています。
+Corollary 1は、$$z_k\in U_1$$ は明確に定義され、前回の観測では、代数演算子の定義$$z_iz_jz_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ 固有関数の二乗によるポイントワイズ関数の乗算に同意します。生成された代数も密です$$L^2(M,g)$$ (Stone-Weierstrassより) いたるところで同意する。
 
-Corollary 2は、その条件に注意して続きます。$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 全般的に正しい。
+Corollary 2は、その条件に注意して続きます。$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 全般的に正しい。If For Some Choiceシングル$$i,j,k$$製品について$$M^{i,i,k}\bar M^{j,j,k}$$ 汎用マニホールドは多重度1スペクトルを持つため、いくつかの基底のペアで異なっていた。これにより、仮説の必要性が確立され、その証明が完成します。
 
 これでコロラの証明は完了です。
 

@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=49595
+status: vérifié=49626
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -76,7 +76,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 </div>
   <div class="card-body">
 
-(Test diagonal de Litmus) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque $$k>0$$, au moins une valeur de $$i>0$$ pour lequel $$M^{i,i,k} \neq 0$$ dans les deux bases ; et si pour chaque choix $$i,j,k$$, le produit $$M^{i,i,k}M^{j,j,k}$$ d'accord dans les deux bases.
+(Test diagonal de Litmus) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque $$k>0$$, au moins une valeur de $$i>0$$ pour lequel $$M^{i,i,k} \neq 0$$ dans les deux bases ; et si pour chaque choix $$i,j,k$$, le produit $$M^{i,i,k}\bar M^{j,j,k}$$ d'accord dans les deux bases.
 
 </div>
 </div>
@@ -91,7 +91,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 </div>
   <div class="card-body">
 
-Étant donné une paire de valeurs propres préservant les bases orthonormes comme décrit dans le théorème entre les collecteurs génériques, les collecteurs sont isométriques si et seulement si pour chaque choix de $$i,j,k$$ le produit $$M^{i,k,k}M^{j,j,k}$$ d'accord dans les deux bases.
+Étant donné une paire de valeurs propres préservant les bases orthonormes comme décrit dans le théorème entre les collecteurs génériques, les collecteurs sont isométriques si et seulement si pour chaque choix de $$i,j,k$$ le produit $$M^{i,k,k}\bar M^{j,j,k}$$ d'accord dans les deux bases.
 
 </div>
 </div>
@@ -308,15 +308,14 @@ Remarque : pour le cas de tori plat unidimensionnel ci-dessous, $$\tilde{Q}_k(e^
 Considérez maintenant les célèbres relations associatives de la théorie du champ conforme (sur une base réelle) :
 
 ```math
-
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
-i = j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
+i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Le corollaire 1 découle du fait que $$z_k$$ est bien défini, et l'observation antérieure que les opérateurs algébriques définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ sont d'accord avec la multiplication par des carrés de fonctions propres, dont l'algèbre générée est également dense en $$L^2(M,g)$$ (à nouveau par Stone-Weierstrass.) Ils s'accordent donc partout par la commutativité et l'associativité.
+Le corollaire 1 découle du fait que $$z_k\in U_1$$ est bien défini, et l'observation antérieure que les opérateurs algébriques définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ sont d'accord avec la multiplication par des carrés de fonctions propres, dont l'algèbre générée est également dense en $$L^2(M,g)$$ (à nouveau par Stone-Weierstrass.) Ils sont donc d'accord partout.
 
-Le corollaire 2 suit en notant que la condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ Généralement vrai.
+Le corollaire 2 suit en notant que la condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ Généralement vrai. Et si pour un choix de $$i,j,k$$, le produit $$M^{i,i,k}\bar M^{j,j,k}$$ différeraient dans une paire de bases, elles différeraient dans chaque paire de bases, puisque les variétés génériques ont des spectres de multiplicité-1. Cela établit la nécessité de l'hypothèse et complète la preuve.
 
 Cela complète la preuve des corollaires.
 

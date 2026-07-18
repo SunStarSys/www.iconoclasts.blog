@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=49595
+status: 확인=49626
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -75,7 +75,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(대각선 리트머스 테스트) 정리의 가설에 설명된 대로 정형  기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 각각 $$k>0$$의 값이 하나 이상 있습니다. $$i>0$$ 대상 $$M^{i,i,k} \neq 0$$ 두 가지 모두, 그리고 모든 선택의 경우 $$i,j,k$$, 제품 $$M^{i,i,k}M^{j,j,k}$$ 두 기지에 모두 동의합니다.
+(대각선 리트머스 테스트) 정리의 가설에 설명된 대로 정형  기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 각각 $$k>0$$의 값이 하나 이상 있습니다. $$i>0$$ 대상 $$M^{i,i,k} \neq 0$$ 두 가지 모두, 그리고 모든 선택의 경우 $$i,j,k$$, 제품 $$M^{i,i,k}\bar M^{j,j,k}$$ 두 기지에 모두 동의합니다.
 
 </div>
 </div>
@@ -90,7 +90,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-일반 매니폴드 사이의 정리에 설명된 대로 정형 기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 모든 선택에 대해 동일한 경우에만 등각투영됩니다. $$i,j,k$$ 제품 $$M^{i,k,k}M^{j,j,k}$$ 두 기지에 모두 동의합니다.
+일반 매니폴드 사이의 정리에 설명된 대로 정형 기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 모든 선택에 대해 동일한 경우에만 등각투영됩니다. $$i,j,k$$ 제품 $$M^{i,k,k}\bar M^{j,j,k}$$ 두 기지에 모두 동의합니다.
 
 </div>
 </div>
@@ -307,15 +307,14 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 이제 Conformal Field Theory의 유명한 연관성 관계를 고려하십시오 (실제로).
 
 ```math
-
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
-i = j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
+i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Corollary 1은 다음과 같은 사실입니다. $$z_k$$ 잘 정의되어 있으며, 대수 연산자가 정의한 이전 관찰 $$z_iz_jz_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ eigenfunctions의 제곱에 의한 포인트 방식 함수 곱셈에 동의, 또한 밀집되는 생성 대수 $$L^2(M,g)$$ (다시 Stone-Weierstrass) 그래서 그들은 공동성과 연관성에 의해 모든 곳에서 동의한다.
+Corollary 1은 다음과 같은 사실입니다. $$z_k\in U_1$$ 잘 정의되어 있으며, 대수 연산자가 정의한 이전 관찰 $$z_iz_jz_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ eigenfunctions의 제곱에 의한 포인트 방식 함수 곱셈에 동의, 또한 밀집되는 생성 대수 $$L^2(M,g)$$ (다시 Stone-Weierstrass) 그들은 모든 곳에서 동의한다.
 
-Corollary 2는 다음과 같은 조건을 나타냅니다. $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 일반적으로 사실입니다.
+Corollary 2는 다음과 같은 조건을 나타냅니다. $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 일반적으로 사실입니다. 만약 어떤 선택의 $$i,j,k$$, 제품 $$M^{i,i,k}\bar M^{j,j,k}$$ 기지의 일부 쌍에서 차이가 있었다, 그들은 기지의 모든 쌍에서 다를 것입니다, 일반 매니폴드는 multiplicity-1 스펙트럼을 가지고 있기 때문에. 이것은 가설의 필요성을 확립하고 증거를 완성합니다.
 
 이것은 Corollaries의 증거를 완성합니다.
 
