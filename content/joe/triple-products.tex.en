@@ -96,16 +96,16 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 To be isometric to $(M,g)$, it is a necessary and sufficient condition for another isospectral closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $\set{M^{i,j,k}}$ under each basis.
 \end{theorem}
 
-\textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being unique (i.e., without nontrivial multiplicity.) In this instance, we offer the following
+\textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case. In this instance, we offer the following
 
 \begin{corollary}
 \label{coro-1}
-(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal real-valued bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $k>0$, there is at least one value of $i>0$ for which $M^{i,i,k} \neq 0$ in both bases; and if for every choice of $i,j,k$, the product $M^{i,i,k}M^{j,j,k}$ agrees in both bases.
+(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $k>0$, there is at least one value of $i>0$ for which $M^{i,i,k} \neq 0$ in both bases; and if for every choice of $i,j,k$, the product $M^{i,i,k}M^{j,j,k}$ agrees in both bases.
 \end{corollary}
 
 \begin{corollary}
 \label{coro-2}
-Given a pair of multiplicity-1 eigenvalue preserving orthonormal bases as described in the Theorem, the manifolds are isometric if the hypotheses of the Diagonal Litmus Test hold, even if the bases are complex.
+Given a pair of eigenvalue preserving orthonormal bases as described in the Theorem between generic manifolds, the manifolds are isometric if and only if for every choice of $i,j,k$, the product $M^{i,k,k}M^{j,j,k}$ agrees in both bases.
 \end{corollary}
 
 The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the bilinear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
@@ -327,7 +327,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 
 Corollary~\ref{coro-1} follows from the fact that $z_k$ is well-defined under its presumed hypotheses, and the prior observation that the algebraic operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree with pointwise function multiplication by squares of eigenfunctions (the generated algebra from which is also dense in $L^2(M,g)$ again by Stone-Weirstrass.) So they agree everywhere by commutativity and associativity.
 
-Corollary~\ref{coro-2} follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary~\ref{coro-1} to hold by $\mathbb{Z}_2^\infty$ symmetry. We can always reduce a complex multiplicity-1 eigenbasis to a real basis within its generic $U_1^\infty$ symmetry group.
+Corollary~\ref{coro-2} follows by noting that the condition $\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$ is generically true.
 
 This completes the proof of the Corollaries.
 
