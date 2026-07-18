@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49522
+status: verified=49539
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -73,7 +73,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal real-valued bases as described in the hypothesis of the Theorem, the manifolds are isometric if the $$\set{M^{i,i,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis; and if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,i,k} \neq 0$$ in both bases; and if for every choice of $$i,j$$, $$\sum_k M^{i,i,k}M^{j,j,k}$$ agree in both bases.
+(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal real-valued bases as described in the hypothesis of the Theorem, the manifolds are isometric if the $$\set{M^{i,i,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis; and if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,i,k} \neq 0$$ in both bases; and if for every choice of $$i,j,k, \ M^{i,i,k}M^{j,j,k}$$ agree in both bases.
 
   </div>
 </div>
@@ -269,7 +269,7 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 We may hope that for any given $$k>0$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$, since it is a generically true condition, but false for specific cases like the flat tori case covered in the Example below. Furthermore, the Formula <span class="eqno"></span> for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$.
 
-We sketch a proof of Corollary 1 below the next set of formulae, which first establishes the $$i$$ independence by assuming the "hope" is true.
+We sketch a proof of Corollary 1 below the next set of formulae.
 
 Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into the generalized conjecture:
 
@@ -311,44 +311,7 @@ i = j\ , \ell = k\text{ and relabeling } \implies \\
 \sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-A proof of the $$i$$-invariance of the "hope" follows through this equation, since the sum is concentrated on the terms near $$i$$ and $$j$$, and a contradiction would result from a change in terms on the LHS as $$M_0 \rightarrow M_1$$:
-
-```math
-
-\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (\theta_{i,j,k} - 1)M_0^{i,i,k} M_0^{j,j,k}\ ,\text{ but} \\
-\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (\bar\theta_{i,j,k} - 1)M_1^{i,i,k} M_1^{j,j,k}\ ,\text {and summing}\\
-
-\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
-```
-
-#### Lemma
-
-$$|\theta_k| = 1, A_k \in \Reals^+ \ , \Re(\sum_{k\leq K} (\theta_k - 1) A_k) \in \Reals^+ \cup \set{0} \implies \theta_k = 1 \  \forall k.$$
-
-#### Proof of Lemma
-
-$$A_k > 0 \implies (\theta_k - 1)A_k$$ is in the left half-plane, and thus the summand is as well, unless $$\theta_k = 1\ \forall k$$.
-
-We can therefore reduce both sides of every line to $$0$$ in Equation (16) by splitting the RHS sum in the first two lines into positive and negative terms as in the following lemma:
-
-```math
-
-\sum_{\theta_k = -1, >0} M^{i,i,k}M^{j,j,k} + \sum_{\theta_k = -1,<0} M^{i,i,k}M^{j,j,k} \geq 0 \\
-\implies
-\set{\theta_k = -1, <0} = \emptyset
-```
-
-By induction on the number of terms $$K$$ with $$\theta_k = -1$$, we can set $$-\epsilon_{K-1}$$ to be the sum with the smallest  negative term subtracted from both sides to complete the induction. Combined with the conclusions of the prior lemma, we have establieshed that $$\theta_k = 1\ \forall k$$.
-
-So we have now proven that the equation
-
-```math
-\sum_r M_*^{i,i,r} M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
-```
-
-has LHS and RHS **termwise independent** of $$*\in\set{0,1}^\N$$.
-
-Corollary 1 follows from this and the prior observation that the algebraic multiplication operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree on squares of eigenfunctions, the algebraic span of which is also dense in $$L^2(M,g)$$, so they agree everywhere by associativity.
+Corollary 1 follows from this and the prior observation that the algebraic operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree with pointwise function multiplication by squares of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ again by Stone-Weirstrass, so they agree everywhere by commutativity and associativity.
 
 Corollary 2 follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold by $$\Z_2^\infty$$ symmetry. We can always reduce a complex multiplicity-1 eigenbasis to a real basis within its generic $$U_1^\infty$$ symmetry group.
 
