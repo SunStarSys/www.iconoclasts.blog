@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49543
+status: verified=49547
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -73,7 +73,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal real-valued bases as described in the hypothesis of the Theorem, the manifolds are isometric if the $$\set{M^{i,i,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis; and if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,i,k} \neq 0$$ in both bases; and if for every choice of $$i,j,k$$, the product $$M^{i,i,k}M^{j,j,k}$$ agrees in both bases.
+(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal real-valued bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,i,k} \neq 0$$ in both bases; and if for every choice of $$i,j,k$$, the product $$M^{i,i,k}M^{j,j,k}$$ agrees in both bases.
 
   </div>
 </div>
@@ -311,7 +311,7 @@ i = j\ , \ell = k\text{ and relabeling } \implies \\
 \sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Corollary 1 follows from this and the prior observation that the algebraic operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree with pointwise function multiplication by squares of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ again by Stone-Weirstrass, so they agree everywhere by commutativity and associativity.
+Corollary 1 follows from the fact that $$z_k$$ is well-defined, and the prior observation that the algebraic operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree with pointwise function multiplication by squares of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ again by Stone-Weirstrass, so they agree everywhere by commutativity and associativity.
 
 Corollary 2 follows by noting that the multiplicity-1 condition on the spectrum forces the converse of Corollary 1 to hold by $$\Z_2^\infty$$ symmetry. We can always reduce a complex multiplicity-1 eigenbasis to a real basis within its generic $$U_1^\infty$$ symmetry group.
 
