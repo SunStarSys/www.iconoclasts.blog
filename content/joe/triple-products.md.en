@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49664
+status: verified=49668
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -312,7 +312,7 @@ i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
 
 Corollary 1 follows from the fact that $$z_k\in U_1$$ is well-defined, and the prior observation that the algebraic operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree with pointwise function multiplication by squares of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ (again by Stone-Weierstrass.) So they agree everywhere.
 
-Corollary 2 sufficiency follows by noting that the condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ is generically true. And if for some choice of $$i,j,k$$, the product $$M^{i,i,k}\bar M^{j,j,k}$$ were to differ in some pair of bases, they would differ in every pair of bases, since generic manifolds have multiplicity-1 spectra. This establishes the necessity of the hypothesis, and completes the proof.
+Corollary 2 sufficiency follows by noting that the condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ is generically true. And if for some choice of $$i,j,k$$, the product $$M^{i,i,k}\bar M^{j,j,k}$$ were to differ in some pair of bases, they would differ in every pair of bases, since generic manifolds can be also presumed to have multiplicity-1 spectra. This establishes the necessity of the hypothesis, and completes the proof.
 
 This completes the proof of the Corollaries.
 
