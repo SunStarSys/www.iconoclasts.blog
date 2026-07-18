@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49595
+status: verified=49614
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -73,7 +73,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal  bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,i,k} \neq 0$$ in both bases; and if for every choice of $$i,j,k$$, the product $$M^{i,i,k}M^{j,j,k}$$ agrees in both bases.
+(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal  bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,i,k} \neq 0$$ in both bases; and if for every choice of $$i,j,k$$, the product $$M^{i,i,k}\bar M^{j,j,k}$$ agrees in both bases.
 
   </div>
 </div>
@@ -88,7 +88,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   </div>
   <div class="card-body">
 
-Given a pair of eigenvalue preserving orthonormal bases as described in the Theorem between generic manifolds, the manifolds are isometric if and only if for every choice of $$i,j,k$$ the product $$M^{i,k,k}M^{j,j,k}$$ agrees in both bases.
+Given a pair of eigenvalue preserving orthonormal bases as described in the Theorem between generic manifolds, the manifolds are isometric if and only if for every choice of $$i,j,k$$ the product $$M^{i,k,k}\bar M^{j,j,k}$$ agrees in both bases.
 
   </div>
 </div>
@@ -305,13 +305,12 @@ Note: for the one-dimensional flat-tori case below, $$\tilde{Q}_k(e^i,e^j) = 0$$
 Now consider the famous associativity relations from Conformal Field Theory (in a real basis):
 
 ```math
-
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
-i = j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
+i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Corollary 1 follows from the fact that $$z_k$$ is well-defined, and the prior observation that the algebraic operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree with pointwise function multiplication by squares of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ (again by Stone-Weierstrass.) So they agree everywhere by commutativity and associativity.
+Corollary 1 follows from the fact that $$z_k$$ is well-defined, and the prior observation that the algebraic operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ agree with pointwise function multiplication by squares of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ (again by Stone-Weierstrass.) So they agree everywhere.
 
 Corollary 2 follows by noting that the condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ is generically true.
 
