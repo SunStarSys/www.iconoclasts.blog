@@ -100,12 +100,12 @@ To be isometric to $(M,g)$, it is a necessary and sufficient condition for anoth
 
 \begin{corollary}
 \label{coro-1}
-(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $k>0$, there is at least one value of $i>0$ for which $M^{i,i,k} \neq 0$ in both bases; and if for every choice of $i,j,k$, the product $M^{i,i,k}M^{j,j,k}$ agrees in both bases.
+(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $k>0$, there is at least one value of $i>0$ for which $M^{i,i,k} \neq 0$ in both bases; and if for every choice of $i,j,k$, the product $M^{i,i,k}\bar M^{j,j,k}$ agrees in both bases.
 \end{corollary}
 
 \begin{corollary}
 \label{coro-2}
-Given a pair of eigenvalue preserving orthonormal bases as described in the Theorem between generic manifolds, the manifolds are isometric if and only if for every choice of $i,j,k$, the product $M^{i,k,k}M^{j,j,k}$ agrees in both bases.
+Given a pair of eigenvalue preserving orthonormal bases as described in the Theorem between generic manifolds, the manifolds are isometric if and only if for every choice of $i,j,k$, the product $M^{i,k,k}\bar M^{j,j,k}$ agrees in both bases.
 \end{corollary}
 
 The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the bilinear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
@@ -321,11 +321,11 @@ Now consider the famous associativity relations from Conformal Field Theory:
 e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell &= \sum_{\ell,r} M^{i,j,r}\bar M^{\bar k,\ell,r}e^\ell\\
 &= \sum_{\ell,r} M^{i,\ell,r}\bar M^{\bar j,k,r}e^\ell\ \therefore\\
 i = \bar j, \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,\bar i,r}\bar M^{j,\bar j,r} &= \sum_r |M^{i,j,r}|^2
+\sum_r M^{i,i,r}\bar M^{j,j,r} &= \sum_r |M^{i,j,r}|^2
 \end{aligned}
 \end{equation}
 
-Corollary~\ref{coro-1} follows from the fact that $z_k$ is well-defined under its presumed hypotheses, and the prior observation that the algebraic operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree with pointwise function multiplication by squares of eigenfunctions (the generated algebra from which is also dense in $L^2(M,g)$ again by Stone-Weierstrass.) So they agree everywhere by commutativity and associativity.
+Corollary~\ref{coro-1} follows from the fact that $z_k$ is well-defined under its presumed hypotheses, and the prior observation that the algebraic operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree with pointwise function multiplication by squares of eigenfunctions (the generated algebra from which is also dense in $L^2(M,g)$ again by Stone-Weierstrass.) So they agree everywhere.
 
 Corollary~\ref{coro-2} follows by noting that the condition $\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$ is generically true.
 
