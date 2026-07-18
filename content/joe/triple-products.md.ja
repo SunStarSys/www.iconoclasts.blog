@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=49401
+status: 確認済み=49551
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -74,7 +74,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-定理の仮説で説明されているように、正準基を保持する固有値のペアを考えると、マニホールドは、$$\set{M^{i,i,k}}$$ For one basis agree、 up to absolute value in the individual terms、 with the other basis.一方の基準は、個々の用語で絶対値まで、他方の基準に同意する。
+(対角リトマス試験)定理の仮説で説明されているように、正統な実値ベースを保持する固有値のペアを考えると、マニホールドはアイソメトリックです。$$k>0$$の値が1つ以上あります$$i>0$$ 対象$$M^{i,i,k} \neq 0$$ 両方のベースで、そしてすべての選択のために$$i,j,k$$製品について$$M^{i,i,k}M^{j,j,k}$$ 両基地とも一致。
 
 </div>
 </div>
@@ -89,7 +89,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-定理の仮説で説明されているように、多重度1固有値保存直交基のペアを考えると、マニホールドは、$$\set{M^{i,i,k}}$$ For one basis agree、 up to absolute value in the individual terms、 with the other basis.一方の基準は、個々の用語で絶対値まで、他方の基準に同意する。
+定理に説明されているように、多重度1固有値保持正準基のペアを考えると、基底が複雑であっても、対角リトマステストの仮説が保持されている場合、マニホールドはアイソメです。
 
 </div>
 </div>
@@ -106,7 +106,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 閉じたRiemannianマニホールド(その領域ではRiemannian isometryまで)に対するこのマップの注入性を確立した。これらの手法を適用して、そのイメージ(および逆)を説明するさらなる結果は、メトリックの選択モジュリ領域内で開始されます。[[AA25]](#AA25)。Anshul Adveは、Conformal Field Theoryと同じ**構造定数**を使用して、コンパクトで双曲型の2-orbifoldsのユニット接線スペースに厳密に取り組んでいます。
 
-IheジェネリックRiemannianメトリックケースは、対角リトマステストでカバーされています。[コロラリー2](#h4-corollary-2)。逆もそこにある。
+一般的なRiemannianメトリックケースは、次の研究によって完全に特徴付けられます$$\set{\lambda_i, |M^{i,i,k}|}$$.
 
 これらの結果は、1997年に**MSRI**の著者が同様のタイトルの講演で最初に実証されましたが、それらは初めて公開された形式でここに表示されます。
 
@@ -268,9 +268,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-ご希望の方へ$$k>0$$, $$M_0^{i,i,k}$$ 同じにはできません$$0$$ すべて$$i$$。さらに、Formula <span class="eqno"></span> 対象$$z_k$$ 両方が必要$$i$$ベースマップを確立するための独立性と効率性$$e_0^i \mapsto z_i e_1^i$$ 保存$$\set{M_0^{i,j,k}}$$.
+ご希望の方へ$$k>0$$, $$M_0^{i,i,k}$$ 同じにはできません$$0$$ すべて$$i$$これは一般的には真の状態ですが、次の例で説明するフラット・トーリ・ケースなどの特定のケースではfalseです。さらに、Formula <span class="eqno"></span> 対象$$z_k$$ 両方が必要$$i$$ベースマップを確立するための独立性と効率性$$e_0^i \mapsto z_i e_1^i$$ 保存$$\set{M_0^{i,j,k}}$$.
 
-以上が判明しました。"望む" 正の円錐のLaplace固有関数の正方形の正の和の密度から続く$$L^2(M,g)$$ (あらゆる固有機能の実質および想像上の構成要素) $$e^k$$ そのような二つの要素の違いとして書くことができ、それは矛盾によって希望を確立する。次の数式セットの下にコロラリー1の証明をスケッチします。
+次の数式セットの下にコロラリー1の証明をスケッチします。
 
 それにもかかわらず、いくつかの関連するアイデンティティを計算して、いくつかの困難な将来の研究者が一般化された予想を掘り下げることができます。
 
@@ -303,50 +303,18 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 ### コロラリの証明
 
-Now consider the famous associativity relations from Conformal Field Theory:
+コンフォーマル・フィールド理論(Conformal Field Theory)の有名な連想関係を考えてみましょう。
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
 i = j\ , \ell = k\text{ and relabeling } \implies \\
-
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
-
-```
-の証拠$$i$$のinvariance "望む" この方程式に従って、和は近い項に集中する。$$i$$ および$$j$$そして、矛盾はLHSの点での変化から生じる。$$M_0 \rightarrow M_1$$:
-
-```math
-\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
-\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
-
-\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-####レマ
+Corollary 1は、$$z_k$$ は明確に定義され、前回の観測では、代数演算子の定義$$z_iz_jz_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ 固有関数の二乗によるポイントワイズ関数の乗算に同意します。生成された代数も密です$$L^2(M,g)$$ ストーン・ウィーストラス(Stone-Weirstrass)は、通勤性と連想性によって、どこにでも同意する。
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
-
-#### レマの証明
-
-導入$$K$$ ($$K=1$$ プロダクトの架空の部品の点検によって続きます:
-```math
-\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
-B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
-B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
-```
-次のことがわかります。$$B_{K-1} \ne 0$$ また、$$K-1$$ 暗示する誘導$$\theta_K = \pm 1$$ レマの証拠を完成させる。
-
-したがって、方程式(16)のすべての線の両側を最初に実値に減らすことができます$$M^{i,i,k}$$ 経由$$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$次に、$$0$$ 要素の数の誘導によって$$\set{\theta_k = -1}$$。そこで、方程式を証明しました。
-
-```math
-\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
-```
-
-LHSおよびRHS **期間別独立** $$*\in\set{0,1}^\N$$.
-
-Corollary 1はこれと前回の観察から、代数乗算演算子の定義$$z_iz_jz_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ 固有関数の正方形に同意します。そのスパンも密です$$L^2(M,g)$$だから、あちこちで同意する。
-
-Corollary 2は、スペクトルのmultiplicity-1条件がCorollary 1の収束を$$\Z_2^\infty$$ シンメトリー
+Corollary 2は、スペクトルのmultiplicity-1条件がCorollary 1の収束を$$\Z_2^\infty$$ シンメトリー複雑な多重度1の固有基準を、その汎用的な範囲内でリアルタイムに削減できます。$$U_1^\infty$$ symmetryグループ
 
 これでコロラの証明は完了です。
 

@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=49401
+status: vérifié=49551
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -76,7 +76,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 </div>
   <div class="card-body">
 
-Étant donné une paire de valeurs propres préservant les bases orthonormes telles que décrites dans l'hypothèse du théorème, les collecteurs sont isométriques si $$\set{M^{i,i,k}}$$ pour une base convient, jusqu'à la valeur absolue dans les termes individuels, avec l'autre base.
+(Test diagonal de Litmus) Compte tenu d'une paire de valeurs propres préservant les bases orthonormées réelles décrites dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque $$k>0$$, au moins une valeur de $$i>0$$ pour lequel $$M^{i,i,k} \neq 0$$ dans les deux bases ; et si pour chaque choix $$i,j,k$$, le produit $$M^{i,i,k}M^{j,j,k}$$ d'accord dans les deux bases.
 
 </div>
 </div>
@@ -91,7 +91,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 </div>
   <div class="card-body">
 
-Étant donné une paire de multiplicité-1 valeur propre préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si et seulement si $$\set{M^{i,i,k}}$$ pour une base convient, jusqu'à la valeur absolue dans les termes individuels, avec l'autre base.
+Compte tenu d'une paire de multiplicité-1 valeur propre préservant les bases orthonormées comme décrit dans le théorème, les collecteurs sont isométriques si les hypothèses du test diagonal de Litmus tiennent, même si les bases sont complexes.
 
 </div>
 </div>
@@ -108,7 +108,7 @@ Si nous considérons la carte
 
 cet article établit l'injectivité de cette carte pour les collecteurs riemanniens fermés (jusqu'à l'isométrie riemannienne dans son domaine). D'autres résultats qui appliquent ces techniques pour décrire son image (et inversement), dans certains espaces de modules de mesures, ne font que commencer [[AA25]](#AA25). Là, Anshul Adve s'attaque rigoureusement aux espaces tangents unitaires des 2-orbifolds compacts et hyperboliques en utilisant ces mêmes **constantes de structure** de la théorie du champ conforme.
 
-Le cas métrique générique de Riemannien est couvert par un test diagonal de la muscade décrit les hypothèses de [Corollaire 2](#h4-corollary-2). L'inverse tient là aussi.
+Le cas métrique générique de Riemannian est complètement caractérisé par l'étude de $$\set{\lambda_i, |M^{i,i,k}|}$$.
 
 Ces résultats ont été démontrés pour la première fois lors d'un discours intitulé de la même manière par l'auteur à l' **IRSM** en 1997, mais ils apparaissent ici sous forme publiée pour la première fois.
 
@@ -270,9 +270,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-Nous espérons que pour tout $$k>0$$, $$M_0^{i,i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$. En outre, la formule <span class="eqno"></span> pour $$z_k$$ nécessite les deux $$i$$- indépendance et suffisance, pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conservateurs $$\set{M_0^{i,j,k}}$$.
+Nous espérons que pour tout $$k>0$$, $$M_0^{i,i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$, puisqu'il s'agit d'une condition génériquement vraie, mais fausse pour des cas spécifiques comme le cas de tori plat couvert dans l'exemple ci-dessous. En outre, la formule <span class="eqno"></span> pour $$z_k$$ nécessite les deux $$i$$- indépendance et suffisance, pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conservateurs $$\set{M_0^{i,j,k}}$$.
 
-Il s'avère que ce qui précède "espérance" résulte de la densité de sommes positives de carrés de fonctions propres de Laplace dans le cône positif de $$L^2(M,g)$$ (la composante réelle et imaginaire de toute fonction propre) $$e^k$$ peut être écrit comme la différence de deux éléments de ce genre, qui établit l'espoir par contradiction). Nous esquissons une preuve du Corollaire 1 en dessous de la prochaine série de formules.
+Nous esquissons une preuve du Corollaire 1 en dessous de la prochaine série de formules.
 
 Néanmoins, calculons quelques identités pertinentes afin que certains futurs chercheurs intrépides puissent creuser dans la conjecture généralisée :
 
@@ -305,50 +305,18 @@ Remarque : pour le cas de tori plat unidimensionnel ci-dessous, $$\tilde{Q}_k(e^
 
 ### Preuve de corollaires
 
-Now consider the famous associativity relations from Conformal Field Theory:
+Considérez maintenant les célèbres relations associatives de la théorie du champ conforme (sur une base réelle) :
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
 i = j\ , \ell = k\text{ and relabeling } \implies \\
-
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
-
-```
-Une preuve de $$i$$- l'invariance de "espérance" suit cette équation, puisque la somme est concentrée sur les termes proches $$i$$ et $$j$$et une contradiction résulterait d'un changement de termes sur le LHS comme $$M_0 \rightarrow M_1$$:
-
-```math
-\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
-\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
-
-\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-#### Lemme
+Le corollaire 1 découle du fait que $$z_k$$ est bien défini, et l'observation antérieure que les opérateurs algébriques définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ sont d'accord avec la multiplication par des carrés de fonctions propres, dont l'algèbre générée est également dense en $$L^2(M,g)$$ Encore une fois par Stone-Weirstrass, ils s'accordent donc partout par la commutativité et l'associativité.
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
-
-#### Preuve de Lemma
-
-Induction sur $$K$$ ($$K=1$$ suit par inspection des composants imaginaires des produits :
-```math
-\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
-B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
-B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
-```
-Nous voyons que $$B_{K-1} \ne 0$$ est également couvert par le $$K-1$$ induction, ce qui implique $$\theta_K = \pm 1$$ qui complète la preuve du lemme.
-
-Nous pouvons donc réduire les deux côtés de chaque ligne dans l'équation (16) d'abord à la valeur réelle. $$M^{i,i,k}$$ via $$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$, puis à $$0$$ par induction sur le nombre d'éléments dans $$\set{\theta_k = -1}$$. Nous avons maintenant prouvé que l'équation
-
-```math
-\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
-```
-
-a LHS et RHS **à terme indépendant** de $$*\in\set{0,1}^\N$$.
-
-Le corollaire 1 résulte de cette observation et de l'observation précédente que les opérateurs de multiplication algébriques définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ d'accord sur les carrés des fonctions propres, dont l'envergure est également dense en $$L^2(M,g)$$Ils sont donc d'accord partout.
-
-Le corollaire 2 suit en notant que la condition de multiplicité-1 sur le spectre oblige l'inverse du corollaire 1 à tenir par $$\Z_2^\infty$$ symétrie.
+Le corollaire 2 suit en notant que la condition de multiplicité-1 sur le spectre oblige l'inverse du corollaire 1 à tenir par $$\Z_2^\infty$$ symétrie. Nous pouvons toujours réduire une multiplicité complexe-1 eigenbasis à une base réelle dans son générique. $$U_1^\infty$$ groupe de symétrie.
 
 Cela complète la preuve des corollaires.
 

@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=49401
+status: 확인=49551
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -75,7 +75,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-정리의 가설에 설명된 대로 정형 기지를 보존하는 고유값 쌍을 감안할 때, 매니폴드는 $$\set{M^{i,i,k}}$$ 한 가지 기준은 개별 용어의 절대값까지 다른 기준과 함께 동의한다.
+(대각선 리트머스 테스트) 정리의 가설에 설명된 대로 정형 실제 값 기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 모든 $$k>0$$의 값이 하나 이상 있습니다. $$i>0$$ 대상 $$M^{i,i,k} \neq 0$$ 두 가지 모두, 그리고 모든 선택의 경우 $$i,j,k$$, 제품 $$M^{i,i,k}M^{j,j,k}$$ 두 기지에 모두 동의합니다.
 
 </div>
 </div>
@@ -90,7 +90,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-정리의 가설에 설명된 대로 정형 기지를 보존하는 multiplicity-1 eigenvalue 쌍을 감안할 때, 매니폴드는 다음과 같은 경우에만 아이소메트릭입니다. $$\set{M^{i,i,k}}$$ 한 가지 기준은 개별 용어의 절대값까지 다른 기준과 함께 동의한다.
+정리에 설명된 대로 정형 기지를 보존하는 multiplicity-1 eigenvalue 쌍을 감안할 때, 기지가 복잡하더라도 대각선 리트머스 테스트의 가설이 유지되면 매니폴드는 아이소메트릭입니다.
 
 </div>
 </div>
@@ -107,7 +107,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 이 논문은 닫힌 Riemannian 매니폴드 (도메인에 Riemannian isometry까지)에 대한이지도의 주사를 설정합니다. 메트릭의 일부 모듈 공간 내에서 해당 이미지(및 역)를 설명하기 위해 이러한 기술을 적용하는 추가 결과가 이제 막 시작되었습니다. [[AA25]](#AA25). 그곳에서 Anshul Adve는 Conformal Field Theory의 동일한 **구조 상수**를 사용하여 컴팩트하고 쌍곡선 2-orbifolds의 단위 접선 공간을 엄격하게 해결합니다.
 
-Ihe 일반 Riemannian 미터법 케이스는 대각선 litmus 테스트로 덮여 있습니다. [부관 2](#h4-corollary-2). 대화도 그곳에 있다.
+일반 Riemannian 미터법 사건은 완전히의 연구에 의해 특징입니다 $$\set{\lambda_i, |M^{i,i,k}|}$$.
 
 이러한 결과는 1997년 **MSRI**의 저자가 비슷한 제목으로 이야기하는 동안 처음 입증되었지만 처음 게시된 형식으로 여기에 나타납니다.
 
@@ -269,9 +269,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-우리는 어떤 주어진 것을 기대할 수 있습니다. $$k>0$$, $$M_0^{i,i,k}$$ 동일할 수 없습니다. $$0$$ 모두 $$i$$. 또한, Formula <span class="eqno"></span> 대상 $$z_k$$ 둘 다 필요 $$i$$- 독립성 및 충분성, 기본 맵 설정 $$e_0^i \mapsto z_i e_1^i$$ 보존 $$\set{M_0^{i,j,k}}$$.
+우리는 어떤 주어진 것을 기대할 수 있습니다. $$k>0$$, $$M_0^{i,i,k}$$ 동일할 수 없습니다. $$0$$ 모두 $$i$$일반적으로 참 조건이지만 아래 예제에서 다루는 플랫 토리 케이스와 같은 특정 경우는 거짓입니다. 또한, Formula <span class="eqno"></span> 대상 $$z_k$$ 둘 다 필요 $$i$$- 독립성 및 충분성, 기본 맵 설정 $$e_0^i \mapsto z_i e_1^i$$ 보존 $$\set{M_0^{i,j,k}}$$.
 
-상기 The above is "희망" 긍정적인 원뿔에 있는 Laplace eigenfunctions의 사각형의 긍정적인 합계의 조밀도에서 따르십시오 $$L^2(M,g)$$ (모든 고유 기능의 실제 및 가상 구성 요소) $$e^k$$ 모순에 의해 희망을 확립하는 두 가지 요소의 차이로 작성 될 수 있습니다). 우리는 다음 수식 세트 아래에 Corollary 1의 증거를 스케치합니다.
+우리는 다음 수식 세트 아래에 Corollary 1의 증거를 스케치합니다.
 
 그럼에도 불구하고, 우리는 몇 가지 관련 ID를 계산 하자 그래서 일부 간헐적 인 미래 연구자는 일반화 된 추측에 파고 수:
 
@@ -304,50 +304,18 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 ### 코롤러 증거
 
-Now consider the famous associativity relations from Conformal Field Theory:
+이제 Conformal Field Theory의 유명한 연관성 관계를 고려하십시오 (실제로).
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
 i = j\ , \ell = k\text{ and relabeling } \implies \\
-
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
-
-```
-의 증거 A Proof of the $$i$$-의 차이 "희망" 이 방정식을 통해, 합계가 가까운 용어에 집중되기 때문에 $$i$$ 및 $$j$$, 그리고 모순은 다음과 같이 LHS에 대한 용어의 변경으로 인해 발생합니다. $$M_0 \rightarrow M_1$$:
-
-```math
-\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
-\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
-
-\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-#### 렘마
+Corollary 1은 다음과 같은 사실입니다. $$z_k$$ 잘 정의되어 있으며, 대수 연산자가 정의한 이전 관찰 $$z_iz_jz_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ eigenfunctions의 제곱에 의한 포인트 방식 함수 곱셈에 동의, 또한 밀집되는 생성 대수 $$L^2(M,g)$$ 다시 Stone-Weirstrass에 의해, 그래서 그들은 commutativity와 연관성에 의해 어디에나 동의한다.
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
-
-#### 렘마 증명
-
-유도 켜짐 $$K$$ ($$K=1$$ 제품의 가상 구성 요소의 검사에 따라 다음과 같습니다.
-```math
-\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
-B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
-B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
-```
-우리는 그것을 본다 $$B_{K-1} \ne 0$$ 또한 $$K-1$$ 인덕션, 의미 $$\theta_K = \pm 1$$ 이것은 Lemma의 증거를 완성합니다.
-
-따라서 방정식 (16)에서 모든 선의 양면을 먼저 실제 값으로 줄일 수 있습니다. $$M^{i,i,k}$$ 경유 $$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$다음으로 $$0$$ in에 있는 요소의 수에 유도 $$\set{\theta_k = -1}$$. 그래서 우리는 이제 방정식을 입증했습니다.
-
-```math
-\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
-```
-
-LHS 및 RHS **termwise independent** $$*\in\set{0,1}^\N$$.
-
-Corollary 1은 대수 곱셈 연산자가 정의한 이 관찰과 이전 관찰에서 다음과 같습니다. $$z_iz_jz_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ eigenfunctions의 사각형에 동의, 그 범위는 또한 조밀하다 $$L^2(M,g)$$그래서 그들은 모든 곳에서 동의합니다.
-
-Corollary 2는 스펙트럼의 multiplicity-1 조건이 Corollary 1의 반전을 유지하도록 함으로써 다음과 같습니다. $$\Z_2^\infty$$ 대칭.
+Corollary 2는 스펙트럼의 multiplicity-1 조건이 Corollary 1의 반전을 유지하도록 함으로써 다음과 같습니다. $$\Z_2^\infty$$ 대칭. 우리는 항상 복잡한 다중성-1 고유 기반을 일반 내에서 실제 기반으로 줄일 수 있습니다. $$U_1^\infty$$ 대칭 그룹입니다.
 
 이것은 Corollaries의 증거를 완성합니다.
 

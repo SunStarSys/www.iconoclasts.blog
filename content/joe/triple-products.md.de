@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=49401
+status: überprüft=49551
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -75,7 +75,7 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 </div>
   <div class="card-body">
 
-Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn die $$\set{M^{i,i,k}}$$ für eine Basis bis zum absoluten Wert in den einzelnen Begriffen mit der anderen Basis übereinstimmt.
+(Diagonaler Litmus-Test) Angesichts eines Paares von Eigenwerten, die orthonormale, real bewertete Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede $$k>0$$Es gibt mindestens einen Wert von $$i>0$$ für die $$M^{i,i,k} \neq 0$$ auf beiden Seiten, und wenn für jede Wahl $$i,j,k$$, das Produkt $$M^{i,i,k}M^{j,j,k}$$ stimmt in beiden Basen überein.
 
 </div>
 </div>
@@ -90,7 +90,7 @@ Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypo
 </div>
   <div class="card-body">
 
-Bei einem Paar von Multiplizitäts-1-Eigenwert, der orthonormale Basen wie in der Hypothese des Satzes beschrieben erhält, sind die Mannigfaltigkeiten isometrisch, wenn und nur, wenn die $$\set{M^{i,i,k}}$$ für eine Basis bis zum absoluten Wert in den einzelnen Begriffen mit der anderen Basis übereinstimmt.
+Bei einem Paar von Multiplizitäts-1-Eigenwert, der orthonormale Basen wie im Satz beschrieben erhält, sind die Mannigfaltigkeiten isometrisch, wenn die Hypothesen des diagonalen Litmus-Tests halten, auch wenn die Basen komplex sind.
 
 </div>
 </div>
@@ -107,7 +107,7 @@ Wenn wir die Karte betrachten
 
 Diese Arbeit legt die Injektivität dieser Karte für geschlossene Riemannsche Mannigfaltigkeiten (bis zur Riemannschen Isometrie in ihrer Domäne) fest. Weitere Ergebnisse, die diese Techniken anwenden, um ihr Bild (und umgekehrt) innerhalb ausgewählter Modulräume von Metriken zu beschreiben, beginnen gerade erst. [[AA25]](#AA25). Dort greift Anshul Adve mit denselben **Strukturkonstanten** aus der Conformal Field Theory Tangent Spaces von kompakten, hyperbolischen 2-orbifolds streng an.
 
-Der generische Riemannsche metrische Fall wird durch den diagonalen Litmustest abgedeckt, der die Hypothesen von [Folge 2](#h4-corollary-2). Die Konversation hält auch dort.
+Der generische Riemannsche metrische Fall ist vollständig durch die Untersuchung von $$\set{\lambda_i, |M^{i,i,k}|}$$.
 
 Diese Ergebnisse wurden erstmals 1997 in einem ähnlich betitelten Vortrag des Autors bei **MSRI** gezeigt, erscheinen hier aber erstmals in veröffentlichter Form.
 
@@ -269,9 +269,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-Wir hoffen, dass $$k>0$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$.
+Wir hoffen, dass $$k>0$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$, da es sich um eine allgemein wahre Bedingung handelt, aber für bestimmte Fälle wie den im folgenden Beispiel abgedeckten flachen Tori-Fall falsch. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$.
 
-Es stellt sich heraus, dass die oben "Hoffnung" folgt aus der Dichte positiver Summen von Quadraten von Laplace-Eigenfunktionen im positiven Kegel von $$L^2(M,g)$$ (die reale und imaginäre Komponente jeder Eigenfunktion) $$e^k$$ kann als Differenz zweier solcher Elemente geschrieben werden, was die Hoffnung durch Widerspruch begründet). Wir skizzieren einen Nachweis von Corollary 1 unter dem nächsten Satz von Formeln.
+Wir skizzieren einen Nachweis von Corollary 1 unter dem nächsten Satz von Formeln.
 
 Lassen Sie uns jedoch einige relevante Identitäten berechnen, damit einige unerschrockene zukünftige Forscher in die generalisierte Vermutung eintauchen können:
 
@@ -304,50 +304,18 @@ Hinweis: für das eindimensionale Flat-Tori-Gehäuse unten, $$\tilde{Q}_k(e^i,e^
 
 ### Beweis der Korollarien
 
-Now consider the famous associativity relations from Conformal Field Theory:
+Betrachten Sie nun die berühmten Assoziativitätsbeziehungen aus der konformen Feldtheorie (in einer realen Grundlage):
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
 i = j\ , \ell = k\text{ and relabeling } \implies \\
-
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
-
-```
-Ein Beweis der $$i$$-Unvarianz der "Hoffnung" folgt durch diese Gleichung, da die Summe auf die Begriffe in der Nähe konzentriert ist $$i$$ und $$j$$, und ein Widerspruch würde aus einer Änderung in Bezug auf die LHS als $$M_0 \rightarrow M_1$$:
-
-```math
-\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
-\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
-
-\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-#### Lemma
+Folge 1 ist die Tatsache, dass $$z_k$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist $$L^2(M,g)$$ Wieder von Stone-Weirstrass, also stimmen sie überall mit Kommutativität und Assoziativität überein.
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
-
-#### Nachweis von Lemma
-
-Induktion an $$K$$ ($$K=1$$ folgt durch Inspektion der imaginären Bestandteile der Produkte):
-```math
-\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
-B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
-B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
-```
-Wir sehen das $$B_{K-1} \ne 0$$ wird auch durch die $$K-1$$ Induktion, die impliziert $$\theta_K = \pm 1$$ die den Nachweis der Lemma vervollständigt.
-
-Wir können daher beide Seiten jeder Linie in Gleichung (16) zuerst auf realwertig reduzieren. $$M^{i,i,k}$$ über $$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$und dann zu $$0$$ durch Induktion über die Anzahl der Elemente in $$\set{\theta_k = -1}$$. Wir haben nun bewiesen, dass die Gleichung
-
-```math
-\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
-```
-
-hat LHS und RHS **befristet unabhängig** von $$*\in\set{0,1}^\N$$.
-
-Die Folge 1 ergibt sich aus dieser und der vorherigen Beobachtung, dass die algebraischen Multiplikationsoperatoren definiert durch $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ vereinbaren Sie Quadrate von Eigenfunktionen, deren Spannweite auch dicht ist $$L^2(M,g)$$Sie sind sich überall einig.
-
-Folge 2 folgt, indem darauf hingewiesen wird, dass die Multiplizitäts-1-Bedingung auf das Spektrum die Umkehrung der Folge 1 zwingt, sich an $$\Z_2^\infty$$ Symmetrie.
+Folge 2 folgt, indem darauf hingewiesen wird, dass die Multiplizitäts-1-Bedingung auf das Spektrum die Umkehrung der Folge 1 zwingt, sich an $$\Z_2^\infty$$ Symmetrie. Wir können eine komplexe Multiplizitäts-1-Eigenbasis immer auf eine reale Basis innerhalb ihrer generischen $$U_1^\infty$$ Symmetriegruppe.
 
 Dies vervollständigt den Beweis der Corollaries.
 

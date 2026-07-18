@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=49401
+status: verificado=49551
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -76,7 +76,7 @@ Ser isométrico para $$(M,g)$$, es una condición *necesaria y suficiente* para 
 </div>
   <div class="card-body">
 
-Teniendo en cuenta un par de valores propios que preservan las bases ortonormales como se describe en la hipótesis del Teorema, los colectores son isométricos si el $$\set{M^{i,i,k}}$$ por una base está de acuerdo, hasta el valor absoluto en los términos individuales, con la otra base.
+(Diagonal Litmus Test) Teniendo en cuenta un par de valores propios que preservan las bases ortonormales de valor real tal como se describe en la hipótesis del Teorema, los colectores son isométricos si por cada $$k>0$$, hay al menos un valor de $$i>0$$ cuyo $$M^{i,i,k} \neq 0$$ en ambas bases, y si por cada elección de $$i,j,k$$, el producto $$M^{i,i,k}M^{j,j,k}$$ de acuerdo en ambas bases.
 
 </div>
 </div>
@@ -91,7 +91,7 @@ Teniendo en cuenta un par de valores propios que preservan las bases ortonormale
 </div>
   <div class="card-body">
 
-Dado un par de multiplicidad-1 eigenvalue preservando bases ortonormales como se describe en la hipótesis del Teorema, los colectores son isométricos si y sólo si el $$\set{M^{i,i,k}}$$ por una base está de acuerdo, hasta el valor absoluto en los términos individuales, con la otra base.
+Dado un par de valores propios multiplicidad-1 que preservan las bases ortonormales como se describe en el Teorema, los colectores son isométricos si las hipótesis del Test Diagonal de Límites se mantienen, incluso si las bases son complejas.
 
 </div>
 </div>
@@ -108,7 +108,7 @@ Si consideramos el mapa
 
 Este artículo establece la inyectividad de este mapa para los colectores de Riemann cerrados (hasta la isometría de Riemann en su dominio). Otros resultados que aplican estas técnicas para describir su imagen (e inversa), dentro de espacios selectos de módulos de métricas, apenas están comenzando [[AA25]](#AA25). Allí, Anshul Adve aborda rigurosamente los espacios tangentes unitarios de 2-orbifolds compactos e hiperbólicos utilizando estas mismas **constantes de estructura** de la Teoría de Campo Conformal.
 
-El caso métrico genérico de Riemann está cubierto por la prueba de fuego diagonal que describe las hipótesis de [Corolario 2](#h4-corollary-2). Lo contrario también se mantiene ahí.
+El caso genérico métrico de Riemann se caracteriza completamente por el estudio de $$\set{\lambda_i, |M^{i,i,k}|}$$.
 
 Estos resultados se demostraron por primera vez durante una charla titulada de manera similar por el autor en **MSRI** en 1997, pero aparecen aquí en forma publicada por primera vez.
 
@@ -270,9 +270,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-Podemos esperar que por cualquier $$k>0$$, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$. Además, la fórmula <span class="eqno"></span> para $$z_k$$ requiere tanto $$i$$-independencia, y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conserva $$\set{M_0^{i,j,k}}$$.
+Podemos esperar que por cualquier $$k>0$$, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$, ya que es una condición genéricamente verdadera, pero falsa para casos específicos como el caso de tori plano cubierto en el ejemplo a continuación. Además, la fórmula <span class="eqno"></span> para $$z_k$$ requiere tanto $$i$$-independencia, y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conserva $$\set{M_0^{i,j,k}}$$.
 
-Resulta que lo anterior "esperanza" se deriva de la densidad de sumas positivas de cuadrados de autofunciones de Laplace en el cono positivo de $$L^2(M,g)$$ (el componente real e imaginario de cualquier función propia $$e^k$$ puede ser escrito como la diferencia de dos de estos elementos, que establece la esperanza por contradicción). Esbozamos una prueba del Corolario 1 debajo del siguiente conjunto de fórmulas.
+Esbozamos una prueba del Corolario 1 debajo del siguiente conjunto de fórmulas.
 
 Sin embargo, vamos a calcular algunas identidades relevantes para que algunos intrépidos futuros investigadores puedan profundizar en la conjetura generalizada:
 
@@ -305,50 +305,18 @@ Nota: para el estuche de torsión plana unidimensional a continuación, $$\tilde
 
 ### Prueba de corolarios
 
-Now consider the famous associativity relations from Conformal Field Theory:
+Ahora considere las famosas relaciones de asociatividad de la Teoría del Campo Conformal (en una base real):
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
 i = j\ , \ell = k\text{ and relabeling } \implies \\
-
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
-
-```
-Una prueba del $$i$$-invarianza del "esperanza" a través de esta ecuación, ya que la suma se concentra en los términos cercanos $$i$$ y $$j$$, y una contradicción resultaría de un cambio en los términos del LHS como $$M_0 \rightarrow M_1$$:
-
-```math
-\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
-\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
-
-\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-#### Lema
+Corolario 1 se deriva del hecho de que $$z_k$$ está bien definido, y la observación previa de que los operadores algebraicos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ están de acuerdo con la multiplicación de funciones por cuadrados de funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ De nuevo por Stone-Weirstrass, por lo que están de acuerdo en todas partes por conmutatividad y asociatividad.
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
-
-#### Prueba de Lemma
-
-Inducción en $$K$$ ($$K=1$$ a continuación, mediante inspección de los componentes imaginarios de los productos:
-```math
-\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
-B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
-B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
-```
-Vemos que $$B_{K-1} \ne 0$$ también está cubierto por el $$K-1$$ inducción, lo que implica $$\theta_K = \pm 1$$ que completa la prueba de la Lemma.
-
-Por lo tanto, podemos reducir ambos lados de cada línea en la ecuación (16) primero a valor real. $$M^{i,i,k}$$ vía $$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$y luego a $$0$$ por inducción sobre el número de elementos en $$\set{\theta_k = -1}$$. Así que ahora hemos demostrado que la ecuación
-
-```math
-\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
-```
-
-tiene LHS y RHS **termwise independiente** de $$*\in\set{0,1}^\N$$.
-
-Corolario 1 se desprende de esta y la observación previa de que los operadores de multiplicación algebraica definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ de acuerdo en cuadrados de funciones propias, cuyo lapso también es denso en $$L^2(M,g)$$Así que están de acuerdo en todas partes.
-
-El Corolario 2 sigue observando que la condición de multiplicidad 1 en el espectro obliga al contrario del Corolario 1 a mantenerse por $$\Z_2^\infty$$ simetría.
+El Corolario 2 sigue observando que la condición de multiplicidad 1 en el espectro obliga al contrario del Corolario 1 a mantenerse por $$\Z_2^\infty$$ simetría. Siempre podemos reducir una multiplicidad compleja-1 de base propia a una base real dentro de su genérico $$U_1^\infty$$ grupo de simetría.
 
 Esto completa la prueba de los Corolarios.
 

@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =49401
+status: 驗證 =49551
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -74,7 +74,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-有鑑於一對特徵值保留理論假說中描述的正規基底，如果$$\set{M^{i,i,k}}$$ 一個基準同意，在個別條款中，最多為絕對值，另一個基準。
+(Diagonal Litmus Test) 有一對特徵值保留正規的實值基礎，如理論的假說所述，男性是幾何的，如果每個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,i,k} \neq 0$$ 在兩個基礎中；如果是每個選擇$$i,j,k$$，產品$$M^{i,i,k}M^{j,j,k}$$ 兩地皆同意。
 
 </div>
 </div>
@@ -89,7 +89,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-鑑於一對多重性 -1 特徵值，保留理論假說中描述的正規基底，這兩人僅在$$\set{M^{i,i,k}}$$ 一個基準同意，在個別條款中，最多為絕對值，另一個基準。
+有鑑於一對多重性 -1 特徵值保留理論中所述的正規基底，即使基底很複雜，如果「對角線 Litmus 測試」的假說是幾何的，這兩人都是幾何的。
 
 </div>
 </div>
@@ -106,7 +106,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 本白皮書為封閉的里曼尼亞人機組 (最多只能在其域內使用里曼尼亞人) 建立此地圖的注射性。套用這些技術來描述其影像 (和反向) 的進一步結果，就在測量結果的精選模數空間內開始使用[[AA25]](#AA25)。Anshul Adve 在 Conformal Field Theory 中使用這些相同的 **結構常數** 來處理緊密、雙曲雙曲兩曲的單位正切空間。
 
-Ihe Generic Riemannian 公制案例由對角線 litmus 測試所涵蓋，描述了以下假設：[核數 2](#h4-corollary-2)。反之亦會保留在那裡。
+一般 Riemannian 公制案例的特徵是研究$$\set{\lambda_i, |M^{i,i,k}|}$$.
 
 這些結果最初是在 1997 年 **MSRI** 的作者在類似標題的談話期間進行示範，但初次以公開的形式出現在這裡。
 
@@ -268,9 +268,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-我們可能希望對任何給定者$$k>0$$, $$M_0^{i,i,k}$$ 不能相同$$0$$ 全部$$i$$。此外，公式<span class="eqno"></span> 針對$$z_k$$ 需要兩者$$i$$- 獨立性和充分性，建立基礎地圖$$e_0^i \mapsto z_i e_1^i$$ 保留$$\set{M_0^{i,j,k}}$$.
+我們可能希望對任何給定者$$k>0$$, $$M_0^{i,i,k}$$ 不能相同$$0$$ 全部$$i$$，因為它是一般為真條件，但對於如以下範例所涵蓋的扁平 Tori 案例等特定案例，則為假。此外，公式<span class="eqno"></span> 針對$$z_k$$ 需要兩者$$i$$- 獨立性和充分性，建立基礎地圖$$e_0^i \mapsto z_i e_1^i$$ 保留$$\set{M_0^{i,j,k}}$$.
 
-它指出上述情況"希望" 下面是拉普萊斯特徵正方形密度 (Laplace eigenfunction) 的正方形密度$$L^2(M,g)$$ (任何特徵功能的真實與虛構成分) $$e^k$$ 可以寫成兩個此類元素的差異，這些元素建立了矛盾的希望。我們在下一組公式下方繪製 Corollary 1 的證明。
+我們在下一組公式下方繪製 Corollary 1 的證明。
 
 然而，讓我們計算一些相關的身分，讓未來一些研究人員可以挖掘出一般化的形容詞：
 
@@ -303,50 +303,18 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 ### 核數證明
 
-Now consider the famous associativity relations from Conformal Field Theory:
+現在考慮來自共形場理論的著名關聯性關係 (實質基礎)：
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
 i = j\ , \ell = k\text{ and relabeling } \implies \\
-
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
-
-```
-證明文件$$i$$- 不變量"希望" 遵循此方程式，因為總和集中於接近的學期$$i$$ 與$$j$$，且違禁將導致 LHS 的條款發生變更$$M_0 \rightarrow M_1$$:
-
-```math
-\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
-\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
-
-\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-#### Lemma
+Corollary 1 遵循的事實$$z_k$$ 是定義完善的，且先前觀察的是由其定義的代數運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同意將點函數乘以特徵方形，產生的代數亦密集於$$L^2(M,g)$$ 由 Stone-Weirstrass 再度同意，所以他們在任何地方通過通勤和關聯性。
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
-
-#### Lemma 證明
-
-歸納$$K$$ ($$K=1$$ 依照產品虛構成分的檢驗進行：
-```math
-\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
-B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
-B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
-```
-我們看到：$$B_{K-1} \ne 0$$ 也由下列項目涵蓋：$$K-1$$ 感應，隱含$$\theta_K = \pm 1$$ 完成 Lemma 的證明。
-
-因此，我們將方程式 (16) 中每條線的兩側縮減為重估$$M^{i,i,k}$$ 透過$$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$，然後至$$0$$ 依傳入中的元素數$$\set{\theta_k = -1}$$。因此，我們已證明方程式
-
-```math
-\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
-```
-
-具有左側與右側 **順勢獨立** $$*\in\set{0,1}^\N$$.
-
-Corollary 1 遵循此和先前的觀察，由此定義代數乘法運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同意特徵函數的方形，其跨度亦密集於$$L^2(M,g)$$，所以他們在任何地方都同意。
-
-Corollary 2 遵循指出頻譜上的 multiplicity-1 條件會強制 Corollary 1 的逆向以$$\Z_2^\infty$$ 對稱。
+Corollary 2 遵循指出頻譜上的 multiplicity-1 條件會強制 Corollary 1 的逆向以$$\Z_2^\infty$$ 對稱。我們始終可以將複雜的多重性 -1 特徵性降低到其通用基礎上$$U_1^\infty$$ 對稱群組。
 
 這樣就完成了 Corollaries 的證明。
 

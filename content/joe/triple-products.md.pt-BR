@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=49401
+status: verificado=49551
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -76,7 +76,7 @@ Para ser isométrico $$(M,g)$$, é uma condição *necessária e suficiente* par
 </div>
   <div class="card-body">
 
-Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se o $$\set{M^{i,i,k}}$$ para uma base concorda, até o valor absoluto em termos individuais, com a outra base.
+(Teste Litmus Diagonal) Dado um par de autovalor preservando bases ortonormais real-valiadas como descrito na hipótese do Teorema, as variedades são isométricas se para cada $$k>0$$, há pelo menos um valor de $$i>0$$ para o qual $$M^{i,i,k} \neq 0$$ em ambas as bases, e se para cada escolha de $$i,j,k$$, o produto $$M^{i,i,k}M^{j,j,k}$$ concordam em ambas as bases.
 
 </div>
 </div>
@@ -91,7 +91,7 @@ Dado um par de autovalor preservando bases ortonormais como descrito na hipótes
 </div>
   <div class="card-body">
 
-Dado um par de multiplicidade-1 autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se e somente se o $$\set{M^{i,i,k}}$$ para uma base concorda, até o valor absoluto em termos individuais, com a outra base.
+Dado um par de multiplicidade-1 autovalor preservando bases ortonormais como descrito no Teorema, as variedades são isométricas se as hipóteses do Diagonal Litmus Test se mantiverem, mesmo que as bases sejam complexas.
 
 </div>
 </div>
@@ -108,7 +108,7 @@ Se considerarmos o mapa
 
 este trabalho estabelece a injetividade deste mapa para variedades Riemannianas fechadas (até a isometria Riemanniana em seu domínio). Outros resultados que aplicam essas técnicas para descrever sua imagem (e inversa), dentro de espaços de métricas de módulos selecionados, estão apenas começando [[AA25]](#AA25). Lá, Anshul Adve aborda rigorosamente os espaços tangentes da unidade de 2 orbifolds compactos e hiperbólicos usando essas mesmas **constantes de estrutura** da Teoria do Campo Conformal.
 
-Ihe caso métrico Riemannian genérico é coberto por diagonal litmus teste descrito as hipóteses de [Corolário 2](#h4-corollary-2). O inverso também se mantém lá.
+O caso métrico Riemanniano genérico é completamente caracterizado pelo estudo de $$\set{\lambda_i, |M^{i,i,k}|}$$.
 
 Estes resultados foram demonstrados pela primeira vez durante uma palestra similarmente intitulada pelo autor em **MSRI** em 1997, mas eles aparecem aqui em forma publicada pela primeira vez.
 
@@ -270,9 +270,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-Podemos esperar que, para qualquer $$k>0$$, $$M_0^{i,i,k}$$ não pode ser idêntico $$0$$ para todos $$i$$. Além disso, a fórmula <span class="eqno"></span> para $$z_k$$ requer ambos $$i$$-independência, e suficiência, para estabelecer o mapa base $$e_0^i \mapsto z_i e_1^i$$ preservas $$\set{M_0^{i,j,k}}$$.
+Podemos esperar que, para qualquer $$k>0$$, $$M_0^{i,i,k}$$ não pode ser idêntico $$0$$ para todos $$i$$, uma vez que é uma condição genericamente verdadeira, mas falsa para casos específicos como a caixa de tori plana coberta no Exemplo abaixo. Além disso, a fórmula <span class="eqno"></span> para $$z_k$$ requer ambos $$i$$-independência, e suficiência, para estabelecer o mapa base $$e_0^i \mapsto z_i e_1^i$$ preservas $$\set{M_0^{i,j,k}}$$.
 
-Acontece que o acima "esperança" segue da densidade de somas positivas de quadrados de autofunções de Laplace no cone positivo de $$L^2(M,g)$$ (o componente real e imaginário de qualquer autofunção) $$e^k$$ pode ser escrita como a diferença de dois tais elementos, que estabelece a esperança por contradição). Esboçamos uma prova de Corolário 1 abaixo do próximo conjunto de fórmulas.
+Esboçamos uma prova de Corolário 1 abaixo do próximo conjunto de fórmulas.
 
 No entanto, vamos calcular algumas identidades relevantes para que algum pesquisador futuro intrépido possa cavar a conjectura generalizada:
 
@@ -305,50 +305,18 @@ Nota: para o caso unidimensional do flat-tori abaixo, $$\tilde{Q}_k(e^i,e^j) = 0
 
 ### Prova de Corolários
 
-Now consider the famous associativity relations from Conformal Field Theory:
+Agora considere as famosas relações de associatividade da Teoria do Campo Conformal (em uma base real):
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
 i = j\ , \ell = k\text{ and relabeling } \implies \\
-
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
-
-```
-Uma prova do $$i$$-invariância do "esperança" segue através desta equação, uma vez que a soma está concentrada nos termos próximos $$i$$ e $$j$$e uma contradição resultaria de uma mudança nos termos do LHS como $$M_0 \rightarrow M_1$$:
-
-```math
-\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
-\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
-
-\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-#### Lema
+O Corolário 1 vem do fato de que $$z_k$$ é bem definida, e a observação prévia que os operadores algébricos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ e $$M_1^{i,j,k}$$ concordam com a multiplicação de função pontual por quadrados de autofunções, cuja álgebra gerada também é densa em $$L^2(M,g)$$ novamente por Stone-Weirstrass, então eles concordam em todos os lugares pela comutatividade e associatividade.
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
-
-#### Prova de Lemma
-
-Indução em $$K$$ ($$K=1$$ segue-se pela inspeção dos componentes imaginários dos produtos):
-```math
-\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
-B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
-B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
-```
-Vemos que $$B_{K-1} \ne 0$$ também é coberto pelo $$K-1$$ indução, o que implica $$\theta_K = \pm 1$$ que completa a prova do Lemma.
-
-Podemos, portanto, reduzir os dois lados de cada linha em Equação (16) primeiro para valores reais. $$M^{i,i,k}$$ via $$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$, e depois para $$0$$ por indução do número de elementos em $$\set{\theta_k = -1}$$. Então, já provamos que a equação
-
-```math
-\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
-```
-
-tem LHS e RHS **termo independente** de $$*\in\set{0,1}^\N$$.
-
-Corolário 1 segue a partir desta e da observação prévia que os operadores de multiplicação algébrica definidos por $$z_iz_jz_kM_0^{i,j,k}$$ e $$M_1^{i,j,k}$$ concordam em quadrados de autofunções, cuja extensão também é densa em $$L^2(M,g)$$Então eles concordam em todos os lugares.
-
-O Corolário 2 segue observando que a condição de multiplicidade-1 no espectro força o inverso do Corolário 1 a se manter por $$\Z_2^\infty$$ simetria.
+O Corolário 2 segue observando que a condição de multiplicidade-1 no espectro força o inverso do Corolário 1 a se manter por $$\Z_2^\infty$$ simetria. Podemos sempre reduzir uma multiplicidade complexa-1 eigenbasis para uma base real dentro de seu genérico. $$U_1^\infty$$ grupo de simetria.
 
 Isso completa a prova dos Corolários.
 

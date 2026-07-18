@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=49401
+status: verifierad=49551
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -75,7 +75,7 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 </div>
   <div class="card-body">
 
-Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om $$\set{M^{i,i,k}}$$ för den ena grunden överensstämmer, upp till absolutvärdet i de enskilda termerna, med den andra grunden.
+(Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala realvärdebaser som beskrivs i teoremens hypotes är grenrör isometriska om för varje $$k>0$$Det finns minst ett värde av $$i>0$$ för vilken $$M^{i,i,k} \neq 0$$ i båda baserna, och om för varje val av $$i,j,k$$, produkten $$M^{i,i,k}M^{j,j,k}$$ Instämmer i båda baserna.
 
 </div>
 </div>
@@ -90,7 +90,7 @@ Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i te
 </div>
   <div class="card-body">
 
-Med tanke på ett par multiplikations-1-egensvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes, är grenrör isometriska om och endast om $$\set{M^{i,i,k}}$$ för den ena grunden överensstämmer, upp till absolutvärdet i de enskilda termerna, med den andra grunden.
+Med tanke på ett par multiplikations-1-eigenvärde som bevarar ortonormala baser som beskrivs i teoremen, är grenrör isometriska om hypoteserna i det diagonala litmustestet håller, även om baserna är komplexa.
 
 </div>
 </div>
@@ -107,7 +107,7 @@ Om vi tänker på kartan
 
 Detta papper fastställer injicerbarhet av denna karta för slutna Riemannian grenrör (upp till Riemannian isometry i dess domän). Ytterligare resultat som tillämpar dessa tekniker för att beskriva sin bild (och invers), inom vissa moduli utrymmen av mätvärden, är bara att komma igång [[AA25]](#AA25). Där tacklar Anshul Adve rigoröst enhetstangensutrymmen av kompakta, hyperboliska 2-omkretsar med samma **strukturkonstanter** från Conformal Field Theory.
 
-Ihe generiska Riemannian metriska fallet omfattas av diagonal litmus test beskrev hypoteserna för [Korollarium 2](#h4-corollary-2). Konversationen finns där också.
+Det generiska Riemannian metriska fallet kännetecknas helt av studien av $$\set{\lambda_i, |M^{i,i,k}|}$$.
 
 Dessa resultat visades först under ett liknande tal av författaren vid **MSRI **1997, men de visas här i publicerad form för första gången.
 
@@ -269,9 +269,9 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
 ```
 
-Vi hoppas att för varje given $$k>0$$, $$M_0^{i,i,k}$$ Kan inte vara identisk $$0$$ för alla $$i$$. Dessutom är formeln <span class="eqno"></span> för $$z_k$$ kräver båda $$i$$-oberoende och tillräcklighet, för att fastställa grundkartan $$e_0^i \mapsto z_i e_1^i$$ bevarar $$\set{M_0^{i,j,k}}$$.
+Vi hoppas att för varje given $$k>0$$, $$M_0^{i,i,k}$$ Kan inte vara identisk $$0$$ för alla $$i$$, eftersom det är ett allmänt sant villkor, men falskt för specifika fall som det platta torifallet som omfattas av exemplet nedan. Dessutom är formeln <span class="eqno"></span> för $$z_k$$ kräver båda $$i$$-oberoende och tillräcklighet, för att fastställa grundkartan $$e_0^i \mapsto z_i e_1^i$$ bevarar $$\set{M_0^{i,j,k}}$$.
 
-Det visar sig att ovanstående "hopp" följer av densiteten av positiva summor av kvadrater av Laplace egenfunktioner i den positiva konen av $$L^2(M,g)$$ (den verkliga och inbillade komponenten av någon egenfunktion) $$e^k$$ kan skrivas som skillnaden mellan två sådana element, vilket fastställer hoppet genom motsägelse). Vi skissar ett bevis på Corollary 1 under nästa uppsättning formler.
+Vi skissar ett bevis på Corollary 1 under nästa uppsättning formler.
 
 Låt oss dock beräkna några relevanta identiteter så att några orädda framtida forskare kan gräva i den generaliserade gissningen:
 
@@ -304,50 +304,18 @@ Anmärkning: för det endimensionella flat-tori fallet nedan, $$\tilde{Q}_k(e^i,
 
 ### Bevis för korollarier
 
-Now consider the famous associativity relations from Conformal Field Theory:
+Tänk nu på de berömda associativitetsrelationerna från Conformal Field Theory (på en verklig grund):
 
 ```math
 
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r}\bar M^{j,k,r}e^\ell\ \therefore\\
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}M^{k,\ell,r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,r}e^\ell\ \therefore\\
 i = j\ , \ell = k\text{ and relabeling } \implies \\
-
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
-
-```
-Ett bevis på $$i$$-invarians mellan "hopp" följer genom denna ekvation, eftersom summan är koncentrerad på termer nära $$i$$ och $$j$$och en motsägelse skulle bero på en förändring i termer av LHS som $$M_0 \rightarrow M_1$$:
-
-```math
-\sum_k |M_0^{i,j,k}|^2 - |M_1^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\theta_{i,j,k})M_0^{i,i,k}\bar M_0^{j,j,k}\ ,\text{ but} \\
-\sum_k |M_1^{i,j,k}|^2 - |M_0^{i,j,k}|^2 = \sum_{\theta \ne 1} (1 -\bar\theta_{i,j,k})M_1^{i,i,k}\bar M_1^{j,j,k}\ ,\text {and summing}\\
-
-\sum_{\theta \ne 1} \theta_{i,j,k}M_0^{i,i,k}\bar M_0^{j,j,k} + \bar\theta_{i,j,k}M_1^{i,i,k}\bar M_1^{j,j,k} = \sum_{\theta \ne 1} M_0^{i,i,k}\bar M_0^{j,j,k} + M_1^{i,i,k}\bar M_1^{i,i,k}.
+\sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-#### Lemma
+Corollary 1 följer av det faktum att $$z_k$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ överensstämmer med punktvis funktion multiplikation av rutor av egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ igen av Stone-Weirstrass, så de är överens överallt genom kommutativitet och associativitet.
 
-$$|\theta_k| = 1, A_k = r_ke^{i\phi_k} \in \Reals\setminus \set{0} \ , \sum_{k\leq K} (1 - \theta_k) A_k \in \Reals \implies \theta_k = \pm 1 \  \forall k.$$
-
-#### Bevis för Lemma
-
-Induktion på $$K$$ ($$K=1$$ följer genom inspektion av produkternas imaginära komponenter:
-```math
-\sum_{k\leq K} (\theta_k - 1)A_k = \sum_{k < K}(\theta_k - 1)B_k\ \text{ where} B_k = A_k\ \forall k < K-1,\text{ and}\\
-B_{K-1} = \frac{\theta_K  - 1}{\theta_{K-1}-1}A_K + A_{K-1}
-B_{K-1} = 0 \iff (\theta_K - 1)A_K =( 1-\theta_{K-1} )A_{K-1}\ ,\text{which degenerates to the induction case for }K-2.
-```
-Vi ser att $$B_{K-1} \ne 0$$ omfattas även av $$K-1$$ induktion, vilket innebär $$\theta_K = \pm 1$$ som kompletterar beviset för Lemma.
-
-Vi kan därför minska båda sidor av varje linje i Ekvation (16) först till verkligt värde. $$M^{i,i,k}$$ via $$z_k = \bar M^{i,i,k}/|M^{i,i,k}|$$och sedan till $$0$$ genom induktion av antalet element i $$\set{\theta_k = -1}$$. Så vi har nu bevisat att ekvationen
-
-```math
-\sum_r M_*^{i,i,r}\bar M_*^{j,j,r} = \sum_r |M_*^{i,j,r}|^2
-```
-
-har LHS och RHS **termvis oberoende** av $$*\in\set{0,1}^\N$$.
-
-Corollary 1 följer av detta och den föregående iakttagelsen att de algebraiska multiplikationsoperatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ överens om rutor av egenfunktioner, vars spännvidd också är tät i $$L^2(M,g)$$De är överens överallt.
-
-Corollary 2 följer genom att notera att multiplicity-1-villkoret på spektrumet tvingar konversen av Corollary 1 att hålla av $$\Z_2^\infty$$ symmetri.
+Corollary 2 följer genom att notera att multiplicity-1-villkoret på spektrumet tvingar konversen av Corollary 1 att hålla av $$\Z_2^\infty$$ symmetri. Vi kan alltid minska en komplex multiplikations-1-egenbas till en verklig grund inom dess generiska $$U_1^\infty$$ symmetrisk grupp.
 
 Detta kompletterar beviset för korollarierna.
 
