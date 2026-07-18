@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =49551
+status: 驗證 =49595
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -62,7 +62,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 <br>
 
-*Symmetry* 在計算時扮演著重要的角色[[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94)，這是我們平坦的 tori 中所說明的[範例](#example) 下方。不過，以最少數量的里曼尼對稱來說，我們方法的實力或許最為明顯，這是一般情況，通常與特徵值 *unique* (亦即，沒有非傳統多重性) 一致。在此情況下，我們提供以下服務：
+*Symmetry* 在計算時扮演著重要的角色[[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94)，這是我們平坦的 tori 中所說明的[範例](#example) 下方。然而，我們的方法當選人最少數量的里曼尼對稱對稱時，這可能是最佳做法，這種情況是一般的案例。在此情況下，我們提供以下服務：
 
 <br>
 
@@ -74,7 +74,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) 有一對特徵值保留正規的實值基礎，如理論的假說所述，男性是幾何的，如果每個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,i,k} \neq 0$$ 在兩個基礎中；如果是每個選擇$$i,j,k$$，產品$$M^{i,i,k}M^{j,j,k}$$ 兩地皆同意。
+(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每一個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,i,k} \neq 0$$ 在兩個基礎中；如果是每個選擇$$i,j,k$$，產品$$M^{i,i,k}M^{j,j,k}$$ 兩地皆同意。
 
 </div>
 </div>
@@ -89,7 +89,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-有鑑於一對多重性 -1 特徵值保留理論中所述的正規基底，即使基底很複雜，如果「對角線 Litmus 測試」的假說是幾何的，這兩人都是幾何的。
+鑑於一對特徵值保留了一般人體的定理中描述的正規基底，這兩人只在每一個選擇的時候才是幾何的。$$i,j,k$$ 產品$$M^{i,k,k}M^{j,j,k}$$ 兩地皆同意。
 
 </div>
 </div>
@@ -106,7 +106,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 本白皮書為封閉的里曼尼亞人機組 (最多只能在其域內使用里曼尼亞人) 建立此地圖的注射性。套用這些技術來描述其影像 (和反向) 的進一步結果，就在測量結果的精選模數空間內開始使用[[AA25]](#AA25)。Anshul Adve 在 Conformal Field Theory 中使用這些相同的 **結構常數** 來處理緊密、雙曲雙曲兩曲的單位正切空間。
 
-一般 Riemannian 公制案例的特徵是研究$$\set{\lambda_i, |M^{i,i,k}|}$$.
+一般 Riemannian 公制案例的特徵是研究$$\set{\lambda_i, M^{i,i,k}}$$.
 
 這些結果最初是在 1997 年 **MSRI** 的作者在類似標題的談話期間進行示範，但初次以公開的形式出現在這裡。
 
@@ -270,7 +270,7 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 我們可能希望對任何給定者$$k>0$$, $$M_0^{i,i,k}$$ 不能相同$$0$$ 全部$$i$$，因為它是一般為真條件，但對於如以下範例所涵蓋的扁平 Tori 案例等特定案例，則為假。此外，公式<span class="eqno"></span> 針對$$z_k$$ 需要兩者$$i$$- 獨立性和充分性，建立基礎地圖$$e_0^i \mapsto z_i e_1^i$$ 保留$$\set{M_0^{i,j,k}}$$.
 
-我們在下一組公式下方繪製 Corollary 1 的證明。
+我們在下一組公式下面繪製 Corollary 1 (充分) 的證明。
 
 然而，讓我們計算一些相關的身分，讓未來一些研究人員可以挖掘出一般化的形容詞：
 
@@ -312,9 +312,9 @@ i = j\ , \ell = k\text{ and relabeling } \implies \\
 \sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Corollary 1 遵循的事實$$z_k$$ 是定義完善的，且先前觀察的是由其定義的代數運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同意將點函數乘以特徵方形，產生的代數亦密集於$$L^2(M,g)$$ 由 Stone-Weirstrass 再度同意，所以他們在任何地方通過通勤和關聯性。
+Corollary 1 遵循的事實$$z_k$$ 是定義完善的，且先前觀察的是由其定義的代數運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同意將點函數乘以特徵方形，產生的代數亦密集於$$L^2(M,g)$$ (再加上 Stone-Weierstrass) 因此，他們在任何地方都同意通勤和關聯性。
 
-Corollary 2 遵循指出頻譜上的 multiplicity-1 條件會強制 Corollary 1 的逆向以$$\Z_2^\infty$$ 對稱。我們始終可以將複雜的多重性 -1 特徵性降低到其通用基礎上$$U_1^\infty$$ 對稱群組。
+Corollary 2 遵循指出條件$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 通常為真。
 
 這樣就完成了 Corollaries 的證明。
 

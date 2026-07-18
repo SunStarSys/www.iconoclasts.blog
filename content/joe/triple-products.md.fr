@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=49551
+status: vérifié=49595
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -64,7 +64,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 
 <br>
 
-*La symétrie* joue un rôle important dans les cas computationnellement traçables [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), qui est bien illustré dans notre plat tori [Exemple](#example) ci-dessous. Cependant, la force de notre approche est peut-être mieux mise en évidence dans le cas de variétés avec le moins de symétries riemanniennes, ce qui est le cas générique coïncidant souvent avec les valeurs propres étant *unique* (c'est-à-dire sans multiplicité non banale). Dans ce cas, nous offrons ce qui suit :
+*La symétrie* joue un rôle important dans les cas computationnellement traçables [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), qui est bien illustré dans notre plat tori [Exemple](#example) ci-dessous. Cependant, la force de notre approche est peut-être mieux mise en évidence dans le cas de collecteurs avec le moins de symétries riemanniennes, ce qui est le cas générique. Dans ce cas, nous offrons ce qui suit :
 
 <br>
 
@@ -76,7 +76,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 </div>
   <div class="card-body">
 
-(Test diagonal de Litmus) Compte tenu d'une paire de valeurs propres préservant les bases orthonormées réelles décrites dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque $$k>0$$, au moins une valeur de $$i>0$$ pour lequel $$M^{i,i,k} \neq 0$$ dans les deux bases ; et si pour chaque choix $$i,j,k$$, le produit $$M^{i,i,k}M^{j,j,k}$$ d'accord dans les deux bases.
+(Test diagonal de Litmus) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque $$k>0$$, au moins une valeur de $$i>0$$ pour lequel $$M^{i,i,k} \neq 0$$ dans les deux bases ; et si pour chaque choix $$i,j,k$$, le produit $$M^{i,i,k}M^{j,j,k}$$ d'accord dans les deux bases.
 
 </div>
 </div>
@@ -91,7 +91,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 </div>
   <div class="card-body">
 
-Compte tenu d'une paire de multiplicité-1 valeur propre préservant les bases orthonormées comme décrit dans le théorème, les collecteurs sont isométriques si les hypothèses du test diagonal de Litmus tiennent, même si les bases sont complexes.
+Étant donné une paire de valeurs propres préservant les bases orthonormes comme décrit dans le théorème entre les collecteurs génériques, les collecteurs sont isométriques si et seulement si pour chaque choix de $$i,j,k$$ le produit $$M^{i,k,k}M^{j,j,k}$$ d'accord dans les deux bases.
 
 </div>
 </div>
@@ -108,7 +108,7 @@ Si nous considérons la carte
 
 cet article établit l'injectivité de cette carte pour les collecteurs riemanniens fermés (jusqu'à l'isométrie riemannienne dans son domaine). D'autres résultats qui appliquent ces techniques pour décrire son image (et inversement), dans certains espaces de modules de mesures, ne font que commencer [[AA25]](#AA25). Là, Anshul Adve s'attaque rigoureusement aux espaces tangents unitaires des 2-orbifolds compacts et hyperboliques en utilisant ces mêmes **constantes de structure** de la théorie du champ conforme.
 
-Le cas métrique générique de Riemannian est complètement caractérisé par l'étude de $$\set{\lambda_i, |M^{i,i,k}|}$$.
+Le cas métrique générique de Riemannian est complètement caractérisé par l'étude de $$\set{\lambda_i, M^{i,i,k}}$$.
 
 Ces résultats ont été démontrés pour la première fois lors d'un discours intitulé de la même manière par l'auteur à l' **IRSM** en 1997, mais ils apparaissent ici sous forme publiée pour la première fois.
 
@@ -272,7 +272,7 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 Nous espérons que pour tout $$k>0$$, $$M_0^{i,i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$, puisqu'il s'agit d'une condition génériquement vraie, mais fausse pour des cas spécifiques comme le cas de tori plat couvert dans l'exemple ci-dessous. En outre, la formule <span class="eqno"></span> pour $$z_k$$ nécessite les deux $$i$$- indépendance et suffisance, pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conservateurs $$\set{M_0^{i,j,k}}$$.
 
-Nous esquissons une preuve du Corollaire 1 en dessous de la prochaine série de formules.
+Nous esquissons une preuve du Corollaire 1 (suffisance) en dessous de la prochaine série de formules.
 
 Néanmoins, calculons quelques identités pertinentes afin que certains futurs chercheurs intrépides puissent creuser dans la conjecture généralisée :
 
@@ -314,9 +314,9 @@ i = j\ , \ell = k\text{ and relabeling } \implies \\
 \sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Le corollaire 1 découle du fait que $$z_k$$ est bien défini, et l'observation antérieure que les opérateurs algébriques définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ sont d'accord avec la multiplication par des carrés de fonctions propres, dont l'algèbre générée est également dense en $$L^2(M,g)$$ Encore une fois par Stone-Weirstrass, ils s'accordent donc partout par la commutativité et l'associativité.
+Le corollaire 1 découle du fait que $$z_k$$ est bien défini, et l'observation antérieure que les opérateurs algébriques définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ sont d'accord avec la multiplication par des carrés de fonctions propres, dont l'algèbre générée est également dense en $$L^2(M,g)$$ (à nouveau par Stone-Weierstrass.) Ils s'accordent donc partout par la commutativité et l'associativité.
 
-Le corollaire 2 suit en notant que la condition de multiplicité-1 sur le spectre oblige l'inverse du corollaire 1 à tenir par $$\Z_2^\infty$$ symétrie. Nous pouvons toujours réduire une multiplicité complexe-1 eigenbasis à une base réelle dans son générique. $$U_1^\infty$$ groupe de symétrie.
+Le corollaire 2 suit en notant que la condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ Généralement vrai.
 
 Cela complète la preuve des corollaires.
 

@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=49551
+status: verificado=49595
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -64,7 +64,7 @@ Ser isométrico para $$(M,g)$$, es una condición *necesaria y suficiente* para 
 
 <br>
 
-*La simetría* juega un papel importante en los casos computacionalmente trazables [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), que se ilustra adecuadamente en nuestro tori plano [Ejemplo](#example) abajo. Sin embargo, la fuerza de nuestro enfoque tal vez se haga más evidente en el caso de los colectores con el menor número de simetrías de Riemann, que es el caso genérico que a menudo coincide con los valores propios que son *únicos *(es decir, sin multiplicidad no trivial). En este caso, ofrecemos lo siguiente:
+*La simetría* juega un papel importante en los casos computacionalmente trazables [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), que se ilustra adecuadamente en nuestro tori plano [Ejemplo](#example) abajo. Sin embargo, la fuerza de nuestro enfoque tal vez se haga más evidente en el caso de los colectores con el menor número de simetrías de Riemann, que es el caso genérico. En este caso, ofrecemos lo siguiente:
 
 <br>
 
@@ -76,7 +76,7 @@ Ser isométrico para $$(M,g)$$, es una condición *necesaria y suficiente* para 
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Teniendo en cuenta un par de valores propios que preservan las bases ortonormales de valor real tal como se describe en la hipótesis del Teorema, los colectores son isométricos si por cada $$k>0$$, hay al menos un valor de $$i>0$$ cuyo $$M^{i,i,k} \neq 0$$ en ambas bases, y si por cada elección de $$i,j,k$$, el producto $$M^{i,i,k}M^{j,j,k}$$ de acuerdo en ambas bases.
+(Diagonal Litmus Test) Dados un par de valores propios que preservan las bases ortonormales como se describe en la hipótesis del Teorema, los colectores son isométricos si por cada $$k>0$$, hay al menos un valor de $$i>0$$ cuyo $$M^{i,i,k} \neq 0$$ en ambas bases, y si por cada elección de $$i,j,k$$, el producto $$M^{i,i,k}M^{j,j,k}$$ de acuerdo en ambas bases.
 
 </div>
 </div>
@@ -91,7 +91,7 @@ Ser isométrico para $$(M,g)$$, es una condición *necesaria y suficiente* para 
 </div>
   <div class="card-body">
 
-Dado un par de valores propios multiplicidad-1 que preservan las bases ortonormales como se describe en el Teorema, los colectores son isométricos si las hipótesis del Test Diagonal de Límites se mantienen, incluso si las bases son complejas.
+Teniendo en cuenta un par de valores propios que preserva las bases ortonormales como se describe en el Teorema entre los manifolds genéricos, los manifolds son isométricos si y solo si para cada elección de $$i,j,k$$ el producto $$M^{i,k,k}M^{j,j,k}$$ de acuerdo en ambas bases.
 
 </div>
 </div>
@@ -108,7 +108,7 @@ Si consideramos el mapa
 
 Este artículo establece la inyectividad de este mapa para los colectores de Riemann cerrados (hasta la isometría de Riemann en su dominio). Otros resultados que aplican estas técnicas para describir su imagen (e inversa), dentro de espacios selectos de módulos de métricas, apenas están comenzando [[AA25]](#AA25). Allí, Anshul Adve aborda rigurosamente los espacios tangentes unitarios de 2-orbifolds compactos e hiperbólicos utilizando estas mismas **constantes de estructura** de la Teoría de Campo Conformal.
 
-El caso genérico métrico de Riemann se caracteriza completamente por el estudio de $$\set{\lambda_i, |M^{i,i,k}|}$$.
+El caso genérico métrico de Riemann se caracteriza completamente por el estudio de $$\set{\lambda_i, M^{i,i,k}}$$.
 
 Estos resultados se demostraron por primera vez durante una charla titulada de manera similar por el autor en **MSRI** en 1997, pero aparecen aquí en forma publicada por primera vez.
 
@@ -272,7 +272,7 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 Podemos esperar que por cualquier $$k>0$$, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$, ya que es una condición genéricamente verdadera, pero falsa para casos específicos como el caso de tori plano cubierto en el ejemplo a continuación. Además, la fórmula <span class="eqno"></span> para $$z_k$$ requiere tanto $$i$$-independencia, y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conserva $$\set{M_0^{i,j,k}}$$.
 
-Esbozamos una prueba del Corolario 1 debajo del siguiente conjunto de fórmulas.
+Esbozamos una prueba de Corolario 1 (suficiencia) por debajo del siguiente conjunto de fórmulas.
 
 Sin embargo, vamos a calcular algunas identidades relevantes para que algunos intrépidos futuros investigadores puedan profundizar en la conjetura generalizada:
 
@@ -314,9 +314,9 @@ i = j\ , \ell = k\text{ and relabeling } \implies \\
 \sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Corolario 1 se deriva del hecho de que $$z_k$$ está bien definido, y la observación previa de que los operadores algebraicos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ están de acuerdo con la multiplicación de funciones por cuadrados de funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ De nuevo por Stone-Weirstrass, por lo que están de acuerdo en todas partes por conmutatividad y asociatividad.
+Corolario 1 se deriva del hecho de que $$z_k$$ está bien definido, y la observación previa de que los operadores algebraicos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ están de acuerdo con la multiplicación de funciones por cuadrados de funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ (de nuevo por Stone-Weierstrass). Así que están de acuerdo en todas partes por conmutatividad y asociatividad.
 
-El Corolario 2 sigue observando que la condición de multiplicidad 1 en el espectro obliga al contrario del Corolario 1 a mantenerse por $$\Z_2^\infty$$ simetría. Siempre podemos reducir una multiplicidad compleja-1 de base propia a una base real dentro de su genérico $$U_1^\infty$$ grupo de simetría.
+Corolario 2 sigue observando que la condición $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ es genéricamente cierto.
 
 Esto completa la prueba de los Corolarios.
 

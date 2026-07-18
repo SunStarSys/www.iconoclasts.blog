@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=49551
+status: verifierad=49595
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -63,7 +63,7 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 
 <br>
 
-*Symmetri* spelar en viktig roll i beräkningsrelaterade fall [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), som är lämpligt illustrerad i vår platta tori [Exempel](#example) nedan. Styrkan i vårt tillvägagångssätt är dock kanske bäst uppenbar när det gäller mångfalder med det minsta antalet Riemanniska symmetrier, vilket är det generiska fallet som ofta sammanfaller med att egenvärdena är *unika *(dvs. utan icke-trivial mångfald.) I detta fall erbjuder vi följande
+*Symmetri* spelar en viktig roll i beräkningsrelaterade fall [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), som är lämpligt illustrerad i vår platta tori [Exempel](#example) nedan. Styrkan i vårt tillvägagångssätt görs dock kanske bäst uppenbar när det gäller mångfalder med det minsta antalet Riemanniska symmetrier, vilket är det generiska fallet. I detta fall erbjuder vi följande
 
 <br>
 
@@ -75,7 +75,7 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala realvärdebaser som beskrivs i teoremens hypotes är grenrör isometriska om för varje $$k>0$$Det finns minst ett värde av $$i>0$$ för vilken $$M^{i,i,k} \neq 0$$ i båda baserna, och om för varje val av $$i,j,k$$, produkten $$M^{i,i,k}M^{j,j,k}$$ Instämmer i båda baserna.
+(Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om för varje $$k>0$$Det finns minst ett värde av $$i>0$$ för vilken $$M^{i,i,k} \neq 0$$ i båda baserna, och om för varje val av $$i,j,k$$, produkten $$M^{i,i,k}M^{j,j,k}$$ Instämmer i båda baserna.
 
 </div>
 </div>
@@ -90,7 +90,7 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 </div>
   <div class="card-body">
 
-Med tanke på ett par multiplikations-1-eigenvärde som bevarar ortonormala baser som beskrivs i teoremen, är grenrör isometriska om hypoteserna i det diagonala litmustestet håller, även om baserna är komplexa.
+Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremen mellan generiska grenrör, är grenrör isometriska om och endast om för varje val av $$i,j,k$$ produkten $$M^{i,k,k}M^{j,j,k}$$ Instämmer i båda baserna.
 
 </div>
 </div>
@@ -107,7 +107,7 @@ Om vi tänker på kartan
 
 Detta papper fastställer injicerbarhet av denna karta för slutna Riemannian grenrör (upp till Riemannian isometry i dess domän). Ytterligare resultat som tillämpar dessa tekniker för att beskriva sin bild (och invers), inom vissa moduli utrymmen av mätvärden, är bara att komma igång [[AA25]](#AA25). Där tacklar Anshul Adve rigoröst enhetstangensutrymmen av kompakta, hyperboliska 2-omkretsar med samma **strukturkonstanter** från Conformal Field Theory.
 
-Det generiska Riemannian metriska fallet kännetecknas helt av studien av $$\set{\lambda_i, |M^{i,i,k}|}$$.
+Det generiska Riemannian metriska fallet kännetecknas helt av studien av $$\set{\lambda_i, M^{i,i,k}}$$.
 
 Dessa resultat visades först under ett liknande tal av författaren vid **MSRI **1997, men de visas här i publicerad form för första gången.
 
@@ -271,7 +271,7 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 Vi hoppas att för varje given $$k>0$$, $$M_0^{i,i,k}$$ Kan inte vara identisk $$0$$ för alla $$i$$, eftersom det är ett allmänt sant villkor, men falskt för specifika fall som det platta torifallet som omfattas av exemplet nedan. Dessutom är formeln <span class="eqno"></span> för $$z_k$$ kräver båda $$i$$-oberoende och tillräcklighet, för att fastställa grundkartan $$e_0^i \mapsto z_i e_1^i$$ bevarar $$\set{M_0^{i,j,k}}$$.
 
-Vi skissar ett bevis på Corollary 1 under nästa uppsättning formler.
+Vi skissar ett bevis på Corollary 1 (tillräcklighet) under nästa uppsättning formler.
 
 Låt oss dock beräkna några relevanta identiteter så att några orädda framtida forskare kan gräva i den generaliserade gissningen:
 
@@ -313,9 +313,9 @@ i = j\ , \ell = k\text{ and relabeling } \implies \\
 \sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Corollary 1 följer av det faktum att $$z_k$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ överensstämmer med punktvis funktion multiplikation av rutor av egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ igen av Stone-Weirstrass, så de är överens överallt genom kommutativitet och associativitet.
+Corollary 1 följer av det faktum att $$z_k$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ överensstämmer med punktvis funktion multiplikation av rutor av egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Omdirigerad från Stone-Weierstrass) Så de är överens överallt genom kommutativitet och associativitet.
 
-Corollary 2 följer genom att notera att multiplicity-1-villkoret på spektrumet tvingar konversen av Corollary 1 att hålla av $$\Z_2^\infty$$ symmetri. Vi kan alltid minska en komplex multiplikations-1-egenbas till en verklig grund inom dess generiska $$U_1^\infty$$ symmetrisk grupp.
+Corollary 2 följer genom att notera att villkoret $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ Det är generellt sant.
 
 Detta kompletterar beviset för korollarierna.
 

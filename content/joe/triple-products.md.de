@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=49551
+status: überprüft=49595
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -63,7 +63,7 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 
 <br>
 
-*Symmetrie* spielt eine wichtige Rolle bei rechnerisch traktierbaren Fällen [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), die in unserem flachen Tori passend dargestellt ist [Beispiel](#example) unten. Die Stärke unseres Ansatzes wird jedoch vielleicht am besten bei Mannigfaltigkeiten mit der geringsten Anzahl von Riemannschen Symmetrien deutlich, was der generische Fall ist, der oft mit den Eigenwerten übereinstimmt, die *unique* (d.h. ohne nicht-triviale Multiplizität) sind. In diesem Fall bieten wir folgende
+*Symmetrie* spielt eine wichtige Rolle bei rechnerisch traktierbaren Fällen [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), die in unserem flachen Tori passend dargestellt ist [Beispiel](#example) unten. Die Stärke unseres Ansatzes zeigt sich jedoch vielleicht am besten bei Verteilern mit der geringsten Anzahl an Riemannschen Symmetrien, was der generische Fall ist. In diesem Fall bieten wir folgende
 
 <br>
 
@@ -75,7 +75,7 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 </div>
   <div class="card-body">
 
-(Diagonaler Litmus-Test) Angesichts eines Paares von Eigenwerten, die orthonormale, real bewertete Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede $$k>0$$Es gibt mindestens einen Wert von $$i>0$$ für die $$M^{i,i,k} \neq 0$$ auf beiden Seiten, und wenn für jede Wahl $$i,j,k$$, das Produkt $$M^{i,i,k}M^{j,j,k}$$ stimmt in beiden Basen überein.
+(Diagonaler Litmus-Test) Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede $$k>0$$Es gibt mindestens einen Wert von $$i>0$$ für die $$M^{i,i,k} \neq 0$$ auf beiden Seiten, und wenn für jede Wahl $$i,j,k$$, das Produkt $$M^{i,i,k}M^{j,j,k}$$ stimmt in beiden Basen überein.
 
 </div>
 </div>
@@ -90,7 +90,7 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 </div>
   <div class="card-body">
 
-Bei einem Paar von Multiplizitäts-1-Eigenwert, der orthonormale Basen wie im Satz beschrieben erhält, sind die Mannigfaltigkeiten isometrisch, wenn die Hypothesen des diagonalen Litmus-Tests halten, auch wenn die Basen komplex sind.
+Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie im Satz zwischen generischen Mannigfaltigkeiten beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn und nur, wenn für jede Wahl von $$i,j,k$$ das Produkt $$M^{i,k,k}M^{j,j,k}$$ stimmt in beiden Basen überein.
 
 </div>
 </div>
@@ -107,7 +107,7 @@ Wenn wir die Karte betrachten
 
 Diese Arbeit legt die Injektivität dieser Karte für geschlossene Riemannsche Mannigfaltigkeiten (bis zur Riemannschen Isometrie in ihrer Domäne) fest. Weitere Ergebnisse, die diese Techniken anwenden, um ihr Bild (und umgekehrt) innerhalb ausgewählter Modulräume von Metriken zu beschreiben, beginnen gerade erst. [[AA25]](#AA25). Dort greift Anshul Adve mit denselben **Strukturkonstanten** aus der Conformal Field Theory Tangent Spaces von kompakten, hyperbolischen 2-orbifolds streng an.
 
-Der generische Riemannsche metrische Fall ist vollständig durch die Untersuchung von $$\set{\lambda_i, |M^{i,i,k}|}$$.
+Der generische Riemannsche metrische Fall ist vollständig durch die Untersuchung von $$\set{\lambda_i, M^{i,i,k}}$$.
 
 Diese Ergebnisse wurden erstmals 1997 in einem ähnlich betitelten Vortrag des Autors bei **MSRI** gezeigt, erscheinen hier aber erstmals in veröffentlichter Form.
 
@@ -271,7 +271,7 @@ z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \
 
 Wir hoffen, dass $$k>0$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$, da es sich um eine allgemein wahre Bedingung handelt, aber für bestimmte Fälle wie den im folgenden Beispiel abgedeckten flachen Tori-Fall falsch. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$.
 
-Wir skizzieren einen Nachweis von Corollary 1 unter dem nächsten Satz von Formeln.
+Wir skizzieren einen Nachweis von Corollary 1 (Suffizienz) unter dem nächsten Satz von Formeln.
 
 Lassen Sie uns jedoch einige relevante Identitäten berechnen, damit einige unerschrockene zukünftige Forscher in die generalisierte Vermutung eintauchen können:
 
@@ -313,9 +313,9 @@ i = j\ , \ell = k\text{ and relabeling } \implies \\
 \sum_r M^{i,i,r} M^{j,j,r} = \sum_r |M^{i,j,r}|^2
 ```
 
-Folge 1 ist die Tatsache, dass $$z_k$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist $$L^2(M,g)$$ Wieder von Stone-Weirstrass, also stimmen sie überall mit Kommutativität und Assoziativität überein.
+Folge 1 ist die Tatsache, dass $$z_k$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist $$L^2(M,g)$$ (Weitergeleitet von Stone-Weierstrass) So stimmen sie überall durch Kommutativität und Assoziativität überein.
 
-Folge 2 folgt, indem darauf hingewiesen wird, dass die Multiplizitäts-1-Bedingung auf das Spektrum die Umkehrung der Folge 1 zwingt, sich an $$\Z_2^\infty$$ Symmetrie. Wir können eine komplexe Multiplizitäts-1-Eigenbasis immer auf eine reale Basis innerhalb ihrer generischen $$U_1^\infty$$ Symmetriegruppe.
+Folge 2, indem man feststellt, dass die Bedingung $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ ist allgemein wahr.
 
 Dies vervollständigt den Beweis der Corollaries.
 
