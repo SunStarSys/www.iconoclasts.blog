@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49805
+status: verified=49809
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -315,7 +315,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 
 Corollary 1 follows from the fact that $$z_k\in U_1$$ is well-defined, and the prior observation that the algebraic operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ are both associative, and agree with pointwise function multiplication by squares of absolute values of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ (again by Stone-Weierstrass.) So they agree everywhere.
 
-Corollary 2 sufficiency follows by noting that the condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ is generically true. And if for some choice of $$i,j,k$$, the product $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ disagreed between bases, they would disagree in every pair of bases.
+Corollary 2 sufficiency follows by noting that the condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0$$ is generically true. And if for some choice of $$i,j,k$$, the product $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ disagreed between bases, they would disagree in every pair of bases.
 
 Why? Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $$U_1^\infty$$ where these products are invariants, contradicting Theorem 1. This establishes the necessity of the hypothesis, and completes the proof.
 
