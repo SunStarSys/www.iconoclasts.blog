@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49721
+status: verified=49740
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -73,7 +73,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal  bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,i,k} \neq 0$$ in both bases; and if for every choice of $$i,j,k$$, the product $$M^{i,i,k}\bar M^{j,j,k}$$ agrees in both bases.
+(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal  bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,\bar i,k} \neq 0$$ in both bases; and if for every choice of $$i,j,k$$, the product $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ agrees in both bases.
 
   </div>
 </div>
@@ -263,8 +263,8 @@ More generally, the associated prerequisite "regarding agreement in absolute val
 Getting back to Corollary 1, we observe that the proof involves establishing this implication:
 
 ```math
-z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
-\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
 We may hope that for any given $$k>0$$, $$M_0^{i,i,k}$$ cannot be identically $$0$$ for all $$i$$, since it is a generically true condition, but false for specific cases like the flat tori case covered in the Example below. Furthermore, the Formula <span class="eqno"></span> for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$.
@@ -305,14 +305,19 @@ Note: for the one-dimensional flat-tori case below, $$\tilde{Q}_k(e^i,e^j) = 0$$
 Now consider the famous associativity relations from Conformal Field Theory (in a real basis):
 
 ```math
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
-i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+\begin{aligned}
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell &= \sum_{\ell,r} M^{i,j,r}\bar M^{\bar k,\ell,r}e^\ell\\
+&= \sum_{\ell,r} M^{i,k,r}\bar M^{\bar j,\ell,r}e^\ell\ \therefore\\
+i = \bar j, \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,\bar i,r}\bar M^{j,\bar j,r} &= \sum_r |M^{i,j,r}|^2
+\end{aligned}
 ```
 
-Corollary 1 follows from the fact that $$z_k\in U_1$$ is well-defined, and the prior observation that the algebraic operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ are both associative, and agree with pointwise function multiplication by squares of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ (again by Stone-Weierstrass.) So they agree everywhere.
+Corollary 1 follows from the fact that $$z_k\in U_1$$ is well-defined, and the prior observation that the algebraic operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ are both associative, and agree with pointwise function multiplication by squares of absolute values of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ (again by Stone-Weierstrass.) So they agree everywhere.
 
-Corollary 2 sufficiency follows by noting that the condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ is generically true. And if for some choice of $$i,j,k$$, the product $$M^{i,i,k} M^{j,j,k}$$ disagreed between bases, they would disagree in every pair of real-valued bases. Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $$\Z_2^\infty$$ where these products are invariants, contradicting Theorem 1. This establishes the necessity of the hypothesis, and completes the proof.
+Corollary 2 sufficiency follows by noting that the condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ is generically true. And if for some choice of $$i,j,k$$, the product $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ disagreed between bases, they would disagree in every pair of bases.
+
+Why? Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $$U_1^\infty$$ where these products are invariants, contradicting Theorem 1. This establishes the necessity of the hypothesis, and completes the proof.
 
 This completes the proof of the Corollaries.
 
