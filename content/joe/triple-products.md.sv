@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=49645
+status: verifierad=49751
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -75,7 +75,7 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om för varje $$k>0$$Det finns minst ett värde av $$i>0$$ för vilken $$M^{i,i,k} \neq 0$$ i båda baserna, och om för varje val av $$i,j,k$$, produkten $$M^{i,i,k}\bar M^{j,j,k}$$ Instämmer i båda baserna.
+(Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om för varje $$k>0$$Det finns minst ett värde av $$i>0$$ för vilken $$M^{i,\bar i,k} \neq 0$$ i båda baserna, och om för varje val av $$i,j,k$$, produkten $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ Instämmer i båda baserna.
 
 </div>
 </div>
@@ -90,7 +90,7 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 </div>
   <div class="card-body">
 
-Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremen mellan generiska grenrör, är grenrör isometriska om och endast om för varje val av $$i,j,k$$ produkten $$M^{i,k,k}\bar M^{j,j,k}$$ Instämmer i båda baserna.
+Generiskt är isospektrala grenrör isometriska om och endast om produkterna enligt definitionen i Corollary 1 är överens.
 
 </div>
 </div>
@@ -265,8 +265,8 @@ Mer allmänt, de associerade förutsättningarna "om överenskommelse i absoluta
 Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 
 ```math
-z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
-\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
 Vi hoppas att för varje given $$k>0$$, $$M_0^{i,i,k}$$ Kan inte vara identisk $$0$$ för alla $$i$$, eftersom det är ett allmänt sant villkor, men falskt för specifika fall som det platta torifallet som omfattas av exemplet nedan. Dessutom är formeln <span class="eqno"></span> för $$z_k$$ kräver båda $$i$$-oberoende och tillräcklighet, för att fastställa grundkartan $$e_0^i \mapsto z_i e_1^i$$ bevarar $$\set{M_0^{i,j,k}}$$.
@@ -307,14 +307,19 @@ Anmärkning: för det endimensionella flat-tori fallet nedan, $$\tilde{Q}_k(e^i,
 Tänk nu på de berömda associativitetsrelationerna från Conformal Field Theory (på en verklig grund):
 
 ```math
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
-i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+\begin{aligned}
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell &= \sum_{\ell,r} M^{i,j,r}\bar M^{\bar k,\ell,r}e^\ell\\
+&= \sum_{\ell,r} M^{i,k,r}\bar M^{\bar j,\ell,r}e^\ell\ \therefore\\
+i = \bar j, \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,\bar i,r}\bar M^{j,\bar j,r} &= \sum_r |M^{i,j,r}|^2
+\end{aligned}
 ```
 
-Corollary 1 följer av det faktum att $$z_k\in U_1$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ överensstämmer med punktvis funktion multiplikation av rutor av egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Omdirigerad från Stone-Weierstrass) De är överens överallt.
+Corollary 1 följer av det faktum att $$z_k\in U_1$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ är båda associativa och är överens med pointwise funktion multiplikation av rutor av absoluta värden för egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Omdirigerad från Stone-Weierstrass) De är överens överallt.
 
-Corollary 2 följer genom att notera att villkoret $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ Det är generellt sant. Om för något val av $$i,j,k$$, produkten $$M^{i,i,k}\bar M^{j,j,k}$$ De skulle skilja sig åt i ett par baser, de skulle skilja sig åt i varje par baser, eftersom generiska grenrör har multiplikations-1 spektra. Detta fastställer hypotesens nödvändighet och kompletterar beviset.
+Corollary 2-tillräcklighet följer genom att notera att villkoret $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ Det är generellt sant. Om för något val av $$i,j,k$$, produkten $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Oenighet mellan baser, skulle de vara oense i varje par baser.
+
+Varför? Eftersom generiska grenrör kan antas också ha multiplikation-1-spektra, minskar detta hela symmetrigruppen till $$U_1^\infty$$ där dessa produkter är oföränderliga, motsäger teorem 1. Detta fastställer hypotesens nödvändighet och kompletterar beviset.
 
 Detta kompletterar beviset för korollarierna.
 

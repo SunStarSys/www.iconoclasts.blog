@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=49645
+status: überprüft=49751
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -75,7 +75,7 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 </div>
   <div class="card-body">
 
-(Diagonaler Litmus-Test) Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede $$k>0$$Es gibt mindestens einen Wert von $$i>0$$ für die $$M^{i,i,k} \neq 0$$ auf beiden Seiten, und wenn für jede Wahl $$i,j,k$$, das Produkt $$M^{i,i,k}\bar M^{j,j,k}$$ stimmt in beiden Basen überein.
+(Diagonaler Litmus-Test) Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede $$k>0$$Es gibt mindestens einen Wert von $$i>0$$ für die $$M^{i,\bar i,k} \neq 0$$ auf beiden Seiten, und wenn für jede Wahl $$i,j,k$$, das Produkt $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ stimmt in beiden Basen überein.
 
 </div>
 </div>
@@ -90,7 +90,7 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 </div>
   <div class="card-body">
 
-Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie im Satz zwischen generischen Mannigfaltigkeiten beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn und nur, wenn für jede Wahl von $$i,j,k$$ das Produkt $$M^{i,k,k}\bar M^{j,j,k}$$ stimmt in beiden Basen überein.
+Im Allgemeinen sind isospektrale Mannigfaltigkeiten isometrisch, wenn und nur, wenn die in Korrespondenz 1 definierten Produkte zustimmen.
 
 </div>
 </div>
@@ -265,8 +265,8 @@ Allgemeiner die damit verbundene Voraussetzung "hinsichtlich der Übereinstimmun
 Wenn wir zu Korrespondenz 1 zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
 
 ```math
-z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
-\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
 Wir hoffen, dass $$k>0$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$, da es sich um eine allgemein wahre Bedingung handelt, aber für bestimmte Fälle wie den im folgenden Beispiel abgedeckten flachen Tori-Fall falsch. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$.
@@ -307,14 +307,19 @@ Hinweis: für das eindimensionale Flat-Tori-Gehäuse unten, $$\tilde{Q}_k(e^i,e^
 Betrachten Sie nun die berühmten Assoziativitätsbeziehungen aus der konformen Feldtheorie (in einer realen Grundlage):
 
 ```math
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
-i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+\begin{aligned}
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell &= \sum_{\ell,r} M^{i,j,r}\bar M^{\bar k,\ell,r}e^\ell\\
+&= \sum_{\ell,r} M^{i,k,r}\bar M^{\bar j,\ell,r}e^\ell\ \therefore\\
+i = \bar j, \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,\bar i,r}\bar M^{j,\bar j,r} &= \sum_r |M^{i,j,r}|^2
+\end{aligned}
 ```
 
-Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist $$L^2(M,g)$$ (Weitergeleitet von Stone-Weierstrass) Sie sind sich überall einig.
+Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ sind sowohl assoziativ als auch stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Absolutwerten von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist. $$L^2(M,g)$$ (Weitergeleitet von Stone-Weierstrass) Sie sind sich überall einig.
 
-Folge 2, indem man feststellt, dass die Bedingung $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ ist allgemein wahr. Und wenn für eine Auswahl von $$i,j,k$$, das Produkt $$M^{i,i,k}\bar M^{j,j,k}$$ Sie sollten sich in einigen Basenpaaren unterscheiden, sie würden sich in jedem Basenpaar unterscheiden, da generische Mannigfaltigkeiten Multiplizitäts-1-Spektren aufweisen. Dies begründet die Notwendigkeit der Hypothese und vervollständigt den Beweis.
+Folge 2 Suffizienz folgt mit der Feststellung, dass die Bedingung $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ ist allgemein wahr. Und wenn für eine Auswahl von $$i,j,k$$, das Produkt $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Uneinigkeit zwischen den Basen, würden sie in jedem Paar von Basen nicht zustimmen.
+
+Warum? Da von generischen Verteilern auch Multiplizitäts-1-Spektren angenommen werden kann, reduziert dies die volle Symmetriegruppe auf $$U_1^\infty$$ bei denen es sich um invariante Produkte handelt, die im Widerspruch zu Satz 1 stehen. Dies begründet die Notwendigkeit der Hypothese und vervollständigt den Beweis.
 
 Dies vervollständigt den Beweis der Corollaries.
 

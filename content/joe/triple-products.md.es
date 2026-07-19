@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=49645
+status: verificado=49751
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -76,7 +76,7 @@ Ser isométrico para $$(M,g)$$, es una condición *necesaria y suficiente* para 
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Dados un par de valores propios que preservan las bases ortonormales como se describe en la hipótesis del Teorema, los colectores son isométricos si por cada $$k>0$$, hay al menos un valor de $$i>0$$ cuyo $$M^{i,i,k} \neq 0$$ en ambas bases, y si por cada elección de $$i,j,k$$, el producto $$M^{i,i,k}\bar M^{j,j,k}$$ de acuerdo en ambas bases.
+(Diagonal Litmus Test) Dados un par de valores propios que preservan las bases ortonormales como se describe en la hipótesis del Teorema, los colectores son isométricos si por cada $$k>0$$, hay al menos un valor de $$i>0$$ cuyo $$M^{i,\bar i,k} \neq 0$$ en ambas bases, y si por cada elección de $$i,j,k$$, el producto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ de acuerdo en ambas bases.
 
 </div>
 </div>
@@ -91,7 +91,7 @@ Ser isométrico para $$(M,g)$$, es una condición *necesaria y suficiente* para 
 </div>
   <div class="card-body">
 
-Teniendo en cuenta un par de valores propios que preserva las bases ortonormales como se describe en el Teorema entre los manifolds genéricos, los manifolds son isométricos si y solo si para cada elección de $$i,j,k$$ el producto $$M^{i,k,k}\bar M^{j,j,k}$$ de acuerdo en ambas bases.
+Genéricamente, los colectores isospectrales son isométricos si y solo si los productos definidos en el Corolario 1 están de acuerdo.
 
 </div>
 </div>
@@ -266,8 +266,8 @@ En términos más generales, el requisito previo asociado "con respecto al acuer
 Volviendo al Corolario 1, observamos que la prueba implica establecer esta implicación:
 
 ```math
-z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
-\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
 Podemos esperar que por cualquier $$k>0$$, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$, ya que es una condición genéricamente verdadera, pero falsa para casos específicos como el caso de tori plano cubierto en el ejemplo a continuación. Además, la fórmula <span class="eqno"></span> para $$z_k$$ requiere tanto $$i$$-independencia, y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conserva $$\set{M_0^{i,j,k}}$$.
@@ -308,14 +308,19 @@ Nota: para el estuche de torsión plana unidimensional a continuación, $$\tilde
 Ahora considere las famosas relaciones de asociatividad de la Teoría del Campo Conformal (en una base real):
 
 ```math
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
-i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+\begin{aligned}
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell &= \sum_{\ell,r} M^{i,j,r}\bar M^{\bar k,\ell,r}e^\ell\\
+&= \sum_{\ell,r} M^{i,k,r}\bar M^{\bar j,\ell,r}e^\ell\ \therefore\\
+i = \bar j, \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,\bar i,r}\bar M^{j,\bar j,r} &= \sum_r |M^{i,j,r}|^2
+\end{aligned}
 ```
 
-Corolario 1 se deriva del hecho de que $$z_k\in U_1$$ está bien definido, y la observación previa de que los operadores algebraicos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ están de acuerdo con la multiplicación de funciones por cuadrados de funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ (de nuevo por Stone-Weierstrass). Así que están de acuerdo en todas partes.
+Corolario 1 se deriva del hecho de que $$z_k\in U_1$$ está bien definido, y la observación previa de que los operadores algebraicos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ son ambos asociativos, y están de acuerdo con la multiplicación de la función puntual por cuadrados de valores absolutos de las funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ (de nuevo por Stone-Weierstrass). Así que están de acuerdo en todas partes.
 
-Corolario 2 sigue observando que la condición $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ es genéricamente cierto. Y si por alguna elección de $$i,j,k$$, el producto $$M^{i,i,k}\bar M^{j,j,k}$$ diferirían en algún par de bases, diferirían en cada par de bases, ya que los colectores genéricos tienen espectros de multiplicidad 1. Esto establece la necesidad de la hipótesis, y completa la prueba.
+La suficiencia del Corolario 2 sigue observando que la condición $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ es genéricamente cierto. Y si por alguna elección de $$i,j,k$$, el producto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ En desacuerdo entre bases, estarían en desacuerdo en cada par de bases.
+
+¿Por qué? Dado que se puede presumir que los colectores genéricos también tienen espectros de multiplicidad 1, esto reduce el grupo de simetría completo a $$U_1^\infty$$ donde estos productos son invariantes, contradiciendo el Teorema 1. Esto establece la necesidad de la hipótesis, y completa la prueba.
 
 Esto completa la prueba de los Corolarios.
 

@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =49645
+status: 驗證 =49751
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -74,7 +74,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每一個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,i,k} \neq 0$$ 在兩個基礎中；如果是每個選擇$$i,j,k$$，產品$$M^{i,i,k}\bar M^{j,j,k}$$ 兩地皆同意。
+(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每一個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,\bar i,k} \neq 0$$ 在兩個基礎中；如果是每個選擇$$i,j,k$$，產品$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 兩地皆同意。
 
 </div>
 </div>
@@ -89,7 +89,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-鑑於一對特徵值保留了一般人體的定理中描述的正規基底，這兩人只在每一個選擇的時候才是幾何的。$$i,j,k$$ 產品$$M^{i,k,k}\bar M^{j,j,k}$$ 兩地皆同意。
+一般而言，只有在 Corollary 1 中定義的產品同意時，等光性歧管才具有同等性。
 
 </div>
 </div>
@@ -264,8 +264,8 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 回到 Corollary 1，我們觀察到驗證涉及建立此意涵：
 
 ```math
-z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
-\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
 我們可能希望對任何給定者$$k>0$$, $$M_0^{i,i,k}$$ 不能相同$$0$$ 全部$$i$$，因為它是一般為真條件，但對於如以下範例所涵蓋的扁平 Tori 案例等特定案例，則為假。此外，公式<span class="eqno"></span> 針對$$z_k$$ 需要兩者$$i$$- 獨立性和充分性，建立基礎地圖$$e_0^i \mapsto z_i e_1^i$$ 保留$$\set{M_0^{i,j,k}}$$.
@@ -306,14 +306,19 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 現在考慮來自共形場理論的著名關聯性關係 (實質基礎)：
 
 ```math
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
-i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+\begin{aligned}
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell &= \sum_{\ell,r} M^{i,j,r}\bar M^{\bar k,\ell,r}e^\ell\\
+&= \sum_{\ell,r} M^{i,k,r}\bar M^{\bar j,\ell,r}e^\ell\ \therefore\\
+i = \bar j, \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,\bar i,r}\bar M^{j,\bar j,r} &= \sum_r |M^{i,j,r}|^2
+\end{aligned}
 ```
 
-Corollary 1 遵循的事實$$z_k\in U_1$$ 是定義完善的，且先前觀察的是由其定義的代數運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同意將點函數乘以特徵方形，產生的代數亦密集於$$L^2(M,g)$$ (再加上 Stone-Weierstrass) 因此，他們在任何地方都同意。
+Corollary 1 遵循的事實$$z_k\in U_1$$ 是定義完善的，且先前觀察的是由其定義的代數運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同時也是關聯性，並同意將點函數乘以特徵的絕對值方形，產生的代數也密集於$$L^2(M,g)$$ (再加上 Stone-Weierstrass) 因此，他們在任何地方都同意。
 
-Corollary 2 遵循指出條件$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 通常為真。如果選擇了$$i,j,k$$，產品$$M^{i,i,k}\bar M^{j,j,k}$$ 一些基底不同，它們在每一對基底會有所不同，因為一般的機體具有多性 -1 頻譜。這會建立假設的必要性，並完成證明。
+冠狀動脈 2 充分性遵循指出此狀況$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 通常為真。如果選擇了$$i,j,k$$，產品$$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 在基礎之間不同意，他們會不同意每對基礎。
+
+為什麼？由於一般的歧管也可以被推定為具有 multiplicity-1 頻譜，因此可以將完整的對稱群組減少為$$U_1^\infty$$ 其中這些產品不變，與定理 1 相反。這會建立假設的必要性，並完成證明。
 
 這樣就完成了 Corollaries 的證明。
 

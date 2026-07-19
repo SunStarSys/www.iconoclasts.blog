@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=49645
+status: 確認済み=49751
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -74,7 +74,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(対角リトマス試験)定理の仮説で説明されているように、正統な基質を保持する固有値のペアを考えると、マニホールドはすべての場合にアイソメです$$k>0$$の値が1つ以上あります$$i>0$$ 対象$$M^{i,i,k} \neq 0$$ 両方のベースで、そしてすべての選択のために$$i,j,k$$製品について$$M^{i,i,k}\bar M^{j,j,k}$$ 両基地とも一致。
+(対角リトマス試験)定理の仮説で説明されているように、正統な基質を保持する固有値のペアを考えると、マニホールドはすべての場合にアイソメです$$k>0$$の値が1つ以上あります$$i>0$$ 対象$$M^{i,\bar i,k} \neq 0$$ 両方のベースで、そしてすべての選択のために$$i,j,k$$製品について$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 両基地とも一致。
 
 </div>
 </div>
@@ -89,7 +89,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-汎用マニホールド間の定理で説明されているように、正準基を保持する固有値のペアを考えると、マニホールドは、すべての選択のためにのみアイソメです$$i,j,k$$ 製品$$M^{i,k,k}\bar M^{j,j,k}$$ 両基地とも一致。
+通常、同位体積は、コロラリー1で定義されている製品が同意した場合にのみ同位体積である。
 
 </div>
 </div>
@@ -264,8 +264,8 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 Corollary 1に戻ると、この証明には次のような意味があることがわかります。
 
 ```math
-z_k = M_0^{i,i,k} / M_1^{i,i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
-\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,r,i}M_0^{s,s,j}M_0^{t,t,k}}{M_1^{r,r,i}M_1^{s,s,j}M_1^{t,t,k}}\, .
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
 ご希望の方へ$$k>0$$, $$M_0^{i,i,k}$$ 同じにはできません$$0$$ すべて$$i$$これは一般的には真の状態ですが、次の例で説明するフラット・トーリ・ケースなどの特定のケースではfalseです。さらに、Formula <span class="eqno"></span> 対象$$z_k$$ 両方が必要$$i$$ベースマップを確立するための独立性と効率性$$e_0^i \mapsto z_i e_1^i$$ 保存$$\set{M_0^{i,j,k}}$$.
@@ -306,14 +306,19 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 コンフォーマル・フィールド理論(Conformal Field Theory)の有名な連想関係を考えてみましょう。
 
 ```math
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{e^ke^\ell}e^\ell = \sum_{\ell,r} M^{i,j,r}\bar M^{k,\ell, r}e^\ell = \sum_{\ell,r} M^{i,\ell,r} M^{j,k,\bar r}e^\ell\ \therefore\\
-i = \bar j\ , \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,i,r}\bar M^{j,j,r} = \sum_r |M^{i,j,r}|^2
+\begin{aligned}
+e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell &= \sum_{\ell,r} M^{i,j,r}\bar M^{\bar k,\ell,r}e^\ell\\
+&= \sum_{\ell,r} M^{i,k,r}\bar M^{\bar j,\ell,r}e^\ell\ \therefore\\
+i = \bar j, \ell = k\text{ and relabeling } \implies \\
+\sum_r M^{i,\bar i,r}\bar M^{j,\bar j,r} &= \sum_r |M^{i,j,r}|^2
+\end{aligned}
 ```
 
-Corollary 1は、$$z_k\in U_1$$ は明確に定義され、前回の観測では、代数演算子の定義$$z_iz_jz_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ 固有関数の二乗によるポイントワイズ関数の乗算に同意します。生成された代数も密です$$L^2(M,g)$$ (Stone-Weierstrassより) いたるところで同意する。
+Corollary 1は、$$z_k\in U_1$$ は明確に定義され、前回の観測では、代数演算子の定義$$z_iz_jz_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ どちらも連想的であり、固有関数の絶対値の二乗によるポイントワイズ関数乗算に同意します。生成された代数も密です$$L^2(M,g)$$ (Stone-Weierstrassより) いたるところで同意する。
 
-Corollary 2は、その条件に注意して続きます。$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 全般的に正しい。If For Some Choiceシングル$$i,j,k$$製品について$$M^{i,i,k}\bar M^{j,j,k}$$ 汎用マニホールドは多重度1スペクトルを持つため、いくつかの基底のペアで異なっていた。これにより、仮説の必要性が確立され、その証明が完成します。
+Corollary 2の効率は、その条件に注意することによって続きます$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 全般的に正しい。If For Some Choiceシングル$$i,j,k$$製品について$$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 基地の間で意見の相違があり、各基地の間で意見の相違がある。
+
+どうしてですか? 汎用マニホールドは多重度1スペクトルを持つことも想定できるため、完全な対称グループは次のようになります。$$U_1^\infty$$ これらの製品は不変であり、定理1と矛盾します。これにより、仮説の必要性が確立され、その証明が完成します。
 
 これでコロラの証明は完了です。
 
