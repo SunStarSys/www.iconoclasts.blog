@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=49751
+status: verificado=49782
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -76,7 +76,8 @@ Para ser isométrico $$(M,g)$$, é uma condição *necessária e suficiente* par
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada $$k>0$$, há pelo menos um valor de $$i>0$$ para o qual $$M^{i,\bar i,k} \neq 0$$ em ambas as bases, e se para cada escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ concordam em ambas as bases.
+(Diagonal Litmus Test) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada $$k>0$$, há pelo menos um valor de $$i>0$$ para o qual $$M^{i,\bar i,k} \neq 0$$ em ambas as bases, e se para cada escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ concordam em ambas as bases. Aqui $$\bar j$$ representa a autofunção $$\bar e^j$$ nos cálculos integrais de triplo produto.
+\end{corolário}
 
 </div>
 </div>
@@ -108,7 +109,7 @@ Se considerarmos o mapa
 
 este trabalho estabelece a injetividade deste mapa para variedades Riemannianas fechadas (até a isometria Riemanniana em seu domínio). Outros resultados que aplicam essas técnicas para descrever sua imagem (e inversa), dentro de espaços de métricas de módulos selecionados, estão apenas começando [[AA25]](#AA25). Lá, Anshul Adve aborda rigorosamente os espaços tangentes da unidade de 2 orbifolds compactos e hiperbólicos usando essas mesmas **constantes de estrutura** da Teoria do Campo Conformal.
 
-O caso métrico Riemanniano genérico é completamente caracterizado pelo estudo de $$\set{\lambda_i, M^{i,i,k}}$$.
+O caso métrico Riemanniano genérico é completamente caracterizado pelo estudo de $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 Estes resultados foram demonstrados pela primeira vez durante uma palestra similarmente intitulada pelo autor em **MSRI** em 1997, mas eles aparecem aqui em forma publicada pela primeira vez.
 

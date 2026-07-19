@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =49751
+status: 驗證 =49782
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -74,7 +74,8 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每一個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,\bar i,k} \neq 0$$ 在兩個基礎中；如果是每個選擇$$i,j,k$$，產品$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 兩地皆同意。
+(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每一個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,\bar i,k} \neq 0$$ 在兩個基礎中；如果是每個選擇$$i,j,k$$，產品$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 兩地皆同意。這裡$$\bar j$$ 代表特徵函數$$\bar e^j$$ 在三產品積分計算中。
+\end{軟骨的}
 
 </div>
 </div>
@@ -106,7 +107,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 本白皮書為封閉的里曼尼亞人機組 (最多只能在其域內使用里曼尼亞人) 建立此地圖的注射性。套用這些技術來描述其影像 (和反向) 的進一步結果，就在測量結果的精選模數空間內開始使用[[AA25]](#AA25)。Anshul Adve 在 Conformal Field Theory 中使用這些相同的 **結構常數** 來處理緊密、雙曲雙曲兩曲的單位正切空間。
 
-一般 Riemannian 公制案例的特徵是研究$$\set{\lambda_i, M^{i,i,k}}$$.
+一般 Riemannian 公制案例的特徵是研究$$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 這些結果最初是在 1997 年 **MSRI** 的作者在類似標題的談話期間進行示範，但初次以公開的形式出現在這裡。
 

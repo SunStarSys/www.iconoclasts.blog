@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=49751
+status: 확인=49782
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -75,7 +75,8 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(대각선 리트머스 테스트) 정리의 가설에 설명된 대로 정형  기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 각각 $$k>0$$의 값이 하나 이상 있습니다. $$i>0$$ 대상 $$M^{i,\bar i,k} \neq 0$$ 두 가지 모두, 그리고 모든 선택의 경우 $$i,j,k$$, 제품 $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 두 기지에 모두 동의합니다.
+(대각선 리트머스 테스트) 정리의 가설에 설명된 대로 정형  기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 각각 $$k>0$$의 값이 하나 이상 있습니다. $$i>0$$ 대상 $$M^{i,\bar i,k} \neq 0$$ 두 가지 모두, 그리고 모든 선택의 경우 $$i,j,k$$, 제품 $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 두 기지에 모두 동의합니다. 여기 $$\bar j$$ 고유함수를 나타냅니다. $$\bar e^j$$ 트리플 제품 통합 계산(Triple Product Integral Computations)
+종료{코롤러리}
 
 </div>
 </div>
@@ -107,7 +108,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 이 논문은 닫힌 Riemannian 매니폴드 (도메인에 Riemannian isometry까지)에 대한이지도의 주사를 설정합니다. 메트릭의 일부 모듈 공간 내에서 해당 이미지(및 역)를 설명하기 위해 이러한 기술을 적용하는 추가 결과가 이제 막 시작되었습니다. [[AA25]](#AA25). 그곳에서 Anshul Adve는 Conformal Field Theory의 동일한 **구조 상수**를 사용하여 컴팩트하고 쌍곡선 2-orbifolds의 단위 접선 공간을 엄격하게 해결합니다.
 
-일반 Riemannian 미터법 사건은 완전히의 연구에 의해 특징입니다 $$\set{\lambda_i, M^{i,i,k}}$$.
+일반 Riemannian 미터법 사건은 완전히의 연구에 의해 특징입니다 $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 이러한 결과는 1997년 **MSRI**의 저자가 비슷한 제목으로 이야기하는 동안 처음 입증되었지만 처음 게시된 형식으로 여기에 나타납니다.
 
