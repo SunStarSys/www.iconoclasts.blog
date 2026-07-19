@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49782
+status: draft
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -74,7 +74,6 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
   <div class="card-body">
 
 (Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal  bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every $$k>0$$, there is at least one value of $$i>0$$ for which $$M^{i,\bar i,k} \neq 0$$ in both bases; and if for every choice of $$i,j,k$$, the product $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ agrees in both bases. Here $$\bar j$$ represents the eigenfunction $$\bar e^j$$ in the triple-product integral computations.
-\end{corollary}
 
   </div>
 </div>
