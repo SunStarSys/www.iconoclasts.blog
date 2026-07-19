@@ -327,7 +327,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 
 Corollary~\ref{coro-1} follows from the fact that $z_k\in U_1$ is well-defined under its presumed hypotheses, and the prior observation that the algebraic operators defined by $z_iz_jz_kM_0^{i,j,k}$ and $M_1^{i,j,k}$ agree with pointwise function multiplication by squares of eigenfunctions (the generated algebra from which is also dense in $L^2(M,g)$ again by Stone-Weierstrass.) So they agree everywhere.
 
-Corollary~\ref{coro-2} sufficiency follows by noting that the condition $\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$ is generically true. And if for some choice of $i,j,k$, the product $M^{i,i,k} M^{j,j,k}$ disagreed between bases, they would disagree in every pair of real-valued bases. Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $\mathbb{Z}_2^\infty$ where these products are invariants, contradicting Theorem\ref{thm}. This establishes the necessity of the hypothesis, and completes the proof.
+Corollary~\ref{coro-2} sufficiency follows by noting that the condition $\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$ is generically true. And if for some choice of $i,j,k$, the product $M^{i,i,k} M^{j,j,k}$ disagreed between bases, they would disagree in every pair of real-valued bases. Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $\mathbb{Z}_2^\infty$ where these products are invariants, contradicting Theorem~\ref{thm}. This establishes the necessity of the hypothesis, and completes the proof.
 
 This completes the proof of the Corollaries.
 
