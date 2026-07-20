@@ -332,7 +332,7 @@ Corollary~\ref{coro-1} follows from the fact that $z_k\in U_1$ is well-defined u
 \forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.
 \end{equation}
 
-Corollary~\ref{coro-2} sufficiency follows by noting that the Equation~\ref{cond-2} is generically true. And if for some choice of $i,j,k$, the product $M^{i,\bar i,k} \bar M^{j,\bar j,k}$ disagreed between bases, it would disagree in every pair of bases.
+Corollary~\ref{coro-2} sufficiency follows by noting that the Equation~\ref{cond-2} is generically true, as is the nonvanishing determinant condition in the prior paragraph. And if for some choice of $i,j,k$, the product $M^{i,\bar i,k} \bar M^{j,\bar j,k}$ disagreed between bases, it would disagree in every pair of bases.
 
 Why? Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $U_1^\infty$ where these products are invariants, contradicting Theorem~\ref{thm}. This establishes the necessity of the hypothesis, and completes the proof.
 
