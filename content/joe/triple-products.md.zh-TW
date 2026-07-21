@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =49782
+status: 驗證 =49887
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -74,8 +74,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每一個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,\bar i,k} \neq 0$$ 在兩個基礎中；如果是每個選擇$$i,j,k$$，產品$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 兩地皆同意。這裡$$\bar j$$ 代表特徵函數$$\bar e^j$$ 在三產品積分計算中。
-\end{軟骨的}
+(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每一個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,\bar i,k} \neq 0$$ 在兩個基礎中；如果每個選擇$$i,j,k$$，產品$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 在兩個基礎中同意；如果由$$\set{|e^i|^2}$$ 至少以一個基準來分隔點。這裡$$\bar j$$ 代表特徵函數$$\bar e^j$$ 在三產品積分計算中。
 
 </div>
 </div>
@@ -304,7 +303,7 @@ Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
 
 ## 核數證明
 
-現在考慮來自共形場理論的著名關聯性關係 (實質基礎)：
+Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 \begin{aligned}
@@ -315,9 +314,25 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1 遵循的事實$$z_k\in U_1$$ 是定義完善的，且先前觀察的是由其定義的代數運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同時也是關聯性，並同意將點函數乘以特徵的絕對值方形，產生的代數也密集於$$L^2(M,g)$$ (再加上 Stone-Weierstrass) 因此，他們在任何地方都同意。
+Corollary 1 遵循的事實$$z_k\in U_1$$ 是定義完善的，且先前觀察的是由其定義的代數運算子$$z_iz_jz_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同時也是關聯性，並同意將點函數乘以特徵的絕對值方形，產生的代數也密集於$$L^2(M,g)$$ (再由 Stone-Weierstrass 推定為獨立點)。建立中$$\det M^{i,\bar i,k} \ne 0$$ 通常在有限維度的次矩陣上會因為此目的而成功。
 
-冠狀動脈 2 充分性遵循指出此狀況$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ 通常為真。如果選擇了$$i,j,k$$，產品$$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 在基礎之間不同意，他們會不同意每對基礎。
+為什麼？開始$$\mathscr V$$ 是向量空間產生者$$\set{|e_i|^2}$$，和$$\mathscr W$$ 針對$$\set{e^i}$$。接著是交換圖
+
+```math
+\begin{CD}
+  \mathscr V @>M^{i,i,k}e^k >> \mathscr W\\
+  @V\set{|e^i|^2(x)}VV @VV\set{e^i(x)}V\\
+  \Complex^\N @>>M^{i,i,k} > \Complex^\N
+\end{CD}
+```
+
+及突出$$M^{i,i,k}$$ 隱含$$\ker = 0$$ 用於評估對應$$\set{|e^i|^2(x)}$$，所以$$\mathscr V$$ 每當非消失的決定因素條件保留時，就會分隔點。
+
+因此，他們在任何地方都同意。
+
+$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
+
+冠狀動脈 2 充分性遵循指出「方程式」<span class="eqno"></span> 通常為真，如前段中的不消失的決定因素條件。如果選擇了$$i,j,k$$，產品$$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 在基礎之間不同意，他們會不同意每對基礎。
 
 為什麼？由於一般的歧管也可以被推定為具有 multiplicity-1 頻譜，因此可以將完整的對稱群組減少為$$U_1^\infty$$ 其中這些產品不變，與定理 1 相反。這會建立假設的必要性，並完成證明。
 

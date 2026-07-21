@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=49782
+status: verifierad=49887
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -75,8 +75,7 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om för varje $$k>0$$Det finns minst ett värde av $$i>0$$ för vilken $$M^{i,\bar i,k} \neq 0$$ i båda baserna, och om för varje val av $$i,j,k$$, produkten $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ Instämmer i båda baserna. Här $$\bar j$$ representerar egenfunktionen $$\bar e^j$$ i trippelproduktintegrerade beräkningar.
-\end{följdsats}
+(Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om för varje $$k>0$$Det finns minst ett värde av $$i>0$$ för vilken $$M^{i,\bar i,k} \neq 0$$ i båda baserna, om för varje val av $$i,j,k$$, produkten $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ är överens om båda baserna, och om algebra genereras av $$\set{|e^i|^2}$$ separerar punkter på minst en bas. Här $$\bar j$$ representerar egenfunktionen $$\bar e^j$$ i trippelproduktintegrerade beräkningar.
 
 </div>
 </div>
@@ -305,7 +304,7 @@ Anmärkning: för det endimensionella flat-tori fallet nedan, $$\tilde{Q}_k(e^i,
 
 ## Bevis för korollarier
 
-Tänk nu på de berömda associativitetsrelationerna från Conformal Field Theory (på en verklig grund):
+Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 \begin{aligned}
@@ -316,9 +315,25 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1 följer av det faktum att $$z_k\in U_1$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ är båda associativa och är överens med pointwise funktion multiplikation av rutor av absoluta värden för egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Omdirigerad från Stone-Weierstrass) De är överens överallt.
+Corollary 1 följer av det faktum att $$z_k\in U_1$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_jz_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ är båda associativa och är överens med pointwise funktion multiplikation av rutor av absoluta värden för egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Återigen av Stone-Weierstrass, eftersom det antas vara separata punkter). Upprättar $$\det M^{i,\bar i,k} \ne 0$$ Oändligt ofta på ändlig-dimensionella undergivenhet skulle räcka för detta ändamål.
 
-Corollary 2-tillräcklighet följer genom att notera att villkoret $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ Det är generellt sant. Om för något val av $$i,j,k$$, produkten $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Oenighet mellan baser, skulle de vara oense i varje par baser.
+Varför? Låt $$\mathscr V$$ vara det vektorrum som genereras av $$\set{|e_i|^2}$$och $$\mathscr W$$ för $$\set{e^i}$$. Det kommutativa diagrammet
+
+```math
+\begin{CD}
+  \mathscr V @>M^{i,i,k}e^k >> \mathscr W\\
+  @V\set{|e^i|^2(x)}VV @VV\set{e^i(x)}V\\
+  \Complex^\N @>>M^{i,i,k} > \Complex^\N
+\end{CD}
+```
+
+och surjektivitet av $$M^{i,i,k}$$ innebär $$\ker = 0$$ för utvärderingskartan $$\set{|e^i|^2(x)}$$, så $$\mathscr V$$ separerar punkter när det non-vanishing determinant villkoret håller.
+
+De är överens överallt.
+
+$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
+
+Corollary 2-tillräcklighet följer genom att notera att ekvation <span class="eqno"></span> är allmänt sant, liksom det icke-förvanskande avgörande villkoret i föregående stycke. Om för något val av $$i,j,k$$, produkten $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Oenighet mellan baser, skulle de vara oense i varje par baser.
 
 Varför? Eftersom generiska grenrör kan antas också ha multiplikation-1-spektra, minskar detta hela symmetrigruppen till $$U_1^\infty$$ där dessa produkter är oföränderliga, motsäger teorem 1. Detta fastställer hypotesens nödvändighet och kompletterar beviset.
 

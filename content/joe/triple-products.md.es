@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=49782
+status: verificado=49887
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -76,8 +76,7 @@ Ser isométrico para $$(M,g)$$, es una condición *necesaria y suficiente* para 
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Dados un par de valores propios que preservan las bases ortonormales como se describe en la hipótesis del Teorema, los colectores son isométricos si por cada $$k>0$$, hay al menos un valor de $$i>0$$ cuyo $$M^{i,\bar i,k} \neq 0$$ en ambas bases, y si por cada elección de $$i,j,k$$, el producto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ de acuerdo en ambas bases. Aquí $$\bar j$$ representa la propia función $$\bar e^j$$ en los cálculos integrales de triple producto.
-\final{corolario}
+(Diagonal Litmus Test) Dados un par de valores propios que preservan las bases ortonormales como se describe en la hipótesis del Teorema, los colectores son isométricos si por cada $$k>0$$, hay al menos un valor de $$i>0$$ cuyo $$M^{i,\bar i,k} \neq 0$$ en ambas bases; si por cada elección de $$i,j,k$$, el producto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ en ambas bases; y si el álgebra generado por $$\set{|e^i|^2}$$ separa puntos en al menos una base. Aquí $$\bar j$$ representa la propia función $$\bar e^j$$ en los cálculos integrales de triple producto.
 
 </div>
 </div>
@@ -306,7 +305,7 @@ Nota: para el estuche de torsión plana unidimensional a continuación, $$\tilde
 
 ## Prueba de corolarios
 
-Ahora considere las famosas relaciones de asociatividad de la Teoría del Campo Conformal (en una base real):
+Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 \begin{aligned}
@@ -317,9 +316,25 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corolario 1 se deriva del hecho de que $$z_k\in U_1$$ está bien definido, y la observación previa de que los operadores algebraicos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ son ambos asociativos, y están de acuerdo con la multiplicación de la función puntual por cuadrados de valores absolutos de las funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ (de nuevo por Stone-Weierstrass). Así que están de acuerdo en todas partes.
+Corolario 1 se deriva del hecho de que $$z_k\in U_1$$ está bien definido, y la observación previa de que los operadores algebraicos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ son ambos asociativos, y están de acuerdo con la multiplicación de la función puntual por cuadrados de valores absolutos de las funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ (de nuevo por Stone-Weierstrass, ya que se presume que separa puntos). Establecimiento $$\det M^{i,\bar i,k} \ne 0$$ infinitamente a menudo en submatrices de dimensiones finitas sería suficiente para este propósito.
 
-La suficiencia del Corolario 2 sigue observando que la condición $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ es genéricamente cierto. Y si por alguna elección de $$i,j,k$$, el producto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ En desacuerdo entre bases, estarían en desacuerdo en cada par de bases.
+¿Por qué? Permitir $$\mathscr V$$ ser el espacio vectorial generado por $$\set{|e_i|^2}$$y $$\mathscr W$$ para $$\set{e^i}$$. Luego el diagrama conmutativo
+
+```math
+\begin{CD}
+  \mathscr V @>M^{i,i,k}e^k >> \mathscr W\\
+  @V\set{|e^i|^2(x)}VV @VV\set{e^i(x)}V\\
+  \Complex^\N @>>M^{i,i,k} > \Complex^\N
+\end{CD}
+```
+
+y la surjetividad de $$M^{i,i,k}$$ implica $$\ker = 0$$ para el mapa de evaluación $$\set{|e^i|^2(x)}$$, así que $$\mathscr V$$ separa puntos siempre que se mantenga la condición determinante no decreciente.
+
+Así que están de acuerdo en todas partes.
+
+$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
+
+La suficiencia del Corolario 2 sigue observando que la ecuación <span class="eqno"></span> es genéricamente cierto, al igual que la condición determinante que no desaparece en el párrafo anterior. Y si por alguna elección de $$i,j,k$$, el producto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ En desacuerdo entre bases, estarían en desacuerdo en cada par de bases.
 
 ¿Por qué? Dado que se puede presumir que los colectores genéricos también tienen espectros de multiplicidad 1, esto reduce el grupo de simetría completo a $$U_1^\infty$$ donde estos productos son invariantes, contradiciendo el Teorema 1. Esto establece la necesidad de la hipótesis, y completa la prueba.
 

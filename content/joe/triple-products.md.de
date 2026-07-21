@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=49782
+status: überprüft=49887
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -75,8 +75,7 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 </div>
   <div class="card-body">
 
-(Diagonaler Litmus-Test) Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede $$k>0$$Es gibt mindestens einen Wert von $$i>0$$ für die $$M^{i,\bar i,k} \neq 0$$ auf beiden Seiten, und wenn für jede Wahl $$i,j,k$$, das Produkt $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ stimmt in beiden Basen überein. Hier $$\bar j$$ repräsentiert die Eigenfunktion $$\bar e^j$$ In den Triple-Product Integral-Berechnungen.
-\end{Folge}
+(Diagonaler Litmus-Test) Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede $$k>0$$Es gibt mindestens einen Wert von $$i>0$$ für die $$M^{i,\bar i,k} \neq 0$$ In beiden Basen, wenn für jede Wahl $$i,j,k$$, das Produkt $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ stimmt in beiden Basen zu; und wenn die Algebra erzeugt von $$\set{|e^i|^2}$$ trennt Punkte in mindestens einer Basis. Hier $$\bar j$$ repräsentiert die Eigenfunktion $$\bar e^j$$ In den Triple-Product Integral-Berechnungen.
 
 </div>
 </div>
@@ -305,7 +304,7 @@ Hinweis: für das eindimensionale Flat-Tori-Gehäuse unten, $$\tilde{Q}_k(e^i,e^
 
 ## Beweis der Korollarien
 
-Betrachten Sie nun die berühmten Assoziativitätsbeziehungen aus der konformen Feldtheorie (in einer realen Grundlage):
+Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 \begin{aligned}
@@ -316,9 +315,25 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ sind sowohl assoziativ als auch stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Absolutwerten von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist. $$L^2(M,g)$$ (Weitergeleitet von Stone-Weierstrass) Sie sind sich überall einig.
+Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ sind sowohl assoziativ als auch stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Absolutwerten von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist. $$L^2(M,g)$$ (Wiederum von Stone-Weierstrass, da davon ausgegangen wird, dass es Punkte voneinander trennt). Einrichten $$\det M^{i,\bar i,k} \ne 0$$ Unendlich oft würden zu diesem Zweck endliche Teilmatrizen ausreichen.
 
-Folge 2 Suffizienz folgt mit der Feststellung, dass die Bedingung $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ ist allgemein wahr. Und wenn für eine Auswahl von $$i,j,k$$, das Produkt $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Uneinigkeit zwischen den Basen, würden sie in jedem Paar von Basen nicht zustimmen.
+Warum? Lassen $$\mathscr V$$ der Vektorraum, der erzeugt wird durch $$\set{|e_i|^2}$$und $$\mathscr W$$ für $$\set{e^i}$$. Dann das kommutative Diagramm
+
+```math
+\begin{CD}
+  \mathscr V @>M^{i,i,k}e^k >> \mathscr W\\
+  @V\set{|e^i|^2(x)}VV @VV\set{e^i(x)}V\\
+  \Complex^\N @>>M^{i,i,k} > \Complex^\N
+\end{CD}
+```
+
+und Surjektivität von $$M^{i,i,k}$$ impliziert $$\ker = 0$$ für die Auswertungskarte $$\set{|e^i|^2(x)}$$, so $$\mathscr V$$ trennt Punkte, wenn die nicht-verschwindende Determinantenbedingung hält.
+
+Sie sind sich überall einig.
+
+$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
+
+Folge 2, indem man feststellt, dass Gleichung <span class="eqno"></span> ist allgemein wahr, ebenso wie die nicht verschwindende Determinantenbedingung im vorherigen Absatz. Und wenn für eine Auswahl von $$i,j,k$$, das Produkt $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Uneinigkeit zwischen den Basen, würden sie in jedem Paar von Basen nicht zustimmen.
 
 Warum? Da von generischen Verteilern auch Multiplizitäts-1-Spektren angenommen werden kann, reduziert dies die volle Symmetriegruppe auf $$U_1^\infty$$ bei denen es sich um invariante Produkte handelt, die im Widerspruch zu Satz 1 stehen. Dies begründet die Notwendigkeit der Hypothese und vervollständigt den Beweis.
 

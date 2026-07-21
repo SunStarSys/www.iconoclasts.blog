@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=49782
+status: vérifié=49887
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -76,8 +76,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 </div>
   <div class="card-body">
 
-(Test diagonal de Litmus) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque $$k>0$$, au moins une valeur de $$i>0$$ pour lequel $$M^{i,\bar i,k} \neq 0$$ dans les deux bases ; et si pour chaque choix $$i,j,k$$, le produit $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ d'accord dans les deux bases. Ici $$\bar j$$ représente la fonction propre $$\bar e^j$$ dans les calculs intégraux à triple produit.
-\end{corollaire}
+(Test diagonal de Litmus) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque $$k>0$$, au moins une valeur de $$i>0$$ pour lequel $$M^{i,\bar i,k} \neq 0$$ dans les deux bases ; si pour chaque choix $$i,j,k$$, le produit $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ convient dans les deux bases ; et si l'algèbre générée par $$\set{|e^i|^2}$$ sépare les points sur au moins une base. Ici $$\bar j$$ représente la fonction propre $$\bar e^j$$ dans les calculs intégraux à triple produit.
 
 </div>
 </div>
@@ -306,7 +305,7 @@ Remarque : pour le cas de tori plat unidimensionnel ci-dessous, $$\tilde{Q}_k(e^
 
 ## Preuve de corollaires
 
-Considérez maintenant les célèbres relations associatives de la théorie du champ conforme (sur une base réelle) :
+Now consider the famous associativity relations from Conformal Field Theory:
 
 ```math
 \begin{aligned}
@@ -317,9 +316,25 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Le corollaire 1 découle du fait que $$z_k\in U_1$$ est bien défini, et l'observation antérieure que les opérateurs algébriques définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ sont à la fois associatifs, et sont d'accord avec la multiplication de fonction ponctuelle par des carrés de valeurs absolues des fonctions propres, dont l'algèbre générée est également dense en $$L^2(M,g)$$ (à nouveau par Stone-Weierstrass.) Ils sont donc d'accord partout.
+Le corollaire 1 découle du fait que $$z_k\in U_1$$ est bien défini, et l'observation antérieure que les opérateurs algébriques définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ sont à la fois associatifs, et sont d'accord avec la multiplication de fonction ponctuelle par des carrés de valeurs absolues des fonctions propres, dont l'algèbre générée est également dense en $$L^2(M,g)$$ (encore une fois par Stone-Weierstrass, puisqu'il est présumé séparer des points). Etablissement $$\det M^{i,\bar i,k} \ne 0$$ infiniment souvent sur des sous-matrices de dimensions finies suffirait à cet effet.
 
-La suffisance du Corollaire 2 découle du fait que la condition $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,i,k} \ne 0$$ Généralement vrai. Et si pour un choix de $$i,j,k$$, le produit $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ en désaccord entre les bases, ils seraient en désaccord dans chaque paire de bases.
+Pourquoi ? Laissez $$\mathscr V$$ être l'espace vectoriel généré par $$\set{|e_i|^2}$$, et $$\mathscr W$$ pour $$\set{e^i}$$. Puis le diagramme commutatif
+
+```math
+\begin{CD}
+  \mathscr V @>M^{i,i,k}e^k >> \mathscr W\\
+  @V\set{|e^i|^2(x)}VV @VV\set{e^i(x)}V\\
+  \Complex^\N @>>M^{i,i,k} > \Complex^\N
+\end{CD}
+```
+
+et surjectivité de $$M^{i,i,k}$$ implique $$\ker = 0$$ pour la carte d'évaluation $$\set{|e^i|^2(x)}$$, donc $$\mathscr V$$ sépare les points chaque fois que la condition déterminante non disparue est maintenue.
+
+Ils sont donc d'accord partout.
+
+$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
+
+La suffisance du Corollaire 2 suit en notant que l'équation <span class="eqno"></span> est généralement vrai, comme l'est la condition déterminante non disparue dans le paragraphe précédent. Et si pour un choix de $$i,j,k$$, le produit $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ en désaccord entre les bases, ils seraient en désaccord dans chaque paire de bases.
 
 Pourquoi ? Puisque les collecteurs génériques peuvent être présumés avoir également des spectres de multiplicité-1, cela réduit le groupe de symétrie complet à $$U_1^\infty$$ où ces produits sont invariants, en contradiction avec le théorème 1. Cela établit la nécessité de l'hypothèse et complète la preuve.
 
