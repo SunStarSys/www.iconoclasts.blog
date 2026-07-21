@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49934
+status: verified=49938
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -243,7 +243,7 @@ This completes the proof of the Theorem.
 
 ### Discussion of Corollaries
 
-With $$\set{M_0^{i,j,k}}$$ and $$\set{M_1^{i,j,k}}$$ representing the two triple-product sets for the bases $$\set{e_0^i}$$ and $$\set{e_1^i}$$, let $$z_i \in U_1$$ be the $$U_1^\infty$$ action on such an orthonormal basis $$\set{e_1^i}$$. Thus, we need to choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+With $$\set{M_0^{i,j,k}}$$ and $$\set{M_1^{i,j,k}}$$ representing the two triple-product sets for the bases $$\set{e_0^i}$$ and $$\set{e_1^i}$$, let $$z_i \in U_1$$ be the $$U_1^\infty$$ action on such an orthonormal basis $$\set{e_1^i}$$. Thus, we need to choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 Why is this the case? In general, the symmetry group acting on the space of possible orthonormal bases of eigenfunctions is the space of Unitary Operators $$U: \mathscr H\rightarrow\mathscr H$$ that commute with projections $$P_{\mathcal V_\lambda}$$ onto the finite-dimensional eigenspaces $$\mathcal V_{\lambda}$$ associated with each individual eigenvalue $$\lambda$$ of the Laplacian. Therefore
 
@@ -313,7 +313,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1 follows from the fact that $$z_k\in U_1$$ is well-defined, and the prior observation that the algebraic operators defined by $$z_iz_jz_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ are both associative, and agree with pointwise function multiplication by squares of absolute values of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ (again by Stone-Weierstrass, since it is presumed to separate points). Establishing $$\det M^{i,\bar i,k} \ne 0$$ infinitely often on finite-dimensional submatrices would suffice for this purpose.[^1]
+Corollary 1 follows from the fact that $$z_k\in U_1$$ is well-defined, and the prior observation that the algebraic operators defined by $$z_iz_j\bar z_kM_0^{i,j,k}$$ and $$M_1^{i,j,k}$$ are both associative, and agree with pointwise function multiplication by squares of absolute values of eigenfunctions, the generated algebra of which is also dense in $$L^2(M,g)$$ (again by Stone-Weierstrass, since it is presumed to separate points). Establishing $$\det M^{i,\bar i,k} \ne 0$$ infinitely often on finite-dimensional submatrices would suffice for this purpose.[^1]
 
 So they agree everywhere.
 
