@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=49918
+status: verified=49922
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -378,5 +378,8 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 ```
 
 and bijectivity of $$M^{i,\bar i,k}$$ implies $$\ker = 0$$ for the evaluation map $$\set{|e^i|^2(x)}$$ (since $$\ker = 0$$ is known for the evaluation map $$\set{e^i(x)}$$), so $$\mathscr V$$ separates points whenever the non-vanishing determinant condition holds.
+
+
+Since $$|e^i|^2 = \sum_k M^{i,\bar i, k}e^k$$, it suffices to establish linear independence of $$|e^i|^2$$.
 
 <!-- $Date$ $Author$ $Revision$ -->
