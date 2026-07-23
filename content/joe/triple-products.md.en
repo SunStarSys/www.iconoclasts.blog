@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50080
+status: verified=50084
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -381,17 +381,20 @@ and the infinitely-often, finite-dimensional bijectivity of the unitary operator
 
 The agument is this:
 
-$$
-x \ne y \implies \exists k_0>0 \ ⋺\ |e^{k_0}(x) - e^{k_0}(y)| = \epsilon \gt 0.
-$$
+```math
+x \ne y \implies \exists k_0>0 \ ⋺\ e^{k_0}(x) - e^{k_0}(y) = \epsilon \gt 0.
+```
 
- Given $$\sum_{i<N}c_i|e^i|^2(x) - e^{k_0}(x) = - \sum_{k>N,i<N}c_iM^{i,\bar i, k}e^k(x)$$, pick $$N>0$$ such that $$|\sum_{k>N,i<N} c_iM^{i,\bar i, k}e^k(x)|\lt \epsilon\  \forall x, i < N$$. But that means
+Assume for contradiction that $$|e^i|^2(x) = |e^i|^2(y)\ \forall i$$. Since  $$\exists N>k_0\ ⋺\ \sum_{i<N}c_i|e^i|^2(x) - e^{k_0}(x) = - \sum_{k>N,i<N}c_iM^{i,\bar i, k}e^k(x)$$, pick $$K=K(\set{c_i},\delta > 0) > N\ ⋺\ |\sum_{k>K,i<N} c_iM^{i,\bar i, k}e^k(x)|\lt \delta\  \forall x, i<N$$. But that implies
 
-$$
-|\sum_{i<N} c_i |e^i|^2(x) - e^{k_0}(x)| \lt \epsilon \implies
-\sum_{i<N}c_i|e^i|^2(x) \ne\sum_{i<N}c_i|e^i|^2(y)
-$$
+```math
+|LHS(x)| := |\sum_{i < N} c_i |e^i|^2(x) - e^{k_0}(x) - \sum_{N < k \leq K,i < N}c_iM^{i,\bar i,k}e^k(x)| <\delta \implies\\
+|LHS(x)-LHS(y)|  > \epsilon -2\delta\\
+```
+But
 
-and so $$|e^i|^2(x) \ne |e^i|^2(y)$$ for some $$i < N$$.
+$$|LHS(x)-LHS(y)| < 2\delta,$$
+
+Which leads to a contradiction by choosing $$\delta < \epsilon/4$$.
 
 <!-- $Date$ $Author$ $Revision$ -->
