@@ -385,11 +385,11 @@ $$
 x \ne y \implies \exists k_0>0 such that |e^{k_0}(x) - e^{k_0}(y)| = \epsilon \gt 0.
 $$
 
-Pick $$N>0$$ such that $$\sum_{k>N} |M^{i,\bar i i, k}|^2 \lt \epsilon^2/4 \forall i $$.
+Pick $$N>0$$ such that $$\sum_{k>N} |M^{i,\bar i i, k}e^i(x)|^2\lt \epsilon^2/4 \forall x, i $$.
 
 But
 
 $$
-\sum_{i<N} c_i (|e^i|^2(x) - |e^i|^2(y)) = e^{k_0}(x) - e^{k_0}(y) - \sum_{i<N,k>N}c_iM^{i,\bar i,k}(e^i(x)-e^i(y)
+\sum_{i<N} c_i |e^i|^2(x) - e^{k_0}(x) = - \sum_{i<N,k>N}c_iM^{i,\bar i,k}e^i(x)
 $$
 <!-- $Date$ $Author$ $Revision$ -->
