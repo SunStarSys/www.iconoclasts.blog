@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50088
+status: verified=50092
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -388,13 +388,18 @@ x \ne y \implies \exists k_0>0 \ ⋺\ e^{k_0}(x) - e^{k_0}(y) = \epsilon \gt 0.
 Assume for contradiction that $$|e^i|^2(x) = |e^i|^2(y)\ \forall i$$. Since  $$\exists N>k_0\ ⋺\ \sum_{i<N}c_i|e^i|^2(x) - e^{k_0}(x) = - \sum_{k>N,i<N}c_iM^{i,\bar i, k}e^k(x)$$, pick $$K=K(\set{c_i},\delta > 0) > N\ ⋺\ |\sum_{k>K,i<N} c_iM^{i,\bar i, k}e^k(x)|\lt \delta\  \forall x$$. But that implies
 
 ```math
-|LHS(x)| := |\sum_{i < N} c_i |e^i|^2(x) - e^{k_0}(x) - \sum_{N < k \leq K,i < N}c_iM^{i,\bar i,k}e^k(x)| <\delta \implies\\
-|LHS(x)-LHS(y)|  > \epsilon -2\delta\\
+|LHS(\set{c_i},K,x)| := |\sum_{i < N} c_i |e^i|^2(x) - e^{k_0}(x) - \sum_{N < k \leq K,i < N}c_iM^{i,\bar i,k}e^k(x)| <\delta \implies\\
+|LHS(x)-LHS(y)| < 2\delta.
 ```
-But
 
-$$|LHS(x)-LHS(y)| < 2\delta,$$
+Now choose $$b_i(K) \ ⋺\ a_i := b_i + c_i\implies$$
 
-Which leads to a contradiction by choosing $$\delta < \epsilon/4$$.
+```math
+|LHS(\set{b_i}, K, x) - LHS(\set{b_i}, K, y)| > \epsilon - 2\delta,\\
+LHS(\set{a_i},K,x) - LHS(\set{a_i},K,y) = \epsilon\implies\\
+|LHS(\set{c_i},K,x)-LHS(\set{c_i},K,y)| > 2\delta,
+```
+
+a contradiction.
 
 <!-- $Date$ $Author$ $Revision$ -->
