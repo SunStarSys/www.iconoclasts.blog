@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50084
+status: verified=50088
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -379,13 +379,13 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 
 and the infinitely-often, finite-dimensional bijectivity of the unitary operator $$[M^{i,\bar i,k}]:\mathcal V \rightarrow \mathcal W$$ is just the Fourier expansion, so its uniform finite dimensional approximations implies injectivity for the evaluation map $$\set{|e^i|^2(x)}$$ (since injectivity is known for the evaluation map $$\set{e^k(x)}$$), which by definition means it separates points.
 
-The agument is this:
+The detailed argument is this:
 
 ```math
 x \ne y \implies \exists k_0>0 \ ⋺\ e^{k_0}(x) - e^{k_0}(y) = \epsilon \gt 0.
 ```
 
-Assume for contradiction that $$|e^i|^2(x) = |e^i|^2(y)\ \forall i$$. Since  $$\exists N>k_0\ ⋺\ \sum_{i<N}c_i|e^i|^2(x) - e^{k_0}(x) = - \sum_{k>N,i<N}c_iM^{i,\bar i, k}e^k(x)$$, pick $$K=K(\set{c_i},\delta > 0) > N\ ⋺\ |\sum_{k>K,i<N} c_iM^{i,\bar i, k}e^k(x)|\lt \delta\  \forall x, i<N$$. But that implies
+Assume for contradiction that $$|e^i|^2(x) = |e^i|^2(y)\ \forall i$$. Since  $$\exists N>k_0\ ⋺\ \sum_{i<N}c_i|e^i|^2(x) - e^{k_0}(x) = - \sum_{k>N,i<N}c_iM^{i,\bar i, k}e^k(x)$$, pick $$K=K(\set{c_i},\delta > 0) > N\ ⋺\ |\sum_{k>K,i<N} c_iM^{i,\bar i, k}e^k(x)|\lt \delta\  \forall x$$. But that implies
 
 ```math
 |LHS(x)| := |\sum_{i < N} c_i |e^i|^2(x) - e^{k_0}(x) - \sum_{N < k \leq K,i < N}c_iM^{i,\bar i,k}e^k(x)| <\delta \implies\\
