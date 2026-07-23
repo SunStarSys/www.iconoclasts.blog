@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: draft
+status: verified=50076
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -382,14 +382,18 @@ and the infinitely-often, finite-dimensional bijectivity of the unitary operator
 The agument is this:
 
 $$
-x \ne y \implies \exists k_0>0 such that |e^{k_0}(x) - e^{k_0}(y)| = \epsilon \gt 0.
+x \ne y \implies \exists k_0>0 \ ⋺\ |e^{k_0}(x) - e^{k_0}(y)| = \epsilon \gt 0.
 $$
 
-Pick $$N>0$$ such that $$\sum_{k>N} |M^{i,\bar i i, k}e^i(x)|^2\lt \epsilon^2/4 \forall x, i $$.
+Now pick $$N>0$$ such that $$\sum_{k>N} |c_iM^{i,\bar i, k}e^k(x)|^2\lt \epsilon^2\  \forall x, i < N$$.
 
 But
 
 $$
-\sum_{i<N} c_i |e^i|^2(x) - e^{k_0}(x) = - \sum_{i<N,k>N}c_iM^{i,\bar i,k}e^i(x)
+|\sum_{i<N} c_i |e^i|^2(x) - e^{k_0}(x)| \lt \epsilon \implies
+\sum_{i<N}c_i|e^i|^2(x) \ne\sum_{i<N}c_i|e^i|^2(y)
 $$
+
+and we are done.
+
 <!-- $Date$ $Author$ $Revision$ -->
