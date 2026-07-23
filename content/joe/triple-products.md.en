@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50076
+status: verified=50080
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -385,15 +385,13 @@ $$
 x \ne y \implies \exists k_0>0 \ ⋺\ |e^{k_0}(x) - e^{k_0}(y)| = \epsilon \gt 0.
 $$
 
-Now pick $$N>0$$ such that $$\sum_{k>N} |c_iM^{i,\bar i, k}e^k(x)|^2\lt \epsilon^2\  \forall x, i < N$$.
-
-But
+ Given $$\sum_{i<N}c_i|e^i|^2(x) - e^{k_0}(x) = - \sum_{k>N,i<N}c_iM^{i,\bar i, k}e^k(x)$$, pick $$N>0$$ such that $$|\sum_{k>N,i<N} c_iM^{i,\bar i, k}e^k(x)|\lt \epsilon\  \forall x, i < N$$. But that means
 
 $$
 |\sum_{i<N} c_i |e^i|^2(x) - e^{k_0}(x)| \lt \epsilon \implies
 \sum_{i<N}c_i|e^i|^2(x) \ne\sum_{i<N}c_i|e^i|^2(y)
 $$
 
-and we are done.
+and so $$|e^i|^2(x) \ne |e^i|^2(y)$$ for some $$i < N$$.
 
 <!-- $Date$ $Author$ $Revision$ -->
