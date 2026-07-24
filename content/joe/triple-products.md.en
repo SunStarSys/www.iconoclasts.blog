@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50117
+status: verified=50121
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -390,9 +390,10 @@ is finite-dimensional, hence compact, and
 [M]_{N_i}[M]_{N_i}^* = 1
 
 ```
-and
+and $$P_V W$$ unitary projection of $$W$$ onto $$V$$, and $$\mathscr H_N$$ the span of the first $$N$$ eigenvectors for the Laplacian,
+
 ```math
-\dim Range\ [M]_{N_i}|_{\mathscr H_{N_i}} = N_i,
+\dim P|_{\mathscr H_{N_i}} Range\ [M]_{N_i}= N_i,
 ```
 
 so $$[M]^{-1} = M^*:Range\  M\rightarrow \mathscr V$$ can be uniquely extended to $$\mathscr W$$. Now since $$1 - [M][M]^*$$ is also compact, its finite dimensional approximations converge to a compact operator that satisfies
@@ -404,6 +405,6 @@ since
 ```math
 \bra{h}\ket{k} = \lim_{i\rightarrow\infty}\bra{[M]^*_{N_i}h}\ket{[M]^*_{N_i}k}\forall k\in \mathscr W.\\
 ```
-This proves $$[M^{i,\bar i,k}]$$ is invertible with inverse $$[M^{i,\bar i,k}]^*$$. Furthermore, as noted previously, $$[M^{i,\bar i, k}]v_j = e^j\implies v_j = e^j$$, so in fact $$M=1$$ everywhere.
+This proves $$[M^{i,\bar i,k}]$$ is invertible with inverse $$[M^{i,\bar i,k}]^*$$. Furthermore, as noted previously, $$[M^{i,\bar i, k}]v_j = e^j\implies v_j = e^j$$, so in fact $$[M^{i,\bar i, k}]=1$$ everywhere.
 
 <!-- $Date$ $Author$ $Revision$ -->
