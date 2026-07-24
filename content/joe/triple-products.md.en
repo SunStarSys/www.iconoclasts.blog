@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: draft
+status: verified=50100
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -402,7 +402,26 @@ LHS(\set{a_i},N_0,K_0,x) - LHS(\set{a_i},N_0,K_0,y) = \epsilon\\
 -\epsilon - 2\delta_1 < \sum_{N_0\leq i < N_1,K_0\leq k < K_1}b^iM^{i,\bar i,k}(e^i(x)-e^i(y)) < -\epsilon + 2\delta_1 \implies\\
 |LHS(\set{b_i},N_1,K_1,x) - LHS(\set{b_i},N_1, K_1,y)| \lt 2(\delta_0 + \delta_1)
 ```
-Iterating on this procedure, if the resultant sequence $$v_{N_i}=\sum_{i < N_i} a_{i,N_i}|e^i|^2\in\mathcal V$$ is bounded, it converges to $$e^{k_0}$$.
+Iterating on this procedure, if the resultant sequence $$v_{N_i}=\sum_{i < N_i} a_{i,N_i}|e^i|^2\in\mathcal V$$ is bounded, it converges weakly to $$e^{k_0}$$.
+
+```math
+h\in\mathscr H \implies \exists \kappa > 0\ ⋺\ \forall N_i\\
+|\bra{v_{N_i}-e^{k_0}}\ket{\sum_k\hat h(k)e^k} - \bra{v_{N_i}-e^{k_0}}\ket{\sum_{k < \kappa}\hat h(k)e^k}| \leq \epsilon
+```
+But once $$N_i > \kappa$$, the second term vanishes. This implies $$e^{k_0} \in \mathcal V$$, which is a contradiction.
+
+So we need to prove $$v_{N_i}$$ is bounded. If not, then renormalized $$w_{N_i} := v_{N_i}/||v_{N_i}||$$ becomes
+
+```math
+\lim_{i\rightarrow\infty} \sum_{N_{i-1}\leq i < N_i, K_{i-1}\leq k  < K_i}|b_{i,N_i}M^{i,\bar i,k}|^2 = \infty \implies\\
+||[M^{i,\bar i,k}]_{N_i}w_{N_i}||\rightarrow 0
+```
+But this contradicts the fact that
+```math
+\lim_{K_{i}\rightarrow\infty} ||[M^{i,\bar i,k}]_{K_i}w_{N_i} - w_{N_i}|| = 0\implies\\
+\lim_{K_i\rightarrow\infty} \sum_{N_{i-1}\leq i < N_i, K_{i-1}\leq k}|b_{i,N_i}M^{i,\bar i,k}|^2 = 0
+```
+So the $$\set{v_{N_i}}\in \mathscr V$$ is bounded, which completes the proof.
 
 
 <!-- $Date$ $Author$ $Revision$ -->
