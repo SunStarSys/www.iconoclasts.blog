@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50110
+status: verified=50113
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -377,7 +377,7 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 \end{CD}
 ```
 
-as the operator $$[M^{i,\bar i,k}]:\mathcal V \rightarrow \mathcal W$$ is **invertible**, so $$\mathscr V = \mathscr W = \mathscr H$$.
+as the operator $$[M^{i,\bar i,k}]:\mathcal V \rightarrow \mathcal W$$ is **invertible**, so $$\mathscr V = \mathscr W = \mathscr H$$ and both vertical arrows in the diagram above are bijective if one is. For example, for $$x\ne y,\ x,y\in M\implies\ \exists k_0>0$$ such that $$e^k_0(x) \ne e^k_0(y)$$. Now pick $$v\in \mathcal V$$ with $$[M^{i,\bar i,k}]v=e^k_0\implies v = e^{k_0}$$, so $$v(x)\ne v(y)$$, hence $$\mathcal V$$ separates points.
 
 Take $$N_i\rightarrow\infty$$ such that the $$N_i \times N_i$$ square matrix $$[M]_{N_i}=M^{i,\bar i, k}$$ is invertible and note that
 ```math
@@ -390,7 +390,7 @@ is finite-dimensional, hence compact, and
 [M]_{N_i}[M]_{N_i}^* = 1
 
 ```
-and 
+and
 ```math
 \dim Range\ [M]_{N_i}|_{\mathscr H_{N_i}} = N_i,
 ```
@@ -404,6 +404,6 @@ since
 ```math
 \bra{h}\ket{k} = \lim_{i\rightarrow\infty}\bra{[M]^*_{N_i}h}\ket{[M]^*_{N_i}k}\forall k\in \mathscr W.\\
 ```
-This proves $$[M^{i,\bar i,k}]$$ is invertible with inverse $$[M^{i,\bar i,k}]^*$$.
+This proves $$[M^{i,\bar i,k}]$$ is invertible with inverse $$[M^{i,\bar i,k}]^*$$. Furthermore, as noted previously, $$[M^{i,\bar i, k}]e^j = e^j$$, so in fact $$M=1$$ everywhere.
 
 <!-- $Date$ $Author$ $Revision$ -->
