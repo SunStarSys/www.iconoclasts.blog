@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50092
+status: draft
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -385,21 +385,24 @@ The detailed argument is this:
 x \ne y \implies \exists k_0>0 \ ⋺\ e^{k_0}(x) - e^{k_0}(y) = \epsilon \gt 0.
 ```
 
-Assume for contradiction that $$|e^i|^2(x) = |e^i|^2(y)\ \forall i$$. Since  $$\exists N>k_0\ ⋺\ \sum_{i<N}c_i|e^i|^2(x) - e^{k_0}(x) = - \sum_{k>N,i<N}c_iM^{i,\bar i, k}e^k(x)$$, pick $$K=K(\set{c_i},\delta > 0) > N\ ⋺\ |\sum_{k>K,i<N} c_iM^{i,\bar i, k}e^k(x)|\lt \delta\  \forall x$$. But that implies
+Assume for contradiction that $$|e^i|^2(x) = |e^i|^2(y)\ \forall i$$. Since  $$\exists N_0 > k_0\ ⋺\ \sum_{i<N_0}c_i|e^i|^2(x) - e^{k_0}(x) = - \sum_{k > N_0,i < N_0}c_iM^{i,\bar i, k}e^k(x)$$, pick $$K_0=K_0(\set{c_i},\delta_0 > 0) > N_0\ ⋺\ |\sum_{k>K_0,i<N_0} c_iM^{i,\bar i, k}e^k(x)|\lt \delta_0\  \forall x$$. But that implies
 
 ```math
-|LHS(\set{c_i},K,x)| := |\sum_{i < N} c_i |e^i|^2(x) - e^{k_0}(x) - \sum_{N < k \leq K,i < N}c_iM^{i,\bar i,k}e^k(x)| <\delta \implies\\
-|LHS(x)-LHS(y)| < 2\delta.
+|LHS(\set{c_i},N_0,K_0,x)| := |\sum_{i < N} c_i |e^i|^2(x) - e^{k_0}(x) - \sum_{N_0 \leq k < K_0,i < N_0}c_iM^{i,\bar i,k}e^k(x)| <\delta_0 \implies\\
+|LHS(x)-LHS(y)| < 2\delta_0\implies\\
+-\epsilon - 2\delta_0 < -\sum_{N_0\leq k < K_0, i < N_0}c^iM^{i,\bar i, k}(e^k(x)-e^k(y)) < -\epsilon + 2\delta_0
 ```
 
-Now choose $$b_i(K) \ ⋺\ a_i := b_i + c_i\implies$$
+Now choose $$\delta_1<\delta_0, b_i(K_1(\delta_1)) \ ⋺\ a_i := b_i + c_i\implies$$
 
 ```math
-|LHS(\set{b_i}, K, x) - LHS(\set{b_i}, K, y)| > \epsilon - 2\delta,\\
-LHS(\set{a_i},K,x) - LHS(\set{a_i},K,y) = \epsilon\implies\\
-|LHS(\set{c_i},K,x)-LHS(\set{c_i},K,y)| > 2\delta,
+\epsilon - 2\delta_0 < LHS(\set{b_i},N_0, K_0, x) - LHS(\set{b_i}, N_0, K_0, y)<\epsilon + 2\delta_0\\
+LHS(\set{a_i},N_0,K_0,x) - LHS(\set{a_i},N_0,K_0,y) = \epsilon\\
+|LHS(\set{a_i},N_1,K_1,x) - LHS(\set{a_i},N_1,K_1,y)| < 2\delta_1\implies\\
+-\epsilon - 2\delta_1 < \sum_{N_0\leq i < N_1,K_0\leq k < K_1}b^iM^{i,\bar i,k}(e^i(x)-e^i(y)) < -\epsilon + 2\delta_1 \implies\\
+|LHS(\set{b_i},N_1,K_1,x) - LHS(\set{b_i},N_1, K_1,y)| \lt 2(\delta_0 + \delta_1)
 ```
+Iterating on this procedure, if the resultant sequence $$v_{N_i}=\sum_{i < N_i} a_{i,N_i}|e^i|^2\in\mathcal V$$ is bounded, it converges to $$e^{k_0}$$.
 
-a contradiction.
 
 <!-- $Date$ $Author$ $Revision$ -->
