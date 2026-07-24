@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50129
+status: verified=50133
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -408,6 +408,6 @@ since
 ```math
 \bra{h}\ket{k} = \lim_{i\rightarrow\infty}\bra{[M]^*_{N_i}h}\ket{[M]^*_{N_i}k}\forall h,k\in \mathscr W.\\
 ```
-This proves $$[M^{i,\bar i,k}]$$ is invertible with inverse $$[M^{i,\bar i,k}]^*$$. Furthermore, as noted previously, $$[M^{i,\bar i, k}]v_j = e^j\implies v_j = e^j$$, so in fact $$[M^{i,\bar i, k}]=1$$ everywhere.
+This proves $$[M^{i,\bar i,k}]=\lim_{i\rightarrow\infty}[M]_{N_i}$$ is invertible with inverse $$[M^{i,\bar i,k}]^*$$. Furthermore, as noted previously, $$[M^{i,\bar i, k}]v_j = e^j\implies v_j = e^j$$, so in fact $$[M^{i,\bar i, k}]=1$$ everywhere.
 
 <!-- $Date$ $Author$ $Revision$ -->
