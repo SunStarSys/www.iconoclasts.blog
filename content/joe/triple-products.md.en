@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50125
+status: verified=50129
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -379,18 +379,21 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 
 As the operator $$[M^{i,\bar i,k}]:\mathcal V \rightarrow \mathcal W$$ is **invertible**, so $$\mathscr V = \mathscr W = \mathscr H$$ and both vertical arrows in the diagram above are bijective if one is. For example, for $$x\ne y,\ x,y\in M\implies\ \exists k_0>0$$ such that $$e^k_0(x) \ne e^k_0(y)$$. Now pick $$v\in \mathcal V$$ with $$[M^{i,\bar i,k}]v=e^k_0\implies v = e^{k_0}$$, so $$v(x)\ne v(y)$$, hence $$\mathcal V$$ separates points.
 
-Take $$N_i\rightarrow\infty$$ such that the $$N_i \times N_i$$ square matrix $$[M]_{N_i}=[M^{i,\bar i, k}]$$ is invertible and note that
+Take $$N_i\rightarrow\infty$$ such that the $$N_i \times N_i$$ square matrix $$[M]_{N_i,N_i}=[M^{i,\bar i, k}]$$ is invertible, and define 
+```math
+[M]_{N_i} := \lim_{K\rightarrow\infty}[M]_{N_i,K}
+```
+and note that
 ```math
 \lim_{K_i\rightarrow\infty} 1-[M^{j,\bar j,k}]_{K_i,N_i}^*[M^{i,i,k}]_{N_i,K_i}
 ```
 is finite-dimensional, hence compact, and
 
 ```math
-\bra{h}\ket{k} = \bra{[M]_{N_i}h}\ket{[M]_{N_i}k}\forall k\in \mathscr V\implies\\
-[M]_{N_i}[M]_{N_i}^* = 1
-
+\bra{h}\ket{k} = \bra{[M]_{N_i}h}\ket{[M]_{N_i}k}\forall h,k\in \mathscr V\implies\\
+[M]_{N_i}[M]_{N_i}^* = 1.
 ```
-and $$P_V W$$ unitary projection of $$W$$ onto $$V$$, and $$\mathscr H_N$$ the span of the first $$N$$ eigenvectors for the Laplacian,
+With $$P_V W$$ the unitary projection of $$W$$ onto $$V$$, and $$\mathscr H_N$$ the span of the first $$N$$ eigenvectors for the Laplacian,
 
 ```math
 \dim P|_{\mathscr H_{N_i}} Range\ [M]_{N_i}= N_i,
@@ -403,7 +406,7 @@ so $$[M]^{-1} = M^*:Range\  M\rightarrow \mathscr V$$ can be uniquely extended t
 ```
 since
 ```math
-\bra{h}\ket{k} = \lim_{i\rightarrow\infty}\bra{[M]^*_{N_i}h}\ket{[M]^*_{N_i}k}\forall k\in \mathscr W.\\
+\bra{h}\ket{k} = \lim_{i\rightarrow\infty}\bra{[M]^*_{N_i}h}\ket{[M]^*_{N_i}k}\forall h,k\in \mathscr W.\\
 ```
 This proves $$[M^{i,\bar i,k}]$$ is invertible with inverse $$[M^{i,\bar i,k}]^*$$. Furthermore, as noted previously, $$[M^{i,\bar i, k}]v_j = e^j\implies v_j = e^j$$, so in fact $$[M^{i,\bar i, k}]=1$$ everywhere.
 
