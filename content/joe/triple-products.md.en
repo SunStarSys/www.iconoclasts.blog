@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50178
+status: verified=50193
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -258,7 +258,7 @@ is the image of $$M^{i,j,k}$$ under $$U$$'s basis action $$e^i \mapsto U(e^i)$$.
 
 Now under the conditions of Corollary 2, each of the $$\mathcal V_\lambda$$ are one dimensional vector spaces over $$\Complex$$, but that also means they are one dimensional vector spaces over $$\Reals$$, and so the full multiplicative symmetry group is $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-More generally, the associated prerequisite "regarding agreement in absolute values" would simply become "preservation of the ordered set of singular values of $$\set{M^{i,j,k}}$$ (counted with multiplicity), when viewed as a collection of maps from $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", which are a robust set of Unitary Invariants.  We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
+More generally, the associated prerequisite "regarding agreement in product values" would simply become "preservation of the ordered set of singular values of $$\set{M^{i,j,k}}$$ (counted with multiplicity), when viewed as a collection of maps from $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", which are a robust set of Unitary Invariants.  We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
 
 Getting back to Corollary 1, we observe that the proof involves establishing this implication:
 
