@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50162
+status: verified=50166
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -319,7 +319,7 @@ So they agree everywhere.
 
 $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
 
-Corollary 2 sufficiency follows by noting that Equation <span class="eqno"></span> is generically true, as is the vanishing adjoint-map kernel condition in the prior paragraph. And if for some choice of $$i,j,k$$, the product $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ disagreed between bases, they would disagree in every pair of bases.
+Corollary 2 sufficiency follows by noting that Equation <span class="eqno"></span> is generically true, as is the stronger vanishing adjoint-map kernel condition in the prior paragraph. And if for some choice of $$i,j,k$$, the product $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ disagreed between bases, they would disagree in every pair of bases.
 
 Why? Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $$U_1^\infty$$ where these products are invariants, contradicting Theorem 1. This establishes the necessity of the hypothesis, and completes the proof.
 
