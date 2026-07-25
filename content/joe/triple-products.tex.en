@@ -339,7 +339,7 @@ So they agree everywhere. This completes the proof of Corollary~\ref{coro-1}.
 
 Corollary~\ref{coro-2} sufficiency follows by noting that the vanishing adjoint kernel condition in Corollary~\ref{coro-1} is generically true. And if for some choice of $i,j,k$, the product $M^{i,\bar i,k} \bar M^{j,\bar j,k}$ disagreed between bases, it would disagree in every pair of bases.
 
-Why? Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $U_1^\infty$ where these products are invariants, contradicting Theorem~\ref{thm}. This establishes the necessity of the hypothesis, and completes the proof of Corollary~\ref{coro-2}.
+Why? Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $U_1^\infty$ where these products are invariants, contradicting Theorem~\ref{thm}. Further reduction to $\mathbb{Z}_2^\infty$ via real-valued bases ensures the products are real-valued. This establishes the necessity of the hypothesis, and completes the proof of Corollary~\ref{coro-2}.
 
 \end{proof}
 
