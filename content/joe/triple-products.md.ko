@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=50178
+status: 확인=50217
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -77,6 +77,11 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 (대각선 리트머스 테스트) 정리의 가설에 설명된 대로 정형  기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 각각 $$k>0$$의 값이 하나 이상 있습니다. $$i>0$$ 대상 $$M^{i,\bar i,k} \neq 0$$ 두 기지에서; 모든 선택의 경우 $$i,j,k$$, 제품 $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 두 베이스에 모두 동의하고 벡터 공간이 $$\set{|e^i|^2}$$ 하나 이상의 기준으로 점을 구분합니다. 여기 $$\bar j$$ 고유함수를 나타냅니다. $$\bar e^j$$ 트리플 제품 통합 계산(Triple Product Integral Computations)
 
+또한 $$\mathscr V$$ Hilbert space 생성자 $$\set{|e^i|^2}$$, 인접 맵인 경우에만 점을 분리합니다.
+```math
+[M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
+```
+Injection 입니다.
 </div>
 </div>
 
@@ -260,7 +265,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 이제 Corollary 2의 조건 하에서, 각각의 $$\mathcal V_\lambda$$ 1차원 벡터 공간 $$\Complex$$그러나 그것은 또한 그들이 하나의 차원 벡터 공간을 의미 $$\Reals$$, 따라서 전체 다중 대칭 그룹은 $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-일반적으로 연관된 필요 조건 "절대값의 계약 관련" 그저 그렇게 될 뿐 "정렬된 단수 값 집합 보존 $$\set{M^{i,j,k}}$$ (다중성으로 계산됨), 에서 맵 모음으로 표시되는 경우 $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"의 강력한 단일 불변 집합입니다.  우리는이 일반화 된 추측이 사실임을 확신하지 못하는데, 이는 명백한 Sunada 건설을 통해 반예제를 생산할 수 있기 때문입니다.
+일반적으로 연관된 필요 조건 "제품 가치 계약 관련" 그저 그렇게 될 뿐 "정렬된 단수 값 집합 보존 $$\set{M^{i,j,k}}$$ (다중성으로 계산됨), 에서 맵 모음으로 표시되는 경우 $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"의 강력한 단일 불변 집합입니다.  우리는이 일반화 된 추측이 사실임을 확신하지 못하는데, 이는 명백한 Sunada 건설을 통해 반예제를 생산할 수 있기 때문입니다.
 
 Corollary 1로 돌아가면, 우리는 증거가이 의미를 확립하는 것을 포함합니다 :
 
@@ -315,7 +320,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1은 다음과 같은 사실입니다. $$z_k\in U_1$$ 잘 정의되어 있으며, 대수 연산자가 정의한 이전 관찰 $$z_iz_j\bar z_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ 둘 다 연관되어 있고, eigenfunctions의 절대값의 제곱에 의한 점방향 함수 곱셈에 동의하며, 생성된 대수학은 또한 조밀하다. $$L^2(M,g)$$ (다시 Stone-Weierstrass에 의해, 그것은 별개의 점으로 추정되기 때문에). 설정 중 $$\ker\ [M^{i,\bar i,k}]^* = 0$$ 충분하다, where $$\mathscr V$$ 은(는) 생성된 닫힌 힐베르트 공간입니다. $$\set{|e^i|^2}$$및 $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 기본 변경 ID 맵입니다.
+Corollary 1은 다음과 같은 사실입니다. $$z_k\in U_1$$ 잘 정의되어 있으며, 대수 연산자가 정의한 이전 관찰 $$z_iz_j\bar z_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ 둘 다 연관되어 있고, eigenfunctions의 절대값의 제곱에 의한 점방향 함수 곱셈에 동의하며, 생성된 대수학은 또한 조밀하다. $$L^2(M,g)$$ (다시 Stone-Weierstrass에 의해, 그것은 별개의 점으로 추정되기 때문에). 설정 중 $$\ker\ [M^{i,\bar i,k}]^* = 0$$ 정확히 동일합니다. $$\mathscr V$$ 은(는) 생성된 닫힌 힐베르트 공간입니다. $$\set{|e^i|^2}$$및 $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 기본 변경 ID 맵입니다.
 
 그들은 모든 곳에서 동의한다.
 

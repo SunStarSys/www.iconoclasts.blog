@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=50178
+status: überprüft=50217
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -77,6 +77,11 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 
 (Diagonaler Litmus-Test) Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede $$k>0$$Es gibt mindestens einen Wert von $$i>0$$ für die $$M^{i,\bar i,k} \neq 0$$ In beiden Basen, wenn für jede Wahl $$i,j,k$$, das Produkt $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ stimmt in beiden Basen zu; und wenn der Vektorraum $$\set{|e^i|^2}$$ trennt Punkte in mindestens einer Basis. Hier $$\bar j$$ repräsentiert die Eigenfunktion $$\bar e^j$$ In den Triple-Product Integral-Berechnungen.
 
+Außerdem, wenn wir definieren $$\mathscr V$$ ist der Hilbert-Raum, der von $$\set{|e^i|^2}$$, trennt es Punkte, wenn und nur, wenn die Nebenkarte
+```math
+[M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
+```
+ist injektiv.
 </div>
 </div>
 
@@ -260,7 +265,7 @@ ist das Bild von $$M^{i,j,k}$$ unter $$U$$'s Basismaßnahme $$e^i \mapsto U(e^i)
 
 Jetzt unter den Bedingungen von Corollary 2, jeder der $$\mathcal V_\lambda$$ sind eindimensionale Vektorräume über $$\Complex$$, aber das bedeutet auch, dass sie eindimensionale Vektorräume über $$\Reals$$und so ist die vollständige multiplikative Symmetriegruppe $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Allgemeiner die damit verbundene Voraussetzung "hinsichtlich der Übereinstimmung in absoluten Werten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten $$\set{M^{i,j,k}}$$ (mit Multiplizität gezählt), wenn als eine Sammlung von Karten aus $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", die ein robuster Satz von Unitary Invariants sind.  Wir sind deutlich weniger zuversichtlich, dass diese verallgemeinerte Vermutung zutrifft, da es möglich sein könnte, ein Gegenbeispiel über explizite Sunada-Konstruktion zu erstellen.
+Allgemeiner die damit verbundene Voraussetzung "bezüglich der Übereinstimmung mit den Produktwerten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten $$\set{M^{i,j,k}}$$ (mit Multiplizität gezählt), wenn als eine Sammlung von Karten aus $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", die ein robuster Satz von Unitary Invariants sind.  Wir sind deutlich weniger zuversichtlich, dass diese verallgemeinerte Vermutung zutrifft, da es möglich sein könnte, ein Gegenbeispiel über explizite Sunada-Konstruktion zu erstellen.
 
 Wenn wir zu Korrespondenz 1 zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
 
@@ -315,7 +320,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_j\bar z_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ sind sowohl assoziativ als auch stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Absolutwerten von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist. $$L^2(M,g)$$ (Wiederum von Stone-Weierstrass, da davon ausgegangen wird, dass es Punkte voneinander trennt). Einrichten $$\ker\ [M^{i,\bar i,k}]^* = 0$$ genügt, wo $$\mathscr V$$ Ist der geschlossene Hilbert-Raum von $$\set{|e^i|^2}$$und $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ ist die Change-of-Basis Identity Map.
+Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_j\bar z_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ sind sowohl assoziativ als auch stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Absolutwerten von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist. $$L^2(M,g)$$ (Wiederum von Stone-Weierstrass, da davon ausgegangen wird, dass es Punkte voneinander trennt). Einrichten $$\ker\ [M^{i,\bar i,k}]^* = 0$$ ist genau gleichwertig, wobei $$\mathscr V$$ Ist der geschlossene Hilbert-Raum von $$\set{|e^i|^2}$$und $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ ist die Change-of-Basis Identity Map.
 
 Sie sind sich überall einig.
 

@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=50178
+status: verificado=50217
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -78,6 +78,11 @@ Para ser isométrico $$(M,g)$$, é uma condição *necessária e suficiente* par
 
 (Diagonal Litmus Test) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada $$k>0$$, há pelo menos um valor de $$i>0$$ para o qual $$M^{i,\bar i,k} \neq 0$$ em ambas as bases; se para cada escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ concorda em ambas as bases; e se o espaço vetorial $$\set{|e^i|^2}$$ separa pontos em pelo menos uma base. Aqui $$\bar j$$ representa a autofunção $$\bar e^j$$ nos cálculos integrais de triplo produto.
 
+Além disso, se definirmos $$\mathscr V$$ é o espaço Hilbert gerado por $$\set{|e^i|^2}$$, separa pontos se e somente se o mapa adjacente
+```math
+[M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
+```
+é injetável.
 </div>
 </div>
 
@@ -261,7 +266,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 Agora, nas condições do Corolário 2, cada um dos $$\mathcal V_\lambda$$ são espaços vetoriais unidimensionais sobre $$\Complex$$, mas isso também significa que eles são espaços vetoriais unidimensionais $$\Reals$$, e assim o grupo multiplicativo completo da simetria é $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Mais geralmente, o prerrequisito associado "acordo em valores absolutos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado com multiplicidade), quando visto como uma coleção de mapas de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", que são um conjunto robusto de invariantes unitários.  Estamos significativamente menos confiantes de que esta conjectura generalizada é verdadeira, uma vez que pode ser possível produzir um contra-exemplo através de construção Sunada explícita.
+Mais geralmente, o prerrequisito associado "acordo sobre os valores dos produtos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado com multiplicidade), quando visto como uma coleção de mapas de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", que são um conjunto robusto de invariantes unitários.  Estamos significativamente menos confiantes de que esta conjectura generalizada é verdadeira, uma vez que pode ser possível produzir um contra-exemplo através de construção Sunada explícita.
 
 Voltando ao Corolário 1, observamos que a prova envolve estabelecer essa implicação:
 
@@ -316,7 +321,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-O Corolário 1 vem do fato de que $$z_k\in U_1$$ é bem definida, e a observação prévia que os operadores algébricos definidos por $$z_iz_j\bar z_kM_0^{i,j,k}$$ e $$M_1^{i,j,k}$$ são ambos associativos, e concordam com a multiplicação de função pontual por quadrados de valores absolutos de autofunções, cuja álgebra gerada também é densa em $$L^2(M,g)$$ (novamente por Stone-Weierstrass, uma vez que se presume separar pontos). Definindo $$\ker\ [M^{i,\bar i,k}]^* = 0$$ suficiente, onde $$\mathscr V$$ é o espaço fechado de Hilbert gerado por $$\set{|e^i|^2}$$, e $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ é o mapa de identidade de mudança de base.
+O Corolário 1 vem do fato de que $$z_k\in U_1$$ é bem definida, e a observação prévia que os operadores algébricos definidos por $$z_iz_j\bar z_kM_0^{i,j,k}$$ e $$M_1^{i,j,k}$$ são ambos associativos, e concordam com a multiplicação de função pontual por quadrados de valores absolutos de autofunções, cuja álgebra gerada também é densa em $$L^2(M,g)$$ (novamente por Stone-Weierstrass, uma vez que se presume separar pontos). Definindo $$\ker\ [M^{i,\bar i,k}]^* = 0$$ é exatamente equivalente, onde $$\mathscr V$$ é o espaço fechado de Hilbert gerado por $$\set{|e^i|^2}$$, e $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ é o mapa de identidade de mudança de base.
 
 Então eles concordam em todos os lugares.
 

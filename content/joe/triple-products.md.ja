@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=50178
+status: 確認済み=50217
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -76,6 +76,11 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 (対角リトマス試験)定理の仮説で説明されているように、正統な基質を保持する固有値のペアを考えると、マニホールドはすべての場合にアイソメです$$k>0$$の値が1つ以上あります$$i>0$$ 対象$$M^{i,\bar i,k} \neq 0$$ 両方のベースで、すべての選択の場合$$i,j,k$$製品について$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 両方のベースで一致し、ベクトル空間がスパンした場合$$\set{|e^i|^2}$$ 少なくとも1つの基準でポイントを分離します。こちら$$\bar j$$ 固有関数を表します$$\bar e^j$$ 三重積分計算
 
+さらに、定義する場合$$\mathscr V$$ ヒルバートの空間は、$$\set{|e^i|^2}$$は、隣接マップの場合にのみポイントを分離します。
+```math
+[M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
+```
+注射です。
 </div>
 </div>
 
@@ -259,7 +264,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 現在、コロラリー2の条件下では、$$\mathcal V_\lambda$$ 1次元ベクトル空間$$\Complex$$しかし、それはまた、それらが一次元ベクトル空間であることを意味する。$$\Reals$$のように、完全な多重対称グループは$$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-より一般的には、関連する前提条件"絶対値に関する合意" 単に"単数値の順序付きセットの保存$$\set{M^{i,j,k}}$$ (多重度でカウント)マップの集合として表示する場合$$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"これは、Unitary Invariantsの堅牢なセットです。我々は、この一般化された予想が、明示的なSunada建設を介して反例を作り出すことが可能である可能性があるので、真であることは、あまり確信がない。
+より一般的には、関連する前提条件"製品価値契約について" 単に"単数値の順序付きセットの保存$$\set{M^{i,j,k}}$$ (多重度でカウント)マップの集合として表示する場合$$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"これは、Unitary Invariantsの堅牢なセットです。我々は、この一般化された予想が、明示的なSunada建設を介して反例を作り出すことが可能である可能性があるので、真であることは、あまり確信がない。
 
 Corollary 1に戻ると、この証明には次のような意味があることがわかります。
 
@@ -314,7 +319,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1は、$$z_k\in U_1$$ は明確に定義され、前回の観測では、代数演算子の定義$$z_iz_j\bar z_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ どちらも連想的であり、固有関数の絶対値の二乗によるポイントワイズ関数乗算に同意します。生成された代数も密です$$L^2(M,g)$$ (Stone-Weierstrassは、ポイントを分離すると推定されているため)。設立$$\ker\ [M^{i,\bar i,k}]^* = 0$$ 十分、どこ$$\mathscr V$$ ヒルバートの閉じた空間$$\set{|e^i|^2}$$および$$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ は、基本の変更IDマップです。
+Corollary 1は、$$z_k\in U_1$$ は明確に定義され、前回の観測では、代数演算子の定義$$z_iz_j\bar z_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ どちらも連想的であり、固有関数の絶対値の二乗によるポイントワイズ関数乗算に同意します。生成された代数も密です$$L^2(M,g)$$ (Stone-Weierstrassは、ポイントを分離すると推定されているため)。設立$$\ker\ [M^{i,\bar i,k}]^* = 0$$ 正確には同等です。$$\mathscr V$$ ヒルバートの閉じた空間$$\set{|e^i|^2}$$および$$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ は、基本の変更IDマップです。
 
 いたるところで同意する。
 

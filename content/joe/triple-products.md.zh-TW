@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =50178
+status: 驗證 =50217
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -76,6 +76,11 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 (Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每一個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,\bar i,k} \neq 0$$ 在兩個基礎中；如果每個選擇$$i,j,k$$，產品$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 在兩個基礎上都同意；如果向量空間由$$\set{|e^i|^2}$$ 至少以一個基準來分隔點。這裡$$\bar j$$ 代表特徵函數$$\bar e^j$$ 在三產品積分計算中。
 
+此外，如果我們定義$$\mathscr V$$ 是 Hilbert 產生的空間$$\set{|e^i|^2}$$，它只會在相鄰的地圖 (如果和) 時分隔點
+```math
+[M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
+```
+注射。
 </div>
 </div>
 
@@ -259,7 +264,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 現在在珊瑚礁 2 的條件下，每個$$\mathcal V_\lambda$$ 一維向量空間超過$$\Complex$$，但這也表示它們是維度向量空間的上方$$\Reals$$，因此完整的乘對稱群組為$$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-一般而言，相關必備條件"關於絕對值的協議" 只是變成"保留排序的單一值集$$\set{M^{i,j,k}}$$ 檢視為地圖集合時 (以多重性計算)，$$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"，這是一套強大的單體不變量。我們對這種廣義的形容詞有極大的信心，因為可能可以通過明確的 Sunada 建築來產生一個反範例。
+一般而言，相關必備條件"關於產品值中的協議" 只是變成"保留排序的單一值集$$\set{M^{i,j,k}}$$ 檢視為地圖集合時 (以多重性計算)，$$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"，這是一套強大的單體不變量。我們對這種廣義的形容詞有極大的信心，因為可能可以通過明確的 Sunada 建築來產生一個反範例。
 
 回到 Corollary 1，我們觀察到驗證涉及建立此意涵：
 
@@ -314,7 +319,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1 遵循的事實$$z_k\in U_1$$ 是定義完善的，且先前觀察的是由其定義的代數運算子$$z_iz_j\bar z_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同時也是關聯性，並同意將點函數乘以特徵的絕對值方形，產生的代數也密集於$$L^2(M,g)$$ (再由 Stone-Weierstrass 推定為獨立點)。建立中$$\ker\ [M^{i,\bar i,k}]^* = 0$$ 成功，其中$$\mathscr V$$ 是所產生的封閉 Hilbert 空間$$\set{|e^i|^2}$$，和$$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 是基準變更識別對應。
+Corollary 1 遵循的事實$$z_k\in U_1$$ 是定義完善的，且先前觀察的是由其定義的代數運算子$$z_iz_j\bar z_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同時也是關聯性，並同意將點函數乘以特徵的絕對值方形，產生的代數也密集於$$L^2(M,g)$$ (再由 Stone-Weierstrass 推定為獨立點)。建立中$$\ker\ [M^{i,\bar i,k}]^* = 0$$ 完全相等，其中$$\mathscr V$$ 是所產生的封閉 Hilbert 空間$$\set{|e^i|^2}$$，和$$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 是基準變更識別對應。
 
 因此，他們在任何地方都同意。
 

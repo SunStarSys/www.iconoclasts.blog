@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=50178
+status: vérifié=50217
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -78,6 +78,11 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 
 (Test diagonal de Litmus) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque $$k>0$$, au moins une valeur de $$i>0$$ pour lequel $$M^{i,\bar i,k} \neq 0$$ dans les deux bases ; si pour chaque choix $$i,j,k$$, le produit $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ convient dans les deux bases ; et si l'espace vectoriel $$\set{|e^i|^2}$$ sépare les points sur au moins une base. Ici $$\bar j$$ représente la fonction propre $$\bar e^j$$ dans les calculs intégraux à triple produit.
 
+En outre, si nous définissons $$\mathscr V$$ est l'espace de Hilbert généré par $$\set{|e^i|^2}$$, il sépare les points si et seulement si la carte adjointe
+```math
+[M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
+```
+est injective.
 </div>
 </div>
 
@@ -261,7 +266,7 @@ est l'image de $$M^{i,j,k}$$ sous $$U$$Action de base $$e^i \mapsto U(e^i)$$.
 
 Maintenant, dans les conditions du Corollaire 2, chacun des $$\mathcal V_\lambda$$ sont des espaces vectoriels unidimensionnels sur $$\Complex$$, mais cela signifie également qu'ils sont des espaces vectoriels unidimensionnels sur $$\Reals$$et donc le groupe de symétrie multiplicative complet est $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Plus généralement, le prérequis associé "concernant l'accord sur les valeurs absolues" serait simplement devenu "conservation de l'ensemble ordonné de valeurs singulières $$\set{M^{i,j,k}}$$ (compté avec multiplicité), lorsqu'il est considéré comme un ensemble de cartes $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", qui sont un ensemble robuste d'invariants unitaires.  Nous sommes beaucoup moins convaincus que cette conjecture généralisée est vraie, car il peut être possible de produire un contre-exemple via une construction Sunada explicite.
+Plus généralement, le prérequis associé "concernant l'accord sur les valeurs des produits" serait simplement devenu "conservation de l'ensemble ordonné de valeurs singulières $$\set{M^{i,j,k}}$$ (compté avec multiplicité), lorsqu'il est considéré comme un ensemble de cartes $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", qui sont un ensemble robuste d'invariants unitaires.  Nous sommes beaucoup moins convaincus que cette conjecture généralisée est vraie, car il peut être possible de produire un contre-exemple via une construction Sunada explicite.
 
 En revenant au Corollaire 1, nous observons que la preuve implique d'établir cette implication :
 
@@ -316,7 +321,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Le corollaire 1 découle du fait que $$z_k\in U_1$$ est bien défini, et l'observation antérieure que les opérateurs algébriques définis par $$z_iz_j\bar z_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ sont à la fois associatifs, et sont d'accord avec la multiplication de fonction ponctuelle par des carrés de valeurs absolues des fonctions propres, dont l'algèbre générée est également dense en $$L^2(M,g)$$ (encore une fois par Stone-Weierstrass, puisqu'il est présumé séparer des points). Etablissement $$\ker\ [M^{i,\bar i,k}]^* = 0$$ suffit, où $$\mathscr V$$ est l'espace fermé de Hilbert généré par $$\set{|e^i|^2}$$, et $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ est la carte d'identité de changement de base.
+Le corollaire 1 découle du fait que $$z_k\in U_1$$ est bien défini, et l'observation antérieure que les opérateurs algébriques définis par $$z_iz_j\bar z_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ sont à la fois associatifs, et sont d'accord avec la multiplication de fonction ponctuelle par des carrés de valeurs absolues des fonctions propres, dont l'algèbre générée est également dense en $$L^2(M,g)$$ (encore une fois par Stone-Weierstrass, puisqu'il est présumé séparer des points). Etablissement $$\ker\ [M^{i,\bar i,k}]^* = 0$$ est exactement équivalent, où $$\mathscr V$$ est l'espace fermé de Hilbert généré par $$\set{|e^i|^2}$$, et $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ est la carte d'identité de changement de base.
 
 Ils sont donc d'accord partout.
 

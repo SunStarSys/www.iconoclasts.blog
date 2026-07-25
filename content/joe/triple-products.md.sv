@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50178
+status: verifierad=50217
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -77,6 +77,11 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 
 (Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om för varje $$k>0$$Det finns minst ett värde av $$i>0$$ för vilken $$M^{i,\bar i,k} \neq 0$$ i båda baserna, om för varje val av $$i,j,k$$, produkten $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ överens om båda baserna, och om vektorrummet spänner över $$\set{|e^i|^2}$$ separerar punkter på minst en bas. Här $$\bar j$$ representerar egenfunktionen $$\bar e^j$$ i trippelproduktintegrerade beräkningar.
 
+Om vi definierar $$\mathscr V$$ är Hilbert-rymden som genereras av $$\set{|e^i|^2}$$separerar den punkter om och endast om den justerade kartan
+```math
+[M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
+```
+är injicerande.
 </div>
 </div>
 
@@ -260,7 +265,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 Nu under villkoren i Corollary 2, var och en av de $$\mathcal V_\lambda$$ är ett dimensionellt vektorrum över $$\Complex$$, men det betyder också att de är endimensionella vektorrum över $$\Reals$$och så är hela den multiplikativa symmetrigruppen $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Mer allmänt, de associerade förutsättningarna "om överenskommelse i absoluta värden" skulle helt enkelt bli "bevarandet av den ordinerade uppsättningen singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsvarianter.  Vi är betydligt mindre övertygade om att denna generaliserade gissning är sann, eftersom det kan vara möjligt att producera ett motexempel via explicit Sunada-konstruktion.
+Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "bevarandet av den ordinerade uppsättningen singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsvarianter.  Vi är betydligt mindre övertygade om att denna generaliserade gissning är sann, eftersom det kan vara möjligt att producera ett motexempel via explicit Sunada-konstruktion.
 
 Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 
@@ -315,7 +320,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1 följer av det faktum att $$z_k\in U_1$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_j\bar z_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ är båda associativa och är överens med pointwise funktion multiplikation av rutor av absoluta värden för egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Återigen av Stone-Weierstrass, eftersom det antas vara separata punkter). Upprättar $$\ker\ [M^{i,\bar i,k}]^* = 0$$ Det räcker, där $$\mathscr V$$ är det stängda Hilbert-utrymmet som genereras av $$\set{|e^i|^2}$$och $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ är basändringsidentitetskartan.
+Corollary 1 följer av det faktum att $$z_k\in U_1$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_j\bar z_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ är båda associativa och är överens med pointwise funktion multiplikation av rutor av absoluta värden för egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Återigen av Stone-Weierstrass, eftersom det antas vara separata punkter). Upprättar $$\ker\ [M^{i,\bar i,k}]^* = 0$$ är exakt lika, där $$\mathscr V$$ är det stängda Hilbert-utrymmet som genereras av $$\set{|e^i|^2}$$och $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ är basändringsidentitetskartan.
 
 De är överens överallt.
 
