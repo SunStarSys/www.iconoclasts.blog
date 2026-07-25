@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=50217
+status: verificado=50232
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -76,7 +76,7 @@ Para ser isométrico $$(M,g)$$, é uma condição *necessária e suficiente* par
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada $$k>0$$, há pelo menos um valor de $$i>0$$ para o qual $$M^{i,\bar i,k} \neq 0$$ em ambas as bases; se para cada escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ concorda em ambas as bases; e se o espaço vetorial $$\set{|e^i|^2}$$ separa pontos em pelo menos uma base. Aqui $$\bar j$$ representa a autofunção $$\bar e^j$$ nos cálculos integrais de triplo produto.
+(Teste Litmus Diagonal) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ concorda em ambas as bases; e se o espaço vetorial $$\set{|e^i|^2}$$ separa pontos em pelo menos uma base. Aqui $$\bar j$$ representa a autofunção $$\bar e^j$$ nos cálculos integrais de triplo produto.
 
 Além disso, se definirmos $$\mathscr V$$ é o espaço Hilbert gerado por $$\set{|e^i|^2}$$, separa pontos se e somente se o mapa adjacente
 ```math
@@ -325,9 +325,7 @@ O Corolário 1 vem do fato de que $$z_k\in U_1$$ é bem definida, e a observaç�
 
 Então eles concordam em todos os lugares.
 
-$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
-
-Corolário 2 suficiência segue observando que Equação <span class="eqno"></span> é genericamente verdadeiro, assim como a condição mais forte do kernel adjoint-map no parágrafo anterior. E se para alguma escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ discordavam entre bases, discordavam em cada par de bases.
+A suficiência do Corolário 2 segue observando que a condição do kernel do mapa adjacente desaparecendo no parágrafo anterior é genericamente verdadeira. E se para alguma escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ discordavam entre bases, discordavam em cada par de bases.
 
 Por que? Uma vez que as variedades genéricas também podem ter espectros de multiplicidade-1, isso reduz o grupo de simetria total para $$U_1^\infty$$ onde esses produtos são invariantes, contradizendo o Teorema 1. Isso estabelece a necessidade da hipótese e completa a prova.
 

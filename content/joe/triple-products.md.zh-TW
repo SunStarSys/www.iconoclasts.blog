@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =50217
+status: 驗證 =50232
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -74,7 +74,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每一個$$k>0$$，至少有一個值$$i>0$$ 針對$$M^{i,\bar i,k} \neq 0$$ 在兩個基礎中；如果每個選擇$$i,j,k$$，產品$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 在兩個基礎上都同意；如果向量空間由$$\set{|e^i|^2}$$ 至少以一個基準來分隔點。這裡$$\bar j$$ 代表特徵函數$$\bar e^j$$ 在三產品積分計算中。
+(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每個選擇都屬於幾何$$i,j,k$$，產品$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 在兩個基礎上都同意；如果向量空間由$$\set{|e^i|^2}$$ 至少以一個基準來分隔點。這裡$$\bar j$$ 代表特徵函數$$\bar e^j$$ 在三產品積分計算中。
 
 此外，如果我們定義$$\mathscr V$$ 是 Hilbert 產生的空間$$\set{|e^i|^2}$$，它只會在相鄰的地圖 (如果和) 時分隔點
 ```math
@@ -323,9 +323,7 @@ Corollary 1 遵循的事實$$z_k\in U_1$$ 是定義完善的，且先前觀察�
 
 因此，他們在任何地方都同意。
 
-$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
-
-冠狀動脈 2 充分性遵循指出「方程式」<span class="eqno"></span> 通常為真，因為前段較強的消失點陣圖核心條件。如果選擇了$$i,j,k$$，產品$$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 在基礎之間不同意，他們會不同意每對基礎。
+Corollary 2 的效率遵循指出前段中的消失的相鄰對映核心條件一般為真。如果選擇了$$i,j,k$$，產品$$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 在基礎之間不同意，他們會不同意每對基礎。
 
 為什麼？由於一般的歧管也可以被推定為具有 multiplicity-1 頻譜，因此可以將完整的對稱群組減少為$$U_1^\infty$$ 其中這些產品不變，與定理 1 相反。這會建立假設的必要性，並完成證明。
 

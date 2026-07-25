@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=50217
+status: verificado=50232
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -76,7 +76,7 @@ Ser isométrico para $$(M,g)$$, es una condición *necesaria y suficiente* para 
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Dados un par de valores propios que preservan las bases ortonormales como se describe en la hipótesis del Teorema, los colectores son isométricos si por cada $$k>0$$, hay al menos un valor de $$i>0$$ cuyo $$M^{i,\bar i,k} \neq 0$$ en ambas bases; si por cada elección de $$i,j,k$$, el producto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ está de acuerdo en ambas bases; y si el espacio vectorial $$\set{|e^i|^2}$$ separa puntos en al menos una base. Aquí $$\bar j$$ representa la propia función $$\bar e^j$$ en los cálculos integrales de triple producto.
+(Diagonal Litmus Test) Dados un par de valores propios que preservan las bases ortonormales como se describe en la hipótesis del Teorema, los colectores son isométricos si para cada elección de $$i,j,k$$, el producto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ está de acuerdo en ambas bases; y si el espacio vectorial $$\set{|e^i|^2}$$ separa puntos en al menos una base. Aquí $$\bar j$$ representa la propia función $$\bar e^j$$ en los cálculos integrales de triple producto.
 
 Además, si definimos $$\mathscr V$$ es el espacio de Hilbert generado por $$\set{|e^i|^2}$$, separa puntos si y solo si el mapa adjunto
 ```math
@@ -325,9 +325,7 @@ Corolario 1 se deriva del hecho de que $$z_k\in U_1$$ está bien definido, y la 
 
 Así que están de acuerdo en todas partes.
 
-$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
-
-La suficiencia del Corolario 2 sigue observando que la ecuación <span class="eqno"></span> es genéricamente cierto, al igual que la condición de núcleo de mapa adjunto más fuerte que desaparece en el párrafo anterior. Y si por alguna elección de $$i,j,k$$, el producto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ En desacuerdo entre bases, estarían en desacuerdo en cada par de bases.
+La suficiencia del Corolario 2 sigue observando que la condición del núcleo del mapa adjunto que desaparece en el párrafo anterior es genéricamente cierta. Y si por alguna elección de $$i,j,k$$, el producto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ En desacuerdo entre bases, estarían en desacuerdo en cada par de bases.
 
 ¿Por qué? Dado que se puede presumir que los colectores genéricos también tienen espectros de multiplicidad 1, esto reduce el grupo de simetría completo a $$U_1^\infty$$ donde estos productos son invariantes, contradiciendo el Teorema 1. Esto establece la necesidad de la hipótesis, y completa la prueba.
 

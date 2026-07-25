@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=50217
+status: vérifié=50232
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -76,7 +76,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 </div>
   <div class="card-body">
 
-(Test diagonal de Litmus) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque $$k>0$$, au moins une valeur de $$i>0$$ pour lequel $$M^{i,\bar i,k} \neq 0$$ dans les deux bases ; si pour chaque choix $$i,j,k$$, le produit $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ convient dans les deux bases ; et si l'espace vectoriel $$\set{|e^i|^2}$$ sépare les points sur au moins une base. Ici $$\bar j$$ représente la fonction propre $$\bar e^j$$ dans les calculs intégraux à triple produit.
+(Diagonal Litmus Test) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque choix de $$i,j,k$$, le produit $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ convient dans les deux bases ; et si l'espace vectoriel $$\set{|e^i|^2}$$ sépare les points sur au moins une base. Ici $$\bar j$$ représente la fonction propre $$\bar e^j$$ dans les calculs intégraux à triple produit.
 
 En outre, si nous définissons $$\mathscr V$$ est l'espace de Hilbert généré par $$\set{|e^i|^2}$$, il sépare les points si et seulement si la carte adjointe
 ```math
@@ -325,9 +325,7 @@ Le corollaire 1 découle du fait que $$z_k\in U_1$$ est bien défini, et l'obser
 
 Ils sont donc d'accord partout.
 
-$$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
-
-La suffisance du Corollaire 2 suit en notant que l'équation <span class="eqno"></span> est généralement vrai, tout comme la condition de noyau de carte adjointe de fuite plus forte dans le paragraphe précédent. Et si pour un choix de $$i,j,k$$, le produit $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ en désaccord entre les bases, ils seraient en désaccord dans chaque paire de bases.
+La suffisance du corollaire 2 s'ensuit en notant que la condition de noyau de carte adjointe disparaissant dans le paragraphe précédent est généralement vraie. Et si pour un choix de $$i,j,k$$, le produit $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ en désaccord entre les bases, ils seraient en désaccord dans chaque paire de bases.
 
 Pourquoi ? Puisque les collecteurs génériques peuvent être présumés avoir également des spectres de multiplicité-1, cela réduit le groupe de symétrie complet à $$U_1^\infty$$ où ces produits sont invariants, en contradiction avec le théorème 1. Cela établit la nécessité de l'hypothèse et complète la preuve.
 
