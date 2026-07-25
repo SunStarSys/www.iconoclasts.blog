@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=50312
+status: 확인=50336
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -324,7 +324,7 @@ Corollary 1은 다음과 같은 사실입니다. $$z_k\in U_1$$ 잘 정의되어
 
 그들은 모든 곳에서 동의한다.
 
-Corollary 2 충분성은 이전 단락에서 사라지는 adjoint-map 커널 조건이 일반적으로 참임을 지적함으로써 따릅니다. 만약 어떤 선택의 $$i,j,k$$, 제품 $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 기지 사이에 동의하지 않으면 모든 기지 쌍에 동의하지 않을 것입니다.
+Corollary 2의 충분성은 Corollary 1의 사라지는 adjoint-map 커널 조건이 일반적으로 사실임을 지적함으로써 이어집니다. 만약 어떤 선택의 $$i,j,k$$, 제품 $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 기지 사이에 동의하지 않으면 모든 기지 쌍에 동의하지 않을 것입니다.
 
 왜? 일반 매니폴드는 다중성-1 스펙트럼을 갖는 것으로 추정될 수 있기 때문에, 이것은 전체 대칭 그룹을 $$U_1^\infty$$ 이 제품들은 불변성이며, Theorem 1과 모순된다. 이것은 가설의 필요성을 확립하고 증거를 완성합니다.
 

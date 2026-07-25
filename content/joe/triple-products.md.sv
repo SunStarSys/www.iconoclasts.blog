@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50312
+status: verifierad=50336
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -324,7 +324,7 @@ Corollary 1 följer av det faktum att $$z_k\in U_1$$ är väldefinierad, och den
 
 De är överens överallt.
 
-Corollary 2-tillräcklighet följer av att notera att det försvinnande adjoint-map-kärnans villkor i föregående stycke är allmänt sant. Om för något val av $$i,j,k$$, produkten $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Oenighet mellan baser, skulle de vara oense i varje par baser.
+Corollary 2-tillräcklighet följer genom att notera att det försvinnande adjoint-map-kärnans tillstånd i Corollary 1 är allmänt sant. Om för något val av $$i,j,k$$, produkten $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Oenighet mellan baser, skulle de vara oense i varje par baser.
 
 Varför? Eftersom generiska grenrör kan antas också ha multiplikation-1-spektra, minskar detta hela symmetrigruppen till $$U_1^\infty$$ där dessa produkter är oföränderliga, motsäger teorem 1. Detta fastställer hypotesens nödvändighet och kompletterar beviset.
 

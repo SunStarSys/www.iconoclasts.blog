@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=50312
+status: verificado=50336
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -325,7 +325,7 @@ O Corolário 1 vem do fato de que $$z_k\in U_1$$ é bem definida, e a observaç�
 
 Então eles concordam em todos os lugares.
 
-A suficiência do Corolário 2 segue observando que a condição do kernel do mapa adjacente desaparecendo no parágrafo anterior é genericamente verdadeira. E se para alguma escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ discordavam entre bases, discordavam em cada par de bases.
+A suficiência do Corolário 2 segue observando que a condição do kernel do mapa adjacente desaparecendo no Corolário 1 é genericamente verdadeira. E se para alguma escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ discordavam entre bases, discordavam em cada par de bases.
 
 Por que? Uma vez que as variedades genéricas também podem ter espectros de multiplicidade-1, isso reduz o grupo de simetria total para $$U_1^\infty$$ onde esses produtos são invariantes, contradizendo o Teorema 1. Isso estabelece a necessidade da hipótese e completa a prova.
 

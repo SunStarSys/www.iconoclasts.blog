@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=50312
+status: verificado=50336
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -325,7 +325,7 @@ Corolario 1 se deriva del hecho de que $$z_k\in U_1$$ está bien definido, y la 
 
 Así que están de acuerdo en todas partes.
 
-La suficiencia del Corolario 2 sigue observando que la condición del núcleo del mapa adjunto que desaparece en el párrafo anterior es genéricamente cierta. Y si por alguna elección de $$i,j,k$$, el producto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ En desacuerdo entre bases, estarían en desacuerdo en cada par de bases.
+La suficiencia del Corolario 2 sigue observando que la condición del núcleo del mapa adjunto que desaparece en el Corolario 1 es genéricamente cierta. Y si por alguna elección de $$i,j,k$$, el producto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ En desacuerdo entre bases, estarían en desacuerdo en cada par de bases.
 
 ¿Por qué? Dado que se puede presumir que los colectores genéricos también tienen espectros de multiplicidad 1, esto reduce el grupo de simetría completo a $$U_1^\infty$$ donde estos productos son invariantes, contradiciendo el Teorema 1. Esto establece la necesidad de la hipótesis, y completa la prueba.
 
