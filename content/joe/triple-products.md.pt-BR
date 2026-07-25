@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=49887
+status: verificado=50178
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -76,7 +76,7 @@ Para ser isométrico $$(M,g)$$, é uma condição *necessária e suficiente* par
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada $$k>0$$, há pelo menos um valor de $$i>0$$ para o qual $$M^{i,\bar i,k} \neq 0$$ em ambas as bases; se para cada escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ concorda em ambas as bases; e se a álgebra gerada por $$\set{|e^i|^2}$$ separa pontos em pelo menos uma base. Aqui $$\bar j$$ representa a autofunção $$\bar e^j$$ nos cálculos integrais de triplo produto.
+(Diagonal Litmus Test) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada $$k>0$$, há pelo menos um valor de $$i>0$$ para o qual $$M^{i,\bar i,k} \neq 0$$ em ambas as bases; se para cada escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ concorda em ambas as bases; e se o espaço vetorial $$\set{|e^i|^2}$$ separa pontos em pelo menos uma base. Aqui $$\bar j$$ representa a autofunção $$\bar e^j$$ nos cálculos integrais de triplo produto.
 
 </div>
 </div>
@@ -238,7 +238,7 @@ Sem perda de generalidade, podemos aplicar o resultado de caso especial mostrado
 
 Desde $$\set {\bar e^i}$$ é também uma base de Fourier para $$L^2(M,g)$$, é claro da Equação (3) que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Isso significa que em um conjunto denso de $$C(M)$$ (e $$C(N)$$), estabelecemos $$\vec{F}$$ como um isomorfismo de Abelian $$C^*$$ álgebras, e assim pode ser estendido a um isomorfismo de $$C(M)$$ e $$C(N)$$ na mesma categoria.
 
-Agora, aplicamos o Teorema da Representação de Gelfand-Naimark (em forma de funtor contravariante) para o unital Abeliano. $$C^*$$ álgebras [[JC19]](#JC19) para representar este isomorfismo por um homeomorfismo $$F$$ entre $$N$$ e $$M$$. Como é bijetivo em funções suaves, também deve ser suave.
+Agora aplicamos o Teorema da Representação Gelfand-Naimark-Segal (em forma de funtor contravariante) para Abeliano unital. $$C^*$$ álgebras [[JC19]](#JC19) para representar este isomorfismo por um homeomorfismo $$F$$ entre $$N$$ e $$M$$. Como é bijetivo em funções suaves, também deve ser suave.
 
 Como este agora diffeomorfismo $$F$$ preserva autovalores e autofunções (por hipótese sobre $$\vec{F}(f) = f\circ F$$), deve preservar o Laplaciano em funções suaves. Por isso, também deve preservar os principais símbolos desses mesmos operadores elípticos. [[MT13]](#MT13). Os principais símbolos do Laplaciano são simplesmente outro meio de expressar a métrica Riemanniana nas variedades em questão.
 
@@ -246,7 +246,7 @@ Isso completa a prova do Teorema.
 
 ### Discussão dos Corolários
 
-Com $$\set{M_0^{i,j,k}}$$ e $$\set{M_1^{i,j,k}}$$ representando os dois conjuntos de triplo produto para as bases $$\set{e_0^i}$$ e $$\set{e_1^i}$$, deixe $$z_i \in U_1$$ seja o $$U_1^\infty$$ ação em tal base ortonormal $$\set{e_1^i}$$. Assim, precisamos escolher $$z_i$$ para que $$\set{z_ie_1^i}$$ rendimentos $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+Com $$\set{M_0^{i,j,k}}$$ e $$\set{M_1^{i,j,k}}$$ representando os dois conjuntos de triplo produto para as bases $$\set{e_0^i}$$ e $$\set{e_1^i}$$, deixe $$z_i \in U_1$$ seja o $$U_1^\infty$$ ação em tal base ortonormal $$\set{e_1^i}$$. Assim, precisamos escolher $$z_i$$ para que $$\set{z_ie_1^i}$$ rendimentos $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 Por que é esse o caso? Em geral, o grupo de simetria que atua no espaço de possíveis bases ortonormais de autofunções é o espaço de Operadores Unitários $$U: \mathscr H\rightarrow\mathscr H$$ que se deslocam com projeções $$P_{\mathcal V_\lambda}$$ para os eigenspaces de dimensão finita $$\mathcal V_{\lambda}$$ associado a cada autovalor individual $$\lambda$$ do Laplaciano. Portanto
 
@@ -316,25 +316,13 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-O Corolário 1 vem do fato de que $$z_k\in U_1$$ é bem definida, e a observação prévia que os operadores algébricos definidos por $$z_iz_jz_kM_0^{i,j,k}$$ e $$M_1^{i,j,k}$$ são ambos associativos, e concordam com a multiplicação de função pontual por quadrados de valores absolutos de autofunções, cuja álgebra gerada também é densa em $$L^2(M,g)$$ (novamente por Stone-Weierstrass, uma vez que se presume separar pontos). Definindo $$\det M^{i,\bar i,k} \ne 0$$ infinitamente frequentemente em submatrizes finito-dimensionais seria suficiente para esta finalidade.
-
-Por que? Deixar $$\mathscr V$$ ser o espaço vetorial gerado por $$\set{|e_i|^2}$$, e $$\mathscr W$$ para $$\set{e^i}$$. Em seguida, o diagrama comutativo
-
-```math
-\begin{CD}
-  \mathscr V @>M^{i,i,k}e^k >> \mathscr W\\
-  @V\set{|e^i|^2(x)}VV @VV\set{e^i(x)}V\\
-  \Complex^\N @>>M^{i,i,k} > \Complex^\N
-\end{CD}
-```
-
-e sobrejetividade de $$M^{i,i,k}$$ implica $$\ker = 0$$ para o mapa de avaliação $$\set{|e^i|^2(x)}$$, assim $$\mathscr V$$ separa pontos sempre que a condição determinante não desaparecedora for mantida.
+O Corolário 1 vem do fato de que $$z_k\in U_1$$ é bem definida, e a observação prévia que os operadores algébricos definidos por $$z_iz_j\bar z_kM_0^{i,j,k}$$ e $$M_1^{i,j,k}$$ são ambos associativos, e concordam com a multiplicação de função pontual por quadrados de valores absolutos de autofunções, cuja álgebra gerada também é densa em $$L^2(M,g)$$ (novamente por Stone-Weierstrass, uma vez que se presume separar pontos). Definindo $$\ker\ [M^{i,\bar i,k}]^* = 0$$ suficiente, onde $$\mathscr V$$ é o espaço fechado de Hilbert gerado por $$\set{|e^i|^2}$$, e $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ é o mapa de identidade de mudança de base.
 
 Então eles concordam em todos os lugares.
 
 $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
 
-Corolário 2 suficiência segue observando que Equação <span class="eqno"></span> é genericamente verdade, como é a condição determinante não desaparecendo no parágrafo anterior. E se para alguma escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ discordavam entre bases, discordavam em cada par de bases.
+Corolário 2 suficiência segue observando que Equação <span class="eqno"></span> é genericamente verdadeiro, assim como a condição mais forte do kernel adjoint-map no parágrafo anterior. E se para alguma escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ discordavam entre bases, discordavam em cada par de bases.
 
 Por que? Uma vez que as variedades genéricas também podem ter espectros de multiplicidade-1, isso reduz o grupo de simetria total para $$U_1^\infty$$ onde esses produtos são invariantes, contradizendo o Teorema 1. Isso estabelece a necessidade da hipótese e completa a prova.
 
@@ -372,7 +360,7 @@ No entanto, para aplicar o nosso [Teorema](#theorem)É essencial que um mapa lin
 
 deve também preservar o "analítico" invariáveis &mdash; a figura induzida pelo elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, ou seja, os autovalores individuais do Laplaciano do tori plano.
 
-Esta conta de representação-teórica [[AK01]](#AK01) é exatamente equivalente ao desenvolvimento anterior da congruência *lattice *[[NRR22]](#NRR22) tradicionalmente utilizado para delinear classes de isometria de toros planos. Na verdade, a matriz transpõe tal mapa linear $$B\in SO(n,\Reals)$$, conforme descrito no parágrafo anterior, **é** a contravariante isometria Riemanniana entre o tori, conforme previsto pela aplicação do *Gelfand-Naimark Representation Theorem* durante o [Prova](#proof-of-theorem) do nosso [Teorema](#theorem).
+Esta conta de representação-teórica [[AK01]](#AK01) é exatamente equivalente ao desenvolvimento anterior da congruência *lattice *[[NRR22]](#NRR22) tradicionalmente utilizado para delinear classes de isometria de toros planos. Na verdade, a matriz transpõe tal mapa linear $$B\in SO(n,\Reals)$$, conforme descrito no parágrafo anterior, **é** a contravariante isometria Riemanniana entre o tori, conforme previsto pela aplicação do *Gelfand-Naimark-Segal Representation Theorem* durante o [Prova](#proof-of-theorem) do nosso [Teorema](#theorem).
 
 ## Agradecimentos
 

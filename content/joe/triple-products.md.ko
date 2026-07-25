@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=49887
+status: 확인=50178
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -75,7 +75,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(대각선 리트머스 테스트) 정리의 가설에 설명된 대로 정형  기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 각각 $$k>0$$의 값이 하나 이상 있습니다. $$i>0$$ 대상 $$M^{i,\bar i,k} \neq 0$$ 두 기지에서; 모든 선택의 경우 $$i,j,k$$, 제품 $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 두 기지 모두에 동의; 그리고 대수 생성 하는 경우 $$\set{|e^i|^2}$$ 하나 이상의 기준으로 점을 구분합니다. 여기 $$\bar j$$ 고유함수를 나타냅니다. $$\bar e^j$$ 트리플 제품 통합 계산(Triple Product Integral Computations)
+(대각선 리트머스 테스트) 정리의 가설에 설명된 대로 정형  기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 각각 $$k>0$$의 값이 하나 이상 있습니다. $$i>0$$ 대상 $$M^{i,\bar i,k} \neq 0$$ 두 기지에서; 모든 선택의 경우 $$i,j,k$$, 제품 $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 두 베이스에 모두 동의하고 벡터 공간이 $$\set{|e^i|^2}$$ 하나 이상의 기준으로 점을 구분합니다. 여기 $$\bar j$$ 고유함수를 나타냅니다. $$\bar e^j$$ 트리플 제품 통합 계산(Triple Product Integral Computations)
 
 </div>
 </div>
@@ -237,7 +237,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 유니폼 규범을 유지합니
 
 시작일 $$\set {\bar e^i}$$ 이것은 또한 Fourier의 기초입니다. $$L^2(M,g)$$방정식 (3)에서 분명하다. $$\vec F(\bar f) = \bar{\vec F}(f)$$. 즉, 고밀도 집합에서 $$C(M)$$ (그리고 $$C(N)$$), 우리는 설치했습니다 $$\vec{F}$$ 아벨의 isomorphism $$C^*$$ algebras, 따라서 isomorphism의 확장 될 수있다 $$C(M)$$ 및 $$C(N)$$ 같은 범주에서.
 
-이제 우리는 Gelfand-Naimark Representation Theorem (in contravariant functor form)을 unital Abelian에 적용합니다. $$C^*$$ 대수학 [[JC19]](#JC19) 이 동형성을 동형성(homeomorphism)으로 표현하기 $$F$$ 사이 $$N$$ 및 $$M$$. 그것은 매끄러운 기능에 bijective이기 때문에, 그것 또한 매끄럽습니다.
+이제 우리는 Gelfand-Naimark-Segal Representation Theorem (in contravariant functor form)을 unital Abelian에 적용합니다. $$C^*$$ 대수학 [[JC19]](#JC19) 이 동형성을 동형성(homeomorphism)으로 표현하기 $$F$$ 사이 $$N$$ 및 $$M$$. 그것은 매끄러운 기능에 bijective이기 때문에, 그것 또한 매끄럽습니다.
 
 현재로서는 diffeomorphism $$F$$ eigenvalues 및 eigenfunctions 보존 (가설에 의해) $$\vec{F}(f) = f\circ F$$), 그것은 부드러운 기능에 라플라시안을 보존해야합니다. 따라서 동일한 타원 연산자의 기본 기호도 보존해야 합니다. [[MT13]](#MT13). 라플라시안의 주요 상징은 단순히 Riemannian 메트릭을 문제의 다양성에 표현하는 또 다른 수단입니다.
 
@@ -245,7 +245,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 유니폼 규범을 유지합니
 
 ### 코롤러 토론
 
-대상 $$\set{M_0^{i,j,k}}$$ 및 $$\set{M_1^{i,j,k}}$$ 기본에 대한 두 개의 삼중 제품 세트를 나타냅니다. $$\set{e_0^i}$$ 및 $$\set{e_1^i}$$의 Let $$z_i \in U_1$$ 다음과 같이 하십시오. $$U_1^\infty$$ 이러한 orthonormal 기초에 행동 $$\set{e_1^i}$$. 그래서 우리는 선택해야합니다. $$z_i$$ 이렇게 $$\set{z_ie_1^i}$$ 수율 $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+대상 $$\set{M_0^{i,j,k}}$$ 및 $$\set{M_1^{i,j,k}}$$ 기본에 대한 두 개의 삼중 제품 세트를 나타냅니다. $$\set{e_0^i}$$ 및 $$\set{e_1^i}$$의 Let $$z_i \in U_1$$ 다음과 같이 하십시오. $$U_1^\infty$$ 이러한 orthonormal 기초에 행동 $$\set{e_1^i}$$. 그래서 우리는 선택해야합니다. $$z_i$$ 이렇게 $$\set{z_ie_1^i}$$ 수율 $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 이게 왜 케이스인가요? 일반적으로, eigenfunctions의 가능한 직교 기지의 공간에 작용하는 대칭 그룹은 단일 연산자의 공간입니다 $$U: \mathscr H\rightarrow\mathscr H$$ 프로젝션과 함께 $$P_{\mathcal V_\lambda}$$ 유한 차원의 eigenspaces $$\mathcal V_{\lambda}$$ 각 개별 고유 값과 연관됨 $$\lambda$$ 라플라시안 The Laplacian 따라서
 
@@ -315,25 +315,13 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1은 다음과 같은 사실입니다. $$z_k\in U_1$$ 잘 정의되어 있으며, 대수 연산자가 정의한 이전 관찰 $$z_iz_jz_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ 둘 다 연관되어 있고, eigenfunctions의 절대값의 제곱에 의한 점방향 함수 곱셈에 동의하며, 생성된 대수학은 또한 조밀하다. $$L^2(M,g)$$ (다시 Stone-Weierstrass에 의해, 그것은 별개의 점으로 추정되기 때문에). 설정 중 $$\det M^{i,\bar i,k} \ne 0$$ 무한히 유한 차원 서브 매트릭스에 자주 이러한 목적을 위해 충분합니다.
-
-왜? 허가 $$\mathscr V$$ be the vector벡터 space생성된 by $$\set{|e_i|^2}$$및 $$\mathscr W$$ 대상 $$\set{e^i}$$. 다음으로는 commutative diagram
-
-```math
-\begin{CD}
-  \mathscr V @>M^{i,i,k}e^k >> \mathscr W\\
-  @V\set{|e^i|^2(x)}VV @VV\set{e^i(x)}V\\
-  \Complex^\N @>>M^{i,i,k} > \Complex^\N
-\end{CD}
-```
-
-의 surjectivity $$M^{i,i,k}$$ 암시 $$\ker = 0$$ 평가 맵용 $$\set{|e^i|^2(x)}$$기타 $$\mathscr V$$ 소실되지 않는 결정 요소 조건이 유지될 때마다 점을 구분합니다.
+Corollary 1은 다음과 같은 사실입니다. $$z_k\in U_1$$ 잘 정의되어 있으며, 대수 연산자가 정의한 이전 관찰 $$z_iz_j\bar z_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ 둘 다 연관되어 있고, eigenfunctions의 절대값의 제곱에 의한 점방향 함수 곱셈에 동의하며, 생성된 대수학은 또한 조밀하다. $$L^2(M,g)$$ (다시 Stone-Weierstrass에 의해, 그것은 별개의 점으로 추정되기 때문에). 설정 중 $$\ker\ [M^{i,\bar i,k}]^* = 0$$ 충분하다, where $$\mathscr V$$ 은(는) 생성된 닫힌 힐베르트 공간입니다. $$\set{|e^i|^2}$$및 $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 기본 변경 ID 맵입니다.
 
 그들은 모든 곳에서 동의한다.
 
 $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
 
-Corollary 2 충분성은 그 방정식을 언급함으로써 따른다. <span class="eqno"></span> 이전 단락에서 사라지지 않는 결정 요소 조건과 마찬가지로 일반적으로 사실입니다. 만약 어떤 선택의 $$i,j,k$$, 제품 $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 기지 사이에 동의하지 않으면 모든 기지 쌍에 동의하지 않을 것입니다.
+Corollary 2 충분성은 그 방정식을 언급함으로써 따른다. <span class="eqno"></span> 이전 단락에서 더 강력한 사라지는 인접 맵 커널 조건과 마찬가지로 일반적으로 true입니다. 만약 어떤 선택의 $$i,j,k$$, 제품 $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 기지 사이에 동의하지 않으면 모든 기지 쌍에 동의하지 않을 것입니다.
 
 왜? 일반 매니폴드는 다중성-1 스펙트럼을 갖는 것으로 추정될 수 있기 때문에, 이것은 전체 대칭 그룹을 $$U_1^\infty$$ 이 제품들은 불변성이며, Theorem 1과 모순된다. 이것은 가설의 필요성을 확립하고 증거를 완성합니다.
 
@@ -371,7 +359,7 @@ M^{i,j,k} = \begin{cases}
 
 또한 다음을 보존해야 합니다. "분석" 불변성 &mdash; Casimir-element 유도된 숫자 $$4\pi^2\lVert\lambda_i\rVert^2$$ 각 인덱싱된 중량, 즉 플랫 토리의 라플라시안의 개별 고유 값.
 
-이 표현 이론적 계정 [[AK01]](#AK01) *격자 congruence*의 이전 발달과 정확하게 동등합니다 [[NRR22]](#NRR22) 전통적으로 플랫 토리의 형상 클래스를 구분하는 데 사용됩니다. 사실, 이러한 선형 맵의 행렬 전치 $$B\in SO(n,\Reals)$$, 이전 단락에서 설명 된 바와 같이, **는 *Gelfand-Naimark 표현 정리 *의 적용에 의해 제공 된 토리 사이의 논란 Riemannian 기하학입니다 [검증](#proof-of-theorem) 우리의 [정리](#theorem).
+이 표현 이론적 계정 [[AK01]](#AK01) *격자 congruence*의 이전 발달과 정확하게 동등합니다 [[NRR22]](#NRR22) 전통적으로 플랫 토리의 형상 클래스를 구분하는 데 사용됩니다. 사실, 이러한 선형 맵의 행렬 전치 $$B\in SO(n,\Reals)$$, 이전 단락에서 설명한 바와 같이, **는 *Gelfand-Naimark-Segal Representation Theorem*의 적용에 의해 제공 된 토리 사이의 논란 Riemannian 기하학입니다. [검증](#proof-of-theorem) 우리의 [정리](#theorem).
 
 ## 승인
 

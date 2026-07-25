@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=49887
+status: überprüft=50178
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -75,7 +75,7 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 </div>
   <div class="card-body">
 
-(Diagonaler Litmus-Test) Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede $$k>0$$Es gibt mindestens einen Wert von $$i>0$$ für die $$M^{i,\bar i,k} \neq 0$$ In beiden Basen, wenn für jede Wahl $$i,j,k$$, das Produkt $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ stimmt in beiden Basen zu; und wenn die Algebra erzeugt von $$\set{|e^i|^2}$$ trennt Punkte in mindestens einer Basis. Hier $$\bar j$$ repräsentiert die Eigenfunktion $$\bar e^j$$ In den Triple-Product Integral-Berechnungen.
+(Diagonaler Litmus-Test) Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede $$k>0$$Es gibt mindestens einen Wert von $$i>0$$ für die $$M^{i,\bar i,k} \neq 0$$ In beiden Basen, wenn für jede Wahl $$i,j,k$$, das Produkt $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ stimmt in beiden Basen zu; und wenn der Vektorraum $$\set{|e^i|^2}$$ trennt Punkte in mindestens einer Basis. Hier $$\bar j$$ repräsentiert die Eigenfunktion $$\bar e^j$$ In den Triple-Product Integral-Berechnungen.
 
 </div>
 </div>
@@ -237,7 +237,7 @@ Ohne Verlust der Allgemeinheit können wir das für die reibungslose Aufteilung 
 
 Seit $$\set {\bar e^i}$$ ist auch eine Fourier-Basis für $$L^2(M,g)$$Aus der Gleichung (3) wird deutlich, dass $$\vec F(\bar f) = \bar{\vec F}(f)$$. Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), haben wir $$\vec{F}$$ als Isomorphismus des Abelian $$C^*$$ Algebras und können so zu einem Isomorphismus von $$C(M)$$ und $$C(N)$$ in der gleichen Kategorie.
 
-Jetzt wenden wir den Gelfand-Naimark Repräsentationstheorem (in kontravarianter Funkform) für unitales Abelian an. $$C^*$$ Algebras [[JC19]](#JC19) diesen Isomorphismus durch einen Homomorphismus darzustellen $$F$$ zwischen $$N$$ und $$M$$. Da es bijektiv auf glatte Funktionen ist, muss es auch glatt sein.
+Jetzt wenden wir das Gelfand-Naimark-Segal-Darstellungstheorem (in kontravarianter Funkform) für unitales Abelian an. $$C^*$$ Algebras [[JC19]](#JC19) diesen Isomorphismus durch einen Homomorphismus darzustellen $$F$$ zwischen $$N$$ und $$M$$. Da es bijektiv auf glatte Funktionen ist, muss es auch glatt sein.
 
 Wie jetzt Diffeomorphismus $$F$$ Eigenwerte und Eigenfunktionen (nach Hypothese auf $$\vec{F}(f) = f\circ F$$), muss es den Laplacian auf glatten Funktionen bewahren. Daher muss es auch die Hauptsymbole dieser elliptischen Operatoren beibehalten. [[MT13]](#MT13). Die Hauptsymbole des Laplacian sind einfach ein anderes Mittel, um die Riemannsche Metrik auf den fraglichen Mannigfaltigkeiten auszudrücken.
 
@@ -245,7 +245,7 @@ Damit ist der Beweis des Theorems abgeschlossen.
 
 ### Diskussion von Corollaries
 
-Mit $$\set{M_0^{i,j,k}}$$ und $$\set{M_1^{i,j,k}}$$ Darstellung der beiden Dreifach-Produkt-Sets für die Basen $$\set{e_0^i}$$ und $$\set{e_1^i}$$, lassen $$z_i \in U_1$$ sind die $$U_1^\infty$$ Aktion auf einer solchen orthonormalen Basis $$\set{e_1^i}$$. Daher müssen wir wählen $$z_i$$ so dass $$\set{z_ie_1^i}$$ Erträge $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+Mit $$\set{M_0^{i,j,k}}$$ und $$\set{M_1^{i,j,k}}$$ Darstellung der beiden Dreifach-Produkt-Sets für die Basen $$\set{e_0^i}$$ und $$\set{e_1^i}$$, lassen $$z_i \in U_1$$ sind die $$U_1^\infty$$ Aktion auf einer solchen orthonormalen Basis $$\set{e_1^i}$$. Daher müssen wir wählen $$z_i$$ so dass $$\set{z_ie_1^i}$$ Erträge $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 Warum ist das der Fall? Im Allgemeinen ist die Symmetriegruppe, die auf den Raum möglicher orthonormaler Grundlagen von Eigenfunktionen wirkt, der Raum von Unitary Operators. $$U: \mathscr H\rightarrow\mathscr H$$ die mit Projektionen pendeln $$P_{\mathcal V_\lambda}$$ auf die endlichen Eigenräume $$\mathcal V_{\lambda}$$ für jeden einzelnen Eigenwert $$\lambda$$ Der Laplacian. Daher
 
@@ -315,25 +315,13 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_jz_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ sind sowohl assoziativ als auch stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Absolutwerten von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist. $$L^2(M,g)$$ (Wiederum von Stone-Weierstrass, da davon ausgegangen wird, dass es Punkte voneinander trennt). Einrichten $$\det M^{i,\bar i,k} \ne 0$$ Unendlich oft würden zu diesem Zweck endliche Teilmatrizen ausreichen.
-
-Warum? Lassen $$\mathscr V$$ der Vektorraum, der erzeugt wird durch $$\set{|e_i|^2}$$und $$\mathscr W$$ für $$\set{e^i}$$. Dann das kommutative Diagramm
-
-```math
-\begin{CD}
-  \mathscr V @>M^{i,i,k}e^k >> \mathscr W\\
-  @V\set{|e^i|^2(x)}VV @VV\set{e^i(x)}V\\
-  \Complex^\N @>>M^{i,i,k} > \Complex^\N
-\end{CD}
-```
-
-und Surjektivität von $$M^{i,i,k}$$ impliziert $$\ker = 0$$ für die Auswertungskarte $$\set{|e^i|^2(x)}$$, so $$\mathscr V$$ trennt Punkte, wenn die nicht-verschwindende Determinantenbedingung hält.
+Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_j\bar z_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ sind sowohl assoziativ als auch stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Absolutwerten von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist. $$L^2(M,g)$$ (Wiederum von Stone-Weierstrass, da davon ausgegangen wird, dass es Punkte voneinander trennt). Einrichten $$\ker\ [M^{i,\bar i,k}]^* = 0$$ genügt, wo $$\mathscr V$$ Ist der geschlossene Hilbert-Raum von $$\set{|e^i|^2}$$und $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ ist die Change-of-Basis Identity Map.
 
 Sie sind sich überall einig.
 
 $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
 
-Folge 2, indem man feststellt, dass Gleichung <span class="eqno"></span> ist allgemein wahr, ebenso wie die nicht verschwindende Determinantenbedingung im vorherigen Absatz. Und wenn für eine Auswahl von $$i,j,k$$, das Produkt $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Uneinigkeit zwischen den Basen, würden sie in jedem Paar von Basen nicht zustimmen.
+Folge 2, indem man feststellt, dass Gleichung <span class="eqno"></span> ist allgemein wahr, ebenso wie der stärkere verschwindende Adjoint-Map-Kernelzustand im vorherigen Absatz. Und wenn für eine Auswahl von $$i,j,k$$, das Produkt $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Uneinigkeit zwischen den Basen, würden sie in jedem Paar von Basen nicht zustimmen.
 
 Warum? Da von generischen Verteilern auch Multiplizitäts-1-Spektren angenommen werden kann, reduziert dies die volle Symmetriegruppe auf $$U_1^\infty$$ bei denen es sich um invariante Produkte handelt, die im Widerspruch zu Satz 1 stehen. Dies begründet die Notwendigkeit der Hypothese und vervollständigt den Beweis.
 
@@ -371,7 +359,7 @@ Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ s
 
 muss auch die "Analytisch" Invarianten &mdash; Die Casimir-Element induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Flat-Tori-Laplacian.
 
-Dieses repräsentationstheoretische Konto [[AK01]](#AK01) entspricht genau der vorherigen Entwicklung von *Gitterkongruenz* [[NRR22]](#NRR22) Traditionell verwendet, um Isometrieklassen von flachen Tori zu beschreiben. Tatsächlich ist die Matrix-Transpose einer solchen linearen Karte $$B\in SO(n,\Reals)$$, wie im vorstehenden Absatz beschrieben, **ist** die kontravariante Riemannsche Isometrie zwischen den Tori, wie sie durch die Anwendung des *Gelfand-Naimark Repräsentationstheorem* während der [Nachweis](#proof-of-theorem) von unseren [Satz](#theorem).
+Dieses repräsentationstheoretische Konto [[AK01]](#AK01) entspricht genau der vorherigen Entwicklung von *Gitterkongruenz* [[NRR22]](#NRR22) Traditionell verwendet, um Isometrieklassen von flachen Tori zu beschreiben. Tatsächlich ist die Matrix-Transpose einer solchen linearen Karte $$B\in SO(n,\Reals)$$, wie im vorstehenden Absatz beschrieben, **ist** die kontravariante Riemannsche Isometrie zwischen den Tori, wie sie durch die Anwendung des *Gelfand-Naimark-Segal Repräsentationssatzes* während der [Nachweis](#proof-of-theorem) von unseren [Satz](#theorem).
 
 ## Bestätigungen
 

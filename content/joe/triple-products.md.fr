@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=49887
+status: vérifié=50178
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -76,7 +76,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 </div>
   <div class="card-body">
 
-(Test diagonal de Litmus) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque $$k>0$$, au moins une valeur de $$i>0$$ pour lequel $$M^{i,\bar i,k} \neq 0$$ dans les deux bases ; si pour chaque choix $$i,j,k$$, le produit $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ convient dans les deux bases ; et si l'algèbre générée par $$\set{|e^i|^2}$$ sépare les points sur au moins une base. Ici $$\bar j$$ représente la fonction propre $$\bar e^j$$ dans les calculs intégraux à triple produit.
+(Test diagonal de Litmus) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque $$k>0$$, au moins une valeur de $$i>0$$ pour lequel $$M^{i,\bar i,k} \neq 0$$ dans les deux bases ; si pour chaque choix $$i,j,k$$, le produit $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ convient dans les deux bases ; et si l'espace vectoriel $$\set{|e^i|^2}$$ sépare les points sur au moins une base. Ici $$\bar j$$ représente la fonction propre $$\bar e^j$$ dans les calculs intégraux à triple produit.
 
 </div>
 </div>
@@ -238,7 +238,7 @@ Sans perte de généralité, nous pouvons appliquer le résultat de cas particul
 
 Depuis $$\set {\bar e^i}$$ est aussi une base de Fourier pour $$L^2(M,g)$$, il ressort clairement de l'équation (3) que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Cela signifie que sur un ensemble dense de $$C(M)$$ (et $$C(N)$$), nous avons établi $$\vec{F}$$ comme un isomorphisme d'Abelian $$C^*$$ les algèbres, et peuvent donc être étendues à un isomorphisme de $$C(M)$$ et $$C(N)$$ dans la même catégorie.
 
-Maintenant, nous appliquons le théorème de représentation de Gelfand-Naimark (sous forme de champignon contravariant) pour Abelian unital $$C^*$$ algèbre [[JC19]](#JC19) représenter cet isomorphisme par un homéomorphisme $$F$$ entre $$N$$ et $$M$$. Comme il est bijectif sur les fonctions lisses, il doit également être lisse.
+Maintenant, nous appliquons le théorème de représentation de Gelfand-Naimark-Segal (sous forme de champignon contravariant) pour l'abélien unitaire $$C^*$$ algèbre [[JC19]](#JC19) représenter cet isomorphisme par un homéomorphisme $$F$$ entre $$N$$ et $$M$$. Comme il est bijectif sur les fonctions lisses, il doit également être lisse.
 
 Comme maintenant le difféomorphisme $$F$$ préserve les valeurs propres et les fonctions propres (par hypothèse sur $$\vec{F}(f) = f\circ F$$), il doit préserver le Laplacien sur des fonctions lisses. Il doit donc aussi conserver les symboles principaux de ces mêmes opérateurs elliptiques. [[MT13]](#MT13). Les principaux symboles du Laplacien sont simplement un autre moyen d'exprimer la métrique riemannienne sur les collecteurs en question.
 
@@ -246,7 +246,7 @@ Cela complète la preuve du théorème.
 
 ### Discussion des corollaires
 
-Avec $$\set{M_0^{i,j,k}}$$ et $$\set{M_1^{i,j,k}}$$ représentant les deux ensembles à trois produits pour les bases $$\set{e_0^i}$$ et $$\set{e_1^i}$$, laissez $$z_i \in U_1$$ être le $$U_1^\infty$$ action sur une telle base orthonormée $$\set{e_1^i}$$. Il faut donc choisir $$z_i$$ afin que $$\set{z_ie_1^i}$$ rendements $$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+Avec $$\set{M_0^{i,j,k}}$$ et $$\set{M_1^{i,j,k}}$$ représentant les deux ensembles à trois produits pour les bases $$\set{e_0^i}$$ et $$\set{e_1^i}$$, laissez $$z_i \in U_1$$ être le $$U_1^\infty$$ action sur une telle base orthonormée $$\set{e_1^i}$$. Il faut donc choisir $$z_i$$ afin que $$\set{z_ie_1^i}$$ rendements $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 Pourquoi est-ce le cas ? En général, le groupe de symétrie agissant sur l'espace des bases orthonormes possibles des fonctions propres est l'espace des opérateurs unitaires $$U: \mathscr H\rightarrow\mathscr H$$ ce trajet avec des projections $$P_{\mathcal V_\lambda}$$ sur les espaces propres de dimension finie $$\mathcal V_{\lambda}$$ associé à chaque valeur propre individuelle $$\lambda$$ du Laplacien. Par conséquent
 
@@ -316,25 +316,13 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Le corollaire 1 découle du fait que $$z_k\in U_1$$ est bien défini, et l'observation antérieure que les opérateurs algébriques définis par $$z_iz_jz_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ sont à la fois associatifs, et sont d'accord avec la multiplication de fonction ponctuelle par des carrés de valeurs absolues des fonctions propres, dont l'algèbre générée est également dense en $$L^2(M,g)$$ (encore une fois par Stone-Weierstrass, puisqu'il est présumé séparer des points). Etablissement $$\det M^{i,\bar i,k} \ne 0$$ infiniment souvent sur des sous-matrices de dimensions finies suffirait à cet effet.
-
-Pourquoi ? Laissez $$\mathscr V$$ être l'espace vectoriel généré par $$\set{|e_i|^2}$$, et $$\mathscr W$$ pour $$\set{e^i}$$. Puis le diagramme commutatif
-
-```math
-\begin{CD}
-  \mathscr V @>M^{i,i,k}e^k >> \mathscr W\\
-  @V\set{|e^i|^2(x)}VV @VV\set{e^i(x)}V\\
-  \Complex^\N @>>M^{i,i,k} > \Complex^\N
-\end{CD}
-```
-
-et surjectivité de $$M^{i,i,k}$$ implique $$\ker = 0$$ pour la carte d'évaluation $$\set{|e^i|^2(x)}$$, donc $$\mathscr V$$ sépare les points chaque fois que la condition déterminante non disparue est maintenue.
+Le corollaire 1 découle du fait que $$z_k\in U_1$$ est bien défini, et l'observation antérieure que les opérateurs algébriques définis par $$z_iz_j\bar z_kM_0^{i,j,k}$$ et $$M_1^{i,j,k}$$ sont à la fois associatifs, et sont d'accord avec la multiplication de fonction ponctuelle par des carrés de valeurs absolues des fonctions propres, dont l'algèbre générée est également dense en $$L^2(M,g)$$ (encore une fois par Stone-Weierstrass, puisqu'il est présumé séparer des points). Etablissement $$\ker\ [M^{i,\bar i,k}]^* = 0$$ suffit, où $$\mathscr V$$ est l'espace fermé de Hilbert généré par $$\set{|e^i|^2}$$, et $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ est la carte d'identité de changement de base.
 
 Ils sont donc d'accord partout.
 
 $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
 
-La suffisance du Corollaire 2 suit en notant que l'équation <span class="eqno"></span> est généralement vrai, comme l'est la condition déterminante non disparue dans le paragraphe précédent. Et si pour un choix de $$i,j,k$$, le produit $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ en désaccord entre les bases, ils seraient en désaccord dans chaque paire de bases.
+La suffisance du Corollaire 2 suit en notant que l'équation <span class="eqno"></span> est généralement vrai, tout comme la condition de noyau de carte adjointe de fuite plus forte dans le paragraphe précédent. Et si pour un choix de $$i,j,k$$, le produit $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ en désaccord entre les bases, ils seraient en désaccord dans chaque paire de bases.
 
 Pourquoi ? Puisque les collecteurs génériques peuvent être présumés avoir également des spectres de multiplicité-1, cela réduit le groupe de symétrie complet à $$U_1^\infty$$ où ces produits sont invariants, en contradiction avec le théorème 1. Cela établit la nécessité de l'hypothèse et complète la preuve.
 
@@ -372,7 +360,7 @@ Cependant, afin d'appliquer notre [Théorème](#theorem), il est essentiel qu'un
 
 doit également préserver "analyse" invariants &mdash; la figure induite par l'élément Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ pour chaque poids indexé, c'est-à-dire les valeurs propres individuelles du laplacien du tori plat.
 
-Ce compte représentation-théorique [[AK01]](#AK01) est exactement équivalent au développement antérieur de *congruence de réseau* [[NRR22]](#NRR22) traditionnellement utilisé pour délimiter les classes d'isométrie des tori plats. En effet, la matrice transpose une telle carte linéaire $$B\in SO(n,\Reals)$$, tel que décrit dans le paragraphe précédent, **est** l'isométrie Riemannienne contravariante entre les tori, telle que fournie par l'application du *théorème de représentation de Gelfand-Naimark* pendant la [Preuve](#proof-of-theorem) de notre [Théorème](#theorem).
+Ce compte représentation-théorique [[AK01]](#AK01) est exactement équivalent au développement antérieur de *congruence de réseau* [[NRR22]](#NRR22) traditionnellement utilisé pour délimiter les classes d'isométrie des tori plats. En effet, la matrice transpose une telle carte linéaire $$B\in SO(n,\Reals)$$, tel que décrit dans le paragraphe précédent, **est** l'isométrie Riemannienne contravariante entre les tori, telle que fournie par l'application du *théorème de représentation Gelfand-Naimark-Segal* pendant la [Preuve](#proof-of-theorem) de notre [Théorème](#theorem).
 
 ## Accusés de réception
 

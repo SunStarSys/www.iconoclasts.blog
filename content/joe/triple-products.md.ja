@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=49887
+status: 確認済み=50178
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -74,7 +74,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(対角リトマス試験)定理の仮説で説明されているように、正統な基質を保持する固有値のペアを考えると、マニホールドはすべての場合にアイソメです$$k>0$$の値が1つ以上あります$$i>0$$ 対象$$M^{i,\bar i,k} \neq 0$$ 両方のベースで、すべての選択の場合$$i,j,k$$製品について$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 両方のベースで一致し、代数が生成されるかどうか$$\set{|e^i|^2}$$ 少なくとも1つの基準でポイントを分離します。こちら$$\bar j$$ 固有関数を表します$$\bar e^j$$ 三重積分計算
+(対角リトマス試験)定理の仮説で説明されているように、正統な基質を保持する固有値のペアを考えると、マニホールドはすべての場合にアイソメです$$k>0$$の値が1つ以上あります$$i>0$$ 対象$$M^{i,\bar i,k} \neq 0$$ 両方のベースで、すべての選択の場合$$i,j,k$$製品について$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 両方のベースで一致し、ベクトル空間がスパンした場合$$\set{|e^i|^2}$$ 少なくとも1つの基準でポイントを分離します。こちら$$\bar j$$ 固有関数を表します$$\bar e^j$$ 三重積分計算
 
 </div>
 </div>
@@ -236,7 +236,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 均一な基準を維持しま�
 
 次以降$$\set {\bar e^i}$$ フーリエの基礎でもある。$$L^2(M,g)$$という方程式(3)から、$$\vec F(\bar f) = \bar{\vec F}(f)$$。これは、密集した一連の$$C(M)$$ および$$C(N)$$)を確立した。$$\vec{F}$$ アベリア人の同型$$C^*$$ 代数は、したがって、同型に拡張することができます$$C(M)$$ および$$C(N)$$ 同じカテゴリーで。
 
-今度は、Gelfand-Naimark Representation Theorem (in contravariant functor form)をunital Abelianに適用します。$$C^*$$ 代数学[[JC19]](#JC19) ホメオモルフィズムによってこのアイソモルフィズムを表す$$F$$ 次の間$$N$$ および$$M$$。スムーズな機能では形容詞なので、スムーズでなければなりません。
+ここでは、Gelfand-Naimark-Segal Representation Theorem (in contravariant functor form)をunital Abelianに適用します。$$C^*$$ 代数学[[JC19]](#JC19) ホメオモルフィズムによってこのアイソモルフィズムを表す$$F$$ 次の間$$N$$ および$$M$$。スムーズな機能では形容詞なので、スムーズでなければなりません。
 
 今日のdiffomorphism $$F$$ 固有値および固有関数を保持します(仮説による) $$\vec{F}(f) = f\circ F$$)、滑らかな機能でラプラシアンを保持する必要があります。したがって、これらの同じ楕円演算子の主要シンボルも保持する必要があります。[[MT13]](#MT13)。Laplacianの主なシンボルは、問題のマニホールドに関するRiemannianメトリックを表現するもう一つの手段です。
 
@@ -244,7 +244,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 均一な基準を維持しま�
 
 ### Corollariesについて
 
-次を含む$$\set{M_0^{i,j,k}}$$ および$$\set{M_1^{i,j,k}}$$ 基底の2つの三重プロダクトセットを表す$$\set{e_0^i}$$ および$$\set{e_1^i}$$Let $$z_i \in U_1$$ である$$U_1^\infty$$ このような正統性に基づく行動$$\set{e_1^i}$$。したがって、私たちは選択する必要があります$$z_i$$ したがって$$\set{z_ie_1^i}$$ 降伏$$\set{M_1^{i,j,k}} = \set{z_i z_j z_kM_0^{i,j,k}}$$.
+次を含む$$\set{M_0^{i,j,k}}$$ および$$\set{M_1^{i,j,k}}$$ 基底の2つの三重プロダクトセットを表す$$\set{e_0^i}$$ および$$\set{e_1^i}$$Let $$z_i \in U_1$$ である$$U_1^\infty$$ このような正統性に基づく行動$$\set{e_1^i}$$。したがって、私たちは選択する必要があります$$z_i$$ したがって$$\set{z_ie_1^i}$$ 降伏$$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 このケースはなぜですか。一般に、固有関数の正準基底の空間に作用する対称群は、単項演算子の空間である。$$U: \mathscr H\rightarrow\mathscr H$$ プロジェクションと合致する$$P_{\mathcal V_\lambda}$$ 有限次元異次元空間$$\mathcal V_{\lambda}$$ 個々の固有値に関連付けられる$$\lambda$$ Laplacianです。したがって、
 
@@ -314,25 +314,13 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1は、$$z_k\in U_1$$ は明確に定義され、前回の観測では、代数演算子の定義$$z_iz_jz_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ どちらも連想的であり、固有関数の絶対値の二乗によるポイントワイズ関数乗算に同意します。生成された代数も密です$$L^2(M,g)$$ (Stone-Weierstrassは、ポイントを分離すると推定されているため)。設立$$\det M^{i,\bar i,k} \ne 0$$ 有限次元サブマトリックスの場合は、この目的のために十分です。
-
-どうしてですか? 許可$$\mathscr V$$ 生成したベクトル空間$$\set{|e_i|^2}$$および$$\mathscr W$$ 対象$$\set{e^i}$$。続いて、Computative Diagram
-
-```math
-\begin{CD}
-  \mathscr V @>M^{i,i,k}e^k >> \mathscr W\\
-  @V\set{|e^i|^2(x)}VV @VV\set{e^i(x)}V\\
-  \Complex^\N @>>M^{i,i,k} > \Complex^\N
-\end{CD}
-```
-
-そしてSurjectivity $$M^{i,i,k}$$ 暗黙$$\ker = 0$$ 評価マップ用$$\set{|e^i|^2(x)}$$など$$\mathscr V$$ 非消滅決定要因条件が保持されるたびにポイントを分離します。
+Corollary 1は、$$z_k\in U_1$$ は明確に定義され、前回の観測では、代数演算子の定義$$z_iz_j\bar z_kM_0^{i,j,k}$$ および$$M_1^{i,j,k}$$ どちらも連想的であり、固有関数の絶対値の二乗によるポイントワイズ関数乗算に同意します。生成された代数も密です$$L^2(M,g)$$ (Stone-Weierstrassは、ポイントを分離すると推定されているため)。設立$$\ker\ [M^{i,\bar i,k}]^* = 0$$ 十分、どこ$$\mathscr V$$ ヒルバートの閉じた空間$$\set{|e^i|^2}$$および$$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ は、基本の変更IDマップです。
 
 いたるところで同意する。
 
 $$\forall k>0\ \exists\ i>0\ ⋺ M^{i,\bar i,k} \ne 0.$$
 
-Corollary 2の効率は、その方程式に注目することによって続きます<span class="eqno"></span> 前項の非消滅決定要因条件と同様に、一般的には真です。If For Some Choiceシングル$$i,j,k$$製品について$$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 基地の間で意見の相違があり、各基地の間で意見の相違がある。
+Corollary 2の効率は、その方程式に注目することによって続きます<span class="eqno"></span> 前項のより強力なvanishing adjoint-mapカーネル条件と同様に、一般的にはtrueです。If For Some Choiceシングル$$i,j,k$$製品について$$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 基地の間で意見の相違があり、各基地の間で意見の相違がある。
 
 どうしてですか? 汎用マニホールドは多重度1スペクトルを持つことも想定できるため、完全な対称グループは次のようになります。$$U_1^\infty$$ これらの製品は不変であり、定理1と矛盾します。これにより、仮説の必要性が確立され、その証明が完成します。
 
@@ -370,7 +358,7 @@ M^{i,j,k} = \begin{cases}
 
 また、"分析" 不変条件&mdash; カシミール要素誘起図$$4\pi^2\lVert\lambda_i\rVert^2$$ 各インデックス付き重量、すなわち、フラット通りのラプラシアンの個々の固有値。
 
-この表示- 理論勘定[[AK01]](#AK01) は、*lattice congruence*の以前の開発とまったく同じです。[[NRR22]](#NRR22) 伝統的に平らな通路の等量クラスを描写するために使用されます。実際、そのような線形マップのマトリックス転写$$B\in SO(n,\Reals)$$前項で説明したように、**は、通路間の矛盾するRiemannian等量であり、*Gelfand-Naimark表現定理*の適用によって提供されています。[プルーフ](#proof-of-theorem) 私たちの[定理](#theorem).
+この表示- 理論勘定[[AK01]](#AK01) は、*lattice congruence*の以前の開発とまったく同じです。[[NRR22]](#NRR22) 伝統的に平らな通路の等量クラスを描写するために使用されます。実際、そのような線形マップのマトリックス転写$$B\in SO(n,\Reals)$$前項で説明したように、**は、通路間の矛盾したRiemannian等量であり、*Gelfand-Naimark-Segal表現定理*の適用によって提供されています。[プルーフ](#proof-of-theorem) 私たちの[定理](#theorem).
 
 ## 確認
 
