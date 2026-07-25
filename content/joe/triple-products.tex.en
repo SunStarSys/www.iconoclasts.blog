@@ -267,7 +267,7 @@ is the image of $M^{i,j,k}$ under $U$’s basis action $e^i \mapsto U(e^i)$.
 
 Now under the conditions of Corollary~\ref{coro-2}, each of the $\mathcal V_\lambda$ are one dimensional vector spaces over $\mathbb{C}$, but that also means they are one dimensional vector spaces over $\mathbb{R}$, and so the full multiplicative symmetry group is $O(1,\mathbb{R})^\infty=\mathbb{Z}_2^\infty$.
 
-Without the multiplicity constraint, the Corollary~\ref{coro-2}'s associated prerequisite "regarding agreement in absolute values" would hence become "preservation of the ordered set of singular values of $\set{M^{i,j,k}}$, counted with multiplicity, when viewed as a collection of maps from $\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$". It turns out this is a reasonably robust set of Unitary Invariants. We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
+Without the multiplicity constraint, the Corollary~\ref{coro-2}'s associated prerequisite "regarding agreement in product values" would hence become "preservation of the ordered set of singular values of $\set{M^{i,j,k}}$, counted with multiplicity, when viewed as a collection of maps from $\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$". It turns out this is a reasonably robust set of Unitary Invariants. We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
 
 Getting back to the Corollary~\ref{coro-1}, we observe that the proof involves establishing this implication:
 
