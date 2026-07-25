@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50232
+status: verifierad=50270
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -77,7 +77,7 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 
 (Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om för varje val av $$i,j,k$$, produkten $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ överens om båda baserna, och om vektorrummet spänner över $$\set{|e^i|^2}$$ separerar punkter på minst en bas. Här $$\bar j$$ representerar egenfunktionen $$\bar e^j$$ i trippelproduktintegrerade beräkningar.
 
-Om vi definierar $$\mathscr V$$ är Hilbert-rymden som genereras av $$\set{|e^i|^2}$$separerar den punkter om och endast om den justerade kartan
+Om vi definierar $$\mathscr V$$ som Hilbert-rymden som genereras av $$\set{|e^i|^2}$$separerar den punkter om och endast om den justerade kartan
 ```math
 [M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
 ```
@@ -252,20 +252,20 @@ Detta kompletterar teoremens bevis.
 
 Med $$\set{M_0^{i,j,k}}$$ och $$\set{M_1^{i,j,k}}$$ representerar de två trippelproduktseten för baserna $$\set{e_0^i}$$ och $$\set{e_1^i}$$, låt $$z_i \in U_1$$ vara $$U_1^\infty$$ åtgärder på en sådan ortonormal grund $$\set{e_1^i}$$. Därför måste vi välja $$z_i$$ så att $$\set{z_ie_1^i}$$ avkastning $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
-Varför är detta fallet? I allmänhet är den symmetrigrupp som verkar på utrymmet för möjliga ortonormala baser av egenfunktioner utrymmet för enhetsoperatorer. $$U: \mathscr H\rightarrow\mathscr H$$ som pendlar med prognoser $$P_{\mathcal V_\lambda}$$ på de finita dimensionella åttondelar $$\mathcal V_{\lambda}$$ för varje enskilt egenvärde $$\lambda$$ från Lappland. Därför
+Varför är detta fallet? I allmänhet är den symmetrigrupp som verkar på utrymmet för möjliga ortonormala baser av egenfunktioner utrymmet för enhetsoperatorer. $$U: \mathscr H\rightarrow\mathscr H$$ som pendlar med prognoser $$P_{\mathscr V_\lambda}$$ på de finita dimensionella åttondelar $$\mathscr V_{\lambda}$$ för varje enskilt egenvärde $$\lambda$$ från Lappland. Därför
 
 ```math
 \begin{aligned}
-P_{\mathcal V_{\lambda}}U(e^i) = UP_{\mathcal V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
+P_{\mathscr V_{\lambda}}U(e^i) = UP_{\mathscr V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
 M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
 \end{aligned}
 ```
 
 är bilden av $$M^{i,j,k}$$ under $$U$$'s basåtgärd $$e^i \mapsto U(e^i)$$.
 
-Nu under villkoren i Corollary 2, var och en av de $$\mathcal V_\lambda$$ är ett dimensionellt vektorrum över $$\Complex$$, men det betyder också att de är endimensionella vektorrum över $$\Reals$$och så är hela den multiplikativa symmetrigruppen $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+Nu under villkoren i Corollary 2, var och en av de $$\mathscr V_\lambda$$ är ett dimensionellt vektorrum över $$\Complex$$, men det betyder också att de är endimensionella vektorrum över $$\Reals$$och så är hela den multiplikativa symmetrigruppen $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "bevarandet av den ordinerade uppsättningen singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsvarianter.  Vi är betydligt mindre övertygade om att denna generaliserade gissning är sann, eftersom det kan vara möjligt att producera ett motexempel via explicit Sunada-konstruktion.
+Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "bevarandet av den ordinerade uppsättningen singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsvarianter.  Vi är betydligt mindre övertygade om att denna generaliserade gissning är sann, eftersom det kan vara möjligt att producera ett motexempel via explicit Sunada-konstruktion.
 
 Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 
@@ -274,7 +274,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-Vi hoppas att för varje given $$k>0$$, $$M_0^{i,i,k}$$ Kan inte vara identisk $$0$$ för alla $$i$$, eftersom det är ett allmänt sant villkor, men falskt för specifika fall som det platta torifallet som omfattas av exemplet nedan. Dessutom är formeln <span class="eqno"></span> för $$z_k$$ kräver båda $$i$$-oberoende och tillräcklighet, för att fastställa grundkartan $$e_0^i \mapsto z_i e_1^i$$ bevarar $$\set{M_0^{i,j,k}}$$.
+Vi hoppas att för varje given $$k>0$$, $$M_0^{i,i,k}$$ Kan inte vara identisk $$0$$ för alla $$i$$, eftersom det är ett allmänt sant villkor, men falskt för specifika fall som det platta torifallet som omfattas av exemplet nedan. Ett högre sätt att se på detta tillstånd är att notera att ett sådant hopp-kränkande $$e^k$$ skulle vara i kärnan av adjoint-kartan $$[M^{i,\bar i,k}]^*$$. Dessutom är formeln <span class="eqno"></span> för $$z_k$$ kräver båda $$i$$-oberoende och tillräcklighet, för att fastställa grundkartan $$e_0^i \mapsto z_i e_1^i$$ bevarar $$\set{M_0^{i,j,k}}$$.
 
 Vi skissar ett bevis på Corollary 1 (tillräcklighet) under nästa uppsättning formler.
 

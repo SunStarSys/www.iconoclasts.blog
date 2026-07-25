@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=50232
+status: überprüft=50270
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -77,7 +77,7 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 
 (Diagonaler Litmus-Test) Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede Wahl von $$i,j,k$$, das Produkt $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ stimmt in beiden Basen zu; und wenn der Vektorraum $$\set{|e^i|^2}$$ trennt Punkte in mindestens einer Basis. Hier $$\bar j$$ repräsentiert die Eigenfunktion $$\bar e^j$$ In den Triple-Product Integral-Berechnungen.
 
-Außerdem, wenn wir definieren $$\mathscr V$$ ist der Hilbert-Raum, der von $$\set{|e^i|^2}$$, trennt es Punkte, wenn und nur, wenn die Nebenkarte
+Außerdem, wenn wir definieren $$\mathscr V$$ als Hilbert-Raum erzeugt von $$\set{|e^i|^2}$$, trennt es Punkte, wenn und nur, wenn die Nebenkarte
 ```math
 [M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
 ```
@@ -252,20 +252,20 @@ Damit ist der Beweis des Theorems abgeschlossen.
 
 Mit $$\set{M_0^{i,j,k}}$$ und $$\set{M_1^{i,j,k}}$$ Darstellung der beiden Dreifach-Produkt-Sets für die Basen $$\set{e_0^i}$$ und $$\set{e_1^i}$$, lassen $$z_i \in U_1$$ sind die $$U_1^\infty$$ Aktion auf einer solchen orthonormalen Basis $$\set{e_1^i}$$. Daher müssen wir wählen $$z_i$$ so dass $$\set{z_ie_1^i}$$ Erträge $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
-Warum ist das der Fall? Im Allgemeinen ist die Symmetriegruppe, die auf den Raum möglicher orthonormaler Grundlagen von Eigenfunktionen wirkt, der Raum von Unitary Operators. $$U: \mathscr H\rightarrow\mathscr H$$ die mit Projektionen pendeln $$P_{\mathcal V_\lambda}$$ auf die endlichen Eigenräume $$\mathcal V_{\lambda}$$ für jeden einzelnen Eigenwert $$\lambda$$ Der Laplacian. Daher
+Warum ist das der Fall? Im Allgemeinen ist die Symmetriegruppe, die auf den Raum möglicher orthonormaler Grundlagen von Eigenfunktionen wirkt, der Raum von Unitary Operators. $$U: \mathscr H\rightarrow\mathscr H$$ die mit Projektionen pendeln $$P_{\mathscr V_\lambda}$$ auf die endlichen Eigenräume $$\mathscr V_{\lambda}$$ für jeden einzelnen Eigenwert $$\lambda$$ Der Laplacian. Daher
 
 ```math
 \begin{aligned}
-P_{\mathcal V_{\lambda}}U(e^i) = UP_{\mathcal V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
+P_{\mathscr V_{\lambda}}U(e^i) = UP_{\mathscr V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
 M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
 \end{aligned}
 ```
 
 ist das Bild von $$M^{i,j,k}$$ unter $$U$$'s Basismaßnahme $$e^i \mapsto U(e^i)$$.
 
-Jetzt unter den Bedingungen von Corollary 2, jeder der $$\mathcal V_\lambda$$ sind eindimensionale Vektorräume über $$\Complex$$, aber das bedeutet auch, dass sie eindimensionale Vektorräume über $$\Reals$$und so ist die vollständige multiplikative Symmetriegruppe $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+Jetzt unter den Bedingungen von Corollary 2, jeder der $$\mathscr V_\lambda$$ sind eindimensionale Vektorräume über $$\Complex$$, aber das bedeutet auch, dass sie eindimensionale Vektorräume über $$\Reals$$und so ist die vollständige multiplikative Symmetriegruppe $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Allgemeiner die damit verbundene Voraussetzung "bezüglich der Übereinstimmung mit den Produktwerten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten $$\set{M^{i,j,k}}$$ (mit Multiplizität gezählt), wenn als eine Sammlung von Karten aus $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", die ein robuster Satz von Unitary Invariants sind.  Wir sind deutlich weniger zuversichtlich, dass diese verallgemeinerte Vermutung zutrifft, da es möglich sein könnte, ein Gegenbeispiel über explizite Sunada-Konstruktion zu erstellen.
+Allgemeiner die damit verbundene Voraussetzung "bezüglich der Übereinstimmung mit den Produktwerten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten $$\set{M^{i,j,k}}$$ (mit Multiplizität gezählt), wenn als eine Sammlung von Karten aus $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", die ein robuster Satz von Unitary Invariants sind.  Wir sind deutlich weniger zuversichtlich, dass diese verallgemeinerte Vermutung zutrifft, da es möglich sein könnte, ein Gegenbeispiel über explizite Sunada-Konstruktion zu erstellen.
 
 Wenn wir zu Korrespondenz 1 zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
 
@@ -274,7 +274,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-Wir hoffen, dass $$k>0$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$, da es sich um eine allgemein wahre Bedingung handelt, aber für bestimmte Fälle wie den im folgenden Beispiel abgedeckten flachen Tori-Fall falsch. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$.
+Wir hoffen, dass $$k>0$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$, da es sich um eine allgemein wahre Bedingung handelt, aber für bestimmte Fälle wie den im folgenden Beispiel abgedeckten flachen Tori-Fall falsch. Eine übergeordnete Möglichkeit, diese Bedingung zu betrachten, ist zu beachten, dass eine solche Hoffnung verletzt $$e^k$$ wäre im Kernel der Nebenkarte $$[M^{i,\bar i,k}]^*$$. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$.
 
 Wir skizzieren einen Nachweis von Corollary 1 (Suffizienz) unter dem nächsten Satz von Formeln.
 

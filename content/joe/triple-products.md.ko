@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=50232
+status: 확인=50270
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -252,20 +252,20 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 유니폼 규범을 유지합니
 
 대상 $$\set{M_0^{i,j,k}}$$ 및 $$\set{M_1^{i,j,k}}$$ 기본에 대한 두 개의 삼중 제품 세트를 나타냅니다. $$\set{e_0^i}$$ 및 $$\set{e_1^i}$$의 Let $$z_i \in U_1$$ 다음과 같이 하십시오. $$U_1^\infty$$ 이러한 orthonormal 기초에 행동 $$\set{e_1^i}$$. 그래서 우리는 선택해야합니다. $$z_i$$ 이렇게 $$\set{z_ie_1^i}$$ 수율 $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
-이게 왜 케이스인가요? 일반적으로, eigenfunctions의 가능한 직교 기지의 공간에 작용하는 대칭 그룹은 단일 연산자의 공간입니다 $$U: \mathscr H\rightarrow\mathscr H$$ 프로젝션과 함께 $$P_{\mathcal V_\lambda}$$ 유한 차원의 eigenspaces $$\mathcal V_{\lambda}$$ 각 개별 고유 값과 연관됨 $$\lambda$$ 라플라시안 The Laplacian 따라서
+이게 왜 케이스인가요? 일반적으로, eigenfunctions의 가능한 직교 기지의 공간에 작용하는 대칭 그룹은 단일 연산자의 공간입니다 $$U: \mathscr H\rightarrow\mathscr H$$ 프로젝션과 함께 $$P_{\mathscr V_\lambda}$$ 유한 차원의 eigenspaces $$\mathscr V_{\lambda}$$ 각 개별 고유 값과 연관됨 $$\lambda$$ 라플라시안 The Laplacian 따라서
 
 ```math
 \begin{aligned}
-P_{\mathcal V_{\lambda}}U(e^i) = UP_{\mathcal V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
+P_{\mathscr V_{\lambda}}U(e^i) = UP_{\mathscr V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
 M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
 \end{aligned}
 ```
 
 의 이미지입니다. $$M^{i,j,k}$$ 아래 $$U$$기준 작업 $$e^i \mapsto U(e^i)$$.
 
-이제 Corollary 2의 조건 하에서, 각각의 $$\mathcal V_\lambda$$ 1차원 벡터 공간 $$\Complex$$그러나 그것은 또한 그들이 하나의 차원 벡터 공간을 의미 $$\Reals$$, 따라서 전체 다중 대칭 그룹은 $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+이제 Corollary 2의 조건 하에서, 각각의 $$\mathscr V_\lambda$$ 1차원 벡터 공간 $$\Complex$$그러나 그것은 또한 그들이 하나의 차원 벡터 공간을 의미 $$\Reals$$, 따라서 전체 다중 대칭 그룹은 $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-일반적으로 연관된 필요 조건 "제품 가치 계약 관련" 그저 그렇게 될 뿐 "정렬된 단수 값 집합 보존 $$\set{M^{i,j,k}}$$ (다중성으로 계산됨), 에서 맵 모음으로 표시되는 경우 $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"의 강력한 단일 불변 집합입니다.  우리는이 일반화 된 추측이 사실임을 확신하지 못하는데, 이는 명백한 Sunada 건설을 통해 반예제를 생산할 수 있기 때문입니다.
+일반적으로 연관된 필요 조건 "제품 가치 계약 관련" 그저 그렇게 될 뿐 "정렬된 단수 값 집합 보존 $$\set{M^{i,j,k}}$$ (다중성으로 계산됨), 에서 맵 모음으로 표시되는 경우 $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$"의 강력한 단일 불변 집합입니다.  우리는이 일반화 된 추측이 사실임을 확신하지 못하는데, 이는 명백한 Sunada 건설을 통해 반예제를 생산할 수 있기 때문입니다.
 
 Corollary 1로 돌아가면, 우리는 증거가이 의미를 확립하는 것을 포함합니다 :
 
@@ -274,7 +274,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-우리는 어떤 주어진 것을 기대할 수 있습니다. $$k>0$$, $$M_0^{i,i,k}$$ 동일할 수 없습니다. $$0$$ 모두 $$i$$일반적으로 참 조건이지만 아래 예제에서 다루는 플랫 토리 케이스와 같은 특정 경우는 거짓입니다. 또한, Formula <span class="eqno"></span> 대상 $$z_k$$ 둘 다 필요 $$i$$- 독립성 및 충분성, 기본 맵 설정 $$e_0^i \mapsto z_i e_1^i$$ 보존 $$\set{M_0^{i,j,k}}$$.
+우리는 어떤 주어진 것을 기대할 수 있습니다. $$k>0$$, $$M_0^{i,i,k}$$ 동일할 수 없습니다. $$0$$ 모두 $$i$$일반적으로 참 조건이지만 아래 예제에서 다루는 플랫 토리 케이스와 같은 특정 경우는 거짓입니다. 이 상태를 보는 더 높은 수준의 방법은 그러한 희망 위반을 주목하는 것입니다. $$e^k$$ 조정 맵의 커널에 있음 $$[M^{i,\bar i,k}]^*$$. 또한, Formula <span class="eqno"></span> 대상 $$z_k$$ 둘 다 필요 $$i$$- 독립성 및 충분성, 기본 맵 설정 $$e_0^i \mapsto z_i e_1^i$$ 보존 $$\set{M_0^{i,j,k}}$$.
 
 우리는 다음 수식 세트 아래에 Corollary 1 (효율성)의 증거를 스케치합니다.
 

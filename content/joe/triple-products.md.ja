@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=50232
+status: 確認済み=50270
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -251,20 +251,20 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 均一な基準を維持しま�
 
 次を含む$$\set{M_0^{i,j,k}}$$ および$$\set{M_1^{i,j,k}}$$ 基底の2つの三重プロダクトセットを表す$$\set{e_0^i}$$ および$$\set{e_1^i}$$Let $$z_i \in U_1$$ である$$U_1^\infty$$ このような正統性に基づく行動$$\set{e_1^i}$$。したがって、私たちは選択する必要があります$$z_i$$ したがって$$\set{z_ie_1^i}$$ 降伏$$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
-このケースはなぜですか。一般に、固有関数の正準基底の空間に作用する対称群は、単項演算子の空間である。$$U: \mathscr H\rightarrow\mathscr H$$ プロジェクションと合致する$$P_{\mathcal V_\lambda}$$ 有限次元異次元空間$$\mathcal V_{\lambda}$$ 個々の固有値に関連付けられる$$\lambda$$ Laplacianです。したがって、
+このケースはなぜですか。一般に、固有関数の正準基底の空間に作用する対称群は、単項演算子の空間である。$$U: \mathscr H\rightarrow\mathscr H$$ プロジェクションと合致する$$P_{\mathscr V_\lambda}$$ 有限次元異次元空間$$\mathscr V_{\lambda}$$ 個々の固有値に関連付けられる$$\lambda$$ Laplacianです。したがって、
 
 ```math
 \begin{aligned}
-P_{\mathcal V_{\lambda}}U(e^i) = UP_{\mathcal V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
+P_{\mathscr V_{\lambda}}U(e^i) = UP_{\mathscr V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
 M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
 \end{aligned}
 ```
 
 次のイメージです$$M^{i,j,k}$$ 真下付き$$U$$基準処理$$e^i \mapsto U(e^i)$$.
 
-現在、コロラリー2の条件下では、$$\mathcal V_\lambda$$ 1次元ベクトル空間$$\Complex$$しかし、それはまた、それらが一次元ベクトル空間であることを意味する。$$\Reals$$のように、完全な多重対称グループは$$O(1,\Reals)^\infty=\Z_2^\infty$$.
+現在、コロラリー2の条件下では、$$\mathscr V_\lambda$$ 1次元ベクトル空間$$\Complex$$しかし、それはまた、それらが一次元ベクトル空間であることを意味する。$$\Reals$$のように、完全な多重対称グループは$$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-より一般的には、関連する前提条件"製品価値契約について" 単に"単数値の順序付きセットの保存$$\set{M^{i,j,k}}$$ (多重度でカウント)マップの集合として表示する場合$$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$"これは、Unitary Invariantsの堅牢なセットです。我々は、この一般化された予想が、明示的なSunada建設を介して反例を作り出すことが可能である可能性があるので、真であることは、あまり確信がない。
+より一般的には、関連する前提条件"製品価値契約について" 単に"単数値の順序付きセットの保存$$\set{M^{i,j,k}}$$ (多重度でカウント)マップの集合として表示する場合$$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$"これは、Unitary Invariantsの堅牢なセットです。我々は、この一般化された予想が、明示的なSunada建設を介して反例を作り出すことが可能である可能性があるので、真であることは、あまり確信がない。
 
 Corollary 1に戻ると、この証明には次のような意味があることがわかります。
 
@@ -273,7 +273,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-ご希望の方へ$$k>0$$, $$M_0^{i,i,k}$$ 同じにはできません$$0$$ すべて$$i$$これは一般的には真の状態ですが、次の例で説明するフラット・トーリ・ケースなどの特定のケースではfalseです。さらに、Formula <span class="eqno"></span> 対象$$z_k$$ 両方が必要$$i$$ベースマップを確立するための独立性と効率性$$e_0^i \mapsto z_i e_1^i$$ 保存$$\set{M_0^{i,j,k}}$$.
+ご希望の方へ$$k>0$$, $$M_0^{i,i,k}$$ 同じにはできません$$0$$ すべて$$i$$これは一般的には真の状態ですが、次の例で説明するフラット・トーリ・ケースなどの特定のケースではfalseです。この状態を見るより高度な方法は、そのような希望に違反していることに注意することです$$e^k$$ 隣接マップのカーネル内にある$$[M^{i,\bar i,k}]^*$$。さらに、Formula <span class="eqno"></span> 対象$$z_k$$ 両方が必要$$i$$ベースマップを確立するための独立性と効率性$$e_0^i \mapsto z_i e_1^i$$ 保存$$\set{M_0^{i,j,k}}$$.
 
 Corollary 1 (sufficiency)の証明を次の数式セットの下にスケッチします。
 

@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=50232
+status: vérifié=50270
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -78,7 +78,7 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 
 (Diagonal Litmus Test) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque choix de $$i,j,k$$, le produit $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ convient dans les deux bases ; et si l'espace vectoriel $$\set{|e^i|^2}$$ sépare les points sur au moins une base. Ici $$\bar j$$ représente la fonction propre $$\bar e^j$$ dans les calculs intégraux à triple produit.
 
-En outre, si nous définissons $$\mathscr V$$ est l'espace de Hilbert généré par $$\set{|e^i|^2}$$, il sépare les points si et seulement si la carte adjointe
+En outre, si nous définissons $$\mathscr V$$ comme l'espace de Hilbert généré par $$\set{|e^i|^2}$$, il sépare les points si et seulement si la carte adjointe
 ```math
 [M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
 ```
@@ -253,20 +253,20 @@ Cela complète la preuve du théorème.
 
 Avec $$\set{M_0^{i,j,k}}$$ et $$\set{M_1^{i,j,k}}$$ représentant les deux ensembles à trois produits pour les bases $$\set{e_0^i}$$ et $$\set{e_1^i}$$, laissez $$z_i \in U_1$$ être le $$U_1^\infty$$ action sur une telle base orthonormée $$\set{e_1^i}$$. Il faut donc choisir $$z_i$$ afin que $$\set{z_ie_1^i}$$ rendements $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
-Pourquoi est-ce le cas ? En général, le groupe de symétrie agissant sur l'espace des bases orthonormes possibles des fonctions propres est l'espace des opérateurs unitaires $$U: \mathscr H\rightarrow\mathscr H$$ ce trajet avec des projections $$P_{\mathcal V_\lambda}$$ sur les espaces propres de dimension finie $$\mathcal V_{\lambda}$$ associé à chaque valeur propre individuelle $$\lambda$$ du Laplacien. Par conséquent
+Pourquoi est-ce le cas ? En général, le groupe de symétrie agissant sur l'espace des bases orthonormes possibles des fonctions propres est l'espace des opérateurs unitaires $$U: \mathscr H\rightarrow\mathscr H$$ ce trajet avec des projections $$P_{\mathscr V_\lambda}$$ sur les espaces propres de dimension finie $$\mathscr V_{\lambda}$$ associé à chaque valeur propre individuelle $$\lambda$$ du Laplacien. Par conséquent
 
 ```math
 \begin{aligned}
-P_{\mathcal V_{\lambda}}U(e^i) = UP_{\mathcal V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
+P_{\mathscr V_{\lambda}}U(e^i) = UP_{\mathscr V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
 M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
 \end{aligned}
 ```
 
 est l'image de $$M^{i,j,k}$$ sous $$U$$Action de base $$e^i \mapsto U(e^i)$$.
 
-Maintenant, dans les conditions du Corollaire 2, chacun des $$\mathcal V_\lambda$$ sont des espaces vectoriels unidimensionnels sur $$\Complex$$, mais cela signifie également qu'ils sont des espaces vectoriels unidimensionnels sur $$\Reals$$et donc le groupe de symétrie multiplicative complet est $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+Maintenant, dans les conditions du Corollaire 2, chacun des $$\mathscr V_\lambda$$ sont des espaces vectoriels unidimensionnels sur $$\Complex$$, mais cela signifie également qu'ils sont des espaces vectoriels unidimensionnels sur $$\Reals$$et donc le groupe de symétrie multiplicative complet est $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Plus généralement, le prérequis associé "concernant l'accord sur les valeurs des produits" serait simplement devenu "conservation de l'ensemble ordonné de valeurs singulières $$\set{M^{i,j,k}}$$ (compté avec multiplicité), lorsqu'il est considéré comme un ensemble de cartes $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", qui sont un ensemble robuste d'invariants unitaires.  Nous sommes beaucoup moins convaincus que cette conjecture généralisée est vraie, car il peut être possible de produire un contre-exemple via une construction Sunada explicite.
+Plus généralement, le prérequis associé "concernant l'accord sur les valeurs des produits" serait simplement devenu "conservation de l'ensemble ordonné de valeurs singulières $$\set{M^{i,j,k}}$$ (compté avec multiplicité), lorsqu'il est considéré comme un ensemble de cartes $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", qui sont un ensemble robuste d'invariants unitaires.  Nous sommes beaucoup moins convaincus que cette conjecture généralisée est vraie, car il peut être possible de produire un contre-exemple via une construction Sunada explicite.
 
 En revenant au Corollaire 1, nous observons que la preuve implique d'établir cette implication :
 
@@ -275,7 +275,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-Nous espérons que pour tout $$k>0$$, $$M_0^{i,i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$, puisqu'il s'agit d'une condition génériquement vraie, mais fausse pour des cas spécifiques comme le cas de tori plat couvert dans l'exemple ci-dessous. En outre, la formule <span class="eqno"></span> pour $$z_k$$ nécessite les deux $$i$$- indépendance et suffisance, pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conservateurs $$\set{M_0^{i,j,k}}$$.
+Nous espérons que pour tout $$k>0$$, $$M_0^{i,i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$, puisqu'il s'agit d'une condition génériquement vraie, mais fausse pour des cas spécifiques comme le cas de tori plat couvert dans l'exemple ci-dessous. Une façon de plus haut niveau d'examiner cette condition est de noter qu'une telle violation de l'espoir $$e^k$$ serait dans le noyau de la carte adjointe $$[M^{i,\bar i,k}]^*$$. En outre, la formule <span class="eqno"></span> pour $$z_k$$ nécessite les deux $$i$$- indépendance et suffisance, pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conservateurs $$\set{M_0^{i,j,k}}$$.
 
 Nous esquissons une preuve du Corollaire 1 (suffisance) en dessous de la prochaine série de formules.
 

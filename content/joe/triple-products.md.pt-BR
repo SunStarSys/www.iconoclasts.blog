@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=50232
+status: verificado=50270
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -78,7 +78,7 @@ Para ser isométrico $$(M,g)$$, é uma condição *necessária e suficiente* par
 
 (Teste Litmus Diagonal) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ concorda em ambas as bases; e se o espaço vetorial $$\set{|e^i|^2}$$ separa pontos em pelo menos uma base. Aqui $$\bar j$$ representa a autofunção $$\bar e^j$$ nos cálculos integrais de triplo produto.
 
-Além disso, se definirmos $$\mathscr V$$ é o espaço Hilbert gerado por $$\set{|e^i|^2}$$, separa pontos se e somente se o mapa adjacente
+Além disso, se definirmos $$\mathscr V$$ como o espaço Hilbert gerado por $$\set{|e^i|^2}$$, separa pontos se e somente se o mapa adjacente
 ```math
 [M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
 ```
@@ -253,20 +253,20 @@ Isso completa a prova do Teorema.
 
 Com $$\set{M_0^{i,j,k}}$$ e $$\set{M_1^{i,j,k}}$$ representando os dois conjuntos de triplo produto para as bases $$\set{e_0^i}$$ e $$\set{e_1^i}$$, deixe $$z_i \in U_1$$ seja o $$U_1^\infty$$ ação em tal base ortonormal $$\set{e_1^i}$$. Assim, precisamos escolher $$z_i$$ para que $$\set{z_ie_1^i}$$ rendimentos $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
-Por que é esse o caso? Em geral, o grupo de simetria que atua no espaço de possíveis bases ortonormais de autofunções é o espaço de Operadores Unitários $$U: \mathscr H\rightarrow\mathscr H$$ que se deslocam com projeções $$P_{\mathcal V_\lambda}$$ para os eigenspaces de dimensão finita $$\mathcal V_{\lambda}$$ associado a cada autovalor individual $$\lambda$$ do Laplaciano. Portanto
+Por que é esse o caso? Em geral, o grupo de simetria que atua no espaço de possíveis bases ortonormais de autofunções é o espaço de Operadores Unitários $$U: \mathscr H\rightarrow\mathscr H$$ que se deslocam com projeções $$P_{\mathscr V_\lambda}$$ para os eigenspaces de dimensão finita $$\mathscr V_{\lambda}$$ associado a cada autovalor individual $$\lambda$$ do Laplaciano. Portanto
 
 ```math
 \begin{aligned}
-P_{\mathcal V_{\lambda}}U(e^i) = UP_{\mathcal V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
+P_{\mathscr V_{\lambda}}U(e^i) = UP_{\mathscr V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
 M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
 \end{aligned}
 ```
 
 é a imagem de $$M^{i,j,k}$$ sob $$U$$ação base $$e^i \mapsto U(e^i)$$.
 
-Agora, nas condições do Corolário 2, cada um dos $$\mathcal V_\lambda$$ são espaços vetoriais unidimensionais sobre $$\Complex$$, mas isso também significa que eles são espaços vetoriais unidimensionais $$\Reals$$, e assim o grupo multiplicativo completo da simetria é $$O(1,\Reals)^\infty=\Z_2^\infty$$.
+Agora, nas condições do Corolário 2, cada um dos $$\mathscr V_\lambda$$ são espaços vetoriais unidimensionais sobre $$\Complex$$, mas isso também significa que eles são espaços vetoriais unidimensionais $$\Reals$$, e assim o grupo multiplicativo completo da simetria é $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Mais geralmente, o prerrequisito associado "acordo sobre os valores dos produtos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado com multiplicidade), quando visto como uma coleção de mapas de $$\mathcal V_{\lambda_i} \rightarrow Hom(\mathcal V_{\lambda_j}, \mathcal V_{\lambda_k}^*)$$", que são um conjunto robusto de invariantes unitários.  Estamos significativamente menos confiantes de que esta conjectura generalizada é verdadeira, uma vez que pode ser possível produzir um contra-exemplo através de construção Sunada explícita.
+Mais geralmente, o prerrequisito associado "acordo sobre os valores dos produtos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado com multiplicidade), quando visto como uma coleção de mapas de $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", que são um conjunto robusto de invariantes unitários.  Estamos significativamente menos confiantes de que esta conjectura generalizada é verdadeira, uma vez que pode ser possível produzir um contra-exemplo através de construção Sunada explícita.
 
 Voltando ao Corolário 1, observamos que a prova envolve estabelecer essa implicação:
 
@@ -275,7 +275,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-Podemos esperar que, para qualquer $$k>0$$, $$M_0^{i,i,k}$$ não pode ser idêntico $$0$$ para todos $$i$$, uma vez que é uma condição genericamente verdadeira, mas falsa para casos específicos como a caixa de tori plana coberta no Exemplo abaixo. Além disso, a fórmula <span class="eqno"></span> para $$z_k$$ requer ambos $$i$$-independência, e suficiência, para estabelecer o mapa base $$e_0^i \mapsto z_i e_1^i$$ preservas $$\set{M_0^{i,j,k}}$$.
+Podemos esperar que, para qualquer $$k>0$$, $$M_0^{i,i,k}$$ não pode ser idêntico $$0$$ para todos $$i$$, uma vez que é uma condição genericamente verdadeira, mas falsa para casos específicos como a caixa de tori plana coberta no Exemplo abaixo. Uma maneira de nível superior de olhar para esta condição é notar que tal esperança-violação $$e^k$$ estaria no núcleo do mapa adjacente $$[M^{i,\bar i,k}]^*$$. Além disso, a fórmula <span class="eqno"></span> para $$z_k$$ requer ambos $$i$$-independência, e suficiência, para estabelecer o mapa base $$e_0^i \mapsto z_i e_1^i$$ preservas $$\set{M_0^{i,j,k}}$$.
 
 Nós esboçamos uma prova de Corolário 1 (suficiência) abaixo do próximo conjunto de fórmulas.
 
