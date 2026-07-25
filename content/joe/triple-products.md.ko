@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=50296
+status: 확인=50312
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -240,7 +240,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 유니폼 규범을 유지합니
 
 일반성 손실 없이 원활한 통합 분할에 대해 표시된 특수 사례 결과를 적용할 수 있습니다. $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$여기서 $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ 렘마는 긍정적 인 척도를 가지고 있으며, 렘마는 전체적으로 입증되었습니다.
 
-시작일 $$\set {\bar e^i}$$ 이것은 또한 Fourier의 기초입니다. $$L^2(M,g)$$방정식 (3)에서 분명하다. $$\vec F(\bar f) = \bar{\vec F}(f)$$. 즉, 고밀도 집합에서 $$C(M)$$ (그리고 $$C(N)$$), 우리는 설치했습니다 $$\vec{F}$$ 아벨의 isomorphism $$C^*$$ algebras, 따라서 isomorphism의 확장 될 수있다 $$C(M)$$ 및 $$C(N)$$ 같은 범주에서.
+시작일 $$\set {\bar e^i}$$ 이것은 또한 Fourier의 기초입니다. $$L^2(M,g)$$방정식 (4)에서 분명하다. $$\vec F(\bar f) = \bar{\vec F}(f)$$. 즉, 고밀도 집합에서 $$C(M)$$ (그리고 $$C(N)$$), 우리는 설치했습니다 $$\vec{F}$$ 아벨의 isomorphism $$C^*$$ algebras, 따라서 isomorphism의 확장 될 수있다 $$C(M)$$ 및 $$C(N)$$ 같은 범주에서.
 
 이제 우리는 Gelfand-Naimark-Segal Representation Theorem (in contravariant functor form)을 unital Abelian에 적용합니다. $$C^*$$ 대수학 [[JC19]](#JC19) 이 동형성을 동형성(homeomorphism)으로 표현하기 $$F$$ 사이 $$N$$ 및 $$M$$. 그것은 매끄러운 기능에 bijective이기 때문에, 그것 또한 매끄럽습니다.
 
@@ -250,7 +250,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 유니폼 규범을 유지합니
 
 ### 코롤러 토론
 
-대상 $$\set{M_0^{i,j,k}}$$ 및 $$\set{M_1^{i,j,k}}$$ 기본에 대한 두 개의 삼중 제품 세트를 나타냅니다. $$\set{e_0^i}$$ 및 $$\set{e_1^i}$$의 Let $$z_i \in U_1$$ 다음과 같이 하십시오. $$U_1^\infty$$ 이러한 orthonormal 기초에 행동 $$\set{e_1^i}$$. 그래서 우리는 선택해야합니다. $$z_i$$ 이렇게 $$\set{z_ie_1^i}$$ 수율 $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
+대상 $$\set{M_0^{i,j,k}}$$ 및 $$\set{M_1^{i,j,k}}$$ 기본에 대한 두 개의 삼중 제품 세트를 나타냅니다. $$\set{e_0^i}$$ 및 $$\set{e_1^i}$$의 Let $$z_i \in U_1$$ 다음과 같이 하십시오. $$U_1^\infty$$ 이러한 orthonormal 기초에 행동 $$\set{e_1^i}$$. 그러므로 우리는 선택할 것이다. $$z_i$$ 이렇게 $$\set{z_ie_1^i}$$ 수율 $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 이게 왜 케이스인가요? 일반적으로, eigenfunctions의 가능한 직교 기지의 공간에 작용하는 대칭 그룹은 단일 연산자의 공간입니다 $$U: \mathscr H\rightarrow\mathscr H$$ 프로젝션과 함께 $$P_{\mathscr V_\lambda}$$ 유한 차원의 eigenspaces $$\mathscr V_{\lambda}$$ 각 개별 고유 값과 연관됨 $$\lambda$$ 라플라시안 The Laplacian 따라서
 

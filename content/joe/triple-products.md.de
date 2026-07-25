@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=50296
+status: überprüft=50312
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -240,7 +240,7 @@ eine charakteristische Funktion des positiven Maßes für jede disjunktive Teilm
 
 Ohne Verlust der Allgemeinheit können wir das für die reibungslose Aufteilung der Einheit gezeigte Sonderfallergebnis anwenden $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, wobei $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ hat ein positives Maß, und die Lemma ist vollständig bewiesen.
 
-Seit $$\set {\bar e^i}$$ ist auch eine Fourier-Basis für $$L^2(M,g)$$Aus der Gleichung (3) wird deutlich, dass $$\vec F(\bar f) = \bar{\vec F}(f)$$. Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), haben wir $$\vec{F}$$ als Isomorphismus des Abelian $$C^*$$ Algebras und können so zu einem Isomorphismus von $$C(M)$$ und $$C(N)$$ in der gleichen Kategorie.
+Seit $$\set {\bar e^i}$$ ist auch eine Fourier-Basis für $$L^2(M,g)$$Aus der Gleichung (4) wird deutlich, dass $$\vec F(\bar f) = \bar{\vec F}(f)$$. Dies bedeutet, dass auf einem dichten Satz von $$C(M)$$ (und $$C(N)$$), haben wir $$\vec{F}$$ als Isomorphismus des Abelian $$C^*$$ Algebras und können so zu einem Isomorphismus von $$C(M)$$ und $$C(N)$$ in der gleichen Kategorie.
 
 Jetzt wenden wir das Gelfand-Naimark-Segal-Darstellungstheorem (in kontravarianter Funkform) für unitales Abelian an. $$C^*$$ Algebras [[JC19]](#JC19) diesen Isomorphismus durch einen Homomorphismus darzustellen $$F$$ zwischen $$N$$ und $$M$$. Da es bijektiv auf glatte Funktionen ist, muss es auch glatt sein.
 
@@ -250,7 +250,7 @@ Damit ist der Beweis des Theorems abgeschlossen.
 
 ### Diskussion von Corollaries
 
-Mit $$\set{M_0^{i,j,k}}$$ und $$\set{M_1^{i,j,k}}$$ Darstellung der beiden Dreifach-Produkt-Sets für die Basen $$\set{e_0^i}$$ und $$\set{e_1^i}$$, lassen $$z_i \in U_1$$ sind die $$U_1^\infty$$ Aktion auf einer solchen orthonormalen Basis $$\set{e_1^i}$$. Daher müssen wir wählen $$z_i$$ so dass $$\set{z_ie_1^i}$$ Erträge $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
+Mit $$\set{M_0^{i,j,k}}$$ und $$\set{M_1^{i,j,k}}$$ Darstellung der beiden Dreifach-Produkt-Sets für die Basen $$\set{e_0^i}$$ und $$\set{e_1^i}$$, lassen $$z_i \in U_1$$ sind die $$U_1^\infty$$ Aktion auf einer solchen orthonormalen Basis $$\set{e_1^i}$$. So wählen wir $$z_i$$ so dass $$\set{z_ie_1^i}$$ Erträge $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 Warum ist das der Fall? Im Allgemeinen ist die Symmetriegruppe, die auf den Raum möglicher orthonormaler Grundlagen von Eigenfunktionen wirkt, der Raum von Unitary Operators. $$U: \mathscr H\rightarrow\mathscr H$$ die mit Projektionen pendeln $$P_{\mathscr V_\lambda}$$ auf die endlichen Eigenräume $$\mathscr V_{\lambda}$$ für jeden einzelnen Eigenwert $$\lambda$$ Der Laplacian. Daher
 

@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50296
+status: verifierad=50312
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -240,7 +240,7 @@ som är en karakteristisk funktion av positivt mått på varje delmängd $$\set{
 
 Utan förlust av allmängiltighet kan vi tillämpa specialfallets resultat som visas för den smidiga uppdelningen av enhet $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, där $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ har positiva mått, och Lemma bevisas i sin helhet.
 
-Sedan $$\set {\bar e^i}$$ Det är också en Fourier-bas för $$L^2(M,g)$$Det framgår av ekvationen (3) att $$\vec F(\bar f) = \bar{\vec F}(f)$$. Detta innebär att på en tät uppsättning $$C(M)$$ (och $$C(N)$$), vi har etablerat $$\vec{F}$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$ i samma kategori.
+Sedan $$\set {\bar e^i}$$ Det är också en Fourier-bas för $$L^2(M,g)$$Det framgår av ekvationen (4) att $$\vec F(\bar f) = \bar{\vec F}(f)$$. Detta innebär att på en tät uppsättning $$C(M)$$ (och $$C(N)$$), vi har etablerat $$\vec{F}$$ som en isomorfism av Abelian $$C^*$$ algebror, och därmed kan utvidgas till en isomorfism av $$C(M)$$ och $$C(N)$$ i samma kategori.
 
 Nu tillämpar vi Gelfand-Naimark-Segal Representation Theorem (i kontravariant functor form) för unital Abelian $$C^*$$ algebror [[JC19]](#JC19) att representera denna isomorfism genom en homeomorfism $$F$$ mellan $$N$$ och $$M$$. Eftersom det är bijektiv på släta funktioner, måste det också vara smidigt.
 
@@ -250,7 +250,7 @@ Detta kompletterar teoremens bevis.
 
 ### Diskussion om korollarier
 
-Med $$\set{M_0^{i,j,k}}$$ och $$\set{M_1^{i,j,k}}$$ representerar de två trippelproduktseten för baserna $$\set{e_0^i}$$ och $$\set{e_1^i}$$, låt $$z_i \in U_1$$ vara $$U_1^\infty$$ åtgärder på en sådan ortonormal grund $$\set{e_1^i}$$. Därför måste vi välja $$z_i$$ så att $$\set{z_ie_1^i}$$ avkastning $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
+Med $$\set{M_0^{i,j,k}}$$ och $$\set{M_1^{i,j,k}}$$ representerar de två trippelproduktseten för baserna $$\set{e_0^i}$$ och $$\set{e_1^i}$$, låt $$z_i \in U_1$$ vara $$U_1^\infty$$ åtgärder på en sådan ortonormal grund $$\set{e_1^i}$$. Därför kommer vi att välja $$z_i$$ så att $$\set{z_ie_1^i}$$ avkastning $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 Varför är detta fallet? I allmänhet är den symmetrigrupp som verkar på utrymmet för möjliga ortonormala baser av egenfunktioner utrymmet för enhetsoperatorer. $$U: \mathscr H\rightarrow\mathscr H$$ som pendlar med prognoser $$P_{\mathscr V_\lambda}$$ på de finita dimensionella åttondelar $$\mathscr V_{\lambda}$$ för varje enskilt egenvärde $$\lambda$$ från Lappland. Därför
 

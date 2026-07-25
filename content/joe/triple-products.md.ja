@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=50296
+status: 確認済み=50312
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -239,7 +239,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 均一な基準を維持しま�
 
 ジェネラリティを失うことなく、統一のスムーズなパーティションに示された特別なケース結果を適用できます$$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$ここで$$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ ポジティブな手段があり、レマは完全に証明されています。
 
-次以降$$\set {\bar e^i}$$ フーリエの基礎でもある。$$L^2(M,g)$$という方程式(3)から、$$\vec F(\bar f) = \bar{\vec F}(f)$$。これは、密集した一連の$$C(M)$$ および$$C(N)$$)を確立した。$$\vec{F}$$ アベリア人の同型$$C^*$$ 代数は、したがって、同型に拡張することができます$$C(M)$$ および$$C(N)$$ 同じカテゴリーで。
+次以降$$\set {\bar e^i}$$ フーリエの基礎でもある。$$L^2(M,g)$$という方程式(4)から、$$\vec F(\bar f) = \bar{\vec F}(f)$$。これは、密集した一連の$$C(M)$$ および$$C(N)$$)を確立した。$$\vec{F}$$ アベリア人の同型$$C^*$$ 代数は、したがって、同型に拡張することができます$$C(M)$$ および$$C(N)$$ 同じカテゴリーで。
 
 ここでは、Gelfand-Naimark-Segal Representation Theorem (in contravariant functor form)をunital Abelianに適用します。$$C^*$$ 代数学[[JC19]](#JC19) ホメオモルフィズムによってこのアイソモルフィズムを表す$$F$$ 次の間$$N$$ および$$M$$。スムーズな機能では形容詞なので、スムーズでなければなりません。
 
@@ -249,7 +249,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 均一な基準を維持しま�
 
 ### Corollariesについて
 
-次を含む$$\set{M_0^{i,j,k}}$$ および$$\set{M_1^{i,j,k}}$$ 基底の2つの三重プロダクトセットを表す$$\set{e_0^i}$$ および$$\set{e_1^i}$$Let $$z_i \in U_1$$ である$$U_1^\infty$$ このような正統性に基づく行動$$\set{e_1^i}$$。したがって、私たちは選択する必要があります$$z_i$$ したがって$$\set{z_ie_1^i}$$ 降伏$$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
+次を含む$$\set{M_0^{i,j,k}}$$ および$$\set{M_1^{i,j,k}}$$ 基底の2つの三重プロダクトセットを表す$$\set{e_0^i}$$ および$$\set{e_1^i}$$Let $$z_i \in U_1$$ である$$U_1^\infty$$ このような正統性に基づく行動$$\set{e_1^i}$$。わたしたちは選ぶ。$$z_i$$ したがって$$\set{z_ie_1^i}$$ 降伏$$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 このケースはなぜですか。一般に、固有関数の正準基底の空間に作用する対称群は、単項演算子の空間である。$$U: \mathscr H\rightarrow\mathscr H$$ プロジェクションと合致する$$P_{\mathscr V_\lambda}$$ 有限次元異次元空間$$\mathscr V_{\lambda}$$ 個々の固有値に関連付けられる$$\lambda$$ Laplacianです。したがって、
 

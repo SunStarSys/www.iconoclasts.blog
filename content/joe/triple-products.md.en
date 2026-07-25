@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50311
+status: verified=50312
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -248,7 +248,7 @@ This completes the proof of the Theorem.
 
 ### Discussion of Corollaries
 
-With $$\set{M_0^{i,j,k}}$$ and $$\set{M_1^{i,j,k}}$$ representing the two triple-product sets for the bases $$\set{e_0^i}$$ and $$\set{e_1^i}$$, let $$z_i \in U_1$$ be the $$U_1^\infty$$ action on such an orthonormal basis $$\set{e_1^i}$$. Thus, we need to choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
+With $$\set{M_0^{i,j,k}}$$ and $$\set{M_1^{i,j,k}}$$ representing the two triple-product sets for the bases $$\set{e_0^i}$$ and $$\set{e_1^i}$$, let $$z_i \in U_1$$ be the $$U_1^\infty$$ action on such an orthonormal basis $$\set{e_1^i}$$. Thus, we will choose $$z_i$$ so that $$\set{z_ie_1^i}$$ yields $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 Why is this the case? In general, the symmetry group acting on the space of possible orthonormal bases of eigenfunctions is the space of Unitary Operators $$U: \mathscr H\rightarrow\mathscr H$$ that commute with projections $$P_{\mathscr V_\lambda}$$ onto the finite-dimensional eigenspaces $$\mathscr V_{\lambda}$$ associated with each individual eigenvalue $$\lambda$$ of the Laplacian. Therefore
 

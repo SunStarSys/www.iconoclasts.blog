@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=50296
+status: vérifié=50312
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -241,7 +241,7 @@ qui est une fonction caractéristique de la mesure positive sur chaque sous-ense
 
 Sans perte de généralité, nous pouvons appliquer le résultat de cas particulier montré pour la partition lisse de l'unité $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, où $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ a une mesure positive, et le Lemma est prouvé en entier.
 
-Depuis $$\set {\bar e^i}$$ est aussi une base de Fourier pour $$L^2(M,g)$$, il ressort clairement de l'équation (3) que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Cela signifie que sur un ensemble dense de $$C(M)$$ (et $$C(N)$$), nous avons établi $$\vec{F}$$ comme un isomorphisme d'Abelian $$C^*$$ les algèbres, et peuvent donc être étendues à un isomorphisme de $$C(M)$$ et $$C(N)$$ dans la même catégorie.
+Depuis $$\set {\bar e^i}$$ est aussi une base de Fourier pour $$L^2(M,g)$$, il ressort clairement de l'équation (4) que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Cela signifie que sur un ensemble dense de $$C(M)$$ (et $$C(N)$$), nous avons établi $$\vec{F}$$ comme un isomorphisme d'Abelian $$C^*$$ les algèbres, et peuvent donc être étendues à un isomorphisme de $$C(M)$$ et $$C(N)$$ dans la même catégorie.
 
 Maintenant, nous appliquons le théorème de représentation de Gelfand-Naimark-Segal (sous forme de champignon contravariant) pour l'abélien unitaire $$C^*$$ algèbre [[JC19]](#JC19) représenter cet isomorphisme par un homéomorphisme $$F$$ entre $$N$$ et $$M$$. Comme il est bijectif sur les fonctions lisses, il doit également être lisse.
 
@@ -251,7 +251,7 @@ Cela complète la preuve du théorème.
 
 ### Discussion des corollaires
 
-Avec $$\set{M_0^{i,j,k}}$$ et $$\set{M_1^{i,j,k}}$$ représentant les deux ensembles à trois produits pour les bases $$\set{e_0^i}$$ et $$\set{e_1^i}$$, laissez $$z_i \in U_1$$ être le $$U_1^\infty$$ action sur une telle base orthonormée $$\set{e_1^i}$$. Il faut donc choisir $$z_i$$ afin que $$\set{z_ie_1^i}$$ rendements $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
+Avec $$\set{M_0^{i,j,k}}$$ et $$\set{M_1^{i,j,k}}$$ représentant les deux ensembles à trois produits pour les bases $$\set{e_0^i}$$ et $$\set{e_1^i}$$, laissez $$z_i \in U_1$$ être le $$U_1^\infty$$ action sur une telle base orthonormée $$\set{e_1^i}$$. Ainsi, nous choisirons $$z_i$$ afin que $$\set{z_ie_1^i}$$ rendements $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 Pourquoi est-ce le cas ? En général, le groupe de symétrie agissant sur l'espace des bases orthonormes possibles des fonctions propres est l'espace des opérateurs unitaires $$U: \mathscr H\rightarrow\mathscr H$$ ce trajet avec des projections $$P_{\mathscr V_\lambda}$$ sur les espaces propres de dimension finie $$\mathscr V_{\lambda}$$ associé à chaque valeur propre individuelle $$\lambda$$ du Laplacien. Par conséquent
 

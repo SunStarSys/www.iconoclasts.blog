@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=50296
+status: verificado=50312
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -241,7 +241,7 @@ que es una función característica de la medida positiva en cada subconjunto se
 
 Sin pérdida de generalidad, podemos aplicar el resultado de caso especial mostrado para la partición suave de la unidad $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$donde $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ tiene una medida positiva, y el Lemma está probado en su totalidad.
 
-Desde $$\set {\bar e^i}$$ constituye también una base de Fourier para $$L^2(M,g)$$, queda claro en la ecuación (3) que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Esto significa que en un conjunto denso de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abeliano $$C^*$$ álgebras, y por lo tanto puede extenderse a un isomorfismo de $$C(M)$$ y $$C(N)$$ en la misma categoría.
+Desde $$\set {\bar e^i}$$ constituye también una base de Fourier para $$L^2(M,g)$$, queda claro en la ecuación (4) que $$\vec F(\bar f) = \bar{\vec F}(f)$$. Esto significa que en un conjunto denso de $$C(M)$$ (y $$C(N)$$), hemos establecido $$\vec{F}$$ como un isomorfismo de Abeliano $$C^*$$ álgebras, y por lo tanto puede extenderse a un isomorfismo de $$C(M)$$ y $$C(N)$$ en la misma categoría.
 
 Ahora aplicamos el Teorema de Representación Segal de Gelfand-Naimark (en forma de functor contravariante) para unital Abelian $$C^*$$ álgebras [[JC19]](#JC19) para representar este isomorfismo por un homeomorfismo $$F$$ celebrado entre $$N$$ y $$M$$. Dado que es bijetivo en funciones lisas, también debe ser suave.
 
@@ -251,7 +251,7 @@ Esto completa la prueba del teorema.
 
 ### Discusión de Corolarios
 
-Con $$\set{M_0^{i,j,k}}$$ y $$\set{M_1^{i,j,k}}$$ que representan los dos conjuntos de productos triples para las bases $$\set{e_0^i}$$ y $$\set{e_1^i}$$, vamos $$z_i \in U_1$$ ser el $$U_1^\infty$$ acción sobre una base ortonormal $$\set{e_1^i}$$. Por lo tanto, tenemos que elegir $$z_i$$ para que $$\set{z_ie_1^i}$$ rendimientos $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
+Con $$\set{M_0^{i,j,k}}$$ y $$\set{M_1^{i,j,k}}$$ que representan los dos conjuntos de productos triples para las bases $$\set{e_0^i}$$ y $$\set{e_1^i}$$, vamos $$z_i \in U_1$$ ser el $$U_1^\infty$$ acción sobre una base ortonormal $$\set{e_1^i}$$. Así pues, elegiremos $$z_i$$ para que $$\set{z_ie_1^i}$$ rendimientos $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
 
 ¿Por qué es este el caso? En general, el grupo de simetría que actúa sobre el espacio de posibles bases ortonormales de funciones propias es el espacio de Operadores Unitarios. $$U: \mathscr H\rightarrow\mathscr H$$ que viajan con proyecciones $$P_{\mathscr V_\lambda}$$ en los espacios de ocho dimensiones finitas $$\mathscr V_{\lambda}$$ asociado a cada valor propio individual $$\lambda$$ de los laplacianos. Por lo tanto
 
