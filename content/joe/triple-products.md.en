@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50296
+status: verified=50311
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -238,7 +238,7 @@ which is a characteristic function of positive measure on each disjoint subset $
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, where $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ has positive measure, and the Lemma is proven in full.
 
-Since $$\set {\bar e^i}$$ is also a Fourier basis for $$L^2(M,g)$$, it is clear from Equation (3) that $$\vec F(\bar f) = \bar{\vec F}(f)$$. This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established $$\vec{F}$$ as an isomorphism of Abelian $$C^*$$ algebras, and thus can be extended to an isomorphism of $$C(M)$$ and $$C(N)$$ in the same category.
+Since $$\set {\bar e^i}$$ is also a Fourier basis for $$L^2(M,g)$$, it is clear from Equation (4) that $$\vec F(\bar f) = \bar{\vec F}(f)$$. This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established $$\vec{F}$$ as an isomorphism of Abelian $$C^*$$ algebras, and thus can be extended to an isomorphism of $$C(M)$$ and $$C(N)$$ in the same category.
 
 Now we apply the Gelfand-Naimark-Segal Representation Theorem (in contravariant functor form) for unital Abelian $$C^*$$ algebras [[JC19]](#JC19) to represent this isomorphism by a homeomorphism $$F$$ between $$N$$ and $$M$$. Since it is bijective on smooth functions, it too must be smooth.
 
