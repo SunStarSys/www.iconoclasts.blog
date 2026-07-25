@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50312
+status: verified=50329
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -322,7 +322,7 @@ Corollary 1 follows from the fact that $$z_k\in U_1$$ is well-defined, and the p
 
 So they agree everywhere.
 
-Corollary 2 sufficiency follows by noting that the vanishing adjoint-map kernel condition in the prior paragraph is generically true. And if for some choice of $$i,j,k$$, the product $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ disagreed between bases, they would disagree in every pair of bases.
+Corollary 2 sufficiency follows by noting that the vanishing adjoint-map kernel condition in Corollary 1 is generically true. And if for some choice of $$i,j,k$$, the product $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ disagreed between bases, they would disagree in every pair of bases.
 
 Why? Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $$U_1^\infty$$ where these products are invariants, contradicting Theorem 1. This establishes the necessity of the hypothesis, and completes the proof.
 
