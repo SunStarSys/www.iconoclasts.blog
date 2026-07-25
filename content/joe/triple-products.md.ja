@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=50270
+status: 確認済み=50296
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -235,7 +235,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 均一な基準を維持しま�
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-これは、各非結合サブセットの正の測定の特徴的な機能です$$\set{x\in M | a_j(x) = 1}$$。これは、レマがそれぞれに証明されていることを意味します$$a_j$$正の測定を用いるセットの限定的な特徴的な機能は保たれ、従ってすべてのように均一規範1がありますので、$$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$ダイアグラム(5)
+これは、各非結合サブセットの正の測定の特徴的な機能です$$\set{x\in M | a_j(x) = 1}$$。これは、レマがそれぞれに証明されていることを意味します$$a_j$$正の測定を用いるセットの限定的な特徴的な機能は保たれ、従ってすべてのように均一規範1がありますので、$$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$ダイアグラム(6)
 
 ジェネラリティを失うことなく、統一のスムーズなパーティションに示された特別なケース結果を適用できます$$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$ここで$$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ ポジティブな手段があり、レマは完全に証明されています。
 
@@ -269,7 +269,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 Corollary 1に戻ると、この証明には次のような意味があることがわかります。
 
 ```math
-z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 

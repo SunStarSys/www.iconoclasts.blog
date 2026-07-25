@@ -3,7 +3,7 @@ categories: الرياضيات
 dependencies: '*.md.ar'
 keywords: النظرية الطيفية، الهندسة الريمانية، المشاكل العكسية، الفيزياء الرياضية،
   التحليل التوافقي، نظرية التمثيل، ثوابت الهيكل، نظرية المجال المطابق
-status: التحقق = 50270
+status: التحقق = 50296
 title: المنتجات الثلاثية من وظائف Eigenfunctions والهندسة الطيفية
 ---
 
@@ -236,7 +236,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ يحافظ على القاعدة
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-وهي وظيفة مميزة لقياس إيجابي على كل مجموعة فرعية غير مشتركة $$\set{x\in M | a_j(x) = 1}$$. وهذا يعني أن ليما ثبت لكل $$a_j$$، منذ يتم الحفاظ على وظيفة مميزة الحد من مجموعة مع مقياس إيجابي، وبالتالي لديه قاعدة موحدة 1، كما يفعل كل شيء $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$عن طريق الرسم البياني (5).
+وهي وظيفة مميزة لقياس إيجابي على كل مجموعة فرعية غير مشتركة $$\set{x\in M | a_j(x) = 1}$$. وهذا يعني أن ليما ثبت لكل $$a_j$$، منذ يتم الحفاظ على وظيفة مميزة الحد من مجموعة مع مقياس إيجابي، وبالتالي لديه قاعدة موحدة 1، كما يفعل كل شيء $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$حسب الرسم البياني (6).
 
 دون فقدان العمومية، قد نطبق نتيجة الحالة الخاصة الموضحة لتقسيم الوحدة بسلاسة $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$أين $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ له مقياس إيجابي، وقد ثبت ليما بالكامل.
 
@@ -270,7 +270,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 بالعودة إلى Corollary 1، نلاحظ أن الدليل ينطوي على إثبات هذا التأثير:
 
 ```math
-z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 

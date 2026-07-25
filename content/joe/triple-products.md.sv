@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50270
+status: verifierad=50296
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -236,7 +236,7 @@ genom den dominerade konvergenssatsen,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-som är en karakteristisk funktion av positivt mått på varje delmängd $$\set{x\in M | a_j(x) = 1}$$. Detta innebär att Lemma är bevisat för varje $$a_j$$, eftersom den begränsande karakteristiska funktionen hos en uppsättning med positiv åtgärd bevaras, och därmed har enhetlig norm 1, liksom alla $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, genom diagram (5).
+som är en karakteristisk funktion av positivt mått på varje delmängd $$\set{x\in M | a_j(x) = 1}$$. Detta innebär att Lemma är bevisat för varje $$a_j$$, eftersom den begränsande karakteristiska funktionen hos en uppsättning med positiv åtgärd bevaras, och därmed har enhetlig norm 1, liksom alla $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, genom diagram (6).
 
 Utan förlust av allmängiltighet kan vi tillämpa specialfallets resultat som visas för den smidiga uppdelningen av enhet $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, där $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ har positiva mått, och Lemma bevisas i sin helhet.
 
@@ -270,7 +270,7 @@ Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skull
 Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 
 ```math
-z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 

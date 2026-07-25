@@ -3,7 +3,7 @@ categories: מתמטיקה
 dependencies: '*.md.he'
 keywords: תאוריה ספקטרלית, גאומטריה רימאנית, בעיות הפוכות, פיזיקה מתמטית, ניתוח הרמוני,
   תורת הייצוג, קבועי המבנה, תורת השדות הקונפורמית
-status: אומתה=50270
+status: אומתה=50296
 title: טריפל מוצרים של Eigenfunctions ו Spectral Geometry
 ---
 
@@ -236,7 +236,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ שומר על הנורמה הא�
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-שהיא פונקציה אופיינית של מידה חיובית על כל תת-קבוצה מנותקת $$\set{x\in M | a_j(x) = 1}$$. משמעות הדבר היא כי Lemma הוכח עבור כל אחד $$a_j$$מכיוון שתפקוד האופייני המגביל של קבוצה עם מידה חיובית נשמר, ולכן יש לו נורמה אחידה 1, כמו כל $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$על ידי Diagram (5)
+שהיא פונקציה אופיינית של מידה חיובית על כל תת-קבוצה מנותקת $$\set{x\in M | a_j(x) = 1}$$. משמעות הדבר היא כי Lemma הוכח עבור כל אחד $$a_j$$מכיוון שתפקוד האופייני המגביל של קבוצה עם מידה חיובית נשמר, ולכן יש לו נורמה אחידה 1, כמו כל $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$על ידי Diagram (6)
 
 ללא אובדן הכלליות, אנו עשויים ליישם את תוצאת המקרה המיוחדת המוצגת עבור חלוקת האחדות החלקה $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, היכן $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ יש לו מידה חיובית, והלמה מוכחת במלואה.
 
@@ -270,7 +270,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 בחזרה אל Corollary 1, אנו מבחינים כי ההוכחה כרוכה ביסוס משמעות זו:
 
 ```math
-z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 

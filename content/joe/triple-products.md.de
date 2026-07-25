@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=50270
+status: überprüft=50296
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -236,7 +236,7 @@ nach dem dominierten Konvergenzsatz,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-eine charakteristische Funktion des positiven Maßes für jede disjunktive Teilmenge $$\set{x\in M | a_j(x) = 1}$$. Dies bedeutet, dass die Lemma für jede $$a_j$$, da die limitierende charakteristische Funktion eines Satzes mit positivem Maß erhalten bleibt und somit einheitliche Norm 1 hat, wie alle $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, nach Diagramm (5).
+eine charakteristische Funktion des positiven Maßes für jede disjunktive Teilmenge $$\set{x\in M | a_j(x) = 1}$$. Dies bedeutet, dass die Lemma für jede $$a_j$$, da die limitierende charakteristische Funktion eines Satzes mit positivem Maß erhalten bleibt und somit einheitliche Norm 1 hat, wie alle $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, nach Diagramm (6).
 
 Ohne Verlust der Allgemeinheit können wir das für die reibungslose Aufteilung der Einheit gezeigte Sonderfallergebnis anwenden $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, wobei $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ hat ein positives Maß, und die Lemma ist vollständig bewiesen.
 
@@ -270,7 +270,7 @@ Allgemeiner die damit verbundene Voraussetzung "bezüglich der Übereinstimmung 
 Wenn wir zu Korrespondenz 1 zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
 
 ```math
-z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 

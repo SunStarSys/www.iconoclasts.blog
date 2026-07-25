@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=50270
+status: 확인=50296
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -236,7 +236,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 유니폼 규범을 유지합니
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-각 분리 하위 세트에 대한 긍정적 측정의 특성 함수입니다. $$\set{x\in M | a_j(x) = 1}$$. 이것은 Lemma가 각각에 대해 입증되었음을 의미합니다. $$a_j$$, 긍정적인 측정을 가진 세트의 제한 특성 기능이 보존되기 때문에, 따라서 모든 것과 같이 획일한 규범 1이, $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$그림 (5)
+각 분리 하위 세트에 대한 긍정적 측정의 특성 함수입니다. $$\set{x\in M | a_j(x) = 1}$$. 이것은 Lemma가 각각에 대해 입증되었음을 의미합니다. $$a_j$$, 긍정적인 측정을 가진 세트의 제한 특성 기능이 보존되기 때문에, 따라서 모든 것과 같이 획일한 규범 1이, $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$그림 (6)
 
 일반성 손실 없이 원활한 통합 분할에 대해 표시된 특수 사례 결과를 적용할 수 있습니다. $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$여기서 $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ 렘마는 긍정적 인 척도를 가지고 있으며, 렘마는 전체적으로 입증되었습니다.
 
@@ -270,7 +270,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 Corollary 1로 돌아가면, 우리는 증거가이 의미를 확립하는 것을 포함합니다 :
 
 ```math
-z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 

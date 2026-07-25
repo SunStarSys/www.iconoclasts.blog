@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =50270
+status: 驗證 =50296
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -235,7 +235,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 保持均勻的規範。
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-這是每個相互子集之正計量的特性函數$$\set{x\in M | a_j(x) = 1}$$。這表示每個 Lemma 都會得到證明$$a_j$$，由於保留具有正計量的集合的限制特性函數，因此具有均勻的常規 1，如全部$$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$，依圖 (5)。
+這是每個相互子集之正計量的特性函數$$\set{x\in M | a_j(x) = 1}$$。這表示每個 Lemma 都會得到證明$$a_j$$，由於保留具有正計量的集合的限制特性函數，因此具有均勻的常規 1，如全部$$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$，依圖 (6)。
 
 如果不失去一般性，我們可能會對統一的平滑分割套用特殊案例結果。$$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$，其中$$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ 有正面的措施，而且 Lemma 完全被證明。
 
@@ -269,7 +269,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 回到 Corollary 1，我們觀察到驗證涉及建立此意涵：
 
 ```math
-z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 

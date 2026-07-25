@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=50270
+status: vérifié=50296
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -237,7 +237,7 @@ Par le théorème de convergence dominée,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-qui est une fonction caractéristique de la mesure positive sur chaque sous-ensemble disjoint $$\set{x\in M | a_j(x) = 1}$$. Cela signifie que le lemme est prouvé pour chaque $$a_j$$, étant donné que la fonction caractéristique limitante d'un ensemble à mesure positive est préservée, et a donc une norme uniforme 1, tout comme $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, par diagramme (5).
+qui est une fonction caractéristique de la mesure positive sur chaque sous-ensemble disjoint $$\set{x\in M | a_j(x) = 1}$$. Cela signifie que le lemme est prouvé pour chaque $$a_j$$, étant donné que la fonction caractéristique limitante d'un ensemble à mesure positive est préservée, et a donc une norme uniforme 1, tout comme $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, par diagramme (6).
 
 Sans perte de généralité, nous pouvons appliquer le résultat de cas particulier montré pour la partition lisse de l'unité $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, où $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ a une mesure positive, et le Lemma est prouvé en entier.
 
@@ -271,7 +271,7 @@ Plus généralement, le prérequis associé "concernant l'accord sur les valeurs
 En revenant au Corollaire 1, nous observons que la preuve implique d'établir cette implication :
 
 ```math
-z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 

@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=50270
+status: verificado=50296
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -237,7 +237,7 @@ Por el teorema de convergencia dominado,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-que es una función característica de la medida positiva en cada subconjunto separado $$\set{x\in M | a_j(x) = 1}$$. Esto significa que el Lemma está probado para cada $$a_j$$, ya que se conserva la función característica limitante de un conjunto con medida positiva, y por lo tanto tiene una norma uniforme 1, como todos los $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, por Diagrama (5).
+que es una función característica de la medida positiva en cada subconjunto separado $$\set{x\in M | a_j(x) = 1}$$. Esto significa que el Lemma está probado para cada $$a_j$$, ya que se conserva la función característica limitante de un conjunto con medida positiva, y por lo tanto tiene una norma uniforme 1, como todos los $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, por Diagrama (6).
 
 Sin pérdida de generalidad, podemos aplicar el resultado de caso especial mostrado para la partición suave de la unidad $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$donde $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ tiene una medida positiva, y el Lemma está probado en su totalidad.
 
@@ -271,7 +271,7 @@ En términos más generales, el requisito previo asociado "sobre el acuerdo en l
 Volviendo al Corolario 1, observamos que la prueba implica establecer esta implicación:
 
 ```math
-z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 

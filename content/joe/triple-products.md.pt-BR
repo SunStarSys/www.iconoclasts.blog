@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=50270
+status: verificado=50296
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -237,7 +237,7 @@ Pelo teorema da convergência dominada,
 \sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx
 ```
 
-que é uma função característica de medida positiva em cada subconjunto disjuntivo $$\set{x\in M | a_j(x) = 1}$$. Isso significa que o Lemma é comprovado para cada $$a_j$$, uma vez que a função característica limitante de um conjunto com medida positiva é preservada, e, portanto, tem norma uniforme 1, assim como $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, por Diagrama (5).
+que é uma função característica de medida positiva em cada subconjunto disjuntivo $$\set{x\in M | a_j(x) = 1}$$. Isso significa que o Lemma é comprovado para cada $$a_j$$, uma vez que a função característica limitante de um conjunto com medida positiva é preservada, e, portanto, tem norma uniforme 1, assim como $$a_j^p,\space \vec{F}(a_j^p)=\vec{F}(a_j)^p,\space p\in\N$$, por Diagrama (6).
 
 Sem perda de generalidade, podemos aplicar o resultado de caso especial mostrado para a partição suave da unidade $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, onde $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ tem medida positiva, e o Lemma é provado na íntegra.
 
@@ -271,7 +271,7 @@ Mais geralmente, o prerrequisito associado "acordo sobre os valores dos produtos
 Voltando ao Corolário 1, observamos que a prova envolve estabelecer essa implicação:
 
 ```math
-z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,i,k} \ne 0 \, \implies
+z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
