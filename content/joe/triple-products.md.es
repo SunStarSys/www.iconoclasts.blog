@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=50336
+status: verificado=50397
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -96,7 +96,7 @@ es inyectable.
 </div>
   <div class="card-body">
 
-Genéricamente, los colectores isospectrales son isométricos si y solo si los productos definidos en el Corolario 1 están de acuerdo.
+Genéricamente, los colectores isospectrales son isométricos si y solo si los productos definidos en el Corolario 1 están de acuerdo como valores reales.
 
 </div>
 </div>
@@ -275,7 +275,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\b
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-Podemos esperar que por cualquier $$k>0$$, $$M_0^{i,i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$, ya que es una condición genéricamente verdadera, pero falsa para casos específicos como el caso de tori plano cubierto en el ejemplo a continuación. Una forma más alta de ver esta condición es notar que tal esperanza viola $$e^k$$ estaría en el núcleo del mapa adjunto $$[M^{i,\bar i,k}]^*$$. Además, la fórmula <span class="eqno"></span> para $$z_k$$ requiere tanto $$i$$-independencia, y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conserva $$\set{M_0^{i,j,k}}$$.
+Podemos esperar que por cualquier $$k>0$$, $$M_0^{i,\bar i,k}$$ no puede ser idéntico $$0$$ para todos $$i$$, ya que es una condición genéricamente verdadera, pero falsa para casos específicos como el caso de tori plano cubierto en el ejemplo a continuación. Una forma más alta de ver esta condición es notar que tal esperanza viola $$k$$ habría $$\bar e^k$$ en el núcleo del mapa adjunto $$[M^{i,\bar i,k}]^*$$. Además, la fórmula <span class="eqno"></span> para $$z_k$$ requiere tanto $$i$$-independencia, y suficiencia, para establecer el mapa base $$e_0^i \mapsto z_i e_1^i$$ conserva $$\set{M_0^{i,j,k}}$$.
 
 Esbozamos una prueba de Corolario 1 (suficiencia) por debajo del siguiente conjunto de fórmulas.
 
@@ -327,7 +327,9 @@ Así que están de acuerdo en todas partes.
 
 La suficiencia del Corolario 2 sigue observando que la condición del núcleo del mapa adjunto que desaparece en el Corolario 1 es genéricamente cierta. Y si por alguna elección de $$i,j,k$$, el producto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ En desacuerdo entre bases, estarían en desacuerdo en cada par de bases.
 
-¿Por qué? Dado que se puede presumir que los colectores genéricos también tienen espectros de multiplicidad 1, esto reduce el grupo de simetría completo a $$U_1^\infty$$ donde estos productos son invariantes, contradiciendo el Teorema 1. Esto establece la necesidad de la hipótesis, y completa la prueba.
+¿Por qué? Dado que se puede presumir que los colectores genéricos también tienen espectros de multiplicidad 1, esto reduce el grupo de simetría completo a $$U_1^\infty$$ donde estos productos son invariantes, contradiciendo el Teorema 1. Reducción ulterior de $$\Z_2^\infty$$ a través de bases de valor real garantiza que los productos sean de valor real. Esto establece la necesidad de la hipótesis, y completa la prueba.
+
+Además, los argumentos de la prueba del Corolario 1 son válidos incluso cuando los colectores no son isospectrales, por lo que podemos representar el mapa base como un diffeomorfismo si y solo si los productos coinciden en el caso genérico anterior. La isospectralidad entonces se convierte en equivalente a este diffeomorfismo siendo una isometría riemanniana.
 
 Esto completa la prueba de los Corolarios.
 

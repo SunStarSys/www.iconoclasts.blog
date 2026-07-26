@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50336
+status: verifierad=50397
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -95,7 +95,7 @@ Om vi definierar $$\mathscr V$$ som Hilbert-rymden som genereras av $$\set{|e^i|
 </div>
   <div class="card-body">
 
-Generiskt är isospektrala grenrör isometriska om och endast om produkterna enligt definitionen i Corollary 1 är överens.
+Generiskt är isospektrala grenrör isometriska om och endast om de produkter som definieras i Corollary 1 är överens som verkliga värden.
 
 </div>
 </div>
@@ -274,7 +274,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\b
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-Vi hoppas att för varje given $$k>0$$, $$M_0^{i,i,k}$$ Kan inte vara identisk $$0$$ för alla $$i$$, eftersom det är ett allmänt sant villkor, men falskt för specifika fall som det platta torifallet som omfattas av exemplet nedan. Ett högre sätt att se på detta tillstånd är att notera att ett sådant hopp-kränkande $$e^k$$ skulle vara i kärnan av adjoint-kartan $$[M^{i,\bar i,k}]^*$$. Dessutom är formeln <span class="eqno"></span> för $$z_k$$ kräver båda $$i$$-oberoende och tillräcklighet, för att fastställa grundkartan $$e_0^i \mapsto z_i e_1^i$$ bevarar $$\set{M_0^{i,j,k}}$$.
+Vi hoppas att för varje given $$k>0$$, $$M_0^{i,\bar i,k}$$ Kan inte vara identisk $$0$$ för alla $$i$$, eftersom det är ett allmänt sant villkor, men falskt för specifika fall som det platta torifallet som omfattas av exemplet nedan. Ett högre sätt att se på detta tillstånd är att notera att ett sådant hopp-kränkande $$k$$ skulle ha $$\bar e^k$$ i kärnan av adjoint-kartan $$[M^{i,\bar i,k}]^*$$. Dessutom är formeln <span class="eqno"></span> för $$z_k$$ kräver båda $$i$$-oberoende och tillräcklighet, för att fastställa grundkartan $$e_0^i \mapsto z_i e_1^i$$ bevarar $$\set{M_0^{i,j,k}}$$.
 
 Vi skissar ett bevis på Corollary 1 (tillräcklighet) under nästa uppsättning formler.
 
@@ -326,7 +326,9 @@ De är överens överallt.
 
 Corollary 2-tillräcklighet följer genom att notera att det försvinnande adjoint-map-kärnans tillstånd i Corollary 1 är allmänt sant. Om för något val av $$i,j,k$$, produkten $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Oenighet mellan baser, skulle de vara oense i varje par baser.
 
-Varför? Eftersom generiska grenrör kan antas också ha multiplikation-1-spektra, minskar detta hela symmetrigruppen till $$U_1^\infty$$ där dessa produkter är oföränderliga, motsäger teorem 1. Detta fastställer hypotesens nödvändighet och kompletterar beviset.
+Varför? Eftersom generiska grenrör kan antas också ha multiplikation-1-spektra, minskar detta hela symmetrigruppen till $$U_1^\infty$$ där dessa produkter är oföränderliga, motsäger teorem 1. Ytterligare minskning till $$\Z_2^\infty$$ Genom realvärderade baser säkerställs att produkterna är realvärderade. Detta fastställer hypotesens nödvändighet och kompletterar beviset.
+
+Vidare är argumenten i beviset för korollarium 1 giltiga även när grenrör är icke-isospektrala, så vi kan representera grundkartan som en diffeomorfism om och endast om produkterna matchar i det generiska fallet ovan. Isospektralitet blir då likvärdig med denna diffeomorfism är en Riemannian isometri.
 
 Detta kompletterar beviset för korollarierna.
 

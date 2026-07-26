@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=50336
+status: überprüft=50397
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -95,7 +95,7 @@ ist injektiv.
 </div>
   <div class="card-body">
 
-Im Allgemeinen sind isospektrale Mannigfaltigkeiten isometrisch, wenn und nur, wenn die in Korrespondenz 1 definierten Produkte zustimmen.
+Im Allgemeinen sind isospektrale Mannigfaltigkeiten isometrisch, wenn und nur, wenn die in Korrespondenz 1 definierten Produkte als reale Werte übereinstimmen.
 
 </div>
 </div>
@@ -274,7 +274,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\b
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-Wir hoffen, dass $$k>0$$, $$M_0^{i,i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$, da es sich um eine allgemein wahre Bedingung handelt, aber für bestimmte Fälle wie den im folgenden Beispiel abgedeckten flachen Tori-Fall falsch. Eine übergeordnete Möglichkeit, diese Bedingung zu betrachten, ist zu beachten, dass eine solche Hoffnung verletzt $$e^k$$ wäre im Kernel der Nebenkarte $$[M^{i,\bar i,k}]^*$$. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$.
+Wir hoffen, dass $$k>0$$, $$M_0^{i,\bar i,k}$$ kann nicht identisch sein $$0$$ für alle $$i$$, da es sich um eine allgemein wahre Bedingung handelt, aber für bestimmte Fälle wie den im folgenden Beispiel abgedeckten flachen Tori-Fall falsch. Eine übergeordnete Möglichkeit, diese Bedingung zu betrachten, ist zu beachten, dass eine solche Hoffnung verletzt $$k$$ hätte $$\bar e^k$$ im Kernel der Nebenkarte $$[M^{i,\bar i,k}]^*$$. Die Formel <span class="eqno"></span> für $$z_k$$ erfordert beides $$i$$- Unabhängigkeit und Angemessenheit, um die Grundkarte zu erstellen $$e_0^i \mapsto z_i e_1^i$$ Behältnisse $$\set{M_0^{i,j,k}}$$.
 
 Wir skizzieren einen Nachweis von Corollary 1 (Suffizienz) unter dem nächsten Satz von Formeln.
 
@@ -326,7 +326,9 @@ Sie sind sich überall einig.
 
 Folge 2 Angemessenheit folgt, indem darauf hingewiesen wird, dass der verschwindende Nebenkartenkernzustand in der Folge 1 allgemein wahr ist. Und wenn für eine Auswahl von $$i,j,k$$, das Produkt $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ Uneinigkeit zwischen den Basen, würden sie in jedem Paar von Basen nicht zustimmen.
 
-Warum? Da von generischen Verteilern auch Multiplizitäts-1-Spektren angenommen werden kann, reduziert dies die volle Symmetriegruppe auf $$U_1^\infty$$ bei denen es sich um invariante Produkte handelt, die im Widerspruch zu Satz 1 stehen. Dies begründet die Notwendigkeit der Hypothese und vervollständigt den Beweis.
+Warum? Da von generischen Verteilern auch Multiplizitäts-1-Spektren angenommen werden kann, reduziert dies die volle Symmetriegruppe auf $$U_1^\infty$$ bei denen es sich um invariante Produkte handelt, die im Widerspruch zu Satz 1 stehen. weitere Reduktion auf $$\Z_2^\infty$$ über real bewertete Basen stellen sicher, dass die Produkte real bewertet werden. Dies begründet die Notwendigkeit der Hypothese und vervollständigt den Beweis.
+
+Darüber hinaus sind die Argumente im Nachweis von Corollary 1 auch dann gültig, wenn die Verteiler nicht-ispektral sind, so dass wir die Basiskarte als Diffeomorphismus darstellen können, wenn und nur, wenn die Produkte im obigen generischen Fall übereinstimmen. Isospektralität wird dann gleichbedeutend mit diesem Diffeomorphismus als Riemannsche Isometrie.
 
 Dies vervollständigt den Beweis der Corollaries.
 

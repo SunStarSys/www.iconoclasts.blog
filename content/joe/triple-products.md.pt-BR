@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=50336
+status: verificado=50397
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -96,7 +96,7 @@ Além disso, se definirmos $$\mathscr V$$ como o espaço Hilbert gerado por $$\s
 </div>
   <div class="card-body">
 
-Genericamente, as variedades isospectrais são isométricas se e somente se os produtos definidos no Corolário 1 concordarem.
+Genericamente, as variedades isospectrais são isométricas se e somente se os produtos definidos no Corolário 1 concordarem como valores reais.
 
 </div>
 </div>
@@ -275,7 +275,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\b
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-Podemos esperar que, para qualquer $$k>0$$, $$M_0^{i,i,k}$$ não pode ser idêntico $$0$$ para todos $$i$$, uma vez que é uma condição genericamente verdadeira, mas falsa para casos específicos como a caixa de tori plana coberta no Exemplo abaixo. Uma maneira de nível superior de olhar para esta condição é notar que tal esperança-violação $$e^k$$ estaria no núcleo do mapa adjacente $$[M^{i,\bar i,k}]^*$$. Além disso, a fórmula <span class="eqno"></span> para $$z_k$$ requer ambos $$i$$-independência, e suficiência, para estabelecer o mapa base $$e_0^i \mapsto z_i e_1^i$$ preservas $$\set{M_0^{i,j,k}}$$.
+Podemos esperar que, para qualquer $$k>0$$, $$M_0^{i,\bar i,k}$$ não pode ser idêntico $$0$$ para todos $$i$$, uma vez que é uma condição genericamente verdadeira, mas falsa para casos específicos como a caixa de tori plana coberta no Exemplo abaixo. Uma maneira de nível superior de olhar para esta condição é notar que tal esperança-violação $$k$$ teria $$\bar e^k$$ no kernel do mapa adjacente $$[M^{i,\bar i,k}]^*$$. Além disso, a fórmula <span class="eqno"></span> para $$z_k$$ requer ambos $$i$$-independência, e suficiência, para estabelecer o mapa base $$e_0^i \mapsto z_i e_1^i$$ preservas $$\set{M_0^{i,j,k}}$$.
 
 Nós esboçamos uma prova de Corolário 1 (suficiência) abaixo do próximo conjunto de fórmulas.
 
@@ -327,7 +327,9 @@ Então eles concordam em todos os lugares.
 
 A suficiência do Corolário 2 segue observando que a condição do kernel do mapa adjacente desaparecendo no Corolário 1 é genericamente verdadeira. E se para alguma escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ discordavam entre bases, discordavam em cada par de bases.
 
-Por que? Uma vez que as variedades genéricas também podem ter espectros de multiplicidade-1, isso reduz o grupo de simetria total para $$U_1^\infty$$ onde esses produtos são invariantes, contradizendo o Teorema 1. Isso estabelece a necessidade da hipótese e completa a prova.
+Por que? Uma vez que as variedades genéricas também podem ter espectros de multiplicidade-1, isso reduz o grupo de simetria total para $$U_1^\infty$$ onde esses produtos são invariantes, contradizendo o Teorema 1. Mais redução para $$\Z_2^\infty$$ através de bases real-valued garante que os produtos são real-valued. Isso estabelece a necessidade da hipótese e completa a prova.
+
+Além disso, os argumentos na prova do Corolário 1 são válidos mesmo quando as variedades não são isospectrais, por isso podemos representar o mapa de base como um diffeomorfismo se e somente se os produtos corresponderem no caso genérico acima. A isospectralidade torna-se então equivalente a este diffeomorfismo ser uma isometria Riemanniana.
 
 Isso completa a prova dos Corolários.
 

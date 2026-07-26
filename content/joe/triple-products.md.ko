@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=50336
+status: 확인=50397
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -95,7 +95,7 @@ Injection 입니다.
 </div>
   <div class="card-body">
 
-일반적으로 isospectral 매니폴드는 Corollary 1에 정의된 제품이 동의하는 경우에만 등각투영됩니다.
+일반적으로, isospectral 매니폴드는 Corollary 1에 정의된 제품이 실제 값으로 동의하는 경우에만 등각투영됩니다.
 
 </div>
 </div>
@@ -274,7 +274,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\b
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-우리는 어떤 주어진 것을 기대할 수 있습니다. $$k>0$$, $$M_0^{i,i,k}$$ 동일할 수 없습니다. $$0$$ 모두 $$i$$일반적으로 참 조건이지만 아래 예제에서 다루는 플랫 토리 케이스와 같은 특정 경우는 거짓입니다. 이 상태를 보는 더 높은 수준의 방법은 그러한 희망 위반을 주목하는 것입니다. $$e^k$$ 조정 맵의 커널에 있음 $$[M^{i,\bar i,k}]^*$$. 또한, Formula <span class="eqno"></span> 대상 $$z_k$$ 둘 다 필요 $$i$$- 독립성 및 충분성, 기본 맵 설정 $$e_0^i \mapsto z_i e_1^i$$ 보존 $$\set{M_0^{i,j,k}}$$.
+우리는 어떤 주어진 것을 기대할 수 있습니다. $$k>0$$, $$M_0^{i,\bar i,k}$$ 동일할 수 없습니다. $$0$$ 모두 $$i$$일반적으로 참 조건이지만 아래 예제에서 다루는 플랫 토리 케이스와 같은 특정 경우는 거짓입니다. 이 상태를 보는 더 높은 수준의 방법은 그러한 희망 위반을 주목하는 것입니다. $$k$$ 아마 $$\bar e^k$$ 조정 맵의 커널에서 $$[M^{i,\bar i,k}]^*$$. 또한, Formula <span class="eqno"></span> 대상 $$z_k$$ 둘 다 필요 $$i$$- 독립성 및 충분성, 기본 맵 설정 $$e_0^i \mapsto z_i e_1^i$$ 보존 $$\set{M_0^{i,j,k}}$$.
 
 우리는 다음 수식 세트 아래에 Corollary 1 (효율성)의 증거를 스케치합니다.
 
@@ -326,7 +326,9 @@ Corollary 1은 다음과 같은 사실입니다. $$z_k\in U_1$$ 잘 정의되어
 
 Corollary 2의 충분성은 Corollary 1의 사라지는 adjoint-map 커널 조건이 일반적으로 사실임을 지적함으로써 이어집니다. 만약 어떤 선택의 $$i,j,k$$, 제품 $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ 기지 사이에 동의하지 않으면 모든 기지 쌍에 동의하지 않을 것입니다.
 
-왜? 일반 매니폴드는 다중성-1 스펙트럼을 갖는 것으로 추정될 수 있기 때문에, 이것은 전체 대칭 그룹을 $$U_1^\infty$$ 이 제품들은 불변성이며, Theorem 1과 모순된다. 이것은 가설의 필요성을 확립하고 증거를 완성합니다.
+왜? 일반 매니폴드는 다중성-1 스펙트럼을 갖는 것으로 추정될 수 있기 때문에, 이것은 전체 대칭 그룹을 $$U_1^\infty$$ 이 제품들은 불변성이며, Theorem 1과 모순된다. 추가 감소 $$\Z_2^\infty$$ 실제 값 기준은 제품이 실제로 평가되도록 보장합니다. 이것은 가설의 필요성을 확립하고 증거를 완성합니다.
+
+또한, Corollary 1의 증거에 있는 인수는 매니폴드가 non-isospectral인 경우에도 유효하므로, 제품이 위의 일반적인 케이스에서 일치하는 경우에만 기본 맵을 diffeomorphism으로 나타낼 수 있습니다. 그런 다음 Isospectrality는 Riemannian isometry 인이 diffeomorphism과 동등하게됩니다.
 
 이것은 Corollaries의 증거를 완성합니다.
 

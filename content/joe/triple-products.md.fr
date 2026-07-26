@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=50336
+status: vérifié=50397
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -96,7 +96,7 @@ est injective.
 </div>
   <div class="card-body">
 
-Généralement, les collecteurs isospectraux sont isométriques si et seulement si les produits tels que définis dans le Corollaire 1 sont d'accord.
+Généralement, les collecteurs isospectraux sont isométriques si et seulement si les produits tels que définis dans le Corollaire 1 conviennent comme des valeurs réelles.
 
 </div>
 </div>
@@ -275,7 +275,7 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\b
 \exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
 ```
 
-Nous espérons que pour tout $$k>0$$, $$M_0^{i,i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$, puisqu'il s'agit d'une condition génériquement vraie, mais fausse pour des cas spécifiques comme le cas de tori plat couvert dans l'exemple ci-dessous. Une façon de plus haut niveau d'examiner cette condition est de noter qu'une telle violation de l'espoir $$e^k$$ serait dans le noyau de la carte adjointe $$[M^{i,\bar i,k}]^*$$. En outre, la formule <span class="eqno"></span> pour $$z_k$$ nécessite les deux $$i$$- indépendance et suffisance, pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conservateurs $$\set{M_0^{i,j,k}}$$.
+Nous espérons que pour tout $$k>0$$, $$M_0^{i,\bar i,k}$$ ne peut pas être identique $$0$$ pour tous $$i$$, puisqu'il s'agit d'une condition génériquement vraie, mais fausse pour des cas spécifiques comme le cas de tori plat couvert dans l'exemple ci-dessous. Une façon de plus haut niveau d'examiner cette condition est de noter qu'une telle violation de l'espoir $$k$$ aurait $$\bar e^k$$ dans le noyau de la carte adjointe $$[M^{i,\bar i,k}]^*$$. En outre, la formule <span class="eqno"></span> pour $$z_k$$ nécessite les deux $$i$$- indépendance et suffisance, pour établir la carte de base $$e_0^i \mapsto z_i e_1^i$$ conservateurs $$\set{M_0^{i,j,k}}$$.
 
 Nous esquissons une preuve du Corollaire 1 (suffisance) en dessous de la prochaine série de formules.
 
@@ -327,7 +327,9 @@ Ils sont donc d'accord partout.
 
 La suffisance du Corollaire 2 s'ensuit en notant que la condition de noyau de carte adjointe disparaissant dans le Corollaire 1 est généralement vraie. Et si pour un choix de $$i,j,k$$, le produit $$M^{i,\bar i,k} \bar M^{j,\bar j,k}$$ en désaccord entre les bases, ils seraient en désaccord dans chaque paire de bases.
 
-Pourquoi ? Puisque les collecteurs génériques peuvent être présumés avoir également des spectres de multiplicité-1, cela réduit le groupe de symétrie complet à $$U_1^\infty$$ où ces produits sont invariants, en contradiction avec le théorème 1. Cela établit la nécessité de l'hypothèse et complète la preuve.
+Pourquoi ? Puisque les collecteurs génériques peuvent être présumés avoir également des spectres de multiplicité-1, cela réduit le groupe de symétrie complet à $$U_1^\infty$$ où ces produits sont invariants, en contradiction avec le théorème 1. Réduction supplémentaire de $$\Z_2^\infty$$ Grâce à des bases valorisées, les produits sont valorisés. Cela établit la nécessité de l'hypothèse et complète la preuve.
+
+De plus, les arguments dans la preuve du Corollaire 1 sont valables même lorsque les collecteurs sont non-isospectraux, de sorte que nous pouvons représenter la carte de base comme un difféomorphisme si et seulement si les produits correspondent dans le cas générique ci-dessus. L'isospectralité devient alors équivalente à ce difféomorphisme étant une isométrie riemannienne.
 
 Cela complète la preuve des corollaires.
 
