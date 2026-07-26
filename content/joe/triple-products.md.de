@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=50397
+status: überprüft=50455
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -62,6 +62,10 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 </div>
 
 <br>
+
+Es ist wichtig zu erkennen $$M^{i,j,k}$$ ist nicht grundinvariant: es gibt eine natürliche einheitliche veränderung der grundlage darauf, die nach dem beweis dieses theorems ausführlich diskutiert wird. Die Diskussion beinhaltet bestimmte Sätze von grundlageninvarianten Singularwerten, die man um eine allgemeine Vermutung herum bilden könnte, die behauptet, dass diese geordnete Gruppe von Singularwerten den Satz von isospektralen Mannigfaltigkeiten vollständig charakterisiert.
+
+Die harte Arbeit für zukünftige Forschung ist es, solche Basispaare zu finden oder zu bestimmen, dass solche Paare überhaupt nicht existieren können, nur indem man die Eigenschaften der $$M^{i,j,k}$$ im Beweis. Aber dieser Artikel stellt dieses Ziel in den Mittelpunkt: Wir versuchen, die analytischen Geometriefragen der Spektraltheorie auf rechnerisch traktierbare lineare Algebra-Fragen zu Produkten von Eigenfunktionen zu reduzieren.
 
 *Symmetrie* spielt eine wichtige Rolle bei rechnerisch traktierbaren Fällen [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), die in unserem flachen Tori passend dargestellt ist [Beispiel](#example) unten. Die Stärke unseres Ansatzes zeigt sich jedoch vielleicht am besten bei Verteilern mit der geringsten Anzahl an Riemannschen Symmetrien, was der generische Fall ist. In diesem Fall bieten wir folgende
 
@@ -265,7 +269,11 @@ ist das Bild von $$M^{i,j,k}$$ unter $$U$$'s Basismaßnahme $$e^i \mapsto U(e^i)
 
 Jetzt unter den Bedingungen von Corollary 2, jeder der $$\mathscr V_\lambda$$ sind eindimensionale Vektorräume über $$\Complex$$, aber das bedeutet auch, dass sie eindimensionale Vektorräume über $$\Reals$$und so ist die vollständige multiplikative Symmetriegruppe $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Allgemeiner die damit verbundene Voraussetzung "bezüglich der Übereinstimmung mit den Produktwerten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten $$\set{M^{i,j,k}}$$ (mit Multiplizität gezählt), wenn als eine Sammlung von Karten aus $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", die ein robuster Satz von Unitary Invariants sind.  Wir sind deutlich weniger zuversichtlich, dass diese verallgemeinerte Vermutung zutrifft, da es möglich sein könnte, ein Gegenbeispiel über explizite Sunada-Konstruktion zu erstellen.
+Allgemeiner die damit verbundene Voraussetzung "bezüglich der Übereinstimmung mit den Produktwerten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten $$\set{M^{i,j,k}}$$ (mit Multiplizität gezählt), wenn als eine Sammlung von Karten aus $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", die ein robuster Satz von Unitary Invariants sind.
+
+Im Falle des Multiplizitäts-1-Spektrums ist der vollständige Satz von Singularwerten einfach der Satz von Absolutwerten von $$M^{i,j,k}$$ die, wie wir immer noch vermuten, die Isometrieklassen solcher isospektraler Mannigfaltigkeiten vollständig charakterisiert. Siehe Gleichung (16) für die Schlüsselbeziehung zwischen dieser Vermutung und Folge 2.
+
+Wir sind deutlich weniger zuversichtlich, dass die allgemeine Vermutung wahr ist (außerhalb des Falles mit Multiplizität-1-Spektrum), da es möglich sein kann, ein Gegenbeispiel durch explizite Sunada-Konstruktion zu erstellen.
 
 Wenn wir zu Korrespondenz 1 zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
 
@@ -320,7 +328,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist genau definiert, und die vorherige Beobachtung, dass die algebraischen Operatoren $$z_iz_j\bar z_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ sind sowohl assoziativ als auch stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Absolutwerten von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist. $$L^2(M,g)$$ (Wiederum von Stone-Weierstrass, da davon ausgegangen wird, dass es Punkte voneinander trennt). Einrichten $$\ker\ [M^{i,\bar i,k}]^* = 0$$ ist genau gleichwertig, wobei $$\mathscr V$$ Ist der geschlossene Hilbert-Raum von $$\set{|e^i|^2}$$und $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ ist die Change-of-Basis Identity Map.
+Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist klar definiert (d.h. $$i$$-invariant durch die Hypothesen über Produkte), und die vorherige Beobachtung, dass die algebraischen Betreiber definiert durch $$z_iz_j\bar z_kM_0^{i,j,k}$$ und $$M_1^{i,j,k}$$ sind sowohl assoziativ als auch stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Absolutwerten von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist. $$L^2(M,g)$$ (Wiederum von Stone-Weierstrass, da davon ausgegangen wird, dass es Punkte voneinander trennt). Einrichten $$\ker\ [M^{i,\bar i,k}]^* = 0$$ ist genau gleichwertig, wobei $$\mathscr V$$ Ist der geschlossene Hilbert-Raum von $$\set{|e^i|^2}$$und $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ ist die Change-of-Basis Identity Map.
 
 Sie sind sich überall einig.
 

@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50397
+status: verifierad=50455
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -62,6 +62,10 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 </div>
 
 <br>
+
+Det är viktigt att erkänna $$M^{i,j,k}$$ är inte grundinvariant: det finns en naturlig enhetsförändring på det diskuteras i detalj efter bevis för denna sats. Diskussionen innehåller vissa uppsättningar av bas-invariant singulära värden som man kan bilda en allmän gissning runt, vilket hävdar att den ordnade uppsättningen av singulära värden helt karakteriserar uppsättningen isospektrala grenrör.
+
+Det hårda arbetet framåt för framtida forskning är att hitta sådana baspar, eller att bestämma att sådana par inte kan existera alls, bara genom att undersöka egenskaperna hos $$M^{i,j,k}$$ i bevis. Men denna uppsats sätter det målet fram och centrum: vi försöker minska de analytiska geometrifrågorna i spektralteorin till beräkningsstyrda linjära algebrafrågor om produkter av egenfunktioner.
 
 *Symmetri* spelar en viktig roll i beräkningsrelaterade fall [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), som är lämpligt illustrerad i vår platta tori [Exempel](#example) nedan. Styrkan i vårt tillvägagångssätt görs dock kanske bäst uppenbar när det gäller mångfalder med det minsta antalet Riemanniska symmetrier, vilket är det generiska fallet. I detta fall erbjuder vi följande
 
@@ -265,7 +269,11 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 Nu under villkoren i Corollary 2, var och en av de $$\mathscr V_\lambda$$ är ett dimensionellt vektorrum över $$\Complex$$, men det betyder också att de är endimensionella vektorrum över $$\Reals$$och så är hela den multiplikativa symmetrigruppen $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "bevarandet av den ordinerade uppsättningen singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsvarianter.  Vi är betydligt mindre övertygade om att denna generaliserade gissning är sann, eftersom det kan vara möjligt att producera ett motexempel via explicit Sunada-konstruktion.
+Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "bevarandet av den ordinerade uppsättningen singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsvarianter.
+
+I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (16) för nyckelförhållandet mellan denna gissning och Corollary 2.
+
+Vi är betydligt mindre säkra på att den allmänna gissningen är sann (utanför multiplikations-1-spektrumfallet), eftersom det kan vara möjligt att producera ett motexempel via explicit Sunada-konstruktion.
 
 Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 
@@ -320,7 +328,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1 följer av det faktum att $$z_k\in U_1$$ är väldefinierad, och den föregående iakttagelsen att de algebraiska operatorer som definieras av $$z_iz_j\bar z_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ är båda associativa och är överens med pointwise funktion multiplikation av rutor av absoluta värden för egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Återigen av Stone-Weierstrass, eftersom det antas vara separata punkter). Upprättar $$\ker\ [M^{i,\bar i,k}]^* = 0$$ är exakt lika, där $$\mathscr V$$ är det stängda Hilbert-utrymmet som genereras av $$\set{|e^i|^2}$$och $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ är basändringsidentitetskartan.
+Corollary 1 följer av det faktum att $$z_k\in U_1$$ Den är väldefinierad (dvs. $$i$$-invariant av hypoteserna om produkter), och föregående observation att de algebraiska operatorer som definieras av $$z_iz_j\bar z_kM_0^{i,j,k}$$ och $$M_1^{i,j,k}$$ är båda associativa och är överens med pointwise funktion multiplikation av rutor av absoluta värden för egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Återigen av Stone-Weierstrass, eftersom det antas vara separata punkter). Upprättar $$\ker\ [M^{i,\bar i,k}]^* = 0$$ är exakt lika, där $$\mathscr V$$ är det stängda Hilbert-utrymmet som genereras av $$\set{|e^i|^2}$$och $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ är basändringsidentitetskartan.
 
 De är överens överallt.
 

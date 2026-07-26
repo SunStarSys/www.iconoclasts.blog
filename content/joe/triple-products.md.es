@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=50397
+status: verificado=50455
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -63,6 +63,10 @@ Ser isométrico para $$(M,g)$$, es una condición *necesaria y suficiente* para 
 </div>
 
 <br>
+
+Es importante reconocer $$M^{i,j,k}$$ no es una variable de base: hay una acción unitaria natural de cambio de base sobre ella discutida en detalle después de la prueba de este Teorema. La discusión incorpora ciertos conjuntos de valores singulares invariantes de base que uno podría formar una conjetura general alrededor, que afirma que ese conjunto ordenado de valores singulares caracteriza completamente el conjunto de colectores isospectrales.
+
+El arduo trabajo que se avecina para futuras investigaciones consiste en localizar tales pares de bases, o en determinar que tales pares no pueden existir en absoluto, simplemente examinando las propiedades de la $$M^{i,j,k}$$ en pruebas. Pero este artículo pone ese frente y centro objetivo: buscamos reducir las cuestiones de geometría analítica de la Teoría Espectral a preguntas de álgebra lineal computacionalmente trazables sobre productos de funciones propias.
 
 *La simetría* juega un papel importante en los casos computacionalmente trazables [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), que se ilustra adecuadamente en nuestro tori plano [Ejemplo](#example) abajo. Sin embargo, la fuerza de nuestro enfoque tal vez se haga más evidente en el caso de los colectores con el menor número de simetrías de Riemann, que es el caso genérico. En este caso, ofrecemos lo siguiente:
 
@@ -266,7 +270,11 @@ es la imagen de $$M^{i,j,k}$$ bajo $$U$$acción de base $$e^i \mapsto U(e^i)$$.
 
 Bajo las condiciones del Corolario 2, cada uno de los $$\mathscr V_\lambda$$ son espacios vectoriales unidimensionales sobre $$\Complex$$, pero eso también significa que son espacios vectoriales unidimensionales sobre $$\Reals$$, por lo que el grupo de simetría multiplicativa completa es $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-En términos más generales, el requisito previo asociado "sobre el acuerdo en los valores de los productos" serían simplemente "preservación del conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado con multiplicidad), cuando se ve como una colección de mapas de $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", que son un conjunto robusto de invariantes unitarios.  Estamos significativamente menos seguros de que esta conjetura generalizada es cierta, ya que puede ser posible producir un contraejemplo a través de la construcción explícita de Sunada.
+En términos más generales, el requisito previo asociado "sobre el acuerdo en los valores de los productos" serían simplemente "preservación del conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado con multiplicidad), cuando se ve como una colección de mapas de $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", que son un conjunto robusto de invariantes unitarios.
+
+En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (16) para la relación clave entre esta conjetura y el Corolario 2.
+
+Estamos significativamente menos seguros de que la conjetura general es cierta (fuera del caso del espectro de multiplicidad-1), ya que puede ser posible producir un contraejemplo a través de la construcción explícita de Sunada.
 
 Volviendo al Corolario 1, observamos que la prueba implica establecer esta implicación:
 
@@ -321,7 +329,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corolario 1 se deriva del hecho de que $$z_k\in U_1$$ está bien definido, y la observación previa de que los operadores algebraicos definidos por $$z_iz_j\bar z_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ son ambos asociativos, y están de acuerdo con la multiplicación de la función puntual por cuadrados de valores absolutos de las funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ (de nuevo por Stone-Weierstrass, ya que se presume que separa puntos). Establecimiento $$\ker\ [M^{i,\bar i,k}]^* = 0$$ es exactamente equivalente, donde $$\mathscr V$$ es el espacio cerrado de Hilbert generado por $$\set{|e^i|^2}$$y $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ es el mapa de identidad de cambio de base.
+Corolario 1 se deriva del hecho de que $$z_k\in U_1$$ está bien definido (es decir, $$i$$-invariante por las hipótesis sobre los productos), y la observación previa de que los operadores algebraicos definidos por $$z_iz_j\bar z_kM_0^{i,j,k}$$ y $$M_1^{i,j,k}$$ son ambos asociativos, y están de acuerdo con la multiplicación de la función puntual por cuadrados de valores absolutos de las funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ (de nuevo por Stone-Weierstrass, ya que se presume que separa puntos). Establecimiento $$\ker\ [M^{i,\bar i,k}]^* = 0$$ es exactamente equivalente, donde $$\mathscr V$$ es el espacio cerrado de Hilbert generado por $$\set{|e^i|^2}$$y $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ es el mapa de identidad de cambio de base.
 
 Así que están de acuerdo en todas partes.
 
