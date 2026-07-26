@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=50455
+status: verificado=50474
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -272,7 +272,7 @@ Bajo las condiciones del Corolario 2, cada uno de los $$\mathscr V_\lambda$$ son
 
 En términos más generales, el requisito previo asociado "sobre el acuerdo en los valores de los productos" serían simplemente "preservación del conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado con multiplicidad), cuando se ve como una colección de mapas de $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", que son un conjunto robusto de invariantes unitarios.
 
-En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (16) para la relación clave entre esta conjetura y el Corolario 2.
+En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (16) para la relación clave entre esta conjetura y el Corolario 2. Lo que falta es el argumento de suficiencia de que si los valores absolutos están de acuerdo, los colectores son isométricos; lo que requiere un argumento sobre posibles cancelaciones de cambio de signos entre las bases en los sumandos de la ecuación LHS (16).
 
 Estamos significativamente menos seguros de que la conjetura general es cierta (fuera del caso del espectro de multiplicidad-1), ya que puede ser posible producir un contraejemplo a través de la construcción explícita de Sunada.
 

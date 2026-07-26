@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=50455
+status: vérifié=50474
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -272,7 +272,7 @@ Maintenant, dans les conditions du Corollaire 2, chacun des $$\mathscr V_\lambda
 
 Plus généralement, le prérequis associé "concernant l'accord sur les valeurs des produits" serait simplement devenu "conservation de l'ensemble ordonné de valeurs singulières $$\set{M^{i,j,k}}$$ (compté avec multiplicité), lorsqu'il est considéré comme un ensemble de cartes $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", qui sont un ensemble robuste d'invariants unitaires.
 
-Dans le cas du spectre multiplicité-1, l'ensemble complet des valeurs singulières est simplement l'ensemble des valeurs absolues de $$M^{i,j,k}$$ qui, nous conjecturons encore, caractérise complètement les classes d'isométrie de tels collecteurs isospectraux. Voir l'équation (16) pour la relation clé entre cette conjecture et le corollaire 2.
+Dans le cas du spectre multiplicité-1, l'ensemble complet des valeurs singulières est simplement l'ensemble des valeurs absolues de $$M^{i,j,k}$$ qui, nous conjecturons encore, caractérise complètement les classes d'isométrie de tels collecteurs isospectraux. Voir l'équation (16) pour la relation clé entre cette conjecture et le corollaire 2. Ce qui manque est l'argument de suffisance que si les valeurs absolues sont d'accord, les collecteurs sont isométriques ; ce qui nécessite un argument sur les annulations possibles de changement de signe entre les bases dans les sommets LHS de l'équation (16).
 
 Nous sommes beaucoup moins convaincus que la conjecture générale est vraie (en dehors du cas du spectre multiplicité-1), car il peut être possible de produire un contre-exemple via la construction explicite de Sunada.
 

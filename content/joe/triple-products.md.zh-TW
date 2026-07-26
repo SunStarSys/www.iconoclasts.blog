@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =50455
+status: 驗證 =50474
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -270,7 +270,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 一般而言，相關必備條件"關於產品值中的協議" 只是變成"保留排序的單一值集$$\set{M^{i,j,k}}$$ 檢視為地圖集合時 (以多重性計算)，$$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$"，這是一套強大的單體不變量。
 
-在 multiplicity-1 spectrum 的情況下，完整的單一值集就是絕對值的一組$$M^{i,j,k}$$ 這樣，我們仍然可以形容，完全描述這種等離子譜歧管的幾何類別。請參閱 方程式 (16) 以獲取此形容詞與 Corollary 2 之間的關鍵關係。
+在 multiplicity-1 spectrum 的情況下，完整的單一值集就是絕對值的一組$$M^{i,j,k}$$ 這樣，我們仍然可以形容，完全描述這種等離子譜歧管的幾何類別。請參閱 方程式 (16) 以獲取此形容詞與 Corollary 2 之間的關鍵關係。缺少的是足夠的引數，如果絕對值一致，則操作是幾何的；這需要在左方方方程式摘要 (16) 中基準之間取消可能的符號變更的引數。
 
 我們對一般形容詞保持真 (在 multiplicity-1 spectrum case 之外) 的信心較不自信，因為可能透過明確的 Sunada 建構產生反範例。
 

@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=50455
+status: verificado=50474
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -272,7 +272,7 @@ Agora, nas condições do Corolário 2, cada um dos $$\mathscr V_\lambda$$ são 
 
 Mais geralmente, o prerrequisito associado "acordo sobre os valores dos produtos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado com multiplicidade), quando visto como uma coleção de mapas de $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", que são um conjunto robusto de invariantes unitários.
 
-No caso do espectro da multiplicidade-1, o conjunto completo de valores singulares é simplesmente o conjunto de valores absolutos de $$M^{i,j,k}$$ que, ainda conjecturamos, caracteriza completamente as classes de isometria de tais variedades isospectrais. Ver Equação (16) para a relação chave entre esta conjectura e Corolário 2.
+No caso do espectro da multiplicidade-1, o conjunto completo de valores singulares é simplesmente o conjunto de valores absolutos de $$M^{i,j,k}$$ que, ainda conjecturamos, caracteriza completamente as classes de isometria de tais variedades isospectrais. Ver Equação (16) para a relação chave entre esta conjectura e Corolário 2. O que falta é o argumento de suficiência de que, se os valores absolutos concordarem, as variedades são isométricas; o que requer um argumento sobre possíveis cancelamentos de mudança de sinal entre as bases nos summands LHS da Equação (16).
 
 Estamos significativamente menos confiantes de que a conjectura geral é verdadeira (fora do caso do espectro da multiplicidade-1), uma vez que pode ser possível produzir um contraexemplo através da construção explícita de Sunada.
 

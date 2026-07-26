@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=50455
+status: überprüft=50474
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -271,7 +271,7 @@ Jetzt unter den Bedingungen von Corollary 2, jeder der $$\mathscr V_\lambda$$ si
 
 Allgemeiner die damit verbundene Voraussetzung "bezüglich der Übereinstimmung mit den Produktwerten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten $$\set{M^{i,j,k}}$$ (mit Multiplizität gezählt), wenn als eine Sammlung von Karten aus $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", die ein robuster Satz von Unitary Invariants sind.
 
-Im Falle des Multiplizitäts-1-Spektrums ist der vollständige Satz von Singularwerten einfach der Satz von Absolutwerten von $$M^{i,j,k}$$ die, wie wir immer noch vermuten, die Isometrieklassen solcher isospektraler Mannigfaltigkeiten vollständig charakterisiert. Siehe Gleichung (16) für die Schlüsselbeziehung zwischen dieser Vermutung und Folge 2.
+Im Falle des Multiplizitäts-1-Spektrums ist der vollständige Satz von Singularwerten einfach der Satz von Absolutwerten von $$M^{i,j,k}$$ die, wie wir immer noch vermuten, die Isometrieklassen solcher isospektraler Mannigfaltigkeiten vollständig charakterisiert. Siehe Gleichung (16) für die Schlüsselbeziehung zwischen dieser Vermutung und Folge 2. Was fehlt, ist das Suffizienz-Argument, dass, wenn die absoluten Werte übereinstimmen, die Mannigfaltigkeiten isometrisch sind; was ein Argument über mögliche Zeichenwechselstornierungen zwischen den Basen in den LHS-Summanden der Gleichung (16) erfordert.
 
 Wir sind deutlich weniger zuversichtlich, dass die allgemeine Vermutung wahr ist (außerhalb des Falles mit Multiplizität-1-Spektrum), da es möglich sein kann, ein Gegenbeispiel durch explizite Sunada-Konstruktion zu erstellen.
 

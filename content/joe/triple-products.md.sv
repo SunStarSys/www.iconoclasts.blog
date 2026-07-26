@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50455
+status: verifierad=50474
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -271,7 +271,7 @@ Nu under villkoren i Corollary 2, var och en av de $$\mathscr V_\lambda$$ är et
 
 Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "bevarandet av den ordinerade uppsättningen singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsvarianter.
 
-I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (16) för nyckelförhållandet mellan denna gissning och Corollary 2.
+I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (16) för nyckelförhållandet mellan denna gissning och Corollary 2. Vad som saknas är tillräcklighetsargumentet att om de absoluta värdena är överens är grenrör isometriska; vilket kräver ett argument om möjliga teckenändringsavbrott mellan baser i LHS-summorna av ekvation (16).
 
 Vi är betydligt mindre säkra på att den allmänna gissningen är sann (utanför multiplikations-1-spektrumfallet), eftersom det kan vara möjligt att producera ett motexempel via explicit Sunada-konstruktion.
 
