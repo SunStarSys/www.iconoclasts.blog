@@ -281,7 +281,7 @@ Now under the conditions of Corollary~\ref{coro-2}, each of the $\mathscr V_\lam
 
 Without the multiplicity constraint, the Corollary~\ref{coro-2}'s associated prerequisite "regarding agreement in product values" would hence become "preservation of the ordered set of singular values of $\set{M^{i,j,k}}$, counted with multiplicity, when viewed as a collection of maps from $\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$". It turns out this is a reasonably robust set of Unitary Invariants.
 
-In the multiplicity-1 spectrum case, the complete set of singular values is simply the set of absolute values of $M^{i,j,k}$ which, we still conjecture, completely characterizes the isometry classes of such isospectral manifolds. See Equation~\ref{assoc} for the key relationship between this conjecture and Corollary~\ref{coro-2}.
+In the multiplicity-1 spectrum case, the complete set of singular values is simply the set of absolute values of $M^{i,j,k}$ which, we still conjecture, completely characterizes the isometry classes of such isospectral manifolds. See Equation~\ref{assoc} for the key relationship between this conjecture and Corollary~\ref{coro-2}. What's missing is the sufficiency argument that if the absolute values agree, the manifolds are isometric; which requires an argument to eliminate possible sign change cancellations between bases in the LHS summands of Equation~\ref{assoc}.
 
 We are significantly less confident that this generalized conjecture holds true, since it may be possible to produce a counterexample via explicit Sunada construction.
 
