@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50397
+status: verified=50427
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -60,6 +60,10 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 </div>
 
 <br>
+
+It is important to recognize $$M^{i,j,k}$$ is not basis-invariant: there is a natural unitary change-of-basis action on it discussed in detail after the proof of this Theorem. The discussion incorporates certain sets of basis-invariant singular values that one might form a general conjecture around, which claims that that ordered set of singular values completely characterizes the set of isospectral manifolds.
+
+The hard work ahead for future research is in locating such basis pairs, or in determining that such pairs cannot exist at all, just by examining the properties of the $$M^{i,j,k}$$ in evidence. But this paper puts that target front and center.
 
 *Symmetry* plays an important role in computationally tractable cases [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case. In this instance, we offer the following
 
