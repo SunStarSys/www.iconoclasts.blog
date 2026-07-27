@@ -382,7 +382,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 \end{equation}
 
-As this Equation~\ref{eqn:a} only depends on the weight lattice itself, it is orthonormal-basis-index invariant. Further, it is *only* invariant under linear transformations on the weight lattice $(A^{-1})^t\mathbb{Z}^n = \set{\lambda_i}$, so only an $L^2$ orthonormal eigenfunction basis map \textit{which is induced from a volume-preserving invertible linear map between two such indexed, rank $n$ weight lattices} will keep the "algebraic/topological" indexed data set $\set{M^{i,j,k}}$ invariant.
+As this Equation~\ref{eqn:a} only depends on the weight lattice itself, it is orthonormal-basis-index invariant. Further, it is only invariant under linear transformations on the weight lattice $(A^{-1})^t\mathbb{Z}^n = \set{\lambda_i}$, so only an $L^2$ orthonormal eigenfunction basis map \textit{which is induced from a volume-preserving invertible linear map between two such indexed, rank $n$ weight lattices} will keep the "algebraic/topological" indexed data set $\set{M^{i,j,k}}$ invariant.
 
 However, in order to apply Theorem~\ref{thm}, it is essential that such a linear map $B$ be $B\in SO(n,\mathbb{R})$ on the weight lattice, because the induced $L^2$ eigenfunction basis map
 
