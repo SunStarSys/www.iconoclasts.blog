@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50688
+status: verified=50692
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -273,7 +273,7 @@ In the multiplicity-1 spectrum case, the complete set of singular values is simp
 
 We are significantly less confident that the general conjecture holds true (outside the multiplicity-1 spectrum case), since it may be possible to produce a counterexample (of sufficiency) via explicit Sunada construction.
 
-However, these basis invariants may prove useful in deciphering more complex cases involving proving two manifolds are **not isometric**, by showing that their singular values are not identical between the two bases in question.
+However, these basis invariants may prove useful in deciphering more complex cases involving proving two isospectral manifolds are **not isometric**, by showing that their singular values are not identical between the two bases in question.
 
 Getting back to Corollary 1, we observe that the proof involves establishing this implication:
 
