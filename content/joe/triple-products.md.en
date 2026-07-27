@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50579
+status: verified=50583
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -271,7 +271,7 @@ More generally, the associated prerequisite "regarding agreement in product valu
 
 In the multiplicity-1 spectrum case, the complete set of singular values is simply the set of absolute values of $$M^{i,j,k}$$ which, we still conjecture, completely characterizes the isometry classes of such isospectral manifolds. See Equation (16) for the key relationship between this conjecture and Corollary 2. What's missing is the sufficiency argument that if the absolute values agree, the manifolds are isometric; which requires an argument to eliminate possible sign change cancellations between bases in the LHS summands of Equation (16).
 
-We are significantly less confident that the general conjecture holds true (outside the multiplicity-1 spectrum case), since it may be possible to produce a counterexample (of sufficiency) via explicit Sunada construction. Even Milnor's duet is an apparent counterexample, as evidenced in the trivial flat tori singular value computations convered below.
+We are significantly less confident that the general conjecture holds true (outside the multiplicity-1 spectrum case), since it may be possible to produce a counterexample (of sufficiency) via explicit Sunada construction.
 
 However, these basis invariants may prove useful in deciphering more complex cases involving proving two manifolds are **not isometric**, by showing that their singular values are not identical between the two bases in question.
 
@@ -371,6 +371,12 @@ However, in order to apply our [Theorem](#theorem), it is essential that such a 
 ```
 
 must also preserve the "analytic" invariants &mdash; the Casimir-element induced figure $$4\pi^2\lVert\lambda_i\rVert^2$$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
+
+As Milnor's duet exemplifies, a linear map which preserves the lengths of the lattice eigenvalues is not sufficent to deduce the map is in $$SO(n,\Reals)$$; we must also know that the map preserves lattice angles. But this is a consequence of the formulae developed in Equation (15):
+
+```math
+-4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (||\lambda_i|| + ||\lambda_j|| - ||\lambda_k||)M^{i,j,k}e^k.
+```
 
 This representation-theoretical account [[AK01]](#AK01) is exactly equivalent to the prior development of *lattice congruence* [[NRR22]](#NRR22) traditionally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $$B\in SO(n,\Reals)$$, as described in the prior paragraph, **is** the contravariant Riemannian isometry between the tori, as provided by application of the *Gelfand-Naimark-Segal Representation Theorem* during the [Proof](#proof-of-theorem) of our [Theorem](#theorem).
 
