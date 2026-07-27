@@ -33,6 +33,6 @@ Unikheten resulterar i Anshuls papper är starkt beroende av de tekniker som omf
 
 #### Förmodan refaktoriserad till ett par korollarier den 16 juli 2026
 
-#### Publicerad till SSRN och arXiv den 26 juli 2026
+#### Publicerad till SSRN och arXiv den 27 juli 2026
 
 <!-- $Date$ $Author$ $Revision$ -->
