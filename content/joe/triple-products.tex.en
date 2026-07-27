@@ -283,7 +283,7 @@ Without the multiplicity constraint, the Corollary~\ref{coro-2}'s associated pre
 
 In the multiplicity-1 spectrum case, the complete set of singular values is simply the set of absolute values of $M^{i,j,k}$ which, we still conjecture, completely characterizes the isometry classes of such isospectral manifolds. See Equation~\ref{assoc} for the key relationship between this conjecture and Corollary~\ref{coro-2}. What's missing is the sufficiency argument that if the absolute values agree, the manifolds are isometric; which requires an argument to eliminate possible sign change cancellations between bases in the LHS summands of Equation~\ref{assoc}.
 
-We are significantly less confident that the general conjecture holds true (outside the multiplicity-1 spectrum case), since it may be possible to produce a counterexample via explicit Sunada construction.
+We are significantly less confident that the general conjecture holds true (outside the multiplicity-1 spectrum case), since it may be possible to produce a counterexample via explicit Sunada construction. However these basis invariants can prove useful in deciphering cases when two manifolds are \textit{not isometric}, by showing that their singular values are not identical between the two bases in question.
 
 Getting back to the Corollary~\ref{coro-1}, we observe that the proof involves establishing this implication:
 
