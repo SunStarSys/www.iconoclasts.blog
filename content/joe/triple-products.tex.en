@@ -392,7 +392,7 @@ However, in order to apply Theorem~\ref{thm}, it is essential that such a linear
 
 must also preserve the "analytic" invariants -- the Casimir-element induced figure $4\pi^2\lVert\lambda_i\rVert^2$ for each indexed weight, i.e.\ the individual eigenvalues of the flat-tori's Laplacian.
 
-As Milnor's duet exemplifies, having a linear map which preserves the lengths of the lattice weights is not sufficent to deduce the map is in $SO(n,\mathbb{R})$; we must also know that the map preserves weight angles. But this is a consequence of the formulae developed in Equation~\ref{eqn-15}:
+As Milnor's duet exemplifies, having a linear map which preserves the lengths of the lattice weights is not sufficient to deduce the map is in $SO(n,\mathbb{R})$; we must also know that the map preserves weight angles. But this is a consequence of the formulae developed in Equation~\ref{eqn-15}:
 
 \begin{equation}
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j
