@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=50540
+status: 확인=50654
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -269,12 +269,13 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 이제 Corollary 2의 조건 하에서, 각각의 $$\mathscr V_\lambda$$ 1차원 벡터 공간 $$\Complex$$그러나 그것은 또한 그들이 하나의 차원 벡터 공간을 의미 $$\Reals$$, 따라서 전체 다중 대칭 그룹은 $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-일반적으로 연관된 필요 조건 "제품 가치 계약 관련" 그저 그렇게 될 뿐 "정렬된 단수 값 집합 보존 $$\set{M^{i,j,k}}$$ (다중성으로 계산됨), 에서 맵 모음으로 표시되는 경우 $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$"의 강력한 단일 불변 집합입니다.
+일반적으로 연관된 필요 조건 "제품 가치 계약 관련" 그저 그렇게 될 뿐 "선형 맵의 정렬된 단수 값 세트(다중성으로 계산됨) 보존 $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 정의자 $$\set{M^{i,j,k}}$$." 정의상, 이러한 변수는 단일 변환의 직접 합계에 따라 변하지 않습니다. $$\mathscr V_\lambda$$.
 
 multiplicity-1 스펙트럼 케이스에서, 단수값의 완전한 세트는 단순히의 절대값의 세트이다 $$M^{i,j,k}$$ 이것은, 우리는 여전히 추측, 완전히 이러한 isospectral 매니폴드의 isometry 클래스를 특징. 이 추측과 관상 2 사이의 주요 관계는 방정식(16)을 참조하십시오. 누락 된 것은 절대값이 동의하면 매니폴드가 아이소메트릭이라는 충분한 인수입니다. 즉, 방정식 (16)의 LHS 요약에서 기지 사이에 가능한 기호 변경 취소를 제거하기 위해 인수가 필요합니다.
 
-우리는 일반적인 추측이 사실 (다중성-1 스펙트럼 케이스 외부)을 가지고 있다는 것을 매우 덜 확신합니다. 왜냐하면 그것은 명백한 Sunada 건설을 통해 반예제를 생산할 수 있기 때문입니다.
-그러나 이러한 기본 불변성은 두 개의 매니폴드가 **동등하지 않음**인 경우 해당 두 베이스 간에 단수 값이 동일하지 않음을 표시하여 케이스를 해독하는 데 유용할 수 있습니다.
+우리는 일반 추측이 사실 (다중성-1 스펙트럼 케이스 외부)을 가지고 있다는 것을 훨씬 덜 확신합니다. 왜냐하면 그것은 명백한 Sunada 건설을 통해 반예 (충분성)를 생산할 수 있기 때문입니다.
+
+그러나 이러한 기초 불변은 두 개의 매니폴드를 증명하는 것과 관련된 더 복잡한 사례를 해독하는 데 유용 할 수 있습니다 **isometric 아님**, 그들의 단수 값이 문제의 두 기지 사이에서 동일하지 않다는 것을 표시함으로써.
 
 Corollary 1로 돌아가면, 우리는 증거가이 의미를 확립하는 것을 포함합니다 :
 
@@ -329,7 +330,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1은 다음과 같은 사실입니다. $$z_k\in U_1$$ 잘 정의되어 있습니다(즉, $$i$$- 제품에 대한 가설에 의해 변함), 그리고 대수 연산자에 의해 정의 사전 관찰 $$z_iz_j\bar z_kM_0^{i,j,k}$$ 및 $$M_1^{i,j,k}$$ 둘 다 연관되어 있고, eigenfunctions의 절대값의 제곱에 의한 점방향 함수 곱셈에 동의하며, 생성된 대수학은 또한 조밀하다. $$L^2(M,g)$$ (다시 Stone-Weierstrass에 의해, 그것은 별개의 점으로 추정되기 때문에). 설정 중 $$\ker\ [M^{i,\bar i,k}]^* = 0$$ 정확히 동일합니다. $$\mathscr V$$ 은(는) 생성된 닫힌 힐베르트 공간입니다. $$\set{|e^i|^2}$$및 $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 기본 변경 ID 맵입니다.
+Corollary 1은 다음과 같은 사실입니다. $$z_k\in U_1$$ 잘 정의되어 있습니다(즉, $$i$$- 제품에 대한 가설에 의해 변함), 그리고 대수 연산자에 의해 정의 사전 관찰 $$z_iz_j\bar z_kM_1^{i,j,k}$$ 및 $$M_0^{i,j,k}$$ 둘 다 연관되어 있고, eigenfunctions의 절대값의 제곱에 의한 점방향 함수 곱셈에 동의하며, 생성된 대수학은 또한 조밀하다. $$L^2(M,g)$$ (다시 Stone-Weierstrass에 의해, 그것은 별개의 점으로 추정되기 때문에). 설정 중 $$\ker\ [M^{i,\bar i,k}]^* = 0$$ 정확히 동일합니다. $$\mathscr V$$ 은(는) 생성된 닫힌 힐베르트 공간입니다. $$\set{|e^i|^2}$$및 $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 기본 변경 ID 맵입니다.
 
 그들은 모든 곳에서 동의한다.
 
@@ -372,6 +373,12 @@ M^{i,j,k} = \begin{cases}
 ```
 
 또한 다음을 보존해야 합니다. "분석" 불변성 &mdash; Casimir-element 유도된 숫자 $$4\pi^2\lVert\lambda_i\rVert^2$$ 각 인덱싱된 중량, 즉 플랫 토리의 라플라시안의 개별 고유 값.
+
+Milnor의 듀엣이 예시하는 것처럼 격자 가중치의 길이를 유지하는 선형 맵을 갖는 것은 맵을 추론하는 데 충분하지 않습니다. $$SO(n,\Reals)$$우리는 또한 지도가 격자 무게 각도를 보존한다는 것을 알아야합니다. 그러나 이것은 방정식 (15)에서 개발 된 공식의 결과입니다 :
+
+```math
+-4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j
+```
 
 이 표현 이론적 계정 [[AK01]](#AK01) *격자 congruence*의 이전 발달과 정확하게 동등합니다 [[NRR22]](#NRR22) 전통적으로 플랫 토리의 형상 클래스를 구분하는 데 사용됩니다. 사실, 이러한 선형 맵의 행렬 전치 $$B\in SO(n,\Reals)$$, 이전 단락에서 설명한 바와 같이, **는 *Gelfand-Naimark-Segal Representation Theorem*의 적용에 의해 제공 된 토리 사이의 논란 Riemannian 기하학입니다. [검증](#proof-of-theorem) 우리의 [정리](#theorem).
 

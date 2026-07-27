@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =50540
+status: 驗證 =50654
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -268,12 +268,13 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 現在在珊瑚礁 2 的條件下，每個$$\mathscr V_\lambda$$ 一維向量空間超過$$\Complex$$，但這也表示它們是維度向量空間的上方$$\Reals$$，因此完整的乘對稱群組為$$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-一般而言，相關必備條件"關於產品值中的協議" 只是變成"保留排序的單一值集$$\set{M^{i,j,k}}$$ 檢視為地圖集合時 (以多重性計算)，$$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$"，這是一套強大的單體不變量。
+一般而言，相關必備條件"關於產品值中的協議" 只是變成"線性對映的排序單一值集 (以多重性計算) 保留$$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 定義者$$\set{M^{i,j,k}}$$." 根據定義，這些在直接的單一轉換總和之下是不變的$$\mathscr V_\lambda$$.
 
 在 multiplicity-1 spectrum 的情況下，完整的單一值集就是絕對值的一組$$M^{i,j,k}$$ 這樣，我們仍然可以形容，完全描述這種等離子譜歧管的幾何類別。請參閱 方程式 (16) 以獲取此形容詞與 Corollary 2 之間的關鍵關係。缺少的是足夠的引數，如果絕對值一致，則操作是幾何的；這需要一個引數來消除在左方方方程式摘要 (16) 中基準之間可能的符號變更取消。
 
-我們對一般形容詞保持真 (在 multiplicity-1 spectrum case 之外) 的信心較不自信，因為可能透過明確的 Sunada 建構產生反範例。
-但是，這些基準不變量在解譯兩個操作體為 **非幾何** 時很有用，因為顯示它們的單一值在有問題的兩個基礎之間並不相同。
+我們對一般形容詞保持真 (在 multiplicity-1 spectrum case 之外) 的信心較不自信，因為它可能透過明確的 Sunada 建構產生反範例 (充分) 。
+
+但是，這些基礎不變量在解譯涉及證明兩隻手法的較複雜案例時可能非常有用 **不是幾何 **，因為顯示它們的奇異值在有問題的兩個基礎之間並不相同。
 
 回到 Corollary 1，我們觀察到驗證涉及建立此意涵：
 
@@ -328,7 +329,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1 遵循的事實$$z_k\in U_1$$ 完整定義 (亦即，$$i$$- 因產品上的假設而異，以及由代數運算子定義的先前觀察$$z_iz_j\bar z_kM_0^{i,j,k}$$ 與$$M_1^{i,j,k}$$ 同時也是關聯性，並同意將點函數乘以特徵的絕對值方形，產生的代數也密集於$$L^2(M,g)$$ (再由 Stone-Weierstrass 推定為獨立點)。建立中$$\ker\ [M^{i,\bar i,k}]^* = 0$$ 完全相等，其中$$\mathscr V$$ 是所產生的封閉 Hilbert 空間$$\set{|e^i|^2}$$，和$$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 是基準變更識別對應。
+Corollary 1 遵循的事實$$z_k\in U_1$$ 完整定義 (亦即，$$i$$- 因產品上的假設而異，以及由代數運算子定義的先前觀察$$z_iz_j\bar z_kM_1^{i,j,k}$$ 與$$M_0^{i,j,k}$$ 同時也是關聯性，並同意將點函數乘以特徵的絕對值方形，產生的代數也密集於$$L^2(M,g)$$ (再由 Stone-Weierstrass 推定為獨立點)。建立中$$\ker\ [M^{i,\bar i,k}]^* = 0$$ 完全相等，其中$$\mathscr V$$ 是所產生的封閉 Hilbert 空間$$\set{|e^i|^2}$$，和$$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 是基準變更識別對應。
 
 因此，他們在任何地方都同意。
 
@@ -371,6 +372,12 @@ M^{i,j,k} = \begin{cases}
 ```
 
 也必須保留"分析" 不變量&mdash; Casimir-element 引致的數字$$4\pi^2\lVert\lambda_i\rVert^2$$ 對於每個索引的權重，即扁平的利普拉西亞人的個別特徵值。
+
+由於 Milnor 的 duet 顯現，擁有一個線性地圖來保留晶格權重的長度，因此不適合去除地圖。$$SO(n,\Reals)$$我們也必須知道地圖會保留晶格加權角度。但這是「方程式」(15) 中所發展公式的後果：
+
+```math
+-4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j
+```
 
 此表示法 - 理論科目[[AK01]](#AK01) 與 *lattice congruence* 的先前開發完全相同[[NRR22]](#NRR22) 傳統上用於描繪平坦的幾何類別。事實上，這種線性圖的矩陣轉向$$B\in SO(n,\Reals)$$，如上一段所述，** 是 **Riemannian 與 Riemannian 在 Tori 之間有相反的幾何，由應用 *Gelfand-Naimark-Segal 代表定理 *提供。[證明](#proof-of-theorem) 我們的[定理](#theorem).
 
