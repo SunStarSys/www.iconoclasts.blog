@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=50474
+status: verificado=50540
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -23,7 +23,7 @@ Joe Schaefer
 
 ## Resumen
 
-Uso de técnicas elementales del Análisis Geométrico, Ecuaciones Diferenciales Parciales y Abeliano $$C^*$$ Algebras, {# lede #}Descubrimos una invariante geométrica global novedosa pero familiar{# lede #} &mdash; es decir, **el conjunto indexado de integrales de productos triples de funciones propias del operador Laplace-Beltrami**, para caracterizar con precisión qué colectores Riemannianos cerrados isospectrales son isométricos.
+Uso de técnicas elementales del Análisis Geométrico, Ecuaciones Diferenciales Parciales y Abeliano $$C^*$$ Algebras, {# lede #}Descubrimos una novela, pero familiar, global geométrica discriminante{# lede #} &mdash; es decir, **el conjunto indexado de integrales de productos triples de funciones propias del operador Laplace-Beltrami**, para caracterizar con precisión qué colectores Riemannianos cerrados isospectrales son isométricos.
 
 ## Introducción
 
@@ -35,7 +35,7 @@ Para las métricas riemannianas no homogéneas, Carolyn Gordon descubrió dúos 
 
 El trabajo continúa en muchas áreas relacionadas [[DH11]](#DH11), como la determinación de las características topológicas de la clase de colectores isospectrales, no isométricos en general (vacío [[ST80]](#ST80), finito [[AS94]](#AS94), rígido [[GK80]](#GK80)y compacto [[GZ97]](#GZ97)) como un subconjunto de diferentes espacios modulares de métricas riemannianas.
 
-What we offer in this article is a new perspective on a familiar tool: Coeficientes de Fourier indexados de productos pareados de funciones propias como un "invariable algebraico/topológico" complementar la actual y discreta "invariante analítica" &mdash; el espectro no negativo del *operador Laplace-Beltrami* (en lo sucesivo denominado el **laplaciano**) en $$ℋ = L^2(M,g)$$. Combinado, observamos que el par proporciona un "representación geométrica global discreta" de las clases de isometría de los colectores isospectrales, Riemannianos cerrados.
+What we offer in this article is a new perspective on a familiar tool: Coeficientes de Fourier indexados de productos pareados de funciones propias como un "discriminante algebraico/topológico" complementar la actual y discreta "invariante analítica" &mdash; el espectro no negativo del *operador Laplace-Beltrami* (en lo sucesivo denominado el **laplaciano**) en $$ℋ = L^2(M,g)$$. Combinado, observamos que el par proporciona un "representación geométrica global discreta" de las clases de isometría de los colectores isospectrales, Riemannianos cerrados.
 
 ### Resultados
 
@@ -255,7 +255,7 @@ Esto completa la prueba del teorema.
 
 ### Discusión de Corolarios
 
-Con $$\set{M_0^{i,j,k}}$$ y $$\set{M_1^{i,j,k}}$$ que representan los dos conjuntos de productos triples para las bases $$\set{e_0^i}$$ y $$\set{e_1^i}$$, vamos $$z_i \in U_1$$ ser el $$U_1^\infty$$ acción sobre una base ortonormal $$\set{e_1^i}$$. Así pues, elegiremos $$z_i$$ para que $$\set{z_ie_1^i}$$ rendimientos $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
+Con $$\set{M_0^{i,j,k}}$$ y $$\set{M_1^{i,j,k}}$$ que representan los dos conjuntos de productos triples para las bases $$\set{e_0^i}$$ y $$\set{e_1^i}$$, vamos $$z_i \in U_1$$ ser el $$U_1^\infty$$ acción sobre una base ortonormal $$\set{e_1^i}$$. Así pues, elegiremos $$z_i$$ para que $$\set{z_ie_1^i}$$ rendimientos $$\set{M_0^{i,j,k}} = \set{z_i z_j \bar z_kM_1^{i,j,k}}$$.
 
 ¿Por qué es este el caso? En general, el grupo de simetría que actúa sobre el espacio de posibles bases ortonormales de funciones propias es el espacio de Operadores Unitarios. $$U: \mathscr H\rightarrow\mathscr H$$ que viajan con proyecciones $$P_{\mathscr V_\lambda}$$ en los espacios de ocho dimensiones finitas $$\mathscr V_{\lambda}$$ asociado a cada valor propio individual $$\lambda$$ de los laplacianos. Por lo tanto
 
@@ -272,9 +272,10 @@ Bajo las condiciones del Corolario 2, cada uno de los $$\mathscr V_\lambda$$ son
 
 En términos más generales, el requisito previo asociado "sobre el acuerdo en los valores de los productos" serían simplemente "preservación del conjunto ordenado de valores singulares de $$\set{M^{i,j,k}}$$ (contado con multiplicidad), cuando se ve como una colección de mapas de $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", que son un conjunto robusto de invariantes unitarios.
 
-En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (16) para la relación clave entre esta conjetura y el Corolario 2. Lo que falta es el argumento de suficiencia de que si los valores absolutos están de acuerdo, los colectores son isométricos; lo que requiere un argumento sobre posibles cancelaciones de cambio de signos entre las bases en los sumandos de la ecuación LHS (16).
+En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (16) para la relación clave entre esta conjetura y el Corolario 2. Lo que falta es el argumento de suficiencia de que si los valores absolutos están de acuerdo, los colectores son isométricos; lo que requiere un argumento para eliminar las posibles cancelaciones de cambio de signos entre las bases en los sumandos de la ecuación LHS (16).
 
 Estamos significativamente menos seguros de que la conjetura general es cierta (fuera del caso del espectro de multiplicidad-1), ya que puede ser posible producir un contraejemplo a través de la construcción explícita de Sunada.
+Sin embargo, estas invariantes de base pueden resultar útiles para descifrar casos en los que dos colectores son **no isométricos**, mostrando que sus valores singulares no son idénticos entre las dos bases en cuestión.
 
 Volviendo al Corolario 1, observamos que la prueba implica establecer esta implicación:
 
@@ -363,7 +364,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 ```
 
-Como esta ecuación <span class="eqno"></span> es *solamente* invariante bajo transformaciones lineales en la red de pesas $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, sólo un $$L^2$$ mapa de base de funciones propias ortonormales **que se induce a partir de un mapa lineal invertible que preserva el volumen entre dos de dichos rangos indexados $$n$$ cerraduras de peso** mantendrá "algebraico/topológico" juego de datos indexados $$\set{M^{i,j,k}}$$ invariante.
+Como esta ecuación <span class="eqno"></span> sólo depende de la red de peso en sí, es ortonormal-basis-índice invariante. Además, es *solo *invariante bajo transformaciones lineales en la red de pesas $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, así que sólo $$L^2$$ mapa de base de funciones propias ortonormales **que se induce a partir de un mapa lineal invertible que preserva el volumen entre dos de dichos rangos indexados $$n$$ cerraduras de peso** mantendrá "algebraico/topológico" juego de datos indexados $$\set{M^{i,j,k}}$$ invariante.
 
 Sin embargo, para aplicar nuestra [Teorema](#theorem)Es esencial que este mapa lineal $$B$$ ser $$B\in SO(n,\Reals)$$ en la red de pesas, porque el $$L^2$$ mapa de la base de la función propia
 

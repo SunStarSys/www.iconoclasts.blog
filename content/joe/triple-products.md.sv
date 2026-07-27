@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50474
+status: verifierad=50540
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -22,7 +22,7 @@ Joe Schaefer
 
 ## Sammandrag
 
-Använda elementära tekniker från geometrisk analys, partiella differentialekvationer och abeliska $$C^*$$ Algebror, {# lede #}Vi avslöjar en roman, men ändå bekant, global geometrisk invariant{# lede #} &mdash; nämligen **den indexerade uppsättningen integraler av tredubbla produkter av egenfunktioner hos Laplace-Beltrami-operatören**, för att exakt karakterisera vilka isospektrala slutna Riemanniska grenrör som är isometriska.
+Använda elementära tekniker från geometrisk analys, partiella differentialekvationer och abeliska $$C^*$$ Algebror, {# lede #}Vi avslöjar en roman, men ändå bekant, global geometrisk diskriminerande{# lede #} &mdash; nämligen **den indexerade uppsättningen integraler av tredubbla produkter av egenfunktioner hos Laplace-Beltrami-operatören**, för att exakt karakterisera vilka isospektrala slutna Riemanniska grenrör som är isometriska.
 
 ## Introduktion
 
@@ -34,7 +34,7 @@ För inhomogena riemanniska mätvärden upptäckte Carolyn Gordon duetter som in
 
 Arbetet fortsätter inom många närliggande områden [[DH11]](#DH11), såsom bestämning av topologiska egenskaper hos klassen av isospektrala, icke-isometriska grenrör i allmänhet (tomt) [[ST80]](#ST80), ändlig [[AS94]](#AS94), styv [[GK80]](#GK80)och kompakt [[GZ97]](#GZ97)) som en delmängd av olika modulutrymmen för Riemannian-mätvärden.
 
-What we offer in this article is a new perspective on a familiar tool: indexerade fourierkoefficienter för parvisa produkter av egenfunktioner som diskreta "algebraisk/topologisk invariant" för att komplettera den befintliga, diskreta "invariantanalys" &mdash; det icke-negativa spektrumet hos *Laplace-Beltrami-operatören* (här kallad **Laplacian**) på $$ℋ = L^2(M,g)$$. Tillsammans observerar vi att paret ger en "diskret global geometrisk representation" av isometriklasserna av isospektral, slutna Riemanniska grenrör.
+What we offer in this article is a new perspective on a familiar tool: indexerade fourierkoefficienter för parvisa produkter av egenfunktioner som diskreta "algebraisk/topologisk diskriminerande" för att komplettera den befintliga, diskreta "invariantanalys" &mdash; det icke-negativa spektrumet hos *Laplace-Beltrami-operatören* (här kallad **Laplacian**) på $$ℋ = L^2(M,g)$$. Tillsammans observerar vi att paret ger en "diskret global geometrisk representation" av isometriklasserna av isospektral, slutna Riemanniska grenrör.
 
 ### Resultat
 
@@ -254,7 +254,7 @@ Detta kompletterar teoremens bevis.
 
 ### Diskussion om korollarier
 
-Med $$\set{M_0^{i,j,k}}$$ och $$\set{M_1^{i,j,k}}$$ representerar de två trippelproduktseten för baserna $$\set{e_0^i}$$ och $$\set{e_1^i}$$, låt $$z_i \in U_1$$ vara $$U_1^\infty$$ åtgärder på en sådan ortonormal grund $$\set{e_1^i}$$. Därför kommer vi att välja $$z_i$$ så att $$\set{z_ie_1^i}$$ avkastning $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
+Med $$\set{M_0^{i,j,k}}$$ och $$\set{M_1^{i,j,k}}$$ representerar de två trippelproduktseten för baserna $$\set{e_0^i}$$ och $$\set{e_1^i}$$, låt $$z_i \in U_1$$ vara $$U_1^\infty$$ åtgärder på en sådan ortonormal grund $$\set{e_1^i}$$. Därför kommer vi att välja $$z_i$$ så att $$\set{z_ie_1^i}$$ avkastning $$\set{M_0^{i,j,k}} = \set{z_i z_j \bar z_kM_1^{i,j,k}}$$.
 
 Varför är detta fallet? I allmänhet är den symmetrigrupp som verkar på utrymmet för möjliga ortonormala baser av egenfunktioner utrymmet för enhetsoperatorer. $$U: \mathscr H\rightarrow\mathscr H$$ som pendlar med prognoser $$P_{\mathscr V_\lambda}$$ på de finita dimensionella åttondelar $$\mathscr V_{\lambda}$$ för varje enskilt egenvärde $$\lambda$$ från Lappland. Därför
 
@@ -271,9 +271,10 @@ Nu under villkoren i Corollary 2, var och en av de $$\mathscr V_\lambda$$ är et
 
 Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "bevarandet av den ordinerade uppsättningen singulära värden för $$\set{M^{i,j,k}}$$ (räknat med mångfald), när det ses som en samling kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$", som är en robust uppsättning enhetsvarianter.
 
-I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (16) för nyckelförhållandet mellan denna gissning och Corollary 2. Vad som saknas är tillräcklighetsargumentet att om de absoluta värdena är överens är grenrör isometriska; vilket kräver ett argument om möjliga teckenändringsavbrott mellan baser i LHS-summorna av ekvation (16).
+I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (16) för nyckelförhållandet mellan denna gissning och Corollary 2. Vad som saknas är tillräcklighetsargumentet att om de absoluta värdena är överens är grenrör isometriska; vilket kräver ett argument för att eliminera eventuella teckenändringsavbrott mellan baser i LHS-topparna i ekvation (16).
 
 Vi är betydligt mindre säkra på att den allmänna gissningen är sann (utanför multiplikations-1-spektrumfallet), eftersom det kan vara möjligt att producera ett motexempel via explicit Sunada-konstruktion.
+Dessa grundvarianter kan dock vara användbara i dechiffreringsfall när två grenrör är **inte isometriska**, genom att visa att deras singulära värden inte är identiska mellan de två baserna i fråga.
 
 Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 
@@ -362,7 +363,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 ```
 
-Som denna ekvation <span class="eqno"></span> är *endast* invariant under linjära transformationer på viktgitter $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, endast ett $$L^2$$ ortonormal egenfunktionskarta **som induceras från en volymbevarande inverterbar linjär karta mellan två sådana indexerade, rangordnade $$n$$ viktgitter** kommer att hålla "algebraisk/topologisk" indexerad datamängd $$\set{M^{i,j,k}}$$ Ovariant.
+Som denna ekvation <span class="eqno"></span> beror bara på vikten gitter själv, det är orthonormal-basis-index invariant. Vidare är det *bara *invariant under linjära omvandlingar på viktgitter $$(A^{-1})^t\Z^n = \set{\lambda_i}$$Så bara en $$L^2$$ ortonormal egenfunktionskarta **som induceras från en volymbevarande inverterbar linjär karta mellan två sådana indexerade, rangordnade $$n$$ viktgitter** kommer att hålla "algebraisk/topologisk" indexerad datamängd $$\set{M^{i,j,k}}$$ Ovariant.
 
 För att kunna tillämpa vår [Satsen](#theorem)Det är viktigt att en sådan linjär karta $$B$$ vara $$B\in SO(n,\Reals)$$ på vikten gitter, eftersom den inducerade $$L^2$$ Basmappning för egenfunktion
 

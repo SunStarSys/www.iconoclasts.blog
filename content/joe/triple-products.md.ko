@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=50474
+status: 확인=50540
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -22,7 +22,7 @@ Joe Schaefer
 
 ## 요약
 
-Geometric Analysis, Partial Differential Equations 및 Abelian의 기본 기법 사용 $$C^*$$ Algebras, {# lede #}우리는 소설, 아직 익숙한, 글로벌 기하학적 불변을 발견{# lede #} &mdash; 즉 **Laplace-Beltrami 연산자의 eigenfunctions의 삼중 제품의 통합 세트**, 정확히 어떤 isospectral 폐쇄 Riemannian 매니폴드 isometric 특징.
+Geometric Analysis, Partial Differential Equations 및 Abelian의 기본 기법 사용 $$C^*$$ Algebras, {# lede #}우리는 소설, 아직 익숙한, 글로벌 기하학적 차별을 발견{# lede #} &mdash; 즉 **Laplace-Beltrami 연산자의 eigenfunctions의 삼중 제품의 통합 세트**, 정확히 어떤 isospectral 폐쇄 Riemannian 매니폴드 isometric 특징.
 
 ## 소개
 
@@ -34,7 +34,7 @@ Inhomogeneous Riemannian metrics의 경우 Carolyn Gordon은 로컬 등각투영
 
 많은 관련 영역에서 작업이 계속됨 [[DH11]](#DH11)isospectral, non-isometric 매니폴드 클래스의 위상적 특성을 결정하는 것과 같이, 일반적으로 (비어 있음) [[ST80]](#ST80), 유한 [[AS94]](#AS94), 엄밀한 [[GK80]](#GK80)및 Compact [[GZ97]](#GZ97)) Riemannian 메트릭의 다른 모듈리 공간의 하위 집합으로.
 
-What we offer in this article is a new perspective on a familiar tool: 고유 함수의 쌍방식 제품의 색인 푸리에 계수를 이산으로 "대수/위상 불변성" 기존 비연속 보완 "분석 불변성" &mdash; *Laplace-Beltrami 연산자*의 음이 아닌 스펙트럼(여기서는 **Laplacian**이라고 함) $$ℋ = L^2(M,g)$$. 결합, 우리는 쌍이 제공하는 것을 관찰 "이산 전역 기하학적 표현" isospectral의 isometry 클래스의, 닫힌 Riemannian 매니폴드.
+What we offer in this article is a new perspective on a familiar tool: 고유 함수의 쌍방식 제품의 색인 푸리에 계수를 이산으로 "대수/위상 차별" 기존 비연속 보완 "분석 불변성" &mdash; *Laplace-Beltrami 연산자*의 음이 아닌 스펙트럼(여기서는 **Laplacian**이라고 함) $$ℋ = L^2(M,g)$$. 결합, 우리는 쌍이 제공하는 것을 관찰 "이산 전역 기하학적 표현" isospectral의 isometry 클래스의, 닫힌 Riemannian 매니폴드.
 
 ### 결과
 
@@ -254,7 +254,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 유니폼 규범을 유지합니
 
 ### 코롤러 토론
 
-대상 $$\set{M_0^{i,j,k}}$$ 및 $$\set{M_1^{i,j,k}}$$ 기본에 대한 두 개의 삼중 제품 세트를 나타냅니다. $$\set{e_0^i}$$ 및 $$\set{e_1^i}$$의 Let $$z_i \in U_1$$ 다음과 같이 하십시오. $$U_1^\infty$$ 이러한 orthonormal 기초에 행동 $$\set{e_1^i}$$. 그러므로 우리는 선택할 것이다. $$z_i$$ 이렇게 $$\set{z_ie_1^i}$$ 수율 $$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
+대상 $$\set{M_0^{i,j,k}}$$ 및 $$\set{M_1^{i,j,k}}$$ 기본에 대한 두 개의 삼중 제품 세트를 나타냅니다. $$\set{e_0^i}$$ 및 $$\set{e_1^i}$$의 Let $$z_i \in U_1$$ 다음과 같이 하십시오. $$U_1^\infty$$ 이러한 orthonormal 기초에 행동 $$\set{e_1^i}$$. 그러므로 우리는 선택할 것이다. $$z_i$$ 이렇게 $$\set{z_ie_1^i}$$ 수율 $$\set{M_0^{i,j,k}} = \set{z_i z_j \bar z_kM_1^{i,j,k}}$$.
 
 이게 왜 케이스인가요? 일반적으로, eigenfunctions의 가능한 직교 기지의 공간에 작용하는 대칭 그룹은 단일 연산자의 공간입니다 $$U: \mathscr H\rightarrow\mathscr H$$ 프로젝션과 함께 $$P_{\mathscr V_\lambda}$$ 유한 차원의 eigenspaces $$\mathscr V_{\lambda}$$ 각 개별 고유 값과 연관됨 $$\lambda$$ 라플라시안 The Laplacian 따라서
 
@@ -271,9 +271,10 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 일반적으로 연관된 필요 조건 "제품 가치 계약 관련" 그저 그렇게 될 뿐 "정렬된 단수 값 집합 보존 $$\set{M^{i,j,k}}$$ (다중성으로 계산됨), 에서 맵 모음으로 표시되는 경우 $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$"의 강력한 단일 불변 집합입니다.
 
-multiplicity-1 스펙트럼 케이스에서, 단수값의 완전한 세트는 단순히의 절대값의 세트이다 $$M^{i,j,k}$$ 이것은, 우리는 여전히 추측, 완전히 이러한 isospectral 매니폴드의 isometry 클래스를 특징. 이 추측과 관상 2 사이의 주요 관계는 방정식(16)을 참조하십시오. 누락 된 것은 절대값이 동의하면 매니폴드는 아이소메트릭; 이는 방정식의 LHS 요약 (16)의 기지 사이에 가능한 기호 변경 취소에 대한 인수가 필요하다는 충분한 인수입니다.
+multiplicity-1 스펙트럼 케이스에서, 단수값의 완전한 세트는 단순히의 절대값의 세트이다 $$M^{i,j,k}$$ 이것은, 우리는 여전히 추측, 완전히 이러한 isospectral 매니폴드의 isometry 클래스를 특징. 이 추측과 관상 2 사이의 주요 관계는 방정식(16)을 참조하십시오. 누락 된 것은 절대값이 동의하면 매니폴드가 아이소메트릭이라는 충분한 인수입니다. 즉, 방정식 (16)의 LHS 요약에서 기지 사이에 가능한 기호 변경 취소를 제거하기 위해 인수가 필요합니다.
 
 우리는 일반적인 추측이 사실 (다중성-1 스펙트럼 케이스 외부)을 가지고 있다는 것을 매우 덜 확신합니다. 왜냐하면 그것은 명백한 Sunada 건설을 통해 반예제를 생산할 수 있기 때문입니다.
+그러나 이러한 기본 불변성은 두 개의 매니폴드가 **동등하지 않음**인 경우 해당 두 베이스 간에 단수 값이 동일하지 않음을 표시하여 케이스를 해독하는 데 유용할 수 있습니다.
 
 Corollary 1로 돌아가면, 우리는 증거가이 의미를 확립하는 것을 포함합니다 :
 
@@ -362,7 +363,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 ```
 
-이 방정식으로 <span class="eqno"></span> *only* 무게 격자에 선형 변환의 불변입니다. $$(A^{-1})^t\Z^n = \set{\lambda_i}$$또는 $$L^2$$ orthonormal eigenfunction base map **이러한 두 인덱스화 된 순위 사이의 볼륨 보존 반전 가능한 선형 맵에서 유도됩니다 $$n$$ 무게 격자**는 지킬 것입니다 "대수학/위상학" 인덱스화된 데이터 집합 $$\set{M^{i,j,k}}$$ 불변.
+이 방정식으로 <span class="eqno"></span> 단지 무게 격자 자체에 의존, 그것은 orthonormal-basis-index invariant. 게다가, 그것은 *only* 무게 격자에 선형 변환의 밑에 invariant입니다 $$(A^{-1})^t\Z^n = \set{\lambda_i}$$관련 리뷰: So only an... $$L^2$$ orthonormal eigenfunction base map **이러한 두 인덱스화 된 순위 사이의 볼륨 보존 반전 가능한 선형 맵에서 유도됩니다 $$n$$ 무게 격자**는 지킬 것입니다 "대수학/위상학" 인덱스화된 데이터 집합 $$\set{M^{i,j,k}}$$ 불변.
 
 그러나, 우리의 [정리](#theorem)이러한 선형 맵이 필수적입니다. $$B$$ 다음 $$B\in SO(n,\Reals)$$ 무게 격자에, 때문에 유도된 $$L^2$$ 고유기능 기반 맵
 

@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=50474
+status: 確認済み=50540
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -21,7 +21,7 @@ Joe Schaefer
 
 ## 抽象画
 
-Geometric Analysis、Partial Differential Equations、Abelianの基本技術$$C^*$$ 代数、{# lede #}私たちは、小説を発見、まだ馴染みのある、グローバルな幾何学的不変{# lede #} &mdash; すなわち**Laplace-Beltrami演算子の固有関数の三重積分の指数集合**は、どの等分スペクトル閉じたRiemannianマニホールドがアイソメトリックであるかを正確に特徴付ける。
+Geometric Analysis、Partial Differential Equations、Abelianの基本技術$$C^*$$ 代数、{# lede #}私たちは、小説を発見、まだ馴染みのある、グローバルな幾何学差別{# lede #} &mdash; すなわち**Laplace-Beltrami演算子の固有関数の三重積分の指数集合**は、どの等分スペクトル閉じたRiemannianマニホールドがアイソメトリックであるかを正確に特徴付ける。
 
 ## はじめに
 
@@ -33,7 +33,7 @@ Geometric Analysis、Partial Differential Equations、Abelianの基本技術$$C^
 
 さまざまな関連分野での取り組み[[DH11]](#DH11)イソスペクトルのクラスの位相的特性を決定するような、一般的には非アイソメトリックマニホールド(空) [[ST80]](#ST80)、有限[[AS94]](#AS94)、堅い[[GK80]](#GK80)、コンパクト[[GZ97]](#GZ97))は、Riemannianメトリックのさまざまなモジュリ空間のサブセットです。
 
-What we offer in this article is a new perspective on a familiar tool: 離散物としての固有関数のペアワイズプロダクトのインデックス付きフーリエ係数"代数/位相不変" 既存、個別を補完する"分析不変条件" &mdash; *Laplace-Beltrami演算子* (ここでは**Laplacian**)の負でないスペクトル$$ℋ = L^2(M,g)$$。組み合わせて、ペアは、"個別のグローバル幾何表現" isospectralのisometryクラス、閉じたRiemannianマニホールド。
+What we offer in this article is a new perspective on a familiar tool: 離散物としての固有関数のペアワイズプロダクトのインデックス付きフーリエ係数"代数的/位相的差別" 既存、個別を補完する"分析不変条件" &mdash; *Laplace-Beltrami演算子* (ここでは**Laplacian**)の負でないスペクトル$$ℋ = L^2(M,g)$$。組み合わせて、ペアは、"個別のグローバル幾何表現" isospectralのisometryクラス、閉じたRiemannianマニホールド。
 
 ### 結果
 
@@ -253,7 +253,7 @@ $$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$$ 均一な基準を維持しま�
 
 ### Corollariesについて
 
-次を含む$$\set{M_0^{i,j,k}}$$ および$$\set{M_1^{i,j,k}}$$ 基底の2つの三重プロダクトセットを表す$$\set{e_0^i}$$ および$$\set{e_1^i}$$Let $$z_i \in U_1$$ である$$U_1^\infty$$ このような正統性に基づく行動$$\set{e_1^i}$$。わたしたちは選ぶ。$$z_i$$ したがって$$\set{z_ie_1^i}$$ 降伏$$\set{M_1^{i,j,k}} = \set{z_i z_j \bar z_kM_0^{i,j,k}}$$.
+次を含む$$\set{M_0^{i,j,k}}$$ および$$\set{M_1^{i,j,k}}$$ 基底の2つの三重プロダクトセットを表す$$\set{e_0^i}$$ および$$\set{e_1^i}$$Let $$z_i \in U_1$$ である$$U_1^\infty$$ このような正統性に基づく行動$$\set{e_1^i}$$。わたしたちは選ぶ。$$z_i$$ したがって$$\set{z_ie_1^i}$$ 降伏$$\set{M_0^{i,j,k}} = \set{z_i z_j \bar z_kM_1^{i,j,k}}$$.
 
 このケースはなぜですか。一般に、固有関数の正準基底の空間に作用する対称群は、単項演算子の空間である。$$U: \mathscr H\rightarrow\mathscr H$$ プロジェクションと合致する$$P_{\mathscr V_\lambda}$$ 有限次元異次元空間$$\mathscr V_{\lambda}$$ 個々の固有値に関連付けられる$$\lambda$$ Laplacianです。したがって、
 
@@ -270,9 +270,10 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 より一般的には、関連する前提条件"製品価値契約について" 単に"単数値の順序付きセットの保存$$\set{M^{i,j,k}}$$ (多重度でカウント)マップの集合として表示する場合$$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k}^*)$$"これは、Unitary Invariantsの堅牢なセットです。
 
-multiplicity-1スペクトルの場合、単数値の完全なセットは、$$M^{i,j,k}$$ それでも、私たちは、そのような等分スペクトルマニホールドの等分量クラスを完全に特徴づける。この予想とコロラリー2の間の重要な関係については、方程式(16)を参照してください。欠けているのは、絶対値が一致した場合、マニホールドは等方性であり、LHSの方程式要約(16)の基底間の符号変更取消の可能性に関する議論が必要であるという十分性の引数です。
+multiplicity-1スペクトルの場合、単数値の完全なセットは、$$M^{i,j,k}$$ それでも、私たちは、そのような等分スペクトルマニホールドの等分量クラスを完全に特徴づける。この予想とコロラリー2の間の重要な関係については、方程式(16)を参照してください。欠けているのは、絶対値が一致した場合、マニホールドはアイソメトリックであり、LHSの方程式要約(16)の基底間の可能な符号変更取消を排除するための引数が必要であるという、十分性の引数です。
 
 我々は、一般的な予想が(多重度1スペクトルの場合を除いて)真であることは、あまり自信がない。なぜなら、Sunadaの明示的な建設によって反例を作り出すことができるかもしれないからだ。
+ただし、これらの基準不変条件は、問題の2つのベース間で単数値が同一でないことを示すことで、2つのマニホールドが**アイソメトリックではない**場合の解読に役立ちます。
 
 Corollary 1に戻ると、この証明には次のような意味があることがわかります。
 
@@ -361,7 +362,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 ```
 
-この方程式として<span class="eqno"></span> 重量格子の線形変換では*only*不変$$(A^{-1})^t\Z^n = \set{\lambda_i}$$単なる$$L^2$$ orthonormal eigenfunction basis map **これは、このようなインデックス付き、ランク間の体積保持の反転線形マップから誘発されます$$n$$ 重量格子**は保ちます"代数/位相" 索引付きデータ・セット$$\set{M^{i,j,k}}$$ 不変
+この方程式として<span class="eqno"></span> 重量格子自体によってのみ決まります、それは正統なbasis索引の不変量です。さらに、重量格子上の線形変換では*のみ*不変です$$(A^{-1})^t\Z^n = \set{\lambda_i}$$ただ、$$L^2$$ orthonormal eigenfunction basis map **これは、このようなインデックス付き、ランク間の体積保持の反転線形マップから誘発されます$$n$$ 重量格子**は保ちます"代数/位相" 索引付きデータ・セット$$\set{M^{i,j,k}}$$ 不変
 
 ただし、[定理](#theorem)そのような線形の地図が不可欠です。$$B$$ ある$$B\in SO(n,\Reals)$$ 重さの格子で、なぜなら、$$L^2$$ 固有関数基準マップ
 
