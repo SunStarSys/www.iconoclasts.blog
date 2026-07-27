@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50517
+status: verified=50525
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -271,7 +271,8 @@ More generally, the associated prerequisite "regarding agreement in product valu
 
 In the multiplicity-1 spectrum case, the complete set of singular values is simply the set of absolute values of $$M^{i,j,k}$$ which, we still conjecture, completely characterizes the isometry classes of such isospectral manifolds. See Equation (16) for the key relationship between this conjecture and Corollary 2. What's missing is the sufficiency argument that if the absolute values agree, the manifolds are isometric; which requires an argument to eliminate possible sign change cancellations between bases in the LHS summands of Equation (16).
 
-We are significantly less confident that the general conjecture holds true (outside the multiplicity-1 spectrum case), since it may be possible to produce a counterexample via explicit Sunada construction. However these basis invariants can prove useful in deciphering cases when two manifolds are **not isometric**, by showing that their singular values are not identical between the two bases in question.
+We are significantly less confident that the general conjecture holds true (outside the multiplicity-1 spectrum case), since it may be possible to produce a counterexample via explicit Sunada construction.
+However these basis invariants can prove useful in deciphering cases when two manifolds are **not isometric**, by showing that their singular values are not identical between the two bases in question.
 
 Getting back to Corollary 1, we observe that the proof involves establishing this implication:
 
@@ -360,7 +361,7 @@ M^{i,j,k} = \begin{cases}
 \end{cases}
 ```
 
-As this Equation <span class="eqno"></span> is *only* invariant under linear transformations on the weight lattice $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, only an $$L^2$$ orthonormal eigenfunction basis map **which is induced from a volume-preserving invertible linear map between two such indexed, rank $$n$$ weight lattices** will keep the "algebraic/topological" indexed data set $$\set{M^{i,j,k}}$$ invariant.
+As this Equation <span class="eqno"></span> only depends on the weight lattice itself, it is orthonormal-basis-index invariant. Further, it is *only* invariant under linear transformations on the weight lattice $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, so only an $$L^2$$ orthonormal eigenfunction basis map **which is induced from a volume-preserving invertible linear map between two such indexed, rank $$n$$ weight lattices** will keep the "algebraic/topological" indexed data set $$\set{M^{i,j,k}}$$ invariant.
 
 However, in order to apply our [Theorem](#theorem), it is essential that such a linear map $$B$$ be $$B\in SO(n,\Reals)$$ on the weight lattice, because the induced $$L^2$$ eigenfunction basis map
 
