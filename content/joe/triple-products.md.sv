@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50654
+status: verifierad=50755
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -116,7 +116,9 @@ Om vi tänker på kartan
 
 Detta papper fastställer injicerbarhet av denna karta för slutna Riemannian grenrör (upp till Riemannian isometry i dess domän). Ytterligare resultat som tillämpar dessa tekniker för att beskriva sin bild (och invers), inom vissa moduli utrymmen av mätvärden, är bara att komma igång [[AA25]](#AA25). Där tacklar Anshul Adve rigoröst enhetstangensutrymmen av kompakta, hyperboliska 2-omkretsar med samma **strukturkonstanter** från Conformal Field Theory.
 
-Det generiska Riemannian metriska fallet kännetecknas helt av studien av $$\set{\lambda_i, M^{i,\bar i,k}}$$.
+Vissa bilder kan vara till hjälp här. Om vi fixar $$(M,g)$$ och titta på banorna i $$\set{M^{i,j,k}}$$ under spektrumbevarande basbytesomvandlingar på $$\set{e^i}$$Vi ser att omloppsbana av olika isospektral $$(M,g)$$ par partitionerar bilden av denna karta längs isometriklasser.
+
+Slutligen bevisar vi att det generiska Riemannian metriska fallet helt kännetecknas av studien av "diagonal" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 Dessa resultat visades först under ett liknande tal av författaren vid **MSRI **1997, men de visas här i publicerad form för första gången.
 
@@ -269,13 +271,13 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 Nu under villkoren i Corollary 2, var och en av de $$\mathscr V_\lambda$$ är ett dimensionellt vektorrum över $$\Complex$$, men det betyder också att de är endimensionella vektorrum över $$\Reals$$och så är hela den multiplikativa symmetrigruppen $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "Bevarande av den ordnade uppsättningen av singulära värden (räknade med multiplikation) av linjära kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definierad av $$\set{M^{i,j,k}}$$." per definition, dessa är invariant under direkta summor av enhetliga omvandlingar på $$\mathscr V_\lambda$$.
+Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "Bevarande av den ordnade uppsättningen av singulära värden (räknade med multiplikation) av linjära kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definierad av $$\set{M^{i,j,k}}$$." Här är den inre produkten på $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ är $$tr (B^*A)$$. per definition, dessa är invariant under direkta summor av enhetliga omvandlingar på $$\mathscr V_\lambda$$.
 
 I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (16) för nyckelförhållandet mellan denna gissning och Corollary 2. Vad som saknas är tillräcklighetsargumentet att om de absoluta värdena är överens är grenrör isometriska; vilket kräver ett argument för att eliminera eventuella teckenändringsavbrott mellan baser i LHS-topparna i ekvation (16).
 
 Vi är betydligt mindre säkra på att den allmänna gissningen är sann (utanför multiplikations-1-spektrumfallet), eftersom det kan vara möjligt att producera ett motexempel (av tillräcklighet) via explicit Sunada-konstruktion.
 
-Dessa grundvarianter kan dock vara användbara vid dechiffrering av mer komplexa fall som innebär att två grenrör är **inte isometriska**, genom att visa att deras singulära värden inte är identiska mellan de två baserna i fråga.
+Dessa grundvarianter kan dock vara användbara vid dechiffrering av mer komplexa fall som innebär att två isospektrala grenrör är **inte isometriska**, genom att visa att deras singulära värden inte är identiska mellan de två baserna i fråga.
 
 Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 
@@ -330,7 +332,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1 följer av det faktum att $$z_k\in U_1$$ Den är väldefinierad (dvs. $$i$$-invariant av hypoteserna om produkter), och föregående observation att de algebraiska operatorer som definieras av $$z_iz_j\bar z_kM_1^{i,j,k}$$ och $$M_0^{i,j,k}$$ är båda associativa och är överens med pointwise funktion multiplikation av rutor av absoluta värden för egenfunktioner, vars genererade algebra också är tät i $$L^2(M,g)$$ (Återigen av Stone-Weierstrass, eftersom det antas vara separata punkter). Upprättar $$\ker\ [M^{i,\bar i,k}]^* = 0$$ är exakt lika, där $$\mathscr V$$ är det stängda Hilbert-utrymmet som genereras av $$\set{|e^i|^2}$$och $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ är basändringsidentitetskartan.
+Corollary 1 följer av det faktum att $$z_k\in U_1$$ Den är väldefinierad (dvs. $$i$$-invariant av hypoteserna om produkter), och föregående observation att de algebraiska operatorer som definieras av $$z_iz_j\bar z_kM_1^{i,j,k}$$ och $$M_0^{i,j,k}$$ är båda associativa och är överens med pointwise funktion multiplikation av rutor av absoluta värden för egenfunktioner, vars genererade algebra också är tät i $$C(M)$$ (Återigen av Stone-Weierstrass, eftersom det antas vara separata punkter). Upprättar $$\ker\ [M^{i,\bar i,k}]^* = 0$$ är exakt lika, där $$\mathscr V$$ är det stängda Hilbert-utrymmet som genereras av $$\set{|e^i|^2}$$och $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ är basändringsidentitetskartan.
 
 De är överens överallt.
 
@@ -374,10 +376,10 @@ För att kunna tillämpa vår [Satsen](#theorem)Det är viktigt att en sådan li
 
 måste också bevara "analytisk" varianter &mdash; Casimir-element-inducerad figur $$4\pi^2\lVert\lambda_i\rVert^2$$ för varje indexerad vikt, dvs. de individuella egenvärdena i Lappland.
 
-Som Milnors duett exemplifierar är det inte tillräckligt att ha en linjär karta som bevarar längden på gittervikterna för att härleda kartan i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (15):
+Som Milnors duett exemplifierar, att ha en linjär karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (15):
 
 ```math
--4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j
+-4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
 ```
 
 Detta representationsteoretiska konto [[AK01]](#AK01) är exakt likvärdig med den tidigare utvecklingen av *lattice kongruens* [[NRR22]](#NRR22) Traditionellt används för att avgränsa isometri klasser av platt tori. Faktum är att matrisen införlivar en sådan linjär karta $$B\in SO(n,\Reals)$$, som beskrivs i föregående stycke, **är **den kontravariant Riemannian isometri mellan tori, som tillhandahålls genom tillämpning av *Gelfand-Naimark-Segal Representation Theorem *under [Bevis](#proof-of-theorem) från vår [Satsen](#theorem).

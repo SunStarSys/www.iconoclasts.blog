@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=50654
+status: verificado=50755
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -117,7 +117,9 @@ Se considerarmos o mapa
 
 este trabalho estabelece a injetividade deste mapa para variedades Riemannianas fechadas (até a isometria Riemanniana em seu domínio). Outros resultados que aplicam essas técnicas para descrever sua imagem (e inversa), dentro de espaços de métricas de módulos selecionados, estão apenas começando [[AA25]](#AA25). Lá, Anshul Adve aborda rigorosamente os espaços tangentes da unidade de 2 orbifolds compactos e hiperbólicos usando essas mesmas **constantes de estrutura** da Teoria do Campo Conformal.
 
-O caso métrico Riemanniano genérico é completamente caracterizado pelo estudo de $$\set{\lambda_i, M^{i,\bar i,k}}$$.
+Algumas imagens podem ser úteis aqui. Se corrigirmos $$(M,g)$$ Veja as órbitas de $$\set{M^{i,j,k}}$$ sob as transformações unitárias da mudança de base de preservação do espectro em $$\set{e^i}$$, vemos que as órbitas de diferentes isospectrais $$(M,g)$$ pares partilham a imagem deste mapa ao longo de classes de isometria.
+
+Finalmente, provamos que o caso métrico Riemanniano genérico é completamente caracterizado pelo estudo do "diagonal" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 Estes resultados foram demonstrados pela primeira vez durante uma palestra similarmente intitulada pelo autor em **MSRI** em 1997, mas eles aparecem aqui em forma publicada pela primeira vez.
 
@@ -270,13 +272,13 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 Agora, nas condições do Corolário 2, cada um dos $$\mathscr V_\lambda$$ são espaços vetoriais unidimensionais sobre $$\Complex$$, mas isso também significa que eles são espaços vetoriais unidimensionais $$\Reals$$, e assim o grupo multiplicativo completo da simetria é $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Mais geralmente, o prerrequisito associado "acordo sobre os valores dos produtos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares (contados com multiplicidade) dos mapas lineares $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definido por $$\set{M^{i,j,k}}$$." Por definição, estes são invariantes sob somas diretas de transformações unitárias no $$\mathscr V_\lambda$$.
+Mais geralmente, o prerrequisito associado "acordo sobre os valores dos produtos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares (contados com multiplicidade) dos mapas lineares $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definido por $$\set{M^{i,j,k}}$$." Aqui o produto interno em $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ é $$tr (B^*A)$$. Por definição, estes são invariantes sob somas diretas de transformações unitárias no $$\mathscr V_\lambda$$.
 
 No caso do espectro da multiplicidade-1, o conjunto completo de valores singulares é simplesmente o conjunto de valores absolutos de $$M^{i,j,k}$$ que, ainda conjecturamos, caracteriza completamente as classes de isometria de tais variedades isospectrais. Ver Equação (16) para a relação chave entre esta conjectura e Corolário 2. O que falta é o argumento de suficiência de que, se os valores absolutos concordarem, as variedades são isométricas; o que requer um argumento para eliminar possíveis cancelamentos de mudança de sinal entre as bases nos summands LHS da Equação (16).
 
 Estamos significativamente menos confiantes de que a conjectura geral é verdadeira (fora do caso do espectro da multiplicidade-1), uma vez que pode ser possível produzir um contra-exemplo (de suficiência) através de construção Sunada explícita.
 
-No entanto, essas invariantes de base podem ser úteis na decifração de casos mais complexos envolvendo a comprovação de que duas variedades são **não isométricas**, mostrando que seus valores singulares não são idênticos entre as duas bases em questão.
+No entanto, esses invariantes de base podem ser úteis na decifração de casos mais complexos envolvendo a prova de que duas variedades isospectrais são **não isométricas**, mostrando que seus valores singulares não são idênticos entre as duas bases em questão.
 
 Voltando ao Corolário 1, observamos que a prova envolve estabelecer essa implicação:
 
@@ -331,7 +333,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-O Corolário 1 vem do fato de que $$z_k\in U_1$$ é bem definida (i.e. $$i$$-invariante por hipóteses sobre produtos), e a observação prévia de que os operadores algébricos definidos por $$z_iz_j\bar z_kM_1^{i,j,k}$$ e $$M_0^{i,j,k}$$ são ambos associativos, e concordam com a multiplicação de função pontual por quadrados de valores absolutos de autofunções, cuja álgebra gerada também é densa em $$L^2(M,g)$$ (novamente por Stone-Weierstrass, uma vez que se presume separar pontos). Definindo $$\ker\ [M^{i,\bar i,k}]^* = 0$$ é exatamente equivalente, onde $$\mathscr V$$ é o espaço fechado de Hilbert gerado por $$\set{|e^i|^2}$$, e $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ é o mapa de identidade de mudança de base.
+O Corolário 1 vem do fato de que $$z_k\in U_1$$ é bem definida (i.e. $$i$$-invariante por hipóteses sobre produtos), e a observação prévia de que os operadores algébricos definidos por $$z_iz_j\bar z_kM_1^{i,j,k}$$ e $$M_0^{i,j,k}$$ são ambos associativos, e concordam com a multiplicação de função pontual por quadrados de valores absolutos de autofunções, cuja álgebra gerada também é densa em $$C(M)$$ (novamente por Stone-Weierstrass, uma vez que se presume separar pontos). Definindo $$\ker\ [M^{i,\bar i,k}]^* = 0$$ é exatamente equivalente, onde $$\mathscr V$$ é o espaço fechado de Hilbert gerado por $$\set{|e^i|^2}$$, e $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ é o mapa de identidade de mudança de base.
 
 Então eles concordam em todos os lugares.
 
@@ -378,7 +380,7 @@ deve também preservar o "analítico" invariáveis &mdash; a figura induzida pel
 Como o dueto de Milnor exemplifica, ter um mapa linear que preserva os comprimentos dos pesos da rede não é suficiente para deduzir que o mapa está em $$SO(n,\Reals)$$; também devemos saber que o mapa preserva os ângulos de peso da rede. Mas esta é uma consequência das fórmulas desenvolvidas na Equação (15):
 
 ```math
--4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j
+-4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
 ```
 
 Esta conta de representação-teórica [[AK01]](#AK01) é exatamente equivalente ao desenvolvimento anterior da congruência *lattice *[[NRR22]](#NRR22) tradicionalmente utilizado para delinear classes de isometria de toros planos. Na verdade, a matriz transpõe tal mapa linear $$B\in SO(n,\Reals)$$, conforme descrito no parágrafo anterior, **é** a contravariante isometria Riemanniana entre o tori, conforme previsto pela aplicação do *Gelfand-Naimark-Segal Representation Theorem* durante o [Prova](#proof-of-theorem) do nosso [Teorema](#theorem).

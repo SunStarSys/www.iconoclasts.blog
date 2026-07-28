@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=50654
+status: verificado=50755
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -117,7 +117,9 @@ Si consideramos el mapa
 
 Este artículo establece la inyectividad de este mapa para los colectores de Riemann cerrados (hasta la isometría de Riemann en su dominio). Otros resultados que aplican estas técnicas para describir su imagen (e inversa), dentro de espacios selectos de módulos de métricas, apenas están comenzando [[AA25]](#AA25). Allí, Anshul Adve aborda rigurosamente los espacios tangentes unitarios de 2-orbifolds compactos e hiperbólicos utilizando estas mismas **constantes de estructura** de la Teoría de Campo Conformal.
 
-El caso genérico métrico de Riemann se caracteriza completamente por el estudio de $$\set{\lambda_i, M^{i,\bar i,k}}$$.
+Algunas imágenes pueden ser útiles aquí. Si solucionamos $$(M,g)$$ y mirar las órbitas de $$\set{M^{i,j,k}}$$ bajo transformaciones unitarias de cambio de base que preservan el espectro en $$\set{e^i}$$, vemos que las órbitas de diferentes isospectrales $$(M,g)$$ Los pares particionan la imagen de este mapa a lo largo de las clases de isometría.
+
+Finalmente, demostramos que el caso genérico métrico de Riemann se caracteriza por completo por el estudio de la "diagonal" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 Estos resultados se demostraron por primera vez durante una charla titulada de manera similar por el autor en **MSRI** en 1997, pero aparecen aquí en forma publicada por primera vez.
 
@@ -270,13 +272,13 @@ es la imagen de $$M^{i,j,k}$$ bajo $$U$$acción de base $$e^i \mapsto U(e^i)$$.
 
 Bajo las condiciones del Corolario 2, cada uno de los $$\mathscr V_\lambda$$ son espacios vectoriales unidimensionales sobre $$\Complex$$, pero eso también significa que son espacios vectoriales unidimensionales sobre $$\Reals$$, por lo que el grupo de simetría multiplicativa completa es $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-En términos más generales, el requisito previo asociado "sobre el acuerdo en los valores de los productos" serían simplemente "Preservación del conjunto ordenado de valores singulares (contados con multiplicidad) de los mapas lineales desde $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definido por $$\set{M^{i,j,k}}$$." Por definición, estos son invariantes bajo sumas directas de transformaciones unitarias en la $$\mathscr V_\lambda$$.
+En términos más generales, el requisito previo asociado "sobre el acuerdo en los valores de los productos" serían simplemente "Preservación del conjunto ordenado de valores singulares (contados con multiplicidad) de los mapas lineales desde $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definido por $$\set{M^{i,j,k}}$$." Aquí el producto interior en $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ es $$tr (B^*A)$$. Por definición, estos son invariantes bajo sumas directas de transformaciones unitarias en la $$\mathscr V_\lambda$$.
 
 En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (16) para la relación clave entre esta conjetura y el Corolario 2. Lo que falta es el argumento de suficiencia de que si los valores absolutos están de acuerdo, los colectores son isométricos; lo que requiere un argumento para eliminar las posibles cancelaciones de cambio de signos entre las bases en los sumandos de la ecuación LHS (16).
 
 Estamos significativamente menos seguros de que la conjetura general es cierta (fuera del caso del espectro de multiplicidad-1), ya que puede ser posible producir un contraejemplo (de suficiencia) a través de la construcción explícita de Sunada.
 
-Sin embargo, estas invariantes de base pueden resultar útiles para descifrar casos más complejos que implican demostrar que dos colectores son **no isométricos**, mostrando que sus valores singulares no son idénticos entre las dos bases en cuestión.
+Sin embargo, estas invariantes de base pueden resultar útiles para descifrar casos más complejos que implican demostrar que dos colectores isospectrales **no son isométricos**, mostrando que sus valores singulares no son idénticos entre las dos bases en cuestión.
 
 Volviendo al Corolario 1, observamos que la prueba implica establecer esta implicación:
 
@@ -331,7 +333,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corolario 1 se deriva del hecho de que $$z_k\in U_1$$ está bien definido (es decir, $$i$$-invariante por las hipótesis sobre los productos), y la observación previa de que los operadores algebraicos definidos por $$z_iz_j\bar z_kM_1^{i,j,k}$$ y $$M_0^{i,j,k}$$ son ambos asociativos, y están de acuerdo con la multiplicación de la función puntual por cuadrados de valores absolutos de las funciones propias, cuyo álgebra generada también es densa en $$L^2(M,g)$$ (de nuevo por Stone-Weierstrass, ya que se presume que separa puntos). Establecimiento $$\ker\ [M^{i,\bar i,k}]^* = 0$$ es exactamente equivalente, donde $$\mathscr V$$ es el espacio cerrado de Hilbert generado por $$\set{|e^i|^2}$$y $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ es el mapa de identidad de cambio de base.
+Corolario 1 se deriva del hecho de que $$z_k\in U_1$$ está bien definido (es decir, $$i$$-invariante por las hipótesis sobre los productos), y la observación previa de que los operadores algebraicos definidos por $$z_iz_j\bar z_kM_1^{i,j,k}$$ y $$M_0^{i,j,k}$$ son ambos asociativos, y están de acuerdo con la multiplicación de la función puntual por cuadrados de valores absolutos de las funciones propias, cuyo álgebra generada también es densa en $$C(M)$$ (de nuevo por Stone-Weierstrass, ya que se presume que separa puntos). Establecimiento $$\ker\ [M^{i,\bar i,k}]^* = 0$$ es exactamente equivalente, donde $$\mathscr V$$ es el espacio cerrado de Hilbert generado por $$\set{|e^i|^2}$$y $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ es el mapa de identidad de cambio de base.
 
 Así que están de acuerdo en todas partes.
 
@@ -378,7 +380,7 @@ debe preservar también "analítico" invariables &mdash; la cifra inducida por e
 Como ejemplifica el dúo de Milnor, tener un mapa lineal que preserve las longitudes de los pesos de la celosía no es suficiente para deducir que el mapa está en $$SO(n,\Reals)$$; también debemos saber que el mapa conserva los ángulos de peso de celosía. Pero esto es una consecuencia de las fórmulas desarrolladas en Ecuación (15):
 
 ```math
--4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j
+-4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
 ```
 
 Esta representación-cuenta teórica [[AK01]](#AK01) es exactamente equivalente al desarrollo previo de *congruencia de la rejilla* [[NRR22]](#NRR22) tradicionalmente utilizado para delinear clases de isometría de tori plano. De hecho, la matriz transpone tal mapa lineal $$B\in SO(n,\Reals)$$, como se describe en el párrafo anterior, **es** la contravariante isometría Riemanniana entre los tori, según lo dispuesto por la aplicación del *Teorema de Representación Segal de Gelfand-Naimark* durante el [Prueba](#proof-of-theorem) de nuestra [Teorema](#theorem).

@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=50654
+status: 確認済み=50755
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -115,7 +115,9 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 閉じたRiemannianマニホールド(その領域ではRiemannian isometryまで)に対するこのマップの注入性を確立した。これらの手法を適用して、そのイメージ(および逆)を説明するさらなる結果は、メトリックの選択モジュリ領域内で開始されます。[[AA25]](#AA25)。Anshul Adveは、Conformal Field Theoryと同じ**構造定数**を使用して、コンパクトで双曲型の2-orbifoldsのユニット接線スペースに厳密に取り組んでいます。
 
-一般的なRiemannianメトリックケースは、次の研究によって完全に特徴付けられます$$\set{\lambda_i, M^{i,\bar i,k}}$$.
+ここで役立つ画像があるかもしれません。修正する場合$$(M,g)$$ の軌道を見る。$$\set{M^{i,j,k}}$$ Spectrum-preserving Change-of-basis Unitary Transformationの略。$$\set{e^i}$$異なったisospectralの軌道を見る$$(M,g)$$ pairsは、このマップのイメージをisometryクラスに沿って分割します。
+
+最後に、一般的なRiemannianメトリックケースは、次の研究によって完全に特徴付けられていることを証明します"対角線" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 これらの結果は、1997年に**MSRI**の著者が同様のタイトルの講演で最初に実証されましたが、それらは初めて公開された形式でここに表示されます。
 
@@ -268,13 +270,13 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 現在、コロラリー2の条件下では、$$\mathscr V_\lambda$$ 1次元ベクトル空間$$\Complex$$しかし、それはまた、それらが一次元ベクトル空間であることを意味する。$$\Reals$$のように、完全な多重対称グループは$$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-より一般的には、関連する前提条件"製品価値契約について" 単に"線形マップの単数値の順序付きセットの保存(多重度でカウント) $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 定義者$$\set{M^{i,j,k}}$$." 定義上、これらは単体変換の直接合計では不変です。$$\mathscr V_\lambda$$.
+より一般的には、関連する前提条件"製品価値契約について" 単に"線形マップの単数値の順序付きセットの保存(多重度でカウント) $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 定義者$$\set{M^{i,j,k}}$$." ここに内部のプロダクト$$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ 次である$$tr (B^*A)$$。定義上、これらは単体変換の直接合計では不変です。$$\mathscr V_\lambda$$.
 
 multiplicity-1スペクトルの場合、単数値の完全なセットは、$$M^{i,j,k}$$ それでも、私たちは、そのような等分スペクトルマニホールドの等分量クラスを完全に特徴づける。この予想とコロラリー2の間の重要な関係については、方程式(16)を参照してください。欠けているのは、絶対値が一致した場合、マニホールドはアイソメトリックであり、LHSの方程式要約(16)の基底間の可能な符号変更取消を排除するための引数が必要であるという、十分性の引数です。
 
 我々は、一般的な予想が(多重度1スペクトルの場合を除いて)真であることは、あまり自信がない。なぜなら、それは、明示的なSunada構造を介して(効率の)反例を作り出すことができる可能性があるからである。
 
-ただし、これらの基準不変条件は、2つのマニホールドを証明するより複雑なケースを解読するのに有用である**アイソメ**ではなく**であり、問題の2つのベース間で単数値が同一ではないことを示しています。
+ただし、これらの基準不変条件は、2つの等分スペクトルマニホールドを証明するより複雑なケースを解読するのに有用である**非等分**であり、それらの単数値が問題の2つのベース間で同一でないことを示すことで有用である可能性があります。
 
 Corollary 1に戻ると、この証明には次のような意味があることがわかります。
 
@@ -329,7 +331,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1は、$$z_k\in U_1$$ 明確に定義されています(つまり、$$i$$製品に関する仮説による-invariant、および次によって定義される代数演算子の前の観察$$z_iz_j\bar z_kM_1^{i,j,k}$$ および$$M_0^{i,j,k}$$ どちらも連想的であり、固有関数の絶対値の二乗によるポイントワイズ関数乗算に同意します。生成された代数も密です$$L^2(M,g)$$ (Stone-Weierstrassは、ポイントを分離すると推定されているため)。設立$$\ker\ [M^{i,\bar i,k}]^* = 0$$ 正確には同等です。$$\mathscr V$$ ヒルバートの閉じた空間$$\set{|e^i|^2}$$および$$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ は、基本の変更IDマップです。
+Corollary 1は、$$z_k\in U_1$$ 明確に定義されています(つまり、$$i$$製品に関する仮説による-invariant、および次によって定義される代数演算子の前の観察$$z_iz_j\bar z_kM_1^{i,j,k}$$ および$$M_0^{i,j,k}$$ どちらも連想的であり、固有関数の絶対値の二乗によるポイントワイズ関数乗算に同意します。生成された代数も密です$$C(M)$$ (Stone-Weierstrassは、ポイントを分離すると推定されているため)。設立$$\ker\ [M^{i,\bar i,k}]^* = 0$$ 正確には同等です。$$\mathscr V$$ ヒルバートの閉じた空間$$\set{|e^i|^2}$$および$$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ は、基本の変更IDマップです。
 
 いたるところで同意する。
 
@@ -376,7 +378,7 @@ M^{i,j,k} = \begin{cases}
 ミルナーのデュエットが例示しているように、格子ウェイトの長さを保持する線形マップを持つことは、マップを推測するのに十分ではありません$$SO(n,\Reals)$$また、マップが格子重量の角度を保持していることも知っておく必要があります。これは、方程式(15)で開発された式の結果である。
 
 ```math
--4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j
+-4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
 ```
 
 この表示- 理論勘定[[AK01]](#AK01) は、*lattice congruence*の以前の開発とまったく同じです。[[NRR22]](#NRR22) 伝統的に平らな通路の等量クラスを描写するために使用されます。実際、そのような線形マップのマトリックス転写$$B\in SO(n,\Reals)$$前項で説明したように、**は、通路間の矛盾したRiemannian等量であり、*Gelfand-Naimark-Segal表現定理*の適用によって提供されています。[プルーフ](#proof-of-theorem) 私たちの[定理](#theorem).

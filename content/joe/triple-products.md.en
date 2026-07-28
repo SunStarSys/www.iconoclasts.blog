@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50752
+status: verified=50755
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -269,7 +269,7 @@ is the image of $$M^{i,j,k}$$ under $$U$$'s basis action $$e^i \mapsto U(e^i)$$.
 
 Now under the conditions of Corollary 2, each of the $$\mathscr V_\lambda$$ are one dimensional vector spaces over $$\Complex$$, but that also means they are one dimensional vector spaces over $$\Reals$$, and so the full multiplicative symmetry group is $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-More generally, the associated prerequisite "regarding agreement in product values" would simply become "preservation of the ordered set of singular values (counted with multiplicity) of the linear maps from $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ defined by $$\set{M^{i,j,k}}$$." By definition, these are invariant under direct sums of unitary transformations on the $$\mathscr V_\lambda$$. Here the inner product on $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ is $$tr (AB^*)$$.
+More generally, the associated prerequisite "regarding agreement in product values" would simply become "preservation of the ordered set of singular values (counted with multiplicity) of the linear maps from $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ defined by $$\set{M^{i,j,k}}$$." Here the inner product on $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ is $$tr (B^*A)$$. By definition, these are invariant under direct sums of unitary transformations on the $$\mathscr V_\lambda$$.
 
 In the multiplicity-1 spectrum case, the complete set of singular values is simply the set of absolute values of $$M^{i,j,k}$$ which, we still conjecture, completely characterizes the isometry classes of such isospectral manifolds. See Equation (16) for the key relationship between this conjecture and Corollary 2. What's missing is the sufficiency argument that if the absolute values agree, the manifolds are isometric; which requires an argument to eliminate possible sign change cancellations between bases in the LHS summands of Equation (16).
 
