@@ -98,7 +98,7 @@ To be isometric to $(M,g)$, it is a necessary and sufficient condition for anoth
 
 It is important to recognize $M^{i,j,k}$ is not basis-invariant: there is a natural unitary change-of-basis action on it discussed in detail after the proof of Theorem~\ref{thm}. The discussion incorporates certain sets of basis-invariant singular values that one might form a general conjecture around, which claims that that ordered set of singular values completely characterizes the set of isospectral manifolds.
 
-Regardless of the sufficiency half of the general conjecture, necessity is always the case. Which means these collections of singular values defined by $M^{i,j,k}$ and associated to every eigenspace triple are a new set of Riemannian **invariants**.
+Regardless of the sufficiency half of the general conjecture, necessity is always the case. Which means these collections of singular values defined by $M^{i,j,k}$ and associated to every eigenspace triple are a new set of Riemannian \textbf{invariants}.
 
 The hard work ahead for future research is in locating such basis pairs, or in determining that such pairs cannot exist at all, just by examining the properties of the $M^{i,j,k}$ in evidence. But this paper puts that target front and center: we seek to reduce the analytic geometry questions of Spectral Theory to computationally tractable linear algebra questions about products of eigenfunctions.
 
