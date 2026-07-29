@@ -402,6 +402,8 @@ As Milnor's duet exemplifies, having a map which preserves the lengths of the la
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j
 \end{equation}
 
+The neat thing about this analysis is that we've proven there is no \textbf{linear} map between lattices that preserves the eigenvalues without being induced by a Riemannian isometry on the tori.
+
 This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of \textit{lattice congruence} \cite{NRR22} traditionally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $B\in SO(n,\mathbb{R})$, as described in the prior paragraph, \textbf{is} the contravariant Riemannian isometry between the tori, as provided by application of the \textit{Gelfand-Naimark-Segal Representation Theorem} during the proof of Theorem~\ref{thm}.
 
 \paragraph{Acknowledgements}
