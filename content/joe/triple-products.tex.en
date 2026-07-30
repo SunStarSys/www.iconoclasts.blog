@@ -289,6 +289,15 @@ In the multiplicity-1 spectrum case, the complete set of singular values is simp
 
 We are significantly less confident that the general conjecture holds true (outside the multiplicity-1 spectrum case), since it may be possible to produce a counterexample (of sufficiency) via explicit Sunada construction.
 
+
+If the index notation is obfuscating the situation, perhaps this basis-indepedent description will help.  Take $v_{\lambda} \in V_{\lambda}$ and consider the expression
+
+$$
+P_{V_\gamma}(v_\alpha v_\beta).
+$$
+
+All $M_{i,j,k}$ does is provide a basis of coordinates of this basis-independent map.  But it is this map we are trying to grok via singular value decomposition, which is basis-independent, and therefore a complete characterization of the underlying Riemannian geometry.
+
 However these basis invariants may prove useful in deciphering complex cases to prove two manifolds are \textit{not isometric}, by showing that their singular values are not identical between the two bases in question.
 
 Getting back to the Corollary~\ref{coro-1}, we observe that the proof involves establishing this implication:
