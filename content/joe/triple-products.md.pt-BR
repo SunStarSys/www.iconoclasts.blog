@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=50755
+status: verificado=50859
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -66,6 +66,8 @@ Para ser isométrico $$(M,g)$$, é uma condição *necessária e suficiente* par
 
 É importante reconhecer $$M^{i,j,k}$$ não é invariante de base: há uma ação natural unitária de mudança de base nela discutida em detalhes após a prova deste Teorema. A discussão incorpora certos conjuntos de valores singulares invariantes de base que se pode formar uma conjectura geral em torno, que afirma que o conjunto ordenado de valores singulares caracteriza completamente o conjunto de variedades isospectrais.
 
+Independentemente da metade da suficiência da conjectura geral, a necessidade é sempre o caso. O que significa essas coleções de valores singulares definidos por $$M^{i,j,k}$$ e associado a cada triplo eigenspace estão um novo conjunto de Riemannian **invariantes**.
+
 O trabalho árduo pela frente para futuras pesquisas está em localizar tais pares de base, ou em determinar que tais pares não podem existir em tudo, apenas examinando as propriedades dos pares de base. $$M^{i,j,k}$$ em evidência. Mas este artigo coloca esse alvo na frente e no centro: buscamos reduzir as questões de geometria analítica da Teoria Espectral para questões de álgebra linear computacionalmente tratável sobre produtos de autofunções.
 
 *A simetria desempenha um papel importante em casos computacionalmente tratáveis [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), que é apropriadamente ilustrado em nosso tori plano [Exemplo](#example) abaixo. No entanto, a força de nossa abordagem talvez seja melhor evidenciada no caso de variedades com o menor número de simetrias Riemannianas, que é o caso genérico. Neste caso, oferecemos o seguinte
@@ -80,9 +82,9 @@ O trabalho árduo pela frente para futuras pesquisas está em localizar tais par
 </div>
   <div class="card-body">
 
-(Teste Litmus Diagonal) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ concorda em ambas as bases; e se o espaço vetorial $$\set{|e^i|^2}$$ separa pontos em pelo menos uma base. Aqui $$\bar j$$ representa a autofunção $$\bar e^j$$ nos cálculos integrais de triplo produto.
+(Teste Litmus Diagonal) Dado um par de autovalor preservando bases ortonormais como descrito na hipótese do Teorema, as variedades são isométricas se para cada escolha de $$i,j,k$$, o produto $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ concorda em ambas as bases; e se o espaço vetorial $$\set{|e^i|^2}$$ é denso em $$\mathscr H$$. Aqui $$\bar j$$ representa a autofunção $$\bar e^j$$ nos cálculos integrais de triplo produto.
 
-Além disso, se definirmos $$\mathscr V$$ como o espaço Hilbert gerado por $$\set{|e^i|^2}$$, separa pontos se e somente se o mapa adjacente
+Além disso, se definirmos $$\mathscr V$$ como o espaço Hilbert gerado por $$\set{|e^i|^2}$$, $$\mathscr V = \mathscr H$$ se um só se o mapa adjunto
 ```math
 [M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
 ```
@@ -272,11 +274,19 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 Agora, nas condições do Corolário 2, cada um dos $$\mathscr V_\lambda$$ são espaços vetoriais unidimensionais sobre $$\Complex$$, mas isso também significa que eles são espaços vetoriais unidimensionais $$\Reals$$, e assim o grupo multiplicativo completo da simetria é $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Mais geralmente, o prerrequisito associado "acordo sobre os valores dos produtos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares (contados com multiplicidade) dos mapas lineares $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definido por $$\set{M^{i,j,k}}$$." Aqui o produto interno em $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ é $$tr (B^*A)$$. Por definição, estes são invariantes sob somas diretas de transformações unitárias no $$\mathscr V_\lambda$$.
+Mais geralmente, o prerrequisito associado "acordo sobre os valores dos produtos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares (contados com multiplicidade) dos mapas lineares $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definido por $$\set{M^{i,j,k}}$$." Aqui o produto interno em $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ é $$tr (B^*A)$$. Por definição, esses valores singulares são invariantes sob somas diretas de transformações unitárias na $$\mathscr V_\lambda$$.
 
 No caso do espectro da multiplicidade-1, o conjunto completo de valores singulares é simplesmente o conjunto de valores absolutos de $$M^{i,j,k}$$ que, ainda conjecturamos, caracteriza completamente as classes de isometria de tais variedades isospectrais. Ver Equação (16) para a relação chave entre esta conjectura e Corolário 2. O que falta é o argumento de suficiência de que, se os valores absolutos concordarem, as variedades são isométricas; o que requer um argumento para eliminar possíveis cancelamentos de mudança de sinal entre as bases nos summands LHS da Equação (16).
 
 Estamos significativamente menos confiantes de que a conjectura geral é verdadeira (fora do caso do espectro da multiplicidade-1), uma vez que pode ser possível produzir um contra-exemplo (de suficiência) através de construção Sunada explícita.
+
+Se a notação de índice é ofuscação a situação, talvez esta descrição base-indepedente vai ajudar.  Utilização $$v_{\lambda} \in V_{\lambda}$$ e considere a expressão
+
+$$
+P_{V_\gama}(v_\alpha v_\beta).
+$$
+
+Todos $$M_{i,j,k}$$ fornece as coordenadas base deste mapa independente da base.  Mas é este mapa que estamos tentando gemer através de decomposição de valor singular, que é independente de base, e, portanto, uma caracterização completa da geometria Riemanniana subjacente.
 
 No entanto, esses invariantes de base podem ser úteis na decifração de casos mais complexos envolvendo a prova de que duas variedades isospectrais são **não isométricas**, mostrando que seus valores singulares não são idênticos entre as duas bases em questão.
 
@@ -333,7 +343,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-O Corolário 1 vem do fato de que $$z_k\in U_1$$ é bem definida (i.e. $$i$$-invariante por hipóteses sobre produtos), e a observação prévia de que os operadores algébricos definidos por $$z_iz_j\bar z_kM_1^{i,j,k}$$ e $$M_0^{i,j,k}$$ são ambos associativos, e concordam com a multiplicação de função pontual por quadrados de valores absolutos de autofunções, cuja álgebra gerada também é densa em $$C(M)$$ (novamente por Stone-Weierstrass, uma vez que se presume separar pontos). Definindo $$\ker\ [M^{i,\bar i,k}]^* = 0$$ é exatamente equivalente, onde $$\mathscr V$$ é o espaço fechado de Hilbert gerado por $$\set{|e^i|^2}$$, e $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ é o mapa de identidade de mudança de base.
+O Corolário 1 vem do fato de que $$z_k\in U_1$$ é bem definida (i.e. $$i$$-invariante por hipóteses sobre produtos), e a observação prévia de que os operadores algébricos, delimitados trilinear definido por $$z_iz_j\bar z_kM_1^{i,j,k}$$ e $$M_0^{i,j,k}$$ são ambos associativos, e concordam com a multiplicação de função pontual por quadrados de valores absolutos de autofunções, que é densa em $$\mathscr H$$. Definindo $$\ker\ [M^{i,\bar i,k}]^* = 0$$ é exatamente equivalente, onde $$\mathscr V$$ é o espaço fechado de Hilbert gerado por $$\set{|e^i|^2}$$, e $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ é o mapa de identidade de mudança de base.
 
 Então eles concordam em todos os lugares.
 
@@ -377,11 +387,13 @@ No entanto, para aplicar o nosso [Teorema](#theorem)É essencial que um mapa lin
 
 deve também preservar o "analítico" invariáveis &mdash; a figura induzida pelo elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, ou seja, os autovalores individuais do Laplaciano do tori plano.
 
-Como o dueto de Milnor exemplifica, ter um mapa linear que preserva os comprimentos dos pesos da rede não é suficiente para deduzir que o mapa está em $$SO(n,\Reals)$$; também devemos saber que o mapa preserva os ângulos de peso da rede. Mas esta é uma consequência das fórmulas desenvolvidas na Equação (15):
+Como o dueto de Milnor exemplifica, ter um mapa que preserva os comprimentos dos pesos da rede não é suficiente para deduzir que o mapa está em $$SO(n,\Reals)$$; também devemos saber que o mapa preserva os ângulos de peso da rede. Mas esta é uma consequência das fórmulas desenvolvidas na Equação (15):
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
 ```
+
+A coisa legal sobre esta análise é que provamos que não há mapa **linear** entre as redes que preservam os autovalores sem que o mapa seja induzido por uma isometria Riemanniana no tori. &mdash; como consequência do Teorema, não porque os cálculos explícitos envolvidos sejam identidades de polarização simples.
 
 Esta conta de representação-teórica [[AK01]](#AK01) é exatamente equivalente ao desenvolvimento anterior da congruência *lattice *[[NRR22]](#NRR22) tradicionalmente utilizado para delinear classes de isometria de toros planos. Na verdade, a matriz transpõe tal mapa linear $$B\in SO(n,\Reals)$$, conforme descrito no parágrafo anterior, **é** a contravariante isometria Riemanniana entre o tori, conforme previsto pela aplicação do *Gelfand-Naimark-Segal Representation Theorem* durante o [Prova](#proof-of-theorem) do nosso [Teorema](#theorem).
 

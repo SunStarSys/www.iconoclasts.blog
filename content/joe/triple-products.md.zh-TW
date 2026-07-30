@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =50755
+status: 驗證 =50859
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -64,6 +64,8 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 認知至關重要$$M^{i,j,k}$$ 並非基本不變量：在本理論證明後，會詳細探討其具有自然的統一基準變更動作。討論包含一組可能形成一般形容詞的基準不變單數值，其中宣稱排序的單數值會完全描述一組 isospectral manifolds。
 
+無論一般形容詞的充分程度一半，必然就是這種情況。這表示這些由下列定義之單一值的集合：$$M^{i,j,k}$$ 而且與每一個空間三人相關聯，是一組新的里曼尼亞 **不變量 **。
+
 未來研究的努力是找出這類基礎配對，或判斷這類配對根本無法存在，只要檢查其特性即可$$M^{i,j,k}$$ 證據。但本白皮書以目標為中心：我們尋求減少 Spectral Theory 的分析幾何問題，以計算有關特徵性產品的可追蹤線性代數問題。
 
 *Symmetry* 在計算時扮演著重要的角色[[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94)，這是我們平坦的 tori 中所說明的[範例](#example) 下方。然而，我們的方法當選人最少數量的里曼尼對稱對稱時，這可能是最佳做法，這種情況是一般的案例。在此情況下，我們提供以下服務：
@@ -78,9 +80,9 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每個選擇都屬於幾何$$i,j,k$$，產品$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 在兩個基礎上都同意；如果向量空間由$$\set{|e^i|^2}$$ 至少以一個基準來分隔點。這裡$$\bar j$$ 代表特徵函數$$\bar e^j$$ 在三產品積分計算中。
+(Diagonal Litmus Test) 鑑於一對特徵值保留理論假說的正規基底，如果每個選擇都屬於幾何$$i,j,k$$，產品$$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 在兩個基礎上都同意；如果向量空間由$$\set{|e^i|^2}$$ 密集於$$\mathscr H$$。這裡$$\bar j$$ 代表特徵函數$$\bar e^j$$ 在三產品積分計算中。
 
-此外，如果我們定義$$\mathscr V$$ 作為由 Hilbert 產生的空間$$\set{|e^i|^2}$$，它只會在相鄰的地圖 (如果和) 時分隔點
+此外，如果我們定義$$\mathscr V$$ 作為由 Hilbert 產生的空間$$\set{|e^i|^2}$$, $$\mathscr V = \mathscr H$$ 如果只有在相鄰對映時
 ```math
 [M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
 ```
@@ -270,11 +272,19 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 現在在珊瑚礁 2 的條件下，每個$$\mathscr V_\lambda$$ 一維向量空間超過$$\Complex$$，但這也表示它們是維度向量空間的上方$$\Reals$$，因此完整的乘對稱群組為$$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-一般而言，相關必備條件"關於產品值中的協議" 只是變成"線性對映的排序單一值集 (以多重性計算) 保留$$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 定義者$$\set{M^{i,j,k}}$$." 此處為內部產品$$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ 是$$tr (B^*A)$$。根據定義，這些在直接的單一轉換總和之下是不變的$$\mathscr V_\lambda$$.
+一般而言，相關必備條件"關於產品值中的協議" 只是變成"線性對映的排序單一值集 (以多重性計算) 保留$$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 定義者$$\set{M^{i,j,k}}$$." 此處為內部產品$$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ 是$$tr (B^*A)$$。根據定義，這些單數值在單數轉換的直接總和下不變$$\mathscr V_\lambda$$.
 
 在 multiplicity-1 spectrum 的情況下，完整的單一值集就是絕對值的一組$$M^{i,j,k}$$ 這樣，我們仍然可以形容，完全描述這種等離子譜歧管的幾何類別。請參閱 方程式 (16) 以獲取此形容詞與 Corollary 2 之間的關鍵關係。缺少的是足夠的引數，如果絕對值一致，則操作是幾何的；這需要一個引數來消除在左方方方程式摘要 (16) 中基準之間可能的符號變更取消。
 
 我們對一般形容詞保持真 (在 multiplicity-1 spectrum case 之外) 的信心較不自信，因為它可能透過明確的 Sunada 建構產生反範例 (充分) 。
+
+如果索引表示法混淆處理此情況，則此基礎獨立描述可能有助於。請假$$v_{\lambda} \in V_{\lambda}$$ 並考慮表示式
+
+$$
+P_{伽瑪 (_\)}(v_\alpha v_\beta)。
+$$
+
+全部$$M_{i,j,k}$$ 會提供此基準獨立地圖的基準座標。但在這張地圖中，我們正試圖透過單一的數值分解進行劃分，該分解與基礎無關，因此，裡曼尼亞幾何圖形的完整特徵。
 
 但是，這些基準不變量在解譯涉及證明兩個同位素歧義的複雜案例時可能非常有用 **不是幾何 **，因為顯示它們的單一值在有問題的兩個基礎之間並不相同。
 
@@ -331,7 +341,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1 遵循的事實$$z_k\in U_1$$ 完整定義 (亦即，$$i$$- 因產品上的假設而異，以及由代數運算子定義的先前觀察$$z_iz_j\bar z_kM_1^{i,j,k}$$ 與$$M_0^{i,j,k}$$ 同時也是關聯性，並同意將點函數乘以特徵的絕對值方形，產生的代數也密集於$$C(M)$$ (再由 Stone-Weierstrass 推定為獨立點)。建立中$$\ker\ [M^{i,\bar i,k}]^* = 0$$ 完全相等，其中$$\mathscr V$$ 是所產生的封閉 Hilbert 空間$$\set{|e^i|^2}$$，和$$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 是基準變更識別對應。
+Corollary 1 遵循的事實$$z_k\in U_1$$ 完整定義 (亦即，$$i$$- 因產品上的假設而異，以及先前由代數、界限三線性運算子所定義的觀察$$z_iz_j\bar z_kM_1^{i,j,k}$$ 與$$M_0^{i,j,k}$$ 同時也是關聯性，並同意以相交函數乘以特徵函數的絕對值方形，其密集於$$\mathscr H$$。建立中$$\ker\ [M^{i,\bar i,k}]^* = 0$$ 完全相等，其中$$\mathscr V$$ 是所產生的封閉 Hilbert 空間$$\set{|e^i|^2}$$，和$$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 是基準變更識別對應。
 
 因此，他們在任何地方都同意。
 
@@ -375,11 +385,13 @@ M^{i,j,k} = \begin{cases}
 
 也必須保留"分析" 不變量&mdash; Casimir-element 引致的數字$$4\pi^2\lVert\lambda_i\rVert^2$$ 對於每個索引的權重，即扁平的利普拉西亞人的個別特徵值。
 
-由於 Milnor 的 duet 顯現，擁有一個線性地圖來保留晶格權重的長度不足以推論地圖位於$$SO(n,\Reals)$$我們也必須知道地圖會保留晶格加權角度。但這是「方程式」(15) 中所發展公式的後果：
+由於 Milnor 的 duet 顯現，擁有一個保留晶格權重長度的地圖不足以推論地圖位於$$SO(n,\Reals)$$我們也必須知道地圖會保留晶格加權角度。但這是「方程式」(15) 中所發展公式的後果：
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
 ```
+
+對這份分析而言，我們已證明在晶格之間沒有 **線性** 地圖，在沒有 Riemannian isometry 引發地圖的情況下，保留特徵。&mdash; 作為理論的結果，而不是因為涉及的明確運算是簡單的極化識別。
 
 此表示法 - 理論科目[[AK01]](#AK01) 與 *lattice congruence* 的先前開發完全相同[[NRR22]](#NRR22) 傳統上用於描繪平坦的幾何類別。事實上，這種線性圖的矩陣轉向$$B\in SO(n,\Reals)$$，如上一段所述，** 是 **Riemannian 與 Riemannian 在 Tori 之間有相反的幾何，由應用 *Gelfand-Naimark-Segal 代表定理 *提供。[證明](#proof-of-theorem) 我們的[定理](#theorem).
 

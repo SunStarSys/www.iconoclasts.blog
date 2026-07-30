@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=50755
+status: überprüft=50859
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -65,6 +65,8 @@ Isometrisch zu sein $$(M,g)$$, ist es eine *notwendige und ausreichende Bedingun
 
 Es ist wichtig zu erkennen $$M^{i,j,k}$$ ist nicht grundinvariant: es gibt eine natürliche einheitliche veränderung der grundlage darauf, die nach dem beweis dieses theorems ausführlich diskutiert wird. Die Diskussion beinhaltet bestimmte Sätze von grundlageninvarianten Singularwerten, die man um eine allgemeine Vermutung herum bilden könnte, die behauptet, dass diese geordnete Gruppe von Singularwerten den Satz von isospektralen Mannigfaltigkeiten vollständig charakterisiert.
 
+Unabhängig von der ausreichenden Hälfte der allgemeinen Vermutung ist die Notwendigkeit immer der Fall. Was bedeutet, dass diese Sammlungen von Einzelwerten definiert durch $$M^{i,j,k}$$ und jedem Eigenraumdreifach zugeordnet sind, ist ein neuer Satz von Riemannschen **Invarianten**.
+
 Die harte Arbeit für zukünftige Forschung ist es, solche Basispaare zu finden oder zu bestimmen, dass solche Paare überhaupt nicht existieren können, nur indem man die Eigenschaften der $$M^{i,j,k}$$ im Beweis. Aber dieser Artikel stellt dieses Ziel in den Mittelpunkt: Wir versuchen, die analytischen Geometriefragen der Spektraltheorie auf rechnerisch traktierbare lineare Algebra-Fragen zu Produkten von Eigenfunktionen zu reduzieren.
 
 *Symmetrie* spielt eine wichtige Rolle bei rechnerisch traktierbaren Fällen [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), die in unserem flachen Tori passend dargestellt ist [Beispiel](#example) unten. Die Stärke unseres Ansatzes zeigt sich jedoch vielleicht am besten bei Verteilern mit der geringsten Anzahl an Riemannschen Symmetrien, was der generische Fall ist. In diesem Fall bieten wir folgende
@@ -79,9 +81,9 @@ Die harte Arbeit für zukünftige Forschung ist es, solche Basispaare zu finden 
 </div>
   <div class="card-body">
 
-(Diagonaler Litmus-Test) Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede Wahl von $$i,j,k$$, das Produkt $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ stimmt in beiden Basen zu; und wenn der Vektorraum $$\set{|e^i|^2}$$ trennt Punkte in mindestens einer Basis. Hier $$\bar j$$ repräsentiert die Eigenfunktion $$\bar e^j$$ In den Triple-Product Integral-Berechnungen.
+(Diagonaler Litmus-Test) Bei einem Paar von Eigenwerten, die orthonormale Basen erhalten, wie in der Hypothese des Satzes beschrieben, sind die Mannigfaltigkeiten isometrisch, wenn für jede Wahl von $$i,j,k$$, das Produkt $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ stimmt in beiden Basen zu; und wenn der Vektorraum $$\set{|e^i|^2}$$ ist dicht in $$\mathscr H$$. Hier $$\bar j$$ repräsentiert die Eigenfunktion $$\bar e^j$$ In den Triple-Product Integral-Berechnungen.
 
-Außerdem, wenn wir definieren $$\mathscr V$$ als Hilbert-Raum erzeugt von $$\set{|e^i|^2}$$, trennt es Punkte, wenn und nur, wenn die Nebenkarte
+Außerdem, wenn wir definieren $$\mathscr V$$ als Hilbert-Raum erzeugt von $$\set{|e^i|^2}$$, $$\mathscr V = \mathscr H$$ nur wenn die Nebenkarte
 ```math
 [M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
 ```
@@ -271,11 +273,19 @@ ist das Bild von $$M^{i,j,k}$$ unter $$U$$'s Basismaßnahme $$e^i \mapsto U(e^i)
 
 Jetzt unter den Bedingungen von Corollary 2, jeder der $$\mathscr V_\lambda$$ sind eindimensionale Vektorräume über $$\Complex$$, aber das bedeutet auch, dass sie eindimensionale Vektorräume über $$\Reals$$und so ist die vollständige multiplikative Symmetriegruppe $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Allgemeiner die damit verbundene Voraussetzung "bezüglich der Übereinstimmung mit den Produktwerten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten (mit Multiplizität gezählt) der linearen Karten aus $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definiert durch $$\set{M^{i,j,k}}$$." Hier das innere Produkt auf $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ ist $$tr (B^*A)$$. Per Definition sind diese unter direkten Summen von einheitlichen Transformationen auf der $$\mathscr V_\lambda$$.
+Allgemeiner die damit verbundene Voraussetzung "bezüglich der Übereinstimmung mit den Produktwerten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten (mit Multiplizität gezählt) der linearen Karten aus $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definiert durch $$\set{M^{i,j,k}}$$." Hier das innere Produkt auf $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ ist $$tr (B^*A)$$. Per Definition sind diese Singularwerte unter direkten Summen von einheitlichen Transformationen auf der $$\mathscr V_\lambda$$.
 
 Im Falle des Multiplizitäts-1-Spektrums ist der vollständige Satz von Singularwerten einfach der Satz von Absolutwerten von $$M^{i,j,k}$$ die, wie wir immer noch vermuten, die Isometrieklassen solcher isospektraler Mannigfaltigkeiten vollständig charakterisiert. Siehe Gleichung (16) für die Schlüsselbeziehung zwischen dieser Vermutung und Folge 2. Was fehlt, ist das Suffizienz-Argument, dass, wenn die absoluten Werte übereinstimmen, die Mannigfaltigkeiten isometrisch sind; was ein Argument erfordert, um mögliche Zeichenwechselstornierungen zwischen den Basen in den LHS-Summanden der Gleichung (16) zu beseitigen.
 
 Wir sind deutlich weniger zuversichtlich, dass die allgemeine Vermutung wahr ist (außerhalb des Falles mit Multiplizitäts-1-Spektrum), da es möglich sein kann, über explizite Sunada-Konstruktion ein Gegenbeispiel (von Suffizienz) zu erstellen.
+
+Wenn die Indexnotation die Situation verschleiert, wird vielleicht diese grundlagenunabhängige Beschreibung helfen.  Nehmen $$v_{\lambda} \in V_{\lambda}$$ und betrachten Sie den Ausdruck
+
+$$
+P_{V_\gamma}(v_\alpha v_\beta).
+$$
+
+Alle $$M_{i,j,k}$$ ist Basiskoordinaten dieser grundlagenunabhängigen Karte.  Aber es ist diese Karte, die wir versuchen, durch singuläre Wertzerlegung, die grundlagenunabhängig ist, und damit eine vollständige Charakterisierung der zugrunde liegenden Riemannschen Geometrie zu groben.
 
 Diese Basisinvarianten können sich jedoch als nützlich erweisen, um komplexere Fälle zu entschlüsseln, bei denen zwei isospektrale Mannigfaltigkeiten **nicht isometrisch** sind, indem sie zeigen, dass ihre Singularwerte zwischen den beiden fraglichen Basen nicht identisch sind.
 
@@ -332,7 +342,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist klar definiert (d.h. $$i$$-invariant durch die Hypothesen über Produkte), und die vorherige Beobachtung, dass die algebraischen Betreiber definiert durch $$z_iz_j\bar z_kM_1^{i,j,k}$$ und $$M_0^{i,j,k}$$ sind sowohl assoziativ als auch stimmen mit der Multiplikation der pointwise Funktion durch Quadrate von Absolutwerten von Eigenfunktionen überein, deren generierte Algebra ebenfalls dicht ist. $$C(M)$$ (Wiederum von Stone-Weierstrass, da davon ausgegangen wird, dass es Punkte voneinander trennt). Einrichten $$\ker\ [M^{i,\bar i,k}]^* = 0$$ ist genau gleichwertig, wobei $$\mathscr V$$ Ist der geschlossene Hilbert-Raum von $$\set{|e^i|^2}$$und $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ ist die Change-of-Basis Identity Map.
+Folge 1 ist die Tatsache, dass $$z_k\in U_1$$ ist klar definiert (d.h. $$i$$-invariant durch die Hypothesen über Produkte), und die vorherige Beobachtung, dass die algebraischen, gebundenen trilinearen Operatoren definiert durch $$z_iz_j\bar z_kM_1^{i,j,k}$$ und $$M_0^{i,j,k}$$ sind beide assoziativ und stimmen mit der Multiplikation der pointwise Funktion mit Quadraten von Absolutwerten von Eigenfunktionen überein, die $$\mathscr H$$. Einrichten $$\ker\ [M^{i,\bar i,k}]^* = 0$$ ist genau gleichwertig, wobei $$\mathscr V$$ Ist der geschlossene Hilbert-Raum von $$\set{|e^i|^2}$$und $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ ist die Change-of-Basis Identity Map.
 
 Sie sind sich überall einig.
 
@@ -376,11 +386,13 @@ Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ s
 
 muss auch die "Analytisch" Invarianten &mdash; Die Casimir-Element induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Flat-Tori-Laplacian.
 
-Wie Milnors Duett veranschaulicht, reicht es nicht aus, eine lineare Karte zu haben, die die Längen der Gittergewichte behält, um abzuleiten, dass die Karte in $$SO(n,\Reals)$$; wir müssen auch wissen, dass die Karte Gittergewichtswinkel behält. Dies ist jedoch eine Folge der in Gleichung (15) entwickelten Formeln:
+Wie das Duett von Milnor veranschaulicht, reicht es nicht aus, eine Karte zu haben, die die Längen der Gittergewichte behält, um abzuleiten, dass die Karte in $$SO(n,\Reals)$$; wir müssen auch wissen, dass die Karte Gittergewichtswinkel behält. Dies ist jedoch eine Folge der in Gleichung (15) entwickelten Formeln:
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
 ```
+
+Das Schöne an dieser Analyse ist, dass wir bewiesen haben, dass es keine **lineare** Karte zwischen Gittern gibt, die die Eigenwerte behält, ohne dass die Karte durch eine Riemannsche Isometrie auf dem Tori induziert wird. &mdash; als Folge des Satzes, nicht weil die expliziten Berechnungen einfache Polarisationsidentitäten sind.
 
 Dieses repräsentationstheoretische Konto [[AK01]](#AK01) entspricht genau der vorherigen Entwicklung von *Gitterkongruenz* [[NRR22]](#NRR22) Traditionell verwendet, um Isometrieklassen von flachen Tori zu beschreiben. Tatsächlich ist die Matrix-Transpose einer solchen linearen Karte $$B\in SO(n,\Reals)$$, wie im vorstehenden Absatz beschrieben, **ist** die kontravariante Riemannsche Isometrie zwischen den Tori, wie sie durch die Anwendung des *Gelfand-Naimark-Segal Repräsentationssatzes* während der [Nachweis](#proof-of-theorem) von unseren [Satz](#theorem).
 

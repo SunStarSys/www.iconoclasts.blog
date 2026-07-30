@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=50755
+status: 확인=50859
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -65,6 +65,8 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 
 인식하는 것이 중요합니다. $$M^{i,j,k}$$ 기초가 변하지 않습니다 :이 정리의 증거 이후에 상세하게 논의 된 자연적 단일 기본 변화 조치가 있습니다. 이 토론에는 일반적인 추측을 형성할 수 있는 특정 기본 변이 단수 값 세트가 포함되어 있으며, 단수 값의 정렬된 세트가 isospectral 매니폴드 세트를 완전히 특징으로 한다고 주장합니다.
 
+일반 추측의 절반 정도의 충분성에 상관없이, 필요성은 항상 그렇습니다. 즉, 이러한 단일 값 모음은 $$M^{i,j,k}$$ 그리고 모든 eigenspace 트리플에 관련된 Riemannian **invariants**의 새로운 세트입니다.
+
 미래의 연구를 위해 앞으로의 노력은 이러한 기본 쌍을 찾거나 그러한 쌍이 전혀 존재하지 않는다고 판단하는 데 있습니다. $$M^{i,j,k}$$ 증거로. 그러나이 논문은 그 표적 전면과 중심을두고 : 우리는 eigenfunctions의 제품에 대한 계산적으로 추적 가능한 선형 대수학 질문에 스펙트럼 이론의 분석 기하학 질문을 줄이려고합니다.
 
 *대칭*은 계산적으로 추적 가능한 경우에 중요한 역할을 합니다. [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94)우리의 평평한 토리에 적절하게 묘사 된 [예제](#example) 아래. 그러나, 우리의 접근 방식의 강점은 아마도 가장 적은 수의 Riemannian 대칭을 가진 매니폴드의 경우 명백하게, 이는 일반적인 경우입니다. 이 경우 다음과 같은 기능을 제공합니다.
@@ -79,9 +81,9 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 </div>
   <div class="card-body">
 
-(대각선 리트머스 테스트) 정리의 가설에 설명된 대로 정형 기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 다음과 같은 모든 선택에 대해 아이소메트릭입니다. $$i,j,k$$, 제품 $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 두 베이스에 모두 동의하고 벡터 공간이 $$\set{|e^i|^2}$$ 하나 이상의 기준으로 점을 구분합니다. 여기 $$\bar j$$ 고유함수를 나타냅니다. $$\bar e^j$$ 트리플 제품 통합 계산(Triple Product Integral Computations)
+(대각선 리트머스 테스트) 정리의 가설에 설명된 대로 정형 기지를 보존하는 eigenvalue 쌍을 감안할 때, 매니폴드는 다음과 같은 모든 선택에 대해 아이소메트릭입니다. $$i,j,k$$, 제품 $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ 두 베이스에 모두 동의하고 벡터 공간이 $$\set{|e^i|^2}$$ 조밀함 $$\mathscr H$$. 여기 $$\bar j$$ 고유함수를 나타냅니다. $$\bar e^j$$ 트리플 제품 통합 계산(Triple Product Integral Computations)
 
-또한 $$\mathscr V$$ Hilbert space 생성자 $$\set{|e^i|^2}$$, 인접 맵인 경우에만 점을 분리합니다.
+또한 $$\mathscr V$$ Hilbert space 생성자 $$\set{|e^i|^2}$$, $$\mathscr V = \mathscr H$$ if an only if the adjoint 지도
 ```math
 [M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
 ```
@@ -271,11 +273,19 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 이제 Corollary 2의 조건 하에서, 각각의 $$\mathscr V_\lambda$$ 1차원 벡터 공간 $$\Complex$$그러나 그것은 또한 그들이 하나의 차원 벡터 공간을 의미 $$\Reals$$, 따라서 전체 다중 대칭 그룹은 $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-일반적으로 연관된 필요 조건 "제품 가치 계약 관련" 그저 그렇게 될 뿐 "선형 맵의 정렬된 단수 값 세트(다중성으로 계산됨) 보존 $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 정의자 $$\set{M^{i,j,k}}$$." 여기에 내부 제품 $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ 다음과 같음 $$tr (B^*A)$$. 정의상, 이러한 변수는 단일 변환의 직접 합계에 따라 변하지 않습니다. $$\mathscr V_\lambda$$.
+일반적으로 연관된 필요 조건 "제품 가치 계약 관련" 그저 그렇게 될 뿐 "선형 맵의 정렬된 단수 값 세트(다중성으로 계산됨) 보존 $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 정의자 $$\set{M^{i,j,k}}$$." 여기에 내부 제품 $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ 다음과 같음 $$tr (B^*A)$$. 정의상, 이러한 단수값은 단일 변환의 직접 합계에서 불변합니다. $$\mathscr V_\lambda$$.
 
 multiplicity-1 스펙트럼 케이스에서, 단수값의 완전한 세트는 단순히의 절대값의 세트이다 $$M^{i,j,k}$$ 이것은, 우리는 여전히 추측, 완전히 이러한 isospectral 매니폴드의 isometry 클래스를 특징. 이 추측과 관상 2 사이의 주요 관계는 방정식(16)을 참조하십시오. 누락 된 것은 절대값이 동의하면 매니폴드가 아이소메트릭이라는 충분한 인수입니다. 즉, 방정식 (16)의 LHS 요약에서 기지 사이에 가능한 기호 변경 취소를 제거하기 위해 인수가 필요합니다.
 
 우리는 일반 추측이 사실 (다중성-1 스펙트럼 케이스 외부)을 가지고 있다는 것을 훨씬 덜 확신합니다. 왜냐하면 그것은 명백한 Sunada 건설을 통해 반예 (충분성)를 생산할 수 있기 때문입니다.
+
+인덱스 표기법이 상황을 난독화하면 이러한 기본 고유 설명이 도움이 될 수 있습니다.  테이크아웃 $$v_{\lambda} \in V_{\lambda}$$ 표현식을 고려하십시오.
+
+$$
+P_{감마(_G)}(v_\alpha v_\beta).
+$$
+
+모두 $$M_{i,j,k}$$ 은(는) 이 기준 독립 맵의 기준 좌표를 제공합니다.  그러나 그것은 우리가 기본 독립적 인 단수 값 분해, 따라서 기본 Riemannian 기하학의 완전한 특성화를 통해 grok하려고이지도입니다.
 
 그러나 이러한 기초 불변성은 두 개의 등각성 매니폴드가 **등각이 아님**임을 증명하는 것과 관련된 더 복잡한 사례를 해독하는 데 유용할 수 있으며, 이는 해당 두 기준 간에 단수 값이 동일하지 않음을 나타냅니다.
 
@@ -332,7 +342,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1은 다음과 같은 사실입니다. $$z_k\in U_1$$ 잘 정의되어 있습니다(즉, $$i$$- 제품에 대한 가설에 의해 변함), 그리고 대수 연산자에 의해 정의 사전 관찰 $$z_iz_j\bar z_kM_1^{i,j,k}$$ 및 $$M_0^{i,j,k}$$ 둘 다 연관되어 있고, eigenfunctions의 절대값의 제곱에 의한 점방향 함수 곱셈에 동의하며, 생성된 대수학은 또한 조밀하다. $$C(M)$$ (다시 Stone-Weierstrass에 의해, 그것은 별개의 점으로 추정되기 때문에). 설정 중 $$\ker\ [M^{i,\bar i,k}]^* = 0$$ 정확히 동일합니다. $$\mathscr V$$ 은(는) 생성된 닫힌 힐베르트 공간입니다. $$\set{|e^i|^2}$$및 $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 기본 변경 ID 맵입니다.
+Corollary 1은 다음과 같은 사실입니다. $$z_k\in U_1$$ 잘 정의되어 있습니다(즉, $$i$$- 제품에 대한 가설에 의해 변함), 그리고 대수, 경계 삼선 연산자에 의해 정의 사전 관찰 $$z_iz_j\bar z_kM_1^{i,j,k}$$ 및 $$M_0^{i,j,k}$$ 둘 다 연관되어 있고, 조밀한 eigenfunctions의 절대값의 제곱에 의하여 점방 함수 곱셈에 동의한다 $$\mathscr H$$. 설정 중 $$\ker\ [M^{i,\bar i,k}]^* = 0$$ 정확히 동일합니다. $$\mathscr V$$ 은(는) 생성된 닫힌 힐베르트 공간입니다. $$\set{|e^i|^2}$$및 $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ 기본 변경 ID 맵입니다.
 
 그들은 모든 곳에서 동의한다.
 
@@ -376,11 +386,13 @@ M^{i,j,k} = \begin{cases}
 
 또한 다음을 보존해야 합니다. "분석" 불변성 &mdash; Casimir-element 유도된 숫자 $$4\pi^2\lVert\lambda_i\rVert^2$$ 각 인덱싱된 중량, 즉 플랫 토리의 라플라시안의 개별 고유 값.
 
-Milnor의 듀엣이 예시하는 것처럼 격자 가중치의 길이를 유지하는 선형 맵을 갖는 것은 맵을 추론하기에 충분하지 않습니다. $$SO(n,\Reals)$$우리는 또한 지도가 격자 무게 각도를 보존한다는 것을 알아야합니다. 그러나 이것은 방정식 (15)에서 개발 된 공식의 결과입니다 :
+Milnor의 듀엣이 예시하는 것처럼 격자 가중치의 길이를 유지하는 맵을 갖는 것은 맵을 추론하기에 충분하지 않습니다. $$SO(n,\Reals)$$우리는 또한 지도가 격자 무게 각도를 보존한다는 것을 알아야합니다. 그러나 이것은 방정식 (15)에서 개발 된 공식의 결과입니다 :
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
 ```
+
+이 분석에 대한 깔끔한 점은 우리가 토리에 Riemannian 기하학에 의해 유도되는지도없이 고유 값을 보존 격자 사이에 **선형**지도가 없다는 것을 입증했다. &mdash; 이론의 결과로서, 관련된 명시적 계산이 단순한 분극 ID이기 때문이 아니다.
 
 이 표현 이론적 계정 [[AK01]](#AK01) *격자 congruence*의 이전 발달과 정확하게 동등합니다 [[NRR22]](#NRR22) 전통적으로 플랫 토리의 형상 클래스를 구분하는 데 사용됩니다. 사실, 이러한 선형 맵의 행렬 전치 $$B\in SO(n,\Reals)$$, 이전 단락에서 설명한 바와 같이, **는 *Gelfand-Naimark-Segal Representation Theorem*의 적용에 의해 제공 된 토리 사이의 논란 Riemannian 기하학입니다. [검증](#proof-of-theorem) 우리의 [정리](#theorem).
 

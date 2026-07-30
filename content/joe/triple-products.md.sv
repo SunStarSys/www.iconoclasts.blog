@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50755
+status: verifierad=50859
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -65,6 +65,8 @@ Att vara isometrisk för $$(M,g)$$, det är ett *nödvändigt och tillräckligt 
 
 Det är viktigt att erkänna $$M^{i,j,k}$$ är inte grundinvariant: det finns en naturlig enhetsförändring på det diskuteras i detalj efter bevis för denna sats. Diskussionen innehåller vissa uppsättningar av bas-invariant singulära värden som man kan bilda en allmän gissning runt, vilket hävdar att den ordnade uppsättningen av singulära värden helt karakteriserar uppsättningen isospektrala grenrör.
 
+Oavsett tillräcklig hälften av den allmänna gissningen är nödvändigheten alltid fallet. Det betyder att dessa samlingar av enskilda värden definieras av $$M^{i,j,k}$$ och associerade till varje åttonde rymd trippel är en ny uppsättning Riemannian** invariants**.
+
 Det hårda arbetet framåt för framtida forskning är att hitta sådana baspar, eller att bestämma att sådana par inte kan existera alls, bara genom att undersöka egenskaperna hos $$M^{i,j,k}$$ i bevis. Men denna uppsats sätter det målet fram och centrum: vi försöker minska de analytiska geometrifrågorna i spektralteorin till beräkningsstyrda linjära algebrafrågor om produkter av egenfunktioner.
 
 *Symmetri* spelar en viktig roll i beräkningsrelaterade fall [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), som är lämpligt illustrerad i vår platta tori [Exempel](#example) nedan. Styrkan i vårt tillvägagångssätt görs dock kanske bäst uppenbar när det gäller mångfalder med det minsta antalet Riemanniska symmetrier, vilket är det generiska fallet. I detta fall erbjuder vi följande
@@ -79,9 +81,9 @@ Det hårda arbetet framåt för framtida forskning är att hitta sådana baspar,
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om för varje val av $$i,j,k$$, produkten $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ överens om båda baserna, och om vektorrummet spänner över $$\set{|e^i|^2}$$ separerar punkter på minst en bas. Här $$\bar j$$ representerar egenfunktionen $$\bar e^j$$ i trippelproduktintegrerade beräkningar.
+(Diagonal Litmus Test) Med tanke på ett par egenvärde som bevarar ortonormala baser som beskrivs i teoremens hypotes är grenrör isometriska om för varje val av $$i,j,k$$, produkten $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ överens om båda baserna, och om vektorrummet spänner över $$\set{|e^i|^2}$$ är tät i $$\mathscr H$$. Här $$\bar j$$ representerar egenfunktionen $$\bar e^j$$ i trippelproduktintegrerade beräkningar.
 
-Om vi definierar $$\mathscr V$$ som Hilbert-rymden som genereras av $$\set{|e^i|^2}$$separerar den punkter om och endast om den justerade kartan
+Om vi definierar $$\mathscr V$$ som Hilbert-rymden som genereras av $$\set{|e^i|^2}$$, $$\mathscr V = \mathscr H$$ om en endast om den adjoint kartan
 ```math
 [M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
 ```
@@ -271,11 +273,19 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 Nu under villkoren i Corollary 2, var och en av de $$\mathscr V_\lambda$$ är ett dimensionellt vektorrum över $$\Complex$$, men det betyder också att de är endimensionella vektorrum över $$\Reals$$och så är hela den multiplikativa symmetrigruppen $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "Bevarande av den ordnade uppsättningen av singulära värden (räknade med multiplikation) av linjära kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definierad av $$\set{M^{i,j,k}}$$." Här är den inre produkten på $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ är $$tr (B^*A)$$. per definition, dessa är invariant under direkta summor av enhetliga omvandlingar på $$\mathscr V_\lambda$$.
+Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "Bevarande av den ordnade uppsättningen av singulära värden (räknade med multiplikation) av linjära kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definierad av $$\set{M^{i,j,k}}$$." Här är den inre produkten på $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ är $$tr (B^*A)$$. Per definition är dessa singulära värden invariant under direkta summor av enhetliga transformationer på $$\mathscr V_\lambda$$.
 
 I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (16) för nyckelförhållandet mellan denna gissning och Corollary 2. Vad som saknas är tillräcklighetsargumentet att om de absoluta värdena är överens är grenrör isometriska; vilket kräver ett argument för att eliminera eventuella teckenändringsavbrott mellan baser i LHS-topparna i ekvation (16).
 
 Vi är betydligt mindre säkra på att den allmänna gissningen är sann (utanför multiplikations-1-spektrumfallet), eftersom det kan vara möjligt att producera ett motexempel (av tillräcklighet) via explicit Sunada-konstruktion.
+
+Om indexnotationen är obfuscation situationen, kanske denna grundlösa beskrivning hjälper.  Ta $$v_{\lambda} \in V_{\lambda}$$ och överväga uttrycket
+
+$$
+P_{V_\gamma}(v_\alpha v_\beta).
+$$
+
+Alla $$M_{i,j,k}$$ ger baskoordinater för denna basoberoende karta.  Men det är denna karta vi försöker grok via singular value sönderdelning, som är basoberoende, och därför en fullständig karakterisering av den underliggande Riemannian geometri.
 
 Dessa grundvarianter kan dock vara användbara vid dechiffrering av mer komplexa fall som innebär att två isospektrala grenrör är **inte isometriska**, genom att visa att deras singulära värden inte är identiska mellan de två baserna i fråga.
 
@@ -332,7 +342,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Corollary 1 följer av det faktum att $$z_k\in U_1$$ Den är väldefinierad (dvs. $$i$$-invariant av hypoteserna om produkter), och föregående observation att de algebraiska operatorer som definieras av $$z_iz_j\bar z_kM_1^{i,j,k}$$ och $$M_0^{i,j,k}$$ är båda associativa och är överens med pointwise funktion multiplikation av rutor av absoluta värden för egenfunktioner, vars genererade algebra också är tät i $$C(M)$$ (Återigen av Stone-Weierstrass, eftersom det antas vara separata punkter). Upprättar $$\ker\ [M^{i,\bar i,k}]^* = 0$$ är exakt lika, där $$\mathscr V$$ är det stängda Hilbert-utrymmet som genereras av $$\set{|e^i|^2}$$och $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ är basändringsidentitetskartan.
+Corollary 1 följer av det faktum att $$z_k\in U_1$$ Den är väldefinierad (dvs. $$i$$-invariant av hypoteserna om produkter) och föregående observation att de algebraiska, avgränsade trilinjära operatorer som definieras av $$z_iz_j\bar z_kM_1^{i,j,k}$$ och $$M_0^{i,j,k}$$ är båda associativa, och håller med punktvis funktion multiplikation av rutor av absoluta värden för egenfunktioner, som är tät i $$\mathscr H$$. Upprättar $$\ker\ [M^{i,\bar i,k}]^* = 0$$ är exakt lika, där $$\mathscr V$$ är det stängda Hilbert-utrymmet som genereras av $$\set{|e^i|^2}$$och $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ är basändringsidentitetskartan.
 
 De är överens överallt.
 
@@ -376,11 +386,13 @@ För att kunna tillämpa vår [Satsen](#theorem)Det är viktigt att en sådan li
 
 måste också bevara "analytisk" varianter &mdash; Casimir-element-inducerad figur $$4\pi^2\lVert\lambda_i\rVert^2$$ för varje indexerad vikt, dvs. de individuella egenvärdena i Lappland.
 
-Som Milnors duett exemplifierar, att ha en linjär karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (15):
+Som Milnors duett exemplifierar, att ha en karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (15):
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
 ```
+
+Det fina med denna analys är att vi har bevisat att det inte finns någon **linjär** karta mellan galler som bevarar egenvärdena utan att kartan induceras av en Riemannian isometri på tori &mdash; Som en följd av teorin, inte för att de explicita beräkningarna är enkla polariseringsidentiteter.
 
 Detta representationsteoretiska konto [[AK01]](#AK01) är exakt likvärdig med den tidigare utvecklingen av *lattice kongruens* [[NRR22]](#NRR22) Traditionellt används för att avgränsa isometri klasser av platt tori. Faktum är att matrisen införlivar en sådan linjär karta $$B\in SO(n,\Reals)$$, som beskrivs i föregående stycke, **är **den kontravariant Riemannian isometri mellan tori, som tillhandahålls genom tillämpning av *Gelfand-Naimark-Segal Representation Theorem *under [Bevis](#proof-of-theorem) från vår [Satsen](#theorem).
 

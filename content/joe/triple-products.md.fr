@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=50755
+status: vérifié=50859
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -66,6 +66,8 @@ Pour être isométrique à $$(M,g)$$, c'est une condition *nécessaire et suffis
 
 Il est important de reconnaître $$M^{i,j,k}$$ n'est pas invariant sur la base : il y a une action de changement de base unitaire naturelle qui est discutée en détail après la preuve de ce théorème. La discussion incorpore certains ensembles de valeurs singulières invariantes de base que l'on pourrait former une conjecture générale autour, qui prétend que cet ensemble ordonné de valeurs singulières caractérise complètement l'ensemble des variétés isospectrales.
 
+Indépendamment de la moitié suffisante de la conjecture générale, la nécessité est toujours le cas. Ce qui signifie ces ensembles de valeurs singulières définies par $$M^{i,j,k}$$ et associés à chaque triple d'espace propre sont un nouvel ensemble d' **invariants** riemanniens.
+
 Le travail acharné à venir pour les recherches futures consiste à localiser de telles paires de base, ou à déterminer que de telles paires ne peuvent pas exister du tout, simplement en examinant les propriétés du $$M^{i,j,k}$$ en preuve. Mais cet article met cette cible au premier plan et au centre : nous cherchons à réduire les questions de géométrie analytique de la théorie spectrale aux questions d'algèbre linéaire traçables par calcul sur les produits des fonctions propres.
 
 *La symétrie* joue un rôle important dans les cas computationnellement traçables [[TF17]](#TF17) [[LS18]](#LS18) [[PS94]](#PS94), qui est bien illustré dans notre plat tori [Exemple](#example) ci-dessous. Cependant, la force de notre approche est peut-être mieux mise en évidence dans le cas de collecteurs avec le moins de symétries riemanniennes, ce qui est le cas générique. Dans ce cas, nous offrons ce qui suit :
@@ -80,9 +82,9 @@ Le travail acharné à venir pour les recherches futures consiste à localiser d
 </div>
   <div class="card-body">
 
-(Diagonal Litmus Test) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque choix de $$i,j,k$$, le produit $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ convient dans les deux bases ; et si l'espace vectoriel $$\set{|e^i|^2}$$ sépare les points sur au moins une base. Ici $$\bar j$$ représente la fonction propre $$\bar e^j$$ dans les calculs intégraux à triple produit.
+(Diagonal Litmus Test) Compte tenu d'une paire de valeurs propres préservant les bases orthonormes comme décrit dans l'hypothèse du théorème, les collecteurs sont isométriques si pour chaque choix de $$i,j,k$$, le produit $$M^{i,\bar i,k}\bar M^{j,\bar j,k}$$ convient dans les deux bases ; et si l'espace vectoriel $$\set{|e^i|^2}$$ est dense en $$\mathscr H$$. Ici $$\bar j$$ représente la fonction propre $$\bar e^j$$ dans les calculs intégraux à triple produit.
 
-En outre, si nous définissons $$\mathscr V$$ comme l'espace de Hilbert généré par $$\set{|e^i|^2}$$, il sépare les points si et seulement si la carte adjointe
+En outre, si nous définissons $$\mathscr V$$ comme l'espace de Hilbert généré par $$\set{|e^i|^2}$$, $$\mathscr V = \mathscr H$$ si un seulement si la carte adjointe
 ```math
 [M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
 ```
@@ -272,11 +274,19 @@ est l'image de $$M^{i,j,k}$$ sous $$U$$Action de base $$e^i \mapsto U(e^i)$$.
 
 Maintenant, dans les conditions du Corollaire 2, chacun des $$\mathscr V_\lambda$$ sont des espaces vectoriels unidimensionnels sur $$\Complex$$, mais cela signifie également qu'ils sont des espaces vectoriels unidimensionnels sur $$\Reals$$et donc le groupe de symétrie multiplicative complet est $$O(1,\Reals)^\infty=\Z_2^\infty$$.
 
-Plus généralement, le prérequis associé "concernant l'accord sur les valeurs des produits" serait simplement devenu "conservation de l'ensemble ordonné de valeurs singulières (comptées avec multiplicité) des cartes linéaires à partir de $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ défini par $$\set{M^{i,j,k}}$$." Ici le produit intérieur sur $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ est $$tr (B^*A)$$. Par définition, ceux-ci sont invariants sous des sommes directes de transformations unitaires sur $$\mathscr V_\lambda$$.
+Plus généralement, le prérequis associé "concernant l'accord sur les valeurs des produits" serait simplement devenu "conservation de l'ensemble ordonné de valeurs singulières (comptées avec multiplicité) des cartes linéaires à partir de $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ défini par $$\set{M^{i,j,k}}$$." Ici le produit intérieur sur $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ est $$tr (B^*A)$$. Par définition, ces valeurs singulières sont invariantes sous des sommes directes de transformations unitaires sur $$\mathscr V_\lambda$$.
 
 Dans le cas du spectre multiplicité-1, l'ensemble complet des valeurs singulières est simplement l'ensemble des valeurs absolues de $$M^{i,j,k}$$ qui, nous conjecturons encore, caractérise complètement les classes d'isométrie de tels collecteurs isospectraux. Voir l'équation (16) pour la relation clé entre cette conjecture et le corollaire 2. Ce qui manque est l'argument de suffisance que si les valeurs absolues sont d'accord, les collecteurs sont isométriques ; ce qui nécessite un argument pour éliminer les éventuelles annulations de changement de signe entre les bases dans les sommets LHS de l'équation (16).
 
 Nous sommes beaucoup moins confiants que la conjecture générale soit vraie (en dehors du cas de la multiplicité-1 du spectre), car il peut être possible de produire un contre-exemple (de suffisance) via une construction Sunada explicite.
+
+Si la notation d'index brouille la situation, cette description indépendante de la base peut aider.  Prendre $$v_{\lambda} \in V_{\lambda}$$ et considérer l'expression
+
+$$
+P_{V_\gamma}(v_\alpha v_\beta).
+$$
+
+Tout $$M_{i,j,k}$$ fournit les coordonnées de base de cette carte indépendante.  Mais c'est cette carte que nous essayons de grok via la décomposition de valeurs singulières, qui est indépendante de la base, et donc une caractérisation complète de la géométrie riemannienne sous-jacente.
 
 Cependant, ces invariants de base peuvent s'avérer utiles pour déchiffrer des cas plus complexes impliquant la preuve que deux collecteurs isospectraux sont **non isométriques**, en montrant que leurs valeurs singulières ne sont pas identiques entre les deux bases en question.
 
@@ -333,7 +343,7 @@ i = \bar j, \ell = k\text{ and relabeling } \implies \\
 \end{aligned}
 ```
 
-Le corollaire 1 découle du fait que $$z_k\in U_1$$ est bien définie (i.e. $$i$$-invariant par les hypothèses sur les produits), et l'observation préalable que les opérateurs algébriques définis par $$z_iz_j\bar z_kM_1^{i,j,k}$$ et $$M_0^{i,j,k}$$ sont à la fois associatifs, et sont d'accord avec la multiplication de fonction ponctuelle par des carrés de valeurs absolues des fonctions propres, dont l'algèbre générée est également dense en $$C(M)$$ (encore une fois par Stone-Weierstrass, puisqu'il est présumé séparer des points). Etablissement $$\ker\ [M^{i,\bar i,k}]^* = 0$$ est exactement équivalent, où $$\mathscr V$$ est l'espace fermé de Hilbert généré par $$\set{|e^i|^2}$$, et $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ est la carte d'identité de changement de base.
+Le corollaire 1 découle du fait que $$z_k\in U_1$$ est bien définie (i.e. $$i$$-invariant par les hypothèses sur les produits), et l'observation préalable que les opérateurs trilinéaires algébriques et bornés définis par $$z_iz_j\bar z_kM_1^{i,j,k}$$ et $$M_0^{i,j,k}$$ sont à la fois associatifs, et sont d'accord avec la multiplication de fonction ponctuelle par des carrés de valeurs absolues des fonctions propres, qui est dense en $$\mathscr H$$. Etablissement $$\ker\ [M^{i,\bar i,k}]^* = 0$$ est exactement équivalent, où $$\mathscr V$$ est l'espace fermé de Hilbert généré par $$\set{|e^i|^2}$$, et $$[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$$ est la carte d'identité de changement de base.
 
 Ils sont donc d'accord partout.
 
@@ -377,11 +387,13 @@ Cependant, afin d'appliquer notre [Théorème](#theorem), il est essentiel qu'un
 
 doit également préserver "analyse" invariants &mdash; la figure induite par l'élément Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ pour chaque poids indexé, c'est-à-dire les valeurs propres individuelles du laplacien du tori plat.
 
-Comme l'illustre le duo de Milnor, avoir une carte linéaire qui préserve les longueurs des poids de treillis n'est pas suffisant pour déduire que la carte est dans $$SO(n,\Reals)$$ ; il faut aussi savoir que la carte préserve les angles de poids en treillis. Mais ceci est une conséquence des formules développées dans l'Équation (15) :
+Comme l'illustre le duo de Milnor, avoir une carte qui préserve les longueurs des poids de treillis ne suffit pas à déduire que la carte est dans $$SO(n,\Reals)$$ ; il faut aussi savoir que la carte préserve les angles de poids en treillis. Mais ceci est une conséquence des formules développées dans l'Équation (15) :
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
 ```
+
+La chose intéressante à propos de cette analyse est que nous avons prouvé qu'il n'y a pas de carte **linéaire** entre les réseaux qui préserve les valeurs propres sans que la carte ne soit induite par une isométrie riemannienne sur la tori. &mdash; En conséquence du théorème, non pas parce que les calculs explicites impliqués sont de simples identités de polarisation.
 
 Ce compte représentation-théorique [[AK01]](#AK01) est exactement équivalent au développement antérieur de *congruence de réseau* [[NRR22]](#NRR22) traditionnellement utilisé pour délimiter les classes d'isométrie des tori plats. En effet, la matrice transpose une telle carte linéaire $$B\in SO(n,\Reals)$$, tel que décrit dans le paragraphe précédent, **est** l'isométrie Riemannienne contravariante entre les tori, telle que fournie par l'application du *théorème de représentation Gelfand-Naimark-Segal* pendant la [Preuve](#proof-of-theorem) de notre [Théorème](#theorem).
 
