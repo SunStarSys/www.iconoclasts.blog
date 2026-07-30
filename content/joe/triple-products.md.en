@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=50898
+status: verified=50906
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -280,10 +280,10 @@ We are significantly less confident that the general conjecture holds true (outs
 If the index notation is obfuscating the situation, perhaps this basis-independent description will help.  Take $$v_{\lambda} \in V_{\lambda}$$ and consider the expression
 
 $$
-P_{V_\gamma}(v_\alpha v_\beta).
+P_{\mathscr V_\gamma}(v_\alpha v_\beta).
 $$
 
-All $$M^{i,j,k}$$ does is provide basis coordinates of this basis-independent map.  But it is this map we are trying to grok via singular value decomposition, which is basis-independent, and therefore a complete characterization of the underlying Riemannian geometry.
+Recall that each $$\mathscr V_\lambda$$ is a finite dimesional complexified Euclidean space. All $$M^{i,j,k}$$ does is provide basis coordinates of this basis-independent map.  But it is this map we are trying to grok via singular value decomposition, which is basis-independent, and therefore a complete characterization of the underlying Riemannian geometry.
 
 However, these basis invariants may prove useful in deciphering more complex cases involving proving two isospectral manifolds are **not isometric**, by showing that their singular values are not identical between the two bases in question.
 
