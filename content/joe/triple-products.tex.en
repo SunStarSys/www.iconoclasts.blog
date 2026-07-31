@@ -289,10 +289,10 @@ In the multiplicity-1 spectrum case, the complete set of singular values is simp
 
 We are significantly less confident that the general conjecture holds true (outside the multiplicity-1 spectrum case), since it may be possible to produce a counterexample (of sufficiency) via explicit Sunada construction.
 
-If the index notation is obfuscating the situation, perhaps this basis-independent description will help.  Take $v_{\lambda} \in V_{\lambda}$ and consider the expression
+If the index notation is obfuscating the situation, perhaps this basis-independent description will help.  Take $v_{\lambda} \in \mathscr V_{\lambda}$ and consider the expression
 
 $$
-P_{V_\gamma}(v_\alpha v_\beta).
+P_{\mathscr V_\gamma}(v_\alpha v_\beta).
 $$
 
 Recall that each $\mathscr V_\lambda$ is a finite dimensional complexified Euclidean space. All $M^{i,j,k}$ does is provide basis coordinates of this basis-independent expression. Since $1 = \oplus_\lambda P_{\mathscr V_\lambda}$, what the Theorem says is that the above expression is \textbf{identical} between manifolds if and only if the manifolds are isometric; which should come as a shock to literally no one. The sufficiency half of these conjectures are largely combinatorics problems involving reconstructing these expressions purely from their singular value decomposition.
