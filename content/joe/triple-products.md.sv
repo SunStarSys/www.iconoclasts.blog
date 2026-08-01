@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=50859
+status: verifierad=51035
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -279,15 +279,17 @@ I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singul
 
 Vi är betydligt mindre säkra på att den allmänna gissningen är sann (utanför multiplikations-1-spektrumfallet), eftersom det kan vara möjligt att producera ett motexempel (av tillräcklighet) via explicit Sunada-konstruktion.
 
-Om indexnotationen är obfuscation situationen, kanske denna grundlösa beskrivning hjälper.  Ta $$v_{\lambda} \in V_{\lambda}$$ och överväga uttrycket
+Om indexnotationen försvårar situationen kanske denna grundoberoende beskrivning hjälper.  Ta $$v_{\lambda} \in \mathscr V_{\lambda}$$ och överväga uttrycket
 
 $$
-P_{V_\gamma}(v_\alpha v_\beta).
+P_{\mathscr V_\gamma}(v_\alpha v_\beta).
 $$
 
-Alla $$M_{i,j,k}$$ ger baskoordinater för denna basoberoende karta.  Men det är denna karta vi försöker grok via singular value sönderdelning, som är basoberoende, och därför en fullständig karakterisering av den underliggande Riemannian geometri.
+Kom ihåg att varje $$\mathscr V_\lambda$$ är ett finitdimensionellt komplexiserat euklidiskt rum. Alla $$M^{i,j,k}$$ ger baskoordinater för detta basoberoende uttryck. Sedan $$1 = \oplus_\lambda P_{\mathscr V_\lambda}$$Vad teorin säger är att ovanstående uttryck är **identiskt** mellan grenrör om och endast om grenrör är isometriska; vilket bör komma som en chock för bokstavligen ingen. Tillräcklighet hälften av dessa antaganden är till stor del kombinatoriska problem som innebär att rekonstruera dessa uttryck enbart från deras singular värde sönderdelning.
 
 Dessa grundvarianter kan dock vara användbara vid dechiffrering av mer komplexa fall som innebär att två isospektrala grenrör är **inte isometriska**, genom att visa att deras singulära värden inte är identiska mellan de två baserna i fråga.
+
+ASIDE: Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier $$G$$-invariant *irreducible* sönderdelning $$P_{\mathscr V_\lambda}$$ av $$L^2(G,dx)$$ som $$\oplus_\lambda P_{\mathscr V_\lambda}$$och hedrar deras samspel i uttrycket ovan som de väsentliga artefakterna i Lie Theory. Kompatibla Riemannian geometrier genereras av praktiska val av Casimir element, som är av mindre betydelse än den irreducibla sönderdelningen själv. **Deras spektrala sönderdelning** är en (mindre bekväm) sammanställning av dessa irreducibla komponenter. För kompakta Abelian Lie-grupper är dessa irreducibla komponenter alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multplicity-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
 
 Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 
@@ -386,7 +388,7 @@ För att kunna tillämpa vår [Satsen](#theorem)Det är viktigt att en sådan li
 
 måste också bevara "analytisk" varianter &mdash; Casimir-element-inducerad figur $$4\pi^2\lVert\lambda_i\rVert^2$$ för varje indexerad vikt, dvs. de individuella egenvärdena i Lappland.
 
-Som Milnors duett exemplifierar, att ha en karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (15):
+Som Milnors duett exemplifierar, att ha en karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (16):
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=50859
+status: vérifié=51035
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -280,15 +280,17 @@ Dans le cas du spectre multiplicité-1, l'ensemble complet des valeurs singuliè
 
 Nous sommes beaucoup moins confiants que la conjecture générale soit vraie (en dehors du cas de la multiplicité-1 du spectre), car il peut être possible de produire un contre-exemple (de suffisance) via une construction Sunada explicite.
 
-Si la notation d'index brouille la situation, cette description indépendante de la base peut aider.  Prendre $$v_{\lambda} \in V_{\lambda}$$ et considérer l'expression
+Si la notation d'index brouille la situation, cette description indépendante de la base peut vous aider.  Prendre $$v_{\lambda} \in \mathscr V_{\lambda}$$ et considérer l'expression
 
 $$
-P_{V_\gamma}(v_\alpha v_\beta).
+P_{\mathscr V_\gamma}(v_\alpha v_\beta).
 $$
 
-Tout $$M_{i,j,k}$$ fournit les coordonnées de base de cette carte indépendante.  Mais c'est cette carte que nous essayons de grok via la décomposition de valeurs singulières, qui est indépendante de la base, et donc une caractérisation complète de la géométrie riemannienne sous-jacente.
+Rappelez-vous que chaque $$\mathscr V_\lambda$$ est un espace euclidien complexe dimensionnel fini. Tout $$M^{i,j,k}$$ fournit des coordonnées de base de cette expression indépendante de la base. Depuis $$1 = \oplus_\lambda P_{\mathscr V_\lambda}$$Ce que le théorème dit est que l'expression ci-dessus est **identique** entre les collecteurs si et seulement si les collecteurs sont isométriques ; qui devrait venir comme un choc à personne littéralement. La moitié suffisante de ces conjectures sont en grande partie des problèmes combinatoires impliquant la reconstruction de ces expressions uniquement à partir de leur décomposition de valeur singulière.
 
 Cependant, ces invariants de base peuvent s'avérer utiles pour déchiffrer des cas plus complexes impliquant la preuve que deux collecteurs isospectraux sont **non isométriques**, en montrant que leurs valeurs singulières ne sont pas identiques entre les deux bases en question.
+
+ASIDE: La théorie de la représentation d'un groupe de Lie Compact $$G$$ prend le Laplacien explicite hors de l'équation et des études $$G$$- décompositions invariantes *irréductibles* $$P_{\mathscr V_\lambda}$$ sur $$L^2(G,dx)$$ comme $$\oplus_\lambda P_{\mathscr V_\lambda}$$et honore leur interaction dans l'expression ci-dessus comme les artefacts essentiels de la théorie du mensonge. Les géométries Riemanniennes compatibles sont générées par des choix pratiques d'éléments Casimir, qui sont moins importants que la décomposition irréductible elle-même. **Leur décomposition spectrale** est un réassemblage (moins pratique) de ces composants irréductibles. Pour les groupes compacts Abelian Lie, ces composants irréductibles sont tous unidimensionnels, de sorte que leur situation est entièrement similaire à la décomposition spectrale de plusieurs Laplaciens-1 ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
 
 En revenant au Corollaire 1, nous observons que la preuve implique d'établir cette implication :
 
@@ -387,7 +389,7 @@ Cependant, afin d'appliquer notre [Théorème](#theorem), il est essentiel qu'un
 
 doit également préserver "analyse" invariants &mdash; la figure induite par l'élément Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ pour chaque poids indexé, c'est-à-dire les valeurs propres individuelles du laplacien du tori plat.
 
-Comme l'illustre le duo de Milnor, avoir une carte qui préserve les longueurs des poids de treillis ne suffit pas à déduire que la carte est dans $$SO(n,\Reals)$$ ; il faut aussi savoir que la carte préserve les angles de poids en treillis. Mais ceci est une conséquence des formules développées dans l'Équation (15) :
+Comme l'illustre le duo de Milnor, avoir une carte qui préserve les longueurs des poids de treillis ne suffit pas à déduire que la carte est dans $$SO(n,\Reals)$$ ; il faut aussi savoir que la carte préserve les angles de poids en treillis. Mais ceci est une conséquence des formules développées dans l'Équation (16) :
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

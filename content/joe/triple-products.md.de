@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=50859
+status: überprüft=51035
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -279,15 +279,17 @@ Im Falle des Multiplizitäts-1-Spektrums ist der vollständige Satz von Singular
 
 Wir sind deutlich weniger zuversichtlich, dass die allgemeine Vermutung wahr ist (außerhalb des Falles mit Multiplizitäts-1-Spektrum), da es möglich sein kann, über explizite Sunada-Konstruktion ein Gegenbeispiel (von Suffizienz) zu erstellen.
 
-Wenn die Indexnotation die Situation verschleiert, wird vielleicht diese grundlagenunabhängige Beschreibung helfen.  Nehmen $$v_{\lambda} \in V_{\lambda}$$ und betrachten Sie den Ausdruck
+Wenn die Indexnotation die Situation verschleiert, wird vielleicht diese grundlagenunabhängige Beschreibung helfen.  Nehmen $$v_{\lambda} \in \mathscr V_{\lambda}$$ und betrachten Sie den Ausdruck
 
 $$
-P_{V_\gamma}(v_\alpha v_\beta).
+P_{\mathscr V_\gamma}(v_\alpha v_\beta).
 $$
 
-Alle $$M_{i,j,k}$$ ist Basiskoordinaten dieser grundlagenunabhängigen Karte.  Aber es ist diese Karte, die wir versuchen, durch singuläre Wertzerlegung, die grundlagenunabhängig ist, und damit eine vollständige Charakterisierung der zugrunde liegenden Riemannschen Geometrie zu groben.
+Rückruf $$\mathscr V_\lambda$$ ist ein endlicher dimensionaler, komplexer euklidischer Raum. Alle $$M^{i,j,k}$$ ist Basiskoordinaten dieses grundlagenunabhängigen Ausdrucks. Seit $$1 = \oplus_\lambda P_{\mathscr V_\lambda}$$, was der Satz sagt, ist, dass der obige Ausdruck **identisch** zwischen Mannigfaltigkeiten ist, wenn und nur, wenn die Mannigfaltigkeiten isometrisch sind; was als Schock für buchstäblich niemand kommen sollte. Die ausreichende Hälfte dieser Vermutungen sind weitgehend kombinatorische Probleme, bei denen diese Ausdrücke rein aus ihrer Singularwertzersetzung rekonstruiert werden.
 
 Diese Basisinvarianten können sich jedoch als nützlich erweisen, um komplexere Fälle zu entschlüsseln, bei denen zwei isospektrale Mannigfaltigkeiten **nicht isometrisch** sind, indem sie zeigen, dass ihre Singularwerte zwischen den beiden fraglichen Basen nicht identisch sind.
+
+ASIDE: Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien $$G$$-invariante *irreduible* Zersetzungen $$P_{\mathscr V_\lambda}$$ von $$L^2(G,dx)$$ als $$\oplus_\lambda P_{\mathscr V_\lambda}$$, und ehrt ihr Zusammenspiel im obigen Ausdruck als die wesentlichen Artefakte der Lüge Theorie. Kompatible Riemannsche Geometrien werden durch bequeme Entscheidungen von Casimir-Elementen erzeugt, die von geringerer Bedeutung sind als die irreduzible Zersetzung selbst. **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Wiederzusammensetzung dieser irreduzierbaren Komponenten. Für kompakte Abelian Lie-Gruppen sind diese irreduziblen Komponenten alle eindimensional, so dass ihre Situation der spektralen Zersetzung von Multplicity-1-Laplaciern oben völlig ähnlich ist.  Mehr dazu im Beispiel unten.
 
 Wenn wir zu Korrespondenz 1 zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
 
@@ -386,7 +388,7 @@ Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ s
 
 muss auch die "Analytisch" Invarianten &mdash; Die Casimir-Element induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Flat-Tori-Laplacian.
 
-Wie das Duett von Milnor veranschaulicht, reicht es nicht aus, eine Karte zu haben, die die Längen der Gittergewichte behält, um abzuleiten, dass die Karte in $$SO(n,\Reals)$$; wir müssen auch wissen, dass die Karte Gittergewichtswinkel behält. Dies ist jedoch eine Folge der in Gleichung (15) entwickelten Formeln:
+Wie das Duett von Milnor veranschaulicht, reicht es nicht aus, eine Karte zu haben, die die Längen der Gittergewichte behält, um abzuleiten, dass die Karte in $$SO(n,\Reals)$$; wir müssen auch wissen, dass die Karte Gittergewichtswinkel behält. Dies ist jedoch eine Folge der in Gleichung (16) entwickelten Formeln:
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

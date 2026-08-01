@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=50859
+status: verificado=51035
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -280,15 +280,17 @@ No caso do espectro da multiplicidade-1, o conjunto completo de valores singular
 
 Estamos significativamente menos confiantes de que a conjectura geral é verdadeira (fora do caso do espectro da multiplicidade-1), uma vez que pode ser possível produzir um contra-exemplo (de suficiência) através de construção Sunada explícita.
 
-Se a notação de índice é ofuscação a situação, talvez esta descrição base-indepedente vai ajudar.  Utilização $$v_{\lambda} \in V_{\lambda}$$ e considere a expressão
+Se a notação de índice estiver ofuscando a situação, talvez essa descrição independente da base ajude.  Utilização $$v_{\lambda} \in \mathscr V_{\lambda}$$ e considere a expressão
 
 $$
-P_{V_\gama}(v_\alpha v_\beta).
+P_{\mathscr V_\gamma}(v_\alpha v_\beta).
 $$
 
-Todos $$M_{i,j,k}$$ fornece as coordenadas base deste mapa independente da base.  Mas é este mapa que estamos tentando gemer através de decomposição de valor singular, que é independente de base, e, portanto, uma caracterização completa da geometria Riemanniana subjacente.
+Lembre-se de que cada $$\mathscr V_\lambda$$ é um espaço euclidiano complexificado dimensional finito. Todos $$M^{i,j,k}$$ é fornecer coordenadas de base desta expressão independente de base. Desde $$1 = \oplus_\lambda P_{\mathscr V_\lambda}$$, o que o Teorema diz é que a expressão acima é **idêntica** entre variedades se e somente se as variedades forem isométricas; o que deve ser um choque para literalmente ninguém. A metade da suficiência dessas conjecturas são, em grande parte, problemas combinatórios que envolvem a reconstrução dessas expressões puramente a partir de sua decomposição de valor singular.
 
 No entanto, esses invariantes de base podem ser úteis na decifração de casos mais complexos envolvendo a prova de que duas variedades isospectrais são **não isométricas**, mostrando que seus valores singulares não são idênticos entre as duas bases em questão.
+
+ASIDE: A Teoria da Representação de um Grupo de Mentiras Compacto $$G$$ tira o Laplaciano explícito da equação e dos estudos $$G$$decomposições *irreduzíveis* invariantes $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dx)$$ como $$\oplus_\lambda P_{\mathscr V_\lambda}$$e honra sua interação na expressão acima como os artefatos essenciais da Teoria da Mentira. As geometrias Riemannianas compatíveis são geradas por escolhas convenientes de elementos Casimir, que são de menor importância do que a própria decomposição irredutível. **Sua decomposição espectral** é uma remontagem (menos conveniente) desses componentes irredutíveis. Para os grupos compactos da Mentira Abeliana, esses componentes irredutíveis são todos unidimensionais, de modo que sua situação é inteiramente semelhante à decomposição espectral dos Laplacianos de multiplicidade-1 acima.  Mais sobre isso no Exemplo abaixo.
 
 Voltando ao Corolário 1, observamos que a prova envolve estabelecer essa implicação:
 
@@ -387,7 +389,7 @@ No entanto, para aplicar o nosso [Teorema](#theorem)É essencial que um mapa lin
 
 deve também preservar o "analítico" invariáveis &mdash; a figura induzida pelo elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, ou seja, os autovalores individuais do Laplaciano do tori plano.
 
-Como o dueto de Milnor exemplifica, ter um mapa que preserva os comprimentos dos pesos da rede não é suficiente para deduzir que o mapa está em $$SO(n,\Reals)$$; também devemos saber que o mapa preserva os ângulos de peso da rede. Mas esta é uma consequência das fórmulas desenvolvidas na Equação (15):
+Como o dueto de Milnor exemplifica, ter um mapa que preserva os comprimentos dos pesos da rede não é suficiente para deduzir que o mapa está em $$SO(n,\Reals)$$; também devemos saber que o mapa preserva os ângulos de peso da rede. Mas esta é uma consequência das fórmulas desenvolvidas na Equação (16):
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

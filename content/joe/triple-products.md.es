@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=50859
+status: verificado=51035
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -280,15 +280,17 @@ En el caso del espectro multiplicidad-1, el conjunto completo de valores singula
 
 Estamos significativamente menos seguros de que la conjetura general es cierta (fuera del caso del espectro de multiplicidad-1), ya que puede ser posible producir un contraejemplo (de suficiencia) a través de la construcción explícita de Sunada.
 
-Si la notación de índice es la ofuscación de la situación, tal vez esta descripción de base-independiente ayudará.  Tomar $$v_{\lambda} \in V_{\lambda}$$ y considerar la expresión
+Si la notación del índice está ocultando la situación, tal vez esta descripción independiente de la base ayudará.  Tomar $$v_{\lambda} \in \mathscr V_{\lambda}$$ y considerar la expresión
 
 $$
-P_{V_\gamma}(v_\alfa v_\beta).
+P_{\mathscr V_\gamma}(v_\alfa v_\beta).
 $$
 
-Todos $$M_{i,j,k}$$ es proporcionar coordenadas básicas de este mapa independiente de la base.  Pero es este mapa que estamos tratando de recortar a través de la descomposición de valor singular, que es independiente de la base, y por lo tanto una caracterización completa de la geometría Riemanniana subyacente.
+Recuerde que cada $$\mathscr V_\lambda$$ es un espacio euclidiano complejo dimensional finito. Todos $$M^{i,j,k}$$ es proporcionar coordenadas básicas de esta expresión independiente de la base. Desde $$1 = \oplus_\lambda P_{\mathscr V_\lambda}$$Lo que dice el Teorema es que la expresión anterior es **idéntica** entre los colectores si y solo si los colectores son isométricos; lo que debería venir como un shock para literalmente nadie. La mitad de la suficiencia de estas conjeturas son en gran medida problemas combinatorios que implican la reconstrucción de estas expresiones puramente a partir de su descomposición de valor singular.
 
 Sin embargo, estas invariantes de base pueden resultar útiles para descifrar casos más complejos que implican demostrar que dos colectores isospectrales **no son isométricos**, mostrando que sus valores singulares no son idénticos entre las dos bases en cuestión.
+
+ASIDE: La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y los estudios $$G$$-invariante *irreducible* descomposiciones $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dx)$$ como $$\oplus_\lambda P_{\mathscr V_\lambda}$$y honra su interacción en la expresión anterior como los artefactos esenciales de la teoría de la mentira. Las geometrías Riemannianas compatibles son generadas por opciones convenientes de elementos Casimir, que son de menor importancia que la propia descomposición irreductible. **Su descomposición espectral** es un (menos conveniente) reensamblaje de esos componentes irreductibles. Para los grupos compactos de Abelian Lie, estos componentes irreductibles son todos unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad 1 de los laplacianos anteriores.  Más sobre esto en el ejemplo a continuación.
 
 Volviendo al Corolario 1, observamos que la prueba implica establecer esta implicación:
 
@@ -387,7 +389,7 @@ Sin embargo, para aplicar nuestra [Teorema](#theorem)Es esencial que este mapa l
 
 debe preservar también "analítico" invariables &mdash; la cifra inducida por el elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, es decir, los valores propios individuales del laplaciano de flat-tori.
 
-Como ejemplifica el dúo de Milnor, tener un mapa que preserve las longitudes de los pesos de la celosía no es suficiente para deducir que el mapa está en $$SO(n,\Reals)$$; también debemos saber que el mapa conserva los ángulos de peso de celosía. Pero esto es una consecuencia de las fórmulas desarrolladas en Ecuación (15):
+Como ejemplifica el dúo de Milnor, tener un mapa que preserve las longitudes de los pesos de la celosía no es suficiente para deducir que el mapa está en $$SO(n,\Reals)$$; también debemos saber que el mapa conserva los ángulos de peso de celosía. Pero esto es una consecuencia de las fórmulas desarrolladas en Ecuación (16):
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
