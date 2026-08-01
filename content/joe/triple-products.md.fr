@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=51035
+status: vérifié=51066
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -20,6 +20,10 @@ title: Triples produits des fonctions propres et de la géométrie spectrale
 ## Auteur
 
 Joe Schaefer
+
+## Dédicace
+
+A l'automne
 
 ## Résumé
 
@@ -290,7 +294,7 @@ Rappelez-vous que chaque $$\mathscr V_\lambda$$ est un espace euclidien complexe
 
 Cependant, ces invariants de base peuvent s'avérer utiles pour déchiffrer des cas plus complexes impliquant la preuve que deux collecteurs isospectraux sont **non isométriques**, en montrant que leurs valeurs singulières ne sont pas identiques entre les deux bases en question.
 
-ASIDE: La théorie de la représentation d'un groupe de Lie Compact $$G$$ prend le Laplacien explicite hors de l'équation et des études $$G$$- décompositions invariantes *irréductibles* $$P_{\mathscr V_\lambda}$$ sur $$L^2(G,dx)$$ comme $$\oplus_\lambda P_{\mathscr V_\lambda}$$et honore leur interaction dans l'expression ci-dessus comme les artefacts essentiels de la théorie du mensonge. Les géométries Riemanniennes compatibles sont générées par des choix pratiques d'éléments Casimir, qui sont moins importants que la décomposition irréductible elle-même. **Leur décomposition spectrale** est un réassemblage (moins pratique) de ces composants irréductibles. Pour les groupes compacts Abelian Lie, ces composants irréductibles sont tous unidimensionnels, de sorte que leur situation est entièrement similaire à la décomposition spectrale de plusieurs Laplaciens-1 ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
+ASIDE: La théorie de la représentation d'un groupe de Lie Compact $$G$$ prend le Laplacien explicite hors de l'équation et des études $$G$$-invariante (sous action conjuguée) *irréductible* décompositions $$P_{\mathscr V_\lambda}$$ sur $$L^2(G,dx)$$ comme $$\oplus_\lambda P_{\mathscr V_\lambda}$$et honore leur interaction dans l'expression ci-dessus comme les artefacts essentiels de la théorie du mensonge. Les géométries Riemanniennes compatibles sont générées par des choix pratiques d'éléments Casimir, qui sont moins importants que la décomposition irréductible elle-même. **Leur décomposition spectrale** est un démontage et un réassemblage (moins pratiques) de ces composants irréductibles. Pour les groupes de mensonges abéliens compacts, ces composants irréductibles sont tous unidimensionnels, de sorte que leur situation est entièrement similaire à la décomposition spectrale de la multiplicité-1 Laplaciens ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
 
 En revenant au Corollaire 1, nous observons que la preuve implique d'établir cette implication :
 

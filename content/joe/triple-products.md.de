@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=51035
+status: überprüft=51066
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -19,6 +19,10 @@ title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ## Autor
 
 Joe Schaefer
+
+## Einsatz
+
+Im Herbst
 
 ## Kurzbeschreibung
 
@@ -289,7 +293,7 @@ Rückruf $$\mathscr V_\lambda$$ ist ein endlicher dimensionaler, komplexer eukli
 
 Diese Basisinvarianten können sich jedoch als nützlich erweisen, um komplexere Fälle zu entschlüsseln, bei denen zwei isospektrale Mannigfaltigkeiten **nicht isometrisch** sind, indem sie zeigen, dass ihre Singularwerte zwischen den beiden fraglichen Basen nicht identisch sind.
 
-ASIDE: Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien $$G$$-invariante *irreduible* Zersetzungen $$P_{\mathscr V_\lambda}$$ von $$L^2(G,dx)$$ als $$\oplus_\lambda P_{\mathscr V_\lambda}$$, und ehrt ihr Zusammenspiel im obigen Ausdruck als die wesentlichen Artefakte der Lüge Theorie. Kompatible Riemannsche Geometrien werden durch bequeme Entscheidungen von Casimir-Elementen erzeugt, die von geringerer Bedeutung sind als die irreduzible Zersetzung selbst. **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Wiederzusammensetzung dieser irreduzierbaren Komponenten. Für kompakte Abelian Lie-Gruppen sind diese irreduziblen Komponenten alle eindimensional, so dass ihre Situation der spektralen Zersetzung von Multplicity-1-Laplaciern oben völlig ähnlich ist.  Mehr dazu im Beispiel unten.
+ASIDE: Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien $$G$$-invariant (unter konjugierter Wirkung) *irreduzible* Zersetzungen $$P_{\mathscr V_\lambda}$$ von $$L^2(G,dx)$$ als $$\oplus_\lambda P_{\mathscr V_\lambda}$$, und ehrt ihr Zusammenspiel im obigen Ausdruck als die wesentlichen Artefakte der Lüge Theorie. Kompatible Riemannsche Geometrien werden durch bequeme Entscheidungen von Casimir-Elementen erzeugt, die von geringerer Bedeutung sind als die irreduzible Zersetzung selbst. **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Demontage und Wiederzusammensetzung dieser irreduziblen Komponenten. Für kompakte Abelian Lie-Gruppen sind diese irreduziblen Komponenten alle eindimensional, so dass ihre Situation der spektralen Zersetzung von Multiplizitäts-1 Laplaciern oben völlig ähnlich ist.  Mehr dazu im Beispiel unten.
 
 Wenn wir zu Korrespondenz 1 zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
 

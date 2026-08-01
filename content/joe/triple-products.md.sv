@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=51035
+status: verifierad=51066
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -19,6 +19,10 @@ title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ## Författare
 
 Joe Schaefer
+
+## Dedikering
+
+Till höst
 
 ## Sammandrag
 
@@ -289,7 +293,7 @@ Kom ihåg att varje $$\mathscr V_\lambda$$ är ett finitdimensionellt komplexise
 
 Dessa grundvarianter kan dock vara användbara vid dechiffrering av mer komplexa fall som innebär att två isospektrala grenrör är **inte isometriska**, genom att visa att deras singulära värden inte är identiska mellan de två baserna i fråga.
 
-ASIDE: Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier $$G$$-invariant *irreducible* sönderdelning $$P_{\mathscr V_\lambda}$$ av $$L^2(G,dx)$$ som $$\oplus_\lambda P_{\mathscr V_\lambda}$$och hedrar deras samspel i uttrycket ovan som de väsentliga artefakterna i Lie Theory. Kompatibla Riemannian geometrier genereras av praktiska val av Casimir element, som är av mindre betydelse än den irreducibla sönderdelningen själv. **Deras spektrala sönderdelning** är en (mindre bekväm) sammanställning av dessa irreducibla komponenter. För kompakta Abelian Lie-grupper är dessa irreducibla komponenter alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multplicity-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
+ASIDE: Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier $$G$$-invariant (under konjugerad verkan) *irreducerbar* dekomposition $$P_{\mathscr V_\lambda}$$ av $$L^2(G,dx)$$ som $$\oplus_\lambda P_{\mathscr V_\lambda}$$och hedrar deras samspel i uttrycket ovan som de väsentliga artefakterna i Lie Theory. Kompatibla Riemannian geometrier genereras av praktiska val av Casimir element, som är av mindre betydelse än den irreducibla sönderdelningen själv. **Deras spektrala sönderdelning** är en (mindre bekväm) demontering och montering av dessa irreducibla komponenter. För kompakta Abeliska Liegrupper är dessa irreducibla komponenter alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multiplicitet-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
 
 Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 
