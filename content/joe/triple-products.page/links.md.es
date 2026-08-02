@@ -33,6 +33,6 @@ La singularidad de los resultados en el papel de Anshul se basa en gran medida e
 
 #### Conjetura refactorizada en un par de corolarios el 16 de julio de 2026
 
-#### Publicado en SSRN y arXiv el 27 de julio de 2026
+#### Finalizado y dedicado al otoño el 1 de agosto de 2026
 
 <!-- $Date$ $Author$ $Revision$ -->
