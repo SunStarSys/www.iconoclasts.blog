@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=51173
+status: verified=51192
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -311,7 +311,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
-From the point of view of the compact group $$SU(2)$$, the $$3j$$ symbols are precisely the (properly normalized and phased) intertwining operators that realize the unique (up to scale) invariant subspace of the triple tensor product $$V_{j_1}\otimes V_{j_2}\otimes V_{j_3}$$ when that product contains the trivial representation. They are therefore the natural “structure constants” for the fusion of three irreducible representations to the singlet.
+From the point of view of the compact group $$SU(2)$$, the $$3j$$ symbols are precisely the (properly normalized and phased) intertwining operators that realize the unique (up to scale) invariant subspace of the triple tensor product $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ when that product contains the trivial representation. They are therefore the natural “structure constants” for the fusion of three irreducible representations to the singlet.
 
 For compact Abelian Lie Groups, these irreducible components are all one-dimensional, so their situation is entirely similar to the spectral decomposition of multiplicity-1 Laplacians above.  More on this in the Example below.
 
