@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=51066
+status: verificado=51129
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -294,7 +294,7 @@ Recuerde que cada $$\mathscr V_\lambda$$ es un espacio euclidiano complejo dimen
 
 Sin embargo, estas invariantes de base pueden resultar útiles para descifrar casos más complejos que implican demostrar que dos colectores isospectrales **no son isométricos**, mostrando que sus valores singulares no son idénticos entre las dos bases en cuestión.
 
-ASIDE: La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y los estudios $$G$$-invariante (bajo acción conjugada) *irreducible* descomposiciones $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dx)$$ como $$\oplus_\lambda P_{\mathscr V_\lambda}$$y honra su interacción en la expresión anterior como los artefactos esenciales de la teoría de la mentira. Las geometrías Riemannianas compatibles son generadas por opciones convenientes de elementos Casimir, que son de menor importancia que la propia descomposición irreductible. **Su descomposición espectral** es un desmontaje (menos conveniente) y reensamblaje de esos componentes irreductibles. Para los grupos de mentiras abelianos compactos, estos componentes irreductibles son todos unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad 1 de los laplacianos anteriores.  Más sobre esto en el ejemplo a continuación.
+ASIDE: La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y los estudios $$G$$-invariante (bajo acción izquierda o derecha) *irreducible* descomposiciones $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dx)$$ como $$\oplus_\lambda P_{\mathscr V_\lambda}$$y honra su interacción en la expresión anterior como los artefactos esenciales de la Teoría de la Mentira, como se aborda en el Teorema de Peter-Weyl [[AK01]](#AK01). Las geometrías Riemannian compatibles son generadas por opciones convenientes de elementos Casimir cuadráticos que se encuentran en el centro del álgebra envolvente universal, que son de menor importancia que la propia descomposición irreductible. **Su descomposición espectral** es un desmontaje (menos conveniente) y reensamblaje de esos componentes irreductibles. Para los grupos de mentiras abelianos compactos, estos componentes irreductibles son todos unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad 1 de los laplacianos anteriores.  Más sobre esto en el ejemplo a continuación.
 
 Volviendo al Corolario 1, observamos que la prueba implica establecer esta implicación:
 
