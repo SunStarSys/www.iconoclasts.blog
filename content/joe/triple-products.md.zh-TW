@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =51129
+status: 驗證 =51173
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -292,7 +292,29 @@ $$
 
 但是，這些基準不變量在解譯涉及證明兩個同位素歧義的複雜案例時可能非常有用 **不是幾何 **，因為顯示它們的單一值在有問題的兩個基礎之間並不相同。
 
-ASIDE: 輕巧小 Lie Group 的代表理論$$G$$ 從方程式和研究中取得明確的 Laplacian $$G$$- 不變 (左右下動作) *可縮減* 分解$$P_{\mathscr V_\lambda}$$ 總共$$L^2(G,dx)$$ 作為$$\oplus_\lambda P_{\mathscr V_\lambda}$$，並遵循上述表達式中的相互作用，作為 Lie Theory 的必要構件，如 Peter-Weyl Theorem 所述[[AK01]](#AK01)。相容的 Riemannian 幾何圖形是由二次 Casimir 元素的便利選擇所產生，這些元素位於通用信封代數中心，其重要性低於無法縮減的分解本身。** 其頻譜分解 **是這些不可縮減元件的 (較不方便) 拆解和重組。對於精簡的 Abelian Lie Groups，這些不可縮減的組件全都是一維的，所以它們的情況與上面的 multiplicity-1 Laplacians 的頻譜分解完全類似。請參考下方範例中的詳細資訊。
+ASIDE: 輕巧小 Lie Group 的代表理論$$G$$ 從方程式和研究中取得明確的 Laplacian $$G$$- 不變 (左右下動作) *可縮減* 分解$$P_{\mathscr V_\lambda}$$ 總共$$L^2(G,dx)$$ 作為$$\oplus_\lambda P_{\mathscr V_\lambda}$$，並遵循上述表達式中的相互作用，作為 Lie Theory 的必要構件，如 Peter-Weyl Theorem 所述[[AK01]](#AK01)。相容的 Riemannian 幾何圖形是由二次 Casimir 元素的便利選擇所產生，這些元素位於通用信封代數中心，其重要性低於無法縮減的分解本身。** 其頻譜分解 **是這些不可縮減元件的 (較不方便) 拆解和重組。
+
+Wigner 氏$$3j$$ 符號 - $$SU(2)$$ 是進一步研究的主要範例。方程式
+
+```math
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & m_3
+\end{pmatrix}
+=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
+```
+
+以 Clebsch-Gordan Coefficients (可回收) 的定義$$3j$$ 符號為
+```math
+C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
+\begin{pmatrix}
+j_1 & j_2 & j \\
+m_1 & m_2 & -m
+\end{pmatrix}.
+```
+從精簡群組的檢視點$$SU(2)$$, $$3j$$ 符號是精確的 (適當標準化和階段化) 交錯運算子，可實現三張量產品的唯一 (最大比例) 不變子空間$$V_{j_1}\otimes V_{j_2}\otimes V_{j_3}$$ 當該產品包含真實表示時。因此，它們是自然的「結構常數」，用於將三個無法縮減的表示法融合至單一。
+
+對於精簡的 Abelian Lie Groups，這些不可縮減的組件全都是一維的，所以它們的情況與上面的 multiplicity-1 Laplacians 的頻譜分解完全類似。請參考下方範例中的詳細資訊。
 
 回到 Corollary 1，我們觀察到驗證涉及建立此意涵：
 

@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=51129
+status: verificado=51173
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -294,7 +294,29 @@ Lembre-se de que cada $$\mathscr V_\lambda$$ é um espaço euclidiano complexifi
 
 No entanto, esses invariantes de base podem ser úteis na decifração de casos mais complexos envolvendo a prova de que duas variedades isospectrais são **não isométricas**, mostrando que seus valores singulares não são idênticos entre as duas bases em questão.
 
-ASIDE: A Teoria da Representação de um Grupo de Mentiras Compacto $$G$$ tira o Laplaciano explícito da equação e dos estudos $$G$$-invariante (sob a ação esquerda ou direita) decomposições *irredutíveis* $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dx)$$ como $$\oplus_\lambda P_{\mathscr V_\lambda}$$e honra sua interação na expressão acima como os artefatos essenciais da Teoria de Lie, como abordado no Teorema de Peter-Weyl [[AK01]](#AK01). As geometrias Riemannianas compatíveis são geradas por escolhas convenientes de elementos de Casimir quadráticos que se encontram no centro da álgebra envolvente universal, que são de menor importância do que a própria decomposição irredutível. **Sua decomposição espectral** é uma (menos conveniente) desmontagem e remontagem desses componentes irredutíveis. Para os compactos Grupos de Mentiras Abelianas, estes componentes irredutíveis são todos unidimensionais, de modo que a sua situação é inteiramente semelhante à decomposição espectral de multiplicidade-1 Laplacianos acima.  Mais sobre isso no Exemplo abaixo.
+ASIDE: A Teoria da Representação de um Grupo de Mentiras Compacto $$G$$ tira o Laplaciano explícito da equação e dos estudos $$G$$-invariante (sob a ação esquerda ou direita) decomposições *irredutíveis* $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dx)$$ como $$\oplus_\lambda P_{\mathscr V_\lambda}$$e honra sua interação na expressão acima como os artefatos essenciais da Teoria de Lie, como abordado no Teorema de Peter-Weyl [[AK01]](#AK01). As geometrias Riemannianas compatíveis são geradas por escolhas convenientes de elementos de Casimir quadráticos que se encontram no centro da álgebra envolvente universal, que são de menor importância do que a própria decomposição irredutível. **Sua decomposição espectral** é uma (menos conveniente) desmontagem e remontagem desses componentes irredutíveis.
+
+Wigner's $$3j$$ símbolos para $$SU(2)$$ são um excelente exemplo para um estudo mais aprofundado. A equação
+
+```math
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & m_3
+\end{pmatrix}
+=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
+```
+
+expressa sua definição em termos de coeficientes de Clebsch-Gordan, que são recuperáveis do $$3j$$ símbolos como
+```math
+C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
+\begin{pmatrix}
+j_1 & j_2 & j \\
+m_1 & m_2 & -m
+\end{pmatrix}.
+```
+Do ponto de vista do grupo compacto $$SU(2)$$, o $$3j$$ símbolos são precisamente os operadores entrelaçados (corretamente normalizados e em fases) que percebem o subespaço invariante único (até à escala) do produto de tensor triplo $$V_{j_1}\otimes V_{j_2}\otimes V_{j_3}$$ quando esse produto contém a representação trivial. São, portanto, as "constantes estruturais" naturais para a fusão de três representações irredutíveis ao singlet.
+
+Para os compactos Grupos de Mentiras Abelianas, estes componentes irredutíveis são todos unidimensionais, de modo que a sua situação é inteiramente semelhante à decomposição espectral de multiplicidade-1 Laplacianos acima.  Mais sobre isso no Exemplo abaixo.
 
 Voltando ao Corolário 1, observamos que a prova envolve estabelecer essa implicação:
 
