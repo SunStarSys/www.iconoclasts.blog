@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=51255
+status: verificado=51274
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -306,7 +306,7 @@ m_1 & m_2 & m_3
 =(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
 ```
 
-expresa su definición en términos de los coeficientes de Clebsch-Gordan (es decir, la variable índice) "celosía" representación de $$M^{i,j,k}$$, que tienen ecuaciones de forma cerrada como la fórmula de Racah que sustenta las bibliotecas modernas de software numérico [[JF16](#JF16)) recuperables de la $$3j$$ símbolos como
+expresa su definición en términos de los coeficientes de Clebsch-Gordan (es decir, la variable índice) "celosía" representación de $$M^{i,j,k}$$, que tienen expresiones de forma cerrada como la fórmula de Racah que sustenta las bibliotecas modernas de software numérico [[JF16]](#JF16)) recuperables de la $$3j$$ símbolos como
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
 \begin{pmatrix}

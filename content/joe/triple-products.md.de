@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=51255
+status: überprüft=51274
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -305,7 +305,7 @@ m_1 & m_2 & m_3
 =(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
 ```
 
-drückt ihre Definition in Bezug auf Clebsch-Gordan Koeffizienten aus (d.h. die Index-invariant "Gitter" Darstellung von $$M^{i,j,k}$$, die geschlossene Formgleichungen wie Racahs Formel haben, die moderne numerische Softwarebibliotheken untermauert [[JF16](#JF16)) die aus dem $$3j$$ Symbole als
+drückt ihre Definition in Bezug auf Clebsch-Gordan Koeffizienten aus (d.h. die Index-invariant "Gitter" Darstellung von $$M^{i,j,k}$$, die formausdrücke wie racahs formel geschlossen haben, die moderne numerische softwarebibliotheken unterstützen. [[JF16]](#JF16)) die aus dem $$3j$$ Symbole als
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
 \begin{pmatrix}

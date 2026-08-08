@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=51255
+status: verifierad=51274
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -305,7 +305,7 @@ m_1 & m_2 & m_3
 =(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
 ```
 
-uttrycker sin definition i termer av Clebsch-Gordan-koefficienter (dvs. index-invariant) "gitter" representation av $$M^{i,j,k}$$, som har slutna form ekvationer som Racah formel som ligger till grund för moderna numeriska programvarubibliotek [[JF16](#JF16)) som kan återvinnas från $$3j$$ symboler som
+uttrycker sin definition i termer av Clebsch-Gordan-koefficienter (dvs. index-invariant) "gitter" representation av $$M^{i,j,k}$$, som har slutna formuttryck som Racahs formel som stöder moderna numeriska programvarubibliotek [[JF16]](#JF16)) som kan återvinnas från $$3j$$ symboler som
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
 \begin{pmatrix}

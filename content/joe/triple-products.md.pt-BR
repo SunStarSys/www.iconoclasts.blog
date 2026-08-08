@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=51255
+status: verificado=51274
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -306,7 +306,7 @@ m_1 & m_2 & m_3
 =(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
 ```
 
-expressa sua definição em termos de coeficientes de Clebsch-Gordan (i.e. o índice-invariante "rede" representação de $$M^{i,j,k}$$, que têm equações de forma fechada, como a fórmula de Racah que sustenta as modernas bibliotecas de software numérico [[JF16](#JF16)) que são recuperáveis do $$3j$$ símbolos como
+expressa sua definição em termos de coeficientes de Clebsch-Gordan (i.e. o índice-invariante "rede" representação de $$M^{i,j,k}$$, que têm expressões de forma fechada, como a fórmula de Racah que sustenta as modernas bibliotecas de software numérico [[JF16]](#JF16)) que são recuperáveis do $$3j$$ símbolos como
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
 \begin{pmatrix}

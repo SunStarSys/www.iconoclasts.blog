@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=51255
+status: 확인=51274
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -305,7 +305,7 @@ m_1 & m_2 & m_3
 =(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
 ```
 
-Clebsch-Gordan 계수의 관점에서 그들의 정의를 표현합니다 (즉, 색인 변수). "격자" 표현 $$M^{i,j,k}$$, 현대 숫자 소프트웨어 라이브러리를 뒷받침하는 Racah의 공식과 같은 폐쇄 형 방정식 [[JF16](#JF16))에서 복구할 수 있습니다. $$3j$$ 기호
+Clebsch-Gordan 계수의 관점에서 그들의 정의를 표현합니다 (즉, 색인 변수). "격자" 표현 $$M^{i,j,k}$$, 현대 숫자 소프트웨어 라이브러리를 뒷받침하는 Racah의 공식과 같은 형식 표현식을 닫았습니다. [[JF16]](#JF16))에서 복구할 수 있습니다. $$3j$$ 기호
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
 \begin{pmatrix}
