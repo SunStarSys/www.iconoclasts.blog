@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=51300
+status: verified=51318
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -277,7 +277,7 @@ Now under the conditions of Corollary 2, each of the $$\mathscr V_\lambda$$ are 
 
 More generally, the associated prerequisite "regarding agreement in product values" would simply become "preservation of the ordered set of singular values (counted with multiplicity) of the linear maps from $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ defined by $$\set{M^{i,j,k}}$$." Here the inner product on $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ is $$tr (B^*A)$$. By definition, these singular values are invariant under direct sums of unitary transformations on the $$\mathscr V_\lambda$$.
 
-In the multiplicity-1 spectrum case, the complete set of singular values is simply the set of absolute values of $$M^{i,j,k}$$ which, we still conjecture, completely characterizes the isometry classes of such isospectral manifolds. See Equation (16) for the key relationship between this conjecture and Corollary 2. What's missing is the sufficiency argument that if the absolute values agree, the manifolds are isometric; which requires an argument to eliminate possible sign change cancellations between bases in the LHS summands of Equation (16).
+In the multiplicity-1 spectrum case, the complete set of singular values is simply the set of absolute values of $$M^{i,j,k}$$ which, we still conjecture, completely characterizes the isometry classes of such isospectral manifolds. See Equation (19) for the key relationship between this conjecture and Corollary 2. What's missing is the sufficiency argument that if the absolute values agree, the manifolds are isometric; which requires an argument to eliminate possible sign change cancellations between bases in the LHS summands of Equation (19).
 
 We are significantly less confident that the general conjecture holds true (outside the multiplicity-1 spectrum case), since it may be possible to produce a counterexample (of sufficiency) via explicit Sunada construction.
 
@@ -416,7 +416,7 @@ However, in order to apply our [Theorem](#theorem), it is essential that such a 
 
 must also preserve the "analytic" invariants &mdash; the Casimir-element induced figure $$4\pi^2\lVert\lambda_i\rVert^2$$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
 
-As Milnor's duet exemplifies, having a map which preserves the lengths of the lattice weights is not sufficient to deduce the map is in $$SO(n,\Reals)$$; we must also know that the map preserves lattice weight angles. But this is a consequence of the formulae developed in Equation (16):
+As Milnor's duet exemplifies, having a map which preserves the lengths of the lattice weights is not sufficient to deduce the map is in $$SO(n,\Reals)$$; we must also know that the map preserves lattice weight angles. But this is a consequence of the formulae developed in Equation (18):
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
