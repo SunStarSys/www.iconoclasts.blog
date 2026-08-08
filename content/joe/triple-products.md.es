@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=51526
+status: verificado=51621
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -312,16 +312,16 @@ m_1 & m_2 & m_3
 
 expresa el $$3j$$ Definición del símbolo en términos de los coeficientes Clebsch-Gordan $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, que tienen expresiones de forma cerrada como la fórmula de Racah que sustenta las bibliotecas modernas de software numérico [[JF16]](#JF16).
 
-A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$las desigualdades del triángulo $$|j_1-j_2|\le j_3\le j_1+j_2$$ mantener, y $$j_1+j_2+j_3$$ es un entero. La función propia se triplica para $$SU(2)$$ que comprenden estos coeficientes de valor real convencionalmente (a través de la fase Condon-Shortley) son exactamente los armónicos esféricos de $$S^2$$ levantado para $$SU(2)$$.
+A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$las desigualdades del triángulo $$|j_1-j_2|\le j_3\le j_1+j_2$$ mantener, y $$j_1+j_2+j_3$$ es un entero. La función propia se triplica para $$SU(2)$$ que comprenden estos coeficientes de valor real convencionalmente (a través de la fase Condon-Shortley) son exactamente los armónicos esféricos de $$S^2$$.
 
 Desde el punto de vista del grupo compacto $$SU(2)$$, el $$3j$$ Los símbolos son precisamente los operadores que se entrelazan (bien normalizados y por fases) que se dan cuenta del subespacio invariante único (hasta la escala) del producto de triple tensor. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ Cuando el producto contiene la representación trivial. Por lo tanto, son las constantes naturales de la "estructura" para la fusión de tres representaciones irreducibles al singlete.
 
-Esto es exactamente análogo al papel jugado por las integrales de triple producto. $$M^{i,j,k}$$ en un colector riemanniano: son las constantes de la estructura del producto puntual de las funciones propias cuando ese producto se expande de nuevo en la base propia. En el grupo $$SU(2)$$ propia (o en $$S^2=SU(2)/U(1)$$) esas integrales reducen, a través del teorema de Peter-Weyl, a $$3j$$-símbolos, a través de la Fórmula Integral Gaunt [[O26]](#O26):
+Esto es exactamente análogo al papel jugado por las integrales de triple producto. $$M^{i,j,k}$$ en un colector riemanniano: son las constantes de la estructura del producto puntual de las funciones propias cuando ese producto se expande de nuevo en la base propia. En el grupo $$SU(2)$$ propia (o en $$S^2=SU(2)/U(1)$$) esas integrales reducen al $$3j$$-símbolos, a través de la Fórmula Integral Gaunt [[O26]](#O26):
 
 ```math
 M^{i,j,k}
 =
-(-1)^{m_k}
+(-1)^{m_k(l_k)}
 \sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
 l_i & l_j & l_k \\
@@ -329,9 +329,10 @@ l_i & l_j & l_k \\
 \end{pmatrix}
 \begin{pmatrix}
 l_i & l_j & l_k \\
-m_i & m_j & -m_k
-\end{pmatrix}.
+m_i(l_i) & m_j(l_j) & -m_k(l_k)
+\end{pmatrix},
 ```
+donde $$l_i \in \set{0,1/2,1,3/2,\dots}$$ no se reduce de $$0$$ desde $$\Delta|_ {\mathscr V_j} = j(j+1)$$y $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$. En otras palabras, $$m_i(l_i)$$ varía con $$i$$pero $$l_i$$ tiene multiplicidades de umbral de $$\dim \mathscr V_{l_i} = 2l_i+1$$.
 
 Para los grupos de mentiras abelianos compactos, estos componentes irreductibles son todos unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad 1 de los laplacianos anteriores.  Más sobre esto en el ejemplo a continuación.
 

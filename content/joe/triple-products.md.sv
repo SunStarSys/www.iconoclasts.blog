@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=51526
+status: verifierad=51621
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -311,16 +311,16 @@ m_1 & m_2 & m_3
 
 uttrycker $$3j$$ symboldefinition i termer av Clebsch-Gordan koefficienter $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, som har slutna formuttryck som Racahs formel som stöder moderna numeriska programvarubibliotek [[JF16]](#JF16).
 
-A $$3j$$ symbolen försvinner om inte $$m_1+m_2+m_3=0$$Triangeln ojämlikheter $$|j_1-j_2|\le j_3\le j_1+j_2$$ hålla, och $$j_1+j_2+j_3$$ är ett heltal. Egenfunktionen tredubblar för $$SU(2)$$ som omfattar dessa konventionellt (via Condon-Shortley-fasen) är realvärdekoefficienter exakt sfäriska övertoner av $$S^2$$ lyftes till $$SU(2)$$.
+A $$3j$$ symbolen försvinner om inte $$m_1+m_2+m_3=0$$Triangeln ojämlikheter $$|j_1-j_2|\le j_3\le j_1+j_2$$ hålla, och $$j_1+j_2+j_3$$ är ett heltal. Egenfunktionen tredubblar för $$SU(2)$$ som omfattar dessa konventionellt (via Condon-Shortley-fasen) är realvärdekoefficienter exakt sfäriska övertoner av $$S^2$$.
 
 Från den kompakta gruppens synvinkel $$SU(2)$$, $$3j$$ symbolerna är exakt de (riktigt normaliserade och fasade) sammanflätande operatorer som inser det unika (upp till skala) invarierade underutrymmet för trippeltensorprodukten $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ när produkten innehåller den triviala representationen. De är därför de naturliga "strukturkonstanterna" för sammansmältningen av tre irreducibla representationer till singleten.
 
-Detta är exakt analogt med den roll som spelas av trippelproduktintegralerna. $$M^{i,j,k}$$ på ett Riemanniskt grenrör: de är strukturkonstanterna för den punktvisa produkten av egenfunktioner när den produkten expanderas tillbaka i egenbasen. I gruppen $$SU(2)$$ själv (eller på $$S^2=SU(2)/U(1)$$Dessa integraler reduceras, via Peter-Weyl-satsen, till $$3j$$-symboler, via Gaunt Integral Formula [[O26]](#O26):
+Detta är exakt analogt med den roll som spelas av trippelproduktintegralerna. $$M^{i,j,k}$$ på ett Riemanniskt grenrör: de är strukturkonstanterna för den punktvisa produkten av egenfunktioner när den produkten expanderas tillbaka i egenbasen. I gruppen $$SU(2)$$ själv (eller på $$S^2=SU(2)/U(1)$$Dessa integraler reduceras till $$3j$$-symboler, via Gaunt Integral Formula [[O26]](#O26):
 
 ```math
 M^{i,j,k}
 =
-(-1)^{m_k}
+(-1)^{m_k(l_k)}
 \sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
 l_i & l_j & l_k \\
@@ -328,9 +328,10 @@ l_i & l_j & l_k \\
 \end{pmatrix}
 \begin{pmatrix}
 l_i & l_j & l_k \\
-m_i & m_j & -m_k
-\end{pmatrix}.
+m_i(l_i) & m_j(l_j) & -m_k(l_k)
+\end{pmatrix},
 ```
+där $$l_i \in \set{0,1/2,1,3/2,\dots}$$ är icke-minskande från $$0$$ sedan $$\Delta|_ {\mathscr V_j} = j(j+1)$$och $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$. Med andra ord, $$m_i(l_i)$$ varierar med $$i$$men $$l_i$$ har tröskelmultiplikationer av $$\dim \mathscr V_{l_i} = 2l_i+1$$.
 
 För kompakta Abeliska Liegrupper är dessa irreducibla komponenter alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multiplicitet-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
 

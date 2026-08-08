@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=51526
+status: überprüft=51621
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -311,16 +311,16 @@ m_1 & m_2 & m_3
 
 drückt die $$3j$$ Symboldefinition in Bezug auf Clebsch-Gordan Koeffizienten $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, die formausdrücke wie racahs formel geschlossen haben, die moderne numerische softwarebibliotheken unterstützen. [[JF16]](#JF16).
 
-A $$3j$$ Symbol verschwindet, wenn $$m_1+m_2+m_3=0$$die Dreiecksungleichheiten $$|j_1-j_2|\le j_3\le j_1+j_2$$ halten und $$j_1+j_2+j_3$$ ist eine Ganzzahl. Die Eigenfunktion Triples für $$SU(2)$$ die diese konventionell (über die Condon-Shortley-Phase) real bewerteten Koeffizienten umfassen, sind genau die kugelförmigen Harmonien von $$S^2$$ angehoben auf $$SU(2)$$.
+A $$3j$$ Symbol verschwindet, wenn $$m_1+m_2+m_3=0$$die Dreiecksungleichheiten $$|j_1-j_2|\le j_3\le j_1+j_2$$ halten und $$j_1+j_2+j_3$$ ist eine Ganzzahl. Die Eigenfunktion Triples für $$SU(2)$$ die diese konventionell (über die Condon-Shortley-Phase) real bewerteten Koeffizienten umfassen, sind genau die kugelförmigen Harmonien von $$S^2$$.
 
 Aus Sicht der Kompaktgruppe $$SU(2)$$, die $$3j$$ Symbole sind genau die (richtig normalisierten und phasenweise) ineinandergreifenden Operatoren, die den einzigartigen (bis zu skalierenden) invarianten Unterraum des dreifachen Tensorprodukts realisieren. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ wenn dieses Produkt die triviale Darstellung enthält. Sie sind daher die natürlichen "Strukturkonstanten" für die Verschmelzung von drei irreduziblen Darstellungen zum Singlet.
 
-Dies ist genau analog zu der Rolle, die von den dreifachen Produktintegralen gespielt wird. $$M^{i,j,k}$$ auf einem Riemannschen Mannigfaltigkeit: Sie sind die Strukturkonstanten des punktuellen Produkts von Eigenfunktionen, wenn dieses Produkt in der Eigenbasis wieder erweitert wird. In der Gruppe $$SU(2)$$ (oder auf $$S^2=SU(2)/U(1)$$) diese Integrale reduzieren über den Peter-Weyl-Satz auf die $$3j$$-Symbole über die Gaunt Integral Formula [[O26]](#O26):
+Dies ist genau analog zu der Rolle, die von den dreifachen Produktintegralen gespielt wird. $$M^{i,j,k}$$ auf einem Riemannschen Mannigfaltigkeit: Sie sind die Strukturkonstanten des punktuellen Produkts von Eigenfunktionen, wenn dieses Produkt in der Eigenbasis wieder erweitert wird. In der Gruppe $$SU(2)$$ (oder auf $$S^2=SU(2)/U(1)$$) diese Integrationen auf die $$3j$$-Symbole über die Gaunt Integral Formula [[O26]](#O26):
 
 ```math
 M^{i,j,k}
 =
-(-1)^{m_k}
+(-1)^{m_k(l_k)}
 \sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
 l_i & l_j & l_k \\
@@ -328,9 +328,10 @@ l_i & l_j & l_k \\
 \end{pmatrix}
 \begin{pmatrix}
 l_i & l_j & l_k \\
-m_i & m_j & -m_k
-\end{pmatrix}.
+m_i(l_i) & m_j(l_j) & -m_k(l_k)
+\end{pmatrix},
 ```
+wobei $$l_i \in \set{0,1/2,1,3/2,\dots}$$ ist nicht abnehmend von $$0$$ seit $$\Delta|_ {\mathscr V_j} = j(j+1)$$und $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$. Mit anderen Worten, $$m_i(l_i)$$ variiert mit $$i$$, aber $$l_i$$ hat Schwellenwertmultiplikationen von $$\dim \mathscr V_{l_i} = 2l_i+1$$.
 
 Für kompakte Abelian Lie-Gruppen sind diese irreduziblen Komponenten alle eindimensional, so dass ihre Situation der spektralen Zersetzung von Multiplizitäts-1 Laplaciern oben völlig ähnlich ist.  Mehr dazu im Beispiel unten.
 

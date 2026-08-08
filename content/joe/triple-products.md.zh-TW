@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =51526
+status: 驗證 =51621
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -310,16 +310,16 @@ m_1 & m_2 & m_3
 
 表示$$3j$$ 根據 Clebsch-Gordan 係數的符號定義$$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$，其具有封閉型式運算式，例如 Racah 的公式，可分解現代數值軟體程式庫[[JF16]](#JF16).
 
-一個$$3j$$ 除非符號虛名$$m_1+m_2+m_3=0$$，三角形不等式$$|j_1-j_2|\le j_3\le j_1+j_2$$ 保留與$$j_1+j_2+j_3$$ 是整數。特徵性三元組$$SU(2)$$ 由這些傳統因素組成 (透過 Condon-Shortley 階段) 實值係數正是球面和諧的$$S^2$$ 升降至$$SU(2)$$.
+一個$$3j$$ 除非符號虛名$$m_1+m_2+m_3=0$$，三角形不等式$$|j_1-j_2|\le j_3\le j_1+j_2$$ 保留與$$j_1+j_2+j_3$$ 是整數。特徵性三元組$$SU(2)$$ 由這些傳統因素組成 (透過 Condon-Shortley 階段) 實值係數正是球面和諧的$$S^2$$.
 
 從精簡群組的檢視點$$SU(2)$$, $$3j$$ 符號是精確的 (適當標準化和階段化) 交錯運算子，可實現三張量產品的唯一 (最大比例) 不變子空間$$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ 當該產品包含真實表示時。因此，它們是自然的「結構常數」，用於將三個無法縮減的表示法融合至單一。
 
-這與三產品積分所播放的象牙海岸完全類似$$M^{i,j,k}$$ 在 Riemannian 的操作上：當該產品在 eigenbasis 中被擴展回時，它們是特徵性產品的結構常數。在群組上$$SU(2)$$ 本身 (或$$S^2=SU(2)/U(1)$$) 那些積分減少，經由彼得—威爾定理到$$3j$$-symbols，通過 Gaunt 積分公式[[O26]](#O26):
+這與三產品積分所播放的象牙海岸完全類似$$M^{i,j,k}$$ 在 Riemannian 的操作上：當該產品在 eigenbasis 中被擴展回時，它們是特徵性產品的結構常數。在群組上$$SU(2)$$ 本身 (或$$S^2=SU(2)/U(1)$$) 這些積分減少至$$3j$$-symbols，通過 Gaunt 積分公式[[O26]](#O26):
 
 ```math
 M^{i,j,k}
 =
-(-1)^{m_k}
+(-1)^{m_k(l_k)}
 \sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
 l_i & l_j & l_k \\
@@ -327,9 +327,10 @@ l_i & l_j & l_k \\
 \end{pmatrix}
 \begin{pmatrix}
 l_i & l_j & l_k \\
-m_i & m_j & -m_k
-\end{pmatrix}.
+m_i(l_i) & m_j(l_j) & -m_k(l_k)
+\end{pmatrix},
 ```
+位置$$l_i \in \set{0,1/2,1,3/2,\dots}$$ 非減少來源$$0$$ 起自$$\Delta|_ {\mathscr V_j} = j(j+1)$$，和$$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$。換言之，$$m_i(l_i)$$ 不同於$$i$$，但是$$l_i$$ 具有臨界值乘數$$\dim \mathscr V_{l_i} = 2l_i+1$$.
 
 對於精簡的 Abelian Lie Groups，這些不可縮減的組件全都是一維的，所以它們的情況與上面的 multiplicity-1 Laplacians 的頻譜分解完全類似。請參考下方範例中的詳細資訊。
 

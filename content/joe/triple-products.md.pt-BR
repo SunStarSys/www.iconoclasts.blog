@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=51526
+status: verificado=51621
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -312,16 +312,16 @@ m_1 & m_2 & m_3
 
 expressa o $$3j$$ Definição de símbolo em termos de Coeficientes de Clebsch-Gordan $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, que têm expressões de forma fechada, como a fórmula de Racah que sustenta as modernas bibliotecas de software numérico [[JF16]](#JF16).
 
-A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$, as desigualdades do triângulo $$|j_1-j_2|\le j_3\le j_1+j_2$$ aguarde, e $$j_1+j_2+j_3$$ é um inteiro. A função própria triplica para $$SU(2)$$ que compreendem estes coeficientes convencionalmente (através da fase Condon-Shortley) real-valued são exatamente os harmônicos esféricos de $$S^2$$ levantado para $$SU(2)$$.
+A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$, as desigualdades do triângulo $$|j_1-j_2|\le j_3\le j_1+j_2$$ aguarde, e $$j_1+j_2+j_3$$ é um inteiro. A função própria triplica para $$SU(2)$$ que compreendem estes coeficientes convencionalmente (através da fase Condon-Shortley) real-valued são exatamente os harmônicos esféricos de $$S^2$$.
 
 Do ponto de vista do grupo compacto $$SU(2)$$, o $$3j$$ símbolos são precisamente os operadores entrelaçados (corretamente normalizados e em fases) que percebem o subespaço invariante único (até à escala) do produto de tensor triplo $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ quando esse produto contém a representação trivial. São, portanto, as "constantes estruturais" naturais para a fusão de três representações irredutíveis ao singlet.
 
-Isto é exatamente análogo ao papel desempenhado pelas integrais de triplo produto. $$M^{i,j,k}$$ em uma variedade Riemannian: são as constantes da estrutura do produto pontual de autofunções quando esse produto é expandido de volta na autobase. No grupo $$SU(2)$$ próprio (ou em $$S^2=SU(2)/U(1)$$) essas integrais reduzem, através do teorema de Peter-Weyl, ao $$3j$$-símbolos, através da Fórmula Integral Gaunt [[O26]](#O26):
+Isto é exatamente análogo ao papel desempenhado pelas integrais de triplo produto. $$M^{i,j,k}$$ em uma variedade Riemannian: são as constantes da estrutura do produto pontual de autofunções quando esse produto é expandido de volta na autobase. No grupo $$SU(2)$$ próprio (ou em $$S^2=SU(2)/U(1)$$) essas integrais reduzem ao $$3j$$-símbolos, através da Fórmula Integral Gaunt [[O26]](#O26):
 
 ```math
 M^{i,j,k}
 =
-(-1)^{m_k}
+(-1)^{m_k(l_k)}
 \sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
 l_i & l_j & l_k \\
@@ -329,9 +329,10 @@ l_i & l_j & l_k \\
 \end{pmatrix}
 \begin{pmatrix}
 l_i & l_j & l_k \\
-m_i & m_j & -m_k
-\end{pmatrix}.
+m_i(l_i) & m_j(l_j) & -m_k(l_k)
+\end{pmatrix},
 ```
+onde $$l_i \in \set{0,1/2,1,3/2,\dots}$$ não é decorrente de $$0$$ desde $$\Delta|_ {\mathscr V_j} = j(j+1)$$, e $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$. Em outras palavras, $$m_i(l_i)$$ varia com $$i$$, mas $$l_i$$ tem multiplicidade de limiares de $$\dim \mathscr V_{l_i} = 2l_i+1$$.
 
 Para os compactos Grupos de Mentiras Abelianas, estes componentes irredutíveis são todos unidimensionais, de modo que a sua situação é inteiramente semelhante à decomposição espectral de multiplicidade-1 Laplacianos acima.  Mais sobre isso no Exemplo abaixo.
 

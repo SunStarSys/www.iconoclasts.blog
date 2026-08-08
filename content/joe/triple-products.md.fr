@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=51526
+status: vérifié=51621
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -312,16 +312,16 @@ m_1 & m_2 & m_3
 
 exprime le $$3j$$ Définition de symbole en termes de coefficients de Clebsch-Gordan $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, qui ont des expressions de forme fermée telles que la formule de Racah qui sous-tend les bibliothèques de logiciels numériques modernes [[JF16]](#JF16).
 
-A $$3j$$ symbole disparaît sauf si $$m_1+m_2+m_3=0$$Les inégalités triangulaires $$|j_1-j_2|\le j_3\le j_1+j_2$$ et $$j_1+j_2+j_3$$ est un entier. Les triples eigenfunction pour $$SU(2)$$ qui comprennent classiquement (via la phase de Condon-Shortley) des coefficients réels sont exactement les harmoniques sphériques de $$S^2$$ levée vers $$SU(2)$$.
+A $$3j$$ symbole disparaît sauf si $$m_1+m_2+m_3=0$$Les inégalités triangulaires $$|j_1-j_2|\le j_3\le j_1+j_2$$ et $$j_1+j_2+j_3$$ est un entier. Les triples eigenfunction pour $$SU(2)$$ qui comprennent classiquement (via la phase de Condon-Shortley) des coefficients réels sont exactement les harmoniques sphériques de $$S^2$$.
 
 Du point de vue du groupe compact $$SU(2)$$, le $$3j$$ les symboles sont précisément les opérateurs d'entrelacement (probablement normalisés et par phase) qui réalisent le sous-espace invariant unique (jusqu'à l'échelle) du produit à triple tenseur $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ lorsque ce produit contient la représentation triviale. Elles sont donc les "constantes structurales" naturelles pour la fusion de trois représentations irréductibles au singlet.
 
-Ceci est exactement analogue au rôle joué par les intégrales à trois produits $$M^{i,j,k}$$ sur un collecteur riemannien : ils sont les constantes de structure du produit ponctuel des fonctions propres lorsque ce produit est repoussé dans la base propre. Sur le groupe $$SU(2)$$ lui-même (ou sur $$S^2=SU(2)/U(1)$$) ces intégrales réduisent, via le théorème de Peter-Weyl, à la $$3j$$-symboles, via la formule intégrale Gaunt [[O26]](#O26):
+Ceci est exactement analogue au rôle joué par les intégrales à trois produits $$M^{i,j,k}$$ sur un collecteur riemannien : ils sont les constantes de structure du produit ponctuel des fonctions propres lorsque ce produit est repoussé dans la base propre. Sur le groupe $$SU(2)$$ lui-même (ou sur $$S^2=SU(2)/U(1)$$) ces intégrales réduisent à $$3j$$-symboles, via la formule intégrale Gaunt [[O26]](#O26):
 
 ```math
 M^{i,j,k}
 =
-(-1)^{m_k}
+(-1)^{m_k(l_k)}
 \sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
 l_i & l_j & l_k \\
@@ -329,9 +329,10 @@ l_i & l_j & l_k \\
 \end{pmatrix}
 \begin{pmatrix}
 l_i & l_j & l_k \\
-m_i & m_j & -m_k
-\end{pmatrix}.
+m_i(l_i) & m_j(l_j) & -m_k(l_k)
+\end{pmatrix},
 ```
+où $$l_i \in \set{0,1/2,1,3/2,\dots}$$ n'est pas de $$0$$ depuis $$\Delta|_ {\mathscr V_j} = j(j+1)$$, et $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$. En d'autres termes, $$m_i(l_i)$$ varie avec $$i$$, mais $$l_i$$ a des multiplicités de seuil de $$\dim \mathscr V_{l_i} = 2l_i+1$$.
 
 Pour les groupes de mensonges abéliens compacts, ces composants irréductibles sont tous unidimensionnels, de sorte que leur situation est entièrement similaire à la décomposition spectrale de la multiplicité-1 Laplaciens ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
 
