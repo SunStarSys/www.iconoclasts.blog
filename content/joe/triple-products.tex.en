@@ -328,7 +328,7 @@ l_i & l_j & l_k \\
 m_i(l_i) & m_j(l_j) & -m_k(l_k)
 \end{pmatrix},
 $$
-where $l_i \in \set{0,1/2,1,3/2,\dots}$ is nondecreasing from $0$ since $\Delta|_ {\mathscr V_j} = j(j+1)$, and $m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$. In other words, $m_i(l_i)$ varies with $i$, but $l_i$ has threshold multiplicities of $\dim \mathscr V_{l_i} = 2l_i+1$.
+where $l_i \in \set{0,1/2,1,3/2,\dots}$ is nondecreasing from $0$ since $\Delta|_ {\mathscr V_j} = j(j+1)$, and $m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$. In other words, $m_i(l_i)$ varies with $i$, but $l_i$ has threshold multiplicities of $\dim \mathscr V_{l_i} = 2l_i+1$. The $\sqrt{4\pi}$ term in the denominator comes from the induced Riemannian metric expression for Haar measure; it disappears if we revert to a normalized probability measure.
 
 For compact Abelian Lie Groups, these irreducible components are all one-dimensional, so their situation is entirely similar to the spectral decomposition of multiplicity-1 Laplacians above.  More on this in the Example below.
 
