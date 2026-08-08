@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=51526
+status: verified=51565
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -309,7 +309,7 @@ m_1 & m_2 & m_3
 
 expresses the $$3j$$ symbol definition in terms of Clebsch-Gordan Coefficients $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, which have closed form expressions such as Racah's formula that underpins modern numerical software libraries [[JF16]](#JF16).
 
-A $$3j$$ symbol vanishes unless $$m_1+m_2+m_3=0$$, the triangle inequalities $$|j_1-j_2|\le j_3\le j_1+j_2$$ hold, and $$j_1+j_2+j_3$$ is an integer. The eigenfunction triples for $$SU(2)$$ which comprise these conventionally (via the Condon–Shortley phase) real-valued coefficients are exactly the spherical harmonics of $$S^2$$ lifted to $$SU(2)$$.
+A $$3j$$ symbol vanishes unless $$m_1+m_2+m_3=0$$, the triangle inequalities $$|j_1-j_2|\le j_3\le j_1+j_2$$ hold, and $$j_1+j_2+j_3$$ is an integer. The eigenfunction triples for $$SU(2)$$ which comprise these conventionally (via the Condon–Shortley phase) real-valued coefficients are exactly the spherical harmonics of $$S^2$$.
 
 From the point of view of the compact group $$SU(2)$$, the $$3j$$ symbols are precisely the (properly normalized and phased) intertwining operators that realize the unique (up to scale) invariant subspace of the triple tensor product $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ when that product contains the trivial representation. They are therefore the natural “structure constants” for the fusion of three irreducible representations to the singlet.
 
