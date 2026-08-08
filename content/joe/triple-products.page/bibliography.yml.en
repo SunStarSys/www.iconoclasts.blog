@@ -3,7 +3,6 @@ title: Bibliography
 status: generated
 dependencies: ../triple-products.bib.en
 ---
-
 - author: McKean, Henry P. and Singer, Isadore M.
   id: MS67
   journal: Journal of Differential Geometry
@@ -188,13 +187,12 @@ dependencies: ../triple-products.bib.en
   title: A converse theorem for hyperbolic surface spectra and the conformal bootstrap
   type: online
   year: '2025'
-- author: "Johansson, H. T. and Forssén, C"
-  title: "Fast and Accurate Evaluation of Wigner 3j, 6j, and 9j Symbols Using Prime Factorization and Multiword Integer Arithmetic"
-  journal: "SIAM Journal on Scientific Computing"
-  volume: "38"
-  pages: A376-–A384
-  year: "2016"
+- author: Johansson, H. T. and Forssén, C
   id: JF16
-  archivePrefix: arXiv
-  eprint: 1504.08329
+  journal: SIAM Journal on Scientific Computing
+  pages: A376-–A384
+  title: Fast and Accurate Evaluation of Wigner 3j, 6j, and 9j Symbols Using Prime
+    Factorization and Multiword Integer Arithmetic
   type: article
+  volume: '38'
+  year: '2016'
