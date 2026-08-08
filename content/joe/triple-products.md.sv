@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=51274
+status: verifierad=51300
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -293,7 +293,9 @@ Kom ihåg att varje $$\mathscr V_\lambda$$ är ett finitdimensionellt komplexise
 
 Dessa grundvarianter kan dock vara användbara vid dechiffrering av mer komplexa fall som innebär att två isospektrala grenrör är **inte isometriska**, genom att visa att deras singulära värden inte är identiska mellan de två baserna i fråga.
 
-ASIDE: Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier $$G$$-invariant (under vänster eller höger åtgärd) *irreducerbar* dekompositioner $$P_{\mathscr V_\lambda}$$ av $$L^2(G,dx)$$ som $$\oplus_\lambda P_{\mathscr V_\lambda}$$och hedrar deras samspel i uttrycket ovan som de väsentliga artefakterna i Lie Theory, som behandlas i Peter-Weyl Theorem [[AK01]](#AK01). Kompatibla Riemannian geometrier genereras av praktiska val av kvadratiska Casimir element som ligger i mitten av den universella omslutande algebra, som är av mindre betydelse än den irreducibla sönderdelningen själv. **Deras spektrala sönderdelning** är en (mindre bekväm) demontering och återmontering av dessa irreducibla komponenter.
+#### Förutom
+
+Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier $$G$$-invariant (under vänster eller höger åtgärd) *irreducerbar* dekompositioner $$P_{\mathscr V_\lambda}$$ av $$L^2(G,dx)$$ som $$\oplus_\lambda P_{\mathscr V_\lambda}$$och hedrar deras samspel i uttrycket ovan som de väsentliga artefakterna i Lie Theory, som behandlas i Peter-Weyl Theorem [[AK01]](#AK01). Kompatibla Riemannian geometrier genereras av praktiska val av kvadratiska Casimir element som ligger i mitten av den universella omslutande algebra, som är av mindre betydelse än den irreducibla sönderdelningen själv. **Deras spektrala sönderdelning** är en (mindre bekväm) demontering och återmontering av dessa irreducibla komponenter.
 
 Wigners $$3j$$ symboler för $$SU(2)$$ Det är ett bra exempel på vidare studier. Ekvationen
 
@@ -302,10 +304,11 @@ Wigners $$3j$$ symboler för $$SU(2)$$ Det är ett bra exempel på vidare studie
 j_1 & j_2 & j_3 \\
 m_1 & m_2 & m_3
 \end{pmatrix}
-=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
+=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}
 ```
 
 uttrycker sin definition i termer av Clebsch-Gordan-koefficienter (dvs. index-invariant) "gitter" representation av $$M^{i,j,k}$$, som har slutna formuttryck som Racahs formel som stöder moderna numeriska programvarubibliotek [[JF16]](#JF16)) som kan återvinnas från $$3j$$ symboler som
+
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
 \begin{pmatrix}
@@ -313,6 +316,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
+
 Från den kompakta gruppens synvinkel $$SU(2)$$, $$3j$$ symbolerna är exakt de (riktigt normaliserade och fasade) sammanflätande operatorer som inser det unika (upp till skala) invarierade underutrymmet för trippeltensorprodukten $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ när produkten innehåller den triviala representationen. De är därför de naturliga "strukturkonstanterna" för sammansmältningen av tre irreducibla representationer till singleten.
 
 För kompakta Abeliska Liegrupper är dessa irreducibla komponenter alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multiplicitet-1 Lapplandare ovan.  Mer om detta i exemplet nedan.

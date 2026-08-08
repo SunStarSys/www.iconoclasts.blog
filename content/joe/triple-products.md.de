@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=51274
+status: überprüft=51300
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -293,7 +293,9 @@ Rückruf $$\mathscr V_\lambda$$ ist ein endlicher dimensionaler, komplexer eukli
 
 Diese Basisinvarianten können sich jedoch als nützlich erweisen, um komplexere Fälle zu entschlüsseln, bei denen zwei isospektrale Mannigfaltigkeiten **nicht isometrisch** sind, indem sie zeigen, dass ihre Singularwerte zwischen den beiden fraglichen Basen nicht identisch sind.
 
-ASIDE: Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien $$G$$-invariant (unter linker oder rechter Aktion) *irreduzible* Zersetzungen $$P_{\mathscr V_\lambda}$$ von $$L^2(G,dx)$$ als $$\oplus_\lambda P_{\mathscr V_\lambda}$$, und ehrt ihr Zusammenspiel im obigen Ausdruck als die wesentlichen Artefakte der Lüge-Theorie, wie im Peter-Weyl-Theorem angesprochen [[AK01]](#AK01). Kompatible Riemannsche Geometrien werden durch bequeme Wahl von quadratischen Casimir-Elementen erzeugt, die in der Mitte der universellen umhüllenden Algebra liegen, die von geringerer Bedeutung sind als die irreduzible Zersetzung selbst. **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Demontage und Wiederzusammensetzung dieser irreduziblen Komponenten.
+#### Abgesehen
+
+Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien $$G$$-invariant (unter linker oder rechter Aktion) *irreduzible* Zersetzungen $$P_{\mathscr V_\lambda}$$ von $$L^2(G,dx)$$ als $$\oplus_\lambda P_{\mathscr V_\lambda}$$, und ehrt ihr Zusammenspiel im obigen Ausdruck als die wesentlichen Artefakte der Lüge-Theorie, wie im Peter-Weyl-Theorem angesprochen [[AK01]](#AK01). Kompatible Riemannsche Geometrien werden durch bequeme Wahl von quadratischen Casimir-Elementen erzeugt, die in der Mitte der universellen umhüllenden Algebra liegen, die von geringerer Bedeutung sind als die irreduzible Zersetzung selbst. **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Demontage und Wiederzusammensetzung dieser irreduziblen Komponenten.
 
 Wigner's $$3j$$ Symbole für $$SU(2)$$ Ein Paradebeispiel für weitere Studien. Die Gleichung
 
@@ -302,10 +304,11 @@ Wigner's $$3j$$ Symbole für $$SU(2)$$ Ein Paradebeispiel für weitere Studien. 
 j_1 & j_2 & j_3 \\
 m_1 & m_2 & m_3
 \end{pmatrix}
-=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
+=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}
 ```
 
 drückt ihre Definition in Bezug auf Clebsch-Gordan Koeffizienten aus (d.h. die Index-invariant "Gitter" Darstellung von $$M^{i,j,k}$$, die formausdrücke wie racahs formel geschlossen haben, die moderne numerische softwarebibliotheken unterstützen. [[JF16]](#JF16)) die aus dem $$3j$$ Symbole als
+
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
 \begin{pmatrix}
@@ -313,6 +316,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
+
 Aus Sicht der Kompaktgruppe $$SU(2)$$, die $$3j$$ Symbole sind genau die (richtig normalisierten und phasenweise) ineinandergreifenden Operatoren, die den einzigartigen (bis zu skalierenden) invarianten Unterraum des dreifachen Tensorprodukts realisieren. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ wenn dieses Produkt die triviale Darstellung enthält. Sie sind daher die natürlichen "Strukturkonstanten" für die Verschmelzung von drei irreduziblen Darstellungen zum Singlet.
 
 Für kompakte Abelian Lie-Gruppen sind diese irreduziblen Komponenten alle eindimensional, so dass ihre Situation der spektralen Zersetzung von Multiplizitäts-1 Laplaciern oben völlig ähnlich ist.  Mehr dazu im Beispiel unten.

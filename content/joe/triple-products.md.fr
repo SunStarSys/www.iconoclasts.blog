@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=51274
+status: vérifié=51300
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -294,7 +294,9 @@ Rappelez-vous que chaque $$\mathscr V_\lambda$$ est un espace euclidien complexe
 
 Cependant, ces invariants de base peuvent s'avérer utiles pour déchiffrer des cas plus complexes impliquant la preuve que deux collecteurs isospectraux sont **non isométriques**, en montrant que leurs valeurs singulières ne sont pas identiques entre les deux bases en question.
 
-ASIDE: La théorie de la représentation d'un groupe de Lie Compact $$G$$ prend le Laplacien explicite hors de l'équation et des études $$G$$-invariante (sous l'action gauche ou droite) *irréductible* décompositions $$P_{\mathscr V_\lambda}$$ sur $$L^2(G,dx)$$ comme $$\oplus_\lambda P_{\mathscr V_\lambda}$$et honore leur interaction dans l'expression ci-dessus comme les artefacts essentiels de la théorie des mensonges, comme abordé dans le théorème de Peter-Weyl. [[AK01]](#AK01). Les géométries Riemanniennes compatibles sont générées par des choix pratiques d'éléments quadratiques Casimir qui se trouvent au centre de l'algèbre universelle enveloppante, qui sont moins importants que la décomposition irréductible elle-même. **Leur décomposition spectrale** est un démontage et un réassemblage (moins pratique) de ces composants irréductibles.
+#### En dehors
+
+La théorie de la représentation d'un groupe de Lie Compact $$G$$ prend le Laplacien explicite hors de l'équation et des études $$G$$-invariante (sous l'action gauche ou droite) *irréductible* décompositions $$P_{\mathscr V_\lambda}$$ sur $$L^2(G,dx)$$ comme $$\oplus_\lambda P_{\mathscr V_\lambda}$$et honore leur interaction dans l'expression ci-dessus comme les artefacts essentiels de la théorie des mensonges, comme abordé dans le théorème de Peter-Weyl. [[AK01]](#AK01). Les géométries Riemanniennes compatibles sont générées par des choix pratiques d'éléments quadratiques Casimir qui se trouvent au centre de l'algèbre universelle enveloppante, qui sont moins importants que la décomposition irréductible elle-même. **Leur décomposition spectrale** est un démontage et un réassemblage (moins pratique) de ces composants irréductibles.
 
 Wigner's $$3j$$ symboles pour $$SU(2)$$ sont un excellent exemple pour une étude plus approfondie. L'équation
 
@@ -303,10 +305,11 @@ Wigner's $$3j$$ symboles pour $$SU(2)$$ sont un excellent exemple pour une étud
 j_1 & j_2 & j_3 \\
 m_1 & m_2 & m_3
 \end{pmatrix}
-=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
+=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}
 ```
 
 exprime leur définition en termes de coefficients de Clebsch-Gordan (c'est-à-dire l'indice invariant "réseau" représentation de $$M^{i,j,k}$$, qui ont des expressions de forme fermée telles que la formule de Racah qui sous-tend les bibliothèques de logiciels numériques modernes [[JF16]](#JF16)) qui sont récupérables à partir de $$3j$$ symboles comme
+
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
 \begin{pmatrix}
@@ -314,6 +317,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
+
 Du point de vue du groupe compact $$SU(2)$$, le $$3j$$ les symboles sont précisément les opérateurs d'entrelacement (probablement normalisés et par phase) qui réalisent le sous-espace invariant unique (jusqu'à l'échelle) du produit à triple tenseur $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ lorsque ce produit contient la représentation triviale. Elles sont donc les "constantes structurales" naturelles pour la fusion de trois représentations irréductibles au singlet.
 
 Pour les groupes de mensonges abéliens compacts, ces composants irréductibles sont tous unidimensionnels, de sorte que leur situation est entièrement similaire à la décomposition spectrale de la multiplicité-1 Laplaciens ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
