@@ -33,6 +33,8 @@ Unikheten resulterar i Anshuls papper är starkt beroende av de tekniker som omf
 
 #### Förmodan refaktoriserad till ett par korollarier den 16 juli 2026
 
-#### Slutförd och dedikerad till hösten den 1 augusti 2026
+#### SU(2) täckt i termer av Wigner $$3j$$ symboler
+
+#### Slutförd och dedikerad till hösten den 8 augusti 2026
 
 <!-- $Date$ $Author$ $Revision$ -->
