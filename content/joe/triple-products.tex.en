@@ -306,7 +306,7 @@ m_1 & m_2 & m_3
 \end{pmatrix}
 :=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}
 $$
-expresses the $3j$ symbol definition in terms of Clebsch-Gordan Coefficients $C^{j\,m}_{j_1 m_1\,j_2 m_2}:=\bra{j_1 m_1\,j_2 m_2}\ket{j\,m}$ (i.e.\ the index-invariant "lattice" representation of $M^{i,j,k}$, which have closed form expressions such as Racah's formula that underpins modern numerical software libraries \cite{JF16}) which are recoverable from the $3j$ symbols as
+expresses the $3j$ symbol definition in terms of Clebsch-Gordan Coefficients $C^{j m}_{j_1 m_1\,j_2 m_2}:=\bra{j_1 m_1\,j_2 m_2}\ket{j m}$ (i.e.\ the index-invariant "lattice" representation of $M^{i,j,k}$, which have closed form expressions such as Racah's formula that underpins modern numerical software libraries \cite{JF16}) which are recoverable from the $3j$ symbols as
 
 $$
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
