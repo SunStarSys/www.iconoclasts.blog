@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=51235
+status: draft
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -303,7 +303,7 @@ m_1 & m_2 & m_3
 =(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
 ```
 
-expresses their definition in terms of Clebsch-Gordan Coefficients (i.e. the index-invariant "lattice" representation of $$M^{i,j,k}$$, which have closed form equations such as Racah's formula, which underpins modern numerical software libraries [JF16](#JF16)) which are recoverable from the $$3j$$ symbols as
+expresses their definition in terms of Clebsch-Gordan Coefficients (i.e. the index-invariant "lattice" representation of $$M^{i,j,k}$$, which have closed form equations such as Racah's formula that underpins modern numerical software libraries [JF16](#JF16)) which are recoverable from the $$3j$$ symbols as
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
 \begin{pmatrix}
