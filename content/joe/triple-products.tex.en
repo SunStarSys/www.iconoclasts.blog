@@ -304,9 +304,9 @@ $$
 j_1 & j_2 & j_3 \\
 m_1 & m_2 & m_3
 \end{pmatrix}
-:=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}
+:=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1\,j_2\ m_2}
 $$
-expresses the $3j$ symbol definition in terms of Clebsch-Gordan Coefficients $C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1\,j_2\ m_2}\ket{j\ m}$ (i.e.\ the index-invariant "lattice" representation of $M^{i,j,k}$, which have closed form expressions such as Racah's formula that underpins modern numerical software libraries \cite{JF16}).
+expresses the $3j$ symbol definition in terms of Clebsch-Gordan Coefficients $C^{j\ m}_{j_1\ m_1,j_2\ m_2}:=\bra{j_1\ m_1\,j_2\ m_2}\ket{j\ m}$ (i.e.\ the index-invariant "lattice" representation of $M^{i,j,k}$, which have closed form expressions such as Racah's formula that underpins modern numerical software libraries \cite{JF16}).
 
 A $3j$ symbol vanishes unless $m_1+m_2+m_3=0$, the triangle inequalities $|j_1-j_2|\le j_3\le j_1+j_2$ hold, and $j_1+j_2+j_3$ is an integer. The eigenfunction triples for $SU(2)$ which comprise these conventionally (via the Condon–Shortley phase) real-valued coefficients are exactly the spherical harmonics of $S^2$ lifted to $SU(2)$.
 
