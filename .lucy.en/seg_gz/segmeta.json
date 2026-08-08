@@ -1,0 +1,69 @@
+{
+  "deletions": {
+    "files": {
+      "seg_gs": {
+        "count": "46",
+        "filename": "seg_gz/deletions-seg_gs.bv"
+      },
+      "seg_gy": {
+        "count": "45",
+        "filename": "seg_gz/deletions-seg_gy.bv"
+      }
+    },
+    "format": "1"
+  },
+  "documents": {
+    "format": "2"
+  },
+  "highlight": {
+    "format": "1"
+  },
+  "lexicon": {
+    "counts": {
+      "categories": "15",
+      "content": "4422",
+      "keywords": "92",
+      "path": "46",
+      "status": "38",
+      "title": "72"
+    },
+    "format": "3",
+    "index_counts": {
+      "categories": "1",
+      "content": "35",
+      "keywords": "1",
+      "path": "1",
+      "status": "1",
+      "title": "1"
+    }
+  },
+  "postings": {
+    "format": "1"
+  },
+  "segmeta": {
+    "count": "46",
+    "field_names": [
+      "",
+      "status",
+      "categories",
+      "title",
+      "path",
+      "acl",
+      "content",
+      "type",
+      "keywords"
+    ],
+    "format": "1",
+    "name": "seg_gz"
+  },
+  "sort": {
+    "counts": {
+      "path": "46"
+    },
+    "format": "3",
+    "null_ords": {},
+    "ord_widths": {
+      "path": "8"
+    }
+  }
+}
