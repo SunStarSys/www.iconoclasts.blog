@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=51399
+status: verificado=51462
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -296,9 +296,9 @@ Sin embargo, estas invariantes de base pueden resultar útiles para descifrar ca
 
 #### Aside
 
-La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y los estudios $$G$$-invariante (bajo acción izquierda o derecha) *irreducible* descomposiciones $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dx)$$ (aquí) $$dx$$ es la medida normalizada de probabilidad de Haar en $$G$$) como $$\oplus_\lambda P_{\mathscr V_\lambda}$$y honra su interacción en la expresión anterior como los artefactos esenciales de la Teoría de la Mentira, como se aborda en el Teorema de Peter-Weyl [[AK01]](#AK01). Las geometrías Riemannian compatibles son generadas por opciones convenientes de elementos Casimir cuadráticos que se encuentran en el centro del álgebra envolvente universal, que son de menor importancia que la propia descomposición irreductible. **Su descomposición espectral** es un desmontaje (menos conveniente) y reensamblaje de esos componentes irreductibles.
+La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y los estudios $$G$$-invariante (bajo acción izquierda o derecha) *irreducible* descomposiciones $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dx)$$ (aquí) $$dx$$ es la medida normalizada de probabilidad de Haar en $$G$$) como $$\oplus_\lambda P_{\mathscr V_\lambda}$$y honra su interacción en la expresión anterior como los artefactos esenciales de la Teoría de la Mentira, como se aborda en el Teorema de Peter-Weyl [[AK01]](#AK01). Las geometrías Riemannian compatibles son generadas por opciones convenientes de elementos Casimir cuadráticos que se encuentran en el centro del álgebra envolvente universal, que son de menos importancia que la propia descomposición irreductible. **Su descomposición espectral** es un (menos conveniente) reensamblaje de esos componentes irreductibles, ya que el elemento Casimir asociado Cartan-Matar / métrica Riemannian es constante en cada componente irreductible.
 
-Wigner $$3j$$ símbolos para $$SU(2)$$ son un buen ejemplo para seguir estudiando. Cada representación unitaria irreductible de dimensiones finitas de $$  SU(2)$$ está etiquetado por medio entero no negativo $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Escribimos $$\mathscr  V_j  $$ para el $$ (2j+1)  $$Espacio dimensional en el que actúa esta representación. Una base ortonormal estándar de $$\mathscr  V_j $$ es la base magnética $$  \ket{j,m}$$ con $$m = -j,-j+1,\dots,j.$$
+Wigner $$3j$$ símbolos para $$SU(2)$$ constituyen un buen ejemplo para seguir estudiando &mdash; Apliquemos nuestra construcción general a ella como un colector de grupo con la métrica Riemannian Cartan-Killing. Cada representación unitaria irreductible de dimensiones finitas de $$SU(2)$$ está etiquetado por medio entero no negativo $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Escribimos $$\mathscr  V_j  $$ para el $$ (2j+1)  $$Espacio dimensional en el que actúa esta representación. Una base ortonormal estándar de $$\mathscr  V_j $$ es la base magnética $$  \ket{j\ m}$$ con $$m = -j,-j+1,\dots,j.$$
 
 La ecuación
 
@@ -307,18 +307,11 @@ La ecuación
 j_1 & j_2 & j_3 \\
 m_1 & m_2 & m_3
 \end{pmatrix}
-:=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}
+:=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
 ```
 
-expresa el $$3j$$ Definición del símbolo en términos de los coeficientes Clebsch-Gordan $$C^{j\,m}_{j_1 m_1\,j_2 m_2}:=\bra{j_1 m_1\,j_2 m_2}\ket{j\,m}$$ (es decir, la variable índice) "celosía" representación de $$M^{i,j,k}$$, que tienen expresiones de forma cerrada como la fórmula de Racah que sustenta las bibliotecas modernas de software numérico [[JF16]](#JF16)) recuperables de la $$3j$$ símbolos como
+expresa el $$3j$$ Definición del símbolo en términos de los coeficientes Clebsch-Gordan $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1\,j_2\ m_2}\ket{j\ m}$$, que tienen expresiones de forma cerrada como la fórmula de Racah que sustenta las bibliotecas modernas de software numérico [[JF16]](#JF16).
 
-```math
-C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
-\begin{pmatrix}
-j_1 & j_2 & j \\
-m_1 & m_2 & -m
-\end{pmatrix}.
-```
 A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$las desigualdades del triángulo $$|j_1-j_2|\le j_3\le j_1+j_2$$ mantener, y $$j_1+j_2+j_3$$ es un entero. La función propia se triplica para $$SU(2)$$ que comprenden estos coeficientes de valor real convencionalmente (a través de la fase Condon-Shortley) son exactamente los armónicos esféricos de $$S^2$$ levantado para $$SU(2)$$.
 
 Desde el punto de vista del grupo compacto $$SU(2)$$, el $$3j$$ Los símbolos son precisamente los operadores que se entrelazan (bien normalizados y por fases) que se dan cuenta del subespacio invariante único (hasta la escala) del producto de triple tensor. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ Cuando el producto contiene la representación trivial. Por lo tanto, son las constantes naturales de la "estructura" para la fusión de tres representaciones irreducibles al singlete.

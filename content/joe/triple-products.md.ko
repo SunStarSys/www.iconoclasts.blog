@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=51399
+status: 확인=51462
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -295,9 +295,9 @@ $$
 
 #### 옆으로
 
-조밀한 거짓말 그룹의 표현 이론 $$G$$ 방정식과 연구에서 명백한 라플라시안을 취한다. $$G$$-invariant (왼쪽 또는 오른쪽 동작의 밑에) *irreducible* 분해 $$P_{\mathscr V_\lambda}$$ 의 $$L^2(G,dx)$$ (여기서) $$dx$$ 은(는) 정규화된 Haar 확률 측정입니다. $$G$$) 으로 $$\oplus_\lambda P_{\mathscr V_\lambda}$$and honors their interplay in the expression above as the essential artifacts of Lie Theory, as addressed in the Peter-Weyl Theorem 거짓말 이론의 본질적인 유물로서 위의 표현에서 그들의 상호 작용을 존중한다. [[AK01]](#AK01). 호환 Riemannian 기하학은 보편적 인 봉투 대수학의 중심에 놓여있는 사분면 Casimir 요소의 편리한 선택에 의해 생성되며, 이는 환원 불가능한 분해 자체보다 덜 중요합니다. **그들의 스펙트럼 분해**는 (적어도 편리한) 분해 및 그 환원 불가능한 구성 요소의 재조립입니다.
+조밀한 거짓말 그룹의 표현 이론 $$G$$ 방정식과 연구에서 명백한 라플라시안을 취한다. $$G$$-invariant (왼쪽 또는 오른쪽 동작의 밑에) *irreducible* 분해 $$P_{\mathscr V_\lambda}$$ 의 $$L^2(G,dx)$$ (여기서) $$dx$$ 은(는) 정규화된 Haar 확률 측정입니다. $$G$$) 으로 $$\oplus_\lambda P_{\mathscr V_\lambda}$$and honors their interplay in the expression above as the essential artifacts of Lie Theory, as addressed in the Peter-Weyl Theorem 거짓말 이론의 본질적인 유물로서 위의 표현에서 그들의 상호 작용을 존중한다. [[AK01]](#AK01). 호환 Riemannian 기하학은 보편적 인 봉투 대수학의 중심에 놓여있는 이차적 Casimir 요소의 편리한 선택에 의해 생성되며, 이는 환원 불가능한 분해 자체보다 덜 중요합니다. **그들의 스펙트럼 분해**는 관련 Cartan-Killing Casimir 요소 / Riemannian 미터법이 각 환원 불가능한 구성 요소에서 일정하기 때문에 이러한 환원 불가능한 구성 요소의 (적어도 편리한) 재조립입니다.
 
-위너스 $$3j$$ 기호 $$SU(2)$$ 추가 연구를위한 주요 예입니다. 모든 유한 차원의 환원 불가능한 단일 표현 $$  SU(2)$$ 음이 아닌 반정수로 레이블 지정됨 $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. 글쓰기 $$\mathscr  V_j  $$ 대상 $$ (2j+1)  $$이 표현이 작동하는 -차원 공간입니다. 표준 직교 기준 $$\mathscr  V_j $$ 자기 기초 The Magnetic Base $$  \ket{j,m}$$ 포함 $$m = -j,-j+1,\dots,j.$$
+위너스 $$3j$$ 기호 $$SU(2)$$ 추가 학습을 위한 주요 사례 &mdash; 우리는 Cartan-Killing Riemannian 미터법으로 그룹 매니폴드로 우리의 일반적인 건설을 적용하자. 모든 유한 차원의 환원 불가능한 단일 표현 $$SU(2)$$ 음이 아닌 반정수로 레이블 지정됨 $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. 글쓰기 $$\mathscr  V_j  $$ 대상 $$ (2j+1)  $$이 표현이 작동하는 -차원 공간입니다. 표준 직교 기준 $$\mathscr  V_j $$ 자기 기초 The Magnetic Base $$  \ket{j\ m}$$ 포함 $$m = -j,-j+1,\dots,j.$$
 
 방정식
 
@@ -306,18 +306,11 @@ $$
 j_1 & j_2 & j_3 \\
 m_1 & m_2 & m_3
 \end{pmatrix}
-:=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}
+:=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
 ```
 
-이 명령문은 $$3j$$ Clebsch-Gordan 계수의 상징 정의 $$C^{j\,m}_{j_1 m_1\,j_2 m_2}:=\bra{j_1 m_1\,j_2 m_2}\ket{j\,m}$$ (즉, index-invariant) "격자" 표현 $$M^{i,j,k}$$, 현대 숫자 소프트웨어 라이브러리를 뒷받침하는 Racah의 공식과 같은 형식 표현식을 닫았습니다. [[JF16]](#JF16))에서 복구할 수 있습니다. $$3j$$ 기호
+이 명령문은 $$3j$$ Clebsch-Gordan 계수의 상징 정의 $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1\,j_2\ m_2}\ket{j\ m}$$, 현대 숫자 소프트웨어 라이브러리를 뒷받침하는 Racah의 공식과 같은 형식 표현식을 닫았습니다. [[JF16]](#JF16).
 
-```math
-C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
-\begin{pmatrix}
-j_1 & j_2 & j \\
-m_1 & m_2 & -m
-\end{pmatrix}.
-```
 A $$3j$$ 기호가 사라지지 않는 경우 $$m_1+m_2+m_3=0$$삼각형 불평등(Triangle Inequalities) $$|j_1-j_2|\le j_3\le j_1+j_2$$ 보류 및 $$j_1+j_2+j_3$$ 정수입니다. Eigenfunction 트리플 $$SU(2)$$ 일반적으로 (콘돈-짧은 단계를 통해) 실제 값을 갖는 계수를 구성하는 것은 정확히 구형의 조화이다. $$S^2$$ 들어올림 $$SU(2)$$.
 
 컴팩트 그룹의 관점에서 $$SU(2)$$의 경우 $$3j$$ 기호는 삼중 텐서 제품의 고유(확장까지) 불변 하위 공간을 실현하는 (적절하게 정규화되고 단계적으로 진행되는) 끼워넣는 연산자입니다. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ 해당 제품에 단순 표현이 포함되어 있는 경우 따라서 그들은 단일에 대한 세 가지 돌이킬 수없는 표현의 융합을위한 자연 "구조 상수"입니다.
