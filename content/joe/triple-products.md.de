@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=51300
+status: überprüft=51337
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -279,7 +279,7 @@ Jetzt unter den Bedingungen von Corollary 2, jeder der $$\mathscr V_\lambda$$ si
 
 Allgemeiner die damit verbundene Voraussetzung "bezüglich der Übereinstimmung mit den Produktwerten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten (mit Multiplizität gezählt) der linearen Karten aus $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definiert durch $$\set{M^{i,j,k}}$$." Hier das innere Produkt auf $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ ist $$tr (B^*A)$$. Per Definition sind diese Singularwerte unter direkten Summen von einheitlichen Transformationen auf der $$\mathscr V_\lambda$$.
 
-Im Falle des Multiplizitäts-1-Spektrums ist der vollständige Satz von Singularwerten einfach der Satz von Absolutwerten von $$M^{i,j,k}$$ die, wie wir immer noch vermuten, die Isometrieklassen solcher isospektraler Mannigfaltigkeiten vollständig charakterisiert. Siehe Gleichung (16) für die Schlüsselbeziehung zwischen dieser Vermutung und Folge 2. Was fehlt, ist das Suffizienz-Argument, dass, wenn die absoluten Werte übereinstimmen, die Mannigfaltigkeiten isometrisch sind; was ein Argument erfordert, um mögliche Zeichenwechselstornierungen zwischen den Basen in den LHS-Summanden der Gleichung (16) zu beseitigen.
+Im Falle des Multiplizitäts-1-Spektrums ist der vollständige Satz von Singularwerten einfach der Satz von Absolutwerten von $$M^{i,j,k}$$ die, wie wir immer noch vermuten, die Isometrieklassen solcher isospektraler Mannigfaltigkeiten vollständig charakterisiert. Siehe Gleichung (19) für die Schlüsselbeziehung zwischen dieser Vermutung und Korrespondenz 2. Was fehlt, ist das Suffizienz-Argument, dass, wenn die absoluten Werte zustimmen, die Mannigfaltigkeiten isometrisch sind; was ein Argument erfordert, um mögliche Zeichenwechselstornierungen zwischen den Basen in den LHS-Summanden der Gleichung (19) zu beseitigen.
 
 Wir sind deutlich weniger zuversichtlich, dass die allgemeine Vermutung wahr ist (außerhalb des Falles mit Multiplizitäts-1-Spektrum), da es möglich sein kann, über explizite Sunada-Konstruktion ein Gegenbeispiel (von Suffizienz) zu erstellen.
 
@@ -316,6 +316,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
+A $$3j$$ Symbol verschwindet, wenn $$m_1+m_2+m_3=0$$die Dreiecksungleichheiten $$|j_1-j_2|\le j_3\le j_1+j_2$$ halten und $$j_1+j_2+j_3$$ ist eine Ganzzahl.
 
 Aus Sicht der Kompaktgruppe $$SU(2)$$, die $$3j$$ Symbole sind genau die (richtig normalisierten und phasenweise) ineinandergreifenden Operatoren, die den einzigartigen (bis zu skalierenden) invarianten Unterraum des dreifachen Tensorprodukts realisieren. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ wenn dieses Produkt die triviale Darstellung enthält. Sie sind daher die natürlichen "Strukturkonstanten" für die Verschmelzung von drei irreduziblen Darstellungen zum Singlet.
 
@@ -418,7 +419,7 @@ Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ s
 
 muss auch die "Analytisch" Invarianten &mdash; Die Casimir-Element induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Flat-Tori-Laplacian.
 
-Wie das Duett von Milnor veranschaulicht, reicht es nicht aus, eine Karte zu haben, die die Längen der Gittergewichte behält, um abzuleiten, dass die Karte in $$SO(n,\Reals)$$; wir müssen auch wissen, dass die Karte Gittergewichtswinkel behält. Dies ist jedoch eine Folge der in Gleichung (16) entwickelten Formeln:
+Wie das Duett von Milnor veranschaulicht, reicht es nicht aus, eine Karte zu haben, die die Längen der Gittergewichte behält, um abzuleiten, dass die Karte in $$SO(n,\Reals)$$; wir müssen auch wissen, dass die Karte Gittergewichtswinkel behält. Dies ist jedoch eine Folge der in Gleichung (18) entwickelten Formeln:
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

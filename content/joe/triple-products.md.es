@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=51300
+status: verificado=51337
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -280,7 +280,7 @@ Bajo las condiciones del Corolario 2, cada uno de los $$\mathscr V_\lambda$$ son
 
 En términos más generales, el requisito previo asociado "sobre el acuerdo en los valores de los productos" serían simplemente "Preservación del conjunto ordenado de valores singulares (contados con multiplicidad) de los mapas lineales desde $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definido por $$\set{M^{i,j,k}}$$." Aquí el producto interior en $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ es $$tr (B^*A)$$. Por definición, estos valores singulares son invariantes bajo sumas directas de transformaciones unitarias en $$\mathscr V_\lambda$$.
 
-En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (16) para la relación clave entre esta conjetura y el Corolario 2. Lo que falta es el argumento de suficiencia de que si los valores absolutos están de acuerdo, los colectores son isométricos; lo que requiere un argumento para eliminar las posibles cancelaciones de cambio de signos entre las bases en los sumandos de la ecuación LHS (16).
+En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (19) para la relación clave entre esta conjetura y el Corolario 2. Lo que falta es el argumento de suficiencia de que si los valores absolutos están de acuerdo, los colectores son isométricos; lo que requiere un argumento para eliminar las posibles cancelaciones de cambio de signos entre las bases en los sumandos de la ecuación LHS (19).
 
 Estamos significativamente menos seguros de que la conjetura general es cierta (fuera del caso del espectro de multiplicidad-1), ya que puede ser posible producir un contraejemplo (de suficiencia) a través de la construcción explícita de Sunada.
 
@@ -317,6 +317,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
+A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$las desigualdades del triángulo $$|j_1-j_2|\le j_3\le j_1+j_2$$ mantener, y $$j_1+j_2+j_3$$ es un entero.
 
 Desde el punto de vista del grupo compacto $$SU(2)$$, el $$3j$$ Los símbolos son precisamente los operadores que se entrelazan (bien normalizados y por fases) que se dan cuenta del subespacio invariante único (hasta la escala) del producto de triple tensor. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ Cuando el producto contiene la representación trivial. Por lo tanto, son las constantes naturales de la "estructura" para la fusión de tres representaciones irreducibles al singlete.
 
@@ -419,7 +420,7 @@ Sin embargo, para aplicar nuestra [Teorema](#theorem)Es esencial que este mapa l
 
 debe preservar también "analítico" invariables &mdash; la cifra inducida por el elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, es decir, los valores propios individuales del laplaciano de flat-tori.
 
-Como ejemplifica el dúo de Milnor, tener un mapa que preserve las longitudes de los pesos de la celosía no es suficiente para deducir que el mapa está en $$SO(n,\Reals)$$; también debemos saber que el mapa conserva los ángulos de peso de celosía. Pero esto es una consecuencia de las fórmulas desarrolladas en Ecuación (16):
+Como ejemplifica el dúo de Milnor, tener un mapa que preserve las longitudes de los pesos de la celosía no es suficiente para deducir que el mapa está en $$SO(n,\Reals)$$; también debemos saber que el mapa conserva los ángulos de peso de celosía. Pero esto es una consecuencia de las fórmulas desarrolladas en Ecuación (18):
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

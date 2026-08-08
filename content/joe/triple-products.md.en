@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=51333
+status: verified=51337
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -314,9 +314,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
-A $$3j$$ symbol vanishes unless $$m_1+m_2+m_3=0$$,
-the triangle inequalities $$|j_1-j_2|\le j_3\le j_1+j_2$$ hold, and
-$$j_1+j_2+j_3$$ is an integer.
+A $$3j$$ symbol vanishes unless $$m_1+m_2+m_3=0$$, the triangle inequalities $$|j_1-j_2|\le j_3\le j_1+j_2$$ hold, and $$j_1+j_2+j_3$$ is an integer.
 
 From the point of view of the compact group $$SU(2)$$, the $$3j$$ symbols are precisely the (properly normalized and phased) intertwining operators that realize the unique (up to scale) invariant subspace of the triple tensor product $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ when that product contains the trivial representation. They are therefore the natural “structure constants” for the fusion of three irreducible representations to the singlet.
 

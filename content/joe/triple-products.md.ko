@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=51300
+status: 확인=51337
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -279,7 +279,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 일반적으로 연관된 필요 조건 "제품 가치 계약 관련" 그저 그렇게 될 뿐 "선형 맵의 정렬된 단수 값 세트(다중성으로 계산됨) 보존 $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 정의자 $$\set{M^{i,j,k}}$$." 여기에 내부 제품 $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ 다음과 같음 $$tr (B^*A)$$. 정의상, 이러한 단수값은 단일 변환의 직접 합계에서 불변합니다. $$\mathscr V_\lambda$$.
 
-multiplicity-1 스펙트럼 케이스에서, 단수값의 완전한 세트는 단순히의 절대값의 세트이다 $$M^{i,j,k}$$ 이것은, 우리는 여전히 추측, 완전히 이러한 isospectral 매니폴드의 isometry 클래스를 특징. 이 추측과 관상 2 사이의 주요 관계는 방정식(16)을 참조하십시오. 누락 된 것은 절대값이 동의하면 매니폴드가 아이소메트릭이라는 충분한 인수입니다. 즉, 방정식 (16)의 LHS 요약에서 기지 사이에 가능한 기호 변경 취소를 제거하기 위해 인수가 필요합니다.
+multiplicity-1 스펙트럼 케이스에서, 단수값의 완전한 세트는 단순히의 절대값의 세트이다 $$M^{i,j,k}$$ 이것은, 우리는 여전히 추측, 완전히 이러한 isospectral 매니폴드의 isometry 클래스를 특징. 이 추측과 Corollary 2 사이의 주요 관계는 방정식(19)을 참조하십시오. 누락 된 것은 절대값이 동의하면 매니폴드가 아이소메트릭이라는 충분한 인수입니다. 즉, 방정식 (19)의 LHS 요약에서 기지 사이에 가능한 기호 변경 취소를 제거하기 위해 인수가 필요합니다.
 
 우리는 일반 추측이 사실 (다중성-1 스펙트럼 케이스 외부)을 가지고 있다는 것을 훨씬 덜 확신합니다. 왜냐하면 그것은 명백한 Sunada 건설을 통해 반예 (충분성)를 생산할 수 있기 때문입니다.
 
@@ -316,6 +316,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
+A $$3j$$ 기호가 사라지지 않는 경우 $$m_1+m_2+m_3=0$$삼각형 불평등(Triangle Inequalities) $$|j_1-j_2|\le j_3\le j_1+j_2$$ 보류 및 $$j_1+j_2+j_3$$ 정수입니다.
 
 컴팩트 그룹의 관점에서 $$SU(2)$$의 경우 $$3j$$ 기호는 삼중 텐서 제품의 고유(확장까지) 불변 하위 공간을 실현하는 (적절하게 정규화되고 단계적으로 진행되는) 끼워넣는 연산자입니다. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ 해당 제품에 단순 표현이 포함되어 있는 경우 따라서 그들은 단일에 대한 세 가지 돌이킬 수없는 표현의 융합을위한 자연 "구조 상수"입니다.
 
@@ -418,7 +419,7 @@ M^{i,j,k} = \begin{cases}
 
 또한 다음을 보존해야 합니다. "분석" 불변성 &mdash; Casimir-element 유도된 숫자 $$4\pi^2\lVert\lambda_i\rVert^2$$ 각 인덱싱된 중량, 즉 플랫 토리의 라플라시안의 개별 고유 값.
 
-Milnor의 듀엣이 예시하는 것처럼 격자 가중치의 길이를 유지하는 맵을 갖는 것은 맵을 추론하기에 충분하지 않습니다. $$SO(n,\Reals)$$우리는 또한 지도가 격자 무게 각도를 보존한다는 것을 알아야합니다. 그러나 이것은 방정식 (16)에서 개발 된 공식의 결과입니다 :
+Milnor의 듀엣이 예시하는 것처럼 격자 가중치의 길이를 유지하는 맵을 갖는 것은 맵을 추론하기에 충분하지 않습니다. $$SO(n,\Reals)$$우리는 또한 지도가 격자 무게 각도를 보존한다는 것을 알아야합니다. 그러나 이것은 방정식 (18)에서 개발 된 공식의 결과입니다 :
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

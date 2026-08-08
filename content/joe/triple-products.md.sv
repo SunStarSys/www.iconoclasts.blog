@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=51300
+status: verifierad=51337
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -279,7 +279,7 @@ Nu under villkoren i Corollary 2, var och en av de $$\mathscr V_\lambda$$ är et
 
 Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "Bevarande av den ordnade uppsättningen av singulära värden (räknade med multiplikation) av linjära kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definierad av $$\set{M^{i,j,k}}$$." Här är den inre produkten på $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ är $$tr (B^*A)$$. Per definition är dessa singulära värden invariant under direkta summor av enhetliga transformationer på $$\mathscr V_\lambda$$.
 
-I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (16) för nyckelförhållandet mellan denna gissning och Corollary 2. Vad som saknas är tillräcklighetsargumentet att om de absoluta värdena är överens är grenrör isometriska; vilket kräver ett argument för att eliminera eventuella teckenändringsavbrott mellan baser i LHS-topparna i ekvation (16).
+I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (19) för nyckelförhållandet mellan denna gissning och Corollary 2. Vad som saknas är tillräcklighetsargumentet att om de absoluta värdena är överens är grenrör isometriska; vilket kräver ett argument för att eliminera eventuella teckenändringsavbrott mellan baser i LHS-topparna av ekvation (19).
 
 Vi är betydligt mindre säkra på att den allmänna gissningen är sann (utanför multiplikations-1-spektrumfallet), eftersom det kan vara möjligt att producera ett motexempel (av tillräcklighet) via explicit Sunada-konstruktion.
 
@@ -316,6 +316,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
+A $$3j$$ symbolen försvinner om inte $$m_1+m_2+m_3=0$$Triangeln ojämlikheter $$|j_1-j_2|\le j_3\le j_1+j_2$$ hålla, och $$j_1+j_2+j_3$$ är ett heltal.
 
 Från den kompakta gruppens synvinkel $$SU(2)$$, $$3j$$ symbolerna är exakt de (riktigt normaliserade och fasade) sammanflätande operatorer som inser det unika (upp till skala) invarierade underutrymmet för trippeltensorprodukten $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ när produkten innehåller den triviala representationen. De är därför de naturliga "strukturkonstanterna" för sammansmältningen av tre irreducibla representationer till singleten.
 
@@ -418,7 +419,7 @@ För att kunna tillämpa vår [Satsen](#theorem)Det är viktigt att en sådan li
 
 måste också bevara "analytisk" varianter &mdash; Casimir-element-inducerad figur $$4\pi^2\lVert\lambda_i\rVert^2$$ för varje indexerad vikt, dvs. de individuella egenvärdena i Lappland.
 
-Som Milnors duett exemplifierar, att ha en karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (16):
+Som Milnors duett exemplifierar, att ha en karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (18):
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

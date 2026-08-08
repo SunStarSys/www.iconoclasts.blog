@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =51300
+status: 驗證 =51337
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -278,7 +278,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 一般而言，相關必備條件"關於產品值中的協議" 只是變成"線性對映的排序單一值集 (以多重性計算) 保留$$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 定義者$$\set{M^{i,j,k}}$$." 此處為內部產品$$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ 是$$tr (B^*A)$$。根據定義，這些單數值在單數轉換的直接總和下不變$$\mathscr V_\lambda$$.
 
-在 multiplicity-1 spectrum 的情況下，完整的單一值集就是絕對值的一組$$M^{i,j,k}$$ 這樣，我們仍然可以形容，完全描述這種等離子譜歧管的幾何類別。請參閱 方程式 (16) 以獲取此形容詞與 Corollary 2 之間的關鍵關係。缺少的是足夠的引數，如果絕對值一致，則操作是幾何的；這需要一個引數來消除在左方方方程式摘要 (16) 中基準之間可能的符號變更取消。
+在 multiplicity-1 spectrum 的情況下，完整的單一值集就是絕對值的一組$$M^{i,j,k}$$ 這樣，我們仍然可以形容，完全描述這種等離子譜歧管的幾何類別。請參閱 方程式 (19) 以獲取此形容詞與 Corollary 2 之間的關鍵關係。缺少的是充分性引數，如果絕對值一致，則操作是幾何的；這需要一個引數，以消除在左方方方程式摘要 (19) 中基準之間可能的符號變更取消。
 
 我們對一般形容詞保持真 (在 multiplicity-1 spectrum case 之外) 的信心較不自信，因為它可能透過明確的 Sunada 建構產生反範例 (充分) 。
 
@@ -315,6 +315,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
+一個$$3j$$ 除非符號虛名$$m_1+m_2+m_3=0$$，三角形不等式$$|j_1-j_2|\le j_3\le j_1+j_2$$ 保留與$$j_1+j_2+j_3$$ 是整數。
 
 從精簡群組的檢視點$$SU(2)$$, $$3j$$ 符號是精確的 (適當標準化和階段化) 交錯運算子，可實現三張量產品的唯一 (最大比例) 不變子空間$$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ 當該產品包含真實表示時。因此，它們是自然的「結構常數」，用於將三個無法縮減的表示法融合至單一。
 
@@ -417,7 +418,7 @@ M^{i,j,k} = \begin{cases}
 
 也必須保留"分析" 不變量&mdash; Casimir-element 引致的數字$$4\pi^2\lVert\lambda_i\rVert^2$$ 對於每個索引的權重，即扁平的利普拉西亞人的個別特徵值。
 
-由於 Milnor 的 duet 顯現，擁有一個保留晶格權重長度的地圖不足以推論地圖位於$$SO(n,\Reals)$$我們也必須知道地圖會保留晶格加權角度。但這是「方程式」(16) 中所發展公式的後果：
+由於 Milnor 的 duet 顯現，擁有一個保留晶格權重長度的地圖不足以推論地圖位於$$SO(n,\Reals)$$我們也必須知道地圖會保留晶格加權角度。但這是「方程式」(18) 中所發展公式的後果：
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
