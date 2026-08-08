@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=51173
+status: vérifié=51255
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -306,7 +306,7 @@ m_1 & m_2 & m_3
 =(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
 ```
 
-exprime leur définition en termes de coefficients de Clebsch-Gordan, qui sont récupérables à partir de $$3j$$ symboles comme
+exprime leur définition en termes de coefficients de Clebsch-Gordan (c'est-à-dire l'indice invariant "réseau" représentation de $$M^{i,j,k}$$, qui ont des équations de forme fermée telles que la formule de Racah qui sous-tend les bibliothèques de logiciels numériques modernes [[JF16](#JF16)) qui sont récupérables à partir de $$3j$$ symboles comme
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
 \begin{pmatrix}
@@ -314,7 +314,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
-Du point de vue du groupe compact $$SU(2)$$, le $$3j$$ les symboles sont précisément les opérateurs d'entrelacement (probablement normalisés et par phase) qui réalisent le sous-espace invariant unique (jusqu'à l'échelle) du produit à triple tenseur $$V_{j_1}\otimes V_{j_2}\otimes V_{j_3}$$ lorsque ce produit contient la représentation triviale. Elles sont donc les "constantes structurales" naturelles pour la fusion de trois représentations irréductibles au singlet.
+Du point de vue du groupe compact $$SU(2)$$, le $$3j$$ les symboles sont précisément les opérateurs d'entrelacement (probablement normalisés et par phase) qui réalisent le sous-espace invariant unique (jusqu'à l'échelle) du produit à triple tenseur $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ lorsque ce produit contient la représentation triviale. Elles sont donc les "constantes structurales" naturelles pour la fusion de trois représentations irréductibles au singlet.
 
 Pour les groupes de mensonges abéliens compacts, ces composants irréductibles sont tous unidimensionnels, de sorte que leur situation est entièrement similaire à la décomposition spectrale de la multiplicité-1 Laplaciens ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
 

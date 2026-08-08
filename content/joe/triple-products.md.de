@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=51173
+status: überprüft=51255
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -305,7 +305,7 @@ m_1 & m_2 & m_3
 =(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}.
 ```
 
-drückt ihre Definition in Bezug auf Clebsch-Gordan Koeffizienten aus, die aus dem $$3j$$ Symbole als
+drückt ihre Definition in Bezug auf Clebsch-Gordan Koeffizienten aus (d.h. die Index-invariant "Gitter" Darstellung von $$M^{i,j,k}$$, die geschlossene Formgleichungen wie Racahs Formel haben, die moderne numerische Softwarebibliotheken untermauert [[JF16](#JF16)) die aus dem $$3j$$ Symbole als
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
 \begin{pmatrix}
@@ -313,7 +313,7 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
-Aus Sicht der Kompaktgruppe $$SU(2)$$, die $$3j$$ Symbole sind genau die (richtig normalisierten und phasenweise) ineinandergreifenden Operatoren, die den einzigartigen (bis zu skalierenden) invarianten Unterraum des dreifachen Tensorprodukts realisieren. $$V_{j_1}\otimes V_{j_2}\otimes V_{j_3}$$ wenn dieses Produkt die triviale Darstellung enthält. Sie sind daher die natürlichen "Strukturkonstanten" für die Verschmelzung von drei irreduziblen Darstellungen zum Singlet.
+Aus Sicht der Kompaktgruppe $$SU(2)$$, die $$3j$$ Symbole sind genau die (richtig normalisierten und phasenweise) ineinandergreifenden Operatoren, die den einzigartigen (bis zu skalierenden) invarianten Unterraum des dreifachen Tensorprodukts realisieren. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ wenn dieses Produkt die triviale Darstellung enthält. Sie sind daher die natürlichen "Strukturkonstanten" für die Verschmelzung von drei irreduziblen Darstellungen zum Singlet.
 
 Für kompakte Abelian Lie-Gruppen sind diese irreduziblen Komponenten alle eindimensional, so dass ihre Situation der spektralen Zersetzung von Multiplizitäts-1 Laplaciern oben völlig ähnlich ist.  Mehr dazu im Beispiel unten.
 
