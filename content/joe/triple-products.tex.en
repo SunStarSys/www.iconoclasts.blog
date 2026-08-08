@@ -313,7 +313,6 @@ m_1 & m_2 & m_3
 \end{pmatrix}
 =(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}
 $$
-
 expresses their definition in terms of Clebsch-Gordan Coefficients (i.e.\ the index-invariant "lattice" representation of $M^{i,j,k}$, which have closed form expressions such as Racah's formula that underpins modern numerical software libraries \cite{JF16}) which are recoverable from the $3j$ symbols as
 
 $$
