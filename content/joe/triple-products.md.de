@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=51337
+status: überprüft=51399
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -295,19 +295,21 @@ Diese Basisinvarianten können sich jedoch als nützlich erweisen, um komplexere
 
 #### Abgesehen
 
-Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien $$G$$-invariant (unter linker oder rechter Aktion) *irreduzible* Zersetzungen $$P_{\mathscr V_\lambda}$$ von $$L^2(G,dx)$$ als $$\oplus_\lambda P_{\mathscr V_\lambda}$$, und ehrt ihr Zusammenspiel im obigen Ausdruck als die wesentlichen Artefakte der Lüge-Theorie, wie im Peter-Weyl-Theorem angesprochen [[AK01]](#AK01). Kompatible Riemannsche Geometrien werden durch bequeme Wahl von quadratischen Casimir-Elementen erzeugt, die in der Mitte der universellen umhüllenden Algebra liegen, die von geringerer Bedeutung sind als die irreduzible Zersetzung selbst. **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Demontage und Wiederzusammensetzung dieser irreduziblen Komponenten.
+Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien $$G$$-invariant (unter linker oder rechter Aktion) *irreduzible* Zersetzungen $$P_{\mathscr V_\lambda}$$ von $$L^2(G,dx)$$ (hier $$dx$$ ist die normalisierte Haarwahrscheinlichkeit auf $$G$$) als $$\oplus_\lambda P_{\mathscr V_\lambda}$$, und ehrt ihr Zusammenspiel im obigen Ausdruck als die wesentlichen Artefakte der Lüge-Theorie, wie im Peter-Weyl-Theorem angesprochen [[AK01]](#AK01). Kompatible Riemannsche Geometrien werden durch bequeme Wahl von quadratischen Casimir-Elementen erzeugt, die in der Mitte der universellen umhüllenden Algebra liegen, die von geringerer Bedeutung sind als die irreduzible Zersetzung selbst. **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Demontage und Wiederzusammensetzung dieser irreduziblen Komponenten.
 
-Wigner's $$3j$$ Symbole für $$SU(2)$$ Ein Paradebeispiel für weitere Studien. Die Gleichung
+Wigner's $$3j$$ Symbole für $$SU(2)$$ Ein Paradebeispiel für weitere Studien. Jede endliche, irreduzible, einheitliche Darstellung von $$  SU(2)$$ ist durch eine nicht negative halbe Ganzzahl gekennzeichnet $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Wir schreiben $$\mathscr  V_j  $$ für die $$ (2j+1)  $$-dimensionaler Raum, auf den diese Darstellung wirkt. Eine orthonormale Basis für $$\mathscr  V_j $$ ist die magnetische Basis $$  \ket{j,m}$$ mit $$m = -j,-j+1,\dots,j.$$
+
+Die Gleichung
 
 ```math
 \begin{pmatrix}
 j_1 & j_2 & j_3 \\
 m_1 & m_2 & m_3
 \end{pmatrix}
-=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}
+:=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\,-m_3}_{j_1 m_1\,j_2 m_2}
 ```
 
-drückt ihre Definition in Bezug auf Clebsch-Gordan Koeffizienten aus (d.h. die Index-invariant "Gitter" Darstellung von $$M^{i,j,k}$$, die formausdrücke wie racahs formel geschlossen haben, die moderne numerische softwarebibliotheken unterstützen. [[JF16]](#JF16)) die aus dem $$3j$$ Symbole als
+drückt die $$3j$$ Symboldefinition in Bezug auf Clebsch-Gordan Koeffizienten $$C^{j\,m}_{j_1 m_1\,j_2 m_2}:=\bra{j_1 m_1\,j_2 m_2}\ket{j\,m}$$ (d.h. der Index-invariant "Gitter" Darstellung von $$M^{i,j,k}$$, die formausdrücke wie racahs formel geschlossen haben, die moderne numerische softwarebibliotheken unterstützen. [[JF16]](#JF16)) die aus dem $$3j$$ Symbole als
 
 ```math
 C^{j\,m}_{j_1 m_1\,j_2 m_2}=(-1)^{j_1-j_2+m}\sqrt{2j+1}
@@ -316,9 +318,11 @@ j_1 & j_2 & j \\
 m_1 & m_2 & -m
 \end{pmatrix}.
 ```
-A $$3j$$ Symbol verschwindet, wenn $$m_1+m_2+m_3=0$$die Dreiecksungleichheiten $$|j_1-j_2|\le j_3\le j_1+j_2$$ halten und $$j_1+j_2+j_3$$ ist eine Ganzzahl.
+A $$3j$$ Symbol verschwindet, wenn $$m_1+m_2+m_3=0$$die Dreiecksungleichheiten $$|j_1-j_2|\le j_3\le j_1+j_2$$ halten und $$j_1+j_2+j_3$$ ist eine Ganzzahl. Die Eigenfunktion Triples für $$SU(2)$$ die diese konventionell (über die Condon-Shortley-Phase) real bewerteten Koeffizienten umfassen, sind genau die kugelförmigen Harmonien von $$S^2$$ angehoben auf $$SU(2)$$.
 
 Aus Sicht der Kompaktgruppe $$SU(2)$$, die $$3j$$ Symbole sind genau die (richtig normalisierten und phasenweise) ineinandergreifenden Operatoren, die den einzigartigen (bis zu skalierenden) invarianten Unterraum des dreifachen Tensorprodukts realisieren. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ wenn dieses Produkt die triviale Darstellung enthält. Sie sind daher die natürlichen "Strukturkonstanten" für die Verschmelzung von drei irreduziblen Darstellungen zum Singlet.
+
+Dies ist genau analog zu der Rolle, die von den dreifachen Produktintegralen gespielt wird. $$M^{i,j,k}$$ auf einem Riemannschen Mannigfaltigkeit: Sie sind die Strukturkonstanten des punktuellen Produkts von Eigenfunktionen, wenn dieses Produkt in der Eigenbasis wieder erweitert wird. In der Gruppe $$SU(2)$$ (oder auf $$S^2=SU(2)/U(1)$$) diese Integrale reduzieren über den Peter-Weyl-Satz auf die $$3j$$-Symbole.
 
 Für kompakte Abelian Lie-Gruppen sind diese irreduziblen Komponenten alle eindimensional, so dass ihre Situation der spektralen Zersetzung von Multiplizitäts-1 Laplaciern oben völlig ähnlich ist.  Mehr dazu im Beispiel unten.
 
