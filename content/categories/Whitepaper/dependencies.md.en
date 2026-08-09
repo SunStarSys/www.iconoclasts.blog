@@ -1,0 +1,10 @@
+---
+categories: whitepaper
+dependencies: '*.md.en'
+keywords: architecture,incremental,website,generation,builds,dependencies,topology,wiki,graph
+status: '*.md.en'
+title: architecture,incremental,website,generation,builds,dependencies,topology,wiki,graph
+
+---
+
+{% ssi `/joe/dependencies.md.en` %}
