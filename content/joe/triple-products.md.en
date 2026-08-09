@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=51669
+status: verified=51694
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -337,7 +337,7 @@ Getting back to Corollary 1, we observe that the proof involves establishing thi
 
 ```math
 z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
-\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}\bar M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}\bar M_1^{t,\bar t,k}}\, .
 ```
 
 We may hope that for any given $$k>0$$, $$M_0^{i,\bar i,k}$$ cannot be identically $$0$$ for all $$i$$, since it is a generically true condition, but false for specific cases like the flat tori case covered in the Example below. A higher-level way of looking at this condition is to note that such a hope-violating $$k$$ would have $$\bar e^k$$ in the kernel of the adjoint map $$[M^{i,\bar i,k}]^*$$. Furthermore, the Formula <span class="eqno"></span> for $$z_k$$ requires both $$i$$-independence, and sufficiency, to establish the basis map $$e_0^i \mapsto z_i e_1^i$$ preserves $$\set{M_0^{i,j,k}}$$.
