@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=51621
+status: verificado=51669
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -332,7 +332,7 @@ l_i & l_j & l_k \\
 m_i(l_i) & m_j(l_j) & -m_k(l_k)
 \end{pmatrix},
 ```
-donde $$l_i \in \set{0,1/2,1,3/2,\dots}$$ no se reduce de $$0$$ desde $$\Delta|_ {\mathscr V_j} = j(j+1)$$y $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$. En otras palabras, $$m_i(l_i)$$ varía con $$i$$pero $$l_i$$ tiene multiplicidades de umbral de $$\dim \mathscr V_{l_i} = 2l_i+1$$.
+donde $$l_i \in \set{0,1/2,1,3/2,\dots}$$ no se reduce de $$0$$ desde $$\Delta|_ {\mathscr V_j} = j(j+1)$$y $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$. En otras palabras, $$m_i(l_i)$$ varía con $$i$$pero $$l_i$$ tiene multiplicidades de umbral de $$\dim \mathscr V_{l_i} = 2l_i+1$$. Las mesetas de $$l_i$$ están representados por el mapa $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$. El $$\sqrt{4\pi}$$ El término en el denominador proviene de la expresión métrica Riemanniana inducida para la medida Haar; desaparece si volvemos a una medida de probabilidad normalizada.
 
 Para los grupos de mentiras abelianos compactos, estos componentes irreductibles son todos unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad 1 de los laplacianos anteriores.  Más sobre esto en el ejemplo a continuación.
 

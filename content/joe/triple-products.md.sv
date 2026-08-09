@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=51621
+status: verifierad=51669
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -331,7 +331,7 @@ l_i & l_j & l_k \\
 m_i(l_i) & m_j(l_j) & -m_k(l_k)
 \end{pmatrix},
 ```
-där $$l_i \in \set{0,1/2,1,3/2,\dots}$$ är icke-minskande från $$0$$ sedan $$\Delta|_ {\mathscr V_j} = j(j+1)$$och $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$. Med andra ord, $$m_i(l_i)$$ varierar med $$i$$men $$l_i$$ har tröskelmultiplikationer av $$\dim \mathscr V_{l_i} = 2l_i+1$$.
+där $$l_i \in \set{0,1/2,1,3/2,\dots}$$ är icke-minskande från $$0$$ sedan $$\Delta|_ {\mathscr V_j} = j(j+1)$$och $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$. Med andra ord, $$m_i(l_i)$$ varierar med $$i$$men $$l_i$$ har tröskelmultiplikationer av $$\dim \mathscr V_{l_i} = 2l_i+1$$. Platåerna för $$l_i$$ representeras av kartan $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$. Den $$\sqrt{4\pi}$$ Termen i nämnaren kommer från det inducerade Riemannian metriska uttrycket för Haar-måttet; det försvinner om vi återgår till ett normaliserat sannolikhetsmått.
 
 För kompakta Abeliska Liegrupper är dessa irreducibla komponenter alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multiplicitet-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
 
