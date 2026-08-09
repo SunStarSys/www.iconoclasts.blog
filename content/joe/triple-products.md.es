@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=51760
+status: verificado=51806
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -332,7 +332,7 @@ l_i & l_j & l_k \\
 m_i(l_i) & m_j(l_j) & -m_k(l_k)
 \end{pmatrix},
 ```
-donde $$l_i \in \set{0,1/2,1,3/2,\dots}$$ no se reduce de $$0$$ desde $$\Delta|_ {\mathscr V_j} = j(j+1)$$y $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ es una secuencia creciente dentro de un valor fijo de $$l_i$$. En otras palabras, $$-l_i \leq m_i(l_i) \leq l_i$$ varía con $$i$$ abarcar todo el conjunto en orden, pero $$l_i$$ tiene multiplicidades de umbral de $$n=\dim \mathscr V_{l_i} = 2l_i+1\in \N$$. La acción Unitaria natural en $\mathscr V_{l_i}$ hace que esta elección de la definición de $m_i(l_i)$ sea algo arbitraria, pero la elección realizada aquí debe ser clara. Las mesetas de $$l_i$$ están representados por el mapa $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (derivado de la inversión de la suma dimensional $$i=f(n)=\frac{n(n+1)}{2}$$). El $$\sqrt{4\pi}$$ El término en el denominador proviene de la expresión métrica Riemanniana inducida para la medida Haar; desaparece si volvemos a una medida de probabilidad normalizada.
+donde $$l_i \in \set{0,1/2,1,3/2,\dots}$$ no se reduce de $$0$$ desde $$\Delta|_ {\mathscr V_j} = j(j+1)$$y $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ es una secuencia creciente dentro de un valor fijo de $$l_i$$. En otras palabras, $$n:=\dim \mathscr V_{l_i} = 2l_i+1\in \N\implies n(n-1)/2 \leq i \lt n(n+1)/2 \implies -l_i \leq m_i(l_i) \leq l_i$$ varía con $$i$$ abarcar todo el conjunto en orden, como $$l_i$$  tiene multiplicidad de umbral $$n$$. La acción unitaria natural sobre $$\mathscr V_{l_i}$$ elige esta definición de $$m_i(l_i)$$ algo arbitrario, pero la elección que se haga aquí debe ser clara. Las mesetas de $$l_i$$ están representados por el mapa $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (derivado de la inversión de la suma dimensional $$i=f(n)=\frac{n(n+1)}{2}$$). El $$\sqrt{4\pi}$$ El término en el denominador proviene de la expresión métrica Riemanniana inducida para la medida Haar; desaparece si volvemos a una medida de probabilidad normalizada.
 
 Para los grupos de mentiras abelianos compactos, estos componentes irreductibles son todos unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad 1 de los laplacianos anteriores.  Más sobre esto en el ejemplo a continuación.
 

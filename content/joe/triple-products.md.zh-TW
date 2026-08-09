@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =51760
+status: 驗證 =51806
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -330,7 +330,7 @@ l_i & l_j & l_k \\
 m_i(l_i) & m_j(l_j) & -m_k(l_k)
 \end{pmatrix},
 ```
-位置$$l_i \in \set{0,1/2,1,3/2,\dots}$$ 非減少來源$$0$$ 起自$$\Delta|_ {\mathscr V_j} = j(j+1)$$，和$$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ 是固定值內的遞增順序$$l_i$$。換言之，$$-l_i \leq m_i(l_i) \leq l_i$$ 不同於$$i$$ 按順序橫跨整個集合，但$$l_i$$ 具有臨界值乘數$$n=\dim \mathscr V_{l_i} = 2l_i+1\in \N$$。$\mathscr V_ 上的自然單一動作{中文 _ English}$ 讓 $m_i (l_i) $ 的定義有點任意選擇，但此處所做的選擇應該清楚。的高原$$l_i$$ 以地圖表示$$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (從反轉維度總和衍生) $$i=f(n)=\frac{n(n+1)}{2}$$). 繁體中文$$\sqrt{4\pi}$$ 分母中的名詞來自針對 Haar 評量所引發的 Riemannian 度量表示式；如果我們回復成標準化機率評量，則該名詞會消失。
+位置$$l_i \in \set{0,1/2,1,3/2,\dots}$$ 非減少來源$$0$$ 起自$$\Delta|_ {\mathscr V_j} = j(j+1)$$，和$$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ 是固定值內的遞增順序$$l_i$$。換言之，$$n:=\dim \mathscr V_{l_i} = 2l_i+1\in \N\implies n(n-1)/2 \leq i \lt n(n+1)/2 \implies -l_i \leq m_i(l_i) \leq l_i$$ 不同於$$i$$ 以順序跨整個集合，如$$l_i$$  具有臨界值多重性$$n$$。自然的單體動作$$\mathscr V_{l_i}$$ 讓此定義的選擇$$m_i(l_i)$$ 有些許是任意的，但此處所做的選擇應該很清楚。的高原$$l_i$$ 以地圖表示$$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (從反轉維度總和衍生) $$i=f(n)=\frac{n(n+1)}{2}$$). 繁體中文$$\sqrt{4\pi}$$ 分母中的名詞來自針對 Haar 評量所引發的 Riemannian 度量表示式；如果我們回復成標準化機率評量，則該名詞會消失。
 
 對於精簡的 Abelian Lie Groups，這些不可縮減的組件全都是一維的，所以它們的情況與上面的 multiplicity-1 Laplacians 的頻譜分解完全類似。請參考下方範例中的詳細資訊。
 

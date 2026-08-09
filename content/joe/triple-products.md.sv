@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=51760
+status: verifierad=51806
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -331,7 +331,7 @@ l_i & l_j & l_k \\
 m_i(l_i) & m_j(l_j) & -m_k(l_k)
 \end{pmatrix},
 ```
-där $$l_i \in \set{0,1/2,1,3/2,\dots}$$ är icke-minskande från $$0$$ sedan $$\Delta|_ {\mathscr V_j} = j(j+1)$$och $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ är en ökande sekvens inom ett fast värde av $$l_i$$. Med andra ord, $$-l_i \leq m_i(l_i) \leq l_i$$ varierar med $$i$$ att sträcka ut hela uppsättningen i ordning, men $$l_i$$ har tröskelmultiplikationer av $$n=\dim \mathscr V_{l_i} = 2l_i+1\in \N$$. Den naturliga enhetsåtgärden på $\mathscr V_{l_i}$ gör detta val av definition av $m_i(l_i) $ något godtyckligt, men valet som görs här bör vara tydligt. Platåerna för $$l_i$$ representeras av kartan $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (härledd från invertering av dimensionell summa) $$i=f(n)=\frac{n(n+1)}{2}$$). Den $$\sqrt{4\pi}$$ Termen i nämnaren kommer från det inducerade Riemannian metriska uttrycket för Haar-måttet; det försvinner om vi återgår till ett normaliserat sannolikhetsmått.
+där $$l_i \in \set{0,1/2,1,3/2,\dots}$$ är icke-minskande från $$0$$ sedan $$\Delta|_ {\mathscr V_j} = j(j+1)$$och $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ är en ökande sekvens inom ett fast värde av $$l_i$$. Med andra ord, $$n:=\dim \mathscr V_{l_i} = 2l_i+1\in \N\implies n(n-1)/2 \leq i \lt n(n+1)/2 \implies -l_i \leq m_i(l_i) \leq l_i$$ varierar med $$i$$ att sträcka sig över hela uppsättningen i ordning, som $$l_i$$  har tröskelmultiplicitet $$n$$. Den naturliga enhetsåtgärden på $$\mathscr V_{l_i}$$ gör detta val av definition av $$m_i(l_i)$$ Något godtyckligt, men valet som görs här bör vara tydligt. Platåerna för $$l_i$$ representeras av kartan $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (härledd från invertering av dimensionell summa) $$i=f(n)=\frac{n(n+1)}{2}$$). Den $$\sqrt{4\pi}$$ Termen i nämnaren kommer från det inducerade Riemannian metriska uttrycket för Haar-måttet; det försvinner om vi återgår till ett normaliserat sannolikhetsmått.
 
 För kompakta Abeliska Liegrupper är dessa irreducibla komponenter alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multiplicitet-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
 

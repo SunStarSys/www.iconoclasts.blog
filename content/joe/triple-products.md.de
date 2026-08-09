@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=51760
+status: überprüft=51806
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -331,7 +331,7 @@ l_i & l_j & l_k \\
 m_i(l_i) & m_j(l_j) & -m_k(l_k)
 \end{pmatrix},
 ```
-wobei $$l_i \in \set{0,1/2,1,3/2,\dots}$$ ist nicht abnehmend von $$0$$ seit $$\Delta|_ {\mathscr V_j} = j(j+1)$$und $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ ist eine zunehmende Sequenz innerhalb eines festen Wertes von $$l_i$$. Mit anderen Worten, $$-l_i \leq m_i(l_i) \leq l_i$$ variiert mit $$i$$ um den gesamten Satz in der Reihenfolge zu überspannen, aber $$l_i$$ hat Schwellenwertmultiplikationen von $$n=\dim \mathscr V_{l_i} = 2l_i+1\in \N$$. Die natürliche Einheitliche Aktion auf $\mathscr V_{L_i}$ macht diese Wahl der Definition von $m_i(l_i)$ etwas willkürlich, aber die hier getroffene Auswahl sollte klar sein. Die Hochebenen von $$l_i$$ werden durch die Karte dargestellt $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (abgeleitet vom Invertieren der Dimensionssumme) $$i=f(n)=\frac{n(n+1)}{2}$$). Die $$\sqrt{4\pi}$$ Der Begriff im Nenner stammt aus dem induzierten Riemannschen metrischen Ausdruck für Haar-Maß; er verschwindet, wenn wir zu einem normalisierten Wahrscheinlichkeitsmaß zurückkehren.
+wobei $$l_i \in \set{0,1/2,1,3/2,\dots}$$ ist nicht abnehmend von $$0$$ seit $$\Delta|_ {\mathscr V_j} = j(j+1)$$und $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ ist eine zunehmende Sequenz innerhalb eines festen Wertes von $$l_i$$. Mit anderen Worten, $$n:=\dim \mathscr V_{l_i} = 2l_i+1\in \N\implies n(n-1)/2 \leq i \lt n(n+1)/2 \implies -l_i \leq m_i(l_i) \leq l_i$$ variiert mit $$i$$ um den gesamten Satz in der Reihenfolge, wie $$l_i$$  hat eine Schwellenwertvielfalt $$n$$. Die natürliche Einheitliche Aktion $$\mathscr V_{l_i}$$ Diese Definition von $$m_i(l_i)$$ etwas willkürlich, aber die hier getroffene Wahl sollte klar sein. Die Hochebenen von $$l_i$$ werden durch die Karte dargestellt $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (abgeleitet vom Invertieren der Dimensionssumme) $$i=f(n)=\frac{n(n+1)}{2}$$). Die $$\sqrt{4\pi}$$ Der Begriff im Nenner stammt aus dem induzierten Riemannschen metrischen Ausdruck für Haar-Maß; er verschwindet, wenn wir zu einem normalisierten Wahrscheinlichkeitsmaß zurückkehren.
 
 Für kompakte Abelian Lie-Gruppen sind diese irreduziblen Komponenten alle eindimensional, so dass ihre Situation der spektralen Zersetzung von Multiplizitäts-1 Laplaciern oben völlig ähnlich ist.  Mehr dazu im Beispiel unten.
 
