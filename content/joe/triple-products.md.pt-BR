@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=51669
+status: verificado=51760
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -332,7 +332,7 @@ l_i & l_j & l_k \\
 m_i(l_i) & m_j(l_j) & -m_k(l_k)
 \end{pmatrix},
 ```
-onde $$l_i \in \set{0,1/2,1,3/2,\dots}$$ não é decorrente de $$0$$ desde $$\Delta|_ {\mathscr V_j} = j(j+1)$$, e $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$. Em outras palavras, $$m_i(l_i)$$ varia com $$i$$, mas $$l_i$$ tem multiplicidade de limiares de $$\dim \mathscr V_{l_i} = 2l_i+1$$. Os planaltos de $$l_i$$ são representados pelo mapa $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$. O $$\sqrt{4\pi}$$ termo no denominador vem da expressão métrica Riemanniana induzida para a medida Haar; ele desaparece se revertermos para uma medida de probabilidade normalizada.
+onde $$l_i \in \set{0,1/2,1,3/2,\dots}$$ não é decorrente de $$0$$ desde $$\Delta|_ {\mathscr V_j} = j(j+1)$$, e $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ é uma sequência crescente dentro de um valor fixo de $$l_i$$. Em outras palavras, $$-l_i \leq m_i(l_i) \leq l_i$$ varia com $$i$$ para abranger todo o conjunto em ordem, mas $$l_i$$ tem multiplicidade de limiares de $$n=\dim \mathscr V_{l_i} = 2l_i+1\in \N$$. A ação unitária natural em $\mathscr V_{l_l}$ torna esta escolha de definição de $m_i(l_i)$ um tanto arbitrária, mas a escolha feita aqui deve ser clara. Os planaltos de $$l_i$$ são representados pelo mapa $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (derivado da inversão da soma dimensional $$i=f(n)=\frac{n(n+1)}{2}$$). O $$\sqrt{4\pi}$$ termo no denominador vem da expressão métrica Riemanniana induzida para a medida Haar; ele desaparece se revertermos para uma medida de probabilidade normalizada.
 
 Para os compactos Grupos de Mentiras Abelianas, estes componentes irredutíveis são todos unidimensionais, de modo que a sua situação é inteiramente semelhante à decomposição espectral de multiplicidade-1 Laplacianos acima.  Mais sobre isso no Exemplo abaixo.
 
@@ -340,7 +340,7 @@ Voltando ao Corolário 1, observamos que a prova envolve estabelecer essa implic
 
 ```math
 z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
-\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}M_1^{t,\bar t,k}}\, .
+\exists r,s,t \in \N\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}\bar M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}\bar M_1^{t,\bar t,k}}\, .
 ```
 
 Podemos esperar que, para qualquer $$k>0$$, $$M_0^{i,\bar i,k}$$ não pode ser idêntico $$0$$ para todos $$i$$, uma vez que é uma condição genericamente verdadeira, mas falsa para casos específicos como a caixa de tori plana coberta no Exemplo abaixo. Uma maneira de nível superior de olhar para esta condição é notar que tal esperança-violação $$k$$ teria $$\bar e^k$$ no kernel do mapa adjacente $$[M^{i,\bar i,k}]^*$$. Além disso, a fórmula <span class="eqno"></span> para $$z_k$$ requer ambos $$i$$-independência, e suficiência, para estabelecer o mapa base $$e_0^i \mapsto z_i e_1^i$$ preservas $$\set{M_0^{i,j,k}}$$.
