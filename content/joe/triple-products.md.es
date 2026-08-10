@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=51912
+status: verificado=51931
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -315,7 +315,7 @@ A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$las desigualdades del 
 
 Desde el punto de vista del grupo compacto $$SU(2)$$, el $$3j$$ Los símbolos son precisamente los operadores que se entrelazan (bien normalizados y por fases) que se dan cuenta del subespacio invariante único (hasta la escala) del producto de triple tensor. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ Cuando el producto contiene la representación trivial. Por lo tanto, son las constantes naturales de la "estructura" para la fusión de tres representaciones irreducibles al singlete.
 
-Esto es exactamente análogo al papel jugado por las integrales de triple producto. $$M^{i,j,k}$$ en un colector riemanniano: son las constantes de la estructura del producto puntual de las funciones propias cuando ese producto se expande de nuevo en la base propia. En el grupo $$SU(2)$$ propias, esas integrales reducen al $$3j$$-símbolos.
+Esto es exactamente análogo al papel jugado por las integrales de triple producto. $$M^{i,j,k}$$ en un colector riemanniano: son las constantes de la estructura del producto puntual de las funciones propias cuando ese producto se expande de nuevo en la base propia. En el grupo $$SU(2)$$ estas integrales se reducen a productos escalonados de la $$3j$$-símbolos.
 
 Para ingeniar, dejar $$D^{j}_{m n}(g)$$ ser el Wigner estándar $$D$$-funciones (coeficientes de matriz de la irrep de espín) $$j$$). Con respecto a la medida de probabilidad Haar normalizada $$dg$$ tiene la fórmula exacta [[VK88]](#VK88)
 
@@ -337,9 +337,7 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(La convención general de la fase se puede ajustar por los factores habituales de Condon-Shortley; el punto esencial es que los factores integrales en un producto de dos reales $$3j$$-símbolos.) Cuando los índices $$i,j,k$$ del papel sobre una base ortonormal completa de coeficientes de matriz ordenados aumentando $$j$$ (y luego por índices magnéticos) $$m,n$$), las cantidades $$M^{i,j,k}$$ son precisamente los números que aparecen en el lado derecho de arriba.
-
-El teorema de Peter-Weyl proporciona una base ortonormal completa de $$L^2(SU(2),dg)$$ dados por los coeficientes de matriz renormalizados:
+(La convención general de la fase se puede ajustar por los factores habituales de Condon-Shortley; el punto esencial es que los factores integrales en un producto de dos reales $$3j$$-símbolos.) El teorema de Peter-Weyl proporciona una base ortonormal completa de $$L^2(SU(2),dg)$$ dados por los coeficientes de matriz renormalizados:
 
 $$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
 
@@ -391,16 +389,8 @@ M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambd
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
-\text{Now with }J \text{ real-analytic}\\
-Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
-&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
-\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
 \end{aligned}
 ```
-
-Nota: para el estuche de torsión plana unidimensional a continuación, $$\tilde{Q}_k(e^i,e^j) = 0$$ desde $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ es una verdadera derivación.
 
 ## Prueba de corolarios
 

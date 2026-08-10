@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=51912
+status: überprüft=51931
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -314,7 +314,7 @@ A $$3j$$ Symbol verschwindet, wenn $$m_1+m_2+m_3=0$$die Dreiecksungleichheiten $
 
 Aus Sicht der Kompaktgruppe $$SU(2)$$, die $$3j$$ Symbole sind genau die (richtig normalisierten und phasenweise) ineinandergreifenden Operatoren, die den einzigartigen (bis zu skalierenden) invarianten Unterraum des dreifachen Tensorprodukts realisieren. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ wenn dieses Produkt die triviale Darstellung enthält. Sie sind daher die natürlichen "Strukturkonstanten" für die Verschmelzung von drei irreduziblen Darstellungen zum Singlet.
 
-Dies ist genau analog zu der Rolle, die von den dreifachen Produktintegralen gespielt wird. $$M^{i,j,k}$$ auf einem Riemannschen Mannigfaltigkeit: Sie sind die Strukturkonstanten des punktuellen Produkts von Eigenfunktionen, wenn dieses Produkt in der Eigenbasis wieder erweitert wird. In der Gruppe $$SU(2)$$ Die Integralen reduzieren sich auf die $$3j$$-Symbole.
+Dies ist genau analog zu der Rolle, die von den dreifachen Produktintegralen gespielt wird. $$M^{i,j,k}$$ auf einem Riemannschen Mannigfaltigkeit: Sie sind die Strukturkonstanten des punktuellen Produkts von Eigenfunktionen, wenn dieses Produkt in der Eigenbasis wieder erweitert wird. In der Gruppe $$SU(2)$$ selbst, reduzieren sich diese Integrale auf phasenweise Produkte der $$3j$$-Symbole.
 
 Zum Witz, lassen $$D^{j}_{m n}(g)$$ Standard-Wigner sein $$D$$-Funktionen (Matrix-Koeffizienten der irrep des Spin $$j$$). In Bezug auf die normalisierte Haar Wahrscheinlichkeitsmaß $$dg$$ Eine hat die genaue Formel [[VK88]](#VK88)
 
@@ -336,9 +336,7 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(Die allgemeine Phasenkonvention kann durch die üblichen Condon-Shortley-Faktoren angepasst werden; der wesentliche Punkt ist, dass die integralen Faktoren in ein Produkt von zwei realen $$3j$$-Symbole.) Wenn die Indizes $$i,j,k$$ des Papiers über eine vollständige orthonormale Basis von Matrixkoeffizienten, geordnet nach $$j$$ (und dann durch magnetische Indizes $$m,n$$), die Mengen $$M^{i,j,k}$$ sind genau die Zahlen, die auf der rechten Seite oben erscheinen.
-
-Das Peter-Weyl-Theorem liefert eine komplette orthonormale Grundlage für $$L^2(SU(2),dg)$$ durch die renormalisierten Matrixkoeffizienten:
+(Die allgemeine Phasenkonvention kann durch die üblichen Condon-Shortley-Faktoren angepasst werden; der wesentliche Punkt ist, dass die integralen Faktoren in ein Produkt von zwei realen $$3j$$-Symbole.) Das Peter-Weyl-Theorem liefert eine komplette orthonormale Grundlage für $$L^2(SU(2),dg)$$ durch die renormalisierten Matrixkoeffizienten:
 
 $$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
 
@@ -390,16 +388,8 @@ M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambd
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
-\text{Now with }J \text{ real-analytic}\\
-Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
-&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
-\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
 \end{aligned}
 ```
-
-Hinweis: für das eindimensionale Flat-Tori-Gehäuse unten, $$\tilde{Q}_k(e^i,e^j) = 0$$ seit $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ ist eine wahre Ableitung.
 
 ## Beweis der Korollarien
 

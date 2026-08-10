@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=51912
+status: verificado=51931
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -315,7 +315,7 @@ A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$, as desigualdades do 
 
 Do ponto de vista do grupo compacto $$SU(2)$$, o $$3j$$ símbolos são precisamente os operadores entrelaçados (corretamente normalizados e em fases) que percebem o subespaço invariante único (até à escala) do produto de tensor triplo $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ quando esse produto contém a representação trivial. São, portanto, as "constantes estruturais" naturais para a fusão de três representações irredutíveis ao singlet.
 
-Isto é exatamente análogo ao papel desempenhado pelas integrais de triplo produto. $$M^{i,j,k}$$ em uma variedade Riemannian: são as constantes da estrutura do produto pontual de autofunções quando esse produto é expandido de volta na autobase. No grupo $$SU(2)$$ em si, essas integrais reduzem ao $$3j$$- símbolos.
+Isto é exatamente análogo ao papel desempenhado pelas integrais de triplo produto. $$M^{i,j,k}$$ em uma variedade Riemannian: são as constantes da estrutura do produto pontual de autofunções quando esse produto é expandido de volta na autobase. No grupo $$SU(2)$$ em si, essas integrais reduzem a produtos em fases do $$3j$$- símbolos.
 
 Para saber, deixe $$D^{j}_{m n}(g)$$ ser o Wigner padrão $$D$$-funções (coeficientes de matriz da irrep de spin) $$j$$). Com relação à medida de probabilidade Haar normalizada $$dg$$ um tem a fórmula exata [[VK88]](#VK88)
 
@@ -337,9 +337,7 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(A convenção de fase geral pode ser ajustada pelos fatores condon-shortley habituais; o ponto essencial é que os fatores integrais em um produto de dois fatores reais) $$3j$$- símbolos.) Quando os índices $$i,j,k$$ do papel sobre uma base ortonormal completa dos coeficientes de matriz ordenados pelo aumento $$j$$ (e depois por índices magnéticos) $$m,n$$), as quantidades $$M^{i,j,k}$$ são precisamente os números que aparecem no lado direito acima.
-
-O teorema de Peter-Weyl fornece uma base ortonormal completa de $$L^2(SU(2),dg)$$ dados pelos coeficientes de matriz renormalizados:
+(A convenção de fase geral pode ser ajustada pelos fatores condon-shortley habituais; o ponto essencial é que os fatores integrais em um produto de dois fatores reais) $$3j$$- símbolos.) O teorema de Peter-Weyl fornece uma base ortonormal completa de $$L^2(SU(2),dg)$$ dados pelos coeficientes de matriz renormalizados:
 
 $$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
 
@@ -391,16 +389,8 @@ M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambd
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
-\text{Now with }J \text{ real-analytic}\\
-Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
-&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
-\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
 \end{aligned}
 ```
-
-Nota: para o caso unidimensional do flat-tori abaixo, $$\tilde{Q}_k(e^i,e^j) = 0$$ desde $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ É uma verdadeira derivação.
 
 ## Prova de Corolários
 

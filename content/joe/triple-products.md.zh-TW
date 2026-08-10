@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =51912
+status: 驗證 =51931
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -313,7 +313,7 @@ m_1 & m_2 & m_3
 
 從精簡群組的檢視點$$SU(2)$$, $$3j$$ 符號是精確的 (適當標準化和階段化) 交錯運算子，可實現三張量產品的唯一 (最大比例) 不變子空間$$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ 當該產品包含真實表示時。因此，它們是自然的「結構常數」，用於將三個無法縮減的表示法融合至單一。
 
-這與三產品積分所播放的象牙海岸完全類似$$M^{i,j,k}$$ 在 Riemannian 的操作上：當該產品在 eigenbasis 中被擴展回時，它們是特徵性產品的結構常數。在群組上$$SU(2)$$ 本身，那些積分減少到$$3j$$- 符號。
+這與三產品積分所播放的象牙海岸完全類似$$M^{i,j,k}$$ 在 Riemannian 的操作上：當該產品在 eigenbasis 中被擴展回時，它們是特徵性產品的結構常數。在群組上$$SU(2)$$ 本身，這些產品整體減少到分階段的產品$$3j$$- 符號。
 
 人才招聘$$D^{j}_{m n}(g)$$ 標準 Wigner $$D$$-fununction (微針捲曲的矩陣係數) $$j$$). 就正規化哈拉機率計量而言$$dg$$ 一個具有完全相同的公式[[VK88]](#VK88)
 
@@ -335,9 +335,7 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(整體階段慣例可由常規的 Condon-Shortley 因素調整；基本要點是將整體因素融入兩個實質產品中$$3j$$- 符號。) 索引時$$i,j,k$$ 以完整正規基準的矩陣係數 (透過增加排序) 執行紙張$$j$$ (然後是磁性指數) $$m,n$$)，數量$$M^{i,j,k}$$ 是以上右側顯示的數字。
-
-Peter – Weyl 定理提供完全正常的基礎$$L^2(SU(2),dg)$$ 由重新正規化矩陣係數給定 ：
+(整體階段慣例可由常規的 Condon-Shortley 因素調整；基本要點是將整體因素融入兩個實質產品中$$3j$$- 符號。) Peter – Weyl 定理提供完全正常的基礎$$L^2(SU(2),dg)$$ 由重新正規化矩陣係數給定 ：
 
 $$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
 
@@ -389,18 +387,10 @@ M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambd
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
-\text{Now with }J \text{ real-analytic}\\
-Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
-&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
-\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
 \end{aligned}
 ```
 
-注意：對於下面的一維均一案例，$$\tilde{Q}_k(e^i,e^j) = 0$$ 起自$$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ 是真正的衍生。
-
-## 核數證明
+## 核對證明
 
 Now consider the famous associativity relations from Conformal Field Theory:
 

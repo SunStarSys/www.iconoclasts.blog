@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=51912
+status: vérifié=51931
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -315,7 +315,7 @@ A $$3j$$ symbole disparaît sauf si $$m_1+m_2+m_3=0$$Les inégalités triangulai
 
 Du point de vue du groupe compact $$SU(2)$$, le $$3j$$ les symboles sont précisément les opérateurs d'entrelacement (probablement normalisés et par phase) qui réalisent le sous-espace invariant unique (jusqu'à l'échelle) du produit à triple tenseur $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ lorsque ce produit contient la représentation triviale. Elles sont donc les "constantes structurales" naturelles pour la fusion de trois représentations irréductibles au singlet.
 
-Ceci est exactement analogue au rôle joué par les intégrales à trois produits $$M^{i,j,k}$$ sur un collecteur riemannien : ils sont les constantes de structure du produit ponctuel des fonctions propres lorsque ce produit est repoussé dans la base propre. Sur le groupe $$SU(2)$$ ces intégrales réduisent à $$3j$$-symboles.
+Ceci est exactement analogue au rôle joué par les intégrales à trois produits $$M^{i,j,k}$$ sur un collecteur riemannien : ils sont les constantes de structure du produit ponctuel des fonctions propres lorsque ce produit est repoussé dans la base propre. Sur le groupe $$SU(2)$$ ces intégrales se réduisent à des produits progressifs de $$3j$$-symboles.
 
 Pour l'esprit, laissez $$D^{j}_{m n}(g)$$ être le Wigner standard $$D$$-fonctions (coefficients matriciels de l'irrep de spin) $$j$$). En ce qui concerne la mesure de probabilité normalisée de Haar $$dg$$ On a la formule exacte [[VK88]](#VK88)
 
@@ -337,9 +337,7 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(La convention de phase globale peut être ajustée par les facteurs habituels de Condon-Shortley ; le point essentiel est que les facteurs intégraux dans un produit de deux $$3j$$-symboles.) Quand les indices $$i,j,k$$ du papier couler sur une base orthonormée complète de coefficients matriciels ordonnés en augmentant $$j$$ puis par des indices magnétiques $$m,n$$), les quantités $$M^{i,j,k}$$ sont précisément les nombres apparaissant sur le côté droit ci-dessus.
-
-Le théorème de Peter-Weyl fournit une base orthonormée complète de $$L^2(SU(2),dg)$$ données par les coefficients matriciels renormalisés :
+(La convention de phase globale peut être ajustée par les facteurs habituels de Condon-Shortley ; le point essentiel est que les facteurs intégraux dans un produit de deux $$3j$$-symboles.) Le théorème de Peter-Weyl fournit une base orthonormée complète de $$L^2(SU(2),dg)$$ données par les coefficients matriciels renormalisés :
 
 $$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
 
@@ -391,16 +389,8 @@ M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambd
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
-\text{Now with }J \text{ real-analytic}\\
-Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
-&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
-\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
 \end{aligned}
 ```
-
-Remarque : pour le cas de tori plat unidimensionnel ci-dessous, $$\tilde{Q}_k(e^i,e^j) = 0$$ depuis $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ est une véritable dérivation.
 
 ## Preuve de corollaires
 

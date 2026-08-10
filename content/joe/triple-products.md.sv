@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=51912
+status: verifierad=51931
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -314,7 +314,7 @@ A $$3j$$ symbolen försvinner om inte $$m_1+m_2+m_3=0$$Triangeln ojämlikheter $
 
 Från den kompakta gruppens synvinkel $$SU(2)$$, $$3j$$ symbolerna är exakt de (riktigt normaliserade och fasade) sammanflätande operatorer som inser det unika (upp till skala) invarierade underutrymmet för trippeltensorprodukten $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ när produkten innehåller den triviala representationen. De är därför de naturliga "strukturkonstanterna" för sammansmältningen av tre irreducibla representationer till singleten.
 
-Detta är exakt analogt med den roll som spelas av trippelproduktintegralerna. $$M^{i,j,k}$$ på ett Riemanniskt grenrör: de är strukturkonstanterna för den punktvisa produkten av egenfunktioner när den produkten expanderas tillbaka i egenbasen. I gruppen $$SU(2)$$ Dessa integraler minskar till $$3j$$-symboler.
+Detta är exakt analogt med den roll som spelas av trippelproduktintegralerna. $$M^{i,j,k}$$ på ett Riemanniskt grenrör: de är strukturkonstanterna för den punktvisa produkten av egenfunktioner när den produkten expanderas tillbaka i egenbasen. I gruppen $$SU(2)$$ dessa integraler reduceras till stegvisa produkter av $$3j$$-symboler.
 
 För wit, låt $$D^{j}_{m n}(g)$$ Var standard för Wigner $$D$$-funktioner (matriskoefficienter för spinnets rep) $$j$$). Med avseende på det normaliserade Haar-sannolikhetsmåttet $$dg$$ En har den exakta formeln [[VK88]](#VK88)
 
@@ -336,9 +336,7 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(Den övergripande faskonventionen kan justeras av de vanliga Condon-Shortley-faktorerna; den väsentliga punkten är att de integrerade faktorerna i en produkt av två verkliga $$3j$$-symboler.) När indexen $$i,j,k$$ av papperet löper över en fullständig ortonormal grund av matriskoefficienter ordnade genom att öka $$j$$ (och sedan magnetiska index) $$m,n$$), kvantiteterna $$M^{i,j,k}$$ är exakt de siffror som visas på höger sida ovan.
-
-Peter-Weyl-satsen ger en komplett ortonormal grund för $$L^2(SU(2),dg)$$ som ges av de omnormaliserade matriskoefficienterna:
+(Den övergripande faskonventionen kan justeras av de vanliga Condon-Shortley-faktorerna; den väsentliga punkten är att de integrerade faktorerna i en produkt av två verkliga $$3j$$-symboler.) Peter-Weyl-satsen ger en komplett ortonormal grund för $$L^2(SU(2),dg)$$ som ges av de omnormaliserade matriskoefficienterna:
 
 $$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
 
@@ -390,18 +388,10 @@ M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambd
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
-\text{Now with }J \text{ real-analytic}\\
-Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
-&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
-\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
 \end{aligned}
 ```
 
-Anmärkning: för det endimensionella flat-tori fallet nedan, $$\tilde{Q}_k(e^i,e^j) = 0$$ sedan $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ Det är en sann härledning.
-
-## Bevis för korollarier
+## Korollariebevis
 
 Now consider the famous associativity relations from Conformal Field Theory:
 

@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=51912
+status: 확인=51931
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -314,7 +314,7 @@ A $$3j$$ 기호가 사라지지 않는 경우 $$m_1+m_2+m_3=0$$삼각형 불평�
 
 컴팩트 그룹의 관점에서 $$SU(2)$$의 경우 $$3j$$ 기호는 삼중 텐서 제품의 고유(확장까지) 불변 하위 공간을 실현하는 (적절하게 정규화되고 단계적으로 진행되는) 끼워넣는 연산자입니다. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ 해당 제품에 단순 표현이 포함되어 있는 경우 따라서 그들은 단일에 대한 세 가지 돌이킬 수없는 표현의 융합을위한 자연 "구조 상수"입니다.
 
-이것은 삼중 제품 적분이 연주 한 rôle과 정확히 유사합니다. $$M^{i,j,k}$$ 에 Riemannian 매니폴드: 그들은 그 제품이 eigenbasis에서 다시 확장 될 때 eigenfunctions의 포인트 방식 제품의 구조 상수입니다. 그룹 내 $$SU(2)$$ 그 자체로, 이러한 통합은 $$3j$$-기호.
+이것은 삼중 제품 적분이 연주 한 rôle과 정확히 유사합니다. $$M^{i,j,k}$$ 에 Riemannian 매니폴드: 그들은 그 제품이 eigenbasis에서 다시 확장 될 때 eigenfunctions의 포인트 방식 제품의 구조 상수입니다. 그룹 내 $$SU(2)$$ 그 자체로, 이러한 통합은 단계별 제품의 $$3j$$-기호.
 
 위트, Let $$D^{j}_{m n}(g)$$ 표준 Wigner $$D$$-functions (스핀의 irrep의 매트릭스 계수) $$j$$). 정규화된 하르 확률 측정과 관련하여 $$dg$$ 하나는 정확한 공식입니다. [[VK88]](#VK88)
 
@@ -336,9 +336,7 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(전체 위상 컨벤션은 일반적인 Condon-Shortley 요인에 의해 조정될 수 있습니다; 근본적인 점은 두개의 진짜의 제품으로 적분 인자 입니다 $$3j$$-기호.) 인덱스 $$i,j,k$$ 행렬 계수의 완전한 직교적 기초를 통해 실행되는 종이의 증가에 따라 정렬 $$j$$ 자기 지수(magnetic indices) $$m,n$$), 수량 $$M^{i,j,k}$$ 바로 위의 오른쪽에 나타나는 숫자입니다.
-
-Peter–Weyl theorem은 완전한 직교적 기초를 제공한다. $$L^2(SU(2),dg)$$ 다시 정규화된 행렬 계수에 의해 주어지는:
+(전체 위상 컨벤션은 일반적인 Condon-Shortley 요인에 의해 조정될 수 있습니다; 근본적인 점은 두개의 진짜의 제품으로 적분 인자 입니다 $$3j$$-기호.) Peter–Weyl theorem은 완전한 직교적 기초를 제공한다. $$L^2(SU(2),dg)$$ 다시 정규화된 행렬 계수에 의해 주어지는:
 
 $$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
 
@@ -390,16 +388,8 @@ M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambd
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
-\text{Now with }J \text{ real-analytic}\\
-Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
-&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
-\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
 \end{aligned}
 ```
-
-참고: 아래 1차원 플랫 토리 케이스의 경우, $$\tilde{Q}_k(e^i,e^j) = 0$$ 이후 $$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ 이것은 진정한 파생입니다.
 
 ## 코롤러 증거
 

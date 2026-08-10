@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=51912
+status: 確認済み=51931
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -313,7 +313,7 @@ A $$3j$$ シンボルの消滅$$m_1+m_2+m_3=0$$三角形の不等式$$|j_1-j_2|\
 
 コンパクトグループの視点から$$SU(2)$$、$$3j$$ シンボルは、トリプルテンソル製品のユニークな(スケールまで)不変サブスペースを実現する(適切に正規化され、段階的に)相互結合演算子です$$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ その製品に些細な表現が含まれている場合。それゆえ、それらは三つの非還元表現をシングルレットに融合させるための自然な「構造定数」である。
 
-これは、トリプル製品積分によって再生されるローレとまったく同じです$$M^{i,j,k}$$ Riemannian manifold: それらは、その製品が固有バシスで展開されるときの固有関数のポイントワイズ積の構造定数です。グループで$$SU(2)$$ それらの積分は、$$3j$$- 記号。
+これは、トリプル製品積分によって再生されるローレとまったく同じです$$M^{i,j,k}$$ Riemannian manifold: それらは、その製品が固有バシスで展開されるときの固有関数のポイントワイズ積の構造定数です。グループで$$SU(2)$$ それ自体、これらの積分は段階的なプロダクトに減らします$$3j$$- 記号。
 
 WIT、Let $$D^{j}_{m n}(g)$$ 標準のWigner $$D$$-functions(スピン不良のマトリックス係数) $$j$$). 正規化ハール確率測定に関して$$dg$$ 正確な式がある[[VK88]](#VK88)
 
@@ -335,9 +335,7 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(全体的な相慣習は、通常のコンドン- ショートリー因子によって調整することができます。重要な点は、積分因子が二つの実体積になることです。$$3j$$-symbol)。インデックス$$i,j,k$$ 行列係数の完全な直交的基準の上で実行される用紙の増加$$j$$ (そして磁気指数によって) $$m,n$$(数量) $$M^{i,j,k}$$ 正確な数字は、上の右側に表示されます。
-
-Peter-Weyl定理は、完全な正統な基礎を提供します。$$L^2(SU(2),dg)$$ 正規化された行列係数によって与えられる:
+(全体的な相慣習は、通常のコンドン- ショートリー因子によって調整することができます。重要な点は、積分因子が二つの実体積になることです。$$3j$$-symbol)。Peter-Weyl定理は、完全な正統な基礎を提供します。$$L^2(SU(2),dg)$$ 正規化された行列係数によって与えられる:
 
 $$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
 
@@ -389,18 +387,10 @@ M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambd
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
-\text{Now with }J \text{ real-analytic}\\
-Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
-&= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
-\tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
 \end{aligned}
 ```
 
-注: 次の一次元の平坦な場合のために、$$\tilde{Q}_k(e^i,e^j) = 0$$ 以降$$\sqrt{\Delta} = \sqrt{-1}\frac{d}{dx}$$ 真の派生である。
-
-## コロラリの証明
+##カロリーの証明
 
 Now consider the famous associativity relations from Conformal Field Theory:
 
