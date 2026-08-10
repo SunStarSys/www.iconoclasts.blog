@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52007
+status: verified=52022
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -362,7 +362,7 @@ n_1 & n_2 & -n_3
 \end{aligned}
 ```
 
-For compact Abelian Lie Groups, these irreducible components are all one-dimensional, so their situation is entirely similar to the spectral decomposition of multiplicity-1 Laplacians above.  More on this in the Example below.
+For compact Abelian Lie Groups, these irreducible components $$\langle U(\mathscr V_\lambda)\rangle$$ are all one-dimensional, so their situation is entirely similar to the spectral decomposition of multiplicity-1 Laplacians above.  More on this in the Example below.
 
 Getting back to Corollary 1, we observe that the proof involves establishing this implication:
 
