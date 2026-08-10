@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=51900
+status: verified=51908
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -377,30 +377,23 @@ We may hope that for any given $$k>0$$, $$M_0^{i,\bar i,k}$$ cannot be identical
 
 We sketch a proof of Corollary 1 (sufficiency) below the next set of formulae.
 
-Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into the generalized conjecture:
+Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into the generalized conjecture. Here $$v\cdot w$$ is the Riemannian inner product on the cotangent bundle:
 
 ```math
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\
-\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
 \text {So the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
 \text{Now with }J \text{ real-analytic}\\
 Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
 &= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
 \tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
-df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
-\sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
-&= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
- = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell\implies\\
- \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
-&= \widehat{g^2}(k). \\
 \end{aligned}
 ```
 
