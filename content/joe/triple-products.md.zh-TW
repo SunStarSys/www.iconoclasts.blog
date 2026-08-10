@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =51931
+status: 驗證 =52007
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -294,7 +294,7 @@ $$
 
 #### 阿塞德
 
-輕巧小 Lie Group 的代表理論$$G$$ 從方程式和研究中取得明確的 Laplacian $$G$$- 不變 (左右下動作) *可縮減* 分解$$P_{\mathscr V_\lambda}$$ 總共$$L^2(G,dg)$$ (此處) $$dg$$ 正規化「Haar 機率測量」$$G$$) 作為$$\oplus_\lambda P_{\mathscr V_\lambda}$$，並遵循上述表達式中的相互作用，作為 Lie Theory 的必要構件，如 Peter-Weyl Theorem 所述[[AK01]](#AK01)。相容的 Riemannian 幾何圖形是由二次 Casimir 元素的便利選擇所產生，這些元素位於通用信封代數中心，其重要性低於無法縮減的分解本身。** 其頻譜分解 **是這些不可縮減元件的 (較不方便) 重組，因為相關的 Casimir 元素在每個不可縮減元件上都是固定的。
+輕巧小 Lie Group 的代表理論$$G$$ 從方程式和研究中取得明確的 Laplacian $$G$$- 不變 (左右下動作) *可縮減* 分解$$\langle U(\mathscr V_\lambda)\rangle$$ 總共$$L^2(G,dg)$$ (此處) $$dg$$ 正規化「Haar 機率測量」$$G$$) 作為$$\oplus_\lambda \langle U(\mathscr V_\lambda)\rangle$$，並遵循上述表達式中的相互作用，作為 Lie Theory 的必要構件，如 Peter-Weyl Theorem 所述[[AK01]](#AK01)。相容的 Riemannian 幾何圖形是由二次 Casimir 元素的便利選擇所產生，這些元素位於通用信封代數中心，其重要性低於無法縮減的分解本身。** 其頻譜分解 **是這些不可縮減元件的 (較不方便) 重組，因為相關的 Casimir 元素在每個不可縮減元件上都是固定的。
 
 Wigner 氏$$3j$$ 符號 - $$SU(2)$$ 是進一步研究的主要範例&mdash; 讓我們把我們的一般建築應用在集團旗下。每個有限維度的不可縮回單位表示法$$SU(2)$$ 以非負值半整數標示$$j = 0, \tfrac12, 1, \tfrac32, \dots  $$。我們撰寫$$\mathscr  V_j  $$ 針對$$ (2j+1)  $$此表示法作用中的維度空間。標準正規基準$$\mathscr  V_j $$ 是磁性基礎$$  \ket{j\ m}$$ 取代為$$m = -j,-j+1,\dots,j.$$
 
@@ -307,7 +307,7 @@ m_1 & m_2 & m_3
 \end{pmatrix}
 :=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
 ```
-表示$$3j$$ 根據 Clebsch-Gordan 係數的符號定義$$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$，其具有封閉型式運算式，例如 Racah 的公式，可分解現代數值軟體程式庫[[JF16]](#JF16).
+表示$$3j$$ 根據 Clebsch-Gordan 係數的符號定義$$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$ 分解張量產品表示法$$\mathscr V _{j_1}\otimes\mathscr V _{j_2}$$ 至於無法再現的元件，其具有封閉式表示式，例如 Racah 的公式，可強化現代數值軟體程式庫[[JF16]](#JF16).
 
 一個$$3j$$ 除非符號虛名$$m_1+m_2+m_3=0$$，三角形不等式$$|j_1-j_2|\le j_3\le j_1+j_2$$ 保留與$$j_1+j_2+j_3$$ 是整數。
 
@@ -315,7 +315,7 @@ m_1 & m_2 & m_3
 
 這與三產品積分所播放的象牙海岸完全類似$$M^{i,j,k}$$ 在 Riemannian 的操作上：當該產品在 eigenbasis 中被擴展回時，它們是特徵性產品的結構常數。在群組上$$SU(2)$$ 本身，這些產品整體減少到分階段的產品$$3j$$- 符號。
 
-人才招聘$$D^{j}_{m n}(g)$$ 標準 Wigner $$D$$-fununction (微針捲曲的矩陣係數) $$j$$). 就正規化哈拉機率計量而言$$dg$$ 一個具有完全相同的公式[[VK88]](#VK88)
+人才招聘$$D^{j}_{m n}(g)$$ 標準 Wigner $$D$$-fununction (微針捲曲的矩陣係數) $$j$$ 在磁性正規基礎上$$\ket{j\ m}$$). 就正規化哈拉機率計量而言$$dg$$ 一個具有完全相同的公式[[VK88]](#VK88)
 
 ```math
 \int_{SU(2)}

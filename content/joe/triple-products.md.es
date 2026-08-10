@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=51931
+status: verificado=52007
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -296,7 +296,7 @@ Sin embargo, estas invariantes de base pueden resultar útiles para descifrar ca
 
 #### Aside
 
-La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y los estudios $$G$$-invariante (bajo acción izquierda o derecha) *irreducible* descomposiciones $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dg)$$ (aquí) $$dg$$ es la medida normalizada de probabilidad de Haar en $$G$$) como $$\oplus_\lambda P_{\mathscr V_\lambda}$$y honra su interacción en la expresión anterior como los artefactos esenciales de la Teoría de la Mentira, como se aborda en el Teorema de Peter-Weyl [[AK01]](#AK01). Las geometrías Riemannianas compatibles son generadas por opciones convenientes de elementos Casimir cuadráticos que se encuentran en el centro del álgebra envolvente universal, que son de menos importancia que la propia descomposición irreductible. **Su descomposición espectral** es un (menos conveniente) reensamblaje de esos componentes irreductibles, ya que el elemento Casimir asociado es constante en cada componente irreductible.
+La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y los estudios $$G$$-invariante (bajo acción izquierda o derecha) *irreducible* descomposiciones $$\langle U(\mathscr V_\lambda)\rangle$$ de $$L^2(G,dg)$$ (aquí) $$dg$$ es la medida normalizada de probabilidad de Haar en $$G$$) como $$\oplus_\lambda \langle U(\mathscr V_\lambda)\rangle$$y honra su interacción en la expresión anterior como los artefactos esenciales de la Teoría de la Mentira, como se aborda en el Teorema de Peter-Weyl [[AK01]](#AK01). Las geometrías Riemannianas compatibles son generadas por opciones convenientes de elementos Casimir cuadráticos que se encuentran en el centro del álgebra envolvente universal, que son de menos importancia que la propia descomposición irreductible. **Su descomposición espectral** es un (menos conveniente) reensamblaje de esos componentes irreductibles, ya que el elemento Casimir asociado es constante en cada componente irreductible.
 
 Wigner $$3j$$ símbolos para $$SU(2)$$ constituyen un buen ejemplo para seguir estudiando &mdash; Apliquemos nuestra construcción general a ella como un colector de grupo. Cada representación unitaria irreductible de dimensiones finitas de $$SU(2)$$ está etiquetado por medio entero no negativo $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Escribimos $$\mathscr  V_j  $$ para el $$ (2j+1)  $$Espacio dimensional en el que actúa esta representación. Una base ortonormal estándar de $$\mathscr  V_j $$ es la base magnética $$  \ket{j\ m}$$ con $$m = -j,-j+1,\dots,j.$$
 
@@ -309,7 +309,7 @@ m_1 & m_2 & m_3
 \end{pmatrix}
 :=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
 ```
-expresa el $$3j$$ Definición del símbolo en términos de los coeficientes Clebsch-Gordan $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, que tienen expresiones de forma cerrada como la fórmula de Racah que sustenta las bibliotecas modernas de software numérico [[JF16]](#JF16).
+expresa el $$3j$$ Definición del símbolo en términos de los coeficientes Clebsch-Gordan $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$ que descomponen la representación del producto tensor $$\mathscr V _{j_1}\otimes\mathscr V _{j_2}$$ En componentes irreductibles, que tienen expresiones de forma cerrada como la fórmula de Racah que sustenta las bibliotecas modernas de software numérico. [[JF16]](#JF16).
 
 A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$las desigualdades del triángulo $$|j_1-j_2|\le j_3\le j_1+j_2$$ mantener, y $$j_1+j_2+j_3$$ es un entero.
 
@@ -317,7 +317,7 @@ Desde el punto de vista del grupo compacto $$SU(2)$$, el $$3j$$ Los símbolos so
 
 Esto es exactamente análogo al papel jugado por las integrales de triple producto. $$M^{i,j,k}$$ en un colector riemanniano: son las constantes de la estructura del producto puntual de las funciones propias cuando ese producto se expande de nuevo en la base propia. En el grupo $$SU(2)$$ estas integrales se reducen a productos escalonados de la $$3j$$-símbolos.
 
-Para ingeniar, dejar $$D^{j}_{m n}(g)$$ ser el Wigner estándar $$D$$-funciones (coeficientes de matriz de la irrep de espín) $$j$$). Con respecto a la medida de probabilidad Haar normalizada $$dg$$ tiene la fórmula exacta [[VK88]](#VK88)
+Para ingeniar, dejar $$D^{j}_{m n}(g)$$ ser el Wigner estándar $$D$$-funciones (coeficientes de matriz de la irrep de espín) $$j$$ en la base magnética ortonormal $$\ket{j\ m}$$). Con respecto a la medida de probabilidad Haar normalizada $$dg$$ tiene la fórmula exacta [[VK88]](#VK88)
 
 ```math
 \int_{SU(2)}

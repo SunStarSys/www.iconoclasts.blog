@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=51931
+status: verifierad=52007
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -295,7 +295,7 @@ Dessa grundvarianter kan dock vara användbara vid dechiffrering av mer komplexa
 
 #### Förutom
 
-Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier $$G$$-invariant (under vänster eller höger åtgärd) *irreducerbar* dekompositioner $$P_{\mathscr V_\lambda}$$ av $$L^2(G,dg)$$ (här $$dg$$ är det normaliserade Haar-sannolikhetsmåttet på $$G$$) som $$\oplus_\lambda P_{\mathscr V_\lambda}$$och hedrar deras samspel i uttrycket ovan som de väsentliga artefakterna i Lie Theory, som behandlas i Peter-Weyl Theorem [[AK01]](#AK01). Kompatibla Riemannian geometrier genereras av praktiska val av kvadratiska Casimir element som ligger i mitten av den universella omslutande algebra, som är av mindre betydelse än den irreducibla sönderdelningen själv. **Deras spektrala sönderdelning** är en (mindre bekväm) sammanställning av dessa irreducibla komponenter, eftersom det associerade Casimir elementet är konstant på varje irreduciblig komponent.
+Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier $$G$$-invariant (under vänster eller höger åtgärd) *irreducerbar* dekompositioner $$\langle U(\mathscr V_\lambda)\rangle$$ av $$L^2(G,dg)$$ (här $$dg$$ är det normaliserade Haar-sannolikhetsmåttet på $$G$$) som $$\oplus_\lambda \langle U(\mathscr V_\lambda)\rangle$$och hedrar deras samspel i uttrycket ovan som de väsentliga artefakterna i Lie Theory, som behandlas i Peter-Weyl Theorem [[AK01]](#AK01). Kompatibla Riemannian geometrier genereras av praktiska val av kvadratiska Casimir element som ligger i mitten av den universella omslutande algebra, som är av mindre betydelse än den irreducibla sönderdelningen själv. **Deras spektrala sönderdelning** är en (mindre bekväm) sammanställning av dessa irreducibla komponenter, eftersom det associerade Casimir elementet är konstant på varje irreduciblig komponent.
 
 Wigners $$3j$$ symboler för $$SU(2)$$ Ett bra exempel på vidare studier &mdash; Låt oss tillämpa vår allmänna konstruktion på det som ett gruppmångfald. Varje ändlig dimensionell irreducerbar enhetlig representation av $$SU(2)$$ är märkt med ett icke-negativt halv-heltal $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Vi skriver $$\mathscr  V_j  $$ för $$ (2j+1)  $$-dimensionellt utrymme på vilket denna representation verkar. En standardortonormal grund för $$\mathscr  V_j $$ är den magnetiska basen $$  \ket{j\ m}$$ med $$m = -j,-j+1,\dots,j.$$
 
@@ -308,7 +308,7 @@ m_1 & m_2 & m_3
 \end{pmatrix}
 :=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
 ```
-uttrycker $$3j$$ symboldefinition i termer av Clebsch-Gordan koefficienter $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, som har slutna formuttryck som Racahs formel som stöder moderna numeriska programvarubibliotek [[JF16]](#JF16).
+uttrycker $$3j$$ symboldefinition i termer av Clebsch-Gordan koefficienter $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$ som sönderdelar tensorproduktrepresentationen $$\mathscr V _{j_1}\otimes\mathscr V _{j_2}$$ i irreducibla komponenter, som har slutna formuttryck som Racahs formel som stöder moderna numeriska programvarubibliotek [[JF16]](#JF16).
 
 A $$3j$$ symbolen försvinner om inte $$m_1+m_2+m_3=0$$Triangeln ojämlikheter $$|j_1-j_2|\le j_3\le j_1+j_2$$ hålla, och $$j_1+j_2+j_3$$ är ett heltal.
 
@@ -316,7 +316,7 @@ Från den kompakta gruppens synvinkel $$SU(2)$$, $$3j$$ symbolerna är exakt de 
 
 Detta är exakt analogt med den roll som spelas av trippelproduktintegralerna. $$M^{i,j,k}$$ på ett Riemanniskt grenrör: de är strukturkonstanterna för den punktvisa produkten av egenfunktioner när den produkten expanderas tillbaka i egenbasen. I gruppen $$SU(2)$$ dessa integraler reduceras till stegvisa produkter av $$3j$$-symboler.
 
-För wit, låt $$D^{j}_{m n}(g)$$ Var standard för Wigner $$D$$-funktioner (matriskoefficienter för spinnets rep) $$j$$). Med avseende på det normaliserade Haar-sannolikhetsmåttet $$dg$$ En har den exakta formeln [[VK88]](#VK88)
+För wit, låt $$D^{j}_{m n}(g)$$ Var standard för Wigner $$D$$-funktioner (matriskoefficienter för spinnets rep) $$j$$ i den magnetiska ortonormala basen $$\ket{j\ m}$$). Med avseende på det normaliserade Haar-sannolikhetsmåttet $$dg$$ En har den exakta formeln [[VK88]](#VK88)
 
 ```math
 \int_{SU(2)}
