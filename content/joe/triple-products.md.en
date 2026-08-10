@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=51931
+status: verified=51968
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -314,7 +314,7 @@ From the point of view of the compact group $$SU(2)$$, the $$3j$$ symbols are pr
 
 This is exactly analogous to the rôle played by the triple-product integrals $$M^{i,j,k}$$ on a Riemannian manifold: they are the structure constants of the pointwise product of eigenfunctions when that product is expanded back in the eigenbasis. On the group $$SU(2)$$ itself, those integrals reduce to phased products of the $$3j$$-symbols.
 
-To wit, let $$D^{j}_{m n}(g)$$ be the standard Wigner $$D$$-functions (matrix coefficients of the irrep of spin $$j$$). With respect to the normalized Haar probability measure $$dg$$ one has the exact formula [[VK88]](#VK88)
+To wit, let $$D^{j}_{m n}(g)$$ be the standard Wigner $$D$$-functions (matrix coefficients of the irrep of spin $$j$$ in the magnetic orthonormal basis $$\ket{j\ m}$$). With respect to the normalized Haar probability measure $$dg$$ one has the exact formula [[VK88]](#VK88)
 
 ```math
 \int_{SU(2)}
