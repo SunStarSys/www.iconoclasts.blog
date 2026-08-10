@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=52007
+status: verificado=52051
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -296,7 +296,7 @@ Sin embargo, estas invariantes de base pueden resultar útiles para descifrar ca
 
 #### Aside
 
-La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y los estudios $$G$$-invariante (bajo acción izquierda o derecha) *irreducible* descomposiciones $$\langle U(\mathscr V_\lambda)\rangle$$ de $$L^2(G,dg)$$ (aquí) $$dg$$ es la medida normalizada de probabilidad de Haar en $$G$$) como $$\oplus_\lambda \langle U(\mathscr V_\lambda)\rangle$$y honra su interacción en la expresión anterior como los artefactos esenciales de la Teoría de la Mentira, como se aborda en el Teorema de Peter-Weyl [[AK01]](#AK01). Las geometrías Riemannianas compatibles son generadas por opciones convenientes de elementos Casimir cuadráticos que se encuentran en el centro del álgebra envolvente universal, que son de menos importancia que la propia descomposición irreductible. **Su descomposición espectral** es un (menos conveniente) reensamblaje de esos componentes irreductibles, ya que el elemento Casimir asociado es constante en cada componente irreductible.
+La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y estudia representaciones *irreducibles* $$\Phi^{(\lambda)} \in Hom(G,U(\mathscr V_\lambda))$$ hacia la descomposición espacial de Hilbert de $$L^2(G,dg)$$ (aquí) $$dg$$ es la medida normalizada de probabilidad de Haar en $$G$$) como se aborda en el Teorema de Peter-Weyl, y honra su interacción en la expresión anterior (a través de la descomposición irrep de los productos tensores de irreps) como los artefactos esenciales de la Teoría de la Mentira [[AK01]](#AK01). Las geometrías Riemannian compatibles son generadas por opciones convenientes de elementos Casimir cuadráticos que se encuentran en el centro del álgebra envolvente universal, que son de menor importancia que la descomposición irreductible de $$L^2(G,dg)$$ **Su descomposición espectral** es un reensamblaje (menos conveniente) de esos componentes irreducibles, ya que el elemento Casimir asociado es constante en los coeficientes de matriz de cada representación irreducible.
 
 Wigner $$3j$$ símbolos para $$SU(2)$$ constituyen un buen ejemplo para seguir estudiando &mdash; Apliquemos nuestra construcción general a ella como un colector de grupo. Cada representación unitaria irreductible de dimensiones finitas de $$SU(2)$$ está etiquetado por medio entero no negativo $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Escribimos $$\mathscr  V_j  $$ para el $$ (2j+1)  $$Espacio dimensional en el que actúa esta representación. Una base ortonormal estándar de $$\mathscr  V_j $$ es la base magnética $$  \ket{j\ m}$$ con $$m = -j,-j+1,\dots,j.$$
 
@@ -365,7 +365,7 @@ n_1 & n_2 & -n_3
 \end{aligned}
 ```
 
-Para los grupos de mentiras abelianos compactos, estos componentes irreductibles son todos unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad 1 de los laplacianos anteriores.  Más sobre esto en el ejemplo a continuación.
+Para grupos de mentiras abelianos compactos, estos espacios vectoriales $$\mathscr V_\lambda$$ Todos son unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad-1.  Más sobre esto en el ejemplo a continuación.
 
 Volviendo al Corolario 1, observamos que la prueba implica establecer esta implicación:
 

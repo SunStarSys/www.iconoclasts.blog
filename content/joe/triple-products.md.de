@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=52007
+status: überprüft=52051
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -295,7 +295,7 @@ Diese Basisinvarianten können sich jedoch als nützlich erweisen, um komplexere
 
 #### Abgesehen
 
-Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien $$G$$-invariant (unter linker oder rechter Aktion) *irreduzible* Zersetzungen $$\langle U(\mathscr V_\lambda)\rangle$$ von $$L^2(G,dg)$$ (hier $$dg$$ ist die normalisierte Haarwahrscheinlichkeit auf $$G$$) als $$\oplus_\lambda \langle U(\mathscr V_\lambda)\rangle$$, und ehrt ihr Zusammenspiel im obigen Ausdruck als die wesentlichen Artefakte der Lüge-Theorie, wie im Peter-Weyl-Theorem angesprochen [[AK01]](#AK01). Kompatible Riemannsche Geometrien werden durch bequeme Entscheidungen von quadratischen Casimir-Elementen erzeugt, die in der Mitte der universellen umhüllenden Algebra liegen, die von weniger Bedeutung sind als die irreduzible Zersetzung selbst. **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Wiederzusammensetzung dieser irreduziblen Komponenten, da das zugehörige Casimir-Element an jedem irreduziblen Bestandteil konstant ist.
+Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien *irreducible* Darstellungen $$\Phi^{(\lambda)} \in Hom(G,U(\mathscr V_\lambda))$$ zur Hilbert-Raumzersetzung von $$L^2(G,dg)$$ (hier $$dg$$ ist die normalisierte Haarwahrscheinlichkeit auf $$G$$) wie im Peter-Weyl-Theorem angesprochen, und ehrt ihr Zusammenspiel mit dem oben genannten Ausdruck (durch irrep Zersetzung von Tensorprodukten von Irreps) als die wesentlichen Artefakte der Lüge-Theorie [[AK01]](#AK01). Kompatible Riemannsche Geometrien werden durch bequeme Wahl von quadratischen Casimir-Elementen erzeugt, die in der Mitte der universellen umhüllenden Algebra liegen, die von weniger Bedeutung sind als die irreduzible Zersetzung von $$L^2(G,dg)$$ **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Wiederzusammensetzung dieser irreduziblen Komponenten, da das zugehörige Casimir-Element auf den Matrixkoeffizienten jeder irreduziblen Darstellung konstant ist.
 
 Wigner's $$3j$$ Symbole für $$SU(2)$$ sind ein Paradebeispiel für weitere Studien &mdash; Lassen Sie uns unsere allgemeine Konstruktion als Gruppenverteiler anwenden. Jede endliche, irreduzible, einheitliche Darstellung von $$SU(2)$$ ist durch eine nicht negative halbe Ganzzahl gekennzeichnet $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Wir schreiben $$\mathscr  V_j  $$ für die $$ (2j+1)  $$-dimensionaler Raum, auf den diese Darstellung wirkt. Eine orthonormale Basis für $$\mathscr  V_j $$ ist die magnetische Basis $$  \ket{j\ m}$$ mit $$m = -j,-j+1,\dots,j.$$
 
@@ -364,7 +364,7 @@ n_1 & n_2 & -n_3
 \end{aligned}
 ```
 
-Für kompakte Abelian Lie-Gruppen sind diese irreduziblen Komponenten alle eindimensional, so dass ihre Situation der spektralen Zersetzung von Multiplizitäts-1 Laplaciern oben völlig ähnlich ist.  Mehr dazu im Beispiel unten.
+Für kompakte Abelian Lie-Gruppen, diese Vektorräume $$\mathscr V_\lambda$$ sind alle eindimensional, so dass ihre Situation ganz ähnlich der spektralen Zersetzung von Multiplizitäts-1 Laplacians oben ist.  Mehr dazu im Beispiel unten.
 
 Wenn wir zu Korrespondenz 1 zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
 

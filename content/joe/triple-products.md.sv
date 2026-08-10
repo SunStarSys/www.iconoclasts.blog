@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=52007
+status: verifierad=52051
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -295,7 +295,7 @@ Dessa grundvarianter kan dock vara användbara vid dechiffrering av mer komplexa
 
 #### Förutom
 
-Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier $$G$$-invariant (under vänster eller höger åtgärd) *irreducerbar* dekompositioner $$\langle U(\mathscr V_\lambda)\rangle$$ av $$L^2(G,dg)$$ (här $$dg$$ är det normaliserade Haar-sannolikhetsmåttet på $$G$$) som $$\oplus_\lambda \langle U(\mathscr V_\lambda)\rangle$$och hedrar deras samspel i uttrycket ovan som de väsentliga artefakterna i Lie Theory, som behandlas i Peter-Weyl Theorem [[AK01]](#AK01). Kompatibla Riemannian geometrier genereras av praktiska val av kvadratiska Casimir element som ligger i mitten av den universella omslutande algebra, som är av mindre betydelse än den irreducibla sönderdelningen själv. **Deras spektrala sönderdelning** är en (mindre bekväm) sammanställning av dessa irreducibla komponenter, eftersom det associerade Casimir elementet är konstant på varje irreduciblig komponent.
+Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier *irreducible *representationer $$\Phi^{(\lambda)} \in Hom(G,U(\mathscr V_\lambda))$$ mot Hilbert rymd sönderdelning av $$L^2(G,dg)$$ (här $$dg$$ är det normaliserade Haar-sannolikhetsmåttet på $$G$$) som behandlas i Peter-Weyl Theorem, och hedrar deras samspel i uttrycket ovan (via irrep sönderdelning av tensorprodukter av irreps) som de väsentliga artefakterna i Lie Theory [[AK01]](#AK01). Kompatibla Riemannian geometrier genereras av praktiska val av kvadratiska Casimir element som ligger i mitten av den universella omslutande algebra, som är av mindre betydelse än den irreducibla sönderdelningen av $$L^2(G,dg)$$ **Deras spektrala sönderdelning** är en (mindre bekväm) återmontering av dessa irreducerbara komponenter, eftersom det associerade Casimir-elementet är konstant på matriskoefficienterna för varje irreducerbar representation.
 
 Wigners $$3j$$ symboler för $$SU(2)$$ Ett bra exempel på vidare studier &mdash; Låt oss tillämpa vår allmänna konstruktion på det som ett gruppmångfald. Varje ändlig dimensionell irreducerbar enhetlig representation av $$SU(2)$$ är märkt med ett icke-negativt halv-heltal $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Vi skriver $$\mathscr  V_j  $$ för $$ (2j+1)  $$-dimensionellt utrymme på vilket denna representation verkar. En standardortonormal grund för $$\mathscr  V_j $$ är den magnetiska basen $$  \ket{j\ m}$$ med $$m = -j,-j+1,\dots,j.$$
 
@@ -364,7 +364,7 @@ n_1 & n_2 & -n_3
 \end{aligned}
 ```
 
-För kompakta Abeliska Liegrupper är dessa irreducibla komponenter alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multiplicitet-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
+För kompakta Abelian Lie Grupper, dessa vektorrum $$\mathscr V_\lambda$$ De är alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multiplicitet-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
 
 Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 

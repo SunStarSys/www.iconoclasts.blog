@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=52007
+status: vérifié=52051
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -296,7 +296,7 @@ Cependant, ces invariants de base peuvent s'avérer utiles pour déchiffrer des 
 
 #### En dehors
 
-La théorie de la représentation d'un groupe de Lie Compact $$G$$ prend le Laplacien explicite hors de l'équation et des études $$G$$-invariante (sous l'action gauche ou droite) *irréductible* décompositions $$\langle U(\mathscr V_\lambda)\rangle$$ sur $$L^2(G,dg)$$ (ici) $$dg$$ est la mesure normalisée de probabilité de Haar sur $$G$$) comme $$\oplus_\lambda \langle U(\mathscr V_\lambda)\rangle$$et honore leur interaction dans l'expression ci-dessus comme les artefacts essentiels de la théorie des mensonges, comme abordé dans le théorème de Peter-Weyl. [[AK01]](#AK01). Les géométries Riemanniennes compatibles sont générées par des choix pratiques d'éléments quadratiques Casimir qui se trouvent au centre de l'algèbre universelle enveloppante, qui sont moins importants que la décomposition irréductible elle-même. **Leur décomposition spectrale** est un réassemblage (moins pratique) de ces composants irréductibles, puisque l'élément Casimir associé est constant sur chaque composant irréductible.
+La théorie de la représentation d'un groupe de Lie Compact $$G$$ prend le Laplacien explicite hors de l'équation et des études *reductibles* représentations $$\Phi^{(\lambda)} \in Hom(G,U(\mathscr V_\lambda))$$ vers la décomposition spatiale de Hilbert $$L^2(G,dg)$$ (ici) $$dg$$ est la mesure normalisée de probabilité de Haar sur $$G$$) tel qu'il est abordé dans le théorème de Peter-Weyl, et honore leur interaction dans l'expression ci-dessus (via la décomposition irrep des produits tenseurs d'irréponses) comme les artefacts essentiels de la théorie du mensonge [[AK01]](#AK01). Les géométries riemanniennes compatibles sont générées par des choix pratiques d'éléments quadratiques de Casimir qui se trouvent au centre de l'algèbre universelle enveloppante, qui sont moins importants que la décomposition irréductible de $$L^2(G,dg)$$ **Leur décomposition spectrale** est un réassemblage (moins commode) de ces composantes irréductibles, puisque l'élément Casimir associé est constant sur les coefficients matriciels de chaque représentation irréductible.
 
 Wigner's $$3j$$ symboles pour $$SU(2)$$ sont un excellent exemple pour une étude plus approfondie &mdash; Appliquons notre construction générale à elle en tant que collecteur de groupe. Chaque représentation unitaire irréductible et finie $$SU(2)$$ est étiqueté par un demi-entier non négatif $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Nous écrivons $$\mathscr  V_j  $$ pour $$ (2j+1)  $$-l'espace dimensionnel sur lequel agit cette représentation. Une base orthonormée standard de $$\mathscr  V_j $$ est la base magnétique $$  \ket{j\ m}$$ avec $$m = -j,-j+1,\dots,j.$$
 
@@ -365,7 +365,7 @@ n_1 & n_2 & -n_3
 \end{aligned}
 ```
 
-Pour les groupes de mensonges abéliens compacts, ces composants irréductibles sont tous unidimensionnels, de sorte que leur situation est entièrement similaire à la décomposition spectrale de la multiplicité-1 Laplaciens ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
+Pour les groupes de mensonges abéliens compacts, ces espaces vectoriels $$\mathscr V_\lambda$$ sont tous unidimensionnels, donc leur situation est tout à fait similaire à la décomposition spectrale de la multiplicité-1 Laplaciens ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
 
 En revenant au Corollaire 1, nous observons que la preuve implique d'établir cette implication :
 
