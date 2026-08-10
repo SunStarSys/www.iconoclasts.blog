@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=51806
+status: 확인=51912
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -279,7 +279,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 일반적으로 연관된 필요 조건 "제품 가치 계약 관련" 그저 그렇게 될 뿐 "선형 맵의 정렬된 단수 값 세트(다중성으로 계산됨) 보존 $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 정의자 $$\set{M^{i,j,k}}$$." 여기에 내부 제품 $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ 다음과 같음 $$tr (B^*A)$$. 정의상, 이러한 단수값은 단일 변환의 직접 합계에서 불변합니다. $$\mathscr V_\lambda$$.
 
-multiplicity-1 스펙트럼 케이스에서, 단수값의 완전한 세트는 단순히의 절대값의 세트이다 $$M^{i,j,k}$$ 이것은, 우리는 여전히 추측, 완전히 이러한 isospectral 매니폴드의 isometry 클래스를 특징. 이 추측과 Corollary 2 사이의 주요 관계는 방정식(19)을 참조하십시오. 누락 된 것은 절대값이 동의하면 매니폴드가 아이소메트릭이라는 충분한 인수입니다. 즉, 방정식 (19)의 LHS 요약에서 기지 사이에 가능한 기호 변경 취소를 제거하기 위해 인수가 필요합니다.
+multiplicity-1 스펙트럼 케이스에서, 단수값의 완전한 세트는 단순히의 절대값의 세트이다 $$M^{i,j,k}$$ 이것은, 우리는 여전히 추측, 완전히 이러한 isospectral 매니폴드의 isometry 클래스를 특징. 이 추측과 관상 2 사이의 주요 관계는 방정식(22)을 참조하십시오. 누락 된 것은 절대값이 동의하면 매니폴드가 아이소메트릭이라는 충분성 인수입니다. 즉, 방정식 (22)의 LHS 요약에서 기지 사이에 가능한 기호 변경 취소를 제거하기 위해 인수가 필요합니다.
 
 우리는 일반 추측이 사실 (다중성-1 스펙트럼 케이스 외부)을 가지고 있다는 것을 훨씬 덜 확신합니다. 왜냐하면 그것은 명백한 Sunada 건설을 통해 반예 (충분성)를 생산할 수 있기 때문입니다.
 
@@ -295,9 +295,9 @@ $$
 
 #### 옆으로
 
-조밀한 거짓말 그룹의 표현 이론 $$G$$ 방정식과 연구에서 명백한 라플라시안을 취한다. $$G$$-invariant (왼쪽 또는 오른쪽 동작의 밑에) *irreducible* 분해 $$P_{\mathscr V_\lambda}$$ 의 $$L^2(G,dx)$$ (여기서) $$dx$$ 은(는) 정규화된 Haar 확률 측정입니다. $$G$$) 으로 $$\oplus_\lambda P_{\mathscr V_\lambda}$$and honors their interplay in the expression above as the essential artifacts of Lie Theory, as addressed in the Peter-Weyl Theorem 거짓말 이론의 본질적인 유물로서 위의 표현에서 그들의 상호 작용을 존중한다. [[AK01]](#AK01). 호환 Riemannian 기하학은 보편적 인 봉투 대수학의 중심에 놓여있는 이차적 Casimir 요소의 편리한 선택에 의해 생성되며, 이는 환원 불가능한 분해 자체보다 덜 중요합니다. **그들의 스펙트럼 분해**는 관련 Cartan-Killing Casimir 요소 (Riemannian 미터법)가 각 환원 불가능한 구성 요소에 일정하기 때문에 이러한 환원 불가능한 구성 요소의 (적어도 편리한) 재조립입니다.
+조밀한 거짓말 그룹의 표현 이론 $$G$$ 방정식과 연구에서 명백한 라플라시안을 취한다. $$G$$-invariant (왼쪽 또는 오른쪽 동작의 밑에) *irreducible* 분해 $$P_{\mathscr V_\lambda}$$ 의 $$L^2(G,dg)$$ (여기서) $$dg$$ 은(는) 정규화된 Haar 확률 측정입니다. $$G$$) 으로 $$\oplus_\lambda P_{\mathscr V_\lambda}$$and honors their interplay in the expression above as the essential artifacts of Lie Theory, as addressed in the Peter-Weyl Theorem 거짓말 이론의 본질적인 유물로서 위의 표현에서 그들의 상호 작용을 존중한다. [[AK01]](#AK01). 호환 Riemannian 기하학은 보편적 인 봉투 대수학의 중심에 놓여있는 사분면 Casimir 요소의 편리한 선택에 의해 생성되며, 이는 환원 불가능한 분해 자체보다 덜 중요합니다. **그들의 스펙트럼 분해**는 관련 Casimir 요소가 각 환원 불가능한 구성 요소에 일정하기 때문에 이러한 환원 불가능한 구성 요소의 (적어도 편리한) 재조립입니다.
 
-위너스 $$3j$$ 기호 $$SU(2)$$ 추가 학습을 위한 주요 사례 &mdash; 우리는 Cartan-Killing Riemannian 미터법으로 그룹 매니폴드로 우리의 일반적인 건설을 적용하자. 모든 유한 차원의 환원 불가능한 단일 표현 $$SU(2)$$ 음이 아닌 반정수로 레이블 지정됨 $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. 글쓰기 $$\mathscr  V_j  $$ 대상 $$ (2j+1)  $$이 표현이 작동하는 -차원 공간입니다. 표준 직교 기준 $$\mathscr  V_j $$ 자기 기초 The Magnetic Base $$  \ket{j\ m}$$ 포함 $$m = -j,-j+1,\dots,j.$$
+위너스 $$3j$$ 기호 $$SU(2)$$ 추가 학습을 위한 주요 사례 &mdash; 우리는 우리의 일반적인 건설을 그룹 매니폴드로 적용하자. 모든 유한 차원의 환원 불가능한 단일 표현 $$SU(2)$$ 음이 아닌 반정수로 레이블 지정됨 $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. 글쓰기 $$\mathscr  V_j  $$ 대상 $$ (2j+1)  $$이 표현이 작동하는 -차원 공간입니다. 표준 직교 기준 $$\mathscr  V_j $$ 자기 기초 The Magnetic Base $$  \ket{j\ m}$$ 포함 $$m = -j,-j+1,\dots,j.$$
 
 방정식
 
@@ -308,30 +308,63 @@ m_1 & m_2 & m_3
 \end{pmatrix}
 :=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
 ```
-
 이 명령문은 $$3j$$ Clebsch-Gordan 계수의 상징 정의 $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, 현대 숫자 소프트웨어 라이브러리를 뒷받침하는 Racah의 공식과 같은 형식 표현식을 닫았습니다. [[JF16]](#JF16).
 
-A $$3j$$ 기호가 사라지지 않는 경우 $$m_1+m_2+m_3=0$$삼각형 불평등(Triangle Inequalities) $$|j_1-j_2|\le j_3\le j_1+j_2$$ 보류 및 $$j_1+j_2+j_3$$ 정수입니다. Eigenfunction 트리플 $$SU(2)$$ 일반적으로 (콘돈-짧은 단계를 통해) 실제 값을 갖는 계수를 구성하는 것은 정확히 구형의 조화이다. $$S^2$$.
+A $$3j$$ 기호가 사라지지 않는 경우 $$m_1+m_2+m_3=0$$삼각형 불평등(Triangle Inequalities) $$|j_1-j_2|\le j_3\le j_1+j_2$$ 보류 및 $$j_1+j_2+j_3$$ 정수입니다.
 
 컴팩트 그룹의 관점에서 $$SU(2)$$의 경우 $$3j$$ 기호는 삼중 텐서 제품의 고유(확장까지) 불변 하위 공간을 실현하는 (적절하게 정규화되고 단계적으로 진행되는) 끼워넣는 연산자입니다. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ 해당 제품에 단순 표현이 포함되어 있는 경우 따라서 그들은 단일에 대한 세 가지 돌이킬 수없는 표현의 융합을위한 자연 "구조 상수"입니다.
 
-이것은 삼중 제품 적분이 연주 한 rôle과 정확히 유사합니다. $$M^{i,j,k}$$ 에 Riemannian 매니폴드: 그들은 그 제품이 eigenbasis에서 다시 확장 될 때 eigenfunctions의 포인트 방식 제품의 구조 상수입니다. 그룹 내 $$SU(2)$$ 자체(또는 $$S^2=SU(2)/U(1)$$) 이러한 통합은 $$3j$$-Gaunt Integral Formula를 통한 기호 [[O26]](#O26):
+이것은 삼중 제품 적분이 연주 한 rôle과 정확히 유사합니다. $$M^{i,j,k}$$ 에 Riemannian 매니폴드: 그들은 그 제품이 eigenbasis에서 다시 확장 될 때 eigenfunctions의 포인트 방식 제품의 구조 상수입니다. 그룹 내 $$SU(2)$$ 그 자체로, 이러한 통합은 $$3j$$-기호.
+
+위트, Let $$D^{j}_{m n}(g)$$ 표준 Wigner $$D$$-functions (스핀의 irrep의 매트릭스 계수) $$j$$). 정규화된 하르 확률 측정과 관련하여 $$dg$$ 하나는 정확한 공식입니다. [[VK88]](#VK88)
 
 ```math
-M^{i,j,k}
+\int_{SU(2)}
+D^{j_1}_{m_1 n_1}(g)\,
+D^{j_2}_{m_2 n_2}(g)\,
+\overline{D^{j_3}_{m_3 n_3}(g)}\,dg
 =
-(-1)^{m_k(l_k)}
-\sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-0 & 0 & 0
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
 \end{pmatrix}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-m_i(l_i) & m_j(l_j) & -m_k(l_k)
-\end{pmatrix},
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+\times
+(-1)^{m_3+n_3}.
 ```
-여기서 $$l_i \in \set{0,1/2,1,3/2,\dots}$$ 다음에서 비증가 $$0$$ 이후 $$\Delta|_ {\mathscr V_j} = j(j+1)$$및 $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ 은(는) 다음의 고정 값 내에서 증가하는 시퀀스입니다. $$l_i$$. 즉, $$n:=\dim \mathscr V_{l_i} = 2l_i+1\in \N\implies n(n-1)/2 \leq i \lt n(n+1)/2 \implies -l_i \leq m_i(l_i) \leq l_i$$ 다양함 $$i$$ 상기 전체 세트는, The entire set in order, $$l_i$$  임계값 배수가 있습니다. $$n$$. 자연적 단일행동(Natural Unitary Action) $$\mathscr V_{l_i}$$ 이러한 정의를 $$m_i(l_i)$$ 다소 임의적이지만 여기에서 선택한 사항은 명확해야 합니다. 고원 The Plateaus $$l_i$$ 맵으로 표현됩니다. $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (차원 합계 반전에서 파생됨) $$i=f(n)=\frac{n(n+1)}{2}$$). 해당 $$\sqrt{4\pi}$$ 분모의 용어는 Haar 측정에 대한 유도된 Riemannian 측정항목 표현식에서 비롯됩니다. 정규화된 확률 측정으로 되돌리면 사라집니다.
+
+(전체 위상 컨벤션은 일반적인 Condon-Shortley 요인에 의해 조정될 수 있습니다; 근본적인 점은 두개의 진짜의 제품으로 적분 인자 입니다 $$3j$$-기호.) 인덱스 $$i,j,k$$ 행렬 계수의 완전한 직교적 기초를 통해 실행되는 종이의 증가에 따라 정렬 $$j$$ 자기 지수(magnetic indices) $$m,n$$), 수량 $$M^{i,j,k}$$ 바로 위의 오른쪽에 나타나는 숫자입니다.
+
+Peter–Weyl theorem은 완전한 직교적 기초를 제공한다. $$L^2(SU(2),dg)$$ 다시 정규화된 행렬 계수에 의해 주어지는:
+
+$$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
+
+인덱스가 실행되는 위치
+
+$$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
+
+Combining the two equations one obtains the explicit expression:
+
+```math
+\begin{aligned}
+M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
+&=
+\sqrt{(2j_1+1)(2j_2+1)(2j_3+1)}\\
+&\ \times
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
+\end{pmatrix}
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+(-1)^{m_3+n_3}.
+\end{aligned}
+```
 
 컴팩트 한 아벨 리 그룹의 경우, 이러한 환원 불가능한 구성 요소는 모두 한 차원이므로, 그들의 상황은 전적으로 다수성-1 라플라시안의 스펙트럼 분해와 유사합니다.  이에 대한 자세한 내용은 아래 예제를 참조하십시오.
 
@@ -346,30 +379,23 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\b
 
 우리는 다음 수식 세트 아래에 Corollary 1 (효율성)의 증거를 스케치합니다.
 
-그럼에도 불구하고, 우리는 몇 가지 관련 ID를 계산 하자 그래서 일부 간헐적 인 미래 연구자는 일반화 된 추측에 파고 수:
+그럼에도 불구하고 일부 관련 신원을 계산하여 일부 전염성이없는 미래의 연구자가 일반화 된 추측을 조사 할 수 있도록하십시오. 여기 $$v\cdot w$$ 코탄젠트 번들의 Riemannian 내부 제품입니다 :
 
 ```math
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\
-\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
 \text {So the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
 \text{Now with }J \text{ real-analytic}\\
 Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
 &= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
 \tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
-df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
-\sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
-&= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
- = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell\implies\\
- \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
-&= \widehat{g^2}(k). \\
 \end{aligned}
 ```
 
@@ -432,7 +458,7 @@ M^{i,j,k} = \begin{cases}
 
 또한 다음을 보존해야 합니다. "분석" 불변성 &mdash; Casimir-element 유도된 숫자 $$4\pi^2\lVert\lambda_i\rVert^2$$ 각 인덱싱된 중량, 즉 플랫 토리의 라플라시안의 개별 고유 값.
 
-Milnor의 듀엣이 예시하는 것처럼 격자 가중치의 길이를 유지하는 맵을 갖는 것은 맵을 추론하기에 충분하지 않습니다. $$SO(n,\Reals)$$우리는 또한 지도가 격자 무게 각도를 보존한다는 것을 알아야합니다. 그러나 이것은 방정식 (18)에서 개발 된 공식의 결과입니다 :
+Milnor의 듀엣이 예시하는 것처럼 격자 가중치의 길이를 유지하는 맵을 갖는 것은 맵을 추론하기에 충분하지 않습니다. $$SO(n,\Reals)$$우리는 또한 지도가 격자 무게 각도를 보존한다는 것을 알아야합니다. 그러나 이것은 방정식 (21)에서 개발 된 공식의 결과입니다 :
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

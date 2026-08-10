@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=51806
+status: überprüft=51912
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -279,7 +279,7 @@ Jetzt unter den Bedingungen von Corollary 2, jeder der $$\mathscr V_\lambda$$ si
 
 Allgemeiner die damit verbundene Voraussetzung "bezüglich der Übereinstimmung mit den Produktwerten" wird einfach "Beibehaltung des geordneten Satzes von Singularwerten (mit Multiplizität gezählt) der linearen Karten aus $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definiert durch $$\set{M^{i,j,k}}$$." Hier das innere Produkt auf $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ ist $$tr (B^*A)$$. Per Definition sind diese Singularwerte unter direkten Summen von einheitlichen Transformationen auf der $$\mathscr V_\lambda$$.
 
-Im Falle des Multiplizitäts-1-Spektrums ist der vollständige Satz von Singularwerten einfach der Satz von Absolutwerten von $$M^{i,j,k}$$ die, wie wir immer noch vermuten, die Isometrieklassen solcher isospektraler Mannigfaltigkeiten vollständig charakterisiert. Siehe Gleichung (19) für die Schlüsselbeziehung zwischen dieser Vermutung und Korrespondenz 2. Was fehlt, ist das Suffizienz-Argument, dass, wenn die absoluten Werte zustimmen, die Mannigfaltigkeiten isometrisch sind; was ein Argument erfordert, um mögliche Zeichenwechselstornierungen zwischen den Basen in den LHS-Summanden der Gleichung (19) zu beseitigen.
+Im Falle des Multiplizitäts-1-Spektrums ist der vollständige Satz von Singularwerten einfach der Satz von Absolutwerten von $$M^{i,j,k}$$ die, wie wir immer noch vermuten, die Isometrieklassen solcher isospektraler Mannigfaltigkeiten vollständig charakterisiert. Siehe Gleichung (22) für die Schlüsselbeziehung zwischen dieser Vermutung und Korrespondenz 2. Was fehlt, ist das Suffizienz-Argument, dass, wenn die absoluten Werte übereinstimmen, die Mannigfaltigkeiten isometrisch sind; was ein Argument erfordert, um mögliche Zeichenwechselstornierungen zwischen den Basen in den LHS-Summanden der Gleichung (22) zu beseitigen.
 
 Wir sind deutlich weniger zuversichtlich, dass die allgemeine Vermutung wahr ist (außerhalb des Falles mit Multiplizitäts-1-Spektrum), da es möglich sein kann, über explizite Sunada-Konstruktion ein Gegenbeispiel (von Suffizienz) zu erstellen.
 
@@ -295,9 +295,9 @@ Diese Basisinvarianten können sich jedoch als nützlich erweisen, um komplexere
 
 #### Abgesehen
 
-Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien $$G$$-invariant (unter linker oder rechter Aktion) *irreduzible* Zersetzungen $$P_{\mathscr V_\lambda}$$ von $$L^2(G,dx)$$ (hier $$dx$$ ist die normalisierte Haarwahrscheinlichkeit auf $$G$$) als $$\oplus_\lambda P_{\mathscr V_\lambda}$$, und ehrt ihr Zusammenspiel im obigen Ausdruck als die wesentlichen Artefakte der Lüge-Theorie, wie im Peter-Weyl-Theorem angesprochen [[AK01]](#AK01). Kompatible Riemannsche Geometrien werden durch bequeme Wahl von quadratischen Casimir-Elementen erzeugt, die in der Mitte der universellen umhüllenden Algebra liegen, die von weniger Bedeutung sind als die irreduzible Zersetzung selbst. **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Wiederzusammensetzung dieser irreduziblen Komponenten, da das zugehörige Cartan-Killing Casimir-Element (riemannische Metrik) auf jeder irreduziblen Komponente konstant ist.
+Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien $$G$$-invariant (unter linker oder rechter Aktion) *irreduzible* Zersetzungen $$P_{\mathscr V_\lambda}$$ von $$L^2(G,dg)$$ (hier $$dg$$ ist die normalisierte Haarwahrscheinlichkeit auf $$G$$) als $$\oplus_\lambda P_{\mathscr V_\lambda}$$, und ehrt ihr Zusammenspiel im obigen Ausdruck als die wesentlichen Artefakte der Lüge-Theorie, wie im Peter-Weyl-Theorem angesprochen [[AK01]](#AK01). Kompatible Riemannsche Geometrien werden durch bequeme Entscheidungen von quadratischen Casimir-Elementen erzeugt, die in der Mitte der universellen umhüllenden Algebra liegen, die von weniger Bedeutung sind als die irreduzible Zersetzung selbst. **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Wiederzusammensetzung dieser irreduziblen Komponenten, da das zugehörige Casimir-Element an jedem irreduziblen Bestandteil konstant ist.
 
-Wigner's $$3j$$ Symbole für $$SU(2)$$ sind ein Paradebeispiel für weitere Studien &mdash; Lassen Sie uns unsere allgemeine Konstruktion als Gruppenverteiler mit Cartan-Killing Riemannsche Metrik anwenden. Jede endliche, irreduzible, einheitliche Darstellung von $$SU(2)$$ ist durch eine nicht negative halbe Ganzzahl gekennzeichnet $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Wir schreiben $$\mathscr  V_j  $$ für die $$ (2j+1)  $$-dimensionaler Raum, auf den diese Darstellung wirkt. Eine orthonormale Basis für $$\mathscr  V_j $$ ist die magnetische Basis $$  \ket{j\ m}$$ mit $$m = -j,-j+1,\dots,j.$$
+Wigner's $$3j$$ Symbole für $$SU(2)$$ sind ein Paradebeispiel für weitere Studien &mdash; Lassen Sie uns unsere allgemeine Konstruktion als Gruppenverteiler anwenden. Jede endliche, irreduzible, einheitliche Darstellung von $$SU(2)$$ ist durch eine nicht negative halbe Ganzzahl gekennzeichnet $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Wir schreiben $$\mathscr  V_j  $$ für die $$ (2j+1)  $$-dimensionaler Raum, auf den diese Darstellung wirkt. Eine orthonormale Basis für $$\mathscr  V_j $$ ist die magnetische Basis $$  \ket{j\ m}$$ mit $$m = -j,-j+1,\dots,j.$$
 
 Die Gleichung
 
@@ -308,30 +308,63 @@ m_1 & m_2 & m_3
 \end{pmatrix}
 :=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
 ```
-
 drückt die $$3j$$ Symboldefinition in Bezug auf Clebsch-Gordan Koeffizienten $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, die formausdrücke wie racahs formel geschlossen haben, die moderne numerische softwarebibliotheken unterstützen. [[JF16]](#JF16).
 
-A $$3j$$ Symbol verschwindet, wenn $$m_1+m_2+m_3=0$$die Dreiecksungleichheiten $$|j_1-j_2|\le j_3\le j_1+j_2$$ halten und $$j_1+j_2+j_3$$ ist eine Ganzzahl. Die Eigenfunktion Triples für $$SU(2)$$ die diese konventionell (über die Condon-Shortley-Phase) real bewerteten Koeffizienten umfassen, sind genau die kugelförmigen Harmonien von $$S^2$$.
+A $$3j$$ Symbol verschwindet, wenn $$m_1+m_2+m_3=0$$die Dreiecksungleichheiten $$|j_1-j_2|\le j_3\le j_1+j_2$$ halten und $$j_1+j_2+j_3$$ ist eine Ganzzahl.
 
 Aus Sicht der Kompaktgruppe $$SU(2)$$, die $$3j$$ Symbole sind genau die (richtig normalisierten und phasenweise) ineinandergreifenden Operatoren, die den einzigartigen (bis zu skalierenden) invarianten Unterraum des dreifachen Tensorprodukts realisieren. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ wenn dieses Produkt die triviale Darstellung enthält. Sie sind daher die natürlichen "Strukturkonstanten" für die Verschmelzung von drei irreduziblen Darstellungen zum Singlet.
 
-Dies ist genau analog zu der Rolle, die von den dreifachen Produktintegralen gespielt wird. $$M^{i,j,k}$$ auf einem Riemannschen Mannigfaltigkeit: Sie sind die Strukturkonstanten des punktuellen Produkts von Eigenfunktionen, wenn dieses Produkt in der Eigenbasis wieder erweitert wird. In der Gruppe $$SU(2)$$ (oder auf $$S^2=SU(2)/U(1)$$) diese Integrationen auf die $$3j$$-Symbole über die Gaunt Integral Formula [[O26]](#O26):
+Dies ist genau analog zu der Rolle, die von den dreifachen Produktintegralen gespielt wird. $$M^{i,j,k}$$ auf einem Riemannschen Mannigfaltigkeit: Sie sind die Strukturkonstanten des punktuellen Produkts von Eigenfunktionen, wenn dieses Produkt in der Eigenbasis wieder erweitert wird. In der Gruppe $$SU(2)$$ Die Integralen reduzieren sich auf die $$3j$$-Symbole.
+
+Zum Witz, lassen $$D^{j}_{m n}(g)$$ Standard-Wigner sein $$D$$-Funktionen (Matrix-Koeffizienten der irrep des Spin $$j$$). In Bezug auf die normalisierte Haar Wahrscheinlichkeitsmaß $$dg$$ Eine hat die genaue Formel [[VK88]](#VK88)
 
 ```math
-M^{i,j,k}
+\int_{SU(2)}
+D^{j_1}_{m_1 n_1}(g)\,
+D^{j_2}_{m_2 n_2}(g)\,
+\overline{D^{j_3}_{m_3 n_3}(g)}\,dg
 =
-(-1)^{m_k(l_k)}
-\sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-0 & 0 & 0
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
 \end{pmatrix}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-m_i(l_i) & m_j(l_j) & -m_k(l_k)
-\end{pmatrix},
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+\times
+(-1)^{m_3+n_3}.
 ```
-wobei $$l_i \in \set{0,1/2,1,3/2,\dots}$$ ist nicht abnehmend von $$0$$ seit $$\Delta|_ {\mathscr V_j} = j(j+1)$$und $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ ist eine zunehmende Sequenz innerhalb eines festen Wertes von $$l_i$$. Mit anderen Worten, $$n:=\dim \mathscr V_{l_i} = 2l_i+1\in \N\implies n(n-1)/2 \leq i \lt n(n+1)/2 \implies -l_i \leq m_i(l_i) \leq l_i$$ variiert mit $$i$$ um den gesamten Satz in der Reihenfolge, wie $$l_i$$  hat eine Schwellenwertvielfalt $$n$$. Die natürliche Einheitliche Aktion $$\mathscr V_{l_i}$$ Diese Definition von $$m_i(l_i)$$ etwas willkürlich, aber die hier getroffene Wahl sollte klar sein. Die Hochebenen von $$l_i$$ werden durch die Karte dargestellt $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (abgeleitet vom Invertieren der Dimensionssumme) $$i=f(n)=\frac{n(n+1)}{2}$$). Die $$\sqrt{4\pi}$$ Der Begriff im Nenner stammt aus dem induzierten Riemannschen metrischen Ausdruck für Haar-Maß; er verschwindet, wenn wir zu einem normalisierten Wahrscheinlichkeitsmaß zurückkehren.
+
+(Die allgemeine Phasenkonvention kann durch die üblichen Condon-Shortley-Faktoren angepasst werden; der wesentliche Punkt ist, dass die integralen Faktoren in ein Produkt von zwei realen $$3j$$-Symbole.) Wenn die Indizes $$i,j,k$$ des Papiers über eine vollständige orthonormale Basis von Matrixkoeffizienten, geordnet nach $$j$$ (und dann durch magnetische Indizes $$m,n$$), die Mengen $$M^{i,j,k}$$ sind genau die Zahlen, die auf der rechten Seite oben erscheinen.
+
+Das Peter-Weyl-Theorem liefert eine komplette orthonormale Grundlage für $$L^2(SU(2),dg)$$ durch die renormalisierten Matrixkoeffizienten:
+
+$$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
+
+wo die Indizes überlaufen
+
+$$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
+
+Combining the two equations one obtains the explicit expression:
+
+```math
+\begin{aligned}
+M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
+&=
+\sqrt{(2j_1+1)(2j_2+1)(2j_3+1)}\\
+&\ \times
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
+\end{pmatrix}
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+(-1)^{m_3+n_3}.
+\end{aligned}
+```
 
 Für kompakte Abelian Lie-Gruppen sind diese irreduziblen Komponenten alle eindimensional, so dass ihre Situation der spektralen Zersetzung von Multiplizitäts-1 Laplaciern oben völlig ähnlich ist.  Mehr dazu im Beispiel unten.
 
@@ -346,30 +379,23 @@ Wir hoffen, dass $$k>0$$, $$M_0^{i,\bar i,k}$$ kann nicht identisch sein $$0$$ f
 
 Wir skizzieren einen Nachweis von Corollary 1 (Suffizienz) unter dem nächsten Satz von Formeln.
 
-Lassen Sie uns jedoch einige relevante Identitäten berechnen, damit einige unerschrockene zukünftige Forscher in die generalisierte Vermutung eintauchen können:
+Lassen Sie uns jedoch einige relevante Identitäten berechnen, so dass einige unerschrockene zukünftige Forscher in die generalisierte Vermutung eingreifen können. Hier $$v\cdot w$$ ist das Riemannsche Innenprodukt auf dem Kotangentenbündel:
 
 ```math
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\
-\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
 \text {So the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
 \text{Now with }J \text{ real-analytic}\\
 Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
 &= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
 \tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
-df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
-\sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
-&= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
- = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell\implies\\
- \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
-&= \widehat{g^2}(k). \\
 \end{aligned}
 ```
 
@@ -432,7 +458,7 @@ Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ s
 
 muss auch die "Analytisch" Invarianten &mdash; Die Casimir-Element induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Flat-Tori-Laplacian.
 
-Wie das Duett von Milnor veranschaulicht, reicht es nicht aus, eine Karte zu haben, die die Längen der Gittergewichte behält, um abzuleiten, dass die Karte in $$SO(n,\Reals)$$; wir müssen auch wissen, dass die Karte Gittergewichtswinkel behält. Dies ist jedoch eine Folge der in Gleichung (18) entwickelten Formeln:
+Wie das Duett von Milnor veranschaulicht, reicht es nicht aus, eine Karte zu haben, die die Längen der Gittergewichte behält, um abzuleiten, dass die Karte in $$SO(n,\Reals)$$; wir müssen auch wissen, dass die Karte Gittergewichtswinkel behält. Dies ist jedoch eine Folge der in Gleichung (21) entwickelten Formeln:
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

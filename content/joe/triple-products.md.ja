@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=51806
+status: 確認済み=51912
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -278,7 +278,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 より一般的には、関連する前提条件"製品価値契約について" 単に"線形マップの単数値の順序付きセットの保存(多重度でカウント) $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 定義者$$\set{M^{i,j,k}}$$." ここに内部のプロダクト$$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ 次である$$tr (B^*A)$$。定義上、これらの単数値は、次の単位変換の直接合計では不変です。$$\mathscr V_\lambda$$.
 
-multiplicity-1スペクトルの場合、単数値の完全なセットは、$$M^{i,j,k}$$ それでも、私たちは、そのような等分スペクトルマニホールドの等分量クラスを完全に特徴づける。この予想とコロラリー2の間の重要な関係については、方程式(19)を参照してください。欠けているのは、絶対値が一致した場合、マニホールドはアイソメトリックであり、LHSの方程式要約(19)の基底間の可能な符号変更取消を排除するための引数が必要であるという十分性の引数です。
+multiplicity-1スペクトルの場合、単数値の完全なセットは、$$M^{i,j,k}$$ それでも、私たちは、そのような等分スペクトルマニホールドの等分量クラスを完全に特徴づける。この予想とコロラリー2の間の重要な関係については、方程式(22)を参照してください。欠けているのは、絶対値が一致した場合、マニホールドはアイソメトリックであり、LHSの方程式要約(22)の基底間の可能な符号変更取消を排除するための引数が必要であるという十分性の引数です。
 
 我々は、一般的な予想が(多重度1スペクトルの場合を除いて)真であることは、あまり自信がない。なぜなら、それは、明示的なSunada構造を介して(効率の)反例を作り出すことができる可能性があるからである。
 
@@ -294,9 +294,9 @@ $$
 
 #### 除く
 
-コンパクト・ライ・グループの表現理論$$G$$ 明示的なラプラシアンを方程式と研究から取り出します$$G$$- 不変(左または右のアクションの下) *irreducible*分解$$P_{\mathscr V_\lambda}$$ の$$L^2(G,dx)$$ こちら$$dx$$ 正規化されたHaar確率測定値$$G$$)として$$\oplus_\lambda P_{\mathscr V_\lambda}$$ピーター・ウェイル定理で述べられているように、上記の表現における彼らのインタープレイを、嘘理論の本質的な成果物として尊重する。[[AK01]](#AK01)。多用性があるRiemannianの幾何学は普遍的な封筒の代数の中心にある二次Casimirの要素の便利な選択によって作り出されます、それは不屈の分解自体より重要ではないです。**Theirスペクトル分解**はそれらの不屈の部品の(少ない便利)再アセンブリです、関連するCartan-Killing Casimirの要素(Riemannianのメートル)が各不屈の部品で一定であるため。
+コンパクト・ライ・グループの表現理論$$G$$ 明示的なラプラシアンを方程式と研究から取り出します$$G$$- 不変(左または右のアクションの下) *irreducible*分解$$P_{\mathscr V_\lambda}$$ の$$L^2(G,dg)$$ こちら$$dg$$ 正規化されたHaar確率測定値$$G$$)として$$\oplus_\lambda P_{\mathscr V_\lambda}$$ピーター・ウェイル定理で述べられているように、上記の表現における彼らのインタープレイを、嘘理論の本質的な成果物として尊重する。[[AK01]](#AK01)。多用性があるRiemannianの幾何学は普遍的な封筒の代数の中心にある二次Casimirの要素の便利な選択によって作り出されます、それは不屈の分解自体より重要ではないです。**彼らのスペクトル分解**はそれらの不屈の部品の(より便利)再アセンブリ、関連Casimirの要素が各不屈の部品で一定であるので。
 
-ウィグナーズ$$3j$$ シンボル$$SU(2)$$ さらなる研究のための主要な例です&mdash; Cartan-Killing Riemannianメトリックでグループマニホールドとして私たちの一般的な構造を適用しましょう。あらゆる有限次元非還元性単項表現$$SU(2)$$ 負でない半整数でラベル付けされます。$$j = 0, \tfrac12, 1, \tfrac32, \dots  $$。書く$$\mathscr  V_j  $$ 対象$$ (2j+1)  $$- この表現が動作する次元空間。標準の正統基準$$\mathscr  V_j $$ 磁気の基礎$$  \ket{j\ m}$$ 対象$$m = -j,-j+1,\dots,j.$$
+ウィグナーズ$$3j$$ シンボル$$SU(2)$$ さらなる研究のための主要な例です&mdash; グループマニホールドとして全般的な施工を行います。あらゆる有限次元非還元性単項表現$$SU(2)$$ 負でない半整数でラベル付けされます。$$j = 0, \tfrac12, 1, \tfrac32, \dots  $$。書く$$\mathscr  V_j  $$ 対象$$ (2j+1)  $$- この表現が動作する次元空間。標準の正統基準$$\mathscr  V_j $$ 磁気の基礎$$  \ket{j\ m}$$ 対象$$m = -j,-j+1,\dots,j.$$
 
 方程式
 
@@ -307,30 +307,63 @@ m_1 & m_2 & m_3
 \end{pmatrix}
 :=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
 ```
-
 表す$$3j$$ Clebsch-Gordan Coefficientsによるシンボル定義$$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$現代の数値ソフトウェアライブラリを支えるRacahの公式のような閉じた形式式を持つ。[[JF16]](#JF16).
 
-A $$3j$$ シンボルの消滅$$m_1+m_2+m_3=0$$三角形の不等式$$|j_1-j_2|\le j_3\le j_1+j_2$$ 保留、および$$j_1+j_2+j_3$$ は整数です。固有機能のトリプル$$SU(2)$$ これらの慣例的に(コンドン- ショートリー相を介して)実値係数を構成するものは、まさに球体調和である。$$S^2$$.
+A $$3j$$ シンボルの消滅$$m_1+m_2+m_3=0$$三角形の不等式$$|j_1-j_2|\le j_3\le j_1+j_2$$ 保留、および$$j_1+j_2+j_3$$ は整数です。
 
 コンパクトグループの視点から$$SU(2)$$、$$3j$$ シンボルは、トリプルテンソル製品のユニークな(スケールまで)不変サブスペースを実現する(適切に正規化され、段階的に)相互結合演算子です$$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ その製品に些細な表現が含まれている場合。それゆえ、それらは三つの非還元表現をシングルレットに融合させるための自然な「構造定数」である。
 
-これは、トリプル製品積分によって再生されるローレとまったく同じです$$M^{i,j,k}$$ Riemannian manifold: それらは、その製品が固有バシスで展開されるときの固有関数のポイントワイズ積の構造定数です。グループで$$SU(2)$$ 自分(or on) $$S^2=SU(2)/U(1)$$)これらの積分は、$$3j$$「Gaunt Integral Formula」[[O26]](#O26):
+これは、トリプル製品積分によって再生されるローレとまったく同じです$$M^{i,j,k}$$ Riemannian manifold: それらは、その製品が固有バシスで展開されるときの固有関数のポイントワイズ積の構造定数です。グループで$$SU(2)$$ それらの積分は、$$3j$$- 記号。
+
+WIT、Let $$D^{j}_{m n}(g)$$ 標準のWigner $$D$$-functions(スピン不良のマトリックス係数) $$j$$). 正規化ハール確率測定に関して$$dg$$ 正確な式がある[[VK88]](#VK88)
 
 ```math
-M^{i,j,k}
+\int_{SU(2)}
+D^{j_1}_{m_1 n_1}(g)\,
+D^{j_2}_{m_2 n_2}(g)\,
+\overline{D^{j_3}_{m_3 n_3}(g)}\,dg
 =
-(-1)^{m_k(l_k)}
-\sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-0 & 0 & 0
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
 \end{pmatrix}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-m_i(l_i) & m_j(l_j) & -m_k(l_k)
-\end{pmatrix},
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+\times
+(-1)^{m_3+n_3}.
 ```
-場所$$l_i \in \set{0,1/2,1,3/2,\dots}$$ 次からの非宣言$$0$$ 以降$$\Delta|_ {\mathscr V_j} = j(j+1)$$および$$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ は、の固定値内で増加するシーケンスです。$$l_i$$。つまり、$$n:=\dim \mathscr V_{l_i} = 2l_i+1\in \N\implies n(n-1)/2 \leq i \lt n(n+1)/2 \implies -l_i \leq m_i(l_i) \leq l_i$$ 次によって異なる$$i$$ セット全体を順番に、$$l_i$$  しきい値の倍数があります$$n$$。自然なユニタリーアクション$$\mathscr V_{l_i}$$ この定義を選択する$$m_i(l_i)$$ ある程度は任意ですが、ここでの選択は明確です。The Plateaus Ofシングル$$l_i$$ マップによって表されます。$$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (寸法合計の反転から導出) $$i=f(n)=\frac{n(n+1)}{2}$$). ▲$$\sqrt{4\pi}$$ 分母の用語は、Haar測定の誘導されたRiemannianメトリック式から来ています。正規化された確率尺度に戻ると消えます。
+
+(全体的な相慣習は、通常のコンドン- ショートリー因子によって調整することができます。重要な点は、積分因子が二つの実体積になることです。$$3j$$-symbol)。インデックス$$i,j,k$$ 行列係数の完全な直交的基準の上で実行される用紙の増加$$j$$ (そして磁気指数によって) $$m,n$$(数量) $$M^{i,j,k}$$ 正確な数字は、上の右側に表示されます。
+
+Peter-Weyl定理は、完全な正統な基礎を提供します。$$L^2(SU(2),dg)$$ 正規化された行列係数によって与えられる:
+
+$$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
+
+インデックスの実行場所
+
+$$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
+
+Combining the two equations one obtains the explicit expression:
+
+```math
+\begin{aligned}
+M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
+&=
+\sqrt{(2j_1+1)(2j_2+1)(2j_3+1)}\\
+&\ \times
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
+\end{pmatrix}
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+(-1)^{m_3+n_3}.
+\end{aligned}
+```
 
 コンパクトなAbelian Lieグループの場合、これらの非還元成分はすべて一次元であるため、その状況は上記の多重度1ラプラシアンのスペクトル分解と完全に似ています。これについては、次の例を参照してください。
 
@@ -345,30 +378,23 @@ z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\N,\, ⋺ M_0^{i,\b
 
 Corollary 1 (sufficiency)の証明を次の数式セットの下にスケッチします。
 
-それにもかかわらず、いくつかの関連するアイデンティティを計算して、いくつかの困難な将来の研究者が一般化された予想を掘り下げることができます。
+それにもかかわらず、いくつかの関連性のあるアイデンティティを計算して、いくつかの困難な将来の研究者が一般化された予想を調べることができます。こちら$$v\cdot w$$ コタンジェントの束のRiemannian内部プロダクトです:
 
 ```math
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\
-\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
 \text {So the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
 \text{Now with }J \text{ real-analytic}\\
 Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
 &= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
 \tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
-df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
-\sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
-&= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
- = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell\implies\\
- \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
-&= \widehat{g^2}(k). \\
 \end{aligned}
 ```
 
@@ -431,7 +457,7 @@ M^{i,j,k} = \begin{cases}
 
 また、"分析" 不変条件&mdash; カシミール要素誘起図$$4\pi^2\lVert\lambda_i\rVert^2$$ 各インデックス付き重量、すなわち、フラット通りのラプラシアンの個々の固有値。
 
-ミルナーのデュエットが例示しているように、格子ウェイトの長さを保持するマップを持つことは、マップを推測するのに十分ではありません$$SO(n,\Reals)$$また、マップが格子重量の角度を保持していることも知っておく必要があります。これは、方程式(18)で開発された式の結果である。
+ミルナーのデュエットが例示しているように、格子ウェイトの長さを保持するマップを持つことは、マップを推測するのに十分ではありません$$SO(n,\Reals)$$また、マップが格子重量の角度を保持していることも知っておく必要があります。これは、方程式(21)で開発された式の結果である。
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

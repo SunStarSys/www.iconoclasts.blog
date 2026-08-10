@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=51806
+status: verifierad=51912
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -279,7 +279,7 @@ Nu under villkoren i Corollary 2, var och en av de $$\mathscr V_\lambda$$ är et
 
 Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "Bevarande av den ordnade uppsättningen av singulära värden (räknade med multiplikation) av linjära kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definierad av $$\set{M^{i,j,k}}$$." Här är den inre produkten på $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ är $$tr (B^*A)$$. Per definition är dessa singulära värden invariant under direkta summor av enhetliga transformationer på $$\mathscr V_\lambda$$.
 
-I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (19) för nyckelförhållandet mellan denna gissning och Corollary 2. Vad som saknas är tillräcklighetsargumentet att om de absoluta värdena är överens är grenrör isometriska; vilket kräver ett argument för att eliminera eventuella teckenändringsavbrott mellan baser i LHS-topparna av ekvation (19).
+I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (22) för nyckelförhållandet mellan denna gissning och Corollary 2. Vad som saknas är tillräcklighetsargumentet att om de absoluta värdena är överens är grenrör isometriska; vilket kräver ett argument för att eliminera eventuella teckenändringsavbrott mellan baser i LHS-topparna av ekvation (22).
 
 Vi är betydligt mindre säkra på att den allmänna gissningen är sann (utanför multiplikations-1-spektrumfallet), eftersom det kan vara möjligt att producera ett motexempel (av tillräcklighet) via explicit Sunada-konstruktion.
 
@@ -295,9 +295,9 @@ Dessa grundvarianter kan dock vara användbara vid dechiffrering av mer komplexa
 
 #### Förutom
 
-Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier $$G$$-invariant (under vänster eller höger åtgärd) *irreducerbar* dekompositioner $$P_{\mathscr V_\lambda}$$ av $$L^2(G,dx)$$ (här $$dx$$ är det normaliserade Haar-sannolikhetsmåttet på $$G$$) som $$\oplus_\lambda P_{\mathscr V_\lambda}$$och hedrar deras samspel i uttrycket ovan som de väsentliga artefakterna i Lie Theory, som behandlas i Peter-Weyl Theorem [[AK01]](#AK01). Kompatibla Riemannian geometrier genereras av bekväma val av kvadratiska Casimir element som ligger i mitten av den universella omslutande algebra, som är av mindre betydelse än den irreducibla sönderdelningen själv. **Deras spektrala sönderdelning** är en (mindre bekväm) sammanställning av dessa irreducibla komponenter, eftersom den associerade Cartan-Killing Casimir element (Riemannian metriska) är konstant på varje irreducibla komponent.
+Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier $$G$$-invariant (under vänster eller höger åtgärd) *irreducerbar* dekompositioner $$P_{\mathscr V_\lambda}$$ av $$L^2(G,dg)$$ (här $$dg$$ är det normaliserade Haar-sannolikhetsmåttet på $$G$$) som $$\oplus_\lambda P_{\mathscr V_\lambda}$$och hedrar deras samspel i uttrycket ovan som de väsentliga artefakterna i Lie Theory, som behandlas i Peter-Weyl Theorem [[AK01]](#AK01). Kompatibla Riemannian geometrier genereras av praktiska val av kvadratiska Casimir element som ligger i mitten av den universella omslutande algebra, som är av mindre betydelse än den irreducibla sönderdelningen själv. **Deras spektrala sönderdelning** är en (mindre bekväm) sammanställning av dessa irreducibla komponenter, eftersom det associerade Casimir elementet är konstant på varje irreduciblig komponent.
 
-Wigners $$3j$$ symboler för $$SU(2)$$ Ett bra exempel på vidare studier &mdash; Låt oss tillämpa vår allmänna konstruktion på det som en gruppmångfald med Cartan-Killing Riemannian metrik. Varje ändlig dimensionell irreducerbar enhetlig representation av $$SU(2)$$ är märkt med ett icke-negativt halv-heltal $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Vi skriver $$\mathscr  V_j  $$ för $$ (2j+1)  $$-dimensionellt utrymme på vilket denna representation verkar. En standardortonormal grund för $$\mathscr  V_j $$ är den magnetiska basen $$  \ket{j\ m}$$ med $$m = -j,-j+1,\dots,j.$$
+Wigners $$3j$$ symboler för $$SU(2)$$ Ett bra exempel på vidare studier &mdash; Låt oss tillämpa vår allmänna konstruktion på det som ett gruppmångfald. Varje ändlig dimensionell irreducerbar enhetlig representation av $$SU(2)$$ är märkt med ett icke-negativt halv-heltal $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Vi skriver $$\mathscr  V_j  $$ för $$ (2j+1)  $$-dimensionellt utrymme på vilket denna representation verkar. En standardortonormal grund för $$\mathscr  V_j $$ är den magnetiska basen $$  \ket{j\ m}$$ med $$m = -j,-j+1,\dots,j.$$
 
 Ekvationen
 
@@ -308,30 +308,63 @@ m_1 & m_2 & m_3
 \end{pmatrix}
 :=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
 ```
-
 uttrycker $$3j$$ symboldefinition i termer av Clebsch-Gordan koefficienter $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, som har slutna formuttryck som Racahs formel som stöder moderna numeriska programvarubibliotek [[JF16]](#JF16).
 
-A $$3j$$ symbolen försvinner om inte $$m_1+m_2+m_3=0$$Triangeln ojämlikheter $$|j_1-j_2|\le j_3\le j_1+j_2$$ hålla, och $$j_1+j_2+j_3$$ är ett heltal. Egenfunktionen tredubblar för $$SU(2)$$ som omfattar dessa konventionellt (via Condon-Shortley-fasen) är realvärdekoefficienter exakt sfäriska övertoner av $$S^2$$.
+A $$3j$$ symbolen försvinner om inte $$m_1+m_2+m_3=0$$Triangeln ojämlikheter $$|j_1-j_2|\le j_3\le j_1+j_2$$ hålla, och $$j_1+j_2+j_3$$ är ett heltal.
 
 Från den kompakta gruppens synvinkel $$SU(2)$$, $$3j$$ symbolerna är exakt de (riktigt normaliserade och fasade) sammanflätande operatorer som inser det unika (upp till skala) invarierade underutrymmet för trippeltensorprodukten $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ när produkten innehåller den triviala representationen. De är därför de naturliga "strukturkonstanterna" för sammansmältningen av tre irreducibla representationer till singleten.
 
-Detta är exakt analogt med den roll som spelas av trippelproduktintegralerna. $$M^{i,j,k}$$ på ett Riemanniskt grenrör: de är strukturkonstanterna för den punktvisa produkten av egenfunktioner när den produkten expanderas tillbaka i egenbasen. I gruppen $$SU(2)$$ själv (eller på $$S^2=SU(2)/U(1)$$Dessa integraler reduceras till $$3j$$-symboler, via Gaunt Integral Formula [[O26]](#O26):
+Detta är exakt analogt med den roll som spelas av trippelproduktintegralerna. $$M^{i,j,k}$$ på ett Riemanniskt grenrör: de är strukturkonstanterna för den punktvisa produkten av egenfunktioner när den produkten expanderas tillbaka i egenbasen. I gruppen $$SU(2)$$ Dessa integraler minskar till $$3j$$-symboler.
+
+För wit, låt $$D^{j}_{m n}(g)$$ Var standard för Wigner $$D$$-funktioner (matriskoefficienter för spinnets rep) $$j$$). Med avseende på det normaliserade Haar-sannolikhetsmåttet $$dg$$ En har den exakta formeln [[VK88]](#VK88)
 
 ```math
-M^{i,j,k}
+\int_{SU(2)}
+D^{j_1}_{m_1 n_1}(g)\,
+D^{j_2}_{m_2 n_2}(g)\,
+\overline{D^{j_3}_{m_3 n_3}(g)}\,dg
 =
-(-1)^{m_k(l_k)}
-\sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-0 & 0 & 0
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
 \end{pmatrix}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-m_i(l_i) & m_j(l_j) & -m_k(l_k)
-\end{pmatrix},
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+\times
+(-1)^{m_3+n_3}.
 ```
-där $$l_i \in \set{0,1/2,1,3/2,\dots}$$ är icke-minskande från $$0$$ sedan $$\Delta|_ {\mathscr V_j} = j(j+1)$$och $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ är en ökande sekvens inom ett fast värde av $$l_i$$. Med andra ord, $$n:=\dim \mathscr V_{l_i} = 2l_i+1\in \N\implies n(n-1)/2 \leq i \lt n(n+1)/2 \implies -l_i \leq m_i(l_i) \leq l_i$$ varierar med $$i$$ att sträcka sig över hela uppsättningen i ordning, som $$l_i$$  har tröskelmultiplicitet $$n$$. Den naturliga enhetsåtgärden på $$\mathscr V_{l_i}$$ gör detta val av definition av $$m_i(l_i)$$ Något godtyckligt, men valet som görs här bör vara tydligt. Platåerna för $$l_i$$ representeras av kartan $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (härledd från invertering av dimensionell summa) $$i=f(n)=\frac{n(n+1)}{2}$$). Den $$\sqrt{4\pi}$$ Termen i nämnaren kommer från det inducerade Riemannian metriska uttrycket för Haar-måttet; det försvinner om vi återgår till ett normaliserat sannolikhetsmått.
+
+(Den övergripande faskonventionen kan justeras av de vanliga Condon-Shortley-faktorerna; den väsentliga punkten är att de integrerade faktorerna i en produkt av två verkliga $$3j$$-symboler.) När indexen $$i,j,k$$ av papperet löper över en fullständig ortonormal grund av matriskoefficienter ordnade genom att öka $$j$$ (och sedan magnetiska index) $$m,n$$), kvantiteterna $$M^{i,j,k}$$ är exakt de siffror som visas på höger sida ovan.
+
+Peter-Weyl-satsen ger en komplett ortonormal grund för $$L^2(SU(2),dg)$$ som ges av de omnormaliserade matriskoefficienterna:
+
+$$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
+
+där indexen går över
+
+$$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
+
+Combining the two equations one obtains the explicit expression:
+
+```math
+\begin{aligned}
+M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
+&=
+\sqrt{(2j_1+1)(2j_2+1)(2j_3+1)}\\
+&\ \times
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
+\end{pmatrix}
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+(-1)^{m_3+n_3}.
+\end{aligned}
+```
 
 För kompakta Abeliska Liegrupper är dessa irreducibla komponenter alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multiplicitet-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
 
@@ -346,30 +379,23 @@ Vi hoppas att för varje given $$k>0$$, $$M_0^{i,\bar i,k}$$ Kan inte vara ident
 
 Vi skissar ett bevis på Corollary 1 (tillräcklighet) under nästa uppsättning formler.
 
-Låt oss dock beräkna några relevanta identiteter så att några orädda framtida forskare kan gräva i den generaliserade gissningen:
+Låt oss dock beräkna några relevanta identiteter så att några orädda framtida forskare kan gräva i den generaliserade gissningen. Här $$v\cdot w$$ är den Riemanniska inre produkten på cotangentbunten:
 
 ```math
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\
-\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
 \text {So the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
 \text{Now with }J \text{ real-analytic}\\
 Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
 &= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
 \tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
-df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
-\sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
-&= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
- = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell\implies\\
- \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
-&= \widehat{g^2}(k). \\
 \end{aligned}
 ```
 
@@ -432,7 +458,7 @@ För att kunna tillämpa vår [Satsen](#theorem)Det är viktigt att en sådan li
 
 måste också bevara "analytisk" varianter &mdash; Casimir-element-inducerad figur $$4\pi^2\lVert\lambda_i\rVert^2$$ för varje indexerad vikt, dvs. de individuella egenvärdena i Lappland.
 
-Som Milnors duett exemplifierar, att ha en karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (18):
+Som Milnors duett exemplifierar, att ha en karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (21):
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

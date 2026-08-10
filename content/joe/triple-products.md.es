@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=51806
+status: verificado=51912
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -280,7 +280,7 @@ Bajo las condiciones del Corolario 2, cada uno de los $$\mathscr V_\lambda$$ son
 
 En términos más generales, el requisito previo asociado "sobre el acuerdo en los valores de los productos" serían simplemente "Preservación del conjunto ordenado de valores singulares (contados con multiplicidad) de los mapas lineales desde $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definido por $$\set{M^{i,j,k}}$$." Aquí el producto interior en $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ es $$tr (B^*A)$$. Por definición, estos valores singulares son invariantes bajo sumas directas de transformaciones unitarias en $$\mathscr V_\lambda$$.
 
-En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (19) para la relación clave entre esta conjetura y el Corolario 2. Lo que falta es el argumento de suficiencia de que si los valores absolutos están de acuerdo, los colectores son isométricos; lo que requiere un argumento para eliminar las posibles cancelaciones de cambio de signos entre las bases en los sumandos de la ecuación LHS (19).
+En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (22) para la relación clave entre esta conjetura y el Corolario 2. Lo que falta es el argumento de suficiencia de que si los valores absolutos están de acuerdo, los colectores son isométricos; lo que requiere un argumento para eliminar las posibles cancelaciones de cambio de signos entre las bases en los sumandos de la ecuación LHS (22).
 
 Estamos significativamente menos seguros de que la conjetura general es cierta (fuera del caso del espectro de multiplicidad-1), ya que puede ser posible producir un contraejemplo (de suficiencia) a través de la construcción explícita de Sunada.
 
@@ -296,9 +296,9 @@ Sin embargo, estas invariantes de base pueden resultar útiles para descifrar ca
 
 #### Aside
 
-La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y los estudios $$G$$-invariante (bajo acción izquierda o derecha) *irreducible* descomposiciones $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dx)$$ (aquí) $$dx$$ es la medida normalizada de probabilidad de Haar en $$G$$) como $$\oplus_\lambda P_{\mathscr V_\lambda}$$y honra su interacción en la expresión anterior como los artefactos esenciales de la Teoría de la Mentira, como se aborda en el Teorema de Peter-Weyl [[AK01]](#AK01). Las geometrías Riemannianas compatibles son generadas por opciones convenientes de elementos Casimir cuadráticos que se encuentran en el centro del álgebra envolvente universal, que son de menos importancia que la propia descomposición irreductible. **Su descomposición espectral** es un (menos conveniente) reensamblaje de esos componentes irreductibles, ya que el elemento Casimir asociado Cartan-Matar (métrica de Riemann) es constante en cada componente irreductible.
+La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y los estudios $$G$$-invariante (bajo acción izquierda o derecha) *irreducible* descomposiciones $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dg)$$ (aquí) $$dg$$ es la medida normalizada de probabilidad de Haar en $$G$$) como $$\oplus_\lambda P_{\mathscr V_\lambda}$$y honra su interacción en la expresión anterior como los artefactos esenciales de la Teoría de la Mentira, como se aborda en el Teorema de Peter-Weyl [[AK01]](#AK01). Las geometrías Riemannianas compatibles son generadas por opciones convenientes de elementos Casimir cuadráticos que se encuentran en el centro del álgebra envolvente universal, que son de menos importancia que la propia descomposición irreductible. **Su descomposición espectral** es un (menos conveniente) reensamblaje de esos componentes irreductibles, ya que el elemento Casimir asociado es constante en cada componente irreductible.
 
-Wigner $$3j$$ símbolos para $$SU(2)$$ constituyen un buen ejemplo para seguir estudiando &mdash; Apliquemos nuestra construcción general a ella como un colector de grupo con la métrica Riemannian Cartan-Killing. Cada representación unitaria irreductible de dimensiones finitas de $$SU(2)$$ está etiquetado por medio entero no negativo $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Escribimos $$\mathscr  V_j  $$ para el $$ (2j+1)  $$Espacio dimensional en el que actúa esta representación. Una base ortonormal estándar de $$\mathscr  V_j $$ es la base magnética $$  \ket{j\ m}$$ con $$m = -j,-j+1,\dots,j.$$
+Wigner $$3j$$ símbolos para $$SU(2)$$ constituyen un buen ejemplo para seguir estudiando &mdash; Apliquemos nuestra construcción general a ella como un colector de grupo. Cada representación unitaria irreductible de dimensiones finitas de $$SU(2)$$ está etiquetado por medio entero no negativo $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Escribimos $$\mathscr  V_j  $$ para el $$ (2j+1)  $$Espacio dimensional en el que actúa esta representación. Una base ortonormal estándar de $$\mathscr  V_j $$ es la base magnética $$  \ket{j\ m}$$ con $$m = -j,-j+1,\dots,j.$$
 
 La ecuación
 
@@ -309,30 +309,63 @@ m_1 & m_2 & m_3
 \end{pmatrix}
 :=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
 ```
-
 expresa el $$3j$$ Definición del símbolo en términos de los coeficientes Clebsch-Gordan $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, que tienen expresiones de forma cerrada como la fórmula de Racah que sustenta las bibliotecas modernas de software numérico [[JF16]](#JF16).
 
-A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$las desigualdades del triángulo $$|j_1-j_2|\le j_3\le j_1+j_2$$ mantener, y $$j_1+j_2+j_3$$ es un entero. La función propia se triplica para $$SU(2)$$ que comprenden estos coeficientes de valor real convencionalmente (a través de la fase Condon-Shortley) son exactamente los armónicos esféricos de $$S^2$$.
+A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$las desigualdades del triángulo $$|j_1-j_2|\le j_3\le j_1+j_2$$ mantener, y $$j_1+j_2+j_3$$ es un entero.
 
 Desde el punto de vista del grupo compacto $$SU(2)$$, el $$3j$$ Los símbolos son precisamente los operadores que se entrelazan (bien normalizados y por fases) que se dan cuenta del subespacio invariante único (hasta la escala) del producto de triple tensor. $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ Cuando el producto contiene la representación trivial. Por lo tanto, son las constantes naturales de la "estructura" para la fusión de tres representaciones irreducibles al singlete.
 
-Esto es exactamente análogo al papel jugado por las integrales de triple producto. $$M^{i,j,k}$$ en un colector riemanniano: son las constantes de la estructura del producto puntual de las funciones propias cuando ese producto se expande de nuevo en la base propia. En el grupo $$SU(2)$$ propia (o en $$S^2=SU(2)/U(1)$$) esas integrales reducen al $$3j$$-símbolos, a través de la Fórmula Integral Gaunt [[O26]](#O26):
+Esto es exactamente análogo al papel jugado por las integrales de triple producto. $$M^{i,j,k}$$ en un colector riemanniano: son las constantes de la estructura del producto puntual de las funciones propias cuando ese producto se expande de nuevo en la base propia. En el grupo $$SU(2)$$ propias, esas integrales reducen al $$3j$$-símbolos.
+
+Para ingeniar, dejar $$D^{j}_{m n}(g)$$ ser el Wigner estándar $$D$$-funciones (coeficientes de matriz de la irrep de espín) $$j$$). Con respecto a la medida de probabilidad Haar normalizada $$dg$$ tiene la fórmula exacta [[VK88]](#VK88)
 
 ```math
-M^{i,j,k}
+\int_{SU(2)}
+D^{j_1}_{m_1 n_1}(g)\,
+D^{j_2}_{m_2 n_2}(g)\,
+\overline{D^{j_3}_{m_3 n_3}(g)}\,dg
 =
-(-1)^{m_k(l_k)}
-\sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-0 & 0 & 0
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
 \end{pmatrix}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-m_i(l_i) & m_j(l_j) & -m_k(l_k)
-\end{pmatrix},
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+\times
+(-1)^{m_3+n_3}.
 ```
-donde $$l_i \in \set{0,1/2,1,3/2,\dots}$$ no se reduce de $$0$$ desde $$\Delta|_ {\mathscr V_j} = j(j+1)$$y $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ es una secuencia creciente dentro de un valor fijo de $$l_i$$. En otras palabras, $$n:=\dim \mathscr V_{l_i} = 2l_i+1\in \N\implies n(n-1)/2 \leq i \lt n(n+1)/2 \implies -l_i \leq m_i(l_i) \leq l_i$$ varía con $$i$$ abarcar todo el conjunto en orden, como $$l_i$$  tiene multiplicidad de umbral $$n$$. La acción unitaria natural sobre $$\mathscr V_{l_i}$$ elige esta definición de $$m_i(l_i)$$ algo arbitrario, pero la elección que se haga aquí debe ser clara. Las mesetas de $$l_i$$ están representados por el mapa $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (derivado de la inversión de la suma dimensional $$i=f(n)=\frac{n(n+1)}{2}$$). El $$\sqrt{4\pi}$$ El término en el denominador proviene de la expresión métrica Riemanniana inducida para la medida Haar; desaparece si volvemos a una medida de probabilidad normalizada.
+
+(La convención general de la fase se puede ajustar por los factores habituales de Condon-Shortley; el punto esencial es que los factores integrales en un producto de dos reales $$3j$$-símbolos.) Cuando los índices $$i,j,k$$ del papel sobre una base ortonormal completa de coeficientes de matriz ordenados aumentando $$j$$ (y luego por índices magnéticos) $$m,n$$), las cantidades $$M^{i,j,k}$$ son precisamente los números que aparecen en el lado derecho de arriba.
+
+El teorema de Peter-Weyl proporciona una base ortonormal completa de $$L^2(SU(2),dg)$$ dados por los coeficientes de matriz renormalizados:
+
+$$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
+
+donde los índices se extienden
+
+$$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
+
+Combining the two equations one obtains the explicit expression:
+
+```math
+\begin{aligned}
+M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
+&=
+\sqrt{(2j_1+1)(2j_2+1)(2j_3+1)}\\
+&\ \times
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
+\end{pmatrix}
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+(-1)^{m_3+n_3}.
+\end{aligned}
+```
 
 Para los grupos de mentiras abelianos compactos, estos componentes irreductibles son todos unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad 1 de los laplacianos anteriores.  Más sobre esto en el ejemplo a continuación.
 
@@ -347,30 +380,23 @@ Podemos esperar que por cualquier $$k>0$$, $$M_0^{i,\bar i,k}$$ no puede ser id�
 
 Esbozamos una prueba de Corolario 1 (suficiencia) por debajo del siguiente conjunto de fórmulas.
 
-Sin embargo, vamos a calcular algunas identidades relevantes para que algunos intrépidos futuros investigadores puedan profundizar en la conjetura generalizada:
+Sin embargo, calculemos algunas identidades relevantes para que algunos futuros investigadores intrépidos puedan profundizar en la conjetura generalizada. Aquí $$v\cdot w$$ es el producto interior Riemannian en el paquete cotangent:
 
 ```math
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\
-\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
 \text {So the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
 \text{Now with }J \text{ real-analytic}\\
 Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
 &= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
 \tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
-df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
-\sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
-&= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
- = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell\implies\\
- \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
-&= \widehat{g^2}(k). \\
 \end{aligned}
 ```
 
@@ -433,7 +459,7 @@ Sin embargo, para aplicar nuestra [Teorema](#theorem)Es esencial que este mapa l
 
 debe preservar también "analítico" invariables &mdash; la cifra inducida por el elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, es decir, los valores propios individuales del laplaciano de flat-tori.
 
-Como ejemplifica el dúo de Milnor, tener un mapa que preserve las longitudes de los pesos de la celosía no es suficiente para deducir que el mapa está en $$SO(n,\Reals)$$; también debemos saber que el mapa conserva los ángulos de peso de celosía. Pero esto es una consecuencia de las fórmulas desarrolladas en Ecuación (18):
+Como ejemplifica el dúo de Milnor, tener un mapa que preserve las longitudes de los pesos de la celosía no es suficiente para deducir que el mapa está en $$SO(n,\Reals)$$; también debemos saber que el mapa conserva los ángulos de peso de celosía. Pero esto es una consecuencia de las fórmulas desarrolladas en Ecuación (21):
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .

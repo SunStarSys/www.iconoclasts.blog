@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=51806
+status: verificado=51912
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -280,7 +280,7 @@ Agora, nas condições do Corolário 2, cada um dos $$\mathscr V_\lambda$$ são 
 
 Mais geralmente, o prerrequisito associado "acordo sobre os valores dos produtos" simplesmente se tornaria "preservação do conjunto ordenado de valores singulares (contados com multiplicidade) dos mapas lineares $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definido por $$\set{M^{i,j,k}}$$." Aqui o produto interno em $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ é $$tr (B^*A)$$. Por definição, esses valores singulares são invariantes sob somas diretas de transformações unitárias na $$\mathscr V_\lambda$$.
 
-No caso do espectro da multiplicidade-1, o conjunto completo de valores singulares é simplesmente o conjunto de valores absolutos de $$M^{i,j,k}$$ que, ainda conjecturamos, caracteriza completamente as classes de isometria de tais variedades isospectrais. Ver Equação (19) para a relação chave entre esta conjectura e Corolário 2. O que falta é o argumento de suficiência de que, se os valores absolutos concordarem, as variedades são isométricas; o que requer um argumento para eliminar possíveis cancelamentos de mudança de sinal entre as bases nos summands LHS da Equação (19).
+No caso do espectro da multiplicidade-1, o conjunto completo de valores singulares é simplesmente o conjunto de valores absolutos de $$M^{i,j,k}$$ que, ainda conjecturamos, caracteriza completamente as classes de isometria de tais variedades isospectrais. Ver Equação (22) para a relação chave entre esta conjectura e Corolário 2. O que falta é o argumento de suficiência de que, se os valores absolutos concordarem, as variedades são isométricas; o que requer um argumento para eliminar possíveis cancelamentos de mudança de sinal entre as bases nos summands LHS da Equação (22).
 
 Estamos significativamente menos confiantes de que a conjectura geral é verdadeira (fora do caso do espectro da multiplicidade-1), uma vez que pode ser possível produzir um contra-exemplo (de suficiência) através de construção Sunada explícita.
 
@@ -296,9 +296,9 @@ No entanto, esses invariantes de base podem ser úteis na decifração de casos 
 
 #### Além
 
-A Teoria da Representação de um Grupo de Mentiras Compacto $$G$$ tira o Laplaciano explícito da equação e dos estudos $$G$$-invariante (sob a ação esquerda ou direita) decomposições *irredutíveis* $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dx)$$ (aqui) $$dx$$ é a Medida de Probabilidade Haar normalizada em $$G$$) como $$\oplus_\lambda P_{\mathscr V_\lambda}$$e honra sua interação na expressão acima como os artefatos essenciais da Teoria de Lie, como abordado no Teorema de Peter-Weyl [[AK01]](#AK01). As geometrias Riemannianas compatíveis são geradas por escolhas convenientes de elementos Casimir quadráticos que estão no centro da álgebra envolvente universal, que são de menor importância do que a própria decomposição irredutível. **Sua decomposição espectral** é uma remontagem (menos conveniente) desses componentes irredutíveis, uma vez que o elemento Casimir Cartan-Killing associado (métrica de Riemann) é constante em cada componente irredutível.
+A Teoria da Representação de um Grupo de Mentiras Compacto $$G$$ tira o Laplaciano explícito da equação e dos estudos $$G$$-invariante (sob a ação esquerda ou direita) decomposições *irredutíveis* $$P_{\mathscr V_\lambda}$$ de $$L^2(G,dg)$$ (aqui) $$dg$$ é a Medida de Probabilidade Haar normalizada em $$G$$) como $$\oplus_\lambda P_{\mathscr V_\lambda}$$e honra sua interação na expressão acima como os artefatos essenciais da Teoria de Lie, como abordado no Teorema de Peter-Weyl [[AK01]](#AK01). As geometrias Riemannianas compatíveis são geradas por escolhas convenientes de elementos de Casimir quadráticos que se encontram no centro da álgebra envolvente universal, que são de menor importância do que a própria decomposição irredutível. **Sua decomposição espectral** é uma remontagem (menos conveniente) desses componentes irredutíveis, uma vez que o elemento Casimir associado é constante em cada componente irredutível.
 
-Wigner's $$3j$$ símbolos para $$SU(2)$$ são um excelente exemplo para mais estudos &mdash; vamos aplicar a nossa construção geral a ele como um colector de grupo com Cartan-Killing Riemannian métrica. Toda representação unitária irredutível de dimensão finita de $$SU(2)$$ é rotulado por um meio inteiro não negativo $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Nós escrevemos $$\mathscr  V_j  $$ para o $$ (2j+1)  $$espaço dimensional no qual essa representação atua. Uma base ortonormal padrão de $$\mathscr  V_j $$ é a base magnética $$  \ket{j\ m}$$ com $$m = -j,-j+1,\dots,j.$$
+Wigner's $$3j$$ símbolos para $$SU(2)$$ são um excelente exemplo para mais estudos &mdash; Vamos aplicar a nossa construção geral a ele como uma variedade de grupos. Toda representação unitária irredutível de dimensão finita de $$SU(2)$$ é rotulado por um meio inteiro não negativo $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Nós escrevemos $$\mathscr  V_j  $$ para o $$ (2j+1)  $$espaço dimensional no qual essa representação atua. Uma base ortonormal padrão de $$\mathscr  V_j $$ é a base magnética $$  \ket{j\ m}$$ com $$m = -j,-j+1,\dots,j.$$
 
 A equação
 
@@ -309,30 +309,63 @@ m_1 & m_2 & m_3
 \end{pmatrix}
 :=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
 ```
-
 expressa o $$3j$$ Definição de símbolo em termos de Coeficientes de Clebsch-Gordan $$C^{j\ m}_{j_1\ m_1\,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$$, que têm expressões de forma fechada, como a fórmula de Racah que sustenta as modernas bibliotecas de software numérico [[JF16]](#JF16).
 
-A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$, as desigualdades do triângulo $$|j_1-j_2|\le j_3\le j_1+j_2$$ aguarde, e $$j_1+j_2+j_3$$ é um inteiro. A função própria triplica para $$SU(2)$$ que compreendem estes coeficientes convencionalmente (através da fase Condon-Shortley) real-valued são exatamente os harmônicos esféricos de $$S^2$$.
+A $$3j$$ símbolo desaparece a menos que $$m_1+m_2+m_3=0$$, as desigualdades do triângulo $$|j_1-j_2|\le j_3\le j_1+j_2$$ aguarde, e $$j_1+j_2+j_3$$ é um inteiro.
 
 Do ponto de vista do grupo compacto $$SU(2)$$, o $$3j$$ símbolos são precisamente os operadores entrelaçados (corretamente normalizados e em fases) que percebem o subespaço invariante único (até à escala) do produto de tensor triplo $$\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$$ quando esse produto contém a representação trivial. São, portanto, as "constantes estruturais" naturais para a fusão de três representações irredutíveis ao singlet.
 
-Isto é exatamente análogo ao papel desempenhado pelas integrais de triplo produto. $$M^{i,j,k}$$ em uma variedade Riemannian: são as constantes da estrutura do produto pontual de autofunções quando esse produto é expandido de volta na autobase. No grupo $$SU(2)$$ próprio (ou em $$S^2=SU(2)/U(1)$$) essas integrais reduzem ao $$3j$$-símbolos, através da Fórmula Integral Gaunt [[O26]](#O26):
+Isto é exatamente análogo ao papel desempenhado pelas integrais de triplo produto. $$M^{i,j,k}$$ em uma variedade Riemannian: são as constantes da estrutura do produto pontual de autofunções quando esse produto é expandido de volta na autobase. No grupo $$SU(2)$$ em si, essas integrais reduzem ao $$3j$$- símbolos.
+
+Para saber, deixe $$D^{j}_{m n}(g)$$ ser o Wigner padrão $$D$$-funções (coeficientes de matriz da irrep de spin) $$j$$). Com relação à medida de probabilidade Haar normalizada $$dg$$ um tem a fórmula exata [[VK88]](#VK88)
 
 ```math
-M^{i,j,k}
+\int_{SU(2)}
+D^{j_1}_{m_1 n_1}(g)\,
+D^{j_2}_{m_2 n_2}(g)\,
+\overline{D^{j_3}_{m_3 n_3}(g)}\,dg
 =
-(-1)^{m_k(l_k)}
-\sqrt{\frac{(2l_i+1)(2l_j+1)(2l_k+1)}{4\pi}}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-0 & 0 & 0
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
 \end{pmatrix}
 \begin{pmatrix}
-l_i & l_j & l_k \\
-m_i(l_i) & m_j(l_j) & -m_k(l_k)
-\end{pmatrix},
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+\times
+(-1)^{m_3+n_3}.
 ```
-onde $$l_i \in \set{0,1/2,1,3/2,\dots}$$ não é decorrente de $$0$$ desde $$\Delta|_ {\mathscr V_j} = j(j+1)$$, e $$m_{i}(l_i) \in \set{-l_i,-l_i+1,\dots,l_i}$$ é uma sequência crescente dentro de um valor fixo de $$l_i$$. Em outras palavras, $$n:=\dim \mathscr V_{l_i} = 2l_i+1\in \N\implies n(n-1)/2 \leq i \lt n(n+1)/2 \implies -l_i \leq m_i(l_i) \leq l_i$$ varia com $$i$$ para abranger todo o conjunto em ordem, como $$l_i$$  tem multiplicidade de limiar $$n$$. A ação unitária natural em $$\mathscr V_{l_i}$$ faz esta escolha de definição de $$m_i(l_i)$$ um tanto arbitrária, mas a escolha feita aqui deve ser clara. Os planaltos de $$l_i$$ são representados pelo mapa $$i\mapsto l_i=\frac{1}{2}\lfloor{\frac{1}{2}(\sqrt{1+8i} - 1)}\rfloor$$ (derivado da inversão da soma dimensional $$i=f(n)=\frac{n(n+1)}{2}$$). O $$\sqrt{4\pi}$$ termo no denominador vem da expressão métrica Riemanniana induzida para a medida Haar; ele desaparece se revertermos para uma medida de probabilidade normalizada.
+
+(A convenção de fase geral pode ser ajustada pelos fatores condon-shortley habituais; o ponto essencial é que os fatores integrais em um produto de dois fatores reais) $$3j$$- símbolos.) Quando os índices $$i,j,k$$ do papel sobre uma base ortonormal completa dos coeficientes de matriz ordenados pelo aumento $$j$$ (e depois por índices magnéticos) $$m,n$$), as quantidades $$M^{i,j,k}$$ são precisamente os números que aparecem no lado direito acima.
+
+O teorema de Peter-Weyl fornece uma base ortonormal completa de $$L^2(SU(2),dg)$$ dados pelos coeficientes de matriz renormalizados:
+
+$$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
+
+onde os índices passam
+
+$$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
+
+Combining the two equations one obtains the explicit expression:
+
+```math
+\begin{aligned}
+M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
+&=
+\sqrt{(2j_1+1)(2j_2+1)(2j_3+1)}\\
+&\ \times
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+m_1 & m_2 & -m_3
+\end{pmatrix}
+\begin{pmatrix}
+j_1 & j_2 & j_3 \\
+n_1 & n_2 & -n_3
+\end{pmatrix}
+(-1)^{m_3+n_3}.
+\end{aligned}
+```
 
 Para os compactos Grupos de Mentiras Abelianas, estes componentes irredutíveis são todos unidimensionais, de modo que a sua situação é inteiramente semelhante à decomposição espectral de multiplicidade-1 Laplacianos acima.  Mais sobre isso no Exemplo abaixo.
 
@@ -347,30 +380,23 @@ Podemos esperar que, para qualquer $$k>0$$, $$M_0^{i,\bar i,k}$$ não pode ser i
 
 Nós esboçamos uma prova de Corolário 1 (suficiência) abaixo do próximo conjunto de fórmulas.
 
-No entanto, vamos calcular algumas identidades relevantes para que algum pesquisador futuro intrépido possa cavar a conjectura generalizada:
+No entanto, vamos calcular algumas identidades relevantes para que algum pesquisador futuro intrépido possa cavar a conjectura generalizada. Aqui $$v\cdot w$$ é o produto interno Riemanniano no pacote cotangente:
 
 ```math
 \begin{aligned}
 \Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
 M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k} \implies \\
 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\bra{e^ie^j}\ket{e^k}} &= \frac{\lambda_i+\lambda_j-\lambda_k}{2}\ \text{ when }M^{i,j,k} \ne 0\ .\\
-\inf_{f\in \mathscr H_k^\perp} \frac{||df \cdot df||^2}{||f||^2} &= \lambda_{k+1}\text{ , with }f=\pm e^{k+1}\ .\\
 \text {So the quadratic form} \\
 Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} .\\
+&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
+df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
 \text{Now with }J \text{ real-analytic}\\
 Q^J_k(f,g) :&= -\frac{1}{2}\bra{(J(\sqrt{\Delta})fg - fJ(\sqrt{\Delta})g - gJ(\sqrt{\Delta})f}\ket{e^k} \\
 &= -\frac{1}{2}(\bra{fg}\ket{J(\sqrt{\Delta}) e^k} - \bra{fJ(\sqrt{\Delta})g + gJ(\sqrt{\Delta})f}\ket{e^k})\\
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(J(\sqrt{\lambda_i}) + J(\sqrt{\lambda_j}) - J(\sqrt{\lambda_k})M^{i,j,k}\\
 \tilde{Q}_k(f,g) :&= -\frac{1}{2}\bra{\sqrt{\Delta} fg - f\sqrt{\Delta}g -g\sqrt{\Delta}f}\ket{e^k} \\
 &= \frac{1}{2}\sum_{i,j} \hat{f}(i)\hat{g}(j)(\sqrt{\lambda_i} + \sqrt{\lambda_j} - \sqrt{\lambda_k})M^{i,j,k}\\
-df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-Q_0(f,f) &= \frac{1}{\sqrt{vol(M)}}\sum_i \hat{f}(i)^2 \lambda_i\\
-\sum_{\ell}Q_\ell(f,f)e^\ell &= \frac{1}{2}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)M^{i,j,\ell}e^\ell\\
-&= \frac{1}{4}\sum_{i,j,\ell}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j -\lambda_\ell)(M^{i,i,\ell} + M^{j,j,\ell} - \bra{(e^i-e^j)^2}\ket{e^\ell})e^\ell\\
- = g^2 &= \sum_{i,j,\ell}\hat{g}(i)\hat{g}(j)M^{i,j,\ell}e^\ell\implies\\
- \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{f}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k} &= \sum_{i,j}\hat{g}(i)\hat{g}(j)M^{i,j,k} \\
-&= \widehat{g^2}(k). \\
 \end{aligned}
 ```
 
@@ -433,7 +459,7 @@ No entanto, para aplicar o nosso [Teorema](#theorem)É essencial que um mapa lin
 
 deve também preservar o "analítico" invariáveis &mdash; a figura induzida pelo elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, ou seja, os autovalores individuais do Laplaciano do tori plano.
 
-Como o dueto de Milnor exemplifica, ter um mapa que preserva os comprimentos dos pesos da rede não é suficiente para deduzir que o mapa está em $$SO(n,\Reals)$$; também devemos saber que o mapa preserva os ângulos de peso da rede. Mas esta é uma consequência das fórmulas desenvolvidas na Equação (18):
+Como o dueto de Milnor exemplifica, ter um mapa que preserva os comprimentos dos pesos da rede não é suficiente para deduzir que o mapa está em $$SO(n,\Reals)$$; também devemos saber que o mapa preserva os ângulos de peso da rede. Mas esta é uma consequência das fórmulas desenvolvidas na Equação (21):
 
 ```math
 -4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
