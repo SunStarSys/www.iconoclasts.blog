@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52084
+status: verified=52092
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -342,7 +342,7 @@ where the indices run over
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-Of course, under the Cartan-Killing Casimir Laplacian, $$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$, which has $$vol(G)=8\pi^2$$ under its notion of (metrized) Haar measure. Combining the two equations while sticking to the conventions of the Theorem, one obtains the explicit expression:
+Of course, under the Cartan-Killing Casimir Laplacian, $$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$, which has $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ under its notion of (metrized) Haar measure. Combining the two equations while sticking to the conventions of the Theorem, one obtains the explicit expression:
 
 ```math
 \begin{aligned}
