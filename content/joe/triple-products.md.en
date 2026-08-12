@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52201
+status: verified=52223
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -364,7 +364,7 @@ n_1 & n_2 & -n_3
 \end{aligned}
 ```
 
-For compact Abelian Lie Groups, these vector spaces $$\mathscr V_\alpha$$ are all one-dimensional, so their situation is entirely similar to the spectral decomposition of multiplicity-1 Laplacians above.  More on this in the Example below.
+Thus, we see that the Riemannian Geometry of $$SU(2)$$ induced by the Cartan-Killing Casimir can be captured using our augmented spectral data $$\set{\lambda_i, M^{i,j,k}}$$, from which singular value Riemannian invariants can be explicitly computed from Equation <span class="eqno"></span>. For compact Abelian Lie Groups, these vector spaces $$\mathscr V_\alpha$$ are all one-dimensional, so their situation is entirely similar to the spectral decomposition of multiplicity-1 Laplacians above.  More on this in the Example below.
 
 Getting back to Corollary 1, we observe that the proof involves establishing this implication:
 
