@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=52051
+status: verifierad=52136
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -127,6 +127,8 @@ Vissa bilder kan vara till hjälp här. Om vi fixar $$(M,g)$$ och titta på bano
 Slutligen bevisar vi att det generiska Riemannian metriska fallet helt kännetecknas av studien av "diagonal" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 Dessa resultat visades först under ett liknande tal av författaren vid **MSRI **1997, men de visas här i publicerad form för första gången.
+
+Detta är inte en forskningsmonografi, men en introduktion till ämnet för avancerade matematikstudenter som är bekanta med geometrisk analys, representationsteori och $$C^*$$ algebror.
 
 ## Preliminär
 
@@ -295,7 +297,7 @@ Dessa grundvarianter kan dock vara användbara vid dechiffrering av mer komplexa
 
 #### Förutom
 
-Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier *irreducible *representationer $$\Phi^{(\lambda)} \in Hom(G,U(\mathscr V_\lambda))$$ mot Hilbert rymd sönderdelning av $$L^2(G,dg)$$ (här $$dg$$ är det normaliserade Haar-sannolikhetsmåttet på $$G$$) som behandlas i Peter-Weyl Theorem, och hedrar deras samspel i uttrycket ovan (via irrep sönderdelning av tensorprodukter av irreps) som de väsentliga artefakterna i Lie Theory [[AK01]](#AK01). Kompatibla Riemannian geometrier genereras av praktiska val av kvadratiska Casimir element som ligger i mitten av den universella omslutande algebra, som är av mindre betydelse än den irreducibla sönderdelningen av $$L^2(G,dg)$$ **Deras spektrala sönderdelning** är en (mindre bekväm) återmontering av dessa irreducerbara komponenter, eftersom det associerade Casimir-elementet är konstant på matriskoefficienterna för varje irreducerbar representation.
+Representationsteorin för en kompakt Liegrupp $$G$$ tar den explicit Lappland ut ur ekvationen och studier *irreducible *representationer $$\Phi^{(\alpha)} \in Hom(G,U(\mathscr V_\alpha))$$ mot Hilbert rymd sönderdelning av $$L^2(G,dg)$$ (här $$dg$$ är det normaliserade Haar-sannolikhetsmåttet på $$G$$) som behandlas i Peter-Weyl Theorem, och hedrar deras samspel i uttrycket ovan (via irrep sönderdelning av tensorprodukter av irreps) som de väsentliga artefakterna i Lie Theory [[AK01]](#AK01). Kompatibla Riemannian geometrier genereras av praktiska val av kvadratiska Casimir element som ligger i mitten av den universella omslutande algebra, som är av mindre betydelse än irrep matris koefficient sönderdelning av $$L^2(G,dg)$$ **Deras spektrala sönderdelning** är en (mindre bekväm) återmontering av dessa ortonormala grundelement, eftersom det associerade Casimir-elementet är konstant på varje irreps matriskoefficienter.
 
 Wigners $$3j$$ symboler för $$SU(2)$$ Ett bra exempel på vidare studier &mdash; Låt oss tillämpa vår allmänna konstruktion på det som ett gruppmångfald. Varje ändlig dimensionell irreducerbar enhetlig representation av $$SU(2)$$ är märkt med ett icke-negativt halv-heltal $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Vi skriver $$\mathscr  V_j  $$ för $$ (2j+1)  $$-dimensionellt utrymme på vilket denna representation verkar. En standardortonormal grund för $$\mathscr  V_j $$ är den magnetiska basen $$  \ket{j\ m}$$ med $$m = -j,-j+1,\dots,j.$$
 
@@ -336,21 +338,21 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(Den övergripande faskonventionen kan justeras av de vanliga Condon-Shortley-faktorerna; den väsentliga punkten är att de integrerade faktorerna i en produkt av två verkliga $$3j$$-symboler.) Peter-Weyl-satsen ger en komplett ortonormal grund för $$L^2(SU(2),dg)$$ som ges av de omnormaliserade matriskoefficienterna:
+(Den övergripande faskonventionen kan justeras av de vanliga Condon-Shortley-faktorerna; den väsentliga punkten är att de integrerade faktorerna i en produkt av två verkliga $$3j$$-symboler.) Peter-Weyl-satsen ger en komplett ortonormal grund för $$L^2(SU(2),vol(G)dg)$$ som ges av de omnormaliserade matriskoefficienterna:
 
-$$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
+$$e^{j,m,n}(g):=\sqrt{\frac{2j+1}{vol(G)}}\ D^{j}_{mn}(g),$$
 
 där indexen går över
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-Combining the two equations one obtains the explicit expression:
+Naturligtvis under Cartan-Killing Casimir Lappland, $$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$, som har $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ enligt dess begrepp (metriserad) Haar åtgärd: $$\sqrt g dx = 8\pi^2 dg$$. Kombinera de två ekvationerna samtidigt som man håller sig till teoremens konventioner, får man det uttryckliga uttrycket:
 
 ```math
 \begin{aligned}
 M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
 &=
-\sqrt{(2j_1+1)(2j_2+1)(2j_3+1)}\\
+\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\\
 &\ \times
 \begin{pmatrix}
 j_1 & j_2 & j_3 \\
@@ -364,7 +366,7 @@ n_1 & n_2 & -n_3
 \end{aligned}
 ```
 
-För kompakta Abelian Lie Grupper, dessa vektorrum $$\mathscr V_\lambda$$ De är alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multiplicitet-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
+För kompakta Abelian Lie Grupper, dessa vektorrum $$\mathscr V_\alpha$$ De är alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multiplicitet-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
 
 Att komma tillbaka till Corollary 1, observerar vi att beviset innebär att fastställa denna implikation:
 

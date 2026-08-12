@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=52051
+status: überprüft=52136
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -127,6 +127,8 @@ Einige Bilder können hier hilfreich sein. Wenn wir reparieren $$(M,g)$$ Schauen
 Schließlich beweisen wir, dass der generische Riemannsche metrische Fall vollständig durch die Untersuchung der "diagonal" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 Diese Ergebnisse wurden erstmals 1997 in einem ähnlich betitelten Vortrag des Autors bei **MSRI** gezeigt, erscheinen hier aber erstmals in veröffentlichter Form.
+
+Dies ist keine Forschungsmonografie, sondern eine Einführung in das Thema für fortgeschrittene Mathematikstudenten, die mit Geometric Analysis, Repräsentationstheorie vertraut sind, und $$C^*$$ Algebras.
 
 ## Vorbereitungen
 
@@ -295,7 +297,7 @@ Diese Basisinvarianten können sich jedoch als nützlich erweisen, um komplexere
 
 #### Abgesehen
 
-Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien *irreducible* Darstellungen $$\Phi^{(\lambda)} \in Hom(G,U(\mathscr V_\lambda))$$ zur Hilbert-Raumzersetzung von $$L^2(G,dg)$$ (hier $$dg$$ ist die normalisierte Haarwahrscheinlichkeit auf $$G$$) wie im Peter-Weyl-Theorem angesprochen, und ehrt ihr Zusammenspiel mit dem oben genannten Ausdruck (durch irrep Zersetzung von Tensorprodukten von Irreps) als die wesentlichen Artefakte der Lüge-Theorie [[AK01]](#AK01). Kompatible Riemannsche Geometrien werden durch bequeme Wahl von quadratischen Casimir-Elementen erzeugt, die in der Mitte der universellen umhüllenden Algebra liegen, die von weniger Bedeutung sind als die irreduzible Zersetzung von $$L^2(G,dg)$$ **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Wiederzusammensetzung dieser irreduziblen Komponenten, da das zugehörige Casimir-Element auf den Matrixkoeffizienten jeder irreduziblen Darstellung konstant ist.
+Die Repräsentationstheorie einer Compact Lie Group $$G$$ nimmt den expliziten Laplacian aus der Gleichung und Studien *irreducible* Darstellungen $$\Phi^{(\alpha)} \in Hom(G,U(\mathscr V_\alpha))$$ zur Hilbert-Raumzersetzung von $$L^2(G,dg)$$ (hier $$dg$$ ist die normalisierte Haarwahrscheinlichkeit auf $$G$$) wie im Peter-Weyl-Theorem angesprochen, und ehrt ihr Zusammenspiel mit dem oben genannten Ausdruck (durch irrep Zersetzung von Tensorprodukten von Irreps) als die wesentlichen Artefakte der Lüge-Theorie [[AK01]](#AK01). Kompatible Riemannsche Geometrien werden durch bequeme Wahl von quadratischen Casimir-Elementen erzeugt, die in der Mitte der universellen umhüllenden Algebra liegen, die von weniger Bedeutung sind als die irrep-Matrix-Koeffizientenzersetzung von $$L^2(G,dg)$$ **Ihre spektrale Zersetzung** ist eine (weniger bequeme) Wiederzusammensetzung dieser orthonormalen Basiselemente, da das zugehörige Casimir-Element auf den Matrixkoeffizienten jedes Irp konstant ist.
 
 Wigner's $$3j$$ Symbole für $$SU(2)$$ sind ein Paradebeispiel für weitere Studien &mdash; Lassen Sie uns unsere allgemeine Konstruktion als Gruppenverteiler anwenden. Jede endliche, irreduzible, einheitliche Darstellung von $$SU(2)$$ ist durch eine nicht negative halbe Ganzzahl gekennzeichnet $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Wir schreiben $$\mathscr  V_j  $$ für die $$ (2j+1)  $$-dimensionaler Raum, auf den diese Darstellung wirkt. Eine orthonormale Basis für $$\mathscr  V_j $$ ist die magnetische Basis $$  \ket{j\ m}$$ mit $$m = -j,-j+1,\dots,j.$$
 
@@ -336,21 +338,21 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(Die allgemeine Phasenkonvention kann durch die üblichen Condon-Shortley-Faktoren angepasst werden; der wesentliche Punkt ist, dass die integralen Faktoren in ein Produkt von zwei realen $$3j$$-Symbole.) Das Peter-Weyl-Theorem liefert eine komplette orthonormale Grundlage für $$L^2(SU(2),dg)$$ durch die renormalisierten Matrixkoeffizienten:
+(Die allgemeine Phasenkonvention kann durch die üblichen Condon-Shortley-Faktoren angepasst werden; der wesentliche Punkt ist, dass die integralen Faktoren in ein Produkt von zwei realen $$3j$$-Symbole.) Das Peter-Weyl-Theorem liefert eine komplette orthonormale Grundlage für $$L^2(SU(2),vol(G)dg)$$ durch die renormalisierten Matrixkoeffizienten:
 
-$$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
+$$e^{j,m,n}(g):=\sqrt{\frac{2j+1}{vol(G)}}\ D^{j}_{mn}(g),$$
 
 wo die Indizes überlaufen
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-Combining the two equations one obtains the explicit expression:
+Natürlich unter dem Cartan-Killing Casimir Laplacian, $$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$, die $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ unter dem Begriff des (metrized) Haarmaßes: $$\sqrt g dx = 8\pi^2 dg$$. Kombiniert man die beiden Gleichungen, während man sich an die Konventionen des Satzes hält, erhält man den expliziten Ausdruck:
 
 ```math
 \begin{aligned}
 M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
 &=
-\sqrt{(2j_1+1)(2j_2+1)(2j_3+1)}\\
+\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\\
 &\ \times
 \begin{pmatrix}
 j_1 & j_2 & j_3 \\
@@ -364,7 +366,7 @@ n_1 & n_2 & -n_3
 \end{aligned}
 ```
 
-Für kompakte Abelian Lie-Gruppen, diese Vektorräume $$\mathscr V_\lambda$$ sind alle eindimensional, so dass ihre Situation ganz ähnlich der spektralen Zersetzung von Multiplizitäts-1 Laplacians oben ist.  Mehr dazu im Beispiel unten.
+Für kompakte Abelian Lie-Gruppen, diese Vektorräume $$\mathscr V_\alpha$$ sind alle eindimensional, so dass ihre Situation ganz ähnlich der spektralen Zersetzung von Multiplizitäts-1 Laplacians oben ist.  Mehr dazu im Beispiel unten.
 
 Wenn wir zu Korrespondenz 1 zurückkehren, stellen wir fest, dass der Beweis Folgendes beinhaltet:
 

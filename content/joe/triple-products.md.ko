@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=52051
+status: 확인=52136
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -127,6 +127,8 @@ Injection 입니다.
 마지막으로, 우리는 일반적인 Riemannian 미터법 사례가 완전히의 연구에 의해 특징임을 증명 "대각선" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 이러한 결과는 1997년 **MSRI**의 저자가 비슷한 제목으로 이야기하는 동안 처음 입증되었지만 처음 게시된 형식으로 여기에 나타납니다.
+
+이것은 연구 논문이 아니라 기하학적 분석, 표현 이론에 익숙한 고급 수학 학생들을위한 주제에 대한 소개입니다. $$C^*$$ 대수학
 
 ## 예비
 
@@ -295,7 +297,7 @@ $$
 
 #### 옆으로
 
-조밀한 거짓말 그룹의 표현 이론 $$G$$ 방정식과 연구에서 명백한 라플라시안 *irreducible *표현을 취합니다 $$\Phi^{(\lambda)} \in Hom(G,U(\mathscr V_\lambda))$$ Hilbert Space Decomposition 부근의 호텔 $$L^2(G,dg)$$ (여기서) $$dg$$ 은(는) 정규화된 Haar 확률 측정입니다. $$G$$Peter-Weyl Theorem에서 언급 한 바와 같이, 그리고 거짓말 이론의 필수 유물로서 위의 표현에서 그들의 상호 작용을 존중 (불규칙의 텐서 제품의 irrep 분해를 통해) [[AK01]](#AK01). 호환 Riemannian 기하학은 보편적 인 봉투 대수학의 중심에 놓여있는 사분면 Casimir 요소의 편리한 선택에 의해 생성되며, 이는 돌이킬 수없는 분해보다 덜 중요합니다. $$L^2(G,dg)$$ 그 자체입니다. **그들의 스펙트럼 분해**는 그 환원할 수 없는 성분들의 (적어도 편리한) 재조립품입니다, 왜냐하면 연관된 카시미르 성분은 각 환원할 수 없는 표현의 행렬 계수에 일정하기 때문입니다.
+조밀한 거짓말 그룹의 표현 이론 $$G$$ 방정식과 연구에서 명백한 라플라시안 *irreducible *표현을 취합니다 $$\Phi^{(\alpha)} \in Hom(G,U(\mathscr V_\alpha))$$ Hilbert Space Decomposition 부근의 호텔 $$L^2(G,dg)$$ (여기서) $$dg$$ 은(는) 정규화된 Haar 확률 측정입니다. $$G$$Peter-Weyl Theorem에서 언급 한 바와 같이, 그리고 거짓말 이론의 필수 유물로서 위의 표현에서 그들의 상호 작용을 존중 (불규칙의 텐서 제품의 irrep 분해를 통해) [[AK01]](#AK01). 호환 Riemannian 기하학은 보편적 인 봉투 대수학의 중심에 놓여있는 사분면 Casimir 요소의 편리한 선택에 의해 생성되며, 이는 irrep 매트릭스 계수 분해보다 덜 중요합니다. $$L^2(G,dg)$$ 그 자체. **그들의 스펙트럼 분해**는 연관된 Casimir 요소가 각 irrep의 매트릭스 계수에 상수이기 때문에 이러한 직교 기준 요소의 (적어도 편리한) 재조립입니다.
 
 위너스 $$3j$$ 기호 $$SU(2)$$ 추가 학습을 위한 주요 사례 &mdash; 우리는 우리의 일반적인 건설을 그룹 매니폴드로 적용하자. 모든 유한 차원의 환원 불가능한 단일 표현 $$SU(2)$$ 음이 아닌 반정수로 레이블 지정됨 $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. 글쓰기 $$\mathscr  V_j  $$ 대상 $$ (2j+1)  $$이 표현이 작동하는 -차원 공간입니다. 표준 직교 기준 $$\mathscr  V_j $$ 자기 기초 The Magnetic Base $$  \ket{j\ m}$$ 포함 $$m = -j,-j+1,\dots,j.$$
 
@@ -336,21 +338,21 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(전체 위상 컨벤션은 일반적인 Condon-Shortley 요인에 의해 조정될 수 있습니다; 근본적인 점은 두개의 진짜의 제품으로 적분 인자 입니다 $$3j$$-기호.) Peter–Weyl theorem은 완전한 직교적 기초를 제공한다. $$L^2(SU(2),dg)$$ 다시 정규화된 행렬 계수에 의해 주어지는:
+(전체 위상 컨벤션은 일반적인 Condon-Shortley 요인에 의해 조정될 수 있습니다; 근본적인 점은 두개의 진짜의 제품으로 적분 인자 입니다 $$3j$$-기호.) Peter–Weyl theorem은 완전한 직교적 기초를 제공한다. $$L^2(SU(2),vol(G)dg)$$ 다시 정규화된 행렬 계수에 의해 주어지는:
 
-$$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
+$$e^{j,m,n}(g):=\sqrt{\frac{2j+1}{vol(G)}}\ D^{j}_{mn}(g),$$
 
 인덱스가 실행되는 위치
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-Combining the two equations one obtains the explicit expression:
+당연히 Cartan-Killing Casimir Laplacian의 밑에, $$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$, $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ 그분께서 말씀하시기를, 그분의 말씀은 $$\sqrt g dx = 8\pi^2 dg$$. 정리의 규약에 충실하면서 두 방정식을 결합하면 명시적 표현을 얻을 수 있습니다.
 
 ```math
 \begin{aligned}
 M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
 &=
-\sqrt{(2j_1+1)(2j_2+1)(2j_3+1)}\\
+\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\\
 &\ \times
 \begin{pmatrix}
 j_1 & j_2 & j_3 \\
@@ -364,7 +366,7 @@ n_1 & n_2 & -n_3
 \end{aligned}
 ```
 
-소형 Abelian Lie 그룹의 경우 이러한 벡터 공간 $$\mathscr V_\lambda$$ 모두 다차원, 그래서 그들의 상황은 전적으로 다수성-1 라플라시안의 스펙트럼 분해와 유사합니다.  이에 대한 자세한 내용은 아래 예제를 참조하십시오.
+소형 Abelian Lie 그룹의 경우 이러한 벡터 공간 $$\mathscr V_\alpha$$ 모두 다차원, 그래서 그들의 상황은 전적으로 다수성-1 라플라시안의 스펙트럼 분해와 유사합니다.  이에 대한 자세한 내용은 아래 예제를 참조하십시오.
 
 Corollary 1로 돌아가면, 우리는 증거가이 의미를 확립하는 것을 포함합니다 :
 

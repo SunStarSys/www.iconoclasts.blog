@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=52051
+status: verificado=52136
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -128,6 +128,8 @@ Algunas imágenes pueden ser útiles aquí. Si solucionamos $$(M,g)$$ y mirar la
 Finalmente, demostramos que el caso genérico métrico de Riemann se caracteriza por completo por el estudio de la "diagonal" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 Estos resultados se demostraron por primera vez durante una charla titulada de manera similar por el autor en **MSRI** en 1997, pero aparecen aquí en forma publicada por primera vez.
+
+Esta no es una monografía de investigación, sino una introducción a la materia para los estudiantes avanzados de matemáticas familiarizados con el Análisis Geométrico, la Teoría de las Representaciones, y $$C^*$$ álgebras.
 
 ## Preliminares
 
@@ -296,7 +298,7 @@ Sin embargo, estas invariantes de base pueden resultar útiles para descifrar ca
 
 #### Aside
 
-La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y estudia representaciones *irreducibles* $$\Phi^{(\lambda)} \in Hom(G,U(\mathscr V_\lambda))$$ hacia la descomposición espacial de Hilbert de $$L^2(G,dg)$$ (aquí) $$dg$$ es la medida normalizada de probabilidad de Haar en $$G$$) como se aborda en el Teorema de Peter-Weyl, y honra su interacción en la expresión anterior (a través de la descomposición irrep de los productos tensores de irreps) como los artefactos esenciales de la Teoría de la Mentira [[AK01]](#AK01). Las geometrías Riemannian compatibles son generadas por opciones convenientes de elementos Casimir cuadráticos que se encuentran en el centro del álgebra envolvente universal, que son de menor importancia que la descomposición irreductible de $$L^2(G,dg)$$ **Su descomposición espectral** es un reensamblaje (menos conveniente) de esos componentes irreducibles, ya que el elemento Casimir asociado es constante en los coeficientes de matriz de cada representación irreducible.
+La teoría de la representación de un grupo de mentiras compacto $$G$$ saca al laplaciano explícito de la ecuación y estudia representaciones *irreducibles* $$\Phi^{(\alpha)} \in Hom(G,U(\mathscr V_\alpha))$$ hacia la descomposición espacial de Hilbert de $$L^2(G,dg)$$ (aquí) $$dg$$ es la medida normalizada de probabilidad de Haar en $$G$$) como se aborda en el Teorema de Peter-Weyl, y honra su interacción en la expresión anterior (a través de la descomposición irrep de los productos tensores de irreps) como los artefactos esenciales de la Teoría de la Mentira [[AK01]](#AK01). Las geometrías Riemannian compatibles son generadas por opciones convenientes de elementos Casimir cuadráticos que se encuentran en el centro del álgebra envolvente universal, que son de menor importancia que la descomposición del coeficiente de matriz irrep de $$L^2(G,dg)$$ **Su descomposición espectral** es un reensamblaje (menos conveniente) de esos elementos de base ortonormales, ya que el elemento Casimir asociado es constante en los coeficientes de matriz de cada irrep.
 
 Wigner $$3j$$ símbolos para $$SU(2)$$ constituyen un buen ejemplo para seguir estudiando &mdash; Apliquemos nuestra construcción general a ella como un colector de grupo. Cada representación unitaria irreductible de dimensiones finitas de $$SU(2)$$ está etiquetado por medio entero no negativo $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Escribimos $$\mathscr  V_j  $$ para el $$ (2j+1)  $$Espacio dimensional en el que actúa esta representación. Una base ortonormal estándar de $$\mathscr  V_j $$ es la base magnética $$  \ket{j\ m}$$ con $$m = -j,-j+1,\dots,j.$$
 
@@ -337,21 +339,21 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(La convención general de la fase se puede ajustar por los factores habituales de Condon-Shortley; el punto esencial es que los factores integrales en un producto de dos reales $$3j$$-símbolos.) El teorema de Peter-Weyl proporciona una base ortonormal completa de $$L^2(SU(2),dg)$$ dados por los coeficientes de matriz renormalizados:
+(La convención general de la fase se puede ajustar por los factores habituales de Condon-Shortley; el punto esencial es que los factores integrales en un producto de dos reales $$3j$$-símbolos.) El teorema de Peter-Weyl proporciona una base ortonormal completa de $$L^2(SU(2),vol(G)dg)$$ dados por los coeficientes de matriz renormalizados:
 
-$$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
+$$e^{j,m,n}(g):=\sqrt{\frac{2j+1}{vol(G)}}\ D^{j}_{mn}(g),$$
 
 donde los índices se extienden
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-Combining the two equations one obtains the explicit expression:
+Por supuesto, bajo el Cartan-Killing Casimir Laplacian, $$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$, que ha $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ con arreglo a su noción de medida (medida) Haar: $$\sqrt g dx = 8\pi^2 dg$$. Combinando las dos ecuaciones mientras se aferran a las convenciones del Teorema, se obtiene la expresión explícita:
 
 ```math
 \begin{aligned}
 M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
 &=
-\sqrt{(2j_1+1)(2j_2+1)(2j_3+1)}\\
+\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\\
 &\ \times
 \begin{pmatrix}
 j_1 & j_2 & j_3 \\
@@ -365,7 +367,7 @@ n_1 & n_2 & -n_3
 \end{aligned}
 ```
 
-Para grupos de mentiras abelianos compactos, estos espacios vectoriales $$\mathscr V_\lambda$$ Todos son unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad-1.  Más sobre esto en el ejemplo a continuación.
+Para grupos de mentiras abelianos compactos, estos espacios vectoriales $$\mathscr V_\alpha$$ Todos son unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad-1.  Más sobre esto en el ejemplo a continuación.
 
 Volviendo al Corolario 1, observamos que la prueba implica establecer esta implicación:
 

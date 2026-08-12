@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=52051
+status: vérifié=52136
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -128,6 +128,8 @@ Certaines images peuvent être utiles ici. Si nous corrigeons $$(M,g)$$ et regar
 Enfin, nous prouvons que le cas métrique générique de Riemann est complètement caractérisé par l'étude de la "diagonale" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 Ces résultats ont été démontrés pour la première fois lors d'un discours intitulé de la même manière par l'auteur à l' **IRSM** en 1997, mais ils apparaissent ici sous forme publiée pour la première fois.
+
+Ce n'est pas une monographie de recherche, mais une introduction à la matière pour les étudiants en mathématiques avancés familiers avec l'analyse géométrique, la théorie de la représentation, et $$C^*$$ algèbres.
 
 ## Préliminaires
 
@@ -296,7 +298,7 @@ Cependant, ces invariants de base peuvent s'avérer utiles pour déchiffrer des 
 
 #### En dehors
 
-La théorie de la représentation d'un groupe de Lie Compact $$G$$ prend le Laplacien explicite hors de l'équation et des études *reductibles* représentations $$\Phi^{(\lambda)} \in Hom(G,U(\mathscr V_\lambda))$$ vers la décomposition spatiale de Hilbert $$L^2(G,dg)$$ (ici) $$dg$$ est la mesure normalisée de probabilité de Haar sur $$G$$) tel qu'il est abordé dans le théorème de Peter-Weyl, et honore leur interaction dans l'expression ci-dessus (via la décomposition irrep des produits tenseurs d'irréponses) comme les artefacts essentiels de la théorie du mensonge [[AK01]](#AK01). Les géométries riemanniennes compatibles sont générées par des choix pratiques d'éléments quadratiques de Casimir qui se trouvent au centre de l'algèbre universelle enveloppante, qui sont moins importants que la décomposition irréductible de $$L^2(G,dg)$$ **Leur décomposition spectrale** est un réassemblage (moins commode) de ces composantes irréductibles, puisque l'élément Casimir associé est constant sur les coefficients matriciels de chaque représentation irréductible.
+La théorie de la représentation d'un groupe de Lie Compact $$G$$ prend le Laplacien explicite hors de l'équation et des études *reductibles* représentations $$\Phi^{(\alpha)} \in Hom(G,U(\mathscr V_\alpha))$$ vers la décomposition spatiale de Hilbert $$L^2(G,dg)$$ (ici) $$dg$$ est la mesure normalisée de probabilité de Haar sur $$G$$) tel qu'il est abordé dans le théorème de Peter-Weyl, et honore leur interaction dans l'expression ci-dessus (via la décomposition irrep des produits tenseurs d'irréponses) comme les artefacts essentiels de la théorie du mensonge [[AK01]](#AK01). Les géométries Riemanniennes compatibles sont générées par des choix pratiques d'éléments quadratiques Casimir qui se trouvent au centre de l'algèbre universelle enveloppante, qui sont moins importants que la décomposition du coefficient de matrice irrep de $$L^2(G,dg)$$ **Leur décomposition spectrale** est un réassemblage (moins commode) de ces éléments de base orthonormés, puisque l'élément Casimir associé est constant sur les coefficients matriciels de chaque irrep.
 
 Wigner's $$3j$$ symboles pour $$SU(2)$$ sont un excellent exemple pour une étude plus approfondie &mdash; Appliquons notre construction générale à elle en tant que collecteur de groupe. Chaque représentation unitaire irréductible et finie $$SU(2)$$ est étiqueté par un demi-entier non négatif $$j = 0, \tfrac12, 1, \tfrac32, \dots  $$. Nous écrivons $$\mathscr  V_j  $$ pour $$ (2j+1)  $$-l'espace dimensionnel sur lequel agit cette représentation. Une base orthonormée standard de $$\mathscr  V_j $$ est la base magnétique $$  \ket{j\ m}$$ avec $$m = -j,-j+1,\dots,j.$$
 
@@ -337,21 +339,21 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(La convention de phase globale peut être ajustée par les facteurs habituels de Condon-Shortley ; le point essentiel est que les facteurs intégraux dans un produit de deux $$3j$$-symboles.) Le théorème de Peter-Weyl fournit une base orthonormée complète de $$L^2(SU(2),dg)$$ données par les coefficients matriciels renormalisés :
+(La convention de phase globale peut être ajustée par les facteurs habituels de Condon-Shortley ; le point essentiel est que les facteurs intégraux dans un produit de deux $$3j$$-symboles.) Le théorème de Peter-Weyl fournit une base orthonormée complète de $$L^2(SU(2),vol(G)dg)$$ données par les coefficients matriciels renormalisés :
 
-$$e^{j,m,n}(g):=\sqrt{2j+1}\ D^{j}_{mn}(g),$$
+$$e^{j,m,n}(g):=\sqrt{\frac{2j+1}{vol(G)}}\ D^{j}_{mn}(g),$$
 
 où les index sont exécutés
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-Combining the two equations one obtains the explicit expression:
+Bien sûr, sous le Cartan-Killing Casimir Laplacian, $$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$, qui a $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ selon sa notion de mesure Haar (métriquée) : $$\sqrt g dx = 8\pi^2 dg$$. En combinant les deux équations tout en respectant les conventions du théorème, on obtient l'expression explicite :
 
 ```math
 \begin{aligned}
 M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
 &=
-\sqrt{(2j_1+1)(2j_2+1)(2j_3+1)}\\
+\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\\
 &\ \times
 \begin{pmatrix}
 j_1 & j_2 & j_3 \\
@@ -365,7 +367,7 @@ n_1 & n_2 & -n_3
 \end{aligned}
 ```
 
-Pour les groupes de mensonges abéliens compacts, ces espaces vectoriels $$\mathscr V_\lambda$$ sont tous unidimensionnels, donc leur situation est tout à fait similaire à la décomposition spectrale de la multiplicité-1 Laplaciens ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
+Pour les groupes de mensonges abéliens compacts, ces espaces vectoriels $$\mathscr V_\alpha$$ sont tous unidimensionnels, donc leur situation est tout à fait similaire à la décomposition spectrale de la multiplicité-1 Laplaciens ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
 
 En revenant au Corollaire 1, nous observons que la preuve implique d'établir cette implication :
 
