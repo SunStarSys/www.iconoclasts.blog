@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52106
+status: verified=52110
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -334,7 +334,7 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 ```
 
-(The overall phase convention can be adjusted by the usual Condon–Shortley factors; the essential point is that the integral factors into a product of two real $$3j$$-symbols.) The Peter–Weyl theorem supplies a complete orthonormal basis of $$L^2(SU(2),dg)$$ given by the renormalized matrix coefficients:
+(The overall phase convention can be adjusted by the usual Condon–Shortley factors; the essential point is that the integral factors into a product of two real $$3j$$-symbols.) The Peter–Weyl theorem supplies a complete orthonormal basis of $$L^2(SU(2),vol(G)dg)$$ given by the renormalized matrix coefficients:
 
 $$e^{j,m,n}(g):=\sqrt{\frac{2j+1}{vol(G)}}\ D^{j}_{mn}(g),$$
 
