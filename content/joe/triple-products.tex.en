@@ -341,7 +341,7 @@ where the indices run over
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-Of course, under the Cartan-Killing Casimir Laplacian, $\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$, which has $vol(G)=2\pi\ vol(S^2) = 8\pi^2$ under its notion of (metrized) Haar measure: $\sqrt g dx = 8\pi^2 dg$. Combining the two equations while sticking to the conventions of the Theorem, one obtains the explicit expression:
+Of course, under the Cartan-Killing Casimir Laplacian, $\Delta e^{j,m,n} = \lambda_j e^{j,m,n} = j(j+1)e^{j,m,n}$, which has $vol(G)=2\pi\ vol(S^2) = 8\pi^2$ under its notion of (metrized) Haar measure: $\sqrt g dx = 8\pi^2 dg$. Combining the two equations while sticking to the conventions of the Theorem, one obtains the explicit expression:
 
 \begin{equation}
 \begin{aligned}
