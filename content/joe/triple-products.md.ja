@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=52178
+status: 確認済み=52201
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -38,6 +38,8 @@ Geometric Analysis、Partial Differential Equations、Abelianの基本技術$$C^
 さまざまな関連分野での取り組み[[DH11]](#DH11)イソスペクトルのクラスの位相的特性を決定するような、一般的には非アイソメトリックマニホールド(空) [[ST80]](#ST80)、有限[[AS94]](#AS94)、堅い[[GK80]](#GK80)、コンパクト[[GZ97]](#GZ97))は、Riemannianメトリックのさまざまなモジュリ空間のサブセットです。
 
 What we offer in this article is a new perspective on a familiar tool: 離散物としての固有関数のペアワイズプロダクトのインデックス付きフーリエ係数"代数的/位相的差別" 既存、個別を補完する"分析不変条件" &mdash; *Laplace-Beltrami演算子* (ここでは**Laplacian**)の負でないスペクトル$$ℋ = L^2(M,g)$$。組み合わせて、ペアは、"個別のグローバル幾何表現" isospectralのisometryクラス、閉じたRiemannianマニホールド。
+
+これは研究のモノグラフではなく、幾何学的分析、表現理論に精通した上級数学の学生のための主題の紹介です。$$C^*$$ 代数
 
 ### 結果
 
@@ -126,8 +128,6 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 最後に、一般的なRiemannianメトリックケースは、次の研究によって完全に特徴付けられていることを証明します"対角線" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 これらの結果は、1997年に**MSRI**の著者が同様のタイトルの講演で最初に実証されましたが、それらは初めて公開された形式でここに表示されます。
-
-これは研究のモノグラフではなく、幾何学的分析、表現理論に精通した上級数学の学生のための主題の紹介です。$$C^*$$ 代数
 
 ## 事前審査
 
@@ -345,7 +345,7 @@ $$e^{j,m,n}(g):=\sqrt{\frac{2j+1}{vol(G)}}\ D^{j}_{mn}(g),$$
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-「Cartan-Killing Casimir Laplacian」$$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$は、$$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ 御朱印(御朱印)は、以下の通りです。$$\sqrt g dx = 8\pi^2 dg$$。定理の規則に固執しながら2つの方程式を組み合せると、1つは明示的な式を取得します。
+「Cartan-Killing Casimir Laplacian」$$\Delta e^{j,m,n} = \lambda_j e^{j,m,n} = j(j+1)e^{j,m,n}$$は、$$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ 御朱印(御朱印)は、以下の通りです。$$\sqrt g dx = 8\pi^2 dg$$。定理の規則に固執しながら2つの方程式を組み合せると、1つは明示的な式を取得します。
 
 ```math
 \begin{aligned}

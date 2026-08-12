@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=52178
+status: verificado=52201
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -40,6 +40,8 @@ Para las métricas riemannianas no homogéneas, Carolyn Gordon descubrió dúos 
 El trabajo continúa en muchas áreas relacionadas [[DH11]](#DH11), como la determinación de las características topológicas de la clase de colectores isospectrales, no isométricos en general (vacío [[ST80]](#ST80), finito [[AS94]](#AS94), rígido [[GK80]](#GK80)y compacto [[GZ97]](#GZ97)) como un subconjunto de diferentes espacios modulares de métricas riemannianas.
 
 What we offer in this article is a new perspective on a familiar tool: Coeficientes de Fourier indexados de productos pareados de funciones propias como un "discriminante algebraico/topológico" complementar la actual y discreta "invariante analítica" &mdash; el espectro no negativo del *operador Laplace-Beltrami* (en lo sucesivo denominado el **laplaciano**) en $$ℋ = L^2(M,g)$$. Combinado, observamos que el par proporciona un "representación geométrica global discreta" de las clases de isometría de los colectores isospectrales, Riemannianos cerrados.
+
+Esta no es una monografía de investigación, sino una introducción a la materia para los estudiantes avanzados de matemáticas familiarizados con el Análisis Geométrico, la Teoría de las Representaciones, y $$C^*$$ álgebras.
 
 ### Resultados
 
@@ -128,8 +130,6 @@ Algunas imágenes pueden ser útiles aquí. Si solucionamos $$(M,g)$$ y mirar la
 Finalmente, demostramos que el caso genérico métrico de Riemann se caracteriza por completo por el estudio de la "diagonal" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 Estos resultados se demostraron por primera vez durante una charla titulada de manera similar por el autor en **MSRI** en 1997, pero aparecen aquí en forma publicada por primera vez.
-
-Esta no es una monografía de investigación, sino una introducción a la materia para los estudiantes avanzados de matemáticas familiarizados con el Análisis Geométrico, la Teoría de las Representaciones, y $$C^*$$ álgebras.
 
 ## Preliminares
 
@@ -347,7 +347,7 @@ donde los índices se extienden
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-Por supuesto, bajo el Cartan-Killing Casimir Laplacian, $$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$, que ha $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ con arreglo a su noción de medida (medida) Haar: $$\sqrt g dx = 8\pi^2 dg$$. Combinando las dos ecuaciones mientras se aferran a las convenciones del Teorema, se obtiene la expresión explícita:
+Por supuesto, bajo el Cartan-Killing Casimir Laplacian, $$\Delta e^{j,m,n} = \lambda_j e^{j,m,n} = j(j+1)e^{j,m,n}$$, que ha $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ con arreglo a su noción de medida (medida) Haar: $$\sqrt g dx = 8\pi^2 dg$$. Combinando las dos ecuaciones mientras se aferran a las convenciones del Teorema, se obtiene la expresión explícita:
 
 ```math
 \begin{aligned}

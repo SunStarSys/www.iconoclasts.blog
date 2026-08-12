@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =52178
+status: 驗證 =52201
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -38,6 +38,8 @@ Joe Schaefer
 在許多相關區域繼續工作[[DH11]](#DH11)，例如決定一般 (空白) 中等同位素類別的拓樸特徵、非幾何特徵[[ST80]](#ST80)，有限[[AS94]](#AS94)，剛性[[GK80]](#GK80)，精簡[[GZ97]](#GZ97)) 作為 Riemannian 度量中不同模數空間的子集。
 
 What we offer in this article is a new perspective on a familiar tool: 分散式特徵函數對相關產品的指數傅立葉係數"代數 / 地質鑑別" 以補充現有、離散"分析不變量" &mdash; *Laplace-Beltrami 運算子 *(此處稱為 **Laplacian**) 的非負數頻譜$$ℋ = L^2(M,g)$$。組合，我們觀察配對提供"離散全域幾何表示法" 近似同位素類別，閉合裡曼尼亞人。
+
+這不是一個研究單張，而是介紹了熟悉幾何分析、表現理論的進階數學學生的課題。$$C^*$$ 代數。
 
 ### 結果
 
@@ -126,8 +128,6 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
 最後，我們證明了 Riemannian 通用公制案例在研究結果中完全具有特色。"對角線" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 這些結果最初是在 1997 年 **MSRI** 的作者在類似標題的談話期間進行示範，但初次以公開的形式出現在這裡。
-
-這不是一個研究單張，而是介紹了熟悉幾何分析、表現理論的進階數學學生的課題。$$C^*$$ 代數。
 
 ## 初步
 
@@ -345,7 +345,7 @@ $$e^{j,m,n}(g):=\sqrt{\frac{2j+1}{vol(G)}}\ D^{j}_{mn}(g),$$
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-當然，在 Cartan-Killing Casimir Laplacian 下，$$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$，它具有$$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ 根據其 (計量) 哈爾測量的概念：$$\sqrt g dx = 8\pi^2 dg$$。在固定於定理慣例的同時結合兩個方程式，一個取得明確的表示式：
+當然，在 Cartan-Killing Casimir Laplacian 下，$$\Delta e^{j,m,n} = \lambda_j e^{j,m,n} = j(j+1)e^{j,m,n}$$，它具有$$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ 根據其 (計量) 哈爾測量的概念：$$\sqrt g dx = 8\pi^2 dg$$。在固定於定理慣例的同時結合兩個方程式，一個取得明確的表示式：
 
 ```math
 \begin{aligned}

@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=52178
+status: überprüft=52201
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -39,6 +39,8 @@ Für inhomogene Riemannsche Metriken entdeckte Carolyn Gordon Duette, die nicht 
 Die Arbeit geht in vielen verwandten Bereichen weiter [[DH11]](#DH11), wie die Bestimmung der topologischen Eigenschaften der Klasse der isospektralen, nicht-isometrischen Mannigfaltigkeiten im Allgemeinen (leer [[ST80]](#ST80), endlich [[AS94]](#AS94), starr [[GK80]](#GK80)und kompakt [[GZ97]](#GZ97)) als Teilmenge verschiedener Modulräume von Riemannschen Metriken.
 
 What we offer in this article is a new perspective on a familiar tool: Indizierte Fourier-Koeffizienten von paarweisen Produkten von Eigenfunktionen als diskrete "algebraisch/topologisch diskriminierend" zur Ergänzung der bestehenden, diskreten "analytisch invariant" &mdash; das nicht-negative Spektrum des Betreibers *Laplace-Beltrami* (im Folgenden als **Laplacian** bezeichnet) am $$ℋ = L^2(M,g)$$. Zusammen sehen wir, dass das Paar eine "Diskrete globale geometrische Darstellung" der isometrischen Klassen der isospektralen, geschlossenen Riemannschen Mannigfaltigkeiten.
+
+Dies ist keine Forschungsmonografie, sondern eine Einführung in das Thema für fortgeschrittene Mathematikstudenten, die mit Geometric Analysis, Repräsentationstheorie vertraut sind, und $$C^*$$ Algebras.
 
 ### Ergebnisse
 
@@ -127,8 +129,6 @@ Einige Bilder können hier hilfreich sein. Wenn wir reparieren $$(M,g)$$ Schauen
 Schließlich beweisen wir, dass der generische Riemannsche metrische Fall vollständig durch die Untersuchung der "diagonal" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 Diese Ergebnisse wurden erstmals 1997 in einem ähnlich betitelten Vortrag des Autors bei **MSRI** gezeigt, erscheinen hier aber erstmals in veröffentlichter Form.
-
-Dies ist keine Forschungsmonografie, sondern eine Einführung in das Thema für fortgeschrittene Mathematikstudenten, die mit Geometric Analysis, Repräsentationstheorie vertraut sind, und $$C^*$$ Algebras.
 
 ## Vorbereitungen
 
@@ -346,7 +346,7 @@ wo die Indizes überlaufen
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-Natürlich unter dem Cartan-Killing Casimir Laplacian, $$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$, die $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ unter dem Begriff des (metrized) Haarmaßes: $$\sqrt g dx = 8\pi^2 dg$$. Kombiniert man die beiden Gleichungen, während man sich an die Konventionen des Satzes hält, erhält man den expliziten Ausdruck:
+Natürlich unter dem Cartan-Killing Casimir Laplacian, $$\Delta e^{j,m,n} = \lambda_j e^{j,m,n} = j(j+1)e^{j,m,n}$$, die $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ unter dem Begriff des (metrized) Haarmaßes: $$\sqrt g dx = 8\pi^2 dg$$. Kombiniert man die beiden Gleichungen, während man sich an die Konventionen des Satzes hält, erhält man den expliziten Ausdruck:
 
 ```math
 \begin{aligned}

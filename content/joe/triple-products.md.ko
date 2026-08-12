@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=52178
+status: 확인=52201
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -39,6 +39,8 @@ Inhomogeneous Riemannian metrics의 경우 Carolyn Gordon은 로컬 등각투영
 많은 관련 영역에서 작업이 계속됨 [[DH11]](#DH11)isospectral, non-isometric 매니폴드 클래스의 위상적 특성을 결정하는 것과 같이, 일반적으로 (비어 있음) [[ST80]](#ST80), 유한 [[AS94]](#AS94), 엄밀한 [[GK80]](#GK80)및 Compact [[GZ97]](#GZ97)) Riemannian 메트릭의 다른 모듈리 공간의 하위 집합으로.
 
 What we offer in this article is a new perspective on a familiar tool: 고유 함수의 쌍방식 제품의 색인 푸리에 계수를 이산으로 "대수/위상 차별" 기존 비연속 보완 "분석 불변성" &mdash; *Laplace-Beltrami 연산자*의 음이 아닌 스펙트럼(여기서는 **Laplacian**이라고 함) $$ℋ = L^2(M,g)$$. 결합, 우리는 쌍이 제공하는 것을 관찰 "이산 전역 기하학적 표현" isospectral의 isometry 클래스의, 닫힌 Riemannian 매니폴드.
+
+이것은 연구 논문이 아니라 기하학적 분석, 표현 이론에 익숙한 고급 수학 학생들을위한 주제에 대한 소개입니다. $$C^*$$ 대수학
 
 ### 결과
 
@@ -127,8 +129,6 @@ Injection 입니다.
 마지막으로, 우리는 일반적인 Riemannian 미터법 사례가 완전히의 연구에 의해 특징임을 증명 "대각선" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 이러한 결과는 1997년 **MSRI**의 저자가 비슷한 제목으로 이야기하는 동안 처음 입증되었지만 처음 게시된 형식으로 여기에 나타납니다.
-
-이것은 연구 논문이 아니라 기하학적 분석, 표현 이론에 익숙한 고급 수학 학생들을위한 주제에 대한 소개입니다. $$C^*$$ 대수학
 
 ## 예비
 
@@ -346,7 +346,7 @@ $$e^{j,m,n}(g):=\sqrt{\frac{2j+1}{vol(G)}}\ D^{j}_{mn}(g),$$
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-당연히 Cartan-Killing Casimir Laplacian의 밑에, $$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$, $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ 그분께서 말씀하시기를, 그분의 말씀은 $$\sqrt g dx = 8\pi^2 dg$$. 정리의 규약에 충실하면서 두 방정식을 결합하면 명시적 표현을 얻을 수 있습니다.
+당연히 Cartan-Killing Casimir Laplacian의 밑에, $$\Delta e^{j,m,n} = \lambda_j e^{j,m,n} = j(j+1)e^{j,m,n}$$, $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ 그분께서 말씀하시기를, 그분의 말씀은 $$\sqrt g dx = 8\pi^2 dg$$. 정리의 규약에 충실하면서 두 방정식을 결합하면 명시적 표현을 얻을 수 있습니다.
 
 ```math
 \begin{aligned}

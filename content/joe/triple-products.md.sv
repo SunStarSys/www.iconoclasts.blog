@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=52178
+status: verifierad=52201
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -39,6 +39,8 @@ För inhomogena riemanniska mätvärden upptäckte Carolyn Gordon duetter som in
 Arbetet fortsätter inom många närliggande områden [[DH11]](#DH11), såsom bestämning av topologiska egenskaper hos klassen av isospektrala, icke-isometriska grenrör i allmänhet (tomt) [[ST80]](#ST80), ändlig [[AS94]](#AS94), styv [[GK80]](#GK80)och kompakt [[GZ97]](#GZ97)) som en delmängd av olika modulutrymmen för Riemannian-mätvärden.
 
 What we offer in this article is a new perspective on a familiar tool: indexerade fourierkoefficienter för parvisa produkter av egenfunktioner som diskreta "algebraisk/topologisk diskriminerande" för att komplettera den befintliga, diskreta "invariantanalys" &mdash; det icke-negativa spektrumet hos *Laplace-Beltrami-operatören* (här kallad **Laplacian**) på $$ℋ = L^2(M,g)$$. Tillsammans observerar vi att paret ger en "diskret global geometrisk representation" av isometriklasserna av isospektral, slutna Riemanniska grenrör.
+
+Detta är inte en forskningsmonografi, men en introduktion till ämnet för avancerade matematikstudenter som är bekanta med geometrisk analys, representationsteori och $$C^*$$ algebror.
 
 ### Resultat
 
@@ -127,8 +129,6 @@ Vissa bilder kan vara till hjälp här. Om vi fixar $$(M,g)$$ och titta på bano
 Slutligen bevisar vi att det generiska Riemannian metriska fallet helt kännetecknas av studien av "diagonal" $$\set{\lambda_i, M^{i,\bar i,k}}$$.
 
 Dessa resultat visades först under ett liknande tal av författaren vid **MSRI **1997, men de visas här i publicerad form för första gången.
-
-Detta är inte en forskningsmonografi, men en introduktion till ämnet för avancerade matematikstudenter som är bekanta med geometrisk analys, representationsteori och $$C^*$$ algebror.
 
 ## Preliminär
 
@@ -346,7 +346,7 @@ där indexen går över
 
 $$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
 
-Naturligtvis under Cartan-Killing Casimir Lappland, $$\Delta e^{j,m,n} = j(j+1)e^{j,m,n}$$, som har $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ enligt dess begrepp (metriserad) Haar åtgärd: $$\sqrt g dx = 8\pi^2 dg$$. Kombinera de två ekvationerna samtidigt som man håller sig till teoremens konventioner, får man det uttryckliga uttrycket:
+Naturligtvis under Cartan-Killing Casimir Lappland, $$\Delta e^{j,m,n} = \lambda_j e^{j,m,n} = j(j+1)e^{j,m,n}$$, som har $$vol(G)=2\pi\ vol(S^2) = 8\pi^2$$ enligt dess begrepp (metriserad) Haar åtgärd: $$\sqrt g dx = 8\pi^2 dg$$. Kombinera de två ekvationerna samtidigt som man håller sig till teoremens konventioner, får man det uttryckliga uttrycket:
 
 ```math
 \begin{aligned}
