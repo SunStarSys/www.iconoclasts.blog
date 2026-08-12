@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=52136
+status: verifierad=52178
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -420,40 +420,40 @@ Detta kompletterar beviset för korollarierna.
 
 ## Exempel
 
-Låt $$\set{\lambda_i} \subset \R^n$$ vara indexerad, rangordna $$n$$ Gitter av Lie Algebra vikter för kvoten utrymme representation av $$\frak{g}=\Reals^n$$ som översättningsinvariant (dvs. konstant) vektorfält på sig själv, när $$\R^n$$ ses också som $$\frak{g}$$'s associerade Lie Group över en torus definierad av $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Dessa vikter definierar integrerade hissar av 1-former över torus som integrerar till linjära funktioner. $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ som sin Liegrupp (som täcker torus). Dessa linjära funktioner kan sedan skalas om enhetligt (genom $$2\pi \sqrt{-1}$$) och exponentierade för att bilda multiplikativa tecken som härstammar till att bilda en ortonormal bas av $$L^2(\Reals^n/A\Z^n,dx)$$, med Lebesgue (Haar) mått $$dx$$.
+Låt $$\set{\alpha_i} \subset \R^n$$ vara indexerad, rangordna $$n$$ Gitter av Lie Algebra vikter för kvoten utrymme representation av $$\frak{g}=\Reals^n$$ som översättningsinvariant (dvs. konstant) vektorfält på sig själv, när $$\R^n$$ ses också som $$\frak{g}$$'s associerade Lie Group över en torus definierad av $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Dessa vikter definierar integrerade hissar av 1-former över torus som integrerar till linjära funktioner. $$\bra{x} \alpha_i\rangle,\space x\in\Reals^n$$ som sin Liegrupp (som täcker torus). Dessa linjära funktioner kan sedan skalas om enhetligt (genom $$2\pi \sqrt{-1}$$) och exponentierade för att bilda multiplikativa tecken som härstammar till att bilda en ortonormal bas av $$L^2(\Reals^n/A\Z^n,dx)$$, med Lebesgue (Haar) mått $$dx$$.
 
-Dessutom diagonaliserar denna grund samtidigt den platta torus Laplacian **eftersom** Lappland är bilden av ett symmetriskt, negativt bestämt kvadratiskt Casimir-element under denna (konstant koefficient linjär differentialoperator) kvotmellanrumsrepresentation av den universella omslutande algebra. Därför är dess egenvärden i konstant proportion (av $$4\pi^2$$) till Casimir-element-bestämd längd-kvadrat av varje karaktärs vikt i gitter.
+Dessutom diagonaliserar denna grund samtidigt den platta torus Laplacian **eftersom** Lappland är bilden av ett symmetriskt, negativt bestämt kvadratiskt Casimir-element under denna (konstant koefficient linjär differentialoperator) kvotmellanrumsrepresentation av den universella omslutande algebra. Därför är dess egenvärden i konstant proportion (av $$4\pi^2$$) till Casimir-element-bestämd längd-kvadrat av varje karaktärs vikt i gitter. Det är lätt att se att alla val av icke-degenererade negativa-definita kvadratiska Casimir element genererar en Riemannian Geometry som är isometrisk till den (negativa) euklidiska.
 
 Vi ser för närvarande ovanstående grund
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle{x}|\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-att vara vår teorem-tillämpliga Fourier-bas av ortonormala (multiplikativ karaktär) egenfunktioner (av denna kvotrepresentation av det (negativa) Euklidiska Casimir-elementet) som direkt motsvarar $$\set{\lambda_i}$$. Med våra hypoteser måste vi ha $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (med den euklidiska normen på vikterna).
+att vara vår teorem-tillämpliga Fourier-bas av ortonormala (multiplikativ karaktär) egenfunktioner (av denna kvotrepresentation av det (negativa) Euklidiska Casimir-elementet) som direkt motsvarar $$\set{\alpha_i}$$. Med våra hypoteser måste vi ha $$i < j \implies \lVert\alpha_i\rVert \leq \lVert\alpha_j\rVert$$ (med den euklidiska normen på vikterna).
 
 Nu kan vi beräkna
 
 ```math
 M^{i,j,k} = \begin{cases}
-1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0 \\
+1/\sqrt{|\det A|} & \alpha_i + \alpha_j - \alpha_k = 0 \\
 0 & \text{otherwise}
 \end{cases}
 ```
 
-Som denna ekvation <span class="eqno"></span> beror bara på vikten gitter själv, det är orthonormal-basis-index invariant. Vidare är det *bara *invariant under linjära omvandlingar på viktgitter $$(A^{-1})^t\Z^n = \set{\lambda_i}$$Så bara en $$L^2$$ ortonormal egenfunktionskarta **som induceras från en volymbevarande inverterbar linjär karta mellan två sådana indexerade, rangordnade $$n$$ viktgitter** kommer att hålla "algebraisk/topologisk" indexerad datamängd $$\set{M^{i,j,k}}$$ Ovariant.
+Som denna ekvation <span class="eqno"></span> beror bara på vikten gitter själv, det är orthonormal-basis-index invariant. Vidare är det *bara *invariant under linjära omvandlingar på viktgitter $$(A^{-1})^t\Z^n = \set{\alpha_i}$$Så bara en $$L^2$$ ortonormal egenfunktionskarta **som induceras från en volymbevarande inverterbar linjär karta mellan två sådana indexerade, rangordnade $$n$$ viktgitter** kommer att hålla "algebraisk/topologisk" indexerad datamängd $$\set{M^{i,j,k}}$$ Ovariant.
 
 För att kunna tillämpa vår [Satsen](#theorem)Det är viktigt att en sådan linjär karta $$B$$ vara $$B\in SO(n,\Reals)$$ på vikten gitter, eftersom den inducerade $$L^2$$ Basmappning för egenfunktion
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle x| B\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
-måste också bevara "analytisk" varianter &mdash; Casimir-element-inducerad figur $$4\pi^2\lVert\lambda_i\rVert^2$$ för varje indexerad vikt, dvs. de individuella egenvärdena i Lappland.
+måste också bevara "analytisk" varianter &mdash; Casimir-element-inducerad figur $$\lambda_i = 4\pi^2\lVert\alpha_i\rVert^2$$ för varje indexerad vikt, dvs. de individuella egenvärdena i Lappland.
 
 Som Milnors duett exemplifierar, att ha en karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (21):
 
 ```math
--4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
+-4\pi^2\bra{\alpha_i}\ket{\alpha_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_i + \alpha_j\rVert^2)e^ie^j\ .
 ```
 
 Det fina med denna analys är att vi har bevisat att det inte finns någon **linjär** karta mellan galler som bevarar egenvärdena utan att kartan induceras av en Riemannian isometri på tori &mdash; Som en följd av teorin, inte för att de explicita beräkningarna är enkla polariseringsidentiteter.

@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=52136
+status: überprüft=52178
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -420,40 +420,40 @@ Dies vervollständigt den Beweis der Corollaries.
 
 ## Beispiel
 
-Lassen $$\set{\lambda_i} \subset \R^n$$ ein Index, Rang $$n$$ Gitter der Lie Algebra Gewichte für die Quotientenraumdarstellung von $$\frak{g}=\Reals^n$$ als invariante (d. h. konstante) Vektorfelder auf sich selbst, wenn $$\R^n$$ wird auch als $$\frak{g}$$Lie Group über einen Torus definiert durch $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Diese Gewichte definieren integrable Aufzüge von 1-Form über dem Torus, die sich in lineare Funktionen integrieren $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ Wie seine Lügengruppe (die den Torus bedeckt). Diese linearen Funktionalitäten können dann gleichmäßig (durch $$2\pi \sqrt{-1}$$) und exponentiert, um multiplikative Zeichen zu bilden, die zu einer orthonormalen Basis von $$L^2(\Reals^n/A\Z^n,dx)$$, mit Maß Lebesgue (Haar) $$dx$$.
+Lassen $$\set{\alpha_i} \subset \R^n$$ ein Index, Rang $$n$$ Gitter der Lie Algebra Gewichte für die Quotientenraumdarstellung von $$\frak{g}=\Reals^n$$ als invariante (d. h. konstante) Vektorfelder auf sich selbst, wenn $$\R^n$$ wird auch als $$\frak{g}$$Lie Group über einen Torus definiert durch $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Diese Gewichte definieren integrable Aufzüge von 1-Form über dem Torus, die sich in lineare Funktionen integrieren $$\bra{x} \alpha_i\rangle,\space x\in\Reals^n$$ Wie seine Lügengruppe (die den Torus bedeckt). Diese linearen Funktionalitäten können dann gleichmäßig (durch $$2\pi \sqrt{-1}$$) und exponentiert, um multiplikative Zeichen zu bilden, die zu einer orthonormalen Basis von $$L^2(\Reals^n/A\Z^n,dx)$$, mit Maß Lebesgue (Haar) $$dx$$.
 
-Darüber hinaus diagonalisiert diese Basis gleichzeitig den flachen Torus Laplacian **weil** der Laplacian das Bild eines symmetrischen, negativ-definiten quadratischen Casimir-Elements unter dieser (konstanten Koeffizienten Linear Differential Operator) Quotientenraumdarstellung der universellen Hüllalgebra ist. Die Eigenwerte sind konstant (von $$4\pi^2$$) zum Casimir-Element-bestimmt-Länge-Quadrat jedes Charakters Gewicht im Gitter.
+Darüber hinaus diagonalisiert diese Basis gleichzeitig den flachen Torus Laplacian **weil** der Laplacian das Bild eines symmetrischen, negativ-definiten quadratischen Casimir-Elements unter dieser (konstanten Koeffizienten Linear Differential Operator) Quotientenraumdarstellung der universellen Hüllalgebra ist. Die Eigenwerte sind konstant (von $$4\pi^2$$) zum Casimir-Element-bestimmt-Länge-Quadrat jedes Charakters Gewicht im Gitter. Es ist leicht zu erkennen, dass jede Wahl eines nicht-degenerierten negativ-definiten quadratischen Kasimir-Elements eine Riemannsche Geometrie erzeugt, die isometrisch zur (negativen) euklidischen ist.
 
 Wir betrachten derzeit die obige Basis
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle{x}|\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-als unsere theoretisch anwendbare Fourier-Basis orthonormaler (multiplikativer Charakter) Eigenfunktionen (dieser Quotientendarstellung des (negativen) euklidischen Casimir-Elements) direkt entsprechend $$\set{\lambda_i}$$. Nach den Hypothesen unseres Theorems müssen wir $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (mit der euklidischen Norm auf den Gewichten).
+als unsere theoretisch anwendbare Fourier-Basis orthonormaler (multiplikativer Charakter) Eigenfunktionen (dieser Quotientendarstellung des (negativen) euklidischen Casimir-Elements) direkt entsprechend $$\set{\alpha_i}$$. Nach den Hypothesen unseres Theorems müssen wir $$i < j \implies \lVert\alpha_i\rVert \leq \lVert\alpha_j\rVert$$ (mit der euklidischen Norm auf den Gewichten).
 
 Jetzt können wir berechnen
 
 ```math
 M^{i,j,k} = \begin{cases}
-1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0 \\
+1/\sqrt{|\det A|} & \alpha_i + \alpha_j - \alpha_k = 0 \\
 0 & \text{otherwise}
 \end{cases}
 ```
 
-Wie diese Gleichung <span class="eqno"></span> Es hängt nur vom Gewichtsgitter selbst ab, es ist orthonormal-Basis-Index invariant. Außerdem ist es *nur* invariant unter linearen Transformationen auf dem Gewichtsgitter. $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, also nur eine $$L^2$$ orthonormale Eigenfunktion Basiskarte **, die aus einer volumenerhaltenden invertierbaren linearen Karte zwischen zwei solchen indizierten, Rang induziert wird $$n$$ Gewichtsgitter** halten die "Algebraisch/topologisch" Indexiertes Dataset $$\set{M^{i,j,k}}$$ invariant.
+Wie diese Gleichung <span class="eqno"></span> Es hängt nur vom Gewichtsgitter selbst ab, es ist orthonormal-Basis-Index invariant. Außerdem ist es *nur* invariant unter linearen Transformationen auf dem Gewichtsgitter. $$(A^{-1})^t\Z^n = \set{\alpha_i}$$, also nur eine $$L^2$$ orthonormale Eigenfunktion Basiskarte **, die aus einer volumenerhaltenden invertierbaren linearen Karte zwischen zwei solchen indizierten, Rang induziert wird $$n$$ Gewichtsgitter** halten die "Algebraisch/topologisch" Indexiertes Dataset $$\set{M^{i,j,k}}$$ invariant.
 
 Um unsere [Satz](#theorem)Es ist wichtig, dass eine solche lineare Karte $$B$$ sein $$B\in SO(n,\Reals)$$ auf dem Gewichtsgitter, weil die induzierte $$L^2$$ Eigenfunktion Basiskarte
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle x| B\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
-muss auch die "Analytisch" Invarianten &mdash; Die Casimir-Element induzierte Figur $$4\pi^2\lVert\lambda_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Flat-Tori-Laplacian.
+muss auch die "Analytisch" Invarianten &mdash; Die Casimir-Element induzierte Figur $$\lambda_i = 4\pi^2\lVert\alpha_i\rVert^2$$ für jedes indizierte Gewicht, d.h. die einzelnen Eigenwerte des Flat-Tori-Laplacian.
 
 Wie das Duett von Milnor veranschaulicht, reicht es nicht aus, eine Karte zu haben, die die Längen der Gittergewichte behält, um abzuleiten, dass die Karte in $$SO(n,\Reals)$$; wir müssen auch wissen, dass die Karte Gittergewichtswinkel behält. Dies ist jedoch eine Folge der in Gleichung (21) entwickelten Formeln:
 
 ```math
--4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
+-4\pi^2\bra{\alpha_i}\ket{\alpha_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_i + \alpha_j\rVert^2)e^ie^j\ .
 ```
 
 Das Schöne an dieser Analyse ist, dass wir bewiesen haben, dass es keine **lineare** Karte zwischen Gittern gibt, die die Eigenwerte behält, ohne dass die Karte durch eine Riemannsche Isometrie auf dem Tori induziert wird. &mdash; als Folge des Satzes, nicht weil die expliziten Berechnungen einfache Polarisationsidentitäten sind.

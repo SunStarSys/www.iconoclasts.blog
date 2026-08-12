@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=52136
+status: vérifié=52178
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -421,40 +421,40 @@ Cela complète la preuve des corollaires.
 
 ## Exemple
 
-Laissez $$\set{\lambda_i} \subset \R^n$$ être indexé, rang $$n$$ treillis de poids d'algèbre de Lie pour la représentation spatiale quotient de $$\frak{g}=\Reals^n$$ comme champs vectoriels invariants de traduction (c'est-à-dire constants) sur lui-même, lorsque $$\R^n$$ est également considéré comme $$\frak{g}$$Le groupe Lie associé sur un tore défini par $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Ces poids définissent des ascenseurs intégrables de 1 forme sur le tore qui s'intègrent aux fonctions linéaires $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ comme son groupe de mensonges (couvrant le torus). Ces fonctions linéaires peuvent alors être uniformément redimensionnées (par $$2\pi \sqrt{-1}$$) et exponentie pour former des caractères multiplicatifs qui descendent pour former une base orthonormée de $$L^2(\Reals^n/A\Z^n,dx)$$, avec mesure Lebesgue (Haar) $$dx$$.
+Laissez $$\set{\alpha_i} \subset \R^n$$ être indexé, rang $$n$$ treillis de poids d'algèbre de Lie pour la représentation spatiale quotient de $$\frak{g}=\Reals^n$$ comme champs vectoriels invariants de traduction (c'est-à-dire constants) sur lui-même, lorsque $$\R^n$$ est également considéré comme $$\frak{g}$$Le groupe Lie associé sur un tore défini par $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Ces poids définissent des ascenseurs intégrables de 1 forme sur le tore qui s'intègrent aux fonctions linéaires $$\bra{x} \alpha_i\rangle,\space x\in\Reals^n$$ comme son groupe de mensonges (couvrant le torus). Ces fonctions linéaires peuvent alors être uniformément redimensionnées (par $$2\pi \sqrt{-1}$$) et exponentie pour former des caractères multiplicatifs qui descendent pour former une base orthonormée de $$L^2(\Reals^n/A\Z^n,dx)$$, avec mesure Lebesgue (Haar) $$dx$$.
 
-De plus, cette base diagonalise simultanément le Laplacien du tore plat **parce que** le Laplacien est l'image d'un élément quadratique symétrique, négatif-défini de Casimir sous cette représentation spatiale du quotient de l'algèbre universelle enveloppante (opérateur différentiel linéaire à coefficient constant). Par conséquent, ses valeurs propres sont en proportion constante ( $$4\pi^2$$) au casimir-élément-déterminé-longueur-quared du poids de chaque caractère dans le réseau.
+De plus, cette base diagonalise simultanément le Laplacien du tore plat **parce que** le Laplacien est l'image d'un élément quadratique symétrique, négatif-défini de Casimir sous cette représentation spatiale du quotient de l'algèbre universelle enveloppante (opérateur différentiel linéaire à coefficient constant). Par conséquent, ses valeurs propres sont en proportion constante ( $$4\pi^2$$) au casimir-élément-déterminé-longueur-quared du poids de chaque caractère dans le réseau. Il est facile de voir que tout choix d'élément Casimir quadratique négatif non dégénéré génère une géométrie riemannienne isométrique par rapport à l'élément euclidien (négatif).
 
 Nous considérons actuellement la base ci-dessus
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle{x}|\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-être notre base de Fourier théorique des fonctions propres orthonormes (caractère multiplicatif) (de cette représentation quotient de l'élément Casimir euclidien (négatif) correspondant directement à $$\set{\lambda_i}$$. Par les hypothèses de notre théorème, nous devons avoir $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (avec la norme euclidienne sur les poids).
+être notre base de Fourier théorique des fonctions propres orthonormes (caractère multiplicatif) (de cette représentation quotient de l'élément Casimir euclidien (négatif) correspondant directement à $$\set{\alpha_i}$$. Par les hypothèses de notre théorème, nous devons avoir $$i < j \implies \lVert\alpha_i\rVert \leq \lVert\alpha_j\rVert$$ (avec la norme euclidienne sur les poids).
 
 Maintenant, nous pouvons calculer
 
 ```math
 M^{i,j,k} = \begin{cases}
-1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0 \\
+1/\sqrt{|\det A|} & \alpha_i + \alpha_j - \alpha_k = 0 \\
 0 & \text{otherwise}
 \end{cases}
 ```
 
-Comme cette équation <span class="eqno"></span> ne dépend que du réseau de poids lui-même, il est invariant orthonormal-basis-index. En outre, il est *seulement* invariant sous des transformations linéaires sur le réseau de poids $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, donc seulement un $$L^2$$ Carte de base de fonction propre orthonormée **qui est induite d'une carte linéaire invertible préservant le volume entre deux de ces index, rang $$n$$ les treillis de poids** conserveront "algébrique/topologique" jeu de données indexé $$\set{M^{i,j,k}}$$ invariante.
+Comme cette équation <span class="eqno"></span> ne dépend que du réseau de poids lui-même, il est invariant orthonormal-basis-index. En outre, il est *seulement* invariant sous des transformations linéaires sur le réseau de poids $$(A^{-1})^t\Z^n = \set{\alpha_i}$$, donc seulement un $$L^2$$ Carte de base de fonction propre orthonormée **qui est induite d'une carte linéaire invertible préservant le volume entre deux de ces index, rang $$n$$ les treillis de poids** conserveront "algébrique/topologique" jeu de données indexé $$\set{M^{i,j,k}}$$ invariante.
 
 Cependant, afin d'appliquer notre [Théorème](#theorem), il est essentiel qu'une telle carte linéaire $$B$$ être $$B\in SO(n,\Reals)$$ sur le treillis de poids, parce que $$L^2$$ Carte de base de fonction propre
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle x| B\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
-doit également préserver "analyse" invariants &mdash; la figure induite par l'élément Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ pour chaque poids indexé, c'est-à-dire les valeurs propres individuelles du laplacien du tori plat.
+doit également préserver "analyse" invariants &mdash; la figure induite par l'élément Casimir $$\lambda_i = 4\pi^2\lVert\alpha_i\rVert^2$$ pour chaque poids indexé, c'est-à-dire les valeurs propres individuelles du laplacien du tori plat.
 
 Comme l'illustre le duo de Milnor, avoir une carte qui préserve les longueurs des poids de treillis ne suffit pas à déduire que la carte est dans $$SO(n,\Reals)$$ ; il faut aussi savoir que la carte préserve les angles de poids en treillis. Mais ceci est une conséquence des formules développées dans l'Équation (21) :
 
 ```math
--4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
+-4\pi^2\bra{\alpha_i}\ket{\alpha_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_i + \alpha_j\rVert^2)e^ie^j\ .
 ```
 
 La chose intéressante à propos de cette analyse est que nous avons prouvé qu'il n'y a pas de carte **linéaire** entre les réseaux qui préserve les valeurs propres sans que la carte ne soit induite par une isométrie riemannienne sur la tori. &mdash; En conséquence du théorème, non pas parce que les calculs explicites impliqués sont de simples identités de polarisation.

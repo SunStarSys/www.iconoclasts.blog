@@ -3,7 +3,7 @@ categories: 수학
 dependencies: '*.md.ko'
 keywords: 스펙트럼 이론, riemannian 기하학, 역 문제, 수학적 물리학, 조화 분석, 표현 이론, 구조 상수, conformal 필드
   이론
-status: 확인=52136
+status: 확인=52178
 title: Eigenfunctions와 스펙트럼 기하학의 삼중 제품
 ---
 
@@ -420,40 +420,40 @@ Corollary 2의 충분성은 Corollary 1의 사라지는 adjoint-map 커널 조�
 
 ## 예제
 
-허가 $$\set{\lambda_i} \subset \R^n$$ 인덱스화, 순위 지정 $$n$$ 의 quotient 공간 표현을위한 거짓말 대수 중량의 격자 $$\frak{g}=\Reals^n$$ 번역 불변 (즉, 상수) 벡터 필드 자체로, 때 $$\R^n$$ 또한 다음과 같이 표시됩니다. $$\frak{g}$$'s associated Lie Group over a torus defined by 토러스 $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. 이러한 가중치는 선형 기능에 통합되는 토러스를 통해 1형식의 통합 가능한 리프트를 정의합니다. $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ [중고] 리 그룹(Lie Group) 그런 다음 이러한 선형 함수가 균일하게 재조정될 수 있습니다. $$2\pi \sqrt{-1}$$) 및 의 직교적 기초를 형성하기 위해 내려오는 다수 문자를 형성하기 위해 지수화 $$L^2(\Reals^n/A\Z^n,dx)$$Lebesgue (Haar) 측정 $$dx$$.
+허가 $$\set{\alpha_i} \subset \R^n$$ 인덱스화, 순위 지정 $$n$$ 의 quotient 공간 표현을위한 거짓말 대수 중량의 격자 $$\frak{g}=\Reals^n$$ 번역 불변 (즉, 상수) 벡터 필드 자체로, 때 $$\R^n$$ 또한 다음과 같이 표시됩니다. $$\frak{g}$$'s associated Lie Group over a torus defined by 토러스 $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. 이러한 가중치는 선형 기능에 통합되는 토러스를 통해 1형식의 통합 가능한 리프트를 정의합니다. $$\bra{x} \alpha_i\rangle,\space x\in\Reals^n$$ [중고] 리 그룹(Lie Group) 그런 다음 이러한 선형 함수가 균일하게 재조정될 수 있습니다. $$2\pi \sqrt{-1}$$) 및 의 직교적 기초를 형성하기 위해 내려오는 다수 문자를 형성하기 위해 지수화 $$L^2(\Reals^n/A\Z^n,dx)$$Lebesgue (Haar) 측정 $$dx$$.
 
-또한,이 기초는 동시에 플랫 토러스의 라플라시안을 대각선화 **때문에** 라플라시안이 (일정한 계수 선형 미분 연산자) 보편적 봉투 대수의 몫 공간 표현 아래 대칭, 부정-무한 이차 카시미르 요소의 이미지입니다. 따라서 고유값은 일정한 비율( $$4\pi^2$$) 격자에서 각 캐릭터의 무게의 Casimir-element-determined-length-squared.
+또한,이 기초는 동시에 플랫 토러스의 라플라시안을 대각선화 **때문에** 라플라시안이 (일정한 계수 선형 미분 연산자) 보편적 봉투 대수의 몫 공간 표현 아래 대칭, 부정-무한 이차 카시미르 요소의 이미지입니다. 따라서 고유값은 일정한 비율( $$4\pi^2$$) 격자에서 각 캐릭터의 무게의 Casimir-element-determined-length-squared. non-degenerate negative-definite quadratic Casimir 엘리먼트의 어떤 선택이 (음수) 유클리드에 아이소메트릭 인 Riemannian Geometry를 생성한다는 것을 쉽게 알 수 있습니다.
 
 우리는 현재 위의 기준을 본다.
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle{x}|\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-정형외과(멀티플릭티브 캐릭터) 고유 기능(이러한 네거티브 표현의 유클리드 카시미르 요소)의 Theorem-applicable Fourier base of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) 유클리드 카시미르 요소) directly corresponding to $$\set{\lambda_i}$$. 우리의 이론에 따르면, 우리는 $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (유클리드 표준과 함께)
+정형외과(멀티플릭티브 캐릭터) 고유 기능(이러한 네거티브 표현의 유클리드 카시미르 요소)의 Theorem-applicable Fourier base of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) 유클리드 카시미르 요소) directly corresponding to $$\set{\alpha_i}$$. 우리의 이론에 따르면, 우리는 $$i < j \implies \lVert\alpha_i\rVert \leq \lVert\alpha_j\rVert$$ (유클리드 표준과 함께)
 
 이제 컴퓨트할 수 있습니다.
 
 ```math
 M^{i,j,k} = \begin{cases}
-1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0 \\
+1/\sqrt{|\det A|} & \alpha_i + \alpha_j - \alpha_k = 0 \\
 0 & \text{otherwise}
 \end{cases}
 ```
 
-이 방정식으로 <span class="eqno"></span> 단지 무게 격자 자체에 의존, 그것은 orthonormal-basis-index invariant. 게다가, 그것은 *only* 무게 격자에 선형 변환의 밑에 invariant입니다 $$(A^{-1})^t\Z^n = \set{\lambda_i}$$관련 리뷰: So only an... $$L^2$$ orthonormal eigenfunction base map **이러한 두 인덱스화 된 순위 사이의 볼륨 보존 반전 가능한 선형 맵에서 유도됩니다 $$n$$ 무게 격자**는 지킬 것입니다 "대수학/위상학" 인덱스화된 데이터 집합 $$\set{M^{i,j,k}}$$ 불변.
+이 방정식으로 <span class="eqno"></span> 단지 무게 격자 자체에 의존, 그것은 orthonormal-basis-index invariant. 게다가, 그것은 *only* 무게 격자에 선형 변환의 밑에 invariant입니다 $$(A^{-1})^t\Z^n = \set{\alpha_i}$$관련 리뷰: So only an... $$L^2$$ orthonormal eigenfunction base map **이러한 두 인덱스화 된 순위 사이의 볼륨 보존 반전 가능한 선형 맵에서 유도됩니다 $$n$$ 무게 격자**는 지킬 것입니다 "대수학/위상학" 인덱스화된 데이터 집합 $$\set{M^{i,j,k}}$$ 불변.
 
 그러나, 우리의 [정리](#theorem)이러한 선형 맵이 필수적입니다. $$B$$ 다음 $$B\in SO(n,\Reals)$$ 무게 격자에, 때문에 유도된 $$L^2$$ 고유기능 기반 맵
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle x| B\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
-또한 다음을 보존해야 합니다. "분석" 불변성 &mdash; Casimir-element 유도된 숫자 $$4\pi^2\lVert\lambda_i\rVert^2$$ 각 인덱싱된 중량, 즉 플랫 토리의 라플라시안의 개별 고유 값.
+또한 다음을 보존해야 합니다. "분석" 불변성 &mdash; Casimir-element 유도된 숫자 $$\lambda_i = 4\pi^2\lVert\alpha_i\rVert^2$$ 각 인덱싱된 중량, 즉 플랫 토리의 라플라시안의 개별 고유 값.
 
 Milnor의 듀엣이 예시하는 것처럼 격자 가중치의 길이를 유지하는 맵을 갖는 것은 맵을 추론하기에 충분하지 않습니다. $$SO(n,\Reals)$$우리는 또한 지도가 격자 무게 각도를 보존한다는 것을 알아야합니다. 그러나 이것은 방정식 (21)에서 개발 된 공식의 결과입니다 :
 
 ```math
--4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
+-4\pi^2\bra{\alpha_i}\ket{\alpha_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_i + \alpha_j\rVert^2)e^ie^j\ .
 ```
 
 이 분석에 대한 깔끔한 점은 우리가 토리에 Riemannian 기하학에 의해 유도되는지도없이 고유 값을 보존 격자 사이에 **선형**지도가 없다는 것을 입증했다. &mdash; 이론의 결과로서, 관련된 명시적 계산이 단순한 분극 ID이기 때문이 아니다.

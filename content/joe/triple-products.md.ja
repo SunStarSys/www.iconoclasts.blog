@@ -2,7 +2,7 @@
 categories: 数学
 dependencies: '*.md.ja'
 keywords: スペクトル理論、リーマン幾何学、逆問題、数学物理学、調和解析、表現理論、構造定数、適合場理論
-status: 確認済み=52136
+status: 確認済み=52178
 title: 固有関数とスペクトルジオメトリのトリプル製品
 ---
 
@@ -419,40 +419,40 @@ Corollary 2の効率は、Corollary 1のvanishing adjoint-mapカーネル条件�
 
 ## 例
 
-許可$$\set{\lambda_i} \subset \R^n$$ 索引付き、ランク$$n$$ Lie代数ウェイト(Lie Algebra Weights)の格子$$\frak{g}=\Reals^n$$ 翻訳不変(定数)ベクトルフィールドとして、$$\R^n$$ また、次のように表示されます。$$\frak{g}$$の定義したトーラス上の関連Lieグループ$$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$。これらのウェイトは、線形関数に統合されるトルス上の1フォームの積分可能なリフトを定義します$$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ Lie Group(ルーシー・グループ) これらの線形関数は、均一に再スケールできます( $$2\pi \sqrt{-1}$$)および指数関数して、直交的基礎を形成するために降下する多重文字を形成する$$L^2(\Reals^n/A\Z^n,dx)$$レベスゲ(Leebesgue) $$dx$$.
+許可$$\set{\alpha_i} \subset \R^n$$ 索引付き、ランク$$n$$ Lie代数ウェイト(Lie Algebra Weights)の格子$$\frak{g}=\Reals^n$$ 翻訳不変(定数)ベクトルフィールドとして、$$\R^n$$ また、次のように表示されます。$$\frak{g}$$の定義したトーラス上の関連Lieグループ$$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$。これらのウェイトは、線形関数に統合されるトルス上の1フォームの積分可能なリフトを定義します$$\bra{x} \alpha_i\rangle,\space x\in\Reals^n$$ Lie Group(ルーシー・グループ) これらの線形関数は、均一に再スケールできます( $$2\pi \sqrt{-1}$$)および指数関数して、直交的基礎を形成するために降下する多重文字を形成する$$L^2(\Reals^n/A\Z^n,dx)$$レベスゲ(Leebesgue) $$dx$$.
 
-さらに、この基準は平らなトルスのラプラシア語を同時に対角化します**。ラプラシア語は、この(定数係数線形微分演算子)普遍的なエンベロープ代数の符号空間表現の下の対称的で負の定値四角形カシミール要素のイメージであるためです。したがって、その固有値は一定の割合(of)です$$4\pi^2$$)は、ラティスにおける各文字の重量のカシミール要素決定長さ2乗。
+さらに、この基準は平らなトルスのラプラシア語を同時に対角化します**。ラプラシア語は、この(定数係数線形微分演算子)普遍的なエンベロープ代数の符号空間表現の下の対称的で負の定値四角形カシミール要素のイメージであるためです。したがって、その固有値は一定の割合(of)です$$4\pi^2$$)は、ラティスにおける各文字の重量のカシミール要素決定長さ2乗。非変性負定値四角形Casimir要素の選択は、(負の)Euclidean要素に対するアイソメトリックであるRiemannian Geometryを生成することを簡単に確認できます。
 
 上記の基準を現在見ています。
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle{x}|\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-(負の)ユークリッドカシミール要素(Euclidean Casimir element)を直接対応する正準(multiplicative character)固有関数の定理適用可能なフーリエ基準となるため$$\set{\lambda_i}$$。理論の仮説によって、私たちは$$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (重さのユークリッド基準)
+(負の)ユークリッドカシミール要素(Euclidean Casimir element)を直接対応する正準(multiplicative character)固有関数の定理適用可能なフーリエ基準となるため$$\set{\alpha_i}$$。理論の仮説によって、私たちは$$i < j \implies \lVert\alpha_i\rVert \leq \lVert\alpha_j\rVert$$ (重さのユークリッド基準)
 
 計算できるようになりました
 
 ```math
 M^{i,j,k} = \begin{cases}
-1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0 \\
+1/\sqrt{|\det A|} & \alpha_i + \alpha_j - \alpha_k = 0 \\
 0 & \text{otherwise}
 \end{cases}
 ```
 
-この方程式として<span class="eqno"></span> 重量格子自体によってのみ決まります、それは正統なbasis索引の不変量です。さらに、重量格子上の線形変換では*のみ*不変です$$(A^{-1})^t\Z^n = \set{\lambda_i}$$ただ、$$L^2$$ orthonormal eigenfunction basis map **これは、このようなインデックス付き、ランク間の体積保持の反転線形マップから誘発されます$$n$$ 重量格子**は保ちます"代数/位相" 索引付きデータ・セット$$\set{M^{i,j,k}}$$ 不変
+この方程式として<span class="eqno"></span> 重量格子自体によってのみ決まります、それは正統なbasis索引の不変量です。さらに、重量格子上の線形変換では*のみ*不変です$$(A^{-1})^t\Z^n = \set{\alpha_i}$$ただ、$$L^2$$ orthonormal eigenfunction basis map **これは、このようなインデックス付き、ランク間の体積保持の反転線形マップから誘発されます$$n$$ 重量格子**は保ちます"代数/位相" 索引付きデータ・セット$$\set{M^{i,j,k}}$$ 不変
 
 ただし、[定理](#theorem)そのような線形の地図が不可欠です。$$B$$ ある$$B\in SO(n,\Reals)$$ 重さの格子で、なぜなら、$$L^2$$ 固有関数基準マップ
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle x| B\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
-また、"分析" 不変条件&mdash; カシミール要素誘起図$$4\pi^2\lVert\lambda_i\rVert^2$$ 各インデックス付き重量、すなわち、フラット通りのラプラシアンの個々の固有値。
+また、"分析" 不変条件&mdash; カシミール要素誘起図$$\lambda_i = 4\pi^2\lVert\alpha_i\rVert^2$$ 各インデックス付き重量、すなわち、フラット通りのラプラシアンの個々の固有値。
 
 ミルナーのデュエットが例示しているように、格子ウェイトの長さを保持するマップを持つことは、マップを推測するのに十分ではありません$$SO(n,\Reals)$$また、マップが格子重量の角度を保持していることも知っておく必要があります。これは、方程式(21)で開発された式の結果である。
 
 ```math
--4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
+-4\pi^2\bra{\alpha_i}\ket{\alpha_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_i + \alpha_j\rVert^2)e^ie^j\ .
 ```
 
 この分析のきちんとしたことは、地図がトリのリーマンアイソメトリーによって誘導されることなく、固有値を保持する格子間に**線形**マップがないことが証明されていることです。&mdash; 定理の結果として、関与する明示的な計算が単純な偏光IDであるからではない。

@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=52136
+status: verificado=52178
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -421,40 +421,40 @@ Esto completa la prueba de los Corolarios.
 
 ## Ejemplo
 
-Permitir $$\set{\lambda_i} \subset \R^n$$ ser una clasificación indexada $$n$$ enrejado de Lie Algebra pesos para el cociente espacio representación de $$\frak{g}=\Reals^n$$ como campos vectoriales invariantes de traducción (es decir, constantes) en sí mismos, cuando $$\R^n$$ también se considera $$\frak{g}$$el Grupo Lie asociado sobre un toro definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Estos pesos definen elevadores integrables de 1 forma sobre el toro que se integran a los funcionales lineales. $$\bra{x} \lambda_i\rangle,\space x\in\Reals^n$$ como su grupo de mentiras (que cubre el toro). Estas funciones lineales se pueden volver a escalar uniformemente (por $$2\pi \sqrt{-1}$$) y exponenciado para formar caracteres multiplicativos que descienden para formar una base ortonormal de $$L^2(\Reals^n/A\Z^n,dx)$$, con la medida Lebesgue (Haar) $$dx$$.
+Permitir $$\set{\alpha_i} \subset \R^n$$ ser una clasificación indexada $$n$$ enrejado de Lie Algebra pesos para el cociente espacio representación de $$\frak{g}=\Reals^n$$ como campos vectoriales invariantes de traducción (es decir, constantes) en sí mismos, cuando $$\R^n$$ también se considera $$\frak{g}$$el Grupo Lie asociado sobre un toro definido por $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. Estos pesos definen elevadores integrables de 1 forma sobre el toro que se integran a los funcionales lineales. $$\bra{x} \alpha_i\rangle,\space x\in\Reals^n$$ como su grupo de mentiras (que cubre el toro). Estas funciones lineales se pueden volver a escalar uniformemente (por $$2\pi \sqrt{-1}$$) y exponenciado para formar caracteres multiplicativos que descienden para formar una base ortonormal de $$L^2(\Reals^n/A\Z^n,dx)$$, con la medida Lebesgue (Haar) $$dx$$.
 
-Además, esta base diagonaliza simultáneamente el Laplaciano del toro plano **porque** el Laplaciano es la imagen de un elemento cuadrático simétrico, negativo-definido Casimir bajo este cociente (coeficiente de operador diferencial lineal constante) representación espacial del álgebra envolvente universal. Por lo tanto, sus valores propios están en proporción constante (de $$4\pi^2$$) al casimir-elemento-determinado-longitud-cuadrado del peso de cada personaje en la red.
+Además, esta base diagonaliza simultáneamente el Laplaciano del toro plano **porque** el Laplaciano es la imagen de un elemento cuadrático simétrico, negativo-definido Casimir bajo este cociente (coeficiente de operador diferencial lineal constante) representación espacial del álgebra envolvente universal. Por lo tanto, sus valores propios están en proporción constante (de $$4\pi^2$$) al casimir-elemento-determinado-longitud-cuadrado del peso de cada personaje en la red. Es fácil ver que cualquier elección del elemento Casimir no degenerado definido negativo genera una Geometría Riemanniana que es isométrica a la (negativa) euclidiana.
 
 Actualmente consideramos la base anterior
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle{x}|\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle{x}|\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-ser nuestra base de Fourier aplicable al teorema de funciones propias ortonormales (carácter multiplicativo) (de esta representación cociente del elemento (negativo) Euclidiano Casimir) directamente correspondiente a $$\set{\lambda_i}$$. Por las hipótesis de nuestro teorema, debemos tener $$i < j \implies \lVert\lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (con la norma euclidiana sobre los pesos).
+ser nuestra base de Fourier aplicable al teorema de funciones propias ortonormales (carácter multiplicativo) (de esta representación cociente del elemento (negativo) Euclidiano Casimir) directamente correspondiente a $$\set{\alpha_i}$$. Por las hipótesis de nuestro teorema, debemos tener $$i < j \implies \lVert\alpha_i\rVert \leq \lVert\alpha_j\rVert$$ (con la norma euclidiana sobre los pesos).
 
 Ahora podemos calcular
 
 ```math
 M^{i,j,k} = \begin{cases}
-1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0 \\
+1/\sqrt{|\det A|} & \alpha_i + \alpha_j - \alpha_k = 0 \\
 0 & \text{otherwise}
 \end{cases}
 ```
 
-Como esta ecuación <span class="eqno"></span> sólo depende de la red de peso en sí, es ortonormal-basis-índice invariante. Además, es *solo *invariante bajo transformaciones lineales en la red de pesas $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, así que sólo $$L^2$$ mapa de base de funciones propias ortonormales **que se induce a partir de un mapa lineal invertible que preserva el volumen entre dos de dichos rangos indexados $$n$$ cerraduras de peso** mantendrá "algebraico/topológico" juego de datos indexados $$\set{M^{i,j,k}}$$ invariante.
+Como esta ecuación <span class="eqno"></span> sólo depende de la red de peso en sí, es ortonormal-basis-índice invariante. Además, es *solo *invariante bajo transformaciones lineales en la red de pesas $$(A^{-1})^t\Z^n = \set{\alpha_i}$$, así que sólo $$L^2$$ mapa de base de funciones propias ortonormales **que se induce a partir de un mapa lineal invertible que preserva el volumen entre dos de dichos rangos indexados $$n$$ cerraduras de peso** mantendrá "algebraico/topológico" juego de datos indexados $$\set{M^{i,j,k}}$$ invariante.
 
 Sin embargo, para aplicar nuestra [Teorema](#theorem)Es esencial que este mapa lineal $$B$$ ser $$B\in SO(n,\Reals)$$ en la red de pesas, porque el $$L^2$$ mapa de la base de la función propia
 
 ```math
-\set{e^{2\pi\sqrt{-1}\langle x| B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle x| B\alpha_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 
-debe preservar también "analítico" invariables &mdash; la cifra inducida por el elemento Casimir $$4\pi^2\lVert\lambda_i\rVert^2$$ para cada peso indexado, es decir, los valores propios individuales del laplaciano de flat-tori.
+debe preservar también "analítico" invariables &mdash; la cifra inducida por el elemento Casimir $$\lambda_i = 4\pi^2\lVert\alpha_i\rVert^2$$ para cada peso indexado, es decir, los valores propios individuales del laplaciano de flat-tori.
 
 Como ejemplifica el dúo de Milnor, tener un mapa que preserve las longitudes de los pesos de la celosía no es suficiente para deducir que el mapa está en $$SO(n,\Reals)$$; también debemos saber que el mapa conserva los ángulos de peso de celosía. Pero esto es una consecuencia de las fórmulas desarrolladas en Ecuación (21):
 
 ```math
--4\pi^2\bra{\lambda_i}\ket{\lambda_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\lambda_i\rVert^2 + \lVert\lambda_j\rVert^2 - \lVert\lambda_i + \lambda_j\rVert^2)e^ie^j\ .
+-4\pi^2\bra{\alpha_i}\ket{\alpha_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_i + \alpha_j\rVert^2)e^ie^j\ .
 ```
 
 Lo bueno de este análisis es que hemos demostrado que no hay un mapa **lineal** entre las celosías que preserva los valores propios sin que el mapa sea inducido por una isometría riemanniana en el tori. &mdash; Como consecuencia del Teorema, no porque los cálculos explícitos involucrados sean identidades de polarización simples.
