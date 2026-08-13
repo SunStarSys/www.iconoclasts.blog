@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=52461
+status: verificado=52487
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -373,7 +373,7 @@ $$
 \sigma(j_1,j_2,j_3)=\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\cdot\frac{1}{2j_3+1}=\sqrt{\frac{(2j_1+1)(2j_2+1)}{(2j_3+1)\ 8\pi^2}},
 $$
 
-siempre que se cumplan las desigualdades del triángulo y la condición de paridad para $$j_1, j_2, j_3$$, con multiplicidad 1; y todos los demás valores singulares cero. El cálculo se deriva de la observación de que $$M^{i,j,k}$$ se descompone en el producto tensor de los operadores entrelazados izquierda/derecha de rango 1, cada uno con la norma Hilbert-Schmidt $$1/\sqrt{2j_3+1}$$ (por definición), por lo que su valor singular distinto de cero, por definición anterior, es el producto escalado de Peter Weyl de esas normas Hilbert-Schmidt. Sin embargo, puesto que $$SU(2)$$ con la métrica Cartan-Killing es proporcionalmente isométrica a $$S^3$$ (con la constante de proporcionalidad 4), y para $$S^n, n\leq 6$$, cada colector isospectral es isométrico [[ST80]](#ST80) (una hermosa reducción a las constantes métricas de curvatura seccional de las asintóticas de corto tiempo del rastro del núcleo de calor), este cálculo de los valores singulares es en gran medida académico para $$SU(2)$$.
+siempre que se cumplan las desigualdades del triángulo y la condición de paridad para $$j_1, j_2, j_3$$, con multiplicidad 1; y todos los demás valores singulares cero. El cálculo se deriva de la observación de que $$M^{i,j,k}$$ se descompone en el producto tensor de los operadores entrelazados izquierda/derecha de rango 1, cada uno con la norma Hilbert-Schmidt $$1/\sqrt{2j_3+1}$$ (por definición), por lo que su valor singular distinto de cero, por definición anterior, es el producto escalado de Peter Weyl de esas normas Hilbert-Schmidt. Sin embargo, puesto que $$SU(2)$$ con la métrica Cartan-Killing isométrica a 4 veces la métrica homogénea tradicional en $$S^3$$y para $$S^n, n\leq 6$$, cada colector isospectral es isométrico [[ST80]](#ST80) (una hermosa reducción a las constantes métricas de curvatura seccional de las asintóticas de corto tiempo del rastro del núcleo de calor), este cálculo de los valores singulares es en gran medida académico para $$SU(2)$$.
 
 Desde el caso métrico homogéneo para $$n>6$$ está actualmente sin resolver, realizando el mismo análisis de Clebsch-Gordon sobre $$SO(n+1)$$ [[BJK78]](#BJK78) con la ayuda de un ordenador podría conducir a nuevos descubrimientos sobre el determinismo espectral de $$S^n$$ en términos de sus valores singulares [[M06]](#M06).
 

@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=52461
+status: verifierad=52487
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -372,7 +372,7 @@ $$
 \sigma(j_1,j_2,j_3)=\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\cdot\frac{1}{2j_3+1}=\sqrt{\frac{(2j_1+1)(2j_2+1)}{(2j_3+1)\ 8\pi^2}},
 $$
 
-när ojämlikheter och paritet i triangeln är uppfyllda för $$j_1, j_2, j_3$$, med multiplikation 1 och alla andra singulära värden noll. Beräkningen följer av observationen att $$M^{i,j,k}$$ sönderdelas i tensorprodukten av vänster / höger rank-1 sammanflätningsoperatörer, var och en med Hilbert-Schmidt-normen $$1/\sqrt{2j_3+1}$$ (per definition), så dess icke-noll singulära värde, per definition ovan, är Peter-Weyl skalad produkt av dessa Hilbert-Schmidt normer. Men eftersom $$SU(2)$$ med Cartan-Killing Metric är proportionellt isometrisk för att $$S^3$$ (med proportionalitetskonstant 4), och för $$S^n, n\leq 6$$Varje isospektral mångfald är isometrisk [[ST80]](#ST80) (en vacker minskning till konstant sektionskurvaturmått från den korta asymptotiken i spåren av värmekärnan), är denna beräkning av singulära värden till stor del akademisk för $$SU(2)$$.
+när ojämlikheter och paritet i triangeln är uppfyllda för $$j_1, j_2, j_3$$, med multiplikation 1 och alla andra singulära värden noll. Beräkningen följer av observationen att $$M^{i,j,k}$$ sönderdelas i tensorprodukten av vänster / höger rank-1 sammanflätningsoperatörer, var och en med Hilbert-Schmidt-normen $$1/\sqrt{2j_3+1}$$ (per definition), så dess icke-noll singulära värde, per definition ovan, är Peter-Weyl skalad produkt av dessa Hilbert-Schmidt normer. Men eftersom $$SU(2)$$ med Cartan-Killing Metric är isometrisk till 4 gånger det traditionella homogena mätvärdet på $$S^3$$och för $$S^n, n\leq 6$$Varje isospektral mångfald är isometrisk [[ST80]](#ST80) (en vacker minskning till konstant sektionskurvaturmått från den korta asymptotiken i spåren av värmekärnan), är denna beräkning av singulära värden till stor del akademisk för $$SU(2)$$.
 
 Eftersom det homogena metriska fallet för $$n>6$$ är för närvarande oroad, utför samma Clebsch-Gordon-analys på $$SO(n+1)$$ [[BJK78]](#BJK78) med hjälp av en dator kan *leda till nya upptäckter om spektral determinism av $$S^n$$ När det gäller dess enskilda värden [[M06]](#M06).
 
