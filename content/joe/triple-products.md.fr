@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=52201
+status: vérifié=52330
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -282,7 +282,7 @@ Maintenant, dans les conditions du Corollaire 2, chacun des $$\mathscr V_\lambda
 
 Plus généralement, le prérequis associé "concernant l'accord sur les valeurs des produits" serait simplement devenu "conservation de l'ensemble ordonné de valeurs singulières (comptées avec multiplicité) des cartes linéaires à partir de $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ défini par $$\set{M^{i,j,k}}$$." Ici le produit intérieur sur $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ est $$tr (B^*A)$$. Par définition, ces valeurs singulières sont invariantes sous des sommes directes de transformations unitaires sur $$\mathscr V_\lambda$$.
 
-Dans le cas du spectre multiplicité-1, l'ensemble complet des valeurs singulières est simplement l'ensemble des valeurs absolues de $$M^{i,j,k}$$ qui, nous conjecturons encore, caractérise complètement les classes d'isométrie de tels collecteurs isospectraux. Voir l'équation (22) pour la relation clé entre cette conjecture et le corollaire 2. Ce qui manque est l'argument de suffisance que si les valeurs absolues sont d'accord, les collecteurs sont isométriques ; ce qui nécessite un argument pour éliminer les éventuelles annulations de changement de signe entre les bases dans les sommets LHS de l'équation (22).
+Dans le cas du spectre multiplicité-1, l'ensemble complet des valeurs singulières est simplement l'ensemble des valeurs absolues de $$M^{i,j,k}$$ qui, nous conjecturons encore, caractérise complètement les classes d'isométrie de tels collecteurs isospectraux. Voir l'équation (23) pour la relation clé entre cette conjecture et le corollaire 2. Ce qui manque est l'argument de suffisance que si les valeurs absolues sont d'accord, les collecteurs sont isométriques ; ce qui nécessite un argument pour éliminer les éventuelles annulations de changement de signe entre les bases dans les sommets LHS de l'équation (23).
 
 Nous sommes beaucoup moins confiants que la conjecture générale soit vraie (en dehors du cas de la multiplicité-1 du spectre), car il peut être possible de produire un contre-exemple (de suffisance) via une construction Sunada explicite.
 
@@ -366,6 +366,14 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 \end{aligned}
 ```
+
+Ainsi, nous voyons que la géométrie riemannienne de $$SU(2)$$ induit par le Cartan-Killing Casimir peut être capturé à l'aide de nos données spectrales augmentées $$\set{\lambda_i, M^{i,j,k}}$$, à partir de laquelle les invariants riemanniens peuvent être explicitement calculés à partir de l'équation <span class="eqno"></span>:
+
+$$
+\sigma(j_1,j_2,j_3)=\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\cdot\frac{1}{2j_3+1}=\sqrt{\frac{(2j_1+1)(2j_2+1)}{(2j_3+1)\ 8\pi^2}},
+$$
+
+chaque fois que les inégalités de triangle et la condition de parité sont satisfaites pour $$j_1, j_2, j_3$$, avec la multiplicité 1 ; et toutes les autres valeurs singulières zéro. Le calcul découle de l'observation que $$M^{i,j,k}$$ se décompose en produit tenseur des opérateurs d'entrelacement gauche/droite rang-1, chacun avec la norme de Hilbert-Schmidt $$1/\sqrt{2j_3+1}$$ (par définition), donc sa valeur singulière non nulle, par définition ci-dessus, est le produit de Peter-Weyl remanié de ces normes de Hilbert-Schmidt. Cependant, depuis $$SU(2)$$ avec la métrique Cartan-Killing est isométrique à $$S^3$$, et pour $$S^n, n\leq 6$$, chaque collecteur isospectral est isométrique [[ST80]](#ST80), ce calcul des valeurs singulières est largement académique pour $$SU(2)$$.
 
 Pour les groupes de mensonges abéliens compacts, ces espaces vectoriels $$\mathscr V_\alpha$$ sont tous unidimensionnels, donc leur situation est tout à fait similaire à la décomposition spectrale de la multiplicité-1 Laplaciens ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
 
@@ -451,7 +459,7 @@ Cependant, afin d'appliquer notre [Théorème](#theorem), il est essentiel qu'un
 
 doit également préserver "analyse" invariants &mdash; la figure induite par l'élément Casimir $$\lambda_i = 4\pi^2\lVert\alpha_i\rVert^2$$ pour chaque poids indexé, c'est-à-dire les valeurs propres individuelles du laplacien du tori plat.
 
-Comme l'illustre le duo de Milnor, avoir une carte qui préserve les longueurs des poids de treillis ne suffit pas à déduire que la carte est dans $$SO(n,\Reals)$$ ; il faut aussi savoir que la carte préserve les angles de poids en treillis. Mais ceci est une conséquence des formules développées dans l'Équation (21) :
+Comme l'illustre le duo de Milnor, avoir une carte qui préserve les longueurs des poids de treillis ne suffit pas à déduire que la carte est dans $$SO(n,\Reals)$$ ; il faut aussi savoir que la carte préserve les angles de poids en treillis. Mais ceci est une conséquence des formules développées dans l'Équation (22) :
 
 ```math
 -4\pi^2\bra{\alpha_i}\ket{\alpha_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_i + \alpha_j\rVert^2)e^ie^j\ .

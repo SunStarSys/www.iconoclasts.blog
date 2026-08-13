@@ -2,7 +2,7 @@
 categories: 數學
 dependencies: '*.md.zh-TW'
 keywords: 頻譜理論，里曼尼亞幾何，逆問題，數學物理，諧波分析，表示理論，結構常數，共形場理論
-status: 驗證 =52201
+status: 驗證 =52330
 title: 特徵和光譜幾何的三重產品
 ---
 
@@ -280,7 +280,7 @@ M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r 
 
 一般而言，相關必備條件"關於產品值中的協議" 只是變成"線性對映的排序單一值集 (以多重性計算) 保留$$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ 定義者$$\set{M^{i,j,k}}$$." 此處為內部產品$$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ 是$$tr (B^*A)$$。根據定義，這些單數值在單數轉換的直接總和下不變$$\mathscr V_\lambda$$.
 
-在 multiplicity-1 spectrum 的情況下，完整的單一值集就是絕對值的一組$$M^{i,j,k}$$ 這樣，我們仍然可以形容，完全描述這種等離子譜歧管的幾何類別。請參閱「方程式」(22) 以取得此形容詞與「視角 2」之間的關鍵關係。缺少的是足夠的引數，如果絕對值一致，則操作是幾何的；這需要一個引數，以消除在左方方方程式摘要 (22) 中基準之間可能的符號變更取消。
+在 multiplicity-1 spectrum 的情況下，完整的單一值集就是絕對值的一組$$M^{i,j,k}$$ 這樣，我們仍然可以形容，完全描述這種等離子譜歧管的幾何類別。請參閱「方程式」(23) 以取得此形容詞與「核數 2」之間的關鍵關係。缺少的是充分的引數，如果絕對值一致，則歧義是幾何的；這需要一個引數來消除在左方方方方程式摘要 (23) 中基準之間可能的符號變更取消。
 
 我們對一般形容詞保持真 (在 multiplicity-1 spectrum case 之外) 的信心較不自信，因為它可能透過明確的 Sunada 建構產生反範例 (充分) 。
 
@@ -364,6 +364,14 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 \end{aligned}
 ```
+
+因此，我們看到 Riemannian Geometry of $$SU(2)$$ 由 Cartan-Killing Casimir 引進的 Cartan-Killing Casimir 可以利用我們擴增的頻譜數據捕捉到$$\set{\lambda_i, M^{i,j,k}}$$，可從「方程式」中明確計算 Riemannian 不變量的單一值<span class="eqno"></span>:
+
+$$
+\sigma (j_1,j_2,j_3) =\sqrt{\ 追蹤{(2j_1+1)  (2j_2+1)  (2j_3+1)}{8\pi^2}}\cdot\frac{1 個}{2j_3+1}=\sqrt{\ 追蹤{(2j_1+1)  (2j_2+1)}{(2j_3+1) \ 8\pi^2}},
+$$
+
+每當滿足三角形不等式和同位條件時$$j_1, j_2, j_3$$，具有多重性 1；以及所有其他單一值零。計算來自觀察，$$M^{i,j,k}$$ 分解為左 / 右排名 -1 的左 / 右旋轉運算子的張量乘積，每個運算元都有 Hilbert-Schmidt norm $$1/\sqrt{2j_3+1}$$ (依定義)，因此其非零的單數值 (依上述定義) 是 Peter-Weyl 重新調整那些 Hilbert-Schmidt 規範的產品。然而，自$$SU(2)$$ 卡坦 - 殺死公制等同於$$S^3$$，以及$$S^n, n\leq 6$$，每個等光譜歧管是幾何的[[ST80]](#ST80)，此計算單數值大致上是針對$$SU(2)$$.
 
 對於精簡的 Abelian Lie Groups，這些向量空間$$\mathscr V_\alpha$$ 全都是一維的，因此它們的情況完全類似於上面的多重率 -1 拉普拉克人的頻譜分解。請參考下方範例中的詳細資訊。
 
@@ -449,7 +457,7 @@ M^{i,j,k} = \begin{cases}
 
 也必須保留"分析" 不變量&mdash; Casimir-element 引致的數字$$\lambda_i = 4\pi^2\lVert\alpha_i\rVert^2$$ 對於每個索引的權重，即扁平的利普拉西亞人的個別特徵值。
 
-由於 Milnor 的 duet 顯現，擁有一個保留晶格權重長度的地圖不足以推論地圖位於$$SO(n,\Reals)$$我們也必須知道地圖會保留晶格加權角度。但這是「方程式」(21) 中所發展公式的後果：
+由於 Milnor 的 duet 顯現，擁有一個保留晶格權重長度的地圖不足以推論地圖位於$$SO(n,\Reals)$$我們也必須知道地圖會保留晶格加權角度。但這是「方程式」(22) 中所發展公式的後果：
 
 ```math
 -4\pi^2\bra{\alpha_i}\ket{\alpha_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_i + \alpha_j\rVert^2)e^ie^j\ .

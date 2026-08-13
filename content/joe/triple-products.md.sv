@@ -3,7 +3,7 @@ categories: Matematik
 dependencies: '*.md.sv'
 keywords: spektralteori, riemannisk geometri, inversa problem, matematisk fysik, harmonisk
   analys, representationsteori, strukturkonstanter, konform fältteori
-status: verifierad=52201
+status: verifierad=52330
 title: Trippelprodukter av Eigenfunktioner och spektral geometri
 ---
 
@@ -281,7 +281,7 @@ Nu under villkoren i Corollary 2, var och en av de $$\mathscr V_\lambda$$ är et
 
 Mer allmänt, de associerade förutsättningarna "avtal om produktvärden" skulle helt enkelt bli "Bevarande av den ordnade uppsättningen av singulära värden (räknade med multiplikation) av linjära kartor från $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definierad av $$\set{M^{i,j,k}}$$." Här är den inre produkten på $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ är $$tr (B^*A)$$. Per definition är dessa singulära värden invariant under direkta summor av enhetliga transformationer på $$\mathscr V_\lambda$$.
 
-I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (22) för nyckelförhållandet mellan denna gissning och Corollary 2. Vad som saknas är tillräcklighetsargumentet att om de absoluta värdena är överens är grenrör isometriska; vilket kräver ett argument för att eliminera eventuella teckenändringsavbrott mellan baser i LHS-topparna av ekvation (22).
+I multiplikation-1-spektrumfallet är den fullständiga uppsättningen av singulära värden helt enkelt uppsättningen absoluta värden för $$M^{i,j,k}$$ som vi fortfarande antar, helt karakteriserar isometri klasserna av sådana isospektrala grenrör. Se Ekvation (23) för nyckelförhållandet mellan denna gissning och Corollary 2. Vad som saknas är tillräcklighetsargumentet att om de absoluta värdena är överens är grenrör isometriska; vilket kräver ett argument för att eliminera eventuella teckenändringsavbrott mellan baser i LHS-topparna av ekvation (23).
 
 Vi är betydligt mindre säkra på att den allmänna gissningen är sann (utanför multiplikations-1-spektrumfallet), eftersom det kan vara möjligt att producera ett motexempel (av tillräcklighet) via explicit Sunada-konstruktion.
 
@@ -365,6 +365,14 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 \end{aligned}
 ```
+
+Därför ser vi att Riemannian Geometry $$SU(2)$$ Inducerad av Cartan-Killing Casimir kan fångas med hjälp av våra förstärkta spektraldata $$\set{\lambda_i, M^{i,j,k}}$$, från vilket singularvärde Riemannian invarianter uttryckligen kan beräknas från ekvation <span class="eqno"></span>:
+
+$$
+\sigma(j_1,j_2,j_3)=\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\cdot\frac{1}{2j_3+1}=\sqrt{\frac{(2j_1+1)(2j_2+1)}{(2j_3+1)\ 8\pi^2}},
+$$
+
+när ojämlikheter och paritet i triangeln är uppfyllda för $$j_1, j_2, j_3$$, med multiplikation 1 och alla andra singulära värden noll. Beräkningen följer av observationen att $$M^{i,j,k}$$ sönderdelas i tensorprodukten av vänster / höger rank-1 sammanflätningsoperatörer, var och en med Hilbert-Schmidt-normen $$1/\sqrt{2j_3+1}$$ (per definition), så dess icke-noll singulära värde, per definition ovan, är Peter-Weyl skalad produkt av dessa Hilbert-Schmidt normer. Men eftersom $$SU(2)$$ med Cartan-Killing Metric är isometrisk för $$S^3$$och för $$S^n, n\leq 6$$Varje isospektral mångfald är isometrisk [[ST80]](#ST80)Denna beräkning av de enskilda värdena är till stor del akademisk för $$SU(2)$$.
 
 För kompakta Abelian Lie Grupper, dessa vektorrum $$\mathscr V_\alpha$$ De är alla endimensionella, så deras situation är helt lik den spektrala sönderdelningen av multiplicitet-1 Lapplandare ovan.  Mer om detta i exemplet nedan.
 
@@ -450,7 +458,7 @@ För att kunna tillämpa vår [Satsen](#theorem)Det är viktigt att en sådan li
 
 måste också bevara "analytisk" varianter &mdash; Casimir-element-inducerad figur $$\lambda_i = 4\pi^2\lVert\alpha_i\rVert^2$$ för varje indexerad vikt, dvs. de individuella egenvärdena i Lappland.
 
-Som Milnors duett exemplifierar, att ha en karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (21):
+Som Milnors duett exemplifierar, att ha en karta som bevarar längden på gittervikterna är inte tillräckligt för att härleda kartan är i $$SO(n,\Reals)$$Vi måste också veta att kartan bevarar gitter vikt vinklar. Men detta är en följd av de formler som utvecklats i ekvation (22):
 
 ```math
 -4\pi^2\bra{\alpha_i}\ket{\alpha_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_i + \alpha_j\rVert^2)e^ie^j\ .

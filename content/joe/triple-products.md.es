@@ -4,7 +4,7 @@ dependencies: '*.md.es'
 keywords: Teoría espectral, geometría riemanniana, problemas inversos, física matemática,
   análisis armónico, teoría de la representación, constantes de estructura, teoría
   de campo conformal
-status: verificado=52201
+status: verificado=52330
 title: Triple producto de autofunciones y geometría espectral
 ---
 
@@ -282,7 +282,7 @@ Bajo las condiciones del Corolario 2, cada uno de los $$\mathscr V_\lambda$$ son
 
 En términos más generales, el requisito previo asociado "sobre el acuerdo en los valores de los productos" serían simplemente "Preservación del conjunto ordenado de valores singulares (contados con multiplicidad) de los mapas lineales desde $$\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$$ definido por $$\set{M^{i,j,k}}$$." Aquí el producto interior en $$A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$$ es $$tr (B^*A)$$. Por definición, estos valores singulares son invariantes bajo sumas directas de transformaciones unitarias en $$\mathscr V_\lambda$$.
 
-En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (22) para la relación clave entre esta conjetura y el Corolario 2. Lo que falta es el argumento de suficiencia de que si los valores absolutos están de acuerdo, los colectores son isométricos; lo que requiere un argumento para eliminar las posibles cancelaciones de cambio de signos entre las bases en los sumandos de la ecuación LHS (22).
+En el caso del espectro multiplicidad-1, el conjunto completo de valores singulares es simplemente el conjunto de valores absolutos de $$M^{i,j,k}$$ que, todavía conjeturamos, caracteriza completamente las clases de isometría de tales colectores isospectrales. Véase la Ecuación (23) para la relación clave entre esta conjetura y el Corolario 2. Lo que falta es el argumento de suficiencia de que si los valores absolutos están de acuerdo, los colectores son isométricos; lo que requiere un argumento para eliminar las posibles cancelaciones de cambio de signos entre las bases en los sumandos de la ecuación LHS (23).
 
 Estamos significativamente menos seguros de que la conjetura general es cierta (fuera del caso del espectro de multiplicidad-1), ya que puede ser posible producir un contraejemplo (de suficiencia) a través de la construcción explícita de Sunada.
 
@@ -366,6 +366,14 @@ n_1 & n_2 & -n_3
 (-1)^{m_3+n_3}.
 \end{aligned}
 ```
+
+Así, vemos que la Geometría Riemanniana de $$SU(2)$$ inducido por el Cartan-Killing Casimir se puede capturar utilizando nuestros datos espectrales aumentados $$\set{\lambda_i, M^{i,j,k}}$$, desde el cual se pueden calcular explícitamente invariantes de Riemann de valor singular a partir de la ecuación <span class="eqno"></span>:
+
+$$
+\sigma(j_1,j_2,j_3)=\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\cdot\frac{1}{2j_3+1}=\sqrt{\frac{(2j_1+1)(2j_2+1)}{(2j_3+1)\ 8\pi^2}},
+$$
+
+siempre que se cumplan las desigualdades del triángulo y la condición de paridad para $$j_1, j_2, j_3$$, con multiplicidad 1; y todos los demás valores singulares cero. El cálculo se deriva de la observación de que $$M^{i,j,k}$$ se descompone en el producto tensor de los operadores entrelazados izquierda/derecha de rango 1, cada uno con la norma Hilbert-Schmidt $$1/\sqrt{2j_3+1}$$ (por definición), por lo que su valor singular distinto de cero, por definición anterior, es el producto escalado de Peter Weyl de esas normas Hilbert-Schmidt. Sin embargo, puesto que $$SU(2)$$ con la métrica Cartan-Killing isométrica para $$S^3$$y para $$S^n, n\leq 6$$, cada colector isospectral es isométrico [[ST80]](#ST80)Este cálculo de los valores singulares es en gran medida académico para $$SU(2)$$.
 
 Para grupos de mentiras abelianos compactos, estos espacios vectoriales $$\mathscr V_\alpha$$ Todos son unidimensionales, por lo que su situación es completamente similar a la descomposición espectral de la multiplicidad-1.  Más sobre esto en el ejemplo a continuación.
 
@@ -451,7 +459,7 @@ Sin embargo, para aplicar nuestra [Teorema](#theorem)Es esencial que este mapa l
 
 debe preservar también "analítico" invariables &mdash; la cifra inducida por el elemento Casimir $$\lambda_i = 4\pi^2\lVert\alpha_i\rVert^2$$ para cada peso indexado, es decir, los valores propios individuales del laplaciano de flat-tori.
 
-Como ejemplifica el dúo de Milnor, tener un mapa que preserve las longitudes de los pesos de la celosía no es suficiente para deducir que el mapa está en $$SO(n,\Reals)$$; también debemos saber que el mapa conserva los ángulos de peso de celosía. Pero esto es una consecuencia de las fórmulas desarrolladas en Ecuación (21):
+Como ejemplifica el dúo de Milnor, tener un mapa que preserve las longitudes de los pesos de la celosía no es suficiente para deducir que el mapa está en $$SO(n,\Reals)$$; también debemos saber que el mapa conserva los ángulos de peso de celosía. Pero esto es una consecuencia de las fórmulas desarrolladas en Ecuación (22):
 
 ```math
 -4\pi^2\bra{\alpha_i}\ket{\alpha_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_i + \alpha_j\rVert^2)e^ie^j\ .
