@@ -4,7 +4,7 @@ dependencies: '*.md.fr'
 keywords: théorie spectrale, géométrie riemannienne, problèmes inverses, physique
   mathématique, analyse harmonique, théorie de la représentation, constantes de structure,
   théorie de champ conforme
-status: vérifié=52386
+status: vérifié=52461
 title: Triples produits des fonctions propres et de la géométrie spectrale
 ---
 
@@ -373,7 +373,9 @@ $$
 \sigma(j_1,j_2,j_3)=\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\cdot\frac{1}{2j_3+1}=\sqrt{\frac{(2j_1+1)(2j_2+1)}{(2j_3+1)\ 8\pi^2}},
 $$
 
-chaque fois que les inégalités de triangle et la condition de parité sont satisfaites pour $$j_1, j_2, j_3$$, avec la multiplicité 1 ; et toutes les autres valeurs singulières zéro. Le calcul découle de l'observation que $$M^{i,j,k}$$ se décompose en produit tenseur des opérateurs d'entrelacement gauche/droite rang-1, chacun avec la norme de Hilbert-Schmidt $$1/\sqrt{2j_3+1}$$ (par définition), donc sa valeur singulière non nulle, par définition ci-dessus, est le produit de Peter-Weyl remanié de ces normes de Hilbert-Schmidt. Cependant, depuis $$SU(2)$$ avec la métrique Cartan-Killing est proportionnellement isométrique à $$S^3$$ (avec la constante de proportionnalité 4), et pour $$S^n, n\leq 6$$, chaque collecteur isospectral est isométrique [[ST80]](#ST80) (une belle réduction à des mesures de courbure sectionnelle constantes des asymptotiques de courte durée de la trace du noyau thermique), ce calcul des valeurs singulières est largement académique pour $$SU(2)$$. Cependant, effectuer la même analyse de Clebsch-Gordon sur $$SO(n+1)$$ [[BJK78]](#BJK78) à l'aide d'un ordinateur *pourrait* conduire à de nouvelles découvertes sur le déterminisme spectral de $$S^n, n>6$$ en termes de valeurs singulières [[M06]](#M06).
+chaque fois que les inégalités de triangle et la condition de parité sont satisfaites pour $$j_1, j_2, j_3$$, avec la multiplicité 1 ; et toutes les autres valeurs singulières zéro. Le calcul découle de l'observation que $$M^{i,j,k}$$ se décompose en produit tenseur des opérateurs d'entrelacement gauche/droite rang-1, chacun avec la norme de Hilbert-Schmidt $$1/\sqrt{2j_3+1}$$ (par définition), donc sa valeur singulière non nulle, par définition ci-dessus, est le produit de Peter-Weyl remanié de ces normes de Hilbert-Schmidt. Cependant, depuis $$SU(2)$$ avec la métrique Cartan-Killing est proportionnellement isométrique à $$S^3$$ (avec la constante de proportionnalité 4), et pour $$S^n, n\leq 6$$, chaque collecteur isospectral est isométrique [[ST80]](#ST80) (une belle réduction à des mesures de courbure sectionnelle constantes des asymptotiques de courte durée de la trace du noyau thermique), ce calcul des valeurs singulières est largement académique pour $$SU(2)$$.
+
+Depuis le cas métrique homogène pour $$n>6$$ est actuellement instable, effectuant la même analyse de Clebsch-Gordon sur $$SO(n+1)$$ [[BJK78]](#BJK78) à l'aide d'un ordinateur *pourrait* conduire à de nouvelles découvertes sur le déterminisme spectral de $$S^n$$ en termes de valeurs singulières [[M06]](#M06).
 
 Pour les groupes de mensonges abéliens compacts, ces espaces vectoriels $$\mathscr V_\alpha$$ sont tous unidimensionnels, donc leur situation est tout à fait similaire à la décomposition spectrale de la multiplicité-1 Laplaciens ci-dessus.  Pour en savoir plus, consultez l'exemple ci-dessous.
 
