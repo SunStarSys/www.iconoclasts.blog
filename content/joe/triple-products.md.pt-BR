@@ -4,7 +4,7 @@ dependencies: '*.md.pt-BR'
 keywords: teoria espectral, geometria riemanniana, problemas inversos, física matemática,
   análise harmônica, teoria da representação, constantes de estrutura, teoria de campo
   conformado
-status: verificado=52330
+status: verificado=52386
 title: Produtos Triplos de Autofunções e Geometria Espectral
 ---
 
@@ -373,7 +373,7 @@ $$
 \sigma(j_1,j_2,j_3)=\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\cdot\frac{1}{2j_3+1}=\sqrt{\frac{(2j_1+1)(2j_2+1)}{(2j_3+1)\ 8\pi^2}},
 $$
 
-sempre que as desigualdades do triângulo e a condição de paridade forem satisfeitas para $$j_1, j_2, j_3$$, com multiplicidade 1; e todos os outros valores singulares zero. O cálculo segue da observação de que $$M^{i,j,k}$$ se decompõe no produto tensor de operadores de entrelaçamento de posição 1 esquerda/direita, cada um com a norma Hilbert-Schmidt $$1/\sqrt{2j_3+1}$$ (por definição), portanto, seu valor singular diferente de zero, por definição acima, é o produto reescalonado de Peter-Weyl dessas normas de Hilbert-Schmidt. No entanto, desde que $$SU(2)$$ com a métrica Cartan-Killing é isométrica para $$S^3$$, e para $$S^n, n\leq 6$$, todo o múltiplo isospectral é isométrico [[ST80]](#ST80), este cálculo dos valores singulares é em grande parte acadêmico para $$SU(2)$$.
+sempre que as desigualdades do triângulo e a condição de paridade forem satisfeitas para $$j_1, j_2, j_3$$, com multiplicidade 1; e todos os outros valores singulares zero. O cálculo segue da observação de que $$M^{i,j,k}$$ se decompõe no produto tensor de operadores de entrelaçamento de posição 1 esquerda/direita, cada um com a norma Hilbert-Schmidt $$1/\sqrt{2j_3+1}$$ (por definição), portanto, seu valor singular diferente de zero, por definição acima, é o produto reescalonado de Peter-Weyl dessas normas de Hilbert-Schmidt. No entanto, desde que $$SU(2)$$ com a métrica Cartan-Killing é proporcionalmente isométrica para $$S^3$$ (com proporcionalidade constante 4), e para $$S^n, n\leq 6$$, todo o múltiplo isospectral é isométrico [[ST80]](#ST80) (uma bela redução às métricas de curvatura seccional constante dos assintóticos de curto prazo do traço do núcleo de calor), esse cálculo dos valores singulares é amplamente acadêmico para $$SU(2)$$. No entanto, realizando a mesma análise de Clebsch-Gordon em $$SO(n+1)$$ [[BJK78]](#BJK78) com a ajuda de um computador *poder* levar a novas descobertas sobre o determinismo espectral de $$S^n, n>6$$ em termos de seus valores singulares [[M06]](#M06).
 
 Para grupos compactos Abelian Lie, estes espaços vetoriais $$\mathscr V_\alpha$$ são todos unidimensionais, de modo que sua situação é inteiramente semelhante à decomposição espectral da multiplicidade-1 Laplacianos acima.  Mais sobre isso no Exemplo abaixo.
 

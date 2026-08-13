@@ -3,7 +3,7 @@ categories: Mathematik
 dependencies: '*.md.de'
 keywords: spektrale Theorie, riemannsche Geometrie, inverse Probleme, mathematische
   Physik, harmonische Analyse, Darstellungstheorie, Strukturkonstanten, konforme Feldtheorie
-status: überprüft=52330
+status: überprüft=52386
 title: Dreifache Produkte von Eigenfunktionen und Spektralgeometrie
 ---
 
@@ -372,7 +372,7 @@ $$
 \sigma(j_1,j_2,j_3)=\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\PI^2}}\cdot\frac{1}{2j_3+1}=\sqrt{\frac{(2j_1+1)(2j_2+1)}{(2j_3+1)\ 8\pi^2}},
 $$
 
-wenn die Ungleichheiten des Dreiecks und die Paritätsbedingung erfüllt sind für $$j_1, j_2, j_3$$mit Multiplizität 1 und allen anderen Einzelwerten Null. Die Berechnung folgt aus der Beobachtung, dass $$M^{i,j,k}$$ Zersetzt sich in das Tensorprodukt von links/rechts-Rang-1-Verflechtungsoperatoren, jeweils mit Hilbert-Schmidt-Norm $$1/\sqrt{2j_3+1}$$ (per definitionem), so ist sein nicht-null-singularwert, per definition oben, das peter-weyl-reskalierte produkt dieser Hilbert- Schmidt-normen. Seit $$SU(2)$$ mit der Cartan-Killing-Metrik isometrisch zu $$S^3$$und für $$S^n, n\leq 6$$, jeder isospektrale Mann ist isometrisch [[ST80]](#ST80)Diese Berechnung der Singularwerte ist weitgehend akademisch für $$SU(2)$$.
+wenn die Ungleichheiten des Dreiecks und die Paritätsbedingung erfüllt sind für $$j_1, j_2, j_3$$mit Multiplizität 1 und allen anderen Einzelwerten Null. Die Berechnung folgt aus der Beobachtung, dass $$M^{i,j,k}$$ Zersetzt sich in das Tensorprodukt von links/rechts-Rang-1-Verflechtungsoperatoren, jeweils mit Hilbert-Schmidt-Norm $$1/\sqrt{2j_3+1}$$ (per definitionem), so ist sein nicht-null-singularwert, per definition oben, das peter-weyl-reskalierte produkt dieser Hilbert- Schmidt-normen. Seit $$SU(2)$$ mit der Cartan-Killing-Metrik ist proportional isometrisch zu $$S^3$$ (mit Proportionalitätskonstante 4) und für $$S^n, n\leq 6$$, jeder isospektrale Mann ist isometrisch [[ST80]](#ST80) (eine schöne Reduktion auf konstante Schnittkrümmungsmetriken aus der kurzzeitigen Asymptotik der Spur des Wärmekerns), diese Berechnung der singulären Werte ist weitgehend akademisch für $$SU(2)$$. Die gleiche Clebsch-Gordon-Analyse auf $$SO(n+1)$$ [[BJK78]](#BJK78) mit Hilfe eines Computers *könnte* zu neuen Entdeckungen über den spektralen Determinismus von $$S^n, n>6$$ in Bezug auf seine singulären Werte [[M06]](#M06).
 
 Für kompakte Abelian Lie-Gruppen, diese Vektorräume $$\mathscr V_\alpha$$ sind alle eindimensional, so dass ihre Situation ganz ähnlich der spektralen Zersetzung von Multiplizitäts-1 Laplacians oben ist.  Mehr dazu im Beispiel unten.
 
