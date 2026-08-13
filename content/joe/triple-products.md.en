@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52461
+status: verified=52483
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -370,7 +370,7 @@ $$
 \sigma(j_1,j_2,j_3)=\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\cdot\frac{1}{2j_3+1}=\sqrt{\frac{(2j_1+1)(2j_2+1)}{(2j_3+1)\ 8\pi^2}},
 $$
 
-whenever the triangle inequalities and parity condition are satisfied for $$j_1, j_2, j_3$$, with multiplicity 1; and all other singular values zero. The computation follows from the observation that $$M^{i,j,k}$$ decomposes into the tensor product of left/right rank-1 intertwining operators, each with Hilbert-Schmidt norm $$1/\sqrt{2j_3+1}$$ (by definition), so its non-zero singular value, per definition above, is the Peter-Weyl rescaled product of those Hilbert-Schmidt norms. However, since $$SU(2)$$ with the Cartan-Killing Metric is proportionally isometric to $$S^3$$ (with proportionality constant 4), and for $$S^n, n\leq 6$$, every isospectral manifold is isometric [[ST80]](#ST80) (a beautiful reduction to constant sectional curvature metrics from the short-time asymptotics of the trace of the heat kernel), this computation of the singular values is largely academic for $$SU(2)$$.
+whenever the triangle inequalities and parity condition are satisfied for $$j_1, j_2, j_3$$, with multiplicity 1; and all other singular values zero. The computation follows from the observation that $$M^{i,j,k}$$ decomposes into the tensor product of left/right rank-1 intertwining operators, each with Hilbert-Schmidt norm $$1/\sqrt{2j_3+1}$$ (by definition), so its non-zero singular value, per definition above, is the Peter-Weyl rescaled product of those Hilbert-Schmidt norms. However, since $$SU(2)$$ with the Cartan-Killing Metric is isometric to 4 times the homogeneous metric on $$S^3$$, and for $$S^n, n\leq 6$$, every isospectral manifold is isometric [[ST80]](#ST80) (a beautiful reduction to constant sectional curvature metrics from the short-time asymptotics of the trace of the heat kernel), this computation of the singular values is largely academic for $$SU(2)$$.
 
 Since the homogeneous metric case for $$n>6$$ is presently unsettled, performing the same Clebsch-Gordon analysis on $$SO(n+1)$$ [[BJK78]](#BJK78) with the aid of a computer *might* lead to new discoveries about the spectral determinism of $$S^n$$ in terms of its singular values [[M06]](#M06).
 
