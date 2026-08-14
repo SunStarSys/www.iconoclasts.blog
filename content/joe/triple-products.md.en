@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52518
+status: verified=52526
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -429,7 +429,7 @@ Corollary 2 sufficiency follows by noting that the vanishing adjoint-map kernel 
 
 Why? Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $$U_1^\infty$$ where these products are invariants, contradicting Theorem 1. Further reduction to $$\Z_2^\infty$$ via real-valued bases ensures the products are real-valued. This establishes the necessity of the hypothesis, and completes the proof.
 
-Further, the arguments in the proof of Corollary 1 are valid even when the manifolds are non-isospectral, so we can represent the basis map as a diffeomorphism if and only if the products match in the generic case above. Isospectrality then becomes equivalent to this diffeomorphism being a Riemannian isometry.
+Further, the arguments in the proof of Corollary 1 are valid even when the manifolds are non-isospectral, so we can represent the basis map as a homeomorphism if and only if the products match in the generic case above. Isospectrality then becomes equivalent to this homeomorphism being promoted to a Riemannian isometry &mdash; due to Sobolev norm equivalence on the corresponding Fourier coefficients (realizing it as a diffeomorphism), and leading to principal symbol preservation on the Laplacians for full isometry as in the proof of the Theorem.
 
 This completes the proof of the Corollaries.
 
