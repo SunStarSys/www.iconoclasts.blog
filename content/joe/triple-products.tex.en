@@ -372,7 +372,7 @@ $$\sigma(j_1,j_2,j_3)
 $$
 whenever the triangle inequalities and parity condition are satisfied on $j_1,j_2,j_3$, with multiplicity 1; and all other singular values zero. The computation follows from the observation that $M^{i,j,k}$ decomposes into the tensor product of left/right rank-1 interwining operators, each with Hilbert-Schmidt norm $1/\sqrt{2j_3+1}$ (by definition), so its non-zero singular value, per definition above, is the Peter-Weyl rescaled product of those Hilbert-Schmidt norms.
 
-For example, $  (j_1,j_2,j_3)=(1,1,0)  $ the only non-zero $  3j  $-symbols have absolute value $  1/\sqrt{3}  $, the prefactor is $  \sqrt{3\cdot3\cdot1/8\pi^2}  $, and one recovers$$\sigma(1,1,0)=\sqrt{\frac{9}{8\pi^2}}\cdot\frac13=\frac{1}{\sqrt{8\pi^2}},$$which matches the direct Hilbert–Schmidt computation.
+For example, $  (j_1,j_2,j_3)=(1,1,0)  $ the 3 non-zero $  3j  $-symbols have absolute value $  1/\sqrt{3}  $, the prefactor is $  \sqrt{3\cdot3\cdot1/8\pi^2}  $, and one recovers$$\sigma(1,1,0)=\sqrt{\frac{9}{8\pi^2}}\cdot 1=\frac{3}{\sqrt{8\pi^2}},$$which matches the direct Hilbert–Schmidt computation.
 
 However, since $SU(2)$ with the Cartan-Killing Metric is isometric to $4$ times the traditional homogeneous metric on $S^3$, and for $S^n, n\leq 6$, every isospectral manifold is isometric \cite{ST80} (a beautiful reduction to constant sectional curvature metrics from the short-time asymptotics of the trace of the heat kernel), this computation of the singular values is largely academic for $SU(2)$.
 
