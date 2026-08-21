@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52530
+status: verified=52538
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -289,7 +289,11 @@ $$
 P_{\mathscr V_\gamma}(v_\alpha v_\beta).
 $$
 
-Recall that each $$\mathscr V_\lambda$$ is a finite dimensional complexified Euclidean space. All $$M^{i,j,k}$$ does is provide basis coordinates of this basis-independent expression. Since $$1 = \oplus_\lambda P_{\mathscr V_\lambda}$$, what the Theorem says is that the above expression is **identical** between manifolds if and only if the manifolds are isometric; which should come as a shock to literally no one. The sufficiency half of these conjectures are largely combinatorics problems involving reconstructing these expressions purely from their singular value decomposition.
+Recall that each $$\mathscr V_\lambda$$ is a finite dimensional complexified Euclidean space. All $$M^{i,j,k}$$ does is provide basis coordinates of this basis-independent expression. Since $$1 = \oplus_\lambda P_{\mathscr V_\lambda}$$, what the Theorem says is that the above expression is **identical** between manifolds if and only if the manifolds are isometric; which should come as a shock to literally no one.
+
+The role of the $$M^{i,j,k}$$ is purely relative (comparative).  They give us a way of comparing these triple-product-tensor operators between two different manifolds. Why do we care? Because we want to use these coordinates to justify the promotion of the associated basis map to a Riemannian isometry between the manifolds.
+
+The sufficiency half of these conjectures are largely combinatorics problems involving reconstructing these expressions purely from their singular value decomposition.
 
 However, these basis invariants may prove useful in deciphering more complex cases involving proving two isospectral manifolds are **not isometric**, by showing that their singular values are not identical between the two bases in question.
 
