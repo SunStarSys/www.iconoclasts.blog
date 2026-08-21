@@ -103,7 +103,7 @@ Regardless of the sufficiency half of the general conjecture, necessity is alway
 
 The hard work ahead for future research is in locating such basis pairs, or in determining that such pairs cannot exist at all, just by examining the properties of the $M^{i,j,k}$ in evidence. But this paper puts that target front and center: we seek to reduce the analytic geometry questions of Spectral Theory to computationally tractable linear algebra questions about products of eigenfunctions.
 
-\textit{Symmetry} plays an important role in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case. In this instance, we offer the following
+\textit{Symmetry} plays an important rôle in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case. In this instance, we offer the following
 
 \begin{corollary}
 \label{coro-1}
@@ -123,7 +123,7 @@ is injective.
 Generically, isospectral manifolds are isometric if and only if the products as defined in Corollary~\ref{coro-1} agree as real values.
 \end{corollary}
 
-The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the role of the bilinear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
+The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the rôle of the bilinear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
 If we consider the map
 \begin{equation}
@@ -290,7 +290,7 @@ $$
 
 Recall that each $\mathscr V_\lambda$ is a finite dimensional complexified Euclidean space. All $M^{i,j,k}$ does is provide basis coordinates of this basis-independent expression. Since $1 = \oplus_\lambda P_{\mathscr V_\lambda}$, what the Theorem says is that the above expression is \textbf{identical} between manifolds if and only if the manifolds are isometric; which should come as a shock to literally no one.
 
-The role of the $M^{i,j,k}$ is purely relative (comparative). They give us a way of comparing these triple-product-tensor operators between two different manifolds. Why do we care? Because we want to use these coordinates to justify the promotion of the associated basis map to a Riemannian isometry between the manifolds.
+The rôle of the $M^{i,j,k}$ is purely relative (comparative). They give us a way of comparing these triple-product-tensor operators between two different manifolds. Why do we care? Because we want to use these coordinates to justify the promotion of the associated basis map to a Riemannian isometry between the manifolds.
 
 The sufficiency half of these conjectures are largely combinatorics problems involving reconstructing these expressions purely from their singular value decomposition.
 
