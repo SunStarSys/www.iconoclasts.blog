@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52564
+status: verified=52568
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -37,6 +37,8 @@ For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are n
 Work continues in many related areas [[DH11]](#DH11), such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty [[ST80]](#ST80), finite [[AS94]](#AS94), rigid [[GK80]](#GK80), and compact [[GZ97]](#GZ97)) as a subset of different moduli spaces of Riemannian metrics.
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological discriminant" to complement the existing, discrete "analytic invariant" &mdash; the non-negative spectrum of the *Laplace-Beltrami operator* (herein referred to as the **Laplacian**) on $$ℋ = L^2(M,g)$$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
+
+If given two closed Riemannian manifolds, and the belief that they were isometric, how would one go about constructing the isometry? This paper is a global roadmap towards addressing that question in fine detail.
 
 This is not a research monograph, but an introduction to the subject matter for advanced math students familiar with Geometric Analysis, Representation Theory, and $$C^*$$ algebras.
 
