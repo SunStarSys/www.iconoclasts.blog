@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52568
+status: verified=52576
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -385,7 +385,7 @@ which matches the direct Hilbert–Schmidt computation.
 
 However, since $$SU(2)$$ with the Cartan-Killing Metric is isometric to 4 times the traditional homogeneous metric on $$S^3$$, and for $$S^n, n\leq 6$$, every isospectral manifold is isometric [[ST80]](#ST80) (a beautiful reduction to constant sectional curvature metrics from the short-time asymptotics of the trace of the heat kernel), this computation of the singular values is largely academic for $$SU(2)$$.
 
-Since the homogeneous metric case for $$n>6$$ is presently unsettled, performing the same Clebsch-Gordon analysis on $$SO(n+1)$$ [[BJK78]](#BJK78) with the aid of a computer *might* lead to new discoveries about the spectral determinism of $$S^n$$ in terms of its singular values [[M06]](#M06).
+Since the homogeneous metric case for $$n>6$$ is presently unsettled, performing the same Clebsch-Gordon analysis on $$SO(n+1)$$ [[BJK78]](#BJK78) with the aid of a computer [[HR11]](#HR11) *might* lead to new discoveries about the spectral determinism of $$S^n$$ in terms of its singular values [[M06]](#M06).
 
 For compact Abelian Lie Groups, these vector spaces $$\mathscr V_\alpha$$ are all one-dimensional, so their situation is entirely similar to the spectral decomposition of multiplicity-1 Laplacians above.  More on this in the Example below.
 
