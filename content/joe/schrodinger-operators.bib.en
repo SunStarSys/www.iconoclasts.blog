@@ -27,6 +27,66 @@
   publisher={Lehigh University}
 }
 
+@book{TaylorPDE1,
+  author    = {Taylor, Michael E.},
+  title     = {Partial Differential Equations {I}: Basic Theory},
+  series    = {Applied Mathematical Sciences},
+  volume    = {115},
+  publisher = {Springer},
+  address   = {New York},
+  year      = {2011},
+  edition   = {2},
+  doi       = {10.1007/978-1-4419-7055-8},
+  note      = {Chapter 5}
+}
+
+@article{Hormander1968,
+  author  = {H{\"o}rmander, Lars},
+  title   = {The spectral function of an elliptic operator},
+  journal = {Acta Mathematica},
+  volume  = {121},
+  pages   = {193--218},
+  year    = {1968},
+  doi     = {10.1007/BF02391913}
+}
+
+@book{Sogge1993,
+  author    = {Sogge, Christopher D.},
+  title     = {Fourier Integrals in Classical Analysis},
+  series    = {Cambridge Tracts in Mathematics},
+  volume    = {105},
+  publisher = {Cambridge University Press},
+  year      = {1993},
+  doi       = {10.1017/CBO9780511530029}
+}
+
+@book{Agmon1982,
+  author    = {Agmon, Shmuel},
+  title     = {Lectures on Exponential Decay of Solutions of Second-Order Elliptic Equations: Bounds on Eigenfunctions of {$N$}-Body {S}chr{\"o}dinger Operators},
+  series    = {Mathematical Notes},
+  volume    = {29},
+  publisher = {Princeton University Press},
+  address   = {Princeton, NJ},
+  year      = {1982},
+  doi       = {10.1515/9781400882229}
+}
+
+@book{ReedSimonII,
+  author    = {Reed, Michael and Simon, Barry},
+  title     = {Methods of Modern Mathematical Physics {II}: {F}ourier Analysis, Self-Adjointness},
+  publisher = {Academic Press},
+  address   = {New York},
+  year      = {1975}
+}
+
+@book{ReedSimonIV,
+  author    = {Reed, Michael and Simon, Barry},
+  title     = {Methods of Modern Mathematical Physics {IV}: Analysis of Operators},
+  publisher = {Academic Press},
+  address   = {New York},
+  year      = {1978}
+}
+
 @article{BJK78,
   author={Barnes, K. J. and Jarvis, P. D. and Ketley, I. J.},
   title={A calculation of SO(8) Clebsch-Gordan coefficients},
