@@ -82,7 +82,7 @@ there is an orthonormal basis $\{e^i\}_{i=0}^\infty\subset L^2(M,d\mathrm{vol}_g
 (The same conclusions hold for $-\Delta_g$ itself on some complete manifolds of finite volume with no continuous spectrum, but the confining potential makes the analysis cleaner.)
 Define the triple products exactly as in the compact case:
 $$M^{i,j,k}:=\langle e^i e^j,e^k\rangle_{L^2}=\int_M e^i e^j\,\overline{e^k}\,d\mathrm{vol}_g.$$
-Because the eigenfunctions are Schwartz-class at infinity in the sense that they decay faster than any polynomial in $V$ (Agmon estimates / weighted Sobolev), the products $e^i e^j$ lie in $L^2$ and the integrals converge absolutely.
+Because the eigenfunctions are Schwartz-class at infinity in the sense that they decay faster than any polynomial in $V$ (Agmon estimates \cite{Agmon1982}/ weighted Sobolev \cite{TaylorPDE1}), the products $e^i e^j$ lie in $L^2$ and the integrals converge absolutely.
 
 \subsection{Results}
 \label{subsec:res}
