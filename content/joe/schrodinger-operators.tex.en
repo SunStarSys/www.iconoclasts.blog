@@ -97,272 +97,48 @@ M_M^{i,j,k}=M_N^{i,j,k}\qquad\forall\qquad i,j,k.
 Then there is a diffeomorphism $F:N\to M$ with $F^*g=h$ and $V\circ F=W$.
 \end{theorem}
 
+\section{Preliminaries}
+\label{sec:pre}
+
+Let $\mathcal{A}_0\subset L^2(M)$ be the algebraic span of the eigenfunctions. Finite linear combinations
+$$\phi=\sum_{i=0}^N\hat\phi(i)\,e^i$$ are dense in $L^2$ and, by elliptic regularity plus the decay of eigenfunctions, lie in $C^\infty\cap C_0(M)$. Pointwise multiplication is
+$$\phi\psi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\psi(j)M^{i,j,k}\Bigr)e^k.$$
+Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $N$. Consequently the linear map
+$$\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N),\qquad e^i\mapsto f^i$$
+is a unital algebra homomorphism for pointwise multiplication (the constant function is a multiple of the ground state only if $V$ is constant; in general $\vec F$ need not send $1$ to $1$, but it preserves the product of any two functions that can be so expanded). Characteristic functions of sublevel sets of $V$ can be approximated in $L^2$ by functional calculus of $H$, so $\vec F$ also preserves characteristic functions of sets of finite measure in the $L^2$ sense.
+This is identical to the compact calculation; the only extra ingredient is that the eigenfunction expansion of a compactly supported smooth function still converges rapidly enough for the triple-product formula to be justified (which follows from the same elliptic estimates that give $\lambda_i^{N}\|e^i\|_\infty\to 0$ locally, plus Agmon decay at infinity).
+
+
 \begin{proof}
 For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $\vec{F}$ from $C^\infty(M)$ to $C^\infty(N)$ and note that from the calculations in Section~\ref{sec:pre} above, $\vec{F}$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
 
 \begin{lemma}
 \label{lma}
-$\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
+ $\vec F$ preserves the uniform norm on the span of the eigenfunctions, hence extends to an isometric $*$-homomorphism
+$$\vec F:C_0(M)\supset\overline{\mathcal{A}_0}^{\|\cdot\|_\infty}\longrightarrow C_0(N).$$
 \end{lemma}
 
 \begin{subproof}[Proof of Lemma~\ref{lma}]
-Let $\set{a_i}$ be a smooth partition of unity on $M$.
-
-\begin{equation}
-\begin{aligned}
-1 &= \sum_i a_i(x) \\
-       &= \sum_{i,j} \hat{a_i}(j)e^j(x) \\
-	   &= \sum_j e^j(x)\sum_i \hat{a_i}(j)
-\end{aligned}
-\end{equation}
-
-Thus $\sum_i\hat{a_i}(j) = \delta_j\sqrt{vol(M)}$ (Kronecker delta).
-
-By the dominated convergence theorem,
-\begin{equation}
-\lim_{p\rightarrow\infty}
-\sum_j\hat{a^p_j}(k) = \int_{\dot{\bigcup}_j\set{a_j=1}}\bar{e^k}(x)\sqrt{g}dx\,,
-\end{equation}
-which is a characteristic function of positive measure on each disjoint subset $\set{x\in M | a_j(x) = 1}$. This means the Lemma is proven for each $a_j$, since the limiting characteristic function of a set with positive measure is preserved, and hence has uniform norm 1, as do all $a_j^p,\, \vec{F}(a_j^p)=\vec{F}(a_j)^p,\, p\in\mathbb{N}$, by Diagram~\ref{fig}.
-
-Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$, where $ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$ has positive measure, and the Lemma is proven in full.
+On a compact manifold one uses a smooth partition of unity and the fact that $\|a\|_\infty=1$ for a partition function $a$ is detected by $\|a^p\|_\infty=1$ for all $p$, which is visible in the Fourier coefficients because the limiting characteristic function of $\{a=1\}$ has $L^2$-mass.
+In the non-compact setting replace a global partition of unity by a sequence of cutoffs $\chi_R$ that equal $1$ on $\{V\le R\}$ and vanish outside $\{V\le R+1\}$. On each such “almost-compact” region the same argument applies: if $\|\phi\|_\infty=c$ is attained on a set of positive measure inside $\{V\le R\}$, the powers $\phi^p/\|\phi\|_\infty^p$ converge in $L^2_{\mathrm{loc}}$ to a characteristic function, and $\vec F$ preserves that limit because it preserves all triple products. Sending $R\to\infty$ and using that every function in $C_0(M)$ is uniformly small outside a large sublevel set of $V$ gives $\|\vec F(\phi)\|_\infty=\|\phi\|_\infty$.
 
 \end{subproof}
 
-Since $\set {\bar e^i}$ is also a Fourier basis for $L^2(M,g)$, it is clear from Equation~\ref{eqn:Fourier} that $\vec F(\bar f) = \bar{\vec F}(f)$. This means that on a dense set of $C(M)$ (and $C(N)$), we have established $\vec{F}$ as an isomorphism of Abelian $C^*$ algebras, and thus can be extended to an isomorphism of $C(M)$ and $C(N)$ in the same category.
+Now we apply the Gelfand-Naimark-Segal Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras $C_0(N), C_0(M)$ \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$. Since $\vec{F}$ is bijective on smooth functions, $F$ too must be smooth.
 
-Now we apply the Gelfand-Naimark-Segal Representation Theorem (in contravariant functor form) for unital Abelian $C^*$ algebras \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$. Since $\vec{F}$ is bijective on smooth functions, $F$ too must be smooth.
-
-As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $\vec{F}(f) = f \circ F$), it must preserve the Laplacian on smooth functions. Hence $F$ also must preserve the principal symbols of these same elliptic operators \cite{MT13}. The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
+As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $\vec{F}(f) = f \circ F$), it must preserve the Schr\"odinger operator on smooth functions. By construction
+$$\vec F(\phi)=\phi\circ F$$
+on the eigenbasis, hence on all finite combinations. Therefore
+$$H_N(\phi\circ F)=(H_M\phi)\circ F$$
+for every eigenfunction $\phi$, and by density for every Schwartz-class function. In particular $F$ pulls eigenfunctions of $H_M$ back to eigenfunctions of $H_N$ with the same eigenvalues.
+Writing $H=-\Delta+V$ in local coordinates, the principal symbol of $H$ is the same as that of $-\Delta$, namely the cometric $g^{ij}\xi_i\xi_j$. An elliptic operator that is intertwined by a diffeomorphism has its principal symbol pulled back. Hence
+$$F^*g=h.$$
+The zeroth-order terms then give $V\circ F=W$.
 
 This completes the proof of the Theorem.
 
 \end{proof}
 
-\subsection{Discussion of Corollaries}
-\label{subsec:coros}
-
-With $\set{M_0^{i,j,k}}$ and $\set{M_1^{i,j,k}}$ representing the two triple-product sets for the bases $\set{e_0^i}$ and $\set{e_1^i}$, let $z_i \in U_1$ be the $U_1^\infty$ action on such an orthonormal basis $\set{e_1^i}$. Thus, we will choose $z_i$ so that $\set{z_ie_1^i}$ yields $\set{M_0^{i,j,k}} = \set{z_i z_j \bar z_kM_1^{i,j,k}}$.
-
-Why is this the case? In general, the symmetry group acting on the space of possible orthonormal bases of eigenfunctions is the space of Unitary Operators $U: \mathscr H\rightarrow\mathscr H$ that commute with projections $P_{\mathscr V_\lambda}$ onto the finite-dimensional eigenspaces $\mathscr V_{\lambda}$ associated with each individual eigenvalue $\lambda$ of the Laplacian. Therefore
-
-\begin{equation}
-\begin{aligned}
-P_{\mathscr V_{\lambda}}U(e^i) = UP_{\mathscr V_{\lambda}}(e^i),\ \therefore U(e^i) &= \sum_{\lambda_i = \lambda_j}u_{ij}e^j \implies \\
-M_U^{i,j,k} := \int_M U(e^i)U(e^j)\bar U(\bar e^k)\sqrt g dx &= \sum_{\lambda_r = \lambda_i,\lambda_s=\lambda_j,\lambda_t=\lambda_k} u_{ir}u_{js}\bar u_{tk} M^{r,s,t}
-\end{aligned}
-\end{equation}
-is the image of $M^{i,j,k}$ under $U$’s basis action $e^i \mapsto U(e^i)$.
-
-Now under the conditions of Corollary~\ref{coro-2}, each of the $\mathscr V_\lambda$ are one dimensional vector spaces over $\mathbb{C}$, but that also means they are one dimensional vector spaces over $\mathbb{R}$, and so the full multiplicative symmetry group is $O(1,\mathbb{R})^\infty=\mathbb{Z}_2^\infty$.
-
-More generally, the Corollary~\ref{coro-2}'s associated prerequisite "regarding agreement in product values" would simply become "preservation of the ordered set of singular values (counted with multiplicity) of the linear maps from $\mathscr V_{\lambda_i} \rightarrow Hom(\mathscr V_{\lambda_j}, \mathscr V_{\lambda_k})$ defined by $\set{M^{i,j,k}}$." Here the inner product on $A,B \in Hom(\mathscr V_{\lambda_i}, \mathscr V_{\lambda_j})$ is $tr (B^*A)$. By definition, these singular values are invariant under direct sums of unitary transformations on the $\mathscr V_\lambda$.
-
-In the multiplicity-1 spectrum case, the complete set of singular values is simply the set of absolute values of $M^{i,j,k}$ which, we still conjecture, completely characterizes the isometry classes of such isospectral manifolds. See Equation~\ref{assoc} for the key relationship between this conjecture and Corollary~\ref{coro-2}. What's missing is the sufficiency argument that if the absolute values agree, the manifolds are isometric; which requires an argument to eliminate possible sign change cancellations between bases in the LHS summands of Equation~\ref{assoc}.
-
-We are significantly less confident that the general conjecture holds true (outside the multiplicity-1 spectrum case), since it may be possible to produce a counterexample (of sufficiency) via explicit Sunada construction.
-
-If the index notation is obfuscating the situation, perhaps this basis-independent description will help.  Take $v_{\lambda} \in \mathscr V_{\lambda}$ and consider the expression
-
-$$
-P_{\mathscr V_\gamma}(v_\alpha v_\beta).
-$$
-
-Recall that each $\mathscr V_\lambda$ is a finite dimensional complexified Euclidean space. All $M^{i,j,k}$ does is provide basis coordinates of this basis-independent expression. Since $1 = \oplus_\lambda P_{\mathscr V_\lambda}$, what the Theorem says is that the above expression is \textbf{identical} between manifolds if and only if the manifolds are isometric; which should come as a shock to literally no one.
-
-The rôle of the $M^{i,j,k}$ is purely relative (comparative). They give us a way of comparing these tensor product operators between two different manifolds. Why do we care? Because we want to use these coordinates to justify the promotion of the associated basis map to a Riemannian isometry between the manifolds.
-
-The sufficiency half of these conjectures are largely combinatorics problems involving reconstructing these expressions purely from their singular value decomposition.
-
-However these basis invariants may prove useful in deciphering complex cases to prove two manifolds are \textit{not isometric}, by showing that their singular values are not identical between the two bases in question.
-
-\subsection{Aside}
-
-The Representation Theory of a Compact Lie Group $G$ takes the explicit Laplacian out of the equation and studies \textit{irreducible} representations $\Phi^{(\alpha)} \in Hom(G,U(\mathscr V_\alpha))$ towards the Hilbert space decomposition of $L^2(G,dg)$ (here $dg$ is the normalized Haar Probability Measure on $G$) as addressed in the Peter-Weyl Theorem, and honors their interplay in the expression above (via irrep decomposition of tensor products of irreps) as the essential artifacts of Lie Theory \cite{AK01}. Compatible Riemannian geometries are generated by convenient choices of quadratic Casimir elements that lie in the center of the universal enveloping algebra, which are of less significance than the irrep matrix coefficient decomposition of $L^2(G,dg)$ itself. \textbf{Their spectral decomposition} is a (less convenient) reassembly of those orthonormal basis elements, since the associated Casimir element is constant on each irrep's matrix coefficients.
-
-Wigner's $3j$ symbols for $SU(2)$ are a prime example for further study -- let us apply our general construction to it as a group manifold.  Every finite-dimensional irreducible unitary representation of $SU(2)$ is labelled by a non-negative half-integer $j = 0, \tfrac12, 1, \tfrac32, \dots$. We write $\mathscr  V_j$ for the $(2j+1)$-dimensional space on which this representation acts. A standard orthonormal basis of $\mathscr  V_j$ is the magnetic basis $\ket{j\ m}$ with $m = -j,-j+1,\dots,j$.
-
-The equation
-
-$$
-\begin{pmatrix}
-j_1 & j_2 & j_3 \\
-m_1 & m_2 & m_3
-\end{pmatrix}
-:=(-1)^{j_1-j_2-m_3}\frac{1}{\sqrt{2j_3+1}}C^{j_3\ -m_3}_{j_1\ m_1,j_2\ m_2}
-$$
-expresses the $3j$ symbol definition in terms of Clebsch-Gordan Coefficients $C^{j\ m}_{j_1\ m_1,j_2\ m_2}:=\bra{j_1\ m_1,j_2\ m_2}\ket{j\ m}$ that decompose the tensor product representation $\mathscr V _{j_1}\otimes\mathscr V _{j_2}$ into irreducible components, which have closed form expressions such as Racah's formula that underpins modern numerical software libraries \cite{JF16}.
-
-A $3j$ symbol vanishes unless $m_1+m_2+m_3=0$, the triangle inequalities $|j_1-j_2|\le j_3\le j_1+j_2$ hold, and $j_1+j_2+j_3$ is an integer.
-
-From the point of view of the compact group $SU(2)$, the $3j$ symbols are precisely the (properly normalized and phased) intertwining operators that realize the unique (up to scale) invariant subspace of the triple tensor product $\mathscr V_{j_1}\otimes \mathscr V_{j_2}\otimes \mathscr V_{j_3}$ when that product contains the trivial representation. They are therefore the natural "structure constants" for the fusion of three irreducible representations to the singlet.
-
-This is exactly analogous to the rôle played by the triple-product integrals $M^{i,j,k}$ on a Riemannian manifold: they are the structure constants of the pointwise product of eigenfunctions when that product is expanded back in the eigenbasis. On the group $SU(2)$ itself (or on $S^2=SU(2)/U(1)$) those integrals reduce to phased products of the $3j$-symbols.
-
-To wit, let $D^{j}_{m n}(g)$ be the standard Wigner $D$-functions (matrix coefficients of the irrep of spin $j$ in the magnetic orthonormal basis $\ket{j\ m}$). With respect to the normalized Haar probability measure $dg$ one has the exact formula \cite{VK88}:
-
-\begin{equation}
-\int_{SU(2)}
-D^{j_1}_{m_1 n_1}(g)\,
-D^{j_2}_{m_2 n_2}(g)\,
-\overline{D^{j_3}_{m_3 n_3}(g)}\,dg
-=
-\begin{pmatrix}
-j_1 & j_2 & j_3 \\
-m_1 & m_2 & -m_3
-\end{pmatrix}
-\begin{pmatrix}
-j_1 & j_2 & j_3 \\
-n_1 & n_2 & -n_3
-\end{pmatrix}
-\times
-(-1)^{m_3+n_3}.
-\end{equation}
-(The overall phase convention can be adjusted by the usual Condon–Shortley factors; the essential point is that the integral factors into a product of two real $3j$-symbols.) The Peter–Weyl theorem supplies a complete orthonormal basis of $L^2(SU(2),vol(G)dg)$ given by the renormalized matrix coefficients:
-
-$$e^{j,m,n}(g):=\sqrt{\frac{2j+1}{vol(G)}}\ D^{j}_{mn}(g),$$
-where the indices run over
-
-$$j=0,\tfrac12,1,\tfrac32,\dots,\ m,n=-j,-j+1,\dots,j.$$
-
-Of course, under the Cartan-Killing Casimir Laplacian, $\Delta e^{j,m,n} = \lambda_j e^{j,m,n} = j(j+1)e^{j,m,n}$, which has $vol(G)=2\pi\ vol(S^2) = 8\pi^2$ under its notion of (metrized) Haar measure: $\sqrt g dx = 8\pi^2 dg$. Combining the two equations while sticking to the conventions of the Theorem, one obtains the explicit expression:
-
-\begin{equation}
-\label{eqn-su2}
-\begin{aligned}
-M^{(j_1 m_1 n_1),(j_2 m_2 n_2),(j_3 m_3 n_3)}
-&=
-\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\\
-&\ \times
-\begin{pmatrix}
-j_1 & j_2 & j_3 \\
-m_1 & m_2 & -m_3
-\end{pmatrix}
-\begin{pmatrix}
-j_1 & j_2 & j_3 \\
-n_1 & n_2 & -n_3
-\end{pmatrix}
-(-1)^{m_3+n_3}.
-\end{aligned}
-\end{equation}
-
-Thus, we see that the Riemannian Geometry of $SU(2)$ induced by the Cartan-Killing Casimir can be captured using our augmented spectral data $\set{\lambda_i, M^{i,j,k}}$, from which singular value Riemannian invariants can be explicitly computed from Equation~\ref{eqn-su2}:
-
-$$\sigma(j_1,j_2,j_3)
-=
-\sqrt{\frac{(2j_1+1)(2j_2+1)(2j_3+1)}{8\pi^2}}\cdot\frac{1}{2j_3+1}
-=
-\sqrt{\frac{(2j_1+1)(2j_2+1)}{(2j_3+1)\,8\pi^2}},
-$$
-whenever the triangle inequalities and parity condition are satisfied on $j_1,j_2,j_3$, with multiplicity 1; and all other singular values zero. The computation follows from the observation that $M^{i,j,k}$ decomposes into the tensor product of left/right rank-1 interwining operators, each with Hilbert-Schmidt norm $1/\sqrt{2j_3+1}$ (by definition), so its non-zero singular value, per definition above, is the Peter-Weyl rescaled product of those Hilbert-Schmidt norms.
-
-For example, $  (j_1,j_2,j_3)=(1,1,0)  $ the 3 non-zero $  3j  $-symbols have absolute value $  1/\sqrt{3}  $, the prefactor is $  \sqrt{3\cdot3\cdot1/8\pi^2}  $, and one recovers$$\sigma(1,1,0)=\sqrt{\frac{9}{8\pi^2}}\cdot 1=\frac{3}{\sqrt{8\pi^2}},$$which matches the direct Hilbert–Schmidt computation.
-
-However, since $SU(2)$ with the Cartan-Killing Metric is isometric to $4$ times the traditional homogeneous metric on $S^3$, and for $S^n, n\leq 6$, every isospectral manifold is isometric \cite{ST80} (a beautiful reduction to constant sectional curvature metrics from the short-time asymptotics of the trace of the heat kernel), this computation of the singular values is largely academic for $SU(2)$.
-
-Since the homogeneous metric case for $n>6$ is presently unsettled, performing the same Clebsch-Gordon analysis on $SO(n+1)$ \cite{BJK78} with the aid of a computer \cite{HR11} \textit{might} lead to new discoveries about the spectral determinism of $S^n$ in terms of its singular values \cite{M06}.
-
-For compact Abelian Lie Groups, these vector spaces $\mathscr V_\alpha$ are all one-dimensional, so their situation is entirely similar to the spectral decomposition of multiplicity-1 Laplacians above.  More on this in the Example below.
-
-Getting back to the Corollary~\ref{coro-1}, we observe that the proof involves establishing this implication:
-
-\begin{equation}
-\label{fml}
-z_k = M_0^{i,\bar i,k} / M_1^{i,\bar i,k} \,\, \forall i,k\in\mathbb{N},\, ⋺ M_0^{i,\bar i,k} \ne 0 \, \implies
-\exists r,s,t \in \mathbb{N}\ ⋺\ \frac{M_0^{i,j,k}}{M_1^{i,j,k}} = \frac{M_0^{r,\bar r,i}M_0^{s,\bar s,j}\bar M_0^{t,\bar t,k}}{M_1^{r,\bar r,i}M_1^{s,\bar s,j}\bar M_1^{t,\bar t,k}}\,.
-\end{equation}
-We may hope that for any given $k>0$, $M_0^{i,\bar i,k}$ cannot be identically $0$ for all $i$, since it is a generically true condition, but false for specific cases like the flat tori case covered in the Example below. A higher-level way of looking at this condition is to note that such a hope-violating $k$ would have $\bar e^k$ in the kernel of the adjoint map $[M^{i,\bar i,k}]^*$. Furthermore, the Formula~\ref{fml} for $z_k$ requires both $i$-independence, and sufficiency, to establish the basis map $e_0^i \mapsto z_i e_1^i$ preserves $\set{M_0^{i,j,k}}$.
-
-We sketch a proof of Corollary~\ref{coro-1} (sufficiency) below the next set of formulae.
-
-Nevertheless, let us compute some relevant identities so some intrepid future researcher can dig into this generalized conjecture. Here $v\cdot w$ is the Riemannian inner product on the cotangent bundle:
-
-\begin{equation}
-\label{eqn-15}
-\begin{aligned}
-\Delta fg &= f\Delta g + g\Delta f - 2 df \cdot dg \implies \\
-M^{i,j,k} &= 2 \frac{\bra{de^i\cdot de^j}\ket{e^k}}{\lambda_i +\lambda_j -\lambda_k}\\
-\text{and so the quadratic form} \\
-Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i\cdot de^j}\ket{e^k} \\
-&= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}.\\
-df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}\\
-\end{aligned}
-\end{equation}
-
-\section{Proof of Corollaries}
-\label{sec:proof-of-coros}
-\begin{proof}
-
-Now consider the famous associativity relations from Conformal Field Theory:
-
-\begin{equation}
-\label{assoc}
-\begin{aligned}
-e^ie^je^k = \sum_\ell\bra{e^ie^j}\ket{\bar{e^k}e^\ell}e^\ell &= \sum_{\ell,r} M^{i,j,r}\bar M^{\bar k,\ell,r}e^\ell\\
-&= \sum_{\ell,r} M^{i,k,r}\bar M^{\bar j,\ell,r}e^\ell\ \therefore\\
-i = \bar j, \ell = k\text{ and relabeling } \implies \\
-\sum_r M^{i,\bar i,r}\bar M^{j,\bar j,r} &= \sum_r |M^{i,j,r}|^2
-\end{aligned}
-\end{equation}
-
-Corollary~\ref{coro-1} follows from the fact that $z_k\in U_1$ is well-defined under its presumed hypotheses, and the prior observation that the algebraic, bounded, trilinear operators defined by $z_iz_j\bar z_kM_1^{i,j,k}$ and $M_0^{i,j,k}$ are both associative, and agree with pointwise function multiplication by squares of absolute values of eigenfunctions, the linear span of which is dense in $\mathscr H$.  Establishing $\ker\ [M^{i,\bar i,k}]^* = 0$ is exactly equivalent, where $\mathscr V$ is the closed Hilbert space generated by $\set{|e^i|^2}$, and $[M^{i,\bar i,k}]:\mathscr V\rightarrow \mathscr H$ is the change-of-basis identity map.
-
-So they agree everywhere. This completes the proof of Corollary~\ref{coro-1}.
-
-Corollary~\ref{coro-2} sufficiency follows by noting that the vanishing adjoint kernel condition in Corollary~\ref{coro-1} is generically true. And if for some choice of $i,j,k$, the product $M^{i,\bar i,k} \bar M^{j,\bar j,k}$ disagreed between bases, it would disagree in every pair of bases.
-
-Why? Since generic manifolds can be presumed to also have multiplicity-1 spectra, this reduces the full symmetry group to $U_1^\infty$ where these products are invariants, contradicting Theorem~\ref{thm}. Further reduction to $\mathbb{Z}_2^\infty$ via real-valued bases ensures the products are real-valued. This establishes the necessity of the hypothesis, and completes the proof of Corollary~\ref{coro-2}.
-
-Further, the arguments in the proof of Corollary~\ref{coro-1} are valid even when the manifolds are non-isospectral, so we can represent the basis map as a homeomorphism if and only if the products match in the generic case above. Isospectrality then becomes equivalent to this homeomorphism being promoted to a Riemannian isometry -- due to Sobolev norm equivalence on the corresponding Fourier coefficients (realizing it as a diffeomorphism), and leading to principal symbol preservation on the Laplacians for full isometry as in the proof of the Theorem.
-
-
-\end{proof}
-
-\section{Example}
-\label{sec:ex}
-
-Let $\set{\alpha_i} \subset \mathbb{R}^n$ be an indexed, rank $n$ lattice of Lie Algebra weights for the quotient space representation of $\mathfrak{g}=\mathbb{R}^n$ as translation invariant (i.e., constant) vector fields on itself, when $\mathbb{R}^n$ is also viewed as $\mathfrak{g}$'s associated Lie Group over a torus defined by $\mathbb{R}^n/A\mathbb{Z}^n, A \in GL(n,\mathbb{R})$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $\bra{x} \alpha_i\rangle,\, x\in\mathbb{R}^n$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $2\pi \sqrt{-1}$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $L^2(\mathbb{R}^n/A\mathbb{Z}^n,dx)$, with Lebesgue (Haar) measure $dx$.
-
-Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian, because the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $4\pi^2$) to the Casimir-element-determined-length-squared of each character's weight in the lattice. It is easy to see that any choice of non-degenerate, negative-definite quadratic Casimir element generates a Riemannian Geometry that is isometric to the (negative) Euclidean one.
-
-We presently view the above basis
-
-\begin{equation}
-\{e^{2\pi\sqrt{-1}\bra{x}\alpha_i\rangle}/\sqrt{|\det A|}\}_{i=0}^\infty
-\end{equation}
-to be our Theorem-applicable Fourier basis of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) Euclidean Casimir element) directly corresponding to $\set{\alpha_i}$. By our Theorem's hypotheses, we must have $i < j \implies \lVert\alpha_i\rVert\leq \lVert\alpha_j\rVert$ (with the Euclidean norm on the weights).
-
-Now we can compute
-
-\begin{equation}
-\label{eqn:a}
-M^{i,j,k} = \begin{cases}
-1/\sqrt{|\det A|} & \alpha_i + \alpha_j - \alpha_k = 0 \\
-0 & \text{otherwise}
-\end{cases}
-\end{equation}
-As this Equation~\ref{eqn:a} only depends on the weight lattice itself, it is orthonormal-basis-index invariant. Further, it is only invariant under linear transformations on the weight lattice $(A^{-1})^t\mathbb{Z}^n = \set{\alpha_i}$, so only an $L^2$ orthonormal eigenfunction basis map \textit{which is induced from a volume-preserving invertible linear map between two such indexed, rank $n$ weight lattices} will keep the "algebraic/topological" indexed data set $\set{M^{i,j,k}}$ invariant.
-
-However, in order to apply Theorem~\ref{thm}, it is essential that such a linear map $B$ be $B\in SO(n,\mathbb{R})$ on the weight lattice, because the induced $L^2$ eigenfunction basis map
-
-\begin{equation}
-\{e^{2\pi\sqrt{-1}\bra{x}B\alpha_i\rangle}/\sqrt{|\det A|}\}_{i=0}^\infty
-\end{equation}
-must also preserve the "analytic" invariants -- the Casimir-element induced figure $\lambda_i = 4\pi^2\lVert\alpha_i\rVert^2$ for each indexed weight, i.e.\ the individual eigenvalues of the flat-tori's Laplacian.
-
-As Milnor's duet exemplifies, having a map which preserves the lengths of the lattice weights is not sufficient to deduce the map is in $SO(n,\mathbb{R})$; we must also know that the map preserves weight angles. But this is a consequence of the formulae developed in Equation~\ref{eqn-15}:
-
-\begin{equation}
--4\pi^2\bra{\alpha_i}\ket{\alpha_j}e^ie^j = de^i\cdot de^j = 2\pi^2\sum_k (\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_k\rVert^2)M^{i,j,k}e^k = 2\pi^2(\lVert\alpha_i\rVert^2 + \lVert\alpha_j\rVert^2 - \lVert\alpha_i + \alpha_j\rVert^2)e^ie^j
-\end{equation}
-The neat thing about this analysis is that we've proven there is no \textbf{linear} map between lattices that preserves the eigenvalues without the map being induced by a Riemannian isometry on the tori -- as a consequence of the Theorem, not because the explicit computations involved are simple polarization identities.
-
-This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of \textit{lattice congruence} \cite{NRR22} traditionally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $B\in SO(n,\mathbb{R})$, as described in the prior paragraph, \textbf{is} the contravariant Riemannian isometry between the tori, as provided by application of the \textit{Gelfand-Naimark-Segal Representation Theorem} during the proof of Theorem~\ref{thm}.
-
-\paragraph{Acknowledgements}
-The original research was funded in part by a gracious James Simons Research Award in 1995-1996, and the generous support of an Alfred P. Sloan Dissertation Fellowship in 1996-1997 at the University at Stony Brook.
-
-The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid Hezari, Harish Seshadri, and especially Leon Takhtajan for their technical assistance and review in the preparation of this manuscript for publication.
 
 \doclicenseThis
 
