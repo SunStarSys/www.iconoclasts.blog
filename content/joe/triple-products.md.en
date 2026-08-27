@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52592
+status: verified=52713
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -412,7 +412,7 @@ Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i
 &= \frac{1}{2}\sum_{i,j}\hat{f}(i)\hat{g}(j)(\lambda_i + \lambda_j - \lambda_k)M^{i,j,k}\\
 df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}.\\
 \text{And so we have the Bockner Formula:}\\
-\Gamma_2(e^i,e^j) := \sum_k (\lambda_i + \lambda_j - \lambda_k)^2M^{i,j,k}e^k=\langle\operatorname{Hess}e^i,\operatorname{Hess}e^j\rangle_{\mathrm{HS}}+\operatorname{Ric}(\nabla e^i,\nabla e^j).
+\Gamma_2(e^i,e^j) := \sum_k (\lambda_i + \lambda_j - \lambda_k)^2M^{i,j,k}e^k&=\langle\operatorname{Hess}e^i,\operatorname{Hess}e^j\rangle_{\mathrm{HS}}+\operatorname{Ric}(\nabla e^i,\nabla e^j).
 \end{aligned}
 ```
 
