@@ -180,14 +180,11 @@ $$M^{i,j,k}=\langle\psi_i\psi_j,\psi_k\rangle
 =\int_{\mathbb{R}}\psi_i(x)\psi_j(x)\psi_k(x)\,dx
 =N_i N_j N_k\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\,e^{-3x^2/2}\,dx,$$
 where $N_n=(2^n n!\sqrt{\pi})^{-1/2}$.
-Vanishing
-$M^{i,j,k}=0$ unless both of the following hold:
 
-parity: $i+j+k$ is even;
-triangle: $|i-j|\le k\le i+j$ (and cyclic permutations).
+$M^{i,j,k}=0$ unless both of the following hold -- parity: $i+j+k$ is even; triangle: $|i-j|\le k\le i+j$ (and cyclic permutations).
 
 These are the oscillator analogues of the Clebsch–Gordan support conditions.
-Closed form, after scaling
+
 Change variables $x=\sqrt{2/3}\,y$. Then
 $$\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\,e^{-3x^2/2}\,dx
 =\sqrt{\frac{2}{3}}\int_{\mathbb{R}}H_i\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)
@@ -204,6 +201,17 @@ $$\int_{\mathbb{R}}H_a H_b H_c\,e^{-y^2}\,dy
 0 & \text{otherwise.}
 \end{cases}$$
 The result is a finite triple sum (at most $O(ijk)$ terms, typically far fewer). Combining the prefactors $N_i N_j N_k\sqrt{2/3}$ gives $M^{i,j,k}$ exactly.
+
+Equivalently, the product of two normalized functions expands in a scaled Hermite basis
+$$\psi_i(x)\psi_j(x)=\sum_{r=0}^{\lfloor(i+j)/2\rfloor}c_{r;ij}\,\psi_{i+j-2r}(\sqrt{2}\,x),$$
+with explicit coefficients
+$$c_{r;ij}
+=\frac{(-1)^r}{\sqrt{2^{i+j-2r+1}\pi}}
+\sqrt{\frac{(i+j-2r)!}{i!\,j!}}
+\binom{i}{r}\binom{j}{r}r!\,2^{r}$$
+(up to the conventional placement of the $\sqrt{2}$ in the argument; cf. Korevaar et al.). Then
+$$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\,x)\,\psi_k(x)\,dx,$$
+and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric sum). This is the form best suited to computation.
 
 \doclicenseThis
 
