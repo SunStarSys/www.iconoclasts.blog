@@ -2,6 +2,7 @@ title: Triple Products of Eigenfunctions and Schrodinger Operators
 dependencies: *.md.en
 categories: Math
 keywords: Schrodinger
+status: draft
 
 ## Author
 
@@ -14,15 +15,9 @@ To Autumn
 
 ## Abstract
 
-Using elementary techniques from Geometric Analysis, Partial Differential Equations, and Abelian $$C^*$$Algebras, we uncover a novel, yet familiar, global geometric discriminant -- namely the indexed set of integrals of triple products of eigenfunctions of the Schr\"odinger operator, to precisely characterize which isospectral Schr\"odinger Operators are isometric.
+Using elementary techniques from Geometric Analysis, Partial Differential Equations, and Abelian $$C^*$$Algebras, we uncover a novel, yet familiar, global geometric discriminant -- namely the indexed set of integrals of triple products of eigenfunctions of the Schrodinger operator, to precisely characterize which isospectral Schrodinger Operators are isometric.
 
-\noindent\textbf{Keywords:} spectrum, Fourier, harmonic, triple products, Schr\"odinger, eigenfunctions, functional, inverse problem, representation theory
-\end{abstract}
-
-\tableofcontents
-
-\section{Introduction}
-\label{sec:intro}
+## Introduction
 
 Let $$(M,g)$$ be a smooth, connected, complete Riemannian manifold (possibly non-compact, possibly of infinite volume). Fix a real potential $$V\in C^\infty(M)$$ which is bounded below and proper in the sense
 
@@ -61,15 +56,15 @@ Let $$\mathcal{A}_0\subset L^2(M)$$ be the algebraic span of the eigenfunctions.
 
 $$\phi=\sum_{i=0}^N\hat\phi(i)\,e^i$$
 
-are dense in $L^2$ and, by elliptic regularity plus the decay of eigenfunctions, lie in $C^\infty\cap C_0(M)$. Pointwise multiplication is
+are dense in $$L^2$$ and, by elliptic regularity plus the decay of eigenfunctions, lie in $$C^\infty\cap C_0(M)$$. Pointwise multiplication is
 
 $$\phi\psi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\psi(j)M^{i,j,k}\Bigr)e^k.$$
 
-Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $N$. Consequently the linear map
+Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $$N$$. Consequently the linear map
 
 $$\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N),\qquad e^i\mapsto f^i$$
 
-is a unital algebra homomorphism for pointwise multiplication (the constant function is a multiple of the ground state only if $V$ is constant; in general $$\vec F$$ need not send $$1$$ to $$1$$, but it preserves the product of any two functions that can be so expanded). Characteristic functions of sublevel sets of $$V$$ can be approximated in $$L^2$$ by functional calculus of $$H$$, so $$\vec F$$ also preserves characteristic functions of sets of finite measure in the $$L^2$$ sense.
+is a unital algebra homomorphism for pointwise multiplication (the constant function is a multiple of the ground state only if $$V$$ is constant; in general $$\vec F$$ need not send $$1$$ to $$1$$, but it preserves the product of any two functions that can be so expanded). Characteristic functions of sublevel sets of $$V$$ can be approximated in $$L^2$$ by functional calculus of $$H$$, so $$\vec F$$ also preserves characteristic functions of sets of finite measure in the $$L^2$$ sense.
 
 This is identical to the compact calculation; the only extra ingredient is that the eigenfunction expansion of a compactly supported smooth function still converges rapidly enough for the triple-product formula to be justified (which follows from the same elliptic estimates that give $$\lambda_i^{N}\|e^i\|_\infty\to 0$$ locally, plus Agmon decay at infinity).
 
