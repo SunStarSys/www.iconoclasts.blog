@@ -60,9 +60,9 @@
 \maketitle
 
 \begin{abstract}
-Using elementary techniques from Geometric Analysis, Partial Differential Equations, and Abelian $C^*$ Algebras, we uncover a novel, yet familiar, global geometric discriminant -- namely the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator, to precisely characterize which isospectral closed Riemannian manifolds are isometric.
+Using elementary techniques from Geometric Analysis, Partial Differential Equations, and Abelian $C^*$ Algebras, we uncover a novel, yet familiar, global geometric discriminant -- namely the indexed set of integrals of triple products of eigenfunctions of the Schr\"odinger operator, to precisely characterize which isospectral Schr\"odinger Operators are isometric.
 
-\noindent\textbf{Keywords:} spectrum, Fourier, harmonic, triple products, Laplacian, eigenfunctions, functional, inverse problem, representation theory
+\noindent\textbf{Keywords:} spectrum, Fourier, harmonic, triple products, Schr\"odinger, eigenfunctions, functional, inverse problem, representation theory
 \end{abstract}
 
 \tableofcontents
@@ -70,19 +70,19 @@ Using elementary techniques from Geometric Analysis, Partial Differential Equati
 \section{Introduction}
 \label{sec:intro}
 
-For a closed Riemannian manifold $(M,g)$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem \cite{DH11} in Spectral Geometry. Naïvely one might speculate that this class would always be empty. However, the academic literature is rich with decades-old constructions of specific pairings of counterexamples: beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori \cite{JM64}, and continuing \cite{CS92} towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis \cite{AS94} -- replete with a computer aided search for the critical $\dim = 3$ case.  A modern survey of the full flat tori history appears in \cite{NRR22}.
+Let $(M,g)$ be a smooth, connected, complete Riemannian manifold (possibly non-compact, possibly of infinite volume). Fix a real potential $V\in C^\infty(M)$ which is bounded below and proper in the sense
+$$V(x)\to +\infty\qquad\text{as }x\to\infty$$
+(i.e., $\{x:V(x)\le C\}$ is compact for every $C$). Let
+$$H=-\Delta_g+V$$
+be the associated Schrödinger operator, essentially self-adjoint on $C_c^\infty(M)$. Under these hypotheses it is classical that
 
-Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces; constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 \cite{MS67}.) A prime example of this effort was Toshikazu Sunada's 1985 \cite{TS85} invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
+$\sigma(H)=\sigma_{\mathrm{disc}}(H)=\{\lambda_0\le\lambda_1\le\lambda_2\le\cdots\}\to+\infty$, each eigenvalue of finite multiplicity;
+there is an orthonormal basis $\{e^i\}_{i=0}^\infty\subset L^2(M,d\mathrm{vol}_g)$ of smooth eigenfunctions,$$He^i=\lambda_i e^i.$$
 
-For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are not even locally isometric \cite{CG93}.
-
-Work continues in many related areas \cite{DH11}, such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty \cite{ST80}, finite \cite{AS94}, rigid \cite{GK80}, and compact \cite{GZ97}) as a subset of different moduli spaces of Riemannian metrics.
-
-What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological discriminant" to complement the existing, discrete "analytic invariant" -- the non-negative spectrum of the Laplace-Beltrami operator (herein referred to as the (non-negative) \textit{Laplacian}) on $\mathscr H = L^2(M,g)$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
-
-If given two closed Riemannian manifolds, and the belief that they were isometric, how would one go about constructing the isometry? This paper is a global roadmap towards addressing that question in fine detail.
-
-This is not a research monograph, but an introduction to the subject matter for advanced math students familiar with Geometric Analysis, Representation Theory, and $C^*$ algebras.
+(The same conclusions hold for $-\Delta_g$ itself on some complete manifolds of finite volume with no continuous spectrum, but the confining potential makes the analysis cleaner.)
+Define the triple products exactly as in the compact case:
+$$M^{i,j,k}:=\langle e^i e^j,e^k\rangle_{L^2}=\int_M e^i e^j\,\overline{e^k}\,d\mathrm{vol}_g.$$
+Because the eigenfunctions are Schwartz-class at infinity in the sense that they decay faster than any polynomial in $V$ (Agmon estimates / weighted Sobolev), the products $e^i e^j$ lie in $L^2$ and the integrals converge absolutely.
 
 \subsection{Results}
 \label{subsec:res}
@@ -90,136 +90,14 @@ This is not a research monograph, but an introduction to the subject matter for 
 \begin{theorem}
 \label{thm}
 
-Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $\set{e^i}_{i=0}^{\infty}$ for the (non-negative) Laplacian $\Delta_M$ on $L^2(M,g)$ associated with a closed Riemannian manifold $(M,g)$, define
-
+Let $(M,g,V)$ and $(N,h,W)$ be two such data, with isospectral Schrödinger operators $H_M$ and $H_N$. Suppose there exist orthonormal eigenbases $\{e^i\}$ of $H_M$ and $\{f^i\}$ of $H_N$, ordered by non-decreasing eigenvalues, such that
 \begin{equation}
-M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}
+M_M^{i,j,k}=M_N^{i,j,k}\qquad\forall\qquad i,j,k.
 \end{equation}
-
-To be isometric to $(M,g)$, it is a necessary and sufficient condition for another isospectral closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $\set{M^{i,j,k}}$ under each basis.
+Then there is a diffeomorphism $F:N\to M$ with $F^*g=h$ and $V\circ F=W$.
 \end{theorem}
 
-It is important to recognize $M^{i,j,k}$ is not basis-invariant: there is a natural unitary change-of-basis action on it discussed in detail after the proof of Theorem~\ref{thm}. The discussion incorporates certain sets of basis-invariant singular values that one might form a general conjecture around, which claims that that ordered set of singular values completely characterizes the set of isospectral manifolds.
-
-Regardless of the sufficiency half of the general conjecture, necessity is always the case. Which means these collections of singular values defined by $M^{i,j,k}$ and associated to every eigenspace triple are a new set of Riemannian \textbf{invariants}.
-
-The hard work ahead for future research is in locating such basis pairs, or in determining that such pairs cannot exist at all, just by examining the properties of the $M^{i,j,k}$ in evidence. But this paper puts that target front and center: we seek to reduce the analytic geometry questions of Spectral Theory to computationally tractable linear algebra questions about products of eigenfunctions.
-
-\textit{Symmetry} plays an important rôle in computationally tractable cases \cite{TF17} \cite{LS18} \cite{PS94}, which is aptly illustrated in our flat tori Example~\ref{sec:ex} below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case. In this instance, we offer the following
-
-\begin{corollary}
-\label{coro-1}
-(Diagonal Litmus Test) Given a pair of eigenvalue preserving orthonormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if for every choice of $i,j,k$, the product $M^{i,\bar i,k}\bar M^{j,\bar j,k}$ agrees in both bases; and if the vector space spanned by $\set{|e^i|^2}$ is dense in $\mathscr H$. Here $\bar j$ represents the eigenfunction $\bar e^j$ in the triple-product integral computations.
-
-Furthermore, if we define $\mathscr V$ as the Hilbert space generated by $\set{|e^i|^2}$, $\mathscr V = \mathscr H$ if and only if the adjoint map
-
-\begin{equation}
-[M^{i,\bar i, k}]^*:\mathscr H \rightarrow \mathscr V
-\end{equation}
-
-is injective.
-\end{corollary}
-
-\begin{corollary}
-\label{coro-2}
-Generically, isospectral manifolds are isometric if and only if the products as defined in Corollary~\ref{coro-1} agree as real values.
-\end{corollary}
-
-The motivation for the study of $\set{M^{i,j,k}}$ is loosely derived from the study of the rôle of the bilinear multiplication operator $Y:V\otimes V\rightarrow V((z))$ in the definition of a Vertex Operator Algebra \cite{FBZ04} associated with a Chiral Conformal Field Theory. Here $V$ is the Vector Space of States and $V((z))$ is the space of formal Laurent series in $z$ with coefficients in $V$. Since $V$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $Y$ using the Fourier basis elements of $V$ is only slightly more involved than the $M^{i,j,k}$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
-
-If we consider the map
-\begin{equation}
-(M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
-\end{equation}
-this paper establishes the injectivity of this map for closed Riemannian manifolds (up to Riemannian isometry in its domain). Further results which apply these techniques to describe its image (and inverse), within select moduli spaces of metrics, are just getting started \cite{AA25}.  There, Anshul Adve rigorously tackles unit tangent spaces of compact, hyperbolic 2-orbifolds, using these same \textit{structure constants} from Conformal Field Theory.
-
-Some imagery may be helpful here. If we fix $(M,g)$ and look at the orbits of $\set{M^{i,j,k}}$ under spectrum-preserving change-of-basis unitary transformations on $\set{e^i}$, we see that the orbits of different isospectral $(M,g)$ pairs partition the image of this map along isometry classes.
-
-Finally, we prove that the generic Riemannian metric case is completely characterized by the study of the "diagonal" $\set{\lambda_i, M^{i,\bar i,k}}$.
-
-These results were first demonstrated during a similarly titled talk by the author at \textbf{MSRI} in 1997, but they appear here in published form for the first time.
-
-\section{Preliminaries}
-\label{sec:pre}
-
-Now with $M,g,e^i,M^{i,j,k}$ as in the hypotheses of Theorem~\ref{thm}, for $f \in C^\infty(M)$ and $i \geq 0$ note that the \textit{Fourier coefficients}
-
-\begin{equation}
-\label{eqn:Fourier}
-\begin{aligned}
-\hat{f}(i) &:= \int_M f(x)\bar{e^i}(x)\sqrt{g(x)}dx \\
-\implies \\
-f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)\,,
-\end{aligned}
-\end{equation}
-since $f$ is uniquely representable as its rapidly converging \textit{Fourier Series} ($\Delta_M$-specific Sobolev Embeddings \cite{MT13} \cite{RS75}, together with Weyl's Asymptotic Law \cite{HW11}, imply the terms in the sum are $o(i^{-n})$ uniformly in $x$ \cite{LH68}, $\forall n\in\mathbb{N}$.) Then we see that for $f_1, f_2 \in C^\infty(M)$, the Fourier coefficients of the pointwise product $f_1 f_2 \in C^\infty(M)$ are
-
-\begin{equation}
-\begin{aligned}
-\widehat{f_1 f_2}(k) &= \sum_{i,j}^\infty\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k} \\
-\implies \\
-f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
-f_1 &= f^p_2,\, p > 2 \implies \\
-\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,i_2,\ldots,i_{2p-1}}\hat{f_2}(i_1)\hat{f_2}(i_2)\hat{f_2}(i_4)\hat {f_2}(i_6)\ldots\hat{f_2}(i_{2p-2})M^{i_1,i_2,i_3}M^{i_3,i_4,i_5}\ldots M^{i_{2p-3},i_{2p-2},i_{2p-1}}e^{i_{2p-1}}(x)
-\end{aligned}
-\end{equation}
-and so, critically, any multivariate polynomial $\wp \in \mathbb{C}[z_1,\ldots,z_l]$ (on smooth functions) commutes with any spectrum-preserving $\Delta$-eigenfunction orthonormal basis map $\vec{F}$ that preserves $\set{M^{i,j,k}}$:
-
-\begin{equation}
-\label{fig}
-\begin{tikzcd}
-  C^\infty(M,\space\mathbb{C}^l)\arrow[swap]{d}{\underbrace{\vec{F}\oplus\dots\oplus \vec{F}}_{l\,\text{times}}} \arrow{r}{\wp} & C^\infty(M) \arrow{d}{\vec{F}}\\%
-  C^\infty(N,\space\mathbb{C}^l) \arrow{r}{\wp} & C^\infty(N)
-\end{tikzcd}
-\end{equation}
-
-Moreover if $A\subset M$ is Borel-measurable, then the results above hold pointwise for the characteristic function of $A$ everywhere except along the boundary of $A$: if $f = f^2$ and $A:=\set{x\in M|f(x)=1}$,
-
-\begin{equation}
-\sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \begin{cases}
-1 & x \in \mathring{A} \\
-0 & x \in \mathring{A^\complement}\end{cases}\,,
-\end{equation}
-and by uniqueness, we have the following identity
-
-\begin{equation}
-\begin{aligned}
-\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\,,\, \forall k\geq 0 \\
-\iff f&=f^2 \, a.e.
-\end{aligned}
-\end{equation}
-
-This implies any such basis map as above carries characteristic functions (as members of $L^2(M,g)\subset L^1(M,g)$) to characteristic functions in a measure-preserving fashion.
-
-The point of these computations is to emphasize the fact that $\set{M^{i,j,k}}$ characterizes the Harmonic Analysis of the pointwise multiplication operator on $C^\infty(M)$, which is a dense subalgebra of the Abelian $C^*$ algebra $C(M)$, by the Stone-Weierstrass theorem.
-
-For the rapid convergence of these above sums involving $M^{i,j,k}$, note that products of eigenfunctions are smooth, so these Fourier coefficients decay as above (in each index). For more details, see Emmett Wyman's work in 2022 with these coefficients as it relates to the triangle inequality on the eigenvalues \cite{EW22}.
-
-Note: we may always assume
-
-\begin{equation}
-\begin{aligned}
-e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
-\implies \\
-M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}\,,
-\end{aligned}
-\end{equation}
-where $\delta_i$ is the Kronecker delta. Since $vol(M)$ is a spectral invariant \cite{HW11}, this information is already available from isospectrality considerations.
-
-\section{Proof of Theorem~\ref{thm}}
-\label{sec:proof}
-
 \begin{proof}
-For necessity, let $F:(N,h)\rightarrow (M,g)$ be an isometry between closed Riemannian manifolds, and let the target orthonormal basis of eigenfunctions on $L^2(N,h)$ be the pull-back via $F$ of the orthonormal basis $\set{e^i}$ on $(M,g)$ above. Since
-
-\begin{equation}
-\begin{aligned}
-M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
-          &= \int_N e^i(F(x)) e^j(F(x))\bar{e^k}(F(x))\sqrt{h}dx\,,
-\end{aligned}
-\end{equation}
-we are done with the necessity argument because $\Delta_N(f\circ F) = (\Delta_M f) \circ F,\ \ \forall f\in C^\infty(M)$.
-
 For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $\vec{F}$ from $C^\infty(M)$ to $C^\infty(N)$ and note that from the calculations in Section~\ref{sec:pre} above, $\vec{F}$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
 
 \begin{lemma}
