@@ -209,7 +209,7 @@ $$c_{r;ij}
 =\frac{(-1)^r}{\sqrt{2^{i+j-2r+1}\pi}}
 \sqrt{\frac{(i+j-2r)!}{i!\,j!}}
 \binom{i}{r}\binom{j}{r}r!\,2^{r}$$
-(up to the conventional placement of the $\sqrt{2}$ in the argument; cf. Korevaar et al.). Then
+(up to the conventional placement of the $\sqrt{2}$ in the argument; cf. \cite{K16}). Then
 $$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\,x)\,\psi_k(x)\,dx,$$
 and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric sum). This is the form best suited to computation.
 
