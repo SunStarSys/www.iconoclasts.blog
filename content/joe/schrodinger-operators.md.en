@@ -34,7 +34,7 @@ $$He^i=\lambda_i e^i.$$
 (The same conclusions hold for $$-\Delta_g$$ itself on some complete manifolds of finite volume with no continuous spectrum, but the confining potential makes the analysis cleaner.)
 Define the triple products exactly as in the compact case:
 
-$$M^{i,j,k}:=\langle e^i e^j,e^k\rangle_{L^2}=\int_M e^i e^j\,\overline{e^k}\,d\mathrm{vol}_g.$$
+$$M^{i,j,k}:=\langle e^i e^j,e^k\rangle_{L^2}=\int_M e^i e^j\ \overline{e^k}\ d\mathrm{vol}_g.$$
 
 Because the eigenfunctions are Schwartz-class at infinity in the sense that they decay faster than any polynomial in $$V$$ (Agmon estimates [[Agmon1982]](#Agmon1982)/ weighted Sobolev [[TaylorPDE1]](#TaylorPDE1)), the products $$e^i e^j$$ lie in $$L^2$$ and the integrals converge absolutely.
 
@@ -54,7 +54,7 @@ Then there is a diffeomorphism $$F:N\to M$$ with $$F^*g=h$$ and $$V\circ F=W$$.
 
 Let $$\mathcal{A}_0\subset L^2(M)$$ be the algebraic span of the eigenfunctions. Finite linear combinations
 
-$$\phi=\sum_{i=0}^N\hat\phi(i)\,e^i$$
+$$\phi=\sum_{i=0}^N\hat\phi(i)\ e^i$$
 
 are dense in $$L^2$$ and, by elliptic regularity plus the decay of eigenfunctions, lie in $$C^\infty\cap C_0(M)$$. Pointwise multiplication is
 
@@ -122,7 +122,7 @@ $$\lambda_n=2n+1,\qquad n=0,1,2,\dots$$
 
 (each of multiplicity one). The corresponding $$L^2(\mathbb{R})$$-normalized eigenfunctions are the Hermite functions
 
-$$\psi_n(x)=\bigl(2^n n!\,\sqrt{\pi}\bigr)^{-1/2}H_n(x)\,e^{-x^2/2},$$
+$$\psi_n(x)=\bigl(2^n n!\ \sqrt{\pi}\bigr)^{-1/2}H_n(x)\ e^{-x^2/2},$$
 
 where $$H_n$$ are the physicist’s Hermite polynomials. They form an orthonormal basis of $$L^2(\mathbb{R})$$, lie in the Schwartz class $$\mathcal{S}(\mathbb{R})\subset C_0(\mathbb{R})$$, and satisfy the Agmon decay that makes every pointwise product $$\psi_i\psi_j$$ square-integrable.
 
@@ -130,27 +130,27 @@ where $$H_n$$ are the physicist’s Hermite polynomials. They form an orthonorma
 
 Because the eigenfunctions are real,
 
-$$M^{i,j,k}=\langle\psi_i\psi_j,\psi_k\rangle=\int_{-\infty}^{\infty}\psi_i(x)\psi_j(x)\psi_k(x)\,dx.$$
+$$M^{i,j,k}=\langle\psi_i\psi_j,\psi_k\rangle=\int_{-\infty}^{\infty}\psi_i(x)\psi_j(x)\psi_k(x)\ dx.$$
 
 These integrals vanish unless $$i+j+k$$ is even (parity) and the three indices satisfy a triangle-type constraint coming from the linearization of Hermite polynomials. The linearization formula
 
-$$H_n(x)H_m(x)=\sum_{r=0}^{\min(n,m)}\binom{n}{r}\binom{m}{r}r!\,2^r\,H_{n+m-2r}(x)$$
+$$H_n(x)H_m(x)=\sum_{r=0}^{\min(n,m)}\binom{n}{r}\binom{m}{r}r!\ 2^r\ H_{n+m-2r}(x)$$
 
 together with the Gaussian weight converts, after normalizing, into an explicit formula for $$M^{i,j,k}$$. Equivalently, the generating-function identity
 
-$$\int_{-\infty}^{\infty}e^{-x^2}H_a(x)H_b(x)H_c(x)\,dx
-=\sqrt{\pi}\,2^N\frac{a!\,b!\,c!}{(N-a)!(N-b)!(N-c)!}$$
+$$\int_{-\infty}^{\infty}e^{-x^2}H_a(x)H_b(x)H_c(x)\ dx
+=\sqrt{\pi}\ 2^N\frac{a!\ b!\ c!}{(N-a)!(N-b)!(N-c)!}$$
 
 (when $$a+b+c=2N$$ is even and each factorial in the denominator is defined and non-negative, and $$0$$ otherwise) yields $$M^{i,j,k}$$ after inserting the normalization constants of the $$\psi_n$$. In particular:
 
-$$M^{n,n,0}=\int\psi_n^2\psi_0\,dx>0$$ (the ground state $$\psi_0=\pi^{-1/4}e^{-x^2/2}$$ is a strictly positive Gaussian);
+$$M^{n,n,0}=\int\psi_n^2\psi_0\ dx>0$$ (the ground state $$\psi_0=\pi^{-1/4}e^{-x^2/2}$$ is a strictly positive Gaussian);
 the map $$\psi_i\psi_j=\sum_k M^{i,j,k}\psi_k$$ is the exact multiplication rule in the Hermite basis.
 
-So the structure constants of pointwise multiplication on the dense subspace $$\mathrm{span}\{\psi_n\}\subset C_0(\mathbb{R})$$ are known in closed form.
+So the structure constants of pointwise multiplication on the dense subspace $$\mathrm{span}\ \{\psi_n\}\subset C_0(\mathbb{R})$$ are known in closed form.
 
 ### What the theorem says
 
-Suppose $$(\mathbb{R},g,W)$$ is another complete Riemannian line (so $$g=e^{2\phi(x)}\,dx^2$$ in some coordinate) with a smooth confining potential $$W$$, and suppose its Schrödinger operator $$-\Delta_g+W$$ is isospectral to $$H$$ and admits an eigenbasis $$\{f_n\}$$ with the same triple products $$\langle f_i f_j,f_k\rangle=M^{i,j,k}.$$
+Suppose $$(\mathbb{R},g,W)$$ is another complete Riemannian line (so $$g=e^{2\phi(x)}\ dx^2$$ in some coordinate) with a smooth confining potential $$W$$, and suppose its Schrödinger operator $$-\Delta_g+W$$ is isospectral to $$H$$ and admits an eigenbasis $$\{f_n\}$$ with the same triple products $$\langle f_i f_j,f_k\rangle=M^{i,j,k}.$$
 
 The discrete-spectrum argument then produces a diffeomorphism  $$F:\mathbb{R}\to\mathbb{R}$$ such that
 
@@ -169,8 +169,8 @@ Because every eigenspace is one-dimensional, the singular-value packaging collap
 ### Explicit Formula
 
 $$M^{i,j,k}=\langle\psi_i\psi_j,\psi_k\rangle
-=\int_{\mathbb{R}}\psi_i(x)\psi_j(x)\psi_k(x)\,dx
-=N_i N_j N_k\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\,e^{-3x^2/2}\,dx,$$
+=\int_{\mathbb{R}}\psi_i(x)\psi_j(x)\psi_k(x)\ dx
+=N_i N_j N_k\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\ e^{-3x^2/2}\ dx,$$
 
 where $$N_n=(2^n n!\sqrt{\pi})^{-1/2}$$.
 
@@ -178,45 +178,45 @@ $$M^{i,j,k}=0$$ unless both of the following hold -- parity: $$i+j+k$$ is even; 
 
 These are the oscillator analogues of the Clebsch–Gordan support conditions.
 
-Change variables $$x=\sqrt{2/3}\,y$$. Then
+Change variables $$x=\sqrt{2/3}\ y$$. Then
 
-$$\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\,e^{-3x^2/2}\,dx
-=\sqrt{\frac{2}{3}}\int_{\mathbb{R}}H_i\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)
-H_j\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)
-H_k\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)\,e^{-y^2}\,dy.$$
+$$\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\ e^{-3x^2/2}\ dx
+=\sqrt{\frac{2}{3}}\int_{\mathbb{R}}H_i\Bigl(\sqrt{\tfrac{2}{3}}\ y\Bigr)
+H_j\Bigl(\sqrt{\tfrac{2}{3}}\ y\Bigr)
+H_k\Bigl(\sqrt{\tfrac{2}{3}}\ y\Bigr)\ e^{-y^2}\ dy.$$
 
 Each scaled polynomial expands by the finite identity
 
-$$H_n(\gamma y)=\sum_{\ell=0}^{\lfloor n/2\rfloor}\gamma^{n-2\ell}(\gamma^2-1)^\ell\binom{n}{2\ell}\frac{(2\ell)!}{\ell!}\,H_{n-2\ell}(y),$$
+$$H_n(\gamma y)=\sum_{\ell=0}^{\lfloor n/2\rfloor}\gamma^{n-2\ell}(\gamma^2-1)^\ell\binom{n}{2\ell}\frac{(2\ell)!}{\ell!}\ H_{n-2\ell}(y),$$
 
 with $$\gamma=\sqrt{2/3}$$. The product of the three expansions is a finite linear combination of products $$H_a H_b H_c$$. Titchmarsh’s formula then evaluates every remaining integral:
 
 ```math
-\int_{\mathbb{R}}H_a H_b H_c\,e^{-y^2}\,dy
+\int_{\mathbb{R}}H_a H_b H_c\ e^{-y^2}\ dy
 =
 \begin{cases}
-\dfrac{\sqrt{\pi}\,2^{s}\,a!\,b!\,c!}{(s-a)!(s-b)!(s-c)!}
+\dfrac{\sqrt{\pi}\ 2^{s}\ a!\ b!\ c!}{(s-a)!(s-b)!(s-c)!}
 & \text{if }a+b+c=2s\text{ is even and }s\ge a,b,c,\\
 0 & \text{otherwise.}
 \end{cases}
 ```
 
-The result is a finite triple sum (at most $O(ijk)$ terms, typically far fewer). Combining the prefactors $$N_i N_j N_k\sqrt{2/3}$$ gives $$M^{i,j,k}$$ exactly.
+The result is a finite triple sum (at most $$O(ijk)$$ terms, typically far fewer). Combining the prefactors $$N_i N_j N_k\sqrt{2/3}$$ gives $$M^{i,j,k}$$ exactly.
 
 Equivalently, the product of two normalized functions expands in a scaled Hermite basis
 
-$$\psi_i(x)\psi_j(x)=\sum_{r=0}^{\lfloor(i+j)/2\rfloor}c_{r;ij}\,\psi_{i+j-2r}(\sqrt{2}\,x),$$
+$$\psi_i(x)\psi_j(x)=\sum_{r=0}^{\lfloor(i+j)/2\rfloor}c_{r;ij}\ \psi_{i+j-2r}(\sqrt{2}\ x),$$
 
 with explicit coefficients
 
 $$c_{r;ij}
 =\frac{(-1)^r}{\sqrt{2^{i+j-2r+1}\pi}}
-\sqrt{\frac{(i+j-2r)!}{i!\,j!}}
-\binom{i}{r}\binom{j}{r}r!\,2^{r}$$
+\sqrt{\frac{(i+j-2r)!}{i!\ j!}}
+\binom{i}{r}\binom{j}{r}r!\ 2^{r}$$
 
 (up to the conventional placement of the $$\sqrt{2}$$ in the argument; cf. [[K16]](##K16)). Then
 
-$$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\,x)\,\psi_k(x)\,dx,$$
+$$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\ x)\ \psi_k(x)\ dx,$$
 
 and each scaled overlap is a $${}_2F_1$$ (or terminates as a short hypergeometric sum). This is the form best suited to computation.
 
