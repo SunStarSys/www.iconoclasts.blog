@@ -213,7 +213,7 @@ $$c_{r;ij}
 $$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\,x)\,\psi_k(x)\,dx,$$
 and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric sum). This is the form best suited to computation.
 
-\section{\Gamma}
+\section{Gamma}
 By definition
 $$\Gamma(f,g)=\frac12\bigl(H(fg)-f\,Hg-g\,Hf\bigr).$$
 On basis vectors this is already diagonal in the spectrum:
