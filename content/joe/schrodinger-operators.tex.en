@@ -147,7 +147,7 @@ $$\lambda_n=2n+1,\qquad n=0,1,2,\dots$$
 (each of multiplicity one). The corresponding $L^2(\mathbb{R})$-normalized eigenfunctions are the Hermite functions
 $$\psi_n(x)=\bigl(2^n n!\,\sqrt{\pi}\bigr)^{-1/2}H_n(x)\,e^{-x^2/2},$$
 where $H_n$ are the physicist’s Hermite polynomials. They form an orthonormal basis of $L^2(\mathbb{R})$, lie in the Schwartz class $\mathcal{S}(\mathbb{R})\subset C_0(\mathbb{R})$, and satisfy the Agmon decay that makes every pointwise product $\psi_i\psi_j$ square-integrable.
-Triple products
+\subsection{Triple products}
 Because the eigenfunctions are real,
 $$M^{i,j,k}=\langle\psi_i\psi_j,\psi_k\rangle=\int_{-\infty}^{\infty}\psi_i(x)\psi_j(x)\psi_k(x)\,dx.$$
 These integrals vanish unless $i+j+k$ is even (parity) and the three indices satisfy a triangle-type constraint coming from the linearization of Hermite polynomials. The linearization formula
@@ -161,7 +161,7 @@ $M^{n,n,0}=\int\psi_n^2\psi_0\,dx>0$ (the ground state $\psi_0=\pi^{-1/4}e^{-x^2
 the map $\psi_i\psi_j=\sum_k M^{i,j,k}\psi_k$ is the exact multiplication rule in the Hermite basis.
 
 So the structure constants of pointwise multiplication on the dense subspace $\mathrm{span}\{\psi_n\}\subset C_0(\mathbb{R})$ are known in closed form.
-What the theorem says in this example
+\subsection{What the theorem says}
 Suppose $(\mathbb{R},g,W)$ is another complete Riemannian line (so $g=e^{2\phi(x)}\,dx^2$ in some coordinate) with a smooth confining potential $W$, and suppose its Schrödinger operator $-\Delta_g+W$ is isospectral to $H$ and admits an eigenbasis $\{f_n\}$ with the same triple products
 $$\langle f_i f_j,f_k\rangle=M^{i,j,k}.$$
 The discrete-spectrum argument then produces a diffeomorphism $F:\mathbb{R}\to\mathbb{R}$ such that
