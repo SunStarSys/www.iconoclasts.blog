@@ -3,16 +3,26 @@ title: Bibliography
 status: generated
 dependencies: ../schrodinger-operators.bib.en
 ---
-- author: McKean, Henry P. and Singer, Isadore M.
-  doi: 10.2139/ssrn.4793533
+- author: Schaefer, Joe
+  doi: 10.1109/TSP.2015.2488580
   id: JS24
+  journal: IEEE Transactions on Signal Processing
+  number: '6'
+  pages: 1383--1390
+  publisher: Elsevier BV
+  title: Closed-form expressions for time-frequency operations involving {H
+  type: article
+  url: http://dx.doi.org/10.2139/ssrn.4793533
+  volume: '64'
+  year: '2016'
+- author: McKean, Henry P. and Singer, Isadore M.
+  id: MS67
   journal: Journal of Differential Geometry
   number: 1-2
   pages: 43--69
   publisher: Lehigh University
   title: Curvature and the eigenvalues of the Laplacian
   type: article
-  url: http://dx.doi.org/10.2139/ssrn.4793533
   volume: '1'
   year: '1967'
 - author: Barnes, K. J. and Jarvis, P. D. and Ketley, I. J.
