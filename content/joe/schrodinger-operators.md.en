@@ -88,7 +88,6 @@ $$\phi^p/\|\phi\|_\infty^p$$
 
 converge in $$L^2_{\mathrm{loc}}$$ to a characteristic function, and $$\vec F$$ preserves that limit because it preserves all triple products. Sending $$R\to\infty$$ and using that every function in $$C_0(M)$$ is uniformly small outside a large sublevel set of $$V$$ gives $$\|\vec F(\phi)\|_\infty=\|\phi\|_\infty$$.
 
-\end{subproof}
 
 Now we apply the Gelfand-Naimark-Segal Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras $$C_0(N), C_0(M)$$ [[JC19]](#JC19) to represent this isomorphism $$\vec{F}$$ by a homeomorphism $$F$$ between $$N$$ and $$M$$. Since $$\vec{F}$$ is bijective on smooth functions, $$F$$ too must be smooth.
 
