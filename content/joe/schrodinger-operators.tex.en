@@ -227,8 +227,21 @@ $$\begin{aligned}
 \end{aligned}$$
 
 Ground-state conjugation repairs the $V$ defect: if $H\psi=E_0\psi$ with $\psi>0$, then
-$$L=\psi^{-1}(H-E_0)(\psi\,\cdot\,)=\Delta-2\langle\nabla\log\psi,\nabla\,\cdot\,\rangle$$
+$$L:=\psi^{-1}(H-\lambda_0)(\psi\,\cdot\,)=\Delta-2\langle\nabla\log\psi,\nabla\,\cdot\,\rangle$$
 is a diffusion, and its Bakry–Émery tensor is $\operatorname{Ric}+2\operatorname{Hess}\log\psi$. For the harmonic oscillator the ground state is a Gaussian, $\log\psi_0=-x^2/2+\mathrm{const}$, and one recovers exactly $\mathrm{BE}(2,\infty)$ for this renormalized Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator.
+
+With $\phi = -2 \log \psi_0$, let us write these operators in the eigenbasis of $L$,
+
+\begin{equation}
+f_n=\frac{\psi_n}{\psi_0},\qquad
+ M_L^{i,j,k}=\int\frac{\psi_i\psi_j\psi_k}{\psi_0}\,d\mathrm{vol},\\
+\begin{aligned}
+\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)M_L^{i,j,k}\,f_k,\\
+\Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 M_L^{i,j,k}\,f_k\implies\\
+\Gamma_{2,L}(f)&=\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2+\operatorname{Ric}(\nabla f,\nabla f) + \operatorname{Hess}\phi(\nabla f, \nabla f).
+\end{aligned}
+\end{equation}
+
 
 \doclicenseThis
 
