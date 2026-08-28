@@ -2,7 +2,7 @@ title: Triple Products of Eigenfunctions and Schrodinger Operators
 dependencies: *.md.en
 categories: Math
 keywords: Schrodinger
-status: draft
+status: verified=52962
 
 <div class="right">
 
@@ -96,7 +96,7 @@ converge in $$L^2_{\mathrm{loc}}$$ to a characteristic function, and $$\vec F$$ 
 
 Now we apply the Gelfand-Naimark-Segal Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras $$C_0(N), C_0(M)$$ [[JC19]](#JC19) to represent this isomorphism $$\vec{F}$$ by a homeomorphism $$F$$ between $$N$$ and $$M$$. Since $$\vec{F}$$ is bijective on smooth functions, $$F$$ too must be smooth.
 
-As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $$\vec{F}(f) = f \circ F$$), it must preserve the Schr\"odinger operator on smooth functions. By construction
+As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $$\vec{F}(f) = f \circ F$$), it must preserve the Schrodinger operator on smooth functions. By construction
 
 $$\vec F(\phi)=\phi\circ F$$
 
