@@ -249,6 +249,6 @@ Ground-state conjugation repairs the $$V$$ defect: if $$H\psi=E_0\psi$$ with $$\
 
 $$L=\psi^{-1}(H-E_0)(\psi\ \cdot\ )=\Delta-2\langle\nabla\log\psi,\nabla\ \cdot\ \rangle$$
 
-is a diffusion, and its Bakry–Émery tensor is $$\operatorname{Ric}+2\operatorname{Hess}\log\psi$$. For the harmonic oscillator the ground state is a Gaussian, $$\log\psi_0=-x^2/2+\mathrm{const}$$, and one recovers exactly $$\mathrm{BE}(1,\infty)$$ for the Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator.
+is a diffusion, and its Bakry–Émery tensor is $$\operatorname{Ric}+2\operatorname{Hess}\log\psi$$. For the harmonic oscillator the ground state is a Gaussian, $$\log\psi_0=-x^2/2+\mathrm{const}$$, and one recovers exactly $$\mathrm{BE}(2,\infty)$$ for this renormalized Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator.
 
 <!-- $Date$ $Author$ $Revision$ -->
