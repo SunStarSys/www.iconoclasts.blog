@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52808
+status: verified=52812
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -425,7 +425,7 @@ $$2\operatorname{Hess}f(\nabla u,\nabla v)
 
 Each $$\Gamma(\ \cdot\ ,\ \cdot\ )$$ is a function whose eigen-coefficients are known, so the right-hand side is a finite combination of $$M$$’s and $$\lambda$$’s. Concretely, write
 
-$$\gamma_{ab}^c:=\frac12(\lambda_c-\lambda_a-\lambda_b)M^{a,b,c},$$
+$$\gamma_{ab}^c:=\frac12(\lambda_a-\lambda_b-\lambda_c)M^{a,b,c},$$
 
 so $$\Gamma(e^a,e^b)=\sum_c\gamma_{ab}^c e^c$$. Then
 
@@ -445,7 +445,7 @@ $$\begin{aligned}
 
 The Hilbert–Schmidt pairing $$\lvert\operatorname{Hess}e^i\rvert_{\mathrm{HS}}^2$$ is obtained by tracing this $$2$$-tensor against the cometric. The cometric itself is $$\Gamma$$:
 
-$$g(\nabla u,\nabla v)=\Gamma(u,v).$$
+$$du \cdot dv=\Gamma(u,v).$$
 
 Generically, finitely many eigenfunctions give local coordinates, their $$\Gamma$$-matrix is $$g^{ab}$$, and one inverts to $$g_{ab}$$. Then
 
