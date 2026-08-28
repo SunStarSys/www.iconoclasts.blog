@@ -420,7 +420,7 @@ The Hessian is not an extra datum. In $\Gamma$-calculus it is
 $$2\operatorname{Hess}f(\nabla u,\nabla v)
 =\Gamma\bigl(u,\Gamma(f,v)\bigr)+\Gamma\bigl(v,\Gamma(f,u)\bigr)-\Gamma\bigl(f,\Gamma(u,v)\bigr).$$
 Each $\Gamma(\,\cdot\,,\,\cdot\,)$ is a function whose eigen-coefficients are known, so the right-hand side is a finite combination of $M$’s and $\lambda$’s. Concretely, write
-$$\gamma_{ab}^c:=-\frac12(\lambda_c-\lambda_a-\lambda_b)M^{a,b,c},$$
+$$\gamma_{ab}^c:=\frac12(\lambda_a+\lambda_b-\lambda_c)M^{a,b,c},$$
 so $\Gamma(e^a,e^b)=\sum_c\gamma_{ab}^c e^c$. Then
 $$\Gamma\bigl(e^p,\Gamma(e^i,e^q)\bigr)
 =\sum_{c,r}\gamma_{iq}^c\gamma_{pc}^r e^r,$$
