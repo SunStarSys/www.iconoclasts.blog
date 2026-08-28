@@ -266,17 +266,14 @@ f_n=\frac{\psi_n}{\psi_0},\qquad
 For a confining Schrödinger operator as in the Theorem, the isometric type of $$(M,g,V)$$ is encoded in the diffusion data $$(\{\lambda_n-\lambda_0\},\{M_L^{i,j,k}\})$$, because $$\Gamma_L$$ is the cometric and $$\psi_0$$ recovers $$V$$ by Riccati.
 
 ### Returning to Harmonic Oscillator Example
-With $$f_n=\psi_n/\psi_0$$ and $$d\mu=\psi_0^2\,dx$$,
+With $$f_n=\psi_n/\psi_0$$ and $$d\mu=\psi_0^2\ dx$$,
 
-$$M_L^{i,j,k}=\int_{\mathbb{R}}\frac{\psi_i\psi_j\psi_k}{\psi_0}\,dx
-=\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\,e^{-x^2}\,dx.$$
+$$M_L^{i,j,k}=\int_{\mathbb{R}}\frac{\psi_i\psi_j\psi_k}{\psi_0}\ dx
+=\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\,e^{-x^2}\ dx.$$
 
 Titchmarsh then collapses to
 
-$$M_L^{i,j,k}
-=
-\frac{\sqrt{i!\,j!\,k!}}{(s-i)!(s-j)!(s-k)!}
-\quad\text{when }i+j+k=2s\text{ and }s\ge i,j,k,$$
+$$M_L^{i,j,k} = \frac{\sqrt{i!\,j!\,k!}}{(s-i)!(s-j)!(s-k)!} \quad\text{when }i+j+k=2s\text{ and }s\ge i,j,k,$$
 
 and $$0$$ otherwise. In particular $$M_L^{0,n,n}=1$$, which is orthonormality of $$\{\psi_n\}$$ in $$L^2(dx)$$.
 
