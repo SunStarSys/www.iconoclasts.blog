@@ -115,7 +115,6 @@ Then there exists a diffeomorphism $F:N\to M$ such that
 $$F^*g=h,\qquad \psi=\varphi\circ F+C$$
 for a constant $C\in\mathbb{R}$. In particular the weighted Riemannian manifolds $(M,g,e^{-\varphi}\mathrm{vol}_g)$ and $(N,h,e^{-\psi}\mathrm{vol}_h)$ are isometric.
 \end{corollary}
-
 The Witten Laplacian on $p$-forms is the Hodge Laplacian of the weighted manifold plus $t\operatorname{Hess}\varphi\#_p+t^2\lvert\nabla\varphi\rvert^2$. Once $(M,g,\varphi)$ is reconstructed from the scalar array $W^{i,j,k}$, the operators $L_{\varphi}^{(p)}$ are determined, so their spectra and eigenform pairings against scalar eigenfunctions are invariants, not additional moduli.
 
 \section{Preliminaries}
