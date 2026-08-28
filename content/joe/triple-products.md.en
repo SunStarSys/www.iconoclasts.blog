@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52837
+status: verified=52841
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -427,7 +427,7 @@ $$2\operatorname{Hess}f(\nabla u,\nabla v)
 
 Each $$\Gamma(\ \cdot\ ,\ \cdot\ )$$ is a function whose eigen-coefficients are known, so the right-hand side is a finite combination of $$M$$’s and $$\lambda$$’s. Concretely, write
 
-$$\gamma_{ab}^c:=\frac12(\lambda_a-\lambda_b-\lambda_c)M^{a,b,c},$$
+$$\gamma_{ab}^c:=\frac12(\lambda_a+\lambda_b-\lambda_c)M^{a,b,c},$$
 
 so $$\Gamma(e^a,e^b)=\sum_c\gamma_{ab}^c e^c$$. Then
 
