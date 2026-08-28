@@ -214,7 +214,7 @@ $$c_{r;ij}
 $$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\,x)\,\psi_k(x)\,dx,$$
 and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric sum). This is the form best suited to computation.
 
-\section{Gamma}
+\section{Gamma Calculus}
 By definition \cite{BE85}
 $$\Gamma(f,g):=\frac12\bigl(H(fg)-f\,Hg-g\,Hf\bigr).$$
 On basis vectors this is already diagonal in the spectrum:
@@ -227,7 +227,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 Ground-state conjugation repairs the $V$ defect: if $H\psi=E_0\psi$ with $\psi>0$, then
-$$L:=\psi^{-1}(H-\lambda_0)(\psi\,\cdot\,)=\Delta-2\langle\nabla\log\psi,\nabla\,\cdot\,\rangle$$
+$$L:=\psi^{-1}(H-\lambda_0)(\psi\,\cdot\,)=-\Delta-2\langle\nabla\log\psi,\nabla\,\cdot\,\rangle$$
 is a diffusion, and its Bakry–Émery tensor is $\operatorname{Ric}+2\operatorname{Hess}\log\psi$. For the harmonic oscillator the ground state is a Gaussian, $\log\psi_0=-x^2/2+\mathrm{const}$, and one recovers exactly $\mathrm{BE}(2,\infty)$ for this renormalized Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator.
 
 With $\phi = -2 \log \psi_0$ and $v\cdot w$ the Riemannian metric on the cotangent bundle, let us write these operators in the eigenbasis of $L$,
