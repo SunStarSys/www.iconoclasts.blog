@@ -2,7 +2,7 @@ title: Triple Products of Eigenfunctions and Schrodinger/Witten Operators
 dependencies: *.md.en
 categories: Math
 keywords: Schrodinger, Witten
-status: verified=52970
+status: verified=52995
 
 <div class="right">
 
@@ -54,6 +54,40 @@ M_M^{i,j,k}=M_N^{i,j,k}\qquad\forall\qquad i,j,k.
 ```
 Then there is a diffeomorphism $$F:N\to M$$ with $$F^*g=h$$ and $$V\circ F=W$$.
 
+
+### Corollary
+
+Let $$(M,g)$$ be a complete connected Riemannian manifold and $$\varphi\in C^\infty(M)$$ a weight such that the Witten operator
+
+$$L_\varphi u=-\Delta_g u+\langle\nabla\varphi,\nabla u\rangle$$
+
+is essentially self-adjoint and bounded below on $$C_c^\infty(M)$$, with
+
+$$\sigma(L_\varphi)=\sigma_{\mathrm{disc}}(L_\varphi)=\{\nu_0=0<\nu_1\le\nu_2\le\cdots\}\to+\infty$$
+
+in $$L^2(M,e^{-\varphi}\,d\mathrm{vol}_g)$$. (This holds whenever $$\varphi$$ is confining in the Bakry–Émery sense: e.g. $$\operatorname{Ric}_g+\operatorname{Hess}\varphi\ge K$$ and $$\varphi(x)\to+\infty$$ as $$x\to\infty$$.) Let $$\set{f^i} _{i=0}^\infty$$ be an orthonormal eigenbasis,
+
+$$L_\varphi f^i=\nu_i f^i,\qquad
+\int_M f^i\overline{f^j}\,e^{-\varphi}\,d\mathrm{vol}_g=\delta^{ij},$$
+
+ordered by nondecreasing eigenvalues, and set
+
+$$W^{i,j,k}:=\int_M f^i f^j\overline{f^k}\,e^{-\varphi}\,d\mathrm{vol}_g=\langle f^if^j,f^k\rangle_{L^2(e^{-\varphi}\mathrm{vol})}.$$
+
+Let $$(N,h,\psi)$$ be a second such triple, with Witten operator $$L_\psi$$ isospectral to $$L_\varphi$$, and suppose there is an eigenbasis $$\{u^i\}$$ of $$L_\psi$$ with the same eigenvalues and
+
+$$\int_N u^i u^j\overline{u^k}\,e^{-\psi}\,d\mathrm{vol}_h=W^{i,j,k}
+\quad\text{for all }i,j,k.$$
+
+Then there exists a diffeomorphism $$F:N\to M$$ such that
+$$F^*g=h,\qquad \psi=\varphi\circ F+\log \frac{\mu(M)}{\mu(N)}.$$
+In particular the weighted Riemannian manifolds $$(M,g,e^{-\varphi}\mathrm{vol}_g)$$ and $$(N,h,e^{-\psi}\mathrm{vol}_h)$$ are isometric.
+
+The Witten Laplacian on $$p$$-forms is the Hodge Laplacian of the weighted manifold plus 
+
+$$t\operatorname{Hess}\varphi\\#_p+t^2\lvert\nabla\varphi\rvert^2.$$
+
+Once $$(M,g,\varphi)$$ is reconstructed from the scalar array $$W^{i,j,k}$$, the operators $$L_{\varphi}^{(p)}$$ are determined, so their spectra and eigenform pairings against scalar eigenfunctions are invariants, not additional moduli.
 
 ## Preliminaries
 
@@ -112,9 +146,7 @@ $$F^*g=h.$$
 
 The zeroth-order terms then give $$V\circ F=W$$.
 
-This completes the proof of the Theorem.
-
-
+This completes the proof of the Theorem. As the proof of the Corollary is redundant, it is omitted.
 
 ## Example
 On $$M=\mathbb{R}$$ with the Euclidean metric, take
