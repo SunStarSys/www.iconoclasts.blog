@@ -252,7 +252,7 @@ $$L:=\psi^{-1}(H-\lambda_0)(\psi\ \cdot\ )=-\Delta-2\langle\nabla\log\psi,\nabla
 
 is a diffusion, and its Bakry–Émery tensor is $$\operatorname{Ric}+2\operatorname{Hess}\log\psi$$. For the harmonic oscillator the ground state is a Gaussian, $$\log\psi_0=-x^2/2+\mathrm{const}$$, and one recovers exactly $$\mathrm{BE}(2,\infty)$$ for this renormalized Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator.
 
-With $$\phi = -2 \log \psi_0$$ and $$v\cdot w$$ the Riemannian inner product on the cotangent bundle, let us write these operators in the eigenbasis of $$L$$:
+With $$\phi = 2 \log \psi_0$$ and $$v\cdot w$$ the Riemannian inner product on the cotangent bundle, let us write these operators in the eigenbasis of $$L$$:
 
 ```math
 f_n=\frac{\psi_n}{\psi_0},\qquad
