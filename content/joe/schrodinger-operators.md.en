@@ -260,8 +260,9 @@ f_n=\frac{\psi_n}{\psi_0},\qquad
 \begin{aligned}
 \Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)M_L^{i,j,k}\,f_k,\\
 \Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 M_L^{i,j,k}\,f_k\implies\\
-\Gamma_{2,L}(f)&=\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2+\operatorname{Ric}(\nabla f,\nabla f) + \operatorname{Hess}\phi(\nabla f, \nabla f)
+\Gamma_{2,L}(f)&=\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2+\operatorname{Ric}(\nabla f,\nabla f) + \operatorname{Hess}\phi(\nabla f, \nabla f).
 \end{aligned}
 ```
+For a confining Schrödinger operator, the isometric type of $(M,g,V)$ is encoded in the diffusion data $$(\{\lambda_n-\lambda_0\},\{M_L^{i,j,k}\})$$, because $$\Gamma_L$$ is the cometric and $$\psi_0$$ recovers $$V$$ by Riccati.
 
 <!-- $Date$ $Author$ $Revision$ -->
