@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-status: verified=52816
+status: verified=52820
 published: https://dx.doi.org/10.2139/ssrn.4793533
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory, structure constants, conformal field theory
@@ -416,7 +416,7 @@ df \cdot dg &= \sum_k Q_k(f,g)e^k = -\frac{\Delta fg - f\Delta g - g\Delta f}{2}
 \Gamma_\ell(e^i,e^j) :&= \frac{1}{2^\ell}\sum_k (\lambda_i + \lambda_j - \lambda_k)^\ell M^{i,j,k}e^k.
 \end{aligned}
 ```
-Cauchy–Schwarz on the Hessian, $$\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2\ge\frac1n(\Delta f)^2$$, turns $$\operatorname{Ric}\ge K\,g$$ into exactly $$\mathrm{BE}(K,n)$$ [[BE85]](#BE85). The bound is sharp on space forms. Integrating this inequality yields the Lichenerowitz bound for $$\lambda_1$$ (only $$k=0$$ survives):
+Cauchy–Schwarz on the Hessian, $$\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2\ge\frac1n(\Delta f)^2$$, turns $$\operatorname{Ric}\ge K\,g$$ into exactly $$\mathrm{BE}(K,n)$$ [[BE85]](#BE85). The bound is sharp on space forms. Integrating these inequalities in the Bochner Formula for $$\Gamma_2(e^1,e^1)$$ yields the Lichenerowicz bound for $$\lambda_1$$ (only $$k=0$$ survives):
 
 $$\lambda_1\ge\frac{n}{n-1}K.$$
 
