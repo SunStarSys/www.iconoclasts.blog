@@ -2,7 +2,7 @@ title: Triple Products of Eigenfunctions and Schrodinger Operators
 dependencies: *.md.en
 categories: Math
 keywords: Schrodinger
-status: verified=52962
+status: verified=52966
 
 <div class="right">
 
@@ -219,7 +219,7 @@ $$c_{r;ij}
 \sqrt{\frac{(i+j-2r)!}{i!\ j!}}
 \binom{i}{r}\binom{j}{r}r!\ 2^{r}$$
 
-(up to the conventional placement of the $$\sqrt{2}$$ in the argument; cf. [[K16]](##K16)). Then
+(up to the conventional placement of the $$\sqrt{2}$$ in the argument; cf. [[K16]](#K16)). Then
 
 $$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\ x)\ \psi_k(x)\ dx,$$
 
