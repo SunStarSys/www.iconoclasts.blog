@@ -32,7 +32,7 @@ $$V(x)\to +\infty\qquad\text{as }x\to\infty$$
 
 $$H=-\Delta_g+V$$
 
-be the associated Schrodinger operator, essentially self-adjoint on $$C_c^\infty(M)$$. Under these hypotheses it is classical that $$\sigma(H)=\sigma_{\mathrm{disc}}(H)=\{\lambda_0\le\lambda_1\le\lambda_2\le\cdots\}\to+\infty$$, each eigenvalue of finite multiplicity; there is an orthonormal basis $$\{e^i\}_{i=0}^\infty\subset L^2(M,d\mathrm{vol}_g)$$ of smooth eigenfunctions,
+be the associated Schrodinger operator, essentially self-adjoint on $$C_c^\infty(M)$$. Under these hypotheses it is classical that $$\sigma(H)=\sigma_{\mathrm{disc}}(H)=\{\lambda_0\lt\lambda_1\le\lambda_2\le\cdots\}\to+\infty$$, each eigenvalue of finite multiplicity; there is an orthonormal basis $$\{e^i\}_{i=0}^\infty\subset L^2(M,d\mathrm{vol}_g)$$ of smooth eigenfunctions,
 
 $$He^i=\lambda_i e^i.$$
 
@@ -226,14 +226,15 @@ $$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\ x)\ \psi_k(
 and each scaled overlap is a $${}_2F_1$$ (or terminates as a short hypergeometric sum). This is the form best suited to computation.
 
 
-## Gamma
+## $$\Gamma$$ Calculus
+
 By definition [[BE85]](#BE85)
 
-$$\Gamma(f,g):=\frac12\bigl(H(fg)-f\ Hg-g\ Hf\bigr).$$
+$$\Gamma_H(f,g):=\frac12\bigl(H(fg)-f\ Hg-g\ Hf\bigr).$$
 
 On basis vectors this is already diagonal in the spectrum:
 
-$$\Gamma(e^i,e^j)=\frac12\sum_k(\lambda_k-\lambda_i-\lambda_j)\ M^{i,j,k}\ e^k.$$
+$$\Gamma_H(e^i,e^j)=\frac12\sum_k(\lambda_k-\lambda_i-\lambda_j)\ M^{i,j,k}\ e^k.$$
 
 Hence
 
@@ -245,10 +246,22 @@ Hence
 \end{aligned}
 ```
 
-Ground-state conjugation repairs the $$V$$ defect: if $$H\psi=E_0\psi$$ with $$\psi>0$$, then
+Ground-state conjugation repairs the $$V$$ defect: if $$H\psi=\lambda_0\psi$$ with $$\psi>0$$, then
 
-$$L=\psi^{-1}(H-E_0)(\psi\ \cdot\ )=\Delta-2\langle\nabla\log\psi,\nabla\ \cdot\ \rangle$$
+$$L:=\psi^{-1}(H-\lambda_0)(\psi\ \cdot\ )=\Delta-2\langle\nabla\log\psi,\nabla\ \cdot\ \rangle$$
 
 is a diffusion, and its Bakry–Émery tensor is $$\operatorname{Ric}+2\operatorname{Hess}\log\psi$$. For the harmonic oscillator the ground state is a Gaussian, $$\log\psi_0=-x^2/2+\mathrm{const}$$, and one recovers exactly $$\mathrm{BE}(2,\infty)$$ for this renormalized Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator.
+
+With $$\phi = -2 \log \psi_0$$, let us write these operators in the eigenbasis of $$L$$,
+
+```math
+f_n=\frac{\psi_n}{\psi_0},\qquad
+ M_L^{i,j,k}=\int\frac{\psi_i\psi_j\psi_k}{\psi_0}\,d\mathrm{vol},\\
+\begin{aligned}
+\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)M_L^{i,j,k}\,f_k,\\
+\Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 M_L^{i,j,k}\,f_k\implies\\
+\Gamma_{2,L}(f)&=\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2+\operatorname{Ric}(\nabla f,\nabla f) + \operatorname{Hess}\phi(\nabla f, \nabla f)
+\end{aligned}
+```
 
 <!-- $Date$ $Author$ $Revision$ -->
