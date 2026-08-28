@@ -236,7 +236,7 @@ With $\phi =-  2 \log \psi_0$ and $v\cdot w$ the Riemannian metric on the cotang
 f_n=\frac{\psi_n}{\psi_0},\qquad
  M_L^{i,j,k}=\int\frac{\psi_i\psi_j\psi_k}{\psi_0}\,d\mathrm{vol},\\
 \begin{aligned}
-\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)M_L^{i,j,k}\,f_k = df_i \cdot df_j\\
+\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)M_L^{i,j,k}\,f_k = -df_i \cdot df_j\\
 \Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 M_L^{i,j,k}\,f_k\implies\\
 \Gamma_{2,L}(f)&=\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2+\operatorname{Ric}(\nabla f,\nabla f) + \operatorname{Hess}\phi(\nabla f, \nabla f).
 \end{aligned}
