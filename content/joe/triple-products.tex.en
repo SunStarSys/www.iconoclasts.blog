@@ -415,7 +415,7 @@ Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i
 \end{aligned}
 \end{equation}
 
-Cauchy–Schwarz on the Hessian, $\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2\ge\frac1n(\Delta f)^2$, turns $\operatorname{Ric}\ge K\,g$ into exactly $\mathrm{BE}(K,n)$ \cite{BE85}. The bound is sharp on space forms. Integrating these inequalities from the Bochner Formula yields the Lichnerowicz lower bound for $\lambda_1$ (only $k=0$ survives):
+Cauchy–Schwarz on the Hessian, $\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2\ge\frac1n(\Delta f)^2$, turns $\operatorname{Ric}\ge K\,g$ into exactly $\mathrm{BE}(K,n)$ \cite{BE85}. The bound is sharp on space forms. Integrating these inequalities from the Bochner Formula for $\Gamma_2(e^1,e^1)$ yields the Lichnerowicz lower bound for $\lambda_1$ (only $k=0$ survives):
 
 $$\lambda_1\ge\frac{n}{n-1}K.$$
 
