@@ -2,7 +2,7 @@ title: Triple Products of Eigenfunctions and Schrodinger/Witten Operators
 dependencies: *.md.en
 categories: Math
 keywords: Schrodinger, Witten
-status: verified=53003
+status: verified=53007
 
 <div class="right">
 
@@ -82,6 +82,8 @@ $$\int_N u^i u^j\overline{u^k}\ e^{-\psi}\ d\mathrm{vol}_h=W^{i,j,k}
 Then there exists a diffeomorphism $$F:N\to M$$ such that
 $$F^*g=h,\qquad \psi=\varphi\circ F+\log \frac{\mu(M)}{\mu(N)}.$$
 In particular the weighted Riemannian manifolds $$(M,g,e^{-\varphi}\mathrm{vol}_g)$$ and $$(N,h,e^{-\psi}\mathrm{vol}_h)$$ are isometric.
+
+#### Remark
 
 The Witten Laplacian on $$p$$-forms is the Hodge Laplacian of the weighted manifold plus 
 
