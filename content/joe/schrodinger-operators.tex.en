@@ -24,7 +24,7 @@
 \usepackage{tikz-cd}
 
 \usepackage[style=alphabetic]{biblatex}
-\addbibresource{content/joe/triple-products.bib.en}
+\addbibresource{content/joe/schrodinger-operators.bib.en}
 
 % useful math-physics macros
 \usepackage{braket}
@@ -213,7 +213,7 @@ $$c_{r;ij}
 $$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\,x)\,\psi_k(x)\,dx,$$
 and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric sum). This is the form best suited to computation.
 
-\section{Gamma Calculus}
+\section{{\Gamma} Calculus}
 By definition \cite{BE85}
 $$\Gamma(f,g):=\frac12\bigl(H(fg)-f\,Hg-g\,Hf\bigr).$$
 On basis vectors this is already diagonal in the spectrum:
@@ -244,6 +244,7 @@ f_n=\frac{\psi_n}{\psi_0},\qquad
 For a Schr\"odinger operator as in the Theorem~\ref{thm}, the isometric type of $(M,g,V)$ is encoded in the diffusion data $(\{\lambda_n-\lambda_0\},\{M_L^{i,j,k}\})$, because $\Gamma_L$ is the cometric and $\psi_0$ recovers $V$ by Riccati.
 
 \doclicenseThis
+
 \printbibliography
 
 \end{document}
