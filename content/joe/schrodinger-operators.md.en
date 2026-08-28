@@ -237,11 +237,13 @@ $$\Gamma(e^i,e^j)=\frac12\sum_k(\lambda_k-\lambda_i-\lambda_j)\ M^{i,j,k}\ e^k.$
 
 Hence
 
-$$\begin{aligned}
+```math
+\begin{aligned}
 \langle\nabla e^i,\nabla e^j\rangle
 &=-\Gamma_H(e^i,e^j)-\frac12 V e^i e^j\\
 &=-\frac12\sum_k[(\lambda_k-\lambda_i-\lambda_j)M^{i,j,k} +\int V e^i e^j \bar e^k\  dx]\  e^k.
-\end{aligned}$$
+\end{aligned}
+```
 
 Ground-state conjugation repairs the $$V$$ defect: if $$H\psi=E_0\psi$$ with $$\psi>0$$, then
 
