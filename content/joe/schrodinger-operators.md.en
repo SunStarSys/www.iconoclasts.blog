@@ -2,7 +2,7 @@ title: Triple Products of Eigenfunctions and Schrodinger/Witten Operators
 dependencies: *.md.en
 categories: Math
 keywords: Schrodinger, Witten
-status: verified=52995
+status: verified=52999
 
 <div class="right">
 
@@ -65,18 +65,18 @@ is essentially self-adjoint and bounded below on $$C_c^\infty(M)$$, with
 
 $$\sigma(L_\varphi)=\sigma_{\mathrm{disc}}(L_\varphi)=\{\nu_0=0<\nu_1\le\nu_2\le\cdots\}\to+\infty$$
 
-in $$L^2(M,e^{-\varphi}\,d\mathrm{vol}_g)$$. (This holds whenever $$\varphi$$ is confining in the Bakry–Émery sense: e.g. $$\operatorname{Ric}_g+\operatorname{Hess}\varphi\ge K$$ and $$\varphi(x)\to+\infty$$ as $$x\to\infty$$.) Let $$\set{f^i} _{i=0}^\infty$$ be an orthonormal eigenbasis,
+in $$L^2(M,e^{-\varphi}\ d\mathrm{vol}_g)$$. (This holds whenever $$\varphi$$ is confining in the Bakry–Émery sense: e.g. $$\operatorname{Ric}_g+\operatorname{Hess}\varphi\ge K$$ and $$\varphi(x)\to+\infty$$ as $$x\to\infty$$.) Let $$\set{f^i} _{i=0}^\infty$$ be an orthonormal eigenbasis,
 
 $$L_\varphi f^i=\nu_i f^i,\qquad
-\int_M f^i\overline{f^j}\,e^{-\varphi}\,d\mathrm{vol}_g=\delta^{ij},$$
+\int_M f^i\overline{f^j}\ e^{-\varphi}\ d\mathrm{vol}_g=\delta^{ij},$$
 
 ordered by nondecreasing eigenvalues, and set
 
-$$W^{i,j,k}:=\int_M f^i f^j\overline{f^k}\,e^{-\varphi}\,d\mathrm{vol}_g=\langle f^if^j,f^k\rangle_{L^2(e^{-\varphi}\mathrm{vol})}.$$
+$$W^{i,j,k}:=\int_M f^i f^j\overline{f^k}\ e^{-\varphi}\ d\mathrm{vol}_g=\langle f^if^j,f^k\rangle_{L^2(e^{-\varphi}\mathrm{vol})}.$$
 
 Let $$(N,h,\psi)$$ be a second such triple, with Witten operator $$L_\psi$$ isospectral to $$L_\varphi$$, and suppose there is an eigenbasis $$\{u^i\}$$ of $$L_\psi$$ with the same eigenvalues and
 
-$$\int_N u^i u^j\overline{u^k}\,e^{-\psi}\,d\mathrm{vol}_h=W^{i,j,k}
+$$\int_N u^i u^j\overline{u^k}\ e^{-\psi}\ d\mathrm{vol}_h=W^{i,j,k}
 \quad\text{for all }i,j,k.$$
 
 Then there exists a diffeomorphism $$F:N\to M$$ such that
@@ -288,10 +288,10 @@ With $$\phi = -2 \log \psi_0$$ and $$v\cdot w$$ the Riemannian inner product on 
 
 ```math
 f_n=\frac{\psi_n}{\psi_0},\qquad
- M_L^{i,j,k}=\int\frac{\psi_i\psi_j\psi_k}{\psi_0}\,d\mathrm{vol},\\
+ M_L^{i,j,k}=\int\frac{\psi_i\psi_j\psi_k}{\psi_0}\ d\mathrm{vol},\\
 \begin{aligned}
-\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)M_L^{i,j,k}\,f_k = -df_i \cdot df_j,\\
-\Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 M_L^{i,j,k}\,f_k\implies\\
+\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)M_L^{i,j,k}\ f_k = -df_i \cdot df_j,\\
+\Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 M_L^{i,j,k}\ f_k\implies\\
 \Gamma_{2,L}(f)&=\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2+\operatorname{Ric}(\nabla f,\nabla f) + \operatorname{Hess}\phi(\nabla f, \nabla f).
 \end{aligned}
 ```
@@ -301,11 +301,11 @@ For a confining Schrödinger operator as in the Theorem, the isometric type of $
 With $$f_n=\psi_n/\psi_0$$ and $$d\mu=\psi_0^2\ dx$$,
 
 $$M_L^{i,j,k}=\int_{\mathbb{R}}\frac{\psi_i\psi_j\psi_k}{\psi_0}\ dx
-=\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\,e^{-x^2}\ dx.$$
+=\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\ e^{-x^2}\ dx.$$
 
 Titchmarsh then collapses to
 
-$$M_L^{i,j,k} = \frac{\sqrt{i!\,j!\,k!}}{(s-i)!(s-j)!(s-k)!} \quad\text{when }i+j+k=2s\text{ and }s\ge i,j,k,$$
+$$M_L^{i,j,k} = \frac{\sqrt{i!\ j!\ k!}}{(s-i)!(s-j)!(s-k)!} \quad\text{when }i+j+k=2s\text{ and }s\ge i,j,k,$$
 
 and $$0$$ otherwise. In particular $$M_L^{0,n,n}=1$$, which is orthonormality of $$\{\psi_n\}$$ in $$L^2(dx)$$.
 
