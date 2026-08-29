@@ -289,12 +289,26 @@ As these structure constants are non-negative on a multiplicity-1 spectrum, they
 On a complete hyperbolic surface, $H_\alpha=-\Delta+\alpha|\iota|^2$ for a proper isometric embedding $\iota$ has discrete spectrum for every $\alpha>0$. If $\operatorname{Hess}|\iota|^2\ge 2\kappa_0 g$ with $\kappa_0>0$, then $\lambda_1-\lambda_0\ge 2\sqrt{\alpha\kappa_0}$. If only $\operatorname{Ric}=-g$ is assumed, the gap may be $o(1)$ as $\alpha\to 0$ and is $\Theta(\sqrt{\alpha})$ as $\alpha\to\infty$.
 \end{claim}
 \begin{proof}
-Take $V_0:=|\iota|^2,\,H_\alpha=-\Delta_g+\alpha V_0,\,\alpha>0;$ then Bakry–Émery for the ground-state diffusion
+Take $V_0:=|\iota|^2,\,H_\alpha=-\Delta_g+\alpha V_0,\,\alpha>0;$ properness of $\iota$ makes $V_0$ proper, so $H_\alpha$ is essentially self-adjoint on $C_c^\infty(\Sigma)$ and
+$$\sigma(H_\alpha)=\sigma_{\mathrm{disc}}(H_\alpha)=\{\lambda_0(\alpha)<\lambda_1(\alpha)\le\cdots\}\to+\infty.$$
+
+Write $\gamma(\alpha):=\lambda_1(\alpha)-\lambda_0(\alpha)$.
+The extrinsic Hessian is
+$$\operatorname{Hess}_g V_0=2g+2\langle\iota,\mathrm{II}\rangle.$$
+
+Define
+$$\kappa_0:=\tfrac12\inf_\Sigma\operatorname{spec}(\operatorname{Hess}_g V_0)
+=\inf_\Sigma\bigl(1+\langle\iota,\mathrm{II}(\cdot,\cdot)\rangle_{\mathrm{min}}\bigr)\in[-\infty,1].$$
+Then $\operatorname{Hess}_g(\alpha V_0)\ge 2(\alpha\kappa_0)\,g$ wherever $\kappa_0$ is finite. On a hyperbolic surface $\kappa_0$ need not be positive: $\mathrm{II}$ can point against $\iota$.
+
+Bakry–Émery for the ground-state diffusion
 $$L_\alpha=(\psi_0^\alpha)^{-1}(H_\alpha-\lambda_0(\alpha))(\psi_0^\alpha\cdot)
 =-\Delta_g-2\langle\nabla\log\psi_0^\alpha,\nabla\rangle$$
 is
 $$\operatorname{Ric}_{L_\alpha}=-g+\operatorname{Hess}_g\varphi_\alpha,\qquad
 \varphi_\alpha=-2\log\psi_0^\alpha.$$
+
+
 A lower bound $\operatorname{Ric}_{L_\alpha}\ge K(\alpha)\,g$ implies $\gamma(\alpha)\ge K(\alpha)$. For large $\alpha$, $\psi_0^\alpha$ concentrates where $V_0$ is minimal and
 $$\operatorname{Hess}\varphi_\alpha\sim\sqrt{\alpha}\,\operatorname{Hess}(\text{local quadratic of }V_0).$$
 Thus
