@@ -132,7 +132,7 @@ $$\mathcal{S}_\varphi:=\bigoplus_{n=0}^\infty\ker(L_\varphi-\nu_n)\subset L^2(M,
 The same data $(N,h,\psi)$ produce $L_\psi$ and $\mathcal{S}_\psi$.
 The invariant is the weighted triple form
 $$\Phi_\varphi:\mathcal{S}_\varphi\times\mathcal{S}_\varphi\times\mathcal{S}_\varphi\to\mathbb{C},\qquad
-\Phi_\varphi(u,v,w)=\int_M u\,v\,\overline{w}\,e^{-\varphi}\,d\mathrm{vol}_g.$$
+\Phi_\varphi(u,v,w)=\int_M u\,v\,w\,e^{-\varphi}\,d\mathrm{vol}_g.$$
 A linear map $U:\mathcal{S}_\varphi\to\mathcal{S}_\psi$ is a spectral identification if it is unitary for the weighted $L^2$ inner products and
 $$U\bigl(\ker(L_\varphi-\nu_n)\bigr)=\ker(L_\psi-\nu_n)\qquad\text{for every }n.$$
 
