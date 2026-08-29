@@ -139,6 +139,7 @@ A linear map $U:\mathcal{S}_\varphi\to\mathcal{S}_\psi$ is a spectral identifica
 $$U\bigl(\ker(L_\varphi-\nu_n)\bigr)=\ker(L_\psi-\nu_n)\qquad\text{for every }n.$$
 
 \begin{corollary}
+\label{coro}
 Let $(M,g,\varphi)$ and $(N,h,\psi)$ be as above, and assume $L_\varphi$ and $L_\psi$ are isospectral. If there exists a spectral identification $U:\mathcal{S}_\varphi\to\mathcal{S}_\psi$ such that
 $$\Phi_\psi(Uu,Uv,Uw)=\Phi_\varphi(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{S}_\varphi,$$
 then there is a diffeomorphism $F:N\to M$ with
@@ -147,7 +148,7 @@ for a constant $c\in\mathbb{R}$. In particular the weighted manifolds $(M,g,e^{-
 \end{corollary}
 In basis coordinates, we again have
 \begin{corollary}
-\label{coro}
+\label{coro-2}
 The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f^i\}$ of $L_\varphi$ and $\{u^i\}$ of $L_\psi$, ordered by nondecreasing eigenvalues, with
 $$\int_M f^i f^j\overline{f^k}\,e^{-\varphi}\,d\mathrm{vol}_g
 =\int_N u^i u^j\overline{u^k}\,e^{-\psi}\,d\mathrm{vol}_h
@@ -168,7 +169,7 @@ $$\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N),\qquad e^i\mapsto f^i$$
 is an algebra homomorphism for pointwise multiplication (the constant function is a multiple of the ground state only if $V$ is constant; in general $\vec F$ need not send $1$ to $1$, but it preserves the product of any two functions that can be so expanded).
 This is identical to the compact calculation; the only extra ingredient is that the eigenfunction expansion of a compactly supported smooth function still converges rapidly enough for the triple-product formula to be justified (which follows from the same elliptic estimates that give $\lambda_i^{N}\|e^i\|_\infty\to 0$ locally, plus Agmon decay at infinity).
 
-\section{Proof of Second Theorem}
+\section{Proof of Theorems}
 \begin{proof}
 (Following \cite{JS24}) For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $\vec{F}$ from Schwartz class functions $\mathcal{S}(M)$ to $\mathcal{S}(N)$ (defined as the intersection of the Sobolev spaces for elliptic $H$) and note that from the calculations in Section~\ref{sec:pre} above, $\vec{F}$ preserves pointwise products for such smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
 
@@ -198,7 +199,7 @@ The zeroth-order terms then give $V\circ F=W$.
 This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a consequence of Theorem~\ref{thm-2} and Remark~\ref{rmk}.
 \end{proof}
 
-\begin{subproof}{Sketch of Proof of Corollary}
+\begin{subproof}[Proof of Corollary~\ref{coro}]
 Assume a spectral identification $U:\mathcal{S}_\varphi\to\mathcal{S}_\psi$ with
 $$\Phi_\psi(Uu,Uv,Uw)=\Phi_\varphi(u,v,w).$$
 Pointwise products expand in the weighted eigenbasis by $\Phi_\varphi$, so $U(fg)=U(f)U(g)$ on finite combinations. The same cutoff argument as Lemma 7, using sublevel sets of $\varphi$ (or of a confining exhaustion), shows $U$ preserves $\|\cdot\|_\infty$ and extends to a $*$-isomorphism
@@ -213,6 +214,8 @@ The first-order terms are the drifts:
 $$L_\varphi=-\Delta_g+\mathrm{grad}_g\varphi\,\lrcorner\,d,\qquad
 L_\psi=-\Delta_h+\mathrm{grad}_h\psi\,\lrcorner\,d.$$
 Pulling back gives $d\psi=F^*d\varphi$, so $\psi=\varphi\circ F+c$.
+
+This completes the proof. Corollary~\ref{coro-2} is a coordinate restatement of it, so no additional proof provided.
 \end{subproof}
 
 \section{Example}
