@@ -98,7 +98,7 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}.
 Another closed Riemannian manifold $(N,h)$ is isometric to $(M,g)$ if and only if it is isospectral to $(M,g)$ and admits an orthonormal eigenbasis of $\Delta_N$ with the same eigenvalues and the same triple products $M^{i,j,k}$.
 \end{theorem}
 
-It is important to recognize $M^{i,j,k}$ is not basis-invariant: there is a natural unitary change-of-basis action on it discussed in detail after the proof of Theorem~\ref{thm}. The discussion incorporates certain sets of basis-invariant singular values that one might form a general conjecture around, which claims that ordered set of singular values completely characterizes the set of isospectral manifolds.
+It is important to recognize $M^{i,j,k}$ is not basis-invariant: there is a natural unitary change-of-basis action on it discussed in detail after the proof of Theorem~\ref{thm}. The discussion incorporates certain sets of basis-invariant singular values that one might form a general conjecture around, which claims that the ordered set of singular values completely characterizes the set of isospectral manifolds.
 
 Regardless of the sufficiency half of the general conjecture, necessity is always the case. Which means these collections of singular values defined by $M^{i,j,k}$ and associated to every eigenspace triple are a new set of Riemannian \textbf{invariants}.
 
