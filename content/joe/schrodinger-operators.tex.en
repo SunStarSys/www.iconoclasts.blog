@@ -219,7 +219,7 @@ H_j\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)
 H_k\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)\,e^{-y^2}\,dy.$$
 Each scaled polynomial expands by the finite identity
 $$H_n(\gamma y)=\sum_{\ell=0}^{\lfloor n/2\rfloor}\gamma^{n-2\ell}(\gamma^2-1)^\ell\binom{n}{2\ell}\frac{(2\ell)!}{\ell!}\,H_{n-2\ell}(y),$$
-with $\gamma=\sqrt{2/3}$. The product of the three expansions is a finite linear combination of products $H_a H_b H_c$. Titchmarsh’s formula then evaluates every remaining integral:
+with $\gamma=\sqrt{2/3}$. The product of the three expansions is a finite linear combination of products $H_a H_b H_c$. Titchmarsh’s formula \cite{T48} then evaluates every remaining integral:
 $$\int_{\mathbb{R}}H_a H_b H_c\,e^{-y^2}\,dy
 =
 \begin{cases}
@@ -274,7 +274,7 @@ For a Schr\"odinger operator as in the Theorem~\ref{thm}, the isometric type of 
 With $f_n=\psi_n/\psi_0$ and $d\mu=\psi_0^2\,dx$,
 $$M_L^{i,j,k}=\int_{\mathbb{R}}\frac{\psi_i\psi_j\psi_k}{\psi_0}\,dx
 =\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\,e^{-x^2}\,dx.$$
-Titchmarsh then collapses to
+Titchmarsh \cite{T48} then collapses to
 $$M_L^{i,j,k}
 =
 \frac{\sqrt{i!\,j!\,k!}}{(s-i)!(s-j)!(s-k)!}
