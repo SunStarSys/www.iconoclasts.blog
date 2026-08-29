@@ -82,7 +82,7 @@ there is an orthonormal basis $\{e^i\}_{i=0}^\infty\subset L^2(M,d\mathrm{vol}_g
 (The same conclusions hold for $-\Delta_g$ itself on some complete manifolds of finite volume with no continuous spectrum, but the confining potential makes the analysis cleaner.)
 Define the triple products exactly as in the compact case:
 $$M^{i,j,k}:=\langle e^i e^j,e^k\rangle_{L^2}=\int_M e^i e^j\,\overline{e^k}\,d\mathrm{vol}_g.$$
-Because the eigenfunctions are Schwartz-class at infinity in the sense that they decay faster than any polynomial in $V$ (Agmon estimates \cite{Agmon1982}/ weighted Sobolev \cite{TaylorPDE1}), the products $e^i e^j$ lie in $L^2$ and the integrals converge absolutely.
+Because the eigenfunctions are Schwartz-class at infinity in the sense that they and their derivatives decay faster than any polynomial in $V$ (Agmon estimates \cite{Agmon1982}/ weighted Sobolev \cite{TaylorPDE1} expressed in terns of $H$), the products $e^i e^j$ lie in $L^2$ and the integrals converge absolutely.
 
 \subsection{Results}
 \label{subsec:res}
@@ -132,7 +132,7 @@ This is identical to the compact calculation; the only extra ingredient is that 
 
 \section{Proof of Theorem}
 \begin{proof}
-(Following \cite{JS24}) For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $\vec{F}$ from Schwartz class functions $\mathcal{S}^\infty(M)$ to $\mathcal{S}^\infty(N)$ and note that from the calculations in Section~\ref{sec:pre} above, $\vec{F}$ preserves pointwise products for such smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
+(Following \cite{JS24}) For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $\vec{F}$ from Schwartz class functions $\mathcal{S}(M)$ to $\mathcal{S}(N)$ (defined as the intersection of the Sobolev norms for elliptic $H$) and note that from the calculations in Section~\ref{sec:pre} above, $\vec{F}$ preserves pointwise products for such smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
 
 \begin{lemma}
 \label{lma}
