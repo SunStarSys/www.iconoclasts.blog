@@ -84,12 +84,34 @@ Define the triple products exactly as in the compact case:
 $$M^{i,j,k}:=\langle e^i e^j,e^k\rangle_{L^2}=\int_M e^i e^j\,\overline{e^k}\,d\mathrm{vol}_g.$$
 Because the eigenfunctions are Schwartz-class at infinity in the sense that they and their derivatives decay faster than any polynomial in $V$ (Agmon estimates \cite{Agmon1982}/ weighted Sobolev \cite{TaylorPDE1} expressed in terms of $H$), the products $e^i e^j$ lie in $L^2$ and the integrals converge absolutely.
 
+Now let
+$$\mathcal{S}_M:=\bigoplus_{n=0}^\infty\ker(H_M-\lambda_n)$$
+be the algebraic direct sum of the eigenspaces (a dense subspace of $L^2(M,d\mathrm{vol}_g)$, contained in $\mathcal{S}(M)\cap C_0(M)$ by elliptic regularity and Agmon decay). The same data $(N,h,W)$ produce $H_N$ and $\mathcal{S}_N$.
+
+Pointwise multiplication and the $L^2$ inner product assemble into a Hermitian trilinear form on the spectral subspace,
+$$\Phi_M:\mathcal{S}_M\times\mathcal{S}_M\times\mathcal{S}_M\to\mathbb{C},\qquad
+\Phi_M(u,v,w)=\int_M u\,v\,\overline{w}\,d\mathrm{vol}_g.$$
+Equivalently, $\Phi_M$ is the family of multiplication maps
+$$\mu_{\lambda,\mu}^\nu:\ker(H_M-\lambda)\otimes\ker(H_M-\mu)\longrightarrow\ker(H_N-\nu)$$
+obtained by projecting $uv$ onto the $\nu$-eigenspace. Neither object names a basis.
+A linear map $U:\mathcal{S}_M\to\mathcal{S}_N$ is a \textbf{spectral identification} if it is unitary for the $L^2$ inner products and
+$$U\bigl(\ker(H_M-\lambda_n)\bigr)=\ker(H_N-\lambda_n)\qquad\text{for every }n.$$
+(Existence of some spectral identification is exactly isospectrality with matching multiplicities.)
+
 \subsection{Results}
 \label{subsec:res}
 
 \begin{theorem}
 \label{thm}
 
+Let $(M,g,V)$ and $(N,h,W)$ be as above, and suppose $H_M$ and $H_N$ are isospectral. If there exists a spectral identification $U:\mathcal{S}_M\to\mathcal{S}_N$ that intertwines the triple forms,
+$$\Phi_N(Uu,Uv,Uw)=\Phi_M(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{S}_M,$$
+then there is a diffeomorphism $F:N\to M$ with
+$$F^*g=h\qquad\text{and}\qquad V\circ F=W.$$
+
+\end{theorem}
+
+\begin{theorem}
 Let $(M,g,V)$ and $(N,h,W)$ be two such data, with isospectral Schrödinger operators $H_M$ and $H_N$. Suppose there exist orthonormal eigenbases $\{e^i\}$ of $H_M$ and $\{f^i\}$ of $H_N$, ordered by non-decreasing eigenvalues, such that
 \begin{equation}
 M_M^{i,j,k}=M_N^{i,j,k}\qquad\forall\qquad i,j,k.
