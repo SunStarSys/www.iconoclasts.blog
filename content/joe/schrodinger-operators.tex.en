@@ -252,7 +252,7 @@ $$\begin{aligned}
 &=-\frac12\sum_k[(\lambda_k-\lambda_i-\lambda_j)M^{i,j,k} +\int V e^i e^j \bar e^k\, dx]\, e^k.
 \end{aligned}$$
 
-Ground-state conjugation repairs the $V$ defect: if $H\psi=E_0\psi$ with $\psi>0$, then
+Ground-state conjugation repairs the $V$ defect: if $H\psi=\lambda_0\psi$ with $\psi>0$, then
 $$L:=\psi^{-1}(H-\lambda_0)(\psi\,\cdot\,)=-\Delta-2\langle\nabla\log\psi,\nabla\,\cdot\,\rangle$$
 is a diffusion, and its Bakry–Émery tensor is $\operatorname{Ric}-2\operatorname{Hess}\log\psi$. For the harmonic oscillator the ground state is a Gaussian, $\log\psi_0=-x^2/2+\mathrm{const}$, and one recovers exactly $\mathrm{BE}(2,\infty)$ for this renormalized Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator.
 
