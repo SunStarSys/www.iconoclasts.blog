@@ -261,25 +261,25 @@ With $\phi =- 2 \log \psi_0$ and $v\cdot w$ the Riemannian cometric, let us writ
 \begin{equation}
 \begin{aligned}
 f_n&=\frac{\psi_n}{\psi_0},\qquad
- W_L^{i,j,k}=\int\frac{\psi_i\psi_j\psi_k}{\psi_0}\,d\mathrm{vol},\\
-\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)W_L^{i,j,k}\,f_k = -df_i \cdot df_j\\
-\Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 W_L^{i,j,k}\,f_k\implies\\
+ W^{i,j,k}=\int\frac{\psi_i\psi_j\psi_k}{\psi_0}\,d\mathrm{vol},\\
+\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)W^{i,j,k}\,f_k = -df_i \cdot df_j\\
+\Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 W^{i,j,k}\,f_k\implies\\
 \Gamma_{2,L}(f)&=\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2+\operatorname{Ric}(\nabla f,\nabla f) + \operatorname{Hess}\phi(\nabla f, \nabla f).
 \end{aligned}
 \end{equation}
 
-For a Schr\"odinger operator as in the Theorem~\ref{thm}, the isometric type of $(M,g,V)$ is encoded in the diffusion data $(\{\lambda_n-\lambda_0\},\{W_L^{i,j,k}\})$, because $\Gamma_L$ is the cometric and $\psi_0$ recovers $V$ by Riccati.
+For a Schr\"odinger operator as in the Theorem~\ref{thm}, the isometric type of $(M,g,V)$ is encoded in the diffusion data $(\{\lambda_n-\lambda_0\},\{W^{i,j,k}\})$, because $\Gamma_L$ is the cometric and $\psi_0$ recovers $V$ by Riccati.
 
 \subsection{Returning to Harmonic Oscillator Example}
 With $f_n=\psi_n/\psi_0$ and $d\mu=\psi_0^2\,dx$,
-$$W_L^{i,j,k}=\int_{\mathbb{R}}\frac{\psi_i\psi_j\psi_k}{\psi_0}\,dx
+$$W^{i,j,k}=\int_{\mathbb{R}}\frac{\psi_i\psi_j\psi_k}{\psi_0}\,dx
 =\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\,e^{-x^2}\,dx.$$
 Titchmarsh \cite{T48} then collapses to
-$$W_L^{i,j,k}
+$$W^{i,j,k}
 =
 \frac{\sqrt{i!\,j!\,k!}}{(s-i)!(s-j)!(s-k)!}
 \quad\text{when }i+j+k=2s\text{ and }s\ge i,j,k,$$
-and $0$ otherwise. In particular $W_L^{0,n,n}=1$, which is orthonormality of $\{\psi_n\}$ in $L^2(dx)$.
+and $0$ otherwise. In particular $W^{0,n,n}=1$, which is orthonormality of $\{\psi_n\}$ in $L^2(dx)$.
 
 As these structure constants are non-negative on a multiplicity-1 spectrum, they are the associated singular-value invariants \cite{JS24} for $L$.
 \doclicenseThis
