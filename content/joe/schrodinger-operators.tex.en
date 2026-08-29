@@ -89,7 +89,7 @@ be the algebraic direct sum of the eigenspaces (a dense subspace of $L^2(M,d\mat
 
 Pointwise multiplication and the $L^2$ inner product assemble into a Hermitian trilinear form on the spectral subspace,
 $$\Phi_M:\mathcal{S}_M\times\mathcal{S}_M\times\mathcal{S}_M\to\mathbb{C},\qquad
-\Phi_M(u,v,w)=\int_M u\,v\,\overline{w}\,d\mathrm{vol}_g.$$
+\Phi_M(u,v,w)=\int_M u\,v\,w\,d\mathrm{vol}_g.$$
 Equivalently, $\Phi_M$ is the family of multiplication maps
 $$\mu_{\lambda,\mu}^\nu:\ker(H_M-\lambda)\otimes\ker(H_M-\mu)\longrightarrow\ker(H_M-\nu)$$
 obtained by projecting $uv$ onto the $\nu$-eigenspace. Neither object names a basis.
@@ -121,7 +121,7 @@ $$M_M^{i,j,k}=M_N^{i,j,k}\qquad\text{for all }i,j,k.$$
 \begin{remark}
 \label{rmk}
 Theorem~\ref{thm-2} is the matrix form of Theorem~\ref{thm}. Given such bases, the map $Ue^i=f^i$ is a spectral identification, and
-$$M^{i,j,k}=\Phi(e^i,e^j,e^k),$$
+$$M^{i,j,k}=\Phi(e^i,e^j,\bar e^k),$$
 so matching the arrays $\{M^{i,j,k}\}$ is matching $\Phi$ on those bases. Conversely, any spectral identification that intertwines $\Phi$ becomes Theorem 2 after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,V)$ with $(N,h,W)$.
 \end{remark}
 
