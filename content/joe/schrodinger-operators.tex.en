@@ -120,6 +120,7 @@ $$M_M^{i,j,k}=M_N^{i,j,k}\qquad\text{for all }i,j,k.$$
 \end{theorem}
 
 \begin{remark}
+\label{rmk}
 Theorem~\ref{thm-2} is the matrix form of Theorem~\ref{thm}. Given such bases, the map $Ue^i=f^i$ is a spectral identification, and
 $$M^{i,j,k}=\Phi(e^i,e^j,e^k),$$
 so matching the arrays $\{M^{i,j,k}\}$ is matching $\Phi$ on those bases. Conversely, any spectral identification that intertwines $\Phi$ becomes Theorem 2 after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,V)$ with $(N,h,W)$.
@@ -195,7 +196,7 @@ Writing $H=-\Delta+V$ in local coordinates, the principal symbol of $H$ is the s
 $$F^*g=h.$$
 The zeroth-order terms then give $V\circ F=W$.
 
-This completes the proof of the Theorem.
+This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a consequence of Theorem~\ref{thm} and Remark~\ref{rmk}.
 \end{proof}
 
 \begin{subproof}[Sketch of Proof of Second Corollary~\ref{coro}]
