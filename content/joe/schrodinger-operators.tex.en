@@ -148,21 +148,10 @@ for a constant $c\in\mathbb{R}$. In particular the weighted manifolds $(M,g,e^{-
 In basis coordinates, we again have
 \begin{corollary}
 \label{coro}
-Let $(M,g)$ be a complete connected Riemannian manifold and $\varphi\in C^\infty(M)$ a weight such that the Witten operator
-$$L_\varphi u=-\Delta_g u+\langle\nabla\varphi,\nabla u\rangle$$
-is essentially self-adjoint and bounded below on $C_c^\infty(M)$, with
-$$\sigma(L_\varphi)=\sigma_{\mathrm{disc}}(L_\varphi)=\{\nu_0=0<\nu_1\le\nu_2\le\cdots\}\to+\infty$$
-in $L^2(M,e^{-\varphi}\,d\mathrm{vol}_g)$. (This holds whenever $\varphi$ is confining in the Bakry–Émery sense: e.g. $\operatorname{Ric}_g+\operatorname{Hess}\varphi\ge K$ and $\varphi(x)\to+\infty$ as $x\to\infty$.) Let $\{f^i\}_{i=0}^\infty$ be an orthonormal eigenbasis,
-$$L_\varphi f^i=\nu_i f^i,\qquad
-\int_M f^i\overline{f^j}\,e^{-\varphi}\,d\mathrm{vol}_g=\delta^{ij},$$
-ordered by nondecreasing eigenvalues, and set
-$$W^{i,j,k}:=\int_M f^i f^j\overline{f^k}\,e^{-\varphi}\,d\mathrm{vol}_g=\langle f^if^j,f^k\rangle_{L^2(e^{-\varphi}\mathrm{vol})}.$$
-Let $(N,h,\psi)$ be a second such triple, with Witten operator $L_\psi$ isospectral to $L_\varphi$, and suppose there is an eigenbasis $\{u^i\}$ of $L_\psi$ with the same eigenvalues and
-$$\int_N u^i u^j\overline{u^k}\,e^{-\psi}\,d\mathrm{vol}_h=W^{i,j,k}
-\quad\text{for all }i,j,k.$$
-Then there exists a diffeomorphism $F:N\to M$ such that
-$$F^*g=h,\qquad \psi=\varphi\circ F+\log \frac{\mu(M)}{\mu(N)}.$$
-In particular the weighted Riemannian manifolds $(M,g,e^{-\varphi}\mathrm{vol}_g)$ and $(N,h,e^{-\psi}\mathrm{vol}_h)$ are isometric.
+The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f^i\}$ of $L_\varphi$ and $\{u^i\}$ of $L_\psi$, ordered by nondecreasing eigenvalues, with
+$$\int_M f^i f^j\overline{f^k}\,e^{-\varphi}\,d\mathrm{vol}_g
+=\int_N u^i u^j\overline{u^k}\,e^{-\psi}\,d\mathrm{vol}_h
+\qquad\text{for all }i,j,k.$$
 \end{corollary}
 
 \begin{remark}
