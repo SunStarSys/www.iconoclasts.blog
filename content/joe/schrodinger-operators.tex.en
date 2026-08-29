@@ -118,8 +118,8 @@ $$M_M^{i,j,k}=M_N^{i,j,k}\qquad\text{for all }i,j,k.$$
 \begin{remark}
 \label{rmk}
 Theorem~\ref{thm-2} is the matrix form of Theorem~\ref{thm}. Given such bases, the map $Ue^i=f^i$ is a spectral identification, and
-$$M^{i,j,k}=\Phi(e^i,e^j,\bar e^k),$$
-so matching the arrays $\{M^{i,j,k}\}$ is matching $\Phi$ on those bases. Conversely, any spectral identification that intertwines $\Phi$ becomes Theorem 2 after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,V)$ with $(N,h,W)$.
+$$M^{i,j,k}=\Phi(e^i,e^j,\bar{e}^k).$$
+Conversely, any spectral identification that intertwines $\Phi$ becomes Theorem~\ref{thm-2} after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,V)$ with $(N,h,W)$.
 \end{remark}
 
 Let $(M,g)$ be complete and connected, and let $\varphi\in C^\infty(M)$ be confining in the Bakry–Émery sense, so that the Witten operator
