@@ -153,7 +153,7 @@ $$\vec F(\phi)=\phi\circ F$$
 on the eigenbasis, hence on all finite combinations. Therefore
 $$H_N(\phi\circ F)=(H_M\phi)\circ F$$
 for every eigenfunction $\phi$, and by density for every Schwartz-class function. In particular $F$ pulls eigenfunctions of $H_M$ back to eigenfunctions of $H_N$ with the same eigenvalues.
-Writing $H=-\Delta+V$ in local coordinates, the principal symbol of $H$ is the same as that of $-\Delta$, namely the cometric $g_{ij}\xi^i\xi^j$. An elliptic operator that is intertwined by a diffeomorphism has its principal symbol pulled back. Hence
+Writing $H=-\Delta+V$ in local coordinates, the principal symbol of $H$ is the same as that of $-\Delta$, namely the cometric $g^{ij}\xi_i\xi_j$. An elliptic operator that is intertwined by a diffeomorphism has its principal symbol pulled back. Hence
 $$F^*g=h.$$
 The zeroth-order terms then give $V\circ F=W$.
 
