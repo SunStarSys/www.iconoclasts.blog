@@ -199,8 +199,21 @@ The zeroth-order terms then give $V\circ F=W$.
 This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a consequence of Theorem~\ref{thm} and Remark~\ref{rmk}.
 \end{proof}
 
-\begin{subproof}[Sketch of Proof of Second Corollary~\ref{coro}]
-Regularity of the Witten eigenbases and corresponding $W^{i,j,k}$ follows from the unitary equivalence to the Schr\"odinger case via $H=e^{-\varphi/2}L_\varphi e^{\varphi/2}$, whose potential is $V=\frac14\lvert\nabla\varphi\rvert^2-\frac12\Delta\varphi$ (up to the additive $\lambda_0$). The rest is a rehash of the Gelfand-Naimark construction on the Witten eigenbases.
+\begin{subproof}{Sketch of Proof of Corollary}
+Assume a spectral identification $U:\mathcal{S}_\varphi\to\mathcal{S}_\psi$ with
+$$\Phi_\psi(Uu,Uv,Uw)=\Phi_\varphi(u,v,w).$$
+Pointwise products expand in the weighted eigenbasis by $\Phi_\varphi$, so $U(fg)=U(f)U(g)$ on finite combinations. The same cutoff argument as Lemma 7, using sublevel sets of $\varphi$ (or of a confining exhaustion), shows $U$ preserves $\|\cdot\|_\infty$ and extends to a $*$-isomorphism
+$$U:C_0(M)\supset\overline{\mathcal{S}_\varphi}^{\,\infty}\longrightarrow
+\overline{\mathcal{S}_\psi}^{\,\infty}\subset C_0(N).$$
+Gelfand–Naimark gives a homeomorphism $F:N\to M$ with $Uf=f\circ F$. Eigenfunctions are smooth and vanish at infinity, so $F$ is smooth as in the Schrödinger case.
+By construction $U$ intertwines the operators, so
+$$L_\psi(u\circ F)=(L_\varphi u)\circ F,\qquad u\in\mathcal{S}_\varphi.$$
+Both operators are second-order elliptic with principal symbol the cometric, hence
+$$F^*g=h.$$
+The first-order terms are the drifts:
+$$L_\varphi=-\Delta_g+\mathrm{grad}_g\varphi\,\lrcorner\,d,\qquad
+L_\psi=-\Delta_h+\mathrm{grad}_h\psi\,\lrcorner\,d.$$
+Pulling back gives $d\psi=F^*d\varphi$, so $\psi=\varphi\circ F+c$.
 \end{subproof}
 
 \section{Example}
