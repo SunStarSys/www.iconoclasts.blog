@@ -242,9 +242,9 @@ and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric 
 
 \section{Gamma Calculus}
 By definition \cite{BE85}
-$$\Gamma(f,g):=\frac12\bigl(H(fg)-f\,Hg-g\,Hf\bigr).$$
+$$\Gamma_H(f,g):=\frac12\bigl(H(fg)-f\,Hg-g\,Hf\bigr).$$
 On basis vectors this is already diagonal in the spectrum:
-$$\Gamma(e^i,e^j)=\frac12\sum_k(\lambda_k-\lambda_i-\lambda_j)\,M^{i,j,k}\,e^k.$$
+$$\Gamma_H(e^i,e^j)=\frac12\sum_k(\lambda_k-\lambda_i-\lambda_j)\,M^{i,j,k}\,e^k.$$
 Hence
 $$\begin{aligned}
 \langle\nabla e^i,\nabla e^j\rangle
