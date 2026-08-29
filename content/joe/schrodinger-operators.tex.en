@@ -92,7 +92,7 @@ Pointwise multiplication and the $L^2$ inner product assemble into a Hermitian t
 $$\Phi_M:\mathcal{S}_M\times\mathcal{S}_M\times\mathcal{S}_M\to\mathbb{C},\qquad
 \Phi_M(u,v,w)=\int_M u\,v\,\overline{w}\,d\mathrm{vol}_g.$$
 Equivalently, $\Phi_M$ is the family of multiplication maps
-$$\mu_{\lambda,\mu}^\nu:\ker(H_M-\lambda)\otimes\ker(H_M-\mu)\longrightarrow\ker(H_N-\nu)$$
+$$\mu_{\lambda,\mu}^\nu:\ker(H_M-\lambda)\otimes\ker(H_M-\mu)\longrightarrow\ker(H_M-\nu)$$
 obtained by projecting $uv$ onto the $\nu$-eigenspace. Neither object names a basis.
 A linear map $U:\mathcal{S}_M\to\mathcal{S}_N$ is a \textbf{spectral identification} if it is unitary for the $L^2$ inner products and
 $$U\bigl(\ker(H_M-\lambda_n)\bigr)=\ker(H_N-\lambda_n)\qquad\text{for every }n.$$
