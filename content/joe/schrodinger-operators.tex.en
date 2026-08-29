@@ -284,8 +284,8 @@ and $0$ otherwise. In particular $W^{0,n,n}=1$, which is orthonormality of $\{\p
 
 As these structure constants are non-negative on a multiplicity-1 spectrum, they are the associated singular-value invariants \cite{JS24} for $L$.
 
-\subsection{Schr\"odinger and Hyperbolic Surfaces}
-Consider the Schr\"odinger Operator family over $Y(1)=(\Gamma = SL(2,\mathbb{Z}))\backslash\mathbb{H}$ parametrized by $\alpha > 0$:
+\section{Schr\"odinger and Hyperbolic Surfaces}
+As an illustrative example, consider the Schr\"odinger Operator family over $Y(1)=(\Gamma = SL(2,\mathbb{Z}))\backslash\mathbb{H}$ parametrized by $\alpha > 0$:
 $$H_\alpha=-\Delta_g+\alpha y^2,\qquad
 M^{i,j,k}(\alpha)=\int_{Y(1)}e^i_\alpha e^j_\alpha\overline{e^k_\alpha}\,d\mathrm{vol}.$$
 
@@ -314,7 +314,7 @@ unless the total winding of the three leading cusp modes can cancel. If one trun
 There is no exact vanishing $M^{i,j,k}=0$ from $\lambda_i+\lambda_j-\lambda_k$; the potential $\alpha y^2$ breaks the pure hyperbolic selection rules of Maass-form triple products.
 
 The spectrum of $H_\alpha$ is simple for generic $\alpha$ (no extra symmetry beyond the involution $x\mapsto-x$). Products $M^{i,i,k}(\alpha)$ fix signs. The involution does produce even/odd sectors; so we must restrict the diagonal litmus test in \cite{JS24} to each sector or use real even/odd bases.
-As $\alpha\to\infty$, the eigenfunctions look like oscillator states on the tangent plane. Then $M^{i,j,k}(\alpha)$ approach the Hermite triple products of the 2D oscillator (Titchmarsh), times $\alpha^{1/4}$ Jacobian factors from the local chart.
+As $\alpha\to\infty$, the eigenfunctions look like oscillator states on the tangent plane. Then $M^{i,j,k}(\alpha)$ semiclassically approach the Hermite triple products of the 2D oscillator (Titchmarsh), times $\alpha^{1/4}$ Jacobian factors from the local chart.
 
 $\alpha\mapsto(\lambda(\alpha),M(\alpha))$ is a path of reconstructed data for a fixed underlying surface with a varying potential. Reconstruction does not see a new metric as $\alpha$ changes; it sees the same $g$ and a rescaled $V$. If two modular surfaces (different $\Gamma$) were compared at the same $\alpha$, mismatch of $M^{1,1,k}(\alpha)$ for one small $k$ would differentiate them isometrically.
 
