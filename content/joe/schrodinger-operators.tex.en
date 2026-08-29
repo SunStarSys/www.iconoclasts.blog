@@ -253,6 +253,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 Ground-state conjugation repairs the $V$ defect: if $H\psi=\lambda_0\psi$ with $\psi>0$, then
+
 $$L:=\psi^{-1}(H-\lambda_0)(\psi\,\cdot\,)=-\Delta-2\langle\nabla\log\psi,\nabla\,\cdot\,\rangle$$
 is a diffusion, and its Bakry–Émery tensor is $\mathrm{Ric}_L=\operatorname{Ric}-2\operatorname{Hess}\log\psi$. For the harmonic oscillator the ground state is a Gaussian, $\log\psi_0=-x^2/2+\mathrm{const}$, and one recovers exactly $\mathrm{BE}(2,\infty)$ for this renormalized Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator. In particular, $\mathrm{Ric}_L\ge K g$ implies the spectral gap bound $\lambda_1-\lambda_0\ge K$, with equality for the harmonic oscillator.
 
@@ -284,8 +285,33 @@ and $0$ otherwise. In particular $W^{0,n,n}=1$, which is orthonormality of $\{\p
 As these structure constants are non-negative on a multiplicity-1 spectrum, they are the associated singular-value invariants \cite{JS24} for $L$.
 
 \subsection{Nash embeddings of Riemann surfaces and the Harmonic Oscillator}
+\begin{claim}
 On a complete hyperbolic surface, $H_\alpha=-\Delta+\alpha|\iota|^2$ for a proper isometric embedding $\iota$ has discrete spectrum for every $\alpha>0$. If $\operatorname{Hess}|\iota|^2\ge 2\kappa_0 g$ with $\kappa_0>0$, then $\lambda_1-\lambda_0\ge 2\sqrt{\alpha\kappa_0}$. If only $\operatorname{Ric}=-g$ is assumed, the gap may be $o(1)$ as $\alpha\to 0$ and is $\Theta(\sqrt{\alpha})$ as $\alpha\to\infty$.
+\end{claim}
+\begin{proof}
+Bakry–Émery for the ground-state diffusion
+$$L_\alpha=(\psi_0^\alpha)^{-1}(H_\alpha-\lambda_0(\alpha))(\psi_0^\alpha\cdot)
+=-\Delta_g-2\langle\nabla\log\psi_0^\alpha,\nabla\rangle$$
+is
+$$\operatorname{Ric}_{L_\alpha}=-g+\operatorname{Hess}_g\varphi_\alpha,\qquad
+\varphi_\alpha=-2\log\psi_0^\alpha.$$
+A lower bound $\operatorname{Ric}_{L_\alpha}\ge K(\alpha)\,g$ implies $\gamma(\alpha)\ge K(\alpha)$. For large $\alpha$, $\psi_0^\alpha$ concentrates where $V_0$ is minimal and
+$$\operatorname{Hess}\varphi_\alpha\sim\sqrt{\alpha}\,\operatorname{Hess}(\text{local quadratic of }V_0).$$
+Thus
+$$K(\alpha)\sim -1+c\sqrt{\alpha\kappa_{\mathrm{min}}},$$
+and $K(\alpha)>0$ as soon as
+$$\alpha>\alpha_*\asymp\frac{1}{\kappa_{\mathrm{min}}^2}.$$
+Below that threshold the $-1$ from $\operatorname{Ric}_g$ can keep $\operatorname{Ric}_{L_\alpha}$ from being positive even though a gap still exists (it may be tiny). So:
 
+$\gamma(\alpha)>0$ for all $\alpha>0$,
+$\gamma(\alpha)\ge 2\sqrt{\alpha\kappa_0}$ once $\kappa_0>0$,
+the BE curvature bound only turns on for $\alpha\gtrsim 1/\kappa_{\mathrm{min}}^2$.
+
+If $\kappa_0\le 0$ (position vector against $\mathrm{II}$ somewhere), the Euclidean comparison is lost. The gap still tends to infinity with $\alpha$ if $V_0$ is proper and has a unique nondegenerate minimum: semiclassically
+$$\gamma(\alpha)\sim 2\sqrt{\alpha\,\mu_{\mathrm{min}}},\qquad
+\mu_{\mathrm{min}}=\sqrt{\det\operatorname{Hess}_{p_*}V_0}^{\,1/2}$$
+in the 2D well approximation, i.e. still $\Theta(\sqrt{\alpha})$.
+\end{proof}
 
 
 \doclicenseThis
