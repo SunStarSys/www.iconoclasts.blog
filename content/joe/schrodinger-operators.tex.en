@@ -285,10 +285,10 @@ and $0$ otherwise. In particular $W^{0,n,n}=1$, which is orthonormality of $\{\p
 As these structure constants are non-negative on a multiplicity-1 spectrum, they are the associated singular-value invariants \cite{JS24} for $L$.
 
 \subsection{Schr\"odinger and Hyperbolic Surfaces}
-Consider the family over $(\Gamma = SL(2,\mathbb{Z}))\backslash\mathbb{H}$ and let
+Consider the Schr\"odinger Operator family over $(\Gamma = SL(2,\mathbb{Z}))\backslash\mathbb{H}$ parametrized by $\alpha > 0$:
 $$H_\alpha=-\Delta_g+\alpha y^2,\qquad
 M^{i,j,k}(\alpha)=\int_{Y(1)}e^i_\alpha e^j_\alpha\overline{e^k_\alpha}\,d\mathrm{vol}.$$
-Everything below is for a fixed $\alpha>0$, then how the array moves with $\alpha$.
+Everything below is for a fixed $\alpha$, then how the array moves with $\alpha$.
 
 For each $\alpha$, $\{e^n_\alpha\}$ is an orthonormal eigenbasis of a confining Schrödinger operator on a complete orbifold of finite volume. Theorem 1 applies: the pair $$\bigl(\{\lambda_n(\alpha)\},\{M^{i,j,k}(\alpha)\}\bigr)$$ determines $(g_{\mathrm{hyp}},\alpha y^2)$ up to isometry. In particular it determines $\alpha$, because $V=\alpha y^2$ is recovered as the zeroth-order term after the metric is known.
 The arrays for different $\alpha$ are not related by a unitary that preserves products. Multiplication by $y$ does not commute with $H_\alpha$, so
