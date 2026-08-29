@@ -289,8 +289,7 @@ As these structure constants are non-negative on a multiplicity-1 spectrum, they
 On a complete hyperbolic surface, $H_\alpha=-\Delta+\alpha|\iota|^2$ for a proper isometric embedding $\iota$ has discrete spectrum for every $\alpha>0$. If $\operatorname{Hess}|\iota|^2\ge 2\kappa_0 g$ with $\kappa_0>0$, then $\lambda_1-\lambda_0\ge 2\sqrt{\alpha\kappa_0}$. If only $\operatorname{Ric}=-g$ is assumed, the gap may be $o(1)$ as $\alpha\to 0$ and is $\Theta(\sqrt{\alpha})$ as $\alpha\to\infty$.
 \end{claim}
 \begin{proof}
-Take $V_0:=|\iota|^2,\qquad
-H_\alpha=-\Delta_g+\alpha V_0,\qquad\alpha>0.$; then Bakry–Émery for the ground-state diffusion
+Take $V_0:=|\iota|^2,\,H_\alpha=-\Delta_g+\alpha V_0,\,\alpha>0;$ then Bakry–Émery for the ground-state diffusion
 $$L_\alpha=(\psi_0^\alpha)^{-1}(H_\alpha-\lambda_0(\alpha))(\psi_0^\alpha\cdot)
 =-\Delta_g-2\langle\nabla\log\psi_0^\alpha,\nabla\rangle$$
 is
@@ -311,7 +310,7 @@ the BE curvature bound only turns on for $\alpha\gtrsim 1/\kappa_{\mathrm{min}}^
 If $\kappa_0\le 0$ (position vector against $\mathrm{II}$ somewhere), the Euclidean comparison is lost. The gap still tends to infinity with $\alpha$ if $V_0$ is proper and has a unique nondegenerate minimum: semiclassically
 $$\gamma(\alpha)\sim 2\sqrt{\alpha\,\mu_{\mathrm{min}}},\qquad
 \mu_{\mathrm{min}}=\sqrt{\det\operatorname{Hess}_{p_*}V_0}^{\,1/2}$$
-in the 2D well approximation, i.e. still $\Theta(\sqrt{\alpha})$.
+in the 2D well approximation, i.e.\ still $\Theta(\sqrt{\alpha})$.
 \end{proof}
 
 
