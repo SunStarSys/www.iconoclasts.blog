@@ -166,7 +166,7 @@ $$\phi=\sum_{i=0}^N\hat\phi(i)\,e^i$$ are dense in $L^2$ and, by elliptic regula
 $$\phi\psi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\psi(j)M^{i,j,k}\Bigr)e^k.$$
 Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $N$. Consequently the linear map
 $$\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N),\qquad e^i\mapsto f^i$$
-is an algebra homomorphism for pointwise multiplication (the constant function is a multiple of the ground state only if $V$ is constant; in general $\vec F$ need not send $1$ to $1$, but it preserves the product of any two functions that can be so expanded). Characteristic functions of sublevel sets of $V$ can be approximated in $L^2$ by functional calculus of $H$, so $\vec F$ also preserves characteristic functions of sets of finite measure in the $L^2$ sense.
+is an algebra homomorphism for pointwise multiplication (the constant function is a multiple of the ground state only if $V$ is constant; in general $\vec F$ need not send $1$ to $1$, but it preserves the product of any two functions that can be so expanded).
 This is identical to the compact calculation; the only extra ingredient is that the eigenfunction expansion of a compactly supported smooth function still converges rapidly enough for the triple-product formula to be justified (which follows from the same elliptic estimates that give $\lambda_i^{N}\|e^i\|_\infty\to 0$ locally, plus Agmon decay at infinity).
 
 \section{Proof of Second Theorem}
