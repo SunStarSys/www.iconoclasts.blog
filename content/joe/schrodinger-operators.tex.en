@@ -282,6 +282,12 @@ $$W^{i,j,k}
 and $0$ otherwise. In particular $W^{0,n,n}=1$, which is orthonormality of $\{\psi_n\}$ in $L^2(dx)$.
 
 As these structure constants are non-negative on a multiplicity-1 spectrum, they are the associated singular-value invariants \cite{JS24} for $L$.
+
+\subseection{Isometric noncompact hyperbolic surface Nash embeddings and the Harmonic Oscillator}
+On a complete hyperbolic surface, $H_\alpha=-\Delta+\alpha|\iota|^2$ for a proper isometric embedding $\iota$ has discrete spectrum for every $\alpha>0$. If $\operatorname{Hess}|\iota|^2\ge 2\kappa_0 g$ with $\kappa_0>0$, then $\lambda_1-\lambda_0\ge 2\sqrt{\alpha\kappa_0}$. If only $\operatorname{Ric}=-g$ is assumed, the gap may be $o(1)$ as $\alpha\to 0$ and is $\Theta(\sqrt{\alpha})$ as $\alpha\to\infty$.
+
+
+
 \doclicenseThis
 
 \printbibliography
