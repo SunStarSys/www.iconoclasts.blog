@@ -271,6 +271,53 @@ f_n&=\frac{\psi_n}{\psi_0},\qquad
 
 For a Schr\"odinger operator as in the Theorem~\ref{thm}, the isometric type of $(M,g,V)$ is encoded in the diffusion data $(\{\lambda_n-\lambda_0\},\{W^{i,j,k}\})$, because $\Gamma_L$ is the cometric and $\psi_0$ recovers $V$ by Riccati.
 
+\subsection{Returning to Harmonic Oscillator Example}
+With $f_n=\psi_n/\psi_0$ and $d\mu=\psi_0^2\,dx$,
+$$W^{i,j,k}=\int_{\mathbb{R}}\frac{\psi_i\psi_j\psi_k}{\psi_0}\,dx
+=\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\,e^{-x^2}\,dx.$$
+Titchmarsh \cite{T48} then collapses to
+$$W^{i,j,k}
+=
+\frac{\sqrt{i!\,j!\,k!}}{(s-i)!(s-j)!(s-k)!}
+\quad\text{when }i+j+k=2s\text{ and }s\ge i,j,k,$$
+and $0$ otherwise. In particular $W^{0,n,n}=1$, which is orthonormality of $\{\psi_n\}$ in $L^2(dx)$.
+
+As these structure constants are non-negative on a multiplicity-1 spectrum, they are the associated singular-value invariants \cite{JS24} for $L$.
+
+\section{Schr\"odinger and Hyperbolic Surfaces}
+As an illustrative example, consider the Schr\"odinger Operator family over $Y(1)=(\Gamma = SL(2,\mathbb{Z}))\backslash\mathbb{H}$ parametrized by $\alpha > 0$:
+$$H_\alpha=-\Delta_g+\alpha y^2,\qquad
+M^{i,j,k}(\alpha)=\int_{Y(1)}e^i_\alpha e^j_\alpha\overline{e^k_\alpha}\,d\mathrm{vol}.$$
+
+For each $\alpha$, $\{e^n_\alpha\}$ is an orthonormal eigenbasis of a confining Schrödinger operator on a complete orbifold of finite volume. Theorem 1 applies: the pair $$\bigl(\{\lambda_n(\alpha)\},\{M^{i,j,k}(\alpha)\}\bigr)$$ determines $(g_{\mathrm{hyp}},\alpha y^2)$ up to isometry. In particular it determines $\alpha$, because $V=\alpha y^2$ is recovered as the zeroth-order term after the metric is known.
+The arrays for different $\alpha$ are not related by a unitary that preserves products. Multiplication by $y$ does not commute with $H_\alpha$, so
+$$M^{i,j,k}(\alpha)\;\neq\;M^{i,j,k}(\alpha').$$
+The path $\alpha\mapsto M(\alpha)$ is a curve in the space of structure constants of $C_0(Y(1))$.
+On the strip $y\ge 1$,
+$$e^n_\alpha(x+iy)=\sum_{m\in\mathbb{Z}}f_m^{(n)}(y)\,e^{2\pi imx}.$$
+Each $f_m^{(n)}$ solves the 1D problem
+$$T_{m,\alpha}f=\lambda_n(\alpha)f,\qquad
+T_{m,\alpha}=-y^2\partial_{yy}+\bigl((2\pi m)^2+\alpha\bigr)y^2$$
+up to the matching conditions on the arc $|z|=1$. The product of two eigenfunctions has coefficients that are convolutions
+$$(e^i e^j)_m(y)=\sum_{p+q=m}f_p^{(i)}(y)\,f_q^{(j)}(y).$$
+The triple product splits as core plus cusp:
+$$M^{i,j,k}(\alpha)
+=\int_{\{y\le 1\}}e^i e^j\overline{e^k}\,\frac{dx\,dy}{y^2}
++\sum_m\int_1^\infty f_m^{(i)}f_m^{(j)}\overline{f_m^{(k)}}\,\frac{dy}{y^2}.$$
+The integral over the compact core $\{y\le 1\}$ is the part that needs a 2D solver (or a finite-element scheme on the triangle).
+Because of Agmon decay, $f_m^{(n)}(y)$ is $O(e^{-c\sqrt{\alpha}\,y})$ uniformly in bounded $m$. For large $\alpha$ the cusp contribution to $M^{i,j,k}$ is negligible: the mass of every low eigenfunction sits near $y=\sqrt{3}/2$. For small $\alpha$ the cusp tail of the ground state is long, and the $m=0$ integral
+$$\int_1^\infty f_0^{(0)}(y)^3\,\frac{dy}{y^2}$$
+is a definite fraction of $M^{0,0,0}(\alpha)$.
+Parity and the circle action $x\mapsto x+1$ force
+$$M^{i,j,k}(\alpha)=0$$
+unless the total winding of the three leading cusp modes can cancel. If one truncates each $e^n_\alpha$ to frequencies $|m|\le M$, the product only feeds modes $|m|\le 2M$. That is the modular analogue of the Hermite triangle rule, except the “triangle” is additive in the cusp frequency $m$, not in the energy index $n$.
+There is no exact vanishing $M^{i,j,k}=0$ from $\lambda_i+\lambda_j-\lambda_k$; the potential $\alpha y^2$ breaks the pure hyperbolic selection rules of Maass-form triple products.
+
+The spectrum of $H_\alpha$ is simple for generic $\alpha$ (no extra symmetry beyond the involution $x\mapsto-x$). Products $M^{i,i,k}(\alpha)$ fix signs. The involution does produce even/odd sectors; so we must restrict the diagonal litmus test in \cite{JS24} to each sector or use real even/odd bases.
+As $\alpha\to\infty$, the eigenfunctions look like oscillator states on the tangent plane. Then $M^{i,j,k}(\alpha)$ semiclassically approach the Hermite triple products of the 2D oscillator (Titchmarsh), times $\alpha^{1/4}$ Jacobian factors from the local chart.
+
+$\alpha\mapsto(\lambda(\alpha),M(\alpha))$ is a path of reconstructed data for a fixed underlying surface with a varying potential. Reconstruction does not see a new metric as $\alpha$ changes; it sees the same $g$ and a rescaled $V$. If two modular surfaces (different $\Gamma$) were compared at the same $\alpha$, mismatch of $M^{1,1,k}(\alpha)$ for one small $k$ would differentiate them isometrically.
+
 \doclicenseThis
 
 \printbibliography
