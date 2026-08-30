@@ -134,7 +134,7 @@ The invariant is the weighted triple form
 $$\Phi_\alpha:\mathcal{S}_\alpha\times\mathcal{S}_\alpha\times\mathcal{S}_\alpha\to\mathbb{C},\qquad
 \Phi_\alpha(u,v,w)=\int_M u\,v\,w\,e^{-\alpha}\,d\mathrm{vol}_g.$$
 A linear map $U:\mathcal{S}_\alpha\to\mathcal{S}_\beta$ is a spectral identification if it is unitary for the weighted $L^2$ inner products and
-$$U\bigl(\ker(L_\alpha-\nu_n)\bigr)=\ker(L_\alpha-\nu_n)\qquad\text{for every }n.$$
+$$U\bigl(\ker(L_\alpha-\nu_n)\bigr)=\ker(L_\beta-\nu_n)\qquad\text{for every }n.$$
 
 \begin{corollary}
 \label{coro}
