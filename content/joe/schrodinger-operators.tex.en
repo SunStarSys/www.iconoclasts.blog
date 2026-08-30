@@ -258,7 +258,7 @@ This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a cons
 
 \subsection{Witten Corollaries}
 \begin{subproof}[Proof of Corollary~\ref{coro}]
-The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\alpha:=\operatorname{span}\{f_i\}$ for a weighted-orthonormal eigenbasis of $L_\alpha$, and likewise $\mathcal{A}_\psi$ on $N$. The ground state is a constant; normalize $f^0\equiv 1$. Coordinates will come from $\{f_i\}_{i\ge 1}$.
+The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\alpha:=\operatorname{span}\{f_i\}$ for a weighted-orthonormal eigenbasis of $L_\alpha$, and likewise $\mathcal{A}_\psi$ on $N$. The ground state is a constant; normalize $f_0\equiv 1$. Coordinates will come from $\{f_i\}_{i\ge 1}$.
 
 Completeness of $\{f_i\}$ in $L^2(e^{-\alpha}\,d\mathrm{vol})$ and the same elliptic/Agmon estimates as in §2 give the pointwise expansion
 $$f_if_j=\sum_k W^{i,j,k}f_k,\qquad
@@ -268,26 +268,26 @@ $$U(fg)=U(f)U(g).$$
 Every element of $\mathcal{A}_\alpha$ is $C^\infty$.
 
 As in the proof of Lemma~\ref{lma-smooth}, some $d$-tuple satisfies
-$$\det\bigl(\Gamma_{L_\alpha}(f^{i_a},f^{i_b})(p)\bigr)\ne 0,$$
+$$\det\bigl(\Gamma_{L_\alpha}(f_{i_a},f_{i_b})(p)\bigr)\ne 0,$$
 where, as in (1),
 $$\Gamma_{L_\alpha}(f_i,f_j)=\frac12\sum_k(\nu_k-\nu_i-\nu_j)W^{i,j,k}f_k=-df_i\cdot df_j.$$
 
 The indices may depend on $p$. The joint evaluation
-$$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(f^n(p)\bigr)_{n\ge 0}$$
+$$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(f_n(p)\bigr)_{n\ge 0}$$
 is therefore an immersion. It is injective because $\mathcal{A}_\alpha$ separates points (the same $C^0_{\mathrm{loc}}$ density). So $\mathrm{Ev}_M$ is an embedding onto its image. The same holds for $\mathrm{Ev}_N$.
 
-Define $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $f^n\mapsto Uf^n$, i.e.
-$$f^n\circ F=Uf^n\qquad\text{for all }n.$$
+Define $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $f_n\mapsto Uf_n$, i.e.
+$$f_n\circ F=Uf_n\qquad\text{for all }n.$$
 This is well-defined because $U$ preserves products and both evaluation maps are embeddings. Near any $p\in M$ the $d$-tuple above is a $C^\infty$ chart
-$$x=\bigl(f^{i_1},\dots,f^{i_d}\bigr).$$
+$$x=\bigl(f_{i_1},\dots,f_{i_d}\bigr).$$
 The same indices work at $F^{-1}(p)$ because $U$ preserves $\Gamma_{L_\alpha}$. The matching chart on $N$ is
-$$y=\bigl(Uf^{i_1},\dots,Uf^{i_d}\bigr),$$
+$$y=\bigl(Uf_{i_1},\dots,Uf_{i_d}\bigr),$$
 and $Uf=f\circ F$ says $y=x\circ F$. Thus $F$ is the identity of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism near $p$. The point $p$ was arbitrary.
 
 In those coordinates the cometric is
-$$g^{ab}=-\Gamma_{L_\alpha}(f^{i_a},f^{i_b}),$$
+$$g^{ab}=-\Gamma_{L_\alpha}(f_{i_a},f_{i_b}),$$
 a finite eigenfunction expansion by the displayed formula for $\Gamma_{L_\alpha}$. Applying $U$ gives
-$$h^{ab}=-\Gamma_{L_\beta}(Uf^{i_a},Uf^{i_b})=-\Gamma_{L_\alpha}(f^{i_a},f^{i_b})\circ F,$$
+$$h^{ab}=-\Gamma_{L_\beta}(Uf_{i_a},Uf_{i_b})=-\Gamma_{L_\alpha}(f_{i_a},f_{i_b})\circ F,$$
 so $F^*g=h$.
 
 By construction $U$ intertwines the operators, so
