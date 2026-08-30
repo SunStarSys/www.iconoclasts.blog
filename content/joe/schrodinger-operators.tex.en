@@ -223,21 +223,13 @@ Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functo
 $F$ is a $C^\infty$ diffeomorphism, and $F^*g=h$.
 \end{lemma}
 \begin{subproof}
-The functions $f_n$ are $C^\infty$ by elliptic regularity. At a every point the joint differential of finitely many of them has full rank: the set
-$$\bigl\{p\in M:\text{there exist }i_1,\dots,i_d\text{ with }\det\bigl(\Gamma_L(f_{i_a},f_{i_b})(p)\bigr)\ne 0\bigr\}$$
-is exactly $M$ since any elliptic operator forces its eigenbasis differentials to span the cotangent bundle everywhere.
-So the map
-$$x=\bigl(f_{i_1},\dots,f_{i_d}\bigr):M_{\mathrm{reg}}\longrightarrow\mathbb{R}^d$$
-is a local coordinate chart. The matrix of the cometric in these coordinates is
-$$g^{ab}(x)=-\Gamma_L(f_{i_a},f_{i_b}),$$
-which is a finite eigenfunction expansion by the displayed formula for $\Gamma_L$, hence $C^\infty$.
-The same indices work on $N$ because $U$ preserves $\Gamma_L$ and the spectrum: if $\det\Gamma_L(f_{i_a},f_{i_b})(p)\ne 0$ then
-$$\det\Gamma_{L'}(Uf_{i_a},Uf_{i_b})(F^{-1}(p))\ne 0.$$
-Write $y=(Uf_{i_1},\dots,Uf_{i_d})$ for the corresponding chart on $F^{-1}(M)$. By construction of $F$,
-$$y=x\circ F,$$
-so in these charts $F$ is the identity map $\mathbb{R}^d\to\mathbb{R}^d$. A map that is the identity in $C^\infty$ charts is a $C^\infty$ diffeomorphism. The cometric coefficients match,
-$$h^{ab}(y)=-\Gamma_{L'}(Uf_{i_a},Uf_{i_b})=-\Gamma_L(f_{i_a},f_{i_b})\circ F=g^{ab}(x\circ F),$$
-hence $F^*g=h$.
+Let $f_n=\psi_n/\psi_0$ and let $\mathcal{A}_0$ be their algebraic span. Then $Uf=f\circ F$ on $\mathcal{A}_0$, and $\Gamma_L(f_i,f_j)=-df_i\cdot df_j$ as in (1). Note $f_0\equiv 1$, so coordinates come from $\{f_n\}_{n\ge 1}$.
+Immersion. Fix $p\in M$. The finite spectral projectors of $L$ send $C_c^\infty(M)$ into $\mathcal{A}_0$ and converge in $C^\infty_{\mathrm{loc}}$ (elliptic regularity). Hence $\mathcal{A}_0$ is dense in $C^1$ on a neighborhood of $p$. If $\operatorname{span}\{\nabla f_n(p):n\ge 1\}\ne T_pM$, there would exist $0\neq v\in T_pM$ with $df_n(v)=0$ for every $n$, hence $d\phi(v)=0$ for every $\phi\in\mathcal{A}_0$. Taking a $C^1$-limit would give $du(v)=0$ for every $u\in C_c^\infty$, which is absurd. Thus some $d$-tuple satisfies
+$$\det\bigl(\Gamma_L(f_{i_a},f_{i_b})(p)\bigr)\ne 0.$$
+The indices may depend on $p$; every point has such a tuple.
+Charts and metric. Those $d$ functions are a $C^\infty$ chart $x=(f_{i_1},\dots,f_{i_d})$ on a neighborhood of $p$. The same indices work at $F^{-1}(p)$ because $U$ preserves $\Gamma_L$. The matching chart on $N$ is $y=(Uf_{i_1},\dots,Uf_{i_d})$, and $Uf=f\circ F$ says $y=x\circ F$. So $F$ is the identity map of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism near $p$. The cometric coefficients are
+$$g^{ab}=-\Gamma_L(f_{i_a},f_{i_b}),$$
+finite eigenfunction expansions by (1). Applying $U$ gives $F^*g=h$ near $p$. The point $p$ was arbitrary.
 \end{subproof}
 
 Now since $F$ intertwines $H$, the second-order parts already agree, so the order-zero terms give $V\circ F=W$
@@ -253,6 +245,8 @@ $$U:C_0(M)\supset\overline{\mathcal{S}_\varphi}^{\,\infty}\longrightarrow
 \overline{\mathcal{S}_\psi}^{\,\infty}\subset C_0(N).$$
 
 Gelfand–Naimark gives a homeomorphism $F:N\to M$ with $Uf=f\circ F$. Smoothness of $F$ and $F^*g=h$ follows from Lemma~\ref{lma-smooth}.
+
+The first-order terms are the drifts
 $$L_\varphi=-\Delta_g+\mathrm{grad}_g\varphi\,\lrcorner\,d,\qquad
 L_\psi=-\Delta_h+\mathrm{grad}_h\psi\,\lrcorner\,d.$$
 Pulling back gives $d\psi=F^*d\varphi$, so $\psi=\varphi\circ F+c$.
