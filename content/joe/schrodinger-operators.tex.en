@@ -227,10 +227,10 @@ The same identity holds on $N$.
 
 For $\phi\in\mathcal{A}_0$,
 $$\|\vec F\phi\|_\infty=\lim_p\|\vec F\phi\|_{L^{2p}}=\lim_p\|\phi\|_{L^{2p}}=\|\phi\|_\infty.$$
-Thus $\vec F$ is isometric for $\|\cdot\|_\infty$ on a dense subspace of its uniform closure. The closure of $\mathcal{A}_0$ in $C_0(M)$ is a commutative $C^*$-subalgebra of $C_0(M)$, and $\vec F$ extends uniquely to an isometric $*$-homomorphism into $C_0(N)$. (Self-adjointness is immediate: eigenfunctions are real.
+Thus $\vec F$ is isometric for $\|\cdot\|_\infty$ on a dense subspace of its uniform closure. The closure of $\mathcal{A}_0$ in $C_0(M)$ is a commutative $C^*$-subalgebra of $C_0(M)$, and $\vec F$ extends uniquely to an isometric $*$-homomorphism into $C_0(N)$. Self-adjointness is immediate: eigenfunctions are real.
 \end{subproof}
 
-Since $\mathcal A_0$ separates points and has an element that vanishes nowhere $(\psi_0)$, Stone-Weierstrass \cite{JC19} proves its closure is exactly $C_0(M)$. Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras $C_0(N), C_0(M)$ \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$.
+Since $\mathcal A_0$ separates points and has an element that vanishes nowhere $(\psi_0)$, Stone-Weierstrass \cite{JC19} proves its closure is exactly $C_0(M)$. Running that argument in reverse gives the same result on $C_0(N)$. Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras $C_0(N), C_0(M)$ \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$.
 
 \begin{lemma}
 \label{lma-smooth}
