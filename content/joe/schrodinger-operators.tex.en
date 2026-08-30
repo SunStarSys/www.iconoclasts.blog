@@ -230,7 +230,7 @@ $$\|\vec F\phi\|_\infty=\lim_p\|\vec F\phi\|_{L^{2p}}=\lim_p\|\phi\|_{L^{2p}}=\|
 Thus $\vec F$ is isometric for $\|\cdot\|_\infty$ on a dense subspace of its uniform closure. The closure of $\mathcal{A}_0$ in $C_0(M)$ is a commutative $C^*$-subalgebra of $C_0(M)$, and $\vec F$ extends uniquely to an isometric $*$-homomorphism into $C_0(N)$. (Self-adjointness is immediate: eigenfunctions are real.
 \end{subproof}
 
-Since $\mathcal A_0$ separates points and has an element that vanishes nowhere $(\psi_0)$, Stone-Weierstrass proves its closure is exactly $C_0(M)$. Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras $C_0(N), C_0(M)$ \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$.
+Since $\mathcal A_0$ separates points and has an element that vanishes nowhere $(\psi_0)$, Stone-Weierstrass \cite{JC19} proves its closure is exactly $C_0(M)$. Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras $C_0(N), C_0(M)$ \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$.
 
 \begin{lemma}
 \label{lma-smooth}
@@ -263,7 +263,7 @@ Pointwise products expand in the weighted eigenbasis by $\Phi_\varphi$, so $U(fg
 $$U:C_0(M)\supset\overline{\mathcal{S}_\varphi}^{\,\infty}\longrightarrow
 \overline{\mathcal{S}_\psi}^{\,\infty}\subset C_0(N).$$
 
-Gelfand–Naimark gives a homeomorphism $F:N\to M$ with $Uf=f\circ F$. Smoothness of $F$ and $F^*g=h$ follows from Lemma~\ref{lma-smooth}, where the Witten eigenfunctions play the role of the $\set{f_n}$.
+Gelfand–Naimark \cite{JC19} gives a homeomorphism $F:N\to M$ with $Uf=f\circ F$. Smoothness of $F$ and $F^*g=h$ follows from Lemma~\ref{lma-smooth}, where the Witten eigenfunctions play the role of the $\set{f_n}$.
 
 The first-order terms are the drifts
 $$L_\varphi=-\Delta_g+\mathrm{grad}_g\varphi\,\lrcorner\,d,\qquad
