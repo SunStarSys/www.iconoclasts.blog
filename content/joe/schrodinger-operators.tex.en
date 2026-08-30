@@ -77,12 +77,12 @@ $$H=-\Delta_g+V$$
 be the associated Schr\"odinger operator, essentially self-adjoint on $C_c^\infty(M)$. Under these hypotheses it is classical that
 
 $\sigma(H)=\sigma_{\mathrm{disc}}(H)=\{\lambda_0<\lambda_1\le\lambda_2\le\cdots\}\to+\infty$, each eigenvalue of finite multiplicity;
-there is an orthonormal basis $\{e^i\}_{i=0}^\infty\subset L^2(M,d\mathrm{vol}_g)$ of smooth eigenfunctions,$$He^i=\lambda_i e^i.$$
+there is an orthonormal basis $\{\psi_i\}_{i=0}^\infty\subset L^2(M,d\mathrm{vol}_g)$ of smooth eigenfunctions,$$H\psi_i=\lambda_i \psi_i.$$
 
 (The same conclusions hold for $-\Delta_g$ itself on some complete manifolds of finite volume with no continuous spectrum, but the confining potential makes the analysis cleaner.)
 Define the triple products exactly as in the compact case:
-$$M^{i,j,k}:=\langle e^i e^j,e^k\rangle_{L^2}=\int_M e^i e^j\,\overline{e^k}\,d\mathrm{vol}_g.$$
-Because the eigenfunctions are Schwartz-class at infinity in the sense that they and their derivatives decay faster than any polynomial in $V$ (Agmon estimates \cite{Agmon1982}/ weighted Sobolev \cite{TaylorPDE1} expressed in terms of $H$), the products $e^i e^j$ lie in $L^2$ and the integrals converge absolutely.
+$$M^{i,j,k}:=\langle \psi_i \psi_j,\psi_k\rangle_{L^2}=\int_M \psi_i \psi_j\,\overline{\psi_k}\,d\mathrm{vol}_g.$$
+Because the eigenfunctions are Schwartz-class at infinity in the sense that they and their derivatives decay faster than any polynomial in $V$ (Agmon estimates \cite{Agmon1982}/ weighted Sobolev \cite{TaylorPDE1} expressed in terms of $H$), the products $\psi_i \psi_j$ lie in $L^2$ and the integrals converge absolutely.
 
 Now let
 $$\mathcal{S}_M:=\bigoplus_{n=0}^\infty\ker(H_M-\lambda_n)$$
@@ -112,14 +112,14 @@ Equivalently, in basis coordinates we have the following
 
 \begin{theorem}
 \label{thm-2}
-The same conclusion holds if there exist $L^2$-orthonormal eigenbases $\{e^i\}$ of $H_M$ and $\{f^i\}$ of $H_N$, ordered by nondecreasing eigenvalues, with
+The same conclusion holds if there exist $L^2$-orthonormal eigenbases $\{\psi_i\}$ of $H_M$ and $\{f_i\}$ of $H_N$, ordered by nondecreasing eigenvalues, with
 $$M_M^{i,j,k}=M_N^{i,j,k}\qquad\text{for all }i,j,k.$$
 \end{theorem}
 
 \begin{remark}
 \label{rmk}
-Theorem~\ref{thm-2} is the matrix form of Theorem~\ref{thm}. Given such bases, the map $Ue^i=f^i$ is a spectral identification, and
-$$M^{i,j,k}=\Phi(e^i,e^j,\bar{e}^k).$$
+Theorem~\ref{thm-2} is the matrix form of Theorem~\ref{thm}. Given such bases, the map $U\psi_i=f_i$ is a spectral identification, and
+$$M^{i,j,k}=\Phi(\psi_i,\psi_j,\bar\psi_k).$$
 Conversely, any spectral identification that intertwines $\Phi$ becomes Theorem~\ref{thm-2} after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,V)$ with $(N,h,W)$.
 \end{remark}
 
@@ -147,9 +147,9 @@ for a constant $c\in\mathbb{R}$. In particular the weighted manifolds $(M,g,e^{-
 In basis coordinates, we again have
 \begin{corollary}
 \label{coro-2}
-The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f^i\}$ of $L_\varphi$ and $\{u^i\}$ of $L_\psi$, ordered by nondecreasing eigenvalues, with
-$$W^{i,j,k}:=\int_M f^i f^j\overline{f^k}\,e^{-\varphi}\,d\mathrm{vol}_g
-=\int_N u^i u^j\overline{u^k}\,e^{-\psi}\,d\mathrm{vol}_h
+The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f_i\}$ of $L_\varphi$ and $\{u_i\}$ of $L_\psi$, ordered by nondecreasing eigenvalues, with
+$$W^{i,j,k}:=\int_M f_i f_j\overline{f_k}\,e^{-\varphi}\,d\mathrm{vol}_g
+=\int_N u_i u_j\overline{u_k}\,e^{-\psi}\,d\mathrm{vol}_h
 \qquad\text{for all }i,j,k.$$
 \end{corollary}
 
@@ -160,23 +160,23 @@ The Witten Laplacian on $p$-forms is the Hodge Laplacian of the weighted manifol
 \label{sec:pre}
 
 Let $\mathcal{A}_0\subset L^2(M)$ be the algebraic span of the eigenfunctions. Finite linear combinations
-$$\phi=\sum_{i=0}^N\hat\phi(i)\,e^i$$ are dense in $L^2$ and, by elliptic regularity plus the decay of eigenfunctions, lie in $C^\infty\cap C_0(M)$. Pointwise multiplication is
-$$\phi\psi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\psi(j)M^{i,j,k}\Bigr)e^k.$$
+$$\phi=\sum_{i=0}^N\hat\phi(i)\psi_i$$ are dense in $L^2$ and, by elliptic regularity plus the decay of eigenfunctions, lie in $C^\infty\cap C_0(M)$. Pointwise multiplication is
+$$\phi\alpha=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\alpha(j)M^{i,j,k}\Bigr)\psi_k.$$
 Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $N$. Consequently the linear map
-$$\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N),\qquad e^i\mapsto f^i$$
+$$\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N),\qquad \psi_i\mapsto f_i$$
 is an algebra homomorphism for pointwise multiplication (the constant function is a multiple of the ground state only if $V$ is constant; in general $\vec F$ need not send $1$ to $1$, but it preserves the product of any two functions that can be so expanded).
-This is identical to the compact calculation; the only extra ingredient is that the eigenfunction expansion of a compactly supported smooth function still converges rapidly enough for the triple-product formula to be justified (which follows from the same elliptic estimates that give $\lambda_i^{N}\|e^i\|_\infty\to 0$ locally, plus Agmon decay at infinity).
+This is identical to the compact calculation; the only extra ingredient is that the eigenfunction expansion of a compactly supported smooth function still converges rapidly enough for the triple-product formula to be justified (which follows from the same elliptic estimates that give $\lambda_i^{N}\|\psi_i\|_\infty\to 0$ locally, plus Agmon decay at infinity).
 
 \subsection{Gamma Calculus}
 By definition \cite{BE85}
 $$\Gamma_H(f,g):=\frac12\bigl(H(fg)-f\,Hg-g\,Hf\bigr).$$
 On basis vectors this is already diagonal in the spectrum:
-$$\Gamma_H(e^i,e^j)=\frac12\sum_k(\lambda_k-\lambda_i-\lambda_j)\,M^{i,j,k}\,e^k.$$
+$$\Gamma_H(\psi_i,\psi_j)=\frac12\sum_k(\lambda_k-\lambda_i-\lambda_j)\,M^{i,j,k}\,\psi_k.$$
 Hence
 $$\begin{aligned}
-\langle\nabla e^i,\nabla e^j\rangle
-&=-\Gamma_H(e^i,e^j)-\frac12 V e^i e^j\\
-&=-\frac12\sum_k[(\lambda_k-\lambda_i-\lambda_j)M^{i,j,k} +\int V e^i e^j \bar e^k\, dx]\, e^k.
+\langle\nabla \psi_i,\nabla e^j\rangle
+&=-\Gamma_H(\psi_i,\psi_j)-\frac12 V \psi_i \psi_j\\
+&=-\frac12\sum_k[(\lambda_k-\lambda_i-\lambda_j)M^{i,j,k} +\int V \psi_i \psi_j \bar\psi_k\, dx]\, \psi_k.
 \end{aligned}$$
 
 Ground-state conjugation repairs the $V$ defect: if $H\psi=\lambda_0\psi$ with $\psi>0$ (which is always available under our given hypotheses), then
@@ -210,7 +210,7 @@ $$\vec F:C_0(M)\supset\overline{\mathcal{A}_0}^{\|\cdot\|_\infty}\longrightarrow
 
 \begin{subproof}[Proof of Lemma~\ref{lma}]
 Eigenfunctions may be taken real, so $\mathcal{A}_0$ is a real algebra (without unit) in $C^\infty\cap C_0\cap L^2$. Matching triple products make $\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N)$ an algebra homomorphism, and the spectral identification makes it unitary for $L^2$.
-Products stay in $\mathcal{A}_0$. If $\phi=\sum_i\hat\phi(i)\,e^i\in\mathcal{A}_0$, the structure-constant formula of §2 gives $\phi^p\in\mathcal{A}_0$ for every integer $p\ge 1$, and
+Products stay in $\mathcal{A}_0$. If $\phi=\sum_i\hat\phi(i)\,\psi_i\in\mathcal{A}_0$, the structure-constant formula of §2 gives $\phi^p\in\mathcal{A}_0$ for every integer $p\ge 1$, and
 $$\vec F(\phi^p)=(\vec F\phi)^p.$$
 $L^{2p}$ norms are preserved. Unitarity on $L^2$ therefore yields
 $$\|\phi\|_{L^{2p}(M)}^{2p}=\langle\phi^p,\phi^p\rangle_{L^2(M)}=\langle(\vec F\phi)^p,(\vec F\phi)^p\rangle_{L^2(N)}=\|\vec F\phi\|_{L^{2p}(N)}^{2p}.$$
@@ -257,11 +257,11 @@ This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a cons
 \end{proof}
 
 \begin{subproof}[Proof of Corollary~\ref{coro}]
-The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\varphi:=\operatorname{span}\{f^i\}$ for a weighted-orthonormal eigenbasis of $L_\varphi$, and likewise $\mathcal{A}_\psi$ on $N$. The ground state is a constant; normalize $f^0\equiv 1$. Coordinates will come from $\{f^i\}_{i\ge 1}$.
+The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\varphi:=\operatorname{span}\{f_i\}$ for a weighted-orthonormal eigenbasis of $L_\varphi$, and likewise $\mathcal{A}_\psi$ on $N$. The ground state is a constant; normalize $f^0\equiv 1$. Coordinates will come from $\{f_i\}_{i\ge 1}$.
 
-Completeness of $\{f^i\}$ in $L^2(e^{-\varphi}\,d\mathrm{vol})$ and the same elliptic/Agmon estimates as in §2 give the pointwise expansion
-$$f^if^j=\sum_k W^{i,j,k}f^k,\qquad
-W^{i,j,k}=\Phi_\varphi(f^i,f^j,\bar f^k).$$
+Completeness of $\{f_i\}$ in $L^2(e^{-\varphi}\,d\mathrm{vol})$ and the same elliptic/Agmon estimates as in §2 give the pointwise expansion
+$$f_if_j=\sum_k W^{i,j,k}f_k,\qquad
+W^{i,j,k}=\Phi_\varphi(f_i,f_j,\bar f_k).$$
 Matching $\Phi_\varphi$ with $\Phi_\psi$ therefore makes $U:\mathcal{A}_\varphi\to\mathcal{A}_\psi$ an algebra homomorphism for pointwise multiplication:
 $$U(fg)=U(f)U(g).$$
 Every element of $\mathcal{A}_\varphi$ is $C^\infty$.
@@ -269,7 +269,7 @@ Every element of $\mathcal{A}_\varphi$ is $C^\infty$.
 As in the proof of Lemma~\ref{lma-smooth}, some $d$-tuple satisfies
 $$\det\bigl(\Gamma_{L_\varphi}(f^{i_a},f^{i_b})(p)\bigr)\ne 0,$$
 where, as in (1),
-$$\Gamma_{L_\varphi}(f^i,f^j)=\frac12\sum_k(\nu_k-\nu_i-\nu_j)W^{i,j,k}f^k=-df^i\cdot df^j.$$
+$$\Gamma_{L_\varphi}(f_i,f_j)=\frac12\sum_k(\nu_k-\nu_i-\nu_j)W^{i,j,k}f_k=-df_i\cdot df_j.$$
 
 The indices may depend on $p$. The joint evaluation
 $$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(f^n(p)\bigr)_{n\ge 0}$$
