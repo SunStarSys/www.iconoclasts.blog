@@ -252,11 +252,9 @@ $$\Phi_\psi(Uu,Uv,Uw)=\Phi_\varphi(u,v,w).$$
 Pointwise products expand in the weighted eigenbasis by $\Phi_\varphi$, so $U(fg)=U(f)U(g)$ on finite combinations. The same cutoff argument as Lemma 7, using sublevel sets of $\varphi$ (or of a confining exhaustion), shows $U$ preserves $\|\cdot\|_\infty$ and extends to a $*$-isomorphism
 $$U:C_0(M)\supset\overline{\mathcal{S}_\varphi}^{\,\infty}\longrightarrow
 \overline{\mathcal{S}_\psi}^{\,\infty}\subset C_0(N).$$
-Gelfand–Naimark gives a homeomorphism $F:N\to M$ with $Uf=f\circ F$. Smoothness follows from Lemma~\ref{lma-smooth} and its following paragraph.
-By construction $U$ intertwines the operators, so
-$$L_\psi(u\circ F)=(L_\varphi u)\circ F,\qquad u\in\mathcal{S}_\varphi.$$
-Both operators are second-order elliptic with principal symbol the cometric, hence
-$$F^*g=h.$$
+
+Gelfand–Naimark gives a homeomorphism $F:N\to M$ with $Uf=f\circ F$. Smoothness of $F$ and $F^*g=h$ follows from Lemma~\ref{lma-smooth} and the paragraph which follows its proof.
+
 The first-order terms are the drifts:
 $$L_\varphi=-\Delta_g+\mathrm{grad}_g\varphi\,\lrcorner\,d,\qquad
 L_\psi=-\Delta_h+\mathrm{grad}_h\psi\,\lrcorner\,d.$$
