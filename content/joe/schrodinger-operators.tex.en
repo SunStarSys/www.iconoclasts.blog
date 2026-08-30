@@ -148,7 +148,7 @@ In basis coordinates, we again have
 \begin{corollary}
 \label{coro-2}
 The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f^i\}$ of $L_\varphi$ and $\{u^i\}$ of $L_\psi$, ordered by nondecreasing eigenvalues, with
-$$\int_M f^i f^j\overline{f^k}\,e^{-\varphi}\,d\mathrm{vol}_g
+$$W^{ij,k}:=\int_M f^i f^j\overline{f^k}\,e^{-\varphi}\,d\mathrm{vol}_g
 =\int_N u^i u^j\overline{u^k}\,e^{-\psi}\,d\mathrm{vol}_h
 \qquad\text{for all }i,j,k.$$
 \end{corollary}
