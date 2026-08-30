@@ -261,7 +261,7 @@ The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\varphi:=
 
 Completeness of $\{f^i\}$ in $L^2(e^{-\varphi}\,d\mathrm{vol})$ and the same elliptic/Agmon estimates as in §2 give the pointwise expansion
 $$f^if^j=\sum_k W^{i,j,k}f^k,\qquad
-W^{i,j,k}=\Phi_\varphi(f^i,f^j,f^k).$$
+W^{i,j,k}=\Phi_\varphi(f^i,f^j,\bar f^k).$$
 Matching $\Phi_\varphi$ with $\Phi_\psi$ therefore makes $U:\mathcal{A}_\varphi\to\mathcal{A}_\psi$ an algebra homomorphism for pointwise multiplication:
 $$U(fg)=U(f)U(g).$$
 Every element of $\mathcal{A}_\varphi$ is $C^\infty$.
