@@ -128,7 +128,7 @@ $$L_\varphi u=-\Delta_g u+\langle\nabla\varphi,\nabla u\rangle$$
 is essentially self-adjoint and bounded below on $C_c^\infty(M)$, with
 $$\sigma(L_\varphi)=\sigma_{\mathrm{disc}}(L_\varphi)=\{\nu_0=0<\nu_1\le\nu_2\le\cdots\}\to+\infty$$
 in the weighted space $L^2(M,e^{-\varphi}\,d\mathrm{vol}_g)$. Write
-$$\mathcal{S}_\varphi:=\bigoplus_{n=0}^\infty\ker(L_\varphi-\nu_n)\subset L^2(M,e^{-\varphi}\,d\mathrm{vol}_g)\cap C_0(M).$$
+$$\mathcal{S}_\varphi:=\bigoplus_{n=0}^\infty\ker(L_\varphi-\nu_n)\subset L^2(M,e^{-\varphi}\,d\mathrm{vol}_g).$$
 The same data $(N,h,\psi)$ produce $L_\psi$ and $\mathcal{S}_\psi$.
 The invariant is the weighted triple form
 $$\Phi_\varphi:\mathcal{S}_\varphi\times\mathcal{S}_\varphi\times\mathcal{S}_\varphi\to\mathbb{C},\qquad
