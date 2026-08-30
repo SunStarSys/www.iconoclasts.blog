@@ -129,17 +129,17 @@ is essentially self-adjoint and bounded below on $C_c^\infty(M)$, with
 $$\sigma(L_\alpha)=\sigma_{\mathrm{disc}}(L_\alpha)=\{\nu_0=0<\nu_1\le\nu_2\le\cdots\}\to+\infty$$
 in the weighted space $L^2(M,e^{-\alpha}\,d\mathrm{vol}_g)$. Write
 $$\mathcal{S}_\alpha:=\bigoplus_{n=0}^\infty\ker(L_\alpha-\nu_n)\subset L^2(M,e^{-\alpha}\,d\mathrm{vol}_g)\cap C^\infty(M).$$
-The same data $(N,h,\psi)$ produce $L_\psi$ and $\mathcal{S}_\psi$.
+The same data $(N,h,\alpha)$ produce $L_\alpha$ and $\mathcal{S}_\alpha$.
 The invariant is the weighted triple form
 $$\Phi_\alpha:\mathcal{S}_\alpha\times\mathcal{S}_\alpha\times\mathcal{S}_\alpha\to\mathbb{C},\qquad
 \Phi_\alpha(u,v,w)=\int_M u\,v\,w\,e^{-\alpha}\,d\mathrm{vol}_g.$$
-A linear map $U:\mathcal{S}_\alpha\to\mathcal{S}_\psi$ is a spectral identification if it is unitary for the weighted $L^2$ inner products and
-$$U\bigl(\ker(L_\alpha-\nu_n)\bigr)=\ker(L_\psi-\nu_n)\qquad\text{for every }n.$$
+A linear map $U:\mathcal{S}_\alpha\to\mathcal{S}_\alpha$ is a spectral identification if it is unitary for the weighted $L^2$ inner products and
+$$U\bigl(\ker(L_\alpha-\nu_n)\bigr)=\ker(L_\alpha-\nu_n)\qquad\text{for every }n.$$
 
 \begin{corollary}
 \label{coro}
-Let $(M,g,\alpha)$ and $(N,h,\psi)$ be as above, and assume $L_\alpha$ and $L_\psi$ are isospectral. If there exists a spectral identification $U:\mathcal{S}_\alpha\to\mathcal{S}_\psi$ such that
-$$\Phi_\psi(Uu,Uv,Uw)=\Phi_\alpha(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{S}_\alpha,$$
+Let $(M,g,\alpha)$ and $(N,h,\beta)$ be as above, and assume $L_\alpha$ and $L_\beta$ are isospectral. If there exists a spectral identification $U:\mathcal{S}_\alpha\to\mathcal{S}_\beta$ such that
+$$\Phi_\beta(Uu,Uv,Uw)=\Phi_\alpha(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{S}_\alpha,$$
 then there is a diffeomorphism $F:N\to M$ with
 $$F^*g=h\qquad\text{and}\qquad\psi=\alpha\circ F+c$$
 for a constant $c\in\mathbb{R}$. In particular the weighted manifolds $(M,g,e^{-\alpha}\mathrm{vol}_g)$ and $(N,h,e^{-\beta}\mathrm{vol}_h)$ are isometric up to that constant rescaling of the weight.
@@ -147,7 +147,7 @@ for a constant $c\in\mathbb{R}$. In particular the weighted manifolds $(M,g,e^{-
 In basis coordinates, we again have
 \begin{corollary}
 \label{coro-2}
-The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f_i\}$ of $L_\alpha$ and $\{g_i\}$ of $L_\psi$, ordered by nondecreasing eigenvalues, with
+The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f_i\}$ of $L_\alpha$ and $\{g_i\}$ of $L_\beta$, ordered by nondecreasing eigenvalues, with
 $$W^{i,j,k}:=\int_M f_i f_j\overline{f_k}\,e^{-\alpha}\,d\mathrm{vol}_g
 =\int_N g_i g_j\overline{g_k}\,e^{-\beta}\,d\mathrm{vol}_h
 \qquad\text{for all }i,j,k.$$
@@ -258,12 +258,12 @@ This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a cons
 
 \subsection{Witten Corollaries}
 \begin{subproof}[Proof of Corollary~\ref{coro}]
-The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\alpha:=\operatorname{span}\{f_i\}$ for a weighted-orthonormal eigenbasis of $L_\alpha$, and likewise $\mathcal{A}_\psi$ on $N$. The ground state is a constant; normalize $f_0\equiv 1$. Coordinates will come from $\{f_i\}_{i\ge 1}$.
+The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\alpha:=\operatorname{span}\{f_i\}$ for a weighted-orthonormal eigenbasis of $L_\alpha$, and likewise $\mathcal{A}_\beta$ on $N$. The ground state is a constant; normalize $f_0\equiv 1$. Coordinates will come from $\{f_i\}_{i\ge 1}$.
 
 Completeness of $\{f_i\}$ in $L^2(e^{-\alpha}\,d\mathrm{vol})$ and the same elliptic/Agmon estimates as in §2 give the pointwise expansion
 $$f_if_j=\sum_k W^{i,j,k}f_k,\qquad
 W^{i,j,k}=\Phi_\alpha(f_i,f_j,\bar f_k).$$
-Matching $\Phi_\alpha$ with $\Phi_\psi$ therefore makes $U:\mathcal{A}_\alpha\to\mathcal{A}_\psi$ an algebra homomorphism for pointwise multiplication:
+Matching $\Phi_\alpha$ with $\Phi_\beta$ therefore makes $U:\mathcal{A}_\alpha\to\mathcal{A}_\beta$ an algebra homomorphism for pointwise multiplication:
 $$U(fg)=U(f)U(g).$$
 Every element of $\mathcal{A}_\alpha$ is $C^\infty$.
 
@@ -291,10 +291,10 @@ $$h^{ab}=-\Gamma_{L_\beta}(Uf_{i_a},Uf_{i_b})=-\Gamma_{L_\alpha}(f_{i_a},f_{i_b}
 so $F^*g=h$.
 
 By construction $U$ intertwines the operators, so
-$$L_\psi(u\circ F)=(L_\alpha u)\circ F,\qquad u\in\mathcal{A}_\alpha.$$
+$$L_\beta(u\circ F)=(L_\alpha u)\circ F,\qquad u\in\mathcal{A}_\alpha.$$
 The principal symbols already match. The first-order terms are the drifts
 $$L_\alpha=-\Delta_g+\operatorname{grad}_g\alpha\,\lrcorner\,d,\qquad
-L_\psi=-\Delta_h+\operatorname{grad}_h\psi\,\lrcorner\,d.$$
+L_\beta=-\Delta_h+\operatorname{grad}_h\psi\,\lrcorner\,d.$$
 Pulling back gives $d\psi=F^*d\alpha$, hence $\psi=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$.
 
 This proves Corollary~\ref{coro}. Corollary~\ref{coro-2} is a coordinate restatement of it, so no additional proof provided.
