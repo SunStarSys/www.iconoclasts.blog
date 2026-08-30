@@ -266,7 +266,7 @@ Matching $\Phi_\varphi$ with $\Phi_\psi$ therefore makes $U:\mathcal{A}_\varphi\
 $$U(fg)=U(f)U(g).$$
 Every element of $\mathcal{A}_\varphi$ is $C^\infty$.
 
-Finite spectral projectors of $L_\varphi$ send $C_c^\infty(M)$ into $\mathcal{A}_\varphi$ and converge in $C^\infty_{\mathrm{loc}}$ (elliptic regularity). Hence $\mathcal{A}_\varphi$ is dense in $C^1$ on a neighborhood of any given point $p\in M$. If $\operatorname{span}\{\nabla f^i(p):i\ge 1\}\ne T_pM$, there would exist $0\neq v\in T_pM$ with $df^i(v)=0$ for every $i$, hence $d\phi(v)=0$ for every $\phi\in\mathcal{A}_\varphi$, and a $C^1$-limit would give $du(v)=0$ for every $u\in C_c^\infty$, which is absurd. Thus some $d$-tuple satisfies
+As in the proof of Lemma~\ref{lma-smooth}, some $d$-tuple satisfies
 $$\det\bigl(\Gamma_{L_\varphi}(f^{i_a},f^{i_b})(p)\bigr)\ne 0,$$
 where, as in (1),
 $$\Gamma_{L_\varphi}(f^i,f^j)=\frac12\sum_k(\nu_k-\nu_i-\nu_j)W^{i,j,k}f^k=-df^i\cdot df^j.$$
