@@ -244,7 +244,7 @@ Pointwise products expand in the weighted eigenbasis by $\Phi_\varphi$, so $U(fg
 $$U:C_0(M)\supset\overline{\mathcal{S}_\varphi}^{\,\infty}\longrightarrow
 \overline{\mathcal{S}_\psi}^{\,\infty}\subset C_0(N).$$
 
-Gelfand–Naimark gives a homeomorphism $F:N\to M$ with $Uf=f\circ F$. Smoothness of $F$ and $F^*g=h$ follows from Lemma~\ref{lma-smooth}.
+Gelfand–Naimark gives a homeomorphism $F:N\to M$ with $Uf=f\circ F$. Smoothness of $F$ and $F^*g=h$ follows from Lemma~\ref{lma-smooth}, where the Witten eigenfunctions play the role of the $\set{f_n}$.
 
 The first-order terms are the drifts
 $$L_\varphi=-\Delta_g+\mathrm{grad}_g\varphi\,\lrcorner\,d,\qquad
