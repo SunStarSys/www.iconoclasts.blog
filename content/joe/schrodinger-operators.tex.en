@@ -141,7 +141,7 @@ $$U\bigl(\ker(L_\alpha-\nu_n)\bigr)=\ker(L_\alpha-\nu_n)\qquad\text{for every }n
 Let $(M,g,\alpha)$ and $(N,h,\beta)$ be as above, and assume $L_\alpha$ and $L_\beta$ are isospectral. If there exists a spectral identification $U:\mathcal{S}_\alpha\to\mathcal{S}_\beta$ such that
 $$\Phi_\beta(Uu,Uv,Uw)=\Phi_\alpha(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{S}_\alpha,$$
 then there is a diffeomorphism $F:N\to M$ with
-$$F^*g=h\qquad\text{and}\qquad\psi=\alpha\circ F+c$$
+$$F^*g=h\qquad\text{and}\qquad\beta=\alpha\circ F+c$$
 for a constant $c\in\mathbb{R}$. In particular the weighted manifolds $(M,g,e^{-\alpha}\mathrm{vol}_g)$ and $(N,h,e^{-\beta}\mathrm{vol}_h)$ are isometric up to that constant rescaling of the weight.
 \end{corollary}
 In basis coordinates, we again have
@@ -294,8 +294,8 @@ By construction $U$ intertwines the operators, so
 $$L_\beta(u\circ F)=(L_\alpha u)\circ F,\qquad u\in\mathcal{A}_\alpha.$$
 The principal symbols already match. The first-order terms are the drifts
 $$L_\alpha=-\Delta_g+\operatorname{grad}_g\alpha\,\lrcorner\,d,\qquad
-L_\beta=-\Delta_h+\operatorname{grad}_h\psi\,\lrcorner\,d.$$
-Pulling back gives $d\psi=F^*d\alpha$, hence $\psi=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$.
+L_\beta=-\Delta_h+\operatorname{grad}_h\beta\,\lrcorner\,d.$$
+Pulling back gives $d\beta=F^*d\alpha$, hence $\beta=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$.
 
 This proves Corollary~\ref{coro}. Corollary~\ref{coro-2} is a coordinate restatement of it, so no additional proof provided.
 \end{subproof}
