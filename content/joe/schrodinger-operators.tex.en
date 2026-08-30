@@ -147,9 +147,9 @@ for a constant $c\in\mathbb{R}$. In particular the weighted manifolds $(M,g,e^{-
 In basis coordinates, we again have
 \begin{corollary}
 \label{coro-2}
-The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f_i\}$ of $L_\alpha$ and $\{u_i\}$ of $L_\psi$, ordered by nondecreasing eigenvalues, with
+The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f_i\}$ of $L_\alpha$ and $\{g_i\}$ of $L_\psi$, ordered by nondecreasing eigenvalues, with
 $$W^{i,j,k}:=\int_M f_i f_j\overline{f_k}\,e^{-\alpha}\,d\mathrm{vol}_g
-=\int_N u_i u_j\overline{u_k}\,e^{-\beta}\,d\mathrm{vol}_h
+=\int_N g_i g_j\overline{g_k}\,e^{-\beta}\,d\mathrm{vol}_h
 \qquad\text{for all }i,j,k.$$
 \end{corollary}
 
