@@ -220,25 +220,25 @@ Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functo
 
 \begin{lemma}
 \label{lma-smooth}
-There is a dense open set $M_{\mathrm{reg}}\subset M$ on which $F$ is a $C^\infty$ diffeomorphism onto its image. On that set $F^*g=h$.
+$F$ is a $C^\infty$ diffeomorphism, and $F^*g=h$.
 \end{lemma}
 \begin{subproof}
-The functions $f_n$ are $C^\infty$ by elliptic regularity. At a generic point the joint differential of finitely many of them has full rank: the set
-$$M_{\mathrm{reg}}=\bigl\{p\in M:\text{there exist }i_1,\dots,i_d\text{ with }\det\bigl(\Gamma_L(f_{i_a},f_{i_b})(p)\bigr)\ne 0\bigr\}$$
-is open (the determinant is continuous) and dense (if it failed on an open set, the gradients $\nabla f_n$ would span a proper subbundle, contradicting that the algebra they generate separates points and that $L$ is elliptic-- elliptic operators have the strong unique continuation property, so a function whose gradient vanishes on an open set is constant there, and a finite-dimensional algebra of functions with rank-deficient differentials cannot separate points on a manifold.)
+The functions $f_n$ are $C^\infty$ by elliptic regularity. At a every point the joint differential of finitely many of them has full rank: the set
+$$\bigl\{p\in M:\text{there exist }i_1,\dots,i_d\text{ with }\det\bigl(\Gamma_L(f_{i_a},f_{i_b})(p)\bigr)\ne 0\bigr\}$$
+is exactly $M$ since otherwise the eigenbasis would fail to separate points somewhere.
 
-On $M_{\mathrm{reg}}$ the map
+So the map
 $$x=\bigl(f_{i_1},\dots,f_{i_d}\bigr):M_{\mathrm{reg}}\longrightarrow\mathbb{R}^d$$
 is a local coordinate chart. The matrix of the cometric in these coordinates is
 $$g^{ab}(x)=-\Gamma_L(f_{i_a},f_{i_b}),$$
 which is a finite eigenfunction expansion by the displayed formula for $\Gamma_L$, hence $C^\infty$.
 The same indices work on $N$ because $U$ preserves $\Gamma_L$ and the spectrum: if $\det\Gamma_L(f_{i_a},f_{i_b})(p)\ne 0$ then
 $$\det\Gamma_{L'}(Uf_{i_a},Uf_{i_b})(F^{-1}(p))\ne 0.$$
-Write $y=(Uf_{i_1},\dots,Uf_{i_d})$ for the corresponding chart on $N_{\mathrm{reg}}=F^{-1}(M_{\mathrm{reg}})$. By construction of $F$,
+Write $y=(Uf_{i_1},\dots,Uf_{i_d})$ for the corresponding chart on $F^{-1}(M)$. By construction of $F$,
 $$y=x\circ F,$$
 so in these charts $F$ is the identity map $\mathbb{R}^d\to\mathbb{R}^d$. A map that is the identity in $C^\infty$ charts is a $C^\infty$ diffeomorphism. The cometric coefficients match,
 $$h^{ab}(y)=-\Gamma_{L'}(Uf_{i_a},Uf_{i_b})=-\Gamma_L(f_{i_a},f_{i_b})\circ F=g^{ab}(x\circ F),$$
-hence $F^*g=h$ on $M_{\mathrm{reg}}$.
+hence $F^*g=h$.
 \end{subproof}
 
 The complement $M\setminus M_{\mathrm{reg}}$ is closed and nowhere dense. Both metrics are smooth on all of $M$ and $N$, so the identity $F^*g=h$ extends by continuity (coordinate functions extend smoothly; the chart condition fails only where the differentials drop rank, not where $F$ ceases to be smooth.) Now since $F$ intertwines $H$, the second-order parts already agree, so the order-zero terms give $V\circ F=W$
