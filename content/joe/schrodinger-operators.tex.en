@@ -129,7 +129,7 @@ is essentially self-adjoint and bounded below on $C_c^\infty(M)$, with
 $$\sigma(L_\alpha)=\sigma_{\mathrm{disc}}(L_\alpha)=\{\nu_0=0<\nu_1\le\nu_2\le\cdots\}\to+\infty$$
 in the weighted space $L^2(M,e^{-\alpha}\,d\mathrm{vol}_g)$. Write
 $$\mathcal{S}_\alpha:=\bigoplus_{n=0}^\infty\ker(L_\alpha-\nu_n)\subset L^2(M,e^{-\alpha}\,d\mathrm{vol}_g)\cap C^\infty(M).$$
-The same data $(N,h,\alpha)$ produce $L_\alpha$ and $\mathcal{S}_\alpha$.
+The same data $(N,h,\beta)$ produce $L_\beta$ and $\mathcal{S}_\beta$.
 The invariant is the weighted triple form
 $$\Phi_\alpha:\mathcal{S}_\alpha\times\mathcal{S}_\alpha\times\mathcal{S}_\alpha\to\mathbb{C},\qquad
 \Phi_\alpha(u,v,w)=\int_M u\,v\,w\,e^{-\alpha}\,d\mathrm{vol}_g.$$
