@@ -210,7 +210,7 @@ For a Schr\"odinger operator as in the Theorem~\ref{thm}, the isometric type of 
 $$\vec F:C_0(M)\supset\overline{\mathcal{A}_0}^{\|\cdot\|_\infty}\longrightarrow C_0(N).$$
 \end{lemma}
 
-\begin{subproof}[Proof of Lemma~\ref{lma}]
+\begin{subproof}[Sketch of proof of Lemma~\ref{lma}]
 On a compact manifold one uses a smooth partition of unity and the fact that $\|a\|_\infty=1$ for a partition function $a$ is detected by $\|a^p\|_\infty=1$ for all $p$, which is visible in the Fourier coefficients because the limiting characteristic function of $\{a=1\}$ has $L^2$-mass.
 In the non-compact setting replace a global partition of unity by a sequence of cutoffs $\chi_R$ that equal $1$ on $\{V\le R\}$ and vanish outside $\{V\le R+1\}$. On each such “almost-compact” region the same argument applies: if $\|\phi\|_\infty=c$ is attained on a set of positive measure inside $\{V\le R\}$, the powers $\phi^p/\|\phi\|_\infty^p$ converge in $L^2_{\mathrm{loc}}$ to a characteristic function, and $\vec F$ preserves that limit because it preserves all triple products. Sending $R\to\infty$ and using that every function in $C_0(M)$ is uniformly small outside a large sublevel set of $V$ gives $\|\vec F(\phi)\|_\infty=\|\phi\|_\infty$.
 
@@ -219,6 +219,7 @@ In the non-compact setting replace a global partition of unity by a sequence of 
 Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras $C_0(N), C_0(M)$ \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$.
 
 \begin{lemma}
+\label{lma-smooth}
 There is a dense open set $M_{\mathrm{reg}}\subset M$ on which $F$ is a $C^\infty$ diffeomorphism onto its image. On that set $F^*g=h$.
 \end{lemma}
 \begin{subproof}
@@ -240,7 +241,7 @@ $$h^{ab}(y)=-\Gamma_{L'}(Uf_{i_a},Uf_{i_b})=-\Gamma_L(f_{i_a},f_{i_b})\circ F=g^
 hence $F^*g=h$ on $M_{\mathrm{reg}}$.
 \end{subproof}
 
-The complement $M\setminus M_{\mathrm{reg}}$ is closed and nowhere dense. Both metrics are smooth on all of $M$ and $N$, so the identity $F^*g=h$ extends by continuity. Again, we can recover $V$ from $\psi_0$ by Riccati, so $V = W\circ F$.
+The complement $M\setminus M_{\mathrm{reg}}$ is closed and nowhere dense. Both metrics are smooth on all of $M$ and $N$, so the identity $F^*g=h$ extends by continuity (coordinate functions extend smoothly; the chart condition fails only where the differentials drop rank, not where $F$ ceases to be smooth.) Now since $F$ intertwines $H$, the second-order parts already agree, so the order-zero terms give $V\circ F=W$
 
 This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a consequence of Theorem~\ref{thm-2} and Remark~\ref{rmk}.
 \end{proof}
@@ -251,7 +252,7 @@ $$\Phi_\psi(Uu,Uv,Uw)=\Phi_\varphi(u,v,w).$$
 Pointwise products expand in the weighted eigenbasis by $\Phi_\varphi$, so $U(fg)=U(f)U(g)$ on finite combinations. The same cutoff argument as Lemma 7, using sublevel sets of $\varphi$ (or of a confining exhaustion), shows $U$ preserves $\|\cdot\|_\infty$ and extends to a $*$-isomorphism
 $$U:C_0(M)\supset\overline{\mathcal{S}_\varphi}^{\,\infty}\longrightarrow
 \overline{\mathcal{S}_\psi}^{\,\infty}\subset C_0(N).$$
-Gelfand–Naimark gives a homeomorphism $F:N\to M$ with $Uf=f\circ F$. Eigenfunctions are smooth and vanish at infinity, so $F$ is smooth as in the Schrödinger case.
+Gelfand–Naimark gives a homeomorphism $F:N\to M$ with $Uf=f\circ F$. Smoothness follows from Lemma~\ref{lma-smooth} and its following paragraph.
 By construction $U$ intertwines the operators, so
 $$L_\psi(u\circ F)=(L_\varphi u)\circ F,\qquad u\in\mathcal{S}_\varphi.$$
 Both operators are second-order elliptic with principal symbol the cometric, hence
