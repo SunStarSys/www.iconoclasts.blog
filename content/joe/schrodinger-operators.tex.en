@@ -128,7 +128,7 @@ $$L_\varphi u=-\Delta_g u+\langle\nabla\varphi,\nabla u\rangle$$
 is essentially self-adjoint and bounded below on $C_c^\infty(M)$, with
 $$\sigma(L_\varphi)=\sigma_{\mathrm{disc}}(L_\varphi)=\{\nu_0=0<\nu_1\le\nu_2\le\cdots\}\to+\infty$$
 in the weighted space $L^2(M,e^{-\varphi}\,d\mathrm{vol}_g)$. Write
-$$\mathcal{S}_\varphi:=\bigoplus_{n=0}^\infty\ker(L_\varphi-\nu_n)\subset L^2(M,e^{-\varphi}\,d\mathrm{vol}_g)\cup C^\infty(M).$$
+$$\mathcal{S}_\varphi:=\bigoplus_{n=0}^\infty\ker(L_\varphi-\nu_n)\subset L^2(M,e^{-\varphi}\,d\mathrm{vol}_g)\cap C^\infty(M).$$
 The same data $(N,h,\psi)$ produce $L_\psi$ and $\mathcal{S}_\psi$.
 The invariant is the weighted triple form
 $$\Phi_\varphi:\mathcal{S}_\varphi\times\mathcal{S}_\varphi\times\mathcal{S}_\varphi\to\mathbb{C},\qquad
@@ -257,12 +257,6 @@ This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a cons
 \end{proof}
 
 \begin{subproof}[Proof of Corollary~\ref{coro}]
-Assume a spectral identification $U:\mathcal{S}_\varphi\to\mathcal{S}_\psi$ with
-$$\Phi_\psi(Uu,Uv,Uw)=\Phi_\varphi(u,v,w).$$
-Pointwise products expand in the weighted eigenbasis by $\Phi_\varphi$, so $U(fg)=U(f)U(g)$ on finite combinations. The same cutoff argument as Lemma 7, using sublevel sets of $\varphi$ (or of a confining exhaustion), shows $U$ preserves $\|\cdot\|_\infty$ and extends to a $*$-isomorphism
-$$U:C_0(M)\supset\overline{\mathcal{S}_\varphi}^{\,\infty}\longrightarrow
-\overline{\mathcal{S}_\psi}^{\,\infty}\subset C_0(N).$$
-
 The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\varphi:=\operatorname{span}\{f^i\}$ for a weighted-orthonormal eigenbasis of $L_\varphi$, and likewise $\mathcal{A}_\psi$ on $N$. The ground state is a constant; normalize $f^0\equiv 1$. Coordinates will come from $\{f^i\}_{i\ge 1}$.
 
 Completeness of $\{f^i\}$ in $L^2(e^{-\varphi}\,d\mathrm{vol})$ and the same elliptic/Agmon estimates as in §2 give the pointwise expansion
@@ -283,7 +277,7 @@ is therefore an immersion. It is injective because $\mathcal{A}_\varphi$ separat
 
 Define $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $f^n\mapsto Uf^n$, i.e.
 $$f^n\circ F=Uf^n\qquad\text{for all }n.$$
-This is well-defined because $U$ preserves products and both evaluation maps are embeddings. Near any $p\in M$ the $d$-tuple of step 2 is a $C^\infty$ chart
+This is well-defined because $U$ preserves products and both evaluation maps are embeddings. Near any $p\in M$ the $d$-tuple above is a $C^\infty$ chart
 $$x=\bigl(f^{i_1},\dots,f^{i_d}\bigr).$$
 The same indices work at $F^{-1}(p)$ because $U$ preserves $\Gamma_{L_\varphi}$. The matching chart on $N$ is
 $$y=\bigl(Uf^{i_1},\dots,Uf^{i_d}\bigr),$$
@@ -297,7 +291,7 @@ so $F^*g=h$.
 
 By construction $U$ intertwines the operators, so
 $$L_\psi(u\circ F)=(L_\varphi u)\circ F,\qquad u\in\mathcal{A}_\varphi.$$
-The principal symbols already match by step 4. The first-order terms are the drifts
+The principal symbols already match. The first-order terms are the drifts
 $$L_\varphi=-\Delta_g+\operatorname{grad}_g\varphi\,\lrcorner\,d,\qquad
 L_\psi=-\Delta_h+\operatorname{grad}_h\psi\,\lrcorner\,d.$$
 Pulling back gives $d\psi=F^*d\varphi$, hence $\psi=\varphi\circ F+c$ for a constant $c\in\mathbb{R}$.
