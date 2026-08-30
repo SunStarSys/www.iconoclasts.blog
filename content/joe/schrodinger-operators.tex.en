@@ -224,10 +224,10 @@ $F$ is a $C^\infty$ diffeomorphism, and $F^*g=h$.
 \end{lemma}
 \begin{subproof}
 Let $f_n=\psi_n/\psi_0$ and let $\mathcal{A}_0$ be their algebraic span. Then $Uf=f\circ F$ on $\mathcal{A}_0$, and $\Gamma_L(f_i,f_j)=-df_i\cdot df_j$ as in (1). Note $f_0\equiv 1$, so coordinates come from $\{f_n\}_{n\ge 1}$.
-Immersion. Fix $p\in M$. The finite spectral projectors of $L$ send $C_c^\infty(M)$ into $\mathcal{A}_0$ and converge in $C^\infty_{\mathrm{loc}}$ (elliptic regularity). Hence $\mathcal{A}_0$ is dense in $C^1$ on a neighborhood of $p$. If $\operatorname{span}\{\nabla f_n(p):n\ge 1\}\ne T_pM$, there would exist $0\neq v\in T_pM$ with $df_n(v)=0$ for every $n$, hence $d\phi(v)=0$ for every $\phi\in\mathcal{A}_0$. Taking a $C^1$-limit would give $du(v)=0$ for every $u\in C_c^\infty$, which is absurd. Thus some $d$-tuple satisfies
+Fix $p\in M$. The finite spectral projectors of $L$ send $C_c^\infty(M)$ into $\mathcal{A}_0$ and converge in $C^\infty_{\mathrm{loc}}$ (elliptic regularity). Hence $\mathcal{A}_0$ is dense in $C^1$ on a neighborhood of $p$. If $\operatorname{span}\{\nabla f_n(p):n\ge 1\}\ne T_pM$, there would exist $0\neq v\in T_pM$ with $df_n(v)=0$ for every $n$, hence $d\phi(v)=0$ for every $\phi\in\mathcal{A}_0$. Taking a $C^1$-limit would give $du(v)=0$ for every $u\in C_c^\infty$, which is absurd. Thus some $d$-tuple satisfies
 $$\det\bigl(\Gamma_L(f_{i_a},f_{i_b})(p)\bigr)\ne 0.$$
 The indices may depend on $p$; every point has such a tuple.
-Charts and metric. Those $d$ functions are a $C^\infty$ chart $x=(f_{i_1},\dots,f_{i_d})$ on a neighborhood of $p$. The same indices work at $F^{-1}(p)$ because $U$ preserves $\Gamma_L$. The matching chart on $N$ is $y=(Uf_{i_1},\dots,Uf_{i_d})$, and $Uf=f\circ F$ says $y=x\circ F$. So $F$ is the identity map of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism near $p$. The cometric coefficients are
+Those $d$ functions are a $C^\infty$ chart $x=(f_{i_1},\dots,f_{i_d})$ on a neighborhood of $p$. The same indices work at $F^{-1}(p)$ because $U$ preserves $\Gamma_L$. The matching chart on $N$ is $y=(Uf_{i_1},\dots,Uf_{i_d})$, and $Uf=f\circ F$ says $y=x\circ F$. So $F$ is the identity map of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism near $p$. The cometric coefficients are
 $$g^{ab}=-\Gamma_L(f_{i_a},f_{i_b}),$$
 finite eigenfunction expansions by (1). Applying $U$ gives $F^*g=h$ near $p$. The point $p$ was arbitrary.
 \end{subproof}
