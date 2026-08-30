@@ -167,6 +167,39 @@ $$\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N),\qquad e^i\mapsto f^i$$
 is an algebra homomorphism for pointwise multiplication (the constant function is a multiple of the ground state only if $V$ is constant; in general $\vec F$ need not send $1$ to $1$, but it preserves the product of any two functions that can be so expanded).
 This is identical to the compact calculation; the only extra ingredient is that the eigenfunction expansion of a compactly supported smooth function still converges rapidly enough for the triple-product formula to be justified (which follows from the same elliptic estimates that give $\lambda_i^{N}\|e^i\|_\infty\to 0$ locally, plus Agmon decay at infinity).
 
+\subsection{Gamma Calculus}
+By definition \cite{BE85}
+$$\Gamma_H(f,g):=\frac12\bigl(H(fg)-f\,Hg-g\,Hf\bigr).$$
+On basis vectors this is already diagonal in the spectrum:
+$$\Gamma_H(e^i,e^j)=\frac12\sum_k(\lambda_k-\lambda_i-\lambda_j)\,M^{i,j,k}\,e^k.$$
+Hence
+$$\begin{aligned}
+\langle\nabla e^i,\nabla e^j\rangle
+&=-\Gamma_H(e^i,e^j)-\frac12 V e^i e^j\\
+&=-\frac12\sum_k[(\lambda_k-\lambda_i-\lambda_j)M^{i,j,k} +\int V e^i e^j \bar e^k\, dx]\, e^k.
+\end{aligned}$$
+
+Ground-state conjugation repairs the $V$ defect: if $H\psi=\lambda_0\psi$ with $\psi>0$, then
+
+$$L:=\psi^{-1}(H-\lambda_0)(\psi\,\cdot\,)=-\Delta-2\langle\nabla\log\psi,\nabla\,\cdot\,\rangle$$
+is a diffusion, and its Bakry–Émery tensor is $\mathrm{Ric}_L=\operatorname{Ric}-2\operatorname{Hess}\log\psi$. For the harmonic oscillator the ground state is a Gaussian, $\log\psi_0=-x^2/2+\mathrm{const}$, and one recovers exactly $\mathrm{BE}(2,\infty)$ for this renormalized Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator. In particular, $\mathrm{Ric}_L\ge K g$ implies the spectral gap bound $\lambda_1-\lambda_0\ge K$, with equality for the harmonic oscillator.
+
+With $\phi =- 2 \log \psi_0$ and $v\cdot w$ the Riemannian cometric, let us write these operators in the eigenbasis of $L$,
+
+\begin{equation}
+\begin{aligned}
+f_n&=\frac{\psi_n}{\psi_0},\qquad
+ W^{i,j,k}=\int\frac{\psi_i\psi_j\psi_k}{\psi_0}\,d\mathrm{vol},\\
+\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)W^{i,j,k}\,f_k = -df_i \cdot df_j\\
+\Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 W^{i,j,k}\,f_k\implies\\
+\Gamma_{2,L}(f)&=\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2+\operatorname{Ric}(\nabla f,\nabla f) + \operatorname{Hess}\phi(\nabla f, \nabla f).
+\end{aligned}
+\end{equation}
+
+For a Schr\"odinger operator as in the Theorem~\ref{thm}, the isometric type of $(M,g,V)$ is encoded in the diffusion data $(\{\lambda_n-\lambda_0\},\{W^{i,j,k}\})$, because $\Gamma_L$ is the cometric and $\psi_0$ recovers $V$ by Riccati.
+
+
+
 \section{Proof of Theorems}
 \begin{proof}
 (Following \cite{JS24}) For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $\vec{F}$ from $\mathcal{S}_M$ to $\mathcal{S}_N$ and note that from the calculations in Section~\ref{sec:pre} above, $\vec{F}$ preserves pointwise products for such smooth functions (and preserves characteristic functions when extended to $L^2(M,g)$) by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
@@ -191,7 +224,9 @@ There is a dense open set $M_{\mathrm{reg}}\subset M$ on which $F$ is a $C^\inft
 \begin{subproof}
 The functions $f_n$ are $C^\infty$ by elliptic regularity. At a generic point the joint differential of finitely many of them has full rank: the set
 $$M_{\mathrm{reg}}=\bigl\{p\in M:\text{there exist }i_1,\dots,i_d\text{ with }\det\bigl(\Gamma_L(f_{i_a},f_{i_b})(p)\bigr)\ne 0\bigr\}$$
-is open (the determinant is continuous) and dense (if it failed on an open set, the gradients $\nabla f_n$ would span a proper subbundle, contradicting that the algebra they generate separates points and that $L$ is elliptic). On $M_{\mathrm{reg}}$ the map
+is open (the determinant is continuous) and dense (if it failed on an open set, the gradients $\nabla f_n$ would span a proper subbundle, contradicting that the algebra they generate separates points and that $L$ is elliptic-- elliptic operators have the strong unique continuation property, so a function whose gradient vanishes on an open set is constant there, and a finite-dimensional algebra of functions with rank-deficient differentials cannot separate points on a manifold.)
+
+On $M_{\mathrm{reg}}$ the map
 $$x=\bigl(f_{i_1},\dots,f_{i_d}\bigr):M_{\mathrm{reg}}\longrightarrow\mathbb{R}^d$$
 is a local coordinate chart. The matrix of the cometric in these coordinates is
 $$g^{ab}(x)=-\Gamma_L(f_{i_a},f_{i_b}),$$
@@ -301,40 +336,8 @@ $$c_{r;ij}
 \binom{i}{r}\binom{j}{r}r!\,2^{r}$$
 (up to the conventional placement of the $\sqrt{2}$ in the argument; cf. \cite{K16}). Then
 $$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\,x)\,\psi_k(x)\,dx,$$
-and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric sum). This is the form best suited to computation.
+and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric sum).
 
-\section{Gamma Calculus}
-By definition \cite{BE85}
-$$\Gamma_H(f,g):=\frac12\bigl(H(fg)-f\,Hg-g\,Hf\bigr).$$
-On basis vectors this is already diagonal in the spectrum:
-$$\Gamma_H(e^i,e^j)=\frac12\sum_k(\lambda_k-\lambda_i-\lambda_j)\,M^{i,j,k}\,e^k.$$
-Hence
-$$\begin{aligned}
-\langle\nabla e^i,\nabla e^j\rangle
-&=-\Gamma_H(e^i,e^j)-\frac12 V e^i e^j\\
-&=-\frac12\sum_k[(\lambda_k-\lambda_i-\lambda_j)M^{i,j,k} +\int V e^i e^j \bar e^k\, dx]\, e^k.
-\end{aligned}$$
-
-Ground-state conjugation repairs the $V$ defect: if $H\psi=\lambda_0\psi$ with $\psi>0$, then
-
-$$L:=\psi^{-1}(H-\lambda_0)(\psi\,\cdot\,)=-\Delta-2\langle\nabla\log\psi,\nabla\,\cdot\,\rangle$$
-is a diffusion, and its Bakry–Émery tensor is $\mathrm{Ric}_L=\operatorname{Ric}-2\operatorname{Hess}\log\psi$. For the harmonic oscillator the ground state is a Gaussian, $\log\psi_0=-x^2/2+\mathrm{const}$, and one recovers exactly $\mathrm{BE}(2,\infty)$ for this renormalized Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator. In particular, $\mathrm{Ric}_L\ge K g$ implies the spectral gap bound $\lambda_1-\lambda_0\ge K$, with equality for the harmonic oscillator.
-
-With $\phi =- 2 \log \psi_0$ and $v\cdot w$ the Riemannian cometric, let us write these operators in the eigenbasis of $L$,
-
-\begin{equation}
-\begin{aligned}
-f_n&=\frac{\psi_n}{\psi_0},\qquad
- W^{i,j,k}=\int\frac{\psi_i\psi_j\psi_k}{\psi_0}\,d\mathrm{vol},\\
-\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)W^{i,j,k}\,f_k = -df_i \cdot df_j\\
-\Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 W^{i,j,k}\,f_k\implies\\
-\Gamma_{2,L}(f)&=\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2+\operatorname{Ric}(\nabla f,\nabla f) + \operatorname{Hess}\phi(\nabla f, \nabla f).
-\end{aligned}
-\end{equation}
-
-For a Schr\"odinger operator as in the Theorem~\ref{thm}, the isometric type of $(M,g,V)$ is encoded in the diffusion data $(\{\lambda_n-\lambda_0\},\{W^{i,j,k}\})$, because $\Gamma_L$ is the cometric and $\psi_0$ recovers $V$ by Riccati.
-
-\subsection{Returning to Harmonic Oscillator Example}
 With $f_n=\psi_n/\psi_0$ and $d\mu=\psi_0^2\,dx$,
 $$W^{i,j,k}=\int_{\mathbb{R}}\frac{\psi_i\psi_j\psi_k}{\psi_0}\,dx
 =\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\,e^{-x^2}\,dx.$$
