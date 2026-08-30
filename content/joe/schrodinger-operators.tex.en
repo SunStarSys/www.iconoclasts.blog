@@ -256,6 +256,7 @@ Now since $F$ intertwines $H$, the second-order parts already agree, so the orde
 This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a consequence of Theorem~\ref{thm-2} and Remark~\ref{rmk}.
 \end{proof}
 
+\subsection{Witten Corollaries}
 \begin{subproof}[Proof of Corollary~\ref{coro}]
 The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\alpha:=\operatorname{span}\{f_i\}$ for a weighted-orthonormal eigenbasis of $L_\alpha$, and likewise $\mathcal{A}_\psi$ on $N$. The ground state is a constant; normalize $f^0\equiv 1$. Coordinates will come from $\{f_i\}_{i\ge 1}$.
 
