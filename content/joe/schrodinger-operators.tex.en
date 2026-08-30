@@ -159,7 +159,7 @@ The Witten Laplacian on $p$-forms is the Hodge Laplacian of the weighted manifol
 \section{Preliminaries}
 \label{sec:pre}
 
-Let $\mathcal{A}_0\subset L^2(M)$ be the linear span of the eigenfunctions. Finite linear combinations
+Let $\mathcal{A}_0\subset L^2(M)$ be the algebraic span of the eigenfunctions. Finite linear combinations
 $$\phi=\sum_{i=0}^N\hat\phi(i)\,e^i$$ are dense in $L^2$ and, by elliptic regularity plus the decay of eigenfunctions, lie in $C^\infty\cap C_0(M)$. Pointwise multiplication is
 $$\phi\psi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\psi(j)M^{i,j,k}\Bigr)e^k.$$
 Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $N$. Consequently the linear map
@@ -198,22 +198,36 @@ f_n&=\frac{\psi_n}{\psi_0},\qquad
 
 For a Schr\"odinger operator as in the Theorem~\ref{thm}, the isometric type of $(M,g,V)$ is encoded in the diffusion data $(\{\lambda_n-\lambda_0\},\{W^{i,j,k}\})$, because $\Gamma_L$ is the cometric and $\psi_0$ recovers $V$ by Riccati.
 
-
-
 \section{Proof of Theorems}
 \begin{proof}
 (Following \cite{JS24}) For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $\vec{F}$ from $\mathcal{S}_M$ to $\mathcal{S}_N$ and note that from the calculations in Section~\ref{sec:pre} above, $\vec{F}$ preserves pointwise products for such smooth functions by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
 
 \begin{lemma}
 \label{lma}
- $\vec F$ preserves the uniform norm on the span of the eigenfunctions, hence extends to an isometric $*$-homomorphism
+$\vec F$ preserves the uniform norm on the span of the eigenfunctions, hence extends to an isometric $*$-homomorphism
 $$\vec F:C_0(M)\supset\overline{\mathcal{A}_0}^{\|\cdot\|_\infty}\longrightarrow C_0(N).$$
 \end{lemma}
 
 \begin{subproof}[Sketch of proof of Lemma~\ref{lma}]
-On a compact manifold one uses a smooth partition of unity and the fact that $\|a\|_\infty=1$ for a partition function $a$ is detected by $\|a^p\|_\infty=1$ for all $p$, which is visible in the Fourier coefficients because the limiting characteristic function of $\{a=1\}$ has $L^2$-mass.
-In the non-compact setting replace a global partition of unity by a sequence of cutoffs $\chi_R$ that equal $1$ on $\{V\le R\}$ and vanish outside $\{V\le R+1\}$. On each such “almost-compact” region the same argument applies: if $\|\phi\|_\infty=c$ is attained on a set of positive measure inside $\{V\le R\}$, the powers $\phi^p/\|\phi\|_\infty^p$ converge in $L^2_{\mathrm{loc}}$ to a characteristic function, and $\vec F$ preserves that limit because it preserves all triple products. Sending $R\to\infty$ and using that every function in $C_0(M)$ is uniformly small outside a large sublevel set of $V$ gives $\|\vec F(\phi)\|_\infty=\|\phi\|_\infty$.
+Eigenfunctions may be taken real, so $\mathcal{A}_0$ is a unital-over-the-ground-state real algebra in $C^\infty\cap C_0\cap L^2$. Matching triple products make $\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N)$ an algebra homomorphism, and the spectral identification makes it unitary for $L^2$.
+Products stay in $\mathcal{A}_0$. If $\phi=\sum_i\hat\phi(i)\,e^i\in\mathcal{A}_0$, the structure-constant formula of §2 gives $\phi^p\in\mathcal{A}_0$ for every integer $p\ge 1$, and
+$$\vec F(\phi^p)=(\vec F\phi)^p.$$
+$L^{2p}$ norms are preserved. Unitarity on $L^2$ therefore yields
+$$\|\phi\|_{L^{2p}(M)}^{2p}=\langle\phi^p,\phi^p\rangle_{L^2(M)}=\langle(\vec F\phi)^p,(\vec F\phi)^p\rangle_{L^2(N)}=\|\vec F\phi\|_{L^{2p}(N)}^{2p}.$$
 
+$L^{2p}$ recovers $\|\cdot\|_\infty$ on $C_0\cap L^2$. Let $\phi\in C_0(M)\cap L^2(M)$ and write $m=\|\phi\|_\infty$. The function $|\phi|$ attains the value $m$ on a compact set (one-point compactification: the maximum is not at infinity unless $\phi=0$). For $0<\delta<m$ the set
+$$E_\delta=\{x:|\phi(x)|\ge m-\delta\}$$
+is compact and nonempty, hence of finite volume. Then
+$$(m-\delta)^{2p}\mathrm{vol}(E_\delta)\le\int_M|\phi|^{2p}\,d\mathrm{vol}\le m^{2p-2}\|\phi\|_{L^2}^2,$$
+so
+$$(m-\delta)\,\mathrm{vol}(E_\delta)^{1/(2p)}\le\|\phi\|_{L^{2p}}\le m^{1-1/p}\|\phi\|_{L^2}^{1/p}.$$
+The right side tends to $m$ and the left side tends to $m-\delta$. Letting $\delta\downarrow 0$ gives
+$$\lim_{p\to\infty}\|\phi\|_{L^{2p}}=\|\phi\|_\infty.$$
+The same identity holds on $N$.
+
+For $\phi\in\mathcal{A}_0$,
+$$\|\vec F\phi\|_\infty=\lim_p\|\vec F\phi\|_{L^{2p}}=\lim_p\|\phi\|_{L^{2p}}=\|\phi\|_\infty.$$
+Thus $\vec F$ is isometric for $\|\cdot\|_\infty$ on a dense subspace of its uniform closure. The closure of $\mathcal{A}_0$ in $C_0(M)$ is a commutative $C^*$-subalgebra of $C_0(M)$, and $\vec F$ extends uniquely to an isometric $*$-homomorphism into $C_0(N)$. (Self-adjointness is immediate: eigenfunctions are real.
 \end{subproof}
 
 Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras $C_0(N), C_0(M)$ \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$.
@@ -223,7 +237,7 @@ Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functo
 $F$ is a $C^\infty$ diffeomorphism, and $F^*g=h$.
 \end{lemma}
 \begin{subproof}
-Let $f_n=\psi_n/\psi_0$ and let $\mathcal{A}_0$ be their linear span. $f_n$ need not be in $C_0(M)$; so we let
+Let $f_n=\psi_n/\psi_0$ and let $\mathcal{A}_0$ be their algebraic span. $f_n$ need not be in $C_0(M)$; so we let
 $$U\psi_n=\psi_n\circ F,\qquad U\psi_0=\psi_0\circ F>0,$$
 hence
 $$f_n\circ F=\frac{\psi_n\circ F}{\psi_0\circ F}=\frac{U\psi_n}{U\psi_0}.$$
