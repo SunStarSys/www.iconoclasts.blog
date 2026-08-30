@@ -209,7 +209,7 @@ $$\vec F:C_0(M)\supset\overline{\mathcal{A}_0}^{\|\cdot\|_\infty}\longrightarrow
 \end{lemma}
 
 \begin{subproof}[Sketch of proof of Lemma~\ref{lma}]
-Eigenfunctions may be taken real, so $\mathcal{A}_0$ is a unital-over-the-ground-state real algebra in $C^\infty\cap C_0\cap L^2$. Matching triple products make $\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N)$ an algebra homomorphism, and the spectral identification makes it unitary for $L^2$.
+Eigenfunctions may be taken real, so $\mathcal{A}_0$ is a real algebra in $C^\infty\cap C_0\cap L^2$. Matching triple products make $\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N)$ an algebra homomorphism, and the spectral identification makes it unitary for $L^2$.
 Products stay in $\mathcal{A}_0$. If $\phi=\sum_i\hat\phi(i)\,e^i\in\mathcal{A}_0$, the structure-constant formula of §2 gives $\phi^p\in\mathcal{A}_0$ for every integer $p\ge 1$, and
 $$\vec F(\phi^p)=(\vec F\phi)^p.$$
 $L^{2p}$ norms are preserved. Unitarity on $L^2$ therefore yields
