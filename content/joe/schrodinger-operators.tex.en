@@ -240,7 +240,7 @@ $$h^{ab}(y)=-\Gamma_{L'}(Uf_{i_a},Uf_{i_b})=-\Gamma_L(f_{i_a},f_{i_b})\circ F=g^
 hence $F^*g=h$ on $M_{\mathrm{reg}}$.
 \end{subproof}
 
-The complement $M\setminus M_{\mathrm{reg}}$ is closed and nowhere dense. Both metrics are smooth on all of $M$ and $N$, so the identity $F^*g=h$ extends by continuity.
+The complement $M\setminus M_{\mathrm{reg}}$ is closed and nowhere dense. Both metrics are smooth on all of $M$ and $N$, so the identity $F^*g=h$ extends by continuity. Again, we can recover $V$ from $\psi_0$ by Riccati, so $V = W\circ F$.
 
 This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a consequence of Theorem~\ref{thm-2} and Remark~\ref{rmk}.
 \end{proof}
