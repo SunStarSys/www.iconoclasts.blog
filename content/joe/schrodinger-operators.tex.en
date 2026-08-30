@@ -161,7 +161,7 @@ The Witten Laplacian on $p$-forms is the Hodge Laplacian of the weighted manifol
 
 Let $\mathcal{A}_0\subset L^2(M)$ be the algebraic span of the eigenfunctions. Finite linear combinations
 $$\phi=\sum_{i=0}^N\hat\phi(i)\psi_i$$ are dense in $L^2$ and, by elliptic regularity plus the decay of eigenfunctions, lie in $C^\infty\cap C_0(M)$. Pointwise multiplication is
-$$\phi\alpha=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\alpha(j)M^{i,j,k}\Bigr)\psi_k.$$
+$$\phi\chi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\chi(j)M^{i,j,k}\Bigr)\psi_k.$$
 Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $N$. Consequently the linear map
 $$\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N),\qquad \psi_i\mapsto \eta_i$$
 is an algebra homomorphism for pointwise multiplication (the constant function is a multiple of the ground state only if $V$ is constant; in general $\vec F$ need not send $1$ to $1$, but it preserves the product of any two functions that can be so expanded).
