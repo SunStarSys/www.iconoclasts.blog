@@ -304,8 +304,7 @@ In one dimension this is almost tautological once the algebra is identified, but
 
 Finite Hermite combinations are dense in $C_0(\mathbb{R})$ for the uniform norm (Stone–Weierstrass on each compact plus Gaussian decay at infinity).
 The numbers $M^{i,j,k}$ determine the product of any two such combinations, hence determine a $C^*$-isomorphism$$C_0(\mathbb{R})\longrightarrow C_0(\mathbb{R}),\qquad \psi_n\mapsto f_n.$$
-Gelfand–Naimark supplies a homeomorphism of the underlying locally compact spaces; smoothness of the eigenfunctions upgrades it to a diffeomorphism $F$.
-Intertwining of $H$ forces the principal symbol (the cometric) and the zeroth-order term (the potential) to match.
+Gelfand–Naimark supplies a homeomorphism of the underlying locally compact spaces; Lemma~\rev{lma-smooth} smooths it up to a Riemannian isometry.
 
 Because every eigenspace is one-dimensional, the singular-value packaging collapses to the absolute values $|M^{i,j,k}|$ together with a consistent choice of signs (the “diagonal litmus” of the compact paper: the products $M^{i,i,k}$ determine the even part of the algebra and fix most signs).
 
