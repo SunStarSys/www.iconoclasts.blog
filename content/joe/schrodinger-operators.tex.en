@@ -60,7 +60,7 @@
 \maketitle
 
 \begin{abstract}
-For a confining Schrödinger operator $H=-\Delta_g+V$ on a complete Riemannian manifold, isospectrality determines the eigenspaces only up to unitary mixing within each eigenvalue. We prove that a unitary spectral identification which also preserves the triple products $\Phi(u,v,w)=\int uvw\,d\mathrm{vol}$ is implemented by a diffeomorphism intertwining the metrics and the potentials. The same statement holds for Witten operators on $L^2(e^{-\varphi}\,d\mathrm{vol})$, with the weight recovered up to an additive constant. The geometric discriminant is the multiplication table on the spectral subspaces, not the spectrum by itself.
+For a confining Schrödinger operator $H=-\Delta_g+V$ on a complete Riemannian manifold, isospectrality determines the eigenspaces only up to unitary mixing within each eigenvalue. We prove that a unitary spectral identification which also preserves the triple products $\Phi(u,v,w)=\int uvw\,d\mathrm{vol}$ is implemented by a diffeomorphism intertwining the metrics and the potentials. The same statement holds for Witten operators on $L^2(e^{-\alpha}\,d\mathrm{vol})$, with the weight recovered up to an additive constant. The geometric discriminant is the multiplication table on the spectral subspaces, not the spectrum by itself.
 
 \noindent\textbf{Keywords:} spectrum, Fourier, harmonic, triple products, Schr\"odinger, Witten, Laplacian, eigenfunctions, functional, inverse problem
 \end{abstract}
@@ -123,38 +123,38 @@ $$M^{i,j,k}=\Phi(\psi_i,\psi_j,\bar\psi_k).$$
 Conversely, any spectral identification that intertwines $\Phi$ becomes Theorem~\ref{thm-2} after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,V)$ with $(N,h,W)$.
 \end{remark}
 
-Let $(M,g)$ be complete and connected, and let $\varphi\in C^\infty(M)$ be confining in the Bakry–Émery sense, so that the Witten operator
-$$L_\varphi u=-\Delta_g u+\langle\nabla\varphi,\nabla u\rangle$$
+Let $(M,g)$ be complete and connected, and let $\alpha\in C^\infty(M)$ be confining in the Bakry–Émery sense, so that the Witten operator
+$$L_\alpha u=-\Delta_g u+\langle\nabla\alpha,\nabla u\rangle$$
 is essentially self-adjoint and bounded below on $C_c^\infty(M)$, with
-$$\sigma(L_\varphi)=\sigma_{\mathrm{disc}}(L_\varphi)=\{\nu_0=0<\nu_1\le\nu_2\le\cdots\}\to+\infty$$
-in the weighted space $L^2(M,e^{-\varphi}\,d\mathrm{vol}_g)$. Write
-$$\mathcal{S}_\varphi:=\bigoplus_{n=0}^\infty\ker(L_\varphi-\nu_n)\subset L^2(M,e^{-\varphi}\,d\mathrm{vol}_g)\cap C^\infty(M).$$
+$$\sigma(L_\alpha)=\sigma_{\mathrm{disc}}(L_\alpha)=\{\nu_0=0<\nu_1\le\nu_2\le\cdots\}\to+\infty$$
+in the weighted space $L^2(M,e^{-\alpha}\,d\mathrm{vol}_g)$. Write
+$$\mathcal{S}_\alpha:=\bigoplus_{n=0}^\infty\ker(L_\alpha-\nu_n)\subset L^2(M,e^{-\alpha}\,d\mathrm{vol}_g)\cap C^\infty(M).$$
 The same data $(N,h,\psi)$ produce $L_\psi$ and $\mathcal{S}_\psi$.
 The invariant is the weighted triple form
-$$\Phi_\varphi:\mathcal{S}_\varphi\times\mathcal{S}_\varphi\times\mathcal{S}_\varphi\to\mathbb{C},\qquad
-\Phi_\varphi(u,v,w)=\int_M u\,v\,w\,e^{-\varphi}\,d\mathrm{vol}_g.$$
-A linear map $U:\mathcal{S}_\varphi\to\mathcal{S}_\psi$ is a spectral identification if it is unitary for the weighted $L^2$ inner products and
-$$U\bigl(\ker(L_\varphi-\nu_n)\bigr)=\ker(L_\psi-\nu_n)\qquad\text{for every }n.$$
+$$\Phi_\alpha:\mathcal{S}_\alpha\times\mathcal{S}_\alpha\times\mathcal{S}_\alpha\to\mathbb{C},\qquad
+\Phi_\alpha(u,v,w)=\int_M u\,v\,w\,e^{-\alpha}\,d\mathrm{vol}_g.$$
+A linear map $U:\mathcal{S}_\alpha\to\mathcal{S}_\psi$ is a spectral identification if it is unitary for the weighted $L^2$ inner products and
+$$U\bigl(\ker(L_\alpha-\nu_n)\bigr)=\ker(L_\psi-\nu_n)\qquad\text{for every }n.$$
 
 \begin{corollary}
 \label{coro}
-Let $(M,g,\varphi)$ and $(N,h,\psi)$ be as above, and assume $L_\varphi$ and $L_\psi$ are isospectral. If there exists a spectral identification $U:\mathcal{S}_\varphi\to\mathcal{S}_\psi$ such that
-$$\Phi_\psi(Uu,Uv,Uw)=\Phi_\varphi(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{S}_\varphi,$$
+Let $(M,g,\alpha)$ and $(N,h,\psi)$ be as above, and assume $L_\alpha$ and $L_\psi$ are isospectral. If there exists a spectral identification $U:\mathcal{S}_\alpha\to\mathcal{S}_\psi$ such that
+$$\Phi_\psi(Uu,Uv,Uw)=\Phi_\alpha(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{S}_\alpha,$$
 then there is a diffeomorphism $F:N\to M$ with
-$$F^*g=h\qquad\text{and}\qquad\psi=\varphi\circ F+c$$
-for a constant $c\in\mathbb{R}$. In particular the weighted manifolds $(M,g,e^{-\varphi}\mathrm{vol}_g)$ and $(N,h,e^{-\psi}\mathrm{vol}_h)$ are isometric up to that constant rescaling of the weight.
+$$F^*g=h\qquad\text{and}\qquad\psi=\alpha\circ F+c$$
+for a constant $c\in\mathbb{R}$. In particular the weighted manifolds $(M,g,e^{-\alpha}\mathrm{vol}_g)$ and $(N,h,e^{-\beta}\mathrm{vol}_h)$ are isometric up to that constant rescaling of the weight.
 \end{corollary}
 In basis coordinates, we again have
 \begin{corollary}
 \label{coro-2}
-The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f_i\}$ of $L_\varphi$ and $\{u_i\}$ of $L_\psi$, ordered by nondecreasing eigenvalues, with
-$$W^{i,j,k}:=\int_M f_i f_j\overline{f_k}\,e^{-\varphi}\,d\mathrm{vol}_g
-=\int_N u_i u_j\overline{u_k}\,e^{-\psi}\,d\mathrm{vol}_h
+The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f_i\}$ of $L_\alpha$ and $\{u_i\}$ of $L_\psi$, ordered by nondecreasing eigenvalues, with
+$$W^{i,j,k}:=\int_M f_i f_j\overline{f_k}\,e^{-\alpha}\,d\mathrm{vol}_g
+=\int_N u_i u_j\overline{u_k}\,e^{-\beta}\,d\mathrm{vol}_h
 \qquad\text{for all }i,j,k.$$
 \end{corollary}
 
 \begin{remark}
-The Witten Laplacian on $p$-forms is the Hodge Laplacian of the weighted manifold plus $t\operatorname{Hess}\varphi\#_p+t^2\lvert\nabla\varphi\rvert^2$. Once $(M,g,\varphi)$ is reconstructed from the scalar array $W^{i,j,k}$, the operators $L_{\varphi}^{(p)}$ are determined, so their spectra and eigenform pairings against scalar eigenfunctions are invariants, not additional moduli.
+The Witten Laplacian on $p$-forms is the Hodge Laplacian of the weighted manifold plus $t\operatorname{Hess}\alpha\#_p+t^2\lvert\nabla\alpha\rvert^2$. Once $(M,g,\alpha)$ is reconstructed from the scalar array $W^{i,j,k}$, the operators $L_{\alpha}^{(p)}$ are determined, so their spectra and eigenform pairings against scalar eigenfunctions are invariants, not additional moduli.
 \end{remark}
 \section{Preliminaries}
 \label{sec:pre}
@@ -257,44 +257,44 @@ This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a cons
 \end{proof}
 
 \begin{subproof}[Proof of Corollary~\ref{coro}]
-The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\varphi:=\operatorname{span}\{f_i\}$ for a weighted-orthonormal eigenbasis of $L_\varphi$, and likewise $\mathcal{A}_\psi$ on $N$. The ground state is a constant; normalize $f^0\equiv 1$. Coordinates will come from $\{f_i\}_{i\ge 1}$.
+The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\alpha:=\operatorname{span}\{f_i\}$ for a weighted-orthonormal eigenbasis of $L_\alpha$, and likewise $\mathcal{A}_\psi$ on $N$. The ground state is a constant; normalize $f^0\equiv 1$. Coordinates will come from $\{f_i\}_{i\ge 1}$.
 
-Completeness of $\{f_i\}$ in $L^2(e^{-\varphi}\,d\mathrm{vol})$ and the same elliptic/Agmon estimates as in §2 give the pointwise expansion
+Completeness of $\{f_i\}$ in $L^2(e^{-\alpha}\,d\mathrm{vol})$ and the same elliptic/Agmon estimates as in §2 give the pointwise expansion
 $$f_if_j=\sum_k W^{i,j,k}f_k,\qquad
-W^{i,j,k}=\Phi_\varphi(f_i,f_j,\bar f_k).$$
-Matching $\Phi_\varphi$ with $\Phi_\psi$ therefore makes $U:\mathcal{A}_\varphi\to\mathcal{A}_\psi$ an algebra homomorphism for pointwise multiplication:
+W^{i,j,k}=\Phi_\alpha(f_i,f_j,\bar f_k).$$
+Matching $\Phi_\alpha$ with $\Phi_\psi$ therefore makes $U:\mathcal{A}_\alpha\to\mathcal{A}_\psi$ an algebra homomorphism for pointwise multiplication:
 $$U(fg)=U(f)U(g).$$
-Every element of $\mathcal{A}_\varphi$ is $C^\infty$.
+Every element of $\mathcal{A}_\alpha$ is $C^\infty$.
 
 As in the proof of Lemma~\ref{lma-smooth}, some $d$-tuple satisfies
-$$\det\bigl(\Gamma_{L_\varphi}(f^{i_a},f^{i_b})(p)\bigr)\ne 0,$$
+$$\det\bigl(\Gamma_{L_\alpha}(f^{i_a},f^{i_b})(p)\bigr)\ne 0,$$
 where, as in (1),
-$$\Gamma_{L_\varphi}(f_i,f_j)=\frac12\sum_k(\nu_k-\nu_i-\nu_j)W^{i,j,k}f_k=-df_i\cdot df_j.$$
+$$\Gamma_{L_\alpha}(f_i,f_j)=\frac12\sum_k(\nu_k-\nu_i-\nu_j)W^{i,j,k}f_k=-df_i\cdot df_j.$$
 
 The indices may depend on $p$. The joint evaluation
 $$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(f^n(p)\bigr)_{n\ge 0}$$
-is therefore an immersion. It is injective because $\mathcal{A}_\varphi$ separates points (the same $C^0_{\mathrm{loc}}$ density). So $\mathrm{Ev}_M$ is an embedding onto its image. The same holds for $\mathrm{Ev}_N$.
+is therefore an immersion. It is injective because $\mathcal{A}_\alpha$ separates points (the same $C^0_{\mathrm{loc}}$ density). So $\mathrm{Ev}_M$ is an embedding onto its image. The same holds for $\mathrm{Ev}_N$.
 
 Define $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $f^n\mapsto Uf^n$, i.e.
 $$f^n\circ F=Uf^n\qquad\text{for all }n.$$
 This is well-defined because $U$ preserves products and both evaluation maps are embeddings. Near any $p\in M$ the $d$-tuple above is a $C^\infty$ chart
 $$x=\bigl(f^{i_1},\dots,f^{i_d}\bigr).$$
-The same indices work at $F^{-1}(p)$ because $U$ preserves $\Gamma_{L_\varphi}$. The matching chart on $N$ is
+The same indices work at $F^{-1}(p)$ because $U$ preserves $\Gamma_{L_\alpha}$. The matching chart on $N$ is
 $$y=\bigl(Uf^{i_1},\dots,Uf^{i_d}\bigr),$$
 and $Uf=f\circ F$ says $y=x\circ F$. Thus $F$ is the identity of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism near $p$. The point $p$ was arbitrary.
 
 In those coordinates the cometric is
-$$g^{ab}=-\Gamma_{L_\varphi}(f^{i_a},f^{i_b}),$$
-a finite eigenfunction expansion by the displayed formula for $\Gamma_{L_\varphi}$. Applying $U$ gives
-$$h^{ab}=-\Gamma_{L_\psi}(Uf^{i_a},Uf^{i_b})=-\Gamma_{L_\varphi}(f^{i_a},f^{i_b})\circ F,$$
+$$g^{ab}=-\Gamma_{L_\alpha}(f^{i_a},f^{i_b}),$$
+a finite eigenfunction expansion by the displayed formula for $\Gamma_{L_\alpha}$. Applying $U$ gives
+$$h^{ab}=-\Gamma_{L_\beta}(Uf^{i_a},Uf^{i_b})=-\Gamma_{L_\alpha}(f^{i_a},f^{i_b})\circ F,$$
 so $F^*g=h$.
 
 By construction $U$ intertwines the operators, so
-$$L_\psi(u\circ F)=(L_\varphi u)\circ F,\qquad u\in\mathcal{A}_\varphi.$$
+$$L_\psi(u\circ F)=(L_\alpha u)\circ F,\qquad u\in\mathcal{A}_\alpha.$$
 The principal symbols already match. The first-order terms are the drifts
-$$L_\varphi=-\Delta_g+\operatorname{grad}_g\varphi\,\lrcorner\,d,\qquad
+$$L_\alpha=-\Delta_g+\operatorname{grad}_g\alpha\,\lrcorner\,d,\qquad
 L_\psi=-\Delta_h+\operatorname{grad}_h\psi\,\lrcorner\,d.$$
-Pulling back gives $d\psi=F^*d\varphi$, hence $\psi=\varphi\circ F+c$ for a constant $c\in\mathbb{R}$.
+Pulling back gives $d\psi=F^*d\alpha$, hence $\psi=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$.
 
 This proves Corollary~\ref{coro}. Corollary~\ref{coro-2} is a coordinate restatement of it, so no additional proof provided.
 \end{subproof}
