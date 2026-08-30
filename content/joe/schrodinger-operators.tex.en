@@ -159,7 +159,7 @@ The Witten Laplacian on $p$-forms is the Hodge Laplacian of the weighted manifol
 \section{Preliminaries}
 \label{sec:pre}
 
-Let $\mathcal{A}_0\subset L^2(M)$ be the algebraic span of the eigenfunctions. Finite linear combinations
+Let $\mathcal{A}_0\subset L^2(M)$ be the linear span of the eigenfunctions. Finite linear combinations
 $$\phi=\sum_{i=0}^N\hat\phi(i)\,e^i$$ are dense in $L^2$ and, by elliptic regularity plus the decay of eigenfunctions, lie in $C^\infty\cap C_0(M)$. Pointwise multiplication is
 $$\phi\psi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\psi(j)M^{i,j,k}\Bigr)e^k.$$
 Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $N$. Consequently the linear map
@@ -223,7 +223,7 @@ Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functo
 $F$ is a $C^\infty$ diffeomorphism, and $F^*g=h$.
 \end{lemma}
 \begin{subproof}
-Let $f_n=\psi_n/\psi_0$ and let $\mathcal{A}_0$ be their algebraic span. Then $Uf=f\circ F$ on $\mathcal{A}_0$, and $\Gamma_L(f_i,f_j)=-df_i\cdot df_j$ as in (1). Note $f_0\equiv 1$, so coordinates come from $\{f_n\}_{n\ge 1}$.
+Let $f_n=\psi_n/\psi_0$ and let $\mathcal{A}_0$ be their linear span. Then $Uf=f\circ F$ on $\mathcal{A}_0$, and $\Gamma_L(f_i,f_j)=-df_i\cdot df_j$ as in (1). Note $f_0\equiv 1$, so coordinates come from $\{f_n\}_{n\ge 1}$.
 Fix $p\in M$. The finite spectral projectors of $L$ send $C_c^\infty(M)$ into $\mathcal{A}_0$ and converge in $C^\infty_{\mathrm{loc}}$ (elliptic regularity). Hence $\mathcal{A}_0$ is dense in $C^1$ on a neighborhood of $p$. If $\operatorname{span}\{\nabla f_n(p):n\ge 1\}\ne T_pM$, there would exist $0\neq v\in T_pM$ with $df_n(v)=0$ for every $n$, hence $d\phi(v)=0$ for every $\phi\in\mathcal{A}_0$. Taking a $C^1$-limit would give $du(v)=0$ for every $u\in C_c^\infty$, which is absurd. Thus some $d$-tuple satisfies
 $$\det\bigl(\Gamma_L(f_{i_a},f_{i_b})(p)\bigr)\ne 0.$$
 The indices may depend on $p$; every point has such a tuple.
