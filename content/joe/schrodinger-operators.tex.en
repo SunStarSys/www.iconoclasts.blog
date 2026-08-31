@@ -154,7 +154,7 @@ $$\int_{-\infty}^{\infty}e^{-x^2}H_a(x)H_b(x)H_c(x)\,dx
 =\sqrt{\pi}\,2^N\frac{a!\,b!\,c!}{(N-a)!(N-b)!(N-c)!}$$
 (when $a+b+c=2N$ is even and each factorial in the denominator is defined and non-negative, and $0$ otherwise) yields $M^{i,j,k}$ after inserting the normalization constants of the $e^n$. In particular:
 
-$M^{n,n,0}=\inte^n^2e^0\,dx>0$ (the ground state $e^0=\pi^{-1/4}e^{-x^2/2}$ is a strictly positive Gaussian);
+$M^{n,n,0}=\int e^n^2e^0\,dx>0$ (the ground state $e^0=\pi^{-1/4}e^{-x^2/2}$ is a strictly positive Gaussian);
 the map $e^ie^j=\sum_k M^{i,j,k}e^k$ is the exact multiplication rule in the Hermite basis.
 
 So the structure constants of pointwise multiplication on the dense subspace $\mathrm{span}\{e^n\}\subset C_0(\mathbb{R})$ are known in closed form.
@@ -167,7 +167,7 @@ $$F^*g=dx^2,\qquad W\circ F=x^2.$$
 Because every eigenspace is one-dimensional, the singular-value packaging collapses to the absolute values $|M^{i,j,k}|$ together with a consistent choice of signs (the “diagonal litmus” of the compact paper: the products $M^{i,i,k}$ determine the even part of the algebra and fix most signs).
 
 \subsection{Explicit Formula}
-$$M^{i,j,k}=\langlee^ie^j,e^k\rangle
+$$M^{i,j,k}=\langle e^ie^j,e^k\rangle
 =\int_{\mathbb{R}}e^i(x)e^j(x)e^k(x)\,dx
 =N_i N_j N_k\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\,e^{-3x^2/2}\,dx,$$
 where $N_n=(2^n n!\sqrt{\pi})^{-1/2}$.
