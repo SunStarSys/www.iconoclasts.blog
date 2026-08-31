@@ -220,7 +220,7 @@ and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric 
 
 \subsection{Harmonic Oscillator to Ornstein-Uhlenbeck}
 
-The oscillator $H=-d^2/dx^2+x^2$ is the Schrödinger case $\alpha=0$, $V(x)=x^2$ of $P_{\alpha,V}$, with unweighted measure $dx$ and triple products $M^{i,j,k}=\int e_ie_je_k\,dx$. Ground-state conjugation by $e^0(x)=\pi^{-1/4}e^{-x^2/2}$ produces the Witten operator
+The oscillator $H=-d^2/dx^2+x^2$ is the Schrödinger case $\alpha=0$, $V(x)=x^2$ of $P_{\alpha,V}$, with unweighted measure $dx$ and triple products $M^{i,j,k}=\int e^ie^je^k\,dx$. Ground-state conjugation by $e^0(x)=\pi^{-1/4}e^{-x^2/2}$ produces the Witten operator
 $$L={e^0}^{-1}(H-\lambda_0)(e^0\,\cdot)=-\frac{d^2}{dx^2}+2x\frac{d}{dx}$$
 on $L^2(\mathbb{R},{e^0}^2\,dx)$. This is $P_{\alpha,0}$ for $\alpha=x^2+\mathrm{const}$: the generator of the Ornstein–Uhlenbeck diffusion. The conjugated basis $f_n=e_n/e^0$ is orthonormal in $L^2({e^0}^2\,dx)$, and the two arrays are related by
 
