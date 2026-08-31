@@ -107,7 +107,7 @@ $$M^{i,j,k} := \int_M e^ie^j\bar e^k\,d\mu=\int_N f^if^j\bar f^k\,d\nu\qquad\tex
 
 \begin{remark}
 \label{rmk}
-Corollary 2 is the matrix form of Theorem 1. Given such bases, the map $Ue^i=f^i$ is a spectral identification (which extends to all of $\mathcal A_M$ from the Conformal Field Theory associativity relations \cite{JS24} on $M^{i,j,k}$), and
+Corollary 2 is the matrix form of Theorem 1. Given such bases, the map $Ue^i=f^i$ is a spectral identification (which extends to all of $\mathcal A_M, \mathcal A_N$ from the Conformal Field Theory associativity relations \cite{JS24} on $M^{i,j,k}$), and
 $$M^{i,j,k}=\Phi_\mu(e^i,e^j,\bar e^k).$$
 Conversely, any spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$ becomes Corollary 2 after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,\alpha,V)$ with $(N,h,\beta,W)$.
 \end{remark}
