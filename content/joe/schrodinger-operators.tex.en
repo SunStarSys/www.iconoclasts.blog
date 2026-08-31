@@ -60,10 +60,9 @@
 \maketitle
 
 \begin{abstract}
-For a confining Schrödinger operator $H=-\Delta_g+V$ on a complete Riemannian manifold, the spectrum determines the eigenspaces only up to independent unitaries on each eigenspace. We prove that a spectral identification which also preserves the triple products
-$$\Phi(u,v,w)=\int uvw\,d\mathrm{vol}$$
-is implemented by a diffeomorphism $F$ with $F^*g=h$ and $V\circ F=W$. The same statement holds for Witten operators on $L^2(e^{-\alpha}\,d\mathrm{vol})$: the metric is recovered, and the weight is recovered up to an additive constant. Thus the geometric invariant is the multiplication table on the spectral subspaces, not the spectrum alone.
-
+For a second-order operator $P_{\alpha,V}=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle+V$ on a complete Riemannian manifold, acting in $L^2(e^{-\alpha}\,d\mathrm{vol})$ with discrete spectrum, the eigenvalues determine the eigenspaces only up to independent unitaries on each eigenspace. We prove that a spectral identification which also preserves the triple products
+$$\Phi_\mu(u,v,w)=\int uvw\,d\mu,\qquad d\mu=e^{-\alpha}\,d\mathrm{vol},$$
+is implemented by a diffeomorphism $F$ with $F^*g=h$, $\beta=\alpha\circ F+c$, and $W=V\circ F$. Schrödinger operators are the case $\alpha=0$; Witten operators are the case $V=0$. The geometric invariant is the multiplication table on the spectral subspaces, not the spectrum alone.
 \noindent\textbf{Keywords:} spectrum, triple products, Schr\"odinger, Witten, Laplacian, eigenfunctions, inverse problem
 \end{abstract}
 
@@ -112,13 +111,6 @@ Corollary~\ref{coro} is the matrix form of Theorem~\ref{thm}. Given such bases, 
 $$M^{i,j,k}=\Phi(\psi_i,\psi_j,\bar\psi_k).$$
 Conversely, any spectral identification that intertwines $\Phi$ becomes Corollary~\ref{coro} after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,\alpha,V)$ with $(N,h,\beta,W)$.
 \end{remark}
-
-\section{Preliminaries}
-\label{sec:pre}
-Elements of $\mathcal{A}_M$ are finite sums $\sum\hat\phi(i)\psi_i$; they are dense in $L^2$ and lie in $C^\infty\cap C_0$.
-Pointwise multiplication is
-$$\phi\chi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\chi(j)M^{i,j,k}\Bigr)\psi_k.$$
-Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $N$.
 
 \section{Proofs}
 \begin{proof}
