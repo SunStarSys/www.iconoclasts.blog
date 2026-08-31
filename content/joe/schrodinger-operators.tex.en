@@ -159,11 +159,11 @@ The Witten Laplacian on $p$-forms is the Hodge Laplacian of the weighted manifol
 \section{Preliminaries}
 \label{sec:pre}
 
-Let $\mathcal{A}_0\subset L^2(M)$ be the algebraic span of the eigenfunctions. Finite linear combinations
+For $\phi\in\mathcal S_M$, finite linear combinations
 $$\phi=\sum_{i=0}^N\hat\phi(i)\psi_i$$ are dense in $L^2$ and, by elliptic regularity plus the decay of eigenfunctions, lie in $C^\infty\cap C_0(M)$. Pointwise multiplication is
 $$\phi\chi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\chi(j)M^{i,j,k}\Bigr)\psi_k.$$
 Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $N$. Consequently the linear map
-$$\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N),\qquad \psi_i\mapsto \eta_i$$
+$$\vec F:\mathcal{S}_M\to\mathcal{S}_N,\qquad \psi_i\mapsto \eta_i$$
 is an algebra homomorphism for pointwise multiplication (the constant function is a multiple of the ground state only if $V$ is constant; in general $\vec F$ need not send $1$ to $1$, but it preserves the product of any two functions that can be so expanded).
 This is identical to the compact calculation; the only extra ingredient is that the eigenfunction expansion of a compactly supported smooth function still converges rapidly enough for the triple-product formula to be justified (which follows from the same elliptic estimates that give $\lambda_i^{N}\|\psi_i\|_\infty\to 0$ locally, plus Agmon decay at infinity).
 
@@ -198,65 +198,30 @@ f_n&=\frac{\psi_n}{\psi_0},\qquad
 
 For a Schr\"odinger operator as in the Theorem~\ref{thm}, the isometric type of $(M,g,V)$ is encoded in the diffusion data $(\{\lambda_n-\lambda_0\},\{W^{i,j,k}\})$, because $\Gamma_L$ is the cometric and $\psi_0$ recovers $V$ by Riccati.
 
-\section{Proof of Theorems}
+\section{Proof of Schr\"odinger Theorems}
 \begin{proof}
-(Following \cite{JS24}) For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $\vec{F}$ from $\mathcal{S}_M$ to $\mathcal{S}_N$ and note that from the calculations in Section~\ref{sec:pre} above, $\vec{F}$ preserves pointwise products for such smooth functions by the premise that $\set{M^{i,j,k}}$ is invariant under this map.
+Let $U:\mathcal{S}_M\to\mathcal{S}_N$ be a spectral identification intertwining $\Phi$, and write $\psi_i\mapsto\eta_i:=U\psi_i$ for $L^2$-orthonormal eigenbases ordered by nondecreasing eigenvalues. Matching triple products make $U$ an algebra homomorphism for pointwise multiplication on $\mathcal{S}_M=\operatorname{span}\{\psi_i\}$:
+$$\psi_i\psi_j=\sum_k M^{i,j,k}\psi_k,\qquad
+U(\phi\chi)=U(\phi)U(\chi).$$
+(The constant function is a multiple of $\psi_0$ only if $V$ is constant; $U$ need not send $1$ to $1$.) Every element of $\mathcal{S}_M$ lies in $C^\infty\cap C_0$.
+Finite spectral projectors of $H_M$ send $C_c^\infty(M)$ into $\mathcal{S}_M$ and converge in $C^\infty_{\mathrm{loc}}$. Thus $\mathcal{S}_M$ is dense in $C^1$ near any $p\in M$. If $\operatorname{span}\{\nabla\psi_i(p):i\ge 0\}\ne T_pM$, some $0\neq v\in T_pM$ would annihilate every $d\psi_i$, hence every $d\phi$ for $\phi\in\mathcal{S}_M$, and a $C^1$-limit would annihilate every $u\in C_c^\infty$, which is absurd. So some $d$-tuple satisfies
+$$\det\bigl(d\psi_{i_a}\otimes d\psi_{i_b}(p)\bigr)\ne 0.$$
+The joint evaluation
+$$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(\psi_n(p)\bigr)_{n\ge 0}$$
+is therefore an immersion. It is injective because $\mathcal{S}_M$ separates points (the same $C^0_{\mathrm{loc}}$ density, and $\psi_0>0$). So $\mathrm{Ev}_M$ is an embedding onto its image. The same holds for $\mathrm{Ev}_N$ and $\mathcal{S}_N$.
 
-\begin{lemma}
-\label{lma}
-$\vec F$ preserves the uniform norm on the span of the eigenfunctions, hence extends to an isometric $*$-homomorphism
-$$\vec F:C_0(M)\supset\overline{\mathcal{A}_0}^{\|\cdot\|_\infty}\longrightarrow C_0(N).$$
-\end{lemma}
-
-\begin{subproof}[Proof of Lemma~\ref{lma}]
-Eigenfunctions may be taken real, so $\mathcal{A}_0$ is a real algebra (without unit) in $C^\infty\cap C_0\cap L^2$. Matching triple products make $\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N)$ an algebra homomorphism, and the spectral identification makes it unitary for $L^2$.
-Products stay in $\mathcal{A}_0$. If $\phi=\sum_i\hat\phi(i)\,\psi_i\in\mathcal{A}_0$, the structure-constant formula of §2 gives $\phi^p\in\mathcal{A}_0$ for every integer $p\ge 1$, and
-$$\vec F(\phi^p)=(\vec F\phi)^p.$$
-$L^{2p}$ norms are preserved. Unitarity on $L^2$ therefore yields
-$$\|\phi\|_{L^{2p}(M)}^{2p}=\langle\phi^p,\phi^p\rangle_{L^2(M)}=\langle(\vec F\phi)^p,(\vec F\phi)^p\rangle_{L^2(N)}=\|\vec F\phi\|_{L^{2p}(N)}^{2p}.$$
-
-$L^{2p}$ recovers $\|\cdot\|_\infty$ on $C_0\cap L^2$. Let $\phi\in C_0(M)\cap L^2(M)$ and write $m=\|\phi\|_\infty$. The function $|\phi|$ attains the value $m$ on a compact set (one-point compactification: the maximum is not at infinity unless $\phi=0$). For $0<\delta<m$ the set
-$$E_\delta=\{x:|\phi(x)|\ge m-\delta\}$$
-is compact and nonempty, hence of finite volume. Then
-$$(m-\delta)^{2p}\mathrm{vol}(E_\delta)\le\int_M|\phi|^{2p}\,d\mathrm{vol}\le m^{2p-2}\|\phi\|_{L^2}^2,$$
-so
-$$(m-\delta)\,\mathrm{vol}(E_\delta)^{1/(2p)}\le\|\phi\|_{L^{2p}}\le m^{1-1/p}\|\phi\|_{L^2}^{1/p}.$$
-The right side tends to $m$ and the left side tends to $m-\delta$. Letting $\delta\downarrow 0$ gives
-$$\lim_{p\to\infty}\|\phi\|_{L^{2p}}=\|\phi\|_\infty.$$
-The same identity holds on $N$.
-
-For $\phi\in\mathcal{A}_0$,
-$$\|\vec F\phi\|_\infty=\lim_p\|\vec F\phi\|_{L^{2p}}=\lim_p\|\phi\|_{L^{2p}}=\|\phi\|_\infty.$$
-Thus $\vec F$ is isometric for $\|\cdot\|_\infty$ on a dense subspace of its uniform closure. The closure of $\mathcal{A}_0$ in $C_0(M)$ is a commutative $C^*$-subalgebra of $C_0(M)$, and $\vec F$ extends uniquely to an isometric $*$-homomorphism into $C_0(N)$. Self-adjointness is immediate: eigenfunctions are real.
-\end{subproof}
-
-Since $\mathcal A_0$ separates points and has an element that vanishes nowhere $(\psi_0)$, Stone-Weierstrass \cite{JC19} proves its closure is exactly $C_0(M)$. Running that argument in reverse gives the same result on $C_0(N)$. Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $C^*$ algebras $C_0(N), C_0(M)$ \cite{JC19} to represent this isomorphism $\vec{F}$ by a homeomorphism $F$ between $N$ and $M$.
-
-\begin{lemma}
-\label{lma-smooth}
-$F$ is a $C^\infty$ diffeomorphism, and $F^*g=h$.
-\end{lemma}
-\begin{subproof}
-Let $f_n=\psi_n/\psi_0$ and let $\mathcal{A}_0$ be their algebraic span. $f_n$ need not be in $C_0(M)$; so we let
-$$U\psi_n=\psi_n\circ F,\qquad U\psi_0=\psi_0\circ F>0,$$
-hence
-$$f_n\circ F=\frac{\psi_n\circ F}{\psi_0\circ F}=\frac{U\psi_n}{U\psi_0}.$$
-Define $Uf_n:=U\psi_n/U\psi_0$.
-Then $Uf=f\circ F$ on $\mathcal{A}_0$, and $\Gamma_L(f_i,f_j)=-df_i\cdot df_j$ as in (1). Note $f_0\equiv 1$, so coordinates come from $\{f_n\}_{n\ge 1}$.
-Fix $p\in M$. The finite spectral projectors of $L$ send $C_c^\infty(M)$ into $\mathcal{A}_0$ and converge in $C^\infty_{\mathrm{loc}}$ (elliptic regularity). Hence $\mathcal{A}_0$ is dense in $C^1$ on a neighborhood of $p$. If $\operatorname{span}\{\nabla f_n(p):n\ge 1\}\ne T_pM$, there would exist $0\neq v\in T_pM$ with $df_n(v)=0$ for every $n$, hence $d\phi(v)=0$ for every $\phi\in\mathcal{A}_0$. Taking a $C^1$-limit would give $du(v)=0$ for every $u\in C_c^\infty$, which is absurd. Thus some $d$-tuple satisfies
-$$\det\bigl(\Gamma_L(f_{i_a},f_{i_b})(p)\bigr)\ne 0.$$
-The indices may depend on $p$; every point has such a tuple.
-Those $d$ functions are a $C^\infty$ chart $x=(f_{i_1},\dots,f_{i_d})$ on a neighborhood of $p$. The same indices work at $F^{-1}(p)$ because $U$ preserves $\Gamma_L$. The matching chart on $N$ is $y=(Uf_{i_1},\dots,Uf_{i_d})$, and $Uf=f\circ F$ says $y=x\circ F$. So $F$ is the identity map of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism near $p$. The cometric coefficients are
-$$g^{ab}=-\Gamma_L(f_{i_a},f_{i_b}),$$
-finite eigenfunction expansions by (1). Applying $U$ gives $F^*g=h$ near $p$. The point $p$ was arbitrary.
-\end{subproof}
-
-Now since $F$ intertwines $H$, the second-order parts already agree, so the order-zero terms give $V\circ F=W$
-
-This completes the proof of the Theorem~\ref{thm-2}. Theorem~\ref{thm} is a consequence of Theorem~\ref{thm-2} and Remark~\ref{rmk}.
+Define $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $\psi_n\mapsto\eta_n$, i.e.
+$$\psi_n\circ F=\eta_n=U\psi_n\qquad\text{for all }n.$$
+This is well-defined because $U$ preserves products and both evaluation maps are embeddings. Near any point the $d$-tuple above is a $C^\infty$ chart $x=(\psi_{i_1},\dots,\psi_{i_d})$. The same indices work on $N$ because $U$ preserves the spanning of $T^*$ (the Gram determinant is read from first derivatives of eigenfunctions, which match under composition). The matching chart is $y=(U\psi_{i_1},\dots,U\psi_{i_d})$, and $U\psi=\psi\circ F$ says $y=x\circ F$. Thus $F$ is the identity of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism.
+Metric and potential. By construction
+$$H_N(\psi\circ F)=(H_M\psi)\circ F,\qquad\psi\in\mathcal{S}_M.$$
+Both operators are second-order scalar differential operators. The identity holds on a family whose differentials span $T^*$ at every point, so the principal symbols match:
+$$F^*g=h.$$
+The order-zero terms then give $V\circ F=W$.
+This is Theorem 2. Theorem 1 is the same statement with $U$ given abstractly: $Uu=u\circ F$ on $\mathcal{S}_M$, so the evaluation embedding of any eigenbasis is only a coordinate expression of $F$.
 \end{proof}
 
-\subsection{Witten Corollaries}
+\subsection{Proof of Witten Corollaries}
 \begin{subproof}[Proof of Corollary~\ref{coro}]
 The Witten eigenfunctions need not lie in $C_0(M)$. Write $\mathcal{A}_\alpha:=\operatorname{span}\{f_i\}$ for a weighted-orthonormal eigenbasis of $L_\alpha$, and likewise $\mathcal{A}_\beta$ on $N$. The ground state is a constant; normalize $f_0\equiv 1$. Coordinates will come from $\{f_i\}_{i\ge 1}$.
 
@@ -308,7 +273,7 @@ $$\lambda_n=2n+1,\qquad n=0,1,2,\dots$$
 (each of multiplicity one). The corresponding $L^2(\mathbb{R})$-normalized eigenfunctions are the Hermite functions
 $$\psi_n(x)=\bigl(2^n n!\,\sqrt{\pi}\bigr)^{-1/2}H_n(x)\,e^{-x^2/2},$$
 where $H_n$ are the physicist’s Hermite polynomials. They form an orthonormal basis of $L^2(\mathbb{R})$, lie in the Schwartz class $\mathcal{S}(\mathbb{R})\subset C_0(\mathbb{R})$, and satisfy the Agmon decay that makes every pointwise product $\psi_i\psi_j$ square-integrable.
-\subsection{Triple products}
+\subsection{Triple Products}
 Because the eigenfunctions are real,
 $$M^{i,j,k}=\langle\psi_i\psi_j,\psi_k\rangle=\int_{-\infty}^{\infty}\psi_i(x)\psi_j(x)\psi_k(x)\,dx.$$
 These integrals vanish unless $i+j+k$ is even (parity) and the three indices satisfy a triangle-type constraint coming from the linearization of Hermite polynomials. The linearization formula
@@ -322,16 +287,11 @@ $M^{n,n,0}=\int\psi_n^2\psi_0\,dx>0$ (the ground state $\psi_0=\pi^{-1/4}e^{-x^2
 the map $\psi_i\psi_j=\sum_k M^{i,j,k}\psi_k$ is the exact multiplication rule in the Hermite basis.
 
 So the structure constants of pointwise multiplication on the dense subspace $\mathrm{span}\{\psi_n\}\subset C_0(\mathbb{R})$ are known in closed form.
-\subsection{What the theorem says}
+\subsection{What the Theorem Says}
 Suppose $(\mathbb{R},g,W)$ is another complete Riemannian line (so $g=e^{2\phi(x)}\,dx^2$ in some coordinate) with a smooth confining potential $W$, and suppose its Schrödinger operator $-\Delta_g+W$ is isospectral to $H$ and admits an eigenbasis $\{f_n\}$ with the same triple products
 $$\langle f_i f_j,f_k\rangle=M^{i,j,k}.$$
 The discrete-spectrum argument then produces a diffeomorphism $F:\mathbb{R}\to\mathbb{R}$ such that
 $$F^*g=dx^2,\qquad W\circ F=x^2.$$
-In one dimension this is almost tautological once the algebra is identified, but the mechanism is visible by hand:
-
-Finite Hermite combinations are dense in $C_0(\mathbb{R})$ for the uniform norm (Stone–Weierstrass on each compact plus Gaussian decay at infinity).
-The numbers $M^{i,j,k}$ determine the product of any two such combinations, hence determine a $C^*$-isomorphism$$C_0(\mathbb{R})\longrightarrow C_0(\mathbb{R}),\qquad \psi_n\mapsto f_n.$$
-Gelfand–Naimark supplies a homeomorphism of the underlying locally compact spaces; Lemma~\ref{lma-smooth} smooths it up to a Riemannian isometry.
 
 Because every eigenspace is one-dimensional, the singular-value packaging collapses to the absolute values $|M^{i,j,k}|$ together with a consistent choice of signs (the “diagonal litmus” of the compact paper: the products $M^{i,i,k}$ determine the even part of the algebra and fix most signs).
 
