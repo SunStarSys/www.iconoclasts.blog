@@ -127,9 +127,10 @@ The joint evaluation
 $$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(e^n(p)\bigr)_{n\ge0}$$
 is therefore an immersion. It is injective because $\mathcal{A}_M$ separates points ($C^0_{\mathrm{loc}}$ density; on a connected manifold the ground state of $P_{\alpha,V}$ may be taken strictly positive). So $\mathrm{Ev}_M$ is an embedding onto its image. The same holds for $\mathrm{Ev}_N$ and $\mathcal{A}_N$.
 
-Define $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $e^n\mapsto f^n$, i.e.
+For each $q\in N$ the sequence $\bigl(f_n(q)\bigr)$ defines a character of $\mathcal{A}_M$ by $\sum c_ie_i\mapsto\sum c_if_i(q)$. Matching triple products make this map multiplicative. Because $\mathrm{Ev}_M$ is an embedding, every such character is evaluation at a unique point $p\in M$. Set $F(q)=p$. Then $e_n\circ F=f_n$ by construction. This defines $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $e^n\mapsto f^n$, i.e.
 $$e^n\circ F=f^n=Ue^n\qquad\text{for all }n.$$
-This is well-defined because $U$ preserves products and both evaluation maps are embeddings. Near any point the $d$-tuple above is a $C^\infty$ chart $x=(e^{i_1},\dots,e^{i_d})$. The same indices work on $N$ because $U$ preserves the spanning of $T^*$ (the Gram determinant is read from first derivatives, which match under composition). The matching chart is $y=(Ue^{i_1},\dots,Ue^{i_d})$, and $Ue=e\circ F$ says $y=x\circ F$. Thus $F$ is the identity of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism.
+
+Near any point the $d$-tuple above is a $C^\infty$ chart $x=(e^{i_1},\dots,e^{i_d})$. The same indices work on $N$ because $U$ preserves the spanning of $T^*$ (the Gram determinant is read from first derivatives, which match under composition). The matching chart is $y=(Ue^{i_1},\dots,Ue^{i_d})$, and $Ue=e\circ F$ says $y=x\circ F$. Thus $F$ is the identity of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism.
 
 By construction
 $$Q(u\circ F)=(P_{\alpha,V}u)\circ F,\qquad u\in\mathcal{A}_M.$$
