@@ -107,9 +107,9 @@ $$\int_M e_ie_je_k\,d\mu=\int_N f_if_jf_k\,d\nu\qquad\text{for all }i,j,k.$$
 
 \begin{remark}
 \label{rmk}
-Corollary~\ref{coro} is the matrix form of Theorem~\ref{thm}. Given such bases, the map $U\psi_i=\eta_i$ is a spectral identification, and
-$$M^{i,j,k}=\Phi(\psi_i,\psi_j,\bar\psi_k).$$
-Conversely, any spectral identification that intertwines $\Phi$ becomes Corollary~\ref{coro} after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,\alpha,V)$ with $(N,h,\beta,W)$.
+Corollary 2 is the matrix form of Theorem 1. Given such bases, the map $Ue_i=f_i$ is a spectral identification, and
+$$M^{i,j,k}=\Phi_\mu(e_i,e_j,e_k).$$
+Conversely, any spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$ becomes Corollary 2 after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,\alpha,V)$ with $(N,h,\beta,W)$.
 \end{remark}
 
 \section{Proofs}
