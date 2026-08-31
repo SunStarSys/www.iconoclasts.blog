@@ -102,7 +102,7 @@ Equivalently, in basis coordinates we have the following
 \begin{corollary}
 \label{coro}
 The same conclusion holds if there exist $\mu$-orthonormal and $\nu$-orthonormal eigenbases $\{e^i\}$ and $\{f^i\}$, ordered by nondecreasing eigenvalues, with
-$$\int_M e^ie^je^k\,d\mu=\int_N f^if^jf^k\,d\nu\qquad\text{for all }i,j,k.$$
+$$M^{i,j,k} := \int_M e^ie^j\bar e^k\,d\mu=\int_N f^if^j\bar f^k\,d\nu\qquad\text{for all }i,j,k.$$
 \end{corollary}
 
 \begin{remark}
