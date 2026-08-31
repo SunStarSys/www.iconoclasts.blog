@@ -60,7 +60,9 @@
 \maketitle
 
 \begin{abstract}
-For a confining Schrödinger operator $H=-\Delta_g+V$ on a complete Riemannian manifold, isospectrality determines the eigenspaces only up to unitary mixing within each eigenvalue. We prove that a unitary spectral identification which also preserves the triple products $\Phi(u,v,w)=\int uvw\,d\mathrm{vol}$ is implemented by a diffeomorphism intertwining the metrics and the potentials. The same statement holds for Witten operators on $L^2(e^{-\alpha}\,d\mathrm{vol})$, with the weight recovered up to an additive constant. The geometric discriminant is the multiplication table on the spectral subspaces, not the spectrum by itself.
+For a confining Schrödinger operator $H=-\Delta_g+V$ on a complete Riemannian manifold, the spectrum determines the eigenspaces only up to independent unitaries on each eigenspace. We prove that a spectral identification which also preserves the triple products
+$$\Phi(u,v,w)=\int uvw\,d\mathrm{vol}$$
+is implemented by a diffeomorphism $F$ with $F^*g=h$ and $V\circ F=W$. The same statement holds for Witten operators on $L^2(e^{-\alpha}\,d\mathrm{vol})$: the metric is recovered, and the weight is recovered up to an additive constant. Thus the geometric invariant is the multiplication table on the spectral subspaces, not the spectrum alone.
 
 \noindent\textbf{Keywords:} spectrum, Fourier, harmonic, triple products, Schr\"odinger, Witten, Laplacian, eigenfunctions, functional, inverse problem
 \end{abstract}
