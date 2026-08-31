@@ -144,6 +144,11 @@ $$F^*g=h.$$
 The first-order symbols are the drifts $\nabla\alpha$ and $\nabla\beta$, so $d\beta=F^*d\alpha$ and $\beta=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$. The order-zero terms then give $W=V\circ F$.
 
 This is Theorem~\ref{thm}. Corollary~\ref{coro} is the same statement in an eigenbasis: $Ue^i=f^i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$, as in Remark 3.
+
+\begin{remark}
+The same construction applies to compact Riemannian orbifolds: $F$ is a homeomorphism of underlying spaces, an isometry of $P_{\alpha,V}$-data on the regular set, and an isomorphism of local isotropy at singular points. The evaluation map drops rank exactly on the singular strata.
+\end{remark}
+
 \end{proof}
 \section{Example}
 On $M=\mathbb{R}$ with the Euclidean metric, take
