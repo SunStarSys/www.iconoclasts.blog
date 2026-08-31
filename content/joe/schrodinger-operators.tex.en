@@ -136,7 +136,7 @@ a_ia_j=\textstyle\sum_k M^{i,j,k}a_k\text{ for all }i,j\bigr\}.$$Thus $\mathrm{E
 
 In other words $F$ is the unique set-map making$$\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$$as maps into $X\subset\mathbb{R}^{\mathbb{N}}$.
 
-Now fix $q\in N$ and $p=F(q)$. Some $d$-tuple $e_{i_1},\ldots,e_{i_d}$ has independent differentials at $p$, so$$x=(e_{i_1},\ldots,e_{i_d})$$is a $C^\infty$ chart on a neighborhood of $p$. On a neighborhood of $q$ set$$y=(f_{i_1},\ldots,f_{i_d})=(e_{i_1}\circ F,\ldots,e_{i_d}\circ F)=x\circ F.$$Thus $F=x^{-1}\circ y$ wherever $x$ and $y$ are defined. In particular $y$ is a chart on $N$, and in the charts $(x,y)$ the map $F$ is the identity of $\mathbb{R}^d$. Hence $F$ is a $C^\infty$ diffeomorphism. (The same indices work on both sides because they are the coordinate functions of one map.)
+Now fix $q\in N$ and $p=F(q)$. Some $d$-tuple $e^{i_1},\ldots,e^{i_d}$ has independent differentials at $p$, so$$x=(e^{i_1},\ldots,e^{i_d})$$is a $C^\infty$ chart on a neighborhood of $p$. On a neighborhood of $q$ set$$y=(f^{i_1},\ldots,f^{i_d})=(e^{i_1}\circ F,\ldots,e^{i_d}\circ F)=x\circ F.$$Thus $F=x^{-1}\circ y$ wherever $x$ and $y$ are defined. In particular $y$ is a chart on $N$, and in the charts $(x,y)$ the map $F$ is the identity of $\mathbb{R}^d$. Hence $F$ is a $C^\infty$ diffeomorphism. (The same indices work on both sides because they are the coordinate functions of one map.)
 
 By construction
 $$Q(u\circ F)=(P_{\alpha,V}u)\circ F,\qquad u\in\mathcal{V}_M.$$
