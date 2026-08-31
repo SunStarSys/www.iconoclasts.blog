@@ -223,7 +223,7 @@ This is Theorem 2. Theorem 1 is the same statement with $U$ given abstractly: $U
 
 \subsection{Proof of Witten Corollaries}
 \begin{proof}
-The same argument as in the above proof applied to $\{f_i\}$, $\Gamma_{L_\alpha}$, and $\beta=\alpha\circ F+c$ yields Corollary~\ref{coro-2}.  Corollary~\ref{coro} follows immediately with cooresponding matching bases.
+The same embedding and chart construction, applied to a weighted-orthonormal eigenbasis $\{f_i\}$ of $L_\alpha$ and $\{g_i\}$ of $L_\beta$, produces a diffeomorphism $F$ with $f_n\circ F=g_n$. Then $L_\beta(u\circ F)=(L_\alpha u)\circ F$ on $\mathcal{S}_\alpha$. Principal symbols give $F^*g=h$; the first-order terms are the drifts, so $d\beta=F^*d\alpha$ and $\beta=\alpha\circ F+c$. This is Corollary~\ref{coro-2}. Corollary~\ref{coro} is the same statement for an abstract spectral identification $U$.
 \end{proof}
 
 \section{Example}
