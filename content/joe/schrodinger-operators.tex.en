@@ -112,6 +112,10 @@ $$M^{i,j,k}=\Phi_\mu(e^i,e^j,\bar e^k).$$
 Conversely, any spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$ becomes Corollary 2 after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,\alpha,V)$ with $(N,h,\beta,W)$.
 \end{remark}
 
+\begin{remark}
+The spectrum of $P_{\alpha,V}$ does not determine $(g,\alpha,V)$. On $\mathbb{R}$ this is the McKean–Trubowitz class of the oscillator \cite{MT82}. On closed manifolds there are isospectral potentials that are not isometric \cite{GS03}. Theorem 1 is the statement that the missing invariant is the multiplication table $\Phi_\mu$.
+\end{remark}
+
 \section{Proofs}
 \begin{proof}
 Let $U:\mathcal{A}_M\to\mathcal{A}_N$ be a spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$. Choose $\mu$-orthonormal and $\nu$-orthonormal real eigenbases $\{e^i\}$ and $\{f^i\}$ with $Ue^i=f^i$, ordered by nondecreasing eigenvalues. Hölder and $\mathcal{A}_M\subset L^3(\mu)$ make
