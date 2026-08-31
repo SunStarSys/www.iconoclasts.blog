@@ -84,9 +84,7 @@ Define the triple products exactly as in the compact case:
 $$M^{i,j,k}:=\langle \psi_i \psi_j,\psi_k\rangle_{L^2}=\int_M \psi_i \psi_j\,\overline{\psi_k}\,d\mathrm{vol}_g.$$
 Because the eigenfunctions are Schwartz-class at infinity in the sense that they and their derivatives decay faster than any polynomial in $V$ (Agmon estimates \cite{Agmon1982}/ weighted Sobolev \cite{TaylorPDE1} expressed in terms of $H$), the products $\psi_i \psi_j$ lie in $L^2$ and the integrals converge absolutely.
 
-Now let
-$$\mathcal{A}_M:=\bigoplus_{n=0}^\infty\ker(H_M-\lambda_n)$$
-be the algebraic direct sum of the eigenspaces (a dense subspace of $L^2(M,d\mathrm{vol}_g)$, contained in the Schwartz space $\mathcal{S}(M)$ by elliptic regularity and Agmon decay). The same data $(N,h,W)$ produce $H_N$ and $\mathcal{A}_N$.
+Now let $$\mathcal{A}_M:=\bigoplus_{n=0}^\infty\ker(H_M-\lambda_n)$$ be the algebraic direct sum of the eigenspaces (a dense subspace of $L^2(M,d\mathrm{vol}_g)$, contained in the Schwartz space $\mathcal{S}(M)$ by elliptic regularity and Agmon decay). The same data $(N,h,W)$ produce $H_N$ and $\mathcal{A}_N$.
 
 Pointwise multiplication and the $L^2$ inner product assemble into a symmetric trilinear form on the spectral subspace,
 $$\Phi_M:\mathcal{A}_M\times\mathcal{A}_M\times\mathcal{A}_M\to\mathbb{C},\qquad
