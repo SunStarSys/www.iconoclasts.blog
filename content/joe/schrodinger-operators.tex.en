@@ -146,7 +146,7 @@ $$e^n(x)=\bigl(2^n n!\,\sqrt{\pi}\bigr)^{-1/2}H_n(x)\,e^{-x^2/2},$$
 where $H_n$ are the physicist’s Hermite polynomials. They form an orthonormal basis of $L^2(\mathbb{R})$, lie in the Schwartz class $\mathcal{S}(\mathbb{R})\subset C_0(\mathbb{R})$, and satisfy the Agmon decay that makes every pointwise product $e^ie^j$ square-integrable.
 \subsection{Triple Products}
 Because the eigenfunctions are real,
-$$M^{i,j,k}=\langlee^ie^j,e^k\rangle=\int_{-\infty}^{\infty}e^i(x)e^j(x)e^k(x)\,dx.$$
+$$M^{i,j,k}=\langle e^ie^j,e^k\rangle=\int_{-\infty}^{\infty}e^i(x)e^j(x)e^k(x)\,dx.$$
 These integrals vanish unless $i+j+k$ is even (parity) and the three indices satisfy a triangle-type constraint coming from the linearization of Hermite polynomials. The linearization formula
 $$H_n(x)H_m(x)=\sum_{r=0}^{\min(n,m)}\binom{n}{r}\binom{m}{r}r!\,2^r\,H_{n+m-2r}(x)$$
 together with the Gaussian weight converts, after normalizing, into an explicit formula for $M^{i,j,k}$. Equivalently, the generating-function identity
