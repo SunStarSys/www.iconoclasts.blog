@@ -114,8 +114,8 @@ Conversely, any spectral identification that intertwines $\Phi_\mu$ and $\Phi_\n
 
 \section{Proofs}
 \begin{proof}
-Let $U:\mathcal{A}_M\to\mathcal{A}_N$ be a spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$. Choose $\mu$-orthonormal and $\nu$-orthonormal eigenbases $\{e^i\}$ and $\{f^i\}$ with $Ue^i=f^i$, ordered by nondecreasing eigenvalues. Hölder and $\mathcal{A}_M\subset L^3(\mu)$ make
-$$M^{i,j,k}:=\Phi_\mu(e^i,e^j,\bar e^k)=\int_M e^ie^j\bar e^k\,d\mu$$
+Let $U:\mathcal{A}_M\to\mathcal{A}_N$ be a spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$. Choose $\mu$-orthonormal and $\nu$-orthonormal real eigenbases $\{e^i\}$ and $\{f^i\}$ with $Ue^i=f^i$, ordered by nondecreasing eigenvalues. Hölder and $\mathcal{A}_M\subset L^3(\mu)$ make
+$$M^{i,j,k}:=\Phi_\mu(e^i,e^j,e^k)=\int_M e^ie^j\bar e^k\,d\mu$$
 finite, and likewise on $N$. Matching triple products therefore give the same structure constants, so $U$ is a homomorphism for the pointwise $C^\infty$ product on $\mathcal{A}_M$:
 $$e^ie^j=\sum_k M^{i,j,k}e^k,\qquad U(\phi\chi)=U(\phi)U(\chi).$$
 (The unit of $C^\infty$ need not lie in $\mathcal{A}_M$; $U$ need not send $1$ to $1$.)
