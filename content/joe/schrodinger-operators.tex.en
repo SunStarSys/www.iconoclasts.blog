@@ -163,37 +163,6 @@ Pointwise multiplication is
 $$\phi\chi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\chi(j)M^{i,j,k}\Bigr)\psi_k.$$
 Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $N$.
 
-\subsection{Gamma Calculus}
-By definition \cite{BE85}
-$$\Gamma_H(f,g):=\frac12\bigl(H(fg)-f\,Hg-g\,Hf\bigr).$$
-On basis vectors this is already diagonal in the spectrum:
-$$\Gamma_H(\psi_i,\psi_j)=\frac12\sum_k(\lambda_k-\lambda_i-\lambda_j)\,M^{i,j,k}\,\psi_k.$$
-Hence
-$$\begin{aligned}
-\langle\nabla \psi_i,\nabla \psi_j\rangle
-&=-\Gamma_H(\psi_i,\psi_j)-\frac12 V \psi_i \psi_j\\
-&=-\frac12\sum_k[(\lambda_k-\lambda_i-\lambda_j)M^{i,j,k} +\int V \psi_i \psi_j \bar\psi_k\, dx]\, \psi_k.
-\end{aligned}$$
-
-Ground-state conjugation repairs the $V$ defect: if $H\psi=\lambda_0\psi$ with $\psi>0$ (which is always available under our given hypotheses), then
-
-$$L:=\psi^{-1}(H-\lambda_0)(\psi\,\cdot\,)=-\Delta-2\langle\nabla\log\psi,\nabla\,\cdot\,\rangle$$
-is a diffusion, and its Bakry–Émery tensor is $\mathrm{Ric}_L=\operatorname{Ric}-2\operatorname{Hess}\log\psi$. For the harmonic oscillator the ground state is a Gaussian, $\log\psi_0=-x^2/2+\mathrm{const}$, and one recovers exactly $\mathrm{BE}(2,\infty)$ for this renormalized Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator. In particular, $\mathrm{Ric}_L\ge K g$ implies the spectral gap bound $\lambda_1-\lambda_0\ge K$, with equality for the harmonic oscillator.
-
-With $\phi =- 2 \log \psi_0$ and $v\cdot w$ the Riemannian cometric, let us write these operators in the eigenbasis of $L$,
-
-\begin{equation}
-\begin{aligned}
-f_n&=\frac{\psi_n}{\psi_0},\qquad
- W^{i,j,k}=\int\frac{\psi_i\psi_j\psi_k}{\psi_0}\,d\mathrm{vol},\\
-\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)W^{i,j,k}\,f_k = -df_i \cdot df_j\\
-\Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 W^{i,j,k}\,f_k\implies\\
-\Gamma_{2,L}(f)&=\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2+\operatorname{Ric}(\nabla f,\nabla f) + \operatorname{Hess}\phi(\nabla f, \nabla f).
-\end{aligned}
-\end{equation}
-
-For a Schr\"odinger operator as in the Theorem~\ref{thm}, the isometric type of $(M,g,V)$ is encoded in the diffusion data $(\{\lambda_n-\lambda_0\},\{W^{i,j,k}\})$, because $\Gamma_L$ is the cometric and $\psi_0$ recovers $V$ by Riccati.
-
 \section{Proof of Schr\"odinger Theorems}
 \begin{proof}
 Let $U:\mathcal{A}_M\to\mathcal{A}_N$ be a spectral identification intertwining $\Phi$, and write $\psi_i\mapsto\eta_i:=U\psi_i$ for $L^2$-orthonormal eigenbases ordered by nondecreasing eigenvalues. Matching triple products make $U$ an algebra homomorphism for pointwise multiplication on $\mathcal{A}_M=\operatorname{span}\{\psi_i\}$:
