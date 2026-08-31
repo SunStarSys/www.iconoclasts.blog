@@ -131,10 +131,10 @@ The joint evaluation
 $$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(e^n(p)\bigr)_{n\ge0}$$
 is therefore an immersion. It is injective because $\mathcal{A}_M$ separates points ($C^0_{\mathrm{loc}}$ density; on a connected manifold the ground state of $P_{\alpha,V}$ may be taken strictly positive). So $\mathrm{Ev}_M$ is an embedding onto its image. The same holds for $\mathrm{Ev}_N$ and $\mathcal{A}_N$.
 
-For each $q\in N$ the sequence $\bigl(f_n(q)\bigr)$ defines a character of $\mathcal{A}_M$ by $\sum c_ie_i\mapsto\sum c_if_i(q)$. Matching triple products make this map multiplicative. Because $\mathrm{Ev}_M$ is an embedding, every such character is evaluation at a unique point $p\in M$. Set $F(q)=p$. Then $e_n\circ F=f_n$ by construction. This defines $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $e^n\mapsto f^n$, i.e.
-$$e^n\circ F=f^n=Ue^n\qquad\text{for all }n.$$
+For each $q\in N$, the assignment$$\chi_q:\mathcal{A}_M\to\mathbb{R},\qquad
+\sum_i c_ie_i\mapsto\sum_i c_if_i(q)$$is linear. Matching triple products give $\chi_q(\phi\chi)=\chi_q(\phi)\chi_q(\chi)$, so $\chi_q$ is a character of the pointwise algebra $\mathcal{A}_M$. The image of $\mathrm{Ev}_M$ realises every character that arises by evaluation on a manifold whose eigenfunctions satisfy the same product table: $\chi_q(e_i)=f_i(q)$ is the coordinate sequence of a point of that image. Since $\mathrm{Ev}_M$ is injective, there is a unique $p\in M$ with $e_n(p)=f_n(q)$ for all $n$. Set $F(q)=p$. Then $e_n\circ F=f_n$ by construction.
 
-Near any point the $d$-tuple above is a $C^\infty$ chart $x=(e^{i_1},\dots,e^{i_d})$. The same indices work on $N$ because $U$ preserves the spanning of $T^*$ (the Gram determinant is read from first derivatives, which match under composition). The matching chart is $y=(Ue^{i_1},\dots,Ue^{i_d})$, and $Ue=e\circ F$ says $y=x\circ F$. Thus $F$ is the identity of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism.
+At this stage $F$ is defined as a set-map by $e_n\circ F=f_n$. Fix $q\in N$ and $p=F(q)$. Some $d$-tuple $e_{i_1},\ldots,e_{i_d}$ has independent differentials at $p$, so$$x=(e_{i_1},\ldots,e_{i_d})$$is a $C^\infty$ chart on a neighborhood of $p$. On a neighborhood of $q$ set$$y=(f_{i_1},\ldots,f_{i_d})=(e_{i_1}\circ F,\ldots,e_{i_d}\circ F)=x\circ F.$$Thus $F=x^{-1}\circ y$ wherever $x$ and $y$ are defined. In particular $y$ is a chart on $N$, and in the charts $(x,y)$ the map $F$ is the identity of $\mathbb{R}^d$. Hence $F$ is a $C^\infty$ diffeomorphism. (The same indices work on both sides because they are the coordinate functions of one map.)
 
 By construction
 $$Q(u\circ F)=(P_{\alpha,V}u)\circ F,\qquad u\in\mathcal{A}_M.$$
