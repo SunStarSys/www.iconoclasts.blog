@@ -71,6 +71,25 @@ is implemented by a diffeomorphism $F$ with $F^*g=h$ and $V\circ F=W$. The same 
 
 \section{Introduction}
 \label{sec:intro}
+Let $(M,g)$ be a complete connected Riemannian manifold, $\alpha,V\in C^\infty(M)$, and
+$$P_{\alpha,V}u=-\Delta_g u+\langle\nabla\alpha,\nabla u\rangle+Vu$$
+on $C_c^\infty(M)$, acting in $L^2(M,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Assume $P_{\alpha,V}$ is essentially self-adjoint and bounded below, with empty essential spectrum
+$$\sigma(P_{\alpha,V})=\sigma_{\mathrm{disc}}(P_{\alpha,V})=\{\lambda_0<\lambda_1\le\lambda_2\le\cdots\}\to+\infty.$$
+Write
+$$\mathcal{A}_M:=\bigoplus_{n\ge0}\ker(P_{\alpha,V}-\lambda_n)\subset L^2(M,\mu)\cap C^\infty(M),$$
+and assume $\mathcal{A}_M\subset L^3(M,\mu)$. Hölder then gives a bounded symmetric trilinear form
+$$\Phi_\mu:\mathcal{A}_M\times\mathcal{A}_M\times\mathcal{A}_M\to\mathbb{C},
+\qquad
+\Phi_\mu(u,v,w)=\int_M uvw\,d\mu.$$
+The same data $(N,h,\beta,W)$ produce $Q=P_{\beta,W}$, $\nu=e^{-\beta}\mathrm{vol}_h$, $\mathcal{A}_N\subset L^3(N,\nu)$, and $\Phi_\nu$.
+A linear map $U:\mathcal{A}_M\to\mathcal{A}_N$ is a spectral identification if it is unitary for the $L^2$ inner products and
+$$U\bigl(\ker(P_{\alpha,V}-\lambda_n)\bigr)=\ker(Q-\lambda_n)\qquad\text{for every }n.$$
+
+
+
+
+
+
 
 Let $(M,g)$ be a smooth, connected, complete Riemannian manifold (possibly non-compact, possibly of infinite volume). Fix a real potential $V\in C^\infty(M)$ which is bounded below and proper in the sense
 $$V(x)\to +\infty\qquad\text{as }x\to\infty$$
@@ -100,62 +119,28 @@ $$U\bigl(\ker(H_M-\lambda_n)\bigr)=\ker(H_N-\lambda_n)\qquad\text{for every }n.$
 
 \begin{theorem}
 \label{thm}
-
-Let $(M,g,V)$ and $(N,h,W)$ be as above, and suppose $H_M$ and $H_N$ are isospectral. If there exists a spectral identification $U:\mathcal{A}_M\to\mathcal{A}_N$ that intertwines the triple forms,
-$$\Phi_N(Uu,Uv,Uw)=\Phi_M(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{A}_M,$$
-then there is a diffeomorphism $F:N\to M$ with
-$$F^*g=h\qquad\text{and}\qquad V\circ F=W.$$
-
+Suppose $P_{\alpha,V}$ and $P_{\beta,W}$ are isospectral and $U:\mathcal{A}_M\to\mathcal{A}_N$ is a spectral identification with
+$$\Phi_\nu(Uu,Uv,Uw)=\Phi_\mu(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{A}_M.$$
+Then there is a diffeomorphism $F:N\to M$ such that
+$$F^*g=h,\qquad \beta=\alpha\circ F+c,\qquad W=V\circ F$$
+for a constant $c\in\mathbb{R}$.
 \end{theorem}
 
 Equivalently, in basis coordinates we have the following
 
-\begin{theorem}
-\label{thm-2}
-The same conclusion holds if there exist $L^2$-orthonormal eigenbases $\{\psi_i\}$ of $H_M$ and $\{\eta_i\}$ of $H_N$, ordered by nondecreasing eigenvalues, with
-$$M_M^{i,j,k}=M_N^{i,j,k}\qquad\text{for all }i,j,k.$$
-\end{theorem}
+\begin{corollary}
+\label{coro}
+The same conclusion holds if there exist $\mu$-orthonormal and $\nu$-orthonormal eigenbases $\{e_i\}$ and $\{f_i\}$, ordered by nondecreasing eigenvalues, with
+$$\int_M e_ie_je_k\,d\mu=\int_N f_if_jf_k\,d\nu\qquad\text{for all }i,j,k.$$
+\end{corollary}
 
 \begin{remark}
 \label{rmk}
-Theorem~\ref{thm-2} is the matrix form of Theorem~\ref{thm}. Given such bases, the map $U\psi_i=\eta_i$ is a spectral identification, and
+Corollary~\ref{coro} is the matrix form of Theorem~\ref{thm}. Given such bases, the map $U\psi_i=\eta_i$ is a spectral identification, and
 $$M^{i,j,k}=\Phi(\psi_i,\psi_j,\bar\psi_k).$$
 Conversely, any spectral identification that intertwines $\Phi$ becomes Theorem~\ref{thm-2} after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,V)$ with $(N,h,W)$.
 \end{remark}
 
-Let $(M,g)$ be complete and connected, and let $\alpha\in C^\infty(M)$ be confining in the Bakry–Émery sense, so that the Witten operator
-$$L_\alpha u=-\Delta_g u+\langle\nabla\alpha,\nabla u\rangle$$
-is essentially self-adjoint and bounded below on $C_c^\infty(M)$, with
-$$\sigma(L_\alpha)=\sigma_{\mathrm{disc}}(L_\alpha)=\{\nu_0=0<\nu_1\le\nu_2\le\cdots\}\to+\infty$$
-in the weighted space $L^2(M,e^{-\alpha}\,d\mathrm{vol}_g)$. Write
-$$\mathcal{A}_\alpha:=\bigoplus_{n=0}^\infty\ker(L_\alpha-\nu_n)\subset L^2(M,e^{-\alpha}\,d\mathrm{vol}_g)\cap C^\infty(M).$$
-The same data $(N,h,\beta)$ produce $L_\beta$ and $\mathcal{A}_\beta$.
-The invariant is the weighted triple form
-$$\Phi_\alpha:\mathcal{A}_\alpha\times\mathcal{A}_\alpha\times\mathcal{A}_\alpha\to\mathbb{C},\qquad
-\Phi_\alpha(u,v,w)=\int_M u\,v\,w\,e^{-\alpha}\,d\mathrm{vol}_g.$$
-A linear map $U:\mathcal{A}_\alpha\to\mathcal{A}_\beta$ is a spectral identification if it is unitary for the weighted $L^2$ inner products and
-$$U\bigl(\ker(L_\alpha-\nu_n)\bigr)=\ker(L_\beta-\nu_n)\qquad\text{for every }n.$$
-
-\begin{corollary}
-\label{coro}
-Let $(M,g,\alpha)$ and $(N,h,\beta)$ be as above, and assume $L_\alpha$ and $L_\beta$ are isospectral. If there exists a spectral identification $U:\mathcal{A}_\alpha\to\mathcal{A}_\beta$ such that
-$$\Phi_\beta(Uu,Uv,Uw)=\Phi_\alpha(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{A}_\alpha,$$
-then there is a diffeomorphism $F:N\to M$ with
-$$F^*g=h\qquad\text{and}\qquad\beta=\alpha\circ F+c$$
-for a constant $c\in\mathbb{R}$. In particular the weighted manifolds $(M,g,e^{-\alpha}\mathrm{vol}_g)$ and $(N,h,e^{-\beta}\mathrm{vol}_h)$ are isometric up to that constant rescaling of the weight.
-\end{corollary}
-In basis coordinates, we again have
-\begin{corollary}
-\label{coro-2}
-The same conclusion holds if there exist weighted-orthonormal eigenbases $\{f_i\}$ of $L_\alpha$ and $\{g_i\}$ of $L_\beta$, ordered by nondecreasing eigenvalues, with
-$$W^{i,j,k}:=\int_M f_i f_j\overline{f_k}\,e^{-\alpha}\,d\mathrm{vol}_g
-=\int_N g_i g_j\overline{g_k}\,e^{-\beta}\,d\mathrm{vol}_h
-\qquad\text{for all }i,j,k.$$
-\end{corollary}
-
-\begin{remark}
-The Witten Laplacian on $p$-forms is the Hodge Laplacian of the weighted manifold plus $t\operatorname{Hess}\alpha\#_p+t^2\lvert\nabla\alpha\rvert^2$. Once $(M,g,\alpha)$ is reconstructed from the scalar array $W^{i,j,k}$, the operators $L_{\alpha}^{(p)}$ are determined, so their spectra and eigenform pairings against scalar eigenfunctions are invariants, not additional moduli.
-\end{remark}
 \section{Preliminaries}
 \label{sec:pre}
 Elements of $\mathcal{A}_M$ are finite sums $\sum\hat\phi(i)\psi_i$; they are dense in $L^2$ and lie in $C^\infty\cap C_0$.
@@ -163,36 +148,31 @@ Pointwise multiplication is
 $$\phi\chi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\chi(j)M^{i,j,k}\Bigr)\psi_k.$$
 Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $N$.
 
-\section{Proof of Schr\"odinger Theorems}
+\section{Proofs}
 \begin{proof}
-Let $U:\mathcal{A}_M\to\mathcal{A}_N$ be a spectral identification intertwining $\Phi$, and write $\psi_i\mapsto\eta_i:=U\psi_i$ for $L^2$-orthonormal eigenbases ordered by nondecreasing eigenvalues. Matching triple products make $U$ an algebra homomorphism for pointwise multiplication on $\mathcal{A}_M=\operatorname{span}\{\psi_i\}$:
-$$\psi_i\psi_j=\sum_k M^{i,j,k}\psi_k,\qquad
-U(\phi\chi)=U(\phi)U(\chi).$$
-(The constant function is a multiple of $\psi_0$ only if $V$ is constant; $U$ need not send $1$ to $1$.) Every element of $\mathcal{A}_M$ lies in $C^\infty\cap C_0$.
-Finite spectral projectors of $H_M$ send $C_c^\infty(M)$ into $\mathcal{A}_M$ and converge in $C^\infty_{\mathrm{loc}}$. Thus $\mathcal{A}_M$ is dense in $C^1$ near any $p\in M$. If $\operatorname{span}\{\nabla\psi_i(p):i\ge 0\}\ne T_pM$, some $0\neq v\in T_pM$ would annihilate every $d\psi_i$, hence every $d\phi$ for $\phi\in\mathcal{A}_M$, and a $C^1$-limit would annihilate every $u\in C_c^\infty$, which is absurd. So some $d$-tuple satisfies
-$$\det\bigl(d\psi_{i_a}\otimes d\psi_{i_b}(p)\bigr)\ne 0.$$
+Let $U:\mathcal{A}_M\to\mathcal{A}_N$ be a spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$. Choose $\mu$-orthonormal and $\nu$-orthonormal eigenbases $\{e_i\}$ and $\{f_i\}$ with $Ue_i=f_i$, ordered by nondecreasing eigenvalues. Hölder and $\mathcal{A}_M\subset L^3(\mu)$ make
+$$M^{i,j,k}:=\Phi_\mu(e_i,e_j,e_k)=\int_M e_ie_je_k\,d\mu$$
+finite, and likewise on $N$. Matching triple products therefore give the same structure constants, so $U$ is a homomorphism for the pointwise $C^\infty$ product on $\mathcal{A}_M$:
+$$e_ie_j=\sum_k M^{i,j,k}e_k,\qquad U(\phi\chi)=U(\phi)U(\chi).$$
+(The unit of $C^\infty$ need not lie in $\mathcal{A}_M$; $U$ need not send $1$ to $1$.)
+Embedding. Finite spectral projectors of $P_{\alpha,V}$ send $C_c^\infty(M)$ into $\mathcal{A}_M$. Essential self-adjointness and smooth coefficients put $C_c^\infty\subset\bigcap_k\mathrm{Dom}(P_{\alpha,V}^k)$, so those projectors converge in $C^\infty_{\mathrm{loc}}$. Thus $\mathcal{A}_M$ is dense in $C^1$ near every $p\in M$. If $\mathrm{span}\{de_i(p):i\ge0\}\ne T_p^*M$, some $0\neq v\in T_pM$ would annihilate every $d\phi$ for $\phi\in\mathcal{A}_M$, and a $C^1$-limit would annihilate every element of $C_c^\infty$, which is absurd. So some $d$-tuple satisfies
+$$\det\bigl(de_{i_a}\otimes de_{i_b}(p)\bigr)\ne0.$$
 The joint evaluation
-$$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(\psi_n(p)\bigr)_{n\ge 0}$$
-is therefore an immersion. It is injective because $\mathcal{A}_M$ separates points (the same $C^0_{\mathrm{loc}}$ density, and $\psi_0>0$). So $\mathrm{Ev}_M$ is an embedding onto its image. The same holds for $\mathrm{Ev}_N$ and $\mathcal{A}_N$.
-
-Define $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $\psi_n\mapsto\eta_n$, i.e.
-$$\psi_n\circ F=\eta_n=U\psi_n\qquad\text{for all }n.$$
-This is well-defined because $U$ preserves products and both evaluation maps are embeddings. Near any point the $d$-tuple above is a $C^\infty$ chart $x=(\psi_{i_1},\dots,\psi_{i_d})$. The same indices work on $N$ because $U$ preserves the spanning of $T^*$ (the Gram determinant is read from first derivatives of eigenfunctions, which match under composition). The matching chart is $y=(U\psi_{i_1},\dots,U\psi_{i_d})$, and $U\psi=\psi\circ F$ says $y=x\circ F$. Thus $F$ is the identity of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism.
-Metric and potential. By construction
-$$H_N(\psi\circ F)=(H_M\psi)\circ F,\qquad\psi\in\mathcal{A}_M.$$
-Both operators are second-order scalar differential operators. The identity holds on a family whose differentials span $T^*$ at every point, so the principal symbols match:
+$$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(e_n(p)\bigr)_{n\ge0}$$
+is therefore an immersion. It is injective because $\mathcal{A}_M$ separates points ($C^0_{\mathrm{loc}}$ density; on a connected manifold the ground state of $P_{\alpha,V}$ may be taken strictly positive). So $\mathrm{Ev}_M$ is an embedding onto its image. The same holds for $\mathrm{Ev}_N$ and $\mathcal{A}_N$.
+Diffeomorphism. Define $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $e_n\mapsto f_n$, i.e.
+$$e_n\circ F=f_n=Ue_n\qquad\text{for all }n.$$
+This is well-defined because $U$ preserves products and both evaluation maps are embeddings. Near any point the $d$-tuple above is a $C^\infty$ chart $x=(e_{i_1},\dots,e_{i_d})$. The same indices work on $N$ because $U$ preserves the spanning of $T^*$ (the Gram determinant is read from first derivatives, which match under composition). The matching chart is $y=(Ue_{i_1},\dots,Ue_{i_d})$, and $Ue=e\circ F$ says $y=x\circ F$. Thus $F$ is the identity of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism.
+Metric and lower-order terms. By construction
+$$Q(u\circ F)=(P_{\alpha,V}u)\circ F,\qquad u\in\mathcal{A}_M.$$
+Both sides are second-order scalar differential operators. For $\phi\in\mathcal{A}_M$ the product $\phi^2$ lies in the $C^\infty$ algebra generated by $\mathcal{A}_M$, and
+$$P(\phi^2)-2\phi\,P\phi=-2\,d\phi\cdot d\phi$$
+up to the first-order and zero-order terms of $P_{\alpha,V}$; the principal part is the cometric. Since the differentials $de_i$ span $T^*$ at every point,
 $$F^*g=h.$$
-The order-zero terms then give $V\circ F=W$.
-This is Theorem 1. Theorem 2 is the same statement in an eigenbasis: $U\psi_i=\eta_i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi$, as in Remark 3.
+The first-order symbols are the drifts $\nabla\alpha$ and $\nabla\beta$, so $d\beta=F^*d\alpha$ and $\beta=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$. The order-zero terms then give $W=V\circ F$.
+
+This is Theorem~\ref{thm}. Corollary~\ref{coro} is the same statement in an eigenbasis: $U\psi_i=\eta_i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi$, as in Remark 3.
 \end{proof}
-
-\subsection{Proof of Witten Corollaries}
-\begin{proof}
-The same embedding and chart construction, applied to a weighted-orthonormal eigenbasis $\{f_i\}$ of $L_\alpha$ and $\{g_i\}$ of $L_\beta$, produces a diffeomorphism $F$ with $f_n\circ F=g_n$. Then $L_\beta(u\circ F)=(L_\alpha u)\circ F$ on $\mathcal{A}_\alpha$. Principal symbols give $F^*g=h$; the first-order terms are the drifts, so $d\beta=F^*d\alpha$ and $\beta=\alpha\circ F+c$.
-
-This is Corollary 4. Corollary 5 is the same statement in a weighted eigenbasis, as the matrix form of $\Phi_\alpha$.
-\end{proof}
-
 \section{Example}
 On $M=\mathbb{R}$ with the Euclidean metric, take
 $$H=-\frac{d^2}{dx^2}+x^2.$$
