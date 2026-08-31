@@ -132,7 +132,7 @@ $$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(e^n(p)\bigr)_{n
 is therefore an immersion. It is injective because $\mathcal{V}_M$ separates points ($C^0_{\mathrm{loc}}$ density; on a connected manifold the ground state of $P_{\alpha,V}$ may be taken strictly positive). So $\mathrm{Ev}_M$ is an embedding onto its image. The same holds for $\mathrm{Ev}_N$ and $\mathcal{V}_N$.
 
 Matching structure constants mean that both embeddings take values in the same set$$X=\bigl\{a\in\mathbb{R}^{\mathbb{N}}:
-a_ia_j=\textstyle\sum_k M^{i,j,k}a_k\text{ for all }i,j\bigr\}.$$Thus $\mathrm{Ev}_N(N)\subset X$ and $\mathrm{Ev}_M(M)\subset X$. For each $q\in N$ the sequence $a=\mathrm{Ev}_N(q)$ therefore satisfies $a_i=f_i(q)$ and the product identities of $\{e_i\}$. Because $\mathrm{Ev}_M$ realises every point of $X$ that arises as an evaluation of a complete eigenbasis with those structure constants, there is a point $p\in M$ with $\mathrm{Ev}_M(p)=a$. Injectivity of $\mathrm{Ev}_M$ makes $p$ unique. Set $F(q)=p$. Then$$e_n\circ F=f_n\qquad\text{for all }n.$$
+a_ia_j=\textstyle\sum_k M^{i,j,k}a_k\text{ for all }i,j\bigr\}.$$Thus $\mathrm{Ev}_N(N)\subset X$ and $\mathrm{Ev}_M(M)\subset X$. For each $q\in N$ the sequence $a=\mathrm{Ev}_N(q)$ therefore satisfies $a_i=f^i(q)$ and the product identities of $\{e^i\}$. Because $\mathrm{Ev}_M$ realises every point of $X$ that arises as an evaluation of a complete eigenbasis with those structure constants, there is a point $p\in M$ with $\mathrm{Ev}_M(p)=a$. Injectivity of $\mathrm{Ev}_M$ makes $p$ unique. Set $F(q)=p$. Then$$e_n\circ F=f_n\qquad\text{for all }n.$$
 
 In other words $F$ is the unique set-map making$$\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$$as maps into $X\subset\mathbb{R}^{\mathbb{N}}$.
 
