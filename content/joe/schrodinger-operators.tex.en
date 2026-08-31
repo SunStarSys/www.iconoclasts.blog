@@ -101,41 +101,41 @@ Equivalently, in basis coordinates we have the following
 
 \begin{corollary}
 \label{coro}
-The same conclusion holds if there exist $\mu$-orthonormal and $\nu$-orthonormal eigenbases $\{e_i\}$ and $\{f_i\}$, ordered by nondecreasing eigenvalues, with
-$$\int_M e_ie_je_k\,d\mu=\int_N f_if_jf_k\,d\nu\qquad\text{for all }i,j,k.$$
+The same conclusion holds if there exist $\mu$-orthonormal and $\nu$-orthonormal eigenbases $\{e^i\}$ and $\{f^i\}$, ordered by nondecreasing eigenvalues, with
+$$\int_M e^ie^je^k\,d\mu=\int_N f^if^jf^k\,d\nu\qquad\text{for all }i,j,k.$$
 \end{corollary}
 
 \begin{remark}
 \label{rmk}
-Corollary 2 is the matrix form of Theorem 1. Given such bases, the map $Ue_i=f_i$ is a spectral identification, and
-$$M^{i,j,k}=\Phi_\mu(e_i,e_j,e_k).$$
+Corollary 2 is the matrix form of Theorem 1. Given such bases, the map $Ue^i=f^i$ is a spectral identification, and
+$$M^{i,j,k}=\Phi_\mu(e^i,e^j,e^k).$$
 Conversely, any spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$ becomes Corollary 2 after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,\alpha,V)$ with $(N,h,\beta,W)$.
 \end{remark}
 
 \section{Proofs}
 \begin{proof}
-Let $U:\mathcal{A}_M\to\mathcal{A}_N$ be a spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$. Choose $\mu$-orthonormal and $\nu$-orthonormal eigenbases $\{e_i\}$ and $\{f_i\}$ with $Ue_i=f_i$, ordered by nondecreasing eigenvalues. Hölder and $\mathcal{A}_M\subset L^3(\mu)$ make
-$$M^{i,j,k}:=\Phi_\mu(e_i,e_j,e_k)=\int_M e_ie_je_k\,d\mu$$
+Let $U:\mathcal{A}_M\to\mathcal{A}_N$ be a spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$. Choose $\mu$-orthonormal and $\nu$-orthonormal eigenbases $\{e^i\}$ and $\{f^i\}$ with $Ue^i=f^i$, ordered by nondecreasing eigenvalues. Hölder and $\mathcal{A}_M\subset L^3(\mu)$ make
+$$M^{i,j,k}:=\Phi_\mu(e^i,e^j,e^k)=\int_M e^ie^je^k\,d\mu$$
 finite, and likewise on $N$. Matching triple products therefore give the same structure constants, so $U$ is a homomorphism for the pointwise $C^\infty$ product on $\mathcal{A}_M$:
-$$e_ie_j=\sum_k M^{i,j,k}e_k,\qquad U(\phi\chi)=U(\phi)U(\chi).$$
+$$e^ie^j=\sum_k M^{i,j,k}e^k,\qquad U(\phi\chi)=U(\phi)U(\chi).$$
 (The unit of $C^\infty$ need not lie in $\mathcal{A}_M$; $U$ need not send $1$ to $1$.)
-Embedding. Finite spectral projectors of $P_{\alpha,V}$ send $C_c^\infty(M)$ into $\mathcal{A}_M$. Essential self-adjointness and smooth coefficients put $C_c^\infty\subset\bigcap_k\mathrm{Dom}(P_{\alpha,V}^k)$, so those projectors converge in $C^\infty_{\mathrm{loc}}$. Thus $\mathcal{A}_M$ is dense in $C^1$ near every $p\in M$. If $\mathrm{span}\{de_i(p):i\ge0\}\ne T_p^*M$, some $0\neq v\in T_pM$ would annihilate every $d\phi$ for $\phi\in\mathcal{A}_M$, and a $C^1$-limit would annihilate every element of $C_c^\infty$, which is absurd. So some $d$-tuple satisfies
-$$\det\bigl(de_{i_a}\otimes de_{i_b}(p)\bigr)\ne0.$$
+Embedding. Finite spectral projectors of $P_{\alpha,V}$ send $C_c^\infty(M)$ into $\mathcal{A}_M$. Essential self-adjointness and smooth coefficients put $C_c^\infty\subset\bigcap_k\mathrm{Dom}(P_{\alpha,V}^k)$, so those projectors converge in $C^\infty_{\mathrm{loc}}$. Thus $\mathcal{A}_M$ is dense in $C^1$ near every $p\in M$. If $\mathrm{span}\{de^i(p):i\ge0\}\ne T_p^*M$, some $0\neq v\in T_pM$ would annihilate every $d\phi$ for $\phi\in\mathcal{A}_M$, and a $C^1$-limit would annihilate every element of $C_c^\infty$, which is absurd. So some $d$-tuple satisfies
+$$\det\bigl(de^{i_a}\otimes de^{i_b}(p)\bigr)\ne0.$$
 The joint evaluation
-$$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(e_n(p)\bigr)_{n\ge0}$$
+$$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(e^n(p)\bigr)_{n\ge0}$$
 is therefore an immersion. It is injective because $\mathcal{A}_M$ separates points ($C^0_{\mathrm{loc}}$ density; on a connected manifold the ground state of $P_{\alpha,V}$ may be taken strictly positive). So $\mathrm{Ev}_M$ is an embedding onto its image. The same holds for $\mathrm{Ev}_N$ and $\mathcal{A}_N$.
-Diffeomorphism. Define $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $e_n\mapsto f_n$, i.e.
-$$e_n\circ F=f_n=Ue_n\qquad\text{for all }n.$$
-This is well-defined because $U$ preserves products and both evaluation maps are embeddings. Near any point the $d$-tuple above is a $C^\infty$ chart $x=(e_{i_1},\dots,e_{i_d})$. The same indices work on $N$ because $U$ preserves the spanning of $T^*$ (the Gram determinant is read from first derivatives, which match under composition). The matching chart is $y=(Ue_{i_1},\dots,Ue_{i_d})$, and $Ue=e\circ F$ says $y=x\circ F$. Thus $F$ is the identity of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism.
+Diffeomorphism. Define $F:N\to M$ by $\mathrm{Ev}_M\circ F=\mathrm{Ev}_N$ after the reindexing $e^n\mapsto f^n$, i.e.
+$$e^n\circ F=f^n=Ue^n\qquad\text{for all }n.$$
+This is well-defined because $U$ preserves products and both evaluation maps are embeddings. Near any point the $d$-tuple above is a $C^\infty$ chart $x=(e^{i_1},\dots,e^{i_d})$. The same indices work on $N$ because $U$ preserves the spanning of $T^*$ (the Gram determinant is read from first derivatives, which match under composition). The matching chart is $y=(Ue^{i_1},\dots,Ue^{i_d})$, and $Ue=e\circ F$ says $y=x\circ F$. Thus $F$ is the identity of $\mathbb{R}^d$ in these charts, hence a $C^\infty$ diffeomorphism.
 Metric and lower-order terms. By construction
 $$Q(u\circ F)=(P_{\alpha,V}u)\circ F,\qquad u\in\mathcal{A}_M.$$
 Both sides are second-order scalar differential operators. For $\phi\in\mathcal{A}_M$ the product $\phi^2$ lies in the $C^\infty$ algebra generated by $\mathcal{A}_M$, and
 $$P(\phi^2)-2\phi\,P\phi=-2\,d\phi\cdot d\phi$$
-up to the first-order and zero-order terms of $P_{\alpha,V}$; the principal part is the cometric. Since the differentials $de_i$ span $T^*$ at every point,
+up to the first-order and zero-order terms of $P_{\alpha,V}$; the principal part is the cometric. Since the differentials $de^i$ span $T^*$ at every point,
 $$F^*g=h.$$
 The first-order symbols are the drifts $\nabla\alpha$ and $\nabla\beta$, so $d\beta=F^*d\alpha$ and $\beta=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$. The order-zero terms then give $W=V\circ F$.
 
-This is Theorem~\ref{thm}. Corollary~\ref{coro} is the same statement in an eigenbasis: $U\psi_i=\eta_i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi$, as in Remark 3.
+This is Theorem~\ref{thm}. Corollary~\ref{coro} is the same statement in an eigenbasis: $Ue^i=\eta_i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi$, as in Remark 3.
 \end{proof}
 \section{Example}
 On $M=\mathbb{R}$ with the Euclidean metric, take
@@ -143,33 +143,33 @@ $$H=-\frac{d^2}{dx^2}+x^2.$$
 The potential $V(x)=x^2$ is smooth, bounded below, and $V(x)\to+\infty$ as $|x|\to\infty$. Hence $\sigma_{\mathrm{ess}}(H)=\emptyset$. The spectrum is
 $$\lambda_n=2n+1,\qquad n=0,1,2,\dots$$
 (each of multiplicity one). The corresponding $L^2(\mathbb{R})$-normalized eigenfunctions are the Hermite functions
-$$\psi_n(x)=\bigl(2^n n!\,\sqrt{\pi}\bigr)^{-1/2}H_n(x)\,e^{-x^2/2},$$
-where $H_n$ are the physicist’s Hermite polynomials. They form an orthonormal basis of $L^2(\mathbb{R})$, lie in the Schwartz class $\mathcal{S}(\mathbb{R})\subset C_0(\mathbb{R})$, and satisfy the Agmon decay that makes every pointwise product $\psi_i\psi_j$ square-integrable.
+$$e^n(x)=\bigl(2^n n!\,\sqrt{\pi}\bigr)^{-1/2}H_n(x)\,e^{-x^2/2},$$
+where $H_n$ are the physicist’s Hermite polynomials. They form an orthonormal basis of $L^2(\mathbb{R})$, lie in the Schwartz class $\mathcal{S}(\mathbb{R})\subset C_0(\mathbb{R})$, and satisfy the Agmon decay that makes every pointwise product $e^ie^j$ square-integrable.
 \subsection{Triple Products}
 Because the eigenfunctions are real,
-$$M^{i,j,k}=\langle\psi_i\psi_j,\psi_k\rangle=\int_{-\infty}^{\infty}\psi_i(x)\psi_j(x)\psi_k(x)\,dx.$$
+$$M^{i,j,k}=\langlee^ie^j,e^k\rangle=\int_{-\infty}^{\infty}e^i(x)e^j(x)e^k(x)\,dx.$$
 These integrals vanish unless $i+j+k$ is even (parity) and the three indices satisfy a triangle-type constraint coming from the linearization of Hermite polynomials. The linearization formula
 $$H_n(x)H_m(x)=\sum_{r=0}^{\min(n,m)}\binom{n}{r}\binom{m}{r}r!\,2^r\,H_{n+m-2r}(x)$$
 together with the Gaussian weight converts, after normalizing, into an explicit formula for $M^{i,j,k}$. Equivalently, the generating-function identity
 $$\int_{-\infty}^{\infty}e^{-x^2}H_a(x)H_b(x)H_c(x)\,dx
 =\sqrt{\pi}\,2^N\frac{a!\,b!\,c!}{(N-a)!(N-b)!(N-c)!}$$
-(when $a+b+c=2N$ is even and each factorial in the denominator is defined and non-negative, and $0$ otherwise) yields $M^{i,j,k}$ after inserting the normalization constants of the $\psi_n$. In particular:
+(when $a+b+c=2N$ is even and each factorial in the denominator is defined and non-negative, and $0$ otherwise) yields $M^{i,j,k}$ after inserting the normalization constants of the $e^n$. In particular:
 
-$M^{n,n,0}=\int\psi_n^2\psi_0\,dx>0$ (the ground state $\psi_0=\pi^{-1/4}e^{-x^2/2}$ is a strictly positive Gaussian);
-the map $\psi_i\psi_j=\sum_k M^{i,j,k}\psi_k$ is the exact multiplication rule in the Hermite basis.
+$M^{n,n,0}=\inte^n^2e^0\,dx>0$ (the ground state $e^0=\pi^{-1/4}e^{-x^2/2}$ is a strictly positive Gaussian);
+the map $e^ie^j=\sum_k M^{i,j,k}e^k$ is the exact multiplication rule in the Hermite basis.
 
-So the structure constants of pointwise multiplication on the dense subspace $\mathrm{span}\{\psi_n\}\subset C_0(\mathbb{R})$ are known in closed form.
+So the structure constants of pointwise multiplication on the dense subspace $\mathrm{span}\{e^n\}\subset C_0(\mathbb{R})$ are known in closed form.
 \subsection{What the Theorem Says}
-Suppose $(\mathbb{R},g,W)$ is another complete Riemannian line (so $g=e^{2\phi(x)}\,dx^2$ in some coordinate) with a smooth confining potential $W$, and suppose its Schrödinger operator $-\Delta_g+W$ is isospectral to $H$ and admits an eigenbasis $\{f_n\}$ with the same triple products
-$$\langle f_i f_j,f_k\rangle=M^{i,j,k}.$$
+Suppose $(\mathbb{R},g,W)$ is another complete Riemannian line (so $g=e^{2\phi(x)}\,dx^2$ in some coordinate) with a smooth confining potential $W$, and suppose its Schrödinger operator $-\Delta_g+W$ is isospectral to $H$ and admits an eigenbasis $\{f^n\}$ with the same triple products
+$$\langle f^i f^j,f^k\rangle=M^{i,j,k}.$$
 The discrete-spectrum argument then produces a diffeomorphism $F:\mathbb{R}\to\mathbb{R}$ such that
 $$F^*g=dx^2,\qquad W\circ F=x^2.$$
 
 Because every eigenspace is one-dimensional, the singular-value packaging collapses to the absolute values $|M^{i,j,k}|$ together with a consistent choice of signs (the “diagonal litmus” of the compact paper: the products $M^{i,i,k}$ determine the even part of the algebra and fix most signs).
 
 \subsection{Explicit Formula}
-$$M^{i,j,k}=\langle\psi_i\psi_j,\psi_k\rangle
-=\int_{\mathbb{R}}\psi_i(x)\psi_j(x)\psi_k(x)\,dx
+$$M^{i,j,k}=\langlee^ie^j,e^k\rangle
+=\int_{\mathbb{R}}e^i(x)e^j(x)e^k(x)\,dx
 =N_i N_j N_k\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\,e^{-3x^2/2}\,dx,$$
 where $N_n=(2^n n!\sqrt{\pi})^{-1/2}$.
 
@@ -195,25 +195,25 @@ $$\int_{\mathbb{R}}H_a H_b H_c\,e^{-y^2}\,dy
 The result is a finite triple sum (at most $O(ijk)$ terms, typically far fewer). Combining the prefactors $N_i N_j N_k\sqrt{2/3}$ gives $M^{i,j,k}$ exactly.
 
 Equivalently, the product of two normalized functions expands in a scaled Hermite basis
-$$\psi_i(x)\psi_j(x)=\sum_{r=0}^{\lfloor(i+j)/2\rfloor}c_{r;ij}\,\psi_{i+j-2r}(\sqrt{2}\,x),$$
+$$e^i(x)e^j(x)=\sum_{r=0}^{\lfloor(i+j)/2\rfloor}c_{r;ij}\,e^{i+j-2r}(\sqrt{2}\,x),$$
 with explicit coefficients
 $$c_{r;ij}
 =\frac{(-1)^r}{\sqrt{2^{i+j-2r+1}\pi}}
 \sqrt{\frac{(i+j-2r)!}{i!\,j!}}
 \binom{i}{r}\binom{j}{r}r!\,2^{r}$$
 (up to the conventional placement of the $\sqrt{2}$ in the argument; cf. \cite{K16}). Then
-$$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\,x)\,\psi_k(x)\,dx,$$
+$$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}e^{i+j-2r}(\sqrt{2}\,x)\,e^k(x)\,dx,$$
 and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric sum).
 
-With $f_n=\psi_n/\psi_0$ and $d\mu=\psi_0^2\,dx$,
-$$W^{i,j,k}=\int_{\mathbb{R}}\frac{\psi_i\psi_j\psi_k}{\psi_0}\,dx
+With $f^n=e^n/e^0$ and $d\mu=e^0^2\,dx$,
+$$W^{i,j,k}=\int_{\mathbb{R}}\frac{e^ie^je^k}{e^0}\,dx
 =\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\,e^{-x^2}\,dx.$$
 Titchmarsh \cite{T48} then collapses to
 $$W^{i,j,k}
 =
 \frac{\sqrt{i!\,j!\,k!}}{(s-i)!(s-j)!(s-k)!}
 \quad\text{when }i+j+k=2s\text{ and }s\ge i,j,k,$$
-and $0$ otherwise. In particular $W^{0,n,n}=1$, which is orthonormality of $\{\psi_n\}$ in $L^2(dx)$.
+and $0$ otherwise. In particular $W^{0,n,n}=1$, which is orthonormality of $\{e^n\}$ in $L^2(dx)$.
 
 As these structure constants are non-negative on a multiplicity-1 spectrum, they are the associated singular-value invariants \cite{JS24} for $L$.
 
