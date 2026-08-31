@@ -204,7 +204,7 @@ $$c_{r;ij}
 $$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}e^{i+j-2r}(\sqrt{2}\,x)\,e^k(x)\,dx,$$
 and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric sum).
 
-With $f^n=e^n/e^0$ and $d\mu=e^0^2\,dx$,
+With $f^n=e^n/e^0$ and $d\mu={e^0}^2\,dx$,
 $$W^{i,j,k}=\int_{\mathbb{R}}\frac{e^ie^je^k}{e^0}\,dx
 =\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\,e^{-x^2}\,dx.$$
 Titchmarsh \cite{T48} then collapses to
