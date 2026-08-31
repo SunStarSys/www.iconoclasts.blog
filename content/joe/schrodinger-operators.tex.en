@@ -118,8 +118,8 @@ The spectrum of $P_{\alpha,V}$ does not determine $(g,\alpha,V)$. On $\mathbb{R}
 
 \section{Proofs}
 \begin{proof}
-Let $U:\mathcal{V}_M\to\mathcal{V}_N$ be a spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$. Choose $\mu$-orthonormal and $\nu$-orthonormal real eigenbases $\{e^i\}$ and $\{f^i\}$ with $Ue^i=f^i$, ordered by nondecreasing eigenvalues. Hölder and $\mathcal{V}_M\subset L^3(\mu)$ make
-$$M^{i,j,k}:=\Phi_\mu(e^i,e^j,e^k)=\int_M e^ie^j\bar e^k\,d\mu$$
+Let $U:\mathcal{V}_M\to\mathcal{V}_N$ be a spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$. Choose $\mu$-orthonormal and $\nu$-orthonormal real-valued eigenbases $\{e^i\}$ and $\{f^i\}$ with $Ue^i=f^i$, ordered by nondecreasing eigenvalues. Hölder and $\mathcal{V}_M\subset L^3(\mu)$ make
+$$M^{i,j,k}:=\Phi_\mu(e^i,e^j,e^k)=\int_M e^ie^j e^k\,d\mu$$
 finite, and likewise on $N$. Matching triple products therefore give the same structure constants, so $U$ preserves pointwise $C^\infty$ products on $\mathcal{V}_M$:
 $$e^ie^j=\sum_k M^{i,j,k}e^k,\qquad U(\phi\chi)=U(\phi)U(\chi).$$
 (The unit of $C^\infty$ need not lie in $\mathcal{V}_M$; $U$ need not send $1$ to $1$.)
