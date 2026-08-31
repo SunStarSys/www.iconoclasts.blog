@@ -107,7 +107,7 @@ $$\int_M e^ie^je^k\,d\mu=\int_N f^if^jf^k\,d\nu\qquad\text{for all }i,j,k.$$
 \begin{remark}
 \label{rmk}
 Corollary 2 is the matrix form of Theorem 1. Given such bases, the map $Ue^i=f^i$ is a spectral identification, and
-$$M^{i,j,k}=\Phi_\mu(e^i,e^j,e^k).$$
+$$M^{i,j,k}=\Phi_\mu(e^i,e^j,\bar e^k).$$
 Conversely, any spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$ becomes Corollary 2 after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,\alpha,V)$ with $(N,h,\beta,W)$.
 \end{remark}
 
