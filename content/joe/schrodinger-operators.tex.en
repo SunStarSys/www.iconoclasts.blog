@@ -208,12 +208,16 @@ $$c_{r;ij}
 $$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}e^{i+j-2r}(\sqrt{2}\,x)\,e^k(x)\,dx,$$
 and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric sum).
 
-
 \subsection{From Harmonic Oscillator to Ornstein Uhlenbeck}
 
-With $f^n=e^n/e^0$ and $d\mu={e^0}^2\,dx$,
-$$W^{i,j,k}=\int_{\mathbb{R}}\frac{e^ie^je^k}{e^0}\,dx
-=\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\,e^{-x^2}\,dx.$$
+The oscillator $H=-d^2/dx^2+x^2$ is the Schrödinger case $\alpha=0$, $V(x)=x^2$ of $P_{\alpha,V}$, with unweighted measure $dx$ and triple products $M^{i,j,k}=\int e_ie_je_k\,dx$. Ground-state conjugation by $e_0(x)=\pi^{-1/4}e^{-x^2/2}$ produces the Witten operator
+$$L=e_0^{-1}(H-\lambda_0)(e_0\,\cdot)=-\frac{d^2}{dx^2}+2x\frac{d}{dx}$$
+on $L^2(\mathbb{R},e_0^2\,dx)$. This is $P_{\alpha,0}$ for $\alpha=x^2+\mathrm{const}$: the generator of the Ornstein–Uhlenbeck diffusion. The conjugated basis $f_n=e_n/e_0$ is orthonormal in $L^2(e_0^2\,dx)$, and the two arrays are related by
+
+$$W^{i,j,k}:=\int_{\mathbb{R}}f_if_jf_k\,e_0^2\,dx=\int_{\mathbb{R}}\frac{e_ie_je_k}{e_0}\,dx.$$
+
+Thus $M$ is the multiplication table of Theorem 1 for $H$, and $W$ is the same table for $L$. Matching either determines the line, the Euclidean metric, and the data $(V,\alpha)=(x^2,x^2)+\mathrm{const}$. The explicit values follow.
+
 Titchmarsh \cite{T48} then collapses to
 $$W^{i,j,k}
 =
