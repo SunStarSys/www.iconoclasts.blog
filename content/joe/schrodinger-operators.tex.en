@@ -164,12 +164,16 @@ $M^{n,n,0}=\int {e^n}^2e^0\,dx>0$ (the ground state $e^0=\pi^{-1/4}e^{-x^2/2}$ i
 the map $e^ie^j=\sum_k M^{i,j,k}e^k$ is the exact multiplication rule in the Hermite basis.
 
 So the structure constants of pointwise multiplication on the dense subspace $\mathrm{span}\{e^n\}\subset C_0(\mathbb{R})$ are known in closed form.
+
 \subsection{What the Theorem Says}
 Suppose $(\mathbb{R},g,W)$ is another complete Riemannian line (so $g=e^{2\phi(x)}\,dx^2$ in some coordinate) with a smooth confining potential $W$, and suppose its Schrödinger operator $-\Delta_g+W$ is isospectral to $H$ and admits an eigenbasis $\{f^n\}$ with the same triple products
 $$\langle f^i f^j,f^k\rangle=M^{i,j,k}.$$
 The discrete-spectrum argument then produces a diffeomorphism $F:\mathbb{R}\to\mathbb{R}$ such that
 $$F^*g=dx^2,\qquad W\circ F=x^2.$$
 
+Isospectrality alone does not give this. McKean–Trubowitz \cite{MT82} construct an infinite-dimensional family of potentials $q$ on $\mathbb{R}$ with
+$$\sigma\Bigl(-\frac{d^2}{dx^2}+q\Bigr)=\sigma(H)=\{2n+1\}_{n\ge0}$$
+(up to their normalization of $H$). The parameters are the norming constants of the eigenfunctions; the even potential $x^2$ is the unique even point of the class. Thus $\{2n+1\}$ does not determine $V(x)=x^2$. Matching the table $M^{i,j,k}$ does: it encodes the multiplication of the eigenfunctions, which is strictly more than the spectrum, and Theorem 1 converts that table into $F^*g=dx^2$ and $W\circ F=x^2$.
 Because every eigenspace is one-dimensional, the singular-value packaging collapses to the absolute values $|M^{i,j,k}|$ together with a consistent choice of signs (the “diagonal litmus” of the compact paper: the products $M^{i,i,k}$ determine the even part of the algebra and fix most signs).
 
 \subsection{Explicit Formula}
