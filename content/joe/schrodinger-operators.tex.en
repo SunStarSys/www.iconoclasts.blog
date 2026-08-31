@@ -183,7 +183,7 @@ $$H_N(\psi\circ F)=(H_M\psi)\circ F,\qquad\psi\in\mathcal{A}_M.$$
 Both operators are second-order scalar differential operators. The identity holds on a family whose differentials span $T^*$ at every point, so the principal symbols match:
 $$F^*g=h.$$
 The order-zero terms then give $V\circ F=W$.
-This is Theorem 2. Theorem 1 is the same statement with $U$ given abstractly: $Uu=u\circ F$ on $\mathcal{A}_M$, so the evaluation embedding of any eigenbasis is only a coordinate expression of $F$.
+This is Theorem 1. Theorem 2 is the same statement in an eigenbasis: $U\psi_i=\eta_i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi$, as in Remark 3.
 \end{proof}
 
 \subsection{Proof of Witten Corollaries}
