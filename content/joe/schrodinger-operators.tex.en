@@ -154,7 +154,7 @@ $$\int_{-\infty}^{\infty}e^{-x^2}H_a(x)H_b(x)H_c(x)\,dx
 =\sqrt{\pi}\,2^N\frac{a!\,b!\,c!}{(N-a)!(N-b)!(N-c)!}$$
 (when $a+b+c=2N$ is even and each factorial in the denominator is defined and non-negative, and $0$ otherwise) yields $M^{i,j,k}$ after inserting the normalization constants of the $e^n$. In particular:
 
-$M^{n,n,0}=\int e^n^2e^0\,dx>0$ (the ground state $e^0=\pi^{-1/4}e^{-x^2/2}$ is a strictly positive Gaussian);
+$M^{n,n,0}=\int {e^n}^2e^0\,dx>0$ (the ground state $e^0=\pi^{-1/4}e^{-x^2/2}$ is a strictly positive Gaussian);
 the map $e^ie^j=\sum_k M^{i,j,k}e^k$ is the exact multiplication rule in the Hermite basis.
 
 So the structure constants of pointwise multiplication on the dense subspace $\mathrm{span}\{e^n\}\subset C_0(\mathbb{R})$ are known in closed form.
