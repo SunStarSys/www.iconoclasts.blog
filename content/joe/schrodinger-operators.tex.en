@@ -148,7 +148,7 @@ The first-order symbols are the drifts $\nabla\alpha$ and $\nabla\beta$, so $d\b
 
 Now let us tackle the $C_0$ constraint, which we only used in the application of Gelfand-Naimark. Here we are applying Stone-Weierstrass in the compact-open topology to define $\Psi$ on the closure of $\mathcal A_M, \mathcal A_N$ in that topology. It is not a $C^*$ Algebra isomorphism here because we're not using a Banach norm topology, but we don't need it to be until we pass to the conjugate algebras. This is exactly what the structure constants provide, even in the unbounded eigenfunction case, because we only needed pointwide convergence of the associated eigenbasis products for that.
 
-For the general case, define the "effective" smooth Schr\"odinger ground states $\phi>0, \eta>0$ satisfying $\Psi(\phi) = \eta$. Since the conjugation $$\xi\mapsto\Psi(\phi\xi) =\eta\Psi(\xi),$$ we just need the eigenbases to conjugate to $C_0$ under these maps, and we can once again apply Gelfand-Naimark and get the homeomorphism $F$ to represent $\Psi$. That is exactly what the original assumption that the effective Schr\"odinger potentials are \textbf{constraining} yields.
+For the general case, define the "effective" smooth Schr\"odinger ground states $\phi>0, \eta>0$ satisfying $\Psi(\phi) = \eta$. Since the conjugation $$\xi\mapsto\Psi(\phi\xi) =\eta\Psi(\xi),$$ we just need the eigenbases to conjugate to $C_0$ under these maps, and we can once again apply Gelfand-Naimark and get the homeomorphism $F$ to represent $\Psi$. That is exactly what the original assumption that the effective Schr\"odinger potentials are \textbf{constraining} yields \cite{SA82}.
 
 This proves Theorem~\ref{thm}. Corollary~\ref{coro} is the same statement in an eigenbasis: $Ue^i=f^i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$, as in Remark 3.
 
@@ -164,7 +164,7 @@ The potential $V(x)=x^2$ is smooth, bounded below, and $V(x)\to+\infty$ as $|x|\
 $$\lambda_n=2n+1,\qquad n=0,1,2,\dots$$
 (each of multiplicity one). The corresponding $L^2(\mathbb{R})$-normalized eigenfunctions are the Hermite functions
 $$e^n(x)=\bigl(2^n n!\,\sqrt{\pi}\bigr)^{-1/2}H_n(x)\,e^{-x^2/2},$$
-where $H_n$ are the physicist’s Hermite polynomials. They form an orthonormal basis of $L^2(\mathbb{R})$, lie in the Schwartz class $\mathcal{S}(\mathbb{R})\subset C_0(\mathbb{R})$, and satisfy the Agmon decay that makes every pointwise product $e^ie^j$ square-integrable.
+where $H_n$ are the physicist’s Hermite polynomials. They form an orthonormal basis of $L^2(\mathbb{R})$, lie in the Schwartz class $\mathcal{S}(\mathbb{R})\subset C_0(\mathbb{R})$, and satisfy the Agmon decay \cite{SA82} that makes every pointwise product $e^ie^j$ square-integrable.
 \subsection{Triple Products}
 Because the eigenfunctions are real,
 $$M^{i,j,k}=\langle e^ie^j,e^k\rangle=\int_{-\infty}^{\infty}e^i(x)e^j(x)e^k(x)\,dx.$$
