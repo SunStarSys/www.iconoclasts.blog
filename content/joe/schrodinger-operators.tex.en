@@ -158,7 +158,9 @@ This proves Theorem~\ref{thm}. Corollary~\ref{coro} is the same statement in an 
 \begin{remark}
 The same construction applies to compact Riemannian orbifolds: $F$ is a homeomorphism of underlying spaces, an isometry of $P_{\alpha,V}$-data on the regular set, and an isomorphism of local isotropy at singular points. The evaluation map drops rank exactly on the singular strata.
 \end{remark}
-
+\begin{remark}
+If $\overline{M},\overline{N}$ are compact with smooth boundary and $P,Q$ are Dirichlet realizations, the same argument with $C(\overline{M})$ in place of $C_0(M)$ yields a diffeomorphism of closed manifolds with $F(\partial N)=\partial M$, $F^*g=h$, $\beta=\alpha\circ F+c$, $W=V\circ F$. For Neumann or Robin, $F$ is still a diffeomorphism of closed manifolds; preservation of the boundary condition follows from the isometry of the interior metric.
+\end{remark}
 \end{proof}
 
 \section{Example}
