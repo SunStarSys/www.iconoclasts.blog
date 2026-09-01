@@ -77,13 +77,15 @@ on $C_c^\infty(M)$, acting in $L^2(M,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}
 $$\sigma(P_{\alpha,V})=\sigma_{\mathrm{disc}}(P_{\alpha,V})=\{\lambda_0<\lambda_1\le\lambda_2\le\cdots\}\to+\infty.$$
 Write
 $$\mathcal{V}_M:=\bigoplus_{n\ge0}\ker(P_{\alpha,V}-\lambda_n)\subset L^2(M,\mu)\cap C^\infty(M),$$
-and assume $\mathcal{V}_M\subset L^3(M,\mu) \cap C_0(M).$ Hölder then gives a bounded symmetric trilinear form
+and assume $\mathcal{V}_M\subset L^3(M,\mu).$ Hölder then gives a bounded symmetric trilinear form
 $$\Phi_\mu:\mathcal{V}_M\times\mathcal{V}_M\times\mathcal{V}_M\to\mathbb{C},
 \qquad
 \Phi_\mu(u,v,w)=\int_M uvw\,d\mu.$$
-The same data $(N,h,\beta,W)$ produce $Q=P_{\beta,W}$, $\nu=e^{-\beta}\mathrm{vol}_h$, $\mathcal{V}_N\subset L^3(N,\nu)\cap C_0(N)$, and $\Phi_\nu$.
+The same data $(N,h,\beta,W)$ produce $Q=P_{\beta,W}$, $\nu=e^{-\beta}\mathrm{vol}_h$, $\mathcal{V}_N\subset L^3(N,\nu)$, and $\Phi_\nu$.
 A linear map $U:\mathcal{V}_M\to\mathcal{V}_N$ is a spectral identification if it is unitary for the $L^2$ inner products and
 $$U\bigl(\ker(P_{\alpha,V}-\lambda_n)\bigr)=\ker(Q-\lambda_n)\qquad\text{for every }n.$$
+
+Let us now consider the effective Schr\"odinger potentials $V+\frac14|\nabla_g\alpha|^2-\frac12\Delta_g\alpha, W+\frac14|\nabla_h\beta|^2 -\frac12\Delta_h\beta$, and assume they are both \textbf{constraining}, in that they are bounded from below and go to $\infty$ as $x\to\infty$.
 
 \subsection{Results}
 \label{subsec:res}
@@ -118,6 +120,7 @@ The spectrum of $P_{\alpha,V}$ does not determine $(g,\alpha,V)$. On $\mathbb{R}
 
 \section{Proofs}
 \begin{proof}
+Let us first assume all eigenfunctions are $C_0$.  Then we will relax this constraint after proving that case.
 Let $U:\mathcal{V}_M\to\mathcal{V}_N$ be a spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$. Choose $\mu$-orthonormal and $\nu$-orthonormal real-valued eigenbases $\{e^i\}$ and $\{f^i\}$ with $Ue^i=f^i$, ordered by nondecreasing eigenvalues. Hölder and $\mathcal{V}_M\subset L^3(\mu)$ make
 $$M^{i,j,k}:=\Phi_\mu(e^i,e^j,e^k)=\int_M e^ie^j e^k\,d\mu$$
 finite, and likewise on $N$. Matching triple products therefore give the same structure constants, so $U$ preserves pointwise $C^\infty$ products on $\mathcal{V}_M$:
@@ -142,6 +145,8 @@ $$P(\phi^2)-2\phi\,P\phi=-2\,d\phi\cdot d\phi - V\phi^2.$$
 The principal part is the cometric. Since the differentials $de^i$ span $T^*$ at every point,
 $$F^*g=h.$$
 The first-order symbols are the drifts $\nabla\alpha$ and $\nabla\beta$, so $d\beta=F^*d\alpha$ and $\beta=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$. The order-zero terms then give $W=V\circ F$.
+
+Now let us tackle the $C_0$ constraint, which we only used in the application of Gelfand-Naimark. For the general case, take "effective" smooth Schr\"odinger ground states $\phi>0, \eta>0$ satisfying $\Psi(\phi) = \eta$ with $\Psi: \mathcal A_M \to \mathcal A_N$ isometrically as above. Since the conjugation $$\xi\mapsto\Psi(\phi\xi) =\eta\Psi(\xi),$$ we just need the eigenbases to conjugate to $C_0$ under these maps, and we can once again apply Gelfand-Naimark and get the homeomorphism $F$ to represent $\Psi$. That is exactly what the original assumption that the effective Schr\"odinger potentials are \textbf{constraining} yields.
 
 This is Theorem~\ref{thm}. Corollary~\ref{coro} is the same statement in an eigenbasis: $Ue^i=f^i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$, as in Remark 3.
 
