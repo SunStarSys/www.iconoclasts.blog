@@ -85,10 +85,10 @@ A linear map $U:\mathcal{V}_M\to\mathcal{V}_N$ is a \textbf{spectral identificat
 $$U\bigl(\ker(P_{\alpha,V}-\lambda_n)\bigr)=\ker(Q-\lambda_n)\qquad\text{for every }n.$$
 
 
-With $e^0>0, f^0>0$ unit ground states for $P, Q$ respectively, let us now consider the effective Schr\"odinger potentials
+With $e^{-\phi/2}>0, e^{-\psi/2}>0$ unit ground states for $P, Q$ respectively, let us now consider the effective Schr\"odinger potentials
 \begin{equation}
 \label{constraint}
-V+\frac14|\nabla_g(\alpha)|^2 + \frac12\langle\nabla_g\alpha,\nabla_g(2\log e^0)\rangle -\frac12\Delta_g(\alpha),\qquad W+\frac14|\nabla_h(\beta)|^2 +\frac12\langle\nabla_h\beta,\nabla_h(2\log f^0)\rangle-\frac12\Delta_h(\beta),
+V+\frac14|\nabla_g(\alpha)|^2 + \frac12\langle\nabla_g\alpha,\nabla_g(\phi)\rangle -\frac12\Delta_g(\alpha),\qquad W+\frac14|\nabla_h(\beta)|^2 +\frac12\langle\nabla_h\beta,\nabla_h(\psi)\rangle-\frac12\Delta_h(\beta),
 \end{equation}
 and assume they are both \textbf{constraining}, in that they are bounded from below and go to $\infty$ as $x\to\infty$.
 
