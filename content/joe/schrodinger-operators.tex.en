@@ -77,11 +77,11 @@ on $C_c^\infty(M)$, acting in $L^2(M,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}
 $$\sigma(P_{\alpha,V})=\sigma_{\mathrm{disc}}(P_{\alpha,V})=\{\lambda_0<\lambda_1\le\lambda_2\le\cdots\}\to+\infty.$$
 Write
 $$\mathcal{V}_M:=\bigoplus_{n\ge0}\ker(P_{\alpha,V}-\lambda_n)\subset L^2(M,\mu)\cap C^\infty(M),$$
-and assume $\mathcal{V}_M\subset L^3(M,\mu) \cap C_0(M)$. Hölder then gives a bounded symmetric trilinear form
+and assume $\mathcal{V}_M\subset L^3(M,\mu) \cap C_0(M).$ Hölder then gives a bounded symmetric trilinear form
 $$\Phi_\mu:\mathcal{V}_M\times\mathcal{V}_M\times\mathcal{V}_M\to\mathbb{C},
 \qquad
 \Phi_\mu(u,v,w)=\int_M uvw\,d\mu.$$
-The same data $(N,h,\beta,W)$ produce $Q=P_{\beta,W}$, $\nu=e^{-\beta}\mathrm{vol}_h$, $\mathcal{V}_N\subset L^3(N,\nu)$, and $\Phi_\nu$.
+The same data $(N,h,\beta,W)$ produce $Q=P_{\beta,W}$, $\nu=e^{-\beta}\mathrm{vol}_h$, $\mathcal{V}_N\subset L^3(N,\nu)\cap C_0(N)$, and $\Phi_\nu$.
 A linear map $U:\mathcal{V}_M\to\mathcal{V}_N$ is a spectral identification if it is unitary for the $L^2$ inner products and
 $$U\bigl(\ker(P_{\alpha,V}-\lambda_n)\bigr)=\ker(Q-\lambda_n)\qquad\text{for every }n.$$
 
