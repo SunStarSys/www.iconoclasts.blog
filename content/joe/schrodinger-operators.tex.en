@@ -85,7 +85,12 @@ A linear map $U:\mathcal{V}_M\to\mathcal{V}_N$ is a \textbf{spectral identificat
 $$U\bigl(\ker(P_{\alpha,V}-\lambda_n)\bigr)=\ker(Q-\lambda_n)\qquad\text{for every }n.$$
 
 
-With $e^0>0, f^0>0$ unit ground states for $P, Q$ respectively, let us now consider the effective Schr\"odinger potentials $$V+\frac14|\nabla_g(\alpha)|^2 + \frac12\langle\nabla_g\alpha,\nabla_g(2\log e^0)\rangle -\frac12\Delta_g(\alpha),\qquad W+\frac14|\nabla_h(\beta)|^2 +\frac12\langle\nabla_h\beta,\nabla_h(2\log f^0)-\frac12\Delta_h(\beta),$$ and assume they are both \textbf{constraining}, in that they are bounded from below and go to $\infty$ as $x\to\infty$.
+With $e^0>0, f^0>0$ unit ground states for $P, Q$ respectively, let us now consider the effective Schr\"odinger potentials
+\begin{equation}
+\label{constraint}
+V+\frac14|\nabla_g(\alpha)|^2 + \frac12\langle\nabla_g\alpha,\nabla_g(2\log e^0)\rangle -\frac12\Delta_g(\alpha),\qquad W+\frac14|\nabla_h(\beta)|^2 +\frac12\langle\nabla_h\beta,\nabla_h(2\log f^0)-\frac12\Delta_h(\beta),
+\end{equation}
+and assume they are both \textbf{constraining}, in that they are bounded from below and go to $\infty$ as $x\to\infty$.
 
 \subsection{Results}
 \label{subsec:res}
@@ -148,7 +153,7 @@ The first-order symbols are the drifts $\nabla\alpha$ and $\nabla\beta$, so $d\b
 
 Now let us tackle the $C_0$ constraint, which we only used in the application of Gelfand-Naimark. Here we are applying Stone-Weierstrass in the compact-open topology to define $\Psi$ on the closure of $\mathcal A_M, \mathcal A_N$ in that topology. It is not a $C^*$ Algebra isomorphism here because we're not using a Banach norm topology, but we don't need it to be until we pass to the conjugate algebras. This is exactly what the structure constants provide, even in the unbounded eigenfunction case, because we only needed pointwide convergence of the associated eigenbasis products for that.
 
-For the general case, define the "effective" smooth Schr\"odinger ground states $\phi>0, \eta>0$ satisfying $\Psi(\phi) = \eta$. Since the conjugation $$\xi\mapsto\Psi(\frac{\phi}{e^0}\xi) =\frac{\eta}{f^0}\Psi(\xi),$$ we just need the eigenbases to conjugate to $C_0$ under these maps, and we can once again apply Gelfand-Naimark and get the homeomorphism $F$ to represent $\Psi$. That is exactly what the original assumption that the effective Schr\"odinger potentials are \textbf{constraining} yields \cite{SA82}.
+For the general case, define the "effective" smooth Schr\"odinger ground states $\phi>0, \eta>0$ satisfying $\Psi(\phi) = \eta$. Since the conjugation $$\xi\mapsto\Psi(\frac{\phi}{e^0}\xi) =\frac{\eta}{f^0}\Psi(\xi),$$ we just need the eigenbases to conjugate to $C_0$ under these maps, and we can once again apply Gelfand-Naimark and get the homeomorphism $F$ to represent $\Psi$. That is exactly what the original assumption that the effective Schr\"odinger potentials in Equation~\ref{constraint} are \textbf{constraining} yields \cite{SA82}.
 
 This proves Theorem~\ref{thm}. Corollary~\ref{coro} is the same statement in an eigenbasis: $Ue^i=f^i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$, as in Remark 3.
 
