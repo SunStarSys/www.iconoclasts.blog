@@ -56,7 +56,6 @@
 \newtheorem{principle}[theorem]{Principle}
 
 \begin{document}
-
 \maketitle
 
 \begin{abstract}
@@ -157,7 +156,9 @@ The same construction applies to compact Riemannian orbifolds: $F$ is a homeomor
 \end{remark}
 
 \end{proof}
+
 \section{Example}
+
 On $M=\mathbb{R}$ with the Euclidean metric, take
 $$H=-\frac{d^2}{dx^2}+x^2.$$
 The potential $V(x)=x^2$ is smooth, bounded below, and $V(x)\to+\infty$ as $|x|\to\infty$. Hence $\sigma_{\mathrm{ess}}(H)=\emptyset$. The spectrum is
@@ -181,6 +182,7 @@ the map $e^ie^j=\sum_k M^{i,j,k}e^k$ is the exact multiplication rule in the Her
 So the structure constants of pointwise multiplication on the dense subspace $\mathrm{span}\{e^n\}\subset C_0(\mathbb{R})$ are known in closed form.
 
 \subsection{What the Theorem Says}
+
 Suppose $(\mathbb{R},g,W)$ is another complete Riemannian line (so $g=e^{2\phi(x)}\,dx^2$ in some coordinate) with a smooth confining potential $W$, and suppose its Schrödinger operator $-\Delta_g+W$ is isospectral to $H$ and admits an eigenbasis $\{f^n\}$ with the same triple products
 $$\langle f^i f^j,f^k\rangle=M^{i,j,k}.$$
 The discrete-spectrum argument then produces a diffeomorphism $F:\mathbb{R}\to\mathbb{R}$ such that
@@ -192,6 +194,7 @@ $$\sigma\Bigl(-\frac{d^2}{dx^2}+q\Bigr)=\sigma(H)=\{2n+1\}_{n\ge0}$$
 Because every eigenspace is one-dimensional, the singular-value packaging collapses to the absolute values $|M^{i,j,k}|$ together with a consistent choice of signs (the “diagonal litmus” of the compact paper: the products $M^{i,i,k}$ determine the even part of the algebra and fix most signs).
 
 \subsection{Explicit Formula}
+
 $$M^{i,j,k}=\langle e^ie^j,e^k\rangle
 =\int_{\mathbb{R}}e^i(x)e^j(x)e^k(x)\,dx
 =N_i N_j N_k\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\,e^{-3x^2/2}\,dx,$$
