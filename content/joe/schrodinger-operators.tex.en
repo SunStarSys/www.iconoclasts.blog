@@ -4,7 +4,6 @@
 \usepackage{fontspec}
 \usepackage[scr=rsfs]{mathalpha}
 \usepackage[margin=1in]{geometry}
-
 \newenvironment{subproof}[1][\proofname]{%
   \renewcommand{\qedsymbol}{$\blacksquare$}%
   \begin{proof}[#1]%
