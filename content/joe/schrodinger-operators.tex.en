@@ -82,7 +82,7 @@ $$\Phi_\mu:\mathcal{V}_M\times\mathcal{V}_M\times\mathcal{V}_M\to\mathbb{C},
 \qquad
 \Phi_\mu(u,v,w)=\int_M uvw\,d\mu.$$
 The same data $(N,h,\beta,W)$ produce $Q=P_{\beta,W}$, $\nu=e^{-\beta}\mathrm{vol}_h$, $\mathcal{V}_N\subset L^3(N,\nu)$, and $\Phi_\nu$.
-A linear map $U:\mathcal{V}_M\to\mathcal{V}_N$ is a spectral identification if it is unitary for the $L^2$ inner products and
+A linear map $U:\mathcal{V}_M\to\mathcal{V}_N$ is a \textbf{spectral identification} if it is unitary for the $L^2$ inner products and
 $$U\bigl(\ker(P_{\alpha,V}-\lambda_n)\bigr)=\ker(Q-\lambda_n)\qquad\text{for every }n.$$
 
 Let us now consider the effective Schr\"odinger potentials $V+\frac14|\nabla_g\alpha|^2-\frac12\Delta_g\alpha, W+\frac14|\nabla_h\beta|^2 -\frac12\Delta_h\beta$, and assume they are both \textbf{constraining}, in that they are bounded from below and go to $\infty$ as $x\to\infty$.
