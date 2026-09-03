@@ -152,6 +152,15 @@ The same construction applies to compact Riemannian orbifolds: $F$ is a homeomor
 \begin{remark}
 If $\overline{M},\overline{N}$ are compact with smooth boundary and $P,Q$ are Dirichlet realizations, the same argument with $C(\overline{M})$ in place of $C_0(M)$ yields a diffeomorphism of closed manifolds with $F(\partial N)=\partial M$, $F^*g=h$, $\beta=\alpha\circ F+c$, $W=V\circ F$. For Neumann or Robin, $F$ is still a diffeomorphism of closed manifolds; preservation of the boundary condition follows from the isometry of the interior metric.
 \end{remark}
+\begin{remark}
+The same reconstruction applies to graphs, with the amount of analysis matching the function space.
+
+On a finite weighted graph the eigenfunctions of a Schr\"odinger matrix span \(\mathbb{R}^V\). The array \(M^{i,j,k}\) is the multiplication table of that algebra, characters are vertices, and \(P(\phi^2)-2\phi P\phi\) recovers the edge weights. Spectrum alone does not: Sunada graphs and isospectral trees are distinguished by \(\Phi\).
+
+A compact quantum graph is a one-dimensional Riemannian space with singularities. Discrete spectrum, \(\mathcal{V}\subset L^3\), and Claim~4.1 give a homeomorphism of the underlying metric graphs. The principal-symbol identity on each edge recovers lengths; vertex conditions follow from the isometry as in Remark~6. Combinatorial type is not enough: equal graphs with different length vectors are separated by \(\Phi\).
+
+An infinite locally finite graph with \(\sigma_{\mathrm{ess}}(P)=\emptyset\) is formally in the same class. Compact-open Stone--Weierstrass on the discrete space \(V\) produces a bijection of vertices once the generated algebra separates points and the ground state vanishes nowhere (Perron--Frobenius on a connected graph). The same quadratic identity recovers weights. Two hypotheses are not free: eigenfunctions must lie in \(\ell^3(\mu)\), which is an Agmon-type decay statement, and they must separate vertices, which fails if a nontrivial automorphism commutes with \(P\). An infinite quantum graph with discrete spectrum is the hybrid of the last two paragraphs.
+\end{remark}
 \end{proof}
 
 \section{Example}
