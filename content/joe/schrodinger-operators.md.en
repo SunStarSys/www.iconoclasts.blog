@@ -1,8 +1,8 @@
 title: Triple Products of Eigenfunctions and Schrodinger/Witten Operators
 dependencies: *.md.en
 categories: Math
-keywords: Schrodinger, Witten
-status: verified=53011
+keywords: Schrodinger, Witten, triple products
+status: verified=53686
 
 <div class="right">
 
@@ -20,7 +20,7 @@ To Autumn
 
 ## Abstract
 
-For a second-order operator $$P_{\alpha,V}=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle+V$$ on a complete Riemannian manifold, acting in $$L^2(e^{-\alpha}\,d\mathrm{vol})$$ with discrete spectrum, the eigenvalues determine the eigenspaces only up to independent unitaries on each eigenspace. We prove that a spectral identification which also preserves the triple products
+For a second-order operator $$P_{\alpha,V}=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle+V$$ on a complete Riemannian manifold, acting in $$L^2(e^{-\alpha}\,d\mathrm{vol})$$ with discrete spectrum, the eigenvalues determine the eigenspaces only up to independent unitaries on each eigenspace. {# lede #}We prove that a spectral identification which also preserves the triple products{# lede #}
 
 $$\Phi_\mu(u,v,w)=\int uvw\ d\mu,\qquad d\mu=e^{-\alpha}\ d\mathrm{vol},$$
 
