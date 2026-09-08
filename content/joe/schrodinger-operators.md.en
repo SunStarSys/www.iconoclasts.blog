@@ -2,7 +2,7 @@ title: Triple Products of Eigenfunctions and Schrodinger/Witten Operators
 dependencies: *.md.en
 categories: Math
 keywords: Schrodinger, Witten
-status: verified=53007
+status: verified=53011
 
 <div class="right">
 
@@ -20,139 +20,163 @@ To Autumn
 
 ## Abstract
 
-Using elementary techniques from Geometric Analysis, Partial Differential Equations, and Abelian $$C^*$$Algebras, we uncover a novel, yet familiar, global geometric discriminant -- namely the indexed set of integrals of triple products of eigenfunctions of the Schrodinger/Witten Operator, to precisely characterize which isospectral Schrodinger/Witten Operators are isometric.
+For a second-order operator $$P_{\alpha,V}=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle+V$$ on a complete Riemannian manifold, acting in $$L^2(e^{-\alpha}\,d\mathrm{vol})$$ with discrete spectrum, the eigenvalues determine the eigenspaces only up to independent unitaries on each eigenspace. We prove that a spectral identification which also preserves the triple products
+
+$$\Phi_\mu(u,v,w)=\int uvw\ d\mu,\qquad d\mu=e^{-\alpha}\ d\mathrm{vol},$$
+
+is implemented by a diffeomorphism $$F$$ with $$F^*g=h$$, $$\beta=\alpha\circ F+c$$, and $$W=V\circ F$$. Schrödinger operators are the case $$\alpha=0$$; Witten operators are the case $$V=0$$. The geometric invariant is the multiplication table on the spectral subspaces, not the spectrum alone.
+
+### Keywords
+spectrum, triple products, Schrödinger, Witten, Laplacian, eigenfunctions, inverse problem
+
 
 ## Introduction
 
-Let $$(M,g)$$ be a smooth, connected, complete Riemannian manifold (possibly non-compact, possibly of infinite volume). Fix a real potential $$V\in C^\infty(M)$$ which is bounded below and proper in the sense
+Let $$(M,g)$$ be a complete connected Riemannian manifold, $$\alpha,V\in C^\infty(M)$$, and
 
-$$V(x)\to +\infty\qquad\text{as }x\to\infty$$
+$$P_{\alpha,V}u=-\Delta_g u+\langle\nabla\alpha,\nabla u\rangle+Vu$$
 
-(i.e., $$\{x:V(x)\le C\}$$ is compact for every $$C$$). Let
+on $$C_c^\infty(M)$$, acting in $$L^2(M,\mu)$$ with $$d\mu=e^{-\alpha}\ d\mathrm{vol}_g$$. Assume $$P _ {\alpha,V}$$ is essentially self-adjoint and bounded below, with empty essential spectrum
 
-$$H=-\Delta_g+V$$
+$$\sigma(P_{\alpha,V})=\sigma_{\mathrm{disc}}(P_{\alpha,V})=\set{\lambda_0<\lambda_1\le\lambda_2\le\cdots}\to+\infty.$$
 
-be the associated Schrodinger operator, essentially self-adjoint on $$C_c^\infty(M)$$. Under these hypotheses it is classical that $$\sigma(H)=\sigma_{\mathrm{disc}}(H)=\{\lambda_0\lt\lambda_1\le\lambda_2\le\cdots\}\to+\infty$$, each eigenvalue of finite multiplicity; there is an orthonormal basis $$\{e^i\}_{i=0}^\infty\subset L^2(M,d\mathrm{vol}_g)$$ of smooth eigenfunctions,
+Write
 
-$$He^i=\lambda_i e^i.$$
+$$\mathcal{V} _ M:=\bigoplus_{n\ge0}\ker(P_{\alpha,V}-\lambda_n)\subset L^2(M,\mu)\cap C^\infty(M),$$
 
-(The same conclusions hold for $$-\Delta_g$$ itself on some complete manifolds of finite volume with no continuous spectrum, but the confining potential makes the analysis cleaner.)
-Define the triple products exactly as in the compact case:
+and assume $$\mathcal{V}_M\subset L^3(M,\mu).$$ Hölder then gives a bounded symmetric trilinear form
 
-$$M^{i,j,k}:=\langle e^i e^j,e^k\rangle_{L^2}=\int_M e^i e^j\ \overline{e^k}\ d\mathrm{vol}_g.$$
+$$\Phi_\mu:\mathcal{V}_M\times\mathcal{V}_M\times\mathcal{V}_M\to\mathbb{C},
+\qquad
+\Phi_\mu(u,v,w)=\int_M uvw\ d\mu.$$
 
-Because the eigenfunctions are Schwartz-class at infinity in the sense that they decay faster than any polynomial in $$V$$ (Agmon estimates [[Agmon1982]](#Agmon1982)/ weighted Sobolev [[TaylorPDE1]](#TaylorPDE1)), the products $$e^i e^j$$ lie in $$L^2$$ and the integrals converge absolutely.
+The same data $$(N,h,\beta,W)$$ produce $$Q=P_{\beta,W}$$, $$d\nu=e^{-\beta}d\mathrm{vol}_h$$, $$\mathcal{V}_N\subset L^3(N,\nu)$$, and $$\Phi_\nu$$.
 
-## Results
+A linear map $$U:\mathcal{V}_M\to\mathcal{V}_N$$ is a **spectral identification** if it is unitary for the $$L^2$$ inner products and
 
-### Theorem
+$$U\bigl(\ker(P_{\alpha,V}-\lambda_n)\bigr)=\ker(Q-\lambda_n)\qquad\text{for every }n.$$
 
-Let $$(M,g,V)$$ and $$(N,h,W)$$ be two such data, with isospectral Schrödinger operators $$H_M$$ and $$H_N$$. Suppose there exist orthonormal eigenbases $$\{e^i\}$$ of $$H_M$$ and $$\{f^i\}$$ of $$H_N$$, ordered by non-decreasing eigenvalues, such that
+### Results
 
-```math
-M_M^{i,j,k}=M_N^{i,j,k}\qquad\forall\qquad i,j,k.
-```
-Then there is a diffeomorphism $$F:N\to M$$ with $$F^*g=h$$ and $$V\circ F=W$$.
+#### Theorem 1
 
+Suppose $$P_{\alpha,V}$$ and $$P_{\beta,W}$$ are isospectral and $$U:\mathcal{V}_M\to\mathcal{V}_N$$ is a spectral identification with
 
-### Corollary
+$$\Phi_\nu(Uu,Uv,Uw)=\Phi_\mu(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{V}_M.$$
 
-Let $$(M,g)$$ be a complete connected Riemannian manifold and $$\varphi\in C^\infty(M)$$ a weight such that the Witten operator
+Then there is a diffeomorphism $$F:N\to M$$ such that
 
-$$L_\varphi u=-\Delta_g u+\langle\nabla\varphi,\nabla u\rangle$$
+$$F^*g=h,\qquad \beta=\alpha\circ F+c,\qquad W=V\circ F$$
 
-is essentially self-adjoint and bounded below on $$C_c^\infty(M)$$, with
+for a constant $$c\in\mathbb{R}$$.
 
-$$\sigma(L_\varphi)=\sigma_{\mathrm{disc}}(L_\varphi)=\{\nu_0=0<\nu_1\le\nu_2\le\cdots\}\to+\infty$$
+#### Corollary 2
 
-in $$L^2(M,e^{-\varphi}\ d\mathrm{vol}_g)$$. (This holds whenever $$\varphi$$ is confining in the Bakry–Émery sense: e.g. $$\operatorname{Ric}_g+\operatorname{Hess}\varphi\ge K$$ and $$\varphi(x)\to+\infty$$ as $$x\to\infty$$.) Let $$\set{f^i} _{i=0}^\infty$$ be an orthonormal eigenbasis,
+The same conclusion holds if there exist $$\mu$$-orthonormal and $$\nu$$-orthonormal eigenbases $$\set{e^i}$$ and $$\set{f^i}$$, ordered by their common nondecreasing eigenvalues, with
 
-$$L_\varphi f^i=\nu_i f^i,\qquad
-\int_M f^i\overline{f^j}\ e^{-\varphi}\ d\mathrm{vol}_g=\delta^{ij},$$
+$$M^{i,j,k} := \int_M e^ie^j\bar e^k\ d\mu=\int_N f^if^j\bar f^k\ d\nu\qquad\text{for all }i,j,k.$$
 
-ordered by nondecreasing eigenvalues, and set
+#### Remark 3
 
-$$W^{i,j,k}:=\int_M f^i f^j\overline{f^k}\ e^{-\varphi}\ d\mathrm{vol}_g=\langle f^if^j,f^k\rangle_{L^2(e^{-\varphi}\mathrm{vol})}.$$
+Corollary 2 is the matrix form of Theorem 1. Given such bases, the map $$Ue^i=f^i$$ yields a spectral identification via its linearity, and
 
-Let $$(N,h,\psi)$$ be a second such triple, with Witten operator $$L_\psi$$ isospectral to $$L_\varphi$$, and suppose there is an eigenbasis $$\{u^i\}$$ of $$L_\psi$$ with the same eigenvalues and
+$$M^{i,j,k}=\Phi_\mu(e^i,e^j,\bar e^k) = \Phi_\nu(f^i, f^j, \bar f^k).$$
 
-$$\int_N u^i u^j\overline{u^k}\ e^{-\psi}\ d\mathrm{vol}_h=W^{i,j,k}
-\quad\text{for all }i,j,k.$$
+Conversely, any spectral identification that intertwines $$\Phi_\mu$$ and $$\Phi_\nu$$ becomes Corollary 2 after choosing orthonormal bases of each eigenspace and transporting them by $$U$$. The residual freedom in a spectral identification is $$\prod_n\mathrm{U}(m_n)$$; intertwining $$\Phi$$ is the condition that cuts that product down to an isometry of $$(M,g,\alpha,V)$$ with $$(N,h,\beta,W)$$.
 
-Then there exists a diffeomorphism $$F:N\to M$$ such that
-$$F^*g=h,\qquad \psi=\varphi\circ F+\log \frac{\mu(M)}{\mu(N)}.$$
-In particular the weighted Riemannian manifolds $$(M,g,e^{-\varphi}\mathrm{vol}_g)$$ and $$(N,h,e^{-\psi}\mathrm{vol}_h)$$ are isometric.
+#### Remark 4
 
-#### Remark
-
-The Witten Laplacian on $$p$$-forms is the Hodge Laplacian of the weighted manifold plus 
-
-$$t\operatorname{Hess}\varphi\\#_p+t^2\lvert\nabla\varphi\rvert^2.$$
-
-Once $$(M,g,\varphi)$$ is reconstructed from the scalar array $$W^{i,j,k}$$, the operators $$L_{\varphi}^{(p)}$$ are determined, so their spectra and eigenform pairings against scalar eigenfunctions are invariants, not additional moduli.
-
-## Preliminaries
-
-Let $$\mathcal{A}_0\subset L^2(M)$$ be the algebraic span of the eigenfunctions. Finite linear combinations
-
-$$\phi=\sum_{i=0}^N\hat\phi(i)\ e^i$$
-
-are dense in $$L^2$$ and, by elliptic regularity plus the decay of eigenfunctions, lie in $$C^\infty\cap C_0(M)$$. Pointwise multiplication is
-
-$$\phi\psi=\sum_k\Bigl(\sum_{i,j}\hat\phi(i)\hat\psi(j)M^{i,j,k}\Bigr)e^k.$$
-
-Thus the structure constants determine the product of any two finite eigenfunction expansions. The same identity holds on $$N$$. Consequently the linear map
-
-$$\vec F:\mathcal{A}_0(M)\to\mathcal{A}_0(N),\qquad e^i\mapsto f^i$$
-
-is a unital algebra homomorphism for pointwise multiplication (the constant function is a multiple of the ground state only if $$V$$ is constant; in general $$\vec F$$ need not send $$1$$ to $$1$$, but it preserves the product of any two functions that can be so expanded). Characteristic functions of sublevel sets of $$V$$ can be approximated in $$L^2$$ by functional calculus of $$H$$, so $$\vec F$$ also preserves characteristic functions of sets of finite measure in the $$L^2$$ sense.
-
-This is identical to the compact calculation; the only extra ingredient is that the eigenfunction expansion of a compactly supported smooth function still converges rapidly enough for the triple-product formula to be justified (which follows from the same elliptic estimates that give $$\lambda_i^{N}\|e^i\|_\infty\to 0$$ locally, plus Agmon decay at infinity).
-
-### Proof of Theorem
-
-(Following [[JS24]](#JS24)) For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $$\vec{F}$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in Preliminaries section above, $$\vec{F}$$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $$L^2(M,g)$$) by the premise that $$\set{M^{i,j,k}}$$ is invariant under this map.
-
-#### Lemma
-
-$$\vec F$$ preserves the uniform norm on the span of the eigenfunctions, hence extends to an isometric $$*$$-homomorphism
-
-$$\vec F:C_0(M)\supset\overline{\mathcal{A}_0}^{\|\cdot\|_\infty}\longrightarrow C_0(N).$$
-
-#### Proof of Lemma
-
-On a compact manifold one uses a smooth partition of unity and the fact that $$\|a\|_\infty=1$$ for a partition function $a$ is detected by $$\|a^p\|_\infty=1$$ for all $$p$$, which is visible in the Fourier coefficients because the limiting characteristic function of $$\{a=1\}$$ has $$L^2$$-mass.
-
-In the non-compact setting replace a global partition of unity by a sequence of cutoffs $$\chi_R$$ that equal $$1$$ on $$\{V\le R\}$$ and vanish outside $$\{V\le R+1\}$$. On each such “almost-compact” region the same argument applies: if $$\|\phi\|_\infty=c$$ is attained on a set of positive measure inside $$\{V\le R\}$$, the powers
-
-$$\phi^p/\|\phi\|_\infty^p$$
-
-converge in $$L^2_{\mathrm{loc}}$$ to a characteristic function, and $$\vec F$$ preserves that limit because it preserves all triple products. Sending $$R\to\infty$$ and using that every function in $$C_0(M)$$ is uniformly small outside a large sublevel set of $$V$$ gives $$\|\vec F(\phi)\|_\infty=\|\phi\|_\infty$$.
+The spectrum of $$P_{\alpha,V}$$ does not determine $$(g,\alpha,V)$$. On $$\mathbb{R}$$ this is the McKean–Trubowitz class of the oscillator [[MT82]](#MT82). On closed manifolds there are isospectral potentials that are not isometric [[GS03]](#GS03). Theorem 1 is the statement that the missing invariant is the multiplication table $$\Phi_\mu$$.
 
 
-Now we apply the Gelfand-Naimark-Segal Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras $$C_0(N), C_0(M)$$ [[JC19]](#JC19) to represent this isomorphism $$\vec{F}$$ by a homeomorphism $$F$$ between $$N$$ and $$M$$. Since $$\vec{F}$$ is bijective on smooth functions, $$F$$ too must be smooth.
 
-As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $$\vec{F}(f) = f \circ F$$), it must preserve the Schrodinger operator on smooth functions. By construction
+## Proofs
 
-$$\vec F(\phi)=\phi\circ F$$
+Let $$U:\mathcal{V}_M\to\mathcal{V}_N$$ be a spectral identification intertwining $$\Phi_\mu$$ and $$\Phi_\nu$$ (of course, $$U$$ naturally extends to a unitary isometry on $$L^2$$). Choose $$\mu$$-orthonormal and $$\nu$$-orthonormal real-valued eigenbases $$\set{e^i}$$ and $$\set{f^i}$$ with $$Ue^i=f^i$$, ordered by nondecreasing eigenvalues. Hölder and $$\mathcal{V}_M\subset L^3(\mu)$$ make
 
-on the eigenbasis, hence on all finite combinations. Therefore
+$$M^{i,j,k}:=\Phi_\mu(e^i,e^j,e^k)=\int_M e^ie^j e^k\ d\mu$$
 
-$$H_N(\phi\circ F)=(H_M\phi)\circ F$$
+finite, and likewise on $$N$$.
 
-for every eigenfunction $$\phi$$, and by density for every Schwartz-class function. In particular $$F$$ pulls eigenfunctions of $$H_M$$ back to eigenfunctions of $$H_N$$ with the same eigenvalues.
+Finite spectral projectors of $$P_{\alpha,V}$$ send $$C_c^\infty(M)$$ into $$\mathcal{V}_M$$. Essential self-adjointness and smooth coefficients put 
 
-Writing $$H=-\Delta+V$$ in local coordinates, the principal symbol of $$H$$ is the same as that of $$-\Delta$$, namely the cometric $$g^{ij}\xi_i\xi_j$$. An elliptic operator that is intertwined by a diffeomorphism has its principal symbol pulled back. Hence
+$$C_c^\infty\subset\bigcap_k\mathrm{Dom}(P_{\alpha,V}^k),$$
+
+so those projectors converge in $$C^\infty_{\mathrm{loc}}$$. Thus $$\mathcal{V}_M$$ is dense in $C^1$ near every $$p\in M$$. If $$\mathrm{span}\set{de^i(p):i\ge0}\ne T_p^*M$$, some $$0\neq v\in T_pM$$ would annihilate every $$d\phi$$ for $$\phi\in\mathcal{V}_M$$, and a $$C^1$$-limit would annihilate every element of $$C_c^\infty$$, which is absurd. So some $$d$$-tuple satisfies
+
+$$\det\bigl(de^{i_a}\otimes de^{i_b}(p)\bigr)\ne0.$$
+
+The joint evaluation
+
+$$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(e^n(p)\bigr)_{n\ge0}$$
+
+is therefore an immersion. It is injective because $$\mathcal{V}_M$$ separates points ($$C^0 _ {\mathrm{loc}}$$ density; on a connected manifold the ground state of $$P_{\alpha,V}$$ may be taken strictly positive). So $$\mathrm{Ev}_M$$ is an embedding onto its image. The same holds for $$\mathrm{Ev}_N$$ and $$\mathcal{V}_N$$.
+
+### Claim 4.1
+
+The images of the joint evaluation maps coincide in $$\mathbb{R}^{\mathbb{N}}$$.
+
+
+Let $$\mathcal{A}_M$$ be the algebra generated by $$\set{e^i}$$ under pointwise product. The generators of $$\mathcal{A}_M$$ need not lie in $$C_0(M)$$. They lie in $$C(M)$$. The algebra $$\mathcal{A}_M$$ separates points and vanishes nowhere, so Stone–Weierstrass [[Sto48]](#Sto48) (as naturally extended to the compact-open topology) gives density of $$\mathcal{A}_M$$ in $$C(M)$$, and likewise for $$\mathcal{A}_N$$ in $$C(N)$$. Matching structure constants $$M^{i,j,k}$$ convert $$U| _ {\mathcal{A}_M}$$ into an algebra isomorphism $$\Psi:\mathcal{A}_M\to\mathcal{A}_N$$[[JS24]](#JS24).
+
+Elements of $$\mathcal{A}_M$$ are finite sums of finite products of the $$e^i$$. Those products expand as $$\sum_k M^{i,j,k}e^k$$, and the series converge uniformly on compact sets, so $$\Psi$$ is compact-open continuous on $$\mathcal{A}_M$$ and extends to a compact-open algebra isomorphism
+
+$$\Psi:C(M)\xrightarrow{\sim}C(N).$$
+
+The compact-open characters of $$C(M)$$ are the evaluations $$\mathrm{ev}_p$$, $$p\in M$$ [[GJ60]](#GJ60), and likewise for $$N$$. For each $$q\in N$$,
+
+$$\chi_q=\mathrm{ev}_q\circ\Psi:C(M)\to\mathbb{R}$$
+
+is a compact-open continuous character, hence $$\chi_q=\mathrm{ev}_p$$ for a unique $$p\in M$$. Set $$F(q)=p$$. Then $$e^n\circ F=f^n$$ for all $$n$$, and $$F$$ is a homeomorphism $$N\to M$$. The existence of $$F$$ establishes the claim.
+
+Now fix $$q\in N$$ and $$p=F(q)$$. Some $$d$$-tuple 
+
+$$e^{i_1},\ldots,e^{i_d}$$
+
+has independent differentials at $$p$$, so$$x=(e^{i_1},\ldots,e^{i_d})$$is a $$C^\infty$$ chart on a neighborhood of $$p$$. On a neighborhood of $$q$$ set
+
+$$y=(f^{i_1},\ldots,f^{i_d})=(e^{i_1}\circ F,\ldots,e^{i_d}\circ F)=x\circ F.$$
+
+Thus $$F=x^{-1}\circ y$$ wherever $$x$$ and $$y$$ are defined. In particular $$y$$ is a chart on $$N$$, and in the charts $$(x,y)$$ the map $$F$$ is the identity of $$\mathbb{R}^d$$. Hence $$F$$ is a $$C^\infty$$ diffeomorphism. (The same indices work on both sides because they are the coordinate functions of one map.)
+
+By construction
+
+$$Q(u\circ F)=(P_{\alpha,V}u)\circ F,\qquad u\in\mathcal{V}_M.$$
+
+Both sides are second-order scalar differential operators. For $$\phi\in\mathcal{V}_M$$ the product $$\phi^2$$ lies in the $$C^\infty$$ algebra generated by $$\mathcal{V}_M$$, and
+
+$$P(\phi^2)-2\phi\,P\phi=-2\,d\phi\cdot d\phi - V\phi^2.$$
+
+The principal part is the cometric. Since the differentials $$de^i$$ span $$T^*$$ at every point,
 
 $$F^*g=h.$$
 
-The zeroth-order terms then give $$V\circ F=W$$.
+The first-order symbols are the drifts $$\nabla\alpha$$ and $$\nabla\beta$$, so $$d\beta=F^*d\alpha$$ and $$\beta=\alpha\circ F+c$$ for a constant $$c\in\mathbb{R}$$. The order-zero terms then give $$W=V\circ F$$.
 
-This completes the proof of the Theorem. As the proof of the Corollary is redundant, it is omitted.
+This proves Theorem 1. Corollary 2 is the same statement in an eigenbasis: $$Ue^i=f^i$$ and matching $$M^{i,j,k}$$ are the coordinates of a spectral identification that intertwines $$\Phi_\mu$$ and $$\Phi_\nu$$, as in Remark 3.
+
+
+### Remark 5
+
+The same construction applies to compact Riemannian orbifolds: $$F$$ is a homeomorphism of underlying spaces, an isometry of $$P_{\alpha,V}$$-data on the regular set, and an isomorphism of local isotropy at singular points. The evaluation map drops rank exactly on the singular strata.
+
+### Remark 6
+
+If $$\overline{M},\overline{N}$$ are compact with smooth boundary and $$P,Q$$ are Dirichlet realizations, the same argument with $$C(\overline{M})$$ in place of $$C_0(M)$$ yields a diffeomorphism of closed manifolds with $$F(\partial N)=\partial M$$, $$F^*g=h$$, $$\beta=\alpha\circ F+c$$, $$W=V\circ F$$. For Neumann or Robin, $$F$$ is still a diffeomorphism of closed manifolds; preservation of the boundary condition follows from the isometry of the interior metric.
+
+### Remark 7
+
+The same reconstruction applies to graphs, with the amount of analysis matching the function space.
+
+On a finite weighted graph the eigenfunctions of a Schr\"odinger matrix span $$\mathbb{R}^V$$. The array $$M^{i,j,k}$$ is the multiplication table of that algebra, characters are vertices, and $$P(\phi^2)-2\phi P\phi$$ recovers the edge weights. Spectrum alone does not: Sunada graphs and isospectral trees are distinguished by $$\Phi$$.
+
+A compact quantum graph is a one-dimensional Riemannian space with singularities. Discrete spectrum, $$\mathcal{V}\subset L^3$$, and Claim 4.1 give a homeomorphism of the underlying metric graphs. The principal-symbol identity on each edge recovers lengths; vertex conditions follow from the isometry as in Remark 6. Combinatorial type is not enough: equal graphs with different length vectors are separated by $$\Phi$$.
+
+An infinite locally finite graph with $$\sigma_{\mathrm{ess}}(P)=\emptyset$$ is formally in the same class. Compact-open Stone--Weierstrass on the discrete space $$V$$ produces a bijection of vertices once the generated algebra separates points and the ground state vanishes nowhere (Perron--Frobenius on a connected graph). The same quadratic identity recovers weights. Two hypotheses are not free: eigenfunctions must lie in $$\ell^3(\mu)$$, which is an Agmon-type decay statement, and they must separate vertices, which fails if a nontrivial automorphism commutes with $$P$$. An infinite quantum graph with discrete spectrum is the hybrid of the last two paragraphs.
 
 ## Example
-On $$M=\mathbb{R}$$ with the Euclidean metric, take
 
+On $$M=\mathbb{R}$$ with the Euclidean metric, take
 $$H=-\frac{d^2}{dx^2}+x^2.$$
 
 The potential $$V(x)=x^2$$ is smooth, bounded below, and $$V(x)\to+\infty$$ as $$|x|\to\infty$$. Hence $$\sigma_{\mathrm{ess}}(H)=\emptyset$$. The spectrum is
@@ -161,54 +185,53 @@ $$\lambda_n=2n+1,\qquad n=0,1,2,\dots$$
 
 (each of multiplicity one). The corresponding $$L^2(\mathbb{R})$$-normalized eigenfunctions are the Hermite functions
 
-$$\psi_n(x)=\bigl(2^n n!\ \sqrt{\pi}\bigr)^{-1/2}H_n(x)\ e^{-x^2/2},$$
+$$e^n(x)=\bigl(2^n n!\,\sqrt{\pi}\bigr)^{-1/2}H_n(x)\,e^{-x^2/2},$$
 
-where $$H_n$$ are the physicist’s Hermite polynomials. They form an orthonormal basis of $$L^2(\mathbb{R})$$, lie in the Schwartz class $$\mathcal{S}(\mathbb{R})\subset C_0(\mathbb{R})$$, and satisfy the Agmon decay that makes every pointwise product $$\psi_i\psi_j$$ square-integrable.
+where $$H_n$$ are the physicist’s Hermite polynomials. They form an orthonormal basis of $$L^2(\mathbb{R})$$, lie in the Schwartz class $$\mathcal{S}(\mathbb{R})\subset C_0(\mathbb{R})$$, and satisfy the Agmon decay [[SA82]](#SA82) that makes every pointwise product $$e^ie^j$$ square-integrable.
 
 ### Triple Products
-
 Because the eigenfunctions are real,
 
-$$M^{i,j,k}=\langle\psi_i\psi_j,\psi_k\rangle=\int_{-\infty}^{\infty}\psi_i(x)\psi_j(x)\psi_k(x)\ dx.$$
+$$M^{i,j,k}=\langle e^ie^j,e^k\rangle=\int_{-\infty}^{\infty}e^i(x)e^j(x)e^k(x)\ dx.$$
 
 These integrals vanish unless $$i+j+k$$ is even (parity) and the three indices satisfy a triangle-type constraint coming from the linearization of Hermite polynomials. The linearization formula
 
-$$H_n(x)H_m(x)=\sum_{r=0}^{\min(n,m)}\binom{n}{r}\binom{m}{r}r!\ 2^r\ H_{n+m-2r}(x)$$
+$$H_n(x)H_m(x)=\sum_{r=0}^{\min(n,m)}\binom{n}{r}\binom{m}{r}r!\,2^r\,H_{n+m-2r}(x)$$
 
 together with the Gaussian weight converts, after normalizing, into an explicit formula for $$M^{i,j,k}$$. Equivalently, the generating-function identity
 
 $$\int_{-\infty}^{\infty}e^{-x^2}H_a(x)H_b(x)H_c(x)\ dx
 =\sqrt{\pi}\ 2^N\frac{a!\ b!\ c!}{(N-a)!(N-b)!(N-c)!}$$
 
-(when $$a+b+c=2N$$ is even and each factorial in the denominator is defined and non-negative, and $$0$$ otherwise) yields $$M^{i,j,k}$$ after inserting the normalization constants of the $$\psi_n$$. In particular:
+(when $$a+b+c=2N$$ is even and each factorial in the denominator is defined and non-negative, and $$0$$ otherwise) yields $$M^{i,j,k}$$ after inserting the normalization constants of the $$e^n$$. In particular:
 
-$$M^{n,n,0}=\int\psi_n^2\psi_0\ dx>0$$ (the ground state $$\psi_0=\pi^{-1/4}e^{-x^2/2}$$ is a strictly positive Gaussian);
-the map $$\psi_i\psi_j=\sum_k M^{i,j,k}\psi_k$$ is the exact multiplication rule in the Hermite basis.
+$$M^{n,n,0}=\int {e^n}^2e^0\ dx>0$$
 
-So the structure constants of pointwise multiplication on the dense subspace $$\mathrm{span}\ \{\psi_n\}\subset C_0(\mathbb{R})$$ are known in closed form.
+(the ground state $$e^0=\pi^{-1/4}e^{-x^2/2}$$ is a strictly positive Gaussian); the map $$e^ie^j=\sum_k M^{i,j,k}e^k$$ is the exact multiplication rule in the Hermite basis.
 
-### What the theorem says
+So the structure constants of pointwise multiplication on the dense subspace $$\mathrm{span}\set{e^n}\subset C_0(\mathbb{R})$$ are known in closed form.
 
-Suppose $$(\mathbb{R},g,W)$$ is another complete Riemannian line (so $$g=e^{2\phi(x)}\ dx^2$$ in some coordinate) with a smooth confining potential $$W$$, and suppose its Schrödinger operator $$-\Delta_g+W$$ is isospectral to $$H$$ and admits an eigenbasis $$\{f_n\}$$ with the same triple products $$\langle f_i f_j,f_k\rangle=M^{i,j,k}.$$
+### What the Theorem Says
 
-The discrete-spectrum argument then produces a diffeomorphism  $$F:\mathbb{R}\to\mathbb{R}$$ such that
+Suppose $$(\mathbb{R},g,W)$$ is another complete Riemannian line (so $$g=e^{2\phi(x)}\ dx^2$$ in some coordinate) with a smooth confining potential $$W$$, and suppose its Schrödinger operator $$-\Delta_g+W$$ is isospectral to $$H$$ and admits an eigenbasis $$\set{f^n}$$ with the same triple products
+
+$$\langle f^i f^j,f^k\rangle=M^{i,j,k}.$$
+
+The discrete-spectrum argument then produces a diffeomorphism $$F:\mathbb{R}\to\mathbb{R}$$ such that
 
 $$F^*g=dx^2,\qquad W\circ F=x^2.$$
 
-In one dimension this is almost tautological once the algebra is identified, but the mechanism is visible by hand:
+Isospectrality alone does not give this. McKean–Trubowitz [[MT82]](#MT82) construct an infinite-dimensional family of potentials $$q$$ on $$\mathbb{R}$$ with
 
-Finite Hermite combinations are dense in $$C_0(\mathbb{R})$$ for the uniform norm (Stone–Weierstrass on each compact plus Gaussian decay at infinity). The numbers $$M^{i,j,k}$$ determine the product of any two such combinations, hence determine a $$C^*$$-isomorphism
+$$\sigma\Bigl(-\frac{d^2}{dx^2}+q\Bigr)=\sigma(H)=\{2n+1\}_{n\ge0}$$
 
-$$C_0(\mathbb{R})\longrightarrow C_0(\mathbb{R}),\qquad \psi_n\mapsto f_n.$$
-
-Gelfand–Naimark supplies a homeomorphism of the underlying locally compact spaces; smoothness of the eigenfunctions upgrades it to a diffeomorphism $$F$$. Intertwining of $$H$$ forces the principal symbol (the cometric) and the zeroth-order term (the potential) to match.
-
+(up to their normalization of $$H$$). The parameters are the norming constants of the eigenfunctions; the even potential $$x^2$$ is the unique even point of the class. Thus $$\set{2n+1}$$ does not determine $$V(x)=x^2$$. Matching the table $$M^{i,j,k}$$ does: it encodes the multiplication of the eigenfunctions, which is strictly more than the spectrum, and Theorem 1 converts that table into $$F^*g=dx^2$$ and $$W\circ F=x^2$$.
 Because every eigenspace is one-dimensional, the singular-value packaging collapses to the absolute values $$|M^{i,j,k}|$$ together with a consistent choice of signs (the “diagonal litmus” of the compact paper: the products $$M^{i,i,k}$$ determine the even part of the algebra and fix most signs).
 
 ### Explicit Formula
 
-$$M^{i,j,k}=\langle\psi_i\psi_j,\psi_k\rangle
-=\int_{\mathbb{R}}\psi_i(x)\psi_j(x)\psi_k(x)\ dx
+$$M^{i,j,k}=\langle e^ie^j,e^k\rangle
+=\int_{\mathbb{R}}e^i(x)e^j(x)e^k(x)\ dx
 =N_i N_j N_k\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\ e^{-3x^2/2}\ dx,$$
 
 where $$N_n=(2^n n!\sqrt{\pi})^{-1/2}$$.
@@ -219,100 +242,62 @@ These are the oscillator analogues of the Clebsch–Gordan support conditions.
 
 Change variables $$x=\sqrt{2/3}\ y$$. Then
 
-$$\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\ e^{-3x^2/2}\ dx
-=\sqrt{\frac{2}{3}}\int_{\mathbb{R}}H_i\Bigl(\sqrt{\tfrac{2}{3}}\ y\Bigr)
-H_j\Bigl(\sqrt{\tfrac{2}{3}}\ y\Bigr)
-H_k\Bigl(\sqrt{\tfrac{2}{3}}\ y\Bigr)\ e^{-y^2}\ dy.$$
+$$\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\,e^{-3x^2/2}\,dx
+=\sqrt{\frac{2}{3}}\int_{\mathbb{R}}H_i\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)
+H_j\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)
+H_k\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)\,e^{-y^2}\,dy.$$
 
 Each scaled polynomial expands by the finite identity
 
-$$H_n(\gamma y)=\sum_{\ell=0}^{\lfloor n/2\rfloor}\gamma^{n-2\ell}(\gamma^2-1)^\ell\binom{n}{2\ell}\frac{(2\ell)!}{\ell!}\ H_{n-2\ell}(y),$$
+$$H_n(\gamma y)=\sum_{\ell=0}^{\lfloor n/2\rfloor}\gamma^{n-2\ell}(\gamma^2-1)^\ell\binom{n}{2\ell}\frac{(2\ell)!}{\ell!}\,H_{n-2\ell}(y),$$
 
-with $$\gamma=\sqrt{2/3}$$. The product of the three expansions is a finite linear combination of products $$H_a H_b H_c$$. Titchmarsh’s formula then evaluates every remaining integral:
+with $$\gamma=\sqrt{2/3}$$. The product of the three expansions is a finite linear combination of products $H_a H_b H_c$. Titchmarsh’s formula [[T48]](#T48) then evaluates every remaining integral:
 
-```math
-\int_{\mathbb{R}}H_a H_b H_c\ e^{-y^2}\ dy
-=
-\begin{cases}
-\dfrac{\sqrt{\pi}\ 2^{s}\ a!\ b!\ c!}{(s-a)!(s-b)!(s-c)!}
+$$\int_{\mathbb{R}}H_a H_b H_c\,e^{-y^2}\,dy=\begin{cases}
+\dfrac{\sqrt{\pi}\,2^{s}\,a!\,b!\,c!}{(s-a)!(s-b)!(s-c)!}
 & \text{if }a+b+c=2s\text{ is even and }s\ge a,b,c,\\
 0 & \text{otherwise.}
-\end{cases}
-```
+\end{cases}$$
 
 The result is a finite triple sum (at most $$O(ijk)$$ terms, typically far fewer). Combining the prefactors $$N_i N_j N_k\sqrt{2/3}$$ gives $$M^{i,j,k}$$ exactly.
 
 Equivalently, the product of two normalized functions expands in a scaled Hermite basis
 
-$$\psi_i(x)\psi_j(x)=\sum_{r=0}^{\lfloor(i+j)/2\rfloor}c_{r;ij}\ \psi_{i+j-2r}(\sqrt{2}\ x),$$
+$$e^i(x)e^j(x)=\sum_{r=0}^{\lfloor(i+j)/2\rfloor}c_{r;ij}\,e^{i+j-2r}(\sqrt{2}\,x),$$
 
 with explicit coefficients
 
 $$c_{r;ij}
 =\frac{(-1)^r}{\sqrt{2^{i+j-2r+1}\pi}}
-\sqrt{\frac{(i+j-2r)!}{i!\ j!}}
-\binom{i}{r}\binom{j}{r}r!\ 2^{r}$$
+\sqrt{\frac{(i+j-2r)!}{i!\,j!}}
+\binom{i}{r}\binom{j}{r}r!\,2^{r}$$
 
 (up to the conventional placement of the $$\sqrt{2}$$ in the argument; cf. [[K16]](#K16)). Then
 
-$$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}\psi_{i+j-2r}(\sqrt{2}\ x)\ \psi_k(x)\ dx,$$
+$$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}e^{i+j-2r}(\sqrt{2}\,x)\,e^k(x)\,dx,$$
 
-and each scaled overlap is a $${}_2F_1$$ (or terminates as a short hypergeometric sum). This is the form best suited to computation.
+and each scaled overlap is a $${}_2F_1$$ (or terminates as a short hypergeometric sum).
 
+### Harmonic Oscillator to Ornstein-Uhlenbeck
 
-## $$\Gamma$$ Calculus
+The oscillator $$H=-d^2/dx^2+x^2$$ is the Schrödinger case $$\alpha=0$$, $$V(x)=x^2$$ of $$P_{\alpha,V}$$, with unweighted measure $$dx$$ and triple products $$M^{i,j,k}=\int e^ie^je^k\ dx$$. Ground-state conjugation by $e^0(x)=\pi^{-1/4}e^{-x^2/2}$$ produces the Witten operator
 
-By definition [[BE85]](#BE85)
+$$L={e^0}^{-1}(H-\lambda_0)(e^0\ \cdot)=-\frac{d^2}{dx^2}+2x\frac{d}{dx}$$
 
-$$\Gamma_H(f,g):=\frac12\bigl(H(fg)-f\ Hg-g\ Hf\bigr).$$
+on $L^2(\mathbb{R},{e^0}^2\,dx)$. This is $P_{\alpha,0}$ for $\alpha=x^2+\mathrm{const}$: the generator of the Ornstein–Uhlenbeck diffusion. The conjugated basis $$f^n=e^n/e^0$$ is orthonormal in $$L^2({e^0}^2\ dx)$$, and the two arrays are related by
 
-On basis vectors this is already diagonal in the spectrum:
+$$W^{i,j,k}:=\int_{\mathbb{R}}f^if^jf^k\ {e^0}^2\ dx=\int_{\mathbb{R}}\frac{e^ie^je^k}{e^0}\ dx.$$
 
-$$\Gamma_H(e^i,e^j)=\frac12\sum_k(\lambda_k-\lambda_i-\lambda_j)\ M^{i,j,k}\ e^k.$$
+Thus $$M$$ is the multiplication table of Theorem 1 for $$H$$, and $$W$$ is the same table for $$L$$. Matching either determines the line, the Euclidean metric, and the data $$(V,\alpha)=(x^2,x^2)+\mathrm{const}$$. The explicit values follow.
 
-Hence
+Titchmarsh [[T48]](#T48) then collapses to
 
-```math
-\begin{aligned}
-\langle\nabla e^i,\nabla e^j\rangle
-&=-\Gamma_H(e^i,e^j)-\frac12 V e^i e^j\\
-&=-\frac12\sum_k[(\lambda_k-\lambda_i-\lambda_j)M^{i,j,k} +\int V e^i e^j \bar e^k\  dx]\  e^k.
-\end{aligned}
-```
+$$W^{i,j,k}=
+\frac{\sqrt{i!\,j!\,k!}}{(s-i)!(s-j)!(s-k)!}
+\quad\text{when }i+j+k=2s\text{ and }s\ge i,j,k,$$
 
-Ground-state conjugation repairs the $$V$$ defect: if $$H\psi=\lambda_0\psi$$ with $$\psi>0$$, then
-
-$$L:=\psi^{-1}(H-\lambda_0)(\psi\ \cdot\ )=-\Delta-2\langle\nabla\log\psi,\nabla\ \cdot\ \rangle$$
-
-is a diffusion, and its Bakry–Émery tensor is $$\operatorname{Ric}-2\operatorname{Hess}\log\psi$$. For the harmonic oscillator the ground state is a Gaussian, $$\log\psi_0=-x^2/2+\mathrm{const}$$, and one recovers exactly $$\mathrm{BE}(2,\infty)$$ for this renormalized Ornstein–Uhlenbeck process — the classical diffusion underneath the quantum oscillator.
-
-With $$\phi = -2 \log \psi_0$$ and $$v\cdot w$$ the Riemannian inner product on the cotangent bundle, let us write these operators in the eigenbasis of $$L$$:
-
-```math
-f_n=\frac{\psi_n}{\psi_0},\qquad
- M_L^{i,j,k}=\int\frac{\psi_i\psi_j\psi_k}{\psi_0}\ d\mathrm{vol},\\
-\begin{aligned}
-\Gamma_L(f_i,f_j):&=\frac12\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)M_L^{i,j,k}\ f_k = -df_i \cdot df_j,\\
-\Gamma_{2,L}(f_i,f_j):&=\frac14\sum_k(\lambda_k+\lambda_0-\lambda_i-\lambda_j)^2 M_L^{i,j,k}\ f_k\implies\\
-\Gamma_{2,L}(f)&=\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2+\operatorname{Ric}(\nabla f,\nabla f) + \operatorname{Hess}\phi(\nabla f, \nabla f).
-\end{aligned}
-```
-For a confining Schrödinger operator as in the Theorem, the isometric type of $$(M,g,V)$$ is encoded in the diffusion data $$(\{\lambda_n-\lambda_0\},\{M_L^{i,j,k}\})$$, because $$\Gamma_L$$ is the cometric and $$\psi_0$$ recovers $$V$$ by Riccati.
-
-### Returning to Harmonic Oscillator Example
-With $$f_n=\psi_n/\psi_0$$ and $$d\mu=\psi_0^2\ dx$$,
-
-$$M_L^{i,j,k}=\int_{\mathbb{R}}\frac{\psi_i\psi_j\psi_k}{\psi_0}\ dx
-=\frac{N_i N_j N_k}{N_0}\int H_i H_j H_k\ e^{-x^2}\ dx.$$
-
-Titchmarsh then collapses to
-
-$$M_L^{i,j,k} = \frac{\sqrt{i!\ j!\ k!}}{(s-i)!(s-j)!(s-k)!} \quad\text{when }i+j+k=2s\text{ and }s\ge i,j,k,$$
-
-and $$0$$ otherwise. In particular $$M_L^{0,n,n}=1$$, which is orthonormality of $$\{\psi_n\}$$ in $$L^2(dx)$$.
+and $$0$$ otherwise. In particular $$W^{0,n,n}=1$$, which is orthonormality of $$\set{e^n}$$ in $$L^2(dx)$$.
 
 As these structure constants are non-negative on a multiplicity-1 spectrum, they are the associated singular-value invariants [[JS24]](#JS24) for $$L$$.
-
-
 
 <!-- $Date$ $Author$ $Revision$ -->
