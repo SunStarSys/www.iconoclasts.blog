@@ -2,7 +2,7 @@ title: Triple Products of Eigenfunctions and Schrodinger/Witten Operators
 dependencies: *.md.en
 categories: Math
 keywords: Schrodinger, Witten, triple products
-status: verified=53686
+status: verified=53690
 
 <div class="right">
 
@@ -280,7 +280,7 @@ and each scaled overlap is a $${}_2F_1$$ (or terminates as a short hypergeometri
 
 ### Harmonic Oscillator to Ornstein-Uhlenbeck
 
-The oscillator $$H=-d^2/dx^2+x^2$$ is the Schrödinger case $$\alpha=0$$, $$V(x)=x^2$$ of $$P_{\alpha,V}$$, with unweighted measure $$dx$$ and triple products $$M^{i,j,k}=\int e^ie^je^k\ dx$$. Ground-state conjugation by $e^0(x)=\pi^{-1/4}e^{-x^2/2}$$ produces the Witten operator
+The oscillator $$H=-d^2/dx^2+x^2$$ is the Schrödinger case $$\alpha=0$$, $$V(x)=x^2$$ of $$P_{\alpha,V}$$, with unweighted measure $$dx$$ and triple products $$M^{i,j,k}=\int e^ie^je^k\ dx$$. Ground-state conjugation by $$e^0(x)=\pi^{-1/4}e^{-x^2/2}$$ produces the Witten operator
 
 $$L={e^0}^{-1}(H-\lambda_0)(e^0\ \cdot)=-\frac{d^2}{dx^2}+2x\frac{d}{dx}$$
 
