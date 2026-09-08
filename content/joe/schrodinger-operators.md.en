@@ -2,7 +2,7 @@ title: Triple Products of Eigenfunctions and Schrodinger/Witten Operators
 dependencies: *.md.en
 categories: Math
 keywords: Schrodinger, Witten, triple products
-status: verified=53690
+status: verified=53694
 
 <div class="right">
 
@@ -284,7 +284,7 @@ The oscillator $$H=-d^2/dx^2+x^2$$ is the Schrödinger case $$\alpha=0$$, $$V(x)
 
 $$L={e^0}^{-1}(H-\lambda_0)(e^0\ \cdot)=-\frac{d^2}{dx^2}+2x\frac{d}{dx}$$
 
-on $L^2(\mathbb{R},{e^0}^2\,dx)$. This is $P_{\alpha,0}$ for $\alpha=x^2+\mathrm{const}$: the generator of the Ornstein–Uhlenbeck diffusion. The conjugated basis $$f^n=e^n/e^0$$ is orthonormal in $$L^2({e^0}^2\ dx)$$, and the two arrays are related by
+on $$L^2(\mathbb{R},{e^0}^2\ dx)$$. This is $$P_{\alpha,0}$$ for $$\alpha=x^2+\mathrm{const}$$: the generator of the Ornstein–Uhlenbeck diffusion. The conjugated basis $$f^n=e^n/e^0$$ is orthonormal in $$L^2({e^0}^2\ dx)$$, and the two arrays are related by
 
 $$W^{i,j,k}:=\int_{\mathbb{R}}f^if^jf^k\ {e^0}^2\ dx=\int_{\mathbb{R}}\frac{e^ie^je^k}{e^0}\ dx.$$
 
