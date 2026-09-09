@@ -2,7 +2,7 @@ title: Triple Products of Eigenfunctions and Schrödinger/Witten Operators
 dependencies: *.md.en
 categories: Math
 keywords: Schrödinger, Witten, triple products, spectrum
-status: verified=53715
+status: verified=53724
 
 <div class="right">
 
@@ -110,7 +110,7 @@ $$\det\bigl(de^{i_a}\otimes de^{i_b}(p)\bigr)\ne0.$$
 
 The joint evaluation
 
-$$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(e^n(p)\bigr)_{n\ge0}$$
+$$\mathrm{Ev} _ M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(e^n(p)\bigr)_{n\ge0}$$
 
 is therefore an immersion. It is injective because $$\mathcal{V}_M$$ separates points ($$C^0 _ {\mathrm{loc}}$$ density; on a connected manifold the ground state of $$P _ {\alpha,V}$$ may be taken strictly positive). So $$\mathrm{Ev}_M$$ is an embedding onto its image. The same holds for $$\mathrm{Ev}_N$$ and $$\mathcal{V}_N$$.
 
