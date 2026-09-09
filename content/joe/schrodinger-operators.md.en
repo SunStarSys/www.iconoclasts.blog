@@ -2,7 +2,7 @@ title: Triple Products of Eigenfunctions and Schrödinger/Witten Operators
 dependencies: *.md.en
 categories: Math
 keywords: Schrödinger, Witten, triple products, spectrum
-status: verified=53724
+status: verified=53732
 
 <div class="right">
 
@@ -104,7 +104,7 @@ Finite spectral projectors of $$P_{\alpha,V}$$ send $$C_c^\infty(M)$$ into $$\ma
 
 $$C_c^\infty\subset\bigcap_k\mathrm{Dom}(P_{\alpha,V}^k),$$
 
-so those projectors converge in $$C^\infty_{\mathrm{loc}}$$. Thus $$\mathcal{V}_M$$ is dense in $C^1$ near every $$p\in M$$. If $$\mathrm{span}\set{de^i(p):i\ge0}\ne T_p^*M$$, some $$0\neq v\in T_pM$$ would annihilate every $$d\phi$$ for $$\phi\in\mathcal{V}_M$$, and a $$C^1$$-limit would annihilate every element of $$C_c^\infty$$, which is absurd. So some $$d$$-tuple satisfies
+so those projectors converge in $$C^\infty_{\mathrm{loc}}$$. Thus $$\mathcal{V}_M$$ is dense in $$C^1$$ near every $$p\in M$$. If $$\mathrm{span}\set{de^i(p):i\ge0}\ne T_p^*M$$, some $$0\neq v\in T_pM$$ would annihilate every $$d\phi$$ for $$\phi\in\mathcal{V}_M$$, and a $$C^1$$-limit would annihilate every element of $$C_c^\infty$$, which is absurd. So some $$d$$-tuple satisfies
 
 $$\det\bigl(de^{i_a}\otimes de^{i_b}(p)\bigr)\ne0.$$
 
