@@ -257,6 +257,9 @@ and $0$ otherwise. In particular $W^{0,n,n}=1$, which is orthonormality of $\{e^
 
 As these structure constants are non-negative on a multiplicity-1 spectrum, they are the associated singular-value invariants \cite{JS24} for $L$.
 
+
+For the $n$-dimensional isotropic oscillator and its Ornstein–Uhlenbeck conjugate, the eigenspace multiplications are the unique \(\mathrm{U}(n)\)-intertwiners \(S^k\otimes S^\ell\to S^m\). Their singular-value lists therefore determine the structure constants up to the compact symmetry, and Theorem 1 applies. The singular-value conjecture holds for this pair; the argument uses the hidden \(\mathrm{U}(n)\) and does not extend to a general \(P_{\alpha,V}\).
+
 \doclicenseThis
 \printbibliography
 \end{document}
