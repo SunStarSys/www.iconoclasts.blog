@@ -470,8 +470,8 @@ Further, the arguments in the proof of Corollary~\ref{coro-1} are valid even whe
 
 \end{proof}
 
-\begin{remark}
-Suppose a compact Riemannian manifold $M$ carries a smooth right $G$-action by isometries, with $G$ a connected semisimple Lie group, so that the Laplace--Beltrami operator commutes with the action and $L^2(M)$ decomposes into unitary representations of $G$. The associativity identity already recorded after Theorem~1,
+\begin{remark}[Applications of Associative Law]
+Suppose a compact Riemannian manifold $M$ carries a smooth right $G$-action by isometries, with $G$ a connected compact Lie group, so that the Laplace--Beltrami operator commutes with the action and $L^2(M)$ decomposes into unitary representations of $G$. The associativity identity already recorded after Theorem~1,
 $$\sum_k M^{i,j,k}M^{k,\ell,m}=\sum_k M^{j,\ell,k}M^{i,k,m},$$
 may then be rewritten in a $G$-adapted eigenbasis. The change of basis between the two fusion channels is an intertwiner of principal series (or of spherical representations, if one restricts to $K$-fixed vectors on $G/K$). Its matrix coefficients depend only on the Casimir labels of the four external representations and of the intermediate one; they are the kernels $K$ and $K'$ of the conformal bootstrap, related by a Weyl permutation of the external legs.
 Because the unknown coefficients enter the rewritten identity only through the squared Hilbert--Schmidt norms of the multiplication maps $M_{\lambda\mu\to\nu}:\mathcal{V}_{\lambda}\otimes\mathcal{V}_{\mu}\to\mathcal{V}_{\nu}$ (i.e.\ through sums of squares of the singular-value invariants attached to each eigenspace triple), a linear functional $\alpha$ with $\alpha\cdot K\ge 0$ on the support of the spherical Plancherel measure of $G/K$ yields inequalities of the form
