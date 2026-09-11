@@ -3,7 +3,6 @@ title: Bibliography
 status: generated
 dependencies: ../schrodinger-operators.bib.en
 ---
-
 - author: Marshall H. Stone
   id: Sto48
   journal: Mathematics Magazine
@@ -66,6 +65,58 @@ dependencies: ../schrodinger-operators.bib.en
   type: article
   volume: '82'
   year: '1982'
+- author: McKean, Henry P. and Singer, Isadore M.
+  id: MS67
+  journal: Journal of Differential Geometry
+  number: 1-2
+  pages: 43--69
+  publisher: Lehigh University
+  title: Curvature and the eigenvalues of the Laplacian
+  type: article
+  volume: '1'
+  year: '1967'
+- address: Berlin
+  author: Bakry, Dominique and {\'E
+  booktitle: S{\'e
+  doi: 10.1007/BFb0075847
+  id: BE85
+  pages: 177--206
+  publisher: Springer
+  series: Lecture Notes in Mathematics
+  title: Diffusions hypercontractives
+  type: incollection
+  volume: '1123'
+  year: '1985'
+- address: New York
+  author: Taylor, Michael E.
+  doi: 10.1007/978-1-4419-7055-8
+  edition: '2'
+  id: TaylorPDE1
+  note: Chapter 5
+  publisher: Springer
+  series: Applied Mathematical Sciences
+  title: Partial Differential Equations {I
+  type: book
+  volume: '115'
+  year: '2011'
+- author: H{\"o
+  doi: 10.1007/BF02391913
+  id: Hormander1968
+  journal: Acta Mathematica
+  pages: 193--218
+  title: The spectral function of an elliptic operator
+  type: article
+  volume: '121'
+  year: '1968'
+- author: Sogge, Christopher D.
+  doi: 10.1017/CBO9780511530029
+  id: Sogge1993
+  publisher: Cambridge University Press
+  series: Cambridge Tracts in Mathematics
+  title: Fourier Integrals in Classical Analysis
+  type: book
+  volume: '105'
+  year: '1993'
 - address: Princeton, NJ
   author: Agmon, Shmuel
   doi: 10.1515/9781400882229
@@ -99,3 +150,41 @@ dependencies: ../schrodinger-operators.bib.en
   title: A converse theorem for hyperbolic surface spectra and the conformal bootstrap
   type: online
   year: '2025'
+- author: Toshikazu Sunada
+  id: Sun85
+  journal: Ann. of Math.
+  pages: 169--186
+  title: Riemannian coverings and isospectral manifolds
+  type: article
+  volume: '121'
+  year: '1985'
+- author: Gregory Berkolaiko and Peter Kuchment
+  id: BK13
+  publisher: AMS
+  title: Introduction to Quantum Graphs
+  type: book
+  year: '2013'
+- author: B. Gutkin and U. Smilansky
+  id: GS01
+  journal: J. Phys. A
+  pages: 6061--6068
+  title: Can one hear the shape of a graph?
+  type: article
+  volume: '34'
+  year: '2001'
+- author: Edward Witten
+  id: Wit82
+  journal: J. Differential Geom.
+  pages: 661--692
+  title: Supersymmetry and {M
+  type: article
+  volume: '17'
+  year: '1982'
+- author: C. Gordon and D. L. Webb and S. Wolpert
+  id: GWW92
+  journal: Amer. Math. Monthly
+  pages: 1--13
+  title: One cannot hear the shape of a drum
+  type: article
+  volume: '99'
+  year: '1992'
