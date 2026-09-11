@@ -468,8 +468,16 @@ Why? Since generic manifolds can be presumed to also have multiplicity-1 spectra
 
 Further, the arguments in the proof of Corollary~\ref{coro-1} are valid even when the manifolds are non-isospectral, so we can represent the basis map as a homeomorphism if and only if the products match in the generic case above. Isospectrality then becomes equivalent to this homeomorphism being promoted to a Riemannian isometry -- due to Sobolev norm equivalence on the corresponding Fourier coefficients (realizing it as a diffeomorphism), and leading to principal symbol preservation on the Laplacians for full isometry as in the proof of the Theorem.
 
-
 \end{proof}
+
+\begin{remark}
+Suppose a compact Riemannian manifold $M$ carries a smooth left $G$-action by isometries, with $G$ a connected semisimple Lie group, so that the Laplace--Beltrami operator commutes with the action and $L^2(M)$ decomposes into unitary representations of $G$. The associativity identity already recorded after Theorem~1,
+$$\sum_k M^{i,j,k}M^{k,\ell,m}=\sum_k M^{j,\ell,k}M^{i,k,m},$$
+may then be rewritten in a $G$-adapted eigenbasis. The change of basis between the two fusion channels is an intertwiner of principal series (or of spherical representations, if one restricts to $K$-fixed vectors on $G/K$). Its matrix coefficients depend only on the Casimir labels of the four external representations and of the intermediate one; they are the kernels $K$ and $K'$ of the conformal bootstrap, related by a Weyl permutation of the external legs.
+Because the unknown coefficients enter the rewritten identity only through the squared Hilbert--Schmidt norms of the multiplication maps $\mathcal{V}_{\lambda}\otimes\mathcal{V}_{\mu}\to\mathcal{V}_{\nu}$ (i.e.\ through sums of squares of the singular-value invariants attached to each eigenspace triple), a linear functional $\alpha$ with $\alpha\cdot K\ge 0$ on the support of the spherical Plancherel measure of $G/K$ yields inequalities of the form
+$$\sum_{\nu\in\Omega}\lVert M_{\lambda\mu\to\nu}\rVert_{\mathrm{HS}}^2\le C(\lambda,\mu,\Omega).$$
+In particular the support of $\Phi$ in the Weyl chamber---equivalently, the joint spectrum---cannot place too much mass of $\Phi$ outside a compact region determined by the external labels. For $G=\mathrm{PSL}_2(\mathbb{R})$ or $\mathrm{SO}_0(1,d)$ these inequalities are the spectral-gap and triple-overlap bounds of Bonifacio, Kravchuk--Mazáč--Pal, and subsequent work \cite{Bon22} \cite{Bon22b} \cite{KMP24} \cite{BMP25}. They constrain the spectrum; they do not reconstruct the metric, and they do not replace the matching of the full table $M^{i,j,k}$ in Theorem~1.
+\end{remark}
 
 \section{Example}
 \label{sec:ex}
