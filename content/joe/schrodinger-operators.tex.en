@@ -269,7 +269,7 @@ for the projections of pointwise multiplication. The following axioms are then m
 \begin{description}
 \item[(G1)] The product is commutative, associative, and unital.
 \item[(G2)] Each $m_{\alpha\beta}^\gamma$ is a $G$-intertwiner.
-\item[(G3)] The operator $P$ defined by $Pe=\lambda(\alpha)e$ on $\mathcal{H}_\alpha$ is compatible with the cometric identity: $\Gamma(f,h)=\frac12\bigl(\lambda(f)+\lambda(h)-P\bigr - V)(fh)$.
+\item[(G3)] The operator $P$ defined by $Pe=\lambda(\alpha)e$ on $\mathcal{H}_\alpha$ is compatible with the cometric identity: $\Gamma(f,h)=\frac12\bigl(\lambda(f)+\lambda(h)-P\bigr)(fh)$.
 \item[(G4)] Fusion is multiplicity-free: $\dim\operatorname{Hom}_G(\mathcal{H}_\alpha\otimes\mathcal{H}_\beta,\mathcal{H}_\gamma)\le 1$.
 \item[(G5)] $\Gamma$ is positive: $\langle\Gamma(f,f),e_0\rangle\ge 0$, with equality precisely on functions constant along the eventual $G$-orbits.
 \item[(G6)] A $G$-invariant completion $A$ of $A_0$ is a commutative $G$-algebra whose Gelfand space $X$ is locally compact Hausdorff and carries a continuous $G$-action.
