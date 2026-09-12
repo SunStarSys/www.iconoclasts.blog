@@ -271,12 +271,15 @@ for the projections of pointwise multiplication. The following axioms are then m
 \item[(G2)] Each $m_{\alpha\beta}^\gamma$ is a $G$-intertwiner.
 \item[(G3)] Let $P$ act by $Pe=\lambda(\alpha)e$ on $\mathcal{H}_\alpha$. Define
 $$Q(f,h):=\tfrac12\bigl(\lambda(f)+\lambda(h)-P\bigr)(fh)$$
-on eigenfunctions and extend bilinearly. The Leibniz defect on $A_0\otimes A_0\otimes A_0$
+on eigenfunctions and extend bilinearly. The Leibniz defect
 $$D(f,g,h):=Q(fg,h)-f\,Q(g,h)-g\,Q(f,h)$$
-is of the form $-\tfrac12 V\,fgh$ for a unique function $V$. Set the symmetric, positive semidefinite bi-derivation (cometric)
-$$\Gamma(f,h)=Q(f,h)-\tfrac12 V\,fh.$$
+is of the form $-\tfrac12 M_V\,fgh$ for a unique multiplier $M_V$. Set the symmetric, positive semidefinite bi-derivation (cometric)
+$$\Gamma(f,h)=Q(f,h)-\tfrac12 M_V\,fh.$$
+
+$Q$ is defined on $\mathscr{A}$, the algebra generated from $A_0$. It splits as $\Gamma+\frac12 M_V$ with $\Gamma$ a biderivation of $\mathscr{A}$ and $M_V$ a multiplier of $\mathscr{A}$. After (G6), $M_V$ is multiplication by a continuous function $V$ on $X$.
+
 \item[(G4)] Fusion is multiplicity-free: $\dim\operatorname{Hom}_G(\mathcal{H}_\alpha\otimes\mathcal{H}_\beta,\mathcal{H}_\gamma)\le 1$.
-\item[(G5)] $\Gamma$ is positive: $\langle\Gamma(f,f),e_0\rangle\ge 0$, with equality precisely on functions constant along the eventual $G$-orbits.
+\item[(G5)] $\Gamma$ is positive: $\langle\Gamma(f,f),e^0\rangle\ge 0$, with equality precisely on functions constant along the eventual $G$-orbits.
 \item[(G6)] A $G$-invariant completion $A$ of $A_0$ is a commutative $G$-algebra whose Gelfand space $X$ is locally compact Hausdorff and carries a continuous $G$-action.
 \item[(G7)] There exists a finite-dimensional subrepresentation $\mathscr V\subset A_0$ such that evaluation $X\to \mathscr V^*$ is a $G$-equivariant embedding onto a smooth $G$-stable submanifold.
 \item[(G8)] On that image the matrix $g^{ab}=\Gamma(x^a,x^b)$ has rank $\dim X$, and the generator of $\Gamma$ reproduces $P$.
@@ -300,7 +303,7 @@ Assume $G=\mathrm{SO}(n)$, that $\mathscr{V}$ is the defining representation, an
 
 By (G6) and (G7) the evaluation map $\iota:X\to\mathscr{V}^*\simeq\mathbb{R}^n$ is a $G$-equivariant embedding onto a smooth $\mathrm{SO}(n)$-stable submanifold. The defining action of $\mathrm{SO}(n)$ on $\mathbb{R}^n$ and completeness plus positivity of $\Gamma$ force the image to be all of $\mathbb{R}^n$. Thus $X\simeq\mathbb{R}^n$, and an orthonormal basis of $\mathscr{V}$ may be read as linear coordinates $x_1,\ldots,x_n$.
 By (G8) the matrix $g^{ab}=\Gamma(x_a,x_b)$ has rank $n$. $\mathrm{SO}(n)$-invariance implies $g^{ab}=\psi(r)\delta^{ab}$. Applying (G3) to the linear functions shows that $\psi$ is constant. Rescaling gives $g_{ab}=\delta_{ab}$.
-Let $e_0$ be the unique (up to scale) $G$-invariant ground state, strictly positive by (G5). Ground-state conjugation by $e_0$ puts $P$ in Witten form $L=-\Delta+\langle\nabla\alpha,\nabla\cdot\rangle$ on $L^2(e^{-\alpha}\,d\mathrm{vol})$, with $\alpha=-2\log e_0$ up to a constant. In this gauge (G3) has $V=0$, the coordinate functions remain an eigenbasis of $\mathscr{V}$, and
+Let $e^0$ be the unique (up to scale) $G$-invariant ground state, strictly positive by (G5). Ground-state conjugation by $e^0$ puts $P$ in Witten form $L=-\Delta+\langle\nabla\alpha,\nabla\cdot\rangle$ on $L^2(e^{-\alpha}\,d\mathrm{vol})$, with $\alpha=-2\log e^0$ up to a constant. In this gauge (G3) has $V=0$, the coordinate functions remain an eigenbasis of $\mathscr{V}$, and
 $$L x_a=\lambda_1 x_a.$$
 
 On Euclidean $\mathbb{R}^n$,
