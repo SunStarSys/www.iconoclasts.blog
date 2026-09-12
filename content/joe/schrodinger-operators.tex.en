@@ -268,7 +268,7 @@ $$m_{\alpha\beta}^\gamma:\mathcal{H}_\alpha\otimes\mathcal{H}_\beta\to\mathcal{H
 for the projections of pointwise multiplication. The following axioms are then meaningful on the abstract package $\bigl(G,\{\mathcal{H}_\alpha\},\{m_{\alpha\beta}^\gamma\},\{\lambda(\alpha)\}\bigr)$.
 \begin{description}
 \item[(G1)] The product is commutative, associative, and unital.
-\itenm[(G2)] Each $m_{\alpha\beta}^\gamma$ is a $G$-intertwiner.
+\item[(G2)] Each $m_{\alpha\beta}^\gamma$ is a $G$-intertwiner.
 \item[(G3)] The operator $P$ defined by $Pe=\lambda(\alpha)e$ on $\mathcal{H}_\alpha$ is compatible with the cometric identity: $\Gamma(f,h)=\frac12\bigl(\lambda(f)+\lambda(h)-P\bigr)(fh)$.
 \item[(G4)] Fusion is multiplicity-free: $\dim\operatorname{Hom}_G(\mathcal{H}_\alpha\otimes\mathcal{H}_\beta,\mathcal{H}_\gamma)\le 1$.
 \item[(G5)] $\Gamma$ is positive: $\langle\Gamma(f,f),e_0\rangle\ge 0$, with equality precisely on functions constant along the eventual $G$-orbits.
