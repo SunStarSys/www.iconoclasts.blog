@@ -61,7 +61,9 @@ For a second-order operator $P_{\alpha,V}=-\Delta_g+\langle\nabla\alpha,\nabla\c
 $$\Phi_\mu(u,v,w)=\int uvw\,d\mu,\qquad d\mu=e^{-\alpha}\,d\mathrm{vol},$$
 is implemented by a diffeomorphism $F$ with $F^*g=h$, $\beta=\alpha\circ F+c$, and $W=V\circ F$. Schrödinger operators are the case $\alpha=0$; Witten operators are the case $V=0$. The geometric invariant is the multiplication table on the spectral subspaces, not the spectrum alone.
 
-A converse from an abstract $G$-package is produced only for those $G$-manifolds that admit a finite eigen-embedding (a finite-dimensional $G$-invariant sum of eigenspaces that immerses the character space). Homogeneous spaces, the isotropic oscillator, and those radial wells whose first dipole is a chart lie in that class; a general discrete $P_{\alpha,V}$ need not.
+
+A recognition argument from an abstract $G$-package via evaluation in a finite-dimensional subrepresentation of the eigenalgebra applies only when that embedding exists. Homogeneous spaces and the isotropic oscillator admit it; a general radial well need not. The comparison theorem does not use this hypothesis.
+
 
 \noindent\textbf{Keywords:} spectrum, triple products, Schr\"odinger, Witten, Laplacian, eigenfunctions, inverse problem
 \end{abstract}
