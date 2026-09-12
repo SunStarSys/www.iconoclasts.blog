@@ -509,6 +509,36 @@ $$\begin{Bmatrix} j_1 & j_2 & j \\ j_3 & j_4 & J \end{Bmatrix}
 =
 \begin{Bmatrix} j_2 & j_3 & j' \\ j_1 & j_4 & J \end{Bmatrix}$$
 in the two association channels (up to the conventional phase $(-1)^{\sum j_i}$ and the dimensions $2j+1$ already sitting in (15)). That is the crossing equation $(\dagger)$ of Remark 5 for $G=SU(2)$: the kernels $K,K'$ are Racah $6j$ symbols, and the sum over intermediate labels is finite. No Plancherel integral appears.
+
+Fix four external spins $j_1,j_2,j_3,j_4$ and an overall channel spin $J$ (the irrep through which the two bilinear products couple; the four-point singlet is $J=0$). The $s$-channel intermediate spin is $j$, the $t$-channel spin is $j'$. Then
+$$\begin{align*}
+K(j_1,j_2;j_3,j_4\mid j)
+&=(2j+1)
+\begin{Bmatrix}
+j_1 & j_2 & j \\
+j_3 & j_4 & J
+\end{Bmatrix},
+\\[4pt]
+K'(j_1,j_3;j_2,j_4\mid j')
+&=(2j'+1)
+\begin{Bmatrix}
+j_1 & j_3 & j' \\
+j_2 & j_4 & J
+\end{Bmatrix}.
+\end{align*}$$
+They vanish unless the four triangles
+$$(j_1,j_2,j),\quad(j,j_3,j_4),\quad(j_1,j_3,j'),\quad(j',j_2,j_4)$$
+hold and the three sums $j_1+j_2+j$, etc., are integers. A Weyl permutation of the external legs that sends the pairing $(12)(34)$ to $(13)(24)$ sends $K$ to $K'$ up to the phase $(-1)^{j_1+j_2+j_3+j_4}$.
+The Hilbert–Schmidt weights in $(\dagger)$ are already fixed by (15). Summing magnetics in that formula gives
+$$\lVert M_{j_1 j_2\to j}\rVert_{\mathrm{HS}}^2
+=\frac{(2j_1+1)(2j_2+1)(2j+1)}{8\pi^2}$$
+when $(j_1,j_2,j)$ is admissible, and $0$ otherwise. Substituting these two displays into $(\dagger)$ recovers the Racah identity among $6j$ symbols, which is associativity of the $D$-functions after the magnetic sums have been performed.
+For the four-point singlet $J=0$ this collapses to
+$$K(j_1,j_2;j_3,j_4\mid j)
+=(2j+1)\frac{\delta_{j_4,j_1}\delta_{j_3,j_2}}{\sqrt{(2j_1+1)(2j_2+1)}}
+\cdot
+\text{(phase)},$$
+and likewise for $K'$, so $(\dagger)$ becomes an equality of two finite sums of $\lVert M\rVert_{\mathrm{HS}}^2$ with explicit dimension factors only. The interesting case for comparison with Remark 5 is $J\neq 0$, where $K$ and $K'$ are genuine $6j$ kernels.
 \end{remark}
 
 \section{Example}
