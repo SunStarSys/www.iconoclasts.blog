@@ -113,6 +113,11 @@ Conversely, any spectral identification that intertwines $\Phi_\mu$ and $\Phi_\n
 The spectrum of $P_{\alpha,V}$ does not determine $(g,\alpha,V)$. On $\mathbb{R}$ this is the McKean–Trubowitz class of the oscillator \cite{MT82}. On closed manifolds there are isospectral potentials that are not isometric \cite{GS03}. Theorem 1 is the statement that the missing invariant is the multiplication table $\Phi_\mu$.
 \end{remark}
 
+\begin{corollary}
+\label{coro-g}
+Suppose compact $G$ acts by automorphisms of both operators and of both products, and $U$ is a $G$-equivariant spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$. Then the diffeomorphism $F$ of Theorem 1 is $G$-equivariant.
+\end{corollary}
+
 \section{Proofs}
 \begin{proof}
 Let $U:\mathcal{V}_M\to\mathcal{V}_N$ be a spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$ (of course, $U$ naturally extends to a unitary isometry on $L^2$). Choose $\mu$-orthonormal and $\nu$-orthonormal real-valued eigenbases $\{e^i\}$ and $\{f^i\}$ with $Ue^i=f^i$, ordered by nondecreasing eigenvalues. Hölder and $\mathcal{V}_M\subset L^3(\mu)$ make
@@ -162,6 +167,10 @@ A compact quantum graph is a one-dimensional Riemannian space with singularities
 An infinite locally finite graph with \(\sigma_{\mathrm{ess}}(P)=\emptyset\) is formally in the same class. Compact-open Stone--Weierstrass on the discrete space \(V\) produces a bijection of vertices once the generated algebra separates points and the ground state vanishes nowhere (Perron--Frobenius on a connected graph). The same quadratic identity recovers weights. Two hypotheses are not free: eigenfunctions must lie in \(\ell^3(\mu)\), which is an Agmon-type decay statement, and they must separate vertices, which fails if a nontrivial automorphism commutes with \(P\). An infinite quantum graph with discrete spectrum \cite{BK13} is the hybrid of the last two paragraphs.
 \end{remark}
 \end{proof}
+
+\begin{subproof}[Proof of Second Corollary]
+The evaluation embeddings $\mathrm{Ev}_M$ and $\mathrm{Ev}_N$ are $G$-maps by the assumption on the actions. $U$ intertwines them, so $F=\mathrm{Ev}_N^{-1}\circ U^*\circ\mathrm{Ev}_M$ is a $G$-map. The rest is Theorem 1.
+\end{subproof}
 
 \section{Example}
 
