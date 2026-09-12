@@ -473,11 +473,13 @@ Further, the arguments in the proof of Corollary~\ref{coro-1} are valid even whe
 \begin{remark}[Associativity and Crossing.] Suppose a compact Riemannian manifold $M$ carries a smooth right $G$-action by isometries, with $G$ a connected Lie group, so that the Laplace–Beltrami operator commutes with the action and $L^2(M)$ decomposes into unitary representations of $G$. The associativity identity
 $$\sum_k M^{ij,k}M^{k,\ell m}=\sum_k M^{j\ell,k}M^{i,km}$$
 is an identity in the algebra of functions on $M$. In a $G$-adapted eigenbasis each factor sits in an isotype, and the same identity becomes a crossing equation: the two association trees for a four-linear pairing are related by the recoupling kernels of $G$,
-$$\begin{equation}
+
+\begin{equation}
 \sum_{\nu}\lVert M_{\lambda\mu\to\nu}\rVert_{\mathrm{HS}}^2\,K(\lambda,\mu;\kappa,\rho\mid\nu)
 =\sum_{\nu'}\lVert M_{\lambda\kappa\to\nu'}\rVert_{\mathrm{HS}}^2\,K'(\lambda,\kappa;\mu,\rho\mid\nu').
 \tag{\(\dagger\)}
-\end{equation}$$
+\end{equation}
+
 Here $\lambda,\mu,\kappa,\rho$ are the external Casimir (or energy) labels, $\nu,\nu'$ the intermediate labels in the two channels, $M_{\lambda\mu\to\nu}:\mathcal{V}_\lambda\otimes\mathcal{V}_\mu\to\mathcal{V}_\nu$ is the restriction of pointwise multiplication, and $K,K'$ depend only on those labels. They are related by a Weyl permutation of the external legs.
 If $G$ is compact, $K$ and $K'$ are finite Racah $6j$ symbols and $(\dagger)$ is an algebraic identity among the reduced elements of $\Phi$. If $G=\mathrm{PSL}_2(\mathbb{R})$ or $\mathrm{SO}_0(1,d)$ acting on $\Gamma\backslash G$, the labels run over principal series, $K,K'$ are the Plancherel recoupling kernels of Kravchuk–Mazáč–Pal, and $(\dagger)$ is the conformal bootstrap crossing system. A linear functional $\alpha$ with $\alpha\cdot K\ge 0$ on the support of the spherical Plancherel measure then yields
 $$\sum_{\nu\in\Omega}\lVert M_{\lambda\mu\to\nu}\rVert_{\mathrm{HS}}^2\le C(\lambda,\mu,\Omega).$$
