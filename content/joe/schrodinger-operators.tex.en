@@ -260,6 +260,26 @@ As these structure constants are non-negative on a multiplicity-1 spectrum, they
 
 For the $n$-dimensional isotropic oscillator and its Ornstein–Uhlenbeck conjugate, the eigenspace multiplications are the unique \(\mathrm{U}(n)\)-intertwiners \(S^k\otimes S^\ell\to S^m\). Their singular-value lists therefore determine the structure constants up to the compact symmetry, and Theorem 1 applies. The singular-value conjecture holds for this pair; the argument uses the hidden \(\mathrm{U}(n)\) and does not extend to a general \(P_{\alpha,V}\).
 
+
+\section{Admissible G-Actions Towards a Converse}
+
+Suppose a compact group $G$ acts on the algebraic span $A_0$ of the eigenspaces of $P$ by automorphisms of the product and of $P$. Write $\mathcal{H}_\alpha$ for the energy spaces, viewed as finite-dimensional unitary $G$-modules, and write
+$$m_{\alpha\beta}^\gamma:\mathcal{H}_\alpha\otimes\mathcal{H}_\beta\to\mathcal{H}_\gamma$$
+for the projections of pointwise multiplication. The following axioms are then meaningful on the abstract package $\bigl(G,\{\mathcal{H}_\alpha\},\{m_{\alpha\beta}^\gamma\},\{\lambda(\alpha)\}\bigr)$.
+
+(G1) The product is commutative, associative, and unital.
+(G2) Each $m_{\alpha\beta}^\gamma$ is a $G$-intertwiner.
+(G3) The operator $P$ defined by $Pe=\lambda(\alpha)e$ on $\mathcal{H}_\alpha$ is compatible with the cometric identity (17): $\Gamma(f,h)=\frac12\bigl(\lambda(f)+\lambda(h)-P\bigr)(fh)$.
+(G4) Fusion is multiplicity-free: $\dim\operatorname{Hom}_G(\mathcal{H}_\alpha\otimes\mathcal{H}_\beta,\mathcal{H}_\gamma)\le 1$.
+(G5) $\Gamma$ is positive: $\langle\Gamma(f,f),e_0\rangle\ge 0$, with equality precisely on functions constant along the eventual $G$-orbits.
+(G6) A $G$-invariant completion $A$ of $A_0$ is a commutative $G$-algebra whose Gelfand space $X$ is locally compact Hausdorff and carries a continuous $G$-action.
+(G7) There exists a finite-dimensional subrepresentation $V\subset A_0$ such that evaluation $X\to V^*$ is a $G$-equivariant embedding onto a smooth $G$-stable submanifold.
+(G8) On that image the matrix $g^{ab}=\Gamma(x^a,x^b)$ has rank $\dim X$, and the generator of $\Gamma$ reproduces $P$.
+
+If (G1)–(G8) hold, then $X$ is a smooth Riemannian $G$-manifold, $P$ is a $G$-invariant Schrödinger (or Witten) operator on $X$, and the maps $m_{\alpha\beta}^\gamma$ are the geometric triple products of a $G$-adapted eigenbasis. Under (G4) each admissible block is a single scalar $c_{\alpha\beta\gamma}$. Matching lists $\{\lambda(\alpha)\}$ and $\{\lvert c_{\alpha\beta\gamma}\rvert\}$, with signs fixed by (G5) at a base point, yield isometric $G$-manifolds.
+The isotropic oscillator (and its ground-state transform, the Ornstein–Uhlenbeck operator) satisfies (G1)–(G8) with $G=\mathrm{SO}(n)$ or the hidden symmetry $\mathrm{U}(n)$, with $V=\mathcal{H}_1\simeq\mathbb{R}^n$, and with $\{c_{\alpha\beta\gamma}\}$ the Hermite–Gaunt coefficients. In that example (G7) is the ordinary evaluation of the linear Hermite modes.
+\begin{remark}{Remark (On (G7)} Axioms (G1)–(G6) and (G8) construct an algebra, a Dirichlet form, and a Gelfand space of characters. They do not by themselves produce a smooth embedding of that space into a finite-dimensional representation. The missing step is (G7). On a compact homogeneous space $G/K$ it is Peter–Weyl. On the oscillator it is the identification of the character space with $\mathbb{R}^n$ via $\mathcal{H}_1$. A general lemma that (G1)–(G6) and (G8) imply (G7) for an arbitrary compact $G$ is not needed for the comparison theorem of the present paper, which begins with two manifolds and their evaluation maps, and is left aside.
+\end{remark}
 \doclicenseThis
 \printbibliography
 \end{document}
