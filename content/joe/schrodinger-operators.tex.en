@@ -70,7 +70,7 @@ is implemented by a diffeomorphism $F$ with $F^*g=h$, $\beta=\alpha\circ F+c$, a
 \label{sec:intro}
 Let $(M,g)$ be a complete connected Riemannian manifold, $\alpha,V\in C^\infty(M)$, and
 $$P_{\alpha,V}u=-\Delta_g u+\langle\nabla\alpha,\nabla u\rangle+Vu$$
-on $C_c^\infty(M)$ is confining in the Agmon sense if $M$ is noncompact (i.e. its effective potential $V_{eff}$ is bounded below and $V_{eff}\to\infty$ as $x\to\infty$, acting in $L^2(M,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Assume $P_{\alpha,V}$ is essentially self-adjoint and bounded below, with empty essential spectrum
+on $C_c^\infty(M)$ is confining in the Agmon sense if $M$ is noncompact (i.e. its effective potential $V_{eff}$ is bounded below and $V_{eff}(x)\to\infty$ as $x\to\infty$, acting in $L^2(M,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Assume $P_{\alpha,V}$ is essentially self-adjoint and bounded below, with empty essential spectrum
 $$\sigma(P_{\alpha,V})=\sigma_{\mathrm{disc}}(P_{\alpha,V})=\{\lambda_0<\lambda_1\le\lambda_2\le\cdots\}\to+\infty.$$
 Write
 $$\mathcal{V}_M:=\bigoplus_{n\ge0}\ker(P_{\alpha,V}-\lambda_n)\subset L^2(M,\mu)\cap C^\infty(M),$$
