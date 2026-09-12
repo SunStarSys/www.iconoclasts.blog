@@ -61,9 +61,7 @@ For a second-order operator $P_{\alpha,V}=-\Delta_g+\langle\nabla\alpha,\nabla\c
 $$\Phi_\mu(u,v,w)=\int uvw\,d\mu,\qquad d\mu=e^{-\alpha}\,d\mathrm{vol},$$
 is implemented by a diffeomorphism $F$ with $F^*g=h$, $\beta=\alpha\circ F+c$, and $W=V\circ F$. Schrödinger operators are the case $\alpha=0$; Witten operators are the case $V=0$. The geometric invariant is the multiplication table on the spectral subspaces, not the spectrum alone.
 
-
 A recognition argument from an abstract $G$-package via evaluation in a finite-dimensional subrepresentation of the eigenalgebra applies only when that embedding exists. Homogeneous spaces and the isotropic oscillator admit it; a general radial well need not. The comparison theorem does not use this hypothesis.
-
 
 \noindent\textbf{Keywords:} spectrum, triple products, Schr\"odinger, Witten, Laplacian, eigenfunctions, inverse problem
 \end{abstract}
@@ -303,7 +301,7 @@ If (G1)–(G8) hold, then $X$ is a smooth Riemannian $G$-manifold, $P$ is a $G$-
 
 The isotropic oscillator (and its ground-state transform, the Ornstein–Uhlenbeck operator) satisfies (G1)–(G8) with $G=\mathrm{SO}(n)$ with $\mathscr V=\mathcal{H}_1\simeq\mathbb{R}^n$, and with $\{c_{\alpha\beta\gamma}\}$ the Hermite–Gaunt coefficients for the isotropic blocks. In that example (G7) is the ordinary evaluation of the linear Hermite modes.
 
-\begin{remark}{On (G7).} (G1)–(G6) and (G8) construct an algebra, a Dirichlet form, and a Gelfand space of characters. They do not by themselves produce a smooth embedding of that space into a finite-dimensional representation. The missing step is (G7). On a compact homogeneous space $G/K$ it is Peter–Weyl. On the oscillator it is the identification of the character space with $\mathbb{R}^n$ via $\mathcal{H}_1$. A general lemma that (G1)–(G6) and (G8) imply (G7) for an arbitrary compact $G$ is not needed for the comparison theorem of the present paper, which begins with two manifolds and their evaluation maps, and is left aside.
+\begin{remark}{On (G7).} (G1)–(G6) and (G8) construct an algebra, a Dirichlet form, and a Gelfand space of characters. They do not by themselves produce a smooth embedding of that space into a finite-dimensional representation. The missing step is (G7). On a compact homogeneous space $G/K$ it is Peter–Weyl. On the oscillator it is the identification of the character space with $\mathbb{R}^n$ via $\mathcal{H}_1$. Lemma 11 records necessity of (G7) for recognition by evaluation; sufficiency of (G1)–(G6) and (G8) for (G7) is not claimed.
 \end{remark}
 
 \begin{remark}
