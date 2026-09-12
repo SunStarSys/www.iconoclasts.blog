@@ -278,13 +278,16 @@ $$\Gamma(f,h)=Q(f,h)-\tfrac12 M_V(fh).$$
 
 $Q$ is defined on $\mathscr{A}$, the algebra generated from $A_0$. It splits as $\Gamma+\frac12 M_V$ with $\Gamma$ a biderivation of $\mathscr{A}$ and $M_V$ a multiplier of $\mathscr{A}$. After (G6), $M_V$ is multiplication by a continuous function $V$ on $X$.
 
-\item[(G4)] Fusion is multiplicity-free: $\dim\operatorname{Hom}_G(\mathcal{H}_\alpha\otimes\mathcal{H}_\beta,\mathcal{H}_\gamma)\le 1$.
+\item[(G4)] No irreducibility hypothesis. Each $\mathcal{H}_\alpha$ is an eigenspace of $P$, hence a finite-dimensional unitary $G$-module, possibly reducible. Write
+$$\mathcal{H}_\alpha=\bigoplus_\rho m_{\alpha\rho}\,\rho$$
+for its isotypic decomposition. The product maps $m^\gamma_{\alpha\beta}$ are $G$-equivariant by (G2) and may have several independent blocks, one for each triple of isotypes. Fusion multiplicities are not assumed to be $0$ or $1$.
 \item[(G5)] $\Gamma$ is positive: $\langle\Gamma(f,f),e^0\rangle\ge 0$, with equality precisely on functions constant along the eventual $G$-orbits.
 \item[(G6)] A $G$-invariant completion $A$ of $\mathscr A$ is a commutative $G$-algebra whose Gelfand space $X$ is locally compact Hausdorff and carries a continuous $G$-action.
 \item[(G7)] There exists a finite-dimensional subrepresentation $\mathscr V\subset A_0$ such that evaluation $X\to \mathscr V^*$ is a $G$-equivariant embedding onto a smooth $G$-stable submanifold.
 \item[(G8)] On that image the matrix $g^{ab}=\Gamma(x^a,x^b)$ has rank $\dim X$, and the generator of $\Gamma$ reproduces $P$.
 \end{description}
-If (G1)–(G8) hold, then $X$ is a smooth Riemannian $G$-manifold, $P$ is a $G$-invariant Schrödinger (or Witten) operator on $X$, and the maps $m_{\alpha\beta}^\gamma$ are the geometric triple products of a $G$-adapted eigenbasis. Under (G4) each admissible block is a single scalar $c_{\alpha\beta\gamma}$. Matching lists $\{\lambda(\alpha)\}$ and $\{\lvert c_{\alpha\beta\gamma}\rvert\}$, with signs fixed by (G5) at a base point, yield isometric $G$-manifolds.
+If (G1)–(G8) hold, then $X$ is a smooth Riemannian $G$-manifold, $P$ is a $G$-invariant Schrödinger (or Witten) operator on $X$, and the maps $m_{\alpha\beta}^\gamma$ are the geometric triple products of a $G$-adapted eigenbasis. Uniqueness of the geometric data is Theorem 1: an intertwiner of $\Phi$ that preserves the energy decomposition is implemented by an isometry of $(X,g,\alpha,V)$. The axioms (G1)–(G8) do not by themselves cut the unitary freedom on a reducible eigenspace; $\Phi$ does.
+
 The isotropic oscillator (and its ground-state transform, the Ornstein–Uhlenbeck operator) satisfies (G1)–(G8) with $G=\mathrm{SO}(n)$ with $\mathscr V=\mathcal{H}_1\simeq\mathbb{R}^n$, and with $\{c_{\alpha\beta\gamma}\}$ the Hermite–Gaunt coefficients. In that example (G7) is the ordinary evaluation of the linear Hermite modes.
 
 \begin{remark}{On (G7).} (G1)–(G6) and (G8) construct an algebra, a Dirichlet form, and a Gelfand space of characters. They do not by themselves produce a smooth embedding of that space into a finite-dimensional representation. The missing step is (G7). On a compact homogeneous space $G/K$ it is Peter–Weyl. On the oscillator it is the identification of the character space with $\mathbb{R}^n$ via $\mathcal{H}_1$. A general lemma that (G1)–(G6) and (G8) imply (G7) for an arbitrary compact $G$ is not needed for the comparison theorem of the present paper, which begins with two manifolds and their evaluation maps, and is left aside.
