@@ -287,8 +287,12 @@ Any confining radial $V$ gives an admissible $\mathrm{SO}(n)$-action satisfying 
 \end{remark}
 
 
-\subsection{Reconstruction of the isotropic oscillator}
+\subsection{Axiomatic Reconstruction of the Isotropic Oscillator}
 Assume $G=\mathrm{SO}(n)$, that $\mathscr{V}$ is the defining representation, and that (G1)–(G8) hold. Then $X\simeq\mathbb{R}^n$ with the Euclidean metric and $P$ is the isotropic oscillator, up to a constant shift.
+
+\begin{remark}The potential is \textbf{not assumed quadratic}: $\mathrm{SO}(n)$-invariance and the eigen-equation on the defining representation force $\alpha\propto r^2$, hence $V_{\mathrm{eff}}=\lvert x\rvert^2+\mathrm{const}$.
+\end{remark}
+
 By (G6) and (G7) the evaluation map $\iota:X\to\mathscr{V}^*\simeq\mathbb{R}^n$ is a $G$-equivariant embedding onto a smooth $\mathrm{SO}(n)$-stable submanifold. The defining action of $\mathrm{SO}(n)$ on $\mathbb{R}^n$ and completeness plus positivity of $\Gamma$ force the image to be all of $\mathbb{R}^n$. Thus $X\simeq\mathbb{R}^n$, and an orthonormal basis of $\mathscr{V}$ may be read as linear coordinates $x_1,\ldots,x_n$.
 By (G8) the matrix $g^{ab}=\Gamma(x_a,x_b)$ has rank $n$. $\mathrm{SO}(n)$-invariance implies $g^{ab}=\psi(r)\delta^{ab}$. Applying (G3) to the linear functions shows that $\psi$ is constant. Rescaling gives $g_{ab}=\delta_{ab}$.
 Let $e_0$ be the unique (up to scale) $G$-invariant ground state, strictly positive by (G5). Ground-state conjugation by $e_0$ puts $P$ in Witten form $L=-\Delta+\langle\nabla\alpha,\nabla\cdot\rangle$ on $L^2(e^{-\alpha}\,d\mathrm{vol})$, with $\alpha=-2\log e_0$ up to a constant. In this gauge (G3) has $V=0$, the coordinate functions remain an eigenbasis of $\mathscr{V}$, and
