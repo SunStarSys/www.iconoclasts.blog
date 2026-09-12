@@ -70,7 +70,7 @@ is implemented by a diffeomorphism $F$ with $F^*g=h$, $\beta=\alpha\circ F+c$, a
 \label{sec:intro}
 Let $(M,g)$ be a complete connected Riemannian manifold, $\alpha,V\in C^\infty(M)$, and
 $$P_{\alpha,V}u=-\Delta_g u+\langle\nabla\alpha,\nabla u\rangle+Vu$$
-on $C_c^\infty(M)$, acting in $L^2(M,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Assume $P_{\alpha,V}$ is essentially self-adjoint and bounded below, with empty essential spectrum
+on $C_c^\infty(M)$, acting in $L^2(M,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Assume $P_{\alpha,V}$ is essentially self-adjoint and for noncompact manifold $M$, is confining in the Agmon sense (i.e., its effective potential $$V_{\mathrm{eff}}:=V+\frac14\lvert\nabla\alpha\rvert_g^2-\frac12\Delta_g\alpha$$ is bounded from below and $V_{eff}(x)\to\infty$ as $x\to\infty$. This implies $P$ is bounded below with empty essential spectrum \cite{SA82}
 $$\sigma(P_{\alpha,V})=\sigma_{\mathrm{disc}}(P_{\alpha,V})=\{\lambda_0<\lambda_1\le\lambda_2\le\cdots\}\to+\infty.$$
 Write
 $$\mathcal{V}_M:=\bigoplus_{n\ge0}\ker(P_{\alpha,V}-\lambda_n)\subset L^2(M,\mu)\cap C^\infty(M),$$
@@ -81,8 +81,6 @@ $$\Phi_\mu:\mathcal{V}_M\times\mathcal{V}_M\times\mathcal{V}_M\to\mathbb{C},
 The same data $(N,h,\beta,W)$ produce $Q=P_{\beta,W}$, $\nu=e^{-\beta}\mathrm{vol}_h$, $\mathcal{V}_N\subset L^3(N,\nu)$, and $\Phi_\nu$.
 A linear map $U:\mathcal{V}_M\to\mathcal{V}_N$ is a \textbf{spectral identification} if it is unitary for the $L^2$ inner products and
 $$U\bigl(\ker(P_{\alpha,V}-\lambda_n)\bigr)=\ker(Q-\lambda_n)\qquad\text{for every }n.$$
-
-If $M$ is noncompact assume $P$ is confining in the Agmon sense (i.e., its effective potential $$V_{\mathrm{eff}}:=V+\frac14\lvert\nabla\alpha\rvert_g^2-\frac12\Delta_g\alpha$$ is bounded from below and $V_{eff}(x)\to\infty$ as $x\to\infty$. This condition plus essential self-adjointness implies $P$ is bounded below with empty essential spectrum \cite{SA82}.
 
 \subsection{Results}
 \label{subsec:res}
