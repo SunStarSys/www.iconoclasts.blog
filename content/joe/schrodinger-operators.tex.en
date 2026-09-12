@@ -325,6 +325,10 @@ The image $\iota(X)$ is a smooth $G$-stable embedded submanifold of $\mathscr{V}
 For the converse: any argument that builds a smooth structure on the Gelfand space by embedding it in a finite-dimensional $G$-module $W\subset A_0$ is the construction just named, with $\mathscr{V}=W$. If no such $W$ exists, that construction cannot run. Other converses (crossing for a noncompact group, a Dirac spectral triple, inversion of a spherical transform on a known $G/K$) are not excluded; they do not evaluate $X$ in a finite submodule of the eigenalgebra of $P$.
 \end{proof}
 
+\begin{remark}[Low Energy Certification for (G7)]
+If G7 holds for a module sitting in energies $\le\Lambda$, then matching the spectrum and $\Phi$ up to energy $\Lambda$ is equivalent to matching the full package, and the reconstructed geometries are isometric.
+\end{remark}
+
 \subsection{Axiomatic Reconstruction of the Isotropic Oscillator}
 Assume $G=\mathrm{SO}(n)$, that $\mathscr{V}$ is the defining representation, and that (G1)–(G8) hold. Then $X\simeq\mathbb{R}^n$ with the Euclidean metric and $P$ is the isotropic oscillator, up to a constant shift.
 
