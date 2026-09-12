@@ -273,14 +273,14 @@ for the projections of pointwise multiplication. The following axioms are then m
 $$Q(f,h):=\tfrac12\bigl(\lambda(f)+\lambda(h)-P\bigr)(fh)$$
 on eigenfunctions and extend bilinearly. The Leibniz defect
 $$D(f,g,h):=Q(fg,h)-f\,Q(g,h)-g\,Q(f,h)$$
-is of the form $-\tfrac12 M_V\,fgh$ for a unique multiplier $M_V$. Set the symmetric, positive semidefinite bi-derivation (cometric)
-$$\Gamma(f,h)=Q(f,h)-\tfrac12 M_V\,fh.$$
+is of the form $-\tfrac12 M_V(fgh)$ for a unique multiplier $M_V$. Set the symmetric bi-derivation (cometric)
+$$\Gamma(f,h)=Q(f,h)-\tfrac12 M_V(fh).$$
 
 $Q$ is defined on $\mathscr{A}$, the algebra generated from $A_0$. It splits as $\Gamma+\frac12 M_V$ with $\Gamma$ a biderivation of $\mathscr{A}$ and $M_V$ a multiplier of $\mathscr{A}$. After (G6), $M_V$ is multiplication by a continuous function $V$ on $X$.
 
 \item[(G4)] Fusion is multiplicity-free: $\dim\operatorname{Hom}_G(\mathcal{H}_\alpha\otimes\mathcal{H}_\beta,\mathcal{H}_\gamma)\le 1$.
 \item[(G5)] $\Gamma$ is positive: $\langle\Gamma(f,f),e^0\rangle\ge 0$, with equality precisely on functions constant along the eventual $G$-orbits.
-\item[(G6)] A $G$-invariant completion $A$ of $A_0$ is a commutative $G$-algebra whose Gelfand space $X$ is locally compact Hausdorff and carries a continuous $G$-action.
+\item[(G6)] A $G$-invariant completion $A$ of $\mathscr A$ is a commutative $G$-algebra whose Gelfand space $X$ is locally compact Hausdorff and carries a continuous $G$-action.
 \item[(G7)] There exists a finite-dimensional subrepresentation $\mathscr V\subset A_0$ such that evaluation $X\to \mathscr V^*$ is a $G$-equivariant embedding onto a smooth $G$-stable submanifold.
 \item[(G8)] On that image the matrix $g^{ab}=\Gamma(x^a,x^b)$ has rank $\dim X$, and the generator of $\Gamma$ reproduces $P$.
 \end{description}
