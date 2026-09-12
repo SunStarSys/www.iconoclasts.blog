@@ -487,6 +487,30 @@ In particular the support of $\Phi$ in the Weyl chamber cannot place too much ma
 Crossing is associativity written in a $G$-isotypic basis. It constrains the spectrum; it does not reconstruct the metric from two given manifolds, and it does not replace matching the full table $M^{i,j,k}$ in Theorem 1.
 \end{remark}
 
+\begin{remark}[Associativity of Wigner $D$-functions and $6j$ symbols]
+
+On $SU(2)$ the structure constants are (15). Write $I=(j,m,n)$ for a Peter–Weyl index and $M^{IJK}$ for the corresponding triple product. Associativity of pointwise multiplication is
+$$\sum_K M^{IJK}M^{KL P}=\sum_{K'}M^{JKL}M^{IK'P}.$$
+Each $M$ factors into a pair of $3j$ symbols, one in the left magnetic indices and one in the right. Summing the intermediate magnetic numbers $(m,n)$ of $K=(j,m,n)$ therefore splits as a product of two recouplings. The left-magnetic sum is Racah’s identity
+$$\begin{align*}
+\sum_{m_5,m_6}
+\begin{pmatrix} j_1 & j_2 & j_5 \\ m_1 & m_2 & m_5 \end{pmatrix}
+\begin{pmatrix} j_5 & j_3 & j_4 \\ m_5 & m_3 & m_4 \end{pmatrix}
+\begin{pmatrix} j_2 & j_3 & j_6 \\ m_2 & m_3 & m_6 \end{pmatrix}
+\begin{pmatrix} j_1 & j_6 & j_4 \\ m_1 & m_6 & m_4 \end{pmatrix}\\
+=(-1)^{j_1+j_2+j_3+j_4}
+\begin{Bmatrix} j_1 & j_2 & j_5 \\ j_3 & j_4 & j_6 \end{Bmatrix},
+\end{align*}$$
+and the right-magnetic sum is the same $6j$ with $n_i$ in place of $m_i$. Hence, after summing on magnetics,
+$$\sum_{j}(2j+1)\,M^{(j_1)(j_2)(j)}\,M^{(j)(j_3)(j_4)}
+=\sum_{j'}(2j'+1)\,M^{(j_2)(j_3)(j')}\,M^{(j_1)(j')(j_4)}$$
+is the identity
+$$\begin{Bmatrix} j_1 & j_2 & j \\ j_3 & j_4 & J \end{Bmatrix}
+=
+\begin{Bmatrix} j_2 & j_3 & j' \\ j_1 & j_4 & J \end{Bmatrix}$$
+in the two association channels (up to the conventional phase $(-1)^{\sum j_i}$ and the dimensions $2j+1$ already sitting in (15)). That is the crossing equation $(\dagger)$ of Remark 5 for $G=SU(2)$: the kernels $K,K'$ are Racah $6j$ symbols, and the sum over intermediate labels is finite. No Plancherel integral appears.
+\end{remark}
+
 \section{Example}
 \label{sec:ex}
 
