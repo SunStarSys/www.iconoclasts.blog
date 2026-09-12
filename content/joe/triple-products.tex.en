@@ -130,7 +130,7 @@ If we consider the map
 \begin{equation}
 (M, g, \set{e^i}) \mapsto \set{\lambda_i, M^{i,j,k}}\ ,
 \end{equation}
-this paper establishes the injectivity of this map for closed Riemannian manifolds (up to Riemannian isometry in its domain). Further results which apply these techniques to describe its image (and inverse), within select moduli spaces of metrics, are just getting started \cite{AA25}.  There, Anshul Adve rigorously tackles unit tangent spaces of compact, hyperbolic 2-orbifolds, using these same \textit{structure constants} from Conformal Field Theory.
+this paper establishes the injectivity of this map for closed Riemannian manifolds (up to Riemannian isometry in its domain). Further results which apply these techniques to describe its image (and inverse), within select moduli spaces of metrics, are just getting started \cite{AA25}. Adve proves a converse of a different kind: a discrete solution of the $\mathrm{PSL}_2(\mathbb{R})$ crossing equations arises from a compact hyperbolic 2-orbifold. Crossing is associativity in a $G$-isotypic basis (Remark 5). It is not an input to Theorem 1.
 
 Some imagery may be helpful here. If we fix $(M,g)$ and look at the orbits of $\set{M^{i,j,k}}$ under spectrum-preserving change-of-basis unitary transformations on $\set{e^i}$, we see that the orbits of different isospectral $(M,g)$ pairs partition the image of this map along isometry classes.
 
@@ -470,7 +470,7 @@ Further, the arguments in the proof of Corollary~\ref{coro-1} are valid even whe
 
 \end{proof}
 
-\begin{remark}[Associativity and Crossing.] Suppose a compact Riemannian manifold $M$ carries a smooth right $G$-action by isometries, with $G$ a connected Lie group, so that the Laplace–Beltrami operator commutes with the action and $L^2(M)$ decomposes into unitary representations of $G$. The associativity identity (in a real basis)
+\begin{remark}[Associativity and Crossing] Suppose a compact Riemannian manifold $M$ carries a smooth right $G$-action by isometries, with $G$ a connected Lie group, so that the Laplace–Beltrami operator commutes with the action and $L^2(M)$ decomposes into unitary representations of $G$. The associativity identity (in a real basis)
 $$\sum_k M^{i,j,k}M^{\ell,m,k}=\sum_k M^{j,\ell,k}M^{i,m,k}$$
 is an identity in the algebra of functions on $M$. In a $G$-adapted eigenbasis each factor sits in an isotype, and the same identity becomes a crossing equation: the two association trees for a four-linear pairing are related by the recoupling kernels of $G$,
 
