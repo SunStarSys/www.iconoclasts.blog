@@ -492,7 +492,8 @@ Crossing is associativity written in a $G$-isotypic basis. It constrains the spe
 On $SU(2)$ the structure constants are (15). Write $I=(j,m,n)$ for a Peter–Weyl index and $M^{IJK}$ for the corresponding triple product. Associativity of pointwise multiplication is
 $$\sum_K M^{IJK}M^{KL P}=\sum_{K'}M^{JKL}M^{IK'P}.$$
 Each $M$ factors into a pair of $3j$ symbols, one in the left magnetic indices and one in the right. Summing the intermediate magnetic numbers $(m,n)$ of $K=(j,m,n)$ therefore splits as a product of two recouplings. The left-magnetic sum is Racah’s identity
-$$\begin{align*}
+\begin{equation}
+\begin{align*}
 \sum_{m_5,m_6}
 \begin{pmatrix} j_1 & j_2 & j_5 \\ m_1 & m_2 & m_5 \end{pmatrix}
 \begin{pmatrix} j_5 & j_3 & j_4 \\ m_5 & m_3 & m_4 \end{pmatrix}
@@ -500,7 +501,8 @@ $$\begin{align*}
 \begin{pmatrix} j_1 & j_6 & j_4 \\ m_1 & m_6 & m_4 \end{pmatrix}\\
 =(-1)^{j_1+j_2+j_3+j_4}
 \begin{Bmatrix} j_1 & j_2 & j_5 \\ j_3 & j_4 & j_6 \end{Bmatrix},
-\end{align*}$$
+\end{align*}
+\end{equation}
 and the right-magnetic sum is the same $6j$ with $n_i$ in place of $m_i$. Hence, after summing on magnetics,
 $$\sum_{j}(2j+1)\,M^{(j_1)(j_2)(j)}\,M^{(j)(j_3)(j_4)}
 =\sum_{j'}(2j'+1)\,M^{(j_2)(j_3)(j')}\,M^{(j_1)(j')(j_4)}$$
@@ -511,7 +513,8 @@ $$\begin{Bmatrix} j_1 & j_2 & j \\ j_3 & j_4 & J \end{Bmatrix}
 in the two association channels (up to the conventional phase $(-1)^{\sum j_i}$ and the dimensions $2j+1$ already sitting in (15)). That is the crossing equation $(\dagger)$ of Remark 5 for $G=SU(2)$: the kernels $K,K'$ are Racah $6j$ symbols, and the sum over intermediate labels is finite. No Plancherel integral appears.
 
 Fix four external spins $j_1,j_2,j_3,j_4$ and an overall channel spin $J$ (the irrep through which the two bilinear products couple; the four-point singlet is $J=0$). The $s$-channel intermediate spin is $j$, the $t$-channel spin is $j'$. Then
-$$\begin{align*}
+\begin{equation}
+\begin{align*}
 K(j_1,j_2;j_3,j_4\mid j)
 &=(2j+1)
 \begin{Bmatrix}
@@ -525,7 +528,8 @@ K'(j_1,j_3;j_2,j_4\mid j')
 j_1 & j_3 & j' \\
 j_2 & j_4 & J
 \end{Bmatrix}.
-\end{align*}$$
+\end{align*}
+\end{equation}
 They vanish unless the four triangles
 $$(j_1,j_2,j),\quad(j,j_3,j_4),\quad(j_1,j_3,j'),\quad(j',j_2,j_4)$$
 hold and the three sums $j_1+j_2+j$, etc., are integers. A Weyl permutation of the external legs that sends the pairing $(12)(34)$ to $(13)(24)$ sends $K$ to $K'$ up to the phase $(-1)^{j_1+j_2+j_3+j_4}$.
