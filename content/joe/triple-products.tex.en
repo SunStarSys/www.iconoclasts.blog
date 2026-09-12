@@ -470,8 +470,8 @@ Further, the arguments in the proof of Corollary~\ref{coro-1} are valid even whe
 
 \end{proof}
 
-\begin{remark}[Associativity and Crossing.] Suppose a compact Riemannian manifold $M$ carries a smooth right $G$-action by isometries, with $G$ a connected Lie group, so that the Laplace–Beltrami operator commutes with the action and $L^2(M)$ decomposes into unitary representations of $G$. The associativity identity
-$$\sum_k M^{ij,k}M^{k,\ell m}=\sum_k M^{j\ell,k}M^{i,km}$$
+\begin{remark}[Associativity and Crossing.] Suppose a compact Riemannian manifold $M$ carries a smooth right $G$-action by isometries, with $G$ a connected Lie group, so that the Laplace–Beltrami operator commutes with the action and $L^2(M)$ decomposes into unitary representations of $G$. The associativity identity (in a real basis)
+$$\sum_k M^{i,j,k}M^{\ell,m,k}=\sum_k M^{j,\ell,k}M^{i,m,k}$$
 is an identity in the algebra of functions on $M$. In a $G$-adapted eigenbasis each factor sits in an isotype, and the same identity becomes a crossing equation: the two association trees for a four-linear pairing are related by the recoupling kernels of $G$,
 
 \begin{equation}
