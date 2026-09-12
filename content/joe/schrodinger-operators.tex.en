@@ -310,6 +310,22 @@ The isotropic oscillator (and its ground-state transform, the Ornstein–Uhlenbe
 Any confining radial $V$ gives an admissible $\mathrm{SO}(n)$-action satisfying (G1)–(G3), (G5), (G6), (G8).For $n=3$ the $\mathrm{SO}(3)$-isotypic decomposition of each energy space is multiplicity-free. The coordinate axiom (G7) holds when the first dipole profile $R(r)$ is a radial chart; the oscillator is the model case.
 \end{remark}
 
+\begin{lemma}[Necessity of G7 for this method]
+Let $(A_0,\mathscr{A},A,P,\Gamma,G)$ be a package as in (G1)–(G6): $A_0$ is the linear span of the eigenspaces of $P$, $\mathscr{A}$ the algebra they generate, $A$ a $G$-invariant completion with Gelfand space $X$, and $\Gamma$ a $G$-invariant Dirichlet form on $\mathscr{A}$. Suppose there exist a finite-dimensional $G$-subrepresentation $\mathscr{V}\subset A_0$ and a $G$-equivariant map
+$$\iota:X\to\mathscr{V}^*$$
+which is a smooth embedding onto a $G$-stable submanifold, and that $\Gamma$ pulled back to $\iota(X)$ is a Riemannian metric of dimension $\dim X$. Then $\mathscr{V}$ is a finite eigen-embedding of $X$: it is contained in a finite sum of eigenspaces, evaluation in $\mathscr{V}$ separates points of $X$ and is an immersion, and $X$ is $G$-equivariantly diffeomorphic to its image in $\mathscr{V}^*$. Conversely, if no finite-dimensional $G$-invariant subspace of $A_0$ embeds $X$, then no recognition argument that realizes $X$ by evaluation in a finite $G$-module inside the eigenalgebra can produce a smooth $G$-manifold.
+\end{lemma}
+\begin{proof}
+ By definition $A_0=\bigoplus_n\ker(P-\lambda_n)$ (algebraic direct sum). Any finite-dimensional subspace of $A_0$ meets only finitely many summands, so
+$$\mathscr{V}\subset\bigoplus_{n\in F}\ker(P-\lambda_n)$$
+for a finite set $F$ of eigenvalues. Thus $\mathscr{V}$ is a finite sum of pieces of eigenspaces. It is $G$-invariant by hypothesis, so it is a finite-dimensional $G$-submodule of the eigenalgebra.
+The map $\iota$ is evaluation: for $x\in X$ and $v\in\mathscr{V}$,
+$$\iota(x)(v)=\hat v(x),$$
+where $\hat v$ is the Gelfand transform (G6). If $\iota(x)=\iota(y)$, then every $v\in\mathscr{V}$ takes the same value at $x$ and $y$. Because $\iota$ is injective, $\mathscr{V}$ separates points of $X$. Because $\iota$ is an immersion, the differentials $d\hat v(x)$, $v\in\mathscr{V}$, span $T_x^*X$. That is the definition of a finite eigen-embedding.
+The image $\iota(X)$ is a smooth $G$-stable embedded submanifold of $\mathscr{V}^*$ by hypothesis, and $\iota$ is a $G$-equivariant diffeomorphism onto that image. Pulling $\Gamma$ back along $\iota$ gives a Riemannian metric of rank $\dim X$ (G8). This is a smooth Riemannian $G$-manifold realized inside a finite eigen-representation.
+
+For the converse: any argument that builds a smooth structure on the Gelfand space by embedding it in a finite-dimensional $G$-module $W\subset A_0$ is the construction just named, with $\mathscr{V}=W$. If no such $W$ exists, that construction cannot run. Other converses (crossing for a noncompact group, a Dirac spectral triple, inversion of a spherical transform on a known $G/K$) are not excluded; they do not evaluate $X$ in a finite submodule of the eigenalgebra of $P$.
+\end{proof}
 
 \subsection{Axiomatic Reconstruction of the Isotropic Oscillator}
 Assume $G=\mathrm{SO}(n)$, that $\mathscr{V}$ is the defining representation, and that (G1)–(G8) hold. Then $X\simeq\mathbb{R}^n$ with the Euclidean metric and $P$ is the isotropic oscillator, up to a constant shift.
