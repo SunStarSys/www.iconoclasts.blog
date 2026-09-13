@@ -200,6 +200,18 @@ $$\lVert uv\rVert_{H^s(\mu)}\le C_{\mathrm{alg}}(s)\,(1+\Lambda)^s\,\lVert u\rVe
 \qquad(s>\max\{2,n/2\}),$$
 together with $\lVert Pt\rVert_2\le C_{\mathrm{ell}}(P)\lVert t\rVert_{H^2}$. That bounds $\lVert Pt\rVert_2$, not the ratio $\lVert Pt\rVert_2/\varepsilon(u,v)$. The ratio is W1$^+$, not a Sobolev corollary.
 \end{remark}
+\begin{remark}[curvature and $K$]
+The theorems do not use curvature. If one adds a bound on the geometry that produces $P$, the ratio $K$ becomes explicit.
+On a closed Witten pair with
+$$\operatorname{Ric}_g+\nabla^2\alpha\ge\kappa g,\qquad
+\operatorname{inj}(g)\ge i_0,\qquad
+\lVert(g,\alpha)\rVert_{C^s}\le M,$$
+the Sobolev algebra constants and the elliptic constant for $P:H^2\to L^2$ are controlled by $(n,\kappa,i_0,M)$. Products of modes $\le\Lambda$ then satisfy
+$$\lVert P(uv)\rVert_2\le C(n,\kappa,i_0,M,\Lambda)\,\lVert u\rVert_2\lVert v\rVert_2.$$
+If in addition $\sigma(P)$ has a gap $(\Lambda',\Lambda'+G]$, the tail Rayleigh quotient obeys
+$$\Lambda'+G\le K\le C(n,\kappa,i_0,M,\Lambda,\Lambda').$$
+In that regime $\Delta=K\varepsilon$ is a product of a geometrically bounded factor and the packet tail. The dependence of Theorem 2 on the unknown pair $(P,\Lambda,\Lambda')$ reduces to dependence on $(n,\kappa,i_0,M,\Lambda,\Lambda')$.
+\end{remark}
 \begin{corollary} If $\varepsilon=0$, the Gram functions $\Gamma(u,v)$ for $u,v\in\mathcal{V}$ are packet data. W4 is then a nondegeneracy condition on those functions. If $\varepsilon>0$, the same Gram functions are determined up to an $L^2$ error of size $K\varepsilon$.
 \end{corollary}
 
