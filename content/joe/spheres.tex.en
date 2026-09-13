@@ -241,24 +241,27 @@ are smooth embeddings onto closed submanifolds. Characters of the window are eva
 
 \begin{lemma}
 \label{lma-2}
-There exists $\Delta_*=\Delta_*(d,\iota(X))>0$, with $d=\dim\mathcal{V}$, such that if $\Delta<\Delta_*$, then:
-
-$\iota(X)$ is a $C^\infty$ embedded submanifold $\Sigma\subset\mathcal{V}^\ast$;
-$\iota:X\to\Sigma$ is a $C^1$ diffeomorphism, and a $C^\infty$ diffeomorphism if $R=0$;
-for every $k\ge 0$,$$c(k)^{-1}\,\lVert R_X\rVert_{C^k(X)}
+Let $d=\dim\mathcal{V}$ and let $\iota:X\to\mathcal{V}^*$ be the evaluation of W1. Write $t(u,v)=(I-\Pi_{\Lambda'})(uv)$ for $u,v\in\mathcal{V}$.
+(i) (infinite tail) There exists $\tau_*=\tau_*(d,\iota(X))>0$ such that if
+$$\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\lVert t(u,v)\rVert_{C^1(X)}<\tau_*,$$
+then $\iota(X)$ is a $C^\infty$ embedded submanifold $\Sigma\subset\mathcal{V}^*$, $\iota:X\to\Sigma$ is a $C^1$ diffeomorphism (and $C^\infty$ if $t=0$), and for every $k\ge 0$
+$$c(k)^{-1}\,\lVert R_X\rVert_{C^k(X)}
 \le\lVert R_\Sigma\rVert_{C^k(\Sigma)}
-\le c(k)\,\lVert R_X\rVert_{C^k(X)},$$with $c(k)=C(d,k)$.
+\le c(k)\,\lVert R_X\rVert_{C^k(X)},$$
+with $c(k)=C(d,k)$. The smallness parameter here is $\lVert t\rVert_{C^1}$, not $\Delta$.
+(ii) (finite slot) If the $\Phi$-tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), then Remarks 6 and 7 give
+$$\lVert t\rVert_{C^1}\le C(d,d_{\mathrm{tail}},n,\Lambda',\Lambda'')\,\Delta.$$
+Hence there exists $\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$ such that $\Delta<\Delta_*$ implies the conclusions of (i), and
+$$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
 \end{lemma}
 
 \begin{proof}
-W1 says $\iota$ is already a smooth embedding onto a closed submanifold, so the first item is W1 and does not use $\Delta$. The product map $F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$ vanishes on $\iota(X)$ up to the tail $t=(I-\Pi_{\Lambda'})(uv)$. Because evaluation extends to $\mathcal{V}'$, one has $\xi(m(u,v))=m(u,v)(x)$ at $\xi=\iota(x)$, and the only defect is $t(x)$.
-
-On a finite slot, Remarks 6 and 7 give
-$$\lVert t\rVert_{C^0}\le C(n,\Lambda',\Lambda'')\,\Delta,$$
-and likewise $\lVert t\rVert_{C^1}\le C\,\Delta$. Thus $F$ is a $C^1$-small perturbation of a section that vanishes exactly on $\iota(X)$. Differentiating $F$ in the $\mathcal{V}^\ast$-directions at $\iota(x)$ yields the family $(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$ on $T_x^*X$. W2 says $\{du:u\in\mathcal{V}\}$ spans $T_x^*X$, so this family is transverse to $\iota(X)$. Persistence of transverse embeddings for $\Delta<\Delta_*$ keeps $\iota$ a $C^1$ diffeomorphism onto its image.
-
-If the tail is infinite, replace $\Delta$ by $\lVert t\rVert_{C^1}$ (or cut at a finite $\Lambda''$ and absorb the far tail into $\Delta$). At $R=0$ one has $t=0$, $F$ vanishes exactly on $\iota(X)$, and $\iota$ is $C^\infty$. The $C^k$ comparison of $R_X$ and $R_\Sigma$ is the chain rule for $\iota$ and $\iota^{-1}$, whose $C^{k-1}$ norms stay bounded for $\Delta<\Delta_*$.
+W1 already makes $\iota$ a smooth embedding onto a closed submanifold, so the first claim of (i) does not use the size of $t$. The product map $F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$ vanishes on $\iota(X)$ up to $t$. Evaluation extends to $\mathcal{V}'$, so at $\xi=\iota(x)$ one has $\xi(m(u,v))=m(u,v)(x)$ and the only defect is $t(x)$. Differentiating $F$ in the $\mathcal{V}^*$-directions at $\iota(x)$ yields the family $(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$ on $T_x^*X$. W2 says $\{du:u\in\mathcal{V}\}$ spans $T_x^*X$, so this family is transverse to $\iota(X)$. If $\lVert t\rVert_{C^1}<\tau_*$, $F$ is a $C^1$-small perturbation of a section that vanishes exactly on $\iota(X)$. Persistence of transverse embeddings keeps $\iota$ a $C^1$ diffeomorphism onto its image. If $t=0$, then $R=0$, $F$ vanishes exactly on $\iota(X)$, and $\iota$ is $C^\infty$. The $C^k$ comparison of $R_X$ and $R_\Sigma$ is the chain rule for $\iota$ and $\iota^{-1}$, whose $C^{k-1}$ norms stay bounded for $\lVert t\rVert_{C^1}<\tau_*$.
+For (ii), a finite slot makes every $C^k$ norm on the tail equivalent to the $L^2$ norm of $R=-Pt$. Remark 6 supplies the $C^0$ bound on $t$ via Sogge; equivalence of norms on a space of dimension $d_{\mathrm{tail}}$ upgrades that to $C^1$. Thus $\Delta$ small implies $\lVert t\rVert_{C^1}$ small, and (i) applies.
 \end{proof}
+
+\begin{remark} Theorem 2’s general bound is (i), written in $\lVert R\rVert_{C^k(\Sigma)}$. The conversion to a multiple of $\Delta$ is (ii). Theorem 4 uses only (ii), with $d=n+1$ and a finite cluster about the slot $2n+2$.
+\end{remark}
 
 \begin{corollary}
 If $R=0$, $X$ is identified with the character space of the finite algebra $(\mathcal{V},m)$ as a $C^\infty$ embedded submanifold of $\mathcal{V}^\ast$. If $\Delta<\Delta_*$, the same identification holds as a $C^1$ diffeomorphism, and $\lVert R\rVert_{C^k(\Sigma)}$ may be used interchangeably with $\lVert R\rVert_{C^k(X)}$.
