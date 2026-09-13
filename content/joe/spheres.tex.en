@@ -57,13 +57,15 @@
 \maketitle
 
 \begin{abstract}
-For a second-order operator $P_{\alpha,V}=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle+V$ on a complete Riemannian manifold, acting in $L^2(e^{-\alpha}\,d\mathrm{vol})$ with discrete spectrum, the eigenvalues determine the eigenspaces only up to independent unitaries on each eigenspace. We prove that a spectral identification which also preserves the triple products
-$$\Phi_\mu(u,v,w)=\int uvw\,d\mu,\qquad d\mu=e^{-\alpha}\,d\mathrm{vol},$$
-is implemented by a diffeomorphism $F$ with $F^*g=h$, $\beta=\alpha\circ F+c$, and $W=V\circ F$. Schrödinger operators are the case $\alpha=0$; Witten operators are the case $V=0$. The geometric invariant is the multiplication table on the spectral subspaces, not the spectrum alone.
+Let $P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$ be a Witten operator on a closed connected Riemannian manifold, acting in $L^2(e^{-\alpha}\,d\mathrm{vol}_g)$. The spectrum of $P_\alpha$ does not determine $(g,\alpha)$. The full multiplication table of eigenfunctions does. This paper isolates a finite piece of that table.
 
-A recognition argument from an abstract $G$-package via evaluation in a finite-dimensional subrepresentation of the eigenalgebra applies only when that embedding exists. Homogeneous spaces and the isotropic oscillator admit it; a general radial well need not. The comparison theorem does not use this hypothesis.
+Fix cutoffs $\Lambda\le\Lambda'<\infty$ and let $\mathcal{V}$ be the sum of eigenspaces with eigenvalue at most $\Lambda$. The visible packet of the window is the restricted triple products of pairs from $\mathcal{V}$ against modes up to $\Lambda'$, together with the $L^2$ tail $\varepsilon$ of those products and the weighted-tail constant $K$ of Wyman type. No Weyl law, no potential, and no curvature bound is used.
 
-\noindent\textbf{Keywords:} spectrum, triple products, Schr\"odinger, Witten, Laplacian, eigenfunctions, inverse problem
+If $\varepsilon=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$ and an additive constant on $\alpha$. If $\varepsilon$ is smaller than a threshold depending on the given pair, it determines them up to a $C^k$ almost-isometry of defect $O(K\varepsilon)$. The manifold is recovered as the space of almost-characters of the window, the metric by dualizing the cometric of $P$ on $\mathcal{V}$, and the weight from the ratio of the $L^2$ measure to Riemannian volume.
+
+The unweighted first window on the sphere is the minimal case: $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $\varepsilon=0$ already at $\Lambda'=2n+2$. That frame recognizes the unit round sphere exactly, and recognizes it with linear $C^0$ stability when the same frame is allowed small deficits. Those statements are frame-side. They are not Obata theorems.
+
+\noindent\textbf{Keywords:} sphere, spectral window, triple products, Witten Operators, eigenfunctions, inverse problem
 \end{abstract}
 
 \tableofcontents
@@ -73,6 +75,7 @@ A recognition argument from an abstract $G$-package via evaluation in a finite-d
 A Witten operator on a closed Riemannian manifold $(X,g)$ is the weighted Laplacian
 $$P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
 acting in $L^2(e^{-\alpha}\,d\mathrm{vol}_g)$. Its spectrum is discrete, nonnegative, and unbounded, with kernel the constant functions. The geometric data of the pair are the metric $g$ and the weight $\alpha$; equivalently, the Riemannian volume and the measure $\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Ordinary Laplace–Beltrami operators are the case $\alpha=0$.
+
 The spectrum alone does not determine $(g,\alpha)$. What does determine them, in the large, is the multiplication table of eigenfunctions
 $$\Phi(u,v,w)=\int_X uvw\,d\mu$$
 together with the list of eigenvalues. That is a global inverse-spectral statement: it consumes every eigenspace. The purpose of this article is a finite substitute. We fix two cutoffs $\Lambda\le\Lambda'<\infty$ and let
@@ -86,13 +89,14 @@ $$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\
 where $K$ is the constant in the weighted tail bound
 $$\sum_{\lambda>\Lambda'}\lambda^2\bigl\lvert\Phi(u,v,e_\lambda)\bigr\rvert^2
 \le K^2\,\varepsilon(u,v)^2\,\lVert u\rVert_2^2\lVert v\rVert_2^2.$$
+
 The cometric $\Gamma$ of $g$ is not an extra input. The Witten multiplication rule
 $$P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v)$$
 computes $\Gamma$ on $\mathcal{V}$ from $(P,\Phi)$, with an $L^2$ remainder at most $K\varepsilon$. Two nondegeneracy hypotheses close the packet: evaluation $X\to\mathcal{V}^\ast$ is a smooth embedding, and $\{du:u\in\mathcal{V}\}$ spans $T^*X$. No Weyl law is assumed, no potential is present, and no curvature bound is used.
 
 The main recognition theorem is that this packet determines $(X,g,\alpha)$. If $\varepsilon=0$, it determines them up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. If $\varepsilon$ is smaller than a threshold depending on $(P,\Lambda,\Lambda')$, it determines them up to a $C^k$ almost-isometry of defect $O(K\varepsilon)$. In both regimes the underlying manifold is recovered as the space of (almost) multiplicative characters of the window, the metric is recovered by dualizing $\Gamma$, and the weight is recovered as the logarithm of the ratio of $\mu$ to Riemannian volume.
 
-The class of pairs to which the theorem applies is large. Every closed Witten operator, including every Laplace–Beltrami operator, admits some finite embedding window; the packet is then defined, and reconstruction proceeds. The theorem is recognition, not construction: $P$ is given as Witten, and the packet is asked to recover the geometry that produced it. It is also not a spectral uniqueness theorem. Two isospectral Witten operators with different window products need not be isometric. Two packets for the same operator, at different cutoffs, produce isometric copies of the same pair.
+The class of pairs to which the theorem applies is large. Every closed Witten operator, including every Laplace–Beltrami operator, admits some finite embedding window; the packet is then defined, and reconstruction proceeds. The theorem is recognition, not construction: $P$ is given as Witten, and the packet is asked to recover the geometry that produced it. It is also not a spectral uniqueness theorem. Two isospectral Witten operators with different window products need not be isometric.
 
 A distinguished slice is the unweighted sphere. There one may take $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $\varepsilon=0$ already at $\Lambda'=2n+2$: products of linear coordinates on $S^n$ occupy only the constant slot and the quadratic harmonics. Theorems 1 and 2 then specialize to an exact recognition of the unit round sphere from that frame, and to a linear $C^0$ stability statement when the same frame is allowed small defects. Those two statements are compared with Obata’s theorem and with quantitative Obata theorems on the Ricci side; they are not Ricci theorems. They use a linear frame and its products, not a lower bound on Ricci curvature and a single first eigenfunction.
 
