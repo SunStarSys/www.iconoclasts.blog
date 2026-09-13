@@ -70,31 +70,290 @@ A recognition argument from an abstract $G$-package via evaluation in a finite-d
 
 \section{Introduction}
 \label{sec:intro}
-A Witten operator on a closed Riemannian manifold $(X,g)$ is the weighted Laplacian
-$$P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
-acting in $L^2(e^{-\alpha}\,d\mathrm{vol}_g)$. Its spectrum is discrete, nonnegative, and unbounded, with kernel the constant functions. The geometric data of the pair are the metric $g$ and the weight $\alpha$; equivalently, the Riemannian volume and the measure $\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Ordinary Laplace–Beltrami operators are the case $\alpha=0$.
-The spectrum alone does not determine $(g,\alpha)$. What does determine them, in the large, is the multiplication table of eigenfunctions
-$$\Phi(u,v,w)=\int_X uvw\,d\mu$$
-together with the list of eigenvalues. That is a global inverse-spectral statement: it consumes every eigenspace. The purpose of this article is a finite substitute. We fix two cutoffs $\Lambda\le\Lambda'<\infty$ and let
-$$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda)$$
-be the corresponding spectral window. Products of window functions need not lie in $\mathcal{V}$. We compare them to the slightly larger window $\mathcal{V}'$ of modes up to $\Lambda'$, and we write
-$$\varepsilon=\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\bigl\lVert(I-\Pi_{\Lambda'})(uv)\bigr\rVert_{L^2(\mu)}$$
-for the uniform tail of those products. For fixed $\Lambda$ one has $\varepsilon\to 0$ as $\Lambda'\to\infty$; the theory uses one finite pair $(\Lambda,\Lambda')$, not that limit. The exact subclass is $\varepsilon=0$ at a finite $\Lambda'$, which is an algebraic constraint on the window, not an asymptotic one.
-The visible packet of the window is
-$$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},\ \varepsilon,\ K\bigr),$$
-where $K$ is the constant in the weighted tail bound
-$$\sum_{\lambda>\Lambda'}\lambda^2\bigl\lvert\Phi(u,v,e_\lambda)\bigr\rvert^2
-\le K^2\,\varepsilon(u,v)^2\,\lVert u\rVert_2^2\lVert v\rVert_2^2.$$
-The cometric $\Gamma$ of $g$ is not an extra input. The Witten multiplication rule
-$$P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v)$$
-computes $\Gamma$ on $\mathcal{V}$ from $(P,\Phi)$, with an $L^2$ remainder at most $K\varepsilon$. Two nondegeneracy hypotheses close the packet: evaluation $X\to\mathcal{V}^\ast$ is a smooth embedding, and $\{du:u\in\mathcal{V}\}$ spans $T^*X$. No Weyl law is assumed, no potential is present, and no curvature bound is used.
-The main recognition theorem is that this packet determines $(X,g,\alpha)$. If $\varepsilon=0$, it determines them up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. If $\varepsilon$ is smaller than a threshold depending on $(P,\Lambda,\Lambda')$, it determines them up to a $C^k$ almost-isometry of defect $O(K\varepsilon)$. In both regimes the underlying manifold is recovered as the space of (almost) multiplicative characters of the window, the metric is recovered by dualizing $\Gamma$, and the weight is recovered as the logarithm of the ratio of $\mu$ to Riemannian volume.
-The class of pairs to which the theorem applies is large. Every closed Witten operator, including every Laplace–Beltrami operator, admits some finite embedding window; the packet is then defined, and reconstruction proceeds. The theorem is recognition, not construction: $P$ is given as Witten, and the packet is asked to recover the geometry that produced it. It is also not a spectral uniqueness theorem. Two isospectral Witten operators with different window products need not be isometric. Two packets for the same operator, at different cutoffs, produce isometric copies of the same pair.
-A distinguished slice is the unweighted sphere. There one may take $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $\varepsilon=0$ already at $\Lambda'=2n+2$: products of linear coordinates on $S^n$ occupy only the constant slot and the quadratic harmonics. The general theorem then specializes to an exact recognition of the unit round sphere from that frame, and to a linear $C^0$ stability statement when the same frame is allowed small defects. Those two statements are compared with Obata’s theorem and with quantitative Obata theorems on the Ricci side; they are not Ricci theorems. They use a linear frame and its products, not a lower bound on Ricci curvature and a single first eigenfunction.
-The analytic ingredients are elementary. The weighted tail bound is the one place where elliptic estimates enter, and they enter as a constant $K(P,\Lambda,\Lambda')$, not as a curvature comparison. Eigenfunction supremum bounds of Hörmander–Sogge type justify that such a $K$ exists on every closed Witten pair; they are not used as axioms. Weyl’s law describes how large a window eventually is, and is likewise unused.
-The article is organized as follows. Section 2 fixes the Witten category and the window packet. Section 3 extracts $\Gamma$ from the multiplication rule and records the constant $K$. Section 4 identifies points of $X$ with characters of the window and promotes a small tail to a $C^1$ persistence of that identification. Section 5 dualizes $\Gamma$ to a metric and reads $\alpha$ from the two measures. Section 6 states the recognition theorem, exact and approximate, with the isometry claim separated by the size of $\varepsilon$. Section 7 specializes to the unweighted first window on the sphere. Section 8 collects what the packet does not determine.
-Throughout, the governing principle is the same as in the global inverse problem: geometry sits in the multiplication table, not in the list of eigenvalues. The contribution here is that a finite, explicitly tailed piece of that table already reconstructs a Witten pair, and that the unit sphere is the minimal unweighted instance of the same mechanism.
+Let $(M,g)$ be a complete connected Riemannian manifold, $\alpha,V\in C^\infty(M)$, and
+$$P_{\alpha,V}u=-\Delta_g u+\langle\nabla\alpha,\nabla u\rangle+Vu$$
+on $C_c^\infty(M)$, acting in $L^2(M,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Assume $P_{\alpha,V}$ is essentially self-adjoint and for noncompact manifold $M$, is confining in the Agmon sense (i.e., its effective potential $$V_{\mathrm{eff}}:=V+\frac14\lvert\nabla\alpha\rvert_g^2-\frac12\Delta_g\alpha$$ is bounded from below and $V_{eff}(x)\to\infty$ as $x\to\infty$.) This (or just assuming $M$ compact) implies $P$ is bounded below with empty essential spectrum \cite{SA82}
+$$\sigma(P_{\alpha,V})=\sigma_{\mathrm{disc}}(P_{\alpha,V})=\{\lambda_0<\lambda_1\le\lambda_2\le\cdots\}\to+\infty.$$
+Write
+$$\mathcal{V}_M:=\bigoplus_{n\ge0}\ker(P_{\alpha,V}-\lambda_n)\subset L^2(M,\mu)\cap C^\infty(M),$$
+and assume $\mathcal{V}_M\subset L^3(M,\mu).$ Hölder then gives a bounded symmetric trilinear form
+$$\Phi_\mu:\mathcal{V}_M\times\mathcal{V}_M\times\mathcal{V}_M\to\mathbb{C},
+\qquad
+\Phi_\mu(u,v,w)=\int_M uvw\,d\mu.$$
+The same data $(N,h,\beta,W)$ produce $Q=P_{\beta,W}$, $\nu=e^{-\beta}\mathrm{vol}_h$, $\mathcal{V}_N\subset L^3(N,\nu)$, and $\Phi_\nu$.
+A linear map $U:\mathcal{V}_M\to\mathcal{V}_N$ is a \textbf{spectral identification} if it is unitary for the $L^2$ inner products and
+$$U\bigl(\ker(P_{\alpha,V}-\lambda_n)\bigr)=\ker(Q-\lambda_n)\qquad\text{for every }n.$$
 
+This paper extends the closed-manifold comparison of \cite{JS24} to discrete $P_{\alpha,V}$ on complete manifolds.
+\subsection{Results}
+\label{subsec:res}
+
+\begin{theorem}
+\label{thm}
+Suppose $P_{\alpha,V}$ and $P_{\beta,W}$ are isospectral and $U:\mathcal{V}_M\to\mathcal{V}_N$ is a spectral identification with
+$$\Phi_\nu(Uu,Uv,Uw)=\Phi_\mu(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{V}_M.$$
+Then there is a diffeomorphism $F:N\to M$ such that
+$$F^*g=h,\qquad \beta=\alpha\circ F+c,\qquad W=V\circ F$$
+for a constant $c\in\mathbb{R}$.
+\end{theorem}
+
+Equivalently, in basis coordinates we have the following
+
+\begin{corollary}
+\label{coro}
+The same conclusion holds if there exist $\mu$-orthonormal and $\nu$-orthonormal eigenbases $\{e^i\}$ and $\{f^i\}$, ordered by nondecreasing eigenvalues, with
+$$M^{i,j,k} := \int_M e^ie^j\bar e^k\,d\mu=\int_N f^if^j\bar f^k\,d\nu\qquad\text{for all }i,j,k.$$
+\end{corollary}
+
+\begin{remark}
+\label{rmk}
+Corollary 2 is the matrix form of Theorem 1. Given such bases, the map $Ue^i=f^i$ yields a spectral identification via its linearity, and
+$$M^{i,j,k}=\Phi_\mu(e^i,e^j,\bar e^k) = \Phi_\nu(f^i, f^j, \bar f^k).$$
+Conversely, any spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$ becomes Corollary 2 after choosing orthonormal bases of each eigenspace and transporting them by $U$. The residual freedom in a spectral identification is $\prod_n\mathrm{U}(m_n)$; intertwining $\Phi$ is the condition that cuts that product down to an isometry of $(M,g,\alpha,V)$ with $(N,h,\beta,W)$.
+\end{remark}
+
+\begin{remark}
+The spectrum of $P_{\alpha,V}$ does not determine $(g,\alpha,V)$. On $\mathbb{R}$ this is the McKean–Trubowitz class of the oscillator \cite{MT82}. On closed manifolds there are isospectral potentials that are not isometric \cite{GS03}. Theorem 1 is the statement that the missing invariant is the multiplication table $\Phi_\mu$.
+\end{remark}
+
+\begin{corollary}
+\label{coro-g}
+Suppose compact $G$ acts by automorphisms of both operators and of both products, and $U$ is a $G$-equivariant spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$. Then the diffeomorphism $F$ of Theorem 1 is $G$-equivariant.
+\end{corollary}
+
+\section{Proofs}
+\begin{proof}
+Let $U:\mathcal{V}_M\to\mathcal{V}_N$ be a spectral identification intertwining $\Phi_\mu$ and $\Phi_\nu$ (of course, $U$ naturally extends to a unitary isometry on $L^2$). Choose $\mu$-orthonormal and $\nu$-orthonormal real-valued eigenbases $\{e^i\}$ and $\{f^i\}$ with $Ue^i=f^i$, ordered by nondecreasing eigenvalues. Hölder and $\mathcal{V}_M\subset L^3(\mu)$ make
+$$M^{i,j,k}:=\Phi_\mu(e^i,e^j,e^k)=\int_M e^ie^j e^k\,d\mu$$
+finite, and likewise on $N$.
+
+Finite spectral projectors of $P_{\alpha,V}$ send $C_c^\infty(M)$ into $\mathcal{V}_M$. Essential self-adjointness and smooth coefficients put $C_c^\infty\subset\bigcap_k\mathrm{Dom}(P_{\alpha,V}^k)$, so those projectors converge in $C^\infty_{\mathrm{loc}}$. Thus $\mathcal{V}_M$ is dense in $C^1$ near every $p\in M$. If $\mathrm{span}\{de^i(p):i\ge0\}\ne T_p^*M$, some $0\neq v\in T_pM$ would annihilate every $d\phi$ for $\phi\in\mathcal{V}_M$, and a $C^1$-limit would annihilate every element of $C_c^\infty$, which is absurd. So some $d$-tuple satisfies
+$$\det\bigl(de^{i_a}\otimes de^{i_b}(p)\bigr)\ne0.$$
+
+The joint evaluation
+$$\mathrm{Ev}_M:M\to\mathbb{R}^{\mathbb{N}},\qquad p\mapsto\bigl(e^n(p)\bigr)_{n\ge0}$$
+is therefore an immersion. It is injective because $\mathcal{V}_M$ separates points ($C^0_{\mathrm{loc}}$ density; on a connected manifold the ground state of $P_{\alpha,V}$ may be taken strictly positive). So $\mathrm{Ev}_M$ is an embedding onto its image. The same holds for $\mathrm{Ev}_N$ and $\mathcal{V}_N$.
+
+\begin{claim}
+The images of the joint evaluation maps coincide in $\mathbb{R}^{\mathbb{N}}$.
+\end{claim}
+
+Let $\mathcal{A}_M$ be the algebra generated by $\{e^i\}$ under pointwise product. The generators of $\mathcal{A}_M$ need not lie in $C_0(M)$. They lie in $C(M)$. The algebra $\mathcal{A}_M$ separates points and vanishes nowhere, so Stone–Weierstrass \cite{Sto48} (as naturally extended to the compact-open topology) gives density of $\mathcal{A}_M$ in $C(M)$, and likewise for $\mathcal{A}_N$ in $C(N)$. Matching structure constants $M^{i,j,k}$ convert $U|_{\mathcal{A}_M}$ into an algebra isomorphism $\Psi:\mathcal{A}_M\to\mathcal{A}_N$ \cite{JS24}.
+
+Elements of $\mathcal{A}_M$ are finite sums of finite products of the $e^i$. Those products expand as $\sum_k M^{i,j,k}e^k$. If $M$ is compact, the expansion of any product of eigenfunctions converges in $C^\infty$. If $M$ is complete and $P_{\alpha,V}$ is confining in the sense of Agmon, every finite product of eigenfunctions lies in $\bigcap_s H^s_{\mathrm{loc}}\cap L^2(w\mu)$ for a weight $w\to\infty$, so the same expansion converges in $C^\infty_{\mathrm{loc}}$. Hence $\Psi$ is compact-open continuous on $\mathcal{A}_M$ and extends to a compact-open algebra isomorphism $$\Psi:C(M)\xrightarrow{\sim}C(N).$$ The compact-open characters of $C(M)$ are the evaluations $\mathrm{ev}_p$, $p\in M$ \cite{GJ60}, and likewise for $N$. For each $q\in N$,$$\chi_q=\mathrm{ev}_q\circ\Psi:C(M)\to\mathbb{R}$$is a compact-open continuous character, hence $\chi_q=\mathrm{ev}_p$ for a unique $p\in M$. Set $F(q)=p$. Then $e^n\circ F=f^n$ for all $n$, and $F$ is a homeomorphism $N\to M$. The existence of $F$ establishes the claim.
+
+Now fix $q\in N$ and $p=F(q)$. Some $d$-tuple $e^{i_1},\ldots,e^{i_d}$ has independent differentials at $p$, so$$x=(e^{i_1},\ldots,e^{i_d})$$is a $C^\infty$ chart on a neighborhood of $p$. On a neighborhood of $q$ set$$y=(f^{i_1},\ldots,f^{i_d})=(e^{i_1}\circ F,\ldots,e^{i_d}\circ F)=x\circ F.$$Thus $F=x^{-1}\circ y$ wherever $x$ and $y$ are defined. In particular $y$ is a chart on $N$, and in the charts $(x,y)$ the map $F$ is the identity of $\mathbb{R}^d$. Hence $F$ is a $C^\infty$ diffeomorphism. (The same indices work on both sides because they are the coordinate functions of one map.)
+
+By construction
+$$Q(u\circ F)=(P_{\alpha,V}u)\circ F,\qquad u\in\mathcal{V}_M.$$
+Both sides are second-order scalar differential operators. For $\phi\in\mathcal{V}_M$ the product $\phi^2$ lies in the $C^\infty$ algebra generated by $\mathcal{V}_M$, and
+$$P(\phi^2)-2\phi\,P\phi=-2\,d\phi\cdot d\phi - V\phi^2.$$
+The principal part is the cometric. Since the differentials $de^i$ span $T^*$ at every point,
+$$F^*g=h.$$
+The first-order symbols are the drifts $\nabla\alpha$ and $\nabla\beta$, so $d\beta=F^*d\alpha$ and $\beta=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$. The order-zero terms then give $W=V\circ F$.
+
+This proves Theorem~\ref{thm}. Corollary~\ref{coro} is the same statement in an eigenbasis: $Ue^i=f^i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$, as in Remark 3.
+
+\begin{subproof}[Proof of Corollary~\ref{coro-g}]
+The evaluation embeddings $\mathrm{Ev}_M$ and $\mathrm{Ev}_N$ are $G$-maps by the assumption on the actions. $U$ intertwines them, so $F=\mathrm{Ev}_N^{-1}\circ U^*\circ\mathrm{Ev}_M$ is a $G$-map. The rest is Theorem 1.
+\end{subproof}
+
+\begin{remark}
+The same construction applies to compact Riemannian orbifolds: $F$ is a homeomorphism of underlying spaces, an isometry of $P_{\alpha,V}$-data on the regular set, and an isomorphism of local isotropy at singular points. The evaluation map drops rank exactly on the singular strata.  Anshul Adve established a similar uniqueness result for unit tangent bundles of compact hyperbolic 2-orbifolds \cite{AA25}.
+\end{remark}
+\begin{remark}
+If $\overline{M},\overline{N}$ are compact with smooth boundary and $P,Q$ are Dirichlet realizations, the same argument with $C(\overline{M})$ in place of $C_0(M)$ yields a diffeomorphism of closed manifolds with $F(\partial N)=\partial M$, $F^*g=h$, $\beta=\alpha\circ F+c$, $W=V\circ F$. For Neumann or Robin, $F$ is still a diffeomorphism of closed manifolds; preservation of the boundary condition follows from the isometry of the interior metric. See \cite{GWW92} for the original study on isospectral, non-isometric drums.
+\end{remark}
+\begin{remark}
+The same reconstruction applies to graphs, with the amount of analysis matching the function space.
+
+On a finite weighted graph the eigenfunctions of a Schr\"odinger matrix span \(\mathbb{R}^V\). The array \(M^{i,j,k}\) is the multiplication table of that algebra, characters are vertices, and \(P(\phi^2)-2\phi P\phi\) recovers the edge weights  \cite{GS01}. Spectrum alone does not: Sunada graphs \cite{Sun85} and isospectral trees are distinguished by \(\Phi\).
+
+A compact quantum graph is a one-dimensional Riemannian space with singularities. Discrete spectrum, \(\mathcal{V}\subset L^3\), and Claim~4.1 give a homeomorphism of the underlying metric graphs. The principal-symbol identity on each edge recovers lengths; vertex conditions follow from the isometry as in Remark~6. Combinatorial type is not enough: equal graphs with different length vectors are separated by \(\Phi\).
+
+An infinite locally finite graph with \(\sigma_{\mathrm{ess}}(P)=\emptyset\) is formally in the same class. Compact-open Stone--Weierstrass on the discrete space \(V\) produces a bijection of vertices once the generated algebra separates points and the ground state vanishes nowhere (Perron--Frobenius on a connected graph). The same quadratic identity recovers weights. Two hypotheses are not free: eigenfunctions must lie in \(\ell^3(\mu)\), which is an Agmon-type decay statement, and they must separate vertices, which fails if a nontrivial automorphism commutes with \(P\). An infinite quantum graph with discrete spectrum \cite{BK13} is the hybrid of the last two paragraphs.
+\end{remark}
+\end{proof}
+
+\section{Example}
+
+On $M=\mathbb{R}$ with the Euclidean metric, take
+$$H=-\frac{d^2}{dx^2}+x^2.$$
+The potential $V(x)=x^2$ is smooth, bounded below, and $V(x)\to+\infty$ as $|x|\to\infty$. Hence $\sigma_{\mathrm{ess}}(H)=\emptyset$. The spectrum is
+$$\lambda_n=2n+1,\qquad n=0,1,2,\dots$$
+(each of multiplicity one). The corresponding $L^2(\mathbb{R})$-normalized eigenfunctions are the Hermite functions
+$$e^n(x)=\bigl(2^n n!\,\sqrt{\pi}\bigr)^{-1/2}H_n(x)\,e^{-x^2/2},$$
+where $H_n$ are the physicist’s Hermite polynomials. They form an orthonormal basis of $L^2(\mathbb{R})$, lie in the Schwartz class $\mathcal{S}(\mathbb{R})\subset C_0(\mathbb{R})$, and satisfy the Agmon decay \cite{SA82} that makes every pointwise product $e^ie^j$ square-integrable.
+\subsection{Triple Products}
+Because the eigenfunctions are real,
+$$M^{i,j,k}=\langle e^ie^j,e^k\rangle=\int_{-\infty}^{\infty}e^i(x)e^j(x)e^k(x)\,dx.$$
+These integrals vanish unless $i+j+k$ is even (parity) and the three indices satisfy a triangle-type constraint coming from the linearization of Hermite polynomials. The linearization formula
+$$H_n(x)H_m(x)=\sum_{r=0}^{\min(n,m)}\binom{n}{r}\binom{m}{r}r!\,2^r\,H_{n+m-2r}(x)$$
+together with the Gaussian weight converts, after normalizing, into an explicit formula for $M^{i,j,k}$. Equivalently, the generating-function identity
+$$\int_{-\infty}^{\infty}e^{-x^2}H_a(x)H_b(x)H_c(x)\,dx
+=\sqrt{\pi}\,2^N\frac{a!\,b!\,c!}{(N-a)!(N-b)!(N-c)!}$$
+(when $a+b+c=2N$ is even and each factorial in the denominator is defined and non-negative, and $0$ otherwise) yields $M^{i,j,k}$ after inserting the normalization constants of the $e^n$. In particular:
+
+$M^{n,n,0}=\int {e^n}^2e^0\,dx>0$ (the ground state $e^0=\pi^{-1/4}e^{-x^2/2}$ is a strictly positive Gaussian);
+the map $e^ie^j=\sum_k M^{i,j,k}e^k$ is the exact multiplication rule in the Hermite basis.
+
+So the structure constants of pointwise multiplication on the dense subspace $\mathrm{span}\{e^n\}\subset C_0(\mathbb{R})$ are known in closed form.
+
+\subsection{What the Theorem Says}
+
+Suppose $(\mathbb{R},g,W)$ is another complete Riemannian line (so $g=e^{2\phi(x)}\,dx^2$ in some coordinate) with a smooth confining potential $W$, and suppose its Schrödinger operator $-\Delta_g+W$ is isospectral to $H$ and admits an eigenbasis $\{f^n\}$ with the same triple products
+$$\langle f^i f^j,f^k\rangle=M^{i,j,k}.$$
+The discrete-spectrum argument then produces a diffeomorphism $F:\mathbb{R}\to\mathbb{R}$ such that
+$$F^*g=dx^2,\qquad W\circ F=x^2.$$
+
+Isospectrality alone does not give this. McKean–Trubowitz \cite{MT82} construct an infinite-dimensional family of potentials $q$ on $\mathbb{R}$ with
+$$\sigma\Bigl(-\frac{d^2}{dx^2}+q\Bigr)=\sigma(H)=\{2n+1\}_{n\ge0}$$
+(up to their normalization of $H$). The parameters are the norming constants of the eigenfunctions; the even potential $x^2$ is the unique even point of the class. Thus $\{2n+1\}$ does not determine $V(x)=x^2$. Matching the table $M^{i,j,k}$ does: it encodes the multiplication of the eigenfunctions, which is strictly more than the spectrum, and Theorem 1 converts that table into $F^*g=dx^2$ and $W\circ F=x^2$.
+Because every eigenspace is one-dimensional, the singular-value packaging collapses to the absolute values $|M^{i,j,k}|$ together with a consistent choice of signs (the “diagonal litmus” of the compact paper: the products $M^{i,i,k}$ determine the even part of the algebra and fix most signs).
+
+\subsection{Explicit Formula}
+
+$$M^{i,j,k}=\langle e^ie^j,e^k\rangle
+=\int_{\mathbb{R}}e^i(x)e^j(x)e^k(x)\,dx
+=N_i N_j N_k\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\,e^{-3x^2/2}\,dx,$$
+where $N_n=(2^n n!\sqrt{\pi})^{-1/2}$.
+
+$M^{i,j,k}=0$ unless both of the following hold -- parity: $i+j+k$ is even; triangle: $|i-j|\le k\le i+j$ (and cyclic permutations).
+
+These are the oscillator analogues of the Clebsch–Gordan support conditions.
+
+Change variables $x=\sqrt{2/3}\,y$. Then
+$$\int_{\mathbb{R}}H_i(x)H_j(x)H_k(x)\,e^{-3x^2/2}\,dx
+=\sqrt{\frac{2}{3}}\int_{\mathbb{R}}H_i\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)
+H_j\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)
+H_k\Bigl(\sqrt{\tfrac{2}{3}}\,y\Bigr)\,e^{-y^2}\,dy.$$
+Each scaled polynomial expands by the finite identity
+$$H_n(\gamma y)=\sum_{\ell=0}^{\lfloor n/2\rfloor}\gamma^{n-2\ell}(\gamma^2-1)^\ell\binom{n}{2\ell}\frac{(2\ell)!}{\ell!}\,H_{n-2\ell}(y),$$
+with $\gamma=\sqrt{2/3}$. The product of the three expansions is a finite linear combination of products $H_a H_b H_c$. Titchmarsh’s formula \cite{T48} then evaluates every remaining integral:
+$$\int_{\mathbb{R}}H_a H_b H_c\,e^{-y^2}\,dy
+=
+\begin{cases}
+\dfrac{\sqrt{\pi}\,2^{s}\,a!\,b!\,c!}{(s-a)!(s-b)!(s-c)!}
+& \text{if }a+b+c=2s\text{ is even and }s\ge a,b,c,\\
+0 & \text{otherwise.}
+\end{cases}$$
+The result is a finite triple sum (at most $O(ijk)$ terms, typically far fewer). Combining the prefactors $N_i N_j N_k\sqrt{2/3}$ gives $M^{i,j,k}$ exactly.
+
+Equivalently, the product of two normalized functions expands in a scaled Hermite basis
+$$e^i(x)e^j(x)=\sum_{r=0}^{\lfloor(i+j)/2\rfloor}c_{r;ij}\,e^{i+j-2r}(\sqrt{2}\,x),$$
+with explicit coefficients
+$$c_{r;ij}
+=\frac{(-1)^r}{\sqrt{2^{i+j-2r+1}\pi}}
+\sqrt{\frac{(i+j-2r)!}{i!\,j!}}
+\binom{i}{r}\binom{j}{r}r!\,2^{r}$$
+(up to the conventional placement of the $\sqrt{2}$ in the argument; cf. \cite{K16}). Then
+$$M^{i,j,k}=\sum_{r}c_{r;ij}\int_{\mathbb{R}}e^{i+j-2r}(\sqrt{2}\,x)\,e^k(x)\,dx,$$
+and each scaled overlap is a ${}_2F_1$ (or terminates as a short hypergeometric sum).
+
+\subsection{Harmonic Oscillator to Ornstein-Uhlenbeck}
+
+The oscillator $H=-d^2/dx^2+x^2$ is the Schrödinger case $\alpha=0$, $V(x)=x^2$ of $P_{\alpha,V}$, with unweighted measure $dx$ and triple products $M^{i,j,k}=\int e^ie^je^k\,dx$. Ground-state conjugation \cite{ReedSimonIV} by $e^0(x)=\pi^{-1/4}e^{-x^2/2}$ produces the Witten operator \cite{Wit82}
+$$L={e^0}^{-1}(H-\lambda_0)(e^0\,\cdot)=-\frac{d^2}{dx^2}+2x\frac{d}{dx}$$
+on $L^2(\mathbb{R},{e^0}^2\,dx)$. This is $P_{\alpha,0}$ for $\alpha=x^2+\mathrm{const}$: the generator of the Ornstein–Uhlenbeck diffusion. The conjugated basis $f^n=e^n/e^0$ is orthonormal in $L^2({e^0}^2\,dx)$, and the two arrays are related by
+
+$$W^{i,j,k}:=\int_{\mathbb{R}}f^if^jf^k\,{e^0}^2\,dx=\int_{\mathbb{R}}\frac{e^ie^je^k}{e^0}\,dx.$$
+
+Thus $M$ is the multiplication table of Theorem 1 for $H$, and $W$ is the same table for $L$. Matching either determines the line, the Euclidean metric, and the data $(V,\alpha)=(x^2,x^2)+\mathrm{const}$. The explicit values follow.
+
+Titchmarsh \cite{T48} then collapses to
+$$W^{i,j,k}
+=
+\frac{\sqrt{i!\,j!\,k!}}{(s-i)!(s-j)!(s-k)!}
+\quad\text{when }i+j+k=2s\text{ and }s\ge i,j,k,$$
+and $0$ otherwise. In particular $W^{0,n,n}=1$, which is orthonormality of $\{e^n\}$ in $L^2(dx)$.
+
+As these structure constants are non-negative on a multiplicity-1 spectrum, they are the associated singular-value invariants \cite{JS24} for $L$.
+
+
+For the $n$-dimensional isotropic oscillator and its Ornstein–Uhlenbeck conjugate, the eigenspace multiplications are the unique \(\mathrm{U}(n)\)-intertwiners \(S^k\otimes S^\ell\to S^m\). Their singular-value lists therefore determine the structure constants up to the compact symmetry, and Theorem 1 applies. The singular-value conjecture holds for this pair; the argument uses the hidden \(\mathrm{U}(n)\) and does not extend to a general \(P_{\alpha,V}\).
+
+
+\section{Admissible G-Actions Towards a Converse}
+
+Suppose a compact group $G$ acts on the algebraic span $A_0$ of the eigenspaces of $P$ by automorphisms of the product and of $P$. Write $\mathcal{H}_\alpha$ for the energy spaces, viewed as finite-dimensional unitary $G$-modules, and write
+$$m_{\alpha\beta}^\gamma:\mathcal{H}_\alpha\otimes\mathcal{H}_\beta\to\mathcal{H}_\gamma$$
+for the projections of pointwise multiplication. The following axioms are then meaningful on the abstract package $\bigl(G,\{\mathcal{H}_\alpha\},\{m_{\alpha\beta}^\gamma\},\{\lambda(\alpha)\}\bigr)$.
+\begin{description}
+\item[(G1)] The product is commutative, associative, and unital.
+\item[(G2)] Each $m_{\alpha\beta}^\gamma$ is a $G$-intertwiner.
+\item[(G3)] Let $P$ act by $Pe=\lambda(\alpha)e$ on $\mathcal{H}_\alpha$. Define
+$$Q(f,h):=\tfrac12\bigl(\lambda(f)+\lambda(h)-P\bigr)(fh)$$
+on eigenfunctions and extend bilinearly. The Leibniz defect
+$$D(f,g,h):=Q(fg,h)-f\,Q(g,h)-g\,Q(f,h)$$
+is of the form $-\tfrac12 M_V(fgh)$ for a unique multiplier $M_V$. Set the symmetric bi-derivation (cometric)
+$$\Gamma(f,h)=Q(f,h)-\tfrac12 M_V(fh).$$
+
+$Q$ is defined on $\mathscr{A}$, the algebra generated from $A_0$. It splits as $\Gamma+\frac12 M_V$ with $\Gamma$ a biderivation of $\mathscr{A}$ and $M_V$ a multiplier of $\mathscr{A}$. After (G6), $M_V$ is multiplication by a continuous function $V$ on $X$.
+
+\item[(G4)] No irreducibility hypothesis. Each $\mathcal{H}_\alpha$ is an eigenspace of $P$, hence a finite-dimensional unitary $G$-module, possibly reducible. Write
+$$\mathcal{H}_\alpha=\bigoplus_\rho m_{\alpha\rho}\,\rho$$
+for its isotypic decomposition. The product maps $m^\gamma_{\alpha\beta}$ are $G$-equivariant by (G2) and may have several independent blocks, one for each triple of isotypes. Fusion multiplicities are not assumed to be $0$ or $1$.
+\item[(G5)] $\Gamma$ is positive: $\langle\Gamma(f,f),e^0\rangle\ge 0$, with equality precisely on functions constant along the eventual $G$-orbits.
+\item[(G6)] A $G$-invariant completion $A$ of $\mathscr A$ is a commutative $G$-algebra whose Gelfand space $X$ is locally compact Hausdorff and carries a continuous $G$-action.
+\item[(G7)] There exists a finite-dimensional subrepresentation $\mathscr V\subset A_0$ such that evaluation $X\to \mathscr V^*$ is a $G$-equivariant embedding onto a smooth $G$-stable submanifold.
+\item[(G8)] On that image the matrix $g^{ab}=\Gamma(x^a,x^b)$ has rank $\dim X$, and the generator of $\Gamma$ reproduces $P$.
+\end{description}
+If (G1)–(G8) hold, then $X$ is a smooth Riemannian $G$-manifold, $P$ is a $G$-invariant Schrödinger (or Witten) operator on $X$, and the maps $m_{\alpha\beta}^\gamma$ are the geometric triple products of a $G$-adapted eigenbasis. Uniqueness of the geometric data is Theorem 1: an intertwiner of $\Phi$ that preserves the energy decomposition is implemented by an isometry of $(X,g,\alpha,V)$. The axioms (G1)–(G8) do not by themselves cut the unitary freedom on a reducible eigenspace; $\Phi$ does.
+
+The isotropic oscillator (and its ground-state transform, the Ornstein–Uhlenbeck operator) satisfies (G1)–(G8) with $G=\mathrm{SO}(n)$ with $\mathscr V=\mathcal{H}_1\simeq\mathbb{R}^n$, and with $\{c_{\alpha\beta\gamma}\}$ the Hermite–Gaunt coefficients for the isotropic blocks. In that example (G7) is the ordinary evaluation of the linear Hermite modes.
+
+\begin{remark}{On (G7).} (G1)–(G6) and (G8) construct an algebra, a Dirichlet form, and a Gelfand space of characters. They do not by themselves produce a smooth embedding of that space into a finite-dimensional representation. The missing step is (G7). On a compact homogeneous space $G/K$ it is Peter–Weyl. On the oscillator it is the identification of the character space with $\mathbb{R}^n$ via $\mathcal{H}_1$. Lemma 11 records necessity of (G7) for recognition by evaluation; sufficiency of (G1)–(G6) and (G8) for (G7) is not claimed.
+\end{remark}
+
+\begin{remark}
+Any confining radial $V$ gives an admissible $\mathrm{SO}(n)$-action satisfying (G1)–(G3), (G5), (G6), (G8). For $n=3$ the $\mathrm{SO}(3)$-isotypic decomposition of each energy space is multiplicity-free. The coordinate axiom (G7) holds when the first dipole profile $R(r)$ is a radial chart; the oscillator is the model case.
+\end{remark}
+
+\begin{lemma}[Necessity of G7 for This Method]
+Let $(A_0,\mathscr{A},A,P,\Gamma,G)$ be a package as in (G1)–(G6): $A_0$ is the linear span of the eigenspaces of $P$, $\mathscr{A}$ the algebra they generate, $A$ a $G$-invariant completion with Gelfand space $X$, and $\Gamma$ a $G$-invariant Dirichlet form on $\mathscr{A}$. Suppose there exist a finite-dimensional $G$-subrepresentation $\mathscr{V}\subset A_0$ and a $G$-equivariant map
+$$\iota:X\to\mathscr{V}^*$$
+which is a smooth embedding onto a $G$-stable submanifold, and that $\Gamma$ pulled back to $\iota(X)$ is a Riemannian metric of dimension $\dim X$. Then $\mathscr{V}$ is a finite eigen-embedding of $X$: it is contained in a finite sum of eigenspaces, evaluation in $\mathscr{V}$ separates points of $X$ and is an immersion, and $X$ is $G$-equivariantly diffeomorphic to its image in $\mathscr{V}^*$. Conversely, if no finite-dimensional $G$-invariant subspace of $A_0$ embeds $X$, then no recognition argument that realizes $X$ by evaluation in a finite $G$-module inside the eigenalgebra can produce a smooth $G$-manifold.
+\end{lemma}
+\begin{proof}
+ By definition $A_0=\bigoplus_n\ker(P-\lambda_n)$ (algebraic direct sum). Any finite-dimensional subspace of $A_0$ meets only finitely many summands, so
+$$\mathscr{V}\subset\bigoplus_{n\in F}\ker(P-\lambda_n)$$
+for a finite set $F$ of eigenvalues. Thus $\mathscr{V}$ is a finite sum of pieces of eigenspaces. It is $G$-invariant by hypothesis, so it is a finite-dimensional $G$-submodule of the eigenalgebra.
+The map $\iota$ is evaluation: for $x\in X$ and $v\in\mathscr{V}$,
+$$\iota(x)(v)=\hat v(x),$$
+where $\hat v$ is the Gelfand transform (G6). If $\iota(x)=\iota(y)$, then every $v\in\mathscr{V}$ takes the same value at $x$ and $y$. Because $\iota$ is injective, $\mathscr{V}$ separates points of $X$. Because $\iota$ is an immersion, the differentials $d\hat v(x)$, $v\in\mathscr{V}$, span $T_x^*X$. That is the definition of a finite eigen-embedding.
+The image $\iota(X)$ is a smooth $G$-stable embedded submanifold of $\mathscr{V}^*$ by hypothesis, and $\iota$ is a $G$-equivariant diffeomorphism onto that image. Pulling $\Gamma$ back along $\iota$ gives a Riemannian metric of rank $\dim X$ (G8). This is a smooth Riemannian $G$-manifold realized inside a finite eigen-representation.
+
+For the converse: any argument that builds a smooth structure on the Gelfand space by embedding it in a finite-dimensional $G$-module $W\subset A_0$ is the construction just named, with $\mathscr{V}=W$. If no such $W$ exists, that construction cannot run. Other converses (crossing for a noncompact group, a Dirac spectral triple, inversion of a spherical transform on a known $G/K$) are not excluded; they do not evaluate $X$ in a finite submodule of the eigenalgebra of $P$.
+\end{proof}
+
+\begin{remark}[Low Energy Certification for (G7)]
+If G7 holds for a shared module $\mathscr V$ sitting in energies $\le\Lambda$, then matching the spectrum and $\Phi$ with two legs in $\mathscr V$ is equivalent to matching the full package, and the reconstructed geometries are isometric.
+\end{remark}
+
+\subsection{Axiomatic Reconstruction of the Isotropic Oscillator}
+Assume $G=\mathrm{SO}(n)$, that $\mathscr{V}$ is the defining representation, and that (G1)–(G8) hold. Then $X\simeq\mathbb{R}^n$ with the Euclidean metric and $P$ is the isotropic oscillator, up to a constant shift.
+
+\begin{remark}The potential is \textbf{not assumed quadratic}: $\mathrm{SO}(n)$-invariance and the eigen-equation on the defining representation force $\alpha\propto r^2$, hence $V_{\mathrm{eff}}=\lvert x\rvert^2+\mathrm{const}$.
+\end{remark}
+
+By (G6) and (G7) the evaluation map $\iota:X\to\mathscr{V}^*\simeq\mathbb{R}^n$ is a $G$-equivariant embedding onto a smooth $\mathrm{SO}(n)$-stable submanifold. The defining action of $\mathrm{SO}(n)$ on $\mathbb{R}^n$ and completeness plus positivity of $\Gamma$ force the image to be all of $\mathbb{R}^n$. Thus $X\simeq\mathbb{R}^n$, and an orthonormal basis of $\mathscr{V}$ may be read as linear coordinates $x_1,\ldots,x_n$.
+By (G8) the matrix $g^{ab}=\Gamma(x_a,x_b)$ has rank $n$. $\mathrm{SO}(n)$-invariance implies $g^{ab}=\psi(r)\delta^{ab}$. Applying (G3) to the linear functions shows that $\psi$ is constant. Rescaling gives $g_{ab}=\delta_{ab}$.
+Let $e^0$ be the unique (up to scale) $G$-invariant ground state, strictly positive by (G5). Ground-state conjugation by $e^0$ puts $P$ in Witten form $L=-\Delta+\langle\nabla\alpha,\nabla\cdot\rangle$ on $L^2(e^{-\alpha}\,d\mathrm{vol})$, with $\alpha=-2\log e^0$ up to a constant. In this gauge (G3) has $V=0$, the coordinate functions remain an eigenbasis of $\mathscr{V}$, and
+$$L x_a=\lambda_1 x_a.$$
+
+On Euclidean $\mathbb{R}^n$,
+$$L x_a=-\Delta x_a+\langle\nabla\alpha,\nabla x_a\rangle=\langle\nabla\alpha,\partial_a\rangle,$$
+since $\Delta x_a=0$. Invariance forces $\alpha=\alpha(r)$ with $r=\lvert x\rvert$, so
+$$\nabla\alpha=\alpha'(r)\,\frac{x}{r},\qquad
+\langle\nabla\alpha,\partial_a\rangle=\alpha'(r)\,\frac{x_a}{r}.$$
+The eigen-equation $L x_a=\lambda_1 x_a$ is therefore
+$$\alpha'(r)\,\frac{x_a}{r}=\lambda_1 x_a$$
+at every $x\neq 0$. Hence $\alpha'(r)=\lambda_1 r$, and $\alpha=\frac12\lambda_1 r^2+c$.
+The effective potential is then
+$$V_{\mathrm{eff}}=\frac14\lvert\nabla\alpha\rvert^2-\frac12\Delta\alpha=\frac14\lambda_1^2 r^2-\frac n2\lambda_1.$$
+
+Rescaling so that $\lambda_1=2$ yields $V_{\mathrm{eff}}=\lvert x\rvert^2-n$. Translating back to the Schrödinger picture gives $V=\lvert x\rvert^2$ up to a constant. The resulting spectrum $\{2N+n\}_{N\ge 0}$ must coincide with the labels $\{\lambda(\alpha)\}$ of the package.
+The hidden group $\mathrm{U}(n)$ is not used. It makes fusion multiplicity-free and identifies the reduced elements $c_{NMK}$, but it does not act by diffeomorphisms of $\mathbb{R}^n$ and is not the group in (G7).
 
 \doclicenseThis
 \printbibliography
