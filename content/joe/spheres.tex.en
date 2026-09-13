@@ -144,9 +144,9 @@ $$P=P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
 act in $L^2(X,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Assume $P$ is essentially self-adjoint, with discrete spectrum
 $$0=\lambda_0<\lambda_1\le\lambda_2\le\cdots\to+\infty$$
 and $\ker P=\operatorname{span}\{1\}$. The principal symbol of $P$ is the cometric $\Gamma$ of $g$. For all smooth $u,v$,
-$$\begin{equation}
+\begin{equation}
 P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v).\tag{A1}
-\end{equation}$$
+\end{equation}
 Fix cutoffs $\Lambda\le\Lambda'<\infty$. Write
 $$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda),\qquad
 \mathcal{V}'=\bigoplus_{\lambda\le\Lambda'}\ker(P-\lambda),$$
