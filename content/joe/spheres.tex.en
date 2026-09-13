@@ -288,7 +288,7 @@ on $\operatorname{span}\{du_a\}$, and $g$ is the inverse matrix. Independence of
 \end{proof}
 
 \begin{lemma}
-Let $g$ be the metric of Lemma 12 and let $\mu$ be the measure determined by
+Let $g$ be the metric of Lemma 13 and let $\mu$ be the measure determined by
 $$\int uv\,d\mu=\Phi(1,u,v),\qquad u,v\in\mathcal{V},$$
 extended by continuity to $L^2(\mu)$. Then $\mu$ is a smooth positive multiple of $\mathrm{vol}_g$. The function
 $$\alpha=-\log\frac{d\mu}{d\mathrm{vol}_g}$$
@@ -299,14 +299,14 @@ $$\bigl\lVert\alpha_\Sigma\circ\iota-\alpha-c\bigr\rVert_{C^k}
 \end{lemma}
 
 \begin{proof}
- By the standing category, $P$ is already the Witten operator of some pair $(g_0,\alpha_0)$. Lemma 12 identifies $g=g_0$, because both metrics have the same principal symbol. The inner product that makes $P$ self-adjoint is $\mu=e^{-\alpha_0}\mathrm{vol}_{g_0}$. On the other hand $\Phi(1,\cdot,\cdot)$ is that inner product, since $1=\ker P$ and $\Phi(1,u,v)=\langle u,v\rangle_{L^2(\mu)}$. Thus $\mu=e^{-\alpha_0}\mathrm{vol}_g$, so $\alpha=\alpha_0+c$. A Witten operator on a closed manifold is determined by $(g,\alpha)$ up to that constant. The $C^k$ estimate follows from Lemma 12 and the elliptic regularity of $\log(d\mu/d\mathrm{vol}_g)$.
+ By the standing category, $P$ is already the Witten operator of some pair $(g_0,\alpha_0)$. Lemma 13 identifies $g=g_0$, because both metrics have the same principal symbol. The inner product that makes $P$ self-adjoint is $\mu=e^{-\alpha_0}\mathrm{vol}_{g_0}$. On the other hand $\Phi(1,\cdot,\cdot)$ is that inner product, since $1=\ker P$ and $\Phi(1,u,v)=\langle u,v\rangle_{L^2(\mu)}$. Thus $\mu=e^{-\alpha_0}\mathrm{vol}_g$, so $\alpha=\alpha_0+c$. A Witten operator on a closed manifold is determined by $(g,\alpha)$ up to that constant. The $C^k$ estimate follows from Lemma 13 and the elliptic regularity of $\log(d\mu/d\mathrm{vol}_g)$.
 \end{proof}
 
 \begin{remark} Lemma~\ref{lma-4} is recognition, not construction: it uses that $P$ was Witten. The two measures $\mu$ and $\mathrm{vol}_g$ are the only source of $\alpha$. The packet does not store $\alpha$ separately.
 \end{remark}
 
 \begin{corollary}
- Combining Lemmas 9, 12, and 13, the packet determines a Riemannian manifold $(\Sigma,g_\Sigma)$ in $\mathcal{V}^\ast$ and a weight $\alpha_\Sigma$ on $\Sigma$. Evaluation pulls these back to $(g,\alpha)$ exactly when $R=0$, and to within $C(d,k)\lVert R\rVert_{C^k(\Sigma)}$ when $\Delta<\Delta_*$.
+ Combining Lemmas 9, 13, and 14, the packet determines a Riemannian manifold $(\Sigma,g_\Sigma)$ in $\mathcal{V}^\ast$ and a weight $\alpha_\Sigma$ on $\Sigma$. Evaluation pulls these back to $(g,\alpha)$ exactly when $R=0$, and to within $C(d,k)\lVert R\rVert_{C^k(\Sigma)}$ when $\Delta<\Delta_*$.
 \end{corollary}
 
 
@@ -314,13 +314,13 @@ $$\bigl\lVert\alpha_\Sigma\circ\iota-\alpha-c\bigr\rVert_{C^k}
 The lemmas of §§3–5 assemble into Theorem~\ref{thm-1} and Theorem~\ref{thm-2}.
 
 \begin{proof}[Proof of Theorem~\ref{thm-1}]
-Assume $R=0$. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ as a function of $(P,\Phi)$, with remainder zero. Lemma 9 identifies $X$ with the character space $\Sigma\subset\mathcal{V}^\ast$ of the finite algebra $(\mathcal{V},m)$ by a $C^\infty$ diffeomorphism $\iota$. Lemma 12 dualizes $\Gamma$ to a Riemannian metric $g_\Sigma$ on $\Sigma$ with $\iota^*g_\Sigma=g$. Lemma 13 reads $\alpha$ from $\mu/\mathrm{vol}_g$, up to an additive constant, and identifies $P$ with the Witten operator of that pair. Thus $\iota$ is a $C^\infty$ Riemannian isometry, and the packet determines $(X,g,\alpha)$ up to that isometry and the constant on $\alpha$. Residual freedom is an orthogonal change of basis of $\mathcal{V}$ preserving $\Phi$.
+Assume $R=0$. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ as a function of $(P,\Phi)$, with remainder zero. Lemma 9 identifies $X$ with the character space $\Sigma\subset\mathcal{V}^\ast$ of the finite algebra $(\mathcal{V},m)$ by a $C^\infty$ diffeomorphism $\iota$. Lemma 13 dualizes $\Gamma$ to a Riemannian metric $g_\Sigma$ on $\Sigma$ with $\iota^*g_\Sigma=g$. Lemma 14 reads $\alpha$ from $\mu/\mathrm{vol}_g$, up to an additive constant, and identifies $P$ with the Witten operator of that pair. Thus $\iota$ is a $C^\infty$ Riemannian isometry, and the packet determines $(X,g,\alpha)$ up to that isometry and the constant on $\alpha$. Residual freedom is an orthogonal change of basis of $\mathcal{V}$ preserving $\Phi$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm-2}]
-Assume $\Delta<\Delta_*$, with $\Delta_*$ as in Lemma 9. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ with remainder $R$. Lemma 9 produces a $C^1$ diffeomorphism $\iota:X\to\Sigma\subset\mathcal{V}^\ast$ and identifies $\lVert R\rVert_{C^k(\Sigma)}$ with $\lVert R\rVert_{C^k(X)}$ up to $C(d,k)$. Lemma 12 upgrades the cometric error to
+Assume $\Delta<\Delta_*$, with $\Delta_*$ as in Lemma 9. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ with remainder $R$. Lemma 9 produces a $C^1$ diffeomorphism $\iota:X\to\Sigma\subset\mathcal{V}^\ast$ and identifies $\lVert R\rVert_{C^k(\Sigma)}$ with $\lVert R\rVert_{C^k(X)}$ up to $C(d,k)$. Lemma 13 upgrades the cometric error to
 $$\bigl\lVert\iota^*g_\Sigma-g\bigr\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}.$$
-Lemma 13 gives the same bound for $\alpha_\Sigma\circ\iota-\alpha-c$. If the tail of $\Phi$ occupies a finite slot of dimension $d_{\mathrm{tail}}$, the remarks of §3 convert $\lVert R\rVert_{C^k}$ into $C(d,d_{\mathrm{tail}},k)\Delta$. Hence $\iota$ is a $C^k$ almost-isometry, not an isometry, unless $R=0$.
+Lemma 14 gives the same bound for $\alpha_\Sigma\circ\iota-\alpha-c$. If the tail of $\Phi$ occupies a finite slot of dimension $d_{\mathrm{tail}}$, the remarks of §3 convert $\lVert R\rVert_{C^k}$ into $C(d,d_{\mathrm{tail}},k)\Delta$. Hence $\iota$ is a $C^k$ almost-isometry, not an isometry, unless $R=0$.
 \end{proof}
 
 \begin{remark}
@@ -340,7 +340,7 @@ By hypothesis $x_ax_b-\delta_{ab}/(n+1)$ is an eigenfunction at $2n+2$, and $P(1
 $$P(x_ax_b)=(2n+2)\Bigl(x_ax_b-\frac{\delta_{ab}}{n+1}\Bigr).$$
 Hence $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$. The matrix $\delta_{ab}-x_ax_b$ has rank $n$ on the unit sphere, and $\{dx_a\}$ spans $T^*X$ by hypothesis, which is W2 for this frame. W1 follows: $F$ is an immersion, $X$ is closed, and $F(X)$ lies on $S^n$, so $F$ is a covering onto its image. Simple connectedness of $S^n$ for $n\ge 2$, or a direct check for $n=1$, makes $F$ a diffeomorphism onto $S^n$.
 \end{proof}
-\begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 17 and Theorem 1 give that $X$ is isometric to the unit round sphere. The metric dual to $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ is the round metric of radius $1$, and $\alpha=0$ because $\mu=\mathrm{vol}_g$. Thus $P=-\Delta$. The frame spans the first harmonics because it is an $(n+1)$-dimensional eigenspace at eigenvalue $n$. If the first eigenvalue is $\lambda$ rather than $n$, the same identities with the pair $(\lambda,2\lambda+2\lambda/n)$ rescale the radius to $\sqrt{n/\lambda}$. $\square$
+\begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 18 and Theorem 1 give that $X$ is isometric to the unit round sphere. The metric dual to $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ is the round metric of radius $1$, and $\alpha=0$ because $\mu=\mathrm{vol}_g$. Thus $P=-\Delta$. The frame spans the first harmonics because it is an $(n+1)$-dimensional eigenspace at eigenvalue $n$. If the first eigenvalue is $\lambda$ rather than $n$, the same identities with the pair $(\lambda,2\lambda+2\lambda/n)$ rescale the radius to $\sqrt{n/\lambda}$. $\square$
 \end{proof}
 \begin{proof}[Proof of Theorem~\ref{thm-b}]
  Work in the setting of Theorem 3 with deficits $\delta_1,\delta_2,\delta_\lambda$ and
