@@ -104,7 +104,41 @@ The article is organized as follows. Section 2 fixes the Witten category and the
 
 Throughout, the governing principle is the same as in the global inverse problem: geometry sits in the multiplication table, not in the list of eigenvalues. The contribution here is that a finite, explicitly tailed piece of that table already reconstructs a Witten pair, and that the unit sphere is the minimal unweighted instance of the same mechanism.
 
-
+\subsection{Results}
+Standing hypotheses for all four statements: $X$ closed and connected, $P=P_\alpha$ a Witten operator, packet as in §2, $u,v\in\mathcal{V}_\Lambda$, Wyman on window triples, W1$^+$, W2, W4.
+\begin{theorem}[exact recognition]
+\label{thm-1}
+Assume $\varepsilon=0$. The packet
+$$\bigl(\Lambda,\Lambda',\sigma(P)\cap[0,\Lambda'],\Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'}\bigr)$$
+determines $(X,g,\alpha)$ up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. Evaluation is a Riemannian isometry of $(X,g)$ onto the character space of $(\mathcal{V},m)$ in $\mathcal{V}^\ast$, and $P$ is the Witten operator of the reconstructed pair.
+\end{theorem}
+\begin{theorem}[approximate recognition]
+\labem{thm-2}
+There exist $\varepsilon_*=\varepsilon_*(P,\Lambda,\Lambda')>0$ and constants $C(P,\Lambda,\Lambda',k)$ such that if $\varepsilon<\varepsilon_*$, the same packet determines a $C^\infty$ submanifold $\Sigma\subset\mathcal{V}^\ast$ and a metric $g_\Sigma$ for which evaluation $\iota:X\to\Sigma$ is a $C^1$ diffeomorphism satisfying
+$$\bigl\lVert\iota^*g_\Sigma-g\bigr\rVert_{C^k}
++\bigl\lVert\alpha_\Sigma\circ\iota-\alpha-c\bigr\rVert_{C^k}
+\le C\,K\,\varepsilon.$$
+In particular $\iota$ is a $C^k$ almost-isometry of defect $O(K\varepsilon)$, not an isometry.
+\end{theorem}
+\begin{theorem}[round sphere, exact window]
+\label{thm-a}
+Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $\varepsilon=0$ at $\Lambda'=2n+2$. Suppose there is a frame $x_0,\dots,x_n$ in $\mathcal{V}$ with
+$$Px_a=nx_a,\quad
+\int x_ax_b=\delta_{ab},\quad
+\int x_a=0,\quad
+\sum_ax_a^2=1,$$
+each $x_ax_b-\delta_{ab}/(n+1)$ an eigenfunction at $2n+2$, and $\{dx_a\}$ spanning $T^*X$. Then $X$ is isometric to the unit round sphere, $P=-\Delta$, and $\operatorname{span}\{x_a\}=H_1$. Scaling: the pair $(\lambda,2\lambda+2\lambda/n)$ gives radius $\sqrt{n/\lambda}$.
+\end{theorem}
+\begin{theorem}[round sphere, quantitative window]
+In the setting of Theorem~\ref{thm-a}, allow deficits
+$$\delta_1=\Bigl\lVert\sum_ax_a^2-1\Bigr\rVert_{C^0},\quad
+\delta_2=\bigl\lVert(I-\Pi_0-\Pi_{2n+2})(x_ax_b)\bigr\rVert_{L^2},$$
+$$\delta_3=\text{rank gap of }\Gamma(x_a,x_b),\quad
+\delta_\lambda=\lvert\lambda-n\rvert,$$
+and set $\delta=\delta_1+\delta_2+\delta_3+\delta_\lambda+\varepsilon$. There exist $\delta_*=\delta_*(n)>0$ and $C(n)$ such that if $\delta<\delta_*$, then $X$ is a $C^1$-graph over $S^n$ and
+$$d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n)\,\delta.$$
+\end{theorem}
+This is linear stability of Theorem~\ref{thm-a}. It does not use Ricci curvature.
 
 \doclicenseThis
 \printbibliography
