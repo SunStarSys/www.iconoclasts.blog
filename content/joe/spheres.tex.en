@@ -176,6 +176,34 @@ On pairs from $\mathcal{V}$, (A1) gives
 $$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v),$$
 with $\lVert R(u,v)\rVert_2\le K\,\varepsilon(u,v)\,\lVert u\rVert_2\lVert v\rVert_2$. Thus $\Gamma$ on $\mathcal{V}$ is not an independent input.
 
+\section{The Cometric From the Window}
+
+\begin{lemma} Let $u,v\in\mathcal{V}$. Then
+$$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v),$$
+where $R=-P(I-\Pi_{\Lambda'})(uv)$ and
+$$\lVert R(u,v)\rVert_{L^2(\mu)}
+\le K\,\varepsilon(u,v)\,\lVert u\rVert_2\lVert v\rVert_2.$$
+If $\varepsilon=0$, then $R=0$ pointwise and $\Gamma(u,v)$ is determined by $(P,\Phi)$. The bilinear map $\Gamma:\mathcal{V}\times\mathcal{V}\to C^\infty(X)$ does not depend on the orthonormal basis used to expand $\Phi$.
+\end{lemma}
+\begin{proof}
+Identity (A1) gives
+$$2\Gamma(u,v)=u\,Pv+v\,Pu-P(uv).$$
+Split $uv=m(u,v)+t$ with $t=(I-\Pi_{\Lambda'})(uv)$, so $\lVert t\rVert_2=\varepsilon(u,v)$. Then
+$$P(uv)=P\bigl(m(u,v)\bigr)+Pt,$$
+and $R=-Pt$. W1$^+$ is precisely
+$$\lVert Pt\rVert_2\le K\,\varepsilon(u,v)\,\lVert u\rVert_2\lVert v\rVert_2.$$
+If $\varepsilon=0$, then $t=0$, hence $R=0$. In that case $m(u,v)=uv$ and every coefficient of $uv$ against $\mathcal{V}'$ is a value of $\Phi$, so the right-hand side is a function of the packet.
+Basis-independence: $P$ and $\Phi$ are defined on $\mathcal{V}$ without choices, and $m$ is orthogonal projection of the pointwise product. Changing orthonormal bases of $\mathcal{V}$ and $\mathcal{V}'$ conjugates the array of $\Phi$-coefficients and leaves $\Gamma(u,v)$ unchanged.\
+\end{proof}
+\begin{remark}The constant $K$ is part of the packet. It depends on $(P,\Lambda,\Lambda')$ and need not be monotone in $\Lambda'$. An upper bound on the numerator $\lVert Pt\rVert_2$ follows from the Sobolev algebra estimate
+$$\lVert uv\rVert_{H^s(\mu)}\le C_{\mathrm{alg}}(s)\,(1+\Lambda)^s\,\lVert u\rVert_2\lVert v\rVert_2
+\qquad(s>\max\{2,n/2\}),$$
+together with $\lVert Pt\rVert_2\le C_{\mathrm{ell}}(P)\lVert t\rVert_{H^2}$. That bounds $\lVert Pt\rVert_2$, not the ratio $\lVert Pt\rVert_2/\varepsilon(u,v)$. The ratio is W1$^+$, not a Sobolev corollary.
+\end{remark}
+\begin{corollary} If $\varepsilon=0$, the Gram functions $\Gamma(u,v)$ for $u,v\in\mathcal{V}$ are packet data. W4 is then a nondegeneracy condition on those functions. If $\varepsilon>0$, the same Gram functions are determined up to an $L^2$ error of size $K\varepsilon$.
+\end{corollary}
+
+
 \doclicenseThis
 \printbibliography
 \end{document}
