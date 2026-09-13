@@ -178,7 +178,7 @@ $$\Delta=\sup\bigl\{\lVert R(u,v)\rVert_2:\ u,v\in\mathcal{V},\ \lVert u\rVert_2
 
 The exact subclass is $R=0$, equivalently $\Delta=0$.
 
-Wyman. For $u,v\in\mathcal{V}$ and an $L^2$-normalized eigenfunction $e_\lambda$,
+\textbf{Wyman}. For $u,v\in\mathcal{V}$ and an $L^2$-normalized eigenfunction $e_\lambda$,
 $$\sum_{\lambda}\bigl\lvert\Phi(u,v,e_\lambda)\bigr\rvert^2$$
 is controlled by the measure of frequency triangles with side lengths comparable to $(\sqrt{\lambda_u},\sqrt{\lambda_v},\sqrt{\lambda})$ \cite{Wym}. In particular there is rapid decay of the $\ell^2$ mass of $\Phi(u,v,\,\cdot\,)$ in the classically forbidden region
 $$\sqrt{\lambda}\ge(1+\varepsilon)\bigl(\sqrt{\lambda_u}+\sqrt{\lambda_v}\bigr),$$
