@@ -213,7 +213,7 @@ $$c(k)^{-1}\,\lVert R_X\rVert_{C^k(X)}
 \le c(k)\,\lVert R_X\rVert_{C^k(X)},$$
 with $c(k)=C(d,k)$. The smallness parameter here is $\lVert t\rVert_{C^1}$, not $\Delta$.
 
-\item[(ii)] (finite slot) If the $\Phi$-tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), then Remarks 6 and 7 give
+\item[(ii)] (finite slot) If the $\Phi$-tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), then Remarks 7 and 8 give
 $$\lVert t\rVert_{C^1}\le C(d,d_{\mathrm{tail}},n,\Lambda',\Lambda'')\,\Delta.$$
 \end{description}
 Hence there exists $\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$ such that $\Delta<\Delta_*$ implies the conclusions of (i), and
@@ -228,6 +228,7 @@ For (ii), a finite slot makes every $C^k$ norm on the tail equivalent to the $L^
 \begin{remark}
 Theorem 2’s general bound is (i), written in $\lVert R\rVert_{C^k(\Sigma)}$. The conversion to a multiple of $\Delta$ is (ii). Theorem 4 uses only (ii), with $d=n+1$ and a finite cluster about the slot $2n+2$.
 \end{remark}
+
 \begin{remark}[Sogge and $\lVert t\rVert_{C^0}$]
 Hörmander–Sogge gives $\lVert e_\lambda\rVert_{C^0}\le C_S(n)\,(1+\lambda)^{(n-1)/4}$ \cite{Sog88}. Expanding $t$ and applying Cauchy–Schwarz with the weight in $R=Pt$ yields, for a tail supported in a finite slot $\Lambda<\lambda\le\Lambda''$,
 $$\lVert t\rVert_{C^0}\le C(n,\Lambda',\Lambda'')\,\Delta,$$
