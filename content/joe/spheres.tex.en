@@ -140,10 +140,10 @@ Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n
 \label{thm-b}
 In the setting of Theorem~\ref{thm-a}, allow deficits
 $$\delta_1=\Bigl\lVert\sum_ax_a^2-1\Bigr\rVert_{C^0},\quad
-\delta_3=\text{rank gap of }\Gamma(x_a,x_b),\quad
+\delta_2=\text{rank gap of }\Gamma(x_a,x_b),\quad
 \delta_\lambda=\lvert\lambda-n\rvert,$$
 $$\Delta_{\mathrm{fr}}=\sup_{a,b}\lVert R(x_a,x_b)\rVert_2,\qquad
-\delta=\delta_1+\delta_3+\delta_\lambda+\Delta_{\mathrm{fr}}.$$
+\delta=\delta_1+\delta_2+\delta_\lambda+\Delta_{\mathrm{fr}}.$$
 If $\delta<\delta_*(n)$, then $X$ is a $C^1$-graph over $S^n$ and
 $$d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n)\,\delta.$$
 \end{theorem}
@@ -340,14 +340,14 @@ Hence $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$. The matrix $\delta_{ab}-x_ax_b$ has 
 \begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 17 and Theorem 1 give that $X$ is isometric to the unit round sphere. The metric dual to $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ is the round metric of radius $1$, and $\alpha=0$ because $\mu=\mathrm{vol}_g$. Thus $P=-\Delta$. The frame spans the first harmonics because it is an $(n+1)$-dimensional eigenspace at eigenvalue $n$. If the first eigenvalue is $\lambda$ rather than $n$, the same identities with the pair $(\lambda,2\lambda+2\lambda/n)$ rescale the radius to $\sqrt{n/\lambda}$. $\square$
 \end{proof}
 \begin{proof}[Proof of Theorem~\ref{thm-b}]
- Work in the setting of Theorem 3 with deficits $\delta_1,\delta_3,\delta_\lambda$ and
+ Work in the setting of Theorem 3 with deficits $\delta_1,\delta_2,\delta_\lambda$ and
 $$\Delta_{\mathrm{fr}}=\sup_{a,b}\lVert R(x_a,x_b)\rVert_2,$$
-and set $\delta=\delta_1+\delta_3+\delta_\lambda+\Delta_{\mathrm{fr}}$. Then $\sum_a x_a^2=1+O_{C^0}(\delta_1)$, so $F$ lands in a $C^0$-neighborhood of $S^n$. The remainder $\Delta_{\mathrm{fr}}$ is $R$ on this frame. The exact support is the slot $2n+2$; any mass in $R$ occupies a finite cluster, so $d_{\mathrm{tail}}=O(n^2)$ and the remarks of §3 give
+and set $\delta=\delta_1+\delta_2+\delta_\lambda+\Delta_{\mathrm{fr}}$. Then $\sum_a x_a^2=1+O_{C^0}(\delta_1)$, so $F$ lands in a $C^0$-neighborhood of $S^n$. The remainder $\Delta_{\mathrm{fr}}$ is $R$ on this frame. The exact support is the slot $2n+2$; any mass in $R$ occupies a finite cluster, so $d_{\mathrm{tail}}=O(n^2)$ and the remarks of §3 give
 $$\lVert R\rVert_{C^k}\le C(n,k)\,\Delta_{\mathrm{fr}}.$$
 Lemma 5 yields
 $$\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b+E_{ab},\qquad
 \lVert E_{ab}\rVert_{C^0}\le C(n)\,\delta.$$
-The rank gap $\delta_3$ and $\delta_\lambda$ keep $dF$ of rank $n$ for $\delta<\delta_*(n)$. Lemma 9 therefore produces a $C^1$ diffeomorphism from $X$ onto a graph over $S^n$. Theorem 2, with constants reduced to $C(n)$ by the fixed window $d=n+1$, yields
+The rank gap $\delta_2$ and $\delta_\lambda$ keep $dF$ of rank $n$ for $\delta<\delta_*(n)$. Lemma 9 therefore produces a $C^1$ diffeomorphism from $X$ onto a graph over $S^n$. Theorem 2, with constants reduced to $C(n)$ by the fixed window $d=n+1$, yields
 $$d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n)\,\delta.$$
 No Ricci bound is used. Diameter control follows from the diffeomorphism onto a graph over $S^n$, not from Cheng comparison.
 \end{proof}
