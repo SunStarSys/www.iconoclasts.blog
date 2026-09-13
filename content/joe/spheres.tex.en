@@ -295,6 +295,24 @@ $$\bigl\lVert\alpha-\alpha_{\mathrm{true}}-c\bigr\rVert_{C^k}
 
 \begin{corollary}Combining Lemmas, the packet determines a Riemannian manifold $(\Sigma,g_\Sigma)$ in $\mathcal{V}^\ast$ and a weight $\alpha_\Sigma$ on $\Sigma$. The evaluation map of Lemma~\ref{lma-2} pulls these back to $(g,\alpha)$ exactly when $\varepsilon=0$, and to within $O(K\varepsilon)$ in $C^k$ when $\varepsilon<\varepsilon_*$.
 \end{corollary}
+
+
+\section{Recognition}
+The lemmas of §§3–5 assemble into Theorem~\ref{thm-1} and Theorem~\ref{thm-2}.
+
+\begin{proof}[Proof of Theorem~\ref{thm-1}] Assume $\varepsilon=0$. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ as a function of $(P,\Phi)$, with remainder zero. Lemma 9 identifies $X$ with the character space $\Sigma\subset\mathcal{V}^\ast$ of the finite algebra $(\mathcal{V},m)$ by a $C^\infty$ diffeomorphism $\iota$. Lemma 12 dualizes $\Gamma$ to a Riemannian metric $g_\Sigma$ on $\Sigma$ with $\iota^*g_\Sigma=g$. Lemma 13 reads $\alpha$ from $\mu/\mathrm{vol}_g$, up to an additive constant, and identifies $P$ with the Witten operator of that pair. Thus $\iota$ is a $C^\infty$ Riemannian isometry, and the packet determines $(X,g,\alpha)$ up to that isometry and the constant on $\alpha$. Residual freedom is an orthogonal change of basis of $\mathcal{V}$ preserving $\Phi$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm-2}] Assume $\varepsilon<\varepsilon_*$, with $\varepsilon_*$ as in Lemma 9. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ up to an $L^2$ error of size $K\varepsilon$. Lemma 9 produces a $C^1$ diffeomorphism $\iota:X\to\Sigma\subset\mathcal{V}^\ast$ of defect $O(\varepsilon)$ in $\mathcal{V}^\ast$. Lemma 12 upgrades the cometric error to
+$$\bigl\lVert\iota^*g_\Sigma-g\bigr\rVert_{C^k}\le C(P,\Lambda,\Lambda',k)\,K\,\varepsilon.$$
+Lemma 13 gives the same bound for $\alpha_\Sigma\circ\iota-\alpha-c$. Hence $\iota$ is a $C^k$ almost-isometry of defect $O(K\varepsilon)$, not an isometry. The constant $C$ depends on the given pair, not only on $n$.
+\end{proof}
+\begin{remark}
+Two packets for the same operator at different admissible cutoffs produce isometric copies if both have $\varepsilon=0$, and almost-isometric copies of defect controlled by the two values of $K\varepsilon$ otherwise. The theorems do not identify merely isospectral Witten operators.
+\end{remark}
+\begin{remark} A packet-computable modulus, after Lemma 9, is the pointwise remainder $R$ of Lemma 5 evaluated on $\Sigma$. The product $K\varepsilon$ is an a priori stand-in for $\lVert R\rVert_{C^k(\Sigma)}$. Curvature bounds that make $K$ explicit are recorded in Remark 7; they are not used here.
+\end{remark}
+
 \doclicenseThis
 \printbibliography
 \end{document}
