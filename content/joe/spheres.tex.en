@@ -256,9 +256,9 @@ for every $k$.
 \begin{proof}W4 says $\{du:u\in\mathcal{V}\}$ spans $T^*X$. The assignment $(du,dv)\mapsto\Gamma(u,v)$ is well-defined on that spanning set: $\Gamma(u,u)=\sigma_P(du,du)$, so $du=0$ implies $\Gamma(u,\cdot)=0$. Positive-definiteness is the assumption that the principal symbol of $P$ is an inner product. Dualizing gives $g$.
 In a local frame $\{u_a\}\subset\mathcal{V}$ of rank $n=\dim X$,
 $$g^{ab}=\Gamma(u_a,u_b)$$
-on $\operatorname{span}\{du_a\}$, and $g$ is the inverse matrix. Independence of the frame is change of basis for a cometric. The $C^k$ estimate is Lemma 1 plus the $C^\infty$ boundedness of a window basis in $C^{k+2}$ on a closed Witten pair.0
+on $\operatorname{span}\{du_a\}$, and $g$ is the inverse matrix. Independence of the frame is change of basis for a cometric. The $C^k$ estimate is Lemma~\ref{lma-1} plus the $C^\infty$ boundedness of a window basis in $C^{k+2}$ on a closed Witten pair.0
 \end{proof}
-\begin{lemma}Let $g$ be the metric of Lemma 3 and let $\mu$ be the measure determined by
+\begin{lemma}Let $g$ be the metric of Lemma~\ref{lma-3} and let $\mu$ be the measure determined by
 $$\int uv\,d\mu=\Phi(1,u,v),\qquad u,v\in\mathcal{V},$$
 extended by continuity to $L^2(\mu)$. Then $\mu$ is a smooth positive multiple of $\mathrm{vol}_g$. The function
 $$\alpha=-\log\frac{d\mu}{d\mathrm{vol}_g}$$
@@ -271,7 +271,7 @@ $$\bigl\lVert\alpha-\alpha_{\mathrm{true}}-c\bigr\rVert_{C^k}
 \end{proof}
 \begin{remark} Lemma~\ref{lma-4} is recognition, not construction: it uses that $P$ was Witten. The two measures $\mu$ and $\mathrm{vol}_g$ are the only source of $\alpha$. The packet does not store $\alpha$ separately.
 \end{remark}
-Corollary. Combining Lemmas, the packet determines a Riemannian manifold $(\Sigma,g_\Sigma)$ in $\mathcal{V}^\ast$ and a weight $\alpha_\Sigma$ on $\Sigma$. The evaluation map of Lemma 2 pulls these back to $(g,\alpha)$ exactly when $\varepsilon=0$, and to within $O(K\varepsilon)$ in $C^k$ when $\varepsilon<\varepsilon_*$.
+Corollary. Combining Lemmas, the packet determines a Riemannian manifold $(\Sigma,g_\Sigma)$ in $\mathcal{V}^\ast$ and a weight $\alpha_\Sigma$ on $\Sigma$. The evaluation map of Lemma~\ref{lma-2} pulls these back to $(g,\alpha)$ exactly when $\varepsilon=0$, and to within $O(K\varepsilon)$ in $C^k$ when $\varepsilon<\varepsilon_*$.
 \doclicenseThis
 \printbibliography
 \end{document}
