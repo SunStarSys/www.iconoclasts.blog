@@ -216,7 +216,7 @@ Hörmander–Sogge gives $\lVert e_\lambda\rVert_{C^0}\le C_S(n)\,(1+\lambda)^{(
 $$\lVert t\rVert_{C^0}\le C(n,\Lambda',\Lambda'')\,\Delta,$$
 and therefore
 $$\lVert R\rVert_{C^0(X)}\le C(n,\Lambda',\Lambda'')\,\Delta.$$
-Wyman bounds the coefficients of $R$ \cite{Wym}; Sogge bounds the modes. Neither is a curvature comparison.]
+Wyman bounds the coefficients of $R$ \cite{Wym}; Sogge bounds the modes. Neither is a curvature comparison.
 \end{remark}
 
 \begin{remark}
@@ -314,7 +314,7 @@ Lemma 13 gives the same bound for $\alpha_\Sigma\circ\iota-\alpha-c$. If the tai
 \end{proof}
 
 \begin{remark}
- wo packets for the same operator at different admissible cutoffs produce isometric copies if both have $R=0$, and almost-isometric copies on the scale of the two values of $\lVert R\rVert_{C^k(\Sigma)}$ otherwise. The theorems do not identify merely isospectral Witten operators.
+Two packets for the same operator at different admissible cutoffs produce isometric copies if both have $R=0$, and almost-isometric copies on the scale of the two values of $\lVert R\rVert_{C^k(\Sigma)}$ otherwise. The theorems do not identify merely isospectral Witten operators.
 \end{remark}
 
 \section{The Unweighted First Window on the Sphere}
@@ -328,9 +328,9 @@ The quadric $\sum_a x_a^2=1$ is given. Differentiating and using $Px_a=nx_a$ wit
 $$2\Gamma(x_a,x_b)=n x_ax_b+n x_bx_a-P(x_ax_b).$$
 By hypothesis $x_ax_b-\delta_{ab}/(n+1)$ is an eigenfunction at $2n+2$, and $P(1)=0$, so
 $$P(x_ax_b)=(2n+2)\Bigl(x_ax_b-\frac{\delta_{ab}}{n+1}\Bigr).$$
-Hence $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$. The matrix $\delta_{ab}-x_ax_b$ has rank $n$ on the unit sphere, and $\{dx_a\}$ spans $T^*X$ by hypothesis, which is W4 for this frame. W2 follows: $F$ is an immersion, $X$ is closed, and $F(X)$ lies on $S^n$, so $F$ is a covering onto its image. Simple connectedness of $S^n$ for $n\ge 2$, or a direct check for $n=1$, makes $F$ a diffeomorphism onto $S^n$.
+Hence $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$. The matrix $\delta_{ab}-x_ax_b$ has rank $n$ on the unit sphere, and $\{dx_a\}$ spans $T^*X$ by hypothesis, which is W2 for this frame. W1 follows: $F$ is an immersion, $X$ is closed, and $F(X)$ lies on $S^n$, so $F$ is a covering onto its image. Simple connectedness of $S^n$ for $n\ge 2$, or a direct check for $n=1$, makes $F$ a diffeomorphism onto $S^n$.
 \end{proof}
-\begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 15 and Theorem 1 give that $X$ is isometric to the unit round sphere. The metric dual to $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ is the round metric of radius $1$, and $\alpha=0$ because $\mu=\mathrm{vol}_g$. Thus $P=-\Delta$. The frame spans the first harmonics because it is an $(n+1)$-dimensional eigenspace at eigenvalue $n$. If the first eigenvalue is $\lambda$ rather than $n$, the same identities with the pair $(\lambda,2\lambda+2\lambda/n)$ rescale the radius to $\sqrt{n/\lambda}$. $\square$
+\begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 17 and Theorem 1 give that $X$ is isometric to the unit round sphere. The metric dual to $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ is the round metric of radius $1$, and $\alpha=0$ because $\mu=\mathrm{vol}_g$. Thus $P=-\Delta$. The frame spans the first harmonics because it is an $(n+1)$-dimensional eigenspace at eigenvalue $n$. If the first eigenvalue is $\lambda$ rather than $n$, the same identities with the pair $(\lambda,2\lambda+2\lambda/n)$ rescale the radius to $\sqrt{n/\lambda}$. $\square$
 \end{proof}
 \begin{proof}[Proof of Theorem~\ref{thm-b}]
  Work in the setting of Theorem 3 with deficits $\delta_1,\delta_3,\delta_\lambda$ and
