@@ -178,13 +178,13 @@ The exact subclass is $R=0$, equivalently $\Delta=0$.
 
 Wyman. For $u,v\in\mathcal{V}$ and an $L^2$-normalized eigenfunction $e_\lambda$,
 $$\sum_{\lambda}\bigl\lvert\Phi(u,v,e_\lambda)\bigr\rvert^2$$
-is controlled by the measure of frequency triangles with side lengths comparable to $(\sqrt{\lambda_u},\sqrt{\lambda_v},\sqrt{\lambda})$ \cite{Wym22}. In particular there is rapid decay of the $\ell^2$ mass of $\Phi(u,v,\,\cdot\,)$ in the classically forbidden region
+is controlled by the measure of frequency triangles with side lengths comparable to $(\sqrt{\lambda_u},\sqrt{\lambda_v},\sqrt{\lambda})$ \cite{Wym}. In particular there is rapid decay of the $\ell^2$ mass of $\Phi(u,v,\,\cdot\,)$ in the classically forbidden region
 $$\sqrt{\lambda}\ge(1+\varepsilon)\bigl(\sqrt{\lambda_u}+\sqrt{\lambda_v}\bigr),$$
 for every $\varepsilon>0$. The paper uses only the following crude consequence: the coefficients of $R$ exist, and if a finite slot above $\Lambda'$ is fixed, they are bounded by a constant depending on that slot, on $\Lambda$, and on $\lVert u\rVert_2\lVert v\rVert_2$.
 A pointwise bound
 $$\bigl\lvert\Phi(u,v,e_\lambda)\bigr\rvert
 \le C\,(1+\lambda_u+\lambda_v+\lambda)^\delta\,\lVert u\rVert_2\lVert v\rVert_2$$
-is not claimed in \cite{Wym22}; when it is invoked below it is as a convenient majorant on a finite slot, not as Wyman’s theorem.
+is not claimed in \cite{Wym}; when it is invoked below it is as a convenient majorant on a finite slot, not as Wyman’s theorem.
 
 W1. Evaluation $\iota:X\to\mathcal{V}^\ast$, $\iota(x)(u)=u(x)$, is a smooth embedding onto a closed submanifold of $\mathcal{V}^\ast$. The same holds for evaluation $X\to(\mathcal{V}')^\ast$. Characters are therefore evaluations on $\mathcal{V}'$, and the comparison error $E$ of §4 vanishes.
 
