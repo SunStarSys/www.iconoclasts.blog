@@ -28,7 +28,6 @@
 \usepackage{braket}
 \usepackage{physics}
 
-
 % Metadata
 \title{Triple Products of Eigenfunctions and Spheres\footnote{Dedicated to Autumn.}}
 \date{2026\\September}
@@ -187,18 +186,16 @@ $$\bigl\lvert\Phi(u,v,e_\lambda)\bigr\rvert
 \le C\,(1+\lambda_u+\lambda_v+\lambda)^\delta\,\lVert u\rVert_2\lVert v\rVert_2$$
 is not claimed in \cite{Wym}; when it is invoked below it is as a convenient majorant on a finite slot, not as Wyman’s theorem.
 
-W1. Evaluation $\iota:X\to\mathcal{V}^\ast$, $\iota(x)(u)=u(x)$, is a smooth embedding onto a closed submanifold of $\mathcal{V}^\ast$. The same holds for evaluation $X\to(\mathcal{V}')^\ast$. Characters are therefore evaluations on $\mathcal{V}'$, and the comparison error $E$ of §4 vanishes.
+\textbf{W1}. Evaluation $\iota:X\to\mathcal{V}^\ast$, $\iota(x)(u)=u(x)$, is a smooth embedding onto a closed submanifold of $\mathcal{V}^\ast$. The same holds for evaluation $X\to(\mathcal{V}')^\ast$. Characters are therefore evaluations on $\mathcal{V}'$, and the comparison error $E$ of §4 vanishes.
 
 
-W2. The differentials $\{du:u\in\mathcal{V}\}$ span $T^*X$ at every point.
+\textbf{W2}. The differentials $\{du:u\in\mathcal{V}\}$ span $T^*X$ at every point.
 
 The visible packet is
 $$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},\ R\bigr).$$
 On pairs from $\mathcal{V}$, (A1) reads
 $$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v).$$
 Thus $\Gamma$ on $\mathcal{V}$ is not an independent input. No Weyl law, no potential, and no curvature bound is assumed. Dimension of $X$ is the rank in W2.
-
-
 
 \section{The Cometric From the Window}
 
@@ -255,9 +252,11 @@ for every $k\ge 0$,$$c(k)^{-1}\,\lVert R_X\rVert_{C^k(X)}
 
 \begin{proof}
 W1 says $\iota$ is already a smooth embedding onto a closed submanifold, so the first item is W1 and does not use $\Delta$. The product map $F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$ vanishes on $\iota(X)$ up to the tail $t=(I-\Pi_{\Lambda'})(uv)$. Because evaluation extends to $\mathcal{V}'$, one has $\xi(m(u,v))=m(u,v)(x)$ at $\xi=\iota(x)$, and the only defect is $t(x)$.
+
 On a finite slot, Remarks 6 and 7 give
 $$\lVert t\rVert_{C^0}\le C(n,\Lambda',\Lambda'')\,\Delta,$$
 and likewise $\lVert t\rVert_{C^1}\le C\,\Delta$. Thus $F$ is a $C^1$-small perturbation of a section that vanishes exactly on $\iota(X)$. Differentiating $F$ in the $\mathcal{V}^\ast$-directions at $\iota(x)$ yields the family $(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$ on $T_x^*X$. W2 says $\{du:u\in\mathcal{V}\}$ spans $T_x^*X$, so this family is transverse to $\iota(X)$. Persistence of transverse embeddings for $\Delta<\Delta_*$ keeps $\iota$ a $C^1$ diffeomorphism onto its image.
+
 If the tail is infinite, replace $\Delta$ by $\lVert t\rVert_{C^1}$ (or cut at a finite $\Lambda''$ and absorb the far tail into $\Delta$). At $R=0$ one has $t=0$, $F$ vanishes exactly on $\iota(X)$, and $\iota$ is $C^\infty$. The $C^k$ comparison of $R_X$ and $R_\Sigma$ is the chain rule for $\iota$ and $\iota^{-1}$, whose $C^{k-1}$ norms stay bounded for $\Delta<\Delta_*$.
 \end{proof}
 
