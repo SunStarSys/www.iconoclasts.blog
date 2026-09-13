@@ -79,84 +79,80 @@ The unweighted first window on the sphere is the minimal finite-tail case: $\Lam
 
 \section{Introduction}
 \label{sec:intro}
+
 A Witten operator on a closed Riemannian manifold $(X,g)$ is the weighted Laplacian
 $$P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
-acting in $L^2(e^{-\alpha}\,d\mathrm{vol}_g)$. Its spectrum is discrete, nonnegative, and unbounded, with kernel the constant functions. The geometric data of the pair are the metric $g$ and the weight $\alpha$; equivalently, the Riemannian volume and the measure $\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Ordinary Laplace–Beltrami operators are the case $\alpha=0$.
+acting in $L^2(e^{-\alpha}\,d\mathrm{vol}_g)$ \cite{Wit82}. Its spectrum is discrete, nonnegative, and unbounded, with kernel the constant functions. The geometric data of the pair are the metric $g$ and the weight $\alpha$; equivalently, Riemannian volume and the measure $\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Ordinary Laplace–Beltrami operators are the case $\alpha=0$.
 
 The spectrum alone does not determine $(g,\alpha)$. What does determine them, in the large, is the multiplication table of eigenfunctions
 $$\Phi(u,v,w)=\int_X uvw\,d\mu$$
-together with the list of eigenvalues. That is a global inverse-spectral statement: it consumes every eigenspace. The purpose of this article is a finite substitute. We fix two cutoffs $\Lambda\le\Lambda'<\infty$ and let
+together with the list of eigenvalues \cite{Sch24,Sch26}. That statement consumes every eigenspace. The purpose of this article is a finite substitute.
+Fix cutoffs $\Lambda\le\Lambda'<\infty$ and let
 $$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda)$$
-be the corresponding spectral window. Products of window functions need not lie in $\mathcal{V}$. We compare them to the slightly larger window $\mathcal{V}'$ of modes up to $\Lambda'$, and we write
-$$\varepsilon=\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\bigl\lVert(I-\Pi_{\Lambda'})(uv)\bigr\rVert_{L^2(\mu)}$$
-for the uniform tail of those products. For fixed $\Lambda$ one has $\varepsilon\to 0$ as $\Lambda'\to\infty$; the theory uses one finite pair $(\Lambda,\Lambda')$, not that limit. The exact subclass is $\varepsilon=0$ at a finite $\Lambda'$, which is an algebraic constraint on the window, not an asymptotic one.
+be the corresponding spectral window. Products of window functions need not lie in $\mathcal{V}$. Write $m(u,v)=\Pi_{\Lambda'}(uv)$ for the projection onto modes up to $\Lambda'$, and
+$$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv)
+=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda$$
+for the weighted tail of those products. Throughout, $u,v\in\mathcal{V}$. The uniform size of the tail is
+$$\Delta=\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\lVert R(u,v)\rVert_2.$$
 
-The visible packet of the window is
-$$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},\ \varepsilon,\ K\bigr),$$
-where $K$ is the constant in the weighted tail bound
-$$\sum_{\lambda>\Lambda'}\lambda^2\bigl\lvert\Phi(u,v,e_\lambda)\bigr\rvert^2
-\le K^2\,\varepsilon(u,v)^2\,\lVert u\rVert_2^2\lVert v\rVert_2^2.$$
+The exact subclass is $R=0$ at a finite $\Lambda'$, which is an algebraic constraint on the window, not an asymptotic one. A Wyman bound on window triples guarantees that the coefficients of $R$ exist \cite{Wym}.
 
-The cometric $\Gamma$ of $g$ is not an extra input. The Witten multiplication rule
+The visible packet is
+$$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},\ R\bigr).$$
+
+The cometric $\Gamma$ of $g$ is not an extra input. The identity
 $$P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v)$$
-computes $\Gamma$ on $\mathcal{V}$ from $(P,\Phi)$, with an $L^2$ remainder at most $K\varepsilon$. Two nondegeneracy hypotheses close the packet: evaluation $X\to\mathcal{V}^\ast$ is a smooth embedding, and $\{du:u\in\mathcal{V}\}$ spans $T^*X$. No Weyl law is assumed, no potential is present, and no curvature bound is used.
+computes $\Gamma$ on $\mathcal{V}$ from $(P,\Phi)$ with remainder $R$. Two nondegeneracy hypotheses close the packet: evaluation $X\to\mathcal{V}^\ast$ is a smooth embedding, and $\{du:u\in\mathcal{V}\}$ spans $T^*X$. No Weyl law is assumed, no potential is present, and no curvature bound is used.
+If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. If $\Delta$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^\ast$, the same packet determines a submanifold $\Sigma\subset\mathcal{V}^\ast$ on which the metric and weight errors are bounded by $C(d,k)\lVert R\rVert_{C^k(\Sigma)}$, with $d=\dim\mathcal{V}$. When the tail of $\Phi$ occupies a finite slot, Sobolev embedding on $\Sigma$ converts this to a linear bound in $\Delta$ whose constants depend only on window dimensions and $k$. In both regimes the manifold is recovered as the space of (almost) multiplicative characters of the window, the metric by dualizing $\Gamma$, and the weight from the ratio of $\mu$ to Riemannian volume.
 
-The main recognition theorem is that this packet determines $(X,g,\alpha)$. If $\varepsilon=0$, it determines them up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. If $\varepsilon$ is smaller than a threshold depending on $(P,\Lambda,\Lambda')$, it determines them up to a $C^k$ almost-isometry of defect $O(K\varepsilon)$. In both regimes the underlying manifold is recovered as the space of (almost) multiplicative characters of the window, the metric is recovered by dualizing $\Gamma$, and the weight is recovered as the logarithm of the ratio of $\mu$ to Riemannian volume.
+The theorem is recognition, not construction: $P$ is given as Witten, and the packet is asked to recover the geometry that produced it. It is not a spectral uniqueness theorem. Two isospectral Witten operators with different window products need not be isometric.
 
-The class of pairs to which the theorem applies is large. Every closed Witten operator, including every Laplace–Beltrami operator, admits some finite embedding window; the packet is then defined, and reconstruction proceeds. The theorem is recognition, not construction: $P$ is given as Witten, and the packet is asked to recover the geometry that produced it. It is also not a spectral uniqueness theorem. Two isospectral Witten operators with different window products need not be isometric.
+A distinguished slice is the unweighted first window on the sphere. There one may take $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $R=0$ already at $\Lambda'=2n+2$: products of linear coordinates on $S^n$ occupy only the constant slot and the quadratic harmonics. Theorems 1 and 2 then specialize to an exact recognition of the unit round sphere from that frame, and to a linear $C^0$ stability statement when the same frame is allowed small deficits. Those two statements are compared with Obata’s theorem \cite{Oba62} and with quantitative Obata theorems on the Ricci side \cite{CMS}. They are not Ricci theorems. They use a linear frame and its products, not a lower bound on Ricci curvature and a single first eigenfunction.
+The article is organized as follows. Section 2 fixes the Witten category and the window packet. Section 3 extracts $\Gamma$ from the multiplication rule with remainder $R$. Section 4 identifies points of $X$ with characters of the window. Section 5 dualizes $\Gamma$ to a metric and reads $\alpha$ from the two measures. Section 6 assembles Theorems 1 and 2. Section 7 specializes to the unweighted first window on the sphere. Section 8 records what the packet does not determine.
 
-A distinguished slice is the unweighted sphere. There one may take $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $\varepsilon=0$ already at $\Lambda'=2n+2$: products of linear coordinates on $S^n$ occupy only the constant slot and the quadratic harmonics. Theorems 1 and 2 then specialize to an exact recognition of the unit round sphere from that frame, and to a linear $C^0$ stability statement when the same frame is allowed small defects. Those two statements are compared with Obata’s theorem and with quantitative Obata theorems on the Ricci side; they are not Ricci theorems. They use a linear frame and its products, not a lower bound on Ricci curvature and a single first eigenfunction.
-
-The analytic ingredients are elementary. The weighted tail bound is the one place where elliptic estimates enter, and they enter as a constant $K(P,\Lambda,\Lambda')$, not as a curvature comparison. Wyman’s bound on window triples supplies the polynomial control on $\Phi$. The weighted tail constant $K$ is the axiom W1$^+$ on the ratio $\lVert P(I-\Pi_{\Lambda'})(uv)\rVert_2/\varepsilon(u,v)$. Sobolev estimates bound the numerator of that ratio, not automatically the ratio itself. Neither bound is a curvature comparison.
-
-The article is organized as follows. Section 2 fixes the Witten category and the window packet. Section 3 extracts $\Gamma$ from the multiplication rule and records the constant $K$. Section 4 identifies points of $X$ with characters of the window and promotes a small tail to a $C^1$ persistence of that identification. Section 5 dualizes $\Gamma$ to a metric and reads $\alpha$ from the two measures. Section 6 states the recognition theorem, exact and approximate, with the isometry claim separated by the size of $\varepsilon$. Section 7 specializes to the unweighted first window on the sphere. Section 8 collects what the packet does not determine.
-
-Throughout, the governing principle is the same as in the global inverse problem: geometry sits in the multiplication table, not in the list of eigenvalues. The contribution here is that a finite, explicitly tailed piece of that table already reconstructs a Witten pair, and that the unit sphere is the minimal unweighted instance of the same mechanism.
+Geometry sits in the multiplication table, not in the list of eigenvalues. The contribution here is that a finite, explicitly tailed piece of that table already reconstructs a Witten pair, and that the unit sphere is the minimal unweighted instance of the same mechanism.
 
 \subsection{Results}
-Standing hypotheses for all four statements: $X$ closed and connected, $P=P_\alpha$ a Witten operator, packet as in §2, $u,v\in\mathcal{V}_\Lambda$, Wyman on window triples, W1$^+$, W2, W4.
+Standing hypotheses: $X$ closed and connected, $P=P_\alpha$ a Witten operator \cite{Wit82}, packet as in §2, $u,v\in\mathcal{V}$, Wyman on window triples \cite{Wym}, W2, W4.
+
 \begin{theorem}[exact recognition]
 \label{thm-1}
-Assume $\varepsilon=0$. The packet
+Assume $R=0$. The packet
 $$\bigl(\Lambda,\Lambda',\sigma(P)\cap[0,\Lambda'],\Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'}\bigr)$$
 determines $(X,g,\alpha)$ up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. Evaluation is a Riemannian isometry of $(X,g)$ onto the character space of $(\mathcal{V},m)$ in $\mathcal{V}^\ast$, and $P$ is the Witten operator of the reconstructed pair.
 \end{theorem}
 
 \begin{theorem}[approximate recognition]
 \label{thm-2}
-There exist $\varepsilon_*=\varepsilon_*(P,\Lambda,\Lambda')>0$ and constants $C(P,\Lambda,\Lambda',k)$ such that if $\varepsilon<\varepsilon_*$, the same packet determines a $C^\infty$ submanifold $\Sigma\subset\mathcal{V}^\ast$ and a metric $g_\Sigma$ for which evaluation $\iota:X\to\Sigma$ is a $C^1$ diffeomorphism satisfying
+Let $d=\dim\mathcal{V}$. There exists $\Delta_*>0$ such that if $\Delta<\Delta_*$, evaluation produces a $C^1$ diffeomorphism $\iota:X\to\Sigma\subset\mathcal{V}^\ast$ with
 $$\bigl\lVert\iota^*g_\Sigma-g\bigr\rVert_{C^k}
 +\bigl\lVert\alpha_\Sigma\circ\iota-\alpha-c\bigr\rVert_{C^k}
-\le C\,K\,\varepsilon.$$
-In particular $\iota$ is a $C^k$ almost-isometry of defect $O(K\varepsilon)$, not an isometry.
+\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}.$$
+If the tail of $\Phi$ that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$, then $\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta$.
 \end{theorem}
 
 \begin{theorem}[round sphere, exact window]
 \label{thm-a}
-Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $\varepsilon=0$ at $\Lambda'=2n+2$. Suppose there is a frame $x_0,\dots,x_n$ in $\mathcal{V}$ with
-$$Px_a=nx_a,\quad
-\int x_ax_b=\delta_{ab},\quad
-\int x_a=0,\quad
-\sum_ax_a^2=1,$$
-each $x_ax_b-\delta_{ab}/(n+1)$ an eigenfunction at $2n+2$, and $\{dx_a\}$ spanning $T^*X$. Then $X$ is isometric to the unit round sphere, $P=-\Delta$, and $\operatorname{span}\{x_a\}=H_1$. Scaling: the pair $(\lambda,2\lambda+2\lambda/n)$ gives radius $\sqrt{n/\lambda}$.
+Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n+2$. Suppose there is a frame $x_0,\dots,x_n$ in $\mathcal{V}$ with $Px_a=nx_a$, $\int x_ax_b=\delta_{ab}$, $\int x_a=0$, $\sum_ax_a^2=1$, each $x_ax_b-\delta_{ab}/(n+1)$ an eigenfunction at $2n+2$, and $\{dx_a\}$ spanning $T^*X$. Then $X$ is isometric to the unit round sphere, $P=-\Delta$, and $\operatorname{span}\{x_a\}=H_1$. Scaling: the pair $(\lambda,2\lambda+2\lambda/n)$ gives radius $\sqrt{n/\lambda}$.
 \end{theorem}
 
 \begin{theorem}[round sphere, quantitative window]
 In the setting of Theorem~\ref{thm-a}, allow deficits
 $$\delta_1=\Bigl\lVert\sum_ax_a^2-1\Bigr\rVert_{C^0},\quad
-\delta_2=\bigl\lVert(I-\Pi_0-\Pi_{2n+2})(x_ax_b)\bigr\rVert_{L^2},$$
-$$\delta_3=\text{rank gap of }\Gamma(x_a,x_b),\quad
+\delta_3=\text{rank gap of }\Gamma(x_a,x_b),\quad
 \delta_\lambda=\lvert\lambda-n\rvert,$$
-and set $\delta=\delta_1+\delta_2+\delta_3+\delta_\lambda+\varepsilon$. There exist $\delta_*=\delta_*(n)>0$ and $C(n)$ such that if $\delta<\delta_*$, then $X$ is a $C^1$-graph over $S^n$ and
+$$\Delta_{\mathrm{fr}}=\sup_{a,b}\lVert R(x_a,x_b)\rVert_2,\qquad
+\delta=\delta_1+\delta_3+\delta_\lambda+\Delta_{\mathrm{fr}}.$$
+If $\delta<\delta_*(n)$, then $X$ is a $C^1$-graph over $S^n$ and
 $$d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n)\,\delta.$$
 \end{theorem}
 
-This is linear stability of Theorem~\ref{thm-a}. It does not use Ricci curvature.
+This is linear stability of Theorem~\ref{thm-a}. It does not use Ricci curvature \cite{Oba62,CMS}.
 
 \section{The Packet}
 Let $X$ be a closed connected smooth manifold and let
 $$P=P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
-act in $L^2(X,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Assume $P$ is essentially self-adjoint, with discrete spectrum
+act in $L^2(X,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}_g$ \cite{Wit82}. Assume $P$ is essentially self-adjoint, with discrete spectrum
 $$0=\lambda_0<\lambda_1\le\lambda_2\le\cdots\to+\infty$$
 and $\ker P=\operatorname{span}\{1\}$. The principal symbol of $P$ is the cometric $\Gamma$ of $g$. For all smooth $u,v$,
 
@@ -167,31 +163,33 @@ P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v).\tag{A1}
 Fix cutoffs $\Lambda\le\Lambda'<\infty$. Write
 $$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda),\qquad
 \mathcal{V}'=\bigoplus_{\lambda\le\Lambda'}\ker(P-\lambda),$$
-and let $\Pi_{\Lambda'}$ be the orthogonal projection onto $\mathcal{V}'$. Throughout this section, $u,v\in\mathcal{V}$. Set
+and let $\Pi_{\Lambda'}$ be the orthogonal projection onto $\mathcal{V}'$. Throughout, $u,v\in\mathcal{V}$. Set
 $$m(u,v)=\Pi_{\Lambda'}(uv),\qquad
-\varepsilon(u,v)=\bigl\lVert(I-\Pi_{\Lambda'})(uv)\bigr\rVert_{L^2(\mu)},$$
+\Phi(u,v,w)=\int_X uvw\,d\mu.$$
+
+The weighted tail of the product is
+$$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv)
+=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda,$$
 and
-$$\varepsilon=\varepsilon(\Lambda,\Lambda')
-=\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\varepsilon(u,v).$$
-At fixed $\Lambda$ one has $\varepsilon(\Lambda,\Lambda')\to 0$ as $\Lambda'\to\infty$. The article uses one finite pair $(\Lambda,\Lambda')$. The exact subclass is $\varepsilon=0$.
-Write $\Phi(u,v,w)=\int_X uvw\,d\mu$.
-Wyman. There exist $\delta\ge 0$ and $C<\infty$ such that, for all $u,v\in\mathcal{V}$ and every eigenfunction $w$,
+$$\Delta=\sup\bigl\{\lVert R(u,v)\rVert_2:\ u,v\in\mathcal{V},\ \lVert u\rVert_2=\lVert v\rVert_2=1\bigr\}.$$
+
+The exact subclass is $R=0$, equivalently $\Delta=0$.
+
+Wyman. There exist $\delta\ge 0$ and $C<\infty$ such that for all $u,v\in\mathcal{V}$ and every eigenfunction $w$,
 $$\bigl\lvert\Phi(u,v,w)\bigr\rvert
-\le C\,(1+\lambda_u+\lambda_v+\lambda_w)^\delta\,\lVert u\rVert_2\lVert v\rVert_2\lVert w\rVert_2.$$
-W1$^+$. There exists $K=K(P,\Lambda,\Lambda')<\infty$ such that for all $u,v\in\mathcal{V}$,
-$$\sum_{\lambda>\Lambda'}\lambda^2\bigl\lvert\Phi(u,v,e_\lambda)\bigr\rvert^2
-\le K^2\,\varepsilon(u,v)^2\,\lVert u\rVert_2^2\lVert v\rVert_2^2.$$
-Equivalently,
-$$\bigl\lVert P(I-\Pi_{\Lambda'})(uv)\bigr\rVert_2
-\le K\,\varepsilon(u,v)\,\lVert u\rVert_2\lVert v\rVert_2.$$
-Sobolev estimates bound the numerator; they do not automatically bound the ratio $K$.
-W2. Evaluation $\iota:X\to\mathcal{V}^\ast$, $\iota(x)(u)=u(x)$, is a smooth embedding onto a closed submanifold of $\mathcal{V}^\ast$.
+\le C\,(1+\lambda_u+\lambda_v+\lambda_w)^\delta\,\lVert u\rVert_2\lVert v\rVert_2\lVert w\rVert_2$$
+\cite{Wym}.
+
+W2. Evaluation $\iota:X\to\mathcal{V}^\ast$, $\iota(x)(u)=u(x)$, is a smooth embedding onto a closed submanifold of $\mathcal{V}^\ast$. The same holds for evaluation $X\to(\mathcal{V}')^\ast$. Characters are therefore evaluations on $\mathcal{V}'$, and the comparison error $E$ of §4 vanishes.
 W4. The differentials $\{du:u\in\mathcal{V}\}$ span $T^*X$ at every point.
+
 The visible packet is
-$$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},\ \varepsilon,\ K\bigr).$$
-On pairs from $\mathcal{V}$, (A1) gives
-$$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v),$$
-with $\lVert R(u,v)\rVert_2\le K\,\varepsilon(u,v)\,\lVert u\rVert_2\lVert v\rVert_2$. Thus $\Gamma$ on $\mathcal{V}$ is not an independent input.
+$$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},\ R\bigr).$$
+On pairs from $\mathcal{V}$, (A1) reads
+$$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v).$$
+Thus $\Gamma$ on $\mathcal{V}$ is not an independent input. No Weyl law, no potential, and no curvature bound is assumed. Dimension of $X$ is the rank in W4.
+
+
 
 \section{The Cometric From the Window}
 
@@ -271,13 +269,29 @@ The constant $\varepsilon_*$ depends on the given pair $(P,\Lambda,\Lambda')$, t
 \section{Metric and Weight}
 \begin{lemma} Assume Lemma~\ref{lma-1} and W4. There is a unique Riemannian metric $g$ on $X$ such that
 $$\Gamma(u,v)=g^{-1}(du,dv)\qquad\text{for all }u,v\in\mathcal{V}.$$
-This $g$ is the metric whose cometric is the principal symbol of $P$. If the remainder in Lemma 1 is $O(K\varepsilon)$, then
+This $g$ is the metric whose cometric is the principal symbol of $P$. If the remainder in Lemma~\ref{lma-1} is $O(K\varepsilon)$, then
 $$\bigl\lVert g-g_{\mathrm{true}}\bigr\rVert_{C^k}
 \le C(P,\Lambda,\Lambda',k)\,K\,\varepsilon$$
 for every $k$.
 \label{lma-3}
 \end{lemma}
-
+\begin{remark}[Sogge and $\lVert t\rVert_{C^0}$]
+Let $t=(I-\Pi_{\Lambda'})(uv)$ for unit $u,v\in\mathcal{V}$. Hörmander–Sogge gives
+$$\lVert e_\lambda\rVert_{C^0}\le C_S(n)\,(1+\lambda)^{(n-1)/4}$$
+on a closed Riemannian $n$-manifold \cite{Sog88}. Expanding $t=\sum_{\lambda>\Lambda'}\Phi(u,v,e_\lambda)\,e_\lambda$ and applying Cauchy–Schwarz with the weight already in $R=Pt$ yields
+$$\lVert t\rVert_{C^0}
+\le C_S(n)\Bigl(\sum_{\lambda>\Lambda'}\lambda^{-2}(1+\lambda)^{(n-1)/2}\Bigr)^{1/2}
+\lVert R(u,v)\rVert_2.$$
+If the tail is supported in a finite slot $\Lambda<\lambda\le\Lambda''$, the series is a constant $C(n,\Lambda',\Lambda'')$ and
+$$\lVert t\rVert_{C^0}\le C(n,\Lambda',\Lambda'')\,\Delta.$$
+If the tail is infinite, the same bound holds after replacing $\Delta$ by
+$$\Delta_s=\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\Bigl(\sum_{\lambda>\Lambda'}\lambda^{2s}\lvert\Phi(u,v,e_\lambda)\rvert^2\Bigr)^{1/2}$$
+with $s>(n-1)/8+1/2$, or after cutting at a finite $\Lambda''$ and absorbing the far tail into $\Delta$.
+In model A this remark is unused for $E$, because $E=0$. It is used to convert $\Delta$ into a $C^0$ bound on the unweighted tail $t$, and therefore into a $C^0$ bound on $R$ on $X$ once $P$ is applied in a finite slot:
+$$\lVert R\rVert_{C^0(X)}\le C(n,\Lambda',\Lambda'')\,\Delta.$$
+Together with the chart comparison of §4, the same bound holds on $\Sigma$. That is the finite-tail input to the second display of Theorem 2, now with an explicit Sogge exponent instead of a generic Sobolev $n/4$.
+Wyman remains the bound on the coefficients $\Phi(u,v,e_\lambda)$ \cite{Wym}. Sogge is the bound on the modes themselves. Both are used; neither is a curvature comparison.
+\end{remark}
 \begin{proof}W4 says $\{du:u\in\mathcal{V}\}$ spans $T^*X$. The assignment $(du,dv)\mapsto\Gamma(u,v)$ is well-defined on that spanning set: $\Gamma(u,u)=\sigma_P(du,du)$, so $du=0$ implies $\Gamma(u,\cdot)=0$. Positive-definiteness is the assumption that the principal symbol of $P$ is an inner product. Dualizing gives $g$.
 In a local frame $\{u_a\}\subset\mathcal{V}$ of rank $n=\dim X$,
 $$g^{ab}=\Gamma(u_a,u_b)$$
