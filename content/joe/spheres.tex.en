@@ -80,6 +80,7 @@ $$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda)$$
 be the corresponding spectral window. Products of window functions need not lie in $\mathcal{V}$. We compare them to the slightly larger window $\mathcal{V}'$ of modes up to $\Lambda'$, and we write
 $$\varepsilon=\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\bigl\lVert(I-\Pi_{\Lambda'})(uv)\bigr\rVert_{L^2(\mu)}$$
 for the uniform tail of those products. For fixed $\Lambda$ one has $\varepsilon\to 0$ as $\Lambda'\to\infty$; the theory uses one finite pair $(\Lambda,\Lambda')$, not that limit. The exact subclass is $\varepsilon=0$ at a finite $\Lambda'$, which is an algebraic constraint on the window, not an asymptotic one.
+
 The visible packet of the window is
 $$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},\ \varepsilon,\ K\bigr),$$
 where $K$ is the constant in the weighted tail bound
@@ -88,12 +89,21 @@ $$\sum_{\lambda>\Lambda'}\lambda^2\bigl\lvert\Phi(u,v,e_\lambda)\bigr\rvert^2
 The cometric $\Gamma$ of $g$ is not an extra input. The Witten multiplication rule
 $$P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v)$$
 computes $\Gamma$ on $\mathcal{V}$ from $(P,\Phi)$, with an $L^2$ remainder at most $K\varepsilon$. Two nondegeneracy hypotheses close the packet: evaluation $X\to\mathcal{V}^\ast$ is a smooth embedding, and $\{du:u\in\mathcal{V}\}$ spans $T^*X$. No Weyl law is assumed, no potential is present, and no curvature bound is used.
+
 The main recognition theorem is that this packet determines $(X,g,\alpha)$. If $\varepsilon=0$, it determines them up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. If $\varepsilon$ is smaller than a threshold depending on $(P,\Lambda,\Lambda')$, it determines them up to a $C^k$ almost-isometry of defect $O(K\varepsilon)$. In both regimes the underlying manifold is recovered as the space of (almost) multiplicative characters of the window, the metric is recovered by dualizing $\Gamma$, and the weight is recovered as the logarithm of the ratio of $\mu$ to Riemannian volume.
+
+If $\varepsilon=0$, the identification is a $C^\infty$ isometry of $g$ and an additive constant on $\alpha$. If $\varepsilon$ is below a threshold depending on $(P,\Lambda,\Lambda')$, it is a $C^k$ almost-isometry of defect $O(K\varepsilon)$. Two packets for the same operator at different cutoffs produce isometric copies only in the exact case; in the approximate case they produce almost-isometric copies to the same order.
+
 The class of pairs to which the theorem applies is large. Every closed Witten operator, including every Laplace–Beltrami operator, admits some finite embedding window; the packet is then defined, and reconstruction proceeds. The theorem is recognition, not construction: $P$ is given as Witten, and the packet is asked to recover the geometry that produced it. It is also not a spectral uniqueness theorem. Two isospectral Witten operators with different window products need not be isometric. Two packets for the same operator, at different cutoffs, produce isometric copies of the same pair.
+
 A distinguished slice is the unweighted sphere. There one may take $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $\varepsilon=0$ already at $\Lambda'=2n+2$: products of linear coordinates on $S^n$ occupy only the constant slot and the quadratic harmonics. The general theorem then specializes to an exact recognition of the unit round sphere from that frame, and to a linear $C^0$ stability statement when the same frame is allowed small defects. Those two statements are compared with Obata’s theorem and with quantitative Obata theorems on the Ricci side; they are not Ricci theorems. They use a linear frame and its products, not a lower bound on Ricci curvature and a single first eigenfunction.
-The analytic ingredients are elementary. The weighted tail bound is the one place where elliptic estimates enter, and they enter as a constant $K(P,\Lambda,\Lambda')$, not as a curvature comparison. Eigenfunction supremum bounds of Hörmander–Sogge type justify that such a $K$ exists on every closed Witten pair; they are not used as axioms. Weyl’s law describes how large a window eventually is, and is likewise unused.
+
+The analytic ingredients are elementary. The weighted tail bound is the one place where elliptic estimates enter, and they enter as a constant $K(P,\Lambda,\Lambda')$, not as a curvature comparison. Wyman’s bound on window triples supplies the polynomial control on $\Phi$. The weighted tail constant $K$ is the axiom W1$^+$ on the ratio $\lVert P(I-\Pi_{\Lambda'})(uv)\rVert_2/\varepsilon(u,v)$. Sobolev estimates bound the numerator of that ratio, not automatically the ratio itself. Neither bound is a curvature comparison.
+
 The article is organized as follows. Section 2 fixes the Witten category and the window packet. Section 3 extracts $\Gamma$ from the multiplication rule and records the constant $K$. Section 4 identifies points of $X$ with characters of the window and promotes a small tail to a $C^1$ persistence of that identification. Section 5 dualizes $\Gamma$ to a metric and reads $\alpha$ from the two measures. Section 6 states the recognition theorem, exact and approximate, with the isometry claim separated by the size of $\varepsilon$. Section 7 specializes to the unweighted first window on the sphere. Section 8 collects what the packet does not determine.
+
 Throughout, the governing principle is the same as in the global inverse problem: geometry sits in the multiplication table, not in the list of eigenvalues. The contribution here is that a finite, explicitly tailed piece of that table already reconstructs a Witten pair, and that the unit sphere is the minimal unweighted instance of the same mechanism.
+
 
 
 \doclicenseThis
