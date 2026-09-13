@@ -201,33 +201,20 @@ Thus $\Gamma$ on $\mathcal{V}$ is not an independent input. No Weyl law, no pote
 
 \begin{lemma}
 \label{lma-1}
-Let $d=\dim\mathcal{V}$ and let $\iota:X\to\mathcal{V}^*$ be the evaluation of W1. Write $t(u,v)=(I-\Pi_{\Lambda'})(uv)$ for $u,v\in\mathcal{V}$.
-
-\begin{description}
-
-\item[(i)] (infinite tail) There exists $\tau_*=\tau_*(d,\iota(X))>0$ such that if
-$$\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\lVert t(u,v)\rVert_{C^1(X)}<\tau_*,$$
-then $\iota(X)$ is a $C^\infty$ embedded submanifold $\Sigma\subset\mathcal{V}^*$, $\iota:X\to\Sigma$ is a $C^1$ diffeomorphism (and $C^\infty$ if $t=0$), and for every $k\ge 0$
-$$c(k)^{-1}\,\lVert R_X\rVert_{C^k(X)}
-\le\lVert R_\Sigma\rVert_{C^k(\Sigma)}
-\le c(k)\,\lVert R_X\rVert_{C^k(X)},$$
-with $c(k)=C(d,k)$. The smallness parameter here is $\lVert t\rVert_{C^1}$, not $\Delta$.
-
-\item[(ii)] (finite slot) If the $\Phi$-tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), then Remarks 6 and 7 give
-$$\lVert t\rVert_{C^1}\le C(d,d_{\mathrm{tail}},n,\Lambda',\Lambda'')\,\Delta.$$
-\end{description}
-Hence there exists $\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$ such that $\Delta<\Delta_*$ implies the conclusions of (i), and
-$$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
+Let $u,v\in\mathcal{V}$. Then
+$$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v),$$
+where
+$$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv)
+=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda.$$
+In particular $\lVert R(u,v)\rVert_2\le\Delta\,\lVert u\rVert_2\lVert v\rVert_2$. If $R=0$, then $\Gamma(u,v)$ is determined by $(P,\Phi)$. The bilinear map $\Gamma:\mathcal{V}\times\mathcal{V}\to C^\infty(X)$ does not depend on the orthonormal basis used to expand $\Phi$.
 \end{lemma}
 
 \begin{proof}
-W1 already makes $\iota$ a smooth embedding onto a closed submanifold, so the first claim of (i) does not use the size of $t$. The product map $F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$ vanishes on $\iota(X)$ up to $t$. Evaluation extends to $\mathcal{V}'$, so at $\xi=\iota(x)$ one has $\xi(m(u,v))=m(u,v)(x)$ and the only defect is $t(x)$. Differentiating $F$ in the $\mathcal{V}^*$-directions at $\iota(x)$ yields the family $(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$ on $T_x^*X$. W2 says $\{du:u\in\mathcal{V}\}$ spans $T_x^*X$, so this family is transverse to $\iota(X)$. If $\lVert t\rVert_{C^1}<\tau_*$, $F$ is a $C^1$-small perturbation of a section that vanishes exactly on $\iota(X)$. Persistence of transverse embeddings keeps $\iota$ a $C^1$ diffeomorphism onto its image. If $t=0$, then $R=0$, $F$ vanishes exactly on $\iota(X)$, and $\iota$ is $C^\infty$. The $C^k$ comparison of $R_X$ and $R_\Sigma$ is the chain rule for $\iota$ and $\iota^{-1}$, whose $C^{k-1}$ norms stay bounded for $\lVert t\rVert_{C^1}<\tau_*$.
-For (ii), a finite slot makes every $C^k$ norm on the tail equivalent to the $L^2$ norm of $R=-Pt$. Remark 6 supplies the $C^0$ bound on $t$ via Sogge; equivalence of norms on a space of dimension $d_{\mathrm{tail}}$ upgrades that to $C^1$. Thus $\Delta$ small implies $\lVert t\rVert_{C^1}$ small, and (i) applies.
+ Identity (A1) gives
+$$2\Gamma(u,v)=u\,Pv+v\,Pu-P(uv).$$
+Split $uv=m(u,v)+t$ with $t=(I-\Pi_{\Lambda'})(uv)$. Then $P(uv)=P(m(u,v))+Pt$ and $R=-Pt$. If $R=0$, then $t=0$, so $m(u,v)=uv$ and every coefficient of $uv$ against $\mathcal{V}'$ is a value of $\Phi$. Basis-independence: $P$ and $\Phi$ are defined on $\mathcal{V}$ without choices, and $m$ is orthogonal projection of the pointwise product. Changing orthonormal bases of $\mathcal{V}$ and $\mathcal{V}'$ conjugates the array of $\Phi$ and leaves $\Gamma(u,v)$ unchanged.
 \end{proof}
 
-\begin{remark}
-Theorem 2’s general bound is (i), written in $\lVert R\rVert_{C^k(\Sigma)}$. The conversion to a multiple of $\Delta$ is (ii). Theorem 4 uses only (ii), with $d=n+1$ and a finite cluster about the slot $2n+2$.
-\end{remark}
 \begin{remark}[Sogge and $\lVert t\rVert_{C^0}$]
 Hörmander–Sogge gives $\lVert e_\lambda\rVert_{C^0}\le C_S(n)\,(1+\lambda)^{(n-1)/4}$ \cite{Sog88}. Expanding $t$ and applying Cauchy–Schwarz with the weight in $R=Pt$ yields, for a tail supported in a finite slot $\Lambda<\lambda\le\Lambda''$,
 $$\lVert t\rVert_{C^0}\le C(n,\Lambda',\Lambda'')\,\Delta,$$
