@@ -113,7 +113,7 @@ The article is organized as follows. Section 2 fixes the Witten category and the
 Geometry sits in the multiplication table, not in the list of eigenvalues. The contribution here is that a finite, explicitly tailed piece of that table already reconstructs a Witten pair, and that the unit sphere is the minimal unweighted instance of the same mechanism.
 
 \subsection{Results}
-Standing hypotheses: $X$ closed and connected, $P=P_\alpha$ a Witten operator \cite{Wit82}, packet as in §2, $u,v\in\mathcal{V}$, Wyman on window triples \cite{Wym}, W2, W4.
+Standing hypotheses: $X$ closed and connected, $P=P_\alpha$ a Witten operator \cite{Wit82}, packet as in §2, $u,v\in\mathcal{V}$, Wyman on window triples \cite{Wym}, W1, W2.
 
 \begin{theorem}[exact recognition]
 \label{thm-1}
@@ -180,14 +180,16 @@ $$\bigl\lvert\Phi(u,v,w)\bigr\rvert
 \le C\,(1+\lambda_u+\lambda_v+\lambda_w)^\delta\,\lVert u\rVert_2\lVert v\rVert_2\lVert w\rVert_2$$
 \cite{Wym}.
 
-W2. Evaluation $\iota:X\to\mathcal{V}^\ast$, $\iota(x)(u)=u(x)$, is a smooth embedding onto a closed submanifold of $\mathcal{V}^\ast$. The same holds for evaluation $X\to(\mathcal{V}')^\ast$. Characters are therefore evaluations on $\mathcal{V}'$, and the comparison error $E$ of §4 vanishes.
-W4. The differentials $\{du:u\in\mathcal{V}\}$ span $T^*X$ at every point.
+W1. Evaluation $\iota:X\to\mathcal{V}^\ast$, $\iota(x)(u)=u(x)$, is a smooth embedding onto a closed submanifold of $\mathcal{V}^\ast$. The same holds for evaluation $X\to(\mathcal{V}')^\ast$. Characters are therefore evaluations on $\mathcal{V}'$, and the comparison error $E$ of §4 vanishes.
+
+
+W2. The differentials $\{du:u\in\mathcal{V}\}$ span $T^*X$ at every point.
 
 The visible packet is
 $$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},\ R\bigr).$$
 On pairs from $\mathcal{V}$, (A1) reads
 $$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v).$$
-Thus $\Gamma$ on $\mathcal{V}$ is not an independent input. No Weyl law, no potential, and no curvature bound is assumed. Dimension of $X$ is the rank in W4.
+Thus $\Gamma$ on $\mathcal{V}$ is not an independent input. No Weyl law, no potential, and no curvature bound is assumed. Dimension of $X$ is the rank in W2.
 
 
 
