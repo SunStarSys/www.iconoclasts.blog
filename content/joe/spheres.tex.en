@@ -124,11 +124,16 @@ determines $(X,g,\alpha)$ up to a $C^\infty$ Riemannian isometry of $g$ and an a
 
 \begin{theorem}[approximate recognition]
 \label{thm-2}
-Let $d=\dim\mathcal{V}$. There exists $\Delta_*>0$ such that if $\Delta<\Delta_*$, evaluation produces a $C^1$ diffeomorphism $\iota:X\to\Sigma\subset\mathcal{V}^\ast$ with
-$$\bigl\lVert\iota^*g_\Sigma-g\bigr\rVert_{C^k}
-+\bigl\lVert\alpha_\Sigma\circ\iota-\alpha-c\bigr\rVert_{C^k}
-\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}.$$
-If the tail of $\Phi$ that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$, then $\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta$.
+Let $d=\dim\mathcal{V}$.
+(i) There exists $\tau_*=\tau_*(d,\iota(X))>0$ such that if
+$$\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\lVert t(u,v)\rVert_{C^1(X)}<\tau_*,$$
+then evaluation realises $X$ as a $C^1$ embedded submanifold $\Sigma\subset\mathcal{V}^*$ and
+$$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}
+\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}$$
+for every $k\ge 0$, with $c$ an additive constant on $\alpha$. The diffeomorphism $\iota$ is $C^\infty$ if $t=0$. The smallness parameter is $\lVert t\rVert_{C^1}$, equivalently $\lVert R\rVert_{C^k}$ after Lemma 9(i); it is not $\Delta$.
+(ii) If the tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), Lemma 9(ii) supplies $\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$ such that $\Delta<\Delta_*$ implies the conclusions of (i), and
+$$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
+In that case $\iota$ is a $C^k$ almost-isometry on the scale of $\Delta$.
 \end{theorem}
 
 \begin{theorem}[round sphere, exact window]
@@ -299,7 +304,7 @@ $$\bigl\lVert\alpha_\Sigma\circ\iota-\alpha-c\bigr\rVert_{C^k}
 \end{lemma}
 
 \begin{proof}
- By the standing category, $P$ is already the Witten operator of some pair $(g_0,\alpha_0)$. Lemma 13 identifies $g=g_0$, because both metrics have the same principal symbol. The inner product that makes $P$ self-adjoint is $\mu=e^{-\alpha_0}\mathrm{vol}_{g_0}$. On the other hand $\Phi(1,\cdot,\cdot)$ is that inner product, since $1=\ker P$ and $\Phi(1,u,v)=\langle u,v\rangle_{L^2(\mu)}$. Thus $\mu=e^{-\alpha_0}\mathrm{vol}_g$, so $\alpha=\alpha_0+c$. A Witten operator on a closed manifold is determined by $(g,\alpha)$ up to that constant. The $C^k$ estimate follows from Lemma 13 and the elliptic regularity of $\log(d\mu/d\mathrm{vol}_g)$.
+By the standing category, $P$ is already the Witten operator of some pair $(g_0,\alpha_0)$. Lemma 13 identifies $g=g_0$, because both metrics have the same principal symbol. The inner product that makes $P$ self-adjoint is $\mu=e^{-\alpha_0}\mathrm{vol}_{g_0}$. On the other hand $\Phi(1,\cdot,\cdot)$ is that inner product, since $1=\ker P$ and $\Phi(1,u,v)=\langle u,v\rangle_{L^2(\mu)}$. Thus $\mu=e^{-\alpha_0}\mathrm{vol}_g$, so $\alpha=\alpha_0+c$. A Witten operator on a closed manifold is determined by $(g,\alpha)$ up to that constant. The $C^k$ estimate follows from Lemma 13 and the elliptic regularity of $\log(d\mu/d\mathrm{vol}_g)$.
 \end{proof}
 
 \begin{remark} Lemma~\ref{lma-4} is recognition, not construction: it uses that $P$ was Witten. The two measures $\mu$ and $\mathrm{vol}_g$ are the only source of $\alpha$. The packet does not store $\alpha$ separately.
@@ -318,9 +323,9 @@ Assume $R=0$. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ as a function of $(P,\Phi)
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm-2}]
-Assume $\Delta<\Delta_*$, with $\Delta_*$ as in Lemma 9. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ with remainder $R$. Lemma 9 produces a $C^1$ diffeomorphism $\iota:X\to\Sigma\subset\mathcal{V}^\ast$ and identifies $\lVert R\rVert_{C^k(\Sigma)}$ with $\lVert R\rVert_{C^k(X)}$ up to $C(d,k)$. Lemma 13 upgrades the cometric error to
-$$\bigl\lVert\iota^*g_\Sigma-g\bigr\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}.$$
-Lemma 14 gives the same bound for $\alpha_\Sigma\circ\iota-\alpha-c$. If the tail of $\Phi$ occupies a finite slot of dimension $d_{\mathrm{tail}}$, the remarks of §3 convert $\lVert R\rVert_{C^k}$ into $C(d,d_{\mathrm{tail}},k)\Delta$. Hence $\iota$ is a $C^k$ almost-isometry, not an isometry, unless $R=0$.
+Lemma 5 gives $\Gamma$ on $\mathcal{V}$ with remainder $R$. Under the hypothesis of (i), Lemma 9(i) produces a $C^1$ diffeomorphism $\iota:X\to\Sigma\subset\mathcal{V}^*$ and identifies $\lVert R\rVert_{C^k(\Sigma)}$ with $\lVert R\rVert_{C^k(X)}$ up to $C(d,k)$. Lemma 13 upgrades the cometric error to
+$$\lVert\iota^*g_\Sigma-g\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}.$$
+Lemma 14 gives the same bound for $\alpha_\Sigma\circ\iota-\alpha-c$. Under the hypothesis of (ii), Lemma 9(ii) converts $\lVert t\rVert_{C^1}$ and $\lVert R\rVert_{C^k}$ into multiples of $\Delta$, and (i) applies. If $R=0$, both parts reduce to Theorem 1.
 \end{proof}
 
 \begin{remark}
@@ -343,7 +348,7 @@ Hence $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$. The matrix $\delta_{ab}-x_ax_b$ has 
 \begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 18 and Theorem 1 give that $X$ is isometric to the unit round sphere. The metric dual to $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ is the round metric of radius $1$, and $\alpha=0$ because $\mu=\mathrm{vol}_g$. Thus $P=-\Delta$. The frame spans the first harmonics because it is an $(n+1)$-dimensional eigenspace at eigenvalue $n$. If the first eigenvalue is $\lambda$ rather than $n$, the same identities with the pair $(\lambda,2\lambda+2\lambda/n)$ rescale the radius to $\sqrt{n/\lambda}$. $\square$
 \end{proof}
 \begin{proof}[Proof of Theorem~\ref{thm-b}]
- Work in the setting of Theorem 3 with deficits $\delta_1,\delta_2,\delta_\lambda$ and
+Work in the setting of Theorem 3 with deficits $\delta_1,\delta_2,\delta_\lambda$ and
 $$\Delta_{\mathrm{fr}}=\sup_{a,b}\lVert R(x_a,x_b)\rVert_2,$$
 and set $\delta=\delta_1+\delta_2+\delta_\lambda+\Delta_{\mathrm{fr}}$. Then $\sum_a x_a^2=1+O_{C^0}(\delta_1)$, so $F$ lands in a $C^0$-neighborhood of $S^n$. The remainder $\Delta_{\mathrm{fr}}$ is $R$ on this frame. The exact support is the slot $2n+2$; any mass in $R$ occupies a finite cluster, so $d_{\mathrm{tail}}=O(n^2)$ and the remarks of §3 give
 $$\lVert R\rVert_{C^k}\le C(n,k)\,\Delta_{\mathrm{fr}}.$$
