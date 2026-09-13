@@ -113,7 +113,7 @@ $$\bigl(\Lambda,\Lambda',\sigma(P)\cap[0,\Lambda'],\Phi\big|_{\mathcal{V}\otimes
 determines $(X,g,\alpha)$ up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. Evaluation is a Riemannian isometry of $(X,g)$ onto the character space of $(\mathcal{V},m)$ in $\mathcal{V}^\ast$, and $P$ is the Witten operator of the reconstructed pair.
 \end{theorem}
 \begin{theorem}[approximate recognition]
-\labem{thm-2}
+\label{thm-2}
 There exist $\varepsilon_*=\varepsilon_*(P,\Lambda,\Lambda')>0$ and constants $C(P,\Lambda,\Lambda',k)$ such that if $\varepsilon<\varepsilon_*$, the same packet determines a $C^\infty$ submanifold $\Sigma\subset\mathcal{V}^\ast$ and a metric $g_\Sigma$ for which evaluation $\iota:X\to\Sigma$ is a $C^1$ diffeomorphism satisfying
 $$\bigl\lVert\iota^*g_\Sigma-g\bigr\rVert_{C^k}
 +\bigl\lVert\alpha_\Sigma\circ\iota-\alpha-c\bigr\rVert_{C^k}
