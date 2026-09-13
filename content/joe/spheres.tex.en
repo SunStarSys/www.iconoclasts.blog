@@ -110,6 +110,7 @@ Assume $\varepsilon=0$. The packet
 $$\bigl(\Lambda,\Lambda',\sigma(P)\cap[0,\Lambda'],\Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'}\bigr)$$
 determines $(X,g,\alpha)$ up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. Evaluation is a Riemannian isometry of $(X,g)$ onto the character space of $(\mathcal{V},m)$ in $\mathcal{V}^\ast$, and $P$ is the Witten operator of the reconstructed pair.
 \end{theorem}
+
 \begin{theorem}[approximate recognition]
 \label{thm-2}
 There exist $\varepsilon_*=\varepsilon_*(P,\Lambda,\Lambda')>0$ and constants $C(P,\Lambda,\Lambda',k)$ such that if $\varepsilon<\varepsilon_*$, the same packet determines a $C^\infty$ submanifold $\Sigma\subset\mathcal{V}^\ast$ and a metric $g_\Sigma$ for which evaluation $\iota:X\to\Sigma$ is a $C^1$ diffeomorphism satisfying
@@ -118,6 +119,7 @@ $$\bigl\lVert\iota^*g_\Sigma-g\bigr\rVert_{C^k}
 \le C\,K\,\varepsilon.$$
 In particular $\iota$ is a $C^k$ almost-isometry of defect $O(K\varepsilon)$, not an isometry.
 \end{theorem}
+
 \begin{theorem}[round sphere, exact window]
 \label{thm-a}
 Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $\varepsilon=0$ at $\Lambda'=2n+2$. Suppose there is a frame $x_0,\dots,x_n$ in $\mathcal{V}$ with
@@ -127,6 +129,7 @@ $$Px_a=nx_a,\quad
 \sum_ax_a^2=1,$$
 each $x_ax_b-\delta_{ab}/(n+1)$ an eigenfunction at $2n+2$, and $\{dx_a\}$ spanning $T^*X$. Then $X$ is isometric to the unit round sphere, $P=-\Delta$, and $\operatorname{span}\{x_a\}=H_1$. Scaling: the pair $(\lambda,2\lambda+2\lambda/n)$ gives radius $\sqrt{n/\lambda}$.
 \end{theorem}
+
 \begin{theorem}[round sphere, quantitative window]
 In the setting of Theorem~\ref{thm-a}, allow deficits
 $$\delta_1=\Bigl\lVert\sum_ax_a^2-1\Bigr\rVert_{C^0},\quad
@@ -136,6 +139,7 @@ $$\delta_3=\text{rank gap of }\Gamma(x_a,x_b),\quad
 and set $\delta=\delta_1+\delta_2+\delta_3+\delta_\lambda+\varepsilon$. There exist $\delta_*=\delta_*(n)>0$ and $C(n)$ such that if $\delta<\delta_*$, then $X$ is a $C^1$-graph over $S^n$ and
 $$d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n)\,\delta.$$
 \end{theorem}
+
 This is linear stability of Theorem~\ref{thm-a}. It does not use Ricci curvature.
 
 \section{The Packet}
@@ -144,9 +148,11 @@ $$P=P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
 act in $L^2(X,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Assume $P$ is essentially self-adjoint, with discrete spectrum
 $$0=\lambda_0<\lambda_1\le\lambda_2\le\cdots\to+\infty$$
 and $\ker P=\operatorname{span}\{1\}$. The principal symbol of $P$ is the cometric $\Gamma$ of $g$. For all smooth $u,v$,
+
 \begin{equation}
 P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v).\tag{A1}
 \end{equation}
+
 Fix cutoffs $\Lambda\le\Lambda'<\infty$. Write
 $$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda),\qquad
 \mathcal{V}'=\bigoplus_{\lambda\le\Lambda'}\ker(P-\lambda),$$
@@ -186,6 +192,7 @@ $$\lVert R(u,v)\rVert_{L^2(\mu)}
 If $\varepsilon=0$, then $R=0$ pointwise and $\Gamma(u,v)$ is determined by $(P,\Phi)$. The bilinear map $\Gamma:\mathcal{V}\times\mathcal{V}\to C^\infty(X)$ does not depend on the orthonormal basis used to expand $\Phi$.
 \label{lma-1}
 \end{lemma}
+
 \begin{proof}
 Identity (A1) gives
 $$2\Gamma(u,v)=u\,Pv+v\,Pu-P(uv).$$
@@ -196,11 +203,13 @@ $$\lVert Pt\rVert_2\le K\,\varepsilon(u,v)\,\lVert u\rVert_2\lVert v\rVert_2.$$
 If $\varepsilon=0$, then $t=0$, hence $R=0$. In that case $m(u,v)=uv$ and every coefficient of $uv$ against $\mathcal{V}'$ is a value of $\Phi$, so the right-hand side is a function of the packet.
 Basis-independence: $P$ and $\Phi$ are defined on $\mathcal{V}$ without choices, and $m$ is orthogonal projection of the pointwise product. Changing orthonormal bases of $\mathcal{V}$ and $\mathcal{V}'$ conjugates the array of $\Phi$-coefficients and leaves $\Gamma(u,v)$ unchanged.\
 \end{proof}
+
 \begin{remark}The constant $K$ is part of the packet. It depends on $(P,\Lambda,\Lambda')$ and need not be monotone in $\Lambda'$. An upper bound on the numerator $\lVert Pt\rVert_2$ follows from the Sobolev algebra estimate
 $$\lVert uv\rVert_{H^s(\mu)}\le C_{\mathrm{alg}}(s)\,(1+\Lambda)^s\,\lVert u\rVert_2\lVert v\rVert_2
 \qquad(s>\max\{2,n/2\}),$$
 together with $\lVert Pt\rVert_2\le C_{\mathrm{ell}}(P)\lVert t\rVert_{H^2}$. That bounds $\lVert Pt\rVert_2$, not the ratio $\lVert Pt\rVert_2/\varepsilon(u,v)$. The ratio is W1$^+$, not a Sobolev corollary.
 \end{remark}
+
 \begin{remark}[curvature and $K$]
 The theorems do not use curvature. If one adds a bound on the geometry that produces $P$, the ratio $K$ becomes explicit.
 On a closed Witten pair with
@@ -213,6 +222,7 @@ If in addition $\sigma(P)$ has a gap $(\Lambda',\Lambda'+G]$, the tail Rayleigh 
 $$\Lambda'+G\le K\le C(n,\kappa,i_0,M,\Lambda,\Lambda').$$
 In that regime $\Delta=K\varepsilon$ is a product of a geometrically bounded factor and the packet tail. The dependence of Theorem 2 on the unknown pair $(P,\Lambda,\Lambda')$ reduces to dependence on $(n,\kappa,i_0,M,\Lambda,\Lambda')$.
 \end{remark}
+
 \begin{corollary} If $\varepsilon=0$, the Gram functions $\Gamma(u,v)$ for $u,v\in\mathcal{V}$ are packet data. W4 is then a nondegeneracy condition on those functions. If $\varepsilon>0$, the same Gram functions are determined up to an $L^2$ error of size $K\varepsilon$.
 \end{corollary}
 
@@ -222,12 +232,14 @@ $$\bigl\lvert\xi\bigl(m(u,v)\bigr)-\xi(u)\xi(v)\bigr\rvert
 \le C_0\varepsilon\,\lVert u\rVert_2\lVert v\rVert_2
 \qquad\text{for all }u,v\in\mathcal{V}.$$
 Write $\mathcal{M}_\varepsilon$ for the set of such forms. Evaluations $\iota(x)$ lie in $\mathcal{M}_\varepsilon$: $\iota(x)(uv)=\iota(x)(u)\iota(x)(v)$ and the tail $t=(I-\Pi_{\Lambda'})(uv)$ contributes at most $C\varepsilon$ after the $C^0$ embedding of the finite-dimensional space $\mathcal{V}'$.
+
 \begin{lemma} There exist $\varepsilon_*=\varepsilon_*(P,\Lambda,\Lambda')>0$ and $C$ such that if $\varepsilon<\varepsilon_*$, then:
 \label{lma-2}
 $\iota(X)\subset\mathcal{M}_\varepsilon$;
 every $\xi\in\mathcal{M}_\varepsilon$ lies within $C\varepsilon$ of $\iota(x)$ for a unique $x\in X$, in the dual Hilbert norm on $\mathcal{V}^\ast$;
 the resulting map $\mathcal{M}_\varepsilon\to X$ is a $C^\infty$ diffeomorphism if $\varepsilon=0$, and a $C^1$ diffeomorphism if $\varepsilon<\varepsilon_*$.
 \end{lemma}
+
 \begin{proof} W2 says $\iota:X\to\mathcal{V}^\ast$ is a smooth embedding onto a closed submanifold. Consider
 $$F(\xi;u,v)=\xi\bigl(m(u,v)\bigr)-\xi(u)\xi(v)$$
 as a $C^\infty$ section, in $\xi$, of a finite-dimensional bundle of bilinear forms on $\mathcal{V}$. At $\varepsilon=0$, $F(\,\cdot\,;u,v)$ vanishes exactly on $\iota(X)$. Indeed the algebra generated by $\mathcal{V}$ under the exact product $m$ separates points (W2) and is unital, so its characters are the evaluations; Stone–Weierstrass in the compact-open topology upgrades that to $C(X)$.
@@ -237,8 +249,10 @@ on $T^*_xX$. W4 says $\{du:u\in\mathcal{V}\}$ spans $T^*_xX$, so this family is 
 $$\lVert\xi-\iota\bigl(x(\xi)\bigr)\rVert_{\mathcal{V}^\ast}\le C\varepsilon.$$
 Compactness of $X$ makes the local section global and single-valued. At $\varepsilon=0$ the section is $\iota^{-1}$ and is $C^\infty$.
 \end{proof}
+
 \begin{corollary} If $\varepsilon=0$, $X$ is identified with the character space of the finite algebra $(\mathcal{V},m)$ as a $C^\infty$ embedded submanifold $\Sigma\subset\mathcal{V}^\ast$. If $\varepsilon<\varepsilon_*$, the same identification holds up to a $C^1$ diffeomorphism of defect $O(\varepsilon)$ in $\mathcal{V}^\ast$.
 \end{corollary}
+
 \begin{remark}
 The constant $\varepsilon_*$ depends on the given pair $(P,\Lambda,\Lambda')$, through the $C^1$ geometry of $\iota(X)$ and the size of W4. It is not universal in $n$. Residual ambiguity is an orthogonal change of basis of $\mathcal{V}$ preserving $\Phi$, a compact subgroup of $O(\dim\mathcal{V})$.
 \end{remark}
@@ -258,6 +272,7 @@ In a local frame $\{u_a\}\subset\mathcal{V}$ of rank $n=\dim X$,
 $$g^{ab}=\Gamma(u_a,u_b)$$
 on $\operatorname{span}\{du_a\}$, and $g$ is the inverse matrix. Independence of the frame is change of basis for a cometric. The $C^k$ estimate is Lemma~\ref{lma-1} plus the $C^\infty$ boundedness of a window basis in $C^{k+2}$ on a closed Witten pair.0
 \end{proof}
+
 \begin{lemma}Let $g$ be the metric of Lemma~\ref{lma-3} and let $\mu$ be the measure determined by
 $$\int uv\,d\mu=\Phi(1,u,v),\qquad u,v\in\mathcal{V},$$
 extended by continuity to $L^2(\mu)$. Then $\mu$ is a smooth positive multiple of $\mathrm{vol}_g$. The function
@@ -267,11 +282,15 @@ $$\bigl\lVert\alpha-\alpha_{\mathrm{true}}-c\bigr\rVert_{C^k}
 \le C(P,\Lambda,\Lambda',k)\,K\,\varepsilon.$$
 \label{lma-4}
 \end{lemma}
+
 \begin{proof} By the standing category, $P$ is already the Witten operator of some pair $(g_0,\alpha_0)$. Lemma~\ref{lma-3} identifies $g=g_0$, because both metrics have the same principal symbol. The inner product that makes $P$ self-adjoint is $\mu=e^{-\alpha_0}\mathrm{vol}_{g_0}$. On the other hand $\Phi(1,\cdot,\cdot)$ is that inner product, since $1=\ker P$ and $\Phi(1,u,v)=\langle u,v\rangle_{L^2(\mu)}$. Thus $\mu=e^{-\alpha_0}\mathrm{vol}_g$, so $\alpha=\alpha_0+c$. A Witten operator on a closed manifold is determined by $(g,\alpha)$ up to that constant. The $C^k$ estimate follows from Lemma~\ref{lma-3} and the elliptic regularity of $\log(d\mu/d\mathrm{vol}_g)$.
 \end{proof}
+
 \begin{remark} Lemma~\ref{lma-4} is recognition, not construction: it uses that $P$ was Witten. The two measures $\mu$ and $\mathrm{vol}_g$ are the only source of $\alpha$. The packet does not store $\alpha$ separately.
 \end{remark}
-Corollary. Combining Lemmas, the packet determines a Riemannian manifold $(\Sigma,g_\Sigma)$ in $\mathcal{V}^\ast$ and a weight $\alpha_\Sigma$ on $\Sigma$. The evaluation map of Lemma~\ref{lma-2} pulls these back to $(g,\alpha)$ exactly when $\varepsilon=0$, and to within $O(K\varepsilon)$ in $C^k$ when $\varepsilon<\varepsilon_*$.
+
+\begin{corollary}Combining Lemmas, the packet determines a Riemannian manifold $(\Sigma,g_\Sigma)$ in $\mathcal{V}^\ast$ and a weight $\alpha_\Sigma$ on $\Sigma$. The evaluation map of Lemma~\ref{lma-2} pulls these back to $(g,\alpha)$ exactly when $\varepsilon=0$, and to within $O(K\varepsilon)$ in $C^k$ when $\varepsilon<\varepsilon_*$.
+\end{corollary}
 \doclicenseThis
 \printbibliography
 \end{document}
