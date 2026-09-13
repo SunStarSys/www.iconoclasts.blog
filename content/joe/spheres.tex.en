@@ -60,15 +60,12 @@
 Let $P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$ be a Witten operator on a closed connected Riemannian manifold, acting in $L^2(e^{-\alpha}\,d\mathrm{vol}_g)$. The spectrum of $P_\alpha$ does not determine $(g,\alpha)$. The full multiplication table of eigenfunctions does. This paper isolates a finite piece of that table.
 
 Fix cutoffs $\Lambda\le\Lambda'<\infty$ and let $\mathcal{V}$ be the sum of eigenspaces of eigenvalue at most $\Lambda$. The visible packet is the restriction of the triple products $\Phi$ to pairs from $\mathcal{V}$ against modes up to $\Lambda'$, together with the weighted tail
-$$R(u,v)=-P(I-\Pi_{\Lambda'})(uv)
-=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda$$
-and its uniform size $\Delta=\sup\lVert R(u,v)\rVert_2$ over unit $u,v\in\mathcal{V}$. No Weyl law, no potential, and no curvature bound is used. A Wyman bound on window triples guarantees that the coefficients of $R$ exist.
+$$R(u,v)=-P(I-\Pi_{\Lambda'})(uv)=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda$$
+and its uniform size $\Delta=\sup\lVert R(u,v)\rVert_2$ over unit $u,v\in\mathcal{V}$. Write $t=(I-\Pi_{\Lambda'})(uv)$. No Weyl law, no potential, and no curvature bound is used. A Wyman bound on window triples guarantees that the coefficients of $R$ exist.
 
-If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$ and an additive constant on $\alpha$. If $\Delta$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^\ast$, the packet determines a submanifold $\Sigma\subset\mathcal{V}^\ast$ on which
-$$\bigl\lVert\iota^*g_\Sigma-g\bigr\rVert_{C^k}
-+\bigl\lVert\alpha_\Sigma\circ\iota-\alpha-c\bigr\rVert_{C^k}
-\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)},$$
-with $d=\dim\mathcal{V}$. When the tail of $\Phi$ occupies a finite slot, Sobolev embedding on $\Sigma$ converts this to a linear bound in $\Delta$ with constants depending only on window dimensions and $k$.
+If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$ and an additive constant on $\alpha$. If $\lVert t\rVert_{C^1}$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^*$, evaluation realises $X$ as a $C^1$ submanifold $\Sigma\subset\mathcal{V}^*$ on which
+$$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)},$$
+with $d=\dim\mathcal{V}$. That bound is not a statement about $\Delta$. When the tail of $\Phi$ occupies a finite slot, Sobolev embedding on $\Sigma$ converts $\lVert R\rVert_{C^k}$ into a multiple of $\Delta$, with constants depending only on window dimensions and $k$.
 
 The unweighted first window on the sphere is the minimal finite-tail case: $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $R=0$ already at $\Lambda'=2n+2$. That frame recognizes the unit round sphere exactly, and recognizes it with linear $C^0$ stability in the frame deficits when $R$ is small. Those statements are frame-side. They are not Obata theorems.
 
