@@ -336,6 +336,22 @@ No Ricci bound is used. Diameter control follows from the diffeomorphism onto a 
 \end{proof}
 \begin{remark} Obata characterizes $S^n$ by $\operatorname{Ric}\ge(n-1)g$ and $\lambda_1=n$, using one eigenfunction. Theorems 3 and 4 use an $(n+1)$-frame and its products. CMS quantitative Obata is Ricci-side stability of Obata. Theorem 4 is frame-side stability of Theorem 3. They are not the same theorem.
 \end{remark}
+
+\section{What the Packet Does Not Determine}
+The packet of §2 is a finite piece of the multiplication table of $P$. It does not determine the rest of $\sigma(P)$. Two Witten operators with the same window products and different high eigenvalues are not distinguished.
+
+It does not determine a potential. The standing category is Witten: $V=0$. A Schrödinger term is a different operator and a different paper.
+
+It does not yield spectral uniqueness. Isospectral Witten operators with different $\Phi$ on $\mathcal{V}$ need not be isometric. Theorems 1 and 2 identify packets, not spectra.
+
+It does not yield a constant depending only on $n$ in Theorem 2. The factor $C(P,\Lambda,\Lambda',k)$ depends on the given pair. A universal $C(n)$ appears only in Theorem 4, where the window is the first unweighted frame on a homology sphere of dimension $n$.
+
+It does not use Ricci curvature, a Weyl law, or the full table $\Phi$ on $\bigoplus_n\ker(P-\lambda_n)$. Those are the inputs of Obata theorems, of eigenvalue asymptotics, and of the global comparison theorem, respectively. The present arguments use a window frame and its products.
+
+Two packets for the same operator at different admissible cutoffs are consistent with Theorems 1 and 2. That consistency is not part of one packet; each packet has its own $(\Lambda,\Lambda',\varepsilon,K)$.
+
+The contribution of the paper is the converse direction inside this class: a finite, explicitly tailed window already reconstructs a Witten pair, and the unit round sphere is the minimal unweighted instance of that reconstruction.
+
 \doclicenseThis
 \printbibliography
 \end{document}
