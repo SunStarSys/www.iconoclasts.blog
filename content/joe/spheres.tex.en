@@ -69,6 +69,8 @@ with $d=\dim\mathcal{V}$. That bound is not a statement about $\Delta$. When the
 
 If in addition $\alpha=0$, an exact packet realises $X$ as a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). When $\dim\mathcal{V}=n+1$ and the quadratic $Q=\sum u_a^2$ is constant, that action is transitive and $X$ is a spherical space form.
 
+Among exact unweighted windows the unit round sphere is the unique packet with \(\dim\mathcal{V}=n+1\) and constant \(Q\); exactness alone does not force a sphere, and the spectrum of \(P\) does not single the sphere out of the exact class.
+
 The unweighted first window on the sphere is the minimal finite-tail case: $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $R=0$ already at $\Lambda'=2n+2$. That frame recognizes the unit round sphere exactly, and recognizes it with linear $C^0$ stability in the frame deficits when $R$ is small. Those statements are frame-side. They are not Obata theorems.
 
 \noindent\textbf{Keywords:} sphere, homogeneous space, spectral window, triple products, Witten Operators, eigenfunctions, inverse problem
@@ -148,6 +150,8 @@ In that case $\iota$ is a $C^k$ almost-isometry on the scale of $\Delta$.
 \label{thm-a}
 Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n+2$. Suppose there is a frame $x_0,\dots,x_n$ in $\mathcal{V}$ with $Px_a=nx_a$, $\int x_ax_b=\delta_{ab}$, $\int x_a=0$, $\sum_ax_a^2=1$, each $x_ax_b-\delta_{ab}/(n+1)$ an eigenfunction at $2n+2$, and $\{dx_a\}$ spanning $T^*X$. Then $X$ is isometric to the unit round sphere, $P=-\Delta$, and $\operatorname{span}\{x_a\}=H_1$. Scaling: the pair $(\lambda,2\lambda+2\lambda/n)$ gives radius $\sqrt{n/\lambda}$.
 \end{theorem}
+
+Thus the sphere is determined by its first-window packet, not by \(\operatorname{Spec}(P)\) even after restricting to exact windows. The torus packet and mixed first windows of products of spheres are exact and non-spherical; Sunada pairs cannot share an exact packet.
 
 \begin{theorem}[round sphere, quantitative window]
 \label{thm-b}
