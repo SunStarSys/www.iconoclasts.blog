@@ -518,6 +518,8 @@ and \cite{TK68} applies exactly to \(R\)-space orbits.
 
 If $\mathcal{V}=\bigoplus_i\mathcal{V}_{\lambda_i}$ with more than one eigenvalue, Takahashi applies factorwise: each $\iota_{\lambda_i}(X)$ lies in a sphere in $\mathcal{V}_{\lambda_i}^*$, and $\iota(X)$ lies in a product of spheres. The single-quadric argument of Lemma 26 does not run. Constancy of the total $Q=\sum_i Q_i$ is a sum of several sphere equations and does not make $G=\mathrm{O}(\dim\mathcal{V})$.
 
+If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ is a Garay map. The image lies in a product of spheres only after each spectral projector is constant on the diagonal, which is not implied by $R=0$. In codimension one the complete list is spheres and cylinders \cite{Gar90}.
+
 \begin{remark} Lemmas 27–28 are not used in Theorems 1–4. One exact pair does not give the tower; the torus tower is the abelian case of the last clause.
 The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window. They are the extra structure that upgrades packet $II_S$ to a compact group orbit. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$ \cite{CDK70}, Lemma 27 alone already forces $\nabla II_S=0$ in the pinched range. Theorem 21 does not use either lemma.
 \end{remark}
