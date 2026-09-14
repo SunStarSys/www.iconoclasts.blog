@@ -440,7 +440,7 @@ $$P(u_a^2)=2u_aPu_a-2\Gamma(u_a,u_a).$$
 Summing and using $Pu_a=\lambda u_a$ yields the displayed formula. If the trace identity $\sum_a\Gamma(u_a,u_a)=\lambda Q$ holds, then $PQ=0$. Connected $X$ and $\ker P=\mathrm{span}\{1\}$ force $Q$ constant. The value of $\iota$ then lies on the sphere of radius $\sqrt{Q}$ in $\mathcal{V}^*$.
 \end{proof}
 
-On the first spherical window the trace identity is $\sum_a\Gamma(x_a,x_a)=n=n\sum_a x_a^2$, so Lemma 22 recovers the quadric of Lemma 18. In general the trace identity is the Takahashi condition that $\iota$ be a minimal immersion into a sphere \cite{Tak66} (or a product of spheres, one per eigenvalue of $\mathcal{V}$). It is not assumed in Theorem 21.
+On the first spherical window the trace identity is $\sum_a\Gamma(x_a,x_a)=n=n\sum_a x_a^2$, so Lemma 22 recovers the quadric of Lemma 19. In general the trace identity is the Takahashi condition that $\iota$ be a minimal immersion into a sphere \cite{Tak66} (or a product of spheres, one per eigenvalue of $\mathcal{V}$). It is not assumed in Theorem 21.
 
 \begin{lemma}[the linear automorphism group]
 Let $m:\mathcal{V}\times\mathcal{V}\to\mathcal{V}'$ be the multiplication $m(u,v)=uv$ of the exact packet, and let
