@@ -475,7 +475,7 @@ Lemma 22 puts $\iota(X)$ on the sphere $S$ of radius $\sqrt{Q}$ in the $(n+1)$-d
 \end{proof}
 
 \begin{lemma}[cubic slot]
-Assume $\alpha=0$, $R=0$, W1, W2, and that $\mathcal{V}$ is a single eigenspace of dimension $d$ with $Q=\sum_a u_a^2$. If in addition the cubic slot is finite, $$\mathcal{V}\cdot\mathcal{V}'\subset\mathcal{V}'',$$
+Assume $\alpha=0$, $R=0$, W1, W2, and that $\mathcal{V}$ is a single eigenspace of dimension $d$; write $Q=\sum_a u_a^2$. If in addition the cubic slot is finite, $$\mathcal{V}\cdot\mathcal{V}'\subset\mathcal{V}'',$$
 with $\mathcal{V}''$ a finite spectral window, then Takahashi gives $Q\equiv n/\lambda$ and a full minimal immersion $\iota:X\to S^{d-1}(\sqrt{n/\lambda})$; $II_S$ is a packet tensor with coefficients in $\mathcal{V}'$; and $\nabla II_S$ is a packet tensor with coefficients in $\mathcal{V}''$.
 \end{lemma}
 
@@ -516,9 +516,13 @@ windows are isotypic components, \(\iota\) intertwines the \(G\)-actions,
 and \cite{TK68} applies exactly to \(R\)-space orbits.
 \end{proof}
 
+If $\mathcal{V}=\bigoplus_i\mathcal{V}_{\lambda_i}$ with more than one eigenvalue, Takahashi applies factorwise: each $\iota_{\lambda_i}(X)$ lies in a sphere in $\mathcal{V}_{\lambda_i}^*$, and $\iota(X)$ lies in a product of spheres. The single-quadric argument of Lemma 26 does not run. Constancy of the total $Q=\sum_i Q_i$ is a sum of several sphere equations and does not make $G=\mathrm{O}(\dim\mathcal{V})$.
+
 \begin{remark} Lemmas 27–28 are not used in Theorems 1–4. One exact pair does not give the tower; the torus tower is the abelian case of the last clause.
 The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window. They are the extra structure that upgrades packet $II_S$ to a compact group orbit. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$ \cite{CDK70}, Lemma 27 alone already forces $\nabla II_S=0$ in the pinched range. Theorem 21 does not use either lemma.
 \end{remark}
+
+
 \begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 25 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 26 supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant, which is the first window of Theorems 3 and 21 in the spherical case. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
 \end{proof}
 \begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 25. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
