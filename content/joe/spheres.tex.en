@@ -67,7 +67,7 @@ If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g
 $$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)},$$
 with $d=\dim\mathcal{V}$. That bound is not a statement about $\Delta$. When the tail of $\Phi$ occupies a finite slot, Sobolev embedding on $\Sigma$ converts $\lVert R\rVert_{C^k}$ into a multiple of $\Delta$, with constants depending only on window dimensions and $k$.
 
-If in addition $\alpha=0$, an exact packet forces $(X,g)$ to be compact locally homogeneous of compact type (Theorem 21).
+If in addition $\alpha=0$, an exact packet realises $X$ as a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). When $\dim\mathcal{V}=n+1$ and the quadratic $Q=\sum u_a^2$ is constant, that action is transitive and $X$ is a spherical space form.
 
 The unweighted first window on the sphere is the minimal finite-tail case: $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $R=0$ already at $\Lambda'=2n+2$. That frame recognizes the unit round sphere exactly, and recognizes it with linear $C^0$ stability in the frame deficits when $R$ is small. Those statements are frame-side. They are not Obata theorems.
 
@@ -103,7 +103,7 @@ The cometric $\Gamma$ of $g$ is not an extra input. The identity
 $$P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v)$$
 computes $\Gamma$ on $\mathcal{V}$ from $(P,\Phi)$ with remainder $R$. Two nondegeneracy hypotheses close the packet: evaluation $X\to\mathcal{V}^\ast$ is a smooth embedding, and $\{du:u\in\mathcal{V}\}$ spans $T^*X$. No Weyl law is assumed, no potential is present, and no curvature bound is used.
 
-If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$ and an additive constant on $\alpha$; for $\alpha=0$ that pair is locally homogeneous of compact type (§9). If $\lVert t\rVert_{C^1}$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^*$, evaluation realises $X$ as a $C^1$ submanifold $\Sigma\subset\mathcal{V}^*$ on which
+If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$ and an additive constant on $\alpha$. If $\alpha=0$, that pair carries a compact Lie group of isometries whose orbits decompose $X$ (§9); if also $\dim\mathcal{V}=n+1$ and $Q$ is constant, $X$ is a spherical space form. If $\lVert t\rVert_{C^1}$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^*$, evaluation realises $X$ as a $C^1$ submanifold $\Sigma\subset\mathcal{V}^*$ on which
 $$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)},$$
 with $d=\dim\mathcal{V}$. When the tail of $\Phi$ occupies a finite slot, Sobolev embedding on $\Sigma$ converts this to a linear bound in $\Delta$ whose constants depend only on window dimensions and $k$. In both regimes the manifold is recovered as the space of multiplicative characters of the window, the metric by dualizing $\Gamma$, and the weight from the ratio of $\mu$ to Riemannian volume.
 
@@ -111,9 +111,9 @@ The theorem is recognition, not construction: $P$ is given as Witten, and the pa
 
 A distinguished slice is the unweighted first window on the sphere. There one may take $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $R=0$ already at $\Lambda'=2n+2$: products of linear coordinates on $S^n$ occupy only the constant slot and the quadratic harmonics. Theorems 1 and 2 then specialize to an exact recognition of the unit round sphere from that frame, and to a linear $C^0$ stability statement when the same frame is allowed small deficits. Those two statements are compared with Obata’s theorem \cite{Oba62} and with quantitative Obata theorems on the Ricci side \cite{CMS}. They are not Ricci theorems. They use a linear frame and its products, not a lower bound on Ricci curvature and a single first eigenfunction.
 
-The article is organized as follows. Section 2 fixes the Witten category and the window packet. Section 3 extracts $\Gamma$ from the multiplication rule with remainder $R$. Section 4 identifies points of $X$ with characters of the window. Section 5 dualizes $\Gamma$ to a metric and reads $\alpha$ from the two measures. Section 6 assembles Theorems 1 and 2. Section 7 specializes to the unweighted first window on the sphere. Section 8 records what the packet does not determine. Section 9 shows that an exact unweighted window is a compact homogeneous space.
+The article is organized as follows. Section 2 fixes the Witten category and the window packet. Section 3 extracts $\Gamma$ from the multiplication rule with remainder $R$. Section 4 identifies points of $X$ with characters of the window. Section 5 dualizes $\Gamma$ to a metric and reads $\alpha$ from the two measures. Section 6 assembles Theorems 1 and 2. Section 7 specializes to the unweighted first window on the sphere. Section 8 records what the packet does not determine. Section 9 shows that an exact unweighted window is a union of orbits of a compact linear group of isometries, and a spherical space form when $d=n+1$ and $Q$ is constant.
 
-Geometry sits in the multiplication table, not in the list of eigenvalues. The contribution here is that a finite, explicitly tailed piece of that table already reconstructs a Witten pair, and that the unit sphere is the minimal unweighted instance of the same mechanism, and every exact unweighted window is homogeneous.
+Geometry sits in the multiplication table, not in the list of eigenvalues. The contribution here is that a finite, explicitly tailed piece of that table already reconstructs a Witten pair, and that the unit sphere is the minimal unweighted instance of the same mechanism; an exact unweighted window is homogeneous once it has an open orbit.
 
 \subsection{Results}
 Standing hypotheses: $X$ closed and connected, $P=P_\alpha$ a Witten operator \cite{Wit82}, packet as in §2, $u,v\in\mathcal{V}$, Wyman on window triples \cite{Wym}, W1, W2.
@@ -123,7 +123,8 @@ Standing hypotheses: $X$ closed and connected, $P=P_\alpha$ a Witten operator \c
 Assume $R=0$. The packet
 $$\bigl(\Lambda,\Lambda',\sigma(P)\cap[0,\Lambda'],\Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'}\bigr)$$
 determines $(X,g,\alpha)$ up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. Evaluation is a Riemannian isometry of $(X,g)$ onto the character space of $(\mathcal{V},m)$ in $\mathcal{V}^\ast$, and $P$ is the Witten operator of the reconstructed pair.
-If in addition $\alpha=0$, then $(X,g)$ is compact locally homogeneous of compact type (Theorem 21).
+
+If in addition $\alpha=0$, then $X$ is a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). If also $\dim\mathcal{V}=n+1$ and $Q$ is constant, $X$ is a spherical space form.
 \end{theorem}
 
 \begin{theorem}[approximate recognition]
@@ -335,7 +336,8 @@ By the standing category, $P$ is already the Witten operator of some pair $(g_0,
 The lemmas of §§3–5 assemble into Theorem~\ref{thm-1} and Theorem~\ref{thm-2}.
 
 \begin{proof}[Proof of Theorem~\ref{thm-1}]
-Assume $R=0$. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ as a function of $(P,\Phi)$, with remainder zero. Lemma 9 identifies $X$ with the character space $\Sigma\subset\mathcal{V}^\ast$ of the finite algebra $(\mathcal{V},m)$ by a $C^\infty$ diffeomorphism $\iota$. Lemma 14 dualizes $\Gamma$ to a Riemannian metric $g_\Sigma$ on $\Sigma$ with $\iota^*g_\Sigma=g$. Lemma 15 reads $\alpha$ from $\mu/\mathrm{vol}_g$, up to an additive constant, and identifies $P$ with the Witten operator of that pair. Thus $\iota$ is a $C^\infty$ Riemannian isometry, and the packet determines $(X,g,\alpha)$ up to that isometry and the constant on $\alpha$. Residual freedom is an orthogonal change of basis of $\mathcal{V}$ preserving $\Phi$.
+Assume $R=0$. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ as a function of $(P,\Phi)$, with remainder zero. Lemma 9 identifies $X$ with the character space $\Sigma\subset\mathcal{V}^\ast$ of the finite algebra $(\mathcal{V},m)$ by a $C^\infty$ diffeomorphism $\iota$. Lemma 14 dualizes $\Gamma$ to a Riemannian metric $g_\Sigma$ on $\Sigma$ with $\iota^*g_\Sigma=g$. Lemma 15 reads $\alpha$ from $\mu/\mathrm{vol}_g$, up to an additive constant, and identifies $P$ with the Witten operator of that pair. Thus $\iota$ is a $C^\infty$ Riemannian isometry, and the packet determines $(X,g,\alpha)$ up to that isometry and the constant on $\alpha$. Theorem 21 upgrades the unweighted case to an orbit decomposition, and to a spherical space form when $d=n+1$.
+Residual freedom is an orthogonal change of basis of $\mathcal{V}$ preserving $\Phi$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm-2}]
@@ -361,7 +363,7 @@ By hypothesis $x_ax_b-\delta_{ab}/(n+1)$ is an eigenfunction at $2n+2$, and $P(1
 $$P(x_ax_b)=(2n+2)\Bigl(x_ax_b-\frac{\delta_{ab}}{n+1}\Bigr).$$
 Hence $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$. The matrix $\delta_{ab}-x_ax_b$ has rank $n$ on the unit sphere, and $\{dx_a\}$ spans $T^*X$ by hypothesis, which is W2 for this frame. W1 follows: $F$ is an immersion, $X$ is closed, and $F(X)$ lies on $S^n$, so $F$ is a covering onto its image. Simple connectedness of $S^n$ for $n\ge 2$, or a direct check for $n=1$, makes $F$ a diffeomorphism onto $S^n$.
 \end{proof}
-\begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 19 and Theorem 1 give that $X$ is isometric to the unit round sphere. The metric dual to $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ is the round metric of radius $1$, and $\alpha=0$ because $\mu=\mathrm{vol}_g$. Thus $P=-\Delta$. The frame spans the first harmonics because it is an $(n+1)$-dimensional eigenspace at eigenvalue $n$. If the first eigenvalue is $\lambda$ rather than $n$, the same identities with the pair $(\lambda,2\lambda+2\lambda/n)$ rescale the radius to $\sqrt{n/\lambda}$.
+\begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 19 and Theorem 1 give that $X$ is isometric to the unit round sphere. This is the case $d=n+1$, $Q\equiv 1$ of Lemma 26. The metric dual to $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ is the round metric of radius $1$, and $\alpha=0$ because $\mu=\mathrm{vol}_g$. Thus $P=-\Delta$. The frame spans the first harmonics because it is an $(n+1)$-dimensional eigenspace at eigenvalue $n$. If the first eigenvalue is $\lambda$ rather than $n$, the same identities with the pair $(\lambda,2\lambda+2\lambda/n)$ rescale the radius to $\sqrt{n/\lambda}$.
 \end{proof}
 \begin{proof}[Proof of Theorem~\ref{thm-b}]
 Work in the setting of Theorem 3 with deficits $\delta_1,\delta_2,\delta_\lambda$ and
@@ -393,7 +395,7 @@ It does not use Ricci curvature, a Weyl law, or the full table $\Phi$ on $\bigop
 
 Two packets for the same operator at different admissible cutoffs are consistent with Theorems 1 and 2. That consistency is not part of one packet; each packet has its own $(\Lambda,\Lambda',R)$.
 
-The packet with $R=0$ and $\alpha\neq 0$ is not shown to be homogeneous.
+An exact unweighted window is not shown to be a single homogeneous space except when $d=n+1$ and $Q$ is constant.
 
 Sunada pairs remain non-isometric and therefore cannot share an exact packet; §9 does not contradict §8.
 
@@ -404,8 +406,7 @@ Assume throughout this section that $\alpha=0$, that $R=0$, and that W1 and W2 h
 
 \begin{theorem}
 \label{thm-exact}
-$K$ is a compact Lie group acting transitively on $X$. In particular $(X,g)$ is compact homogeneous of compact type: $X=K/H$ for a closed subgroup $H$, or a finite isometric quotient of such a space.
-The metric and the window are $K$-invariant by construction. Residual packet freedom remains the compact group of orthogonal changes of frame of $\mathcal{V}$ that preserve $\Phi$.
+$K$ is a compact Lie group of isometries of $(X,g)$. The identity component acts real-analytically, and $X$ is a union of $G^\circ$-orbits (Lemma 25). If $\dim\mathcal{V}=n+1$ and $Q$ is a positive constant, then $G^\circ$ is transitive and $X$ is a spherical space form (Lemma 26). In general the principal set is a fibre bundle with fibre a compact homogeneous space. Residual packet freedom remains the compact group of orthogonal changes of frame of $\mathcal{V}$ that preserve $\Phi$.
 \end{theorem}
 
 \begin{lemma}[Myers–Steenrod and the window] $K$ is a compact Lie group \cite{MS39}. Pullback by $K$ preserves every eigenspace of $P$, hence preserves $\mathcal{V}$ and $\mathcal{V}'$, and $\iota$ is $K$-equivariant. The reconstructed cometric $\Gamma$ of Lemma 5 and the metric of Lemma 14 are $K$-invariant.
