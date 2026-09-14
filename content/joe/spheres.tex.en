@@ -475,8 +475,8 @@ Lemma 22 puts $\iota(X)$ on the sphere $S$ of radius $\sqrt{Q}$ in the $(n+1)$-d
 \end{proof}
 
 \begin{lemma}[cubic slot]
-Assume $\alpha=0$, $R=0$, W1, W2, and that $\mathcal{V}$ is a single eigenspace of dimension $d$ with $Q=\sum_a u_a^2$ a positive constant. If in addition the cubic slot is finite, $$\mathcal{V}\cdot\mathcal{V}'\subset\mathcal{V}'',$$
-with $\mathcal{V}''$ a finite spectral window, then $\iota:X\to S^{d-1}(\sqrt{Q})$ is a full minimal immersion, $II_S$ is a packet tensor with coefficients in $\mathcal{V}'$, and $\nabla II_S$ is a packet tensor with coefficients in $\mathcal{V}''$.
+Assume $\alpha=0$, $R=0$, W1, W2, and that $\mathcal{V}$ is a single eigenspace of dimension $d$ with $Q=\sum_a u_a^2$. If in addition the cubic slot is finite, $$\mathcal{V}\cdot\mathcal{V}'\subset\mathcal{V}'',$$
+with $\mathcal{V}''$ a finite spectral window, then Q is constant, $\iota:X\to S^{d-1}(\sqrt{Q})$ is a full minimal immersion, $II_S$ is a packet tensor with coefficients in $\mathcal{V}'$, and $\nabla II_S$ is a packet tensor with coefficients in $\mathcal{V}''$.
 \end{lemma}
 
 \begin{proof}The sphere and minimality are Takahashi from Lemma 23 and $\Delta u_a=-\lambda u_a$. Lemma 5 with $R=0$ puts $\Gamma(u_a,u_b)$ in $\mathcal{V}'$, hence $II_S$ in $\mathcal{V}'$ by the Gauss formula. Differentiating the identity
