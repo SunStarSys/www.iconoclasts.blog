@@ -171,6 +171,8 @@ for each fixed \(k\). Multiplicities of low eigenvalues are stable if the conclu
 
 This is packet \(\Rightarrow\) metric \(\Rightarrow\) spectrum. It is not the hypothesis of Tanno, and it does not say that a small spectral distance to \(S^n\) forces a small packet.
 
+Tanno’s uniqueness is the converse neighbourhood statement: if \(\operatorname{Spec}(P)=\operatorname{Spec}(S^n)\) and \(g\) is sufficiently close to constant curvature, then \(g\) is round; the finite-slot \(C^2\) bound of Theorem 4 supplies that neighbourhood, but the paper does not assume the spectra coincide.
+
 \section{The Packet}
 Let $X$ be a closed connected smooth manifold and let
 $$P=P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
