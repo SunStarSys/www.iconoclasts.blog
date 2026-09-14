@@ -130,15 +130,18 @@ If in addition $\alpha=0$, then $X$ is a union of orbits of a compact Lie group 
 \begin{theorem}[approximate recognition]
 \label{thm-2}
 Let $d=\dim\mathcal{V}$.
-(i) There exists $\tau_*=\tau_*(d,\iota(X))>0$ such that if
+\begin{description}
+\item[(i)] There exists $\tau_*=\tau_*(d,\iota(X))>0$ such that if
 $$\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\lVert t(u,v)\rVert_{C^1(X)}<\tau_*,$$
 then evaluation realises $X$ as a $C^1$ embedded submanifold $\Sigma\subset\mathcal{V}^*$ and
 $$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}
 \le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}$$
 for every $k\ge 0$, with $c$ an additive constant on $\alpha$. The diffeomorphism $\iota$ is $C^\infty$ if $t=0$. The smallness parameter is $\lVert t\rVert_{C^1}$, equivalently $\lVert R\rVert_{C^k}$ after Lemma 9(i); it is not $\Delta$.
-(ii) If the tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), Lemma 9(ii) supplies $\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$ such that $\Delta<\Delta_*$ implies the conclusions of (i), and
+
+\item[(ii)] If the tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), Lemma 9(ii) supplies $\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$ such that $\Delta<\Delta_*$ implies the conclusions of (i), and
 $$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
 In that case $\iota$ is a $C^k$ almost-isometry on the scale of $\Delta$.
+\end{description}
 \end{theorem}
 
 \begin{theorem}[round sphere, exact window]
@@ -262,6 +265,7 @@ $$c(k)^{-1}\,\lVert R_X\rVert_{C^k(X)}
 \le\lVert R_\Sigma\rVert_{C^k(\Sigma)}
 \le c(k)\,\lVert R_X\rVert_{C^k(X)},$$
 with $c(k)=C(d,k)$. The smallness parameter here is $\lVert t\rVert_{C^1}$, not $\Delta$.
+
 \item[(ii)] (finite slot) If the $\Phi$-tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), then Remarks 6 and 7 give
 $$\lVert t\rVert_{C^1}\le C(d,d_{\mathrm{tail}},n,\Lambda',\Lambda'')\,\Delta.$$
 Hence there exists $\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$ such that $\Delta<\Delta_*$ implies the conclusions of (i), and
