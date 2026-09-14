@@ -486,13 +486,38 @@ $$2\Gamma(u,f)=\lambda uf+u\,Pf-P(uf).$$
 The product $uf$ lies in $\mathcal{V}''$ by hypothesis, and $P$ preserves $\mathcal{V}''$. Thus every coefficient of $\nabla II_S$ lies in $\mathcal{V}''$.
 \end{proof}
 
-\begin{lemma}[tower]Let $\mathcal{V}_k=\bigoplus_{\lambda\le\Lambda_k}\ker(P-\lambda)$ with $\mathcal{V}_0=\mathcal{V}$ and $\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}$. Then every $\nabla^m II_S$ has coefficients in $\mathcal{V}_{m+2}$. The tower cannot stabilize at a finite-dimensional algebra: on connected $X$ of dimension at least $1$, such an algebra cannot separate points. If the tower is infinite and graded by the Clebsch–Gordan rules of a compact Lie group, then $\iota$ is an equivariant eigenmap of a compact group orbit and $II_S$ is parallel on that orbit \cite{TK68}.
-\end{lemma}
+\begin{lemma}[tower]
+Assume the hypotheses of Lemma 27, and let
+  \(\mathcal{V}_0=\mathcal{V},\qquad
+    \mathcal{V}_k=\bigoplus_{\lambda\le\Lambda_k}\ker(P-\lambda),
+  \)
+be a tower of windows satisfying \(\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\).
+Then every covariant derivative \(\nabla^m II_S\) has coefficients in \(\mathcal{V}_{m+2}\).
 
+The tower cannot stabilize. If \(\bigcup_k\mathcal{V}_k=A\) were finite-dimensional, then
+\(A\) would be a unital subalgebra of \(C(X)\). Any finite-dimensional commutative
+subalgebra of \(C(X)\) is semisimple and therefore has finite Gelfand spectrum.
+W1 implies that \(A\) separates points, so \(X\) would be finite, contradicting
+connectedness and \(\dim X\ge 1\).
+
+If, in addition, the multiplication of the tower is the Clebsch–Gordan
+decomposition of a compact Lie group \(G\) acting smoothly on \(X\), then
+\(\iota\) is a \(G\)-equivariant eigenmap and \(X\) is a union of \(G\)-orbits.
+If some orbit is an \(R\)-space in the sense of Takeuchi–Kobayashi, then
+\(II_S\) is parallel on that orbit \cite{TK68}. Parallelism is not claimed
+for a general compact-group orbit.
+\end{lemma}
 \begin{proof}
-The jet statement is Lemma 27 iterated. If the tower stabilizes, $A=\bigcup_k\mathcal{V}_k$ is a finite-dimensional unital subalgebra of $C(X)$. Each $f\in A$ satisfies a polynomial, so $f(X)$ is finite. If $A$ separates points then $X$ is finite, contradicting connectedness and $\dim X\ge 1$. The infinite graded case is an equivariant eigenmap; $II_S$ is invariant under the compact group, hence parallel on each orbit.
+The jet statement is the product rule and Codazzi applied to the
+packet expression for \(II_S\) in Lemma 27, once at each rung of the tower.
+The stabilization clause is the Gelfand spectrum of a finite-dimensional
+subalgebra of \(C(X)\), as above. The graded case is Peter–Weyl: the
+windows are isotypic components, \(\iota\) intertwines the \(G\)-actions,
+and \cite{TK68} applies exactly to \(R\)-space orbits.
 \end{proof}
-\begin{remark} Lemmas 27 and 28 are not part of the packet of Theorems 1–4. One exact pair $(\Lambda,\Lambda')$ does not produce a tower: $R=0$ on $\mathcal{V}$ does not imply $R=0$ on $\mathcal{V}'$. The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window. They are the extra structure that upgrades packet $II_S$ to a compact group orbit. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$ \cite{CDK70}, Lemma 27 alone already forces $\nabla II_S=0$ in the pinched range. Theorem 21 does not use either lemma.
+
+\begin{remark} Lemmas 27–28 are not used in Theorems 1–4. One exact pair does not give the tower; the torus tower is the abelian case of the last clause.
+The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window. They are the extra structure that upgrades packet $II_S$ to a compact group orbit. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$ \cite{CDK70}, Lemma 27 alone already forces $\nabla II_S=0$ in the pinched range. Theorem 21 does not use either lemma.
 \end{remark}
 \begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 25 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 26 supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant, which is the first window of Theorems 3 and 21 in the spherical case. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
 \end{proof}
