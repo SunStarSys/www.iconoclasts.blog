@@ -465,8 +465,24 @@ If some orbit $\mathcal{O}$ is open in $X$, then $\mathcal{O}$ is also closed (c
 \begin{proof}
 Lemma 22 puts $\iota(X)$ on the sphere $S$ of radius $\sqrt{Q}$ in the $(n+1)$-dimensional space $\mathcal{V}^*$. W1 says $\iota$ is an embedding of an $n$-manifold, so $\iota(X)$ is open in $S$. $S$ is connected, so $\iota(X)=S$. The orthogonal group $\mathrm{O}(n+1)$ preserves $S$. The defining equations of $Z$ reduce to the single quadric $Q=\mathrm{const}$ (the multiplication table of the first window on a sphere: Lemma 19), so $G=\mathrm{O}(n+1)$ and $G^\circ=\mathrm{SO}(n+1)$. That action is transitive on $S$. Lemma 25 then gives transitivity on $X$. The metric of Lemma 14 is the round metric of radius $\sqrt{Q}$ because $\Gamma(u_a,u_b)=\delta_{ab}-u_au_b/Q$ as in Lemma 19, up to the scaling of Theorem 3. Hence $X$ is a spherical space form.
 \end{proof}
-\begin{remark}
-If in addition the cubic slot is finite, $\mathcal{V}\cdot\mathcal{V}'\subset\mathcal{V}''$, then $\nabla II_S$ is a packet tensor. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$, this forces $\nabla II_S=0$ and $X$ is a compact orbit in $\mathcal{V}^*$. The cubic slot is not part of the packet of Theorems 1–4; it holds for every CROSS first window and every Peter–Weyl window.
+
+\begin{lemma}[cubic slot]
+Assume $\alpha=0$, $R=0$, W1, W2, and that $\mathcal{V}$ is a single eigenspace of dimension $d$ with $Q=\sum_a u_a^2$ a positive constant. If in addition the cubic slot is finite, $$\mathcal{V}\cdot\mathcal{V}'\subset\mathcal{V}'',$$
+with $\mathcal{V}''$ a finite spectral window, then $\iota:X\to S^{d-1}(\sqrt{Q})$ is a full minimal immersion, $II_S$ is a packet tensor with coefficients in $\mathcal{V}'$, and $\nabla II_S$ is a packet tensor with coefficients in $\mathcal{V}''$.
+\end{lemma}
+\begin{proof}The sphere and minimality are Takahashi from Lemma 23 and $\Delta u_a=-\lambda u_a$. Lemma 5 with $R=0$ puts $\Gamma(u_a,u_b)$ in $\mathcal{V}'$, hence $II_S$ in $\mathcal{V}'$ by the Gauss formula. Differentiating the identity
+$$Z\,\Gamma(u_a,u_b)=\operatorname{Hess}u_a(Z,\nabla u_b)+\operatorname{Hess}u_b(Z,\nabla u_a)$$
+produces coefficients $\Gamma(u,f)$ for $u\in\mathcal{V}$ and $f\in\mathcal{V}'$. Leibniz writes those as
+$$2\Gamma(u,f)=\lambda uf+u\,Pf-P(uf).$$
+The product $uf$ lies in $\mathcal{V}''$ by hypothesis, and $P$ preserves $\mathcal{V}''$. Thus every coefficient of $\nabla II_S$ lies in $\mathcal{V}''$.
+\end{proof}
+\begin{lemma}[tower] Let $\mathcal{V}_k=\bigoplus_{\lambda\le\Lambda_k}\ker(P-\lambda)$ be a tower of windows with $\mathcal{V}_0=\mathcal{V}$ and
+$$\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}$$
+for all $j,k\ge 0$. Then every covariant derivative $\nabla^m II_S$ is a packet tensor with coefficients in $\mathcal{V}_{m+2}$. If the tower stabilizes at a finite-dimensional algebra of functions that separates points, then $X$ is a compact orbit of a closed subgroup of the orthogonal group of that algebra, and $II_S$ is parallel. If the tower is infinite and graded by the Clebsch–Gordan rules of a compact Lie group, then $\iota$ is a standard eigenmap of a compact group orbit and $II_S$ is parallel.
+\end{lemma}
+\begin{proof}The first sentence is Lemma 27 iterated: the $m$-th derivative of $II_S$ is built from products of length $m+2$ in $\mathcal{V}$. If the tower stabilizes, the coordinate ring of $\iota(X)$ is finite-dimensional, $X$ is a component of a compact real algebraic set, and the compact group $G$ of linear automorphisms preserving the multiplication tables acts by isometries (Lemmas 22 and 24). An orbit of that action through a regular point is open and closed in $X$, hence equals $X$ by connectedness; $II_S$ is $G$-invariant, hence parallel. If the tower is an infinite Peter–Weyl grading, $\iota$ is equivariant for the corresponding compact group and is a standard embedding of a symmetric $R$-space (or a product of CROSSes); those have parallel second fundamental form.
+\end{proof}
+\begin{remark} Lemmas 27 and 28 are not part of the packet of Theorems 1–4. One exact pair $(\Lambda,\Lambda')$ does not produce a tower: $R=0$ on $\mathcal{V}$ does not imply $R=0$ on $\mathcal{V}'$. The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window. They are the extra structure that upgrades packet $II_S$ to a compact group orbit. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$, Lemma 27 alone already forces $\nabla II_S=0$ in the pinched range. Theorem 21 does not use either lemma.
 \end{remark}
 \begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 25 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 26 supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant, which is the first window of Theorems 3 and 21 in the spherical case. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
 \end{proof}
