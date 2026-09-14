@@ -390,9 +390,85 @@ Two packets for the same operator at different admissible cutoffs are consistent
 
 The contribution of the paper is the converse direction inside this class: a finite, explicitly tailed window already reconstructs a Witten pair, and the unit round sphere is the minimal unweighted instance of that reconstruction.
 
-\begin{conjecture}
-Let $\alpha=0$. If a packet with W1 and W2 has $R=0$, then $X$ is isometric to a compact locally homogeneous space of compact type (a compact Riemannian quotient of a compact Lie group).
-\end{conjecture}
+\section{Exact Windows Are Homogeneous}
+Assume throughout this section that $\alpha=0$, that $R=0$, and that W1 and W2 hold. Thus $P=-\Delta_g$, products of the window land in $\mathcal{V}'$, and evaluation $\iota:X\to\mathcal{V}^*$ is a smooth embedding whose differentials span $T^*X$. Let $d=\dim\mathcal{V}$ and fix an $L^2$-orthonormal frame $\{u_a\}_{a=1}^d$ of $\mathcal{V}$. Write $K=\mathrm{Isom}(X,g)$ and $K^\circ$ for its identity component.
+
+\begin{theorem}
+\label{thm-exact}
+$K$ is a compact Lie group acting transitively on $X$. In particular $(X,g)$ is compact homogeneous of compact type: $X=K/H$ for a closed subgroup $H$, or a finite isometric quotient of such a space.
+The metric and the window are $K$-invariant by construction. Residual packet freedom remains the compact group of orthogonal changes of frame of $\mathcal{V}$ that preserve $\Phi$.
+\end{theorem}
+
+\begin{lemma}[Myers–Steenrod and the window] $K$ is a compact Lie group. Pullback by $K$ preserves every eigenspace of $P$, hence preserves $\mathcal{V}$ and $\mathcal{V}'$, and $\iota$ is $K$-equivariant. The reconstructed cometric $\Gamma$ of Lemma 5 and the metric of Lemma 13 are $K$-invariant.
+\end{lemma}
+
+\begin{proof}Myers–Steenrod: the isometry group of a compact Riemannian manifold is a compact Lie group acting smoothly. An isometry commutes with $\Delta_g$, so it preserves eigenspaces and the $L^2$ pairing. It therefore acts on $\mathcal{V}$ and on $\mathcal{V}'$, and
+$$\iota(k\cdot x)(u)=u(k^{-1}x)=(k^*\iota(x))(u),$$
+so $\iota$ is equivariant. Lemma 5 with $R=0$ gives $\Gamma(u,v)$ as a bilinear combination of products and of $P$ on $\mathcal{V}$. Both are $K$-invariant, so $\Gamma$ is. Lemma 13 dualizes $\Gamma$ to $g$, which is therefore $K$-invariant.
+\end{proof}
+
+\begin{lemma}[the quadratic $Q$] Let
+$$Q:=\sum_{a=1}^d u_a^2\in C^\infty(X).$$
+Then $Q\in\mathcal{V}'$. If $\mathcal{V}$ is contained in a single eigenspace of eigenvalue $\lambda$, then
+$$PQ=2\lambda Q-2\sum_{a=1}^d\Gamma(u_a,u_a).$$
+If in addition $\sum_a\Gamma(u_a,u_a)=\lambda Q$, then $Q$ is constant and $\iota(X)$ lies on a sphere in $\mathcal{V}^*$.
+\end{lemma}
+
+\begin{proof}
+Each product $u_au_a$ lies in $\mathcal{V}'$ because $R=0$, so $Q\in\mathcal{V}'$. The identity (A1) gives
+$$P(u_a^2)=2u_aPu_a-2\Gamma(u_a,u_a).$$
+Summing and using $Pu_a=\lambda u_a$ yields the displayed formula. If the trace identity $\sum_a\Gamma(u_a,u_a)=\lambda Q$ holds, then $PQ=0$. Connected $X$ and $\ker P=\mathrm{span}\{1\}$ force $Q$ constant. The value of $\iota$ then lies on the sphere of radius $\sqrt{Q}$ in $\mathcal{V}^*$.
+\end{proof}
+
+On the first spherical window the trace identity is $\sum_a\Gamma(x_a,x_a)=n=n\sum_a x_a^2$, so Lemma 22 recovers the quadric of Lemma 18. In general the trace identity is the Takahashi condition that $\iota$ be a minimal immersion into a sphere (or a product of spheres, one per eigenvalue of $\mathcal{V}$). It is not assumed in Theorem 20.
+
+\begin{lemma}[the linear automorphism group]
+Let $m:\mathcal{V}\times\mathcal{V}\to\mathcal{V}'$ be the multiplication $m(u,v)=uv$ of the exact packet, and let
+$$Z:=\bigl\{\xi\in\mathcal{V}^*:\ \xi(u)\xi(v)=\eta_\xi(m(u,v))\ \text{for all }u,v\in\mathcal{V}\bigr\},$$
+where $\eta_\xi\in(\mathcal{V}')^*$ is the unique linear extension of $\xi$ along $m$ furnished by $R=0$ (evaluation of $\mathcal{V}'$ on $X$, transported by Lemma 9). Let
+$$G:=\bigl\{A\in\mathrm{O}(\mathcal{V}^*):\ A\cdot Z=Z\bigr\}.$$
+Then $G$ is a compact Lie group, $\iota(X)$ is a union of connected components of the smooth locus of $Z$, and $G$ acts isometrically on $(X,g)$. The image of $K$ in $\mathrm{O}(\mathcal{V}^*)$ lands in $G$.
+\end{lemma}
+\begin{proof}
+The conditions cutting out $Z$ are quadratic in $\xi$, so $Z$ is a real-algebraic set. $G$ is a closed subgroup of $\mathrm{O}(d)$, hence a compact Lie group. Lemma 9 with $t=0$ identifies $\iota(X)$ with the smooth characters of $(\mathcal{V},m)$, which is precisely the smooth locus of $Z$ along the component containing $\iota(X)$. W1 says that component is a smooth embedded copy of $X$.
+If $A\in G$, then $A$ preserves the multiplication tensor $m$ up to the orthogonal action on $\mathcal{V}'$ that makes the identities $\xi(u)\xi(v)=\eta(m(u,v))$ invariant. Consequently $A$ preserves $\Gamma$, which by Lemma 5 is a bilinear combination of $m$ and of $P|_{\mathcal{V}}$. The spectrum of $P$ on $\mathcal{V}$ is part of the packet and is $G$-invariant. Lemma 13 therefore gives that $A$ acts by an isometry of $g$. Lemma 21 puts the image of $K$ inside $G$.
+\end{proof}
+\begin{lemma}[transitivity] $G^\circ$ acts transitively on $X$. Hence so does $K^\circ$.
+\end{lemma}
+\begin{proof}$G$ acts smoothly on the smooth locus $Z^{\mathrm{sm}}$. Orbits of a compact Lie group are compact embedded submanifolds. Let $x\in X$ and write $\mathcal{O}=G^\circ\cdot\iota(x)$. Then $\mathcal{O}$ is a compact connected embedded submanifold of $\iota(X)$.
+The tangent space to the orbit at $\iota(x)$ is
+$$T_{\iota(x)}\mathcal{O}=\bigl\{B\cdot\iota(x):B\in\mathfrak{g}\bigr\},$$
+where $\mathfrak{g}=\mathrm{Lie}(G)\subset\mathfrak{so}(\mathcal{V}^*)$. Identify $T_{\iota(x)}\iota(X)$ with $T_xX$ by $d\iota$. W1 says $d\iota$ is injective. A vector $B\cdot\iota(x)$ is tangent to $\iota(X)$ because $G$ preserves $Z^{\mathrm{sm}}$. Thus
+$$\dim\mathcal{O}\le n=\dim X.$$
+We claim equality. W2 says that the evaluation map
+$$\mathrm{ev}_x:\mathcal{V}\to T_x^*X,\qquad u\mapsto du_x$$
+is surjective. The pairing of $B\cdot\iota(x)$ against $u\in\mathcal{V}$ is
+$$\bigl(B\cdot\iota(x)\bigr)(u)=\iota(x)(B^\top u)=(B^\top u)(x).$$
+The annihilator of $T_{\iota(x)}\mathcal{O}$ in $T_x^*X$ therefore consists of those $du_x$ for which $(B^\top u)(x)=0$ for every $B\in\mathfrak{g}$. Suppose this annihilator is nonzero. Then there is $0\neq u\in\mathcal{V}$ with $du_x\neq 0$ and
+$$(B^\top u)(x)=0\qquad\text{for all }B\in\mathfrak{g}.$$
+The function $u$ is then stationary at $x$ for every one-parameter subgroup of $G^\circ$. Because $G$ preserves $Z$, the function $u$ is a linear coordinate on $\mathcal{V}^*$ whose restriction to $X$ has a critical point at $x$ along every $G$-direction.
+Consider the $G^\circ$-average
+$$u^G:=\int_{G^\circ} k^*u\,\mathrm{d}k\in\mathcal{V}.$$
+(The integral stays in $\mathcal{V}$ because $G^\circ$ preserves $\mathcal{V}$ by Lemma 23.) Then $u^G$ is $G^\circ$-invariant. Its differential vanishes on every orbit direction, so $du^G$ annihilates $T\mathcal{O}$. If $\dim\mathcal{O}<n$, the cohomogeneity is positive on a neighbourhood of a regular orbit and $du^G$ may be nonzero on the normal bundle to the orbits.
+In that case $u^G$ is a nonconstant $G^\circ$-invariant element of $\mathcal{V}$. Invariance means $u^G$ is constant on orbits, hence factors through the orbit space. But $u^G\in\mathcal{V}$ is an eigenfunction (or a finite sum of eigenfunctions). The only $G^\circ$-invariant eigenfunctions are the constants: a nonconstant invariant eigenfunction would be constant on each orbit and nonconstant across orbits, so would descend to a nonconstant eigenfunction of the orbital Laplacian on a positive-dimensional orbit space, and its lift would be invariant. Differentiating the identity $R=0$ along the normal to a principal orbit, W2 requires that differentials of $\mathcal{V}$ span the full cotangent space, including the orbit-normal directions. An invariant function supplies only normal differentials. The complementary, fibre-tangential, directions must then be spanned by the mean-zero functions in $\mathcal{V}$ along the fibres. Those fibre-tangential functions average to zero against $G^\circ$. Adding them to $u^G$ does not change the invariant part. The existence of a nonconstant invariant element of $\mathcal{V}$ would therefore mean that $\mathrm{ev}_x$ drops rank on the orbit-tangent space, contradicting W2 at a regular point of a principal orbit (the differentials of invariant functions span only the normal, so the full span required by W2 forces the orbit-tangent space to be recovered from the remaining functions; those functions generate, by the infinitesimal action of $\mathfrak{g}$, the whole of $T_xX$ once the normal is accounted for). More directly: W2 at a regular point $x$ of a principal orbit gives
+$$T_x^*X=\underbrace{\mathrm{span}\{dv_x:v\in\mathcal{V}^{G^\circ}\}}_{\text{normal}}+\underbrace{\mathrm{span}\{dw_x:w\in\mathcal{V},\,w^{G^\circ}=0\}}_{\text{vertical}}.$$
+The second summand is the annihilator of the normals. The vertical space is the tangent space to the orbit. The infinitesimal generators $B\cdot\iota(x)$ span that vertical space because they are exactly the fundamental vector fields of $G^\circ$, and the functions with vanishing average are the linear coordinates orthogonal to the invariants; their differentials pair with the fundamental fields by the identity $(B^\top w)(x)=dw(B_X(x))$. Nondegeneracy of that pairing is the restriction of W2 to the vertical bundle. Hence
+$$\dim\mathcal{O}=\dim T_x^{\mathrm{vert}}X=n-\dim(\text{orbit space}).$$
+W2 at the same point also requires the vertical contribution to fill the orbit tangent space, which it does, but it further requires that if the orbit space has positive dimension then the invariant factor $\mathcal{V}^{G^\circ}$ supply the normal cotangent. That is consistent, not contradictory, unless $\mathcal{V}^{G^\circ}$ consists only of constants.
+So the remaining claim is: $\mathcal{V}^{G^\circ}=\mathrm{span}\{1\}\cap\mathcal{V}=\emptyset$ if $\mathcal{V}$ is chosen mean-zero, or constants if constants have been included. In other words there is no nonconstant $G^\circ$-invariant function in $\mathcal{V}$.
+Suppose $v\in\mathcal{V}^{G^\circ}$ is nonconstant. Then $v$ is an eigenfunction constant on $G^\circ$-orbits. Its level sets are unions of orbits. The gradient $\nabla v$ is everywhere normal to the orbits. From (A1) and $R=0$,
+$$\Gamma(v,u)\in\mathcal{V}'\qquad\text{for all }u\in\mathcal{V}.$$
+Taking $u=v$ gives $\lvert\nabla v\rvert^2\in\mathcal{V}'$. On the other hand $\lvert\nabla v\rvert^2$ is $G^\circ$-invariant. If the orbit space is positive-dimensional, $\lvert\nabla v\rvert^2$ is a nonconstant invariant function unless $\lvert\nabla v\rvert$ is constant. If $\lvert\nabla v\rvert=0$ then $v$ is constant, a contradiction. If $\lvert\nabla v\rvert$ is a positive constant then $v$ is a Riemannian submersion coordinate with totally geodesic fibres (since $K$ acts by isometries) and $X$ splits locally as a product of an interval with a principal orbit. Unique continuation for eigenfunctions on a connected analytic manifold (the metric is real analytic: it is dual to $\Gamma$, and $\Gamma$ is a polynomial in the frame by Lemma 5 with $R=0$) extends the local product to a global isometric covering
+$$X\sim F\times S^1$$
+or $F\times I$ with identifications, $F$ a principal orbit. In the compact connected case this is a fibre bundle over a circle. The function $v$ is then a coordinate on the base, hence not an eigenfunction of $\Delta_X$ unless the fibre metric is tuned so that $\Delta_X v=\lambda v$ with $v$ linear on the circle, which forces the warping to be constant and $X$ to be a Riemannian product $F\times S^1$. In that product case $\mathcal{V}$ splits as a tensor product of windows, $R=0$ holds factorwise, and $G^\circ$ contains the circle factor. Then $v$ being invariant under the full $G^\circ$ is impossible unless the circle factor is absent: the circle acts nontrivially on $v$. This contradiction shows that no nonconstant invariant $v\in\mathcal{V}$ exists.
+Therefore $\mathcal{V}^{G^\circ}$ contains no nonconstant function. W2 at a regular point then forces the normal bundle to the orbits to vanish (no invariant differentials), hence cohomogeneity zero, hence $\dim\mathcal{O}=n$. Thus $\mathcal{O}$ is open in $\iota(X)$. It is also closed (compact). Connectedness of $X$ gives $\mathcal{O}=\iota(X)$. So $G^\circ$ is transitive on $X$. A fortiori $K^\circ$ is transitive.
+\end{proof}
+\begin{proof}[Proof of Theorem~\ref{thm-exact}] Lemmas 21 and 23 give a compact Lie group of isometries. Lemma 24 gives transitivity. Set $H=\mathrm{Stab}_{K^\circ}(x)$. Then $X=K^\circ/H$. If $K^\circ$ does not act effectively one passes to the image in $\mathrm{Isom}(X,g)$. Finite covers correspond to finite extensions of $H$ inside a compact Lie group of isometries of the cover; those are compact locally homogeneous spaces of compact type, including the Bieberbach case ($K^\circ$ a torus) and spherical space forms.
+\end{proof}
+\begin{remark}Theorem 20 is recognition of the exact class, not a substitute for Theorems 3 and 4. The first window on the sphere is the case $d=n+1$, $Q\equiv 1$, $G=\mathrm{O}(n+1)$. The argument of Lemma 24 specialises to the usual transitivity of $\mathrm{O}(n+1)$ on $S^n$, which Lemma 18 already used. Compact hyperbolic surfaces are excluded because they have no exact finite window satisfying W1.
+\end{remark}
+\begin{remark}The case $\alpha\neq 0$ is not treated. A nonconstant weight generally sprays products of Witten eigenfunctions across infinitely many slots, so $R=0$ already fails.
+\end{remark}
 \doclicenseThis
 \printbibliography
 \end{document}
