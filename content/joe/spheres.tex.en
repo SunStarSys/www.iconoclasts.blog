@@ -163,6 +163,13 @@ $$d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n)\,\delta.$$
 
 This is linear stability of Theorem~\ref{thm-a}. It does not use Ricci curvature \cite{Oba62,CMS}.
 
+The \(C^0\) bound of Theorem 4 and the min-max characterization of eigenvalues give
+\[
+\bigl|\lambda_k(P)-\lambda_k(S^n)\bigr|\le C(n,k)\,\delta
+\]
+for each fixed \(k\). Multiplicities of low eigenvalues are stable if the conclusion is read in \(C^2\) (finite slot, Theorem 2(ii)).
+
+This is packet \(\Rightarrow\) metric \(\Rightarrow\) spectrum. It is not the hypothesis of Tanno, and it does not say that a small spectral distance to \(S^n\) forces a small packet.
 
 \section{The Packet}
 Let $X$ be a closed connected smooth manifold and let
