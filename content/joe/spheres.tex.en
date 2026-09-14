@@ -448,7 +448,9 @@ $G^\circ$ acts real-analytically on $X$. All orbits in a connected component of 
 \end{lemma}
 \begin{proof}
 The metric of Lemma 14 is dual to $\Gamma$, and $\Gamma$ is a bilinear combination of the packet product $m$ and of $P|_{\mathcal{V}}$ (Lemma 5 with $R=0$). Both are real-analytic, so $g$ is real-analytic and $X$ is a compact real-analytic Riemannian manifold. $G$ is a compact linear algebraic subgroup of $\mathrm{O}(\mathcal{V}^*)$, hence a compact Lie group, and its action on $Z^{\mathrm{sm}}$ is algebraic, therefore real-analytic. Restricting to the component $\iota(X)$ gives a real-analytic action on $X$.
+
 Orbits of a compact Lie group are compact embedded submanifolds. The principal orbit theorem supplies an open dense principal set $X^{\mathrm{prin}}$ on which all orbits have the same dimension $r\le n$ and the same type. Unique continuation for real-analytic maps: an orbit of dimension $r$ that meets $X^{\mathrm{prin}}$ cannot drop dimension on a nonempty open subset of $X$. Thus every orbit in the given connected component of $X^{\mathrm{prin}}$ has dimension $r$, and $X$ is a union of such orbits together with lower-dimensional singular orbits of measure zero.
+
 If some orbit $\mathcal{O}$ is open in $X$, then $\mathcal{O}$ is also closed (compact), so connectedness of $X$ gives $\mathcal{O}=X$. Conversely, a transitive action has a single orbit, which is open.
 \end{proof}
 \begin{lemma}[open orbit when $d=n+1$] Assume in addition that $\dim\mathcal{V}=n+1$ and that the function $Q=\sum_a u_a^2$ is a positive constant. Then $\iota(X)$ is the sphere of radius $\sqrt{Q}$ in $\mathcal{V}^*$, $G^\circ$ contains $\mathrm{SO}(n+1)$, and $G^\circ$ is transitive on $X$. In particular $X$ is a spherical space form.
