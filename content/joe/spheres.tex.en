@@ -248,18 +248,60 @@ Thus $\Gamma$ on $\mathcal{V}$ is not an independent input. No Weyl law, no pote
 
 \begin{lemma}
 \label{lma-1}
-Let $u,v\in\mathcal{V}$. Then
-$$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v),$$
+Let \(u,v\in\mathcal{V}\). Split the pointwise product as
+\[
+uv=m(u,v)+t(u,v),\qquad
+m(u,v)=\Pi_{\Lambda'}(uv),\qquad
+t(u,v)=(I-\Pi_{\Lambda'})(uv).
+\]
+The visible product \(m(u,v)\) is assembled from the in-window table:
+\[
+m(u,v)=\sum_{\lambda\le\Lambda'}\Phi(u,v,e_\lambda)\,e_\lambda.
+\]
+Identity (A1) then reads
+\[
+2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v),
+\]
 where
-$$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv)
-=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda.$$
-In particular $\lVert R(u,v)\rVert_2\le\Delta\,\lVert u\rVert_2\lVert v\rVert_2$. If $R=0$, then $\Gamma(u,v)$ is determined by $(P,\Phi)$. The bilinear map $\Gamma:\mathcal{V}\times\mathcal{V}\to C^\infty(X)$ does not depend on the orthonormal basis used to expand $\Phi$.
+\[
+R(u,v)=-P\,t(u,v)=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda.
+\]
+Thus \(\Gamma\) on \(\mathcal{V}\) is determined by \(P|_{\mathcal{V}}\), by \(\Phi\) on
+\(\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'\), and by the tail \(R\).
+In particular \(\lVert R(u,v)\rVert_2\le\Delta\lVert u\rVert_2\lVert v\rVert_2\).
+If \(R=0\), then \(t=0\) and \(\Gamma(u,v)\) is determined by \((P,\Phi)\).
+The bilinear map \(\Gamma:\mathcal{V}\times\mathcal{V}\to C^\infty(X)\) does not
+depend on the orthonormal bases used to expand \(\Phi\).
+
+On the first spherical window one may further split
+\[
+m(x_a,x_b)=\Pi_{\mathrm{sph}}(x_ax_b)+(I-\Pi_{\mathrm{sph}})(x_ax_b),
+\]
+with \(\Pi_{\mathrm{sph}}=\Pi_0+\Pi_{2n+2}\). The first summand is the model
+table of Theorem 3; the second is the in-window table error measured by
+\(\delta_\Phi\) in Theorem 4. Lemma 5 converts
+\(\delta_\lambda+\delta_\Phi+\Delta_{\mathrm{fr}}\) into a \(C^0\) error on
+\(\Gamma(x_a,x_b)\) relative to \(\delta_{ab}-x_ax_b\).
+
 \end{lemma}
 
 \begin{proof}
- Identity (A1) gives
-$$2\Gamma(u,v)=u\,Pv+v\,Pu-P(uv).$$
-Split $uv=m(u,v)+t$ with $t=(I-\Pi_{\Lambda'})(uv)$. Then $P(uv)=P(m(u,v))+Pt$ and $R=-Pt$. If $R=0$, then $t=0$, so $m(u,v)=uv$ and every coefficient of $uv$ against $\mathcal{V}'$ is a value of $\Phi$. Basis-independence: $P$ and $\Phi$ are defined on $\mathcal{V}$ without choices, and $m$ is orthogonal projection of the pointwise product. Changing orthonormal bases of $\mathcal{V}$ and $\mathcal{V}'$ conjugates the array of $\Phi$ and leaves $\Gamma(u,v)$ unchanged.
+Identity (A1) is \(2\Gamma(u,v)=u\,Pv+v\,Pu-P(uv)\). Substitute
+\(uv=m+t\) and set \(R=-Pt\). The expansion of \(m\) is the definition of
+\(\Phi\) against \(\mathcal{V}'\). If \(R=0\), then \(t=0\), so \(m(u,v)=uv\)
+and every coefficient of \(uv\) against \(\mathcal{V}'\) is a value of \(\Phi\).
+Basis-independence: \(P\) and \(\Phi\) are defined on \(\mathcal{V}\) without
+choices, and \(m\) is orthogonal projection of the pointwise product.
+
+On the spherical frame, \(Px_a=\lambda x_a\) with \(\lvert\lambda-n\rvert=\delta_\lambda\)
+and \(P(m(x_a,x_b))\) differs from \((2n+2)\bigl(x_ax_b-\delta_{ab}/(n+1)\bigr)\)
+by an \(L^2\) term controlled by \(\delta_\Phi+\delta_\lambda\). The identity
+then yields
+\[
+\bigl\lVert\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\rVert_{L^2}
+\le C(n)\bigl(\delta_\lambda+\delta_\Phi+\Delta_{\mathrm{fr}}\bigr),
+\]
+which is the cometric input to Theorem 4.
 \end{proof}
 
 \begin{remark}[Sogge and $\lVert t\rVert_{C^0}$]
