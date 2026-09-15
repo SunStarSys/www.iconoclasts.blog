@@ -69,7 +69,7 @@ with $d=\dim\mathcal{V}$. That bound is not a statement about $\Delta$. When the
 
 If in addition $\alpha=0$, an exact packet realises $X$ as a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). When $\dim\mathcal{V}=n+1$ and the quadratic $Q=\sum u_a^2$ is constant, that action is transitive and $X$ is isometric to a sphere of radius $\sqrt Q$.
 
-The unweighted first window on the sphere is the minimal finite-tail case: $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $R=0$ already at $\Lambda'=2n+2$. That frame recognizes the unit round sphere exactly, and recognizes it with linear $C^0$ stability in the frame deficits when $R$ is small. Those statements are frame-side. They are not Obata theorems.
+The unweighted first window on the sphere is the minimal finite-tail case: $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $R=0$ already at $\Lambda'=2n+2$. That frame recognizes the unit round sphere exactly, and recognizes it with linear $C^0$ stability for an isolated cluster of first $n+1$ harmonics with an almost spherical table. Those statements are frame-side. They are not Obata theorems.
 
 \noindent\textbf{Keywords:} sphere, homogeneous space, spectral window, triple products, Witten Operators, eigenfunctions, inverse problem
 \end{abstract}
@@ -187,6 +187,10 @@ If \(\delta<\delta_*(n)\), then \(X\) is a \(C^1\)-graph over \(S^n\) and
 \[
 d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n)\,\delta.
 \]
+
+
+\end{theorem}
+
 This is linear stability of the first \(n+1\) harmonics of Theorem 3,
 allowing the slot to split. It does not use Ricci curvature
 [Oba62; CMS23]. When \(w=0\) and \(\Lambda'=2n+2\) it specialises to
@@ -200,15 +204,6 @@ for \(k>n+1\) after the metric comparison. Tanno’s uniqueness is the
 converse neighbourhood statement with
 \(\operatorname{Spec}(P)=\operatorname{Spec}(S^n)\); the paper does
 not assume the spectra coincide.
-\end{theorem}
-
-This is linear stability of Theorem~\ref{thm-a}. It does not use Ricci curvature \cite{Oba62,CMS}.
-
-The \(C^0\) bound of Theorem 4 and the min-max characterization of eigenvalues give
-\[
-\bigl|\lambda_k(P)-\lambda_k(S^n)\bigr|\le C(n,k)\,\delta
-\]
-for each fixed \(k\). Multiplicities of low eigenvalues are stable if the conclusion is read in \(C^2\) (finite slot, Theorem 2(ii)).
 
 This is packet \(\Rightarrow\) metric \(\Rightarrow\) spectrum. It is not the hypothesis of Tanno, and it does not say that a small spectral distance to \(S^n\) forces a small packet.
 
@@ -297,7 +292,7 @@ m(x_a,x_b)=\Pi_{\mathrm{sph}}(x_ax_b)+(I-\Pi_{\mathrm{sph}})(x_ax_b),
 with \(\Pi_{\mathrm{sph}}=\Pi_0+\Pi_{2n+2}\). The first summand is the model
 table of Theorem 3; the second is the in-window table error measured by
 \(\delta_\Phi\) in Theorem 4. Lemma 5 converts
-\(\delta_\lambda+\delta_\Phi+\Delta_{\mathrm{fr}}\) into a \(C^0\) error on
+\(\delta_w\) into a \(C^0\) error on
 \(\Gamma(x_a,x_b)\) relative to \(\delta_{ab}-x_ax_b\).
 
 \end{lemma}
