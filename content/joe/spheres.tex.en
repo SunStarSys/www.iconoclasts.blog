@@ -151,6 +151,7 @@ Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n
 
 \begin{theorem}[round sphere, quantitative window]
 \label{thm-b}
+Theorem 4 (round sphere, quantitative cluster).
 Let \(\lambda_1\le\cdots\le\lambda_{n+1}\) be the first \(n+1\) positive
 eigenvalues of \(P\) counted with multiplicity, and let
 \(\mathcal{V}=\operatorname{span}\{x_1,\dots,x_{n+1}\}\) be the joint
@@ -163,7 +164,12 @@ and assume the cluster is isolated:
 \[
 w<\lambda_{n+2}-\lambda_{n+1}.
 \]
-Fix a cutoff \(\Lambda'\ge 2n+2\) and write \(\Pi_{\mathrm{sph}}=\Pi_0+\Pi_{2n+2}\).
+Fix \(\eta\in\bigl(0,\min\{n,n+4\}/2\bigr)\) smaller than the first two
+spherical gaps, and a cutoff \(\Lambda'\ge 2n+2+\eta\). Set
+\[
+\Pi_{\mathrm{sph}}^\eta
+=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\,2n+2+\eta]}.
+\]
 Allow the table deficits
 \begin{align*}
 \delta_w&=w+\lvert\bar\lambda-n\rvert,\\
@@ -172,7 +178,7 @@ Allow the table deficits
 +\sum_a\Bigl\lvert\int x_a\Bigr\rvert,\\
 \delta_1&=\bigl\|\textstyle\sum_a x_a^2-1\bigr\|_{C^0},\\
 \delta_\Phi
-&=\sup_{a,b}\bigl\|(I-\Pi_{\mathrm{sph}})\,\Pi_{\Lambda'}(x_ax_b)\bigr\|_{L^2},\\
+&=\sup_{a,b}\bigl\|(I-\Pi_{\mathrm{sph}}^\eta)\,\Pi_{\Lambda'}(x_ax_b)\bigr\|_{L^2},\\
 \Delta_{\mathrm{fr}}
 &=\sup_{a,b}\lVert R_{\Lambda'}(x_a,x_b)\rVert_2,\\
 \delta_{\mathrm{rank}}
@@ -183,26 +189,34 @@ Set
 \delta=\delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
 +\Delta_{\mathrm{fr}}+\delta_{\mathrm{rank}}.
 \]
-If \(\delta<\delta_*(n)\), then \(X\) is a \(C^1\)-graph over \(S^n\) and
+If \(\delta<\delta_*(n,\eta)\), then \(X\) is a \(C^1\)-graph over \(S^n\)
+and
 \[
-d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n,\Lambda')\,\delta.
+d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})
+\le C(n,\eta,\Lambda')\,\delta.
 \]
-
-
-\end{theorem}
-
+If \(\Lambda'=2n+2+\eta\), the constant depends only on \(n\) and \(\eta\).
 This is linear stability of the first \(n+1\) harmonics of Theorem 3,
-allowing the slot to split. It does not use Ricci curvature
-[Oba62; CMS23]. When \(w=0\) and \(\Lambda'=2n+2\) it specialises to
-stability of a single eigenspace.
+allowing the first slot to split and the quadratic slot to drift inside
+an \(\eta\)-gap. It does not use Ricci curvature [Oba62; CMS23].
+When \(w=0\), \(\eta=0^+\), and \(\Lambda'=2n+2\), it specialises to
+stability of a single eigenspace with exact projectors
+\(\Pi_0+\Pi_{2n+2}\).
+\end{theorem}
+On a sufficiently small \(C^2\) ball about \(g_{\mathrm{rd}}\) the gaps
+about \(0\), \(n\), and \(2n+2\) persist, and
+\[
+\delta\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
+\]
+Thus Theorem 4 applies on that ball. It does not apply to a residual
+set in \(\mathcal{M}\): a generic perturbation may break isolation or
+spray products through the \(\eta\)-gaps.
 
 The \(C^0\) bound and min-max give
-\(\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k)\,\delta\)
-for each fixed \(k\le n+1\), and
-\(\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k)\,\delta\)
-for \(k>n+1\) after the metric comparison.
-
-Tanno’s uniqueness is the converse neighbourhood statement: if \(\operatorname{Spec}(P)=\operatorname{Spec}(S^n)\) and \(g\) is sufficiently close to constant curvature, then \(g\) is round; the finite-slot \(C^2\) bound of Theorem 4 supplies that neighbourhood, but the paper does not assume the spectra coincide.
+\(\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k,\eta)\,\delta\)
+for each fixed \(k\). Tanno’s uniqueness is the converse neighbourhood
+statement with \(\operatorname{Spec}(P)=\operatorname{Spec}(S^n)\);
+the paper does not assume the spectra coincide.
 
 \section{The Packet}
 Let $X$ be a closed connected smooth manifold and let
