@@ -161,9 +161,8 @@ In that case $\iota$ is a $C^k$ almost-isometry on the scale of $\Delta$.
 Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n+2$. Suppose there is a frame $x_0,\dots,x_n$ in $\mathcal{V}$ with $Px_a=nx_a$, $\int x_ax_b=\delta_{ab}$, $\int x_a=0$, $\sum_ax_a^2=1$, each $x_ax_b-\delta_{ab}/(n+1)$ an eigenfunction at $2n+2$, and $\{dx_a\}$ spanning $T^*X$. Then $X$ is isometric to the unit round sphere, $P=-\Delta$, and $\operatorname{span}\{x_a\}=H_1$. Scaling: the pair $(\lambda,2\lambda+2\lambda/n)$ gives radius $\sqrt{n/\lambda}$.
 \end{theorem}
 
-\begin{theorem}[round sphere, quantitative window]
+\begin{theorem}[round sphere, quantitative cluster]
 \label{thm-b}
-Theorem 4 (round sphere, quantitative cluster).
 Let \(\lambda_1\le\cdots\le\lambda_{n+1}\) be the first \(n+1\) positive
 eigenvalues of \(P\) counted with multiplicity, and let
 \(\mathcal{V}=\operatorname{span}\{x_1,\dots,x_{n+1}\}\) be the joint
@@ -346,8 +345,28 @@ measured by \(\delta_\Phi\), and \(R_{\Lambda'}\) is measured by
 \bigl\lVert\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\rVert_{L^2}
 \le C(n)\bigl(\delta_w+\delta_\Phi+\Delta_{\mathrm{fr}}\bigr),
 \]
-which is the cometric input to Theorem 4. When \(w=0\) and
-\(\Lambda'=2n+2\) this is the single-slot estimate used for Theorem 3.
+which is the cometric input to Theorem 4.
+
+The deficit \(\delta_\Phi\) is the \(L^2\) mass of \(\Pi_{\Lambda'}(x_ax_b)\) off the
+cluster projector
+\[
+\Pi_{\mathrm{sph}}^\eta=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\,2n+2+\eta]}.
+\]
+It is not the tail \(\Delta_{\mathrm{fr}}\), which lives above \(\Lambda'\).
+
+On a sufficiently small \(C^2\) ball about \(g_{\mathrm{rd}}\) the gaps of
+the spherical spectrum about \(0\), \(n\), and \(2n+2\) persist (Kato).
+Thus \(\Pi_{\mathrm{sph}}^\eta\) has rank bounded in terms of \(n\) only,
+the first \(n+1\) modes remain an isolated cluster, and
+\[
+\delta\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
+\]
+Theorem 4 therefore applies on that ball in \(\mathcal{M}^2(M)\) for
+\(M\simeq S^n\).
+
+The specialisation \(w=0\), \(\eta\to 0\), \(\Lambda'=2n+2+\eta\) recovers
+exact projectors \(\Pi_0+\Pi_{2n+2}\) and the single-eigenspace stability
+of Theorem 3.
 \end{proof}
 
 \begin{remark}[Sogge and $\lVert t\rVert_{C^0}$]
