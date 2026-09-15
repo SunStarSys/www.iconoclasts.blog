@@ -292,7 +292,7 @@ m(x_a,x_b)=\Pi_{\mathrm{sph}}(x_ax_b)+(I-\Pi_{\mathrm{sph}})(x_ax_b),
 with \(\Pi_{\mathrm{sph}}=\Pi_0+\Pi_{2n+2}\). The first summand is the model
 table of Theorem 3; the second is the in-window table error measured by
 \(\delta_\Phi\) in Theorem 4. Lemma 5 converts
-\(\delta_w\) into a \(C^0\) error on
+\(\delta_w+\delta_\Phi+\Delta_{\mathrm{fr}}\) into a \(C^0\) error on
 \(\Gamma(x_a,x_b)\) relative to \(\delta_{ab}-x_ax_b\).
 
 \end{lemma}
