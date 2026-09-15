@@ -151,14 +151,38 @@ Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n
 
 \begin{theorem}[round sphere, quantitative window]
 \label{thm-b}
-In the setting of Theorem~\ref{thm-a}, allow deficits
-$$\delta_1=\Bigl\lVert\sum_ax_a^2-1\Bigr\rVert_{C^0},\quad
-\delta_2=\text{rank gap of }\Gamma(x_a,x_b),\quad
-\delta_\lambda=\lvert\lambda-n\rvert,$$
-$$\Delta_{\mathrm{fr}}=\sup_{a,b}\lVert R(x_a,x_b)\rVert_2,\qquad
-\delta=\delta_1+\delta_2+\delta_\lambda+\Delta_{\mathrm{fr}}.$$
-If $\delta<\delta_*(n)$, then $X$ is a $C^1$-graph over $S^n$ and
-$$d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n)\,\delta.$$
+In the setting of Theorem 3, write \(\Pi_{\mathrm{sph}}=\Pi_0+\Pi_{2n+2}\)
+and allow the table deficits
+\begin{align*}
+\delta_\lambda&=\lvert\lambda-n\rvert,\\
+\delta_{\mathrm{on}}
+&=\sum_{a,b}\Bigl\lvert\int x_ax_b-\delta_{ab}\Bigr\rvert
++\sum_a\Bigl\lvert\int x_a\Bigr\rvert,\\
+\delta_1&=\bigl\|\textstyle\sum_a x_a^2-1\bigr\|_{C^0},\\
+\delta_\Phi
+&=\sup_{a,b}\bigl\|(I-\Pi_{\mathrm{sph}})(x_ax_b)\bigr\|_{L^2},\\
+\Delta_{\mathrm{fr}}
+&=\sup_{a,b}\lVert R(x_a,x_b)\rVert_2,\\
+\delta_{\mathrm{rank}}
+&=\text{rank gap of }\Gamma(x_a,x_b).
+\end{align*}
+Set
+\[
+\delta=\delta_\lambda+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
++\Delta_{\mathrm{fr}}+\delta_{\mathrm{rank}}.
+\]
+If \(\delta<\delta_*(n)\), then \(X\) is a \(C^1\)-graph over \(S^n\) and
+\[
+d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n)\,\delta.
+\]
+
+The \(C^0\) bound and min-max give
+\(\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k)\,\delta\)
+for each fixed \(k\). Low multiplicities are stable if the conclusion
+is read in \(C^2\) (finite slot, Theorem 2(ii)). Packet \(\Rightarrow\)
+metric \(\Rightarrow\) spectrum. Tanno’s uniqueness is the converse
+neighbourhood statement with \(\operatorname{Spec}(P)=\operatorname{Spec}(S^n)\);
+the paper does not assume the spectra coincide.
 \end{theorem}
 
 This is linear stability of Theorem~\ref{thm-a}. It does not use Ricci curvature \cite{Oba62,CMS}.
