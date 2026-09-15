@@ -151,38 +151,55 @@ Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n
 
 \begin{theorem}[round sphere, quantitative window]
 \label{thm-b}
-In the setting of Theorem 3, write \(\Pi_{\mathrm{sph}}=\Pi_0+\Pi_{2n+2}\)
-and allow the table deficits
+Let \(\lambda_1\le\cdots\le\lambda_{n+1}\) be the first \(n+1\) positive
+eigenvalues of \(P\) counted with multiplicity, and let
+\(\mathcal{V}=\operatorname{span}\{x_1,\dots,x_{n+1}\}\) be the joint
+span of corresponding \(L^2\)-orthonormal eigenfunctions. Write
+\[
+w=\lambda_{n+1}-\lambda_1,\qquad
+\bar\lambda=\frac1{n+1}\sum_{i=1}^{n+1}\lambda_i,
+\]
+and assume the cluster is isolated:
+\[
+w<\lambda_{n+2}-\lambda_{n+1}.
+\]
+Fix a cutoff \(\Lambda'\ge 2n+2\) and write \(\Pi_{\mathrm{sph}}=\Pi_0+\Pi_{2n+2}\).
+Allow the table deficits
 \begin{align*}
-\delta_\lambda&=\lvert\lambda-n\rvert,\\
+\delta_w&=w+\lvert\bar\lambda-n\rvert,\\
 \delta_{\mathrm{on}}
 &=\sum_{a,b}\Bigl\lvert\int x_ax_b-\delta_{ab}\Bigr\rvert
 +\sum_a\Bigl\lvert\int x_a\Bigr\rvert,\\
 \delta_1&=\bigl\|\textstyle\sum_a x_a^2-1\bigr\|_{C^0},\\
 \delta_\Phi
-&=\sup_{a,b}\bigl\|(I-\Pi_{\mathrm{sph}})(x_ax_b)\bigr\|_{L^2},\\
+&=\sup_{a,b}\bigl\|(I-\Pi_{\mathrm{sph}})\,\Pi_{\Lambda'}(x_ax_b)\bigr\|_{L^2},\\
 \Delta_{\mathrm{fr}}
-&=\sup_{a,b}\lVert R(x_a,x_b)\rVert_2,\\
+&=\sup_{a,b}\lVert R_{\Lambda'}(x_a,x_b)\rVert_2,\\
 \delta_{\mathrm{rank}}
 &=\text{rank gap of }\Gamma(x_a,x_b).
 \end{align*}
 Set
 \[
-\delta=\delta_\lambda+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
+\delta=\delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
 +\Delta_{\mathrm{fr}}+\delta_{\mathrm{rank}}.
 \]
 If \(\delta<\delta_*(n)\), then \(X\) is a \(C^1\)-graph over \(S^n\) and
 \[
 d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n)\,\delta.
 \]
+This is linear stability of the first \(n+1\) harmonics of Theorem 3,
+allowing the slot to split. It does not use Ricci curvature
+[Oba62; CMS23]. When \(w=0\) and \(\Lambda'=2n+2\) it specialises to
+stability of a single eigenspace.
 
 The \(C^0\) bound and min-max give
 \(\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k)\,\delta\)
-for each fixed \(k\). Low multiplicities are stable if the conclusion
-is read in \(C^2\) (finite slot, Theorem 2(ii)). Packet \(\Rightarrow\)
-metric \(\Rightarrow\) spectrum. Tanno’s uniqueness is the converse
-neighbourhood statement with \(\operatorname{Spec}(P)=\operatorname{Spec}(S^n)\);
-the paper does not assume the spectra coincide.
+for each fixed \(k\le n+1\), and
+\(\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k)\,\delta\)
+for \(k>n+1\) after the metric comparison. Tanno’s uniqueness is the
+converse neighbourhood statement with
+\(\operatorname{Spec}(P)=\operatorname{Spec}(S^n)\); the paper does
+not assume the spectra coincide.
 \end{theorem}
 
 This is linear stability of Theorem~\ref{thm-a}. It does not use Ricci curvature \cite{Oba62,CMS}.
@@ -293,15 +310,28 @@ and every coefficient of \(uv\) against \(\mathcal{V}'\) is a value of \(\Phi\).
 Basis-independence: \(P\) and \(\Phi\) are defined on \(\mathcal{V}\) without
 choices, and \(m\) is orthogonal projection of the pointwise product.
 
-On the spherical frame, \(Px_a=\lambda x_a\) with \(\lvert\lambda-n\rvert=\delta_\lambda\)
-and \(P(m(x_a,x_b))\) differs from \((2n+2)\bigl(x_ax_b-\delta_{ab}/(n+1)\bigr)\)
-by an \(L^2\) term controlled by \(\delta_\Phi+\delta_\lambda\). The identity
-then yields
+On a frame of \(n+1\) eigenfunctions with eigenvalues \(\lambda_a\),
+identity (A1) reads
+\[
+2\Gamma(x_a,x_b)=(\lambda_a+\lambda_b)x_ax_b-P\bigl(m(x_a,x_b)\bigr)+R_{\Lambda'}.
+\]
+Write \(\lambda_a=n+\varepsilon_a\) with \(\lvert\varepsilon_a\rvert\le\delta_w\).
+Split \(m=\Pi_{\mathrm{sph}}m+(I-\Pi_{\mathrm{sph}})m\). The model
+computation of Theorem 3 gives
+\[
+P\bigl(\Pi_{\mathrm{sph}}(x_ax_b)\bigr)
+=(2n+2)\Bigl(x_ax_b-\frac{\delta_{ab}}{n+1}\Bigr)+E_{\mathrm{sph}},
+\]
+with \(\lVert E_{\mathrm{sph}}\rVert_{L^2}\le C(n)\delta_w\). The
+remainder \((I-\Pi_{\mathrm{sph}})m\) is the in-window table error
+measured by \(\delta_\Phi\), and \(R_{\Lambda'}\) is measured by
+\(\Delta_{\mathrm{fr}}\). Hence
 \[
 \bigl\lVert\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\rVert_{L^2}
-\le C(n)\bigl(\delta_\lambda+\delta_\Phi+\Delta_{\mathrm{fr}}\bigr),
+\le C(n)\bigl(\delta_w+\delta_\Phi+\Delta_{\mathrm{fr}}\bigr),
 \]
-which is the cometric input to Theorem 4.
+which is the cometric input to Theorem 4. When \(w=0\) and
+\(\Lambda'=2n+2\) this is the single-slot estimate used for Theorem 3.
 \end{proof}
 
 \begin{remark}[Sogge and $\lVert t\rVert_{C^0}$]
