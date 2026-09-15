@@ -476,11 +476,33 @@ Orbits of a compact Lie group are compact embedded submanifolds. The principal o
 If some orbit $\mathcal{O}$ is open in $X$, then $\mathcal{O}$ is also closed (compact), so connectedness of $X$ gives $\mathcal{O}=X$. Conversely, a transitive action has a single orbit, which is open.
 \end{proof}
 
-\begin{lemma}[open orbit when $d=n+1$] Assume in addition that $\dim\mathcal{V}=n+1$ and that the function $Q=\sum_a u_a^2$ is a positive constant. Then $\iota(X)$ is the sphere of radius $\sqrt{Q}$ in $\mathcal{V}^*$, $G^\circ$ contains $\mathrm{SO}(n+1)$, and $G^\circ$ is transitive on $X$. In particular $X$ is diffeomorphic to a sphere, and the metric is round if in addition $\mathcal{V}$ is one eigenspace and the trace identity of Lemma 23 holds
+\begin{lemma}[open orbit when $d=n+1$]
+Assume in addition that \(\dim\mathcal{V}=n+1\) and that the function
+\(Q=\sum_a u_a^2\) is a positive constant. Then \(\iota(X)\) is the sphere
+of radius \(\sqrt{Q}\) in \(\mathcal{V}^*\), \(G^\circ\) contains a
+transitive action on that sphere, and \(G^\circ\) is transitive on \(X\).
+In particular \(X\) is diffeomorphic to a sphere, and the metric is
+round if in addition \(\mathcal{V}\) is one eigenspace and the trace
+identity of Lemma 23 holds.
 \end{lemma}
 
 \begin{proof}
-Lemma 22 puts $\iota(X)$ on the sphere $S$ of radius $\sqrt{Q}$ in the $(n+1)$-dimensional space $\mathcal{V}^*$. W1 says $\iota$ is an embedding of an $n$-manifold, so $\iota(X)$ is open in $S$. $S$ is connected, so $\iota(X)=S$. The orthogonal group $\mathrm{O}(n+1)$ preserves $S$. The defining equations of $Z$ reduce to the single quadric $Q=\mathrm{const}$ (the multiplication table of the first window on a sphere: Lemma 19), so $G=\mathrm{O}(n+1)$ and $G^\circ=\mathrm{SO}(n+1)$. That action is transitive on $S$. Lemma 25 then gives transitivity on $X$. The metric of Lemma 14 is the round metric of radius $\sqrt{Q}$ because $\Gamma(u_a,u_b)=\delta_{ab}-u_au_b/Q$ as in Lemma 19, up to the scaling of Theorem 3.
+The identity \(\lvert\iota\rvert^2=Q\) puts \(\iota(X)\) on the sphere
+\(S\) of radius \(\sqrt{Q}\) in the \((n+1)\)-dimensional space
+\(\mathcal{V}^*\). W1 says \(\iota\) is an embedding of an \(n\)-manifold,
+so \(\iota(X)\) is open in \(S\). \(S\) is connected, so \(\iota(X)=S\).
+The orthogonal group \(\mathrm{O}(n+1)\) preserves \(S\) and acts
+transitively on it. Restricting to the identity component and applying
+Lemma 25 gives transitivity on \(X\). Thus \(X\) is diffeomorphic to a
+sphere.
+
+If moreover \(\mathcal{V}\) is a single eigenspace and
+\(\sum_a\Gamma(u_a,u_a)=\lambda Q\), Lemma 23 puts \(\iota\) on a sphere
+in the Takahashi sense and the reconstructed metric of Lemma 14 is
+round of radius \(\sqrt{Q}\). In the first spherical window this is
+Lemma 19: \(\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b\) and radius \(1\).
+Those extra identities are the data of Theorem 3; they are not
+assumed in Theorem 21 beyond \(Q\) constant.
 \end{proof}
 
 \begin{lemma}[cubic slot]
