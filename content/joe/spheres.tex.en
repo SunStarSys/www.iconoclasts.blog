@@ -524,54 +524,53 @@ The isolation hypothesis \(w<\lambda_{n+2}-\lambda_{n+1}\) makes \(\mathcal{V}\)
 spectral window of dimension \(n+1\). Standing W1 and W2 apply to this
 block. Write \(\lambda_a=n+\varepsilon_a\), so \(\lvert\varepsilon_a\rvert\le\delta_w\).
 
-Lemma 5 on the cluster frame gives
+Lemma 5 on the cluster frame, with model projector
+\(\Pi_{\mathrm{sph}}^\eta\), gives
 \[
 2\Gamma(x_a,x_b)=(\lambda_a+\lambda_b)x_ax_b-P\bigl(m(x_a,x_b)\bigr)+R_{\Lambda'}
 \]
-and the estimate
+and
 \[
 \bigl\lVert\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\rVert_{L^2}
-\le C(n)\bigl(\delta_w+\delta_\Phi+\Delta_{\mathrm{fr}}\bigr).
+\le C(n,\eta)\bigl(\delta_w+\delta_\Phi+\Delta_{\mathrm{fr}}\bigr).
 \]
-The visible product \(m(x_a,x_b)\) occupies a finite slot of dimension
-\(O(n^2)\) once \(\Lambda'\) is fixed (the model support is
-\(\mathcal{H}_0\oplus\mathcal{H}_2\); extra visible mass is charged to
-\(\delta_\Phi\)). Remarks 6–7 therefore upgrade the \(L^2\) error and the
-tail to \(C^0\):
+Here \(\delta_\Phi\) is mass of \(\Pi_{\Lambda'}(x_ax_b)\) off
+\(\Pi_{\mathrm{sph}}^\eta\), and \(\Delta_{\mathrm{fr}}\) is the tail above
+\(\Lambda'\). The visible slot has dimension \(O(n^2)\) for fixed
+\(\eta,\Lambda'\). Remarks 6–7 upgrade the estimate to \(C^0\):
 \[
 \bigl\lVert\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\rVert_{C^0}
-\le C(n,\Lambda')\bigl(\delta_w+\delta_\Phi+\Delta_{\mathrm{fr}}\bigr).
+\le C(n,\eta,\Lambda')\bigl(\delta_w+\delta_\Phi+\Delta_{\mathrm{fr}}\bigr).
 \]
-If the cutoff is frozen at \(\Lambda'=2n+2\), the constant depends only on
-\(n\).
+If \(\Lambda'=2n+2+\eta\), the constant depends only on \(n\) and \(\eta\).
 
 The deficit \(\delta_1\) puts \(\sum_a x_a^2=1+O_{C^0}(\delta_1)\), so
 evaluation \(F=(x_1,\dots,x_{n+1})\) lands in a \(C^0\)-neighborhood of
-the unit sphere in \(\mathcal{V}^*\). The integrals \(\delta_{\mathrm{on}}\)
-make the frame an \(O(\delta)\) perturbation of an orthonormal mean-zero
-basis; Gram–Schmidt absorbs \(\delta_{\mathrm{on}}\) into \(\delta_1\) and
-\(\delta_\Phi\) at cost \(C(n)\). The rank gap \(\delta_{\mathrm{rank}}\)
-keeps \(dF\) of rank \(n\) for \(\delta<\delta_*(n)\), which is W2 for
-this frame.
+the unit sphere in \(\mathcal{V}^*\). Gram–Schmidt absorbs
+\(\delta_{\mathrm{on}}\) into \(\delta_1\) and \(\delta_\Phi\) at cost
+\(C(n)\). The rank gap \(\delta_{\mathrm{rank}}\) keeps \(dF\) of rank \(n\)
+for \(\delta<\delta_*(n,\eta)\).
 
 Lemma 9, with \(d=n+1\) and a finite slot, produces a \(C^1\)
-diffeomorphism of \(X\) onto a graph over \(S^n\). Theorem 2(ii), with
-constants reduced to \(C(n)\) when \(\Lambda'=2n+2\) and to
-\(C(n,\Lambda')\) in general, yields
+diffeomorphism of \(X\) onto a graph over \(S^n\). Theorem 2(ii) yields
 \[
-d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})\le C(n,\Lambda')\,\delta.
+d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})
+\le C(n,\eta,\Lambda')\,\delta.
 \]
-No Ricci bound is used. Diameter control is the diffeomorphism onto a
-graph over \(S^n\), not Cheng comparison.
+No Ricci bound is used. Diameter control is that graph, not Cheng
+comparison.
 
-When \(w=0\) and \(\Lambda'=2n+2\), one has \(\delta_w=\delta_\lambda\) and
-\(\delta_\Phi\) is the projection of \(x_ax_b\) off
-\(\mathcal{H}_0\oplus\mathcal{H}_2\); the argument specialises to
-stability of the single eigenspace of Theorem 3. Isolation may fail for
-a generic metric whose first \(n+1\) eigenvalues are not a cluster, and
-\(\delta_\Phi\) may fail for a generic metric whose products spray.
-Theorem 4 is a neighborhood in the space of isolated almost-spherical
-blocks, not a residual set in the space of all metrics.
+Lemma 5 already records the Kato reduction: on a small \(C^2\) ball
+about \(g_{\mathrm{rd}}\), written as a divergence-form operator on
+\(L^2(d\mathrm{vol}_{g_{\mathrm{rd}}})\), the contours about \(0\),
+\(n\), and \(2n+2\) miss \(\operatorname{Spec}(\Delta_g)\)
+[Kat95, Ch.~IV]. Thus the three gaps persist,
+\(\delta\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}\), and Theorem 4
+applies on that ball in \(\mathcal{M}^2(M)\) for \(M\simeq S^n\).
+Individual eigenvalues in the cluster may split; only the joint span
+\(\mathcal{V}\) is used. The specialisation \(w=0\), \(\eta\to 0\),
+\(\Lambda'=2n+2+\eta\) recovers exact projectors
+\(\Pi_0+\Pi_{2n+2}\) and the single-eigenspace stability of Theorem 3.
 \end{proof}
 
 \begin{remark}
