@@ -354,15 +354,19 @@ cluster projector
 \]
 It is not the tail \(\Delta_{\mathrm{fr}}\), which lives above \(\Lambda'\).
 
-On a sufficiently small \(C^2\) ball about \(g_{\mathrm{rd}}\) the gaps of
-the spherical spectrum about \(0\), \(n\), and \(2n+2\) persist (Kato).
-Thus \(\Pi_{\mathrm{sph}}^\eta\) has rank bounded in terms of \(n\) only,
-the first \(n+1\) modes remain an isolated cluster, and
+Write \(\Delta_g\) as a divergence-form operator on the fixed space
+\(L^2(d\mathrm{vol}_{g_{\mathrm{rd}}})\). On a sufficiently small \(C^2\)
+ball about \(g_{\mathrm{rd}}\), the resolvent is close in operator norm
+and the contours about \(0\), \(n\), and \(2n+2\) miss
+\(\operatorname{Spec}(\Delta_g)\) [Kato, Ch.~IV]. Thus
+\(\Pi_{\mathrm{sph}}^\eta\) has rank bounded in terms of \(n\) only, the
+first \(n+1\) modes remain an isolated cluster, and
 \[
 \delta\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
 \]
 Theorem 4 therefore applies on that ball in \(\mathcal{M}^2(M)\) for
-\(M\simeq S^n\).
+\(M\simeq S^n\). Individual eigenvalues in the cluster may split; only
+the joint span \(\mathcal{V}\) is used.
 
 The specialisation \(w=0\), \(\eta\to 0\), \(\Lambda'=2n+2+\eta\) recovers
 exact projectors \(\Pi_0+\Pi_{2n+2}\) and the single-eigenspace stability
