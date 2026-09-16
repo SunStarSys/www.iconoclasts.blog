@@ -824,7 +824,7 @@ third derivative of \(F\) in the same span. Hence the normal space of
 \(\iota(X)\) in \(\mathbb{R}^d\) is spanned by a finite list of
 eigenfunctions, \(K\)-invariant by Theorem 21, and closed under
 directional derivatives. That list is a parallel normal subbundle, so
-\(\nabla\mathrm{II}=0\).
+\(\nabla\mathrm{II}=0\). For more details on these computations see Section 9.2 below.
 
 A compact full immersion with \(\nabla\mathrm{II}=0\) into Euclidean
 space is an orbit of an \(s\)-representation (isotropy representation
@@ -844,6 +844,85 @@ still supplies a compact group of isometries of \(g_\Gamma\).
 Theorem 21 does not assume a tower and does not use Theorem 32.
 Whether every one-step exact unweighted window extends to an exact
 tower is left open.
+
+\subsection{Jets of an exact tower}
+Let \(\mathcal{V}=\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N\) be an
+exact unweighted tower, \(\alpha=0\), \(P=-\Delta\), and let
+\(F=(F_1,\dots,F_N)\) be the joint eigenframe of the slots
+\(\mathcal{E}_j=\mathcal{V}_j\ominus\mathcal{V}_{j-1}\), so
+\(\Delta F_j=\lambda_j F_j\). Write \(\mathcal{A}=\operatorname{span}\{F_\ell\}
+=\mathcal{V}_N\). Exactness means
+\[
+\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\qquad(j+k\le N),
+\qquad
+\mathcal{V}_N\cdot\mathcal{V}_1\subset\mathcal{V}_N,
+\]
+hence \(\mathcal{A}\) is an algebra and \(P(\mathcal{A})\subset\mathcal{A}\).
+
+\paragraph{First derivatives.}
+For \(u\in\mathcal{A}\) one has \(du(X)=X(u)\). In particular every
+first derivative of a coordinate of \(F\) is a directional derivative of
+an element of \(\mathcal{A}\).
+
+\paragraph{\(2\)-jet.}
+Leibniz for \(P=-\Delta\) on functions is
+\[
+2\Gamma(u,v)=uPv+vPu-P(uv)=g(\nabla u,\nabla v).
+\]
+If \(u\in\mathcal{E}_j\) and \(v\in\mathcal{E}_k\) with \(j+k\le N\),
+then \(uv\in\mathcal{V}_{j+k}\subset\mathcal{A}\) and \(Pu,Pv\in\mathcal{A}\),
+so \(\Gamma(u,v)\in\mathcal{A}\). In coordinates,
+\[
+\operatorname{Hess}u(X,Y)=X(Yu)-\nabla_X Y(u).
+\]
+The Bochner identity on an eigenfunction \(Pu=\lambda u\) reads
+\[
+\operatorname{Hess}u+\tfrac{\lambda}{n}u\,g=\text{trace-free part},
+\]
+and the trace-free part is recovered from \(\Gamma\) by polarisation.
+Thus every second partial of a coordinate of \(F\) is a linear
+combination of elements of \(\mathcal{A}\): the \(2\)-jet of \(F\)
+takes values in \(\mathcal{A}\).
+
+\paragraph{\(3\)-jet.}
+Start from \(\Delta F_j=\lambda_j F_j\) and differentiate:
+\[
+X(\Delta F_j)=\lambda_j\,X(F_j).
+\]
+Commuting \(\nabla_X\) through \(\Delta\) gives
+\[
+\Delta(X(F_j))=\lambda_j X(F_j)+\operatorname{Ric}(X,\nabla F_j)
++\text{terms in }\nabla\operatorname{Hess}F_j.
+\]
+The Ricci term is tensorial in \(dF_j\). The Hessian term is a
+derivative of a function already in \(\mathcal{A}\) by the \(2\)-jet
+step, hence again in \(\mathcal{A}\) after applying \(X\), because
+\(\mathcal{A}\) is an algebra and is closed under \(P\). Therefore
+every third derivative of \(F\) is a linear combination of first
+derivatives of elements of \(\mathcal{A}\), i.e.\ the \(3\)-jet of
+\(F\) takes values in the finite-dimensional space of \(1\)-jets of
+\(\mathcal{A}\).
+
+\paragraph{Normal bundle.}
+View \(\iota=F:X\to\mathbb{R}^d\). The Euclidean second derivative of
+\(F\) splits as \(\nabla dF=\mathrm{II}\oplus\nabla^T dF\). The
+tangential part is the Levi-Civita connection of \(g\) (Parseval). The
+normal part \(\mathrm{II}(X,Y)\) is the component of
+\(\operatorname{Hess}F(X,Y)\) orthogonal to \(T\iota(X)\). By the
+\(2\)-jet step that vector is a linear combination of the coordinates
+of \(F\), so
+\[
+N_{\iota(x)}\iota(X)\subset\mathcal{A}_x\subset\mathbb{R}^d.
+\]
+The \(3\)-jet step says that a directional derivative of such a normal
+field remains in \(\mathcal{A}\). If \(K\) acts as in Theorem 21, the
+list of spanning fields is \(K\)-invariant. A finite \(K\)-invariant
+span of eigenfunctions, closed under directional derivatives, is a
+parallel normal subbundle, and \(\nabla\mathrm{II}=0\).
+
+One-step \(R=0\) gives only \(\mathcal{V}\cdot\mathcal{V}\subset\mathcal{V}'\).
+The \(3\)-jet uses \(\mathcal{V}'\cdot\mathcal{V}\subset\mathcal{A}\),
+which is the tower and is not implied by a single vanishing tail.
 
 \subsection{The Torus Packet}
 The first window of a sphere is not the only exact finite packet. On a compact flat manifold the characters of the translation lattice multiply by addition of frequencies, so any finite spanning set of frequencies is exact at a finite cutoff. Theorem 1 reconstructs the flat metric. Theorem 21 supplies transitivity from the group law rather than from Lemma 26.
