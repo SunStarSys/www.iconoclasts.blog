@@ -1,13 +1,3 @@
-@article{Gar90,
-  author  = {Oscar J. Garay},
-  title   = {An extension of {Takahashi}'s theorem},
-  journal = {Geom. Dedicata},
-  volume  = {34},
-  number  = {2},
-  pages   = {105--112},
-  year    = {1990},
-  doi     = {10.1007/BF00147319}
-}
 @article{Wit82,
   author  = {Witten, Edward},
   title   = {Supersymmetry and {M}orse theory},
@@ -100,17 +90,6 @@
   doi     = {10.2307/1968928}
 }
 
-@article{Tak66,
-  author  = {Tsunero Takahashi},
-  title   = {Minimal immersions of {R}iemannian manifolds},
-  journal = {J. Math. Soc. Japan},
-  volume  = {18},
-  number  = {4},
-  pages   = {380--385},
-  year    = {1966},
-  doi     = {10.2969/jmsj/01840380}
-}
-
 @incollection{CDK70,
   author    = {Shiing-Shen Chern and Manfredo P. do Carmo and Shoshichi Kobayashi},
   title     = {Minimal submanifolds of a sphere with second fundamental form of constant length},
@@ -142,4 +121,75 @@
   address   = {Berlin},
   year      = {1995},
   note      = {Original edition 1966}
+}
+
+@article{Tak66,
+  author  = {Tsunero Takahashi},
+  title   = {Minimal immersions of {R}iemannian manifolds},
+  journal = {Journal of the Mathematical Society of Japan},
+  volume  = {18},
+  number  = {4},
+  pages   = {380--385},
+  year    = {1966},
+  doi     = {10.2969/jmsj/01840380}
+}
+
+@article{Gar90,
+  author  = {Oscar J. Garay},
+  title   = {An extension of {T}akahashi's theorem},
+  journal = {Geometriae Dedicata},
+  volume  = {34},
+  number  = {2},
+  pages   = {105--112},
+  year    = {1990},
+  doi     = {10.1007/BF00147319}
+}
+
+@article{Fer80,
+  author  = {Dirk Ferus},
+  title   = {Symmetric submanifolds of {E}uclidean space},
+  journal = {Mathematische Annalen},
+  volume  = {247},
+  number  = {1},
+  pages   = {81--93},
+  year    = {1980},
+  doi     = {10.1007/BF01359868}
+}
+
+@incollection{Tak81,
+  author    = {Masaru Takeuchi},
+  title     = {Parallel submanifolds of space forms},
+  booktitle = {Manifolds and {L}ie Groups},
+  series    = {Progress in Mathematics},
+  volume    = {14},
+  pages     = {429--447},
+  publisher = {Birkh\"auser},
+  year      = {1981}
+}
+
+@article{TakKob68,
+  author  = {Masaru Takeuchi and Shoshichi Kobayashi},
+  title   = {Minimal imbeddings of {$R$}-spaces},
+  journal = {Journal of Differential Geometry},
+  volume  = {2},
+  pages   = {203--215},
+  year    = {1968}
+}
+
+@article{OlmSan93,
+  author  = {Carlos Olmos and Cristi\'an S\'anchez},
+  title   = {A geometric characterization of the orbits of s-representations},
+  journal = {Journal f\"ur die reine und angewandte Mathematik},
+  volume  = {440},
+  pages   = {111--146},
+  year    = {1993}
+}
+
+@book{BCO16,
+  author    = {J{\"u}rgen Berndt and Sergio Console and Carlos Olmos},
+  title     = {Submanifolds and Holonomy},
+  edition   = {2},
+  series    = {Monographs and Research Notes in Mathematics},
+  publisher = {CRC Press},
+  year      = {2016}
 }
