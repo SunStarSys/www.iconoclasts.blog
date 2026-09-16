@@ -885,23 +885,62 @@ combination of elements of \(\mathcal{A}\): the \(2\)-jet of \(F\)
 takes values in \(\mathcal{A}\).
 
 \paragraph{\(3\)-jet.}
-Start from \(\Delta F_j=\lambda_j F_j\) and differentiate:
+The Euclidean third jet of \(F\) along vector fields \(X,Y,Z\) is
 \[
-X(\Delta F_j)=\lambda_j\,X(F_j).
+D_ZD_X\,dF(Y)
+=dF\bigl(\nabla_Z\nabla_XY\bigr)
++\mathrm{II}\bigl(Z,\nabla_XY\bigr)
++D_Z\bigl(\mathrm{II}(X,Y)\bigr).
 \]
-Commuting \(\nabla_X\) through \(\Delta\) gives
+Split the last term by Weingarten:
 \[
-\Delta(X(F_j))=\lambda_j X(F_j)+\operatorname{Ric}(X,\nabla F_j)
-+\text{terms in }\nabla\operatorname{Hess}F_j.
+D_Z\bigl(\mathrm{II}(X,Y)\bigr)
+=\nabla^\perp_Z\bigl(\mathrm{II}(X,Y)\bigr)
+-A_{\mathrm{II}(X,Y)}Z,
 \]
-The Ricci term is tensorial in \(dF_j\). The Hessian term is a
-derivative of a function already in \(\mathcal{A}\) by the \(2\)-jet
-step, hence again in \(\mathcal{A}\) after applying \(X\), because
-\(\mathcal{A}\) is an algebra and is closed under \(P\). Therefore
-every third derivative of \(F\) is a linear combination of first
-derivatives of elements of \(\mathcal{A}\), i.e.\ the \(3\)-jet of
-\(F\) takes values in the finite-dimensional space of \(1\)-jets of
-\(\mathcal{A}\).
+so
+\begin{align*}
+D_ZD_X\,dF(Y)
+&=dF\bigl(\nabla_Z\nabla_XY-A_{\mathrm{II}(X,Y)}Z\bigr)\\
+&\qquad+\mathrm{II}\bigl(Z,\nabla_XY\bigr)
++(\nabla_Z\mathrm{II})(X,Y)
++\mathrm{II}(\nabla_ZX,Y)
++\mathrm{II}(X,\nabla_ZY).
+\end{align*}
+The first line is tangent to \(\iota(X)\). On a Parseval exact tower
+each spherical factor contributes
+\[
+\mathrm{II}_j(X,Y)
+=-\frac1{Q_j}\,\Gamma(F_j,F_j)(X,Y)\,F_j,
+\]
+hence
+\begin{align*}
+(\nabla_Z\mathrm{II}_j)(X,Y)
+&=-\frac1{Q_j}\bigl(Z\cdot\Gamma(F_j,F_j)(X,Y)\bigr)F_j\\
+&\qquad-\frac1{Q_j}\Gamma(F_j,F_j)(X,Y)\,dF_j(Z)^\top,
+\end{align*}
+where the second summand is tangent to the \(j\)-th sphere
+(Weingarten on that factor). The coefficient derivative is
+\[
+Z\cdot\Gamma(F_j,F_j)(X,Y)
+=\operatorname{Hess}\Gamma(F_j,F_j)(Z,\,\cdot\,)(X,Y)
++\Gamma(F_j,F_j)(\nabla_ZX,Y)
++\Gamma(F_j,F_j)(X,\nabla_ZY).
+\]
+Leibniz puts \(\Gamma(F_j,F_j)(\xi,\eta)\in\mathcal{A}\) for
+\(\xi,\eta\in\mathfrak{X}(X)\), so the Hessian of that coefficient
+is the Hessian of a function in \(\mathcal{A}\) and takes values
+in \(\mathcal{A}\) after tracing against \(g\). Collecting normal
+parts,
+\[
+\bigl(D_ZD_X\,dF(Y)\bigr)^\perp
+=\sum_j\Biggl(
+-\frac1{Q_j}\bigl(Z\cdot\Gamma(F_j,F_j)(X,Y)\bigr)
+-\frac1{Q_j}\Gamma(F_j,F_j)\bigl(Z,\nabla_XY\bigr)
+\Biggr)F_j,
+\]
+which lies in \(\operatorname{span}\{F_\ell\}\). That is the
+explicit third-jet formula used for \(\nabla\mathrm{II}=0\).
 
 \paragraph{Normal bundle.}
 View \(\iota=F:X\to\mathbb{R}^d\). The Euclidean second derivative of
