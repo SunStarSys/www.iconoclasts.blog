@@ -719,7 +719,7 @@ lies in \(\mathcal{V}''\).
 The trace identity \(\sum_a\Gamma(u_a,u_a)=\lambda Q\) is the condition
 that \(\iota\) be isometric into \(\mathcal{V}^*\). Combined with
 \(\Delta u_a=-\lambda u_a\), Takahashi supplies a sphere of radius
-\(\sqrt{n/\lambda}\) and minimality there [Tak66]. The spherical second
+\(\sqrt{n/\lambda}\) and minimality there \cite{Tak66}. The spherical second
 fundamental form \(II_S\) is then the packet tensor already obtained.
 Neither the trace identity nor minimality is assumed in Theorem 21.
 \end{proof}
@@ -767,6 +767,59 @@ The cubic slot and the tower hold for every CROSS first window and every Peterâ€
 \end{proof}
 \begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 25. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
 \end{remark}
+
+\subsection{Parseval slots and parallel \(\mathrm{II}\)}
+Assume \(\alpha=0\) and an exact tower of unweighted windows
+\(\mathcal{V}=\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N\)
+(so \(\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\)
+for \(j+k\le N\), and the last step stabilises). Write
+\(\mathcal{E}_j=\mathcal{V}_j\ominus\mathcal{V}_{j-1}\).
+Suppose each slot admits an \(L^2\)-orthonormal basis whose
+quadratic \(Q_j=\sum_a(u^{(j)}_a)^2\) is constant, and that the
+joint frame is Parseval:
+\[
+\sum_{j,a} du^{(j)}_a\otimes du^{(j)}_a=g.
+\]
+Let \(F_j=(u^{(j)}_a)_a\) and \(F=(F_1,\dots,F_N)\).
+
+Then each \(F_j(X)\) lies in a sphere of radius \(\sqrt{Q_j}\)
+in the Euclidean space of \(\mathcal{E}_j\) \cite{Tak66}, and
+\(\iota=F\) is a homothetic embedding of \((X,g)\) into the
+product of those spheres \cite{Gar90}. In particular \(\mathrm{II}\)
+is the second fundamental form of a Riemannian immersion into
+a product of space forms.
+
+The same conclusion is automatic when \(X\) is compact
+irreducible symmetric and each \(\mathcal{E}_j\) is a full
+isotypic slot of \(-\Delta\): \(Q_j\) is invariant, hence
+constant, and \(\iota^*g_{\mathrm{euc}}\) is invariant, hence a
+multiple of \(g\). It may fail for a left-invariant metric that
+is not bi-invariant, for an incomplete slot, or for an
+unbalanced window on a Riemannian product. In those cases
+Theorem~21 still supplies a compact group of isometries of the
+reconstructed metric \(g_\Gamma\), but Takahashi--Garay do not
+apply.
+
+\begin{lemma}[parallel \(\mathrm{II}\)]
+\(\nabla\mathrm{II}=0\).
+\end{lemma}
+\begin{proof}
+Under the hypotheses above, the \(2\)-jet of \(F\) takes values
+in \(\operatorname{span}\{F_\ell\}\) by Leibniz and \(R=0\) along
+the tower. Differentiating the eigen-equation once more puts the
+\(3\)-jet in the same span. Hence the normal bundle of
+\(\iota(X)\) in \(\mathbb{R}^d\) is spanned by a finite
+\(K\)-invariant list of eigenfunctions and is closed under
+directional derivatives. That list is a parallel normal
+subbundle, and \(\nabla\mathrm{II}=0\).
+\end{proof}
+
+A compact full immersion with \(\nabla\mathrm{II}=0\) into a
+product of spheres is an orbit of an isotropy representation of
+a compact symmetric space, or a product of such orbits
+\cite{Fer80; Tak81; OlmSan93}. One-step \(R=0\) without a tower does
+not give the \(3\)-jet closure; whether every exact unweighted
+window extends to an exact tower is left open.
 
 \subsection{The Torus Packet}
 The first window of a sphere is not the only exact finite packet. On a compact flat manifold the characters of the translation lattice multiply by addition of frequencies, so any finite spanning set of frequencies is exact at a finite cutoff. Theorem 1 reconstructs the flat metric. Theorem 21 supplies transitivity from the group law rather than from Lemma 26.
