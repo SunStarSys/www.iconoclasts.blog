@@ -739,15 +739,19 @@ Assume the hypotheses of Lemma 27, and let
 be a tower of windows satisfying \(\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\).
 Then every covariant derivative \(\nabla^m II_S\) has coefficients in \(\mathcal{V}_{m+2}\).
 
-The tower cannot stabilize. If \(\bigcup_k\mathcal{V}_k=A\) were finite-dimensional, then
-\(A\) would be a unital subalgebra of \(C(X)\). Any finite-dimensional commutative
-subalgebra of \(C(X)\) is semisimple and therefore has finite Gelfand spectrum.
-W1 implies that \(A\) separates points, so \(X\) would be finite, contradicting
-connectedness and \(\dim X\ge 1\).
+The infinite flag with \(\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\)
+for all \(j,k\) has union \(A=\bigcup_k\mathcal{V}_k\), a unital pointwise
+subalgebra of \(C(X)\). If that union is finite-dimensional and separates
+points, the Gelfand spectrum is finite, contradicting \(\dim X\ge 1\).
+A finite cutoff \(\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N\) with the
+rule only for \(j+k\le N\) is not that algebra: it is the span of products
+of length at most \(N\) in \(\mathcal{V}_0\). The third jet of \(\mathcal{V}_0\)
+uses only \(\mathcal{V}_0\cdot\mathcal{V}_0\subset\mathcal{V}_1\).
 
 If, in addition, the multiplication of the tower is the Clebsch–Gordan
 decomposition of a compact Lie group \(G\) acting smoothly on \(X\), then
 \(\iota\) is a \(G\)-equivariant eigenmap and \(X\) is a union of \(G\)-orbits.
+
 If in addition the hypotheses of Theorem 32 hold, the orbit is an
 \(s\)-representation orbit \cite{Fer80, Tak81, OlmSan93}; \cite{TK68} is the
 standard embedding of an \(R\)-space. Parallelism is not claimed
@@ -971,7 +975,11 @@ puts \(\Gamma(F,F)\) in \(\mathcal{V}_1\), and \(Z\cdot\Gamma(F,F)\) is a
 derivative of that slot, not a product \(\mathcal{V}_1\cdot\mathcal{V}_1\).
 If \(\iota\) also uses \(\mathcal{V}_1\), close the mixed products
 \(\mathcal{V}_0\cdot\mathcal{V}_1\subset\mathcal{V}_1\) (or \(\mathcal{V}_2\)).
-Stabilisation at \(\mathcal{V}_1\) is the two-step exact tower.
+Height 2 means \(\mathcal{V}_0\cdot\mathcal{V}_0\subset\mathcal{V}_1\),
+and \(\mathcal{V}_0\cdot\mathcal{V}_1\subset\mathcal{V}_1\) or \(\mathcal{V}_2\)
+if \(\iota\) uses \(\mathcal{V}_1\). It does not mean \(\mathcal{V}_1\cdot\mathcal{V}_1
+\subset\mathcal{V}_1\), and it does not make \(\mathcal{V}_1\) a subalgebra of \(C(X)\).
+
 One-step \(R=0\) without \(\mathcal{V}_1\) in the embedding is
 exactly Theorem~3 when \(\dim\mathcal{V}_0=n+1\).
 
