@@ -123,7 +123,7 @@ quantitative Obata theorems on the Ricci side \cite{CMS}. They are not
 Ricci theorems. They use a linear frame and its products, not a lower
 bound on Ricci curvature and a single first eigenfunction.
 
-If \(\alpha=0\) and the window extends to an exact, finite Parseval tower with
+If \(\alpha=0\) and the exact window has a Parseval metric with
 constant slot quadratics, evaluation is a homothety into a product of
 spheres with parallel second fundamental form, and \(X\) is an orbit
 of an \(s\)-representation (Corollary 32).
@@ -801,6 +801,7 @@ Under these hypotheses, \(\iota=F\) is a homothetic embedding of
 \((X,g)\) into a product of spheres, \(\nabla\mathrm{II}=0\), and
 \(\iota(X)\) is an orbit of an isotropy representation of a compact
 symmetric space, or a product of such orbits.
+In particular, the window extends to an infinite tower.
 \end{corollary}
 \begin{proof}
 Each coordinate of \(F_j\) is an eigenfunction of \(-\Delta\) and
@@ -837,7 +838,7 @@ unbalanced window on a Riemannian product. In those cases Theorem 21
 still supplies a compact group of isometries of \(g_\Gamma\).
 \end{proof}
 
-Theorem 21 does not assume a Parseval embedding and does not use Corollary 32.
+Theorem 21 does not assume a Parseval embedding.
 
 \subsection{Jets of a filtered, exact window}
 
