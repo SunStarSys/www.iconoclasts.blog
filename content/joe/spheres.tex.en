@@ -123,7 +123,7 @@ quantitative Obata theorems on the Ricci side \cite{CMS}. They are not
 Ricci theorems. They use a linear frame and its products, not a lower
 bound on Ricci curvature and a single first eigenfunction.
 
-If \(\alpha=0\) and the window extends to an exact Parseval tower with
+If \(\alpha=0\) and the window extends to an exact, finite Parseval tower with
 constant slot quadratics, evaluation is a homothety into a product of
 spheres with parallel second fundamental form, and \(X\) is an orbit
 of an \(s\)-representation (Theorem 32).
@@ -760,11 +760,23 @@ The stabilization clause is the Gelfand spectrum of a finite-dimensional
 subalgebra of \(C(X)\), as above. The graded case is Peter–Weyl: the
 windows are isotypic components, \(\iota\) intertwines the \(G\)-actions,
 and \cite{TK68} applies exactly to \(R\)-space orbits.
+
+
 \end{proof}
 
 If $\mathcal{V}=\bigoplus_i\mathcal{V}_{\lambda_i}$ with more than one eigenvalue, Takahashi applies factorwise: each $\iota_{\lambda_i}(X)$ lies in a sphere in $\mathcal{V}_{\lambda_i}^*$, and $\iota(X)$ lies in a product of spheres. The single-quadric argument of Lemma 26 does not run. Constancy of the total $Q=\sum_i Q_i$ is a sum of several sphere equations and does not make $G=\mathrm{O}(\dim\mathcal{V})$.
 
 If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ is a Garay map. The image lies in a product of spheres only after each spectral projector is constant on the diagonal, which is not implied by $R=0$. In codimension one the complete list is spheres and cylinders \cite{Gar90}.
+
+A tower of height \(2\) suffices for the third jet of a window
+supported in \(\mathcal{V}_0\): \(\mathcal{V}_0\cdot\mathcal{V}_0\subset\mathcal{V}_1\)
+puts \(\Gamma(F,F)\) in \(\mathcal{V}_1\), and \(Z\cdot\Gamma(F,F)\) is a
+derivative of that slot, not a product \(\mathcal{V}_1\cdot\mathcal{V}_1\).
+If \(\iota\) also uses \(\mathcal{V}_1\), close the mixed products
+\(\mathcal{V}_0\cdot\mathcal{V}_1\subset\mathcal{V}_1\) (or \(\mathcal{V}_2\)).
+Stabilisation at \(\mathcal{V}_1\) is the two-step exact algebra.
+One-step \(R=0\) without \(\mathcal{V}_1\) in the embedding is
+exactly Theorem~3 when \(\dim\mathcal{V}_0=n+1\).
 
 \begin{remark} Lemmas 27–28 are not used in Theorems 1–4. One exact pair does not give the tower; the torus tower is the abelian case of the last clause.
 The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window. They are the extra structure that upgrades packet $II_S$ to a compact group orbit. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$ \cite{CDK70}, Lemma 27 alone already forces $\nabla II_S=0$ in the pinched range. That pinching is not used below. Parallelism of \(\mathrm{II}\) for a tower is Theorem 32. Theorem 21 does not use either lemma.
@@ -778,7 +790,7 @@ union of orbits) under the exact-tower and Parseval hypotheses, which Theorem 21
 \end{remark}
 
 \subsection{Parseval Towers and Parallel \(\mathrm{II}\)}
-Assume \(\alpha=0\) and an exact tower of unweighted windows
+Assume \(\alpha=0\) and an exact, finite tower of unweighted windows
 \[
 \mathcal{V}=\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N,
 \]
