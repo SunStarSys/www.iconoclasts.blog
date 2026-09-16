@@ -779,7 +779,7 @@ The cubic slot and the tower hold for every CROSS first window and every Peterâ€
 union of orbits) under the exact-tower and Parseval hypotheses, which Theorem 21 does not assume. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
 \end{remark}
 
-\subsection{Parseval Towers and Parallel \(\mathrm{II}\)}
+\subsection{Parseval Finite Towers and Parallel \(\mathrm{II}\)}
 Assume \(\alpha=0\) and an exact, finite tower of unweighted windows
 \[
 \mathcal{V}=\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N,
@@ -812,14 +812,14 @@ sphere of radius \(\sqrt{Q_j}\) in the Euclidean space of
 is the second fundamental form of a Riemannian immersion
 \(X\to\mathbb{R}^d\).
 
-Leibniz and exactness of the tower give, for \(u\in\mathcal{E}_j\) and
+Leibniz and exactness of the finite tower give, for \(u\in\mathcal{E}_j\) and
 \(v\in\mathcal{E}_k\) with \(j+k\le N\),
 \[
 uv\in\mathcal{V}_{j+k}\subset\operatorname{span}\{F_\ell\}.
 \]
 The Hessian of a coordinate of \(F\) is computed from
 \(2\Gamma(u,v)=uPv+vPu-P(uv)\). The right-hand side lies in the
-tower, so the \(2\)-jet of \(F\) takes values in
+finite tower, so the \(2\)-jet of \(F\) takes values in
 \(\operatorname{span}\{F_\ell\}\). Differentiating the eigen-equation
 \(\Delta F_j=\lambda_j F_j\) and substituting the \(2\)-jet puts every
 third derivative of \(F\) in the same span. Hence the normal space of
@@ -843,11 +843,11 @@ unbalanced window on a Riemannian product. In those cases Theorem 21
 still supplies a compact group of isometries of \(g_\Gamma\).
 \end{proof}
 
-Theorem 21 does not assume a tower and does not use Theorem 32.
+Theorem 21 does not assume a finite tower and does not use Theorem 32.
 Whether every one-step exact unweighted window extends to an exact
 tower is left open.
 
-\subsection{Jets of an exact tower}
+\subsection{Jets of a finite exact tower}
 Let \(\mathcal{V}=\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N\) be an
 exact unweighted tower, \(\alpha=0\), \(P=-\Delta\), and let
 \(F=(F_1,\dots,F_N)\) be the joint eigenframe of the slots
@@ -859,7 +859,7 @@ exact unweighted tower, \(\alpha=0\), \(P=-\Delta\), and let
 \qquad
 \mathcal{V}_N\cdot\mathcal{V}_1\subset\mathcal{V}_N,
 \]
-hence \(\mathcal{A}\) is an algebra and \(P(\mathcal{A})\subset\mathcal{A}\).
+hence \(\mathcal{A}\) closed under $N$ or fewer products of $\mathcal V_0$ and \(P(\mathcal{A})\subset\mathcal{A}\).
 
 \paragraph{First derivatives.}
 For \(u\in\mathcal{A}\) one has \(du(X)=X(u)\). In particular every
@@ -909,7 +909,7 @@ D_ZD_X\,dF(Y)
 +\mathrm{II}(\nabla_ZX,Y)
 +\mathrm{II}(X,\nabla_ZY).
 \end{align*}
-The first line is tangent to \(\iota(X)\). On a Parseval exact tower
+The first line is tangent to \(\iota(X)\). On a Parseval finite tower
 each spherical factor contributes
 \[
 \mathrm{II}_j(X,Y)
@@ -963,7 +963,7 @@ parallel normal subbundle, and \(\nabla\mathrm{II}=0\).
 
 One-step \(R=0\) gives only \(\mathcal{V}\cdot\mathcal{V}\subset\mathcal{V}'\).
 The \(3\)-jet uses \(\mathcal{V}'\cdot\mathcal{V}\subset\mathcal{A}\),
-which is the tower and is not implied by a single vanishing tail.
+which is the finite tower and is not implied by a single vanishing tail.
 
 A tower of height \(2\) suffices for the third jet of a window
 supported in \(\mathcal{V}_0\): \(\mathcal{V}_0\cdot\mathcal{V}_0\subset\mathcal{V}_1\)
@@ -971,7 +971,7 @@ puts \(\Gamma(F,F)\) in \(\mathcal{V}_1\), and \(Z\cdot\Gamma(F,F)\) is a
 derivative of that slot, not a product \(\mathcal{V}_1\cdot\mathcal{V}_1\).
 If \(\iota\) also uses \(\mathcal{V}_1\), close the mixed products
 \(\mathcal{V}_0\cdot\mathcal{V}_1\subset\mathcal{V}_1\) (or \(\mathcal{V}_2\)).
-Stabilisation at \(\mathcal{V}_1\) is the two-step exact algebra.
+Stabilisation at \(\mathcal{V}_1\) is the two-step exact tower.
 One-step \(R=0\) without \(\mathcal{V}_1\) in the embedding is
 exactly Theorem~3 when \(\dim\mathcal{V}_0=n+1\).
 
