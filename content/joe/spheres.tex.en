@@ -130,6 +130,25 @@ The article is organized as follows. Section 2 fixes the Witten category and the
 
 Geometry sits in the multiplication table, not in the list of eigenvalues. The contribution here is that a finite, explicitly tailed piece of that table already reconstructs a Witten pair, and that the unit sphere is the minimal unweighted instance of the same mechanism; an exact unweighted window is homogeneous once it has an open orbit.
 
+A discrete analogue is immediate for low-energy eigenpairs of a
+finite-element Laplace or Witten operator. Let \(\mathcal{V}_h\) be
+the span of the first \(d\) computed modes and let \(\Phi_h\) be their
+triple products against a slightly larger computed window, with tail
+\(R_h\) the residual of Leibniz for the discrete product. Theorem~2
+applies verbatim to this packet: if \(\|t_h\|_{C^1}\) is below the
+embedding threshold, evaluation realises a \(C^1\) mesh-surface
+\(\Sigma_h\subset\mathcal{V}_h^*\) whose reconstructed metric is
+\(C^k\)-close to the Galerkin metric on the scale of
+\(\|R_h\|_{C^k}\). In the isolated first-window regime of Theorem~4
+the same \(\eta\)-gaps persist for a mesh that resolves the first
+\(n+1\) harmonics, and the table deficits are controlled by the
+\(C^2\) FEM error of the metric plus the discrete product error.
+The exact-window conclusions (Theorem~1, Theorem~21, the sphere
+frame) are not claimed for a finite mesh: \(R_h\) vanishes only in
+the limit \(h\to0\) with \(\Lambda'\) fixed, and only if the
+continuous products already close. The packet is a diagnostic for
+computed low modes, not a discrete classification theorem.
+
 \subsection{Results}
 Standing hypotheses: $X$ closed and connected, $P=P_\alpha$ a Witten operator \cite{Wit82}, packet as in §2, $u,v\in\mathcal{V}$, Wyman on window triples \cite{Wym}, W1, W2.
 
