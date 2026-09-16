@@ -761,7 +761,7 @@ The third jet of $\mathcal{V}_0$ uses only $\mathcal{V}_0\cdot\mathcal{V}_0\subs
 \end{lemma}
 \begin{proof}
 The jet statement is the product rule and Codazzi applied to the
-packet expression for \(II_S\) in Lemma 27, once at each rung of the tower.
+packet expression for \(II_S\) in Lemma 27, once at each rung of the filtration.
 The stabilization clause is the Gelfand spectrum of a finite-dimensional
 subalgebra of \(C(X)\), as above. The graded case is Peter–Weyl: the
 windows are isotypic components, \(\iota\) intertwines the \(G\)-actions,
@@ -773,33 +773,29 @@ If $\mathcal{V}=\bigoplus_i\mathcal{V}_{\lambda_i}$ with more than one eigenvalu
 If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ is a Garay map. The image lies in a product of spheres only after each spectral projector is constant on the diagonal, which is not implied by $R=0$. In codimension one the complete list is spheres and cylinders \cite{Gar90}.
 
 \begin{remark} Lemmas 27–28 are not used in Theorems 1–4. One exact pair does not give the tower; the torus tower is the abelian case of the last clause.
-The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window. They are the extra structure that upgrades packet $II_S$ to a compact group orbit. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$ \cite{CDK70}, Lemma 27 alone already forces $\nabla II_S=0$ in the pinched range. That pinching is not used below. Parallelism of \(\mathrm{II}\) for a tower is Theorem 32. Theorem 21 does not use either lemma.
+The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window. They are the extra structure that upgrades packet $II_S$ to a compact group orbit. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$ \cite{CDK70}, Lemma 27 alone already forces $\nabla II_S=0$ in the pinched range. That pinching is not used below. Parallelism of \(\mathrm{II}\) for an isometric embedding is Theorem 32. Theorem 21 does not use either lemma.
 \end{remark}
 
 \begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 25 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 26 supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant, which is the first window of Theorems 3 and 21 in the spherical case. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
 \end{proof}
 
 \begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 25. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. Theorem 32 gives a stronger conclusion (symmetric orbit, not merely a
-union of orbits) under the exact-tower and Parseval hypotheses, which Theorem 21 does not assume. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
+union of orbits) under the Parseval hypothesis, which Theorem 21 does not assume. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
 \end{remark}
 
-\subsection{Parseval Finite Towers and Parallel \(\mathrm{II}\)}
-Assume \(\alpha=0\) and an exact, finite tower of unweighted windows
+\subsection{Parseval Unweighted, Exact Packets and Parallel \(\mathrm{II}\)}
+Assume \(\alpha=0\) and a filtration of an unweighted exact window
 \[
-\mathcal{V}=\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N,
+\mathcal{V}=\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N.
 \]
-meaning \(\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\) for
-\(j+k\le N\) and \(\mathcal{V}_N\cdot\mathcal{V}_1\subset\mathcal{V}_N\).
 Write \(\mathcal{E}_j=\mathcal{V}_j\ominus\mathcal{V}_{j-1}\). Assume each
-slot admits an \(L^2\)-orthonormal basis \(\{u^{(j)}_a\}\) with constant
+slot $\mathcal E_j$ admits an \(L^2\)-orthonormal basis \(\{u^{(j)}_a\}\) with constant
 quadratic \(Q_j=\sum_a(u^{(j)}_a)^2\), and that the joint frame is
 Parseval:
 \[
 \sum_{j,a} du^{(j)}_a\otimes du^{(j)}_a=g.
 \]
-Let \(F_j=(u^{(j)}_a)_a\) and \(F=(F_1,\dots,F_N)\). One-step \(R=0\)
-is the case \(N=1\) without the higher inclusions; it does not imply
-an exact tower.
+Let \(F_j=(u^{(j)}_a)_a\) and \(F=(F_1,\dots,F_N)\).
 
 \begin{theorem}
 Under these hypotheses, \(\iota=F\) is a homothetic embedding of
@@ -816,17 +812,12 @@ sphere of radius \(\sqrt{Q_j}\) in the Euclidean space of
 is the second fundamental form of a Riemannian immersion
 \(X\to\mathbb{R}^d\).
 
-Leibniz and exactness of the finite tower give, for \(u\in\mathcal{E}_j\) and
-\(v\in\mathcal{E}_k\) with \(j+k\le N\),
-\[
-uv\in\mathcal{V}_{j+k}\subset\operatorname{span}\{F_\ell\}.
-\]
 The Hessian of a coordinate of \(F\) is computed from
-\(2\Gamma(u,v)=uPv+vPu-P(uv)\). The right-hand side lies in the
-finite tower, so the \(2\)-jet of \(F\) takes values in
-\(\operatorname{span}\{F_\ell\}\). Differentiating the eigen-equation
+\(2\Gamma(u,v)=uPv+vPu-P(uv)\). The right-hand side lies in $\mathcal V'$,
+so the \(2\)-jet of \(F\) takes values in
+\(\mathcal V'\). Differentiating the eigen-equation
 \(\Delta F_j=\lambda_j F_j\) and substituting the \(2\)-jet puts every
-third derivative of \(F\) in the same span. Hence the normal space of
+third derivative of \(F\) in the same $\mathcal V'$. Hence the normal space of
 \(\iota(X)\) in \(\mathbb{R}^d\) is spanned by a finite list of
 eigenfunctions, \(K\)-invariant by Theorem 21, and closed under
 directional derivatives. That list is a parallel normal subbundle, so
@@ -847,37 +838,23 @@ unbalanced window on a Riemannian product. In those cases Theorem 21
 still supplies a compact group of isometries of \(g_\Gamma\).
 \end{proof}
 
-Theorem 21 does not assume a finite tower and does not use Theorem 32.
-Whether every one-step exact unweighted window extends to an exact
-tower is left open.
+Theorem 21 does not assume a Parseval embedding and does not use Theorem 32.
 
-\subsection{Jets of a finite exact tower}
-Let \(\mathcal{V}=\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N\) be an
-exact unweighted tower, \(\alpha=0\), \(P=-\Delta\), and let
-\(F=(F_1,\dots,F_N)\) be the joint eigenframe of the slots
-\(\mathcal{E}_j=\mathcal{V}_j\ominus\mathcal{V}_{j-1}\), so
-\(\Delta F_j=\lambda_j F_j\). Write \(\mathcal{A}=\operatorname{span}\{F_\ell\}
-=\mathcal{V}_N\). Exactness means
-\[
-\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\qquad(j+k\le N),
-\qquad
-\mathcal{V}_N\cdot\mathcal{V}_1\subset\mathcal{V}_N,
-\]
-hence \(\mathcal{A}\) closed under $N$ or fewer products of $\mathcal V_0$ and \(P(\mathcal{A})\subset\mathcal{A}\).
+\subsection{Jets of a filtered, exact window}
 
 \paragraph{First derivatives.}
-For \(u\in\mathcal{A}\) one has \(du(X)=X(u)\). In particular every
+For \(u\in\mathcal{V}\) one has \(du(X)=X(u)\). In particular every
 first derivative of a coordinate of \(F\) is a directional derivative of
-an element of \(\mathcal{A}\).
+an element of \(\mathcal{V}\).
 
 \paragraph{\(2\)-jet.}
 Leibniz for \(P=-\Delta\) on functions is
 \[
 2\Gamma(u,v)=uPv+vPu-P(uv)=g(\nabla u,\nabla v).
 \]
-If \(u\in\mathcal{E}_j\) and \(v\in\mathcal{E}_k\) with \(j+k\le N\),
-then \(uv\in\mathcal{V}_{j+k}\subset\mathcal{A}\) and \(Pu,Pv\in\mathcal{A}\),
-so \(\Gamma(u,v)\in\mathcal{A}\). In coordinates,
+If \(u\in\mathcal{E}_j\) and \(v\in\mathcal{E}_k\),
+then \(uv\in\mathcal{V}'\) and \(Pu\in\mathcal{E}_j, Pv\in\mathcal E_k\),
+so \(\Gamma(u,v)\in\mathcal{V}'\). In coordinates,
 \[
 \operatorname{Hess}u(X,Y)=X(Yu)-\nabla_X Y(u).
 \]
@@ -887,8 +864,8 @@ The Bochner identity on an eigenfunction \(Pu=\lambda u\) reads
 \]
 and the trace-free part is recovered from \(\Gamma\) by polarisation.
 Thus every second partial of a coordinate of \(F\) is a linear
-combination of elements of \(\mathcal{A}\): the \(2\)-jet of \(F\)
-takes values in \(\mathcal{A}\).
+combination of elements of \(\mathcal{V}\): the \(2\)-jet of \(F\)
+takes values in \(\mathcal{V}'\).
 
 \paragraph{\(3\)-jet.}
 The Euclidean third jet of \(F\) along vector fields \(X,Y,Z\) is
@@ -913,7 +890,7 @@ D_ZD_X\,dF(Y)
 +\mathrm{II}(\nabla_ZX,Y)
 +\mathrm{II}(X,\nabla_ZY).
 \end{align*}
-The first line is tangent to \(\iota(X)\). On a Parseval finite tower
+The first line is tangent to \(\iota(X)\). On a Parseval exact window
 each spherical factor contributes
 \[
 \mathrm{II}_j(X,Y)
@@ -933,10 +910,10 @@ Z\cdot\Gamma(F_j,F_j)(X,Y)
 +\Gamma(F_j,F_j)(\nabla_ZX,Y)
 +\Gamma(F_j,F_j)(X,\nabla_ZY).
 \]
-Leibniz puts \(\Gamma(F_j,F_j)(\xi,\eta)\in\mathcal{A}\) for
+Leibniz puts \(\Gamma(F_j,F_j)(\xi,\eta)\in\mathcal{V}'\) for
 \(\xi,\eta\in\mathfrak{X}(X)\), so the Hessian of that coefficient
-is the Hessian of a function in \(\mathcal{A}\) and takes values
-in \(\mathcal{A}\) after tracing against \(g\). Collecting normal
+is the Hessian of a function in \(\mathcal{V}'\) and takes values
+in \(\mathcal{V}'\) after tracing against \(g\). Collecting normal
 parts,
 \[
 \bigl(D_ZD_X\,dF(Y)\bigr)^\perp
@@ -945,7 +922,7 @@ parts,
 -\frac1{Q_j}\Gamma(F_j,F_j)\bigl(Z,\nabla_XY\bigr)
 \Biggr)F_j,
 \]
-which lies in \(\operatorname{span}\{F_\ell\}\). That is the
+which lies in \(\mathcal V'\). That is the
 explicit third-jet formula used for \(\nabla\mathrm{II}=0\).
 
 \paragraph{Normal bundle.}
@@ -954,37 +931,18 @@ View \(\iota=F:X\to\mathbb{R}^d\). The Euclidean second derivative of
 tangential part is the Levi-Civita connection of \(g\) (Parseval). The
 normal part \(\mathrm{II}(X,Y)\) is the component of
 \(\operatorname{Hess}F(X,Y)\) orthogonal to \(T\iota(X)\). By the
-\(2\)-jet step that vector is a linear combination of the coordinates
-of \(F\), so
+\(2\)-jet step that vector is in $\mathcal V'$, so
 \[
-N_{\iota(x)}\iota(X)\subset\mathcal{A}_x\subset\mathbb{R}^d.
+N_{\iota(x)}\iota(X)\subset\mathcal V'_x\subset\mathbb{R}^d.
 \]
 The \(3\)-jet step says that a directional derivative of such a normal
-field remains in \(\mathcal{A}\). If \(K\) acts as in Theorem 21, the
+field remains in \(\mathcal{V}'\). If \(K\) acts as in Theorem 21, the
 list of spanning fields is \(K\)-invariant. A finite \(K\)-invariant
 span of eigenfunctions, closed under directional derivatives, is a
 parallel normal subbundle, and \(\nabla\mathrm{II}=0\).
 
-One-step \(R=0\) gives only \(\mathcal{V}\cdot\mathcal{V}\subset\mathcal{V}'\).
-The \(3\)-jet uses \(\mathcal{V}'\cdot\mathcal{V}\subset\mathcal{A}\),
-which is the finite tower and is not implied by a single vanishing tail.
-
-A tower of height \(2\) suffices for the third jet of a window
-supported in \(\mathcal{V}_0\): \(\mathcal{V}_0\cdot\mathcal{V}_0\subset\mathcal{V}_1\)
-puts \(\Gamma(F,F)\) in \(\mathcal{V}_1\), and \(Z\cdot\Gamma(F,F)\) is a
-derivative of that slot, not a product \(\mathcal{V}_1\cdot\mathcal{V}_1\).
-If \(\iota\) also uses \(\mathcal{V}_1\), close the mixed products
-\(\mathcal{V}_0\cdot\mathcal{V}_1\subset\mathcal{V}_1\) (or \(\mathcal{V}_2\)).
-Height 2 means \(\mathcal{V}_0\cdot\mathcal{V}_0\subset\mathcal{V}_1\),
-and \(\mathcal{V}_0\cdot\mathcal{V}_1\subset\mathcal{V}_1\) or \(\mathcal{V}_2\)
-if \(\iota\) uses \(\mathcal{V}_1\). It does not mean \(\mathcal{V}_1\cdot\mathcal{V}_1
-\subset\mathcal{V}_1\), and it does not make \(\mathcal{V}_1\) a subalgebra of \(C(X)\).
-
-One-step \(R=0\) without \(\mathcal{V}_1\) in the embedding is
-exactly Theorem~3 when \(\dim\mathcal{V}_0=n+1\).
-
 \subsection{The Torus Packet}
-The first window of a sphere is not the only exact finite packet. On a compact flat manifold the characters of the translation lattice multiply by addition of frequencies, so any finite spanning set of frequencies is exact at a finite cutoff. Theorem 1 reconstructs the flat metric. Theorem 21 supplies transitivity from the group law rather than from Lemma 26.
+The first window of a sphere is not the only exact packet. On a compact flat manifold the characters of the translation lattice multiply by addition of frequencies, so any finite spanning set of frequencies is exact at a finite cutoff. Theorem 1 reconstructs the flat metric. Theorem 21 supplies transitivity from the group law rather than from Lemma 26.
 
 Let $X=\mathbb{R}^n/\Gamma$ be a compact flat manifold, with $\Gamma$ a Bieberbach group, and write $\Lambda_{\mathrm{tr}}$ for the translation lattice of $\Gamma$. Let $\Lambda_{\mathrm{tr}}^*$ be its dual. Characters
 $$e_\xi(x)=\mathrm{e}^{2\pi i\langle\xi,x\rangle},\qquad\xi\in\Lambda_{\mathrm{tr}}^*,$$
