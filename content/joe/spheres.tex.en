@@ -126,7 +126,7 @@ bound on Ricci curvature and a single first eigenfunction.
 If \(\alpha=0\) and the window extends to an exact, finite Parseval tower with
 constant slot quadratics, evaluation is a homothety into a product of
 spheres with parallel second fundamental form, and \(X\) is an orbit
-of an \(s\)-representation (Theorem 32).
+of an \(s\)-representation (Corollary 32).
 
 The article is organized as follows. Section 2 fixes the Witten category and the window packet. Section 3 extracts $\Gamma$ from the multiplication rule with remainder $R$. Section 4 identifies points of $X$ with characters of the window. Section 5 dualizes $\Gamma$ to a metric and reads $\alpha$ from the two measures. Section 6 assembles Theorems 1 and 2. Section 7 specializes to the unweighted first window on the sphere. Section 8 records what the packet does not determine. Section 9 shows that an exact unweighted window is a union of orbits of a compact linear group of isometries, and a sphere when $d=n+1$ and $Q$ is constant. It also characterizes certain isometric embeddings using classical techniques from differential geometry.
 
@@ -609,7 +609,7 @@ Assume throughout this section that $\alpha=0$, that $R=0$, and that W1 and W2 h
 $K$ is a compact Lie group of isometries of $(X,g)$. The identity component acts real-analytically, and $X$ is a union of $G^\circ$-orbits (Lemma 25). If $\dim\mathcal{V}=n+1$ and $Q$ is a positive constant, then $G^\circ$ is transitive and $X$ is a sphere (Lemma 26). In general the principal set is a fibre bundle with fibre a compact homogeneous space. Residual packet freedom remains the compact group of orthogonal changes of frame of $\mathcal{V}$ that preserve $\Phi$.
 \end{theorem}
 
-Theorem 21 does not assume a tower and does not use Theorem 32.
+Theorem 21 does not assume a tower.
 
 \begin{lemma}[Myers–Steenrod and the window] $K$ is a compact Lie group \cite{MS39}. Pullback by $K$ preserves every eigenspace of $P$, hence preserves $\mathcal{V}$ and $\mathcal{V}'$, and $\iota$ is $K$-equivariant. The reconstructed cometric $\Gamma$ of Lemma 5 and the metric of Lemma 14 are $K$-invariant.
 \end{lemma}
@@ -632,7 +632,7 @@ $$P(u_a^2)=2u_aPu_a-2\Gamma(u_a,u_a).$$
 Summing and using $Pu_a=\lambda u_a$ yields the displayed formula. If the trace identity $\sum_a\Gamma(u_a,u_a)=\lambda Q$ holds, then $PQ=0$. Connected $X$ and $\ker P=\mathrm{span}\{1\}$ force $Q$ constant. The value of $\iota$ then lies on the sphere of radius $\sqrt{Q}$ in $\mathcal{V}^*$.
 \end{proof}
 
-On the first spherical window the trace identity is $\sum_a\Gamma(x_a,x_a)=n=n\sum_a x_a^2$, so Lemma 22 recovers the quadric of Lemma 19. The trace identity $\sum_a\Gamma(u_a,u_a)=\lambda Q$ is the Takahashi condition that $\iota$ be a minimal immersion into a sphere when $\mathcal{V}$ is one eigenspace \cite{Tak66}. If several eigenvalues appear and $\iota$ is isometric, $\iota$ is a Garay map \cite{Gar90}. The image lies in a product of spheres when each slot has constant \(Q_j\) and the joint frame is Parseval (Theorem 32). Neither identity is assumed in Theorem 21.
+On the first spherical window the trace identity is $\sum_a\Gamma(x_a,x_a)=n=n\sum_a x_a^2$, so Lemma 22 recovers the quadric of Lemma 19. The trace identity $\sum_a\Gamma(u_a,u_a)=\lambda Q$ is the Takahashi condition that $\iota$ be a minimal immersion into a sphere when $\mathcal{V}$ is one eigenspace \cite{Tak66}. If several eigenvalues appear and $\iota$ is isometric, $\iota$ is a Garay map \cite{Gar90}. The image lies in a product of spheres when each slot has constant \(Q_j\) and the joint frame is Parseval (Corollary 32). Neither identity is assumed in Theorem 21.
 
 \begin{lemma}[the linear automorphism group]
 Let $m:\mathcal{V}\times\mathcal{V}\to\mathcal{V}'$ be the multiplication $m(u,v)=uv$ of the exact packet, and let
@@ -752,12 +752,11 @@ If, in addition, the multiplication of the tower is the Clebsch–Gordan
 decomposition of a compact Lie group \(G\) acting smoothly on \(X\), then
 \(\iota\) is a \(G\)-equivariant eigenmap and \(X\) is a union of \(G\)-orbits.
 
-If in addition the hypotheses of Theorem 32 hold, the orbit is an
+If in addition the hypotheses of Corollary 32 hold, the orbit is an
 \(s\)-representation orbit \cite{Fer80, Tak81, OlmSan93}; \cite{TK68} is the
 standard embedding of an \(R\)-space. Parallelism is not claimed
 for a general compact-group orbit.
 
-The third jet of $\mathcal{V}_0$ uses only $\mathcal{V}_0\cdot\mathcal{V}_0\subset\mathcal{V}_1$.
 \end{lemma}
 \begin{proof}
 The jet statement is the product rule and Codazzi applied to the
@@ -773,17 +772,17 @@ If $\mathcal{V}=\bigoplus_i\mathcal{V}_{\lambda_i}$ with more than one eigenvalu
 If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ is a Garay map. The image lies in a product of spheres only after each spectral projector is constant on the diagonal, which is not implied by $R=0$. In codimension one the complete list is spheres and cylinders \cite{Gar90}.
 
 \begin{remark} Lemmas 27–28 are not used in Theorems 1–4. One exact pair does not give the tower; the torus tower is the abelian case of the last clause.
-The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window. They are the extra structure that upgrades packet $II_S$ to a compact group orbit. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$ \cite{CDK70}, Lemma 27 alone already forces $\nabla II_S=0$ in the pinched range. That pinching is not used below. Parallelism of \(\mathrm{II}\) for an isometric embedding is Theorem 32. Theorem 21 does not use either lemma.
+The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window. They are the extra structure that upgrades packet $II_S$ to a compact group orbit. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$ \cite{CDK70}, Lemma 27 alone already forces $\nabla II_S=0$ in the pinched range. That pinching is not used below. Parallelism of \(\mathrm{II}\) for an isometric embedding is Corollary 32. Theorem 21 does not use either lemma.
 \end{remark}
 
 \begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 25 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 26 supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant, which is the first window of Theorems 3 and 21 in the spherical case. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
 \end{proof}
 
-\begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 25. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. Theorem 32 gives a stronger conclusion (symmetric orbit, not merely a
+\begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 25. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. Corollary 32 gives a stronger conclusion (symmetric orbit, not merely a
 union of orbits) under the Parseval hypothesis, which Theorem 21 does not assume. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
 \end{remark}
 
-\subsection{Parseval Unweighted, Exact Packets and Parallel \(\mathrm{II}\)}
+\subsection{Parseval Slots and Radial $\mathrm{II}$}
 Assume \(\alpha=0\) and a filtration of an unweighted exact window
 \[
 \mathcal{V}=\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N.
@@ -797,12 +796,12 @@ Parseval:
 \]
 Let \(F_j=(u^{(j)}_a)_a\) and \(F=(F_1,\dots,F_N)\).
 
-\begin{theorem}
+\begin{corollary}
 Under these hypotheses, \(\iota=F\) is a homothetic embedding of
 \((X,g)\) into a product of spheres, \(\nabla\mathrm{II}=0\), and
 \(\iota(X)\) is an orbit of an isotropy representation of a compact
 symmetric space, or a product of such orbits.
-\end{theorem}
+\end{corollary}
 \begin{proof}
 Each coordinate of \(F_j\) is an eigenfunction of \(-\Delta\) and
 \(Q_j\) is constant, so Takahashi's theorem places \(F_j(X)\) on the
@@ -838,7 +837,7 @@ unbalanced window on a Riemannian product. In those cases Theorem 21
 still supplies a compact group of isometries of \(g_\Gamma\).
 \end{proof}
 
-Theorem 21 does not assume a Parseval embedding and does not use Theorem 32.
+Theorem 21 does not assume a Parseval embedding and does not use Corollary 32.
 
 \subsection{Jets of a filtered, exact window}
 
