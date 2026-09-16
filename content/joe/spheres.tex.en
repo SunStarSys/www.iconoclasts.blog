@@ -123,6 +123,11 @@ quantitative Obata theorems on the Ricci side \cite{CMS}. They are not
 Ricci theorems. They use a linear frame and its products, not a lower
 bound on Ricci curvature and a single first eigenfunction.
 
+If \(\alpha=0\) and the window extends to an exact Parseval tower with
+constant slot quadratics, evaluation is a homothety into a product of
+spheres with parallel second fundamental form, and \(X\) is an orbit
+of an \(s\)-representation (Theorem 32).
+
 The article is organized as follows. Section 2 fixes the Witten category and the window packet. Section 3 extracts $\Gamma$ from the multiplication rule with remainder $R$. Section 4 identifies points of $X$ with characters of the window. Section 5 dualizes $\Gamma$ to a metric and reads $\alpha$ from the two measures. Section 6 assembles Theorems 1 and 2. Section 7 specializes to the unweighted first window on the sphere. Section 8 records what the packet does not determine. Section 9 shows that an exact unweighted window is a union of orbits of a compact linear group of isometries, and a sphere when $d=n+1$ and $Q$ is constant.
 
 Geometry sits in the multiplication table, not in the list of eigenvalues. The contribution here is that a finite, explicitly tailed piece of that table already reconstructs a Witten pair, and that the unit sphere is the minimal unweighted instance of the same mechanism; an exact unweighted window is homogeneous once it has an open orbit.
@@ -768,58 +773,73 @@ The cubic slot and the tower hold for every CROSS first window and every Peterâ€
 \begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 25. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
 \end{remark}
 
-\subsection{Parseval slots and parallel \(\mathrm{II}\)}
+\subsection{Parseval Towers and Parallel \(\mathrm{II}\)}
 Assume \(\alpha=0\) and an exact tower of unweighted windows
-\(\mathcal{V}=\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N\)
-(so \(\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\)
-for \(j+k\le N\), and the last step stabilises). Write
-\(\mathcal{E}_j=\mathcal{V}_j\ominus\mathcal{V}_{j-1}\).
-Suppose each slot admits an \(L^2\)-orthonormal basis whose
-quadratic \(Q_j=\sum_a(u^{(j)}_a)^2\) is constant, and that the
-joint frame is Parseval:
+\[
+\mathcal{V}=\mathcal{V}_0\subset\cdots\subset\mathcal{V}_N,
+\]
+meaning \(\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\) for
+\(j+k\le N\) and \(\mathcal{V}_N\cdot\mathcal{V}_1\subset\mathcal{V}_N\).
+Write \(\mathcal{E}_j=\mathcal{V}_j\ominus\mathcal{V}_{j-1}\). Assume each
+slot admits an \(L^2\)-orthonormal basis \(\{u^{(j)}_a\}\) with constant
+quadratic \(Q_j=\sum_a(u^{(j)}_a)^2\), and that the joint frame is
+Parseval:
 \[
 \sum_{j,a} du^{(j)}_a\otimes du^{(j)}_a=g.
 \]
-Let \(F_j=(u^{(j)}_a)_a\) and \(F=(F_1,\dots,F_N)\).
+Let \(F_j=(u^{(j)}_a)_a\) and \(F=(F_1,\dots,F_N)\). One-step \(R=0\)
+is the case \(N=1\) without the higher inclusions; it does not imply
+an exact tower.
 
-Then each \(F_j(X)\) lies in a sphere of radius \(\sqrt{Q_j}\)
-in the Euclidean space of \(\mathcal{E}_j\) \cite{Tak66}, and
-\(\iota=F\) is a homothetic embedding of \((X,g)\) into the
-product of those spheres \cite{Gar90}. In particular \(\mathrm{II}\)
-is the second fundamental form of a Riemannian immersion into
-a product of space forms.
-
-The same conclusion is automatic when \(X\) is compact
-irreducible symmetric and each \(\mathcal{E}_j\) is a full
-isotypic slot of \(-\Delta\): \(Q_j\) is invariant, hence
-constant, and \(\iota^*g_{\mathrm{euc}}\) is invariant, hence a
-multiple of \(g\). It may fail for a left-invariant metric that
-is not bi-invariant, for an incomplete slot, or for an
-unbalanced window on a Riemannian product. In those cases
-Theorem~21 still supplies a compact group of isometries of the
-reconstructed metric \(g_\Gamma\), but Takahashi--Garay do not
-apply.
-
-\begin{lemma}[parallel \(\mathrm{II}\)]
-\(\nabla\mathrm{II}=0\).
-\end{lemma}
+\begin{theorem}
+Under these hypotheses, \(\iota=F\) is a homothetic embedding of
+\((X,g)\) into a product of spheres, \(\nabla\mathrm{II}=0\), and
+\(\iota(X)\) is an orbit of an isotropy representation of a compact
+symmetric space, or a product of such orbits.
+\end{theorem}
 \begin{proof}
-Under the hypotheses above, the \(2\)-jet of \(F\) takes values
-in \(\operatorname{span}\{F_\ell\}\) by Leibniz and \(R=0\) along
-the tower. Differentiating the eigen-equation once more puts the
-\(3\)-jet in the same span. Hence the normal bundle of
-\(\iota(X)\) in \(\mathbb{R}^d\) is spanned by a finite
-\(K\)-invariant list of eigenfunctions and is closed under
-directional derivatives. That list is a parallel normal
-subbundle, and \(\nabla\mathrm{II}=0\).
+Each coordinate of \(F_j\) is an eigenfunction of \(-\Delta\) and
+\(Q_j\) is constant, so Takahashi's theorem places \(F_j(X)\) on the
+sphere of radius \(\sqrt{Q_j}\) in the Euclidean space of
+\(\mathcal{E}_j\) \cite{Tak66}. Parseval makes \(\iota=F\) a homothety of
+\((X,g)\) into the product of those spheres \cite{Gar90}. Thus \(\mathrm{II}\)
+is the second fundamental form of a Riemannian immersion
+\(X\to\mathbb{R}^d\).
+
+Leibniz and exactness of the tower give, for \(u\in\mathcal{E}_j\) and
+\(v\in\mathcal{E}_k\) with \(j+k\le N\),
+\[
+uv\in\mathcal{V}_{j+k}\subset\operatorname{span}\{F_\ell\}.
+\]
+The Hessian of a coordinate of \(F\) is computed from
+\(2\Gamma(u,v)=uPv+vPu-P(uv)\). The right-hand side lies in the
+tower, so the \(2\)-jet of \(F\) takes values in
+\(\operatorname{span}\{F_\ell\}\). Differentiating the eigen-equation
+\(\Delta F_j=\lambda_j F_j\) and substituting the \(2\)-jet puts every
+third derivative of \(F\) in the same span. Hence the normal space of
+\(\iota(X)\) in \(\mathbb{R}^d\) is spanned by a finite list of
+eigenfunctions, \(K\)-invariant by Theorem 21, and closed under
+directional derivatives. That list is a parallel normal subbundle, so
+\(\nabla\mathrm{II}=0\).
+
+A compact full immersion with \(\nabla\mathrm{II}=0\) into Euclidean
+space is an orbit of an \(s\)-representation (isotropy representation
+of a compact symmetric space), or a product of such orbits
+\cite{Fer80, Tak81, OlmSan93}. The product-of-spheres ambient embeds
+standardly in Euclidean space, so the classification applies.
+
+The Parseval identity is automatic when \(X\) is compact irreducible
+symmetric and each \(\mathcal{E}_j\) is a full isotypic slot: \(Q_j\)
+is invariant, hence constant, and \(\iota^*g_{\mathrm{euc}}\) is
+invariant, hence a multiple of \(g\). It may fail for a left-invariant
+metric that is not bi-invariant, for an incomplete slot, or for an
+unbalanced window on a Riemannian product. In those cases Theorem 21
+still supplies a compact group of isometries of \(g_\Gamma\).
 \end{proof}
 
-A compact full immersion with \(\nabla\mathrm{II}=0\) into a
-product of spheres is an orbit of an isotropy representation of
-a compact symmetric space, or a product of such orbits
-\cite{Fer80; Tak81; OlmSan93}. One-step \(R=0\) without a tower does
-not give the \(3\)-jet closure; whether every exact unweighted
-window extends to an exact tower is left open.
+Theorem 21 does not assume a tower and does not use Theorem 32.
+Whether every one-step exact unweighted window extends to an exact
+tower is left open.
 
 \subsection{The Torus Packet}
 The first window of a sphere is not the only exact finite packet. On a compact flat manifold the characters of the translation lattice multiply by addition of frequencies, so any finite spanning set of frequencies is exact at a finite cutoff. Theorem 1 reconstructs the flat metric. Theorem 21 supplies transitivity from the group law rather than from Lemma 26.
