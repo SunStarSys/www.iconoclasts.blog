@@ -770,9 +770,9 @@ If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ 
 The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window. They are the extra structure that upgrades packet $II_S$ to a compact group orbit. Combined with a Chern–do Carmo–Kobayashi bound on $\lvert II_S\rvert^2$ \cite{CDK70}, Lemma 27 alone already forces $\nabla II_S=0$ in the pinched range. That pinching is not used below. Parallelism of \(\mathrm{II}\) for a tower is Theorem 32. Theorem 21 does not use either lemma.
 \end{remark}
 
-
 \begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 25 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 26 supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant, which is the first window of Theorems 3 and 21 in the spherical case. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
 \end{proof}
+
 \begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 25. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. Theorem 32 gives a stronger conclusion (symmetric orbit, not merely a
 union of orbits) under the exact-tower and Parseval hypotheses, which Theorem 21 does not assume. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
 \end{remark}
@@ -962,6 +962,16 @@ parallel normal subbundle, and \(\nabla\mathrm{II}=0\).
 One-step \(R=0\) gives only \(\mathcal{V}\cdot\mathcal{V}\subset\mathcal{V}'\).
 The \(3\)-jet uses \(\mathcal{V}'\cdot\mathcal{V}\subset\mathcal{A}\),
 which is the tower and is not implied by a single vanishing tail.
+
+A tower of height \(2\) suffices for the third jet of a window
+supported in \(\mathcal{V}_0\): \(\mathcal{V}_0\cdot\mathcal{V}_0\subset\mathcal{V}_1\)
+puts \(\Gamma(F,F)\) in \(\mathcal{V}_1\), and \(Z\cdot\Gamma(F,F)\) is a
+derivative of that slot, not a product \(\mathcal{V}_1\cdot\mathcal{V}_1\).
+If \(\iota\) also uses \(\mathcal{V}_1\), close the mixed products
+\(\mathcal{V}_0\cdot\mathcal{V}_1\subset\mathcal{V}_1\) (or \(\mathcal{V}_2\)).
+Stabilisation at \(\mathcal{V}_1\) is the two-step exact algebra.
+One-step \(R=0\) without \(\mathcal{V}_1\) in the embedding is
+exactly Theorem~3 when \(\dim\mathcal{V}_0=n+1\).
 
 \subsection{The Torus Packet}
 The first window of a sphere is not the only exact finite packet. On a compact flat manifold the characters of the translation lattice multiply by addition of frequencies, so any finite spanning set of frequencies is exact at a finite cutoff. Theorem 1 reconstructs the flat metric. Theorem 21 supplies transitivity from the group law rather than from Lemma 26.
