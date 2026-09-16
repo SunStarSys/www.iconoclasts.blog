@@ -781,35 +781,34 @@ The cubic slot and the tower hold for every CROSS first window and every Peterâ€
 
 \subsection{Parseval Slots and Radial $\mathrm{II}$}
 \begin{corollary}[Parseval slots]
-Assume \(\alpha=0\), an exact window \(R=0\) at a finite \(\Lambda'\),
-and a decomposition of \(\mathcal{V}'\) into slots \(\mathcal{E}_j\)
-each admitting an \(L^2\)-orthonormal basis with constant quadratic
-\(Q_j=\sum_a(u^{(j)}_a)^2\). Suppose the joint frame is Parseval:
+Assume the hypotheses of Theorem 21. Suppose \(\mathcal{V}'\) splits into
+slots \(\mathcal{E}_j\), each with an \(L^2\)-orthonormal basis whose
+quadratic \(Q_j=\sum_a(u^{(j)}_a)^2\) is constant, and suppose the joint
+frame is Parseval,
 \[
 \sum_{j,a} du^{(j)}_a\otimes du^{(j)}_a=g.
 \]
-Let \(F_j=(u^{(j)}_a)_a\) and \(F=(F_1,\dots,F_N)\). Then \(\iota=F\)
-is a homothetic embedding of \((X,g)\) into the product of the spheres
-of radii \(\sqrt{Q_j}\) [Tak66, Gar90].
+Write \(F_j=(u^{(j)}_a)_a\) and \(F=(F_1,\dots,F_N)\). Then
+\(\iota=F\) is a homothetic embedding of \((X,g)\) into the product of
+the spheres of radii \(\sqrt{Q_j}\) \cite{Tak66, Gar90}. The group \(K\) of
+Theorem 21 acts on each factor.
 
-If \(\dim\mathcal{V}=n+1\), this product is a single sphere and
+If \(\dim\mathcal{V}=n+1\), there is a single sphere and
 \[
 \mathrm{II}(X,Y)=-\frac1Q\,g(X,Y)\,F,
 \]
-so \(\nabla\mathrm{II}=0\) in one line.
+so \(\nabla\mathrm{II}=0\).
 
-If some \(\dim\mathcal{E}_j>n+1\), the radial summand
-\(-\Gamma_j F_j/Q_j\) is parallel, but extra normals inside that
-sphere are not controlled by the packet. A compact full immersion
-with \(\nabla\mathrm{II}=0\) in Euclidean space is an orbit of an
-\(s\)-representation (or a product of such orbits) [Fer80, Tak81,
-OlmSan93]. That last conclusion is not a consequence of the exact
-window alone.
+If some slot has dimension greater than \(n+1\), assume in addition that
+\(\nabla\mathrm{II}=0\). Then \(\iota(X)\) is a compact full parallel
+submanifold of Euclidean space, hence an orbit of an \(s\)-representation
+or a product of such orbits \cite{Fer80, Tak81, OlmSan93}.
 
-An exact window does not by itself produce an infinite flag
-\(\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\). Such a
-flag exists on every symmetric \(R\)-space, after Ferus, as the
-coordinate filtration of the orbit.
+An exact window does not by itself yield an infinite flag
+\(\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\). On an
+\(s\)-orbit such a flag appears as the coordinate filtration of the
+embedding.
+
 \end{corollary}
 \begin{proof}
 Each coordinate of \(F_j\) is an eigenfunction of \(-\Delta\) and
@@ -828,8 +827,8 @@ so the \(2\)-jet of \(F\) takes values in
 third derivative of \(F\) in the same $\mathcal V'$. Hence the normal space of
 \(\iota(X)\) in \(\mathbb{R}^d\) is spanned by a finite list of
 eigenfunctions, \(K\)-invariant by Theorem 21, and closed under
-directional derivatives. That list is a parallel normal subbundle, so
-\(\nabla\mathrm{II}=0\). For more details on these computations see Section 9.2 below.
+directional derivatives. That list is a parallel normal subbundle in the radial direction.
+For more details on these computations see Section 9.2 below.
 
 A compact full immersion with \(\nabla\mathrm{II}=0\) into Euclidean
 space is an orbit of an \(s\)-representation (isotropy representation
@@ -947,7 +946,7 @@ The \(3\)-jet step says that a directional derivative of such a normal
 field remains in \(\mathcal{V}'\). If \(K\) acts as in Theorem 21, the
 list of spanning fields is \(K\)-invariant. A finite \(K\)-invariant
 span of eigenfunctions, closed under directional derivatives, is a
-parallel normal subbundle, and \(\nabla\mathrm{II}=0\).
+parallel normal subbundle in the radial direction.
 
 \subsection{The Torus Packet}
 The first window of a sphere is not the only exact packet. On a compact flat manifold the characters of the translation lattice multiply by addition of frequencies, so any finite spanning set of frequencies is exact at a finite cutoff. Theorem 1 reconstructs the flat metric. Theorem 21 supplies transitivity from the group law rather than from Lemma 26.
