@@ -862,7 +862,20 @@ still supplies a compact group of isometries of \(g_\Gamma\).
 
 Theorem 21 does not assume a Parseval embedding.
 
-\subsection{Jets of a Filtered, Exact Window}
+\begin{remark}[low-dimensional spheres]
+Assume the hypotheses of Corollary 31. If \(X\) is diffeomorphic to
+\(S^1\), every Riemannian metric on \(X\) is a round circle, and Parseval
+together with a constant quadratic only fixes the radius. If \(X\) is
+diffeomorphic to \(S^2\), the product of spheres in Corollary 31 has a
+single factor, so \(\iota\) is a homothety onto a round sphere. For
+\(\dim\mathcal{V}=3\) this is Lemma 26. For a larger slot, the immersion
+is a full eigenmap of a topological \(2\)-sphere, hence congruent to a
+Veronese map \cite{Cal67}, and the induced metric is again round. In both
+dimensions the conclusion uses Parseval and constant slot quadratics;
+Theorem 21 alone does not rule out a non-round surface of revolution.
+\end{remark}
+
+\subsection{Jets of an Exact Window}
 
 \paragraph{First derivatives.}
 For \(u\in\mathcal{V}\) one has \(du(X)=X(u)\). In particular every
