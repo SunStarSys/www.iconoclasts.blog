@@ -696,33 +696,24 @@ Those extra identities are the data of Theorem 3; they are not
 assumed in Theorem 21 beyond \(Q\) constant.
 \end{proof}
 
-\begin{lemma}[tower]
-Assume the hypotheses of Lemma 26, and let
-  \(\mathcal{V}_0=\mathcal{V},\qquad
-    \mathcal{V}_k=\bigoplus_{\lambda\le\Lambda_k}\ker(P-\lambda),
-  \)
-be a tower of windows satisfying \(\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\).
-A genuine infinite closed algebra of continuous functions that separates points cannot be finite-dimensional on a positive-dimensional manifold, so the tower does not stabilize.
+\begin{remark}[towers]
+A nested sequence of windows \(\mathcal{V}_j\) with
+\(\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}\) cannot
+stabilise at finite dimension if it separates points. If the
+multiplication is the Clebsch--Gordan decomposition of a compact Lie
+group acting smoothly on \(X\), evaluation is an equivariant eigenmap
+and \(X\) is a union of orbits. If in addition evaluation is an
+isometric embedding into the slot spheres, the orbit is open by §9.1.
+A single exact pair does not produce such a flag. The torus packet of
+§9.2 is the abelian case. This remark is not used in Theorems 1--4.
 
-If, in addition, the multiplication of the tower is the Clebsch–Gordan
-decomposition of a compact Lie group \(G\) acting smoothly on \(X\), then
-\(\iota\) is a \(G\)-equivariant eigenmap and \(X\) is a union of \(G\)-orbits.
-
-If in addition the embedding is isometric into a product of slot spheres, the orbit is open.
-
-\end{lemma}
-\begin{proof}
-The stabilization clause is the Gelfand spectrum of a finite-dimensional
-subalgebra of \(C(X)\), as above. The graded case is Peter–Weyl: the
-windows are isotypic components, \(\iota\) intertwines the \(G\)-actions,
-and \cite{TK68} applies exactly to \(R\)-space orbits.
-\end{proof}
+\end{remark}
 
 If $\mathcal{V}=\bigoplus_i\mathcal{V}_{\lambda_i}$ with more than one eigenvalue, Takahashi applies factorwise: each $\iota_{\lambda_i}(X)$ lies in a sphere in $\mathcal{V}_{\lambda_i}^*$, and $\iota(X)$ lies in a product of spheres.
 
 If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ is a Garay map. The image lies in a product of slot spheres only after each spectral projector is constant on the diagonal, which is not implied by $R=0$.
 
-\begin{remark} Lemma 27 is not used in Theorems 1–4. One exact pair does not give the tower; the torus tower is the abelian case of the last clause.
+\begin{remark} One exact pair does not give the tower; the torus tower is the abelian case of the last clause.
 The tower holds for every CROSS first window and every Peter–Weyl window.
 \end{remark}
 
@@ -805,7 +796,7 @@ The translation torus of $\mathbb{R}^n/\Lambda_{\mathrm{tr}}$ acts by isometries
 \end{remark}
 \begin{remark}A generic metric on the underlying torus has no exact finite window: products of first modes spray over infinitely many slots. Exactness of this packet is a certificate of flatness. If $S$ generates a proper sublattice, Theorem 1 reconstructs the coarser torus $\mathbb{R}^n/\Lambda_S$; the original manifold is a finite quotient of a finite cover of that torus.
 \end{remark}
-This subsection does not use Lemma 26. The torus tower $\mathcal{V}_k=\operatorname{span}\{e_\xi:\lvert\xi\rvert\le kR\}$ is infinite and graded by $\Lambda_{\mathrm{tr}}^*$, which is the abelian case of the second clause of Lemma 26.
+This subsection does not use Remark 26. The torus tower $\mathcal{V}_k=\operatorname{span}\{e_\xi:\lvert\xi\rvert\le kR\}$ is infinite and graded by $\Lambda_{\mathrm{tr}}^*$, which is the abelian case of the second clause of Remark 26.
 
 \doclicenseThis
 \printbibliography
