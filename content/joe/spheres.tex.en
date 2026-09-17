@@ -69,6 +69,8 @@ with $d=\dim\mathcal{V}$. That bound is not a statement about $\Delta$. When the
 
 If in addition $\alpha=0$, an exact packet realises $X$ as a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). When $\dim\mathcal{V}=n+1$ and the quadratic $Q=\sum u_a^2$ is constant, that action is transitive and $X$ is isometric to a sphere of radius $\sqrt Q$.
 
+There is a correspondence between slot-sphere exact packets and compact connected Riemannian homogeneous spaces. Whether every exact unweighted window is of slot-sphere type is left open.
+
 The unweighted first window on the sphere is the minimal finite-tail case: $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $R=0$ already at $\Lambda'=2n+2$. That frame recognizes the unit round sphere exactly, and recognizes it with linear $C^0$ stability for an isolated cluster of first $n+1$ harmonics with an almost spherical table. Those statements are frame-side. They are not Obata theorems.
 
 \noindent\textbf{Keywords:} sphere, homogeneous space, spectral window, triple products, Witten Operators, eigenfunctions, inverse problem
@@ -640,21 +642,6 @@ $$\iota(k\cdot x)(u)=u(k^{-1}x)=(k^*\iota(x))(u),$$
 so $\iota$ is equivariant. Lemma 5 with $R=0$ gives $\Gamma(u,v)$ as a bilinear combination of products and of $P$ on $\mathcal{V}$. Both are $K$-invariant, so $\Gamma$ is. Lemma 14 dualizes $\Gamma$ to $g$, which is therefore $K$-invariant.
 \end{proof}
 
-\begin{lemma}[the quadratic $Q$] Let
-$$Q:=\sum_{a=1}^d u_a^2\in C^\infty(X).$$
-Then $Q\in\mathcal{V}'$. If $\mathcal{V}$ is contained in a single eigenspace of eigenvalue $\lambda$, then
-$$PQ=2\lambda Q-2\sum_{a=1}^d\Gamma(u_a,u_a).$$
-If in addition $\sum_a\Gamma(u_a,u_a)=\lambda Q$, then $Q$ is constant and $\iota(X)$ lies on a sphere in $\mathcal{V}^*$.
-\end{lemma}
-
-\begin{proof}
-Each product $u_au_a$ lies in $\mathcal{V}'$ because $R=0$, so $Q\in\mathcal{V}'$. The identity (A1) gives
-$$P(u_a^2)=2u_aPu_a-2\Gamma(u_a,u_a).$$
-Summing and using $Pu_a=\lambda u_a$ yields the displayed formula. If the trace identity $\sum_a\Gamma(u_a,u_a)=\lambda Q$ holds, then $PQ=0$. Connected $X$ and $\ker P=\mathrm{span}\{1\}$ force $Q$ constant. The value of $\iota$ then lies on the sphere of radius $\sqrt{Q}$ in $\mathcal{V}^*$.
-\end{proof}
-
-On the first spherical window the trace identity is $\sum_a\Gamma(x_a,x_a)=n=n\sum_a x_a^2$, so Lemma 22 recovers the quadric of Lemma 19. The trace identity $\sum_a\Gamma(u_a,u_a)=\lambda Q$ is the Takahashi condition that $\iota$ be a minimal immersion into a sphere when $\mathcal{V}$ is one eigenspace \cite{Tak66}. If several eigenvalues appear and $\iota$ is isometric, $\iota$ is a Garay map \cite{Gar90}. The image lies in a product of spheres when each slot has constant \(Q_j\) and the embedding is isometric. Neither identity is assumed in Theorem 21.
-
 \begin{lemma}[the linear automorphism group]
 Let $m:\mathcal{V}\times\mathcal{V}\to\mathcal{V}'$ be the multiplication $m(u,v)=uv$ of the exact packet, and let
 $$Z:=\bigl\{\xi\in\mathcal{V}^*:\ \xi(u)\xi(v)=\eta_\xi(m(u,v))\ \text{for all }u,v\in\mathcal{V}\bigr\},$$
@@ -731,7 +718,7 @@ windows are isotypic components, \(\iota\) intertwines the \(G\)-actions,
 and \cite{TK68} applies exactly to \(R\)-space orbits.
 \end{proof}
 
-If $\mathcal{V}=\bigoplus_i\mathcal{V}_{\lambda_i}$ with more than one eigenvalue, Takahashi applies factorwise: each $\iota_{\lambda_i}(X)$ lies in a sphere in $\mathcal{V}_{\lambda_i}^*$, and $\iota(X)$ lies in a product of spheres. The single-quadric argument of Lemma 26 does not run. Constancy of the total $Q=\sum_i Q_i$ is a sum of several sphere equations and does not make $G=\mathrm{O}(\dim\mathcal{V})$.
+If $\mathcal{V}=\bigoplus_i\mathcal{V}_{\lambda_i}$ with more than one eigenvalue, Takahashi applies factorwise: each $\iota_{\lambda_i}(X)$ lies in a sphere in $\mathcal{V}_{\lambda_i}^*$, and $\iota(X)$ lies in a product of spheres.
 
 If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ is a Garay map. The image lies in a product of slot spheres only after each spectral projector is constant on the diagonal, which is not implied by $R=0$.
 
@@ -739,7 +726,7 @@ If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ 
 The tower holds for every CROSS first window and every Peter–Weyl window.
 \end{remark}
 
-\begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 25 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 26 supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant (which is the first window of Theorems 3 and 21 in the spherical case), or when the evaluation is an isometric embedding into the slot spheres, §9.1. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
+\begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 25 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Takahshi supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant (which is the first window of Theorems 3 and 21 in the spherical case), or when the evaluation is an isometric embedding into the slot spheres, §9.1. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
 \end{proof}
 
 \begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 25. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. A second transitivity/open orbit condition is given in Section 9.1. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
@@ -788,7 +775,7 @@ not the identification of \(X\) with an open \(K\)-orbit.
 
 
 \subsection{The Torus Packet}
-The first window of a sphere is not the only exact packet. On a compact flat manifold the characters of the translation lattice multiply by addition of frequencies, so any finite spanning set of frequencies is exact at a finite cutoff. Theorem 1 reconstructs the flat metric. Theorem 21 supplies transitivity from the group law rather than from Lemma 26.
+The first window of a sphere is not the only exact packet. On a compact flat manifold the characters of the translation lattice multiply by addition of frequencies, so any finite spanning set of frequencies is exact at a finite cutoff. Theorem 1 reconstructs the flat metric. Theorem 21 supplies transitivity from the group law.
 
 Let $X=\mathbb{R}^n/\Gamma$ be a compact flat manifold, with $\Gamma$ a Bieberbach group, and write $\Lambda_{\mathrm{tr}}$ for the translation lattice of $\Gamma$. Let $\Lambda_{\mathrm{tr}}^*$ be its dual. Characters
 $$e_\xi(x)=\mathrm{e}^{2\pi i\langle\xi,x\rangle},\qquad\xi\in\Lambda_{\mathrm{tr}}^*,$$
@@ -812,13 +799,13 @@ $$\operatorname{Hom}(\langle S\rangle_{\mathbb{Z}},S^1)\cong\mathbb{R}^n/\Lambda
 where $\Lambda_S$ is the annihilator of the $\mathbb{Z}$-span of $S$. If $S$ generates $\Lambda_{\mathrm{tr}}^*$ then $\Lambda_S=\Lambda_{\mathrm{tr}}$ and the identification is a translation of the covering torus, descended to $X$. Lemma 14 recovers
 $$g^{-1}(de_\xi,de_\eta)=\Gamma(e_\xi,e_\eta),$$
 which is the flat metric with dual lattice $\Lambda_{\mathrm{tr}}^*$. Lemma 15 gives $\alpha$ constant.
-The translation torus of $\mathbb{R}^n/\Lambda_{\mathrm{tr}}$ acts by isometries and preserves each character, hence preserves $\mathcal{V}$ and $\Phi$. It is a compact connected Lie subgroup of the group $K$ of Theorem 21. Its orbits are the fibres of the holonomy covering; on $X$ they descend to a single principal orbit because the holonomy is finite and acts freely. Lemma 25 is then the orbit decomposition of a Bieberbach manifold: $X$ is a compact quotient of a torus by a finite free linear action. Transitivity of the identity component on the cover is the group law of the character variety, not the spherical criterion of Lemma 26.
+The translation torus of $\mathbb{R}^n/\Lambda_{\mathrm{tr}}$ acts by isometries and preserves each character, hence preserves $\mathcal{V}$ and $\Phi$. It is a compact connected Lie subgroup of the group $K$ of Theorem 21. Its orbits are the fibres of the holonomy covering; on $X$ they descend to a single principal orbit because the holonomy is finite and acts freely. Lemma 25 is then the orbit decomposition of a Bieberbach manifold: $X$ is a compact quotient of a torus by a finite free linear action. Transitivity of the identity component on the cover is the group law of the character variety.
 \end{proof}
-\begin{remark} The dimension of $\mathcal{V}$ is $1+2\lvert S\rvert$ after passing to a real basis, and equals $n+1$ only in degenerate cases that do not occur for $n\ge 2$ with a single frequency length. Theorems 3–4 and Lemma 26 are therefore not available. The quadratic $Q=\sum u_a^2$ is a trigonometric polynomial of frequency at most $2\max_{\xi\in S}\lvert\xi\rvert$, not a constant. The torus packet is exact without being spherical.
+\begin{remark} The dimension of $\mathcal{V}$ is $1+2\lvert S\rvert$ after passing to a real basis, and equals $n+1$ only in degenerate cases that do not occur for $n\ge 2$ with a single frequency length. Theorems 3–4 are therefore not available. The quadratic $Q=\sum u_a^2$ is a trigonometric polynomial of frequency at most $2\max_{\xi\in S}\lvert\xi\rvert$, not a constant. The torus packet is exact without being spherical.
 \end{remark}
 \begin{remark}A generic metric on the underlying torus has no exact finite window: products of first modes spray over infinitely many slots. Exactness of this packet is a certificate of flatness. If $S$ generates a proper sublattice, Theorem 1 reconstructs the coarser torus $\mathbb{R}^n/\Lambda_S$; the original manifold is a finite quotient of a finite cover of that torus.
 \end{remark}
-This subsection does not use Lemma 27. The torus tower $\mathcal{V}_k=\operatorname{span}\{e_\xi:\lvert\xi\rvert\le kR\}$ is infinite and graded by $\Lambda_{\mathrm{tr}}^*$, which is the abelian case of the second clause of Lemma 27.
+This subsection does not use Lemma 26. The torus tower $\mathcal{V}_k=\operatorname{span}\{e_\xi:\lvert\xi\rvert\le kR\}$ is infinite and graded by $\Lambda_{\mathrm{tr}}^*$, which is the abelian case of the second clause of Lemma 26.
 
 \doclicenseThis
 \printbibliography
