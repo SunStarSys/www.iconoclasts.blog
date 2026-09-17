@@ -708,7 +708,7 @@ assumed in Theorem 21 beyond \(Q\) constant.
 \end{proof}
 
 \begin{lemma}[tower]
-Assume the hypotheses of Lemma 27, and let
+Assume the hypotheses of Lemma 26, and let
   \(\mathcal{V}_0=\mathcal{V},\qquad
     \mathcal{V}_k=\bigoplus_{\lambda\le\Lambda_k}\ker(P-\lambda),
   \)
@@ -719,8 +719,7 @@ If, in addition, the multiplication of the tower is the Clebsch–Gordan
 decomposition of a compact Lie group \(G\) acting smoothly on \(X\), then
 \(\iota\) is a \(G\)-equivariant eigenmap and \(X\) is a union of \(G\)-orbits.
 
-If in addition the embedding is isometric into a product of slot spheres, the orbit is open. Parallelism is not claimed
-for a general compact-group orbit.
+If in addition the embedding is isometric into a product of slot spheres, the orbit is open.
 
 \end{lemma}
 \begin{proof}
@@ -732,16 +731,16 @@ and \cite{TK68} applies exactly to \(R\)-space orbits.
 
 If $\mathcal{V}=\bigoplus_i\mathcal{V}_{\lambda_i}$ with more than one eigenvalue, Takahashi applies factorwise: each $\iota_{\lambda_i}(X)$ lies in a sphere in $\mathcal{V}_{\lambda_i}^*$, and $\iota(X)$ lies in a product of spheres. The single-quadric argument of Lemma 26 does not run. Constancy of the total $Q=\sum_i Q_i$ is a sum of several sphere equations and does not make $G=\mathrm{O}(\dim\mathcal{V})$.
 
-If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ is a Garay map. The image lies in a product of slot spheres only after each spectral projector is constant on the diagonal, which is not implied by $R=0$. In codimension one the complete list is spheres and cylinders \cite{Gar90}.
+If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ is a Garay map. The image lies in a product of slot spheres only after each spectral projector is constant on the diagonal, which is not implied by $R=0$.
 
-\begin{remark} Lemmas 27–28 are not used in Theorems 1–4. One exact pair does not give the tower; the torus tower is the abelian case of the last clause.
-The cubic slot and the tower hold for every CROSS first window and every Peter–Weyl window.
+\begin{remark} Lemma 27 is not used in Theorems 1–4. One exact pair does not give the tower; the torus tower is the abelian case of the last clause.
+The tower holds for every CROSS first window and every Peter–Weyl window.
 \end{remark}
 
 \begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 25 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 26 supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant (which is the first window of Theorems 3 and 21 in the spherical case), or when the evaluation is an isometric embedding into the slot spheres, §9.1. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
 \end{proof}
 
-\begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 25. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
+\begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 25. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. A second transitivity/open orbit condition is given in Section 9.1. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
 \end{remark}
 
 \subsection{Slot Spheres and Open Orbits}
