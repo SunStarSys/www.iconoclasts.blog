@@ -544,7 +544,7 @@ $$P(x_ax_b)=(2n+2)\Bigl(x_ax_b-\frac{\delta_{ab}}{n+1}\Bigr).$$
 Hence $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$. The matrix $\delta_{ab}-x_ax_b$ has rank $n$ on the unit sphere, and $\{dx_a\}$ spans $T^*X$ by hypothesis, which is W2 for this frame. W1 follows: $F$ is an immersion, $X$ is closed, and $F(X)$ lies on $S^n$, so $F$ is a covering onto its image. Simple connectedness of $S^n$ for $n\ge 2$, or a direct check for $n=1$, makes $F$ a diffeomorphism onto $S^n$.
 \end{proof}
 
-\begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 19 and Theorem 1 give that $X$ is isometric to the unit round sphere. This is the case $d=n+1$, $Q\equiv 1$ of Lemma 26. The metric dual to $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ is the round metric of radius $1$, and $\alpha=0$ because $\mu=\mathrm{vol}_g$. Thus $P=-\Delta$. The frame spans the first harmonics because it is an $(n+1)$-dimensional eigenspace at eigenvalue $n$. If the first eigenvalue is $\lambda$ rather than $n$, the same identities with the pair $(\lambda,2\lambda+2\lambda/n)$ rescale the radius to $\sqrt{n/\lambda}$.
+\begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 19 and Theorem 1 give that $X$ is isometric to the unit round sphere. This is the case $d=n+1$, $Q\equiv 1$ of Lemma 25. The metric dual to $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ is the round metric of radius $1$, and $\alpha=0$ because $\mu=\mathrm{vol}_g$. Thus $P=-\Delta$. The frame spans the first harmonics because it is an $(n+1)$-dimensional eigenspace at eigenvalue $n$. If the first eigenvalue is $\lambda$ rather than $n$, the same identities with the pair $(\lambda,2\lambda+2\lambda/n)$ rescale the radius to $\sqrt{n/\lambda}$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm-b}]
@@ -629,7 +629,7 @@ Assume throughout this section that $\alpha=0$, that $R=0$, and that W1 and W2 h
 
 \begin{theorem}
 \label{thm-exact}
-$K$ is a compact Lie group of isometries of $(X,g)$. The identity component acts real-analytically, and $X$ is a union of $G^\circ$-orbits (Lemma 25). If $\dim\mathcal{V}=n+1$ and $Q$ is a positive constant, then $G^\circ$ is transitive and $X$ is a sphere (Lemma 26). In general the principal set is a fibre bundle with fibre a compact homogeneous space. Residual packet freedom remains the compact group of orthogonal changes of frame of $\mathcal{V}$ that preserve $\Phi$.
+$K$ is a compact Lie group of isometries of $(X,g)$. The identity component acts real-analytically, and $X$ is a union of $G^\circ$-orbits (Lemma 24). If $\dim\mathcal{V}=n+1$ and $Q$ is a positive constant, then $G^\circ$ is transitive and $X$ is a sphere (Lemma 25). In general the principal set is a fibre bundle with fibre a compact homogeneous space. Residual packet freedom remains the compact group of orthogonal changes of frame of $\mathcal{V}$ that preserve $\Phi$.
 \end{theorem}
 
 Theorem 21 does not assume a tower.
@@ -684,7 +684,7 @@ The identity \(\lvert\iota\rvert^2=Q\) puts \(\iota(X)\) on the sphere
 so \(\iota(X)\) is open in \(S\). \(S\) is connected, so \(\iota(X)=S\).
 The orthogonal group \(\mathrm{O}(n+1)\) preserves \(S\) and acts
 transitively on it. Restricting to the identity component and applying
-Lemma 25 gives transitivity on \(X\). Thus \(X\) is diffeomorphic to a
+Lemma 24 gives transitivity on \(X\). Thus \(X\) is diffeomorphic to a
 sphere.
 
 If moreover \(\mathcal{V}\) is a single eigenspace and
@@ -717,10 +717,10 @@ If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ 
 The tower holds for every CROSS first window and every Peter–Weyl window.
 \end{remark}
 
-\begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 25 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Takahashi supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant (which is the first window of Theorems 3 and 21 in the spherical case), or when the evaluation is an isometric embedding into the slot spheres, §9.1. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
+\begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 24 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Takahashi supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant (which is the first window of Theorems 3 and 21 in the spherical case), or when the evaluation is an isometric embedding into the slot spheres, §9.1. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
 \end{proof}
 
-\begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 25. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. A second transitivity/open orbit condition is given in Section 9.1. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
+\begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 24. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. A second transitivity/open orbit condition is given in Section 9.1. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
 \end{remark}
 
 \subsection{Slot Spheres and Open Orbits}
@@ -790,7 +790,7 @@ $$\operatorname{Hom}(\langle S\rangle_{\mathbb{Z}},S^1)\cong\mathbb{R}^n/\Lambda
 where $\Lambda_S$ is the annihilator of the $\mathbb{Z}$-span of $S$. If $S$ generates $\Lambda_{\mathrm{tr}}^*$ then $\Lambda_S=\Lambda_{\mathrm{tr}}$ and the identification is a translation of the covering torus, descended to $X$. Lemma 14 recovers
 $$g^{-1}(de_\xi,de_\eta)=\Gamma(e_\xi,e_\eta),$$
 which is the flat metric with dual lattice $\Lambda_{\mathrm{tr}}^*$. Lemma 15 gives $\alpha$ constant.
-The translation torus of $\mathbb{R}^n/\Lambda_{\mathrm{tr}}$ acts by isometries and preserves each character, hence preserves $\mathcal{V}$ and $\Phi$. It is a compact connected Lie subgroup of the group $K$ of Theorem 21. Its orbits are the fibres of the holonomy covering; on $X$ they descend to a single principal orbit because the holonomy is finite and acts freely. Lemma 25 is then the orbit decomposition of a Bieberbach manifold: $X$ is a compact quotient of a torus by a finite free linear action. Transitivity of the identity component on the cover is the group law of the character variety.
+The translation torus of $\mathbb{R}^n/\Lambda_{\mathrm{tr}}$ acts by isometries and preserves each character, hence preserves $\mathcal{V}$ and $\Phi$. It is a compact connected Lie subgroup of the group $K$ of Theorem 21. Its orbits are the fibres of the holonomy covering; on $X$ they descend to a single principal orbit because the holonomy is finite and acts freely. Lemma 24 is then the orbit decomposition of a Bieberbach manifold: $X$ is a compact quotient of a torus by a finite free linear action. Transitivity of the identity component on the cover is the group law of the character variety.
 \end{proof}
 \begin{remark} The dimension of $\mathcal{V}$ is $1+2\lvert S\rvert$ after passing to a real basis, and equals $n+1$ only in degenerate cases that do not occur for $n\ge 2$ with a single frequency length. Theorems 3–4 are therefore not available. The quadratic $Q=\sum u_a^2$ is a trigonometric polynomial of frequency at most $2\max_{\xi\in S}\lvert\xi\rvert$, not a constant. The torus packet is exact without being spherical.
 \end{remark}
