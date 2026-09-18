@@ -704,7 +704,10 @@ It does not determine a potential. The standing category is Witten: $V=0$. A Sch
 
 It does not yield spectral uniqueness. Two operators with the same spectrum, or the same $\sigma(P)\cap[0,\Lambda']$, need not be isometric; the missing data are $\Phi$ and $R$. Two operators with the same exact packet ($R=0$) are isometric. Two operators with the same approximate packet need not be; they are $C^k$-close on the scale of $\lVert R\rVert_{C^k(\Sigma)}$.
 
-It does not yield a constant depending only on $n$ in Theorem 2. The factor $C(d,k)$ depends on the window dimension. A universal $C(n)$ when $\Lambda'=2n+2$ appears only in Theorem 4, where $d=n+1$ is fixed.
+It does not yield a constant depending only on $n$ in Theorem 2. The factor $C(d,k)$ depends on the window dimension.
+A constant depending only on \(n\) and \(\eta\), when
+\(\Lambda'=2n+2+\eta\), appears in Theorem 4 after a finite cut of
+the tail (or with \(\delta_t\) listed among the data).
 
 It does not use Ricci curvature, a Weyl law, or the full table $\Phi$ on $\bigoplus_n\ker(P-\lambda_n)$. Those are the inputs of Obata theorems \cite{Oba62,CMS}, of eigenvalue asymptotics, and of the global comparison theorem \cite{Sch24,Sch26}, respectively. The present arguments use a window frame and its products.
 
