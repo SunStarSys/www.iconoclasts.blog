@@ -164,6 +164,7 @@ noncommutative cutoff of first-order spinor data. A packet in
 the present paper is scalar. The visible data are triple
 products of eigenfunctions of a Witten operator \(P_\alpha\) in
 a finite window, plus the tail \(R\) of the pointwise product.
+
 When \(R=0\), Theorem~1 recovers \((X,g,\alpha)\) up to isometry
 from that finite table, not as a GH limit of auxiliary graphs.
 The two reconstructions are complementary: one truncates a
@@ -173,6 +174,11 @@ finite multiplication table exact and reads the metric from
 Dirac triple does not produce the Clebsch–Gordan identities
 used in Theorems~3 and~4, and an exact scalar packet does not
 determine a spin structure.
+
+Gromov–Hausdorff limits under a Ricci bound are described by
+Cheeger–Colding and, synthetically, by \(\mathrm{RCD}(K,N)\) spaces;
+a packet reconstructs the Witten pair at finite cutoff and does not
+pass through those limits.
 
 \subsection{Results}
 Standing hypotheses: $X$ closed and connected, $P=P_\alpha$ a Witten operator \cite{Wit82}, packet as in §2, $u,v\in\mathcal{V}$, Wyman on window triples \cite{Wym}, W1, W2.
