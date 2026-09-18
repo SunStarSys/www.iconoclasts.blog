@@ -155,6 +155,25 @@ the limit \(h\to0\) with \(\Lambda'\) fixed, and only if the
 continuous products already close. The packet is a diagnostic for
 computed low modes, not a discrete classification theorem.
 
+Glaser–Stern reconstruct a closed Riemannian manifold as a
+Gromov–Hausdorff limit of finite metric spaces built from a
+truncated Dirac spectral triple: the spectrum of a Dirac-type
+operator cut at a spectral projection, together with the
+truncated representation of \(C^\infty(X)\) \cite{GS20}. That is a
+noncommutative cutoff of first-order spinor data. A packet in
+the present paper is scalar. The visible data are triple
+products of eigenfunctions of a Witten operator \(P_\alpha\) in
+a finite window, plus the tail \(R\) of the pointwise product.
+When \(R=0\), Theorem~1 recovers \((X,g,\alpha)\) up to isometry
+from that finite table, not as a GH limit of auxiliary graphs.
+The two reconstructions are complementary: one truncates a
+spectral triple and passes to the limit; the other keeps a
+finite multiplication table exact and reads the metric from
+\(\Gamma\). Neither implies the other. In particular a truncated
+Dirac triple does not produce the Clebsch–Gordan identities
+used in Theorems~3 and~4, and an exact scalar packet does not
+determine a spin structure.
+
 \subsection{Results}
 Standing hypotheses: $X$ closed and connected, $P=P_\alpha$ a Witten operator \cite{Wit82}, packet as in §2, $u,v\in\mathcal{V}$, Wyman on window triples \cite{Wym}, W1, W2.
 
