@@ -445,6 +445,93 @@ The error in replacing \(\Pi_{\mathrm{sph}}\) by \(\Pi^\eta_{\mathrm{sph}}\)
 is \(O(\eta)\|x_ax_b\|_2\) and is absorbed into \(C(n,\eta)\) in
 Theorem 4. The tail above \(\Lambda'\) is not \(\delta_\Phi\).
 
+\begin{claim}[cut cometric, fixed pair]
+Let \(u,v\in\mathcal{V}\) on a fixed closed Witten pair \((X,g,\alpha)\).
+For \(\Lambda''\ge\Lambda'\) write
+\[
+2\Gamma_{\Lambda''}(u,v)
+=uPv+vPu-P\bigl(\Pi_{\Lambda''}(uv)\bigr)
++R_{(\Lambda',\Lambda'']}(u,v).
+\]
+Then \(\Gamma_{\Lambda''}(u,v)\to\Gamma(u,v)\) in \(C^k(X)\) as
+\(\Lambda''\to\infty\), for every \(k\ge 0\). In particular, given
+\(\varepsilon>0\) there exists \(\Lambda''=\Lambda''(u,v,k,\varepsilon)\)
+such that
+\[
+\|\Gamma_{\Lambda''}(u,v)-\Gamma(u,v)\|_{C^k}<\varepsilon.
+\]
+The rate depends on \(\|uv\|_{H^{s}}\) for \(s>k+n/2\). It is not
+claimed to be uniform for \(g\) in a \(C^2\) neighbourhood of
+\(g_{\mathrm{rd}}\).
+\end{claim}
+\begin{subproof}[Proof of Claim]
+Fix \(u,v\in\mathcal{V}\) on a single closed Witten pair. The product
+\(uv\) is \(C^\infty\), so \(P^m(uv)\in L^2\) for every \(m\). Let
+\(\{e_\lambda\}\) be an \(L^2\)-orthonormal eigenbasis of \(P\), and write
+\[
+uv=\sum_{\lambda\ge 0}\Phi(u,v,e_\lambda)\,e_\lambda.
+\]
+The tail after \(\Lambda''\) is
+\[
+t_{\Lambda''}:=(I-\Pi_{\Lambda''})(uv)
+=\sum_{\lambda>\Lambda''}\Phi(u,v,e_\lambda)\,e_\lambda.
+\]
+For any \(m\),
+\[
+\|P^m t_{\Lambda''}\|_2^2
+=\sum_{\lambda>\Lambda''}\lambda^{2m}\,|\Phi(u,v,e_\lambda)|^2
+\le\Lambda''^{-2}\sum_{\lambda>\Lambda''}\lambda^{2m+2}\,|\Phi(u,v,e_\lambda)|^2
+\le\Lambda''^{-2}\,\|P^{m+1}(uv)\|_2^2.
+\]
+Thus \(\|t_{\Lambda''}\|_{H^{2m}}\to 0\) as \(\Lambda''\to\infty\).
+Sobolev embedding on the closed \(n\)-manifold \(X\) gives
+\[
+\|t_{\Lambda''}\|_{C^k}\le C(n,k,X)\,\|t_{\Lambda''}\|_{H^{s}},
+\qquad s>k+\tfrac n2,
+\]
+so \(\|t_{\Lambda''}\|_{C^k}\to 0\) for every \(k\).
+
+The cut identity is the exact Leibniz formula with \(\Pi_{\Lambda''}(uv)\)
+in place of \(uv\):
+\[
+2\Gamma_{\Lambda''}(u,v)
+=uPv+vPu-P\bigl(\Pi_{\Lambda''}(uv)\bigr)
++R_{(\Lambda',\Lambda'']}(u,v).
+\]
+The true identity is
+\[
+2\Gamma(u,v)=uPv+vPu-P(uv).
+\]
+Subtract:
+\[
+2\bigl(\Gamma_{\Lambda''}(u,v)-\Gamma(u,v)\bigr)
+=P\bigl((I-\Pi_{\Lambda''})(uv)\bigr)
+-R_{(\Lambda',\Lambda'']}(u,v).
+\]
+On the range of \(\Pi_{(\Lambda',\Lambda'']}\) one has
+\(R_{(\Lambda',\Lambda'']}=-P\,\Pi_{(\Lambda',\Lambda'']}(uv)\), and
+\(P(I-\Pi_{\Lambda''})(uv)=-R_{(\Lambda'',\infty)}\), so the right-hand
+side is
+\[
+P(I-\Pi_{\Lambda''})(uv)=-P t_{\Lambda''}.
+\]
+Hence
+\[
+\Gamma_{\Lambda''}(u,v)-\Gamma(u,v)=-\tfrac12 P t_{\Lambda''}.
+\]
+Elliptic regularity of \(P\) (or the same Sobolev estimate with one
+extra derivative) yields
+\[
+\|P t_{\Lambda''}\|_{C^k}\le C(n,k,X)\,\|t_{\Lambda''}\|_{H^{s+2}}\to 0.
+\]
+Therefore \(\Gamma_{\Lambda''}(u,v)\to\Gamma(u,v)\) in \(C^k(X)\).
+
+The rate is controlled by \(\|P^{m}(uv)\|_2\) for \(m\) large enough
+that \(2m>k+n/2+2\). Those norms depend on the pair \((X,g,\alpha)\)
+and on the two window functions. They are not claimed to be bounded
+uniformly for \(g\) in a \(C^2\) neighbourhood of a model metric.
+\end{subproof}
+
 Write \(\Delta_g\) as a divergence-form operator on the fixed space
 \(L^2(d\mathrm{vol}_{g_{\mathrm{rd}}})\). On a sufficiently small
 \(C^2\) ball about \(g_{\mathrm{rd}}\), the resolvent is close in
