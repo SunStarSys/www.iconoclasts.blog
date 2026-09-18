@@ -192,6 +192,7 @@
   year    = {1967},
   pages   = {111--125}
 }
+
 @online{Adv25,
   author  = {Adve, Anshul},
   title   = {A converse theorem for hyperbolic surface spectra and the conformal bootstrap},
@@ -220,12 +221,65 @@
   year    = {2022},
   pages   = {93}
 }
+
+@article{CC96,
+  author  = {Jeff Cheeger and Tobias H. Colding},
+  title   = {Lower bounds on {R}icci curvature and the almost rigidity of warped products},
+  journal = {Ann. of Math. (2)},
+  volume  = {144},
+  number  = {1},
+  pages   = {189--237},
+  year    = {1996}
+}
+
+@article{CC97,
+  author  = {Jeff Cheeger and Tobias H. Colding},
+  title   = {On the structure of spaces with {R}icci curvature bounded below. {I}},
+  journal = {J. Differential Geom.},
+  volume  = {46},
+  number  = {3},
+  pages   = {406--480},
+  year    = {1997}
+}
+
+@article{LV09,
+  author  = {John Lott and C{\'e}dric Villani},
+  title   = {Ricci curvature for metric-measure spaces via optimal transport},
+  journal = {Ann. of Math. (2)},
+  volume  = {169},
+  number  = {3},
+  pages   = {903--991},
+  year    = {2009}
+}
+
+@article{Stu06,
+  author  = {Karl-Theodor Sturm},
+  title   = {On the geometry of metric measure spaces. {I}},
+  journal = {Acta Math.},
+  volume  = {196},
+  number  = {1},
+  pages   = {65--131},
+  year    = {2006}
+}
+
+@article{AGS14,
+  author  = {Luigi Ambrosio and Nicola Gigli and Giuseppe Savar{\'e}},
+  title   = {Metric measure spaces with {R}iemannian {R}icci curvature bounded from below},
+  journal = {Duke Math. J.},
+  volume  = {163},
+  number  = {7},
+  pages   = {1405--1490},
+  year    = {2014}
+}
+
 @article{GS20,
   author  = {Lisa Glaser and Abel B. Stern},
-  title   = {Reconstructing manifolds from truncated spectral triples},
-  journal = {arXiv preprint},
-  year    = {2020},
+  title   = {Reconstructing manifolds from truncations of spectral triples},
+  journal = {J. Geom. Phys.},
+  volume  = {159},
+  pages   = {103921},
+  year    = {2021},
   eprint  = {1912.09227},
   archiveprefix = {arXiv},
-  primaryclass = {math-ph}
+  primaryclass  = {math-ph}
 }
