@@ -175,6 +175,11 @@ Dirac triple does not produce the Clebsch–Gordan identities
 used in Theorems~3 and~4, and an exact scalar packet does not
 determine a spin structure.
 
+On the round sphere the scalar packet is exact at the first
+harmonic slot (\(\mathcal{H}_1\otimes\mathcal{H}_1\subset\mathcal{H}_0\oplus\mathcal{H}_2\));
+the corresponding truncated Dirac triple is exact only in the
+Gromov–Hausdorff limit \(\Lambda\to\infty\).
+
 Gromov–Hausdorff limits under a Ricci bound are described by
 Cheeger–Colding \cite{CC96, CC97} and, synthetically, by \(\mathrm{RCD}(K,N)\) spaces \cite{AGS14};
 a packet reconstructs the Witten pair at finite cutoff and does not
