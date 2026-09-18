@@ -177,8 +177,13 @@ determine a spin structure.
 
 On the round sphere the scalar packet is exact at the first
 harmonic slot (\(\mathcal{H}_1\otimes\mathcal{H}_1\subset\mathcal{H}_0\oplus\mathcal{H}_2\));
-the corresponding truncated Dirac triple is exact only in the
-Gromov–Hausdorff limit \(\Lambda\to\infty\).
+the corresponding truncated Dirac triple recovers \(S^n\) only as a
+Gromov–Hausdorff limit of state spaces as \(\Lambda\to\infty\).
+Theorem~4 is stronger than that approximation: a packet in a
+neighborhood of the spherical table determines a manifold
+diffeomorphic to \(S^n\) and a metric \(C^0\)-close to the round
+metric, in the topology of diffeomorphisms rather than in
+\(d_{GH}\).
 
 Gromov–Hausdorff limits under a Ricci bound are described by
 Cheeger–Colding \cite{CC96, CC97} and, synthetically, by \(\mathrm{RCD}(K,N)\) spaces \cite{AGS14};
