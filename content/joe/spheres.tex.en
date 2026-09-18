@@ -60,7 +60,7 @@
 Let $P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$ be a Witten operator on a closed connected Riemannian manifold, acting in $L^2(e^{-\alpha}\,d\mathrm{vol}_g)$. The spectrum of $P_\alpha$ does not determine $(g,\alpha)$. The full multiplication table of eigenfunctions does. This paper isolates a finite piece of that table.
 
 Fix cutoffs $\Lambda\le\Lambda'<\infty$ and let $\mathcal{V}$ be the sum of eigenspaces of eigenvalue at most $\Lambda$. The visible packet is the restriction of the triple products $\Phi$ to pairs from $\mathcal{V}$ against modes up to $\Lambda'$, together with the weighted tail
-$$R(u,v)=-P(I-\Pi_{\Lambda'})(uv)=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda$$
+$$R(u,v)=-P(I-\Pi_{\Lambda'})(uv)=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,\bar e_\lambda)\,e_\lambda$$
 and its uniform size $\Delta=\sup\lVert R(u,v)\rVert_2$ over unit $u,v\in\mathcal{V}$. Write $t=(I-\Pi_{\Lambda'})(uv)$. No Weyl law, no potential, and no curvature bound is used. A Wyman bound on window triples guarantees that the coefficients of $R$ exist.
 
 If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$ and an additive constant on $\alpha$. If $\lVert t\rVert_{C^1}$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^*$, evaluation realises $X$ as a $C^1$ submanifold $\Sigma\subset\mathcal{V}^*$ on which
@@ -92,7 +92,7 @@ Fix cutoffs $\Lambda\le\Lambda'<\infty$ and let
 $$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda)$$
 be the corresponding spectral window. Products of window functions need not lie in $\mathcal{V}$. Write $m(u,v)=\Pi_{\Lambda'}(uv)$ for the projection onto modes up to $\Lambda'$, and
 $$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv)
-=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda$$
+=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,\bar e_\lambda)\,e_\lambda$$
 for the weighted tail of those products. Throughout, $u,v\in\mathcal{V}$. The uniform size of the tail is
 $$\Delta=\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\lVert R(u,v)\rVert_2.$$
 
@@ -284,12 +284,12 @@ $$\Delta=\sup\bigl\{\lVert R(u,v)\rVert_2:\ u,v\in\mathcal{V},\ \lVert u\rVert_2
 The exact subclass is $R=0$, equivalently $\Delta=0$.
 
 \textbf{Wyman}. For $u,v\in\mathcal{V}$ and an $L^2$-normalized eigenfunction $e_\lambda$,
-$$\sum_{\lambda}\bigl\lvert\Phi(u,v,e_\lambda)\bigr\rvert^2$$
+$$\sum_{\lambda}\bigl\lvert\Phi(u,v,\bar e_\lambda)\bigr\rvert^2$$
 is controlled by the measure of frequency triangles with side lengths comparable to $(\sqrt{\lambda_u},\sqrt{\lambda_v},\sqrt{\lambda})$ \cite{Wym}. In particular there is rapid decay of the $\ell^2$ mass of $\Phi(u,v,\,\cdot\,)$ in the classically forbidden region
 $$\sqrt{\lambda}\ge(1+\varepsilon)\bigl(\sqrt{\lambda_u}+\sqrt{\lambda_v}\bigr),$$
 for every $\varepsilon>0$. The paper uses only the following crude consequence: the coefficients of $R$ exist, and if a finite slot above $\Lambda'$ is fixed, they are bounded by a constant depending on that slot, on $\Lambda$, and on $\lVert u\rVert_2\lVert v\rVert_2$.
 A pointwise bound
-$$\bigl\lvert\Phi(u,v,e_\lambda)\bigr\rvert
+$$\bigl\lvert\Phi(u,v,\bar e_\lambda)\bigr\rvert
 \le C\,(1+\lambda_u+\lambda_v+\lambda)^\delta\,\lVert u\rVert_2\lVert v\rVert_2$$
 is not claimed in \cite{Wym}; when it is invoked below it is as a convenient majorant on a finite slot, not as Wyman’s theorem.
 
@@ -316,7 +316,7 @@ t(u,v)=(I-\Pi_{\Lambda'})(uv).
 \]
 The visible product \(m(u,v)\) is assembled from the in-window table:
 \[
-m(u,v)=\sum_{\lambda\le\Lambda'}\Phi(u,v,e_\lambda)\,e_\lambda.
+m(u,v)=\sum_{\lambda\le\Lambda'}\Phi(u,v,\bar e_\lambda)\,e_\lambda.
 \]
 Identity (A1) then reads
 \[
@@ -324,7 +324,7 @@ Identity (A1) then reads
 \]
 where
 \[
-R(u,v)=-P\,t(u,v)=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda.
+R(u,v)=-P\,t(u,v)=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,\bar e_\lambda)\,e_\lambda.
 \]
 Thus \(\Gamma\) on \(\mathcal{V}\) is determined by \(P|_{\mathcal{V}}\), by \(\Phi\) on
 \(\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'\), and by the tail \(R\).
@@ -452,13 +452,13 @@ For (ii), a finite slot makes every $C^k$ norm on the tail equivalent to the $L^
 \end{proof}
 
 \begin{remark}[weighted tails] The hypothesis of Lemma 9(i) is $\lVert t\rVert_{C^1}<\tau_*$. On a finite slot this follows from $\Delta$ by Remarks 6 and 7. On an infinite tail it does not, and the paper does not claim that it does. The same Sogge bound that gives Remark 6 still converts a weighted norm of $\Phi$ into $\lVert t\rVert_{C^1}$. Expanding
-$$t(u,v)=\sum_{\lambda>\Lambda'}\Phi(u,v,e_\lambda)\,e_\lambda$$
+$$t(u,v)=\sum_{\lambda>\Lambda'}\Phi(u,v,\bar e_\lambda)\,e_\lambda$$
 and using $\lVert e_\lambda\rVert_{C^0}\le C_S(n)(1+\lambda)^{(n-1)/4}$ together with $\lVert\nabla e_\lambda\rVert_{C^0}\le C(n)(1+\lambda)^{(n-1)/4+1/2}$ yields
 $$\lVert t\rVert_{C^1}
-\le C(n)\sum_{\lambda>\Lambda'}(1+\lambda)^{\frac{n-1}{4}+\frac12}\lvert\Phi(u,v,e_\lambda)\rvert.$$
+\le C(n)\sum_{\lambda>\Lambda'}(1+\lambda)^{\frac{n-1}{4}+\frac12}\lvert\Phi(u,v,\bar e_\lambda)\rvert.$$
 Cauchy–Schwarz against the same weights gives the $\ell^2$ form
 $$\lVert t\rVert_{C^1}
-\le C(n)\Bigl(\sum_{\lambda>\Lambda'}(1+\lambda)^{\frac{n-1}{2}+1}\lvert\Phi(u,v,e_\lambda)\rvert^2\Bigr)^{1/2}.$$
+\le C(n)\Bigl(\sum_{\lambda>\Lambda'}(1+\lambda)^{\frac{n-1}{2}+1}\lvert\Phi(u,v,\bar e_\lambda)\rvert^2\Bigr)^{1/2}.$$
 Either right-hand side may be written $\Delta_{C^1}(u,v)$. Then Lemma 9(i) applies as soon as $\sup\Delta_{C^1}<\tau_*/C(n)$. This $\Delta_{C^1}$ is not the packet scalar $\Delta=\sup\lVert R\rVert_2$. The two coincide, up to a constant depending on the slot, only when the sum is finite, which is Lemma 9(ii). Wyman controls the unweighted $\ell^2$ mass of $\Phi$ off the frequency triangle; it does not by itself bound $\Delta_{C^1}$ on an infinite tail. If a uniform scalar is wanted in that regime, $\Delta_{C^1}$ (or a cut at a finite $\Lambda''$, with the far tail absorbed into $R$) is the quantity that should be listed with the packet.
 \end{remark}
 
