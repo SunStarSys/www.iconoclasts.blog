@@ -205,17 +205,35 @@ If in addition $\alpha=0$, then $X$ is a union of orbits of a compact Lie group 
 \begin{theorem}[approximate recognition]
 \label{thm-2}
 Let $d=\dim\mathcal{V}$.
+Write \(t(u,v)=(I-\Pi_{\Lambda'})(uv)\) for \(u,v\in\mathcal{V}\), and
+assume W1 and W2.
 \begin{description}
-\item[(i)] There exists $\tau_*=\tau_*(d,\iota(X))>0$ such that if
-$$\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\lVert t(u,v)\rVert_{C^1(X)}<\tau_*,$$
-then evaluation realises $X$ as a $C^1$ embedded submanifold $\Sigma\subset\mathcal{V}^*$ and
-$$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}
-\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}$$
-for every $k\ge 0$, with $c$ an additive constant on $\alpha$. The diffeomorphism $\iota$ is $C^\infty$ if $t=0$. The smallness parameter is $\lVert t\rVert_{C^1}$, equivalently $\lVert R\rVert_{C^k}$ after Lemma 9(i); it is not $\Delta$.
+\item[(i)] (infinite tail). There exists \(\tau_*=\tau_*(d,\iota(X))>0\) such that if
+\[
+\sup_{\|u\|_2=\|v\|_2=1}\|t(u,v)\|_{C^1(X)}<\tau_*,
+\]
+then evaluation realises \(X\) as a \(C^1\) embedded submanifold
+\(\Sigma\subset\mathcal{V}^*\) (the standing embedding of W1 persists),
+and
+\[
+\|\iota^*g_\Sigma-g\|_{C^k}+\|\alpha_\Sigma\circ\iota-\alpha-c\|_{C^k}
+\le C(d,k)\,\|R\|_{C^k(\Sigma)}
+\]
+for every \(k\ge 0\), with \(c\) an additive constant on \(\alpha\).
+The diffeomorphism \(\iota\) is \(C^\infty\) if \(t=0\).
+The smallness parameter is \(\|t\|_{C^1}\), equivalently \(\|R\|_{C^k}\)
+after Lemma 9(i). It is not \(\Delta=\sup\|R\|_2\).
+The same smallness may be written \(\Delta_{C^1}<\tau_*/C(n)\) in the
+weighted \(\ell^2\) form of Remark 10.
 
-\item[(ii)] If the tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), Lemma 9(ii) supplies $\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$ such that $\Delta<\Delta_*$ implies the conclusions of (i), and
-$$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
-In that case $\iota$ is a $C^k$ almost-isometry on the scale of $\Delta$.
+\item[(ii)] (finite slot). If the tail that defines \(R\) occupies a finite slot
+of dimension \(d_{\mathrm{tail}}\) (or is cut at a finite \(\Lambda''\)),
+Lemma 9(ii) supplies \(\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0\)
+such that \(\Delta<\Delta_*\) implies the conclusions of (i), and
+\[
+\|R\|_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.
+\]
+In that case \(\iota\) is a \(C^k\) almost-isometry on the scale of \(\Delta\).
 \end{description}
 \end{theorem}
 
@@ -228,63 +246,68 @@ Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n
 \label{thm-b}
 Let \(\lambda_1\le\cdots\le\lambda_{n+1}\) be the first \(n+1\) positive
 eigenvalues of \(P\) counted with multiplicity, and let
-\(\mathcal{V}=\operatorname{span}\{x_1,\dots,x_{n+1}\}\) be the joint
-span of corresponding \(L^2\)-orthonormal eigenfunctions. Write
+\(\mathcal{V}=\mathrm{span}\{x_1,\dots,x_{n+1}\}\) be the joint span of
+corresponding \(L^2\)-orthonormal eigenfunctions. Write
 \[
 w=\lambda_{n+1}-\lambda_1,\qquad
 \bar\lambda=\frac1{n+1}\sum_{i=1}^{n+1}\lambda_i,
 \]
-and assume the cluster is isolated:
-\[
-w<\lambda_{n+2}-\lambda_{n+1}.
-\]
+and assume the cluster is isolated: \(w<\lambda_{n+2}-\lambda_{n+1}\).
+Assume W1 and W2 for this block.
 Fix \(\eta\in\bigl(0,\min\{n,n+4\}/2\bigr)\) smaller than the first two
 spherical gaps, and a cutoff \(\Lambda'\ge 2n+2+\eta\). Set
 \[
-\Pi_{\mathrm{sph}}^\eta
-=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\,2n+2+\eta]}.
+\Pi^\eta_{\mathrm{sph}}=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\,2n+2+\eta]}.
 \]
 Allow the table deficits
 \begin{align*}
-\delta_w&=w+\lvert\bar\lambda-n\rvert,\\
-\delta_{\mathrm{on}}
-&=\sum_{a,b}\Bigl\lvert\int x_ax_b-\delta_{ab}\Bigr\rvert
-+\sum_a\Bigl\lvert\int x_a\Bigr\rvert,\\
+\delta_w&=w+|\bar\lambda-n|,\\
+\delta_{\mathrm{on}}&=\sum_{a,b}\bigl|\textstyle\int x_ax_b-\delta_{ab}\bigr|
++\sum_a\bigl|\textstyle\int x_a\bigr|,\\
 \delta_1&=\bigl\|\textstyle\sum_a x_a^2-1\bigr\|_{C^0},\\
-\delta_\Phi
-&=\sup_{a,b}\bigl\|(I-\Pi_{\mathrm{sph}}^\eta)\,\Pi_{\Lambda'}(x_ax_b)\bigr\|_{L^2},\\
-\Delta_{\mathrm{fr}}
-&=\sup_{a,b}\lVert R_{\Lambda'}(x_a,x_b)\rVert_2,\\
-\delta_{\mathrm{rank}}
-&=\text{rank gap of }\Gamma(x_a,x_b).
+\delta_\Phi&=\sup_{a,b}\bigl\|(I-\Pi^\eta_{\mathrm{sph}})\Pi_{\Lambda'}(x_ax_b)\bigr\|_{L^2},\\
+\delta_t&=\sup_{a,b}\|t_{\Lambda'}(x_a,x_b)\|_{C^1},
 \end{align*}
-Set
+where \(t_{\Lambda'}=(I-\Pi_{\Lambda'})(x_ax_b)\). Set
 \[
-\delta=\delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
-+\Delta_{\mathrm{fr}}+\delta_{\mathrm{rank}}.
+\delta=\delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi+\delta_t.
 \]
-If \(\delta<\delta_*(n,\eta)\), then \(X\) is a \(C^1\)-graph over \(S^n\)
-and
+If \(\delta<\delta_*(n,\eta)\), then evaluation \(F=(x_1,\dots,x_{n+1})\)
+realises \(X\) as a \(C^1\)-graph over \(S^n\), and
 \[
-d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})
+d_{\mathrm{GH}}(X,S^n)+\|F^*g_{\mathrm{eucl}}-g\|_{C^0}
 \le C(n,\eta,\Lambda')\,\delta.
 \]
-If \(\Lambda'=2n+2+\eta\), the constant depends only on \(n\) and \(\eta\).
+If the tail of \(R_{\Lambda'}\) occupies a finite slot of dimension
+\(d_{\mathrm{tail}}\) (or is cut at a finite \(\Lambda''\)), then
+\(\delta_t\le C(n,d_{\mathrm{tail}},\Lambda',\Lambda'')\Delta_{\mathrm{fr}}\)
+with \(\Delta_{\mathrm{fr}}=\sup\|R_{\Lambda'}(x_a,x_b)\|_2\), and \(\delta\)
+may be written with \(\Delta_{\mathrm{fr}}\) in place of \(\delta_t\).
+If \(\Lambda'=2n+2+\eta\) and the tail is so cut, the constant depends
+only on \(n\), \(\eta\), and \(d_{\mathrm{tail}}\).
+
 This is linear stability of the first \(n+1\) harmonics of Theorem 3,
 allowing the first slot to split and the quadratic slot to drift inside
-an \(\eta\)-gap. It does not use Ricci curvature [Oba62; CMS23].
-When \(w=0\), \(\eta=0^+\), and \(\Lambda'=2n+2\), it specialises to
+an \(\eta\)-gap. It does not use Ricci curvature. When \(w=0\),
+\(\eta=0^+\), \(\Lambda'=2n+2\), and \(t=0\), it specialises to
 stability of a single eigenspace with exact projectors
 \(\Pi_0+\Pi_{2n+2}\).
-\end{theorem}
+
 On a sufficiently small \(C^2\) ball about \(g_{\mathrm{rd}}\) the gaps
-about \(0\), \(n\), and \(2n+2\) persist, and
+about \(0\), \(n\), and \(2n+2\) persist. Elliptic estimates on the
+cluster promote \(\|g-g_{\mathrm{rd}}\|_{C^2}\) to \(C^0\) control of
+the frame, and
 \[
-\delta\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
+\delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
+\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
 \]
-Thus Theorem 4 applies on that ball. It does not apply to a residual
-set in \(\mathcal{M}\): a generic perturbation may break isolation or
-spray products through the \(\eta\)-gaps.
+The tail modulus \(\delta_t\) is not in general \(O(\|g-g_{\mathrm{rd}}\|_{C^2})\)
+for an infinite tail; it is, after a finite cut \(\Lambda''\).
+Thus Theorem 4 applies on that ball with the finite-cut form of \(\delta\).
+It does not apply to a residual set in \(\mathcal{M}\): a generic
+perturbation may break isolation or spray products through the
+\(\eta\)-gaps.
+\end{theorem}
 
 The \(C^0\) bound and min-max give
 \(\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k,\eta)\,\delta\)
@@ -481,7 +504,10 @@ $$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
 \end{lemma}
 
 \begin{proof}
-W1 already makes $\iota$ a smooth embedding onto a closed submanifold, so the first claim of (i) does not use the size of $t$. The product map $F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$ vanishes on $\iota(X)$ up to $t$. Evaluation extends to $\mathcal{V}'$, so at $\xi=\iota(x)$ one has $\xi(m(u,v))=m(u,v)(x)$ and the only defect is $t(x)$. Differentiating $F$ in the $\mathcal{V}^*$-directions at $\iota(x)$ yields the family $(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$ on $T_x^*X$. W2 says $\{du:u\in\mathcal{V}\}$ spans $T_x^*X$, so this family is transverse to $\iota(X)$. If $\lVert t\rVert_{C^1}<\tau_*$, $F$ is a $C^1$-small perturbation of a section that vanishes exactly on $\iota(X)$. Persistence of transverse embeddings keeps $\iota$ a $C^1$ diffeomorphism onto its image. If $t=0$, then $R=0$, $F$ vanishes exactly on $\iota(X)$, and $\iota$ is $C^\infty$. The $C^k$ comparison of $R_X$ and $R_\Sigma$ is the chain rule for $\iota$ and $\iota^{-1}$, whose $C^{k-1}$ norms stay bounded for $\lVert t\rVert_{C^1}<\tau_*$.
+W1 makes \(\iota\) a smooth embedding onto a closed submanifold.
+The size of \(t\) is used only to persist that embedding in the \(C^1\)
+topology and to compare \(\|R\|_{C^k}\) on \(X\) and on \(\Sigma\).
+The product map $F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$ vanishes on $\iota(X)$ up to $t$. Evaluation extends to $\mathcal{V}'$, so at $\xi=\iota(x)$ one has $\xi(m(u,v))=m(u,v)(x)$ and the only defect is $t(x)$. Differentiating $F$ in the $\mathcal{V}^*$-directions at $\iota(x)$ yields the family $(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$ on $T_x^*X$. W2 says $\{du:u\in\mathcal{V}\}$ spans $T_x^*X$, so this family is transverse to $\iota(X)$. If $\lVert t\rVert_{C^1}<\tau_*$, $F$ is a $C^1$-small perturbation of a section that vanishes exactly on $\iota(X)$. Persistence of transverse embeddings keeps $\iota$ a $C^1$ diffeomorphism onto its image. If $t=0$, then $R=0$, $F$ vanishes exactly on $\iota(X)$, and $\iota$ is $C^\infty$. The $C^k$ comparison of $R_X$ and $R_\Sigma$ is the chain rule for $\iota$ and $\iota^{-1}$, whose $C^{k-1}$ norms stay bounded for $\lVert t\rVert_{C^1}<\tau_*$.
 
 For (ii), a finite slot makes every $C^k$ norm on the tail equivalent to the $L^2$ norm of $R=-Pt$. Remark 6 supplies the $C^0$ bound on $t$ via Sogge; equivalence of norms on a space of dimension $d_{\mathrm{tail}}$ upgrades that to $C^1$. Thus $\Delta$ small implies $\lVert t\rVert_{C^1}$ small, and (i) applies.
 \end{proof}
@@ -497,7 +523,11 @@ $$\lVert t\rVert_{C^1}
 Either right-hand side may be written $\Delta_{C^1}(u,v)$. Then Lemma 9(i) applies as soon as $\sup\Delta_{C^1}<\tau_*/C(n)$. This $\Delta_{C^1}$ is not the packet scalar $\Delta=\sup\lVert R\rVert_2$. The two coincide, up to a constant depending on the slot, only when the sum is finite, which is Lemma 9(ii). Wyman controls the unweighted $\ell^2$ mass of $\Phi$ off the frequency triangle; it does not by itself bound $\Delta_{C^1}$ on an infinite tail. If a uniform scalar is wanted in that regime, $\Delta_{C^1}$ (or a cut at a finite $\Lambda''$, with the far tail absorbed into $R$) is the quantity that should be listed with the packet.
 \end{remark}
 
-\begin{remark} Theorem 2’s general bound is (i), written in $\lVert R\rVert_{C^k(\Sigma)}$. The conversion to a multiple of $\Delta$ is (ii). Theorem 4 uses only (ii), with $d=n+1$ and a finite cluster about the slot $2n+2$.
+\begin{remark}
+Theorem 2’s general bound is (i), written in \(\|t\|_{C^1}\) and
+\(\|R\|_{C^k(\Sigma)}\). The conversion to a multiple of \(\Delta\) is
+(ii). Theorem 4 uses (i) with \(d=n+1\) and modulus \(\delta_t\);
+it uses (ii) only after a finite cut of the tail.
 \end{remark}
 
 \begin{corollary}
@@ -556,9 +586,21 @@ Residual freedom is an orthogonal change of basis of $\mathcal{V}$ preserving $\
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm-2}]
-Lemma 5 gives $\Gamma$ on $\mathcal{V}$ with remainder $R$. Under the hypothesis of (i), Lemma 9(i) produces a $C^1$ diffeomorphism $\iota:X\to\Sigma\subset\mathcal{V}^*$ and identifies $\lVert R\rVert_{C^k(\Sigma)}$ with $\lVert R\rVert_{C^k(X)}$ up to $C(d,k)$. Lemma 14 upgrades the cometric error to
-$$\lVert\iota^*g_\Sigma-g\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}.$$
-Lemma 15 gives the same bound for $\alpha_\Sigma\circ\iota-\alpha-c$. Under the hypothesis of (ii), Lemma 9(ii) converts $\lVert t\rVert_{C^1}$ and $\lVert R\rVert_{C^k}$ into multiples of $\Delta$, and (i) applies. If $R=0$, both parts reduce to Theorem 1.
+W1 is standing: \(\iota\) is already a smooth embedding. Lemma 5 gives
+\(\Gamma\) on \(\mathcal{V}\) with remainder \(R=-Pt\).
+Under the hypothesis of (i), Lemma 9(i) persists \(\iota\) as a \(C^1\)
+diffeomorphism \(X\to\Sigma\subset\mathcal{V}^*\) and identifies
+\(\|R\|_{C^k(\Sigma)}\) with \(\|R\|_{C^k(X)}\) up to \(C(d,k)\).
+Lemma 14 upgrades the cometric error to
+\[
+\|\iota^*g_\Sigma-g\|_{C^k}\le C(d,k)\,\|R\|_{C^k(\Sigma)}.
+\]
+Lemma 15 gives the same bound for \(\alpha_\Sigma\circ\iota-\alpha-c\).
+Under the hypothesis of (ii), the tail is finite-dimensional, so
+Remarks 6--7 convert \(\|t\|_{C^1}\) and \(\|R\|_{C^k}\) into multiples
+of \(\Delta\), and (i) applies. If \(R=0\), both parts reduce to
+Theorem 1. An infinite tail is controlled only through \(\|t\|_{C^1}\)
+or \(\Delta_{C^1}\); \(\Delta\) alone is not a modulus in that regime.
 \end{proof}
 
 \begin{remark}
@@ -583,57 +625,64 @@ Hence $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$. The matrix $\delta_{ab}-x_ax_b$ has 
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm-b}]
-The isolation hypothesis \(w<\lambda_{n+2}-\lambda_{n+1}\) makes \(\mathcal{V}\) a
-spectral window of dimension \(n+1\). Standing W1 and W2 apply to this
-block. Write \(\lambda_a=n+\varepsilon_a\), so \(\lvert\varepsilon_a\rvert\le\delta_w\).
+The isolation hypothesis makes \(\mathcal{V}\) a spectral window of
+dimension \(n+1\). Standing W1 and W2 apply to this block.
+Write \(\lambda_a=n+\varepsilon_a\), so \(|\varepsilon_a|\le\delta_w\).
 
-Lemma 5 on the cluster frame, with model projector
-\(\Pi_{\mathrm{sph}}^\eta\), gives
+Lemma 5 on the cluster frame, with smeared projector \(\Pi^\eta_{\mathrm{sph}}\),
+gives
 \[
-2\Gamma(x_a,x_b)=(\lambda_a+\lambda_b)x_ax_b-P\bigl(m(x_a,x_b)\bigr)+R_{\Lambda'}
+2\Gamma(x_a,x_b)=(\lambda_a+\lambda_b)x_ax_b-P(m(x_a,x_b))+R_{\Lambda'}
 \]
 and
 \[
-\bigl\lVert\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\rVert_{L^2}
-\le C(n,\eta)\bigl(\delta_w+\delta_\Phi+\Delta_{\mathrm{fr}}\bigr).
+\bigl\|\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\|_{L^2}
+\le C(n,\eta)\,(\delta_w+\delta_\Phi+\|R_{\Lambda'}(x_a,x_b)\|_2).
 \]
-Here \(\delta_\Phi\) is mass of \(\Pi_{\Lambda'}(x_ax_b)\) off
-\(\Pi_{\mathrm{sph}}^\eta\), and \(\Delta_{\mathrm{fr}}\) is the tail above
-\(\Lambda'\). The visible slot has dimension \(O(n^2)\) for fixed
-\(\eta,\Lambda'\). Remarks 6–7 upgrade the estimate to \(C^0\):
+The error in replacing the exact projectors \(\Pi_0+\Pi_{2n+2}\) by
+\(\Pi^\eta_{\mathrm{sph}}\) is \(O(\eta)\|x_ax_b\|_2\) and is absorbed
+into \(C(n,\eta)\). The in-window error \(\delta_\Phi\) lives in a
+slot of dimension \(O(n^2)\) for fixed \(\eta,\Lambda'\); Remarks 6--7
+upgrade that piece to \(C^0\). The tail is upgraded to \(C^0\) only
+through \(\delta_t=\|t_{\Lambda'}\|_{C^1}\), or through
+\(\Delta_{\mathrm{fr}}\) after a finite cut. Hence
 \[
-\bigl\lVert\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\rVert_{C^0}
-\le C(n,\eta,\Lambda')\bigl(\delta_w+\delta_\Phi+\Delta_{\mathrm{fr}}\bigr).
+\bigl\|\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\|_{C^0}
+\le C(n,\eta,\Lambda')\,(\delta_w+\delta_\Phi+\delta_t).
 \]
-If \(\Lambda'=2n+2+\eta\), the constant depends only on \(n\) and \(\eta\).
 
 The deficit \(\delta_1\) puts \(\sum_a x_a^2=1+O_{C^0}(\delta_1)\), so
-evaluation \(F=(x_1,\dots,x_{n+1})\) lands in a \(C^0\)-neighborhood of
-the unit sphere in \(\mathcal{V}^*\). Gram–Schmidt absorbs
-\(\delta_{\mathrm{on}}\) into \(\delta_1\) and \(\delta_\Phi\) at cost
-\(C(n)\). The rank gap \(\delta_{\mathrm{rank}}\) keeps \(dF\) of rank \(n\)
-for \(\delta<\delta_*(n,\eta)\).
+\(F=(x_1,\dots,x_{n+1})\) lands in a \(C^0\)-neighbourhood of the unit
+sphere in \(\mathcal{V}^*\). Gram--Schmidt absorbs \(\delta_{\mathrm{on}}\)
+into \(\delta_1\) and \(\delta_\Phi\) at cost \(C(n)\). The Gram matrix
+\(\Gamma(x_a,x_b)\) is then \(C^0\)-close to \(\delta_{ab}-x_ax_b\), which
+has rank \(n\) on the unit sphere, so \(dF\) has rank \(n\) for
+\(\delta<\delta_*(n,\eta)\).
 
-Lemma 9, with \(d=n+1\) and a finite slot, produces a \(C^1\)
-diffeomorphism of \(X\) onto a graph over \(S^n\). Theorem 2(ii) yields
+Lemma 9(i), with \(d=n+1\) and small \(\delta_t\), persists \(\iota\) as a
+\(C^1\) diffeomorphism of \(X\) onto a graph over \(S^n\).
+Theorem 2(i) yields
 \[
-d_{\mathrm{GH}}(X,S^n)+d_{C^0}(g,g_{\mathrm{rd}})
+d_{\mathrm{GH}}(X,S^n)+\|F^*g_{\mathrm{eucl}}-g\|_{C^0}
 \le C(n,\eta,\Lambda')\,\delta.
 \]
-No Ricci bound is used. Diameter control is that graph, not Cheng
-comparison.
+If the tail is cut at finite \(\Lambda''\), Theorem 2(ii) replaces
+\(\delta_t\) by \(\Delta_{\mathrm{fr}}\). No Ricci bound is used.
+Diameter control is that graph.
 
-Lemma 5 already records the Kato reduction: on a small \(C^2\) ball
-about \(g_{\mathrm{rd}}\), written as a divergence-form operator on
-\(L^2(d\mathrm{vol}_{g_{\mathrm{rd}}})\), the contours about \(0\),
-\(n\), and \(2n+2\) miss \(\operatorname{Spec}(\Delta_g)\)
-[Kat95, Ch.~IV]. Thus the three gaps persist,
-\(\delta\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}\), and Theorem 4
-applies on that ball in \(\mathcal{M}^2(M)\) for \(M\simeq S^n\).
-Individual eigenvalues in the cluster may split; only the joint span
-\(\mathcal{V}\) is used. The specialisation \(w=0\), \(\eta\to 0\),
-\(\Lambda'=2n+2+\eta\) recovers exact projectors
-\(\Pi_0+\Pi_{2n+2}\) and the single-eigenspace stability of Theorem 3.
+On a small \(C^2\) ball about \(g_{\mathrm{rd}}\), written as a
+divergence-form operator on \(L^2(d\mathrm{vol}_{g_{\mathrm{rd}}})\),
+the contours about \(0\), \(n\), and \(2n+2\) miss \(\mathrm{Spec}(\Delta_g)\)
+[Kat95, Ch.~IV]. Thus the three gaps persist. Elliptic estimates on
+the isolated cluster give \(C^0\) control of the frame from
+\(\|g-g_{\mathrm{rd}}\|_{C^2}\), and therefore
+\[
+\delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
+\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
+\]
+A finite cut makes \(\delta_t\) of the same order. Individual
+eigenvalues in the cluster may split; only the joint span \(\mathcal{V}\)
+is used.
 \end{proof}
 
 \begin{remark}
