@@ -532,8 +532,7 @@ The cut identity is the exact Leibniz formula with \(\Pi_{\Lambda''}(uv)\)
 in place of \(uv\):
 \[
 2\Gamma_{\Lambda''}(u,v)
-=uPv+vPu-P\bigl(\Pi_{\Lambda''}(uv)\bigr)
-+R_{(\Lambda',\Lambda'']}(u,v).
+=uPv+vPu-P\bigl(\Pi_{\Lambda''}(uv)\bigr).
 \]
 The true identity is
 \[
@@ -542,8 +541,7 @@ The true identity is
 Subtract:
 \[
 2\bigl(\Gamma_{\Lambda''}(u,v)-\Gamma(u,v)\bigr)
-=P\bigl((I-\Pi_{\Lambda''})(uv)\bigr)
--R_{(\Lambda',\Lambda'']}(u,v).
+=P\bigl((I-\Pi_{\Lambda''})(uv)\bigr).
 \]
 On the range of \(\Pi_{(\Lambda',\Lambda'']}\) one has
 \(R_{(\Lambda',\Lambda'']}=-P\,\Pi_{(\Lambda',\Lambda'']}(uv)\), and
