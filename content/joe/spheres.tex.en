@@ -278,6 +278,8 @@ realises \(X\) as a \(C^1\)-graph over \(S^n\), and
 d_{\mathrm{GH}}(X,S^n)+\|F^*g_{\mathrm{eucl}}-g\|_{C^0}
 \le C(n,\eta,\Lambda')\,\delta.
 \]
+\end{theorem}
+
 If the tail of \(R_{\Lambda'}\) occupies a finite slot of dimension
 \(d_{\mathrm{tail}}\) (or is cut at a finite \(\Lambda''\)), then
 \(\delta_t\le C(n,d_{\mathrm{tail}},\Lambda',\Lambda'')\Delta_{\mathrm{fr}}\)
@@ -302,15 +304,14 @@ the frame, and
 \[
 \delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
 \le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
-\]
+\]0
+
 The tail modulus \(\delta_t\) is not in general \(O(\|g-g_{\mathrm{rd}}\|_{C^2})\)
 for an infinite tail; it is, after a finite cut \(\Lambda''\).
 Thus Theorem 4 applies on that ball with the finite-cut form of \(\delta\).
 It does not apply to a residual set in \(\mathcal{M}\): a generic
 perturbation may break isolation or spray products through the
 \(\eta\)-gaps.
-
-\end{theorem}
 
 The \(C^0\) bound and min-max give
 \(\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k,\eta)\,\delta\)
