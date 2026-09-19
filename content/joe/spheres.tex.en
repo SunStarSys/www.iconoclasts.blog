@@ -21,7 +21,6 @@
 \usepackage{fontsetup}
 \usepackage{tikz-cd}
 
-
 \usepackage[style=alphabetic]{biblatex}
 \addbibresource{content/joe/spheres.bib.en}
 
@@ -469,6 +468,17 @@ They do not bound \(\delta_t\) for an infinite tail. Theorem 4
 applies on that ball with the finite-cut form of \(\delta\), or with
 \(\delta_t\) kept as packet data. Individual eigenvalues in the
 cluster may split; only the joint span \(\mathcal{V}\) is used.
+
+In the infinite-tail regime the constraint \(\delta<\delta_*\) is open
+in the \(C^k\) topology on metrics for every \(k>1\). Continuity of
+\(\delta_w\), \(\delta_{\mathrm{on}}\), \(\delta_1\), and \(\delta_\Phi\)
+is Kato’s \(C^2\) statement on the isolated cluster. Continuity of
+\(\delta_t=\|t_{\Lambda'}\|_{C^1}\) uses \(C^k\) control of the window
+functions and of \(\Pi_{\Lambda'}(x_ax_b)\) at a fixed cutoff
+\(\Lambda'\). The finite-cut form of \(\delta\) is already open in
+\(C^2\). Neither statement is openness in the residual set of
+\(\mathcal{M}\): a perturbation may still close a gap or move mass
+through the \(\eta\)-windows.
 
 The specialisation \(w=0\), \(\eta\to 0\), \(\Lambda'=2n+2+\eta\),
 and \(t=0\) recovers exact projectors \(\Pi_0+\Pi_{2n+2}\) and the
