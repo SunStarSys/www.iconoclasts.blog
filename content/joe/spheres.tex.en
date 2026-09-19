@@ -445,6 +445,40 @@ The error in replacing \(\Pi_{\mathrm{sph}}\) by \(\Pi^\eta_{\mathrm{sph}}\)
 is \(O(\eta)\|x_ax_b\|_2\) and is absorbed into \(C(n,\eta)\) in
 Theorem 4. The tail above \(\Lambda'\) is not \(\delta_\Phi\).
 
+Write \(\Delta_g\) as a divergence-form operator on the fixed space
+\(L^2(d\mathrm{vol}_{g_{\mathrm{rd}}})\). On a sufficiently small
+\(C^2\) ball about \(g_{\mathrm{rd}}\), the resolvent is close in
+operator norm and the contours about \(0\), \(n\), and \(2n+2\) miss
+\(\mathrm{Spec}(\Delta_g)\) [Kat95, Ch.~IV]. Thus \(\Pi^\eta_{\mathrm{sph}}\)
+has rank bounded in terms of \(n\) only, and the first \(n+1\) modes
+remain an isolated cluster. Kato and elliptic estimates on that
+cluster give
+\[
+\delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
+\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
+\]
+They do not bound \(\delta_t\) for an infinite tail. Theorem 4
+applies on that ball with the finite-cut form of \(\delta\), or with
+\(\delta_t\) kept as packet data. Individual eigenvalues in the
+cluster may split; only the joint span \(\mathcal{V}\) is used.
+
+The specialisation \(w=0\), \(\eta\to 0\), \(\Lambda'=2n+2+\eta\),
+and \(t=0\) recovers exact projectors \(\Pi_0+\Pi_{2n+2}\) and the
+single-eigenspace case of Theorem 3.
+\end{proof}
+
+\begin{remark}[Sogge and $\lVert t\rVert_{C^0}$]
+Hörmander–Sogge gives $\lVert e_\lambda\rVert_{C^0}\le C_S(n)\,(1+\lambda)^{(n-1)/4}$ \cite{Sog88}. Expanding $t$ and applying Cauchy–Schwarz with the weight in $R=Pt$ yields, for a tail supported in a finite slot $\Lambda<\lambda\le\Lambda''$,
+$$\lVert t\rVert_{C^0}\le C(n,\Lambda',\Lambda'')\,\Delta,$$
+and therefore
+$$\lVert R\rVert_{C^0(X)}\le C(n,\Lambda',\Lambda'')\,\Delta.$$
+Wyman bounds the coefficients of $R$ \cite{Wym}; Sogge bounds the modes. Neither is a curvature comparison.
+\end{remark}
+
+\begin{remark}
+If the $\Phi$-tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$, all norms on that slot are equivalent and
+$$\lVert R\rVert_{C^k(X)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
+If the tail is infinite, $\lVert R\rVert_{C^k}$ remains the modulus.
 \begin{claim}[cut cometric, fixed pair]
 Let \(u,v\in\mathcal{V}\) on a fixed closed Witten pair \((X,g,\alpha)\).
 For \(\Lambda''\ge\Lambda'\) write
@@ -531,41 +565,6 @@ that \(2m>k+n/2+2\). Those norms depend on the pair \((X,g,\alpha)\)
 and on the two window functions. They are not claimed to be bounded
 uniformly for \(g\) in a \(C^2\) neighbourhood of a model metric.
 \end{subproof}
-
-Write \(\Delta_g\) as a divergence-form operator on the fixed space
-\(L^2(d\mathrm{vol}_{g_{\mathrm{rd}}})\). On a sufficiently small
-\(C^2\) ball about \(g_{\mathrm{rd}}\), the resolvent is close in
-operator norm and the contours about \(0\), \(n\), and \(2n+2\) miss
-\(\mathrm{Spec}(\Delta_g)\) [Kat95, Ch.~IV]. Thus \(\Pi^\eta_{\mathrm{sph}}\)
-has rank bounded in terms of \(n\) only, and the first \(n+1\) modes
-remain an isolated cluster. Kato and elliptic estimates on that
-cluster give
-\[
-\delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
-\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
-\]
-They do not bound \(\delta_t\) for an infinite tail. Theorem 4
-applies on that ball with the finite-cut form of \(\delta\), or with
-\(\delta_t\) kept as packet data. Individual eigenvalues in the
-cluster may split; only the joint span \(\mathcal{V}\) is used.
-
-The specialisation \(w=0\), \(\eta\to 0\), \(\Lambda'=2n+2+\eta\),
-and \(t=0\) recovers exact projectors \(\Pi_0+\Pi_{2n+2}\) and the
-single-eigenspace case of Theorem 3.
-\end{proof}
-
-\begin{remark}[Sogge and $\lVert t\rVert_{C^0}$]
-Hörmander–Sogge gives $\lVert e_\lambda\rVert_{C^0}\le C_S(n)\,(1+\lambda)^{(n-1)/4}$ \cite{Sog88}. Expanding $t$ and applying Cauchy–Schwarz with the weight in $R=Pt$ yields, for a tail supported in a finite slot $\Lambda<\lambda\le\Lambda''$,
-$$\lVert t\rVert_{C^0}\le C(n,\Lambda',\Lambda'')\,\Delta,$$
-and therefore
-$$\lVert R\rVert_{C^0(X)}\le C(n,\Lambda',\Lambda'')\,\Delta.$$
-Wyman bounds the coefficients of $R$ \cite{Wym}; Sogge bounds the modes. Neither is a curvature comparison.
-\end{remark}
-
-\begin{remark}
- If the $\Phi$-tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$, all norms on that slot are equivalent and
-$$\lVert R\rVert_{C^k(X)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
-If the tail is infinite, $\lVert R\rVert_{C^k}$ remains the modulus.
 \end{remark}
 
 \begin{corollary}
