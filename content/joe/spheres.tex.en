@@ -278,7 +278,6 @@ realises \(X\) as a \(C^1\)-graph over \(S^n\), and
 d_{\mathrm{GH}}(X,S^n)+\|F^*g_{\mathrm{eucl}}-g\|_{C^0}
 \le C(n,\eta,\Lambda')\,\delta.
 \]
-\end{theorem}
 
 If the tail of \(R_{\Lambda'}\) occupies a finite slot of dimension
 \(d_{\mathrm{tail}}\) (or is cut at a finite \(\Lambda''\)), then
@@ -287,6 +286,8 @@ with \(\Delta_{\mathrm{fr}}=\sup\|R_{\Lambda'}(x_a,x_b)\|_2\), and \(\delta\)
 may be written with \(\Delta_{\mathrm{fr}}\) in place of \(\delta_t\).
 If \(\Lambda'=2n+2+\eta\) and the tail is so cut, the constant depends
 only on \(n\), \(\eta\), and \(d_{\mathrm{tail}}\).
+
+\end{theorem}
 
 On a fixed pair a cut exists by Claim 7.1; the Kato ball uses one cut chosen after the metric.
 
