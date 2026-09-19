@@ -286,6 +286,8 @@ may be written with \(\Delta_{\mathrm{fr}}\) in place of \(\delta_t\).
 If \(\Lambda'=2n+2+\eta\) and the tail is so cut, the constant depends
 only on \(n\), \(\eta\), and \(d_{\mathrm{tail}}\).
 
+On a fixed pair a cut exists by Claim 5.1; the Kato ball uses one cut chosen after the metric.
+
 This is linear stability of the first \(n+1\) harmonics of Theorem 3,
 allowing the first slot to split and the quadratic slot to drift inside
 an \(\eta\)-gap. It does not use Ricci curvature. When \(w=0\),
@@ -307,6 +309,7 @@ Thus Theorem 4 applies on that ball with the finite-cut form of \(\delta\).
 It does not apply to a residual set in \(\mathcal{M}\): a generic
 perturbation may break isolation or spray products through the
 \(\eta\)-gaps.
+
 \end{theorem}
 
 The \(C^0\) bound and min-max give
