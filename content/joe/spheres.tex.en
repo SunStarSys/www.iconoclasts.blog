@@ -978,6 +978,69 @@ Remark 6 of \cite{Sch26}: Adve is uniqueness for unit tangent bundles
 of compact hyperbolic 2-orbifolds, not an instance of (G7).
 \end{remark}
 
+\begin{proposition}[converse to §9.1]
+Let \((X,g)\) be a compact connected Riemannian homogeneous space.
+Then there exists an exact unweighted packet whose evaluation is an
+isometric embedding into a product of slot spheres. In particular
+\((X,g)\) arises in the class described by §9.1.
+\end{proposition}
+\begin{subproof}
+Write \(X=G/H\) with \(G\) a compact Lie group of isometries acting
+transitively and \(H=\mathrm{Stab}_G(x_0)\). The Laplacian
+\(P=-\Delta_g\) commutes with \(G\), so \(L^2(X)\) decomposes into
+finite-dimensional irreducible \(G\)-modules and each irreducible
+summand lies in a single eigenspace of \(P\) (Schur).
+
+By Moore \cite{Moo76}, there is a \(G\)-equivariant isometric embedding
+\[
+\iota\colon (X,g)\longrightarrow\mathbb{R}^N
+\]
+into Euclidean space, for some \(N<\infty\), with \(G\) acting
+linearly and orthogonally on \(\mathbb{R}^N\). (Mostow supplies a
+\(G\)-equivariant embedding; Moore makes it isometric.) Decompose
+the ambient module as
+\[
+\mathbb{R}^N=\bigoplus_{j=1}^s\mathcal{E}_j
+\]
+into irreducible \(G\)-summands. The coordinate functions of
+\(\iota\) on \(\mathcal{E}_j\) span a \(G\)-irreducible space of
+smooth functions on \(X\), hence lie in a single eigenspace of
+\(P\). Let \(\mathcal{V}=\bigoplus_j\mathcal{E}_j^\vee\) be the
+corresponding window of eigenfunctions (the dual coordinates),
+and let \(\lambda_j\) be the eigenvalue on the \(j\)-th slot.
+
+The slot quadratic
+\[
+Q_j=\sum_{u\in\mathrm{ONB}(\mathcal{E}_j^\vee)}u^2
+\]
+is \(G\)-invariant, hence constant on \(X\). Thus \(\iota(X)\)
+lies in the product of spheres
+\[
+\prod_{j=1}^s\sqrt{Q_j}\,S(\mathcal{E}_j).
+\]
+Isometry of \(\iota\) means
+\[
+g=\iota^*g_{\mathrm{eucl}}=\sum_j\iota_j^*g_{\mathrm{eucl},j},
+\]
+so evaluation on \(\mathcal{V}\) is an isometric embedding into
+that product of slot spheres. Differentials of the coordinates
+span \(T^*X\) because \(\iota\) is an immersion, which is W2.
+W1 is the embedding.
+
+It remains to check exactness. The pointwise product of two
+matrix coefficients of irreps \(\rho\) and \(\sigma\) is a matrix
+coefficient of \(\rho\otimes\sigma\), hence a finite sum of matrix
+coefficients of the irreducible constituents of \(\rho\otimes\sigma\).
+Taking \(\Lambda'\) large enough that \(\mathcal{V}'\) contains every
+constituent of \(\mathcal{E}_j^\vee\otimes\mathcal{E}_k^\vee\) for
+all slots \(j,k\), one has \(R=0\). The packet
+\((\Lambda,\Lambda',\sigma(P)\cap[0,\Lambda'],\Phi|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},0)\)
+is therefore an exact unweighted slot-sphere packet for \((X,g)\).
+
+Residual freedom is an orthogonal change of basis of \(\mathcal{V}\)
+preserving \(\Phi\), as in Theorem 1.
+\end{subproof}
+
 \subsection{The Torus Packet}
 The first window of a sphere is not the only exact packet. On a compact flat manifold the characters of the translation lattice multiply by addition of frequencies, so any finite spanning set of frequencies is exact at a finite cutoff. Theorem 1 reconstructs the flat metric. Theorem 21 supplies transitivity from the group law.
 
