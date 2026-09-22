@@ -1085,6 +1085,14 @@ The translation torus of $\mathbb{R}^n/\Lambda_{\mathrm{tr}}$ acts by isometries
 \end{remark}
 This subsection does not use Remark 26. The torus tower $\mathcal{V}_k=\operatorname{span}\{e_\xi:\lvert\xi\rvert\le kR\}$ is infinite and graded by $\Lambda_{\mathrm{tr}}^*$, which is the abelian case of the second clause of Remark 26.
 
+\begin{remark}[global $N$-product bases]
+Schildkraut–Speciel \cite{SS26} study a global strengthening of exactness: an orthonormal eigenbasis $\{\varphi_i\}_{i\ge0}$ of $L^2(X)$ is an $N$-product eigenbasis if every pairwise product $\varphi_i\varphi_j$ is a linear combination of at most $N$ elements of the basis. Equivalently, the whole eigenbasis is an exact packet whose product-support width is bounded by a fixed integer $N$, independently of the factors. For $N=2$ they prove that a closed connected Riemannian manifold admits such a basis if and only if it is a flat torus; they obtain an analogous Cayley / Cayley-sum conclusion for bounded-degree graphs of odd order.
+
+That hypothesis is strictly stronger than an exact window in the sense of this paper. Here exactness is a finite-cutoff condition: $R=0$ on a pair $(\mathcal{V}_\Lambda,\mathcal{V}_{\Lambda'})$, so products of modes in $\mathcal{V}_\Lambda$ land in a finite $\mathcal{V}_{\Lambda'}$ whose degree may grow with $\Lambda$. A $2$-product eigenbasis is the special case in which one may take $\Lambda'=\infty$ and still have
+$$\#\{\,k:\Phi(\varphi_i,\varphi_j,\varphi_k)\ne0\,\}\le 2$$
+for every $i,j$, including arbitrarily high eigenvalues. Flat tori realise that bound because characters multiply to characters. The reconstruction of $C^\infty(X)$ from the infinite table $\Phi$, which they record as a folklore argument after Nestruev and note also appears in \cite{Sch24}, is the unrestricted-window limit of Theorem~1; it is not a substitute for the finite-packet statements of Theorems~2--4 or for the homogeneous analysis of this section.
+\end{remark}
+
 \doclicenseThis
 \printbibliography
 \end{document}
