@@ -368,6 +368,9 @@ On pairs from $\mathcal{V}$, (A1) reads
 $$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v).$$
 Thus $\Gamma$ on $\mathcal{V}$ is not an independent input. No Weyl law, no potential, and no curvature bound is assumed. Dimension of $X$ is the rank in W2.
 
+When $P=-\Delta$ (equivalently $\alpha=0$), both axioms hold on an arbitrary closed Riemannian manifold, with no curvature hypothesis. Wyman’s bound on $\Phi$ is valid in that generality. Independently, there exists $\Lambda<\infty$ such that $$\iota_\Lambda:X\to\mathcal{V}_\Lambda^*$$
+is a smooth immersive embedding: finitely many eigenfunctions separate points and span the cotangent space \cite{BBG94; Portegies14}. Thus a sufficiently large Laplace window always carries a Wyman estimate and a spectral frame. These facts do not select spheres, nor do they force exactness. Compact hyperbolic surfaces satisfy both axioms for all large $\Lambda$, yet products of eigenfunctions have infinite tails, so $R\neq0$. Rigidity in Theorems~2--4 and in §9 begins only when the visible table is close to exact, or close to the spherical Clebsch–Gordan pattern, on that window.
+
 \section{The Cometric From the Window}
 
 \begin{lemma}
