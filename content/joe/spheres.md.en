@@ -229,7 +229,7 @@ $$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv) =-\sum_{\lambda>\Lambda'}\lambda\,\P
 
 and
 
-$$\Delta=\sup\bigl\{\lVert R(u,v)\rVert_2:\ u,v\in\mathcal{V},\ \lVert u\rVert_2=\lVert v\rVert_2=1\bigr\}.$$
+$$\Delta=\sup\set{\lVert R(u,v)\rVert_2:\ u,v\in\mathcal{V},\ \lVert u\rVert_2=\lVert v\rVert_2=1}$$
 
 The exact subclass is $$R=0$$, equivalently $$\Delta=0$$.
 
@@ -278,10 +278,7 @@ is a smooth immersive embedding: finitely many eigenfunctions separate points an
 Let $$u,v\in\mathcal{V}$$. Split the pointwise product as
 
 $$
-uv=m(u,v)+t(u,v),\qquad
-m(u,v)=\Pi_{\Lambda'}(uv),\qquad
-t(u,v)=(I-\Pi_{\Lambda'})(uv).
-$$
+uv=m(u,v)+t(u,v),\qquad m(u,v)=\Pi_{\Lambda'}(uv),\qquad t(u,v)=(I - \Pi_{\Lambda'})(uv).$$
 
 The visible product $$m(u,v)$$ is assembled from the in-window table:
 
@@ -473,8 +470,10 @@ If $$R=0$$, the Gram functions $$\Gamma(u,v)$$ for $$u,v\in\mathcal{V}$$ are pac
 
 \section{Characters}
 Let $$m:\mathcal{V}\times\mathcal{V}\to\mathcal{V}'$$ be the packet product of §2. By W1, evaluation
-$\iota:X\to\mathcal{V}^\ast,\qquad
+
+$$\iota:X\to\mathcal{V}^\ast,\qquad
 \iota':X\to(\mathcal{V}')^\ast$$
+
 are smooth embeddings onto closed submanifolds. Characters of the window are evaluations on $$\mathcal{V}'$$. In particular the comparison error between $$R$$ as a function on $$X$$ and $$R$$ as a function on the image $$\Sigma=\iota(X)$$ vanishes: $$R_\Sigma\circ\iota=R_X$$.
 
 \begin{lemma}
@@ -508,7 +507,7 @@ $$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
 \begin{proof}
 W1 makes $$\iota$$ a smooth embedding onto a closed submanifold. The size of $$t$$ is used only to persist that embedding in the $$C^1$$ topology and to compare $$\|R\|_{C^k}$$ on $$X$$ and on $$\Sigma$$.
 
-The product map $$F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$$ vanishes on $$\iota(X)$$ up to $$t$$. Evaluation extends to $$\mathcal{V}'$$, so at $$\xi=\iota(x)$$ one has $$\xi(m(u,v))=m(u,v)(x)$$ and the only defect is $$t(x)$$. Differentiating $$F$$ in the $$\mathcal{V}^*$$-directions at $$\iota(x)$$ yields the family $$(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$$ on $$T_x^*X$$. W2 says $$\{du:u\in\mathcal{V}\}$$ spans $$T_x^*X$$, so this family is transverse to $$\iota(X)$$. If $$\lVert t\rVert_{C^1}<\tau_*$$, $$F$$ is a $$C^1$$-small perturbation of a section that vanishes exactly on $$\iota(X)$$. Persistence of transverse embeddings keeps $$\iota$$ a $$C^1$$ diffeomorphism onto its image. If $$t=0$$, then $$R=0$$, $$F$$ vanishes exactly on $$\iota(X)$$, and $$\iota$$ is $$C^\infty$$. The $$C^k$$ comparison of $$R_X$$ and $$R_\Sigma$$ is the chain rule for $$\iota$$ and $$\iota^{-1}$$, whose $$C^{k-1}$$ norms stay bounded for $$\lVert t\rVert_{C^1}<\tau_*$$.
+The product map $$F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$$ vanishes on $$\iota(X)$$ up to $$t$$. Evaluation extends to $$\mathcal{V}'$$, so at $$\xi=\iota(x)$$ one has $$\xi(m(u,v))=m(u,v)(x)$$ and the only defect is $$t(x)$$. Differentiating $$F$$ in the $$\mathcal{V}^*$$-directions at $$\iota(x)$$ yields the family $$(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$$ on $$T_x^ \* X$$. W2 says $$\{du:u\in\mathcal{V}\}$$ spans $$T_x^ \*X$$, so this family is transverse to $$\iota(X)$$. If $$\lVert t\rVert_{C^1}<\tau_*$$, $$F$$ is a $$C^1$$-small perturbation of a section that vanishes exactly on $$\iota(X)$$. Persistence of transverse embeddings keeps $$\iota$$ a $$C^1$$ diffeomorphism onto its image. If $$t=0$$, then $$R=0$$, $$F$$ vanishes exactly on $$\iota(X)$$, and $$\iota$$ is $$C^\infty$$. The $$C^k$$ comparison of $$R_X$$ and $$R_\Sigma$$ is the chain rule for $$\iota$$ and $$\iota^{-1}$$, whose $$C^{k-1}$$ norms stay bounded for $$\lVert t\rVert_{C^1}<\tau_*$$.
 
 For (ii), a finite slot makes every $$C^k$$ norm on the tail equivalent to the $$L^2$$ norm of $$R=-Pt$$. Remark 6 supplies the $$C^0$$ bound on $$t$$ via Sogge; equivalence of norms on a space of dimension $$d_{\mathrm{tail}}$$ upgrades that to $$C^1$$. Thus $$\Delta$$ small implies $$\lVert t\rVert_{C^1}$$ small, and (i) applies.
 \end{proof}
@@ -718,18 +717,20 @@ Theorem 21 does not assume a tower.
 \end{lemma}
 
 \begin{proof}Myers–Steenrod: the isometry group of a compact Riemannian manifold is a compact Lie group acting smoothly. An isometry commutes with $$\Delta_g$$, so it preserves eigenspaces and the $$L^2$$ pairing. It therefore acts on $$\mathcal{V}$$ and on $$\mathcal{V}'$$, and
-$\iota(k\cdot x)(u)=u(k^{-1}x)=(k^*\iota(x))(u),$$
+
+$$\iota(k\cdot x)(u)=u(k^{-1}x)=(k^*\iota(x))(u),$$
+
 so $$\iota$$ is equivariant. Lemma 5 with $$R=0$$ gives $$\Gamma(u,v)$$ as a bilinear combination of products and of $$P$$ on $$\mathcal{V}$$. Both are $$K$$-invariant, so $$\Gamma$$ is. Lemma 14 dualizes $$\Gamma$$ to $$g$$, which is therefore $$K$$-invariant.
 \end{proof}
 
 \begin{lemma}[the linear automorphism group]
 Let $$m:\mathcal{V}\times\mathcal{V}\to\mathcal{V}'$$ be the multiplication $$m(u,v)=uv$$ of the exact packet, and let
 
-$$Z:=\bigl\{\xi\in\mathcal{V}^*:\ \xi(u)\xi(v)=\eta_\xi(m(u,v))\ \text{for all }u,v\in\mathcal{V}\bigr\},$$
+$$Z:=\set{\xi\in\mathcal{V}^*:\ \xi(u)\xi(v)=\eta_\xi(m(u,v))\ \text{for all }u,v\in\mathcal{V}},$$
 
 where $$\eta_\xi\in(\mathcal{V}')^*$$ is the unique linear extension of $$\xi$$ along $$m$$ furnished by $$R=0$$ (evaluation of $$\mathcal{V}'$$ on $$X$$, transported by Lemma 9). Let
 
-$$G:=\bigl\{A\in\mathrm{O}(\mathcal{V}^*):\ A\cdot Z=Z\bigr\}.$$
+$$G:=\set{A\in\mathrm{O}(\mathcal{V}^*):\ A\cdot Z=Z}.$$
 
 Then $$G$$ is a compact Lie group, $$\iota(X)$$ is a union of connected components of the smooth locus of $$Z$$, and $$G$$ acts isometrically on $$(X,g)$$. The image of $$K$$ in $$\mathrm{O}(\mathcal{V}^*)$$ lands in $$G$$.
 \end{lemma}
@@ -858,7 +859,7 @@ $$
 Isometry of $$\iota$$ means
 
 $$
-g=\iota^*g_{\mathrm{eucl}}=\sum_j\iota_j^*g_{\mathrm{eucl},j},
+g=\iota^ \*g_{\mathrm{eucl}}=\sum_j\iota_j^*g_{\mathrm{eucl},j},
 $$
 
 so evaluation on $$\mathcal{V}$$ is an isometric embedding into that product of slot spheres. Differentials of the coordinates span $$T^*X$$ because $$\iota$$ is an immersion, which is W2. W1 is the embedding.
