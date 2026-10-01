@@ -13,131 +13,152 @@ To Autumn.
 
 ## Abstract
 
-Let $P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$ be a Witten operator on a closed connected Riemannian manifold, acting in $L^2(e^{-\alpha}\,d\mathrm{vol}_g)$. The spectrum of $P_\alpha$ does not determine $(g,\alpha)$. The full multiplication table of eigenfunctions does. This paper isolates a finite piece of that table.
+Let $$P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$ be a Witten operator on a closed connected Riemannian manifold, acting in $$L^2(e^{-\alpha}\,d\mathrm{vol}_g)$$. The spectrum of $$P_\alpha$$ does not determine $$(g,\alpha)$$. The full multiplication table of eigenfunctions does. This paper isolates a finite piece of that table.
 
-Fix cutoffs $\Lambda\le\Lambda'<\infty$ and let $\mathcal{V}$ be the sum of eigenspaces of eigenvalue at most $\Lambda$. The visible packet is the restriction of the triple products $\Phi$ to pairs from $\mathcal{V}$ against modes up to $\Lambda'$, together with the weighted tail
+Fix cutoffs $$\Lambda\le\Lambda'<\infty$$ and let $$\mathcal{V}$$ be the sum of eigenspaces of eigenvalue at most $$\Lambda$$. The visible packet is the restriction of the triple products $$\Phi$$ to pairs from $$\mathcal{V}$$ against modes up to $$\Lambda'$$, together with the weighted tail
 $$R(u,v)=-P(I-\Pi_{\Lambda'})(uv)=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,\bar e_\lambda)\,e_\lambda$$
-and its uniform size $\Delta=\sup\lVert R(u,v)\rVert_2$ over unit $u,v\in\mathcal{V}$. Write $t=(I-\Pi_{\Lambda'})(uv)$. No Weyl law, no potential, and no curvature bound is used. A Wyman bound on window triples guarantees that the coefficients of $R$ exist.
+and its uniform size $$\Delta=\sup\lVert R(u,v)\rVert_2$$ over unit $$u,v\in\mathcal{V}$$. Write $$t=(I-\Pi_{\Lambda'})(uv)$$. No Weyl law, no potential, and no curvature bound is used. A Wyman bound on window triples guarantees that the coefficients of $$R$$ exist.
 
-If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$ and an additive constant on $\alpha$. If $\lVert t\rVert_{C^1}$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^*$, evaluation realises $X$ as a $C^1$ submanifold $\Sigma\subset\mathcal{V}^*$ on which
-$$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)},$$
-with $d=\dim\mathcal{V}$. That bound is not a statement about $\Delta$. When the tail of $\Phi$ occupies a finite slot, Sobolev embedding on $\Sigma$ converts $\lVert R\rVert_{C^k}$ into a multiple of $\Delta$, with constants depending only on window dimensions and $k$.
+If $$R=0$$, the packet determines $$(X,g,\alpha)$$ up to a $$C^\infty$$ isometry of $$g$$ and an additive constant on $$\alpha$$. If $$\lVert t\rVert_{C^1}$$ is smaller than a threshold depending on the embedding of $$X$$ in $$\mathcal{V}^*$$, evaluation realises $$X$$ as a $$C^1$$ submanifold $$\Sigma\subset\mathcal{V}^*$$ on which
+$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)},$$
+with $$d=\dim\mathcal{V}$$. That bound is not a statement about $$\Delta$$. When the tail of $$\Phi$$ occupies a finite slot, Sobolev embedding on $$\Sigma$$ converts $$\lVert R\rVert_{C^k}$$ into a multiple of $$\Delta$$, with constants depending only on window dimensions and $$k$$.
 
-If in addition $\alpha=0$, an exact packet realises $X$ as a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). When $\dim\mathcal{V}=n+1$ and the quadratic $Q=\sum u_a^2$ is constant, that action is transitive and $X$ is isometric to a sphere of radius $\sqrt Q$.
+If in addition $$\alpha=0$$, an exact packet realises $$X$$ as a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). When $$\dim\mathcal{V}=n+1$$ and the quadratic $$Q=\sum u_a^2$$ is constant, that action is transitive and $$X$$ is isometric to a sphere of radius $$\sqrt Q$$.
 
 There is a correspondence between slot-sphere exact packets and compact connected Riemannian homogeneous spaces. Whether every exact unweighted window is of slot-sphere type is left open.
 
-The unweighted first window on the sphere is the minimal finite-tail case: $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $R=0$ already at $\Lambda'=2n+2$. That frame recognizes the unit round sphere exactly, and recognizes it with linear $C^0$ stability for an isolated cluster of first $n+1$ harmonics with an almost spherical table. Those statements are frame-side. They are not Obata theorems.
+The unweighted first window on the sphere is the minimal finite-tail case: $$\Lambda=n$$, $$\dim\mathcal{V}=n+1$$, and $$R=0$$ already at $$\Lambda'=2n+2$$. That frame recognizes the unit round sphere exactly, and recognizes it with linear $$C^0$$ stability for an isolated cluster of first $$n+1$$ harmonics with an almost spherical table. Those statements are frame-side. They are not Obata theorems.
 
 ## Introduction
 
-A Witten operator on a closed Riemannian manifold $(X,g)$ is the weighted Laplacian
-$$P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
-acting in $L^2(e^{-\alpha}\,d\mathrm{vol}_g)$ \cite{Wit82}. Its spectrum is discrete, nonnegative, and unbounded, with kernel the constant functions. The geometric data of the pair are the metric $g$ and the weight $\alpha$; equivalently, Riemannian volume and the measure $\mu=e^{-\alpha}\,d\mathrm{vol}_g$. Ordinary Laplace–Beltrami operators are the case $\alpha=0$.
+A Witten operator on a closed Riemannian manifold $$(X,g)$$ is the weighted Laplacian
 
-The spectrum alone does not determine $(g,\alpha)$. What does determine them, in the large, is the multiplication table of eigenfunctions
+$$P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
+
+acting in $$L^2(e^{-\alpha}\,d\mathrm{vol}_g)$$ \cite{Wit82}. Its spectrum is discrete, nonnegative, and unbounded, with kernel the constant functions. The geometric data of the pair are the metric $$g$$ and the weight $$\alpha$$; equivalently, Riemannian volume and the measure $$\mu=e^{-\alpha}\,d\mathrm{vol}_g$$. Ordinary Laplace–Beltrami operators are the case $$\alpha=0$$.
+
+The spectrum alone does not determine $$(g,\alpha)$$. What does determine them, in the large, is the multiplication table of eigenfunctions
+
 $$\Phi(u,v,w)=\int_X uvw\,d\mu$$
+
 together with the list of eigenvalues \cite{Sch24,Sch26}. That statement consumes every eigenspace. The purpose of this article is a finite substitute.
-Fix cutoffs $\Lambda\le\Lambda'<\infty$ and let
+Fix cutoffs $$\Lambda\le\Lambda'<\infty$$ and let
 $$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda)$$
-be the corresponding spectral window. Products of window functions need not lie in $\mathcal{V}$. Write $m(u,v)=\Pi_{\Lambda'}(uv)$ for the projection onto modes up to $\Lambda'$, and
-$$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv)
+be the corresponding spectral window. Products of window functions need not lie in $$\mathcal{V}$$. Write $$m(u,v)=\Pi_{\Lambda'}(uv)$$ for the projection onto modes up to $$\Lambda'$$, and
+$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv)
 =-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,\bar e_\lambda)\,e_\lambda$$
-for the weighted tail of those products. Throughout, $u,v\in\mathcal{V}$. The uniform size of the tail is
+for the weighted tail of those products. Throughout, $$u,v\in\mathcal{V}$$. The uniform size of the tail is
+
 $$\Delta=\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\lVert R(u,v)\rVert_2.$$
 
-The exact subclass is $R=0$ at a finite $\Lambda'$, which is an algebraic constraint on the window, not an asymptotic one. A Wyman bound on window triples guarantees that the coefficients of $R$ exist \cite{Wym}.
+The exact subclass is $$R=0$$ at a finite $$\Lambda'$$, which is an algebraic constraint on the window, not an asymptotic one. A Wyman bound on window triples guarantees that the coefficients of $$R$$ exist \cite{Wym}.
 
 The visible packet is
+
 $$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},\ R\bigr).$$
 
-The cometric $\Gamma$ of $g$ is not an extra input. The identity
+The cometric $$\Gamma$$ of $$g$$ is not an extra input. The identity
+
 $$P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v)$$
-computes $\Gamma$ on $\mathcal{V}$ from $(P,\Phi)$ with remainder $R$. Two nondegeneracy hypotheses close the packet: evaluation $X\to\mathcal{V}^\ast$ is a smooth embedding, and $\{du:u\in\mathcal{V}\}$ spans $T^*X$. No Weyl law is assumed, no potential is present, and no curvature bound is used.
 
-If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$ and an additive constant on $\alpha$. If $\alpha=0$, that pair carries a compact Lie group of isometries whose orbits decompose $X$ (§9); if also $\dim\mathcal{V}=n+1$ and $Q$ is constant, $X$ is a sphere. If $\lVert t\rVert_{C^1}$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^*$, evaluation realises $X$ as a $C^1$ submanifold $\Sigma\subset\mathcal{V}^*$ on which
+computes $$\Gamma$$ on $$\mathcal{V}$$ from $$(P,\Phi)$$ with remainder $$R$$. Two nondegeneracy hypotheses close the packet: evaluation $$X\to\mathcal{V}^\ast$$ is a smooth embedding, and $$\{du:u\in\mathcal{V}\}$$ spans $$T^*X$$. No Weyl law is assumed, no potential is present, and no curvature bound is used.
+
+If $$R=0$$, the packet determines $$(X,g,\alpha)$$ up to a $$C^\infty$$ isometry of $$g$$ and an additive constant on $$\alpha$$. If $$\alpha=0$$, that pair carries a compact Lie group of isometries whose orbits decompose $$X$$ (§9); if also $$\dim\mathcal{V}=n+1$$ and $$Q$$ is constant, $$X$$ is a sphere. If $$\lVert t\rVert_{C^1}$$ is smaller than a threshold depending on the embedding of $$X$$ in $$\mathcal{V}^*$$, evaluation realises $$X$$ as a $$C^1$$ submanifold $$\Sigma\subset\mathcal{V}^*$$ on which
+
 $$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)},$$
-with $d=\dim\mathcal{V}$. When the tail of $\Phi$ occupies a finite slot, Sobolev embedding on $\Sigma$ converts this to a linear bound in $\Delta$ whose constants depend only on window dimensions and $k$. In both regimes the manifold is recovered as the space of multiplicative characters of the window, the metric by dualizing $\Gamma$, and the weight from the ratio of $\mu$ to Riemannian volume.
 
-The theorem is recognition, not construction: $P$ is given as Witten, and the packet is asked to recover the geometry that produced it. It is not a spectral uniqueness theorem. Two Witten operators with the same spectrum, or even the same $\sigma(P)\cap[0,\Lambda']$, need not be isometric; the missing data are $\Phi$ and $R$. Two operators with the same exact packet ($R=0$) are isometric, with $\alpha$ agreeing up to a constant. Two operators with the same approximate packet need not be isometric; they are $C^k$-close to isometric on the scale of $\lVert R\rVert_{C^k(\Sigma)}$.
+with $$d=\dim\mathcal{V}$$. When the tail of $$\Phi$$ occupies a finite slot, Sobolev embedding on $$\Sigma$$ converts this to a linear bound in $$\Delta$$ whose constants depend only on window dimensions and $$k$$. In both regimes the manifold is recovered as the space of multiplicative characters of the window, the metric by dualizing $$\Gamma$$, and the weight from the ratio of $$\mu$$ to Riemannian volume.
 
-A distinguished slice is the unweighted first window on the sphere. There one may take $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $R=0$ already at $\Lambda'=2n+2$: products of linear coordinates on $S^n$ occupy only the constant slot and the quadratic harmonics. Theorem 3 recognizes the unit round sphere from that exact frame. Theorem 4 is linear $C^0$ stability for an isolated cluster of the first $n+1$ harmonics whose visible products lie in $\eta$-gaps about $0$ and $2n+2$; on a sufficiently small $C^2$ ball about the round metric those gaps persist and the table deficits are $O\bigl(\|g-g_{\mathrm{rd}}\|_{C^2}\bigr)$. Those two statements are compared with Obata’s theorem \cite{Oba62} and with quantitative Obata theorems on the Ricci side \cite{CMS}. They are not Ricci theorems. They use a linear frame and its products, not a lower bound on Ricci curvature and a single first eigenfunction.
+The theorem is recognition, not construction: $$P$$ is given as Witten, and the packet is asked to recover the geometry that produced it. It is not a spectral uniqueness theorem. Two Witten operators with the same spectrum, or even the same $$\sigma(P)\cap[0,\Lambda']$$, need not be isometric; the missing data are $$\Phi$$ and $$R$$. Two operators with the same exact packet ($$R=0$$) are isometric, with $$\alpha$$ agreeing up to a constant. Two operators with the same approximate packet need not be isometric; they are $$C^k$$-close to isometric on the scale of $$\lVert R\rVert_{C^k(\Sigma)}$$.
 
-If $\alpha=0$ and the exact window has an isometric embedding with constant slot quadratics, $(X,g)$ is a compact homogeneous space. Every compact homogeneous Riemannian manifold has some isometric embedding with an exact slot-sphere packet; §9.1 says that if the packet given is of that form, then $X$ is a single $K$-orbit and so $X$ is in that precise class.
+A distinguished slice is the unweighted first window on the sphere. There one may take $$\Lambda=n$$, $$\dim\mathcal{V}=n+1$$, and $$R=0$$ already at $$\Lambda'=2n+2$$: products of linear coordinates on $$S^n$$ occupy only the constant slot and the quadratic harmonics. Theorem 3 recognizes the unit round sphere from that exact frame. Theorem 4 is linear $$C^0$$ stability for an isolated cluster of the first $$n+1$$ harmonics whose visible products lie in $$\eta$$-gaps about $$0$$ and $$2n+2$$; on a sufficiently small $$C^2$$ ball about the round metric those gaps persist and the table deficits are $$O\bigl(\|g-g_{\mathrm{rd}}\|_{C^2}\bigr)$$. Those two statements are compared with Obata’s theorem \cite{Oba62} and with quantitative Obata theorems on the Ricci side \cite{CMS}. They are not Ricci theorems. They use a linear frame and its products, not a lower bound on Ricci curvature and a single first eigenfunction.
 
-The article is organized as follows. Section 2 fixes the Witten category and the window packet. Section 3 extracts $\Gamma$ from the multiplication rule with remainder $R$. Section 4 identifies points of $X$ with characters of the window. Section 5 dualizes $\Gamma$ to a metric and reads $\alpha$ from the two measures. Section 6 assembles Theorems 1 and 2. Section 7 specializes to the unweighted first window on the sphere. Section 8 records what the packet does not determine. Section 9 shows that an exact unweighted window is a union of orbits of a compact linear group of isometries, and a sphere when $d=n+1$ and $Q$ is constant. 9.1 gives a second openness criterion -- the embedding is isometric into slot spheres.
+If $$\alpha=0$$ and the exact window has an isometric embedding with constant slot quadratics, $$(X,g)$$ is a compact homogeneous space. Every compact homogeneous Riemannian manifold has some isometric embedding with an exact slot-sphere packet; §9.1 says that if the packet given is of that form, then $$X$$ is a single $$K$$-orbit and so $$X$$ is in that precise class.
+
+The article is organized as follows. Section 2 fixes the Witten category and the window packet. Section 3 extracts $$\Gamma$$ from the multiplication rule with remainder $$R$$. Section 4 identifies points of $$X$$ with characters of the window. Section 5 dualizes $$\Gamma$$ to a metric and reads $$\alpha$$ from the two measures. Section 6 assembles Theorems 1 and 2. Section 7 specializes to the unweighted first window on the sphere. Section 8 records what the packet does not determine. Section 9 shows that an exact unweighted window is a union of orbits of a compact linear group of isometries, and a sphere when $$d=n+1$$ and $$Q$$ is constant. 9.1 gives a second openness criterion -- the embedding is isometric into slot spheres.
 
 The correspondence is between slot-sphere exact packets and compact connected Riemannian homogeneous spaces (Proposition~30). Whether every exact unweighted window is of slot-sphere type (equivalently: whether Theorem 21 always supplies an open orbit) is left open.
 
 Geometry sits in the multiplication table, not in the list of eigenvalues. The contribution here is that a finite, explicitly tailed piece of that table already reconstructs a Witten pair, and that the unit sphere is the minimal unweighted instance of the same mechanism; an exact unweighted window is homogeneous once it has an open orbit.
 
-A discrete analogue is immediate for low-energy eigenpairs of a finite-element Laplace or Witten operator. Let $\mathcal{V}_h$ be the span of the first $d$ computed modes and let $\Phi_h$ be their triple products against a slightly larger computed window, with tail $R_h$ the residual of Leibniz for the discrete product. Theorem~2 applies verbatim to this packet: if $\|t_h\|_{C^1}$ is below the embedding threshold, evaluation realises a $C^1$ mesh-surface $\Sigma_h\subset\mathcal{V}_h^*$ whose reconstructed metric is $C^k$-close to the Galerkin metric on the scale of $\|R_h\|_{C^k}$. In the isolated first-window regime of Theorem~4 the same $\eta$-gaps persist for a mesh that resolves the first $n+1$ harmonics, and the table deficits are controlled by the $C^2$ FEM error of the metric plus the discrete product error. The exact-window conclusions (Theorem~1, Theorem~21, the sphere frame) are not claimed for a finite mesh: $R_h$ vanishes only in the limit $h\to0$ with $\Lambda'$ fixed, and only if the continuous products already close. The packet is a diagnostic for computed low modes, not a discrete classification theorem.
+A discrete analogue is immediate for low-energy eigenpairs of a finite-element Laplace or Witten operator. Let $$\mathcal{V}_h$$ be the span of the first $$d$$ computed modes and let $$\Phi_h$$ be their triple products against a slightly larger computed window, with tail $$R_h$$ the residual of Leibniz for the discrete product. Theorem~2 applies verbatim to this packet: if $$\|t_h\|_{C^1}$$ is below the embedding threshold, evaluation realises a $$C^1$$ mesh-surface $$\Sigma_h\subset\mathcal{V}_h^*$$ whose reconstructed metric is $$C^k$$-close to the Galerkin metric on the scale of $$\|R_h\|_{C^k}$$. In the isolated first-window regime of Theorem~4 the same $$\eta$$-gaps persist for a mesh that resolves the first $$n+1$$ harmonics, and the table deficits are controlled by the $$C^2$$ FEM error of the metric plus the discrete product error. The exact-window conclusions (Theorem~1, Theorem~21, the sphere frame) are not claimed for a finite mesh: $$R_h$$ vanishes only in the limit $$h\to0$$ with $$\Lambda'$$ fixed, and only if the continuous products already close. The packet is a diagnostic for computed low modes, not a discrete classification theorem.
 
-Glaser–Stern reconstruct a closed Riemannian manifold as a Gromov–Hausdorff limit of finite metric spaces built from a truncated Dirac spectral triple: the spectrum of a Dirac-type operator cut at a spectral projection, together with the truncated representation of $C^\infty(X)$ \cite{GS20}. That is a noncommutative cutoff of first-order spinor data. A packet in the present paper is scalar. The visible data are triple products of eigenfunctions of a Witten operator $P_\alpha$ in a finite window, plus the tail $R$ of the pointwise product.
+Glaser–Stern reconstruct a closed Riemannian manifold as a Gromov–Hausdorff limit of finite metric spaces built from a truncated Dirac spectral triple: the spectrum of a Dirac-type operator cut at a spectral projection, together with the truncated representation of $$C^\infty(X)$$ \cite{GS20}. That is a noncommutative cutoff of first-order spinor data. A packet in the present paper is scalar. The visible data are triple products of eigenfunctions of a Witten operator $$P_\alpha$$ in a finite window, plus the tail $$R$$ of the pointwise product.
 
-When $R=0$, Theorem~1 recovers $(X,g,\alpha)$ up to isometry from that finite table, not as a GH limit of auxiliary graphs. The two reconstructions are complementary: one truncates a spectral triple and passes to the limit; the other keeps a finite multiplication table exact and reads the metric from $\Gamma$. Neither implies the other. In particular a truncated Dirac triple does not produce the Clebsch–Gordan identities used in Theorems~3 and~4, and an exact scalar packet does not determine a spin structure.
+When $$R=0$$, Theorem~1 recovers $$(X,g,\alpha)$$ up to isometry from that finite table, not as a GH limit of auxiliary graphs. The two reconstructions are complementary: one truncates a spectral triple and passes to the limit; the other keeps a finite multiplication table exact and reads the metric from $$\Gamma$$. Neither implies the other. In particular a truncated Dirac triple does not produce the Clebsch–Gordan identities used in Theorems~3 and~4, and an exact scalar packet does not determine a spin structure.
 
-On the round sphere the scalar packet is exact at the first harmonic slot ($\mathcal{H}_1\otimes\mathcal{H}_1\subset\mathcal{H}_0\oplus\mathcal{H}_2$); the corresponding truncated Dirac triple recovers $S^n$ only as a Gromov–Hausdorff limit of state spaces as $\Lambda\to\infty$. Theorem 4 is stronger than that approximation on a packet neighborhood of the spherical table: small $\delta$ yields a $C^1$-graph over $S^n$ and a metric $C^0$-close to the round metric, in the topology of diffeomorphisms rather than in $d_{GH}$. That neighborhood contain a $C^2$ ball about $g_{\mathrm{rd}}$ after a finite cut of the tail (Claim 7.1); without the cut it is a condition on $\delta_t$, not a Kato consequence.
+On the round sphere the scalar packet is exact at the first harmonic slot ($$\mathcal{H}_1\otimes\mathcal{H}_1\subset\mathcal{H}_0\oplus\mathcal{H}_2$$); the corresponding truncated Dirac triple recovers $$S^n$$ only as a Gromov–Hausdorff limit of state spaces as $$\Lambda\to\infty$$. Theorem 4 is stronger than that approximation on a packet neighborhood of the spherical table: small $$\delta$$ yields a $$C^1$$-graph over $$S^n$$ and a metric $$C^0$$-close to the round metric, in the topology of diffeomorphisms rather than in $$d_{GH}$$. That neighborhood contain a $$C^2$$ ball about $$g_{\mathrm{rd}}$$ after a finite cut of the tail (Claim 7.1); without the cut it is a condition on $$\delta_t$$, not a Kato consequence.
 
-Gromov–Hausdorff limits under a Ricci bound are described by Cheeger–Colding \cite{CC96, CC97} and, synthetically, by $\mathrm{RCD}(K,N)$ spaces \cite{AGS14}; a packet reconstructs the Witten pair at finite cutoff and does not pass through those limits.
+Gromov–Hausdorff limits under a Ricci bound are described by Cheeger–Colding \cite{CC96, CC97} and, synthetically, by $$\mathrm{RCD}(K,N)$$ spaces \cite{AGS14}; a packet reconstructs the Witten pair at finite cutoff and does not pass through those limits.
 
 \subsection{Results}
-Standing hypotheses: $X$ closed and connected, $P=P_\alpha$ a Witten operator \cite{Wit82}, packet as in §2, $u,v\in\mathcal{V}$, Wyman on window triples \cite{Wym}, W1, W2.
+Standing hypotheses: $$X$$ closed and connected, $$P=P_\alpha$$ a Witten operator \cite{Wit82}, packet as in §2, $$u,v\in\mathcal{V}$$, Wyman on window triples \cite{Wym}, W1, W2.
 
 \begin{theorem}[exact recognition]
 \label{thm-1}
-Assume $R=0$. The packet
-$$\bigl(\Lambda,\Lambda',\sigma(P)\cap[0,\Lambda'],\Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'}\bigr)$$
-determines $(X,g,\alpha)$ up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. Evaluation is a Riemannian isometry of $(X,g)$ onto the character space of $(\mathcal{V},m)$ in $\mathcal{V}^\ast$, and $P$ is the Witten operator of the reconstructed pair.
+Assume $$R=0$$. The packet
 
-If in addition $\alpha=0$, then $X$ is a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). If also $\dim\mathcal{V}=n+1$ and $Q$ is constant, $X$ is a sphere.
+$$\bigl(\Lambda,\Lambda',\sigma(P)\cap[0,\Lambda'],\Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'}\bigr)$$
+
+determines $$(X,g,\alpha)$$ up to a $$C^\infty$$ Riemannian isometry of $$g$$ and an additive constant on $$\alpha$$. Evaluation is a Riemannian isometry of $$(X,g)$$ onto the character space of $$(\mathcal{V},m)$$ in $$\mathcal{V}^\ast$$, and $$P$$ is the Witten operator of the reconstructed pair.
+
+If in addition $$\alpha=0$$, then $$X$$ is a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). If also $$\dim\mathcal{V}=n+1$$ and $$Q$$ is constant, $$X$$ is a sphere.
 \end{theorem}
 
 \begin{theorem}[approximate recognition]
 \label{thm-2}
-Let $d=\dim\mathcal{V}$. Write $t(u,v)=(I-\Pi_{\Lambda'})(uv)$ for $u,v\in\mathcal{V}$, and assume W1 and W2.
+Let $$d=\dim\mathcal{V}$$. Write $$t(u,v)=(I-\Pi_{\Lambda'})(uv)$$ for $$u,v\in\mathcal{V}$$, and assume W1 and W2.
 \begin{description}
-\item[(i)] (infinite tail). There exists $\tau_*=\tau_*(d,\iota(X))>0$ such that if
+\item[(i)] (infinite tail). There exists $$\tau_*=\tau_*(d,\iota(X))>0$$ such that if
+
 $$
 \sup_{\|u\|_2=\|v\|_2=1}\|t(u,v)\|_{C^1(X)}<\tau_*,
 $$
-then evaluation realises $X$ as a $C^1$ embedded submanifold
-$\Sigma\subset\mathcal{V}^*$ (the standing embedding of W1 persists),
+
+then evaluation realises $$X$$ as a $$C^1$$ embedded submanifold $$\Sigma\subset\mathcal{V}^*$$ (the standing embedding of W1 persists),
 and
+
 $$
 \|\iota^*g_\Sigma-g\|_{C^k}+\|\alpha_\Sigma\circ\iota-\alpha-c\|_{C^k}
 \le C(d,k)\,\|R\|_{C^k(\Sigma)}
 $$
-for every $k\ge 0$, with $c$ an additive constant on $\alpha$. The diffeomorphism $\iota$ is $C^\infty$ if $t=0$. The smallness parameter is $\|t\|_{C^1}$, equivalently $\|R\|_{C^k}$ after Lemma 9(i). It is not $\Delta=\sup\|R\|_2$. The same smallness may be written $\Delta_{C^1}<\tau_*/C(n)$ in the weighted $\ell^2$ form of Remark 10.
 
-\item[(ii)] (finite slot). If the tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), Lemma 9(ii) supplies $\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$ such that $\Delta<\Delta_*$ implies the conclusions of (i), and
+for every $$k\ge 0$$, with $$c$$ an additive constant on $$\alpha$$. The diffeomorphism $$\iota$$ is $$C^\infty$$ if $$t=0$$. The smallness parameter is $$\|t\|_{C^1}$$, equivalently $$\|R\|_{C^k}$$ after Lemma 9(i). It is not $$\Delta=\sup\|R\|_2$$. The same smallness may be written $$\Delta_{C^1}<\tau_*/C(n)$$ in the weighted $$\ell^2$$ form of Remark 10.
+
+\item[(ii)] (finite slot). If the tail that defines $$R$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$ (or is cut at a finite $$\Lambda''$$), Lemma 9(ii) supplies $$\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$$ such that $$\Delta<\Delta_*$$ implies the conclusions of (i), and
+
 $$
 \|R\|_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.
 $$
-In that case $\iota$ is a $C^k$ almost-isometry on the scale of $\Delta$.
+
+In that case $$\iota$$ is a $$C^k$$ almost-isometry on the scale of $$\Delta$$.
 \end{description}
 \end{theorem}
 
 \begin{theorem}[round sphere, exact window]
 \label{thm-a}
-Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n+2$. Suppose there is a frame $x_0,\dots,x_n$ in $\mathcal{V}$ with $Px_a=nx_a$, $\int x_ax_b=\delta_{ab}$, $\int x_a=0$, $\sum_ax_a^2=1$, each $x_ax_b-\delta_{ab}/(n+1)$ an eigenfunction at $2n+2$, and $\{dx_a\}$ spanning $T^*X$. Then $X$ is isometric to the unit round sphere, $P=-\Delta$, and $\operatorname{span}\{x_a\}=H_1$. Scaling: the pair $(\lambda,2\lambda+2\lambda/n)$ gives radius $\sqrt{n/\lambda}$.
+Assume $$\alpha=0$$, $$\dim\mathcal{V}=n+1$$, $$\Lambda=n$$, and $$R=0$$ at $$\Lambda'=2n+2$$. Suppose there is a frame $$x_0,\dots,x_n$$ in $$\mathcal{V}$$ with $$Px_a=nx_a$$, $$\int x_ax_b=\delta_{ab}$$, $$\int x_a=0$$, $$\sum_ax_a^2=1$$, each $$x_ax_b-\delta_{ab}/(n+1)$$ an eigenfunction at $$2n+2$$, and $$\{dx_a\}$$ spanning $$T^*X$$. Then $$X$$ is isometric to the unit round sphere, $$P=-\Delta$$, and $$\operatorname{span}\{x_a\}=H_1$$. Scaling: the pair $$(\lambda,2\lambda+2\lambda/n)$$ gives radius $$\sqrt{n/\lambda}$$.
 \end{theorem}
 
 \begin{theorem}[round sphere, quantitative cluster]
 \label{thm-b}
-Let $\lambda_1\le\cdots\le\lambda_{n+1}$ be the first $n+1$ positive eigenvalues of $P$ counted with multiplicity, and let $\mathcal{V}=\mathrm{span}\{x_1,\dots,x_{n+1}\}$ be the joint span of corresponding $L^2$-orthonormal eigenfunctions. Write
+Let $$\lambda_1\le\cdots\le\lambda_{n+1}$$ be the first $$n+1$$ positive eigenvalues of $$P$$ counted with multiplicity, and let $$\mathcal{V}=\mathrm{span}\{x_1,\dots,x_{n+1}\}$$ be the joint span of corresponding $$L^2$$-orthonormal eigenfunctions. Write
+
 $$
 w=\lambda_{n+1}-\lambda_1,\qquad
 \bar\lambda=\frac1{n+1}\sum_{i=1}^{n+1}\lambda_i,
 $$
-and assume the cluster is isolated: $w<\lambda_{n+2}-\lambda_{n+1}$.
+
+and assume the cluster is isolated: $$w<\lambda_{n+2}-\lambda_{n+1}$$.
 
 Assume W1 and W2 for this block.
 
-Fix $\eta\in\bigl(0,\min\{n,n+4\}/2\bigr)$ smaller than the first two spherical gaps, and a cutoff $\Lambda'\ge 2n+2+\eta$. Set
+Fix $$\eta\in\bigl(0,\min\{n,n+4\}/2\bigr)$$ smaller than the first two spherical gaps, and a cutoff $$\Lambda'\ge 2n+2+\eta$$. Set
+
 $$
 \Pi^\eta_{\mathrm{sph}}=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\,2n+2+\eta]}.
 $$
+
 Allow the table deficits
 \begin{align*}
 \delta_w&=w+|\bar\lambda-n|,\\
@@ -147,51 +168,55 @@ Allow the table deficits
 \delta_\Phi&=\sup_{a,b}\bigl\|(I-\Pi^\eta_{\mathrm{sph}})\Pi_{\Lambda'}(x_ax_b)\bigr\|_{L^2},\\
 \delta_t&=\sup_{a,b}\|t_{\Lambda'}(x_a,x_b)\|_{C^1},
 \end{align*}
-where $t_{\Lambda'}=(I-\Pi_{\Lambda'})(x_ax_b)$. Set
+where $$t_{\Lambda'}=(I-\Pi_{\Lambda'})(x_ax_b)$$. Set
 $$
 \delta=\delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi+\delta_t.
 $$
-If $\delta<\delta_*(n,\eta)$, then evaluation $F=(x_1,\dots,x_{n+1})$ realises $X$ as a $C^1$-graph over $S^n$, and
+If $$\delta<\delta_*(n,\eta)$$, then evaluation $$F=(x_1,\dots,x_{n+1})$$ realises $$X$$ as a $$C^1$$-graph over $$S^n$$, and
 $$
 d_{\mathrm{GH}}(X,S^n)+\|F^*g_{\mathrm{eucl}}-g\|_{C^0}
 \le C(n,\eta,\Lambda')\,\delta.
 $$
 
-If the tail of $R_{\Lambda'}$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), then $\delta_t\le C(n,d_{\mathrm{tail}},\Lambda',\Lambda'')\Delta_{\mathrm{fr}}$ with $\Delta_{\mathrm{fr}}=\sup\|R_{\Lambda'}(x_a,x_b)\|_2$, and $\delta$ may be written with $\Delta_{\mathrm{fr}}$ in place of $\delta_t$. If $\Lambda'=2n+2+\eta$ and the tail is so cut, the constant depends only on $n$, $\eta$, and $d_{\mathrm{tail}}$.
+If the tail of $$R_{\Lambda'}$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$ (or is cut at a finite $$\Lambda''$$), then $$\delta_t\le C(n,d_{\mathrm{tail}},\Lambda',\Lambda'')\Delta_{\mathrm{fr}}$$ with $$\Delta_{\mathrm{fr}}=\sup\|R_{\Lambda'}(x_a,x_b)\|_2$$, and $$\delta$$ may be written with $$\Delta_{\mathrm{fr}}$$ in place of $$\delta_t$$. If $$\Lambda'=2n+2+\eta$$ and the tail is so cut, the constant depends only on $$n$$, $$\eta$$, and $$d_{\mathrm{tail}}$$.
 
 \end{theorem}
 
 On a fixed pair a cut exists by Claim 7.1; the Kato ball uses one cut chosen after the metric.
 
-This is linear stability of the first $n+1$ harmonics of Theorem 3, allowing the first slot to split and the quadratic slot to drift inside an $\eta$-gap. It does not use Ricci curvature. When $w=0$, $\eta=0^+$, $\Lambda'=2n+2$, and $t=0$, it specialises to stability of a single eigenspace with exact projectors $\Pi_0+\Pi_{2n+2}$.
+This is linear stability of the first $$n+1$$ harmonics of Theorem 3, allowing the first slot to split and the quadratic slot to drift inside an $$\eta$$-gap. It does not use Ricci curvature. When $$w=0$$, $$\eta=0^+$$, $$\Lambda'=2n+2$$, and $$t=0$$, it specialises to stability of a single eigenspace with exact projectors $$\Pi_0+\Pi_{2n+2}$$.
 
-On a sufficiently small $C^2$ ball about $g_{\mathrm{rd}}$ the gaps about $0$, $n$, and $2n+2$ persist. Elliptic estimates on the cluster promote $\|g-g_{\mathrm{rd}}\|_{C^2}$ to $C^0$ control of the frame, and
-$$
+On a sufficiently small $$C^2$$ ball about $$g_{\mathrm{rd}}$$ the gaps about $$0$$, $$n$$, and $$2n+2$$ persist. Elliptic estimates on the cluster promote $$\|g-g_{\mathrm{rd}}\|_{C^2}$$ to $$C^0$$ control of the frame, and
+$
 \delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
 \le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
 $$
 
-The tail modulus $\delta_t$ is not in general $O(\|g-g_{\mathrm{rd}}\|_{C^2})$ for an infinite tail; it is, after a finite cut $\Lambda''$. Thus Theorem 4 applies on that ball with the finite-cut form of $\delta$. It does not apply to a residual set in $\mathcal{M}$: a generic perturbation may break isolation or spray products through the $\eta$-gaps.
+The tail modulus $$\delta_t$$ is not in general $$O(\|g-g_{\mathrm{rd}}\|_{C^2})$$ for an infinite tail; it is, after a finite cut $$\Lambda''$$. Thus Theorem 4 applies on that ball with the finite-cut form of $$\delta$$. It does not apply to a residual set in $$\mathcal{M}$$: a generic perturbation may break isolation or spray products through the $$\eta$$-gaps.
 
-The $C^0$ bound and min-max give $\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k,\eta)\,\delta$ for each fixed $k$. Tanno’s uniqueness is the converse neighbourhood statement with $\operatorname{Spec}(P)=\operatorname{Spec}(S^n)$; the paper does not assume the spectra coincide.
+The $$C^0$$ bound and min-max give $$\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k,\eta)\,\delta$$ for each fixed $$k$$. Tanno’s uniqueness is the converse neighbourhood statement with $$\operatorname{Spec}(P)=\operatorname{Spec}(S^n)$$; the paper does not assume the spectra coincide.
 
 \section{The Packet}
-Let $X$ be a closed connected smooth manifold and let $$P=P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$ act in $L^2(X,\mu)$ with $d\mu=e^{-\alpha}\,d\mathrm{vol}_g$ \cite{Wit82}. Assume $P$ is essentially self-adjoint, with discrete spectrum
+Let $$X$$ be a closed connected smooth manifold and let
+
+$$P=P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
+
+act in $$L^2(X,\mu)$$ with $$d\mu=e^{-\alpha}\,d\mathrm{vol}_g$$ \cite{Wit82}. Assume $$P$$ is essentially self-adjoint, with discrete spectrum
 
 $$0=\lambda_0<\lambda_1\le\lambda_2\le\cdots\to+\infty$$
 
-and $\ker P=\operatorname{span}\{1\}$. The principal symbol of $P$ is the cometric $\Gamma$ of $g$. For all smooth $u,v$,
+and $$\ker P=\operatorname{span}\{1\}$$. The principal symbol of $$P$$ is the cometric $$\Gamma$$ of $$g$$. For all smooth $$u,v$$,
 
 \begin{equation}
 P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v).\tag{A1}
 \end{equation}
 
-Fix cutoffs $\Lambda\le\Lambda'<\infty$. Write
+Fix cutoffs $$\Lambda\le\Lambda'<\infty$$. Write
 
-$$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda),\qquad
+$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda),\qquad
 \mathcal{V}'=\bigoplus_{\lambda\le\Lambda'}\ker(P-\lambda),$$
 
-and let $\Pi_{\Lambda'}$ be the orthogonal projection onto $\mathcal{V}'$. Throughout, $u,v\in\mathcal{V}$. Set
+and let $$\Pi_{\Lambda'}$$ be the orthogonal projection onto $$\mathcal{V}'$$. Throughout, $$u,v\in\mathcal{V}$$. Set
 
 $$
 m(u,v)=\Pi_{\Lambda'}(uv),\qquad
@@ -199,17 +224,24 @@ m(u,v)=\Pi_{\Lambda'}(uv),\qquad
 $$
 
 The weighted tail of the product is
+
 $$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv) =-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda,$$
+
 and
+
 $$\Delta=\sup\bigl\{\lVert R(u,v)\rVert_2:\ u,v\in\mathcal{V},\ \lVert u\rVert_2=\lVert v\rVert_2=1\bigr\}.$$
 
-The exact subclass is $R=0$, equivalently $\Delta=0$.
+The exact subclass is $$R=0$$, equivalently $$\Delta=0$$.
 
-\textbf{Wyman}. For $u,v\in\mathcal{V}$ and an $L^2$-normalized eigenfunction $e_\lambda$,
+\textbf{Wyman}. For $$u,v\in\mathcal{V}$$ and an $$L^2$$-normalized eigenfunction $$e_\lambda$$,
+
 $$\sum_{\lambda}\bigl\lvert\Phi(u,v,\bar e_\lambda)\bigr\rvert^2$$
-is controlled by the measure of frequency triangles with side lengths comparable to $(\sqrt{\lambda_u},\sqrt{\lambda_v},\sqrt{\lambda})$ \cite{Wym}. In particular there is rapid decay of the $\ell^2$ mass of $\Phi(u,v,\,\cdot\,)$ in the classically forbidden region
+
+is controlled by the measure of frequency triangles with side lengths comparable to $$(\sqrt{\lambda_u},\sqrt{\lambda_v},\sqrt{\lambda})$$ \cite{Wym}. In particular there is rapid decay of the $$\ell^2$$ mass of $$\Phi(u,v,\,\cdot\,)$$ in the classically forbidden region
+
 $$\sqrt{\lambda}\ge(1+\varepsilon)\bigl(\sqrt{\lambda_u}+\sqrt{\lambda_v}\bigr),$$
-for every $\varepsilon>0$. The paper uses only the following crude consequence: the coefficients of $R$ exist, and if a finite slot above $\Lambda'$ is fixed, they are bounded by a constant depending on that slot, on $\Lambda$, and on $\lVert u\rVert_2\lVert v\rVert_2$.
+
+for every $$\varepsilon>0$$. The paper uses only the following crude consequence: the coefficients of $$R$$ exist, and if a finite slot above $$\Lambda'$$ is fixed, they are bounded by a constant depending on that slot, on $$\Lambda$$, and on $$\lVert u\rVert_2\lVert v\rVert_2$$.
 
 A pointwise bound
 
@@ -218,266 +250,345 @@ $$\bigl\lvert\Phi(u,v,\bar e_\lambda)\bigr\rvert
 
 is not claimed in \cite{Wym}; when it is invoked below it is as a convenient majorant on a finite slot, not as Wyman’s theorem.
 
-\textbf{W1}. Evaluation $\iota:X\to\mathcal{V}^\ast$, $\iota(x)(u)=u(x)$, is a smooth embedding onto a closed submanifold of $\mathcal{V}^\ast$. The same holds for evaluation $X\to(\mathcal{V}')^\ast$. Characters are therefore evaluations on $\mathcal{V}'$, and the comparison error $E$ of §4 vanishes.
+\textbf{W1}. Evaluation $$\iota:X\to\mathcal{V}^\ast$$, $$\iota(x)(u)=u(x)$$, is a smooth embedding onto a closed submanifold of $$\mathcal{V}^\ast$$. The same holds for evaluation $$X\to(\mathcal{V}')^\ast$$. Characters are therefore evaluations on $$\mathcal{V}'$$, and the comparison error $$E$$ of §4 vanishes.
 
 
-\textbf{W2}. The differentials $\{du:u\in\mathcal{V}\}$ span $T^*X$ at every point.
+\textbf{W2}. The differentials $$\{du:u\in\mathcal{V}\}$$ span $$T^*X$$ at every point.
 
 The visible packet is
-$$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},\ R\bigr).$$
-On pairs from $\mathcal{V}$, (A1) reads
-$$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v).$$
-Thus $\Gamma$ on $\mathcal{V}$ is not an independent input. No Weyl law, no potential, and no curvature bound is assumed. Dimension of $X$ is the rank in W2.
 
-When $P=-\Delta$ (equivalently $\alpha=0$), both axioms hold on an arbitrary closed Riemannian manifold, with no curvature hypothesis. Wyman’s bound on $\Phi$ is valid in that generality. Independently, there exists $\Lambda<\infty$ such that $$\iota_\Lambda:X\to\mathcal{V}_\Lambda^*$$
-is a smooth immersive embedding: finitely many eigenfunctions separate points and span the cotangent space \cite{BBG94, Portegies14}. Thus a sufficiently large Laplace window always carries a Wyman estimate and a spectral frame. These facts do not select spheres, nor do they force exactness. Compact hyperbolic surfaces satisfy both axioms for all large $\Lambda$, yet products of eigenfunctions have infinite tails, so $R\neq0$. Rigidity in Theorems~2--4 and in §9 begins only when the visible table is close to exact, or close to the spherical Clebsch–Gordan pattern, on that window.
+$$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},\ R\bigr).$$
+
+On pairs from $$\mathcal{V}$$, (A1) reads
+
+$$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v).$$
+
+Thus $$\Gamma$$ on $$\mathcal{V}$$ is not an independent input. No Weyl law, no potential, and no curvature bound is assumed. Dimension of $$X$$ is the rank in W2.
+
+When $$P=-\Delta$$ (equivalently $$\alpha=0$$), both axioms hold on an arbitrary closed Riemannian manifold, with no curvature hypothesis. Wyman’s bound on $$\Phi$$ is valid in that generality. Independently, there exists $$\Lambda<\infty$$ such that
+
+$$\iota_\Lambda:X\to\mathcal{V}_\Lambda^*$$
+
+is a smooth immersive embedding: finitely many eigenfunctions separate points and span the cotangent space \cite{BBG94, Portegies14}. Thus a sufficiently large Laplace window always carries a Wyman estimate and a spectral frame. These facts do not select spheres, nor do they force exactness. Compact hyperbolic surfaces satisfy both axioms for all large $$\Lambda$$, yet products of eigenfunctions have infinite tails, so $$R\neq0$$. Rigidity in Theorems~2--4 and in §9 begins only when the visible table is close to exact, or close to the spherical Clebsch–Gordan pattern, on that window.
 
 \section{The Cometric From the Window}
 
 \begin{lemma}
 \label{lma-1}
-Let $u,v\in\mathcal{V}$. Split the pointwise product as
+Let $$u,v\in\mathcal{V}$$. Split the pointwise product as
+
 $$
 uv=m(u,v)+t(u,v),\qquad
 m(u,v)=\Pi_{\Lambda'}(uv),\qquad
 t(u,v)=(I-\Pi_{\Lambda'})(uv).
 $$
-The visible product $m(u,v)$ is assembled from the in-window table:
+
+The visible product $$m(u,v)$$ is assembled from the in-window table:
+
 $$
 m(u,v)=\sum_{\lambda\le\Lambda'}\Phi(u,v,\bar e_\lambda)\,e_\lambda.
 $$
+
 Identity (A1) then reads
+
 $$
 2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v),
 $$
+
 where
+
 $$
 R(u,v)=-P\,t(u,v)=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,\bar e_\lambda)\,e_\lambda.
 $$
-Thus $\Gamma$ on $\mathcal{V}$ is determined by $P|_{\mathcal{V}}$, by $\Phi$ on $\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'$, and by the tail $R$. In particular $\lVert R(u,v)\rVert_2\le\Delta\lVert u\rVert_2\lVert v\rVert_2$. If $R=0$, then $t=0$ and $\Gamma(u,v)$ is determined by $(P,\Phi)$. The bilinear map $\Gamma:\mathcal{V}\times\mathcal{V}\to C^\infty(X)$ does not depend on the orthonormal bases used to expand $\Phi$.
+
+Thus $$\Gamma$$ on $$\mathcal{V}$$ is determined by $$P|_{\mathcal{V}}$$, by $$\Phi$$ on $$\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'$$, and by the tail $$R$$. In particular $$\lVert R(u,v)\rVert_2\le\Delta\lVert u\rVert_2\lVert v\rVert_2$$. If $$R=0$$, then $$t=0$$ and $$\Gamma(u,v)$$ is determined by $$(P,\Phi)$$. The bilinear map $$\Gamma:\mathcal{V}\times\mathcal{V}\to C^\infty(X)$$ does not depend on the orthonormal bases used to expand $$\Phi$$.
 
 On the first spherical window split
+
 $$
 m(x_a,x_b)=\Pi_{\mathrm{sph}}(x_ax_b)+(I-\Pi_{\mathrm{sph}})(x_ax_b),
 $$
-with $\Pi_{\mathrm{sph}}=\Pi_0+\Pi_{2n+2}$. The first summand is the model table of Theorem 3; the second is the in-window table error measured by $\delta_\Phi$ in Theorem 4. Lemma 5 converts $\delta_w+\delta_\Phi+\|R_{\Lambda'}(x_a,x_b)\|_2$ into an $L^2$ error on $\Gamma(x_a,x_b)$ relative to $\delta_{ab}-x_ax_b$. The upgrade of that error to $C^0$, and the substitution of $\delta_t$ for $\|R_{\Lambda'}\|_2$, are in the proof of Theorem 4, not here.
+
+with $$\Pi_{\mathrm{sph}}=\Pi_0+\Pi_{2n+2}$$. The first summand is the model table of Theorem 3; the second is the in-window table error measured by $$\delta_\Phi$$ in Theorem 4. Lemma 5 converts $$\delta_w+\delta_\Phi+\|R_{\Lambda'}(x_a,x_b)\|_2$$ into an $$L^2$$ error on $$\Gamma(x_a,x_b)$$ relative to $$\delta_{ab}-x_ax_b$$. The upgrade of that error to $$C^0$$, and the substitution of $$\delta_t$$ for $$\|R_{\Lambda'}\|_2$$, are in the proof of Theorem 4, not here.
 
 \end{lemma}
 
 \begin{proof}
-Identity (A1) is $2\Gamma(u,v)=u\,Pv+v\,Pu-P(uv)$. Substitute $uv=m+t$ and set $R=-Pt$. The expansion of $m$ is the definition of $\Phi$ against $\mathcal{V}'$. If $R=0$, then $t=0$, so $m(u,v)=uv$ and every coefficient of $uv$ against $\mathcal{V}'$ is a value of $\Phi$.
+Identity (A1) is $$2\Gamma(u,v)=u\,Pv+v\,Pu-P(uv)$$. Substitute $$uv=m+t$$ and set $$R=-Pt$$. The expansion of $$m$$ is the definition of $$\Phi$$ against $$\mathcal{V}'$$. If $$R=0$$, then $$t=0$$, so $$m(u,v)=uv$$ and every coefficient of $$uv$$ against $$\mathcal{V}'$$ is a value of $$\Phi$$.
 
-Basis-independence: $P$ and $\Phi$ are defined on $\mathcal{V}$ without choices, and $m$ is orthogonal projection of the pointwise product.
+Basis-independence: $$P$$ and $$\Phi$$ are defined on $$\mathcal{V}$$ without choices, and $$m$$ is orthogonal projection of the pointwise product.
 
-On a frame of $n+1$ eigenfunctions with eigenvalues $\lambda_a$, identity (A1) reads
+On a frame of $$n+1$$ eigenfunctions with eigenvalues $$\lambda_a$$, identity (A1) reads
+
 $$
 2\Gamma(x_a,x_b)=(\lambda_a+\lambda_b)x_ax_b-P(m(x_a,x_b))+R_{\Lambda'}.
 $$
-Write $\lambda_a=n+\varepsilon_a$ with $|\varepsilon_a|\le\delta_w$. Split $m=\Pi_{\mathrm{sph}}m+(I-\Pi_{\mathrm{sph}})m$. The model computation of Theorem 3 gives
+
+Write $$\lambda_a=n+\varepsilon_a$$ with $$|\varepsilon_a|\le\delta_w$$. Split $$m=\Pi_{\mathrm{sph}}m+(I-\Pi_{\mathrm{sph}})m$$. The model computation of Theorem 3 gives
+
 $$
 P\bigl(\Pi_{\mathrm{sph}}(x_ax_b)\bigr)
 =(2n+2)\Bigl(x_ax_b-\frac{\delta_{ab}}{n+1}\Bigr)+E_{\mathrm{sph}},
 $$
-with $\|E_{\mathrm{sph}}\|_{L^2}\le C(n)\delta_w$. The remainder $(I-\Pi_{\mathrm{sph}})m$ is the in-window table error measured by $\delta_\Phi$, and $R_{\Lambda'}$ is measured in $L^2$ by $\|R_{\Lambda'}(x_a,x_b)\|_2$. Hence
+
+with $$\|E_{\mathrm{sph}}\|_{L^2}\le C(n)\delta_w$$. The remainder $$(I-\Pi_{\mathrm{sph}})m$$ is the in-window table error measured by $$\delta_\Phi$$, and $$R_{\Lambda'}$$ is measured in $$L^2$$ by $$\|R_{\Lambda'}(x_a,x_b)\|_2$$. Hence
+
 $$
 \bigl\|\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\|_{L^2}
 \le C(n)\bigl(\delta_w+\delta_\Phi+\|R_{\Lambda'}(x_a,x_b)\|_2\bigr).
 $$
-This is the $L^2$ cometric input to Theorem 4. It is not a $C^0$ bound, and it does not use $\Delta_{\mathrm{fr}}$ as a $C^0$ modulus.
 
-The deficit $\delta_\Phi$ is the $L^2$ mass of $\Pi_{\Lambda'}(x_ax_b)$ off the cluster projector
+This is the $$L^2$$ cometric input to Theorem 4. It is not a $$C^0$$ bound, and it does not use $$\Delta_{\mathrm{fr}}$$ as a $$C^0$$ modulus.
+
+The deficit $$\delta_\Phi$$ is the $$L^2$$ mass of $$\Pi_{\Lambda'}(x_ax_b)$$ off the cluster projector
+
 $$
 \Pi^\eta_{\mathrm{sph}}=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\,2n+2+\eta]}.
 $$
-The error in replacing $\Pi_{\mathrm{sph}}$ by $\Pi^\eta_{\mathrm{sph}}$ is $O(\eta)\|x_ax_b\|_2$ and is absorbed into $C(n,\eta)$ in Theorem 4. The tail above $\Lambda'$ is not $\delta_\Phi$.
 
-Write $\Delta_g$ as a divergence-form operator on the fixed space $L^2(d\mathrm{vol}_{g_{\mathrm{rd}}})$. On a sufficiently small $C^2$ ball about $g_{\mathrm{rd}}$, the resolvent is close in operator norm and the contours about $0$, $n$, and $2n+2$ miss $\mathrm{Spec}(\Delta_g)$ \cite{Kato}. Thus $\Pi^\eta_{\mathrm{sph}}$ has rank bounded in terms of $n$ only, and the first $n+1$ modes remain an isolated cluster. Kato and elliptic estimates on that cluster give
+The error in replacing $$\Pi_{\mathrm{sph}}$$ by $$\Pi^\eta_{\mathrm{sph}}$$ is $$O(\eta)\|x_ax_b\|_2$$ and is absorbed into $$C(n,\eta)$$ in Theorem 4. The tail above $$\Lambda'$$ is not $$\delta_\Phi$$.
+
+Write $$\Delta_g$$ as a divergence-form operator on the fixed space $$L^2(d\mathrm{vol}_{g_{\mathrm{rd}}})$$. On a sufficiently small $$C^2$$ ball about $$g_{\mathrm{rd}}$$, the resolvent is close in operator norm and the contours about $$0$$, $$n$$, and $$2n+2$$ miss $$\mathrm{Spec}(\Delta_g)$$ \cite{Kato}. Thus $$\Pi^\eta_{\mathrm{sph}}$$ has rank bounded in terms of $$n$$ only, and the first $$n+1$$ modes remain an isolated cluster. Kato and elliptic estimates on that cluster give
+
 $$
 \delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
 \le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
 $$
-They do not bound $\delta_t$ for an infinite tail. Theorem 4 applies on that ball with the finite-cut form of $\delta$, or with $\delta_t$ kept as packet data. Individual eigenvalues in the cluster may split; only the joint span $\mathcal{V}$ is used.
 
-In the infinite-tail regime the constraint $\delta<\delta_*$ is open in the $C^k$ topology on metrics for every $k>1$. Continuity of $\delta_w$, $\delta_{\mathrm{on}}$, $\delta_1$, and $\delta_\Phi$ is Kato’s $C^2$ statement on the isolated cluster. Continuity of $\delta_t=\|t_{\Lambda'}\|_{C^1}$ uses $C^k$ control of the window functions and of $\Pi_{\Lambda'}(x_ax_b)$ at a fixed cutoff $\Lambda'$. The finite-cut form of $\delta$ is already open in
-$C^2$. Neither statement is openness in the residual set of $\mathcal{M}$: a perturbation may still close a gap or move mass through the $\eta$-windows.
+They do not bound $$\delta_t$$ for an infinite tail. Theorem 4 applies on that ball with the finite-cut form of $$\delta$$, or with $$\delta_t$$ kept as packet data. Individual eigenvalues in the cluster may split; only the joint span $$\mathcal{V}$$ is used.
 
-The specialisation $w=0$, $\eta\to 0$, $\Lambda'=2n+2+\eta$, and $t=0$ recovers exact projectors $\Pi_0+\Pi_{2n+2}$ and the single-eigenspace case of Theorem 3.
+In the infinite-tail regime the constraint $$\delta<\delta_*$$ is open in the $$C^k$$ topology on metrics for every $$k>1$$. Continuity of $$\delta_w$$, $$\delta_{\mathrm{on}}$$, $$\delta_1$$, and $$\delta_\Phi$$ is Kato’s $$C^2$$ statement on the isolated cluster. Continuity of $$\delta_t=\|t_{\Lambda'}\|_{C^1}$$ uses $$C^k$$ control of the window functions and of $$\Pi_{\Lambda'}(x_ax_b)$$ at a fixed cutoff $$\Lambda'$$. The finite-cut form of $$\delta$$ is already open in $$C^2$$. Neither statement is openness in the residual set of $$\mathcal{M}$$: a perturbation may still close a gap or move mass through the $$\eta$$-windows.
+
+The specialisation $$w=0$$, $$\eta\to 0$$, $$\Lambda'=2n+2+\eta$$, and $$t=0$$ recovers exact projectors $$\Pi_0+\Pi_{2n+2}$$ and the single-eigenspace case of Theorem 3.
 \end{proof}
 
-\begin{remark}[Sogge and $\lVert t\rVert_{C^0}$]
-Hörmander–Sogge gives $\lVert e_\lambda\rVert_{C^0}\le C_S(n)\,(1+\lambda)^{(n-1)/4}$ \cite{Sog88}. Expanding $t$ and applying Cauchy–Schwarz with the weight in $R=Pt$ yields, for a tail supported in a finite slot $\Lambda<\lambda\le\Lambda''$,
+\begin{remark}[Sogge and $$\lVert t\rVert_{C^0}$$]
+Hörmander–Sogge gives $$\lVert e_\lambda\rVert_{C^0}\le C_S(n)\,(1+\lambda)^{(n-1)/4}$$ \cite{Sog88}. Expanding $$t$$ and applying Cauchy–Schwarz with the weight in $$R=Pt$$ yields, for a tail supported in a finite slot $$\Lambda<\lambda\le\Lambda''$$,
+
 $$\lVert t\rVert_{C^0}\le C(n,\Lambda',\Lambda'')\,\Delta,$$
+
 and therefore
+
 $$\lVert R\rVert_{C^0(X)}\le C(n,\Lambda',\Lambda'')\,\Delta.$$
-Wyman bounds the coefficients of $R$ \cite{Wym}; Sogge bounds the modes. Neither is a curvature comparison.
+
+Wyman bounds the coefficients of $$R$$ \cite{Wym}; Sogge bounds the modes. Neither is a curvature comparison.
 \end{remark}
 
 \begin{remark}
-If the $\Phi$-tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$, all norms on that slot are equivalent and
+If the $$\Phi$$-tail that defines $$R$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$, all norms on that slot are equivalent and
+
 $$\lVert R\rVert_{C^k(X)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
-If the tail is infinite, $\lVert R\rVert_{C^k}$ remains the modulus.
+
+If the tail is infinite, $$\lVert R\rVert_{C^k}$$ remains the modulus.
 \begin{claim}[cut cometric, fixed pair]
-Let $u,v\in\mathcal{V}$ on a fixed closed Witten pair $(X,g,\alpha)$. For $\Lambda''\ge\Lambda'$ write
+Let $$u,v\in\mathcal{V}$$ on a fixed closed Witten pair $$(X,g,\alpha)$$. For $$\Lambda''\ge\Lambda'$$ write
+
 $$
 2\Gamma_{\Lambda''}(u,v)
 =uPv+vPu-P\bigl(\Pi_{\Lambda''}(uv)\bigr)
 $$
-Then $\Gamma_{\Lambda''}(u,v)\to\Gamma(u,v)$ in $C^k(X)$ as $\Lambda''\to\infty$, for every $k\ge 0$. In particular, given $\varepsilon>0$ there exists $\Lambda''=\Lambda''(u,v,k,\varepsilon)$ such that
+
+Then $$\Gamma_{\Lambda''}(u,v)\to\Gamma(u,v)$$ in $$C^k(X)$$ as $$\Lambda''\to\infty$$, for every $$k\ge 0$$. In particular, given $$\varepsilon>0$$ there exists $$\Lambda''=\Lambda''(u,v,k,\varepsilon)$$ such that
+
 $$
 \|\Gamma_{\Lambda''}(u,v)-\Gamma(u,v)\|_{C^k}<\varepsilon.
 $$
-The rate depends on $\|uv\|_{H^{s}}$ for $s>k+n/2$. It is not claimed to be uniform for $g$ in a $C^2$ neighbourhood of $g_{\mathrm{rd}}$.
+
+The rate depends on $$\|uv\|_{H^{s}}$$ for $$s>k+n/2$$. It is not claimed to be uniform for $$g$$ in a $$C^2$$ neighbourhood of $$g_{\mathrm{rd}}$$.
 \end{claim}
+
 \begin{subproof}[Proof of Claim]
-Fix $u,v\in\mathcal{V}$ on a single closed Witten pair. The product $uv$ is $C^\infty$, so $P^m(uv)\in L^2$ for every $m$. Let $\{e_\lambda\}$ be an $L^2$-orthonormal eigenbasis of $P$, and write
+Fix $$u,v\in\mathcal{V}$$ on a single closed Witten pair. The product $$uv$$ is $$C^\infty$$, so $$P^m(uv)\in L^2$$ for every $$m$$. Let $$\{e_\lambda\}$$ be an $$L^2$$-orthonormal eigenbasis of $$P$$, and write
+
 $$
 uv=\sum_{\lambda\ge 0}\Phi(u,v,e_\lambda)\,e_\lambda.
 $$
+
 The tail after $\Lambda''$ is
+
 $$
 t_{\Lambda''}:=(I-\Pi_{\Lambda''})(uv)
 =\sum_{\lambda>\Lambda''}\Phi(u,v,e_\lambda)\,e_\lambda.
 $$
-For any $m$,
+
+For any $$m$$,
+
 $$
 \|P^m t_{\Lambda''}\|_2^2
 =\sum_{\lambda>\Lambda''}\lambda^{2m}\,|\Phi(u,v,e_\lambda)|^2
 \le\Lambda''^{-2}\sum_{\lambda>\Lambda''}\lambda^{2m+2}\,|\Phi(u,v,e_\lambda)|^2
 \le\Lambda''^{-2}\,\|P^{m+1}(uv)\|_2^2.
 $$
-Thus $\|t_{\Lambda''}\|_{H^{2m}}\to 0$ as $\Lambda''\to\infty$. Sobolev embedding on the closed $n$-manifold $X$ gives
+
+Thus $$\|t_{\Lambda''}\|_{H^{2m}}\to 0$$ as $$\Lambda''\to\infty$$. Sobolev embedding on the closed $$n$$-manifold $$X$$ gives
+
 $$
 \|t_{\Lambda''}\|_{C^k}\le C(n,k,X)\,\|t_{\Lambda''}\|_{H^{s}},
 \qquad s>k+\tfrac n2,
 $$
-so $\|t_{\Lambda''}\|_{C^k}\to 0$ for every $k$.
 
-The cut identity is the exact Leibniz formula with $\Pi_{\Lambda''}(uv)$ in place of $uv$:
+so $$\|t_{\Lambda''}\|_{C^k}\to 0$$ for every $$k$$.
+
+The cut identity is the exact Leibniz formula with $$\Pi_{\Lambda''}(uv)$$ in place of $$uv$$:
+
 $$
 2\Gamma_{\Lambda''}(u,v)
 =uPv+vPu-P\bigl(\Pi_{\Lambda''}(uv)\bigr).
 $$
+
 The true identity is
+
 $$
 2\Gamma(u,v)=uPv+vPu-P(uv).
 $$
+
 Subtract:
+
 $$
 2\bigl(\Gamma_{\Lambda''}(u,v)-\Gamma(u,v)\bigr)
 =P\bigl((I-\Pi_{\Lambda''})(uv)\bigr).
 $$
+
 Hence
+
 $$
 \Gamma_{\Lambda''}(u,v)-\Gamma(u,v)=\tfrac12 P t_{\Lambda''}.
 $$
-Elliptic regularity of $P$ (or the same Sobolev estimate with one extra derivative) yields
+
+Elliptic regularity of $$P$$ (or the same Sobolev estimate with one extra derivative) yields
+
 $$
 \|P t_{\Lambda''}\|_{C^k}\le C(n,k,X)\,\|t_{\Lambda''}\|_{H^{s+2}}\to 0.
 $$
-Therefore $\Gamma_{\Lambda''}(u,v)\to\Gamma(u,v)$ in $C^k(X)$.
 
-The rate is controlled by $\|P^{m}(uv)\|_2$ for $m$ large enough that $2m>k+n/2+2$. Those norms depend on the pair $(X,g,\alpha)$ and on the two window functions. They are not claimed to be bounded uniformly for $g$ in a $C^2$ neighbourhood of a model metric.
+Therefore $$\Gamma_{\Lambda''}(u,v)\to\Gamma(u,v)$$ in $$C^k(X)$$.
+
+The rate is controlled by $$\|P^{m}(uv)\|_2$$ for $$m$$ large enough that $$2m>k+n/2+2$$. Those norms depend on the pair $$(X,g,\alpha)$$ and on the two window functions. They are not claimed to be bounded uniformly for $$g$$ in a $$C^2$$ neighbourhood of a model metric.
 \end{subproof}
 \end{remark}
 
 \begin{corollary}
- If $R=0$, the Gram functions $\Gamma(u,v)$ for $u,v\in\mathcal{V}$ are packet data. W2 is then a nondegeneracy condition on those functions. If $\Delta>0$, the same Gram functions are determined up to an $L^2$ error of size $\Delta$, and up to a $C^k$ error of size $\lVert R\rVert_{C^k}$ after the comparison of §4.
+If $$R=0$$, the Gram functions $$\Gamma(u,v)$$ for $$u,v\in\mathcal{V}$$ are packet data. W2 is then a nondegeneracy condition on those functions. If $$\Delta>0$$, the same Gram functions are determined up to an $$L^2$$ error of size $$\Delta$$, and up to a $$C^k$$ error of size $$\lVert R\rVert_{C^k}$$ after the comparison of §4.
 \end{corollary}
 
 \section{Characters}
-Let $m:\mathcal{V}\times\mathcal{V}\to\mathcal{V}'$ be the packet product of §2. By W1, evaluation
-$$\iota:X\to\mathcal{V}^\ast,\qquad
+Let $$m:\mathcal{V}\times\mathcal{V}\to\mathcal{V}'$$ be the packet product of §2. By W1, evaluation
+$\iota:X\to\mathcal{V}^\ast,\qquad
 \iota':X\to(\mathcal{V}')^\ast$$
-are smooth embeddings onto closed submanifolds. Characters of the window are evaluations on $\mathcal{V}'$. In particular the comparison error between $R$ as a function on $X$ and $R$ as a function on the image $\Sigma=\iota(X)$ vanishes: $R_\Sigma\circ\iota=R_X$.
+are smooth embeddings onto closed submanifolds. Characters of the window are evaluations on $$\mathcal{V}'$$. In particular the comparison error between $$R$$ as a function on $$X$$ and $$R$$ as a function on the image $$\Sigma=\iota(X)$$ vanishes: $$R_\Sigma\circ\iota=R_X$$.
 
 \begin{lemma}
 \label{lma-2}
-Let $d=\dim\mathcal{V}$ and let $\iota:X\to\mathcal{V}^*$ be the evaluation of W1. Write $t(u,v)=(I-\Pi_{\Lambda'})(uv)$ for $u,v\in\mathcal{V}$.
+Let $$d=\dim\mathcal{V}$$ and let $$\iota:X\to\mathcal{V}^*$$ be the evaluation of W1. Write $$t(u,v)=(I-\Pi_{\Lambda'})(uv)$$ for $$u,v\in\mathcal{V}$$.
 
 \begin{description}
-\item[(i)] (infinite tail) There exists $\tau_*=\tau_*(d,\iota(X))>0$ such that if
+\item[(i)] (infinite tail) There exists $$\tau_*=\tau_*(d,\iota(X))>0$$ such that if
+
 $$\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\lVert t(u,v)\rVert_{C^1(X)}<\tau_*,$$
-then $\iota(X)$ is a $C^\infty$ embedded submanifold $\Sigma\subset\mathcal{V}^*$, $\iota:X\to\Sigma$ is a $C^1$ diffeomorphism (and $C^\infty$ if $t=0$), and for every $k\ge 0$
+
+then $$\iota(X)$$ is a $$C^\infty$$ embedded submanifold $$\Sigma\subset\mathcal{V}^*$$, $$\iota:X\to\Sigma$$ is a $$C^1$$ diffeomorphism (and $$C^\infty$$ if $$t=0$$), and for every $$k\ge 0$$
+
 $$c(k)^{-1}\,\lVert R_X\rVert_{C^k(X)}
 \le\lVert R_\Sigma\rVert_{C^k(\Sigma)}
 \le c(k)\,\lVert R_X\rVert_{C^k(X)},$$
-with $c(k)=C(d,k)$. The smallness parameter here is $\lVert t\rVert_{C^1}$, not $\Delta$.
 
-\item[(ii)] (finite slot) If the $\Phi$-tail that defines $R$ occupies a finite slot of dimension $d_{\mathrm{tail}}$ (or is cut at a finite $\Lambda''$), then Remarks 6 and 7 give
+with $$c(k)=C(d,k)$$. The smallness parameter here is $$\lVert t\rVert_{C^1}$$, not $$\Delta$$.
+
+\item[(ii)] (finite slot) If the $$\Phi$$-tail that defines $$R$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$ (or is cut at a finite $$\Lambda''$$), then Remarks 6 and 7 give
+
 $$\lVert t\rVert_{C^1}\le C(d,d_{\mathrm{tail}},n,\Lambda',\Lambda'')\,\Delta.$$
-Hence there exists $\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$ such that $\Delta<\Delta_*$ implies the conclusions of (i), and
+
+Hence there exists $$\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$$ such that $$\Delta<\Delta_*$$ implies the conclusions of (i), and
+
 $$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
+
 \end{description}
 \end{lemma}
 
 \begin{proof}
-W1 makes $\iota$ a smooth embedding onto a closed submanifold. The size of $t$ is used only to persist that embedding in the $C^1$ topology and to compare $\|R\|_{C^k}$ on $X$ and on $\Sigma$.
+W1 makes $$\iota$$ a smooth embedding onto a closed submanifold. The size of $$t$$ is used only to persist that embedding in the $$C^1$$ topology and to compare $$\|R\|_{C^k}$$ on $$X$$ and on $$\Sigma$$.
 
-The product map $F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$ vanishes on $\iota(X)$ up to $t$. Evaluation extends to $\mathcal{V}'$, so at $\xi=\iota(x)$ one has $\xi(m(u,v))=m(u,v)(x)$ and the only defect is $t(x)$. Differentiating $F$ in the $\mathcal{V}^*$-directions at $\iota(x)$ yields the family $(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$ on $T_x^*X$. W2 says $\{du:u\in\mathcal{V}\}$ spans $T_x^*X$, so this family is transverse to $\iota(X)$. If $\lVert t\rVert_{C^1}<\tau_*$, $F$ is a $C^1$-small perturbation of a section that vanishes exactly on $\iota(X)$. Persistence of transverse embeddings keeps $\iota$ a $C^1$ diffeomorphism onto its image. If $t=0$, then $R=0$, $F$ vanishes exactly on $\iota(X)$, and $\iota$ is $C^\infty$. The $C^k$ comparison of $R_X$ and $R_\Sigma$ is the chain rule for $\iota$ and $\iota^{-1}$, whose $C^{k-1}$ norms stay bounded for $\lVert t\rVert_{C^1}<\tau_*$.
+The product map $$F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$$ vanishes on $$\iota(X)$$ up to $$t$$. Evaluation extends to $$\mathcal{V}'$$, so at $$\xi=\iota(x)$$ one has $$\xi(m(u,v))=m(u,v)(x)$$ and the only defect is $$t(x)$$. Differentiating $$F$$ in the $$\mathcal{V}^*$$-directions at $$\iota(x)$$ yields the family $$(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$$ on $$T_x^*X$$. W2 says $$\{du:u\in\mathcal{V}\}$$ spans $$T_x^*X$$, so this family is transverse to $$\iota(X)$$. If $$\lVert t\rVert_{C^1}<\tau_*$$, $$F$$ is a $$C^1$$-small perturbation of a section that vanishes exactly on $$\iota(X)$$. Persistence of transverse embeddings keeps $$\iota$$ a $$C^1$$ diffeomorphism onto its image. If $$t=0$$, then $$R=0$$, $$F$$ vanishes exactly on $$\iota(X)$$, and $$\iota$$ is $$C^\infty$$. The $$C^k$$ comparison of $$R_X$$ and $$R_\Sigma$$ is the chain rule for $$\iota$$ and $$\iota^{-1}$$, whose $$C^{k-1}$$ norms stay bounded for $$\lVert t\rVert_{C^1}<\tau_*$$.
 
-For (ii), a finite slot makes every $C^k$ norm on the tail equivalent to the $L^2$ norm of $R=-Pt$. Remark 6 supplies the $C^0$ bound on $t$ via Sogge; equivalence of norms on a space of dimension $d_{\mathrm{tail}}$ upgrades that to $C^1$. Thus $\Delta$ small implies $\lVert t\rVert_{C^1}$ small, and (i) applies.
+For (ii), a finite slot makes every $$C^k$$ norm on the tail equivalent to the $$L^2$$ norm of $$R=-Pt$$. Remark 6 supplies the $$C^0$$ bound on $$t$$ via Sogge; equivalence of norms on a space of dimension $$d_{\mathrm{tail}}$$ upgrades that to $$C^1$$. Thus $$\Delta$$ small implies $$\lVert t\rVert_{C^1}$$ small, and (i) applies.
 \end{proof}
 
-\begin{remark}[weighted tails] The hypothesis of Lemma 9(i) is $\lVert t\rVert_{C^1}<\tau_*$. On a finite slot this follows from $\Delta$ by Remarks 6 and 7. On an infinite tail it does not, and the paper does not claim that it does. The same Sogge bound that gives Remark 6 still converts a weighted norm of $\Phi$ into $\lVert t\rVert_{C^1}$. Expanding
+\begin{remark}[weighted tails] The hypothesis of Lemma 9(i) is $$\lVert t\rVert_{C^1}<\tau_*$$. On a finite slot this follows from $$\Delta$$ by Remarks 6 and 7. On an infinite tail it does not, and the paper does not claim that it does. The same Sogge bound that gives Remark 6 still converts a weighted norm of $$\Phi$$ into $$\lVert t\rVert_{C^1}$$. Expanding
+
 $$t(u,v)=\sum_{\lambda>\Lambda'}\Phi(u,v,\bar e_\lambda)\,e_\lambda$$
-and using $\lVert e_\lambda\rVert_{C^0}\le C_S(n)(1+\lambda)^{(n-1)/4}$ together with $\lVert\nabla e_\lambda\rVert_{C^0}\le C(n)(1+\lambda)^{(n-1)/4+1/2}$ yields
+
+and using $$\lVert e_\lambda\rVert_{C^0}\le C_S(n)(1+\lambda)^{(n-1)/4}$$ together with $$\lVert\nabla e_\lambda\rVert_{C^0}\le C(n)(1+\lambda)^{(n-1)/4+1/2}$$ yields
+
 $$\lVert t\rVert_{C^1}
 \le C(n)\sum_{\lambda>\Lambda'}(1+\lambda)^{\frac{n-1}{4}+\frac12}\lvert\Phi(u,v,\bar e_\lambda)\rvert.$$
-Cauchy–Schwarz against the same weights gives the $\ell^2$ form
+
+Cauchy–Schwarz against the same weights gives the $$\ell^2$$ form
 
 $$\lVert t\rVert_{C^1} \le C(n)\Bigl(\sum_{\lambda>\Lambda'}(1+\lambda)^{\frac{n-1}{2}+1}\lvert\Phi(u,v,\bar e_\lambda)\rvert^2\Bigr)^{1/2}.$$
 
-Either right-hand side may be written $\Delta_{C^1}(u,v)$. Then Lemma 9(i) applies as soon as $\sup\Delta_{C^1}<\tau_*/C(n)$. This $\Delta_{C^1}$ is not the packet scalar $\Delta=\sup\lVert R\rVert_2$. The two coincide, up to a constant depending on the slot, only when the sum is finite, which is Lemma 9(ii). Wyman controls the unweighted $\ell^2$ mass of $\Phi$ off the frequency triangle; it does not by itself bound $\Delta_{C^1}$ on an infinite tail. If a uniform scalar is wanted in that regime, $\Delta_{C^1}$ (or a cut at a finite $\Lambda''$, with the far tail absorbed into $R$) is the quantity that should be listed with the packet.
+Either right-hand side may be written $$\Delta_{C^1}(u,v)$$. Then Lemma 9(i) applies as soon as $$\sup\Delta_{C^1}<\tau_*/C(n)$$. This $$\Delta_{C^1}$$ is not the packet scalar $$\Delta=\sup\lVert R\rVert_2$$. The two coincide, up to a constant depending on the slot, only when the sum is finite, which is Lemma 9(ii). Wyman controls the unweighted $$\ell^2$$ mass of $$\Phi$$ off the frequency triangle; it does not by itself bound $$\Delta_{C^1}$$ on an infinite tail. If a uniform scalar is wanted in that regime, $$\Delta_{C^1}$$ (or a cut at a finite $$\Lambda''$$, with the far tail absorbed into $$R$$) is the quantity that should be listed with the packet.
 \end{remark}
 
 \begin{remark}
-Theorem 2’s general bound is (i), written in $\|t\|_{C^1}$ and $\|R\|_{C^k(\Sigma)}$. The conversion to a multiple of $\Delta$ is (ii). Theorem 4 uses (i) with $d=n+1$ and modulus $\delta_t$; it uses (ii) only after a finite cut of the tail.
+Theorem 2’s general bound is (i), written in $$\|t\|_{C^1}$$ and $$\|R\|_{C^k(\Sigma)}$$. The conversion to a multiple of $$\Delta$$ is (ii). Theorem 4 uses (i) with $$d=n+1$$ and modulus $$\delta_t$$; it uses (ii) only after a finite cut of the tail.
 \end{remark}
 
 \begin{corollary}
-If $R=0$, $X$ is identified with the character space of the finite algebra $(\mathcal{V},m)$ as a $C^\infty$ embedded submanifold of $\mathcal{V}^\ast$. If $\Delta<\Delta_*$, the same identification holds as a $C^1$ diffeomorphism, and $\lVert R\rVert_{C^k(\Sigma)}$ may be used interchangeably with $\lVert R\rVert_{C^k(X)}$.
+If $$R=0$$, $$X$$ is identified with the character space of the finite algebra $$(\mathcal{V},m)$$ as a $$C^\infty$$ embedded submanifold of $$\mathcal{V}^\ast$$. If $$\Delta<\Delta_*$$, the same identification holds as a $$C^1$$ diffeomorphism, and $$\lVert R\rVert_{C^k(\Sigma)}$$ may be used interchangeably with $$\lVert R\rVert_{C^k(X)}$$.
 \end{corollary}
 
 \begin{remark}
-Residual ambiguity is an orthogonal change of basis of $\mathcal{V}$ preserving $\Phi$, a compact subgroup of $O(d)$. The threshold $\Delta_*$ depends on $d$ and on the $C^1$ geometry of $\iota(X)$ at $\Delta=0$. It is not universal in $n$ except on the spherical window of §7.
+Residual ambiguity is an orthogonal change of basis of $$\mathcal{V}$$ preserving $$\Phi$$, a compact subgroup of $$O(d)$$. The threshold $$\Delta_*$$ depends on $$d$$ and on the $$C^1$$ geometry of $$\iota(X)$$ at $$\Delta=0$$. It is not universal in $$n$$ except on the spherical window of §7.
 \end{remark}
 
 \section{Metric and Weight}
-\begin{lemma}Assume Lemma~\ref{lma-1} and W2. There is a unique Riemannian metric $g$ on $X$ such that
+\begin{lemma}Assume Lemma~\ref{lma-1} and W2. There is a unique Riemannian metric $$g$$ on $$X$$ such that
+
 $$\Gamma(u,v)=g^{-1}(du,dv)\qquad\text{for all }u,v\in\mathcal{V}.$$
-This $g$ is the metric whose cometric is the principal symbol of $P$. After Lemma 9,
+
+This $$g$$ is the metric whose cometric is the principal symbol of $$P$$. After Lemma 9,
+
 $$\bigl\lVert\iota^*g_\Sigma-g\bigr\rVert_{C^k}
 \le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}.$$
-If the tail of $\Phi$ occupies a finite slot of dimension $d_{\mathrm{tail}}$, the right-hand side is at most $C(d,d_{\mathrm{tail}},k)\,\Delta$.
+
+If the tail of $$\Phi$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$, the right-hand side is at most $$C(d,d_{\mathrm{tail}},k)\,\Delta$$.
 \label{lma-3}
 \end{lemma}
 
 \begin{proof}
-W2 says $\{du:u\in\mathcal{V}\}$ spans $T^*X$. The assignment $(du,dv)\mapsto\Gamma(u,v)$ is well-defined on that spanning set: $\Gamma(u,u)=\sigma_P(du,du)$, so $du=0$ implies $\Gamma(u,\cdot)=0$. Positive-definiteness is the assumption that the principal symbol of $P$ is an inner product. Dualizing gives $g$. In a local frame $\{u_a\}\subset\mathcal{V}$ of rank $n=\dim X$,
+W2 says $$\{du:u\in\mathcal{V}\}$$ spans $$T^*X$$. The assignment $$(du,dv)\mapsto\Gamma(u,v)$$ is well-defined on that spanning set: $$\Gamma(u,u)=\sigma_P(du,du)$$, so $$du=0$$ implies $$\Gamma(u,\cdot)=0$$. Positive-definiteness is the assumption that the principal symbol of $$P$$ is an inner product. Dualizing gives $$g$$. In a local frame $$\{u_a\}\subset\mathcal{V}$$ of rank $$n=\dim X$$,
+
 $$g^{ab}=\Gamma(u_a,u_b)$$
-on $\operatorname{span}\{du_a\}$, and $g$ is the inverse matrix. Independence of the frame is change of basis for a cometric. The $C^k$ estimate is Lemma 5 plus the comparison of $\lVert R\rVert_{C^k}$ on $X$ and on $\Sigma$ from Lemma 9. Finite-tail conversion is the remark in §3.
+
+on $$\operatorname{span}\{du_a\}$$, and $$g$$ is the inverse matrix. Independence of the frame is change of basis for a cometric. The $$C^k$$ estimate is Lemma 5 plus the comparison of $$\lVert R\rVert_{C^k}$$ on $$X$$ and on $$\Sigma$$ from Lemma 9. Finite-tail conversion is the remark in §3.
 \end{proof}
 
 \begin{lemma}
-Let $g$ be the metric of Lemma 14 and let $\mu$ be the measure determined by
+Let $$g$$ be the metric of Lemma 14 and let $$\mu$$ be the measure determined by
+
 $$\int uv\,d\mu=\Phi(1,u,v),\qquad u,v\in\mathcal{V},$$
-extended by continuity to $L^2(\mu)$. Then $\mu$ is a smooth positive multiple of $\mathrm{vol}_g$. The function
+
+extended by continuity to $$L^2(\mu)$$. Then $$\mu$$ is a smooth positive multiple of $$\mathrm{vol}_g$$. The function
+
 $$\alpha=-\log\frac{d\mu}{d\mathrm{vol}_g}$$
-is smooth, unique up to an additive constant, and the given operator $P$ is the Witten operator of $(g,\alpha)$. If $\Delta<\Delta_*$,
+
+is smooth, unique up to an additive constant, and the given operator $$P$$ is the Witten operator of $$(g,\alpha)$$. If $$\Delta<\Delta_*$$,
+
 $$\bigl\lVert\alpha_\Sigma\circ\iota-\alpha-c\bigr\rVert_{C^k}
 \le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}.$$
+
 \label{lma-4}
 \end{lemma}
 
 \begin{proof}
-By the standing category, $P$ is already the Witten operator of some pair $(g_0,\alpha_0)$. Lemma 14 identifies $g=g_0$, because both metrics have the same principal symbol. The inner product that makes $P$ self-adjoint is $\mu=e^{-\alpha_0}\mathrm{vol}_{g_0}$. On the other hand $\Phi(1,\cdot,\cdot)$ is that inner product, since $1=\ker P$ and $\Phi(1,u,v)=\langle u,v\rangle_{L^2(\mu)}$. Thus $\mu=e^{-\alpha_0}\mathrm{vol}_g$, so $\alpha=\alpha_0+c$. A Witten operator on a closed manifold is determined by $(g,\alpha)$ up to that constant. The $C^k$ estimate follows from Lemma 14 and the elliptic regularity of $\log(d\mu/d\mathrm{vol}_g)$.
+By the standing category, $$P$$ is already the Witten operator of some pair $$(g_0,\alpha_0)$$. Lemma 14 identifies $$g=g_0$$, because both metrics have the same principal symbol. The inner product that makes $$P$$ self-adjoint is $$\mu=e^{-\alpha_0}\mathrm{vol}_{g_0}$$. On the other hand $$\Phi(1,\cdot,\cdot)$$ is that inner product, since $$1=\ker P$$ and $$\Phi(1,u,v)=\langle u,v\rangle_{L^2(\mu)}$$. Thus $$\mu=e^{-\alpha_0}\mathrm{vol}_g$$, so $$\alpha=\alpha_0+c$$. A Witten operator on a closed manifold is determined by $$(g,\alpha)$$ up to that constant. The $$C^k$$ estimate follows from Lemma 14 and the elliptic regularity of $$\log(d\mu/d\mathrm{vol}_g)$$.
 \end{proof}
 
-\begin{remark} Lemma~\ref{lma-4} is recognition, not construction: it uses that $P$ was Witten. The two measures $\mu$ and $\mathrm{vol}_g$ are the only source of $\alpha$. The packet does not store $\alpha$ separately.
+\begin{remark} Lemma~\ref{lma-4} is recognition, not construction: it uses that $$P$$ was Witten. The two measures $$\mu$$ and $$\mathrm{vol}_g$$ are the only source of $$\alpha$$. The packet does not store $$\alpha$$ separately.
 \end{remark}
 
 \begin{corollary}
- Combining Lemmas 9, 14, and 15, the packet determines a Riemannian manifold $(\Sigma,g_\Sigma)$ in $\mathcal{V}^\ast$ and a weight $\alpha_\Sigma$ on $\Sigma$. Evaluation pulls these back to $(g,\alpha)$ exactly when $R=0$, and to within $C(d,k)\lVert R\rVert_{C^k(\Sigma)}$ when $\Delta<\Delta_*$.
+ Combining Lemmas 9, 14, and 15, the packet determines a Riemannian manifold $$(\Sigma,g_\Sigma)$$ in $$\mathcal{V}^\ast$$ and a weight $$\alpha_\Sigma$$ on $$\Sigma$$. Evaluation pulls these back to $$(g,\alpha)$$ exactly when $$R=0$$, and to within $$C(d,k)\lVert R\rVert_{C^k(\Sigma)}$$ when $$\Delta<\Delta_*$$.
 \end{corollary}
 
 
@@ -485,93 +596,108 @@ By the standing category, $P$ is already the Witten operator of some pair $(g_0,
 The lemmas of §§3–5 assemble into Theorem~\ref{thm-1} and Theorem~\ref{thm-2}.
 
 \begin{proof}[Proof of Theorem~\ref{thm-1}]
-Assume $R=0$. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ as a function of $(P,\Phi)$, with remainder zero. Lemma 9 identifies $X$ with the character space $\Sigma\subset\mathcal{V}^\ast$ of the finite algebra $(\mathcal{V},m)$ by a $C^\infty$ diffeomorphism $\iota$. Lemma 14 dualizes $\Gamma$ to a Riemannian metric $g_\Sigma$ on $\Sigma$ with $\iota^*g_\Sigma=g$. Lemma 15 reads $\alpha$ from $\mu/\mathrm{vol}_g$, up to an additive constant, and identifies $P$ with the Witten operator of that pair. Thus $\iota$ is a $C^\infty$ Riemannian isometry, and the packet determines $(X,g,\alpha)$ up to that isometry and the constant on $\alpha$. Theorem 21 upgrades the unweighted case to an orbit decomposition, and to a sphere when $d=n+1$.
-Residual freedom is an orthogonal change of basis of $\mathcal{V}$ preserving $\Phi$.
+Assume $$R=0$$. Lemma 5 gives $$\Gamma$$ on $$\mathcal{V}$$ as a function of $$(P,\Phi)$$, with remainder zero. Lemma 9 identifies $$X$$ with the character space $$\Sigma\subset\mathcal{V}^\ast$$ of the finite algebra $$(\mathcal{V},m)$$ by a $$C^\infty$$ diffeomorphism $$\iota$$. Lemma 14 dualizes $$\Gamma$$ to a Riemannian metric $$g_\Sigma$$ on $$\Sigma$$ with $$\iota^*g_\Sigma=g$$. Lemma 15 reads $$\alpha$$ from $$\mu/\mathrm{vol}_g$$, up to an additive constant, and identifies $$P$$ with the Witten operator of that pair. Thus $$\iota$$ is a $$C^\infty$$ Riemannian isometry, and the packet determines $$(X,g,\alpha)$$ up to that isometry and the constant on $$\alpha$$. Theorem 21 upgrades the unweighted case to an orbit decomposition, and to a sphere when $$d=n+1$$.
+Residual freedom is an orthogonal change of basis of $$\mathcal{V}$$ preserving $$\Phi$$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm-2}]
-W1 is standing: $\iota$ is already a smooth embedding. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ with remainder $R=-Pt$. Under the hypothesis of (i), Lemma 9(i) persists $\iota$ as a $C^1$ diffeomorphism $X\to\Sigma\subset\mathcal{V}^*$ and identifies $\|R\|_{C^k(\Sigma)}$ with $\|R\|_{C^k(X)}$ up to $C(d,k)$. Lemma 14 upgrades the cometric error to
+W1 is standing: $$\iota$$ is already a smooth embedding. Lemma 5 gives $$\Gamma$$ on $$\mathcal{V}$$ with remainder $$R=-Pt$$. Under the hypothesis of (i), Lemma 9(i) persists $$\iota$$ as a $$C^1$$ diffeomorphism $$X\to\Sigma\subset\mathcal{V}^*$$ and identifies $$\|R\|_{C^k(\Sigma)}$$ with $$\|R\|_{C^k(X)}$$ up to $$C(d,k)$$. Lemma 14 upgrades the cometric error to
+
 $$
 \|\iota^*g_\Sigma-g\|_{C^k}\le C(d,k)\,\|R\|_{C^k(\Sigma)}.
 $$
-Lemma 15 gives the same bound for $\alpha_\Sigma\circ\iota-\alpha-c$. Under the hypothesis of (ii), the tail is finite-dimensional, so Remarks 6--7 convert $\|t\|_{C^1}$ and $\|R\|_{C^k}$ into multiples of $\Delta$, and (i) applies. If $R=0$, both parts reduce to Theorem 1. An infinite tail is controlled only through $\|t\|_{C^1}$ or $\Delta_{C^1}$; $\Delta$ alone is not a modulus in that regime.
+
+Lemma 15 gives the same bound for $$\alpha_\Sigma\circ\iota-\alpha-c$$. Under the hypothesis of (ii), the tail is finite-dimensional, so Remarks 6--7 convert $$\|t\|_{C^1}$$ and $$\|R\|_{C^k}$$ into multiples of $$\Delta$$, and (i) applies. If $$R=0$$, both parts reduce to Theorem 1. An infinite tail is controlled only through $$\|t\|_{C^1}$$ or $$\Delta_{C^1}$$; $$\Delta$$ alone is not a modulus in that regime.
 \end{proof}
 
 \begin{remark}
-Two packets for the same operator at different admissible cutoffs produce isometric copies if both have $R=0$, and almost-isometric copies on the scale of the two values of $\lVert R\rVert_{C^k(\Sigma)}$ otherwise. The theorems do not identify merely isospectral Witten operators.
+Two packets for the same operator at different admissible cutoffs produce isometric copies if both have $$R=0$$, and almost-isometric copies on the scale of the two values of $$\lVert R\rVert_{C^k(\Sigma)}$$ otherwise. The theorems do not identify merely isospectral Witten operators.
 \end{remark}
 
 \section{The Unweighted First Window on the Sphere}
-This section is Theorems 1 and 2 on a single window: $\alpha=0$, $\Lambda=n$, $\dim\mathcal{V}=n+1$, and products of the window supported in slots $\{0,2n+2\}$ when $R=0$. Let $\{x_a\}_{a=0}^n$ be an $L^2$-orthonormal frame in $\mathcal{V}$ as in Theorem 3, and write $F=(x_0,\dots,x_n):X\to\mathbb{R}^{n+1}$.
+This section is Theorems 1 and 2 on a single window: $$\alpha=0$$, $$\Lambda=n$$, $$\dim\mathcal{V}=n+1$$, and products of the window supported in slots $$\{0,2n+2\}$$ when $$R=0$$. Let $$\{x_a\}_{a=0}^n$$ be an $$L^2$$-orthonormal frame in $$\mathcal{V}$$ as in Theorem 3, and write $$F=(x_0,\dots,x_n):X\to\mathbb{R}^{n+1}$$.
 
-\begin{lemma} Assume the hypotheses of Theorem 3. Then $\sum_a x_a^2=1$, $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$, and $dF$ has rank $n$ at every point. Consequently $F(X)$ is a closed embedded hypersurface in the unit sphere of $\mathbb{R}^{n+1}$.
+\begin{lemma} Assume the hypotheses of Theorem 3. Then $$\sum_a x_a^2=1$$, $$\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$$, and $$dF$$ has rank $$n$$ at every point. Consequently $$F(X)$$ is a closed embedded hypersurface in the unit sphere of $$\mathbb{R}^{n+1}$$.
 \end{lemma}
 \begin{proof}
-The quadric $\sum_a x_a^2=1$ is given. Differentiating and using $Px_a=nx_a$ with (A1) yields
+The quadric $$\sum_a x_a^2=1$$ is given. Differentiating and using $$Px_a=nx_a$$ with (A1) yields
+
 $$2\Gamma(x_a,x_b)=n x_ax_b+n x_bx_a-P(x_ax_b).$$
-By hypothesis $x_ax_b-\delta_{ab}/(n+1)$ is an eigenfunction at $2n+2$, and $P(1)=0$, so
+
+By hypothesis $$x_ax_b-\delta_{ab}/(n+1)$$ is an eigenfunction at $$2n+2$$, and $$P(1)=0$$, so
+
 $$P(x_ax_b)=(2n+2)\Bigl(x_ax_b-\frac{\delta_{ab}}{n+1}\Bigr).$$
-Hence $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$. The matrix $\delta_{ab}-x_ax_b$ has rank $n$ on the unit sphere, and $\{dx_a\}$ spans $T^*X$ by hypothesis, which is W2 for this frame. W1 follows: $F$ is an immersion, $X$ is closed, and $F(X)$ lies on $S^n$, so $F$ is a covering onto its image. Simple connectedness of $S^n$ for $n\ge 2$, or a direct check for $n=1$, makes $F$ a diffeomorphism onto $S^n$.
+
+Hence $$\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$$. The matrix $$\delta_{ab}-x_ax_b$$ has rank $$n$$ on the unit sphere, and $$\{dx_a\}$$ spans $$T^*X$$ by hypothesis, which is W2 for this frame. W1 follows: $$F$$ is an immersion, $$X$$ is closed, and $$F(X)$$ lies on $$S^n$$, so $$F$$ is a covering onto its image. Simple connectedness of $$S^n$$ for $$n\ge 2$$, or a direct check for $$n=1$$, makes $$F$$ a diffeomorphism onto $$S^n$$.
 \end{proof}
 
-\begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 19 and Theorem 1 give that $X$ is isometric to the unit round sphere. This is the case $d=n+1$, $Q\equiv 1$ of Lemma 25. The metric dual to $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ is the round metric of radius $1$, and $\alpha=0$ because $\mu=\mathrm{vol}_g$. Thus $P=-\Delta$. The frame spans the first harmonics because it is an $(n+1)$-dimensional eigenspace at eigenvalue $n$. If the first eigenvalue is $\lambda$ rather than $n$, the same identities with the pair $(\lambda,2\lambda+2\lambda/n)$ rescale the radius to $\sqrt{n/\lambda}$.
+\begin{proof}[Proof of Theorem~\ref{thm-a}] Lemma 19 and Theorem 1 give that $$X$$ is isometric to the unit round sphere. This is the case $$d=n+1$$, $$Q\equiv 1$$ of Lemma 25. The metric dual to $$\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$$ is the round metric of radius $$1$$, and $$\alpha=0$$ because $$\mu=\mathrm{vol}_g$$. Thus $$P=-\Delta$$. The frame spans the first harmonics because it is an $$(n+1)$$-dimensional eigenspace at eigenvalue $$n$$. If the first eigenvalue is $$\lambda$$ rather than $$n$$, the same identities with the pair $$(\lambda,2\lambda+2\lambda/n)$$ rescale the radius to $$\sqrt{n/\lambda}$$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm-b}]
-The isolation hypothesis makes $\mathcal{V}$ a spectral window of dimension $n+1$. Standing W1 and W2 apply to this block. Write $\lambda_a=n+\varepsilon_a$, so $|\varepsilon_a|\le\delta_w$.
+The isolation hypothesis makes $$\mathcal{V}$$ a spectral window of dimension $$n+1$$. Standing W1 and W2 apply to this block. Write $$\lambda_a=n+\varepsilon_a$$, so $$|\varepsilon_a|\le\delta_w$$.
 
-Lemma 5 on the cluster frame, with smeared projector $\Pi^\eta_{\mathrm{sph}}$,
+Lemma 5 on the cluster frame, with smeared projector $$\Pi^\eta_{\mathrm{sph}}$$,
 gives
+
 $$
 2\Gamma(x_a,x_b)=(\lambda_a+\lambda_b)x_ax_b-P(m(x_a,x_b))+R_{\Lambda'}
 $$
+
 and
+
 $$
 \bigl\|\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\|_{L^2}
 \le C(n,\eta)\,(\delta_w+\delta_\Phi+\|R_{\Lambda'}(x_a,x_b)\|_2).
 $$
-The error in replacing the exact projectors $\Pi_0+\Pi_{2n+2}$ by $\Pi^\eta_{\mathrm{sph}}$ is $O(\eta)\|x_ax_b\|_2$ and is absorbed into $C(n,\eta)$. The in-window error $\delta_\Phi$ lives in a slot of dimension $O(n^2)$ for fixed $\eta,\Lambda'$; Remarks 6--7 upgrade that piece to $C^0$. The tail is upgraded to $C^0$ only through $\delta_t=\|t_{\Lambda'}\|_{C^1}$, or through $\Delta_{\mathrm{fr}}$ after a finite cut. Hence
+
+The error in replacing the exact projectors $$\Pi_0+\Pi_{2n+2}$$ by $$\Pi^\eta_{\mathrm{sph}}$$ is $$O(\eta)\|x_ax_b\|_2$$ and is absorbed into $$C(n,\eta)$$. The in-window error $$\delta_\Phi$$ lives in a slot of dimension $$O(n^2)$$ for fixed $$\eta,\Lambda'$$; Remarks 6--7 upgrade that piece to $$C^0$$. The tail is upgraded to $$C^0$$ only through $$\delta_t=\|t_{\Lambda'}\|_{C^1}$$, or through $$\Delta_{\mathrm{fr}}$$ after a finite cut. Hence
+
 $$
 \bigl\|\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\|_{C^0}
 \le C(n,\eta,\Lambda')\,(\delta_w+\delta_\Phi+\delta_t).
 $$
 
-The deficit $\delta_1$ puts $\sum_a x_a^2=1+O_{C^0}(\delta_1)$, so $F=(x_1,\dots,x_{n+1})$ lands in a $C^0$-neighbourhood of the unit sphere in $\mathcal{V}^*$. Gram--Schmidt absorbs $\delta_{\mathrm{on}}$ into $\delta_1$ and $\delta_\Phi$ at cost $C(n)$. The Gram matrix $\Gamma(x_a,x_b)$ is then $C^0$-close to $\delta_{ab}-x_ax_b$, which has rank $n$ on the unit sphere, so $dF$ has rank $n$ for $\delta<\delta_*(n,\eta)$.
+The deficit $$\delta_1$$ puts $$\sum_a x_a^2=1+O_{C^0}(\delta_1)$$, so $$F=(x_1,\dots,x_{n+1})$$ lands in a $$C^0$$-neighbourhood of the unit sphere in $$\mathcal{V}^*$$. Gram--Schmidt absorbs $$\delta_{\mathrm{on}}$$ into $$\delta_1$$ and $$\delta_\Phi$$ at cost $$C(n)$$. The Gram matrix $$\Gamma(x_a,x_b)$$ is then $$C^0$$-close to $$\delta_{ab}-x_ax_b$$, which has rank $$n$$ on the unit sphere, so $$dF$$ has rank $$n$$ for $$\delta<\delta_*(n,\eta)$$.
 
-Lemma 9(i), with $d=n+1$ and small $\delta_t$, persists $\iota$ as a $C^1$ diffeomorphism of $X$ onto a graph over $S^n$.
+Lemma 9(i), with $$d=n+1$$ and small $$\delta_t$$, persists $$\iota$$ as a $$C^1$$ diffeomorphism of $$X$$ onto a graph over $$S^n$$.
 Theorem 2(i) yields
+
 $$
 d_{\mathrm{GH}}(X,S^n)+\|F^*g_{\mathrm{eucl}}-g\|_{C^0}
 \le C(n,\eta,\Lambda')\,\delta.
 $$
-If the tail is cut at finite $\Lambda''$, Theorem 2(ii) replaces $\delta_t$ by $\Delta_{\mathrm{fr}}$. No Ricci bound is used. Diameter control is that graph.
 
-On a small $C^2$ ball about $g_{\mathrm{rd}}$, written as a divergence-form operator on $L^2(d\mathrm{vol}_{g_{\mathrm{rd}}})$, the contours about $0$, $n$, and $2n+2$ miss $\mathrm{Spec}(\Delta_g)$ \cite{Kato}. Thus the three gaps persist. Elliptic estimates on the isolated cluster give $C^0$ control of the frame from $\|g-g_{\mathrm{rd}}\|_{C^2}$, and therefore
+If the tail is cut at finite $$\Lambda''$$, Theorem 2(ii) replaces $$\delta_t$$ by $$\Delta_{\mathrm{fr}}$$. No Ricci bound is used. Diameter control is that graph.
+
+On a small $$C^2$$ ball about $$g_{\mathrm{rd}}$$, written as a divergence-form operator on $$L^2(d\mathrm{vol}_{g_{\mathrm{rd}}})$$, the contours about $$0$$, $$n$$, and $$2n+2$$ miss $$\mathrm{Spec}(\Delta_g)$$ \cite{Kato}. Thus the three gaps persist. Elliptic estimates on the isolated cluster give $$C^0$$ control of the frame from $$\|g-g_{\mathrm{rd}}\|_{C^2}$$, and therefore
+
 $$
 \delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
 \le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
 $$
-A finite cut makes $\delta_t$ of the same order. Individual eigenvalues in the cluster may split; only the joint span $\mathcal{V}$ is used.
+
+A finite cut makes $$\delta_t$$ of the same order. Individual eigenvalues in the cluster may split; only the joint span $$\mathcal{V}$$ is used.
 \end{proof}
 
 \begin{remark}
-Obata characterizes $S^n$ by $\operatorname{Ric}\ge(n-1)g$ and $\lambda_1=n$, using one eigenfunction \cite{Oba62}. Theorems 3 and 4 use an $(n+1)$-frame and its products. Quantitative Obata is Ricci-side stability of Obata \cite{CMS}. Theorem 4 is frame-side stability of Theorem 3. They are not the same theorem.
+Obata characterizes $$S^n$$ by $$\operatorname{Ric}\ge(n-1)g$$ and $$\lambda_1=n$$, using one eigenfunction \cite{Oba62}. Theorems 3 and 4 use an $$(n+1)$$-frame and its products. Quantitative Obata is Ricci-side stability of Obata \cite{CMS}. Theorem 4 is frame-side stability of Theorem 3. They are not the same theorem.
 \end{remark}
 
 \section{What the Packet Does Not Determine}
-The packet of §2 is a finite piece of the multiplication table of $P$. It does not determine the rest of $\sigma(P)$. Two Witten operators with the same window products and different high eigenvalues are not distinguished.
+The packet of §2 is a finite piece of the multiplication table of $$P$$. It does not determine the rest of $$\sigma(P)$$. Two Witten operators with the same window products and different high eigenvalues are not distinguished.
 
-It does not determine a potential. The standing category is Witten: $V=0$. A Schrödinger term is a different operator and a different paper \cite{Sch26}.
+It does not determine a potential. The standing category is Witten: $$V=0$$. A Schrödinger term is a different operator and a different paper \cite{Sch26}.
 
-It does not yield spectral uniqueness. Two operators with the same spectrum, or the same $\sigma(P)\cap[0,\Lambda']$, need not be isometric; the missing data are $\Phi$ and $R$. Two operators with the same exact packet ($R=0$) are isometric. Two operators with the same approximate packet need not be; they are $C^k$-close on the scale of $\lVert R\rVert_{C^k(\Sigma)}$.
+It does not yield spectral uniqueness. Two operators with the same spectrum, or the same $$\sigma(P)\cap[0,\Lambda']$$, need not be isometric; the missing data are $$\Phi$$ and $$R$$. Two operators with the same exact packet ($$R=0$$) are isometric. Two operators with the same approximate packet need not be; they are $$C^k$$-close on the scale of $$\lVert R\rVert_{C^k(\Sigma)}$$.
 
-It does not yield a constant depending only on $n$ in Theorem 2. The factor $C(d,k)$ depends on the window dimension. A constant depending only on $n$ and $\eta$, when $\Lambda'=2n+2+\eta$, appears in Theorem 4 after a finite cut of the tail (or with $\delta_t$ listed among the data).
+It does not yield a constant depending only on $$n$$ in Theorem 2. The factor $$C(d,k)$$ depends on the window dimension. A constant depending only on $$n$$ and $$\eta$$, when $$\Lambda'=2n+2+\eta$$, appears in Theorem 4 after a finite cut of the tail (or with $$\delta_t$$ listed among the data).
 
-It does not use Ricci curvature, a Weyl law, or the full table $\Phi$ on $\bigoplus_n\ker(P-\lambda_n)$. Those are the inputs of Obata theorems \cite{Oba62,CMS}, of eigenvalue asymptotics, and of the global comparison theorem \cite{Sch24,Sch26}, respectively. The present arguments use a window frame and its products.
+It does not use Ricci curvature, a Weyl law, or the full table $$\Phi$$ on $$\bigoplus_n\ker(P-\lambda_n)$$. Those are the inputs of Obata theorems \cite{Oba62,CMS}, of eigenvalue asymptotics, and of the global comparison theorem \cite{Sch24,Sch26}, respectively. The present arguments use a window frame and its products.
 
-Two packets for the same operator at different admissible cutoffs are consistent with Theorems 1 and 2. That consistency is not part of one packet; each packet has its own $(\Lambda,\Lambda',R)$.
+Two packets for the same operator at different admissible cutoffs are consistent with Theorems 1 and 2. That consistency is not part of one packet; each packet has its own $$(\Lambda,\Lambda',R)$$.
 
-An exact unweighted window is not shown to be a single homogeneous space except when $d=n+1$ and $Q$ is constant. 9.1 gives a second openness criterion -- the embedding is isometric into slot spheres.
+An exact unweighted window is not shown to be a single homogeneous space except when $$d=n+1$$ and $$Q$$ is constant. 9.1 gives a second openness criterion -- the embedding is isometric into slot spheres.
 
 Sunada pairs remain non-isometric and therefore cannot share an exact packet; §9 does not contradict §8.
 
@@ -579,188 +705,223 @@ The contribution of the paper is the converse direction inside this class: a fin
 
 \section{Orbits of an Exact Unweighted Window}
 
-Assume throughout this section that $\alpha=0$, that $R=0$, and that W1 and W2 hold. Thus $P=-\Delta_g$, products of the window land in $\mathcal{V}'$, and evaluation $\iota:X\to\mathcal{V}^*$ is a smooth embedding whose differentials span $T^*X$. Let $d=\dim\mathcal{V}$ and fix an $L^2$-orthonormal frame $\{u_a\}_{a=1}^d$ of $\mathcal{V}$. Write $K=\mathrm{Isom}(X,g)$ and $K^\circ$ for its identity component.
+Assume throughout this section that $$\alpha=0$$, that $$R=0$$, and that W1 and W2 hold. Thus $$P=-\Delta_g$$, products of the window land in $$\mathcal{V}'$$, and evaluation $$\iota:X\to\mathcal{V}^*$$ is a smooth embedding whose differentials span $$T^*X$$. Let $$d=\dim\mathcal{V}$$ and fix an $$L^2$$-orthonormal frame $$\{u_a\}_{a=1}^d$$ of $$\mathcal{V}$$. Write $$K=\mathrm{Isom}(X,g)$$ and $$K^\circ$$ for its identity component.
 
 \begin{theorem}
 \label{thm-exact}
-$K$ is a compact Lie group of isometries of $(X,g)$. The identity component acts real-analytically, and $X$ is a union of $G^\circ$-orbits (Lemma 24). If $\dim\mathcal{V}=n+1$ and $Q$ is a positive constant, then $G^\circ$ is transitive and $X$ is a sphere (Lemma 25). In general the principal set is a fibre bundle with fibre a compact homogeneous space. Residual packet freedom remains the compact group of orthogonal changes of frame of $\mathcal{V}$ that preserve $\Phi$.
+$$K$$ is a compact Lie group of isometries of $$(X,g)$$. The identity component acts real-analytically, and $$X$$ is a union of $$G^\circ$$-orbits (Lemma 24). If $$\dim\mathcal{V}=n+1$$ and $$Q$$ is a positive constant, then $$G^\circ$$ is transitive and $$X$$ is a sphere (Lemma 25). In general the principal set is a fibre bundle with fibre a compact homogeneous space. Residual packet freedom remains the compact group of orthogonal changes of frame of $$\mathcal{V}$$ that preserve $$\Phi$$.
 \end{theorem}
 
 Theorem 21 does not assume a tower.
 
-\begin{lemma}[Myers–Steenrod and the window] $K$ is a compact Lie group \cite{MS39}. Pullback by $K$ preserves every eigenspace of $P$, hence preserves $\mathcal{V}$ and $\mathcal{V}'$, and $\iota$ is $K$-equivariant. The reconstructed cometric $\Gamma$ of Lemma 5 and the metric of Lemma 14 are $K$-invariant.
+\begin{lemma}[Myers–Steenrod and the window] $$K$$ is a compact Lie group \cite{MS39}. Pullback by $$K$$ preserves every eigenspace of $$P$$, hence preserves $$\mathcal{V}$$ and $$\mathcal{V}'$$, and $$\iota$$ is $$K$$-equivariant. The reconstructed cometric $$\Gamma$$ of Lemma 5 and the metric of Lemma 14 are $$K$$-invariant.
 \end{lemma}
 
-\begin{proof}Myers–Steenrod: the isometry group of a compact Riemannian manifold is a compact Lie group acting smoothly. An isometry commutes with $\Delta_g$, so it preserves eigenspaces and the $L^2$ pairing. It therefore acts on $\mathcal{V}$ and on $\mathcal{V}'$, and
-$$\iota(k\cdot x)(u)=u(k^{-1}x)=(k^*\iota(x))(u),$$
-so $\iota$ is equivariant. Lemma 5 with $R=0$ gives $\Gamma(u,v)$ as a bilinear combination of products and of $P$ on $\mathcal{V}$. Both are $K$-invariant, so $\Gamma$ is. Lemma 14 dualizes $\Gamma$ to $g$, which is therefore $K$-invariant.
+\begin{proof}Myers–Steenrod: the isometry group of a compact Riemannian manifold is a compact Lie group acting smoothly. An isometry commutes with $$\Delta_g$$, so it preserves eigenspaces and the $$L^2$$ pairing. It therefore acts on $$\mathcal{V}$$ and on $$\mathcal{V}'$$, and
+$\iota(k\cdot x)(u)=u(k^{-1}x)=(k^*\iota(x))(u),$$
+so $$\iota$$ is equivariant. Lemma 5 with $$R=0$$ gives $$\Gamma(u,v)$$ as a bilinear combination of products and of $$P$$ on $$\mathcal{V}$$. Both are $$K$$-invariant, so $$\Gamma$$ is. Lemma 14 dualizes $$\Gamma$$ to $$g$$, which is therefore $$K$$-invariant.
 \end{proof}
 
 \begin{lemma}[the linear automorphism group]
-Let $m:\mathcal{V}\times\mathcal{V}\to\mathcal{V}'$ be the multiplication $m(u,v)=uv$ of the exact packet, and let
+Let $$m:\mathcal{V}\times\mathcal{V}\to\mathcal{V}'$$ be the multiplication $$m(u,v)=uv$$ of the exact packet, and let
+
 $$Z:=\bigl\{\xi\in\mathcal{V}^*:\ \xi(u)\xi(v)=\eta_\xi(m(u,v))\ \text{for all }u,v\in\mathcal{V}\bigr\},$$
-where $\eta_\xi\in(\mathcal{V}')^*$ is the unique linear extension of $\xi$ along $m$ furnished by $R=0$ (evaluation of $\mathcal{V}'$ on $X$, transported by Lemma 9). Let
+
+where $$\eta_\xi\in(\mathcal{V}')^*$$ is the unique linear extension of $$\xi$$ along $$m$$ furnished by $$R=0$$ (evaluation of $$\mathcal{V}'$$ on $$X$$, transported by Lemma 9). Let
+
 $$G:=\bigl\{A\in\mathrm{O}(\mathcal{V}^*):\ A\cdot Z=Z\bigr\}.$$
-Then $G$ is a compact Lie group, $\iota(X)$ is a union of connected components of the smooth locus of $Z$, and $G$ acts isometrically on $(X,g)$. The image of $K$ in $\mathrm{O}(\mathcal{V}^*)$ lands in $G$.
+
+Then $$G$$ is a compact Lie group, $$\iota(X)$$ is a union of connected components of the smooth locus of $$Z$$, and $$G$$ acts isometrically on $$(X,g)$$. The image of $$K$$ in $$\mathrm{O}(\mathcal{V}^*)$$ lands in $$G$$.
 \end{lemma}
 
 \begin{proof}
-The conditions cutting out $Z$ are quadratic in $\xi$, so $Z$ is a real-algebraic set. $G$ is a closed subgroup of $\mathrm{O}(d)$, hence a compact Lie group. Lemma 9 with $t=0$ identifies $\iota(X)$ with the smooth characters of $(\mathcal{V},m)$, which is precisely the smooth locus of $Z$ along the component containing $\iota(X)$. W1 says that component is a smooth embedded copy of $X$.
-If $A\in G$, then $A$ preserves the multiplication tensor $m$ up to the orthogonal action on $\mathcal{V}'$ that makes the identities $\xi(u)\xi(v)=\eta(m(u,v))$ invariant. Consequently $A$ preserves $\Gamma$, which by Lemma 5 is a bilinear combination of $m$ and of $P|_{\mathcal{V}}$. The spectrum of $P$ on $\mathcal{V}$ is part of the packet and is $G$-invariant. Lemma 14 therefore gives that $A$ acts by an isometry of $g$. Lemma 21 puts the image of $K$ inside $G$.
+The conditions cutting out $$Z$$ are quadratic in $$\xi$$, so $$Z$$ is a real-algebraic set. $$G$$ is a closed subgroup of $$\mathrm{O}(d)$$, hence a compact Lie group. Lemma 9 with $$t=0$$ identifies $$\iota(X)$$ with the smooth characters of $$(\mathcal{V},m)$$, which is precisely the smooth locus of $$Z$$ along the component containing $$\iota(X)$$. W1 says that component is a smooth embedded copy of $$X$$.
+If $$A\in G$$, then $$A$$ preserves the multiplication tensor $$m$$ up to the orthogonal action on $$\mathcal{V}'$$ that makes the identities $$\xi(u)\xi(v)=\eta(m(u,v))$$ invariant. Consequently $$A$$ preserves $$\Gamma$$, which by Lemma 5 is a bilinear combination of $$m$$ and of $$P|_{\mathcal{V}}$$. The spectrum of $$P$$ on $$\mathcal{V}$$ is part of the packet and is $$G$$-invariant. Lemma 14 therefore gives that $$A$$ acts by an isometry of $$g$$. Lemma 21 puts the image of $$K$$ inside $$G$$.
 \end{proof}
 
 \begin{lemma}[orbits]
-$G^\circ$ acts real-analytically on $X$. All orbits in a connected component of the principal set have the same dimension. Consequently $X$ is a disjoint union of $G^\circ$-orbits, and $G^\circ$ is transitive on $X$ if and only if some orbit is open in $X$.
+$$G^\circ$$ acts real-analytically on $$X$$. All orbits in a connected component of the principal set have the same dimension. Consequently $$X$$ is a disjoint union of $$G^\circ$$-orbits, and $$G^\circ$$ is transitive on $$X$$ if and only if some orbit is open in $$X$$.
 \end{lemma}
 
 \begin{proof}
-The metric of Lemma 14 is dual to $\Gamma$, and $\Gamma$ is a bilinear combination of the packet product $m$ and of $P|_{\mathcal{V}}$ (Lemma 5 with $R=0$). Both are real-analytic, so $g$ is real-analytic and $X$ is a compact real-analytic Riemannian manifold. $G$ is a compact linear algebraic subgroup of $\mathrm{O}(\mathcal{V}^*)$, hence a compact Lie group, and its action on $Z^{\mathrm{sm}}$ is algebraic, therefore real-analytic. Restricting to the component $\iota(X)$ gives a real-analytic action on $X$.
+The metric of Lemma 14 is dual to $$\Gamma$$, and $$\Gamma$$ is a bilinear combination of the packet product $$m$$ and of $$P|_{\mathcal{V}}$$ (Lemma 5 with $$R=0$$). Both are real-analytic, so $$g$$ is real-analytic and $$X$$ is a compact real-analytic Riemannian manifold. $$G$$ is a compact linear algebraic subgroup of $$\mathrm{O}(\mathcal{V}^*)$$, hence a compact Lie group, and its action on $$Z^{\mathrm{sm}}$$ is algebraic, therefore real-analytic. Restricting to the component $$\iota(X)$$ gives a real-analytic action on $$X$$.
 
-Orbits of a compact Lie group are compact embedded submanifolds. The principal orbit theorem supplies an open dense principal set $X^{\mathrm{prin}}$ on which all orbits have the same dimension $r\le n$ and the same type. Unique continuation for real-analytic maps: an orbit of dimension $r$ that meets $X^{\mathrm{prin}}$ cannot drop dimension on a nonempty open subset of $X$. Thus every orbit in the given connected component of $X^{\mathrm{prin}}$ has dimension $r$, and $X$ is a union of such orbits together with lower-dimensional singular orbits of measure zero.
+Orbits of a compact Lie group are compact embedded submanifolds. The principal orbit theorem supplies an open dense principal set $$X^{\mathrm{prin}}$$ on which all orbits have the same dimension $$r\le n$$ and the same type. Unique continuation for real-analytic maps: an orbit of dimension $$r$$ that meets $$X^{\mathrm{prin}}$$ cannot drop dimension on a nonempty open subset of $$X$$. Thus every orbit in the given connected component of $$X^{\mathrm{prin}}$$ has dimension $$r$$, and $$X$$ is a union of such orbits together with lower-dimensional singular orbits of measure zero.
 
-If some orbit $\mathcal{O}$ is open in $X$, then $\mathcal{O}$ is also closed (compact), so connectedness of $X$ gives $\mathcal{O}=X$. Conversely, a transitive action has a single orbit, which is open.
+If some orbit $$\mathcal{O}$$ is open in $$X$$, then $$\mathcal{O}$$ is also closed (compact), so connectedness of $$X$$ gives $$\mathcal{O}=X$$. Conversely, a transitive action has a single orbit, which is open.
 \end{proof}
 
-\begin{lemma}[open orbit when $d=n+1$]
-Assume in addition that $\dim\mathcal{V}=n+1$ and that the function $Q=\sum_a u_a^2$ is a positive constant. Then $\iota(X)$ is the sphere of radius $\sqrt{Q}$ in $\mathcal{V}^*$, $G^\circ$ contains a transitive action on that sphere, and $G^\circ$ is transitive on $X$. In particular $X$ is diffeomorphic to a sphere, and the metric is round if in addition $\mathcal{V}$ is one eigenspace and the trace identity of Lemma 23 holds.
+\begin{lemma}[open orbit when $$d=n+1$$]
+Assume in addition that $$\dim\mathcal{V}=n+1$$ and that the function $$Q=\sum_a u_a^2$$ is a positive constant. Then $$\iota(X)$$ is the sphere of radius $$\sqrt{Q}$$ in $$\mathcal{V}^*$$, $$G^\circ$$ contains a transitive action on that sphere, and $$G^\circ$$ is transitive on $$X$$. In particular $$X$$ is diffeomorphic to a sphere, and the metric is round if in addition $$\mathcal{V}$$ is one eigenspace and the trace identity of Lemma 23 holds.
 \end{lemma}
 
 \begin{proof}
-The identity $\lvert\iota\rvert^2=Q$ puts $\iota(X)$ on the sphere $S$ of radius $\sqrt{Q}$ in the $(n+1)$-dimensional space $\mathcal{V}^*$. W1 says $\iota$ is an embedding of an $n$-manifold, so $\iota(X)$ is open in $S$. $S$ is connected, so $\iota(X)=S$.
-The orthogonal group $\mathrm{O}(n+1)$ preserves $S$ and acts transitively on it. Restricting to the identity component and applying Lemma 24 gives transitivity on $X$. Thus $X$ is diffeomorphic to a sphere.
+The identity $$\lvert\iota\rvert^2=Q$$ puts $$\iota(X)$$ on the sphere $$S$$ of radius $$\sqrt{Q}$$ in the $$(n+1)$$-dimensional space $$\mathcal{V}^*$$. W1 says $$\iota$$ is an embedding of an $$n$$-manifold, so $$\iota(X)$$ is open in $$S$$. $$S$$ is connected, so $$\iota(X)=S$$.
+The orthogonal group $$\mathrm{O}(n+1)$$ preserves $$S$$ and acts transitively on it. Restricting to the identity component and applying Lemma 24 gives transitivity on $$X$$. Thus $$X$$ is diffeomorphic to a sphere.
 
-If moreover $\mathcal{V}$ is a single eigenspace and $\sum_a\Gamma(u_a,u_a)=\lambda Q$, Lemma 23 puts $\iota$ on a sphere in the Takahashi sense and the reconstructed metric of Lemma 14 is round of radius $\sqrt{Q}$. In the first spherical window this is Lemma 19: $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$ and radius $1$. Those extra identities are the data of Theorem 3; they are not assumed in Theorem 21 beyond $Q$ constant.
+If moreover $$\mathcal{V}$$ is a single eigenspace and $$\sum_a\Gamma(u_a,u_a)=\lambda Q$$, Lemma 23 puts $$\iota$$ on a sphere in the Takahashi sense and the reconstructed metric of Lemma 14 is round of radius $$\sqrt{Q}$$. In the first spherical window this is Lemma 19: $$\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$$ and radius $$1$$. Those extra identities are the data of Theorem 3; they are not assumed in Theorem 21 beyond $$Q$$ constant.
 \end{proof}
 
 \begin{remark}[towers]
-A nested sequence of windows $\mathcal{V}_j$ with $\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}$ cannot stabilise at finite dimension if it separates points. If the multiplication is the Clebsch--Gordan decomposition of a compact Lie group acting smoothly on $X$, evaluation is an equivariant eigenmap and $X$ is a union of orbits. If in addition evaluation is an isometric embedding into the slot spheres, the orbit is open by §9.1.
+A nested sequence of windows $$\mathcal{V}_j$$ with $$\mathcal{V}_j\cdot\mathcal{V}_k\subset\mathcal{V}_{j+k}$$ cannot stabilise at finite dimension if it separates points. If the multiplication is the Clebsch--Gordan decomposition of a compact Lie group acting smoothly on $$X$$, evaluation is an equivariant eigenmap and $$X$$ is a union of orbits. If in addition evaluation is an isometric embedding into the slot spheres, the orbit is open by §9.1.
 
 A single exact pair does not produce such a flag. The torus packet of §9.2 is the abelian case. This remark is not used in Theorems 1--4.
 \end{remark}
 
-If $\mathcal{V}=\bigoplus_i\mathcal{V}_{\lambda_i}$ with more than one eigenvalue, Takahashi applies factorwise: each $\iota_{\lambda_i}(X)$ lies in a sphere in $\mathcal{V}_{\lambda_i}^*$, and $\iota(X)$ lies in a product of spheres.
+If $$\mathcal{V}=\bigoplus_i\mathcal{V}_{\lambda_i}$$ with more than one eigenvalue, Takahashi applies factorwise: each $$\iota_{\lambda_i}(X)$$ lies in a sphere in $$\mathcal{V}_{\lambda_i}^*$$, and $$\iota(X)$$ lies in a product of spheres.
 
-If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ is a Garay map. The image lies in a product of slot spheres only after each spectral projector is constant on the diagonal, which is not implied by $R=0$.
+If $$\iota$$ is isometric and $$\mathcal{V}$$ has several eigenvalues, then $$\iota$$ is a Garay map. The image lies in a product of slot spheres only after each spectral projector is constant on the diagonal, which is not implied by $$R=0$$.
 
 \begin{remark}
 The tower holds for every CROSS first window and every Peter–Weyl window.
 \end{remark}
 
-\begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 24 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 25 supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant (which is the first window of Theorems 3 and 21 in the spherical case), or when the evaluation is an isometric embedding into the slot spheres, §9.1. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
+\begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $$(X,g)$$ and a compact linear group $$G$$ acting on $$\iota(X)$$. Lemma 24 gives that $$X$$ is a union of $$G^\circ$$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 25 supplies that open orbit when $$\dim\mathcal{V}=n+1$$ and $$Q$$ is constant (which is the first window of Theorems 3 and 21 in the spherical case), or when the evaluation is an isometric embedding into the slot spheres, §9.1. In general, set $$H=\mathrm{Stab}_{K^\circ}(x)$$ along a principal orbit; the principal set is a fibre bundle with fibre $$K^\circ/H$$. Finite covers and ineffective kernels are as before.
 \end{proof}
 
-\begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 24. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. A second transitivity/open orbit condition is given in Section 9.1. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
+\begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 24. Transitivity is proved when $$d=n+1$$ and $$Q$$ is constant, which is the case already used by Lemma 19 and Theorem 3. A second transitivity/open orbit condition is given in Section 9.1. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
 \end{remark}
 
 \subsection{Slot Spheres and Open Orbits}
 \label{sec:slot-spheres}
 
-Retain the hypotheses of Theorem~21: $\alpha=0$, $R=0$, and a compact group $K$ of linear automorphisms of $\mathcal{V}$ that preserves $\Phi$. Then $K$ acts smoothly on $X$ and $X$ is a union of $K$-orbits.
+Retain the hypotheses of Theorem~21: $$\alpha=0$$, $$R=0$$, and a compact group $$K$$ of linear automorphisms of $$\mathcal{V}$$ that preserves $$\Phi$$. Then $$K$$ acts smoothly on $$X$$ and $$X$$ is a union of $$K$$-orbits.
 
 Assume in addition that evaluation of the slots realises an isometric embedding
+
 $$
 \iota:X\hookrightarrow\prod_j S(\mathcal{E}_j)
 $$
-into the product of the slot spheres in $\mathcal{V}^*$ (spheres about the origin of each Euclidean factor $\mathcal{E}_j$). The embedding is $K$-equivariant, because $K$ acts linearly on each $\mathcal{E}_j$ and preserves $\Phi$. In particular the radius functions $Q_j=\lvert F_j\rvert^2$ are $K$-invariant and constant, so they do not cut orbits down to level sets.
 
-Since $\iota$ is an immersion, every $K$-orbit in $X$ has dimension $\dim X$. A compact group acting on a compact connected manifold cannot have a proper open orbit, hence $X$ is a single $K$-orbit:
+into the product of the slot spheres in $$\mathcal{V}^*$$ (spheres about the origin of each Euclidean factor $$\mathcal{E}_j$$). The embedding is $$K$$-equivariant, because $$K$$ acts linearly on each $$\mathcal{E}_j$$ and preserves $$\Phi$$. In particular the radius functions $$Q_j=\lvert F_j\rvert^2$$ are $$K$$-invariant and constant, so they do not cut orbits down to level sets.
+
+Since $$\iota$$ is an immersion, every $$K$$-orbit in $$X$$ has dimension $$\dim X$$. A compact group acting on a compact connected manifold cannot have a proper open orbit, hence $$X$$ is a single $$K$$-orbit:
+
 $$ X\cong K/H $$
-for the stabilizer $H$ of any point. Thus $X$ is a compact homogeneous space and $g_\Gamma$ is a $K$-invariant Riemannian metric.
 
-When there is a single slot of dimension $n+1$, this is Lemma~25 and the last clause of Theorem~21: $K$ acts through $O(n+1)$ and $X$ is a round sphere. When the slots are harmonic spaces of a round sphere, one recovers that same round metric; a different linear presentation of the same slots changes only the ambient image of $\iota$, not the orbit structure on $X$.
+for the stabilizer $$H$$ of any point. Thus $$X$$ is a compact homogeneous space and $$g_\Gamma$$ is a $$K$$-invariant Riemannian metric.
 
-No statement is made about the second fundamental form of $\iota$ in Euclidean space. That concerns the image $\iota(X)\subset\mathcal{V}^*$, not the identification of $X$ with an open $K$-orbit.
+When there is a single slot of dimension $$n+1$$, this is Lemma~25 and the last clause of Theorem~21: $$K$$ acts through $$O(n+1)$$ and $$X$$ is a round sphere. When the slots are harmonic spaces of a round sphere, one recovers that same round metric; a different linear presentation of the same slots changes only the ambient image of $$\iota$$, not the orbit structure on $$X$$.
+
+No statement is made about the second fundamental form of $$\iota$$ in Euclidean space. That concerns the image $$\iota(X)\subset\mathcal{V}^*$$, not the identification of $$X$$ with an open $$K$$-orbit.
 
 \begin{remark}[Adve’s table is not a finite exact packet]
-Adve’s converse theorem \cite{Adv25} reconstructs a compact hyperbolic 2-orbifold from the full multiplication table of a $(\mathfrak{g},K)$-adapted basis of $K$-finite vectors in $L^2(\Gamma\backslash G)$, $G=\mathrm{PSL}_2(\mathbb{R})$. The structure constants $C_{ij}^\ell$ are the coordinates of that table. Crossing (HB6) is the four-point identity
+Adve’s converse theorem \cite{Adv25} reconstructs a compact hyperbolic 2-orbifold from the full multiplication table of a $$(\mathfrak{g},K)$$-adapted basis of $$K$$-finite vectors in $$L^2(\Gamma\backslash G)$$, $$G=\mathrm{PSL}_2(\mathbb{R})$$. The structure constants $$C_{ij}^\ell$$ are the coordinates of that table. Crossing (HB6) is the four-point identity
+
 $$
 \langle\psi_i\psi_j,\psi_{i'}\psi_{j'}\rangle
 =\langle\psi_i\psi_{i'},\psi_j\psi_{j'}\rangle,
 $$
-together with $K$-equivariance, a unit, and a Leibniz rule for the raising operator. This is the complete infinite algebra of $H_{\mathrm{fin}}$ on the unit tangent bundle, not a finite window.
 
-An exact packet in the sense of Theorems 1 and 21 is a finite spectral window $\mathcal{V}$ with $R=0$ at a finite cutoff $\Lambda'$. Products of Maass modes expand over infinitely many Casimirs of the summed $K$-weight, so no finite $\Lambda'$ makes $R=0$ while evaluation embeds the surface. Compact hyperbolic surfaces therefore lie outside the exact finite-window class and inside Adve’s class: the same multiplication, an infinite table, a noncompact structure group.
+together with $$K$$-equivariance, a unit, and a Leibniz rule for the raising operator. This is the complete infinite algebra of $$H_{\mathrm{fin}}$$ on the unit tangent bundle, not a finite window.
 
-The identity slot is finite by HB4. Products of holomorphic discrete-series vectors of weights $\le k$ close in weight $\le 2k$, which is a finite exact table for a line-bundle operator, not for the scalar Laplacian on $X$. Neither fragment supplies a finite exact scalar window on $X$ or on $T^1X$.
+An exact packet in the sense of Theorems 1 and 21 is a finite spectral window $$\mathcal{V}$$ with $$R=0$$ at a finite cutoff $$\Lambda'$$. Products of Maass modes expand over infinitely many Casimirs of the summed $$K$$-weight, so no finite $$\Lambda'$$ makes $$R=0$$ while evaluation embeds the surface. Compact hyperbolic surfaces therefore lie outside the exact finite-window class and inside Adve’s class: the same multiplication, an infinite table, a noncompact structure group.
 
-The two converses meet at associativity of $\Phi$. They split on whether that algebra is generated by a finite embedding representation. That is the distinction already recorded in Remark 6 of \cite{Sch26}: Adve is uniqueness for unit tangent bundles of compact hyperbolic 2-orbifolds, not an instance of (G7).
+The identity slot is finite by HB4. Products of holomorphic discrete-series vectors of weights $$\le k$$ close in weight $$\le 2k$$, which is a finite exact table for a line-bundle operator, not for the scalar Laplacian on $$X$$. Neither fragment supplies a finite exact scalar window on $$X$$ or on $$T^1X$$.
+
+The two converses meet at associativity of $$\Phi$$. They split on whether that algebra is generated by a finite embedding representation. That is the distinction already recorded in Remark 6 of \cite{Sch26}: Adve is uniqueness for unit tangent bundles of compact hyperbolic 2-orbifolds, not an instance of (G7).
 \end{remark}
 
 \begin{proposition}[converse to §9.1]
-Let $(X,g)$ be a compact connected Riemannian homogeneous space. Then there exists an exact unweighted packet whose evaluation is an isometric embedding into a product of slot spheres. In particular $(X,g)$ arises in the class described by §9.1.
+Let $$(X,g)$$ be a compact connected Riemannian homogeneous space. Then there exists an exact unweighted packet whose evaluation is an isometric embedding into a product of slot spheres. In particular $$(X,g)$$ arises in the class described by §9.1.
 \end{proposition}
 \begin{subproof}
-Write $X=G/H$ with $G$ a compact Lie group of isometries acting transitively and $H=\mathrm{Stab}_G(x_0)$. The Laplacian $P=-\Delta_g$ commutes with $G$, so $L^2(X)$ decomposes into finite-dimensional irreducible $G$-modules and each irreducible summand lies in a single eigenspace of $P$ (Schur).
+Write $$X=G/H$$ with $$G$$ a compact Lie group of isometries acting transitively and $$H=\mathrm{Stab}_G(x_0)$$. The Laplacian $$P=-\Delta_g$$ commutes with $$G$$, so $$L^2(X)$$ decomposes into finite-dimensional irreducible $$G$$-modules and each irreducible summand lies in a single eigenspace of $$P$$ (Schur).
 
-By Moore \cite{Moo76}, there is a $G$-equivariant isometric embedding
+By Moore \cite{Moo76}, there is a $$G$$-equivariant isometric embedding
+
 $$
 \iota\colon (X,g)\longrightarrow\mathbb{R}^N
 $$
-into Euclidean space, for some $N<\infty$, with $G$ acting linearly and orthogonally on $\mathbb{R}^N$. (Mostow supplies a
-$G$-equivariant embedding; Moore makes it isometric.) Decompose the ambient module as
+
+into Euclidean space, for some $$N<\infty$$, with $$G$$ acting linearly and orthogonally on $$\mathbb{R}^N$$. (Mostow supplies a
+$$G$$-equivariant embedding; Moore makes it isometric.) Decompose the ambient module as
+
 $$
 \mathbb{R}^N=\bigoplus_{j=1}^s\mathcal{E}_j
 $$
-into irreducible $G$-summands. The coordinate functions of $\iota$ on $\mathcal{E}_j$ span a $G$-irreducible space of smooth functions on $X$, hence lie in a single eigenspace of $P$. Let $\mathcal{V}=\bigoplus_j\mathcal{E}_j^\vee$ be the corresponding window of eigenfunctions (the dual coordinates), and let $\lambda_j$ be the eigenvalue on the $j$-th slot.
+
+into irreducible $$G$$-summands. The coordinate functions of $$\iota$$ on $$\mathcal{E}_j$$ span a $$G$$-irreducible space of smooth functions on $$X$$, hence lie in a single eigenspace of $$P$$. Let $$\mathcal{V}=\bigoplus_j\mathcal{E}_j^\vee$$ be the corresponding window of eigenfunctions (the dual coordinates), and let $$\lambda_j$$ be the eigenvalue on the $$j$$-th slot.
 
 The slot quadratic
+
 $$
 Q_j=\sum_{u\in\mathrm{ONB}(\mathcal{E}_j^\vee)}u^2
 $$
-is $G$-invariant, hence constant on $X$. Thus $\iota(X)$ lies in the product of spheres
+
+is $$G$$-invariant, hence constant on $$X$$. Thus $$\iota(X)$$ lies in the product of spheres
+
 $$
 \prod_{j=1}^s\sqrt{Q_j}\,S(\mathcal{E}_j).
 $$
-Isometry of $\iota$ means
+
+Isometry of $$\iota$$ means
+
 $$
 g=\iota^*g_{\mathrm{eucl}}=\sum_j\iota_j^*g_{\mathrm{eucl},j},
 $$
-so evaluation on $\mathcal{V}$ is an isometric embedding into that product of slot spheres. Differentials of the coordinates span $T^*X$ because $\iota$ is an immersion, which is W2. W1 is the embedding.
 
-It remains to check exactness. The pointwise product of two matrix coefficients of irreps $\rho$ and $\sigma$ is a matrix coefficient of $\rho\otimes\sigma$, hence a finite sum of matrix coefficients of the irreducible constituents of $\rho\otimes\sigma$. Taking $\Lambda'$ large enough that $\mathcal{V}'$ contains every constituent of $\mathcal{E}_j^\vee\otimes\mathcal{E}_k^\vee$ for all slots $j,k$, one has $R=0$. The packet $(\Lambda,\Lambda',\sigma(P)\cap[0,\Lambda'],\Phi|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},0)$ is therefore an exact unweighted slot-sphere packet for $(X,g)$.
+so evaluation on $$\mathcal{V}$$ is an isometric embedding into that product of slot spheres. Differentials of the coordinates span $$T^*X$$ because $$\iota$$ is an immersion, which is W2. W1 is the embedding.
 
-Residual freedom is an orthogonal change of basis of $\mathcal{V}$ preserving $\Phi$, as in Theorem 1.
+It remains to check exactness. The pointwise product of two matrix coefficients of irreps $$\rho$$ and $$\sigma$$ is a matrix coefficient of $$\rho\otimes\sigma$$, hence a finite sum of matrix coefficients of the irreducible constituents of $$\rho\otimes\sigma$$. Taking $$\Lambda'$$ large enough that $$\mathcal{V}'$$ contains every constituent of $$\mathcal{E}_j^\vee\otimes\mathcal{E}_k^\vee$$ for all slots $$j,k$$, one has $$R=0$$. The packet $$(\Lambda,\Lambda',\sigma(P)\cap[0,\Lambda'],\Phi|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'},0)$$ is therefore an exact unweighted slot-sphere packet for $$(X,g)$$.
+
+Residual freedom is an orthogonal change of basis of $$\mathcal{V}$$ preserving $$\Phi$$, as in Theorem 1.
 \end{subproof}
 
 \subsection{The Torus Packet}
 The first window of a sphere is not the only exact packet. On a compact flat manifold the characters of the translation lattice multiply by addition of frequencies, so any finite spanning set of frequencies is exact at a finite cutoff. Theorem 1 reconstructs the flat metric. Theorem 21 supplies transitivity from the group law.
 
-Let $X=\mathbb{R}^n/\Gamma$ be a compact flat manifold, with $\Gamma$ a Bieberbach group, and write $\Lambda_{\mathrm{tr}}$ for the translation lattice of $\Gamma$. Let $\Lambda_{\mathrm{tr}}^*$ be its dual. Characters
+Let $$X=\mathbb{R}^n/\Gamma$$ be a compact flat manifold, with $$\Gamma$$ a Bieberbach group, and write $$\Lambda_{\mathrm{tr}}$$ for the translation lattice of $$\Gamma$$. Let $$\Lambda_{\mathrm{tr}}^*$$ be its dual. Characters
+
 $$e_\xi(x)=\mathrm{e}^{2\pi i\langle\xi,x\rangle},\qquad\xi\in\Lambda_{\mathrm{tr}}^*,$$
-are eigenfunctions of $P=-\Delta$ with eigenvalues $\lambda_\xi=4\pi^2\lvert\xi\rvert^2$. They are holonomy-invariant when descended to $X$. Fix a finite set $S\subset\Lambda_{\mathrm{tr}}^*$ that spans $\Lambda_{\mathrm{tr}}^*\otimes\mathbb{R}$ as a real vector space, and let $\mathcal{V}$ be the real span of $\{1\}\cup\{\operatorname{Re}e_\xi,\operatorname{Im}e_\xi:\xi\in S\}$. Set
+
+are eigenfunctions of $$P=-\Delta$$ with eigenvalues $$\lambda_\xi=4\pi^2\lvert\xi\rvert^2$$. They are holonomy-invariant when descended to $$X$$. Fix a finite set $$S\subset\Lambda_{\mathrm{tr}}^*$$ that spans $$\Lambda_{\mathrm{tr}}^*\otimes\mathbb{R}$$ as a real vector space, and let $$\mathcal{V}$$ be the real span of $$\{1\}\cup\{\operatorname{Re}e_\xi,\operatorname{Im}e_\xi:\xi\in S\}$$. Set
+
 $$\Lambda'=4\pi^2\max_{\xi,\eta\in S}\lvert\xi+\eta\rvert^2.$$
 
-\begin{proposition}With this packet, $R=0$ and W1–W2 hold. Theorem 1 identifies $(X,g)$ with the compact flat manifold whose dual is generated by $S$. The identity component of the isometry group in Theorem 21 contains the translation torus of the cover $\mathbb{R}^n/\Lambda_{\mathrm{tr}}$, and $X$ is a principal orbit of that torus modulo the holonomy of $\Gamma$.
+\begin{proposition}With this packet, $$R=0$$ and W1–W2 hold. Theorem 1 identifies $$(X,g)$$ with the compact flat manifold whose dual is generated by $$S$$. The identity component of the isometry group in Theorem 21 contains the translation torus of the cover $$\mathbb{R}^n/\Lambda_{\mathrm{tr}}$$, and $$X$$ is a principal orbit of that torus modulo the holonomy of $$\Gamma$$.
 \end{proposition}
-\begin{proof}The product of characters is a character, $e_\xi e_\eta=e_{\xi+\eta}$. If $\xi,\eta\in S$ then $\lvert\xi+\eta\rvert^2\le\max_{\xi',\eta'\in S}\lvert\xi'+\eta'\rvert^2$, so $\lambda_{\xi+\eta}\le\Lambda'$ and $e_\xi e_\eta\in\mathcal{V}'$. Real and imaginary parts are linear combinations of characters, so the same bound holds for products in $\mathcal{V}$. Thus $R=0$.
+\begin{proof}The product of characters is a character, $$e_\xi e_\eta=e_{\xi+\eta}$$. If $$\xi,\eta\in S$$ then $$\lvert\xi+\eta\rvert^2\le\max_{\xi',\eta'\in S}\lvert\xi'+\eta'\rvert^2$$, so $$\lambda_{\xi+\eta}\le\Lambda'$$ and $$e_\xi e_\eta\in\mathcal{V}'$$. Real and imaginary parts are linear combinations of characters, so the same bound holds for products in $$\mathcal{V}$$. Thus $$R=0$$.
 
-Evaluation $\iota:X\to\mathcal{V}^*$ is the composition of the covering $\mathbb{R}^n\to X$ with the map
+Evaluation $$\iota:X\to\mathcal{V}^*$$ is the composition of the covering $$\mathbb{R}^n\to X$$ with the map
+
 $$x\mapsto\bigl(\cos 2\pi\langle\xi,x\rangle,\,\sin 2\pi\langle\xi,x\rangle\bigr)_{\xi\in S}.$$
-The differential has full rank $n$ at every point because $S$ spans. If $S$ generates $\Lambda_{\mathrm{tr}}^*$ as a group then the kernel of $\iota$ on $\mathbb{R}^n$ is exactly $\Lambda_{\mathrm{tr}}$, so $\iota$ descends to an embedding of the translation torus, and hence of its holonomy quotient $X$. That is W1.
+
+The differential has full rank $$n$$ at every point because $$S$$ spans. If $$S$$ generates $$\Lambda_{\mathrm{tr}}^*$$ as a group then the kernel of $$\iota$$ on $$\mathbb{R}^n$$ is exactly $$\Lambda_{\mathrm{tr}}$$, so $$\iota$$ descends to an embedding of the translation torus, and hence of its holonomy quotient $$X$$. That is W1.
 
 The cometric on characters is
-$$\Gamma(e_\xi,e_\eta)=4\pi^2\langle\xi,\eta\rangle\,e_{\xi-\eta}$$
-(up to conjugation). Restricted to $\mathcal{V}$ it has rank $n$ because $S$ spans. That is W2.
 
-Theorem 1 therefore identifies $X$ with the character space of $(\mathcal{V},m)$. That space is the compact abelian group
+$$\Gamma(e_\xi,e_\eta)=4\pi^2\langle\xi,\eta\rangle\,e_{\xi-\eta}$$
+
+(up to conjugation). Restricted to $$\mathcal{V}$$ it has rank $$n$$ because $$S$$ spans. That is W2.
+
+Theorem 1 therefore identifies $$X$$ with the character space of $$(\mathcal{V},m)$$. That space is the compact abelian group
+
 $$\operatorname{Hom}(\langle S\rangle_{\mathbb{Z}},S^1)\cong\mathbb{R}^n/\Lambda_S,$$
-where $\Lambda_S$ is the annihilator of the $\mathbb{Z}$-span of $S$. If $S$ generates $\Lambda_{\mathrm{tr}}^*$ then $\Lambda_S=\Lambda_{\mathrm{tr}}$ and the identification is a translation of the covering torus, descended to $X$. Lemma 14 recovers
+
+where $$\Lambda_S$$ is the annihilator of the $$\mathbb{Z}$$-span of $$S$$. If $$S$$ generates $$\Lambda_{\mathrm{tr}}^*$$ then $$\Lambda_S=\Lambda_{\mathrm{tr}}$$ and the identification is a translation of the covering torus, descended to $$X$$. Lemma 14 recovers
+
 $$g^{-1}(de_\xi,de_\eta)=\Gamma(e_\xi,e_\eta),$$
-which is the flat metric with dual lattice $\Lambda_{\mathrm{tr}}^*$. Lemma 15 gives $\alpha$ constant.
-The translation torus of $\mathbb{R}^n/\Lambda_{\mathrm{tr}}$ acts by isometries and preserves each character, hence preserves $\mathcal{V}$ and $\Phi$. It is a compact connected Lie subgroup of the group $K$ of Theorem 21. Its orbits are the fibres of the holonomy covering; on $X$ they descend to a single principal orbit because the holonomy is finite and acts freely. Lemma 24 is then the orbit decomposition of a Bieberbach manifold: $X$ is a compact quotient of a torus by a finite free linear action. Transitivity of the identity component on the cover is the group law of the character variety.
+
+which is the flat metric with dual lattice $$\Lambda_{\mathrm{tr}}^*$$. Lemma 15 gives $$\alpha$$ constant.
+The translation torus of $$\mathbb{R}^n/\Lambda_{\mathrm{tr}}$$ acts by isometries and preserves each character, hence preserves $$\mathcal{V}$$ and $$\Phi$$. It is a compact connected Lie subgroup of the group $$K$$ of Theorem 21. Its orbits are the fibres of the holonomy covering; on $$X$$ they descend to a single principal orbit because the holonomy is finite and acts freely. Lemma 24 is then the orbit decomposition of a Bieberbach manifold: $$X$$ is a compact quotient of a torus by a finite free linear action. Transitivity of the identity component on the cover is the group law of the character variety.
 \end{proof}
-\begin{remark} The dimension of $\mathcal{V}$ is $1+2\lvert S\rvert$ after passing to a real basis, and equals $n+1$ only in degenerate cases that do not occur for $n\ge 2$ with a single frequency length. Theorems 3–4 are therefore not available. The quadratic $Q=\sum u_a^2$ is a trigonometric polynomial of frequency at most $2\max_{\xi\in S}\lvert\xi\rvert$, not a constant. The torus packet is exact without being spherical.
+\begin{remark} The dimension of $$\mathcal{V}$$ is $$1+2\lvert S\rvert$$ after passing to a real basis, and equals $$n+1$$ only in degenerate cases that do not occur for $$n\ge 2$$ with a single frequency length. Theorems 3–4 are therefore not available. The quadratic $$Q=\sum u_a^2$$ is a trigonometric polynomial of frequency at most $$2\max_{\xi\in S}\lvert\xi\rvert$$, not a constant. The torus packet is exact without being spherical.
 \end{remark}
-\begin{remark}A generic metric on the underlying torus has no exact finite window: products of first modes spray over infinitely many slots. Exactness of this packet is a certificate of flatness. If $S$ generates a proper sublattice, Theorem 1 reconstructs the coarser torus $\mathbb{R}^n/\Lambda_S$; the original manifold is a finite quotient of a finite cover of that torus.
+
+\begin{remark}A generic metric on the underlying torus has no exact finite window: products of first modes spray over infinitely many slots. Exactness of this packet is a certificate of flatness. If $$S$$ generates a proper sublattice, Theorem 1 reconstructs the coarser torus $$\mathbb{R}^n/\Lambda_S$$; the original manifold is a finite quotient of a finite cover of that torus.
 \end{remark}
-This subsection does not use Remark 26. The torus tower $\mathcal{V}_k=\operatorname{span}\{e_\xi:\lvert\xi\rvert\le kR\}$ is infinite and graded by $\Lambda_{\mathrm{tr}}^*$, which is the abelian case of the second clause of Remark 26.
+
+This subsection does not use Remark 26. The torus tower $$\mathcal{V}_k=\operatorname{span}\{e_\xi:\lvert\xi\rvert\le kR\}$$ is infinite and graded by $$\Lambda_{\mathrm{tr}}^*$$, which is the abelian case of the second clause of Remark 26.
 
 \begin{remark}[global 2-product bases]
-A global $2$-product eigenbasis, in the sense of Schildkraut–Speciel \cite{SS26}, forces an infinite Chebyshev tower along each primitive chain and uses that tower either through $k\to\infty$ or through the infinite graph $H_\varphi$. That infinite input is needed only to conclude that the full Gram matrix $\langle\nabla\alpha_i,\nabla\alpha_j\rangle$ is constant, hence that $g$ is flat.
-It is not needed to close a single sum-angle slot. If a finite exact window contains two primitive chains together with their sine companions $\psi=\sin\alpha$, $\eta=\sin\beta$, and if products in that window have width at most two, then
+A global $$2$$-product eigenbasis, in the sense of Schildkraut–Speciel \cite{SS26}, forces an infinite Chebyshev tower along each primitive chain and uses that tower either through $$k\to\infty$$ or through the infinite graph $$H_\varphi$$. That infinite input is needed only to conclude that the full Gram matrix $$\langle\nabla\alpha_i,\nabla\alpha_j\rangle$$ is constant, hence that $$g$$ is flat.
+It is not needed to close a single sum-angle slot. If a finite exact window contains two primitive chains together with their sine companions $$\psi=\sin\alpha$$, $$\eta=\sin\beta$$, and if products in that window have width at most two, then
+
 $$\chi=\varphi\xi-\psi\eta=\cos(\alpha+\beta)$$
-lies in one visible eigenspace: the two products $\varphi\xi$ and $\psi\eta$ occupy the same two-plane and cancel onto one axis. The identity is a finite packet computation (the primitives, the companions, and at most $T_2$). In the notation of this paper, $R=0$ and width two on that window already place $\chi$ in $\mathcal{V}_{\Lambda'}$.
-Thus a finite exact $2$-sparse packet yields slot circles and sum-angle eigenfunctions. Promoting those phases to a parallel coframe, and thereby to a flat metric, still requires constancy of the cross terms on a spanning set, which is an additional exactness identity for the visible cometric, not an invitation to send $\Lambda'\to\infty$.
+
+lies in one visible eigenspace: the two products $$\varphi\xi$$ and $$\psi\eta$$ occupy the same two-plane and cancel onto one axis. The identity is a finite packet computation (the primitives, the companions, and at most $$T_2$$). In the notation of this paper, $$R=0$$ and width two on that window already place $$\chi$$ in $$\mathcal{V}_{\Lambda'}$$.
+Thus a finite exact $$2$$-sparse packet yields slot circles and sum-angle eigenfunctions. Promoting those phases to a parallel coframe, and thereby to a flat metric, still requires constancy of the cross terms on a spanning set, which is an additional exactness identity for the visible cometric, not an invitation to send $$\Lambda'\to\infty$$.
 \end{remark}
 
 \doclicenseThis
