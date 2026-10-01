@@ -132,7 +132,7 @@ $$
 \le C(d,k)\,\|R\|_{C^k(\Sigma)}
 $$
 
-for every $$k\ge 0$$, with $$c$$ an additive constant on $$\alpha$$. The diffeomorphism $$\iota$$ is $$C^\infty$$ if $$t=0$$. The smallness parameter is $$\|t\|_{C^1}$$, equivalently $$\|R\|_{C^k}$$ after Lemma 9(i). It is not $$\Delta=\sup\|R\|_2$$. The same smallness may be written $$\Delta_{C^1}<\tau_*/C(n)$$ in the weighted $$\ell^2$$ form of Remark 10.
+for every $$k\ge 0$$, with $$c$$ an additive constant on $$\alpha$$. The diffeomorphism $$\iota$$ is $$C^\infty$$ if $$t=0$$. The smallness parameter is $$\|t\|_{C^1}$$, equivalently $$\\Vert R \rVert _ {C^k}$$ after Lemma 9(i). It is not $$\Delta=\sup\lVert R\rVert _ 2$$. The same smallness may be written $$\Delta _ {C^1}<\tau _ \*/C(n)$$ in the weighted $$\ell^2$$ form of Remark 10.
 
 \item[(ii)] (finite slot). If the tail that defines $$R$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$ (or is cut at a finite $$\Lambda''$$), Lemma 9(ii) supplies $$\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$$ such that $$\Delta<\Delta_*$$ implies the conclusions of (i), and
 
@@ -146,7 +146,7 @@ In that case $$\iota$$ is a $$C^k$$ almost-isometry on the scale of $$\Delta$$.
 
 \begin{theorem}[round sphere, exact window]
 \label{thm-a}
-Assume $$\alpha=0$$, $$\dim\mathcal{V}=n+1$$, $$\Lambda=n$$, and $$R=0$$ at $$\Lambda'=2n+2$$. Suppose there is a frame $$x_0,\dots,x_n$$ in $$\mathcal{V}$$ with $$Px_a=nx_a$$, $$\int x_ax_b=\delta_{ab}$$, $$\int x_a=0$$, $$\sum_ax_a^2=1$$, each $$x_ax_b-\delta_{ab}/(n+1)$$ an eigenfunction at $$2n+2$$, and $$\{dx_a\}$$ spanning $$T^*X$$. Then $$X$$ is isometric to the unit round sphere, $$P=-\Delta$$, and $$\operatorname{span}\{x_a\}=H_1$$. Scaling: the pair $$(\lambda,2\lambda+2\lambda/n)$$ gives radius $$\sqrt{n/\lambda}$$.
+Assume $$\alpha=0$$, $$\dim\mathcal{V}=n+1$$, $$\Lambda=n$$, and $$R=0$$ at $$\Lambda'=2n+2$$. Suppose there is a frame $$x_0,\dots,x_n$$ in $$\mathcal{V}$$ with $$Px_a=nx_a$$, $$\int x_ax_b=\delta_{ab}$$, $$\int x_a=0$$, $$\sum_ax_a^2=1$$, each $$x_ax_b-\delta_{ab}/(n+1)$$ an eigenfunction at $$2n+2$$, and $$\{dx_a\}$$ spanning $$T^*X$$. Then $$X$$ is isometric to the unit round sphere, $$P=-\Delta$$, and $$\operatorname{span}\{x_a\}=H_1$$. The pair $$(\lambda,2\lambda+2\lambda/n)$$ gives radius $$\sqrt{n/\lambda}$$.
 \end{theorem}
 
 \begin{theorem}[round sphere, quantitative cluster]
@@ -194,7 +194,7 @@ d_{\mathrm{GH}}(X,S^n)+\|F^*g_{\mathrm{eucl}}-g\|_{C^0}
 \le C(n,\eta,\Lambda')\ \delta.
 $$
 
-If the tail of $$R_{\Lambda'}$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$ (or is cut at a finite $$\Lambda''$$), then 
+If the tail of $$R_{\Lambda'}$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$ (or is cut at a finite $$\Lambda''$$), then
 
 $$\delta_t\le C(n,d_{\mathrm{tail}},\Lambda',\Lambda'')\Delta_{\mathrm{fr}}$$
 
@@ -350,11 +350,11 @@ P\bigl(\Pi_{\mathrm{sph}}(x_ax_b)\bigr)
 =(2n+2)\Bigl(x_ax_b-\frac{\delta_{ab}}{n+1}\Bigr)+E_{\mathrm{sph}},
 $$
 
-with $$\|E_{\mathrm{sph}}\|_{L^2}\le C(n)\delta_w$$. The remainder $$(I-\Pi_{\mathrm{sph}})m$$ is the in-window table error measured by $$\delta_\Phi$$, and $$R_{\Lambda'}$$ is measured in $$L^2$$ by $$\|R_{\Lambda'}(x_a,x_b)\|_2$$. Hence
+with $$\|E_{\mathrm{sph}}\|_{L^2}\le C(n)\delta_w$$. The remainder $$(I-\Pi _ {\mathrm{sph}})m$$ is the in-window table error measured by $$\delta_\Phi$$, and $$R_{\Lambda'}$$ is measured in $$L^2$$ by $$\lVert R_{\Lambda'}(x_a,x_b)\rVert_2$$. Hence
 
 $$
-\bigl\|\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\|_{L^2}
-\le C(n)\bigl(\delta_w+\delta_\Phi+\|R_{\Lambda'}(x_a,x_b)\|_2\bigr).
+\lVert\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\rVert_{L^2}
+\le C(n)\bigl(\delta_w+\delta_\Phi+\lVert R_{\Lambda'}(x_a,x_b)\rVert_2\bigr).
 $$
 
 This is the $$L^2$$ cometric input to Theorem 4. It is not a $$C^0$$ bound, and it does not use $$\Delta_{\mathrm{fr}}$$ as a $$C^0$$ modulus.
