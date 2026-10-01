@@ -15,17 +15,17 @@ To Autumn.
 
 ## Abstract
 
-Let $$P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$ be a Witten operator on a closed connected Riemannian manifold, acting in $$L^2(e^{-\alpha}\,d\mathrm{vol}_g)$$. The spectrum of $$P_\alpha$$ does not determine $$(g,\alpha)$$. The full multiplication table of eigenfunctions does. This paper isolates a finite piece of that table.
+Let $$P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$ be a Witten operator on a closed connected Riemannian manifold, acting in $$L^2(e^{-\alpha}\ d\mathrm{vol}_g)$$. The spectrum of $$P_\alpha$$ does not determine $$(g,\alpha)$$. The full multiplication table of eigenfunctions does. This paper isolates a finite piece of that table.
 
 Fix cutoffs $$\Lambda\le\Lambda'<\infty$$ and let $$\mathcal{V}$$ be the sum of eigenspaces of eigenvalue at most $$\Lambda$$. The visible packet is the restriction of the triple products $$\Phi$$ to pairs from $$\mathcal{V}$$ against modes up to $$\Lambda'$$, together with the weighted tail
 
-$$R(u,v)=-P(I-\Pi_{\Lambda'})(uv)=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,\bar e_\lambda)\,e_\lambda$$
+$$R(u,v)=-P(I-\Pi_{\Lambda'})(uv)=-\sum_{\lambda>\Lambda'}\lambda\ \Phi(u,v,\bar e_\lambda)\ e_\lambda$$
 
 and its uniform size $$\Delta=\sup\lVert R(u,v)\rVert_2$$ over unit $$u,v\in\mathcal{V}$$. Write $$t=(I-\Pi_{\Lambda'})(uv)$$. No Weyl law, no potential, and no curvature bound is used. A Wyman bound on window triples guarantees that the coefficients of $$R$$ exist.
 
 If $$R=0$$, the packet determines $$(X,g,\alpha)$$ up to a $$C^\infty$$ isometry of $$g$$ and an additive constant on $$\alpha$$. If $$\lVert t\rVert_{C^1}$$ is smaller than a threshold depending on the embedding of $$X$$ in $$\mathcal{V}^*$$, evaluation realises $$X$$ as a $$C^1$$ submanifold $$\Sigma\subset\mathcal{V}^*$$ on which
 
-$$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)},$$
+$$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}\le C(d,k)\ \lVert R\rVert_{C^k(\Sigma)},$$
 
 with $$d=\dim\mathcal{V}$$. That bound is not a statement about $$\Delta$$. When the tail of $$\Phi$$ occupies a finite slot, Sobolev embedding on $$\Sigma$$ converts $$\lVert R\rVert_{C^k}$$ into a multiple of $$\Delta$$, with constants depending only on window dimensions and $$k$$.
 
@@ -41,11 +41,11 @@ A Witten operator on a closed Riemannian manifold $$(X,g)$$ is the weighted Lapl
 
 $$P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
 
-acting in $$L^2(e^{-\alpha}\,d\mathrm{vol}_g)$$ \cite{Wit82}. Its spectrum is discrete, nonnegative, and unbounded, with kernel the constant functions. The geometric data of the pair are the metric $$g$$ and the weight $$\alpha$$; equivalently, Riemannian volume and the measure $$\mu=e^{-\alpha}\,d\mathrm{vol}_g$$. Ordinary Laplace–Beltrami operators are the case $$\alpha=0$$.
+acting in $$L^2(e^{-\alpha}\ d\mathrm{vol}_g)$$ \cite{Wit82}. Its spectrum is discrete, nonnegative, and unbounded, with kernel the constant functions. The geometric data of the pair are the metric $$g$$ and the weight $$\alpha$$; equivalently, Riemannian volume and the measure $$\mu=e^{-\alpha}\ d\mathrm{vol}_g$$. Ordinary Laplace–Beltrami operators are the case $$\alpha=0$$.
 
 The spectrum alone does not determine $$(g,\alpha)$$. What does determine them, in the large, is the multiplication table of eigenfunctions
 
-$$\Phi(u,v,w)=\int_X uvw\,d\mu$$
+$$\Phi(u,v,w)=\int_X uvw\ d\mu$$
 
 together with the list of eigenvalues \cite{Sch24,Sch26}. That statement consumes every eigenspace. The purpose of this article is a finite substitute.
 Fix cutoffs $$\Lambda\le\Lambda'<\infty$$ and let
@@ -53,7 +53,7 @@ $$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda)$$
 be the corresponding spectral window. Products of window functions need not lie in $$\mathcal{V}$$. Write $$m(u,v)=\Pi_{\Lambda'}(uv)$$ for the projection onto modes up to $$\Lambda'$$, and
 
 $$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv)
-=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,\bar e_\lambda)\,e_\lambda$$
+=-\sum_{\lambda>\Lambda'}\lambda\ \Phi(u,v,\bar e_\lambda)\ e_\lambda$$
 
 for the weighted tail of those products. Throughout, $$u,v\in\mathcal{V}$$. The uniform size of the tail is
 
@@ -67,13 +67,13 @@ $$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\
 
 The cometric $$\Gamma$$ of $$g$$ is not an extra input. The identity
 
-$$P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v)$$
+$$P(uv)=u\ Pv+v\ Pu-2\Gamma(u,v)$$
 
 computes $$\Gamma$$ on $$\mathcal{V}$$ from $$(P,\Phi)$$ with remainder $$R$$. Two nondegeneracy hypotheses close the packet: evaluation $$X\to\mathcal{V}^\ast$$ is a smooth embedding, and $$\{du:u\in\mathcal{V}\}$$ spans $$T^*X$$. No Weyl law is assumed, no potential is present, and no curvature bound is used.
 
 If $$R=0$$, the packet determines $$(X,g,\alpha)$$ up to a $$C^\infty$$ isometry of $$g$$ and an additive constant on $$\alpha$$. If $$\alpha=0$$, that pair carries a compact Lie group of isometries whose orbits decompose $$X$$ (§9); if also $$\dim\mathcal{V}=n+1$$ and $$Q$$ is constant, $$X$$ is a sphere. If $$\lVert t\rVert_{C^1}$$ is smaller than a threshold depending on the embedding of $$X$$ in $$\mathcal{V}^*$$, evaluation realises $$X$$ as a $$C^1$$ submanifold $$\Sigma\subset\mathcal{V}^*$$ on which
 
-$$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)},$$
+$$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha-c\rVert_{C^k}\le C(d,k)\ \lVert R\rVert_{C^k(\Sigma)},$$
 
 with $$d=\dim\mathcal{V}$$. When the tail of $$\Phi$$ occupies a finite slot, Sobolev embedding on $$\Sigma$$ converts this to a linear bound in $$\Delta$$ whose constants depend only on window dimensions and $$k$$. In both regimes the manifold is recovered as the space of multiplicative characters of the window, the metric by dualizing $$\Gamma$$, and the weight from the ratio of $$\mu$$ to Riemannian volume.
 
@@ -129,7 +129,7 @@ and
 
 $$
 \|\iota^*g_\Sigma-g\|_{C^k}+\|\alpha_\Sigma\circ\iota-\alpha-c\|_{C^k}
-\le C(d,k)\,\|R\|_{C^k(\Sigma)}
+\le C(d,k)\ \|R\|_{C^k(\Sigma)}
 $$
 
 for every $$k\ge 0$$, with $$c$$ an additive constant on $$\alpha$$. The diffeomorphism $$\iota$$ is $$C^\infty$$ if $$t=0$$. The smallness parameter is $$\|t\|_{C^1}$$, equivalently $$\\Vert R \rVert _ {C^k}$$ after Lemma 9(i). It is not $$\Delta=\sup\lVert R\rVert _ 2$$. The same smallness may be written $$\Delta _ {C^1}<\tau _ \*/C(n)$$ in the weighted $$\ell^2$$ form of Remark 10.
@@ -137,7 +137,7 @@ for every $$k\ge 0$$, with $$c$$ an additive constant on $$\alpha$$. The diffeom
 \item[(ii)] (finite slot). If the tail that defines $$R$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$ (or is cut at a finite $$\Lambda''$$), Lemma 9(ii) supplies $$\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$$ such that $$\Delta<\Delta_*$$ implies the conclusions of (i), and
 
 $$
-\|R\|_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.
+\|R\|_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\ \Delta.
 $$
 
 In that case $$\iota$$ is a $$C^k$$ almost-isometry on the scale of $$\Delta$$.
@@ -165,7 +165,7 @@ Assume W1 and W2 for this block.
 Fix $$\eta\in\bigl(0,\min\{n,n+4\}/2\bigr)$$ smaller than the first two spherical gaps, and a cutoff $$\Lambda'\ge 2n+2+\eta$$. Set
 
 $$
-\Pi^\eta_{\mathrm{sph}}=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\,2n+2+\eta]}.
+\Pi^\eta_{\mathrm{sph}}=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\ 2n+2+\eta]}.
 $$
 
 Allow the table deficits
@@ -210,19 +210,19 @@ On a sufficiently small $$C^2$$ ball about $$g_{\mathrm{rd}}$$ the gaps about $$
 
 $$
 \delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
-\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
+\le C(n,\eta)\ \|g-g_{\mathrm{rd}}\|_{C^2}.
 $$
 
 The tail modulus $$\delta_t$$ is not in general $$O(\|g-g_{\mathrm{rd}}\|_{C^2})$$ for an infinite tail; it is, after a finite cut $$\Lambda''$$. Thus Theorem 4 applies on that ball with the finite-cut form of $$\delta$$. It does not apply to a residual set in $$\mathcal{M}$$: a generic perturbation may break isolation or spray products through the $$\eta$$-gaps.
 
-The $$C^0$$ bound and min-max give $$\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k,\eta)\,\delta$$ for each fixed $$k$$. Tanno’s uniqueness is the converse neighbourhood statement with $$\operatorname{Spec}(P)=\operatorname{Spec}(S^n)$$; the paper does not assume the spectra coincide.
+The $$C^0$$ bound and min-max give $$\lvert\lambda_k(P)-\lambda_k(S^n)\rvert\le C(n,k,\eta)\ \delta$$ for each fixed $$k$$. Tanno’s uniqueness is the converse neighbourhood statement with $$\operatorname{Spec}(P)=\operatorname{Spec}(S^n)$$; the paper does not assume the spectra coincide.
 
 ## 2. The Packet
 Let $$X$$ be a closed connected smooth manifold and let
 
 $$P=P_\alpha=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle$$
 
-act in $$L^2(X,\mu)$$ with $$d\mu=e^{-\alpha}\,d\mathrm{vol}_g$$ \cite{Wit82}. Assume $$P$$ is essentially self-adjoint, with discrete spectrum
+act in $$L^2(X,\mu)$$ with $$d\mu=e^{-\alpha}\ d\mathrm{vol}_g$$ \cite{Wit82}. Assume $$P$$ is essentially self-adjoint, with discrete spectrum
 
 $$0=\lambda_0<\lambda_1\le\lambda_2\le\cdots\to+\infty$$
 
@@ -230,7 +230,7 @@ and $$\ker P=\operatorname{span}\{1\}$$. The principal symbol of $$P$$ is the co
 
 ```math
 \begin{equation}
-P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v).\tag{A1}
+P(uv)=u\ Pv+v\ Pu-2\Gamma(u,v).\tag{A1}
 \end{equation}
 ```
 Fix cutoffs $$\Lambda\le\Lambda'<\infty$$. Write
@@ -242,12 +242,12 @@ and let $$\Pi_{\Lambda'}$$ be the orthogonal projection onto $$\mathcal{V}'$$. T
 
 $$
 m(u,v)=\Pi_{\Lambda'}(uv),\qquad
-\Phi(u,v,w)=\int_X uvw\,d\mu.
+\Phi(u,v,w)=\int_X uvw\ d\mu.
 $$
 
 The weighted tail of the product is
 
-$$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv) =-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,e_\lambda)\,e_\lambda,$$
+$$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv) =-\sum_{\lambda>\Lambda'}\lambda\ \Phi(u,v,e_\lambda)\ e_\lambda,$$
 
 and
 
@@ -259,7 +259,7 @@ The exact subclass is $$R=0$$, equivalently $$\Delta=0$$.
 
 $$\sum_{\lambda}\bigl\lvert\Phi(u,v,\bar e_\lambda)\bigr\rvert^2$$
 
-is controlled by the measure of frequency triangles with side lengths comparable to $$(\sqrt{\lambda_u},\sqrt{\lambda_v},\sqrt{\lambda})$$ \cite{Wym}. In particular there is rapid decay of the $$\ell^2$$ mass of $$\Phi(u,v,\,\cdot\,)$$ in the classically forbidden region
+is controlled by the measure of frequency triangles with side lengths comparable to $$(\sqrt{\lambda_u},\sqrt{\lambda_v},\sqrt{\lambda})$$ \cite{Wym}. In particular there is rapid decay of the $$\ell^2$$ mass of $$\Phi(u,v,\ \cdot\ )$$ in the classically forbidden region
 
 $$\sqrt{\lambda}\ge(1+\varepsilon)\bigl(\sqrt{\lambda_u}+\sqrt{\lambda_v}\bigr),$$
 
@@ -268,7 +268,7 @@ for every $$\varepsilon>0$$. The paper uses only the following crude consequence
 A pointwise bound
 
 $$\bigl\lvert\Phi(u,v,\bar e_\lambda)\bigr\rvert
-\le C\,(1+\lambda_u+\lambda_v+\lambda)^\delta\,\lVert u\rVert_2\lVert v\rVert_2$$
+\le C\ (1+\lambda_u+\lambda_v+\lambda)^\delta\ \lVert u\rVert_2\lVert v\rVert_2$$
 
 is not claimed in \cite{Wym}; when it is invoked below it is as a convenient majorant on a finite slot, not as Wyman’s theorem.
 
@@ -283,7 +283,7 @@ $$\bigl(\Lambda,\ \Lambda',\ \sigma(P)\cap[0,\Lambda'],\ \Phi\big|_{\mathcal{V}\
 
 On pairs from $$\mathcal{V}$$, (A1) reads
 
-$$2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v).$$
+$$2\Gamma(u,v)=u\ Pv+v\ Pu-P\bigl(m(u,v)\bigr)+R(u,v).$$
 
 Thus $$\Gamma$$ on $$\mathcal{V}$$ is not an independent input. No Weyl law, no potential, and no curvature bound is assumed. Dimension of $$X$$ is the rank in W2.
 
@@ -305,19 +305,19 @@ uv=m(u,v)+t(u,v),\qquad m(u,v)=\Pi_{\Lambda'}(uv),\qquad t(u,v)=(I - \Pi_{\Lambd
 The visible product $$m(u,v)$$ is assembled from the in-window table:
 
 $$
-m(u,v)=\sum_{\lambda\le\Lambda'}\Phi(u,v,\bar e_\lambda)\,e_\lambda.
+m(u,v)=\sum_{\lambda\le\Lambda'}\Phi(u,v,\bar e_\lambda)\ e_\lambda.
 $$
 
 Identity (A1) then reads
 
 $$
-2\Gamma(u,v)=u\,Pv+v\,Pu-P\bigl(m(u,v)\bigr)+R(u,v),
+2\Gamma(u,v)=u\ Pv+v\ Pu-P\bigl(m(u,v)\bigr)+R(u,v),
 $$
 
 where
 
 $$
-R(u,v)=-P\,t(u,v)=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,\bar e_\lambda)\,e_\lambda.
+R(u,v)=-P\ t(u,v)=-\sum_{\lambda>\Lambda'}\lambda\ \Phi(u,v,\bar e_\lambda)\ e_\lambda.
 $$
 
 Thus $$\Gamma$$ on $$\mathcal{V}$$ is determined by $$P|_{\mathcal{V}}$$, by $$\Phi$$ on $$\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'$$, and by the tail $$R$$. In particular $$\lVert R(u,v)\rVert_2\le\Delta\lVert u\rVert_2\lVert v\rVert_2$$. If $$R=0$$, then $$t=0$$ and $$\Gamma(u,v)$$ is determined by $$(P,\Phi)$$. The bilinear map $$\Gamma:\mathcal{V}\times\mathcal{V}\to C^\infty(X)$$ does not depend on the orthonormal bases used to expand $$\Phi$$.
@@ -333,7 +333,7 @@ with $$\Pi_{\mathrm{sph}}=\Pi_0+\Pi_{2n+2}$$. The first summand is the model tab
 \end{lemma}
 
 \begin{proof}
-Identity (A1) is $$2\Gamma(u,v)=u\,Pv+v\,Pu-P(uv)$$. Substitute $$uv=m+t$$ and set $$R=-Pt$$. The expansion of $$m$$ is the definition of $$\Phi$$ against $$\mathcal{V}'$$. If $$R=0$$, then $$t=0$$, so $$m(u,v)=uv$$ and every coefficient of $$uv$$ against $$\mathcal{V}'$$ is a value of $$\Phi$$.
+Identity (A1) is $$2\Gamma(u,v)=u\ Pv+v\ Pu-P(uv)$$. Substitute $$uv=m+t$$ and set $$R=-Pt$$. The expansion of $$m$$ is the definition of $$\Phi$$ against $$\mathcal{V}'$$. If $$R=0$$, then $$t=0$$, so $$m(u,v)=uv$$ and every coefficient of $$uv$$ against $$\mathcal{V}'$$ is a value of $$\Phi$$.
 
 Basis-independence: $$P$$ and $$\Phi$$ are defined on $$\mathcal{V}$$ without choices, and $$m$$ is orthogonal projection of the pointwise product.
 
@@ -362,7 +362,7 @@ This is the $$L^2$$ cometric input to Theorem 4. It is not a $$C^0$$ bound, and 
 The deficit $$\delta_\Phi$$ is the $$L^2$$ mass of $$\Pi_{\Lambda'}(x_ax_b)$$ off the cluster projector
 
 $$
-\Pi^\eta_{\mathrm{sph}}=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\,2n+2+\eta]}.
+\Pi^\eta_{\mathrm{sph}}=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\ 2n+2+\eta]}.
 $$
 
 The error in replacing $$\Pi_{\mathrm{sph}}$$ by $$\Pi^\eta_{\mathrm{sph}}$$ is $$O(\eta)\|x_ax_b\|_2$$ and is absorbed into $$C(n,\eta)$$ in Theorem 4. The tail above $$\Lambda'$$ is not $$\delta_\Phi$$.
@@ -371,7 +371,7 @@ Write $$\Delta_g$$ as a divergence-form operator on the fixed space $$L^2(d\math
 
 $$
 \delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
-\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
+\le C(n,\eta)\ \|g-g_{\mathrm{rd}}\|_{C^2}.
 $$
 
 They do not bound $$\delta_t$$ for an infinite tail. Theorem 4 applies on that ball with the finite-cut form of $$\delta$$, or with $$\delta_t$$ kept as packet data. Individual eigenvalues in the cluster may split; only the joint span $$\mathcal{V}$$ is used.
@@ -382,13 +382,13 @@ The specialisation $$w=0$$, $$\eta\to 0$$, $$\Lambda'=2n+2+\eta$$, and $$t=0$$ r
 \end{proof}
 
 \begin{remark}[Sogge and $$\lVert t\rVert_{C^0}$$]
-Hörmander–Sogge gives $$\lVert e_\lambda\rVert_{C^0}\le C_S(n)\,(1+\lambda)^{(n-1)/4}$$ \cite{Sog88}. Expanding $$t$$ and applying Cauchy–Schwarz with the weight in $$R=Pt$$ yields, for a tail supported in a finite slot $$\Lambda<\lambda\le\Lambda''$$,
+Hörmander–Sogge gives $$\lVert e_\lambda\rVert_{C^0}\le C_S(n)\ (1+\lambda)^{(n-1)/4}$$ \cite{Sog88}. Expanding $$t$$ and applying Cauchy–Schwarz with the weight in $$R=Pt$$ yields, for a tail supported in a finite slot $$\Lambda<\lambda\le\Lambda''$$,
 
-$$\lVert t\rVert_{C^0}\le C(n,\Lambda',\Lambda'')\,\Delta,$$
+$$\lVert t\rVert_{C^0}\le C(n,\Lambda',\Lambda'')\ \Delta,$$
 
 and therefore
 
-$$\lVert R\rVert_{C^0(X)}\le C(n,\Lambda',\Lambda'')\,\Delta.$$
+$$\lVert R\rVert_{C^0(X)}\le C(n,\Lambda',\Lambda'')\ \Delta.$$
 
 Wyman bounds the coefficients of $$R$$ \cite{Wym}; Sogge bounds the modes. Neither is a curvature comparison.
 \end{remark}
@@ -396,7 +396,7 @@ Wyman bounds the coefficients of $$R$$ \cite{Wym}; Sogge bounds the modes. Neith
 \begin{remark}
 If the $$\Phi$$-tail that defines $$R$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$, all norms on that slot are equivalent and
 
-$$\lVert R\rVert_{C^k(X)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
+$$\lVert R\rVert_{C^k(X)}\le C(d,d_{\mathrm{tail}},k)\ \Delta.$$
 
 If the tail is infinite, $$\lVert R\rVert_{C^k}$$ remains the modulus.
 \begin{claim}[cut cometric, fixed pair]
@@ -420,29 +420,29 @@ The rate depends on $$\|uv\|_{H^{s}}$$ for $$s>k+n/2$$. It is not claimed to be 
 Fix $$u,v\in\mathcal{V}$$ on a single closed Witten pair. The product $$uv$$ is $$C^\infty$$, so $$P^m(uv)\in L^2$$ for every $$m$$. Let $$\{e_\lambda\}$$ be an $$L^2$$-orthonormal eigenbasis of $$P$$, and write
 
 $$
-uv=\sum_{\lambda\ge 0}\Phi(u,v,e_\lambda)\,e_\lambda.
+uv=\sum_{\lambda\ge 0}\Phi(u,v,e_\lambda)\ e_\lambda.
 $$
 
 The tail after $\Lambda''$ is
 
 $$
 t_{\Lambda''}:=(I-\Pi_{\Lambda''})(uv)
-=\sum_{\lambda>\Lambda''}\Phi(u,v,e_\lambda)\,e_\lambda.
+=\sum_{\lambda>\Lambda''}\Phi(u,v,e_\lambda)\ e_\lambda.
 $$
 
 For any $$m$$,
 
 $$
 \|P^m t_{\Lambda''}\|_2^2
-=\sum_{\lambda>\Lambda''}\lambda^{2m}\,|\Phi(u,v,e_\lambda)|^2
-\le\Lambda''^{-2}\sum_{\lambda>\Lambda''}\lambda^{2m+2}\,|\Phi(u,v,e_\lambda)|^2
-\le\Lambda''^{-2}\,\|P^{m+1}(uv)\|_2^2.
+=\sum_{\lambda>\Lambda''}\lambda^{2m}\ |\Phi(u,v,e_\lambda)|^2
+\le\Lambda''^{-2}\sum_{\lambda>\Lambda''}\lambda^{2m+2}\ |\Phi(u,v,e_\lambda)|^2
+\le\Lambda''^{-2}\ \|P^{m+1}(uv)\|_2^2.
 $$
 
 Thus $$\|t_{\Lambda''}\|_{H^{2m}}\to 0$$ as $$\Lambda''\to\infty$$. Sobolev embedding on the closed $$n$$-manifold $$X$$ gives
 
 $$
-\|t_{\Lambda''}\|_{C^k}\le C(n,k,X)\,\|t_{\Lambda''}\|_{H^{s}},
+\|t_{\Lambda''}\|_{C^k}\le C(n,k,X)\ \|t_{\Lambda''}\|_{H^{s}},
 \qquad s>k+\tfrac n2,
 $$
 
@@ -477,7 +477,7 @@ $$
 Elliptic regularity of $$P$$ (or the same Sobolev estimate with one extra derivative) yields
 
 $$
-\|P t_{\Lambda''}\|_{C^k}\le C(n,k,X)\,\|t_{\Lambda''}\|_{H^{s+2}}\to 0.
+\|P t_{\Lambda''}\|_{C^k}\le C(n,k,X)\ \|t_{\Lambda''}\|_{H^{s+2}}\to 0.
 $$
 
 Therefore $$\Gamma_{\Lambda''}(u,v)\to\Gamma(u,v)$$ in $$C^k(X)$$.
@@ -509,19 +509,19 @@ $$\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\lVert t(u,v)\rVert_{C^1(X)}<\tau_*,
 
 then $$\iota(X)$$ is a $$C^\infty$$ embedded submanifold $$\Sigma\subset\mathcal{V}^*$$, $$\iota:X\to\Sigma$$ is a $$C^1$$ diffeomorphism (and $$C^\infty$$ if $$t=0$$), and for every $$k\ge 0$$
 
-$$c(k)^{-1}\,\lVert R_X\rVert_{C^k(X)}
+$$c(k)^{-1}\ \lVert R_X\rVert_{C^k(X)}
 \le\lVert R_\Sigma\rVert_{C^k(\Sigma)}
-\le c(k)\,\lVert R_X\rVert_{C^k(X)},$$
+\le c(k)\ \lVert R_X\rVert_{C^k(X)},$$
 
 with $$c(k)=C(d,k)$$. The smallness parameter here is $$\lVert t\rVert_{C^1}$$, not $$\Delta$$.
 
 \item[(ii)] (finite slot) If the $$\Phi$$-tail that defines $$R$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$ (or is cut at a finite $$\Lambda''$$), then Remarks 6 and 7 give
 
-$$\lVert t\rVert_{C^1}\le C(d,d_{\mathrm{tail}},n,\Lambda',\Lambda'')\,\Delta.$$
+$$\lVert t\rVert_{C^1}\le C(d,d_{\mathrm{tail}},n,\Lambda',\Lambda'')\ \Delta.$$
 
 Hence there exists $$\Delta_*=\Delta_*(d,d_{\mathrm{tail}},\iota(X))>0$$ such that $$\Delta<\Delta_*$$ implies the conclusions of (i), and
 
-$$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
+$$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\ \Delta.$$
 
 \end{description}
 \end{lemma}
@@ -529,14 +529,14 @@ $$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
 \begin{proof}
 W1 makes $$\iota$$ a smooth embedding onto a closed submanifold. The size of $$t$$ is used only to persist that embedding in the $$C^1$$ topology and to compare $$\|R\|_{C^k}$$ on $$X$$ and on $$\Sigma$$.
 
-The product map $$F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$$ vanishes on $$\iota(X)$$ up to $$t$$. Evaluation extends to $$\mathcal{V}'$$, so at $$\xi=\iota(x)$$ one has $$\xi(m(u,v))=m(u,v)(x)$$ and the only defect is $$t(x)$$. Differentiating $$F$$ in the $$\mathcal{V}^*$$-directions at $$\iota(x)$$ yields the family $$(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$$ on $$T_x^ \* X$$. W2 says $$\{du:u\in\mathcal{V}\}$$ spans $$T_x^ \*X$$, so this family is transverse to $$\iota(X)$$. If $$\lVert t\rVert_{C^1}<\tau_*$$, $$F$$ is a $$C^1$$-small perturbation of a section that vanishes exactly on $$\iota(X)$$. Persistence of transverse embeddings keeps $$\iota$$ a $$C^1$$ diffeomorphism onto its image. If $$t=0$$, then $$R=0$$, $$F$$ vanishes exactly on $$\iota(X)$$, and $$\iota$$ is $$C^\infty$$. The $$C^k$$ comparison of $$R_X$$ and $$R_\Sigma$$ is the chain rule for $$\iota$$ and $$\iota^{-1}$$, whose $$C^{k-1}$$ norms stay bounded for $$\lVert t\rVert_{C^1}<\tau_*$$.
+The product map $$F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$$ vanishes on $$\iota(X)$$ up to $$t$$. Evaluation extends to $$\mathcal{V}'$$, so at $$\xi=\iota(x)$$ one has $$\xi(m(u,v))=m(u,v)(x)$$ and the only defect is $$t(x)$$. Differentiating $$F$$ in the $$\mathcal{V}^*$$-directions at $$\iota(x)$$ yields the family $$(u,v)\mapsto\xi(u)\ dv+\xi(v)\ du$$ on $$T_x^ \* X$$. W2 says $$\{du:u\in\mathcal{V}\}$$ spans $$T_x^ \*X$$, so this family is transverse to $$\iota(X)$$. If $$\lVert t\rVert_{C^1}<\tau_*$$, $$F$$ is a $$C^1$$-small perturbation of a section that vanishes exactly on $$\iota(X)$$. Persistence of transverse embeddings keeps $$\iota$$ a $$C^1$$ diffeomorphism onto its image. If $$t=0$$, then $$R=0$$, $$F$$ vanishes exactly on $$\iota(X)$$, and $$\iota$$ is $$C^\infty$$. The $$C^k$$ comparison of $$R_X$$ and $$R_\Sigma$$ is the chain rule for $$\iota$$ and $$\iota^{-1}$$, whose $$C^{k-1}$$ norms stay bounded for $$\lVert t\rVert_{C^1}<\tau_*$$.
 
 For (ii), a finite slot makes every $$C^k$$ norm on the tail equivalent to the $$L^2$$ norm of $$R=-Pt$$. Remark 6 supplies the $$C^0$$ bound on $$t$$ via Sogge; equivalence of norms on a space of dimension $$d_{\mathrm{tail}}$$ upgrades that to $$C^1$$. Thus $$\Delta$$ small implies $$\lVert t\rVert_{C^1}$$ small, and (i) applies.
 \end{proof}
 
 \begin{remark}[weighted tails] The hypothesis of Lemma 9(i) is $$\lVert t\rVert_{C^1}<\tau_*$$. On a finite slot this follows from $$\Delta$$ by Remarks 6 and 7. On an infinite tail it does not, and the paper does not claim that it does. The same Sogge bound that gives Remark 6 still converts a weighted norm of $$\Phi$$ into $$\lVert t\rVert_{C^1}$$. Expanding
 
-$$t(u,v)=\sum_{\lambda>\Lambda'}\Phi(u,v,\bar e_\lambda)\,e_\lambda$$
+$$t(u,v)=\sum_{\lambda>\Lambda'}\Phi(u,v,\bar e_\lambda)\ e_\lambda$$
 
 and using $$\lVert e_\lambda\rVert_{C^0}\le C_S(n)(1+\lambda)^{(n-1)/4}$$ together with $$\lVert\nabla e_\lambda\rVert_{C^0}\le C(n)(1+\lambda)^{(n-1)/4+1/2}$$ yields
 
@@ -570,9 +570,9 @@ $$\Gamma(u,v)=g^{-1}(du,dv)\qquad\text{for all }u,v\in\mathcal{V}.$$
 This $$g$$ is the metric whose cometric is the principal symbol of $$P$$. After Lemma 9,
 
 $$\bigl\lVert\iota^*g_\Sigma-g\bigr\rVert_{C^k}
-\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}.$$
+\le C(d,k)\ \lVert R\rVert_{C^k(\Sigma)}.$$
 
-If the tail of $$\Phi$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$, the right-hand side is at most $$C(d,d_{\mathrm{tail}},k)\,\Delta$$.
+If the tail of $$\Phi$$ occupies a finite slot of dimension $$d_{\mathrm{tail}}$$, the right-hand side is at most $$C(d,d_{\mathrm{tail}},k)\ \Delta$$.
 \label{lma-3}
 \end{lemma}
 
@@ -587,7 +587,7 @@ on $$\operatorname{span}\{du_a\}$$, and $$g$$ is the inverse matrix. Independenc
 \begin{lemma}
 Let $$g$$ be the metric of Lemma 14 and let $$\mu$$ be the measure determined by
 
-$$\int uv\,d\mu=\Phi(1,u,v),\qquad u,v\in\mathcal{V},$$
+$$\int uv\ d\mu=\Phi(1,u,v),\qquad u,v\in\mathcal{V},$$
 
 extended by continuity to $$L^2(\mu)$$. Then $$\mu$$ is a smooth positive multiple of $$\mathrm{vol}_g$$. The function
 
@@ -596,7 +596,7 @@ $$\alpha=-\log\frac{d\mu}{d\mathrm{vol}_g}$$
 is smooth, unique up to an additive constant, and the given operator $$P$$ is the Witten operator of $$(g,\alpha)$$. If $$\Delta<\Delta_*$$,
 
 $$\bigl\lVert\alpha_\Sigma\circ\iota-\alpha-c\bigr\rVert_{C^k}
-\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)}.$$
+\le C(d,k)\ \lVert R\rVert_{C^k(\Sigma)}.$$
 
 \label{lma-4}
 \end{lemma}
@@ -626,7 +626,7 @@ Residual freedom is an orthogonal change of basis of $$\mathcal{V}$$ preserving 
 W1 is standing: $$\iota$$ is already a smooth embedding. Lemma 5 gives $$\Gamma$$ on $$\mathcal{V}$$ with remainder $$R=-Pt$$. Under the hypothesis of (i), Lemma 9(i) persists $$\iota$$ as a $$C^1$$ diffeomorphism $$X\to\Sigma\subset\mathcal{V}^*$$ and identifies $$\|R\|_{C^k(\Sigma)}$$ with $$\|R\|_{C^k(X)}$$ up to $$C(d,k)$$. Lemma 14 upgrades the cometric error to
 
 $$
-\|\iota^*g_\Sigma-g\|_{C^k}\le C(d,k)\,\|R\|_{C^k(\Sigma)}.
+\|\iota^*g_\Sigma-g\|_{C^k}\le C(d,k)\ \|R\|_{C^k(\Sigma)}.
 $$
 
 Lemma 15 gives the same bound for $$\alpha_\Sigma\circ\iota-\alpha-c$$. Under the hypothesis of (ii), the tail is finite-dimensional, so Remarks 6--7 convert $$\|t\|_{C^1}$$ and $$\|R\|_{C^k}$$ into multiples of $$\Delta$$, and (i) applies. If $$R=0$$, both parts reduce to Theorem 1. An infinite tail is controlled only through $$\|t\|_{C^1}$$ or $$\Delta_{C^1}$$; $$\Delta$$ alone is not a modulus in that regime.
@@ -671,14 +671,14 @@ and
 
 $$
 \bigl\|\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\|_{L^2}
-\le C(n,\eta)\,(\delta_w+\delta_\Phi+\|R_{\Lambda'}(x_a,x_b)\|_2).
+\le C(n,\eta)\ (\delta_w+\delta_\Phi+\|R_{\Lambda'}(x_a,x_b)\|_2).
 $$
 
 The error in replacing the exact projectors $$\Pi_0+\Pi_{2n+2}$$ by $$\Pi^\eta_{\mathrm{sph}}$$ is $$O(\eta)\|x_ax_b\|_2$$ and is absorbed into $$C(n,\eta)$$. The in-window error $$\delta_\Phi$$ lives in a slot of dimension $$O(n^2)$$ for fixed $$\eta,\Lambda'$$; Remarks 6--7 upgrade that piece to $$C^0$$. The tail is upgraded to $$C^0$$ only through $$\delta_t=\|t_{\Lambda'}\|_{C^1}$$, or through $$\Delta_{\mathrm{fr}}$$ after a finite cut. Hence
 
 $$
 \bigl\|\Gamma(x_a,x_b)-(\delta_{ab}-x_ax_b)\bigr\|_{C^0}
-\le C(n,\eta,\Lambda')\,(\delta_w+\delta_\Phi+\delta_t).
+\le C(n,\eta,\Lambda')\ (\delta_w+\delta_\Phi+\delta_t).
 $$
 
 The deficit $$\delta_1$$ puts $$\sum_a x_a^2=1+O_{C^0}(\delta_1)$$, so $$F=(x_1,\dots,x_{n+1})$$ lands in a $$C^0$$-neighbourhood of the unit sphere in $$\mathcal{V}^*$$. Gram--Schmidt absorbs $$\delta_{\mathrm{on}}$$ into $$\delta_1$$ and $$\delta_\Phi$$ at cost $$C(n)$$. The Gram matrix $$\Gamma(x_a,x_b)$$ is then $$C^0$$-close to $$\delta_{ab}-x_ax_b$$, which has rank $$n$$ on the unit sphere, so $$dF$$ has rank $$n$$ for $$\delta<\delta_*(n,\eta)$$.
@@ -688,7 +688,7 @@ Theorem 2(i) yields
 
 $$
 d_{\mathrm{GH}}(X,S^n)+\|F^*g_{\mathrm{eucl}}-g\|_{C^0}
-\le C(n,\eta,\Lambda')\,\delta.
+\le C(n,\eta,\Lambda')\ \delta.
 $$
 
 If the tail is cut at finite $$\Lambda''$$, Theorem 2(ii) replaces $$\delta_t$$ by $$\Delta_{\mathrm{fr}}$$. No Ricci bound is used. Diameter control is that graph.
@@ -697,7 +697,7 @@ On a small $$C^2$$ ball about $$g_{\mathrm{rd}}$$, written as a divergence-form 
 
 $$
 \delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi
-\le C(n,\eta)\,\|g-g_{\mathrm{rd}}\|_{C^2}.
+\le C(n,\eta)\ \|g-g_{\mathrm{rd}}\|_{C^2}.
 $$
 
 A finite cut makes $$\delta_t$$ of the same order. Individual eigenvalues in the cluster may split; only the joint span $$\mathcal{V}$$ is used.
@@ -878,7 +878,7 @@ $$
 is $$G$$-invariant, hence constant on $$X$$. Thus $$\iota(X)$$ lies in the product of spheres
 
 $$
-\prod_{j=1}^s\sqrt{Q_j}\,S(\mathcal{E}_j).
+\prod_{j=1}^s\sqrt{Q_j}\ S(\mathcal{E}_j).
 $$
 
 Isometry of $$\iota$$ means
@@ -912,13 +912,13 @@ $$\Lambda'=4\pi^2\max_{\xi,\eta\in S}\lvert\xi+\eta\rvert^2.$$
 
 Evaluation $$\iota:X\to\mathcal{V}^*$$ is the composition of the covering $$\mathbb{R}^n\to X$$ with the map
 
-$$x\mapsto\bigl(\cos 2\pi\langle\xi,x\rangle,\,\sin 2\pi\langle\xi,x\rangle\bigr)_{\xi\in S}.$$
+$$x\mapsto\bigl(\cos 2\pi\langle\xi,x\rangle,\ \sin 2\pi\langle\xi,x\rangle\bigr)_{\xi\in S}.$$
 
 The differential has full rank $$n$$ at every point because $$S$$ spans. If $$S$$ generates $$\Lambda_{\mathrm{tr}}^*$$ as a group then the kernel of $$\iota$$ on $$\mathbb{R}^n$$ is exactly $$\Lambda_{\mathrm{tr}}$$, so $$\iota$$ descends to an embedding of the translation torus, and hence of its holonomy quotient $$X$$. That is W1.
 
 The cometric on characters is
 
-$$\Gamma(e_\xi,e_\eta)=4\pi^2\langle\xi,\eta\rangle\,e_{\xi-\eta}$$
+$$\Gamma(e_\xi,e_\eta)=4\pi^2\langle\xi,\eta\rangle\ e_{\xi-\eta}$$
 
 (up to conjugation). Restricted to $$\mathcal{V}$$ it has rank $$n$$ because $$S$$ spans. That is W2.
 
