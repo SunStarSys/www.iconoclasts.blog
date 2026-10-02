@@ -68,7 +68,7 @@ with $d=\dim\mathcal{V}$. That bound is not a statement about $\Delta$. When the
 
 If in addition $\alpha=0$, an exact packet realises $X$ as a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). When $\dim\mathcal{V}=n+1$ and the quadratic $Q=\sum u_a^2$ is constant, that action is transitive and $X$ is isometric to a sphere of radius $\sqrt Q$.
 
-There is a correspondence between slot-sphere exact packets and compact connected Riemannian homogeneous spaces. Whether every exact unweighted window is of slot-sphere type is left open.
+There is a correspondence between slot-sphere exact packets and compact connected Riemannian homogeneous spaces. Not every exact unweighted window is of slot-sphere type.
 
 The unweighted first window on the sphere is the minimal finite-tail case: $\Lambda=n$, $\dim\mathcal{V}=n+1$, and $R=0$ already at $\Lambda'=2n+2$. That frame recognizes the unit round sphere exactly, and recognizes it with linear $C^0$ stability for an isolated cluster of first $n+1$ harmonics with an almost spherical table. Those statements are frame-side. They are not Obata theorems.
 
@@ -128,6 +128,7 @@ If \(\alpha=0\) and the exact window has an isometric embedding with
 constant slot quadratics, $(X,g)$ is a compact homogeneous space.
 Every compact homogeneous Riemannian manifold has some isometric embedding with an exact slot-sphere packet;
 §9.1 says that if the packet given is of that form, then $X$ is a single $K$-orbit and so $X$ is in that precise class.
+§9.4 constructs on OT-FKM space that lies in the gap between §9 and §9.1.
 
 The article is organized as follows. Section 2 fixes the Witten category and the window packet. Section 3 extracts $\Gamma$ from the multiplication rule with remainder $R$. Section 4 identifies points of $X$ with characters of the window. Section 5 dualizes $\Gamma$ to a metric and reads $\alpha$ from the two measures. Section 6 assembles Theorems 1 and 2. Section 7 specializes to the unweighted first window on the sphere. Section 8 records what the packet does not determine. Section 9 shows that an exact unweighted window is a union of orbits of a compact linear group of isometries, and a sphere when $d=n+1$ and $Q$ is constant. 9.1 gives a second openness criterion -- the embedding is isometric into slot spheres.
 
