@@ -609,14 +609,35 @@ $$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
 \end{description}
 \end{lemma}
 
-\begin{proof}
-W1 makes \(\iota\) a smooth embedding onto a closed submanifold.
-The size of \(t\) is used only to persist that embedding in the \(C^1\)
-topology and to compare \(\|R\|_{C^k}\) on \(X\) and on \(\Sigma\).
-The product map $F(\xi;u,v)=\xi(m(u,v))-\xi(u)\xi(v)$ vanishes on $\iota(X)$ up to $t$. Evaluation extends to $\mathcal{V}'$, so at $\xi=\iota(x)$ one has $\xi(m(u,v))=m(u,v)(x)$ and the only defect is $t(x)$. Differentiating $F$ in the $\mathcal{V}^*$-directions at $\iota(x)$ yields the family $(u,v)\mapsto\xi(u)\,dv+\xi(v)\,du$ on $T_x^*X$. W2 says $\{du:u\in\mathcal{V}\}$ spans $T_x^*X$, so this family is transverse to $\iota(X)$. If $\lVert t\rVert_{C^1}<\tau_*$, $F$ is a $C^1$-small perturbation of a section that vanishes exactly on $\iota(X)$. Persistence of transverse embeddings keeps $\iota$ a $C^1$ diffeomorphism onto its image. If $t=0$, then $R=0$, $F$ vanishes exactly on $\iota(X)$, and $\iota$ is $C^\infty$. The $C^k$ comparison of $R_X$ and $R_\Sigma$ is the chain rule for $\iota$ and $\iota^{-1}$, whose $C^{k-1}$ norms stay bounded for $\lVert t\rVert_{C^1}<\tau_*$.
+\begin{subproof}[Proof of (i)]
+W1 makes $\iota$ a smooth embedding of the closed manifold $X$ onto a closed submanifold of $\mathcal{V}^*$. Write $m(u,v)=\Pi_{\Lambda'}(uv)$, a smooth $\mathcal{V}'$-valued bilinear map on $\mathcal{V}$, so that
+$$uv=m(u,v)+t(u,v).$$
+On the unit sphere of $\mathcal{V}\times\mathcal{V}$ the hypothesis bounds $t$ and $dt$ uniformly. Fix an $L^2$-orthonormal frame of $\mathcal{V}$ and identify a neighbourhood of $\iota(X)$ in $\mathcal{V}^*$ with a tubular neighbourhood of $X$.
 
-For (ii), a finite slot makes every $C^k$ norm on the tail equivalent to the $L^2$ norm of $R=-Pt$. Remark 6 supplies the $C^0$ bound on $t$ via Sogge; equivalence of norms on a space of dimension $d_{\mathrm{tail}}$ upgrades that to $C^1$. Thus $\Delta$ small implies $\lVert t\rVert_{C^1}$ small, and (i) applies.
-\end{proof}
+Define $F$ on that neighbourhood, with values in the space of symmetric bilinear forms on $\mathcal{V}$, by
+$$F(\xi)(u,v)=\xi\bigl(m(u,v)\bigr)-\xi(u)\xi(v).$$
+At $\xi=\iota(x)$ one has $\xi(m(u,v))=m(u,v)(x)$ and $\xi(u)\xi(v)=u(x)v(x)$, so
+$$F(\iota(x))(u,v)=-t(u,v)(x).$$
+Thus $F\circ\iota=-t$. If $t=0$, then $F$ vanishes on $\iota(X)$.
+
+Differentiate in the ambient directions at $\iota(x)$. For $\eta\in\mathcal{V}^*$ and $u,v\in\mathcal{V}$,
+$$dF_{\iota(x)}(\eta)(u,v)=\eta\bigl(m(u,v)\bigr)-\eta(u)\,v(x)-u(x)\,\eta(v).$$
+
+Restrict to $\eta$ normal to $T_{\iota(x)}\iota(X)$. The tangential part of this derivative reproduces $d(F\circ\iota)=-dt$. The normal part, evaluated on the unperturbed product $uv$ rather than on $m(u,v)$, is the family
+$$(u,v)\mapsto \xi(u)\,dv+\xi(v)\,du,\qquad \xi=\iota(x).$$
+W2 says that $\{du:u\in\mathcal{V}\}$ spans $T_x^*X$. Hence this family spans the conormal of $\iota(X)$ in $\mathcal{V}^*$: $dF_{\iota(x)}$ is surjective from the normal space onto the target of $F$. The zero set of the unperturbed section is therefore a transverse embedded submanifold, namely $\iota(X)$.
+
+The $C^1$ size of $t$ is the $C^1$ size of $F\circ\iota$. Transverse zeros persist under $C^1$-small perturbations of the section: there is $\tau_*>0$, depending only on the $C^1$ norm of $dF$ along the compact set $\iota(X)$ and on a tubular radius, such that if $\|t\|_{C^1}<\tau_*$ then $F^{-1}(0)$ contains a unique $C^1$ submanifold $\Sigma$ through a $\tau_*$-neighbourhood of $\iota(X)$, and $\iota:X\to\Sigma$ is a $C^1$ diffeomorphism. The inverse has $C^0$ norm of its differential bounded by a constant depending on $d$ and on $\iota(X)$, because $d\iota$ stays injective for a small $C^1$ perturbation of an immersion of a compact manifold. If $t=0$, then $F$ vanishes exactly on $\iota(X)$ and is smooth, so the implicit-function theorem gives a $C^\infty$ identification.
+
+It remains to compare $R$. By definition $R=-Pt$, and $P$ is a differential operator of order $2$, so $R$ is determined pointwise by $t$ and its derivatives up to order $2$. On $\Sigma$, transport $R_X$ by $\iota$ and compare with the function obtained by applying the same formula to the pulled-back tail. The chain rule gives
+$$\|R_\Sigma\|_{C^k(\Sigma)}\le C\bigl(\|d\iota\|_{C^k},\|d\iota^{-1}\|_{C^k}\bigr)\|R_X\|_{C^k(X)},$$
+and the symmetric bound with $\iota$ and $\iota^{-1}$ exchanged. For $\|t\|_{C^1}<\tau_*$ both $C^k$ norms of $d\iota^{\pm 1}$ remain bounded by constants depending only on $d$, $k$, and the unperturbed embedding. That is the comparison, with $c(k)=C(d,k)$.
+\end{subproof}
+\begin{subproof}[Proof of (ii)]
+A finite slot of dimension $d_{\mathrm{tail}}$ is a finite-dimensional space of smooth functions. On that space the $C^1$ norm and the $L^2$ norm are equivalent, with a constant depending on the slot, on $n$, and on the cutoff. Remark 6 supplies the Sogge bound that converts the $L^2$ size of the tail coefficients into a $C^0$ bound; equivalence on the slot upgrades it to $C^1$. Since $R=-Pt$ and $P$ is elliptic of order $2$, $\|t\|_{L^2}$ and $\|R\|_{L^2}$ are comparable on the slot, up to a factor depending on $\Lambda'$ and $\Lambda''$. Hence $\|t\|_{C^1}\le C(d,d_{\mathrm{tail}},n,\Lambda',\Lambda'')\Delta$. Choosing $\Delta_*$ so that this constant times $\Delta_*$ is less than $\tau_*$ puts the hypothesis inside (i). The comparison of (i) then bounds $\|R\|_{C^k(\Sigma)}$ by a multiple of $\Delta$.
+
+The constant $\tau_*$ depends on the unperturbed embedding $\iota(X)\subset\mathcal{V}^*$ through the tubular radius and the norm of $dF$ along it. It is not a function of $n$ alone.
+\end{subproof}
 
 \begin{remark}[weighted tails] The hypothesis of Lemma 9(i) is $\lVert t\rVert_{C^1}<\tau_*$. On a finite slot this follows from $\Delta$ by Remarks 6 and 7. On an infinite tail it does not, and the paper does not claim that it does. The same Sogge bound that gives Remark 6 still converts a weighted norm of $\Phi$ into $\lVert t\rVert_{C^1}$. Expanding
 $$t(u,v)=\sum_{\lambda>\Lambda'}\Phi(u,v,\bar e_\lambda)\,e_\lambda$$
