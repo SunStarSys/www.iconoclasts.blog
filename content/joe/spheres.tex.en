@@ -1097,7 +1097,7 @@ lies in one visible eigenspace: the two products $\varphi\xi$ and $\psi\eta$ occ
 Thus a finite exact $2$-sparse packet yields slot circles and sum-angle eigenfunctions. Promoting those phases to a parallel coframe, and thereby to a flat metric, still requires constancy of the cross terms on a spanning set, which is an additional exactness identity for the visible cometric, not an invitation to send $\Lambda'\to\infty$.
 \end{remark}
 
-\subsection{An Exact Packet That Is Not an Isometric Slot Embedding}
+\subsection{An Exact Packet That Is Not an Isometric Slot Sphere Embedding}
 Let $\{P_0,\dots,P_m\}$ be a symmetric Clifford system on $\mathbb{R}^{2l}$, and let
 $$M_+=\{x\in S^{2l-1}:\langle P_\alpha x,x\rangle=0,\ \alpha=0,\dots,m\}$$
 be the corresponding OT–FKM focal submanifold. The normal space of $M_+$ in $S^{2l-1}$ at $x$ is $\operatorname{span}\{P_0x,\dots,P_mx\}$, and $M_+$ is minimal in the sphere. Write $W_N$ for the restriction to $M_+$ of the spherical harmonics of degree at most $N$ on $S^{2l-1}$.
