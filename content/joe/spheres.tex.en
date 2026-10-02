@@ -612,26 +612,24 @@ $$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
 \begin{subproof}[Proof of (i)]
 W1 makes $\iota$ a smooth embedding onto a closed submanifold of $\mathcal{V}^*$. Write $m(u,v)=\Pi_{\Lambda'}(uv)$, so $uv=m(u,v)+t(u,v)$. On the unit sphere of $\mathcal{V}\times\mathcal{V}$ the hypothesis bounds $t$ and $dt$ uniformly. Fix an $L^2$-orthonormal frame of $\mathcal{V}$ and a tubular neighbourhood of $\iota(X)$ in $\mathcal{V}^*$.
 
-W1 makes $\iota$ a smooth embedding onto a closed submanifold of $\mathcal{V}^*$. Write $m(u,v)=\Pi_{\Lambda'}(uv)$, so $uv=m(u,v)+t(u,v)$. On the unit sphere of $\mathcal{V}\times\mathcal{V}$ the hypothesis bounds $t$ and $dt$ uniformly. Fix an $L^2$-orthonormal frame of $\mathcal{V}$ and a tubular neighbourhood of $\iota(X)$ in $\mathcal{V}^*$.
-
-The dimension of the normal space of $\iota(X)$ in $\mathcal{V}^*$ is $d-n$. W2 supplies the components; so the conormal space also has dimension $d-n$, and $\{du:u\in\mathcal{V}\}$ spans $T^*X$. Choose $d-n$ pairs $(u_j,v_j)$ in $\mathcal{V}$ so that the forms
+The normal space of $\iota(X)$ in $\mathcal{V}^*$ has dimension $d-n$. W2 supplies the components: the conormal has the same dimension, and $\{du:u\in\mathcal{V}\}$ spans $T^*X$. Choose $d-n$ pairs $(u_j,v_j)$ in $\mathcal{V}$ so that the forms
 $$\eta\mapsto \xi(u_j)\,\eta(v_j)+\xi(v_j)\,\eta(u_j),\qquad j=1,\ldots,d-n,$$
 span the conormal at every point of the compact set $\iota(X)$. Such pairs exist by W2 and a partition of unity on finitely many charts. Define $F$, with values in $\mathbb{R}^{d-n}$, by
 $$F(\xi)_j=\xi\bigl(m(u_j,v_j)\bigr)-\xi(u_j)\xi(v_j).$$
 Along $\iota(X)$ one has $F\circ\iota=-t_J$, where $t_J$ is $t$ evaluated on the chosen pairs. If $t=0$, then $F$ vanishes on $\iota(X)$.
-
 The unperturbed section $F_0$ is the same formula with $u_jv_j$ in place of $m(u_j,v_j)$. Its normal derivative at $\iota(x)$ is the chosen frame of the conormal, hence an isomorphism from $N_x$ onto $\mathbb{R}^{d-n}$. The zero set of $F_0$ is a transverse submanifold of codimension $d-n$, namely $\iota(X)$. The difference of $F$ and $F_0$ along $\iota(X)$ is $t_J$, and the difference of their normal derivatives is $dt_J$. Both are bounded by $\|t\|_{C^1}$. Invertibility of a square matrix is open, so $\|t\|_{C^1}<\tau_*$ keeps $dF^N$ invertible. Transverse zeros persist: $F^{-1}(0)$ contains a unique $C^1$ graph $\Sigma$ over $\iota(X)$, and $\iota:X\to\Sigma$ is a $C^1$ diffeomorphism. If $t=0$, then $F=F_0$ is smooth and the implicit-function theorem gives a $C^\infty$ identification.
 
 The graph equation is determined. A normal section $\sigma$ has graph $\xi_\sigma=\iota+\sigma$, and $\Sigma$ is the graph of the solution of $F(\xi_\sigma)=0$. Expand in the normal variable:
 $$dF^N(\sigma)+Q(\sigma,d\sigma)=-t_J,$$
 with $Q$ smooth and vanishing to second order at $(\sigma,d\sigma)=(0,0)$. Apply $(dF^N)^{-1}$:
 $$\sigma+(dF^N)^{-1}Q(\sigma,d\sigma)=-(dF^N)^{-1}t_J.$$
-The left-hand side is an operator of order $1$ if $Q$ depends on $d\sigma$, and of order $0$ if it depends only on $\sigma$. Its linearization at $\sigma=0$ is $\mathrm{Id}$ on the normal bundle of rank $d-n$, since the derivative of $Q$ vanishes at the origin. An operator whose linearization is $\mathrm{Id}$ is elliptic. For $\|t\|_{C^1}<\tau_*$ the section $\sigma$ is small in $C^1$, so the linearization at $\sigma$ remains invertible and the operator remains elliptic. No second derivative of $\sigma$ appears, and none is claimed.
+The left-hand side has order $1$ if $Q$ depends on $d\sigma$, and order $0$ if it depends only on $\sigma$. Its linearization at $\sigma=0$ is $\mathrm{Id}$ on the normal bundle of rank $d-n$, since the derivative of $Q$ vanishes at the origin. An operator whose linearization is $\mathrm{Id}$ is elliptic. For $\|t\|_{C^1}<\tau_*$ the section $\sigma$ is small in $C^1$, so the linearization at $\sigma$ remains invertible and the operator remains elliptic. No second derivative of $\sigma$ appears.
 
-Elliptic regularity for the determined system upgrades the $C^1$ graph to a $C^{k+2}$ graph, and
+The derivatives of $t$ on the right are not assumed. First, $R=-Pt$ and ellipticity of $P$ give, once $R_X\in C^k$,
+$$\|t\|_{C^{k+2}(X)}\le C(k)\bigl(\|R_X\|_{C^k(X)}+\|t\|_{L^2(X)}\bigr).$$
+Only then is the right-hand side in $C^k$. Elliptic regularity for the determined system upgrades the $C^1$ graph to a $C^{k+2}$ graph, and
 $$\|d\iota^{\pm 1}\|_{C^k}\le C(d,k,\iota(X))\bigl(1+\|R_X\|_{C^k(X)}\bigr).$$
-The chain rule transports $R_X$ to $\Sigma$ and gives the comparison, with $c(k)$ depending on $d$, $k$, and $\iota(X)$.
-No $C^{k+1}$ hypothesis on $t$ is required beyond the $C^1$ smallness that persists the graph: the higher norms come from $R=-Pt$ through the elliptic graph equation.
+The chain rule transports $R_X$ to $\Sigma$ and gives the comparison, with $c(k)$ depending on $d$, $k$, and $\iota(X)$. No $C^{k+1}$ hypothesis on $t$ is required beyond the $C^1$ smallness that persists the graph: the higher norms come from $R=-Pt$.
 \end{subproof}
 \begin{subproof}[Proof of (ii)]
 A finite slot of dimension $d_{\mathrm{tail}}$ is a finite-dimensional space of smooth functions, so the $C^1$ norm and the $L^2$ norm are equivalent on it, with a constant depending on the slot, on $n$, and on the cutoff. Remark 6 converts the $L^2$ size of the tail coefficients into a $C^0$ bound by Sogge; equivalence on the slot upgrades it to $C^1$. Since $R=-Pt$ and $P$ is elliptic of order $2$, $\|t\|_{L^2}$ and $\|R\|_{L^2}$ are comparable on the slot, up to a factor depending on $\Lambda'$ and $\Lambda''$. Hence $\|t\|_{C^1}\le C(d,d_{\mathrm{tail}},n,\Lambda',\Lambda'')\Delta$. Choosing $\Delta_*$ so that this constant times $\Delta_*$ is less than $\tau_*$ puts the hypothesis inside (i). The comparison of (i) then bounds $\|R\|_{C^k(\Sigma)}$ by a multiple of $\Delta$.
