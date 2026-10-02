@@ -624,15 +624,25 @@ W2 says that $\{du:u\in\mathcal{V}\}$ spans $T_x^*X$, so this family spans the c
 
 The section actually used is $F$, not $F_0$. Their difference along $\iota(X)$ is $t$, and the difference of their normal derivatives is $dt$. Both are bounded by $\|t\|_{C^1}$. Surjectivity is open, so there exists $\tau_*>0$, depending only on the norm of $d(F_0)$ along the compact set $\iota(X)$ and on a tubular radius, such that $\|t\|_{C^1}<\tau_*$ keeps $dF_{\iota(x)}$ surjective on the normal space. Transverse zeros persist under a $C^1$-small perturbation: $F^{-1}(0)$ contains a unique $C^1$ submanifold $\Sigma$ in a $\tau_*$-neighbourhood of $\iota(X)$, and $\iota:X\to\Sigma$ is a $C^1$ diffeomorphism. The differential of the inverse stays bounded in $C^0$ because $d\iota$ stays injective for a small $C^1$ perturbation of an immersion of a compact manifold. If $t=0$, then $F=F_0$ is smooth and vanishes exactly on $\iota(X)$, so the implicit-function theorem gives a $C^\infty$ identification.
 
-The $C^1$ hypothesis controls $d\iota^{\pm 1}$ in $C^0$ only. The comparison of $R$ in $C^k$ uses ellipticity. By definition $R=-Pt$ with $P$ elliptic of order $2$, so on the compact manifold $X$
-$$\|t\|_{C^{k+2}(X)}\le C(k)\bigl(\|R\|_{C^k(X)}+\|t\|_{L^2(X)}\bigr).$$
-For $\|t\|_{C^1}<\tau_*$ the graph functions of $\iota$ satisfy a quasilinear elliptic equation whose coefficients depend on the unperturbed embedding and on $R$. Elliptic bootstrapping upgrades the $C^1$ graph to a $C^{k+2}$ graph, with
+The $C^1$ hypothesis controls $d\iota^{\pm 1}$ in $C^0$ only. Higher norms come from the graph equation. Let $N\to\iota(X)$ be the normal bundle of the unperturbed embedding in $\mathcal{V}^*$, and write points of a tubular neighbourhood as $\iota(x)+\nu(x)$ with $\nu(x)\in N_x$. A $C^1$ section $\sigma$ of $N$ has graph
+$$\xi_\sigma(x)=\iota(x)+\sigma(x).$$
+The persisted zero set is the graph of the unique small section satisfying
+$$F(\xi_\sigma)=0.$$
+Along the unperturbed image, $F\circ\iota=-t$. Split $dF=dF^\top+dF^N$ into tangential and normal parts. For $\|t\|_{C^1}<\tau_*$ the normal derivative $dF^N$ is invertible, by the surjectivity already proved and equality of dimensions with the target of $F$. Expand $F(\xi_\sigma)$ in the normal variable:
+$$dF^N(\sigma)+Q(\sigma,d\sigma)=-t,$$
+where the remainder $Q$ is quadratic in $(\sigma,d\sigma)$ and smooth in the unperturbed second fundamental form of $\iota(X)$. Apply $(dF^N)^{-1}$:
+$$\sigma+(dF^N)^{-1}Q(\sigma,d\sigma)=-(dF^N)^{-1}t.$$
+Differentiate twice along $X$. The second derivatives of $\sigma$ appear linearly through $d\bigl((dF^N)^{-1}Q\bigr)$, with coefficients depending on $\iota(X)$ and on $(\sigma,d\sigma)$. The principal part is a quasilinear second-order operator
+$$A(x,\sigma,d\sigma)\,D^2\sigma=B(x,\sigma,d\sigma,t,dt,d^2t),$$
+whose linearization at $\sigma=0$ is $(dF^N)^{-1}\circ dF$, an isomorphism on the normal bundle by W2. Thus $A(x,0,0)$ is elliptic. For $\|t\|_{C^1}<\tau_*$ the section $\sigma$ is small in $C^1$, so $A(x,\sigma,d\sigma)$ remains elliptic.
+
+Elliptic regularity for this quasilinear system, together with $R=-Pt$ and the estimate
+$$\|t\|_{C^{k+2}(X)}\le C(k)\bigl(\|R\|_{C^k(X)}+\|t\|_{L^2(X)}\bigr),$$
+upgrades the $C^1$ graph to a $C^{k+2}$ graph once $R_X\in C^k$. The same bound gives
 $$\|d\iota^{\pm 1}\|_{C^k}\le C(d,k,\iota(X))\bigl(1+\|R_X\|_{C^k(X)}\bigr).$$
 Transport $R_X$ by $\iota$. The chain rule and this bound give
 $$c(k)^{-1}\|R_X\|_{C^k(X)}\le\|R_\Sigma\|_{C^k(\Sigma)}\le c(k)\|R_X\|_{C^k(X)},$$
-with $c(k)$ depending on $d$, $k$, and $\iota(X)$, once $R_X\in C^k$. No $C^{k+1}$ hypothesis on $t$ is required beyond the $C^1$ smallness that persists the graph: the higher norms come from $R=-Pt$.
-
-
+with $c(k)$ depending on $d$, $k$, and $\iota(X)$. No $C^{k+1}$ hypothesis on $t$ is required beyond the $C^1$ smallness that persists the graph: the higher norms come from $R=-Pt$ through the elliptic graph equation.
 \end{subproof}
 \begin{subproof}[Proof of (ii)]
 A finite slot of dimension $d_{\mathrm{tail}}$ is a finite-dimensional space of smooth functions, so the $C^1$ norm and the $L^2$ norm are equivalent on it, with a constant depending on the slot, on $n$, and on the cutoff. Remark 6 converts the $L^2$ size of the tail coefficients into a $C^0$ bound by Sogge; equivalence on the slot upgrades it to $C^1$. Since $R=-Pt$ and $P$ is elliptic of order $2$, $\|t\|_{L^2}$ and $\|R\|_{L^2}$ are comparable on the slot, up to a factor depending on $\Lambda'$ and $\Lambda''$. Hence $\|t\|_{C^1}\le C(d,d_{\mathrm{tail}},n,\Lambda',\Lambda'')\Delta$. Choosing $\Delta_*$ so that this constant times $\Delta_*$ is less than $\tau_*$ puts the hypothesis inside (i). The comparison of (i) then bounds $\|R\|_{C^k(\Sigma)}$ by a multiple of $\Delta$.
