@@ -1098,7 +1098,7 @@ Thus a finite exact $2$-sparse packet yields slot circles and sum-angle eigenfun
 \end{remark}
 
 \subsection{An Exact Packet That Is Not an Isometric Slot Sphere Embedding}
-Let $\{P_0,\dots,P_m\}$ be a symmetric Clifford system on $\mathbb{R}^{2l}$, and let
+Let $\{P_0,\dots,P_m\}$ be a symmetric Clifford system on $\mathbb{R}^{2l}$ \cite{FKM81}, and let
 $$M_+=\{x\in S^{2l-1}:\langle P_\alpha x,x\rangle=0,\ \alpha=0,\dots,m\}$$
 be the corresponding OT–FKM focal submanifold. The normal space of $M_+$ in $S^{2l-1}$ at $x$ is $\operatorname{span}\{P_0x,\dots,P_mx\}$, and $M_+$ is minimal in the sphere. Write $W_N$ for the restriction to $M_+$ of the spherical harmonics of degree at most $N$ on $S^{2l-1}$.
 
@@ -1125,7 +1125,7 @@ Products of elements of $\mathcal{V}$ are restrictions of polynomials of degree 
 
 This packet does not meet the hypotheses of §9.1. The coordinate map $M_+\to S^{2l-1}$ is a Takahashi immersion by one eigenspace, but the second fundamental form in the sphere is nonzero, so the induced metric is not the round metric of the slot. Section 9.1 requires an isometric embedding into a product of slot spheres; that hypothesis is not satisfied, and the proposition is not a counterexample to §9.1.
 
-In the indefinite range $m\equiv 0\pmod 4$ with $P_0\cdots P_m\neq\pm\mathrm{Id}$, $M_+$ is not homogeneous. The smallest such focal set is the $(m_1,m_2)=(4,3)$ example in $S^{15}$: dimension $10$, coordinate slot of rank $16$, and $W_2$ of dimension at most $1+16+135=152$. It is diffeomorphic to $S^3\times S^7$ and not isometric to a product of round spheres. Exactness of $(\mathcal{V},W_2)$ is unaffected by the definite/indefinite dichotomy.
+In the indefinite range $m\equiv 0\pmod 4$ with $P_0\cdots P_m\neq\pm\mathrm{Id}$, $M_+$ is not homogeneous \cite{OT75}. The smallest such focal set is the $(m_1,m_2)=(4,3)$ example in $S^{15}$: dimension $10$, coordinate slot of rank $16$, and $W_2$ of dimension at most $1+16+135=152$ \cite{QT16}. It is diffeomorphic to $S^3\times S^7$ and not isometric to a product of round spheres. Exactness of $(\mathcal{V},W_2)$ is unaffected by the definite/indefinite dichotomy.
 
 Exactness here is for products of $\mathcal{V}$. Products of degree-$2$ harmonics land in $W_4$, which is not claimed to be a spectral window. The example separates the exactness condition of §9 from the isometric slot hypothesis of §9.1: $R=0$ does not force the evaluation embedding to be isometric, and does not force homogeneity.
 \doclicenseThis
