@@ -612,6 +612,24 @@ $$\lVert R\rVert_{C^k(\Sigma)}\le C(d,d_{\mathrm{tail}},k)\,\Delta.$$
 \begin{subproof}[Proof of (i)]
 W1 makes $\iota$ a smooth embedding onto a closed submanifold of $\mathcal{V}^*$. Write $m(u,v)=\Pi_{\Lambda'}(uv)$, so $uv=m(u,v)+t(u,v)$. On the unit sphere of $\mathcal{V}\times\mathcal{V}$ the hypothesis bounds $t$ and $dt$ uniformly. Fix an $L^2$-orthonormal frame of $\mathcal{V}$ and a tubular neighbourhood of $\iota(X)$ in $\mathcal{V}^*$.
 
+W1 makes $\iota$ a smooth embedding onto a closed submanifold of $\mathcal{V}^*$. Write $m(u,v)=\Pi_{\Lambda'}(uv)$, so $uv=m(u,v)+t(u,v)$. On the unit sphere of $\mathcal{V}\times\mathcal{V}$ the hypothesis bounds $t$ and $dt$ uniformly. Fix an $L^2$-orthonormal frame of $\mathcal{V}$ and a tubular neighbourhood of $\iota(X)$ in $\mathcal{V}^*$.
+
+The dimension of the normal space of $\iota(X)$ in $\mathcal{V}^*$ is $d-n$. W2 supplies the components; so the conormal space also has dimension $d-n$, and $\{du:u\in\mathcal{V}\}$ spans $T^*X$. Choose $d-n$ pairs $(u_j,v_j)$ in $\mathcal{V}$ so that the forms
+$$\eta\mapsto \xi(u_j)\,\eta(v_j)+\xi(v_j)\,\eta(u_j),\qquad j=1,\ldots,d-n,$$
+span the conormal at every point of the compact set $\iota(X)$. Such pairs exist by W2 and a partition of unity on finitely many charts. Define $F$, with values in $\mathbb{R}^{d-n}$, by
+$$F(\xi)_j=\xi\bigl(m(u_j,v_j)\bigr)-\xi(u_j)\xi(v_j).$$
+Along $\iota(X)$ one has $F\circ\iota=-t_J$, where $t_J$ is $t$ evaluated on the chosen pairs. If $t=0$, then $F$ vanishes on $\iota(X)$.
+
+The unperturbed section $F_0$ is the same formula with $u_jv_j$ in place of $m(u_j,v_j)$. Its normal derivative at $\iota(x)$ is the chosen frame of the conormal, hence an isomorphism from $N_x$ onto $\mathbb{R}^{d-n}$. The zero set of $F_0$ is a transverse submanifold of codimension $d-n$, namely $\iota(X)$. The difference of $F$ and $F_0$ along $\iota(X)$ is $t_J$, and the difference of their normal derivatives is $dt_J$. Both are bounded by $\|t\|_{C^1}$. Invertibility of a square matrix is open, so $\|t\|_{C^1}<\tau_*$ keeps $dF^N$ invertible. Transverse zeros persist: $F^{-1}(0)$ contains a unique $C^1$ graph $\Sigma$ over $\iota(X)$, and $\iota:X\to\Sigma$ is a $C^1$ diffeomorphism. If $t=0$, then $F=F_0$ is smooth and the implicit-function theorem gives a $C^\infty$ identification.
+
+The graph equation is determined. A normal section $\sigma$ has graph $\xi_\sigma=\iota+\sigma$, and $\Sigma$ is the graph of the solution of $F(\xi_\sigma)=0$. Expand in the normal variable:
+$$dF^N(\sigma)+Q(\sigma,d\sigma)=-t_J,$$
+with $Q$ smooth and vanishing to second order at $(\sigma,d\sigma)=(0,0)$. Apply $(dF^N)^{-1}$:
+$$\sigma+(dF^N)^{-1}Q(\sigma,d\sigma)=-(dF^N)^{-1}t_J.$$
+The left-hand side is an operator of order $1$ if $Q$ depends on $d\sigma$, and of order $0$ if it depends only on $\sigma$. Its linearization at $\sigma=0$ is $\mathrm{Id}$ on the normal bundle of rank $d-n$, since the derivative of $Q$ vanishes at the origin. An operator whose linearization is $\mathrm{Id}$ is elliptic. For $\|t\|_{C^1}<\tau_*$ the section $\sigma$ is small in $C^1$, so the linearization at $\sigma$ remains invertible and the operator remains elliptic. No second derivative of $\sigma$ appears, and none is claimed.
+
+
+
 Define $F$ on that neighbourhood, by
 $$F(\xi)(u,v)=\xi(m(u,v))-\xi(u)\xi(v).$$
 At $\xi=\iota(x)$ one has $F(\iota(x))=-t(x)$, so $F\circ\iota=-t$. If $t=0$, then $F$ vanishes on $\iota(X)$.
