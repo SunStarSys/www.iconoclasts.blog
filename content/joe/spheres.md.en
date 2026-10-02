@@ -49,7 +49,9 @@ $$\Phi(u,v,w)=\int_X uvw\ d\mu$$
 
 together with the list of eigenvalues \cite{Sch24,Sch26}. That statement consumes every eigenspace. The purpose of this article is a finite substitute.
 Fix cutoffs $$\Lambda\le\Lambda'<\infty$$ and let
+
 $$\mathcal{V}=\bigoplus_{\lambda\le\Lambda}\ker(P-\lambda)$$
+
 be the corresponding spectral window. Products of window functions need not lie in $$\mathcal{V}$$. Write $$m(u,v)=\Pi_{\Lambda'}(uv)$$ for the projection onto modes up to $$\Lambda'$$, and
 
 $$R(u,v)=-P\bigl(I-\Pi_{\Lambda'}\bigr)(uv)
@@ -79,7 +81,7 @@ with $$d=\dim\mathcal{V}$$. When the tail of $$\Phi$$ occupies a finite slot, So
 
 The theorem is recognition, not construction: $$P$$ is given as Witten, and the packet is asked to recover the geometry that produced it. It is not a spectral uniqueness theorem. Two Witten operators with the same spectrum, or even the same $$\sigma(P)\cap[0,\Lambda']$$, need not be isometric; the missing data are $$\Phi$$ and $$R$$. Two operators with the same exact packet ($$R=0$$) are isometric, with $$\alpha$$ agreeing up to a constant. Two operators with the same approximate packet need not be isometric; they are $$C^k$$-close to isometric on the scale of $$\lVert R\rVert_{C^k(\Sigma)}$$.
 
-A distinguished slice is the unweighted first window on the sphere. There one may take $$\Lambda=n$$, $$\dim\mathcal{V}=n+1$$, and $$R=0$$ already at $$\Lambda'=2n+2$$: products of linear coordinates on $$S^n$$ occupy only the constant slot and the quadratic harmonics. Theorem 3 recognizes the unit round sphere from that exact frame. Theorem 4 is linear $$C^0$$ stability for an isolated cluster of the first $$n+1$$ harmonics whose visible products lie in $$\eta$$-gaps about $$0$$ and $$2n+2$$; on a sufficiently small $$C^2$$ ball about the round metric those gaps persist and the table deficits are $$O\bigl(\|g-g_{\mathrm{rd}}\|_{C^2}\bigr)$$. Those two statements are compared with Obata’s theorem \cite{Oba62} and with quantitative Obata theorems on the Ricci side \cite{CMS}. They are not Ricci theorems. They use a linear frame and its products, not a lower bound on Ricci curvature and a single first eigenfunction.
+A distinguished slice is the unweighted first window on the sphere. There one may take $$\Lambda=n$$, $$\dim\mathcal{V}=n+1$$, and $$R=0$$ already at $$\Lambda'=2n+2$$: products of linear coordinates on $$S^n$$ occupy only the constant slot and the quadratic harmonics. Theorem 3 recognizes the unit round sphere from that exact frame. Theorem 4 is linear $$C^0$$ stability for an isolated cluster of the first $$n+1$$ harmonics whose visible products lie in $$\eta$$-gaps about $$0$$ and $$2n+2$$; on a sufficiently small $$C^2$$ ball about the round metric those gaps persist and the table deficits are $$O\bigl(\lVert g-g_{\mathrm{rd}}\rVert_{C^2}\bigr)$$. Those two statements are compared with Obata’s theorem \cite{Oba62} and with quantitative Obata theorems on the Ricci side \cite{CMS}. They are not Ricci theorems. They use a linear frame and its products, not a lower bound on Ricci curvature and a single first eigenfunction.
 
 If $$\alpha=0$$ and the exact window has an isometric embedding with constant slot quadratics, $$(X,g)$$ is a compact homogeneous space. Every compact homogeneous Riemannian manifold has some isometric embedding with an exact slot-sphere packet; §9.1 says that if the packet given is of that form, then $$X$$ is a single $$K$$-orbit and so $$X$$ is in that precise class.
 
