@@ -911,7 +911,7 @@ If $\iota$ is isometric and $\mathcal{V}$ has several eigenvalues, then $\iota$ 
 The tower holds for every CROSS first window and every Peter–Weyl window.
 \end{remark}
 
-\begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 24 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 25 supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant (which is the first window of Theorems 3 and 21 in the spherical case), or when the evaluation is an isometric embedding into the slot spheres, §9.1. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
+\begin{proof}[Proof of Theorem 21] Lemmas 22–24 give a compact Lie group of isometries of $(X,g)$ and a compact linear group $G$ acting on $\iota(X)$. Lemma 24 gives that $X$ is a union of $G^\circ$-orbits, and that transitivity is equivalent to the existence of an open orbit. Lemma 25 supplies that open orbit when $\dim\mathcal{V}=n+1$ and $Q$ is constant (which is the first window of Theorems 3 and 21 in the spherical case), or when the evaluation is an isometric embedding into the slot spheres and the $K$-orbit is open at a point, §9.1. In general, set $H=\mathrm{Stab}_{K^\circ}(x)$ along a principal orbit; the principal set is a fibre bundle with fibre $K^\circ/H$. Finite covers and ineffective kernels are as before.
 \end{proof}
 
 \begin{remark}Theorem 21 in full generality is the orbit decomposition of Lemma 24. Transitivity is proved when $d=n+1$ and $Q$ is constant, which is the case already used by Lemma 19 and Theorem 3. A second transitivity/open orbit condition is given in Section 9.1. A general exact window is a union of compact orbits of a compact linear group of isometries; it is a single homogeneous space once an open orbit is known to exist. Compact hyperbolic surfaces remain excluded: they have no exact finite window satisfying W1.
@@ -942,9 +942,11 @@ not cut orbits down to level sets.
 \begin{proof} Equivariance identifies $T_x(K\cdot x)$ with $T_{\iota(x)}(K\cdot\iota(x))$. An immersion gives
 $$\dim(K\cdot x)=\dim(K\cdot\iota(x))\le\dim X,$$
 with equality if and only if the fundamental fields span $T_xX$. The set where they span is open, $K$-invariant, and closed by constancy of orbit dimension on a connected component, so the spanning hypothesis propagates from one point to all of $X$.
+
 Every orbit then has dimension $\dim X$, hence is open. A compact group acting continuously on a compact connected manifold has no proper open orbit, so $X=K\cdot x\cong K/H$ for the stabilizer $H$ of any point. The metric $g_\Gamma$ is $K$-invariant by construction of $K$.
-\end{proof}
+
 If $K$ acts transitively on $\prod_j S(\mathcal{E}_j)$, the orbit of $\iota(x)$ is the whole product. Equality of dimensions forces $\dim X=\dim\prod_j S(\mathcal{E}_j)$, so $\iota(X)$ is open in the product. It is also compact, hence closed. The product is connected, so $\iota(X)$ equals the product. An isometric embedding onto the product pulls the product of the round metrics back to $g$.
+\end{proof}
 
 A single slot of dimension $n+1$ is the case already treated in Lemma 25: $K$ contains the identity component of $\mathrm{O}(n+1)$, the image is the sphere of radius $\sqrt{Q}$, and the metric is round.
 
@@ -993,7 +995,7 @@ of compact hyperbolic 2-orbifolds, not an instance of (G7).
 \begin{proposition}[converse to §9.1]
 Let \((X,g)\) be a compact connected Riemannian homogeneous space.
 Then there exists an exact unweighted packet whose evaluation is an
-isometric embedding into a product of slot spheres. In particular
+isometric embedding, whose fundamental fields of its isometry group span $T^*X$ everywhere, into a product of slot spheres. In particular
 \((X,g)\) arises in the class described by §9.1.
 \end{proposition}
 \begin{subproof}
@@ -1120,11 +1122,11 @@ Both terms restrict to elements of $W_2$. Thus $\Delta_{M_+}W_2\subset W_2$. A s
 
 Products of elements of $\mathcal{V}$ are restrictions of polynomials of degree at most $2$, hence lie in $W_2$. The tail past $W_2$ vanishes, and the packet is exact.
 
-The coordinate map is an isometric immersion into one slot sphere, but the image is a proper submanifold. Section 9.1 requires the image to be open in the product of slot spheres. That hypothesis fails, so the example is not a counterexample to §9.1. The induced metric is not round, and in the indefinite range $M_+$ is not homogeneous.
+The coordinate map is an isometric immersion into one slot sphere, but the image is a proper submanifold. Section 9.1 requires the $K$-orbit on the image to be open in $\iota(X)$ in the product of slot spheres. That hypothesis fails -- the fundamental fields of the group preserving $\Phi$ do not span $T M_+$ -- so the example is not a counterexample to §9.1. The induced metric is not round, and in the indefinite range $M_+$ is not homogeneous.
 
 In the indefinite range $m\equiv 0\pmod 4$ with $P_0\cdots P_m\neq\pm\mathrm{Id}$, $M_+$ is not homogeneous \cite{OT75}. The smallest such focal set is the $(m_1,m_2)=(4,3)$ example in $S^{15}$: dimension $10$, coordinate slot of rank $16$, and $W_2$ of dimension at most $1+16+135=152$ \cite{QT16}. It is diffeomorphic to $S^3\times S^7$ and not isometric to a product of round spheres. Exactness of $(\mathcal{V},W_2)$ is unaffected by the definite/indefinite dichotomy.
 
-Exactness here is for products of $\mathcal{V}$. Products of degree-$2$ harmonics land in $W_4$, which is not claimed to be a spectral window. The example separates the exactness condition of §9 from the isometric slot hypothesis of §9.1: $R=0$ does not force the isometric embedding to be open in the slot sphere, and does not force homogeneity.
+Exactness here is for products of $\mathcal{V}$. Products of degree-$2$ harmonics land in $W_4$, which is not claimed to be a spectral window. The example separates the exactness condition of §9 from the open orbit, isometric slot hypothesis of §9.1: $R=0$ does not force the $K$-orbit on the isometric slot-sphere embedding to be open/transitive, and does not force homogeneity.
 \doclicenseThis
 \printbibliography
 \end{document}
