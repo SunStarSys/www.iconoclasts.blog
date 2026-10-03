@@ -21,7 +21,7 @@ Fix cutoffs $$\Lambda\le\Lambda'<\infty$$ and let $$\mathcal{V}$$ be the sum of 
 
 $$R(u,v)=-P(I-\Pi_{\Lambda'})(uv)=-\sum_{\lambda>\Lambda'}\lambda\ \Phi(u,v,\bar e_\lambda)\ e_\lambda$$
 
-and its uniform size $$\Delta=\sup\lVert R(u,v)\rVert_2$$ over unit $$u,v\in\mathcal{V}$$. Write $$t=(I-\Pi_{\Lambda'})(uv)$$. No Weyl law, no potential, and no curvature bound is used. A Wyman bound on window triples guarantees that the coefficients of $$R$$ exist.
+and its uniform size $$\Delta=\sup\lVert R(u,v)\rVert_2$$ over unit $$u,v\in\mathcal{V}$$. Write $$t=(I-\Pi_{\Lambda'})(uv)$$. No Weyl law, no potential, and no curvature bound is used.
 
 If $$R=0$$, the packet determines $$(X,g,\alpha)$$ up to a $$C^\infty$$ isometry of $$g$$ and an additive constant on $$\alpha$$. If $$\lVert t\rVert_{C^1}$$ is smaller than a threshold depending on the embedding of $$X$$ in $$\mathcal{V}^*$$, evaluation realises $$X$$ as a $$C^1$$ submanifold $$\Sigma\subset\mathcal{V}^*$$ on which
 
@@ -61,7 +61,9 @@ for the weighted tail of those products. Throughout, $$u,v\in\mathcal{V}$$. The 
 
 $$\Delta=\sup_{\lVert u\rVert_2=\lVert v\rVert_2=1}\lVert R(u,v)\rVert_2.$$
 
-The exact subclass is $$R=0$$ at a finite $$\Lambda'$$, which is an algebraic constraint on the window, not an asymptotic one. A Wyman bound on window triples guarantees that the coefficients of $$R$$ exist \cite{Wym}.
+The exact subclass is $$R=0$$ at a finite $$\Lambda'$$, which is an algebraic constraint on the window, not an asymptotic one.
+
+A Wyman bound controls the unweighted $\ell^2$ mass of $\Phi(u,v,e_\lambda)$ off the frequency triangle. It is not used in Theorems 1–4. The coefficients of $R$ exist by completeness of the eigenbasis. The bound is recorded to mark the class: compact hyperbolic surfaces satisfy it, and W1–W2, for all large windows, and still have $R\neq 0$. Exactness is a constraint on the visible table, not a consequence of triple-product decay.
 
 The visible packet is
 
@@ -265,7 +267,7 @@ is controlled by the measure of frequency triangles with side lengths comparable
 
 $$\sqrt{\lambda}\ge(1+\varepsilon)\bigl(\sqrt{\lambda_u}+\sqrt{\lambda_v}\bigr),$$
 
-for every $$\varepsilon>0$$. The paper uses only the following crude consequence: the coefficients of $$R$$ exist, and if a finite slot above $$\Lambda'$$ is fixed, they are bounded by a constant depending on that slot, on $$\Lambda$$, and on $$\lVert u\rVert_2\lVert v\rVert_2$$.
+for every $$\varepsilon>0$$. The paper uses only the following crude consequence: if a finite slot above $$\Lambda'$$ is fixed, they are bounded by a constant depending on that slot, on $$\Lambda$$, and on $$\lVert u\rVert_2\lVert v\rVert_2$$.
 
 A pointwise bound
 
