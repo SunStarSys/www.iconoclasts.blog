@@ -953,8 +953,47 @@ lies in one visible eigenspace: the two products $$\varphi\xi$$ and $$\psi\eta$$
 Thus a finite exact $$2$$-sparse packet yields slot circles and sum-angle eigenfunctions. Promoting those phases to a parallel coframe, and thereby to a flat metric, still requires constancy of the cross terms on a spanning set, which is an additional exactness identity for the visible cometric, not an invitation to send $$\Lambda'\to\infty$$.
 \end{remark}
 
-\doclicenseThis
-\printbibliography
-\end{document}
+### 9.3 An Inhomogeneous Exact Packet
+
+Let $$\{P_0,\dots,P_m\}$$ be a symmetric Clifford system on $$\mathbb{R}^{2l}$$ \cite{FKM81}, and let
+
+$$M_+=\{x\in S^{2l-1}:\langle P_\alpha x,x\rangle=0,\ \alpha=0,\dots,m\}$$
+
+be the corresponding OT–FKM focal submanifold. The normal space of $$M_+$$ in $$S^{2l-1}$$ at $$x$$ is $$\operatorname{span}\{P_0x,\dots,P_mx\}$$, and $$M_+$$ is minimal in the sphere. Write $$W_N$$ for the restriction to $$M_+$$ of the spherical harmonics of degree at most $$N$$ on $$S^{2l-1}$$.
+
+\begin{proposition}
+$$W_2$$ is invariant under $$\Delta_{M_+}$$, hence a finite sum of eigenspaces. The pair
+
+$$\mathcal{V}=\operatorname{span}\{1,x_1,\dots,x_{2l}\}\big|_{M_+},\qquad W_2$$
+
+is an exact packet: every product of elements of $$\mathcal{V}$$ lies in $$W_2$$, and $$R=0$$.
+\end{proposition}
+
+\begin{proof}
+Let $$Q(x)=\langle Ax,x\rangle$$ be a degree-$$2$$ harmonic on $$S^{2l-1}$$, so $$\operatorname{tr}A=0$$ and $$\Delta_S Q=\lambda_2 Q$$ with $$\lambda_2=2(2l)$$. Since the mean curvature of $$M_+$$ in the sphere vanishes,
+
+$$\Delta_{M_+}(Q|_{M_+})
+=\Delta_S Q\big|_{M_+}
+-\sum_{\alpha=0}^{m}\operatorname{Hess}_S Q(P_\alpha x,P_\alpha x).$$
+
+For vectors $$U,V$$ tangent to the unit sphere,
+
+$$\operatorname{Hess}_S Q(U,V)=2\langle AU,V\rangle-2Q\langle U,V\rangle.$$
+
+On $$M_+$$ one has $$\langle P_\alpha x,x\rangle=0$$, so each $$P_\alpha x$$ is tangent to the sphere, and
+
+$$\sum_{\alpha=0}^{m}\operatorname{Hess}_S Q(P_\alpha x,P_\alpha x)
+=2\sum_{\alpha=0}^{m}\langle P_\alpha A P_\alpha x,x\rangle-2(m+1)Q.$$
+
+Both terms restrict to elements of $$W_2$$. Thus $$\Delta_{M_+}W_2\subset W_2$$. A symmetric endomorphism of a finite-dimensional space diagonalizes, so $$W_2$$ is a sum of eigenspaces of $$\Delta_{M_+}$$.
+\end{proof}
+
+Products of elements of $$\mathcal{V}$$ are restrictions of polynomials of degree at most $$2$$, hence lie in $$W_2$$. The tail past $$W_2$$ vanishes, and the packet is exact.
+
+The coordinate map is an isometric immersion into one slot sphere, but the image is a proper submanifold. Section 9.1 requires the $$K$$-orbit on the image to be open. That hypothesis fails -- the fundamental fields of the group preserving $$\Phi$$ do not span $$T M_+$$ -- so the example is not a counterexample to §9.1. The induced metric is not round, and in the indefinite range $$M_+$$ is not homogeneous.
+
+In the indefinite range $$m\equiv 0\pmod 4$$ with $$P_0\cdots P_m\neq\pm\mathrm{Id}$$, $$M_+$$ is not homogeneous \cite{OT75}. The smallest such focal set is the $$(m_1,m_2)=(4,3)$$ example in $$S^{15}$$: dimension $$10$$, coordinate slot of rank $$16$$, and $$W_2$$ of dimension at most $$1+16+135=152$$ \cite{QT16}. It is diffeomorphic to $$S^3\times S^7$$ and not isometric to a product of round spheres. Exactness of $$(\mathcal{V},W_2)$$ is unaffected by the definite/indefinite dichotomy.
+
+Exactness here is for products of $$\mathcal{V}$$. Products of degree-$$2$$ harmonics land in $$W_4$$, which is not claimed to be a spectral window. The example separates the exactness condition of §9 from the open orbit, isometric slot hypothesis of §9.1: $$R=0$$ does not force the $$K$$-orbit on the isometric slot-sphere embedding to be open/transitive, and does not force homogeneity.
 
 <!-- $Date$ $Author$ $Revision$ -->
