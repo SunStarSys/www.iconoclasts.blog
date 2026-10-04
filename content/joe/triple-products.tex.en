@@ -489,7 +489,7 @@ Crossing is associativity written in a $G$-isotypic basis. It constrains the spe
 \begin{remark}[Associativity of Wigner $D$-functions and $6j$ symbols]
 
 On $SU(2)$ the structure constants are (15). Write $I=(j,m,n)$ for a Peter–Weyl index and $M^{IJK}$ for the corresponding triple product. Associativity of pointwise multiplication is
-$$\sum_K M^{IJK}M^{KL P}=\sum_{K'}M^{JKL}M^{IK'P}.$$
+$$\sum_K M^{IJK}M^{KL P}=\sum_{K'}M^{JK'L}M^{IK'P}.$$
 Each $M$ factors into a pair of $3j$ symbols, one in the left magnetic indices and one in the right. Summing the intermediate magnetic numbers $(m,n)$ of $K=(j,m,n)$ therefore splits as a product of two recouplings. The left-magnetic sum is Racah’s identity
 \begin{equation}
 \begin{aligned}
