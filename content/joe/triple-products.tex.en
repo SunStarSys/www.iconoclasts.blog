@@ -70,7 +70,7 @@ Using elementary techniques from Geometric Analysis, Partial Differential Equati
 \section{Introduction}
 \label{sec:intro}
 
-For a closed Riemannian manifold $(M,g)$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem \cite{DH11} in Spectral Geometry. Naïvely one might speculate that this class would always be empty. However, the academic literature is rich with decades-old constructions of specific pairings of counterexamples: beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori \cite{JM64}, and continuing \cite{CS92} towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis \cite{AS94} -- replete with a computer aided search for the critical $\dim = 3$ case.  A modern survey of the full flat tori history appears in \cite{NRR22}.
+For a closed, connected Riemannian manifold $(M,g)$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem \cite{DH11} in Spectral Geometry. Naïvely one might speculate that this class would always be empty. However, the academic literature is rich with decades-old constructions of specific pairings of counterexamples: beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori \cite{JM64}, and continuing \cite{CS92} towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis \cite{AS94} -- replete with a computer aided search for the critical $\dim = 3$ case.  A modern survey of the full flat tori history appears in \cite{NRR22}.
 
 Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces; constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 \cite{MS67}.) A prime example of this effort was Toshikazu Sunada's 1985 \cite{TS85} invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
 
@@ -90,7 +90,7 @@ This is not a research monograph, but an introduction to the subject matter for 
 \begin{theorem}
 \label{thm}
 
-Let $(M,g)$ be a closed Riemannian manifold and $\{e^i\}_{i=0}^\infty$ an orthonormal eigenbasis of the non-negative Laplacian $\Delta_M$ on $L^2(M,g)$, ordered by non-decreasing eigenvalues. Define
+Let $(M,g)$ be a closed, connected Riemannian manifold and $\{e^i\}_{i=0}^\infty$ an orthonormal eigenbasis of the non-negative Laplacian $\Delta_M$ on $L^2(M,g)$, ordered by non-decreasing eigenvalues. Define
 \begin{equation}
 M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx = \bra{e^i e^j}\ket{e^k}.
 \end{equation}
