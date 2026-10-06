@@ -23,26 +23,26 @@ The remainder of the script primarily takes advantage of bash shell builtins, wh
 
 To see the opposite tack, where everything is done in-house, fully microoptimized, and still can't beat this script with the default search options, and no caching system available, here is a fine example <https://github.com/BurntSushi/ripgrep>
 
-Just to pull the first #performance #benchmark off that page, and scale it up from a toy sample tree size (linux kernel sources), to a heterogeneous tree that's `23GB`: (best runs after 3 iterations; `LANG=en_US.UTF-8`)
+Just to pull the first #performance #benchmark off that page, and scale it up from a toy sample tree size (linux kernel sources), to a heterogeneous tree that's `47GB`: (best runs after 3 iterations; `LANG=en_US.UTF-8`)
 
 ```shell
-    % du -sh .
-    23G .
-    % time rg -uuniw '[A-Z]+_SUSPEND' | wc -l
-    6259
-    rg -uuniw '[A-Z]+_SUSPEND' 9.46s user 16.08s system 261% cpu 9.759 total
-    wc -l 0.00s user 0.07s system 0% cpu 9.759 total
-    % time pffxg.sh -- -wnE '[A-Z]+_SUSPEND' | wc -l
-    5855
-    pffxg.sh -- -wnE '[A-Z]+_SUSPEND' 16.66s user 2.68s system 429% cpu 4.501 total
-    wc -l 0.00s user 0.00s system 0% cpu 4.501 total
+% du -sh .
+47G	.
+% time rg -uuniw '[A-Z]+_SUSPEND' | wc -l
+10269
+rg -uuniw '[A-Z]+_SUSPEND'  4.17s user 36.97s system 316% cpu 13.015 total
+wc -l  0.04s user 0.05s system 0% cpu 13.015 total
+% time pffxg.sh --no-cache -- -wnE '[A-Z]+_SUSPEND' | wc -l
+9913
+pffxg.sh --no-cache -- -wnE '[A-Z]+_SUSPEND'  14.99s user 11.57s system 626% cpu 4.241 total
+wc -l  0.00s user 0.00s system 0% cpu 4.242 total
 ```
 
 It's quite silly to microoptimize something that's deeply tied to the state of the kernel's filesystem cache for your search. The variation in performance timings is dominated by the access speed to the corpus of files' contents, and it is an order of magnitude more relevant than any other factor to the end results. Being on an `NVMe` helps, but nothing in this space beats `RAM` itself.
 
 That's why having an in-memory, compressed cache for a large corpus of files, will stabilize the performance timings. It is surprising that no one else thought this was important enough to support.
 
-Take the second #performance #benchmark off that page, and scale it up as before (same `23GB` tree):
+Take the second #performance #benchmark off that page, and scale it up as before (same `47GB` tree):
 
 ```shell
 	% time rg -tc -uuuiwn '[A-Z]+_SUSPEND' | wc -l
