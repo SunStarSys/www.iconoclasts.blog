@@ -26,16 +26,16 @@ To see the opposite tack, where everything is done in-house, fully microoptimize
 Just to pull the first #performance #benchmark off that page, and scale it up from a toy sample tree size (linux kernel sources), to a heterogeneous tree that's `47GB`: (best runs after 3 iterations; `LANG=en_US.UTF-8`)
 
 ```shell
-% du -sh .
-47G	.
-% time rg -uuniw '[A-Z]+_SUSPEND' | wc -l
-10269
-rg -uuniw '[A-Z]+_SUSPEND'  4.17s user 36.97s system 316% cpu 13.015 total
-wc -l  0.04s user 0.05s system 0% cpu 13.015 total
-% time pffxg.sh --no-cache -- -wnE '[A-Z]+_SUSPEND' | wc -l
-9913
-pffxg.sh --no-cache -- -wnE '[A-Z]+_SUSPEND'  14.99s user 11.57s system 626% cpu 4.241 total
-wc -l  0.00s user 0.00s system 0% cpu 4.242 total
+    % du -sh .
+    47G	.
+    % time rg -uuniw '[A-Z]+_SUSPEND' | wc -l
+    10269
+    rg -uuniw '[A-Z]+_SUSPEND'  4.17s user 36.97s system 316% cpu 13.015     total
+    wc -l  0.04s user 0.05s system 0% cpu 13.015 total
+    % time pffxg.sh --no-cache -- -wnE '[A-Z]+_SUSPEND' | wc -l
+    9913
+    pffxg.sh --no-cache -- -wnE '[A-Z]+_SUSPEND'  14.99s user 11.57s system 626% cpu 4.241 total
+    wc -l  0.00s user 0.00s system 0% cpu 4.242 total
 ```
 
 It's quite silly to microoptimize something that's deeply tied to the state of the kernel's filesystem cache for your search. The variation in performance timings is dominated by the access speed to the corpus of files' contents, and it is an order of magnitude more relevant than any other factor to the end results. Being on an `NVMe` helps, but nothing in this space beats `RAM` itself.
