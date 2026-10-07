@@ -570,15 +570,15 @@ Summing the magnetic indices in \eqref{eq:su2-triple} gives
 when $(j_1,j_2,j)$ is admissible, and $0$ otherwise. Substituting \eqref{eq:kernels} and \eqref{eq:hs} into $(\dagger)$ recovers \eqref{eq:6j-orth}.
 For the four-point singlet $J=0$, in the bottom-row order of the printed kernel,
 \begin{equation}
-\begin{Bmatrix} j_1 & j_2 & j \\ j_3 & j_4 & 0 \end{Bmatrix}
-=\delta_{j_1 j_4}\,\delta_{j_2 j_3}
+\begin{Bmatrix} j_1 & j_2 & j \\ j_4 & j_3 & 0 \end{Bmatrix}
+=\delta_{j_1 j_3}\,\delta_{j_2 j_4}
 \frac{(-1)^{j_1+j_2+j}}{\sqrt{(2j_1+1)(2j_2+1)}},
 \label{eq:6j-zero}
 \end{equation}
 so
 \begin{equation}
 K(j_1,j_2;j_3,j_4\mid j)
-=\delta_{j_4,j_1}\,\delta_{j_3,j_2}\,(-1)^{j_1+j_2+j}\sqrt{\frac{2j+1}{2j_1+1}},
+=\delta_{j_4,j_1}\,\delta_{j_3,j_2}\,(-1)^{j_1+j_2+j}\sqrt{\frac{2j+1}{(2j_1+1)\ (2j_2+1)}},
 \label{eq:K-singlet}
 \end{equation}
 and likewise for $K'$ after the paired legs are swapped. Then $(\dagger)$ reduces to a finite equality of dimension factors.
