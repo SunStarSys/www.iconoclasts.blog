@@ -226,7 +226,7 @@ $\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
 \end{lemma}
 
 \begin{subproof}[Proof of Lemma~\ref{lma}]
-Continuity of $\vec F$ is a consequence of the Sobolev embedding theorem and the fact that $\vec F$ is an isometry on every Sobolev space between $M$ and $N$. Since $F$ is bijective, we just need to establish $$\lVert\vec F(f)\rVert_\infty = \lVert f\rVert_\infty$$.  From the Preliminaries section above, we can compute
+Continuity of $\vec F$ is a consequence of the Sobolev embedding theorem and the fact that $\vec F$ is an isometry on every Sobolev space between $M$ and $N$. Since $F$ is bijective, we just need to establish $$\lVert\vec F(f)\rVert_\infty = \lVert f\rVert_\infty.$$ From the Preliminaries section above, we can compute
 $$
   \lVert\vec F(f)\rVert_{2p}^{2p}=\lVert\vec F(f^p)\rVert_2^2 = \lVert f^p \rVert_2^2 = \lVert f \rVert_{2p}^{2p},
 $$
