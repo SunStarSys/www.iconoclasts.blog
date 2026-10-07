@@ -3,7 +3,7 @@
     "files": {
       "seg_m3": {
         "count": "55",
-        "filename": "seg_mc/deletions-seg_m3.bv"
+        "filename": "seg_md/deletions-seg_m3.bv"
       }
     },
     "format": "1"
@@ -48,14 +48,16 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_mc"
+    "name": "seg_md"
   },
   "sort": {
     "counts": {
-      "path": "1"
+      "path": "2"
     },
     "format": "3",
-    "null_ords": {},
+    "null_ords": {
+      "path": "1"
+    },
     "ord_widths": {
       "path": "1"
     }
