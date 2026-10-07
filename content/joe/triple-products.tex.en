@@ -226,6 +226,8 @@ $\vec{F}: C^\infty(M)\rightarrow C^\infty(N)$ preserves the uniform norm.
 \end{lemma}
 
 \begin{subproof}[Proof of Lemma~\ref{lma}]
+Continuity of $\vec F$ is a consequence of the Sobolev embedding theorem and the fact that $\vec F$ is an isometry on every Sobolev space between $M$ and $N$. Since $F$ is bijective, we just need to establish $$\lVert\vec F(f)\rVert_\infty = \lVert f\rVert_\infty$$.
+
 Let $\set{a_i}$ be a smooth partition of unity on $M$.
 
 \begin{equation}
