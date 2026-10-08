@@ -492,7 +492,7 @@ If $G$ is compact, $K$ and $K'$ are finite recoupling coefficients, and $(\dagge
 
 If $G=\mathrm{PSL}_2(\mathbb{R})$ or $\mathrm{SO}_0(1,d)$ acting on $\Gamma\backslash G$, the labels run over principal series, $K,K'$ are the Plancherel recoupling kernels of Kravchuk–Mazáč–Pal, and $(\dagger)$ is the conformal bootstrap crossing system. A linear functional $\alpha$ with $\alpha\cdot K\ge 0$ on the support of the spherical Plancherel measure then yields
 $$\sum_{\nu\in\Omega}\lVert M_{\lambda\mu\to\nu}\rVert_{\mathrm{HS}}^2\le C(\lambda,\mu,\Omega).$$
-In particular the support of $\Phi$ in the Weyl chamber cannot place too much mass outside a compact region determined by the external labels. Those inequalities are the spectral-gap and triple-overlap bounds of Bonifacio, Kravchuk–Mazáč–Pal, and subsequent work \cite{Bon22} \cite{Bon22b} \cite{KMP24} \cite{BMP25}. Adve’s converse \cite{AA25} states that a discrete solution of $(\dagger)$ for $G=\mathrm{PSL}_2(\mathbb{R})$ arises from a compact hyperbolic surface.
+In particular the support of $\Phi$ in the Weyl chamber cannot place too much mass outside a compact region determined by the external labels. Those inequalities are the spectral-gap and triple-overlap bounds of Bonifacio, Kravchuk–Mazáč–Pal, and subsequent work \cite{Bon22} \cite{Bon22b} \cite{KMP24} \cite{BMP25}. Adve’s converse \cite{AA25} states that a discrete solution of $(\dagger)$ for $G=\mathrm{PSL}_2(\mathbb{R})$ arises from the unit tangent bundle of a compact hyperbolic 2-orbifold.
 
 Crossing is associativity written in a $G$-isotypic basis. It constrains the spectrum; it does not reconstruct the metric from two given manifolds, and it does not replace matching the full table $M^{i,j,k}$ in Theorem 1.
 \end{remark}
