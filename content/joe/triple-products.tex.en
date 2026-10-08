@@ -487,6 +487,7 @@ is an identity in the algebra of functions on $M$. In a $G$-adapted eigenbasis e
 \end{equation}
 
 The second kernel is $K'(\lambda,\rho;\mu,\kappa\mid\nu')$, not $K'(\lambda,\kappa;\mu,\rho\mid\nu')$. With $\lambda=j_1$, $\mu=j_2$, $\kappa=j_4$, and $\rho=j_3$, this is the $K'$ of (24). The weight on the right is the multiplication map for the pair $(\lambda\rho)$, which is the pair actually crossed.
+In particular, the indicies in the Crossing Equation $(\dagger)$ run over the space of irreducible representations, not the indices of a chosen basis, and each term in the summands is independent of any such choice of basis.
 
 If $G$ is compact, $K$ and $K'$ are finite recoupling coefficients, and $(\dagger)$ is an algebraic identity among the reduced elements of $\Phi$. For $SU(2)$ they are $6j$ symbols when they are three-spin associators, or the $J=0$ collapse, and $9j$ symbols when four external spins couple to a total channel $J\neq 0$.
 
