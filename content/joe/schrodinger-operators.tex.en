@@ -93,8 +93,7 @@ closed Witten operator---a packet of \(\Phi\) plus a controlled tail, without a 
 Suppose $P_{\alpha,V}$ and $P_{\beta,W}$ are isospectral and $U:\mathcal{V}_M\to\mathcal{V}_N$ is a spectral identification with
 $$\Phi_\nu(Uu,Uv,Uw)=\Phi_\mu(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{V}_M.$$
 Then there is a diffeomorphism $F:N\to M$ such that
-$$F^*g=h,\qquad \beta=\alpha\circ F,\qquad W=V\circ F$$
-for a constant $c\in\mathbb{R}$.
+$$F^*g=h,\qquad \beta=\alpha\circ F,\qquad W=V\circ F.$$
 \end{theorem}
 
 Equivalently, in basis coordinates we have the following
@@ -150,7 +149,7 @@ Both sides are second-order scalar differential operators. For $\phi\in\mathcal{
 $$P(\phi^2)-2\phi\,P\phi=-2\,d\phi\cdot d\phi - V\phi^2.$$
 The principal part is the cometric. Since the differentials $de^i$ span $T^*$ at every point,
 $$F^*g=h.$$
-The first-order symbols are the drifts $\nabla\alpha$ and $\nabla\beta$, so $d\beta=F^*d\alpha$ and $\beta=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$, but $c=0$ by unitarity of $F$. The order-zero terms then give $W=V\circ F$.
+The first-order symbols are the drifts $\nabla\alpha$ and $\nabla\beta$, so $d\beta=F^*d\alpha$ and $\beta=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$; but $c=0$ by unitarity of $F$. The order-zero terms then give $W=V\circ F$.
 
 This proves Theorem~\ref{thm}. Corollary~\ref{coro} is the same statement in an eigenbasis: $Ue^i=f^i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$, as in Remark 3.
 
