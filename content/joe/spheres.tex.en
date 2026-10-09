@@ -252,49 +252,21 @@ each $x_ax_b-\delta_{ab}/(n+1)$ an eigenfunction at $2n+2$, and $\{dx_a\}$ spann
 
 \begin{theorem}[round sphere, quantitative cluster]
 \label{thm-b}
-Let \(\lambda_1\le\cdots\le\lambda_{n+1}\) be the first \(n+1\) positive
-eigenvalues of \(P\) counted with multiplicity, and let
-\(\mathcal{V}=\mathrm{span}\{x_1,\dots,x_{n+1}\}\) be the joint span of
-corresponding \(L^2\)-orthonormal eigenfunctions. Write
-\[
-w=\lambda_{n+1}-\lambda_1,\qquad
-\bar\lambda=\frac1{n+1}\sum_{i=1}^{n+1}\lambda_i,
-\]
-and assume the cluster is isolated: \(w<\lambda_{n+2}-\lambda_{n+1}\).
-Assume W1 and W2 for this block.
-Fix \(\eta\in\bigl(0,\min\{n,n+4\}/2\bigr)\) smaller than the first two
-spherical gaps, and a cutoff \(\Lambda'\ge 2n+2+\eta\). Set
-\[
-\Pi^\eta_{\mathrm{sph}}=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\,2n+2+\eta]}.
-\]
-Allow the table deficits
+Let $\lambda_1\le\cdots\le\lambda_{n+1}$ be the first $n+1$ positive eigenvalues of $P$, counted with multiplicity, and let $\mathcal{V}$ be their joint eigenspace. Let $x_0,\ldots,x_n$ be a frame of $\mathcal{V}$ with $\int x_a=0$ and $\sum_a x_a^2$ close to $1$, not an $L^2$-orthonormal frame. Write
+$$w=\lambda_{n+1}-\lambda_1,\qquad
+\bar\lambda=\frac1{n+1}\sum_{i=1}^{n+1}\lambda_i,$$
+and assume the cluster is isolated: $w<\lambda_{n+2}-\lambda_{n+1}$. Assume W1 and W2 for this block. Fix $\eta\in(0,\min\{n,n+4\}/2)$ smaller than the first two spherical gaps, and a cutoff $\Lambda'\ge 2n+2+\eta$. Set
+$$\Pi^\eta_{\mathrm{sph}}=\Pi_{[0,\eta]}+\Pi_{[2n+2-\eta,\,2n+2+\eta]}.$$
+Allow the deficits
 \begin{align*}
 \delta_w&=w+|\bar\lambda-n|,\\
-\delta_{\mathrm{on}}&=\sum_{a,b}\bigl|\textstyle\int x_ax_b-\delta_{ab}\bigr|
-+\sum_a\bigl|\textstyle\int x_a\bigr|,\\
-\delta_1&=\bigl\|\textstyle\sum_a x_a^2-1\bigr\|_{C^0},\\
+\delta_{\mathrm{on}}&=\sum_{a,b}\Bigl|\int_X x_ax_b\,d\mathrm{vol}-\frac{\mathrm{vol}(X)}{n+1}\,\delta_{ab}\Bigr|+\sum_a\bigl|\int_X x_a\,d\mathrm{vol}\bigr|,\\
+\delta_1&=\Bigl\|\sum_a x_a^2-1\Bigr\|_{C^0},\\
 \delta_\Phi&=\sup_{a,b}\bigl\|(I-\Pi^\eta_{\mathrm{sph}})\Pi_{\Lambda'}(x_ax_b)\bigr\|_{L^2},\\
 \delta_t&=\sup_{a,b}\|t_{\Lambda'}(x_a,x_b)\|_{C^1},
 \end{align*}
-where \(t_{\Lambda'}=(I-\Pi_{\Lambda'})(x_ax_b)\). Set
-\[
-\delta=\delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi+\delta_t.
-\]
-If \(\delta<\delta_*(n,\eta)\), then evaluation \(F=(x_1,\dots,x_{n+1})\)
-realises \(X\) as a \(C^1\)-graph over \(S^n\), and
-\[
-d_{\mathrm{GH}}(X,S^n)+\|F^*g_{\mathrm{eucl}}-g\|_{C^0}
-\le C(n,\eta,\Lambda')\,\delta.
-\]
-
-If the tail of \(R_{\Lambda'}\) occupies a finite slot of dimension
-\(d_{\mathrm{tail}}\) (or is cut at a finite \(\Lambda''\)), then
-\(\delta_t\le C(n,d_{\mathrm{tail}},\Lambda',\Lambda'')\Delta_{\mathrm{fr}}\)
-with \(\Delta_{\mathrm{fr}}=\sup\|R_{\Lambda'}(x_a,x_b)\|_2\), and \(\delta\)
-may be written with \(\Delta_{\mathrm{fr}}\) in place of \(\delta_t\).
-If \(\Lambda'=2n+2+\eta\) and the tail is so cut, the constant depends
-only on \(n\), \(\eta\), and \(d_{\mathrm{tail}}\).
-
+where $t_{\Lambda'}=(I-\Pi_{\Lambda'})(x_ax_b)$. Set $\delta=\delta_w+\delta_{\mathrm{on}}+\delta_1+\delta_\Phi+\delta_t$. If $\delta<\delta_*(n,\eta)$, then $F=(x_0,\ldots,x_n)$ realises $X$ as a $C^1$-graph over $S^n$, and
+$$d_{\mathrm{GH}}(X,S^n)+\|F^*g_{\mathrm{eucl}}-g\|_{C^0}\le C(n,\eta,\Lambda')\,\delta.$$
 \end{theorem}
 
 On a fixed pair a cut exists by Claim 7.1; the Kato ball uses one cut chosen after the metric.
