@@ -58,7 +58,7 @@
 \begin{abstract}
 For a second-order operator $P_{\alpha,V}=-\Delta_g+\langle\nabla\alpha,\nabla\cdot\rangle+V$ on a complete Riemannian manifold, acting in $L^2(e^{-\alpha}\,d\mathrm{vol})$ with discrete spectrum, the eigenvalues determine the eigenspaces only up to independent unitaries on each eigenspace. We prove that a spectral identification which also preserves the triple products
 $$\Phi_\mu(u,v,w)=\int uvw\,d\mu,\qquad d\mu=e^{-\alpha}\,d\mathrm{vol},$$
-is implemented by a diffeomorphism $F$ with $F^*g=h$, $\beta=\alpha\circ F+c$, and $W=V\circ F$. Schrödinger operators are the case $\alpha=0$; Witten operators are the case $V=0$. The geometric invariant is the multiplication table on the spectral subspaces, not the spectrum alone.
+is implemented by a diffeomorphism $F$ with $F^*g=h$, $\beta=\alpha\circ F$, and $W=V\circ F$. Schrödinger operators are the case $\alpha=0$; Witten operators are the case $V=0$. The geometric invariant is the multiplication table on the spectral subspaces, not the spectrum alone.
 
 A recognition argument from an abstract $G$-package via evaluation in a finite-dimensional subrepresentation of the eigenalgebra applies only when that embedding exists. Homogeneous spaces and the isotropic oscillator admit it; a general radial well need not. The comparison theorem does not use this hypothesis.
 
@@ -93,7 +93,7 @@ closed Witten operator---a packet of \(\Phi\) plus a controlled tail, without a 
 Suppose $P_{\alpha,V}$ and $P_{\beta,W}$ are isospectral and $U:\mathcal{V}_M\to\mathcal{V}_N$ is a spectral identification with
 $$\Phi_\nu(Uu,Uv,Uw)=\Phi_\mu(u,v,w)\qquad\text{for all }u,v,w\in\mathcal{V}_M.$$
 Then there is a diffeomorphism $F:N\to M$ such that
-$$F^*g=h,\qquad \beta=\alpha\circ F+c,\qquad W=V\circ F$$
+$$F^*g=h,\qquad \beta=\alpha\circ F,\qquad W=V\circ F$$
 for a constant $c\in\mathbb{R}$.
 \end{theorem}
 
@@ -150,7 +150,7 @@ Both sides are second-order scalar differential operators. For $\phi\in\mathcal{
 $$P(\phi^2)-2\phi\,P\phi=-2\,d\phi\cdot d\phi - V\phi^2.$$
 The principal part is the cometric. Since the differentials $de^i$ span $T^*$ at every point,
 $$F^*g=h.$$
-The first-order symbols are the drifts $\nabla\alpha$ and $\nabla\beta$, so $d\beta=F^*d\alpha$ and $\beta=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$. The order-zero terms then give $W=V\circ F$.
+The first-order symbols are the drifts $\nabla\alpha$ and $\nabla\beta$, so $d\beta=F^*d\alpha$ and $\beta=\alpha\circ F+c$ for a constant $c\in\mathbb{R}$, but $c=0$ by unitarity of $F$. The order-zero terms then give $W=V\circ F$.
 
 This proves Theorem~\ref{thm}. Corollary~\ref{coro} is the same statement in an eigenbasis: $Ue^i=f^i$ and matching $M^{i,j,k}$ are the coordinates of a spectral identification that intertwines $\Phi_\mu$ and $\Phi_\nu$, as in Remark 3.
 
@@ -171,7 +171,7 @@ solutions of the hyperbolic bootstrap equations arise from some
 \(\Gamma\backslash G\) — is Adve’s theorem and is not implied here.
 \end{remark}
 \begin{remark}
-If $\overline{M},\overline{N}$ are compact with smooth boundary and $P,Q$ are Dirichlet realizations, the same argument with $C(\overline{M})$ in place of $C_0(M)$ yields a diffeomorphism of closed manifolds with $F(\partial N)=\partial M$, $F^*g=h$, $\beta=\alpha\circ F+c$, $W=V\circ F$. For Neumann or Robin, $F$ is still a diffeomorphism of closed manifolds; preservation of the boundary condition follows from the isometry of the interior metric. See \cite{GWW92} for the original study on isospectral, non-isometric drums.
+If $\overline{M},\overline{N}$ are compact with smooth boundary and $P,Q$ are Dirichlet realizations, the same argument with $C(\overline{M})$ in place of $C_0(M)$ yields a diffeomorphism of closed manifolds with $F(\partial N)=\partial M$, $F^*g=h$, $\beta=\alpha\circ F$, $W=V\circ F$. For Neumann or Robin, $F$ is still a diffeomorphism of closed manifolds; preservation of the boundary condition follows from the isometry of the interior metric. See \cite{GWW92} for the original study on isospectral, non-isometric drums.
 \end{remark}
 \begin{remark}
 The same reconstruction applies to graphs, with the amount of analysis matching the function space.
