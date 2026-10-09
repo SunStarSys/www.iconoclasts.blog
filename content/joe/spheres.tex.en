@@ -245,7 +245,9 @@ In that case \(\iota\) is a \(C^k\) almost-isometry on the scale of \(\Delta\).
 
 \begin{theorem}[round sphere, exact window]
 \label{thm-a}
-Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n+2$. Suppose there is a frame $x_0,\dots,x_n$ in $\mathcal{V}$ with $Px_a=nx_a$, $\int x_ax_b=\delta_{ab}$, $\int x_a=0$, $\sum_ax_a^2=1$, each $x_ax_b-\delta_{ab}/(n+1)$ an eigenfunction at $2n+2$, and $\{dx_a\}$ spanning $T^*X$. Then $X$ is isometric to the unit round sphere, $P=-\Delta$, and $\operatorname{span}\{x_a\}=H_1$. Scaling: the pair $(\lambda,2\lambda+2\lambda/n)$ gives radius $\sqrt{n/\lambda}$.
+Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n+2$. Suppose there is a frame $x_0,\ldots,x_n$ in $\mathcal{V}$ with $Px_a=nx_a$, $\int x_a=0$, $\sum_a x_a^2=1$,
+$$\int_X x_ax_b\,d\mathrm{vol}=\frac{\mathrm{vol}(X)}{n+1}\ \delta_{ab},$$
+each $x_ax_b-\delta_{ab}/(n+1)$ an eigenfunction at $2n+2$, and $\{dx_a\}$ spanning $T^*X$. Then $X$ is isometric to the unit round sphere.
 \end{theorem}
 
 \begin{theorem}[round sphere, quantitative cluster]
@@ -737,7 +739,7 @@ Two packets for the same operator at different admissible cutoffs produce isomet
 
 \section{The Unweighted First Window on the Sphere}
 This section is Theorems 1 and 2 on a single window: $\alpha=0$, $\Lambda=n$, $\dim\mathcal{V}=n+1$, and products of the window supported in slots $\{0,2n+2\}$ when $R=0$.
-Let $\{x_a\}_{a=0}^n$ be an $L^2$-orthonormal frame in $\mathcal{V}$ as in Theorem 3, and write $F=(x_0,\dots,x_n):X\to\mathbb{R}^{n+1}$.
+Let $\{x_a\}_{a=0}^n$ be an $L^2$-orthogonal frame in $\mathcal{V}$ as in Theorem 3, and write $F=(x_0,\dots,x_n):X\to\mathbb{R}^{n+1}$.
 
 \begin{lemma} Assume the hypotheses of Theorem 3. Then $\sum_a x_a^2=1$, $\Gamma(x_a,x_b)=\delta_{ab}-x_ax_b$, and $dF$ has rank $n$ at every point. Consequently $F(X)$ is a closed embedded hypersurface in the unit sphere of $\mathbb{R}^{n+1}$.
 \end{lemma}
