@@ -530,7 +530,7 @@ Each $M$ factors into a left-magnetic $3j$ symbol and a right-magnetic $3j$ symb
 \end{aligned}
 \label{eq:racah-left}
 \end{equation}
-The right-magnetic sum is the same identity with $(n_i,n,n')$ in place of $(m_i,m,m')$, and $n'=-n_1-n_3$. The product of the two, summed on $j$, is the orthogonality relation
+The right-magnetic sum is the same identity with $(n_i,n,n')$ in place of $(m_i,m,m')$, and $n'=-n_1-n_3$. The product of the two recouplings still carries the external $3j$ symbols. Contracting those by $3j$ orthogonality, and summing on $j$, gives
 \begin{equation}
 \sum_j(2j+1)
 \begin{Bmatrix} j_1 & j_2 & j \\ j_4 & j_3 & j' \end{Bmatrix}
@@ -539,7 +539,10 @@ The right-magnetic sum is the same identity with $(n_i,n,n')$ in place of $(m_i,
 \label{eq:6j-orth}
 \end{equation}
 not an equality of two distinct $6j$ symbols, and not the Biedenharn--Elliott pentagon.
-A sum over only $m_5,m_6$, with $m_1,\ldots,m_4$ held fixed, is a single admissible term: the row sums freeze $m_5=-m_1-m_2$ and $m_6=m_2+m_3$. It does not equal a bare $6j$ symbol. The bare symbol is the full contraction,
+
+A sum over only $m_5,m_6$, with $m_1,\ldots,m_4$ held fixed, is a single admissible term. For the unsigned product the row sums freeze $m_5=-m_1-m_2$ and $m_6=-m_2-m_3$. For the signed contraction, with $-m_6$ in the contracted column, the second value is $m_6=m_2+m_3$. Either way it does not equal a bare $6j$ symbol.
+
+The bare symbol is the full contraction
 \begin{equation}
 \begin{aligned}
 &\begin{Bmatrix} j_1 & j_2 & j_5 \\ j_3 & j_4 & j_6 \end{Bmatrix}
