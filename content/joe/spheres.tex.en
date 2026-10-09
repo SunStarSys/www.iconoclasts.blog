@@ -64,7 +64,7 @@ Fix cutoffs $\Lambda\le\Lambda'<\infty$ and let $\mathcal{V}$ be the sum of eige
 $$R(u,v)=-P(I-\Pi_{\Lambda'})(uv)=-\sum_{\lambda>\Lambda'}\lambda\,\Phi(u,v,\bar e_\lambda)\,e_\lambda$$
 and its uniform size $\Delta=\sup\lVert R(u,v)\rVert_2$ over unit $u,v\in\mathcal{V}$. Write $t=(I-\Pi_{\Lambda'})(uv)$. No Weyl law, no potential, and no curvature bound is used.
 
-If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$ and an additive constant on $\alpha$. If $\lVert t\rVert_{C^1}$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^*$, evaluation realises $X$ as a $C^1$ submanifold $\Sigma\subset\mathcal{V}^*$ on which
+If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$. If $\lVert t\rVert_{C^1}$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^*$, evaluation realises $X$ as a $C^1$ submanifold $\Sigma\subset\mathcal{V}^*$ on which
 $$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)},$$
 with $d=\dim\mathcal{V}$. That bound is not a statement about $\Delta$. When the tail of $\Phi$ occupies a finite slot, Sobolev embedding on $\Sigma$ converts $\lVert R\rVert_{C^k}$ into a multiple of $\Delta$, with constants depending only on window dimensions and $k$.
 
@@ -108,7 +108,7 @@ The cometric $\Gamma$ of $g$ is not an extra input. The identity
 $$P(uv)=u\,Pv+v\,Pu-2\Gamma(u,v)$$
 computes $\Gamma$ on $\mathcal{V}$ from $(P,\Phi)$ with remainder $R$. Two nondegeneracy hypotheses close the packet: evaluation $X\to\mathcal{V}^\ast$ is a smooth embedding, and $\{du:u\in\mathcal{V}\}$ spans $T^*X$. No Weyl law is assumed, no potential is present, and no curvature bound is used.
 
-If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$ and an additive constant on $\alpha$. If $\alpha=0$, that pair carries a compact Lie group of isometries whose orbits decompose $X$ (§9); if also $\dim\mathcal{V}=n+1$ and $Q$ is constant, $X$ is a sphere. If $\lVert t\rVert_{C^1}$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^*$, evaluation realises $X$ as a $C^1$ submanifold $\Sigma\subset\mathcal{V}^*$ on which
+If $R=0$, the packet determines $(X,g,\alpha)$ up to a $C^\infty$ isometry of $g$. If $\alpha=0$, that pair carries a compact Lie group of isometries whose orbits decompose $X$ (§9); if also $\dim\mathcal{V}=n+1$ and $Q$ is constant, $X$ is a sphere. If $\lVert t\rVert_{C^1}$ is smaller than a threshold depending on the embedding of $X$ in $\mathcal{V}^*$, evaluation realises $X$ as a $C^1$ submanifold $\Sigma\subset\mathcal{V}^*$ on which
 $$\lVert\iota^*g_\Sigma-g\rVert_{C^k}+\lVert\alpha_\Sigma\circ\iota-\alpha\rVert_{C^k}\le C(d,k)\,\lVert R\rVert_{C^k(\Sigma)},$$
 with $d=\dim\mathcal{V}$. When the tail of $\Phi$ occupies a finite slot, Sobolev embedding on $\Sigma$ converts this to a linear bound in $\Delta$ whose constants depend only on window dimensions and $k$. In both regimes the manifold is recovered as the space of multiplicative characters of the window, the metric by dualizing $\Gamma$, and the weight from the ratio of $\mu$ to Riemannian volume.
 
@@ -203,7 +203,7 @@ Standing hypotheses: $X$ closed and connected, $P=P_\alpha$ a Witten operator \c
 \label{thm-1}
 Assume $R=0$. The packet
 $$\bigl(\Lambda,\Lambda',\sigma(P)\cap[0,\Lambda'],\Phi\big|_{\mathcal{V}\otimes\mathcal{V}\otimes\mathcal{V}'}\bigr)$$
-determines $(X,g,\alpha)$ up to a $C^\infty$ Riemannian isometry of $g$ and an additive constant on $\alpha$. Evaluation is a Riemannian isometry of $(X,g)$ onto the character space of $(\mathcal{V},m)$ in $\mathcal{V}^\ast$, and $P$ is the Witten operator of the reconstructed pair.
+determines $(X,g,\alpha)$ up to a $C^\infty$ Riemannian isometry of $g$. Evaluation is a Riemannian isometry of $(X,g)$ onto the character space of $(\mathcal{V},m)$ in $\mathcal{V}^\ast$, and $P$ is the Witten operator of the reconstructed pair.
 
 If in addition $\alpha=0$, then $X$ is a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). If also $\dim\mathcal{V}=n+1$ and $Q$ is constant, $X$ is a sphere.
 \end{theorem}
@@ -709,7 +709,7 @@ By the standing category, $P$ is already the Witten operator of some pair $(g_0,
 The lemmas of §§3–5 assemble into Theorem~\ref{thm-1} and Theorem~\ref{thm-2}.
 
 \begin{proof}[Proof of Theorem~\ref{thm-1}]
-Assume $R=0$. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ as a function of $(P,\Phi)$, with remainder zero. Lemma 9 identifies $X$ with the character space $\Sigma\subset\mathcal{V}^\ast$ of the finite algebra $(\mathcal{V},m)$ by a $C^\infty$ diffeomorphism $\iota$. Lemma 14 dualizes $\Gamma$ to a Riemannian metric $g_\Sigma$ on $\Sigma$ with $\iota^*g_\Sigma=g$. Lemma 15 reads $\alpha$ from $\mu/\mathrm{vol}_g$, up to an additive constant, and identifies $P$ with the Witten operator of that pair. Thus $\iota$ is a $C^\infty$ Riemannian isometry, and the packet determines $(X,g,\alpha)$ up to that isometry and the constant on $\alpha$. Theorem 21 upgrades the unweighted case to an orbit decomposition, and to a sphere when $d=n+1$.
+Assume $R=0$. Lemma 5 gives $\Gamma$ on $\mathcal{V}$ as a function of $(P,\Phi)$, with remainder zero. Lemma 9 identifies $X$ with the character space $\Sigma\subset\mathcal{V}^\ast$ of the finite algebra $(\mathcal{V},m)$ by a $C^\infty$ diffeomorphism $\iota$. Lemma 14 dualizes $\Gamma$ to a Riemannian metric $g_\Sigma$ on $\Sigma$ with $\iota^*g_\Sigma=g$. Lemma 15 reads $\alpha$ from $\mu/\mathrm{vol}_g$, and identifies $P$ with the Witten operator of that pair. Thus $\iota$ is a $C^\infty$ Riemannian isometry, and the packet determines $(X,g,\alpha)$ up to that isometry. Theorem 21 upgrades the unweighted case to an orbit decomposition, and to a sphere when $d=n+1$.
 Residual freedom is an orthogonal change of basis of $\mathcal{V}$ preserving $\Phi$.
 \end{proof}
 
