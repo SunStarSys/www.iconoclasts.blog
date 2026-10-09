@@ -693,7 +693,7 @@ $$\bigl\lVert\alpha_\Sigma\circ\iota-\alpha\bigr\rVert_{C^k}
 \end{lemma}
 
 \begin{proof}
-By the standing category, $P$ is already the Witten operator of some pair $(g_0,\alpha_0)$. Lemma 14 identifies $g=g_0$, because both metrics have the same principal symbol. The inner product that makes $P$ self-adjoint is $\mu=e^{-\alpha_0}\mathrm{vol}_{g_0}$. On the other hand $\Phi(1,\cdot,\cdot)$ is that inner product, since $1=\ker P$ and $\Phi(1,u,v)=\langle u,v\rangle_{L^2(\mu)}$. Thus $\mu=e^{-\alpha_0}\mathrm{vol}_g$, so $\alpha=\alpha_0+c$. A Witten operator on a closed manifold is determined by $(g,\alpha)$ up to that constant; however by unitarity on the associated measure spaces, $c=0$. The $C^k$ estimate follows from Lemma 14 and the elliptic regularity of $\log(d\mu/d\mathrm{vol}_g)$.
+By the standing category, $P$ is already the Witten operator of some pair $(g_0,\alpha_0)$. Lemma 14 identifies $g=g_0$, because both metrics have the same principal symbol. The inner product that makes $P$ self-adjoint is $\mu=e^{-\alpha_0}\mathrm{vol}_{g_0}$. On the other hand $\Phi(1,\cdot,\cdot)$ is that inner product, since $1=\ker P$ and $\Phi(1,u,v)=\langle u,v\rangle_{L^2(\mu)}$. Thus $\mu=e^{-\alpha_0}\mathrm{vol}_g$, so $\alpha=\alpha_0+c$. A Witten operator on a closed manifold is determined by $(g,\alpha)$ up to that constant; however by unitarity of composition by $F$ on the associated measure spaces, $c=0$. The $C^k$ estimate follows from Lemma 14 and the elliptic regularity of $\log(d\mu/d\mathrm{vol}_g)$.
 \end{proof}
 
 \begin{remark} Lemma~\ref{lma-4} is recognition, not construction: it uses that $P$ was Witten. The two measures $\mu$ and $\mathrm{vol}_g$ are the only source of $\alpha$. The packet does not store $\alpha$ separately.
