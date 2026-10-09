@@ -489,7 +489,7 @@ is an identity in the algebra of functions on $M$. In a $G$-adapted eigenbasis e
 The second kernel is $K'(\lambda,\rho;\mu,\kappa\mid\nu')$, not $K'(\lambda,\kappa;\mu,\rho\mid\nu')$. With $\lambda=j_1$, $\mu=j_2$, $\kappa=j_4$, and $\rho=j_3$, this is the $K'$ of (24). The weight on the right is the multiplication map for the pair $(\lambda\rho)$, which is the pair actually crossed.
 In particular, the indices in the Crossing Equation $(\dagger)$ run over the space of irreducible representations, not the indices of a chosen basis, and each term in the summands is independent of any such choice of basis.
 
-If $G$ is compact, $K$ and $K'$ are finite recoupling coefficients, and $(\dagger)$ is an algebraic identity among the reduced elements of $\Phi$. For $SU(2)$ they are $6j$ symbols when they are three-spin associators, or the $J=0$ collapse, and $9j$ symbols when four external spins couple to a total channel $J\neq 0$.
+If $G$ is compact, $K$ and $K'$ are finite recoupling coefficients, and $(\dagger)$ is an algebraic identity among the reduced elements of $\Phi$. For $SU(2)$ they are $6j$ symbols when they are three-spin associators, or the $J=0$ collapse, and $9j$ symbols when four external spins couple to a total spin $J\neq 0$.
 
 If $G=\mathrm{PSL}_2(\mathbb{R})$ or $\mathrm{SO}_0(1,d)$ acting on $\Gamma\backslash G$, the labels run over principal series, $K,K'$ are the Plancherel recoupling kernels of Kravchuk–Mazáč–Pal, and $(\dagger)$ is the conformal bootstrap crossing system. A linear functional $\alpha$ with $\alpha\cdot K\ge 0$ on the support of the spherical Plancherel measure then yields
 $$\sum_{\nu\in\Omega}\lVert M_{\lambda\mu\to\nu}\rVert_{\mathrm{HS}}^2\le C(\lambda,\mu,\Omega).$$
@@ -573,7 +573,7 @@ They vanish unless all four triangles of each symbol hold,
 \end{aligned}
 \end{equation}
 and each triad sums to an integer. A Weyl move from the pairing $(12)(34)$ to $(13)(24)$ sends $K$ to $K'$ up to $(-1)^{j_1+j_2+j_3+j_4+j+J}$.
-If $j_1,j_2,j_3,j_4$ are four external spins and $J$ is their total channel, the crossing kernel is a $9j$ symbol. The case $J\neq 0$ is the $9j$ case. A single $6j$ symbol is the associator \eqref{eq:kernels}, or the singlet collapse below.
+If $j_1,j_2,j_3,j_4$ are four external spins and $J$ is their total spin, the crossing kernel is a $9j$ symbol. The case $J\neq 0$ is the $9j$ case. A single $6j$ symbol is the associator \eqref{eq:kernels}, or the singlet collapse below.
 Summing the magnetic indices in \eqref{eq:su2-triple} gives
 \begin{equation}
 \|M_{j_1 j_2\to j}\|^2_{\mathrm{HS}}
