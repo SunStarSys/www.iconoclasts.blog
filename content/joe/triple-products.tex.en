@@ -648,7 +648,7 @@ As Milnor's duet exemplifies, having a map which preserves the lengths of the la
 \end{equation}
 The neat thing about this analysis is that we've proven there is no \textbf{linear} map between lattices that preserves the eigenvalues without the map being induced by a Riemannian isometry on the tori -- as a consequence of the Theorem, not because the explicit computations involved are simple polarization identities.
 
-This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of \textit{lattice congruence} \cite{NRR22} traditionally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $B\in SO(n,\mathbb{R})$, as described in the prior paragraph, \textbf{is} the contravariant Riemannian isometry between the tori, as provided by application of the \textit{Gelfand-Naimark Representation Theorem} during the proof of Theorem~\ref{thm}.
+This representation-theoretical account \cite{AK01} is exactly equivalent to the prior development of \textit{lattice congruence} \cite{NRR22} traditionally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map on the weight lattice $B\in SO(n,\mathbb{R})$, \textbf{is} the contravariant Riemannian isometry between the tori, as provided by application of the \textit{Gelfand-Naimark Representation Theorem} during the proof of Theorem~\ref{thm}.
 
 \paragraph{Acknowledgements}
 The original research was funded in part by a gracious James Simons Research Award in 1995-1996, and the generous support of an Alfred P. Sloan Dissertation Fellowship in 1996-1997 at the University at Stony Brook.
