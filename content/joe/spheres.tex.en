@@ -1121,6 +1121,12 @@ The coordinate map is an isometric immersion into one slot sphere, but the image
 In the indefinite range $m\equiv 0\pmod 4$ with $P_0\cdots P_m\neq\pm\mathrm{Id}$, $M_+$ is not homogeneous \cite{OT75}. The smallest such focal set is the $(m_1,m_2)=(4,3)$ example in $S^{15}$: dimension $10$, coordinate slot of rank $16$, and $W_2$ of dimension at most $1+16+135=152$ \cite{QT16}. It is diffeomorphic to $S^3\times S^7$ and not isometric to a product of round spheres. Exactness of $(\mathcal{V},W_2)$ is unaffected by the definite/indefinite dichotomy.
 
 Exactness here is for products of $\mathcal{V}$. Products of degree-$2$ harmonics land in $W_4$, which is not claimed to be a spectral window. The example separates the exactness condition of §9 from the open orbit, isometric slot hypothesis of §9.1: $R=0$ does not force the $K$-orbit on the isometric slot-sphere embedding to be open/transitive, and does not force homogeneity.
+
+
+\begin{remark}[spectrum vs. homogeneity]
+Szabó’s anticommutator constructions produce isospectral pairs of metrics on spheres $S^{4k-1}$ ($k\ge 3$) in which one metric is homogeneous and the other is not even locally homogeneous \cite{Sza01, Sza05}. The spectrum of the Laplacian therefore does not detect the isometry group, nor local homogeneity. Section 9.3 exhibits the complementary phenomenon for exact packets: the indefinite OT–FKM focal set carries an exact unweighted window $(\mathcal{V},W_2)$ whose evaluation is a proper isometric immersion into a slot sphere, yet the fundamental fields do not span and the metric is inhomogeneous. Exactness of a finite multiplication table, like equality of spectra, does not force a transitive action. The two statements use different data—eigenvalues alone versus a closed window—and both separate the algebraic condition from homogeneity.
+\end{remark}
+
 \doclicenseThis
 \printbibliography
 \end{document}
