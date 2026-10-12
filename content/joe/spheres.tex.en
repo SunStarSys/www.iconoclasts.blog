@@ -208,6 +208,11 @@ determines $(X,g,\alpha)$ up to a $C^\infty$ Riemannian isometry of $g$. Evaluat
 If in addition $\alpha=0$, then $X$ is a union of orbits of a compact Lie group of isometries of the reconstructed metric (Theorem 21). If also $\dim\mathcal{V}=n+1$ and $Q$ is constant, $X$ is a sphere.
 \end{theorem}
 
+On an exact packet the Hessian is given by the finite Leibniz identity
+$$\langle\operatorname{Hess}u,\nabla v\otimes\nabla w\rangle
+=\frac12\Bigl(\Gamma(v,\Gamma(u,w))+\Gamma(w,\Gamma(u,v))-\Gamma(u,\Gamma(v,w))\Bigr).$$
+Both sides are linear combinations of window modes, so the identity is a matrix computation in the structure constants. The Bochner formula then recovers the Ricci tensor on the span of the window gradients by the same finite data.
+
 \begin{theorem}[approximate recognition]
 \label{thm-2}
 Let $d=\dim\mathcal{V}$.
