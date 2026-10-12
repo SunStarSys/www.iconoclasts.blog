@@ -418,9 +418,6 @@ Q_k(f,g) :&= \bra{df\cdot dg}\ket{e^k} = \sum_{i,j}\hat{f}(i)\hat{g}(j)\bra{de^i
 \end{aligned}
 \end{equation}
 
-The Hessian is given by the Leibniz identity
-$$\langle\operatorname{Hess}u,\nabla v\otimes\nabla w\rangle
-=\frac12\Bigl(\Gamma(v,\Gamma(u,w))+\Gamma(w,\Gamma(u,v))-\Gamma(u,\Gamma(v,w))\Bigr).$$
 Cauchy–Schwarz on the Hessian, $\lvert\operatorname{Hess}f\rvert_{\mathrm{HS}}^2\ge\frac1n(\Delta f)^2$, turns $\operatorname{Ric}\ge K\,g$ into exactly $\mathrm{BE}(K,n)$ \cite{BE85}. The bound is sharp on space forms. Integrating these inequalities from the Bochner Formula for $\Gamma_2(e^1,e^1)$ yields the Lichnerowicz lower bound for $\lambda_1$ (only $k=0$ survives integration):
 
 $$\lambda_1\ge\frac{n}{n-1}K.$$
