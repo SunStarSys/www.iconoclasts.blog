@@ -248,6 +248,8 @@ In that case \(\iota\) is a \(C^k\) almost-isometry on the scale of \(\Delta\).
 \end{description}
 \end{theorem}
 
+For any fixed window $\mathcal{V}$ satisfying W1–W2, the hypothesis of Theorem 2(i) is satisfied for all sufficiently large $\Lambda'$. Indeed, $uv$ is smooth for $u,v\in\mathcal{V}$, spectral projections converge to the identity in $C^1$, and the supremum is taken over a compact set, so $\|t\|_{C^1}$ can be made smaller than $\tau_*(d,\iota(X))$.
+
 \begin{theorem}[round sphere, exact window]
 \label{thm-a}
 Assume $\alpha=0$, $\dim\mathcal{V}=n+1$, $\Lambda=n$, and $R=0$ at $\Lambda'=2n+2$. Suppose there is a frame $x_0,\ldots,x_n$ in $\mathcal{V}$ with $Px_a=nx_a$, $\int x_a=0$, $\sum_a x_a^2=1$,
