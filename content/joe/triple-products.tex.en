@@ -23,7 +23,16 @@
 \usepackage{fontsetup}
 \usepackage{tikz-cd}
 
-\usepackage[style=alphabetic]{biblatex}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none,
+  maxnames=99,
+  giveninits=true,
+  uniquename=false,
+  doi=true,
+  url=false
+]{biblatex}
 \addbibresource{content/joe/triple-products.bib.en}
 
 % useful math-physics macros
@@ -61,7 +70,7 @@
 \begin{abstract}
 Using elementary techniques from Geometric Analysis, Partial Differential Equations, and Abelian $C^*$ Algebras, we uncover a novel, yet familiar, global geometric discriminant -- namely the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator, to precisely characterize which isospectral closed Riemannian manifolds are isometric.
 
-\noindent\textbf{Keywords:} spectrum, Fourier, harmonic, triple products, Laplacian, eigenfunctions, functional, inverse problem, representation theory
+\noindent\textbf{Keywords:} spectrum, triple products, inverse problem, representation theory
 \end{abstract}
 
 \tableofcontents
