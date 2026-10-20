@@ -20,7 +20,16 @@
 \PassOptionsToPackage{partial=upright}{unicode-math}
 \usepackage{fontsetup}
 \usepackage{tikz-cd}
-\usepackage[style=alphabetic]{biblatex}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none,
+  maxnames=99,
+  giveninits=true,
+  uniquename=false,
+  doi=true,
+  url=false
+]{biblatex}
 \addbibresource{content/joe/schrodinger-operators.bib.en}
 
 % useful math-physics macros
@@ -29,7 +38,7 @@
 
 % Metadata
 \title{Triple Products of Eigenfunctions and Schr\"odinger/Witten Operators\footnote{Dedicated to Autumn.}}
-\date{2026\\September}
+\date{2026\\October}
 \author{Joe Schaefer\\President, SunStar Systems\\ \href{mailto://Joe\%20Schaefer,\%20Ph.D.\%20<joe@sunstarsys.com>}{joe@sunstarsys.com}\footnote{with assistance from Grok.}}
 
 % Theorem, Lemma, etc
@@ -62,7 +71,7 @@ is implemented by a diffeomorphism $F$ with $F^*g=h$, $\beta=\alpha\circ F$, and
 
 A recognition argument from an abstract $G$-package via evaluation in a finite-dimensional subrepresentation of the eigenalgebra applies only when that embedding exists. Homogeneous spaces and the isotropic oscillator admit it; a general radial well need not. The comparison theorem does not use this hypothesis.
 
-\noindent\textbf{Keywords:} spectrum, triple products, Schr\"odinger, Witten, Laplacian, eigenfunctions, inverse problem
+\noindent\textbf{Keywords:} spectrum, triple products, eigenfunctions, inverse problem
 \end{abstract}
 
 \tableofcontents
