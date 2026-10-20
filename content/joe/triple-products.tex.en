@@ -70,7 +70,7 @@
 The spectrum of the Laplace–Beltrami operator on a closed Riemannian manifold does not determine the manifold up to isometry; many non-isometric isospectral pairs are known. This note shows that the missing data are the triple products of eigenfunctions.
 Let $(M,g)$ be closed and connected, and let $\{e_i\}$ be an orthonormal eigenbasis ordered by non-decreasing eigenvalues. Set
 $$M^{i,j,k}=\int_M e_i e_j\overline{e_k}\,d\mathrm{vol}_g.$$
-A second closed manifold $N$ is isometric to $M$ if and only if it is isospectral to $M$ and admits an orthonormal eigenbasis with the same eigenvalues and the same triple products $M_{i,j,k}$.
+A second closed manifold $N$ is isometric to $M$ if and only if it is isospectral to $M$ and admits an orthonormal eigenbasis with the same eigenvalues and the same triple products $M^{i,j,k}$.
 
 Thus the spectrum together with the multiplication table of eigenfunctions determines the isometry class. In the generic case a diagonal test reduces the comparison to products of squared eigenfunctions. The argument is elementary once matching bases are given; the remaining task is to decide whether such bases exist.
 
