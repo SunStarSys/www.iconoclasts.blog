@@ -1,7 +1,7 @@
 Title: PHP, libapreq-1 and CVE-2026-109618
 ACL: joe=rw, *=r
 
-Rasmus Lerdorf personally [ported libapreq-1](https://github.com/php/php-src/blob/master/main/rfc1867.c) to the PHP runtime decades ago. **That port remains secure**. **CVE-2026-109618** is a novel, sophisticated attack on the PHP runtime itself, exacerbated by the browser industry's unwillingness to meaningfully secure the file upload process by otherwise providing human users with file upload performance metadata widgetry in the browser.
+Rasmus Lerdorf personally [ported libapreq-1](https://github.com/php/php-src/blob/master/main/rfc1867.c) to the PHP runtime decades ago. **That port remains secure**. **CVE-2026-109618** is a novel, sophisticated attack on the PHP runtime itself (misuse of `longjmp()` under OOM), exacerbated by the browser industry's unwillingness to meaningfully secure the file upload process by otherwise providing human users with file upload performance metadata widgetry in the browser.
 
 This missing functionality puts the burden of responsibility where it never belonged: on server-side API hooks into the in-flight upload apparatus itself.
 
