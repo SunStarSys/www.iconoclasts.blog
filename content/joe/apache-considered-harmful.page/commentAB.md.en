@@ -1,6 +1,6 @@
 Title: PHP, libapreq-1 and CVE-2026-109618
 ACL: joe=rw, *=r
-status: verified=54942
+status: draft
 
 Rasmus Lerdorf personally [ported libapreq-1](https://github.com/php/php-src/blob/master/main/rfc1867.c) to the PHP runtime decades ago. **That port remains secure**. **CVE-2026-109618** is a novel, sophisticated attack on the PHP runtime itself (misuse of `longjmp()` under OOM), exacerbated by the browser industry's unwillingness to meaningfully secure the file upload process by otherwise providing human users with file upload performance metadata widgetry in the browser.
 
@@ -8,9 +8,9 @@ This missing functionality puts the burden of responsibility where it never belo
 
 NOTE: An important mitigator for Linux for this vulnerability is to set `memlimit=-1` in your php configuration, and on the host run
 
-```shell
-sysctl vm.overcommit_memory=1
-```
+  ```shell
+    sysctl vm.overcommit_memory=1
+  ```
 as root, so your PHP webserver process gets OOMKilled by the kernel instead of receiving soft allocation errors on `realloc(3)`, which woould otherwise trigger the problematic `longjmp(3)`...
 
 <!-- $Date$ $Author$ $Revision$-->
