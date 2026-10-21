@@ -5,11 +5,11 @@ Rasmus Lerdorf personally [ported libapreq-1](https://github.com/php/php-src/blo
 
 This missing functionality puts the burden of responsibility where it never belonged: on server-side API hooks into the in-flight upload apparatus itself.
 
-NOTE: An important mitigator for Linux for this vulnerability is to set
+NOTE: An important mitigator for Linux for this vulnerability is to set `memlimit=-1` in your php configuration, and on the host run
 
 ```shell
 sysctl vm.overcommit_memory=1
 ```
-so your PHP webserver process gets OOMKilled by the kernel instead of receiving soft allocation errors on `realloc(1)`.
+as root, so your PHP webserver process gets OOMKilled by the kernel instead of receiving soft allocation errors on `realloc(1)`.
 
 <!-- $Date$ $Author$ $Revision$-->
