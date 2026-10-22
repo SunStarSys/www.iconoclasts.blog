@@ -10,7 +10,9 @@ This missing functionality puts the burden of responsibility where it never belo
 
 @sunstarsys/status/2113323849794380204
 
-NOTE: An important mitigator for Linux for this vulnerability is to set `memlimit=-1` in your php configuration, and on the host run
+### NOTE
+
+An important mitigator for Linux for this vulnerability is to set `memlimit=-1` in your php configuration, and on the host run
 
   ```shell
     sysctl vm.overcommit_memory=1
