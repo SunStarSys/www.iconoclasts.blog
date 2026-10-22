@@ -17,6 +17,7 @@ An important mitigator for Linux for this vulnerability is to set `memlimit=-1` 
   ```shell
     sysctl vm.overcommit_memory=1
   ```
+
 as root, so your PHP webserver process gets OOMKilled by the kernel instead of receiving soft allocation errors on `realloc(3)`, which woould otherwise trigger the problematic `longjmp(3)`...
 
 
