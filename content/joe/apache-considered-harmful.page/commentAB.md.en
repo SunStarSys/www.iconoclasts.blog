@@ -4,6 +4,8 @@ status: draft
 
 Rasmus Lerdorf personally [ported libapreq-1](https://github.com/php/php-src/blob/master/main/rfc1867.c) to the PHP runtime decades ago. **That port remains secure**. **CVE-2026-109618** is a novel, sophisticated attack on the PHP runtime itself (misuse of `longjmp()` under OOM), exacerbated by the browser industry's unwillingness to meaningfully secure the file upload process by otherwise providing human users with file upload performance metadata widgetry in the browser.
 
+Cynically, but honestly, this is simply because they don't want your bug reports about non-performing uploads. Sadly, abrogation of responsiblity informs most of the division of labor (yours, or mine) in protocol standards development.
+
 This missing functionality puts the burden of responsibility where it never belonged: on server-side API hooks into the in-flight upload apparatus itself.
 
 NOTE: An important mitigator for Linux for this vulnerability is to set `memlimit=-1` in your php configuration, and on the host run
