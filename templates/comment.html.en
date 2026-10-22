@@ -21,7 +21,7 @@
           </h6>
         </header>
         <small>
-          <p class="card-text">{{content|markdown|removetags:"script style"|removeattrs:"on\w+ style class"|safe}}</p>
+          <p class="card-text">{{content|markdown}}</p>
           <hr>
           <p>&nbsp;</p>
         </small>
