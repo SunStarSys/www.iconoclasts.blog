@@ -2,7 +2,7 @@ Title: PHP, libapreq-1 and CVE-2026-109618
 ACL: joe=rw, *=r
 status: draft
 
-Rasmus Lerdorf personally [ported libapreq-1](https://github.com/php/php-src/blob/master/main/rfc1867.c) to the PHP runtime decades ago. **That port remains secure**. **CVE-2026-109618** is a novel, [sophisticated attack on the PHP runtime itself](https://calif.io/php2shell/) (misuse of `longjmp()` under OOM), exacerbated by the browser industry's unwillingness to meaningfully secure the file upload process by otherwise providing human users with file upload performance metadata widgetry in the browser.
+Rasmus Lerdorf personally [ported libapreq-1](https://github.com/php/php-src/blob/master/main/rfc1867.c) to the PHP runtime decades ago. **That port remains secure**. **CVE-2026-109618** is a novel, [sophisticated attack on the PHP runtime itself](https://calif.io/php2shell/) (misuse of `longjmp(3)` under OOM), exacerbated by the browser industry's unwillingness to meaningfully secure the file upload process by otherwise providing human users with file upload performance metadata widgetry in the browser.
 
 Cynically, but honestly, this is simply because they don't want your bug reports about non-performing uploads. Sadly, abrogation of responsibility informs most of the division of labor (yours, or mine) in protocol standards development.
 
@@ -12,13 +12,15 @@ This missing functionality puts the burden of responsibility where it never belo
 
 ### NOTE
 
-AI did not **discover** this set of PHP vulnerabilities. PHP developers have been managing this risk for over 20y largely by ignoring it until someone could demonstrate an operational exploit for it.
+AI did not **discover** this set of PHP vulnerabilities. PHP developers have been [managing this risk for over 20y largely by ignoring it](https://marc.info/?l=bugtraq&m=108981780109154&w=2) until someone could demonstrate an operational exploit for it.
 
 This is the new new that the NSA tacitly admits being in possession of given the chicken little calls it has made publicly about the significance of the present moment:
 
 @NSACyber/status/2112903220209098897
 
-AI vendors also seem confident they have one; however there's no evidence of a massive successful internet attack based on these fears. It's been mostly a giant nothingburger, which justifies the PHP developers' stance over the full lifetime of the known vulnerability situation.
+AI vendors also seem confident they have one; however there's no evidence of a massive successful internet attack based on these fears. It's been mostly a giant nothingburger, which justifies the PHP developers' stance over the full lifetime of the known vulnerability situation. Famous Google Engineer on the topic:
+
+@JohnHultquist/status/2113686799708991522
 
 Nevertheless, an important mitigator for Linux for this class of vulnerabilities is to set `memlimit=-1` in your php configuration, and on the host run
 
