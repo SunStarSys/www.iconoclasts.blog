@@ -13,7 +13,11 @@ This missing functionality puts the burden of responsibility where it never belo
 
 ### NOTE
 
-An important mitigator for Linux for this vulnerability is to set `memlimit=-1` in your php configuration, and on the host run
+AI did not **discover** this set of PHP vulnerabilities. PHP developers have been managing this risk for over 20y largely by ignoring it until someone could demonstrate an operational exploit for it.
+
+This is the new new that the NSA tacitly admits being in possession of, given the chicken little calls it has made publicly about the significance of the present moment.  AI vendors also seem confident they have one; however there's no evidence of a massive successful internet attack based on these fears. It's been mostly a giant nothingburger, which justifies the PHP developers' stance over the full lifetime of the known vulnerability situation.
+
+Nevertheless, an important mitigator for Linux for this class of vulnerabilities is to set `memlimit=-1` in your php configuration, and on the host run
 
   ```shell
     sysctl vm.overcommit_memory=1
