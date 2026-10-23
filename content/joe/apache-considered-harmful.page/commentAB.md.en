@@ -21,6 +21,6 @@ An important mitigator for Linux for this vulnerability is to set `memlimit=-1` 
 
 as root, so your PHP webserver process gets OOMKilled by the kernel instead of receiving soft allocation errors on `realloc(3)`, which woould otherwise trigger the problematic `longjmp(3)`...
 
-Why should you do this, regardless of whether you have already patched? Because the initial patch only covers **round one**. The next rounds are just beginning (**CVE-2026-115560**).
+Why should you do this, regardless of whether you have already patched? Because the initial patch only covers **round one**. The next rounds are just beginning [CVE-2026-115560](https://www.php.net).
 
 <!-- $Date$ $Author$ $Revision$-->
