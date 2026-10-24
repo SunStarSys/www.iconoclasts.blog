@@ -1,0 +1,11 @@
+Title: BROTLI and WEB2SHELL
+ACL: joe=rw, *=r
+status: draft
+
+The gaslighting is even more absurd for this one.  Again, AI did not discover anything other than the fact that the `libbrotli` developers patched their source tree without following up with any kind of public announcement, CVE, or patch release; letting AI concoct an undiscovered exploit in the unpatched decompression implementation and call it a victory for transhumanists.
+
+However, webservers don't touch the decompression side &mdash; only web clients do. The upshot is that the webclient software in the wild needs to be relinked against libbrotli to guard against the possibility of connecting to a malicious website that ships maliciously-brotli-compressed malware.
+
+How likely do you think that happens to your own web clients over the course of the day?  If you said it approaches absolute zero, you are in the right ballpark.
+
+<!-- $Date$ $Author$ $Revision$-->
