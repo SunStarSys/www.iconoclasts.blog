@@ -1,0 +1,12 @@
+---
+archived: ~
+categories: 스포츠, 뉴스, 엔터테인먼트
+dependencies: '*.md.ko'
+keywords: 그레이슨
+published: ~
+status: 초안
+title: 상점에 갈 시간이 지났습니다.
+
+---
+
+{% ssi `/brook/blog1.md.ko` %}
