@@ -1,0 +1,13 @@
+---
+acl: jennifer=rw, *=
+archived: ~
+categories: ホームデコレーション
+dependencies: '*.md.ja'
+keywords: ~
+published: ~
+status: 下書き
+title: ホーム 装飾 ブログ エントリ
+
+---
+
+{% ssi `/jennifer/example.md.ja` %}

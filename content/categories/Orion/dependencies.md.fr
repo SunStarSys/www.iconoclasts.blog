@@ -1,0 +1,10 @@
+---
+categories: Orion, Architecture
+dependencies: '*.md.fr'
+keywords: architecture,incrémentiel,site Web,génération,constructions,dépendances,topologie,wiki,graph
+status: livre blanc
+title: Qu'est-ce que <em>Smart Content Dependency Management™</em> ?
+
+---
+
+{% ssi `/joe/dependencies.md.fr` %}

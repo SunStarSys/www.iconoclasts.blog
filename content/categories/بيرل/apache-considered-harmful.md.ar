@@ -1,0 +1,10 @@
+---
+categories: أباتشي (بيرل)
+dependencies: '*.md.ar'
+keywords: apache,httpd,mod_apreq2,libapreq2,mod_perl
+status: مُسَوَّدَة
+title: أباتشي HTTPd ديفس تعتبر ضارة
+
+---
+
+{% ssi `/joe/apache-considered-harmful.md.ar` %}

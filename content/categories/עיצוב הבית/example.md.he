@@ -1,0 +1,13 @@
+---
+acl: jennifer=rw, *=
+archived: ~
+categories: עיצוב הבית
+dependencies: '*.md.he'
+keywords: ~
+published: ~
+status: טיוטה
+title: עמוד הבית בלוג כניסה
+
+---
+
+{% ssi `/jennifer/example.md.he` %}
